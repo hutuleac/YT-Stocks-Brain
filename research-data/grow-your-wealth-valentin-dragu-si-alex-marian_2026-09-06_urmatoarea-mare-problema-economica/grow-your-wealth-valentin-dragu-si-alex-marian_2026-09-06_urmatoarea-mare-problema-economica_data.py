@@ -1,0 +1,211 @@
+# -*- coding: utf-8 -*-
+"""Grow your WEALTH (Valentin Dragu si Alex Marian) - URMATOAREA MARE PROBLEMA ECONOMICA... (2026-09-06)"""
+
+META = {
+    "title": "URMATOAREA MARE PROBLEMA ECONOMICA...",
+    "channel": "Grow your WEALTH - Valentin Dragu si Alex Marian",
+    "speakers": "Valentin Dragu, Alex Marian",
+    "date": "2026-09-06",
+    "video_url": "https://www.youtube.com/watch?v=oD6BEdbawgw",
+    "thread_line": "6 fire narative: conflictul din Iran si presiunea pe Fed, semnale de racire a pietei muncii si a consumului american, saptamana rapoartelor (Broadcom, Nvidia, UiPath, Snowflake, AppLovin, Dell), dezbaterea Elon Musk despre criza de energie si robotica, parteneriatele Anthropic in cybersecurity, si riscurile pietei de capital romanesti",
+    "category": "market",
+}
+
+SNAPSHOT = [
+    "Conflictul din Iran s-a reaprins (atacuri pe facilitati de gaz natural), dar Valentin considera ca e un soc de scurta durata, nu unul care sa schimbe tendinta pe termen lung a petrolului sau a dobanzilor Fed.",
+    "Piata muncii americana se raceste: se asteapta somaj in usoara crestere pe o perioada mai lunga si tot mai putine locuri de munca noi create la fiecare raportare, ceea ce ii taie Fed-ului orice motiv sa mai creasca dobanda.",
+    "Semnale de consum mai slab la americani: Costco vede o migrare de la carnea de vita spre pui, ton la conserva si porc, iar oamenii se muta de la restaurante normale spre McDonald's - un semnal pe care Valentin il vede si la Walmart.",
+    "Saptamana rapoartelor: Broadcom a scazut 5% desi raportul a fost bun (guidance sub asteptari), Nvidia ramane liderul incontestabil al semiconductorilor, UiPath si Snowflake au avut recuperari puternice, iar Dell a avut un raport pe care Valentin il numeste 'la superlativ'.",
+    "Elon Musk a spus la G20 ca cea mai mare problema pentru infrastructura de AI nu e cipul, e energia - risc de criza energetica - si a propus o combinatie solar plus gaz, plus centre de date pe orbita.",
+    "Cybersecurity ramane un sector scump dar justificat de contracte pe 3-5 ani; Anthropic a semnat parteneriate cu CrowdStrike (pe securitatea API-urilor) si apoi cu OpenAI, iar Valentin recunoaste ca a cumparat agresiv CrowdStrike in timpul unui glitch de sistem si asteapta un altul ca sa reintre.",
+    "Pe bursa de la Bucuresti (BVB), Valentin avertizeaza ca fondurile de pensii Pilon 2 ar putea fi fortate sa vanda actiuni si sa mute bani spre titluri de stat dupa cresterea agresiva a indicelui BET - fara o contraparte reala de cumparare pe piata locala.",
+    "Riscul cel mai serios ridicat despre Romania: posibilitatea (nu science-fiction, spune Valentin) ca statul sa nationalizeze Pilonul 2 de pensii private daca ramane fara lichiditate externa, exact cum s-a mai intamplat in alte tari.",
+]
+
+THEMES = [
+    {
+        "id": "iran-fed-yen",
+        "color": "amber",
+        "badge": "Contestat",
+        "status": "VEDERE: soc de scurta durata, nu o schimbare de trend",
+        "title": "Iran, petrolul si lupta pe doua fronturi a Trezoreriei americane",
+        "lead": "Conflictul cu Iranul a reaprins temerile pe petrol si dobanzi, dar Valentin insista ca e un episod trecator, nu un motor de trend pe termen lung.",
+        "bullets": [
+            "Facilitati de gaz natural din Iran au fost atacate, iar reteaua energetica iraniana este sabotata de americani; Iranul loveste, la randul lui, tinte americane din zona (nu doar baze militare, ci si facilitati ale unor companii importante).",
+            "Risc concret pentru piata: centre de date ale unor companii precum **Google, Amazon sau Microsoft** din Bahrain, Emiratele Arabe, Oman sau Qatar ar putea fi tinta - Iranul a amenintat in trecut cu taierea cablurilor de internet din zona, dar nu a facut-o pana acum.",
+            "Daca pretul petrolului creste sustenabil (nu doar un scurt spike geopolitic), Valentin admite ca inflatia ar putea creste si Fed-ul ar fi pus in fata unor decizii dure - dar parerea lui e ca acest tip de soc ramane de scurta durata.",
+            "Conflictul s-ar putea intensifica in functie de rezultatul alegerilor de midterm din SUA: daca republicanii nu castiga o camera pentru a sustine agenda lui Trump, situatia din Iran ar putea evolua intr-o directie neasteptata.",
+            "Pe frontul monetar: randamentul titlului de stat japonez la 10 ani e usor in scadere, dar cel la 2 ani continua sa accelereze; BCE si Trezoreria americana par sa sustina activ yenul japonez, pentru ca imprumuturile in yeni au sprijinit toate clasele de active timp de 20-30 de ani.",
+            "Trezoreria americana duce, dupa spusele lui Valentin, o lupta pe doua fronturi: rascumpara propriile obligatiuni si, in acelasi timp, tipareste bani ca sa cumpere yeni si sa sustina moneda japoneza.",
+        ],
+        "quote": {"text": "Nu faceti exituri din astea bazate pe panica si pe frica ca cine stie ce se intampla. Stati pe pozitii si analizati companiile, nu evolutiile geopolitice din zona Golfului Persic.", "cite": "— Valentin Dragu"},
+        "watch": "Valentin insusi recunoaste ca situatia se poate schimba brusc daca Trump decide sa escaladeze dupa midterms - deci teza de \"soc trecator\" e conditionata de rezultatul politic din SUA.",
+        "names": None,
+    },
+    {
+        "id": "labor-consumer-cooling",
+        "color": "amber",
+        "badge": "Contestat",
+        "status": "VEDERE: racire graduala, nu criza",
+        "title": "Piata muncii se raceste, iar consumatorul american incepe sa taie din buget",
+        "lead": "Semnale convergente arata un somaj in usoara crestere si un consumator american care coboara in gama de produse - motive suficiente, spune Valentin, ca Fed sa nu mai poata creste dobanda.",
+        "bullets": [
+            "Sansa implicita de crestere a dobanzii a fost la un moment dat **68%** in aceasta saptamana, apoi s-a schimbat rapid - inainte de raportarea oficiala a somajului american.",
+            "Valentin se asteapta la somaj in usoara crestere pe o perioada mai lunga si la un numar tot mai mic de locuri de munca noi create la fiecare raportare - inclusiv din cauza disparitiei joburilor temporare legate de Campionatul Mondial de vara.",
+            "Argumentul lui: cu somaj in crestere si locuri de munca noi in scadere, Fed nu isi mai poate permite sa \"sabotare economia\" prin cresterea dobanzilor.",
+            "Pe inflatie, asteapta o scadere pentru ca SUA a preluat controlul total asupra rezervelor de petrol din Venezuela, ceea ce ar trebui sa scada pretul la pompa si, indirect, costurile de transport ale produselor.",
+            "Semnal de la **Costco**: americanii migreaza de la carnea de vita spre pui, conserve de ton si carne de porc - un semnal timpuriu al lantului de retail despre bugetul din ce in ce mai strans al consumatorului.",
+            "Semnal similar: tot mai multi americani renunta la restaurantele obisnuite in favoarea lui **McDonald's**; Valentin spune ca a vazut un semnal identic si la **Walmart**, pe care il considera, alaturi de **Google**, o actiune atractiva pentru un profil de risc moderat-dinamic in acest moment.",
+        ],
+        "quote": None,
+        "watch": "Interpretarea ca inflatia va scadea se bazeaza pe presupunerea ca preturile mai mici la petrol se transmit integral in preturile de consum - Valentin insusi spune ca nu e sigur daca retailerii vor scadea efectiv preturile sau doar vor evita sa le creasca.",
+        "names": None,
+    },
+    {
+        "id": "earnings-week",
+        "color": "green",
+        "badge": "Contestat",
+        "status": "POZITIONARE MIXTA - vanzari si cumparari punctuale",
+        "title": "Saptamana rapoartelor: Broadcom nu e Nvidia, iar Dell a socat pe toata lumea",
+        "lead": "Un val de rapoarte puternice a scos la iveala si o comparatie gresita intre Broadcom si Nvidia, si o repozitionare activa a lui Valentin catre companii cu potential real de dublare.",
+        "bullets": [
+            "**Broadcom (AVGO)** a scazut **5%** desi raportul a fost bun; multi analisti l-au comparat gresit cu Nvidia - Valentin numeste asta o comparatie \"aberanta\", de tipul \"Renault versus Mercedes\", pentru ca Nvidia ramane motorul absolut al semiconductorilor.",
+            "Explicatia lui pentru scaderea Broadcom: guidance-ul a fost sub asteptarile pietei, posibil intentionat, pentru ca Broadcom are obiceiul sa subestimeze usor asteptarile ca sa le depaseasca ulterior - ramane pe lista lui scurta de cumparare, langa AMD, daca scade sub un anumit pret, cu accelerari de venituri asteptate spre 2027-2028.",
+            "Pe **Nvidia (NVDA)**: Valentin a vandut-o de mult, a reintrat si a luat profit, dar acum considera ca potentialul ei de a mai creste cu 100% in urmatorii 2-3 ani e foarte mic - de aceea vrea sa mute capital spre companii cu potential real de dublare.",
+            "**UiPath (PATH)** a avut un raport puternic si a urcat de la 11-13$ spre 18$, nivel pe care Valentin il anticipase; recomandarea lui pentru angajatii UiPath care au actiuni in pachetul salarial este sa reechilibreze pozitia gradual (15%, apoi 15%, apoi 20% la preturi mai mari), nu sa astepte in \"hope investment\" o revenire la 40-70$ fara fundamente care sa sustina asta.",
+            "**Snowflake (SNOW)** a avut o revenire extraordinara in ultimele 6 luni, dupa ce fusese ignorata ca fost \"competitor de umbra\" al lui Palantir - Valentin o considera insa suprevaluata acum si s-ar gandi de doua ori inainte sa cumpere dupa o crestere atat de mare, desi un forward P/E ridicat poate fi justificat de o rata de crestere anuala foarte mare (ca si la **Palantir (PLTR)** sau **CrowdStrike (CRWD)**).",
+            "**AppLovin (APP)** e vazuta similar - corectata mult fata de all-time high, cu potential exploziv de revenire dupa inca 2-3 raportari bune.",
+            "**Dell (DELL)** a avut cel mai bun raport al saptamanii - venituri, EPS si proiectii de profitabilitate \"la superlativ\" - o companie vazuta anterior ca invechita (\"un fel de IBM\") care s-a repozitionat agresiv pe infrastructura de centre de date AI; Valentin considera insa ca nu mai merita cumparata dupa o crestere atat de exploziva.",
+        ],
+        "quote": {"text": "Speranta nu este o strategie in piata de capital si asta stim.", "cite": "— Valentin Dragu"},
+        "watch": "Valentin recunoaste ca supraevaluarea la Snowflake, Palantir si CrowdStrike e \"oarecum justificata\" de cresterea anuala mare - deci teza lui e o urmarire conditionata a scaderii forward P/E, nu o respingere completa a acestor companii.",
+        "names": [
+            {"name": "Broadcom (AVGO)", "blurb": "URMARESTE - pe lista scurta de cumparare daca scade sub un anumit pret, langa AMD"},
+            {"name": "Nvidia (NVDA)", "blurb": "DETINE, conviction redusa pe crestere viitoare - vandut/reintrat/profit luat; nu mai vede potential de +100% in 2-3 ani"},
+            {"name": "AMD (AMD)", "blurb": "MENTIUNE CASUALA - companie langa care vrea sa adauge Broadcom in portofoliu"},
+            {"name": "UiPath (PATH)", "blurb": "MENTIUNE CASUALA - target de 18$ atins, recomandare de rebalansare graduala pentru angajatii cu actiuni in pachetul salarial"},
+            {"name": "Snowflake (SNOW)", "blurb": "VEDERE NEGATIVA pe termen scurt - supraevaluata dupa revenirea de 6 luni, ar cumpara cu prudenta"},
+            {"name": "Palantir (PLTR)", "blurb": "MENTIUNE CASUALA - comparat cu Snowflake, supraevaluat dar justificat de crestere"},
+            {"name": "CrowdStrike (CRWD)", "blurb": "vezi tema de cybersecurity pentru pozitia completa"},
+            {"name": "AppLovin (APP)", "blurb": "URMARESTE - potential exploziv de revenire dupa 2-3 raportari bune"},
+            {"name": "Dell (DELL)", "blurb": "VEDERE NEGATIVA pe cumparare acum - raport excelent, dar cresterea prea exploziva pentru a mai intra"},
+            {"name": "Walmart (WMT)", "blurb": "POZITIVA - atractiva pentru profil de risc moderat-dinamic"},
+            {"name": "Google (GOOGL)", "blurb": "POZITIVA - atractiva pentru profil de risc moderat-dinamic"},
+            {"name": "Costco (COST)", "blurb": "MENTIUNE CASUALA - sursa semnalului despre migrarea consumatorului catre carne mai ieftina"},
+            {"name": "McDonald's (MCD)", "blurb": "MENTIUNE CASUALA - destinatia consumatorilor care renunta la restaurante obisnuite"},
+        ],
+    },
+    {
+        "id": "energy-robotics-musk",
+        "color": "amber",
+        "badge": "Contestat",
+        "status": "VEDERE: energia e blocajul real, nu cipurile",
+        "title": "Elon Musk: urmatoarea criza e energia, nu semiconductorii",
+        "lead": "Comentariile lui Musk de la G20 despre riscul unei crize energetice deschid o dezbatere despre cum se pozitioneaza un investitor intr-un sector cu prea multe directii posibile.",
+        "bullets": [
+            "La G20, Musk a spus ca cea mai mare problema pentru centrele de date si infrastructura de AI e energia, nu cipurile - risca sa apara o criza energetica; el propune o combinatie de energie solara cu gaz si combustibil fosil.",
+            "Context politic: Trump ar fi cerut companiilor din infrastructura sa construiasca cat vor, dar sa se deconecteze de la reteaua publica de energie, ca sa nu puna presiune suplimentara pe ea.",
+            "Musk a mai discutat despre centre de date pe orbita, cu acces constant la energie solara - insa Valentin noteaza ca o astfel de dezvoltare ar fi mult mai complexa (alti semiconductori, alte solutii de racire).",
+            "Cadru de investitie: nu poti investi in toate directiile de energie deodata (solar, nuclear, gaz, petrol) - China e citata ca exemplu de tara care a dezvoltat masiv eolianul (centru si nord) si solarul (sud), reducandu-si dependenta de petrol, inclusiv ferme eoliene mari spre Mongolia.",
+            "Pentru SUA, Valentin recomanda o combinatie de nuclear si solar si atrage atentia catre companii precum **Constellation Energy** si producatorii de mini-reactoare nucleare, ca zona cu potential de crestere in viitor.",
+            "Anecdota din vacanta: un sef de sala grec de la Davos i-a povestit lui Valentin despre discutii de la Forumul de la Davos legate de scaderea natalitatii si nevoia de roboti (de la roboti de bucatarie si aspiratoare pana la roboti umanoizi) ca urmare a esecului politicilor de import de forta de munca (Germania si alte tari europene, cu muncitori din Pakistan si alte zone).",
+            "In acest context, Valentin leaga povestea de **Tesla (TSLA)**: a atras atentia membrilor sai, inainte de vacanta, catre actiune la 320-330$, unde s-a consolidat un minim; vede potential in robotaxi, in stocarea de energie prin megapack-uri, si in robotii Optimus, care vor lucra intai pe linii de productie si ulterior vor deveni un produs comercial cu marja mare.",
+        ],
+        "quote": {"text": "Nu poti sa investesti in toate zonele. Nu poti sa investesti si in panouri solare, nu poti sa investesti si in zona nucleara, nu poti sa investesti in gaz, petrol si asa mai departe.", "cite": "— Valentin Dragu"},
+        "watch": "Anecdota despre Davos e o sursa secundara, informala (un angajat de restaurant, nu un participant citat oficial) - Valentin insusi o prezinta ca un detaliu de culoare, nu ca informatie confirmata.",
+        "names": [
+            {"name": "Tesla (TSLA)", "blurb": "URMARESTE cu conviction - semnalat membrilor la 320-330$ ca zona de minim, tezata pe robotaxi, megapack-uri si Optimus"},
+            {"name": "Constellation Energy", "blurb": "MENTIUNE CASUALA - exemplu de companie americana importanta din energie, in contextul discutiei despre nuclear"},
+        ],
+    },
+    {
+        "id": "cybersecurity-anthropic",
+        "color": "green",
+        "badge": "Conviction ridicata",
+        "status": "DETINE / A VANDUT recent cu profit - asteapta reintrare",
+        "title": "Cybersecurity ramane scump, dar Valentin cumpara agresiv la fiecare panica",
+        "lead": "Parteneriatele Anthropic cu CrowdStrike si OpenAI confirma teza lui Valentin ca securitatea cibernetica e o cheltuiala obligatorie pentru orice companie care adopta AI la scara larga.",
+        "bullets": [
+            "**Anthropic** a semnat un parteneriat cu **CrowdStrike (CRWD)** pe securitatea API-urilor - motivat de riscul ca firme mari sa dea acces AI-ului la toate datele lor interne; actiunea CrowdStrike a urcat la anuntul acesta si a scazut apoi cand Anthropic a facut un parteneriat similar cu OpenAI, compensand miscarea.",
+            "Context suplimentar citat: un hacking originar din China asupra Anthropic, folosit ca argument suplimentar pentru nevoia de investitii masive in cybersecurity pe masura ce AI-ul accelereaza.",
+            "Valentin recunoaste ca nu a fost neaparat vizionar, doar a inteles de timpuriu ca sectorul va fi important - a investit in **CrowdStrike, Palo Alto Networks (PANW), Fortinet (FTNT) si SentinelOne (S)**; sectorul a fost mereu scump, dar justificat de contracte pe 3-5 ani (cu exceptia anului 2022, cand contractele s-au scurtat la 6-12 luni din cauza incertitudinii economice).",
+            "A vandut recent CrowdStrike si Cloudflare (NET) cu profit \"ca sa isi realizeze un vis\", dar e dispus sa vanda alte pozitii din portofoliu - sau sa foloseasca fonduri de rezerva ale familiei - ca sa recumpere ambele companii la un pret bun.",
+            "Povesteste cum a cumparat agresiv CrowdStrike in timpul unui glitch major de sistem al companiei (cand actiunea a scazut de la aproximativ 380$ la 200-250$) - multi investitori de retail au vandut de frica falimentului, dar Valentin a vazut oportunitatea; ulterior actiunea a avut loc un split de 4 la 1, iar acum el asteapta un alt glitch similar ca sa reintre.",
+            "Pentru un investitor agresiv, considera CrowdStrike si Cloudflare echivalentul unui portofoliu ideal Google-Amazon-Microsoft-Meta pentru un profil moderat-dinamic.",
+        ],
+        "quote": {"text": "Daca ai cat de cat toti neuronii la tine... iti dai seama ca trebuie sa profiti la maxim de un astfel de moment al pietei.", "cite": "— Valentin Dragu (despre glitch-ul CrowdStrike)"},
+        "watch": None,
+        "names": [
+            {"name": "CrowdStrike (CRWD)", "blurb": "A VANDUT recent cu profit, asteapta un glitch similar celui din trecut ca sa reintre agresiv"},
+            {"name": "Cloudflare (NET)", "blurb": "A VANDUT recent cu profit, dispus sa vanda alte pozitii sau sa foloseasca fonduri de rezerva pentru a recumpara"},
+            {"name": "Palo Alto Networks (PANW)", "blurb": "DETINE - parte din teza lui timpurie pe cybersecurity"},
+            {"name": "Fortinet (FTNT)", "blurb": "DETINE - parte din teza lui timpurie pe cybersecurity"},
+            {"name": "SentinelOne (S)", "blurb": "DETINE - parte din teza lui timpurie pe cybersecurity"},
+            {"name": "Anthropic", "blurb": "MENTIUNE CASUALA - parteneriate noi cu CrowdStrike si OpenAI, tinta a unui hacking originar din China"},
+            {"name": "OpenAI", "blurb": "MENTIUNE CASUALA - parteneriat cu Anthropic care a compensat miscarea actiunii CrowdStrike"},
+        ],
+    },
+    {
+        "id": "bvb-pension-risk",
+        "color": "red",
+        "badge": "Risc semnalat",
+        "status": "VEDERE NEGATIVA pe BVB dupa cresterea recenta",
+        "title": "Riscul cel mai mare pentru bursa romaneasca: nationalizarea Pilonului 2 de pensii",
+        "lead": "Dupa o crestere agresiva a indicelui BET, Valentin avertizeaza ca fondurile de pensii ar putea fi fortate sa vanda, iar scenariul cel mai negru - nationalizarea Pilonului 2 - nu e deloc science-fiction.",
+        "bullets": [
+            "Indicele **BET** a crescut aproape vertical, iar multi \"experti\" au inceput brusc sa anticipeze o corectie - Valentin ii ironizeaza ca s-au trezit abia dupa miscare, fara sa fi facut vreo analiza tehnica inainte.",
+            "Teza lui centrala: fondurile de pensii Pilon 2 trebuie sa respecte un procent minim de alocare in titluri de stat (mentionat ca fiind in jur de 8,5%, cu tinta spre 7%); daca bursa a crescut prea mult, alocarea lor in actiuni depaseste procentul permis si sunt fortate sa vanda - nu pentru ca ar crede ca piata nu va mai creste, ci din motive strict de conformitate cu prospectul fondului.",
+            "Problema structurala: daca toate fondurile de pensii vor sa vanda in acelasi timp, cine e contrapartea? Retailul roman detine practic zero actiuni pe BVB, iar fondurile straine evita piata din cauza lipsei de lichiditate, chiar daca multiplii P/E sunt foarte scazuti si bursa pare \"ieftina\".",
+            "Companii romanesti pe care fondurile de pensii ar putea sa le cumpere, dar sunt directionate spre titluri de stat in schimb: **Banca Transilvania, OMV Petrom, Transgaz, Romgaz, Nuclear Electrica, Hidroelectrica**.",
+            "Riscul cel mai serios ridicat de Valentin: posibilitatea ca Ministerul de Finante sa nationalizeze Pilonul 2 de pensii private daca Romania nu mai poate atrage lichiditate externa - precedent care exista deja in alte tari; el insusi spune ca nu ar adauga bani suplimentari, voluntari, peste contributia obligatorie, tocmai din cauza acestui risc politic.",
+            "Riscuri suplimentare de tara enumerate: riscul valutar (leul s-a miscat mult in ultimul an), riscul de downgrade, riscul regional (incidente cu drone, ex. Tulcea) si riscul politic din Europa (Marine Le Pen in Franta, o posibila lidera puternica in Germania) care ar putea aduce politici dure de deportare a imigrantilor, cu efect de propagare si spre Romania/Bulgaria.",
+            "Context adaugat: un comentariu al Ursulei von der Leyen despre banii europenilor care \"stau degeaba\" in conturi si nu sunt \"productivi\" e vazut de Valentin si Alex ca o incalcare a dreptului oamenilor de a decide ce fac cu propriii bani.",
+            "Recomandarea lui pentru investitorii romani: dupa o crestere atat de exploziva a BET, sa ia in calcul un moment de exit din BVB si o realocare catre companii americane (sau, punctual, companii europene bune, cum au fost cele din zona de aparare la inceputul anului).",
+        ],
+        "quote": {"text": "Alte tari au nationalizat pilon doi de pensii private pentru ca au avut nevoie de bani. Nu exista de domeniul SF-ului.", "cite": "— Valentin Dragu"},
+        "watch": "Valentin subliniaza explicit ca nu vrea sa \"bage frica in oameni\" spunand ca nationalizarea sigur se va intampla - e un risc pe care el personal il ia in calcul, nu o predictie ferma.",
+        "names": [
+            {"name": "Banca Transilvania", "blurb": "MENTIUNE CASUALA - companie pe care fondurile de pensii ar putea sa o cumpere, dar nu o fac"},
+            {"name": "OMV Petrom", "blurb": "MENTIUNE CASUALA - la fel"},
+            {"name": "Transgaz", "blurb": "MENTIUNE CASUALA - la fel"},
+            {"name": "Romgaz", "blurb": "MENTIUNE CASUALA - la fel"},
+            {"name": "Nuclear Electrica", "blurb": "MENTIUNE CASUALA - la fel"},
+            {"name": "Hidroelectrica", "blurb": "MENTIUNE CASUALA - la fel"},
+        ],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F4C9", "tag": "Piete", "title": "Nu confunda un soc geopolitic de scurta durata (Iran, petrol) cu o schimbare de trend pe dobanzi - urmareste in schimb datele de somaj si inflatie."},
+    {"icon": "\U0001F6D2", "tag": "Consum", "title": "Trateaza semnalele Costco/Walmart despre migrarea consumatorului catre produse mai ieftine ca un indicator timpuriu de racire economica, inainte sa apara in datele oficiale."},
+    {"icon": "\U0001F4B0", "tag": "Piete", "title": "Nu cumpara o actiune doar pentru ca a avut un raport excelent (Dell) - verifica intai cat de mult a crescut deja pretul inainte de raportare."},
+    {"icon": "\U0001F512", "tag": "Cybersecurity", "title": "Foloseste un plan de vanzare graduala (15%/15%/20%) la actiunile cu recuperare puternica (UiPath), in loc de \"hope investing\" fara fundamente."},
+    {"icon": "\U0001F3E6", "tag": "Romania", "title": "Daca ai economii expuse pe BVB dupa cresterea recenta a BET, ia in calcul o realocare partiala catre piete internationale mai lichide."},
+    {"icon": "⚠️", "tag": "Politica", "title": "Verifica cat de mult din economiile tale pentru pensie sunt expuse la un singur risc politic (nationalizarea Pilonului 2) inainte sa adaugi contributii voluntare suplimentare."},
+]
+
+RISKS = [
+    "Acesta este un material de opinie al doi investitori (Valentin Dragu si Alex Marian) care isi discuta propriile pozitii si tranzactii - inclusiv vanzari recente cu profit la CrowdStrike si Cloudflare - un conflict de interese direct fata de recomandarile facute.",
+    "Segmentul sponsorizat de XTB (demonstratia planurilor de investitii personalizate si a alocarilor sectoriale) a fost exclus din acest brief, conform politicii standard de a nu include continut sponsorizat.",
+    "O mentiune despre o companie de energie ('Centr Energy' in transcriere) ramane neclara din cauza calitatii transcrierii automate si nu a fost inclusa in lista de companii, pentru a evita o identificare gresita.",
+    "Anecdota despre discutiile de la Davos vine dintr-o sursa secundara si informala (un angajat de restaurant), prezentata chiar de Valentin ca detaliu de culoare, nu ca informatie confirmata oficial.",
+    "Scenariul de nationalizare a Pilonului 2 de pensii si predictiile despre Fed, somaj sau inflatie sunt tezele proprii ale lui Valentin, nu fapte confirmate - brief-ul le transmite ca atare, fara sa le valideze.",
+]
+
+HOT_TAKES = [
+    {"take": "Nu prea putem sa facem comparatie intre Renault si Mercedes. Este o comparatie aberanta pe care au facut-o analistii.", "cite": "— Valentin Dragu (despre compararea Broadcom cu Nvidia)", "why": "respinge direct un consens de analisti, cu o comparatie memorabila"},
+    {"take": "Speranta nu este o strategie in piata de capital si asta stim.", "cite": "— Valentin Dragu", "why": "critica directa la adresa \"hope investing\"-ului pe UiPath, o pozitie multi investitori de retail o resimt personal"},
+    {"take": "In momentul de fata asteptam un alt glitch de sistem sa reintram pe Crowdstrike.", "cite": "— Valentin Dragu", "why": "declaratie concreta, verificabila, despre o strategie de cumparare contrarian pe panica pietei"},
+    {"take": "As spune ca ar fi o idee buna, dupa o crestere atat de agresiva, sa analizeze un moment de exit pentru a investi in companii cu adevarat importante, in companii americane.", "cite": "— Valentin Dragu (despre investitorii de pe BVB)", "why": "recomandare directa, contrarie optimismului local dupa raliul indicelui BET"},
+    {"take": "Nu, nu mi se pare o chestie care se poate intampla oricand... Alte tari au nationalizat pilon doi de pensii private pentru ca au avut nevoie de bani. Nu exista de domeniul SF-ului.", "cite": "— Valentin Dragu", "why": "predictie cu numar de consecinte reale, pe care asculatorii isi pot aminti si verifica in timp"},
+    {"take": "Cu siguranta ca nu as investi eu bani suplimentari pe langa cei pe care compania mea ii vireaza catre pilonul doi de pensii private.", "cite": "— Valentin Dragu", "why": "actiune personala concreta, luata pe baza propriei sale predictii de risc politic"},
+]
+
+OTHER_NEWS = []
+
+GLOSSARY = [
+    {"term": "Pilonul 2 de pensii private", "def": "Sistemul obligatoriu de pensii private din Romania, in care o parte din contributiile salariale sunt directionate automat catre fonduri de pensii administrate privat."},
+    {"term": "PEG ratio", "def": "Raportul dintre P/E-ul unei actiuni si rata de crestere a profitului - un PEG scazut sugereaza ca pretul nu e exagerat fata de cat de rapid creste compania."},
+    {"term": "Hope investing", "def": "Termenul folosit de Valentin pentru a descrie mentinerea unei pozitii doar din speranta ca pretul va reveni, fara fundamente concrete care sa sustina acest lucru."},
+    {"term": "13F", "def": "Raportul trimestrial obligatoriu prin care fondurile mari americane isi dezvaluie pozitiile din portofoliu - folosit de Alex pentru a intelege pozitionarea institutionala."},
+]
