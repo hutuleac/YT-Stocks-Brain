@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research: The Bond Market “Crash” Is a Trap — AI Agents Are About to Ignite Crypto</title>
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>The Bond Market “Crash” Is a Trap — AI Agents Are About to Ignite Crypto</h1>
+    <div class="byline">
+      Channel: <b>Jordi Visser</b> &middot; Speaker: <b>Jordi Visser</b> &middot; <b>2026-09-06</b>
+      <div class="stats-line">6 threads · why the bond-crash fear is a trap, the AI trade stuck in the mud but bottoming, GPT-6 Astra and the AGI/agent inflection, AI as crypto's killer app, his own portfolio rotation and sizing rules, and the subscriber business he's building around it &middot; <a href="https://www.youtube.com/watch?v=er5mqvbDQU8" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Visser's core insistence this week: <b>stop fearing a bond-market crash</b> — 30-year yields sit at 5.23%, but bond volatility, junk spreads, and inflation swaps show no crisis signal, and he expects Treasury Secretary Bessent to actively fight yields higher.</li><li>He argues the AI trade is <b>"stuck in mud" but bottoming</b>, not bursting — Nvidia near all-time highs while SMH lags is a divergence he reads as bullish, and he dismisses semiconductor-bubble callers as sharing an "endgame bias."</li><li>His repeated framing: <b>only three companies matter</b> for the AI trade — Anthropic, OpenAI, and Nvidia — and interest rates are "a rounding error" on their economics; the real risk to watch is model-price compression, which he says isn't happening.</li><li>He calls GPT-6 Astra <b>"officially the best model in the world"</b> and treats this as the AGI/agent inflection point — pointing listeners to a specific podcast episode and warning that enterprises just handing staff Anthropic seats, without redesigning workflows, are already falling behind.</li><li>Central thesis of the episode: <b>AI is crypto's killer app</b> — citing Marc Andreessen's argument that AI agents (not humans) are crypto's true native users, needing stablecoins and tokenization rather than Bitcoin-as-payments.</li><li>He has personally <b>rotated out of AI stocks like Micron into crypto since May/June</b>, and lays out an explicit sizing rule: if you believe there's a 5% chance the AI-agent-driven crypto thesis plays out, put 5% of your money in it.</li><li>Crypto quarter-to-date: Ethereum <b>+56%</b>, Solana <b>+38%</b>, Bitcoin <b>+36%</b>, versus the S&amp;P +3%, NASDAQ -3%, and SMH -14% — the gap he's been positioning around since mid-year.</li><li>He's moving more of his output (thematic AI/crypto portfolios, prompts, papers) behind a subscriber paywall at VisserLabs and launching a separate AI-plus-crypto YouTube channel by month's end.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="bond-fear-trap">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">POSITIVE VIEW — no crisis signal</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">"Stop with the bond fears" — the crash narrative is a trap</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Visser insists the bond-market panic circulating on X isn't backed by any of the actual stress indicators, and he expects the government to fight higher yields rather than let a crisis develop.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>30-year yields are at <b>5.23%</b>, within range of the highest since 2004 — but he says a real crisis would show up in bond volatility first, and it isn't: bond vol "would be up here, they wouldn't be sitting down here."</li><li><span class="dot" style="background:#3f6b2e;"></span><b>Junk spreads</b> are near their tightest level ever (though he flags CCC-rated spreads widening, which he expects as AI disruption pushes some companies out of business).</li><li><span class="dot" style="background:#3f6b2e;"></span>Inflation swaps (1yr-10yr) all sit at <b>2.48-2.52%</b>, matching core CPI (2.48%) — stable, not spiking — and he cites the daily Trueflation reading falling as further evidence prices are actually cooling.</li><li><span class="dot" style="background:#3f6b2e;"></span>20-plus-year Treasury total return this year is <b>-3%</b>, versus <b>-32%</b> in 2022 when it actually mattered; Japanese 30-year JGB yields are up 117 basis points since May 2024's breakout, yet the Nikkei is <b>up 52%</b> year-over-year over the same stretch.</li><li><span class="dot" style="background:#3f6b2e;"></span>Cites economist <b>Robin Brooks</b>: this selloff has been ongoing since 2022 and "won't spin out of control into a crisis because governments won't let it" — Japan, Germany, the US, the UK, and Switzerland are all fighting it; Bessent is coordinating with Japan specifically to strengthen the yen.</li><li><span class="dot" style="background:#3f6b2e;"></span>S&amp;P PEG ratio (forward P/E versus earnings growth) is at its <b>lowest level since 1998</b> — earnings growth is outrunning valuation, which he says contradicts any "stocks are a bubble" claim unless you're calling for an outright market collapse.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Everyone in X, everyone in there, the same people who were saying AI is a bubble are telling you that the bond market is going to explode higher and it's going to create problems... Guys, don't believe the hype.&#8221;<cite>— Jordi Visser</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">He concedes yields could still rise ("could they go to five and a half on the 10-year? Sure") — his point is that this is a range-bound risk, not a crisis, not that yields can't move at all.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="ai-trade-stuck-in-mud">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">OWNS — Nvidia high conviction</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">The AI trade is "stuck in the mud" — but three companies are all that matter</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Visser reads Nvidia's push toward new highs against a lagging SMH as a bottoming pattern, not confirmation of a bubble bursting, and narrows the whole AI trade down to three names.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span><b>Nvidia (NVDA)</b> is approaching new all-time highs even as the <b>VanEck Semiconductor ETF (SMH)</b> sits below its 50-day moving average and trending down — Visser calls this divergence bullish, not a bubble signal, since Nvidia is "the head of the circular finance" that every other chip stock follows.</li><li><span class="dot" style="background:#3f6b2e;"></span>Heuristic he offers for spotting bad-faith bears: if a technician is bearish on semiconductors <i>and</i> bullish on bond yields <i>and</i> bearish on Bitcoin at the same time, they likely have an "endgame bias" rather than a data-driven view.</li><li><span class="dot" style="background:#3f6b2e;"></span>Core framing: <b>the three companies that matter most are Anthropic, OpenAI, and Nvidia</b> — Nvidia sells the compute that Anthropic and OpenAI's model revenue funds, in a circular financing loop that also keeps Dell, Marvell, and Micron insulated.</li><li><span class="dot" style="background:#3f6b2e;"></span>His math on why rates don't matter here: a <b>10% decline in model price costs about 3 percentage points of margin</b>, while a <b>200-basis-point rise in the 10-year yield (5% to 7%) only costs about 1 margin point</b> — "interest rates are a rounding error on inference P&amp;L."</li><li><span class="dot" style="background:#3f6b2e;"></span>The risk he's actually watching is <b>model-price compression</b>, not rates or hardware costs — and he says that isn't happening yet because Anthropic and OpenAI currently have the best models.</li><li><span class="dot" style="background:#3f6b2e;"></span>Confirming data points: Nvidia sold off after its own earnings beat, then rallied right back ("a very positive sign"); <b>Dell (DELL)</b> surged 9% after raising its AI server revenue guide from doubling to <b>tripling</b>; Germany is now reportedly running short of AI compute.</li><li><span class="dot" style="background:#3f6b2e;"></span>His own 100-name thematic AI portfolio: the average true range percent (ATR%) across the basket is falling, which he reads as hedge funds no longer getting stopped out and retail no longer forcing moves — a sign the bottom is already in, even though he expects the move higher to stay slow until after the midterms.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;If a technician is bearish on semiconductors, go see if they're bullish on yields. If they're also bearish on Bitcoin, there might be a thing here where they're developing an endgame bias.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)</b><span>OWNS, high conviction — now sized as large in his portfolio as Marvell; center of the "three companies that matter" thesis</span></div><div class="namechip"><b>Micron (MU)</b><span>REDUCED — sold down since May/June rotating into crypto; still expects it could double next year but says the bigger trade already happened</span></div><div class="namechip"><b>Marvell (MRVL)</b><span>CASUAL MENTION — named alongside Dell and Micron as a beneficiary of the circular AI financing loop</span></div><div class="namechip"><b>Dell (DELL)</b><span>CASUAL MENTION — stock +9% after raising AI server revenue guidance from doubling to tripling</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">He explicitly rotated capital out of this trade (selling down Micron since May/June) into crypto — he still thinks Micron could double in the next year, but says "that trade has already happened" for the bigger multiple.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="agi-agents-inflection">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">POSITIVE VIEW — urgent for workers and enterprises</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">GPT-6 Astra and the AGI/agent swarm — "you have no time to wait anymore"</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Visser treats Astra and reports of agent swarms as proof the agentic transition has already arrived, and warns that both individuals and enterprises adopting it passively are already behind.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Calls <b>GPT-6 Astra</b> "officially the best model in the world" on benchmarks, and treats it as evidence of reaching AGI by his own definition — smart enough to do essentially any knowledge-worker job; he estimates the field was around 40% of the way there a year ago and is "now at 100."</li><li><span class="dot" style="background:#93711b;"></span>Names <b>"The Artificial Intelligence Show"</b> podcast's episode on OpenAI/Hugging Face ("Open Face") as the single most important listen of the week — it describes AI agents reportedly sacrificing their own individual goals for a collective outcome, and working in <b>swarms of up to 1,200 agents</b> toward one goal.</li><li><span class="dot" style="background:#93711b;"></span>Cites <b>Bill Gates</b> publicly shifting his own view because agents are moving faster than people can adapt to them — using this as evidence the workforce can't out-adopt the pace of change.</li><li><span class="dot" style="background:#93711b;"></span>Direct warning to businesses: <i>"if you're at a big company... and you're telling me that you're using Anthropic, you're falling behind"</i> — his point is that distributing an AI tool without redesigning the underlying workflow around agents leaves a company slower than AI-native competitors.</li><li><span class="dot" style="background:#93711b;"></span>Advice to students/young workers: stop optimizing for grades ("don't try to get an A on every paper") and instead learn to work with coding agents like Codex now, to stay in the top <b>5%</b> of the workforce.</li><li><span class="dot" style="background:#93711b;"></span>Citing the same podcast: OpenAI and Anthropic reportedly expect the next year of AI progress to be worth what the last four years delivered (i.e., roughly the ChatGPT-to-agents era).</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;If your major plan is to give everyone Anthropic, you are falling behind. That's what this says. That is not a joke. That is a reality.&#8221;<cite>— Jordi Visser</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The 1,200-agent swarm and "sacrificed their own goals" claims come from a podcast's reading of reports about Astra, not something Visser verified firsthand — he presents it as reported, exciting, and "part hype, part reality."</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="ai-crypto-convergence">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">OWNS — high conviction</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">"AI is the crypto killer app" — Bitcoin as the purest AI hedge</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Visser's central thesis: AI agents, not humans, are crypto's real native users, and that shift is what finally gives crypto its mass-market use case.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Cites <b>Marc Andreessen's</b> Latent Space podcast appearance (~April 2026): his argument is that AI is "the crypto killer app" because agents need digital payments and stablecoins — not Bitcoin specifically — and that his 2014 essay "Why Bitcoin Matters" was written in anticipation of exactly this moment.</li><li><span class="dot" style="background:#3f6b2e;"></span>Visser's own framing: <i>"the agent economy is Bitcoin, plain and simple for me"</i> — treating Bitcoin as a proxy for the whole AI-agent economy the way the S&amp;P 500 proxies the US economy; he calls it "the purest AI hedge" because AI disruption shrinks traditional businesses down to a handful of people, pushing more value toward decentralized, tokenized ownership.</li><li><span class="dot" style="background:#3f6b2e;"></span>Also cites a <b>Gavin Baker</b> podcast (roughly the 17-to-20-minute mark) describing the shift from chatbots to agents as a <b>"new consumption shock."</b></li><li><span class="dot" style="background:#3f6b2e;"></span>Real-world tokenization evidence: the RWA (real-world-asset) market has grown <b>18x</b>, built mainly on money-market-fund collateral from <b>BlackRock (BLK)</b> and <b>Franklin Templeton (BEN)</b>; South Korea says it will be ready for tokenized equities, including sports-team ownership, starting <b>February 2027</b>.</li><li><span class="dot" style="background:#3f6b2e;"></span>Platform integrations he flags as evidence this is accelerating now, not later: <b>xAI's Grok</b> can now buy or lend crypto via a Moonpay integration and purchase items online via Stripe Link; <b>Robinhood (HOOD)</b> was upgraded by Wall Street on its new layer-2 chain, which processed <b>$1.5 billion</b> in stock-token trades in six weeks.</li><li><span class="dot" style="background:#3f6b2e;"></span>The Clarity Act's importance, in his view, isn't the regulation itself but that it gives pension funds and insurers the "seal of approval" to enter crypto markets without fearing a future administration rolling it back.</li><li><span class="dot" style="background:#3f6b2e;"></span>"Double debasement" thesis: he expects crypto to capture a rising share of fiat-denominated wealth over the next five years, driven by AI-led business disruption plus governments actively suppressing rates to manage a K-shaped economy.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Not humans, but AI agents will be the biggest users of crypto. So think about that. If you believe that crypto volumes are going to explode... that means we are about to see billions of consumers.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Bitcoin (BTC)</b><span>OWNS, high conviction — "the purest AI hedge"; up 36% quarter-to-date, consolidating above a key technical level</span></div><div class="namechip"><b>Ethereum (ETH)</b><span>OWNS — one of his weekly "three horsemen"; up 56% quarter-to-date, 200-day moving average turned up</span></div><div class="namechip"><b>Solana (SOL)</b><span>OWNS — up 38% quarter-to-date, 200-day moving average turned up, consolidating at current levels</span></div><div class="namechip"><b>Robinhood (HOOD)</b><span>OWNS, part of his 46-name crypto portfolio — upgraded by Wall Street on its new layer-2 stock-tokenization chain</span></div><div class="namechip"><b>BlackRock (BLK)</b><span>CASUAL MENTION — building tokenized money-market-fund collateral driving the RWA market's growth</span></div><div class="namechip"><b>Franklin Templeton (BEN)</b><span>CASUAL MENTION — same tokenized money-market-fund activity as BlackRock</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">This whole thread rests on Andreessen's framing being right that agents — not human adoption — drive crypto's next leg; Visser says explicitly "you don't have to agree with me on this," it's his own thesis, not a consensus call.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="portfolio-and-sizing">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">REPOSITIONED — crypto now larger than AI stocks, beta-adjusted</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">His own rotation, and an explicit rule for sizing a speculative conviction</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Visser has been quietly shifting weight from AI hardware stocks into crypto since May/June, and he lays out a simple, explicit framework for how much to bet on a thesis you believe but can't be certain of.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>He's been rotating out of AI names like Micron into crypto since <b>May/June</b>; his crypto exposure is now larger than his AI-stock exposure "by a good amount, especially when you beta-adjust it."</li><li><span class="dot" style="background:#3f6b2e;"></span><b>Sizing rule, stated directly</b>: <i>"if you think there's a 5% chance it happens, you should have 5% of your money in it... if you think there's a 10% chance, I think you should have a 10% chance."</i> This is his personal opinion, explicitly not advice.</li><li><span class="dot" style="background:#3f6b2e;"></span>Risk-management rule for this specific crypto position: <i>"if we take out the lows, I'm out"</i> — he won't re-engage until price is back above the 200-day moving average.</li><li><span class="dot" style="background:#3f6b2e;"></span>Frames his investing philosophy around handicapping, not stock-picking: his father taught him horse handicapping ("don't look for the winner, look for value; if there's no edge in the race, sit it out") — he treats Bitcoin as roughly "100 to 1" odds, meaning a small stake still delivers a large payoff if he's right.</li><li><span class="dot" style="background:#3f6b2e;"></span>Stacks supporting quotes from other investors to back the framework: Annie Duke ("the edge is in disciplined thinking"), Charlie Munger (markets as a pari-mutuel system where "the crowd sets the odds"), and Paul Tudor Jones ("great trade starts before consensus").</li><li><span class="dot" style="background:#3f6b2e;"></span>His own crypto "three horsemen" — Bitcoin, Ethereum, Solana — sit inside a broader 46-name crypto portfolio (a mix of 6 stocks and 40 tokens) that he says may still change size before its dedicated video launches later this month.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;If there is no edge in the race, sit it out... If I find something that I think is 100 to one, I don't need to put that much money in something that's 100 to 1 to have a great payoff.&#8221;<cite>— Jordi Visser</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">This is his personal position sizing and risk framework, repeatedly flagged as opinion, not advice — he's explicit that readers set their own probability estimate rather than adopting his.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="visserlabs-business">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Confirmed event</span>
+    <span class="theme-status">ANNOUNCED — rolling out this month</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">The free show is shrinking: more of his output moves behind a paywall</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Visser is moving his thematic portfolios, prompts, and most of his written research to a paid subscription tier, and launching a second, crypto-focused channel.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>His thematic AI portfolio and the crypto portfolio (46 names: 6 stocks, 40 tokens) will move to subscribers-only on <b>VisserLabs</b> (visserylabs.com); this main YouTube video stays free and public, but the deeper portfolio detail and prompts will not.</li><li><span class="dot" style="background:#65695f;"></span>A separate, subscriber-only <b>"AI plus crypto" YouTube channel</b> is launching toward the end of this month.</li><li><span class="dot" style="background:#65695f;"></span>Prompts he has shared or referenced building for subscribers: a Grok-based prompt (prior week), a "Jensen Huang knowledge brain" prompt, and a new "personal workflow agent" prompt designed to read, summarize, compare, recommend, and ask permission before acting.</li><li><span class="dot" style="background:#65695f;"></span>He built custom Grok agents nicknamed <b>Jarvis</b>, <b>Pattern Scout</b>, and <b>Universe Clerk</b> to run a daily, post-close chart-pattern screen across his "AI Macro Nexus 100" list using Yahoo Finance data, flagging bullish/bearish technical setups automatically.</li><li><span class="dot" style="background:#65695f;"></span>Most of his previously free Substack essays — including the ones referenced this episode — will move to one free release per month, with the rest behind the subscriber paywall going forward.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📉</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Check bond volatility, junk spreads, and inflation swaps before reacting to a bond-crash headline — none currently confirm the crisis narrative circulating on X.</span></div></div><div class="irow"><div class="ic">🎯</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Track model-price compression, not interest rates, as the real risk to the Nvidia/OpenAI/Anthropic complex — rates are a minor factor in inference economics by his math.</span></div></div><div class="irow"><div class="ic">💼</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Redesign workflows around agents instead of just handing staff an Anthropic or ChatGPT seat — distribution without workflow redesign is what he means by "falling behind."</span></div></div><div class="irow"><div class="ic">₿</div><div class="tline"><span class="cat">Crypto:</span> <span class="txt">Size a speculative crypto/AI-agent thesis by your own probability estimate — if you believe there's a <b>5%</b> chance it plays out, allocate roughly 5% of your portfolio, not more, not zero.</span></div></div><div class="irow"><div class="ic">📊</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Watch ETH/SOL/BTC 200-day moving averages as the current highest-conviction trade in his own book, ahead of AI hardware names he's been trimming since May/June.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where this could be wrong</div>
+      <h2>Risks &amp; Caveats on This Source</h2>
+      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">This is one analyst's personal weekly market read, built on his own charts and his own thematic/crypto portfolios that he also sells subscription access to — a direct conflict of interest inherent to the show's business model.</div><div class="ritem">Auto-generated captions garbled several names and terms that couldn't be reliably resolved (Treasury Secretary "Bessent" appears as "Besson," a bond-volatility index appears as "Bonval," a payments provider appears as "Moonay," and a perpetual-futures reference appears as "PERS") — these are described by function rather than guessed at by name.</div><div class="ritem">Figures on OpenAI/Anthropic margin math, the 1,200-agent swarm, and Bill Gates's shift are all secondhand — drawn from a podcast episode or reports he read this week, not primary sources he cites directly.</div><div class="ritem">Nearly every forward-looking call in this episode (bond yields, AGI timing, crypto share of fiat wealth, his own position sizing) is explicitly labeled by him as his own opinion and not advice — the brief carries that framing forward rather than treating any of it as fact.</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;Everyone in X... the same people who were saying AI is a bubble are telling you that the bond market is going to explode higher. Guys, don't believe the hype.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The three companies that matter the most are Anthropic, OpenAI, and Nvidia... interest rates are a rounding error on inference P&amp;L.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;If your major plan is to give everyone Anthropic, you are falling behind. That's what this says. That is not a joke. That is a reality.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The agent economy is Bitcoin, plain and simple for me. You guys don't have to agree, but that's just a reality for me.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;If you think there's a 5% chance it happens, you should have 5% of your money in it. That's my opinion. That is not advice.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Do I think it'll double between now and next year? Probably. But a double's not 10 times. That trade has already happened.&#8221; <cite>— Jordi Visser (on Micron)</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📰</div><div><div class="title">Sources referenced this episode: <b>The Artificial Intelligence Show</b> (OpenAI/Hugging Face "Open Face" episode), <b>Marc Andreessen</b> on the Latent Space podcast, a <b>Gavin Baker</b> podcast appearance, and a <b>Bill Gates</b> public statement on shifting his view of agents. <span class="tag">Sources</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Double debasement</b> &mdash; Visser's term for crypto capturing a rising share of fiat-denominated wealth as AI disrupts businesses and governments simultaneously suppress interest rates.</div><div><b>Silent IPO</b> &mdash; His term for long-time ideologue Bitcoin holders quietly reducing their positions as newer, less ideological buyers take over the marginal buying.</div><div><b>Circular financing</b> &mdash; The loop where Nvidia sells compute hardware to providers whose revenue comes largely from OpenAI and Anthropic, who in turn depend on that same compute to run their models.</div><div><b>RWA (real-world assets)</b> &mdash; Traditional financial assets — money-market funds, equities, sports-team ownership — represented as blockchain tokens; Visser cites this market growing 18x.</div><div><b>Clarity Act</b> &mdash; US legislation that would give crypto formal regulatory status, which Visser says matters mainly because it lets pension funds and insurers enter the market without fear of a future rollback.</div><div><b>ATR% (average true range percent)</b> &mdash; The average 14-day trading-range-as-percentage across a basket of stocks; Visser uses its decline across his 100-name AI portfolio as a signal that forced selling has stopped.</div><div><b>PEG ratio</b> &mdash; A stock's forward price-to-earnings ratio divided by its expected earnings growth rate; a low PEG suggests valuation isn't outrunning growth.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
