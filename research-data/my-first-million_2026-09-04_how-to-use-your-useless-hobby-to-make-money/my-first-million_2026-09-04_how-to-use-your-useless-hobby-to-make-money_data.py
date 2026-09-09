@@ -1,0 +1,183 @@
+"""
+Per-video data for youtube-research-brief.
+"""
+
+META = {
+    "title": "How to use your \"useless\" hobby to make money",
+    "channel": "My First Million",
+    "speakers": "Sam Parr & Shaan Puri",
+    "date": "2026-09-04",
+    "video_url": "https://youtu.be/xpJQhHek75A",
+    "thread_line": "7 threads · turning niche enthusiasm into a business, a $300M horse-industry roll-up, Dolly Parton's business empire and legacy, LeBron's bond financing, and the Lakers' Guggenheim backstory",
+    "category": "market",
+}
+
+SNAPSHOT = [
+    "Core theme: genuine enthusiasm for a niche hobby is a real competitive moat — several case studies of people who turned an odd passion into a business",
+    "A NYC \"perfume tour\" founder (Aisha Grant) and Nick Gray's **$2.9 million**-revenue Museum Hack are both used to argue you don't need to be the best, just the *only one*",
+    "Advice for scaling past a personal-service ceiling: treat the in-person experience as content generation, not the actual business — \"the real business is building a brand online\"",
+    "A niche horse-industry media roll-up (Equine Network) went from a 600,000-visitor-a-month website to **$85 million** in annual revenue and a **$300 million** exit six months before this recording",
+    "Tribute segment on Dolly Parton's business empire: **$500 million+** net worth, Dollywood, and a philanthropic streak that includes over 300 million free books mailed to children since 1995",
+    "LeBron James securitized his own **Nike** endorsement contract in 2018, raising **$300 million** upfront through a Bowie Bond-style bond issue instead of selling equity in it",
+    "A tangent explains why the Lakers changed hands: the prior owner's insurance arm (tied to Guggenheim) held far more related-party assets than regulators allow, forcing a sell-down",
+    "Closing riff on a cultural shift among athletes — bragging about frugality and ownership stakes instead of spending, with LeBron cited as the model",
+]
+
+THEMES = [
+    {
+        "id": "enthusiasm-moat",
+        "color": "green",
+        "badge": "Founder playbook",
+        "status": "CASE STUDIES",
+        "title": "Enthusiasm as a Competitive Moat: Turning Niche Passion Into a Business",
+        "lead": "The hosts argue the winning move isn't being the best — it's being the only one, and genuine enthusiasm is what gets you there.",
+        "bullets": [
+            "Aisha Grant (sentsocialclub.com) built a NYC \"perfume tour\" business — private tours around **$500**, plus group tours — off roughly 15,000 Instagram followers; the hosts guess she's doing something like $250K revenue and $200K profit a year",
+            "Nick Gray's Museum Hack charged **$200** for staged NYC museum tours against free official ones and hit **$2.9 million** in revenue in the year he sold the business — proof a niche experience can become a sellable asset, not just recurring income",
+            "Advice for scaling past a personal-tour ceiling: stop thinking of the tours as the business — \"the tour is just actors, the real business is building a brand online\" — citing Jack's Dining Room's $10K-100K \"Reserve\" dinners (~$1-2M/yr revenue, high cost, but huge content value) and Alex Hormozi's ~$5K seminars (~$10M/yr) as content-generation plays worth more in brand value than event revenue",
+            "Framework borrowed from writer David Perell (host of *How I Write*): a \"personal monopoly\" — become so specifically known for one niche (e.g. \"New York perfume expert\") that no one else can occupy the category",
+            "Growth lever named repeatedly: find \"one format\" — a repeatable short-form content mechanic — rather than chasing virality: \"I'm one format away from becoming 10 times bigger than I am today\"",
+        ],
+        "quote": {"text": "You don't want to be the best, you want to be the only one.", "cite": "— My First Million"},
+        "watch": "Aisha Grant's revenue and profit figures are the hosts' own guesses, not numbers she gave them.",
+        "names": None,
+    },
+    {
+        "id": "experience-tours",
+        "color": "green",
+        "badge": "Case study",
+        "status": "",
+        "title": "Real Experience Tours: A Repeatable Local Playbook",
+        "lead": "The same pattern shows up three times in one episode: take a mundane local experience, add story and access, charge a premium.",
+        "bullets": [
+            "A retired NYPD officer built a roughly **$1 million**-a-year Airbnb Experiences business running 3-hour \"mafia tours\" through NYC restaurants tied to real mob history, then sold the profile to an operator who now runs it with five to seven other ex-cops",
+            "A New York food-tour format (stopping at several \"best of\" spots per city) is cited as the hosts' own favorite way to explore a new city",
+            "Sendo Sushi (founder Guy Allen), an 8-seat omakase bar built on a decade of the founder's Instagram content about sushi, reportedly pulls in **millions of dollars a year** from DoorDash delivery and pickup as a \"ghost kitchen\" behind a genuinely well-known brand — unusual, since most ghost-kitchen brands have no name recognition at all",
+            "Rough estimate offered by the hosts (not sourced from an operator): local history-plus-food tours like these could plausibly generate \"hundreds of thousands of dollars a year\"",
+        ],
+        "quote": {"text": "If niche doesn't work, niche even deeper.", "cite": "— My First Million"},
+        "watch": None,
+        "names": [{"name": "DoorDash (DASH)", "blurb": "Named as the delivery platform behind Sendo Sushi's ghost-kitchen revenue — a passing mention, not a stance on the stock."}],
+    },
+    {
+        "id": "equine-network",
+        "color": "green",
+        "badge": "Confirmed exit ($300M)",
+        "status": "SOLD ~6 MONTHS BEFORE RECORDING",
+        "title": "The Equine Network Roll-Up: a 600K-Visitor Niche Site to a $300M Exit",
+        "lead": "A media company nobody would bet on — horse owners — became a $300 million roll-up by stacking niche services onto a tiny audience.",
+        "bullets": [
+            "Founders started in the early 2000s buying niche magazines (sailing, then horse titles) under a company the host recalls as Active Interest Media; their horse-focused website topped out around **600,000 unique visitors a month**",
+            "They noticed a roadside-assistance advertiser was getting all its customers from one placement on their site, bought that business \"for pennies,\" and used it as a template — \"if niche doesn't work, niche even deeper\"",
+            "They rolled up a fly-repellent subscription business (~45,000 customers paying roughly **$300 a year**), the country's largest rodeo competition, and RideTV, a roughly **$200-a-year** roping-competition streaming service",
+            "Reported revenue at **$85 million** a year with under 30% margins and only 200 employees; sold for **$300 million** roughly six months before this recording",
+            "A former WWE president/CEO now sits on the board, reportedly betting that roping/equestrian sport can become \"the next big entertainment business\" — a claim relayed by the host, not independently confirmed",
+        ],
+        "quote": None,
+        "watch": "Revenue, margin and buyer details here are the host's own recollection from following the deal, not confirmed with the company in this episode.",
+        "names": None,
+    },
+    {
+        "id": "dolly-business",
+        "color": "green",
+        "badge": "Retrospective (millionaire of the week)",
+        "status": "",
+        "title": "Dolly Parton's Business Empire, and the Rights Decision That Made Her Rich",
+        "lead": "Framed as this week's \"millionaire of the week\" tribute, Dolly Parton's business instincts get more airtime here than her music.",
+        "bullets": [
+            "Net worth cited at over **$500 million**, built substantially through Dollywood (a Tennessee theme park) alongside 100 million+ records sold and 10 Grammys",
+            "Wrote both \"I Will Always Love You\" and \"Jolene\" in a single night, according to the story told on the show, then turned down Elvis Presley's offer to record the former because he demanded majority ownership of the song's rights",
+            "Kept the rights instead — Whitney Houston's later cover (on *The Bodyguard* soundtrack) then paid Parton tens of millions of dollars in royalties through the 1990s; she reinvested $10 million of that into housing for the Black community",
+            "For her film work, she reportedly learned every line of every character in the script, not just her own — surprising a cast and crew who couldn't figure out how she already knew where scene cuts were going on day one",
+        ],
+        "quote": {"text": "She turns Elvis down to do better. It's like a Sylvester Stallone move — she bets on herself.", "cite": "— My First Million"},
+        "watch": "Net worth and royalty-income figures are the hosts' own recollection while discussing her death, not sourced from a filing or press release in this episode.",
+        "names": None,
+    },
+    {
+        "id": "dolly-legacy",
+        "color": "green",
+        "badge": "Retrospective (millionaire of the week)",
+        "status": "",
+        "title": "Dolly Parton's Philanthropy and Personal Mystique",
+        "lead": "Beyond the business, her charitable work and carefully guarded privacy get singled out as its own kind of brand discipline.",
+        "bullets": [
+            "Her Imagination Library has mailed over 300 million free books to children since 1995, a tribute to her father, who couldn't read or write",
+            "A 1980s graduation-incentive program in her home district — $500 to each pair of students if both graduated — cut the local dropout rate from about 35% to about 6%; the hosts note this mirrors current research suggesting direct cash transfers can outperform administratively heavy charity programs",
+            "Cultivated real scarcity around herself as part of the brand: reportedly nobody had her personal phone number, and contacting her required faxing her manager",
+            "Married to the same man for over 60 years — a husband who avoided nearly all public appearances and photographs, and who, by one account on the show, never saw her perform",
+            "Her death drew tributes across the political spectrum, including from Donald Trump and democratic socialists alike — a breadth of consensus the hosts say they haven't seen for another public figure's death",
+        ],
+        "quote": {"text": "I don't think God wanted me to have children — so everyone else's children can be mine.", "cite": "— Dolly Parton (as recounted on the show)"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "lebron-bond",
+        "color": "amber",
+        "badge": "Financial engineering",
+        "status": "2018 BOND ISSUE",
+        "title": "LeBron's \"Bowie Bond\" Move — and How a Guggenheim Insurance Rule Led to the Lakers Sale",
+        "lead": "A genuinely clever piece of financial engineering — LeBron securitized his own Nike contract — sits next to a separate insurance-regulation story explaining why the Lakers changed hands.",
+        "bullets": [
+            "In 2018, while still with Cleveland, LeBron's team issued a roughly **$300 million** investment-grade bond called the \"King James Fund,\" collateralized by his lifetime endorsement deal with **Nike**",
+            "Structured like a 1990s \"Bowie Bond\" (David Bowie raised about $50 million in the 1990s by securitizing future royalties from his music catalog) — a 30-31 year bond with a coupon under 5%",
+            "The structure paid LeBron the full $300M upfront as non-taxable debt rather than selling equity in the contract — unlike factoring, where he'd take a discounted lump sum (e.g. $900K on a $1M contract) and give up the rest",
+            "Separately: the Lakers' recent sale traces back to the team's prior owner, who also controlled an insurance arm tied to Guggenheim; insurance regulators cap how much of an insurer's investable \"float\" can sit in related-party assets, and his related-party holdings were reportedly found to be roughly **$20 billion** — far above the roughly 1%/$1 billion he'd claimed — forcing a sell-down that included the Lakers",
+            "The Lakers' buyer, Josh Kushner, is noted as having built wealth partly through his own insurance-company float — a loose historical echo the hosts flag, not a stated connection to the seller's situation",
+        ],
+        "quote": {"text": "He gets $300 million in cash now, without waiting for that lifetime contract — and he doesn't pay taxes on it.", "cite": "— My First Million"},
+        "watch": "The insurance-float and related-party figures are the hosts' summary of reporting they recall reading, not sourced firsthand in this episode.",
+        "names": [{"name": "Nike (NKE)", "blurb": "LeBron's lifetime endorsement deal with Nike is the collateral behind his 2018 King James Fund bond issue."}],
+    },
+    {
+        "id": "athlete-frugality",
+        "color": "gray",
+        "badge": "Culture trend (speculative)",
+        "status": "",
+        "title": "Athletes Are Flexing Frugality Now — LeBron as the \"Owner, Not Employee\" Blueprint",
+        "lead": "The hosts spot a cultural shift among pro athletes: bragging about not touching your playing-contract money is replacing bragging about spending it.",
+        "bullets": [
+            "They describe a rising social-media trend of athletes downplaying huge earnings (\"I made $100 million, but...\" followed by an exaggeratedly frugal detail) and predict it could become a full-blown meme format",
+            "Cited example: LeBron reportedly avoids roaming charges on Canada road trips and still uses ad-supported Spotify, while claiming to live only off endorsement income and invest his NBA salary",
+            "Framed as the inverse of an earlier \"flex\" era built around cars, chains and grills — credited partly to athletes now running podcasts, where clips about being financially disciplined go viral",
+            "LeBron is credited with an \"owner, not employee\" pattern: turning down McDonald's and Coca-Cola endorsement cash in favor of an ownership stake in the Blaze Pizza chain, following a model the hosts say Magic Johnson and Shaquille O'Neal used earlier through franchise ownership",
+        ],
+        "quote": {"text": "Previously, 'flex' was 'look at my hydraulics in my wheelbarrow.' Now it's 'I didn't even touch my NBA contract.'", "cite": "— My First Million"},
+        "watch": None,
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F3AF", "tag": "Business strategy", "title": "Pick a narrow, unmistakably \"yours\" niche before trying to be the best in a broad category — Museum Hack and Aisha Grant both scaled from a single owned position, not head-to-head competition."},
+    {"icon": "\U0001F3A5", "tag": "Content", "title": "If you're monetizing an in-person experience, treat the experience as content-generation, not the main revenue line — build the brand online first."},
+    {"icon": "\U0001F4B0", "tag": "Finance", "title": "Consider securitizing predictable future income (a royalty stream, an endorsement contract) as debt instead of selling equity in it, the way LeBron structured his Nike-backed bond."},
+    {"icon": "\U0001F4D6", "tag": "Legacy", "title": "Pick one concrete, trackable metric for your own impact — books mailed, kids graduated — instead of a vague mission statement, the way Dolly Parton measured hers."},
+    {"icon": "\U0001F50D", "tag": "Careers", "title": "If you're building a personal brand, look for the smallest sub-niche nobody else has claimed yet — \"if niche doesn't work, niche even deeper.\""},
+]
+
+RISKS = [
+    "This episode ran a HubSpot sponsor segment (a free \"business ideas database\" plug), excluded entirely from this brief per standing policy.",
+    "Financial and revenue figures throughout (Aisha Grant's perfume-tour revenue, Museum Hack's $2.9M, Equine Network's $85M revenue and $300M sale, LeBron's bond terms, Dolly Parton's net worth and royalty income) are the hosts' own estimates, guesses, or secondhand recollection — not sourced from filings or the businesses themselves within this episode.",
+    "The two hosts trade lines throughout without clear speaker labels in the auto-captions; quotes in this brief are attributed to \"My First Million\" generically rather than guessed to an individual host where the transcript didn't make the speaker clear.",
+    "A couple of names in the transcript (e.g. the Equine Network founders' full names, spelled only as \"Andy and Tom\") could not be confidently resolved from auto-captions and were left approximate rather than guessed further.",
+]
+
+HOT_TAKES = [
+    {"take": "You don't want to be the best, you want to be the only one.", "cite": "— My First Million", "why": "contrarian framing on competition, stated as a general business rule"},
+    {"take": "The tour is just actors — the real business is building a brand online.", "cite": "— My First Million", "why": "a specific, falsifiable claim about where the real value sits in an experience business"},
+    {"take": "I don't think God wanted me to have children — so everyone else's children can be mine.", "cite": "— Dolly Parton (as recounted)", "why": "a deeply personal, on-the-record framing of a private loss"},
+    {"take": "She turns Elvis down to do better. It's like a Sylvester Stallone move — she bets on herself.", "cite": "— My First Million", "why": "praises a high-stakes financial gamble that could easily have gone the other way"},
+    {"take": "If niche doesn't work, niche even deeper.", "cite": "— My First Million", "why": "a specific, actionable business philosophy attributed to the Equine Network founders"},
+    {"take": "I think being financially responsible will become fashionable.", "cite": "— My First Million", "why": "a dated cultural prediction about athlete behavior that's easy to check against later"},
+]
+
+OTHER_NEWS = []
+
+GLOSSARY = [
+    {"term": "Personal monopoly", "def": "David Perell's term for becoming so specifically known for one niche that no one else can occupy the category."},
+    {"term": "Bowie Bond", "def": "A security type pioneered by David Bowie in the 1990s, raising upfront cash by selling bonds backed by future royalties from an existing asset (a music catalog, an endorsement deal) rather than selling equity in it."},
+    {"term": "Ghost kitchen", "def": "A delivery-only kitchen operating with little or no physical storefront presence, typically fulfilling orders through platforms like DoorDash."},
+    {"term": "Insurance float", "def": "The pool of premium income an insurer holds and can invest before it's paid out in claims; regulators limit how much of it can go into assets related to the insurer's own owners."},
+]
