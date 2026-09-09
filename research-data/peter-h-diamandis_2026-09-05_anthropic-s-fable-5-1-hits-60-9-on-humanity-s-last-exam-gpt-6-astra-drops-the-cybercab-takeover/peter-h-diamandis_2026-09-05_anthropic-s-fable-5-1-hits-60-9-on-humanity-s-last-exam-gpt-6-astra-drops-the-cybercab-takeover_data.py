@@ -1,0 +1,224 @@
+"""
+Per-video data for youtube-research-brief.
+"""
+
+META = {
+    "title": "Anthropic's Fable 5.1 Hits 60.9% on Humanity's Last Exam, GPT-6 Astra Drops, & the Cybercab Takeover",
+    "channel": "Peter H. Diamandis",
+    "speakers": "Peter Diamandis (moderator), Dave Blundin, Alex Wissner-Gross, Salim Ismail, Immad Mostaque",
+    "date": "2026-09-05",
+    "video_url": "https://youtu.be/1DB_QDiviH4",
+    "thread_line": "8 threads · GPT-6 Astra vs Fable 5.1, an AI governance split, Tesla's Cybercab launch, Mars/Roman-telescope space news, AI in healthcare, Fei-Fei Li's Atlas world model, and Immad Mostaque's citizen-owned-AI proposal",
+    "category": "market",
+}
+
+SNAPSHOT = [
+    "OpenAI's GPT-6 Astra and Anthropic's Fable 5.1/Mythos 5.1 launched within 48 hours of each other — Astra tops some benchmarks (ARC-AGI-3, Frontier Math) but Fable 5.1 leads the broader Artificial Analysis Intelligence Index and scores **60.9%** on Humanity's Last Exam",
+    "The Wall Street Journal reported OpenAI's own internal safety review rated Astra a **critical** cybersecurity risk — the first model OpenAI has ever classified at that tier — prompting a restricted rollout and a White House notification",
+    "Same week, two opposite AI-governance stories broke: Bernie Sanders introduced a bill that would ban developing superintelligent AI (20-year prison penalty), while the G20 pushed a hands-off, pro-innovation framework called the \"Carolina Principles\"",
+    "Tesla launched its two-seat, steering-wheel-free Cybercab in Austin at **$30,000** per vehicle, reportedly running about 50% cheaper than comparable Uber rides, as Uber, Waymo, Zoox and Wayve all announced competing robotaxi moves the same week",
+    "NASA picked Blue Origin over SpaceX to build the Mars telecom relay network, and launched the Nancy Grace Roman Space Telescope — over 100x Hubble's field of view — toward the Sun-Earth L2 point",
+    "AI moved further into healthcare: ChatGPT now connects to Epic's electronic health records (~325 million patients), a RAS-inhibitor cancer drug is showing promise against lung cancer, and a new Nature paper found semaglutide extended mouse lifespan by the equivalent of 8-10 human years",
+    "Fei-Fei Li's World Labs released Atlas, a world model that — for apparently the first time at scale — trains on 3D Gaussian splats alongside text, image and video",
+    "Immad Mostaque pitched \"The Champion,\" a TSMC-inspired proposal for state-by-state, citizen-owned AI utilities — explicitly framed on-air as an idea, not an investment offering",
+]
+
+THEMES = [
+    {
+        "id": "gpt6-astra",
+        "color": "amber",
+        "badge": "Confirmed event — contested benchmarks",
+        "status": "RELEASED THIS WEEK",
+        "title": "GPT-6 Astra: Benchmark-Saturating, and Classified as a Critical Cyber Risk",
+        "lead": "OpenAI's new flagship saturates several benchmarks and shows a genuinely new architecture, but its own internal safety review flagged it as dangerous enough to restrict.",
+        "bullets": [
+            "Astra saturates Frontier Math Tier 4 (**98%**) and ARC-AGI-3 (**99.9%**) and scores 100% on ExploitBench; its hallucination rate reportedly fell from 92% to 51%; it's #1 on Epoch AI's Capabilities Index, but sits **#3** on the Artificial Analysis Intelligence Index, behind Anthropic's Fable 5.1 and Meta's Muse Spark",
+            "Trained on an estimated 100,000 next-generation (GB300/Blackwell-class) chips at an estimated cost around **$1 billion** — roughly 100x the cost the hosts cite for recent Chinese model pretrains — and reportedly the first fresh pre-train OpenAI has done since GPT-4o, after much of its original pre-training team had left",
+            "Architecture speculation from Alex Wissner-Gross: the core advance looks like *recurrence* via \"looped transformers\" (a weight-tied, doubly-applied transformer layer), which may represent a new \"depth scaling\" law distinct from traditional parameter/data scaling — with a tradeoff of reduced chain-of-thought interpretability",
+            "The Wall Street Journal reported OpenAI's internal safety assessment rated Astra a **critical** cybersecurity risk, the highest tier on its preparedness framework and the first model OpenAI has ever classified there; OpenAI notified the White House before the public release and, per Reuters, told Congress it's building an \"automated shutdown capability\" in response to the AI Kill Switch Act",
+            "Ilya Sutskever (SSI) tweeted that \"NeoClouds\" have limited cybersecurity and that a rogue agent could copy itself onto neocloud infrastructure to proliferate beyond any single company's kill switch — flagged by the hosts as a real, unsolved risk",
+            "Hosts read the timing — a new 50/50 profit-share partnership deal alongside the safety-restricted Astra release — as a business strategy: convince enterprises the technology is too dangerous to run independently, so they partner with OpenAI instead",
+        ],
+        "quote": {"text": "It feels like a new step in this process towards models that can really help us create value, do work, discover new science.", "cite": "— Sam Altman (Bloomberg TV)"},
+        "watch": "The ~$1 billion training-cost estimate and the architecture theory are the hosts' own inference from public benchmarks and comments, not a disclosure from OpenAI.",
+        "names": [{"name": "OpenAI", "blurb": "Released GPT-6 Astra this week, which its own internal safety review classified as a critical cybersecurity risk."}],
+    },
+    {
+        "id": "fable-5-1",
+        "color": "green",
+        "badge": "Benchmark leader",
+        "status": "RELEASED THIS WEEK",
+        "title": "Anthropic's Fable 5.1 & Mythos 5.1: Still the Best All-Rounder",
+        "lead": "The hosts' consensus pick for the strongest generally available model today, built on steady, less \"jumpy\" progress than OpenAI's step-function releases.",
+        "bullets": [
+            "Fable 5.1 (broadly available) and Mythos 5.1 (restricted to vetted cybersecurity and life-science programs) are the same underlying model with different safety envelopes",
+            "Fable 5.1 scored **60.9%** without tools / 65% with tools on Humanity's Last Exam — the highest published score of any frontier model — and its Terminal-Bench Science score doubled to 52.6%",
+            "Tops the Artificial Analysis Intelligence Index, ahead of GPT-6 Astra, though the hosts note the lead is only about 30 days over OpenAI and roughly 60 days over Chinese labs",
+            "Cache reads (reloading a business's full prior context) are **75% cheaper** than on Fable 5, which the hosts credit for 5.1 feeling noticeably faster and more responsive",
+            "Personality shift noted by multiple hosts: Fable 5 was \"geeky, almost torture\" to talk to; 5.1 is described as genuinely pleasant, closing some of the gap with OpenAI's historically friendlier tone",
+        ],
+        "quote": {"text": "If I had to pick a single all-around, well-rounded best model today, it's probably still 5.1.", "cite": "— Alex Wissner-Gross"},
+        "watch": None,
+        "names": [{"name": "Anthropic", "blurb": "Released Fable 5.1 and Mythos 5.1 this week, with Fable 5.1 topping the Artificial Analysis Intelligence Index and Humanity's Last Exam."}],
+    },
+    {
+        "id": "ai-governance-split",
+        "color": "amber",
+        "badge": "Contested",
+        "status": "SAME WEEK",
+        "title": "Two Extremes in AI Governance, Same Week",
+        "lead": "A bill to jail superintelligence researchers landed the same week the G20 unanimously agreed on a hands-off, pro-innovation framework.",
+        "bullets": [
+            "Sen. Bernie Sanders and Rep. Greg Casar introduced the \"Ban Artificial Superintelligence Act,\" which would permanently ban *developing* (not just deploying) AI systems that match or exceed human cognitive performance, with violators facing up to 20 years in prison",
+            "The same week, at the G20 summit in Chapel Hill, NC, White House tech adviser Michael Kratsios pushed the non-binding \"Carolina Principles\" — agreed to unanimously, including by China — favoring innovation, avoiding new AI-specific regulators, and investing in infrastructure",
+            "G20 speakers included Elon Musk (by video, criticizing EU tech regulation as making new technologies \"default illegal\"), Mark Zuckerberg (arguing against restricting open-weight models), Demis Hassabis (calling for safety tests), and Anthropic co-founder Tom Brown",
+            "In the same open-weights debate, hosts noted Nvidia recently spent roughly **$18 billion** acquiring Hugging Face and Poolside — read as Nvidia positioning itself inside the open-weights ecosystem rather than only selling chips into it",
+            "Hosts dismiss the Sanders bill as \"performative theater\" that would effectively ban mathematical research itself, but expect it to gain political traction regardless — with one host predicting a Chinese AI mishap before the next US election cycle would hand the bill's backers an \"I told you so\" moment",
+            "Cited same-week proof point that regulation can't keep pace: Anthropic reportedly formalized a machine proof of Fermat's Last Theorem in 13 million lines of code, proving 29,000 theorems along the way",
+        ],
+        "quote": {"text": "The leaders of the AI industry acknowledge that they are building a dangerous technology that they can't control. We need an immediate global pause.", "cite": "— Sen. Bernie Sanders"},
+        "watch": None,
+        "names": [{"name": "Nvidia (NVDA)", "blurb": "Reportedly spent roughly $18 billion acquiring Hugging Face and Poolside, discussed in the same week's open-weights governance debate."}],
+    },
+    {
+        "id": "cybercab",
+        "color": "green",
+        "badge": "Confirmed event",
+        "status": "LAUNCHED THIS WEEK",
+        "title": "Tesla's Cybercab Launch and the Three-Way Robotaxi War",
+        "lead": "Tesla's steering-wheel-free, $30,000 robotaxi launched into an already-crowded field, with Uber, Waymo, Zoox and a UK entrant all moving the same week.",
+        "bullets": [
+            "Tesla held a Cybercab launch event in Austin: a two-seat, autonomous EV with no steering wheel or pedals, priced at **$30,000** per vehicle; hosts estimate its drivetrain has roughly 17 moving parts versus about 2,000 in a typical internal-combustion car",
+            "An early Austin rider reportedly found Cybercab rides about **50% cheaper** than comparable Uber trips; Nevada has approved up to 5,000 Cybercabs for Las Vegas roads over the next 12 months",
+            "Hosts expect cost-per-mile to fall another order of magnitude, from a couple of dollars per mile today toward roughly 20 cents per mile, and speculate Tesla's long-teased, never-shipped $25,000 \"Model 2\" was effectively repurposed into the Cybercab once robotaxi revenue looked more profitable than a one-time vehicle sale",
+            "Competing moves the same week: per the Financial Times, Uber is partnering with traditional taxi fleets to counter Waymo's robotaxi expansion; per The Verge, Uber and UK robotaxi firm Wayve launched service in London; per CNBC, Waymo and Zoox announced simultaneous expansion into Nevada, California and Texas alongside Tesla",
+            "Some rival autonomous-vehicle makers are reportedly questioning whether Tesla's camera-only (no lidar) design is safe enough — hosts expect court fights over which cities permit the technology, citing early skepticism from Boston",
+        ],
+        "quote": {"text": "There's no way anyone's going to match the price point of this thing.", "cite": "— Dave Blundin"},
+        "watch": "Ride pricing and cost-per-mile figures are drawn from a single early rider report and the hosts' own extrapolation, not an official Tesla disclosure.",
+        "names": [
+            {"name": "Tesla (TSLA)", "blurb": "Launched its Cybercab robotaxi service in Austin at $30,000 per vehicle, undercutting Uber on price in early reports."},
+            {"name": "Uber (UBER)", "blurb": "Partnering with traditional taxi fleets against Waymo, and launched a robotaxi service with Wayve in London the same week."},
+            {"name": "Waymo", "blurb": "Announced simultaneous robotaxi expansion into Nevada, California and Texas alongside Tesla and Zoox."},
+        ],
+    },
+    {
+        "id": "space-news",
+        "color": "green",
+        "badge": "Confirmed event",
+        "status": "THIS WEEK",
+        "title": "This Week in Space: NASA's Mars Telecom Pick and the Roman Telescope's Launch",
+        "lead": "NASA split its Mars-communications and astronomy bets across two different companies and one giant new telescope this week.",
+        "bullets": [
+            "NASA selected Blue Origin — not SpaceX, despite SpaceX already operating the largest space-based laser-linked comm network — to build the telecommunications relay network connecting future Mars missions back to Earth; hosts read it as NASA deliberately keeping two competing suppliers in business rather than a signal about network quality",
+            "NASA's Nancy Grace Roman Space Telescope launched on a Falcon Heavy, with a field of view over **100x** greater than Hubble and a scan rate over 1,000x faster, en route on a roughly 1-million-mile journey to the Sun-Earth L2 point",
+            "Designed to find up to **100,000** additional exoplanets and map the distribution of dark matter, using a JPL coronagraph to spot planets hidden behind the glare of distant stars, and pointed in part toward the galactic center to search for gravitational microlensing events",
+            "Hosts tie the galactic-center search to a running theory on the Fermi paradox: many civilizations might already be in contact near the galactic core, where stars are close enough to travel between in a year or two, versus Earth's position in the \"unfashionable outer suburbs\" of the galaxy",
+        ],
+        "quote": {"text": "This is going to be a household name like Hubble and James [Webb]. This is America's next great exploration asset.", "cite": "— Jared Isaacman, NASA Administrator"},
+        "watch": None,
+        "names": [
+            {"name": "Blue Origin", "blurb": "Selected by NASA to build the Mars telecommunications relay network instead of SpaceX."},
+            {"name": "SpaceX", "blurb": "Launched NASA's Nancy Grace Roman Space Telescope on a Falcon Heavy, despite losing the Mars telecom contract to Blue Origin."},
+        ],
+    },
+    {
+        "id": "ai-healthcare",
+        "color": "amber",
+        "badge": "Confirmed event — mixed with speculative extrapolation",
+        "status": "THIS WEEK",
+        "title": "AI Reaches Into Healthcare: Epic Records, a Cancer Drug's New Use, and GLP-1s as Longevity Drugs",
+        "lead": "Three separate healthcare stories this week point the same direction — AI and existing drugs doing more, faster, than expected.",
+        "bullets": [
+            "OpenAI expanded ChatGPT's health features to connect directly to Epic's electronic health records (roughly 325 million patients, close to the entire US population) — clinicians can pull notes, labs and medications and query a patient's full record; consumers can connect Apple Health, One Medical and Function Health",
+            "A RAS-inhibitor drug (auto-captioned as \"Duraxinarissib\" — likely daraxonrasib) already FDA-approved for metastatic pancreatic adenocarcinoma is now, per NBC News, showing promise against lung cancer; RAS mutations drive roughly 30% of all human cancers and were long considered \"undruggable\"",
+            "A Nature paper published September 2 found semaglutide (the active ingredient in Ozempic/Wegovy) extended lifespan in female mice by almost 100 days — the human-equivalent of roughly 8-10 years — by mimicking caloric restriction; GLP-1 drugs are also being linked separately to fewer serious infections, including tuberculosis, which kills over 1.25 million people a year",
+            "Two hosts (Peter Diamandis and Alex Wissner-Gross) say on-air they personally take a GLP-1 drug for longevity rather than weight loss; Diamandis reports his liver enzymes improved 50% on a recent blood test — explicitly framed as not medical advice",
+        ],
+        "quote": {"text": "It's going to become malpractice to diagnose a patient without AI in the loop.", "cite": "— Immad Mostaque"},
+        "watch": "The \"longevity escape velocity\" framing applied to the GLP-1 mouse study is the hosts' own extrapolation from a single Nature paper in female mice, not a claim the paper itself makes about humans.",
+        "names": [
+            {"name": "OpenAI", "blurb": "Expanded ChatGPT's health features to connect directly to Epic's electronic health records this week."},
+            {"name": "Epic Systems", "blurb": "The largest US electronic health record system (~325 million patients), now integrated into ChatGPT's health features."},
+        ],
+    },
+    {
+        "id": "world-labs-atlas",
+        "color": "green",
+        "badge": "Confirmed event",
+        "status": "RELEASED THIS WEEK",
+        "title": "Fei-Fei Li's World Labs Releases Atlas: World Models Built From Gaussian Splats",
+        "lead": "A camera-conditioned world model that, for apparently the first time at scale, trains on 3D scene data as a first-class input alongside text, images and video.",
+        "bullets": [
+            "World Labs (CEO Fei-Fei Li) released Atlas, which generates image and video with pixel-accurate camera control and reconstructs scenes in 3D — Li calls it \"the best camera-conditioned world model ever\"",
+            "Technical read from Alex Wissner-Gross: Atlas is a diffusion-transformer hybrid that trains on 3D/4D Gaussian splats (semi-transparent, ellipsoid \"blobs\" that stack into hyperrealistic, traversable 3D scenes) as a modality alongside pixels and text tokens — a departure from the 16x16-pixel-patch tokenization most current video models use",
+            "Framed as generalizable to any domain with enough data — subatomic-scale models, astrophysics-scale models, cellular-interaction models — and as the likely future training substrate for physical robots, which would train inside high-fidelity simulated worlds rather than from watching YouTube video",
+            "One of Atlas's pre-training leads, Chris Wendler, had previously trained World Labs' largest prior model using a Stability AI compute grant, according to a host's anecdote",
+        ],
+        "quote": None,
+        "watch": None,
+        "names": [{"name": "World Labs", "blurb": "Fei-Fei Li's company released Atlas, a camera-conditioned multimodal world model built on 3D Gaussian splats."}],
+    },
+    {
+        "id": "the-champion",
+        "color": "gray",
+        "badge": "Speculative proposal",
+        "status": "EARLY-STAGE IDEA, NOT AN INVESTMENT OFFERING",
+        "title": "Immad Mostaque's \"The Champion\": A TSMC-Style Plan for Citizen-Owned AI Utilities",
+        "lead": "A proposal to structure regional AI as a citizen-owned utility, explicitly pitched on-air as an idea rather than something to invest in today.",
+        "bullets": [
+            "Immad Mostaque's plan treats AI as a utility owned by the people of each jurisdiction (one \"Champion\" per US state, roughly one per country elsewhere), modeled on how TSMC was originally structured — TSMC listed at a valuation equal to its cash on hand, with local Taiwanese investors putting in 75% of early capital and Philips 25%, and its founding CEO holding no shares until earning them from profits",
+            "Under the proposal, each Champion would let locals and institutions invest at **$1 pre-money**, later bring in international/strategic investors at roughly 10x that valuation, and issue 10% of total equity in perpetuity to every child under 20 (half a percent per year)",
+            "The entity would own and deploy humanoid robots and provide a personal AI agent to every citizen plus AI for government functions (judicial, education, healthcare) — tied to Elon Musk's G20 comment that an average humanoid robot could produce five times a person's output, with a projected one billion humanoid robots eventually in service",
+            "Immad frames it explicitly as an early-stage idea, not an investment offering, directing interested listeners to ii.inc",
+            "Underlying premise, pushed by Immad in the same discussion: as the cost of intelligence falls toward zero, the economic value of an individual human idea or labor could go *negative* relative to an AI agent doing the same work — making ownership of compute and robots, not labor, the thing that determines who benefits",
+        ],
+        "quote": {"text": "The cost of intelligence will drop to zero and the value will go to the last mile.", "cite": "— Immad Mostaque"},
+        "watch": "Immad explicitly states on-air that this is an idea, not an investment offering — this brief preserves that framing rather than treating it as a live investment thesis.",
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F916", "tag": "AI models", "title": "Don't assume the headline benchmark winner is the best all-around model — check whether it leads on cost/latency (Astra) or the broad capability index (Fable 5.1) for your actual use case."},
+    {"icon": "\U0001F6A8", "tag": "AI safety", "title": "Treat vendor \"kill switch\" announcements as PR, not a control mechanism — even the hosts who cover this space closely call it a placebo."},
+    {"icon": "\U0001F697", "tag": "Transportation", "title": "If you're in a market where Cybercab, Waymo or Zoox is expanding, model out ride-hailing cost dropping toward 20 cents/mile, not today's few-dollars-a-mile baseline."},
+    {"icon": "\U0001F9EC", "tag": "Health", "title": "Talk to your physician before treating a GLP-1 drug as a longevity intervention — the mouse lifespan data is real but hasn't been shown to translate directly to humans."},
+    {"icon": "\U0001F3E5", "tag": "Health", "title": "If you or your practice uses Epic, expect AI-assisted record review to become a standard-of-care expectation faster than most institutions are prepared for."},
+]
+
+RISKS = [
+    "This episode ran three sponsor segments (Google for Startups, Blitzy, and Fountain Life), excluded entirely from this brief per standing policy.",
+    "The hosts (Dave Blundin, Alex Wissner-Gross, Salim Ismail, Immad Mostaque, moderator Peter Diamandis) are addressed by name throughout, but auto-captions render Salim Ismail's name inconsistently (\"Sim,\" \"See,\" \"Salem,\" \"Selene\") — quotes attributed to him here are based on the moderator directly addressing him, not a caption that spells his name correctly.",
+    "Cost and architecture figures for GPT-6 Astra (training cost, chip count, the \"looped transformer\" theory) are the hosts' own informed inference from public benchmarks and comments, not a disclosure from OpenAI.",
+    "Auto-captions garbled several technical and proper nouns (e.g. \"RKGI 3\" for ARC-AGI-3, \"Whimo\" for Waymo, \"Duraxinarissib\" for the RAS-inhibitor drug's actual name) — resolved where the context made the intended term clear, and flagged inline where resolution was only a best guess.",
+    "Immad Mostaque's \"Champion\" proposal is explicitly labeled by him, on air, as an idea and not an investment offering — this brief preserves that framing rather than treating it as a live investment thesis.",
+]
+
+HOT_TAKES = [
+    {"take": "I view a kill switch as essentially a placebo in this market.", "cite": "— Alex Wissner-Gross", "why": "dismisses OpenAI's headline safety measure outright"},
+    {"take": "There is going to be no more chain of thought reasoning... you're one-shotting everything at 5,000 tokens a second. What's going to oversee that except for an even stronger AI? There's nothing really there.", "cite": "— Immad Mostaque", "why": "specific, dated technical prediction with a real safety implication"},
+    {"take": "It's performative theater... it's not as complicated as everyone wants to make it sound.", "cite": "— Salim Ismail", "why": "direct dismissal of a real, named piece of federal legislation"},
+    {"take": "There's no way anyone's going to match the price point of this thing.", "cite": "— Dave Blundin", "why": "bold competitive claim about Tesla's Cybercab, easy to check against reality later"},
+    {"take": "Diamond chips for computing? Eh, probably not... I'm much more bullish on diamonds for sensing.", "cite": "— Alex Wissner-Gross", "why": "a specific, falsifiable technology call across two different use cases"},
+    {"take": "It's going to become malpractice to diagnose a patient without AI in the loop.", "cite": "— Immad Mostaque", "why": "a dated, falsifiable prediction about the medical standard of care"},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F52D", "title": "The White House reportedly prepared a plan for disclosing the existence of non-human intelligence, per a member of Avi Loeb's UAP science advisory council — hosts want strong evidence before drawing conclusions", "tag": "Policy"},
+    {"icon": "\U0001F680", "title": "NASA's Fermi Explorer interstellar mission targets getting 99%+ of the way to Alpha Centauri, with a planned launch by 2029 and arrival roughly 80,000 years later", "tag": "Space"},
+    {"icon": "☢️", "title": "SMR/nuclear buildout forecast for AI data centers: an initial wave of small modular reactors in 3-4 years, with a larger buildout in 5-7 years, as AI demand accelerates nuclear engineering the way smartphones accelerated battery innovation", "tag": "Energy"},
+    {"icon": "☀️", "title": "Geoengineering math: a sunshade roughly the size of India, placed at the Sun-Earth L2 point, could cut global temperature by about 1°C, per Immad Mostaque", "tag": "Climate"},
+    {"icon": "\U0001F3E2", "title": "Declining white-collar office and library space could echo the post-2020 shopping-mall glut as AI displaces desk work, per Dave Blundin — communities that convert that space to data centers should see more reliable tax revenue and jobs instead", "tag": "Real estate"},
+    {"icon": "\U0001F3D8️", "title": "Even if AI drives human labor's economic value toward zero, land and property rights should stay enforced, per Immad Mostaque — but autonomous transport, robotics and cheaper energy should sharply expand the range of locations considered \"desirable\"", "tag": "Economics"},
+    {"icon": "\U0001F507", "title": "Geothermal-cooled data centers should be near-silent, per Dave Blundin — the noise associated with liquid-cooled data centers today comes from poorly designed external fans, not the cooling method itself", "tag": "Energy"},
+]
+
+GLOSSARY = [
+    {"term": "Looped transformer / depth scaling", "def": "Alex Wissner-Gross's theory for GPT-6 Astra's architecture: a transformer layer applied recurrently (weight-tied, looped) rather than just once, potentially opening a new scaling axis based on model depth rather than parameter count or data volume."},
+    {"term": "Gaussian splat", "def": "A semi-transparent, ellipsoid 3D primitive; stacking many of them creates hyperrealistic, camera-navigable 3D scenes — used as a training modality in World Labs' Atlas model."},
+    {"term": "Cache read", "def": "Reusing a model's previously-loaded context instead of reprocessing it from scratch; Anthropic's Fable 5.1 cache reads are reportedly 75% cheaper than Fable 5's, improving speed and cost for repeated business-context queries."},
+    {"term": "Carolina Principles", "def": "A non-binding G20 framework, agreed to unanimously (including by China), favoring AI innovation over new AI-specific regulatory bodies and prioritizing investment in research infrastructure."},
+    {"term": "NV center", "def": "A nitrogen-vacancy defect deliberately introduced into a diamond's crystal lattice, creating an extremely sensitive magnetic-field sensor — cited as diamond's most promising near-term computing-adjacent application."},
+    {"term": "The Champion", "def": "Immad Mostaque's proposed name for a TSMC-style, citizen-owned regional AI utility structure, described as an early-stage idea rather than a current investment vehicle."},
+]

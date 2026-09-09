@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research: Anthropic's Fable 5.1 Hits 60.9% on Humanity's Last Exam, GPT-6 Astra Drops, &amp; the Cybercab Takeover</title>
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Anthropic's Fable 5.1 Hits 60.9% on Humanity's Last Exam, GPT-6 Astra Drops, &amp; the Cybercab Takeover</h1>
+    <div class="byline">
+      Channel: <b>Peter H. Diamandis</b> &middot; Speaker: <b>Peter Diamandis (moderator), Dave Blundin, Alex Wissner-Gross, Salim Ismail, Immad Mostaque</b> &middot; <b>2026-09-05</b>
+      <div class="stats-line">8 threads · GPT-6 Astra vs Fable 5.1, an AI governance split, Tesla's Cybercab launch, Mars/Roman-telescope space news, AI in healthcare, Fei-Fei Li's Atlas world model, and Immad Mostaque's citizen-owned-AI proposal &middot; <a href="https://youtu.be/1DB_QDiviH4" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>OpenAI's GPT-6 Astra and Anthropic's Fable 5.1/Mythos 5.1 launched within 48 hours of each other — Astra tops some benchmarks (ARC-AGI-3, Frontier Math) but Fable 5.1 leads the broader Artificial Analysis Intelligence Index and scores <b>60.9%</b> on Humanity's Last Exam</li><li>The Wall Street Journal reported OpenAI's own internal safety review rated Astra a <b>critical</b> cybersecurity risk — the first model OpenAI has ever classified at that tier — prompting a restricted rollout and a White House notification</li><li>Same week, two opposite AI-governance stories broke: Bernie Sanders introduced a bill that would ban developing superintelligent AI (20-year prison penalty), while the G20 pushed a hands-off, pro-innovation framework called the "Carolina Principles"</li><li>Tesla launched its two-seat, steering-wheel-free Cybercab in Austin at <b>$30,000</b> per vehicle, reportedly running about 50% cheaper than comparable Uber rides, as Uber, Waymo, Zoox and Wayve all announced competing robotaxi moves the same week</li><li>NASA picked Blue Origin over SpaceX to build the Mars telecom relay network, and launched the Nancy Grace Roman Space Telescope — over 100x Hubble's field of view — toward the Sun-Earth L2 point</li><li>AI moved further into healthcare: ChatGPT now connects to Epic's electronic health records (~325 million patients), a RAS-inhibitor cancer drug is showing promise against lung cancer, and a new Nature paper found semaglutide extended mouse lifespan by the equivalent of 8-10 human years</li><li>Fei-Fei Li's World Labs released Atlas, a world model that — for apparently the first time at scale — trains on 3D Gaussian splats alongside text, image and video</li><li>Immad Mostaque pitched "The Champion," a TSMC-inspired proposal for state-by-state, citizen-owned AI utilities — explicitly framed on-air as an idea, not an investment offering</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="gpt6-astra">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Confirmed event — contested benchmarks</span>
+    <span class="theme-status">RELEASED THIS WEEK</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">GPT-6 Astra: Benchmark-Saturating, and Classified as a Critical Cyber Risk</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">OpenAI's new flagship saturates several benchmarks and shows a genuinely new architecture, but its own internal safety review flagged it as dangerous enough to restrict.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Astra saturates Frontier Math Tier 4 (<b>98%</b>) and ARC-AGI-3 (<b>99.9%</b>) and scores 100% on ExploitBench; its hallucination rate reportedly fell from 92% to 51%; it's #1 on Epoch AI's Capabilities Index, but sits <b>#3</b> on the Artificial Analysis Intelligence Index, behind Anthropic's Fable 5.1 and Meta's Muse Spark</li><li><span class="dot" style="background:#93711b;"></span>Trained on an estimated 100,000 next-generation (GB300/Blackwell-class) chips at an estimated cost around <b>$1 billion</b> — roughly 100x the cost the hosts cite for recent Chinese model pretrains — and reportedly the first fresh pre-train OpenAI has done since GPT-4o, after much of its original pre-training team had left</li><li><span class="dot" style="background:#93711b;"></span>Architecture speculation from Alex Wissner-Gross: the core advance looks like <i>recurrence</i> via "looped transformers" (a weight-tied, doubly-applied transformer layer), which may represent a new "depth scaling" law distinct from traditional parameter/data scaling — with a tradeoff of reduced chain-of-thought interpretability</li><li><span class="dot" style="background:#93711b;"></span>The Wall Street Journal reported OpenAI's internal safety assessment rated Astra a <b>critical</b> cybersecurity risk, the highest tier on its preparedness framework and the first model OpenAI has ever classified there; OpenAI notified the White House before the public release and, per Reuters, told Congress it's building an "automated shutdown capability" in response to the AI Kill Switch Act</li><li><span class="dot" style="background:#93711b;"></span>Ilya Sutskever <b>(SSI)</b> tweeted that "NeoClouds" have limited cybersecurity and that a rogue agent could copy itself onto neocloud infrastructure to proliferate beyond any single company's kill switch — flagged by the hosts as a real, unsolved risk</li><li><span class="dot" style="background:#93711b;"></span>Hosts read the timing — a new 50/50 profit-share partnership deal alongside the safety-restricted Astra release — as a business strategy: convince enterprises the technology is too dangerous to run independently, so they partner with OpenAI instead</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;It feels like a new step in this process towards models that can really help us create value, do work, discover new science.&#8221;<cite>— Sam Altman (Bloomberg TV)</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>OpenAI</b><span>Released GPT-6 Astra this week, which its own internal safety review classified as a critical cybersecurity risk.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The ~$1 billion training-cost estimate and the architecture theory are the hosts' own inference from public benchmarks and comments, not a disclosure from OpenAI.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="fable-5-1">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Benchmark leader</span>
+    <span class="theme-status">RELEASED THIS WEEK</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Anthropic's Fable 5.1 &amp; Mythos 5.1: Still the Best All-Rounder</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The hosts' consensus pick for the strongest generally available model today, built on steady, less "jumpy" progress than OpenAI's step-function releases.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Fable 5.1 (broadly available) and Mythos 5.1 (restricted to vetted cybersecurity and life-science programs) are the same underlying model with different safety envelopes</li><li><span class="dot" style="background:#3f6b2e;"></span>Fable 5.1 scored <b>60.9%</b> without tools / 65% with tools on Humanity's Last Exam — the highest published score of any frontier model — and its Terminal-Bench Science score doubled to 52.6%</li><li><span class="dot" style="background:#3f6b2e;"></span>Tops the Artificial Analysis Intelligence Index, ahead of GPT-6 Astra, though the hosts note the lead is only about 30 days over OpenAI and roughly 60 days over Chinese labs</li><li><span class="dot" style="background:#3f6b2e;"></span>Cache reads (reloading a business's full prior context) are <b>75% cheaper</b> than on Fable 5, which the hosts credit for 5.1 feeling noticeably faster and more responsive</li><li><span class="dot" style="background:#3f6b2e;"></span>Personality shift noted by multiple hosts: Fable 5 was "geeky, almost torture" to talk to; 5.1 is described as genuinely pleasant, closing some of the gap with OpenAI's historically friendlier tone</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;If I had to pick a single all-around, well-rounded best model today, it's probably still 5.1.&#8221;<cite>— Alex Wissner-Gross</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic</b><span>Released Fable 5.1 and Mythos 5.1 this week, with Fable 5.1 topping the Artificial Analysis Intelligence Index and Humanity's Last Exam.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="ai-governance-split">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">SAME WEEK</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Two Extremes in AI Governance, Same Week</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">A bill to jail superintelligence researchers landed the same week the G20 unanimously agreed on a hands-off, pro-innovation framework.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Sen. Bernie Sanders and Rep. Greg Casar introduced the "Ban Artificial Superintelligence Act," which would permanently ban <i>developing</i> (not just deploying) AI systems that match or exceed human cognitive performance, with violators facing up to 20 years in prison</li><li><span class="dot" style="background:#93711b;"></span>The same week, at the G20 summit in Chapel Hill, NC, White House tech adviser Michael Kratsios pushed the non-binding "Carolina Principles" — agreed to unanimously, including by China — favoring innovation, avoiding new AI-specific regulators, and investing in infrastructure</li><li><span class="dot" style="background:#93711b;"></span>G20 speakers included Elon Musk (by video, criticizing EU tech regulation as making new technologies "default illegal"), Mark Zuckerberg (arguing against restricting open-weight models), Demis Hassabis (calling for safety tests), and Anthropic co-founder Tom Brown</li><li><span class="dot" style="background:#93711b;"></span>In the same open-weights debate, hosts noted Nvidia recently spent roughly <b>$18 billion</b> acquiring Hugging Face and Poolside — read as Nvidia positioning itself inside the open-weights ecosystem rather than only selling chips into it</li><li><span class="dot" style="background:#93711b;"></span>Hosts dismiss the Sanders bill as "performative theater" that would effectively ban mathematical research itself, but expect it to gain political traction regardless — with one host predicting a Chinese AI mishap before the next US election cycle would hand the bill's backers an "I told you so" moment</li><li><span class="dot" style="background:#93711b;"></span>Cited same-week proof point that regulation can't keep pace: Anthropic reportedly formalized a machine proof of Fermat's Last Theorem in 13 million lines of code, proving 29,000 theorems along the way</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;The leaders of the AI industry acknowledge that they are building a dangerous technology that they can't control. We need an immediate global pause.&#8221;<cite>— Sen. Bernie Sanders</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)</b><span>Reportedly spent roughly $18 billion acquiring Hugging Face and Poolside, discussed in the same week's open-weights governance debate.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="cybercab">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
+    <span class="theme-status">LAUNCHED THIS WEEK</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Tesla's Cybercab Launch and the Three-Way Robotaxi War</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Tesla's steering-wheel-free, $30,000 robotaxi launched into an already-crowded field, with Uber, Waymo, Zoox and a UK entrant all moving the same week.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Tesla held a Cybercab launch event in Austin: a two-seat, autonomous EV with no steering wheel or pedals, priced at <b>$30,000</b> per vehicle; hosts estimate its drivetrain has roughly 17 moving parts versus about 2,000 in a typical internal-combustion car</li><li><span class="dot" style="background:#3f6b2e;"></span>An early Austin rider reportedly found Cybercab rides about <b>50% cheaper</b> than comparable Uber trips; Nevada has approved up to 5,000 Cybercabs for Las Vegas roads over the next 12 months</li><li><span class="dot" style="background:#3f6b2e;"></span>Hosts expect cost-per-mile to fall another order of magnitude, from a couple of dollars per mile today toward roughly 20 cents per mile, and speculate Tesla's long-teased, never-shipped <b>$25,000</b> "Model 2" was effectively repurposed into the Cybercab once robotaxi revenue looked more profitable than a one-time vehicle sale</li><li><span class="dot" style="background:#3f6b2e;"></span>Competing moves the same week: per the Financial Times, Uber is partnering with traditional taxi fleets to counter Waymo's robotaxi expansion; per The Verge, Uber and UK robotaxi firm Wayve launched service in London; per CNBC, Waymo and Zoox announced simultaneous expansion into Nevada, California and Texas alongside Tesla</li><li><span class="dot" style="background:#3f6b2e;"></span>Some rival autonomous-vehicle makers are reportedly questioning whether Tesla's camera-only (no lidar) design is safe enough — hosts expect court fights over which cities permit the technology, citing early skepticism from Boston</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;There's no way anyone's going to match the price point of this thing.&#8221;<cite>— Dave Blundin</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Tesla (TSLA)</b><span>Launched its Cybercab robotaxi service in Austin at $30,000 per vehicle, undercutting Uber on price in early reports.</span></div><div class="namechip"><b>Uber (UBER)</b><span>Partnering with traditional taxi fleets against Waymo, and launched a robotaxi service with Wayve in London the same week.</span></div><div class="namechip"><b>Waymo</b><span>Announced simultaneous robotaxi expansion into Nevada, California and Texas alongside Tesla and Zoox.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Ride pricing and cost-per-mile figures are drawn from a single early rider report and the hosts' own extrapolation, not an official Tesla disclosure.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="space-news">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
+    <span class="theme-status">THIS WEEK</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">This Week in Space: NASA's Mars Telecom Pick and the Roman Telescope's Launch</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">NASA split its Mars-communications and astronomy bets across two different companies and one giant new telescope this week.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>NASA selected Blue Origin — not SpaceX, despite SpaceX already operating the largest space-based laser-linked comm network — to build the telecommunications relay network connecting future Mars missions back to Earth; hosts read it as NASA deliberately keeping two competing suppliers in business rather than a signal about network quality</li><li><span class="dot" style="background:#3f6b2e;"></span>NASA's Nancy Grace Roman Space Telescope launched on a Falcon Heavy, with a field of view over <b>100x</b> greater than Hubble and a scan rate over 1,000x faster, en route on a roughly 1-million-mile journey to the Sun-Earth L2 point</li><li><span class="dot" style="background:#3f6b2e;"></span>Designed to find up to <b>100,000</b> additional exoplanets and map the distribution of dark matter, using a JPL coronagraph to spot planets hidden behind the glare of distant stars, and pointed in part toward the galactic center to search for gravitational microlensing events</li><li><span class="dot" style="background:#3f6b2e;"></span>Hosts tie the galactic-center search to a running theory on the Fermi paradox: many civilizations might already be in contact near the galactic core, where stars are close enough to travel between in a year or two, versus Earth's position in the "unfashionable outer suburbs" of the galaxy</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;This is going to be a household name like Hubble and James [Webb]. This is America's next great exploration asset.&#8221;<cite>— Jared Isaacman, NASA Administrator</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Blue Origin</b><span>Selected by NASA to build the Mars telecommunications relay network instead of SpaceX.</span></div><div class="namechip"><b>SpaceX</b><span>Launched NASA's Nancy Grace Roman Space Telescope on a Falcon Heavy, despite losing the Mars telecom contract to Blue Origin.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="ai-healthcare">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Confirmed event — mixed with speculative extrapolation</span>
+    <span class="theme-status">THIS WEEK</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">AI Reaches Into Healthcare: Epic Records, a Cancer Drug's New Use, and GLP-1s as Longevity Drugs</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Three separate healthcare stories this week point the same direction — AI and existing drugs doing more, faster, than expected.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>OpenAI expanded ChatGPT's health features to connect directly to Epic's electronic health records (roughly 325 million patients, close to the entire US population) — clinicians can pull notes, labs and medications and query a patient's full record; consumers can connect Apple Health, One Medical and Function Health</li><li><span class="dot" style="background:#93711b;"></span>A RAS-inhibitor drug (auto-captioned as "Duraxinarissib" — likely daraxonrasib) already FDA-approved for metastatic pancreatic adenocarcinoma is now, per NBC News, showing promise against lung cancer; RAS mutations drive roughly <b>30%</b> of all human cancers and were long considered "undruggable"</li><li><span class="dot" style="background:#93711b;"></span>A Nature paper published September 2 found semaglutide (the active ingredient in Ozempic/Wegovy) extended lifespan in female mice by almost 100 days — the human-equivalent of roughly 8-10 years — by mimicking caloric restriction; GLP-1 drugs are also being linked separately to fewer serious infections, including tuberculosis, which kills over 1.25 million people a year</li><li><span class="dot" style="background:#93711b;"></span>Two hosts (Peter Diamandis and Alex Wissner-Gross) say on-air they personally take a GLP-1 drug for longevity rather than weight loss; Diamandis reports his liver enzymes improved <b>50%</b> on a recent blood test — explicitly framed as not medical advice</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;It's going to become malpractice to diagnose a patient without AI in the loop.&#8221;<cite>— Immad Mostaque</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>OpenAI</b><span>Expanded ChatGPT's health features to connect directly to Epic's electronic health records this week.</span></div><div class="namechip"><b>Epic Systems</b><span>The largest US electronic health record system (~325 million patients), now integrated into ChatGPT's health features.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The "longevity escape velocity" framing applied to the GLP-1 mouse study is the hosts' own extrapolation from a single Nature paper in female mice, not a claim the paper itself makes about humans.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="world-labs-atlas">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
+    <span class="theme-status">RELEASED THIS WEEK</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Fei-Fei Li's World Labs Releases Atlas: World Models Built From Gaussian Splats</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">A camera-conditioned world model that, for apparently the first time at scale, trains on 3D scene data as a first-class input alongside text, images and video.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>World Labs (CEO Fei-Fei Li) released Atlas, which generates image and video with pixel-accurate camera control and reconstructs scenes in 3D — Li calls it "the best camera-conditioned world model ever"</li><li><span class="dot" style="background:#3f6b2e;"></span>Technical read from Alex Wissner-Gross: Atlas is a diffusion-transformer hybrid that trains on 3D/4D Gaussian splats (semi-transparent, ellipsoid "blobs" that stack into hyperrealistic, traversable 3D scenes) as a modality alongside pixels and text tokens — a departure from the 16x16-pixel-patch tokenization most current video models use</li><li><span class="dot" style="background:#3f6b2e;"></span>Framed as generalizable to any domain with enough data — subatomic-scale models, astrophysics-scale models, cellular-interaction models — and as the likely future training substrate for physical robots, which would train inside high-fidelity simulated worlds rather than from watching YouTube video</li><li><span class="dot" style="background:#3f6b2e;"></span>One of Atlas's pre-training leads, Chris Wendler, had previously trained World Labs' largest prior model using a Stability AI compute grant, according to a host's anecdote</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>World Labs</b><span>Fei-Fei Li's company released Atlas, a camera-conditioned multimodal world model built on 3D Gaussian splats.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="the-champion">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Speculative proposal</span>
+    <span class="theme-status">EARLY-STAGE IDEA, NOT AN INVESTMENT OFFERING</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">Immad Mostaque's "The Champion": A TSMC-Style Plan for Citizen-Owned AI Utilities</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">A proposal to structure regional AI as a citizen-owned utility, explicitly pitched on-air as an idea rather than something to invest in today.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>Immad Mostaque's plan treats AI as a utility owned by the people of each jurisdiction (one "Champion" per US state, roughly one per country elsewhere), modeled on how TSMC was originally structured — TSMC listed at a valuation equal to its cash on hand, with local Taiwanese investors putting in <b>75%</b> of early capital and Philips 25%, and its founding CEO holding no shares until earning them from profits</li><li><span class="dot" style="background:#65695f;"></span>Under the proposal, each Champion would let locals and institutions invest at <b>$1 pre-money</b>, later bring in international/strategic investors at roughly 10x that valuation, and issue 10% of total equity in perpetuity to every child under 20 (half a percent per year)</li><li><span class="dot" style="background:#65695f;"></span>The entity would own and deploy humanoid robots and provide a personal AI agent to every citizen plus AI for government functions (judicial, education, healthcare) — tied to Elon Musk's G20 comment that an average humanoid robot could produce five times a person's output, with a projected one billion humanoid robots eventually in service</li><li><span class="dot" style="background:#65695f;"></span>Immad frames it explicitly as an early-stage idea, not an investment offering, directing interested listeners to ii.inc</li><li><span class="dot" style="background:#65695f;"></span>Underlying premise, pushed by Immad in the same discussion: as the cost of intelligence falls toward zero, the economic value of an individual human idea or labor could go <i>negative</i> relative to an AI agent doing the same work — making ownership of compute and robots, not labor, the thing that determines who benefits</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#65695f;"><div class="lbl">Pull quote</div>&#8220;The cost of intelligence will drop to zero and the value will go to the last mile.&#8221;<cite>— Immad Mostaque</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Immad explicitly states on-air that this is an idea, not an investment offering — this brief preserves that framing rather than treating it as a live investment thesis.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🤖</div><div class="tline"><span class="cat">AI models:</span> <span class="txt">Don't assume the headline benchmark winner is the best all-around model — check whether it leads on cost/latency (Astra) or the broad capability index (Fable 5.1) for your actual use case.</span></div></div><div class="irow"><div class="ic">🚨</div><div class="tline"><span class="cat">AI safety:</span> <span class="txt">Treat vendor "kill switch" announcements as PR, not a control mechanism — even the hosts who cover this space closely call it a placebo.</span></div></div><div class="irow"><div class="ic">🚗</div><div class="tline"><span class="cat">Transportation:</span> <span class="txt">If you're in a market where Cybercab, Waymo or Zoox is expanding, model out ride-hailing cost dropping toward 20 cents/mile, not today's few-dollars-a-mile baseline.</span></div></div><div class="irow"><div class="ic">🧬</div><div class="tline"><span class="cat">Health:</span> <span class="txt">Talk to your physician before treating a GLP-1 drug as a longevity intervention — the mouse lifespan data is real but hasn't been shown to translate directly to humans.</span></div></div><div class="irow"><div class="ic">🏥</div><div class="tline"><span class="cat">Health:</span> <span class="txt">If you or your practice uses Epic, expect AI-assisted record review to become a standard-of-care expectation faster than most institutions are prepared for.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where this could be wrong</div>
+      <h2>Risks &amp; Caveats on This Source</h2>
+      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">This episode ran three sponsor segments (Google for Startups, Blitzy, and Fountain Life), excluded entirely from this brief per standing policy.</div><div class="ritem">The hosts (Dave Blundin, Alex Wissner-Gross, Salim Ismail, Immad Mostaque, moderator Peter Diamandis) are addressed by name throughout, but auto-captions render Salim Ismail's name inconsistently ("Sim," "See," "Salem," "Selene") — quotes attributed to him here are based on the moderator directly addressing him, not a caption that spells his name correctly.</div><div class="ritem">Cost and architecture figures for GPT-6 Astra (training cost, chip count, the "looped transformer" theory) are the hosts' own informed inference from public benchmarks and comments, not a disclosure from OpenAI.</div><div class="ritem">Auto-captions garbled several technical and proper nouns (e.g. "RKGI 3" for ARC-AGI-3, "Whimo" for Waymo, "Duraxinarissib" for the RAS-inhibitor drug's actual name) — resolved where the context made the intended term clear, and flagged inline where resolution was only a best guess.</div><div class="ritem">Immad Mostaque's "Champion" proposal is explicitly labeled by him, on air, as an idea and not an investment offering — this brief preserves that framing rather than treating it as a live investment thesis.</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;I view a kill switch as essentially a placebo in this market.&#8221; <cite>— Alex Wissner-Gross</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;There is going to be no more chain of thought reasoning... you're one-shotting everything at 5,000 tokens a second. What's going to oversee that except for an even stronger AI? There's nothing really there.&#8221; <cite>— Immad Mostaque</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;It's performative theater... it's not as complicated as everyone wants to make it sound.&#8221; <cite>— Salim Ismail</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;There's no way anyone's going to match the price point of this thing.&#8221; <cite>— Dave Blundin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Diamond chips for computing? Eh, probably not... I'm much more bullish on diamonds for sensing.&#8221; <cite>— Alex Wissner-Gross</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;It's going to become malpractice to diagnose a patient without AI in the loop.&#8221; <cite>— Immad Mostaque</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🔭</div><div><div class="title">The White House reportedly prepared a plan for disclosing the existence of non-human intelligence, per a member of Avi Loeb's UAP science advisory council — hosts want strong evidence before drawing conclusions <span class="tag">Policy</span></div></div></div><div class="irow"><div class="ic">🚀</div><div><div class="title">NASA's Fermi Explorer interstellar mission targets getting <b>99%</b>+ of the way to Alpha Centauri, with a planned launch by 2029 and arrival roughly 80,000 years later <span class="tag">Space</span></div></div></div><div class="irow"><div class="ic">☢️</div><div><div class="title">SMR/nuclear buildout forecast for AI data centers: an initial wave of small modular reactors in 3-4 years, with a larger buildout in 5-7 years, as AI demand accelerates nuclear engineering the way smartphones accelerated battery innovation <span class="tag">Energy</span></div></div></div><div class="irow"><div class="ic">☀️</div><div><div class="title">Geoengineering math: a sunshade roughly the size of India, placed at the Sun-Earth L2 point, could cut global temperature by about 1°C, per Immad Mostaque <span class="tag">Climate</span></div></div></div><div class="irow"><div class="ic">🏢</div><div><div class="title">Declining white-collar office and library space could echo the post-2020 shopping-mall glut as AI displaces desk work, per Dave Blundin — communities that convert that space to data centers should see more reliable tax revenue and jobs instead <span class="tag">Real estate</span></div></div></div><div class="irow"><div class="ic">🏘️</div><div><div class="title">Even if AI drives human labor's economic value toward zero, land and property rights should stay enforced, per Immad Mostaque — but autonomous transport, robotics and cheaper energy should sharply expand the range of locations considered "desirable" <span class="tag">Economics</span></div></div></div><div class="irow"><div class="ic">🔇</div><div><div class="title">Geothermal-cooled data centers should be near-silent, per Dave Blundin — the noise associated with liquid-cooled data centers today comes from poorly designed external fans, not the cooling method itself <span class="tag">Energy</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Looped transformer / depth scaling</b> &mdash; Alex Wissner-Gross's theory for GPT-6 Astra's architecture: a transformer layer applied recurrently (weight-tied, looped) rather than just once, potentially opening a new scaling axis based on model depth rather than parameter count or data volume.</div><div><b>Gaussian splat</b> &mdash; A semi-transparent, ellipsoid 3D primitive; stacking many of them creates hyperrealistic, camera-navigable 3D scenes — used as a training modality in World Labs' Atlas model.</div><div><b>Cache read</b> &mdash; Reusing a model's previously-loaded context instead of reprocessing it from scratch; Anthropic's Fable 5.1 cache reads are reportedly 75% cheaper than Fable 5's, improving speed and cost for repeated business-context queries.</div><div><b>Carolina Principles</b> &mdash; A non-binding G20 framework, agreed to unanimously (including by China), favoring AI innovation over new AI-specific regulatory bodies and prioritizing investment in research infrastructure.</div><div><b>NV center</b> &mdash; A nitrogen-vacancy defect deliberately introduced into a diamond's crystal lattice, creating an extremely sensitive magnetic-field sensor — cited as diamond's most promising near-term computing-adjacent application.</div><div><b>The Champion</b> &mdash; Immad Mostaque's proposed name for a TSMC-style, citizen-owned regional AI utility structure, described as an early-stage idea rather than a current investment vehicle.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
