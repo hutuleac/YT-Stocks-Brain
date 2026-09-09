@@ -1,0 +1,164 @@
+"""
+Per-video data for youtube-research-brief.
+"""
+
+META = {
+    "title": "Superhuman CEO: How to Position Yourself Now Before the Next AI Phase (2026-2027)",
+    "channel": "Silicon Valley Girl",
+    "speakers": "Shishir Mehrotra (CEO, Superhuman/Grammarly) & Sasha (host)",
+    "date": "2026-09-08",
+    "video_url": "https://youtu.be/JEZVl3BkSLk",
+    "thread_line": "6 threads · career strategy, becoming a manager, the PSHE ladder, AI-doesn't-replace framing, a hiring exercise, and inside Grammarly/Superhuman Go's agent stack",
+    "category": "dev",
+}
+
+SNAPSHOT = [
+    "Shishir Mehrotra (ex-YouTube product lead, Coda founder, Spotify board member) is CEO of Superhuman, which now includes Grammarly (40M+ daily users)",
+    "His top career advice for the next 12 months: avoid the *recruiting folder* — get noticed through visible public work, not job applications",
+    "He argues the highest-leverage skill right now is learning to manage — AI increasingly absorbs execution work, pushing junior people into managing tools and agents years earlier than before",
+    "His internal career framework, **PSHE** (Problem, Solution, How, Execution), maps a *valley of disappointment* where mid-career promotion stops being about scope and starts being about judgment",
+    "Rejects the \"AI replaces jobs\" framing, using an electric-drill/construction-boom analogy and a Mad Men-to-digital-marketing case study",
+    "His signature hiring tool, the *self-eigenquestion*, tests whether candidates find the one clarifying question that matters — demoed via a teleportation-device thought experiment he's run in **hundreds** of interviews",
+    "Superhuman just split Grammarly (**100 billion+** weekly LLM queries) into a grammar agent plus \"Superhuman Go,\" a general-purpose *help*-style agent platform",
+    "Closes with a personal story about mentor Bill Campbell, who measured his own success by counting mentees who became Fortune 500 CEOs",
+]
+
+THEMES = [
+    {
+        "id": "skip-recruiting",
+        "color": "green",
+        "badge": "Recommendation",
+        "status": "",
+        "title": "Skip the Recruiting Funnel, Learn to Manage",
+        "lead": "Shishir's advice for the next 12 months is to stop optimizing for interviews and start building visible work — then learn a skill most people never practice on purpose: managing.",
+        "bullets": [
+            "His own Spotify board seat traces back to an article he wrote (\"Four Minutes to Package\") that reached Daniel Ek through a chain of people who passed it along — not a job application",
+            "At Superhuman, an AI-based email rule auto-routes anyone opening with \"I'd like the job\" into a separate recruiting folder — a lower-priority pipeline, distinct from people he actually wants to build a relationship with",
+            "His core advice: start projects and write things people can see — distribution is cheap now, so *being interesting* matters more than interview prep",
+            "He's reversed decades of advice: he used to tell people to become a great individual performer first; now, as AI absorbs execution work, junior hires find themselves managing workflows, tools and agents much earlier in their careers",
+            "His method for building that judgment: rehearse it in low-stakes reps first — \"go out in the driveway and play basketball,\" not your first game on live broadcast — via a side project with a friend and fast feedback loops",
+        ],
+        "quote": {"text": "The most interesting candidates I've ever hired... usually come about through some kind of interaction that didn't start with 'I'd like the job.'", "cite": "— Shishir Mehrotra"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "pshe-ladder",
+        "color": "green",
+        "badge": "Framework",
+        "status": "",
+        "title": "PSHE and the \"Valley of Disappointment\"",
+        "lead": "A four-letter model — Problem, Solution, How, Execution — reframes what actually gets someone promoted, and Shishir says AI just moved the whole ladder up.",
+        "bullets": [
+            "**PSHE** ladder: junior hires are handed pure Execution; with experience they choose *How*; more senior people design *Solutions*; the most senior define the *Problem* itself",
+            "A Google infrastructure exec plotted her team on this axis against scope/volume and found an S-curve she called the \"valley of disappointment\" — the point where employees expect scope to keep driving promotion, but judgment starts mattering instead",
+            "The same framework applies across engineers, designers, salespeople and marketers — it's a shift in what a company values in senior people, not a role-specific rubric",
+            "AI moves the ladder up: it increasingly handles execution and can even propose solutions, but defining the right problem — and judging whether an AI-proposed solution is actually good — stays almost entirely human",
+        ],
+        "quote": {"text": "Can you imagine a world with artificial intelligence everywhere — this actually moves this whole ladder up.", "cite": "— Shishir Mehrotra"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "ai-not-replace",
+        "color": "amber",
+        "badge": "Structural critique",
+        "status": "",
+        "title": "\"AI Replaces Jobs\" Is the Wrong Frame, He Argues",
+        "lead": "Shishir rejects \"replace\" as zero-sum thinking, and reaches for a construction analogy and a 50-year marketing case study to make the point.",
+        "bullets": [
+            "Analogy: electric drills didn't kill construction jobs — they let the industry build skyscrapers, and net construction employment rose",
+            "Marketing case study: *Mad Men*-era agencies made one ad a year with one jingle for a small client roster; digital marketing forced a shift to producing **millions** of ad variants, which changed who got hired — systems thinkers, not solo creative geniuses",
+            "On today's junior marketers who worry Claude replaces their storytelling job: he disagrees — the underlying skill (coming up with a great idea) hasn't disappeared, only the volume expectation changed, since AI can expand one idea into hundreds of variants but can't originate the idea itself",
+            "That shift also demands a new skill: judging which of the hundred AI-generated variants is actually good, which he says is itself learned through repeated practice, not innate taste",
+        ],
+        "quote": None,
+        "watch": "This is his own framing, not a neutral academic claim — and it's also the framing that best justifies the AI-agent product his company sells (see the agent-stack theme below).",
+        "names": None,
+    },
+    {
+        "id": "eigenquestion",
+        "color": "green",
+        "badge": "Hiring technique",
+        "status": "",
+        "title": "The \"Self-Eigenquestion\" — His Signature Hiring Exercise",
+        "lead": "His top hiring signal isn't whether someone gives the right answer — it's whether they find the right question to ask.",
+        "bullets": [
+            "Coined term \"self-eigenquestion\" (borrowed from linear algebra's *eigenvector*) — the one question in a set whose answer would resolve most of the others",
+            "His long-running interview prompt, used in **hundreds** of interviews: \"Scientists invented a teleportation device — how do you bring it to market?\" — he then forces candidates to narrow dozens of clarifying questions down to just two",
+            "Best answer he's gotten mapped it on two axes — is it safe for people, and is it capital- or operating-expense heavy — producing four distinct go-to-market strategies: put one in every home like a phone if it's safe and cheap to use; sell to governments like airports if it's safe but expensive; use it for low-stakes disposal (e.g. garbage) if it's unsafe and cheap; use it for high-stakes cases with no alternative (e.g. shipping organs to Africa) if it's unsafe and expensive",
+            "He recommends practicing the skill on genuinely low-stakes problems — he's tested the teleportation question on 5-year-olds, who sometimes reach the sharper safety question (\"does it explode?\") faster than adults do",
+        ],
+        "quote": {"text": "It's not about finding the right answer — it's about asking the right question.", "cite": "— Shishir Mehrotra"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "agent-stack",
+        "color": "amber",
+        "badge": "Product demo (self-interested)",
+        "status": "",
+        "title": "Inside Grammarly/Superhuman Go's Agent Stack — Chat, To-Do, and \"Help\"",
+        "lead": "Grammarly quietly became one of the highest-volume AI products in the world, and Shishir just split it into a general agent platform.",
+        "bullets": [
+            "Grammarly processes **100 billion+** LLM queries per week — over 3,000 requests per active user per day — across roughly 1 million distinct app surfaces daily (web, desktop, mobile)",
+            "Three weeks before this recording, Superhuman split the product: Grammarly keeps its grammar-agent role, while a new product, *Superhuman Go*, opens the same underlying infrastructure (his \"AI superhighway\" metaphor) to custom agents",
+            "His framing of three AI product metaphors: *chat* (a conversational agent you have to open and prompt), *to-do* (checklist automation), and the one he thinks is underused — *help* (an agent that acts unprompted, inside your existing tools)",
+            "Demoed agents: a fact-checker that silently verifies claims as he types (catching a wrong quarterly-revenue figure before sending), a \"placeholder filler\" that auto-completes his own bracketed notes-to-self using connected mail/calendar/docs, and a calendar agent that flags scheduling conflicts across two separate email threads",
+            "A publishing customer replaced roughly a dozen journals' worth of manual review departments (legal, fact-check, brand, sourcing — 16 teams) with one agent stack that runs checks continuously as a reporter writes, instead of at the end",
+            "Users on this \"help\" model send thousands of requests a day versus roughly 10/day for a typical heavy ChatGPT or Claude user, because the agent acts without being asked",
+        ],
+        "quote": {"text": "Help is: an agent that comes to where I work before I ask anything, and helps me out of the blue.", "cite": "— Shishir Mehrotra"},
+        "watch": "This is a live product demo from the company's own CEO, not an independent test — treat the usage stats and workflow claims as vendor-reported.",
+        "names": None,
+    },
+    {
+        "id": "bill-campbell",
+        "color": "green",
+        "badge": "Mentorship lesson",
+        "status": "",
+        "title": "Bill Campbell's Real Lesson: Measure Yourself by Other People's Success",
+        "lead": "Shishir's most enduring lesson from legendary Silicon Valley coach Bill Campbell wasn't about strategy — it was about how to measure his own success.",
+        "bullets": [
+            "Shishir began working with Campbell in 2000, shortly after Campbell left Intuit and started informally coaching founders backed by Kleiner Perkins",
+            "When Shishir, then about 21 and running his first company, offered to formalize a paid consulting agreement, Campbell refused — he said he'd been lucky all his life and everything he earned already went to charity",
+            "Campbell's real answer to \"what motivates you\": he kept a running list of how many people he'd mentored who became Fortune 500 CEOs — by 2000 the list already had ~20 names, and later included Larry Page, Steve Jobs and Jeff Bezos",
+            "At Campbell's funeral, Shishir noticed nearly every speaker told the same story — that Campbell gave them what felt like unlimited personal time and cared only about their success",
+        ],
+        "quote": {"text": "If you want to be a good partner, a good manager, a good leader, you have to root for your people to succeed.", "cite": "— Shishir Mehrotra"},
+        "watch": None,
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F4C8", "tag": "Careers", "title": "Build one visible public project or piece of writing this quarter instead of polishing your resume — that's what got Shishir onto Spotify's board."},
+    {"icon": "\U0001F3C0", "tag": "Skill-building", "title": "Practice judgment (a pitch, a design call, a management decision) in a low-stakes side project before it counts at work."},
+    {"icon": "\U0001F916", "tag": "AI workflows", "title": "Give your AI agents \"help\"-style triggers that act unprompted inside your existing tools, not just a chat window you have to remember to open."},
+    {"icon": "\U0001F9E9", "tag": "Hiring", "title": "Borrow the teleportation-device exercise (or invent your own) to test whether a candidate finds the real question, not just a good answer."},
+    {"icon": "\U0001F91D", "tag": "Leadership", "title": "Pick one number that measures your team's success through other people's success, the way Bill Campbell tracked mentees who became CEOs."},
+]
+
+RISKS = [
+    "Shishir is CEO of Superhuman/Grammarly — the agent-stack theme is a live product pitch from someone with a direct financial interest in you adopting it, not an independent test; treat the usage stats and workflow claims as vendor-reported.",
+    "This episode included a MongoDB sponsor segment, excluded entirely from this brief per standing policy.",
+    "Auto-captions garbled several terms (e.g. \"self-eigenquestion\" rendered as \"self-meaning/self-importance questions,\" \"Superhuman\" as \"Ship human\") — cleaned for readability here, but a reminder this is a machine transcript, not a verified script.",
+    "The Bill Campbell anecdotes and the \"~20 people, later Fortune 500 CEOs\" figure are Shishir's own recollection from over two decades ago, quoted as he told it in conversation rather than sourced from a written record.",
+]
+
+HOT_TAKES = [
+    {"take": "I don't like the word 'replace' because I feel like 'replace' signals a zero-sum game.", "cite": "— Shishir Mehrotra", "why": "direct pushback on the dominant AI-takes-jobs narrative"},
+    {"take": "Your ability to judge [an AI-proposed solution] is in your head, and it can very rarely do anything without a good hint.", "cite": "— Shishir Mehrotra", "why": "a specific claim about AI's real limits, from someone selling AI agents"},
+    {"take": "You need someone who comes up with great, wonderful stories. Claude can expand on them, but if you can't come up with that great idea, you'll never be able to create the next ones.", "cite": "— Shishir Mehrotra", "why": "a direct, falsifiable disagreement with the idea that AI makes junior creative hires unnecessary"},
+    {"take": "We're probably your number one LLM generator — over 3,000 requests per user per day.", "cite": "— Shishir Mehrotra", "why": "a specific, checkable usage claim about his own product"},
+    {"take": "I've been lucky all my life. At the moment, everything I receive goes directly to charity.", "cite": "— Bill Campbell (via Shishir Mehrotra)", "why": "a personal, quotable stance on money and mentorship that Campbell is on the record for"},
+]
+
+OTHER_NEWS = []
+
+GLOSSARY = [
+    {"term": "PSHE", "def": "Shishir's internal career-ladder framework: Problem, Solution, How, Execution — each rung representing a higher level of judgment expected of an employee."},
+    {"term": "Self-eigenquestion", "def": "Shishir's term (from linear algebra's \"eigenvector\") for the single question in a set whose answer resolves most of the others — his core hiring and problem-framing signal."},
+    {"term": "Superhuman Go", "def": "New agent-builder product launched roughly three weeks before this recording, built on the same cross-app infrastructure that powers Grammarly, letting users create custom \"help\"-style agents."},
+    {"term": "AI superhighway", "def": "Shishir's internal metaphor for Grammarly's cross-app annotation and suggestion infrastructure, now opened up to third-party agents via Superhuman Go."},
+]
