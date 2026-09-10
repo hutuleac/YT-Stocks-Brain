@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research: Your AI Strategy Is Measuring the Wrong Things</title>
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Your AI Strategy Is Measuring the Wrong Things</h1>
+    <div class="byline">
+      Channel: <b>Salim Ismail</b> &middot; Speaker: <b>Salim Ismail</b> &middot; <b>2026-09-09</b>
+      <div class="stats-line">6 threads · why company decisions run on narrative not evidence, the coordination-tax study, four metrics that actually measure AI transformation, and a free self-diagnostic tool &middot; <a href="https://www.youtube.com/watch?v=Hvr8t-w9GCE" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Core claim: organizations have inverted the scientific method — <b>"I have an opinion, now show me the evidence that confirms it"</b> — and AI narratives are the newest, most visible version of this.</li><li>Most "data-driven" investment decisions are ratification, not evidence: nobody is formally assigned to red-team the view before it's funded.</li><li>A John Hopkins preprint found <b>74%</b> of workflows studied needed no back-and-forth coordination at all, yet unnecessary coordination still ate <b>24%-57%</b> of the work in those cases.</li><li>The three metrics most companies track for AI (seats/licenses, token spend, task speed) all measure <i>effort</i>, not whether the organization got faster or cheaper end-to-end — he calls this "token maxing."</li><li>Four real metrics proposed instead: doing 50% of your week <i>differently</i> (not faster), workflow volume executed autonomously under human command, the human override rate over time, and an L0-L5 organizational readiness ladder.</li><li>Ismail is promoting his new book <i>The Organizational Singularity</i> (follow-up to his 2014 <i>Exponential Organizations</i>) and a free diagnostic tool/skill called "Building an EXO" at openexo.com.</li><li>Closes with a 3-question self-test (leaderboard question, geometry question, latency question) — a single "yes" on any of them caps an org below L3 regardless of AI spend.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="opinion-first-culture">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">Structural critique</span>
+    <span class="theme-status">PATTERN, NOT ONE COMPANY</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">Companies Run on "Opinion First, Evidence Second, Selected for Fit"</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Decks get built to support a senior leader's pre-formed view, not to test it, and everyone in the room calls the result "data-driven."</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span><b>Opening thesis</b> (from a prior Moonshots podcast appearance he references): 50 years ago the sequence was "show me the evidence, I'll form an opinion"; today it's reversed, and social media "put a rocket on it" because nuance has no viral coefficient.</li><li><span class="dot" style="background:#a23f22;"></span>In practice: a senior person forms a view, an analyst is asked to build a deck that supports it (not test it) — knowing which chart to cut and which slide with a hard question gets moved to the appendix.</li><li><span class="dot" style="background:#a23f22;"></span>His direct test for the reader: <i>in your last big investment decision, was anyone formally assigned and paid to argue against it</i> — to red-team it? For most orgs, no.</li><li><span class="dot" style="background:#a23f22;"></span><b>"If nobody owns the counter case, you don't have an evidence culture, you have a ratification process."</b> He's explicit this isn't about stupid executives — the incentives are structural, rewarding confidence stories because that's what moves budget.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;50 years ago the sequence was show me the evidence and I'll form an opinion. Today we say, I have an opinion, now show me the evidence that confirms it.&#8221;<cite>— Salim Ismail</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="three-fake-ai-metrics">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Structural critique</span>
+    <span class="theme-status">"TOKEN MAXING"</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Seats, Spend, and Task Speed Are the Three Metrics Everyone Tracks — and All Three Are Wrong</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Every AI metric he hears from client companies measures <i>effort</i>, not whether the organization actually got faster, cheaper, or better.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span><b>Seats</b>: how many employees have a license/are weekly-active — a measure of software distribution, tells you nothing about whether the company works differently.</li><li><span class="dot" style="background:#93711b;"></span><b>Spend</b>: token consumption as a badge of AI adoption — he's seen companies run internal leaderboards on token burn, which is literally paying a bonus for burning inference (<b>"Goodhart's law with a budget line"</b>).</li><li><span class="dot" style="background:#93711b;"></span><b>Task speed</b>: the most seductive because it's real — a report that took 3 days now takes 20 minutes — but the actual question is whether <i>cycle time</i> changed, or whether the faster report just sits in an approval queue for the same 9 days it always did.</li><li><span class="dot" style="background:#93711b;"></span>He gives his own org as the example: people send him work much faster now, but <i>he's</i> the bottleneck reading/processing it, so overall decision cycle time hasn't moved even though individual output sped up — "token maxing": high visible individual productivity, flat results at the firm level.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">He frames this as observed pattern across "almost every organization" he talks to, not a formal survey — treat as anecdotal client-conversation evidence, not a study.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="coordination-tax-study">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Preprint evidence</span>
+    <span class="theme-status">2026 PREPRINT, UNREPLICATED</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">A John Hopkins Preprint Found 74% of Workflows Need No Coordination at All</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">A study on where organizational coordination is actually necessary found most of it is avoidable — and avoidable coordination still imposes a real, measurable tax where it happens anyway.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Study by a researcher he names as Haran Jou at John Hopkins (published as a 2026 preprint) examined which workflows across a large group of organizations actually require coordination — meetings, handoffs, alignment calls before something can move.</li><li><span class="dot" style="background:#93711b;"></span>Finding: roughly <b>74%</b> of the workflows examined were <i>monotonic</i> — they could run forward without any back-and-forth coordination.</li><li><span class="dot" style="background:#93711b;"></span>Where coordination was avoidable but happened anyway, it imposed a tax of <b>24%-57%</b> of the work on that workflow.</li><li><span class="dot" style="background:#93711b;"></span>He flags the caveat himself: it's a preprint on a sample, will get replicated, numbers may move — but calls that the point: <b>"it's an evidentiary claim which means it can be checked and revised and argued with. You cannot check a vibe."</b></li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Preprint, not peer-reviewed; author name and institution are from auto-captions and may be misheard/misspelled — treat the specific name as approximate, the 74%/24-57% figures as his stated reading of the study.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="four-real-metrics">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">WHAT TO MEASURE INSTEAD</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Four Metrics That Actually Measure AI Transformation</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Replace seats/spend/speed with measures of whether work itself changed, not just whether it got faster.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span><b>Doing it differently, not faster</b> (credited to Michelle Krivcovich): 50% of your time should be spent <i>differently</i> because of AI access — a different sequence of activities in your week, not the same work 50% quicker. His test: what did you do this week you wouldn't have done 18 months ago, and what did you stop doing entirely?</li><li><span class="dot" style="background:#3f6b2e;"></span><b>Workflow volume under autonomous execution</b> (credited to Mark Jenkins at OpenText): stop counting how many employees/companies use AI assistants or agents; measure the volume of <i>workflows</i> safely executed end-to-end by autonomous agents under human command — every word load-bearing: workflows (not tasks), safely (provably happened), executed (reached its own outcome), under human command (someone is accountable).</li><li><span class="dot" style="background:#3f6b2e;"></span><b>Human override rate</b>: when an agent runs alongside an existing process, track how often people correct it, week over week. A falling rate means the system is learning the business; a flat rate after 3 months means "you've bought software, you've not built capability" — and it can't be gamed because the corrections are made by your own people doing their own work.</li><li><span class="dot" style="background:#3f6b2e;"></span><b>The L0-L5 readiness ladder</b> (his firm's framework, released this year): L0 theater, L1 personal productivity, L2 team workflow, L3 organizational infrastructure, L4 compounding operating system/durable advantage, L5 virtually self-driving. His claim: no organization on Earth is at L5 yet, and most companies with a loud AI narrative are actually sitting at L1.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Stop measuring how many employees are using AI, measure the volume of workflows that is executed by AI under human supervision.&#8221;<cite>— Salim Ismail, citing Mark Jenkins</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="organizational-singularity-book">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Self-promotion, disclosed</span>
+    <span class="theme-status">NEW BOOK + FREE TOOL</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">The Organizational Singularity — a Sequel to Exponential Organizations, Built as a Diagnostic Skill</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">His 2014 book described the pattern of fast-scaling organizations but gave no instruments to measure against it; this one is built around a free, installable diagnostic instead.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span><i>Exponential Organizations</i> (2014) gave people vocabulary for how the fastest-growing companies scaled, but was descriptive — he says people would call themselves an "exponential organization" and have no answer when he asked about revenue-per-employee.</li><li><span class="dot" style="background:#65695f;"></span>New book has three pieces: EXO 3.0 (the target architecture, with an "MTP" encoded as a protocol agents can read), the Intelligence Stack (the operating system every agent/workflow plugs into), and Rewrite (the playbook/sequence to get from current state to EXO 3.0).</li><li><span class="dot" style="background:#65695f;"></span>The diagnostics are the part he says matters most: a readiness score with anchored descriptors (so a "4" means the same thing in finance as in operations), covering the dabbling test, token-maxing test, override grade, and the L0-L5 ladder.</li><li><span class="dot" style="background:#65695f;"></span>The whole operating model — diagnostics, scorecards, agent specs, data-governance test, full playbook — is packaged as a free installable skill called "Building an EXO," runnable inside Claude, Codex, and (he says) soon Grok — available at openexo.com/resource-hub, no email or sales call required to run the diagnostic.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">He directly discloses the conflict: "I'm not going to pretend this is charity. We build a business on the far side of this work, and some of you will end up working with us" — the tool is a funnel into his consulting practice, by his own statement.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="three-question-test">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Self-diagnostic</span>
+    <span class="theme-status">RUN IN ~4 MINUTES</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">The Three-Question Test: Leaderboard, Geometry, Latency</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">A single "yes" on any of these three questions caps an organization below L3 no matter how much it's spending on AI.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span><b>Leaderboard question</b>: are you formally or informally rewarding anyone for an input — usage, tokens, pilots, agents deployed? A yes means you're paying for the appearance of transformation.</li><li><span class="dot" style="background:#93711b;"></span><b>Geometry question</b>: do your agents sit one-per-department inside the existing org chart, reporting into the structure you already had? A yes means, in his phrase, <b>"you've electrified the old factory"</b> — put a motor on every machine and left the drive shaft running down the ceiling.</li><li><span class="dot" style="background:#93711b;"></span><b>Latency question</b>: are individual tasks measurably faster while end-to-end cycle time is unchanged? A yes means you've moved the queue, not removed the problem.</li><li><span class="dot" style="background:#93711b;"></span>His framing: three yeses (or three honest "I don't knows") is transformation theater, and none of the three failures is fixable by buying another tool — each is a decision-architecture problem.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🎯</div><div class="tline"><span class="cat">AI strategy:</span> <span class="txt">Audit which of the three fake metrics (seats, token spend, task speed) is on your dashboard right now, and be honest about it — none of them measure whether the org got faster or cheaper.</span></div></div><div class="irow"><div class="ic">📊</div><div class="tline"><span class="cat">AI strategy:</span> <span class="txt">Start tracking human override rate on any agent running alongside a live process — a flat rate after 3 months means you bought software, not capability.</span></div></div><div class="irow"><div class="ic">👥</div><div class="tline"><span class="cat">Org design:</span> <span class="txt">Assign and protect a formal red-team role on your next major investment decision — someone paid to argue against it and expected to win sometimes.</span></div></div><div class="irow"><div class="ic">🧮</div><div class="tline"><span class="cat">Org design:</span> <span class="txt">Run the 3-question test (leaderboard/geometry/latency) on your own org before your next leadership meeting — a single yes caps you below L3 regardless of spend.</span></div></div><div class="irow"><div class="ic">🔁</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Ask what <b>50%</b> of your week you're now doing differently (not just faster) because of AI access — if you can't name it, you're dabbling, not transformed.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where this could be wrong</div>
+      <h2>Risks &amp; Caveats on This Source</h2>
+      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">This is disclosed self-promotion: Ismail names his own consulting business as the reason the diagnostic tool exists ("we build a business on the far side of this work") — the framework and metrics he recommends are also the product he sells.</div><div class="ritem">The coordination-tax study (<b>74%</b> monotonic, 24%-57% tax) is a single 2026 preprint he cites from memory in conversation, not a report he's reading from — he flags it as unreplicated himself.</div><div class="ritem">The researcher's name (heard as "Haran Jou") and the two metric sources ("Michelle Krivcovich", "Mark Jenkins at OpenText") come through auto-captions and may be misspelled or mistranscribed — treat the specific spellings as approximate, the ideas attributed to them as his own paraphrase in conversation.</div><div class="ritem">Figures like the L0-L5 ladder and the override-rate metric are his firm's own framework, presented with conviction but without independent validation data in this video.</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;You've just paid a bonus for burning inference. That's Goodhart's law with a budget line.&#8221; <cite>— Salim Ismail</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;If nobody owns the counter case, you don't have an evidence culture, you have a ratification process.&#8221; <cite>— Salim Ismail</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;You've electrified the old factory. You've put a motor on every machine and left the drive shaft running down the ceiling. This is not going to work over time.&#8221; <cite>— Salim Ismail</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Most companies with a loud AI narrative are sitting at L1.&#8221; <cite>— Salim Ismail</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;A single yes puts you below L3, no matter what you are spending.&#8221; <cite>— Salim Ismail</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Charging for the thermometer would not be very fair, it would be kind of absurd.&#8221; <cite>— Salim Ismail</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><p class="empty">Nothing notable found in this category for this video.</p></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Goodhart's law</b> &mdash; When a measure becomes a target, it stops being a good measure — invoked here for token-consumption leaderboards that reward burning inference rather than useful output.</div><div><b>Monotonic workflow</b> &mdash; A workflow that can run forward to completion without back-and-forth coordination (meetings, handoffs, alignment calls) — the John Hopkins preprint found ~74% of workflows studied fit this category.</div><div><b>L0-L5 ladder</b> &mdash; Ismail's readiness scale for AI-driven organizations: L0 theater, L1 personal productivity, L2 team workflow, L3 organizational infrastructure, L4 compounding operating system, L5 virtually self-driving.</div><div><b>Token maxing</b> &mdash; His term for high visible token spend and individual output paired with flat results at the level of the whole firm.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
