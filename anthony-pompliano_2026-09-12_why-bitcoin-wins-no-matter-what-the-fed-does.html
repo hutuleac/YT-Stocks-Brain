@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research: Why Bitcoin Wins No Matter What The Fed Does</title>
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Why Bitcoin Wins No Matter What The Fed Does</h1>
+    <div class="byline">
+      Channel: <b>Anthony Pompliano</b> &middot; Speaker: <b>Anthony Pompliano, Jordi Visser</b> &middot; <b>2026-09-12</b>
+      <div class="stats-line">6 threads · rates don't matter to an AI/digital economy, Ethereum's quarter, Robinhood's tokenization bridge, a week of AI escalation (Astra, Navier-Stokes, hacks), Bessent/Trump/Warsh aligned on AI+crypto, and the $2T club of unprofitable giants &middot; <a href="https://www.youtube.com/watch?v=Uzc3tBB9pLg" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Jordi Visser's core thesis: the economy is now digital, not rate-sensitive (no housing/auto debt cycle), so <b>25 basis points</b> of Fed action is irrelevant next to 30%+ earnings growth and an accelerating AI trade.</li><li><b>Ethereum</b> is the best-performing major asset (&gt;$100B) quarter-to-date — roughly double Bitcoin's return — while the S&amp;P 500 and Nasdaq are both flat, a low-correlation setup Visser reads as bullish for both once stocks catch up.</li><li><b>Robinhood</b> is being reframed as an Apple-style multi-revenue platform (prediction markets now out-earning stock trading), with Robinhood Chain on Ethereum/Arbitrum as the tokenization bridge between crypto-native and traditional finance communities.</li><li>A single week of AI escalation: OpenAI's <b>Astra</b> release, a reported Navier-Stokes solve via ~100,000 GPUs, Jensen Huang declaring AGI reached, an ex-Anthropic employee's doomer exit, and real-world hacks (Boston Scientific, a UK power plant, Iran allegedly feeding war plans to Claude).</li><li>Visser argues Bessent, Trump, and Fed nominee Kevin Warsh are functionally aligned on "we can't lose the AI race to China" and pro-crypto positioning — making the bear case a bet against the White House, not just the market.</li><li>The Clarity Act (crypto market-structure legislation) is priced below <b>20%</b> to pass this year on prediction markets; Visser thinks passage would trigger a faster-than-expected Bitcoin move by unlocking pension-fund allocation.</li><li>Visser's "<b>$2 trillion</b> club" — Bitcoin, SpaceX, Anthropic, OpenAI — is roughly $8T combined and largely unprofitable, which he compares to Amazon's multi-decade unprofitable run before its 17,000% rise.</li><li>A recurring meta-point: Visser splits people into "static" (linear, textbook, doomer) vs. "dynamic" (adaptive, online, AI-native) thinkers, and says most bearish takes on rates/oil/AI come from the static camp.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="rates-dont-matter">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">FED DECISION PENDING — 81% odds of a 25bp hike (Polymarket, morning of taping)</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">"Why anyone would care about 25 basis points is beyond me"</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Visser's central argument: this economy no longer transmits through interest rates, so the market's rate/oil anxiety is a category error.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span><b>Zero</b> measured rate-sensitivity in the AI trade, per Visser's own weekend research video — despite recurring "these companies can't handle higher rates, their CDS is blowing out" chatter.</li><li><span class="dot" style="background:#3f6b2e;"></span><b>Core CPI at 2.4%</b> year-over-year; Kevin Warsh has publicly disputed how core PCE is calculated and is assembling a group to rework the metric.</li><li><span class="dot" style="background:#3f6b2e;"></span>Oil's sixth-month contract is up <b>20%</b> year-over-year despite doomer predictions (including a widely-wrong call that California would run out of gasoline in July); pipelines are reportedly being built to reduce the Strait of Hormuz's strategic importance.</li><li><span class="dot" style="background:#3f6b2e;"></span>Contrast with 2022: that hiking cycle came off ultra-low rates, no AI capex boom, a fresh recession, and ~9-<b>10%</b> inflation — a fundamentally different setup than today's 25bp debate.</li><li><span class="dot" style="background:#3f6b2e;"></span>Historically 10-year yields ran ~200bp above nominal GDP (which would put them near 8% now); that relationship broke in 1997 during the <b>Asian financial crisis</b> and never fully returned outside recessions — Visser reads today's lower yields as the economy no longer being housing/auto-debt sensitive.</li><li><span class="dot" style="background:#3f6b2e;"></span>The S&amp;P 500 was roughly unchanged since <b>June 2nd</b> as of taping, despite the AI progress described below — Visser's evidence that the market is completely mispriced relative to what's actually happening.</li><li><span class="dot" style="background:#3f6b2e;"></span>His framework for why people get this wrong: <b>static</b> thinkers (tariffs → inflation, full stop) vs. <b>dynamic</b> thinkers (tariffs → does domestic manufacturing respond? do other policy tools blunt it?) — he maps most AI/crypto-adjacent, terminally-online people as dynamic and most traditional-finance doomers as static.</li><li><span class="dot" style="background:#3f6b2e;"></span>He mocks the <b>midterm-elections-will-kill-this-rally</b> narrative (Dems expected to win) as another static, headline-driven worry that will just get retroactively credited to "Trump paid for it" once the market moves higher anyway.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;This is not an interest rate sensitive market... the AI trade has nothing to do with tenure rates at this point.&#8221;<cite>— Jordi Visser</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">This is Visser's own framing of "restrictive" thresholds and rate sensitivity — a real, disputed macro question, not a settled fact.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="market-structure">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Structural critique</span>
+    <span class="theme-status"></span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">AI agents are front-running hedge funds' own drawdown rules</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Visser breaks market participants into three buckets, and says AI agents are exploiting the predictable, rules-bound reactions of human traders.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Bucket one: active hedge fund traders bound by hard drawdown limits (e.g. a <b>5%</b> cap on a market-neutral book) who must react emotionally to data like PPI prints.</li><li><span class="dot" style="background:#93711b;"></span>Bucket two: AI agents with no emotional constraints, whose only job is to front-run the predictable reactions of bucket one — sell when the humans sell, then reverse the next day with no memory of yesterday.</li><li><span class="dot" style="background:#93711b;"></span>Bucket three: retail/long-horizon traders (Visser now counts himself here) who can treat the resulting herky-jerky, low-consistency moves as entry-point opportunities rather than signals.</li><li><span class="dot" style="background:#93711b;"></span>Visser's read: this dynamic is making short-term trading harder for professional managers, while rewarding people who can ignore the noise and hold a medium-term view (e.g. "S&amp;P earnings up <b>20%</b> next year, no recession").</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Visser's own trading experience runs a hedge-fund/prop background; this is his read on market microstructure, not disclosed order-flow data.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="ethereum-robinhood">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">Q3-TO-DATE — Ethereum ~2x Bitcoin's return; S&amp;P 500/Nasdaq roughly flat</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Ethereum's outperformance and Robinhood's tokenization bridge</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Visser's two live examples of tokenization actually happening: Ethereum's standout quarter and Robinhood's business-model shift.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span><b>Ethereum (ETH)</b> is the best-performing major asset (&gt;$100B market cap) quarter-to-date, roughly double Bitcoin's gain, while the S&amp;P 500 and Nasdaq sit near flat — a low-correlation setup Visser thinks precedes stocks catching up alongside crypto.</li><li><span class="dot" style="background:#3f6b2e;"></span><b>Robinhood (HOOD)</b> now earns more revenue from prediction markets than from stock trading, and Morgan Stanley upgraded the stock this week — explicitly <i>not</i> for crypto revenue, but because Robinhood is becoming Apple-like: multiple service revenue streams.</li><li><span class="dot" style="background:#3f6b2e;"></span>Robinhood Chain (built on Ethereum via Arbitrum) is driving 24/7 active trading volumes, currently dominated by memecoins — which Visser frames as the leading edge of a broader tokenization wave, not the point itself.</li><li><span class="dot" style="background:#3f6b2e;"></span>He contrasts Robinhood's collaborative trading-community culture (from attending a Robinhood event) with the traditionally combative culture of Wall Street trading floors.</li><li><span class="dot" style="background:#3f6b2e;"></span>Robinhood, Moomoo, and Interactive Brokers now all offer agentic/paper-trading tools; Visser is releasing a GitHub-based backtesting tool for subscribers and frames agentic trading practice as an entrepreneurship on-ramp for kids (he mentions his son uses agents daily).</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Robinhood merges not just these technologies together — I think it merges this community aspect.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Ethereum (ETH)</b><span>Best-performing major asset quarter-to-date, ~2x Bitcoin's return.</span></div><div class="namechip"><b>Robinhood (HOOD)</b><span>Morgan Stanley-upgraded on multi-revenue-stream thesis; prediction markets now outearn stock trading.</span></div><div class="namechip"><b>Bitcoin (BTC)</b><span>Underperformed Ethereum this quarter but still outpaced flat US equity indices.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="valuing-crypto">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Speculative framework</span>
+    <span class="theme-status"></span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">"We don't know what the metrics are" — valuing crypto like the 1990s internet</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Visser is writing a paper on how to value crypto, built around an analogy to how nobody could value the internet in the 1990s either.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>In the dot-com era, Amazon was valued on "eyeballs" and clicks — metrics that, in hindsight, meant nothing; Visser thinks crypto is at the same pre-metric stage now.</li><li><span class="dot" style="background:#65695f;"></span>He interviewed a figure with roots in Napster, the Ethereum Foundation, and the Solana Foundation for the paper (name garbled in captions as "William Goyabber" — likely blockchain writer William Mougayar) about valuing Ethereum as an ecosystem comparable to the early internet.</li><li><span class="dot" style="background:#65695f;"></span>Visser ran that person's ~2015 TED talk on blockchain through ChatGPT against what's actually happened since: roughly <b>8.5/10</b> on the overall vision, but only <b>5/10</b> when broken into individual predicted components.</li><li><span class="dot" style="background:#65695f;"></span>His framing: the world is shifting from valuing companies on revenue to valuing them on <b>trust</b> and <b>velocity/volume of flow</b> — with Bitcoin and Ethereum benefiting most from the trust side as AI-era hacking risk rises.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The interviewee's name could not be confidently resolved from auto-captions; treat the attribution as approximate.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="ai-week">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested event</span>
+    <span class="theme-status">WEEK OF SEPTEMBER 8, 2026</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">A week's worth of AI progress — and AI risk — compressed into days</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Visser: "There was like a year's worth of progress in the last seven days," citing a cluster of releases, claims, and security incidents.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>OpenAI's <b>Astra</b> release: Visser calls it a step-function beyond Grok ("Grockbot"), combining agentic execution, chat, image generation, and work tools in one system; he cites Greg Brockman's TBPN interview describing everything now converging inside ChatGPT.</li><li><span class="dot" style="background:#93711b;"></span>OpenAI reportedly solved the <b>Navier-Stokes equation</b> using brute-force compute (~100,000 GPUs) — Visser argues this reopens terminal-value questions for physical/mining companies 5+ years out, though not near-term earnings.</li><li><span class="dot" style="background:#93711b;"></span>Jensen Huang publicly declared OpenAI had reached AGI the same week Bessent made his "I am the house" comment — timing Visser reads as the market completely mispricing the pace of AI progress.</li><li><span class="dot" style="background:#93711b;"></span>A separate controversy: accusations that OpenAI may have trained on mathematician-submitted problems before appearing to "solve" a century-old open problem — an open ethics question, not a settled one.</li><li><span class="dot" style="background:#93711b;"></span>Security incidents same week: Boston Scientific hacked and warned it won't hit earnings guidance for the rest of the year (also hitting Stryker's stock); a UK power plant hack; and a report that Iran fed war plans and target lists to Claude, which reportedly flagged the activity rather than assisting.</li><li><span class="dot" style="background:#93711b;"></span>An ex-Anthropic employee who quit after six weeks claiming AI "will kill everybody" was amplified by the doomer crowd; Visser and Pompliano treat this skeptically as more attention-driven than substantive, alongside a Paul Tudor Jones WSJ op-ed and a Greg Jensen (Bridgewater) warning, both flagged the same week.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I don't know if you heard the Boston Scientific news this week... they had a hacking and they basically said they're not going to meet their earnings numbers for the rest of this year.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>OpenAI</b><span>Astra release and reported Navier-Stokes solve; also Jensen Huang's AGI claim about the company.</span></div><div class="namechip"><b>Anthropic (via Claude)</b><span>Reportedly flagged Iran's alleged attempt to use Claude for war planning; also the ex-employee doomer exit story.</span></div><div class="namechip"><b>Boston Scientific, Stryker</b><span>Boston Scientific hacked, warned on earnings; Stryker's stock affected in sympathy.</span></div><div class="namechip"><b>Galvanic</b><span>Critical-infrastructure cybersecurity startup Jordi Visser is an investor in, founded by an ex-White House staffer.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The Navier-Stokes solve, the Iran/Claude story, and the OpenAI training-on-submissions allegation are all reported/discussed claims from this news cycle, not independently verified by the hosts.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="washington-alignment">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status"></span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Bessent, Trump, and Warsh are effectively long AI and crypto</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Visser's argument: betting bearish on AI or crypto right now means betting against an aligned White House, Treasury, and incoming Fed chair.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Bessent said this week the <b>US "cannot lose the AI race to China"</b>; Visser notes AI company leadership is in constant, direct contact with the White House.</li><li><span class="dot" style="background:#3f6b2e;"></span>Bessent, on Steve Bannon's War Room, said: "if the Bloomberg terminal bros are upset with me, then so be it" — Visser reads this as Bessent finding his political voice and becoming the more assertive half of a "carrot and stick" duo with Trump.</li><li><span class="dot" style="background:#3f6b2e;"></span>Kevin Warsh (Fed nominee) is described as pro-crypto, pro-Bitcoin, and a believer — per Alan Greenspan's precedent — that the Fed must adapt its framework to AI-driven productivity change.</li><li><span class="dot" style="background:#3f6b2e;"></span>Visser dismisses the Michael Burry / Jim Chanos bear case (that AI chips depreciate too fast to justify capex) by citing Gavin Baker's point (via a Patrick O'Shaughnessy podcast conversation about a month prior) that H100 resale/rental prices are <i>higher</i> now than a year ago, while cloud providers' underlying costs are falling — implying faster-than-expected profits.</li><li><span class="dot" style="background:#3f6b2e;"></span>Visser also frames Fed politics bluntly: he expects Kevin Warsh not to raise rates for the same reason Powell cut before the last election — "if you have a job, you have a boss."</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Why would you bet against this? Like, why would you be fighting against it?&#8221;<cite>— Jordi Visser</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">This is Visser's political read on Fed independence and administration alignment — a contested framing, not a factual claim about Fed decision-making.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📊</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Track Ethereum's relative strength vs. Bitcoin this quarter as a signal for whether stocks join the next crypto leg up.</span></div></div><div class="irow"><div class="ic">🏛️</div><div class="tline"><span class="cat">Policy:</span> <span class="txt">Watch Clarity Act headlines specifically — Polymarket has it under <b>20%</b> for this year, so any positive surprise is a real catalyst, not priced in.</span></div></div><div class="irow"><div class="ic">🤖</div><div class="tline"><span class="cat">AI:</span> <span class="txt">Treat this week's AI headline cluster (Astra, Navier-Stokes, AGI claims, hacks) as a pace-of-change signal, not a single verified fact set — cross-check before acting on any one claim.</span></div></div><div class="irow"><div class="ic">💸</div><div class="tline"><span class="cat">Macro:</span> <span class="txt">Stop weighting a 25bp Fed move heavily in a portfolio thesis if earnings growth and AI capex are the actual drivers of this cycle.</span></div></div><div class="irow"><div class="ic">🏦</div><div class="tline"><span class="cat">Companies:</span> <span class="txt">Reassess Robinhood as a multi-revenue platform business (prediction markets, tokenization, agentic trading) rather than a commission-free brokerage.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where this could be wrong</div>
+      <h2>Risks &amp; Caveats on This Source</h2>
+      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">Visser is a working money manager and content creator (Sylvia/CFOSylvia.com) with a direct commercial interest in bullish AI/crypto conviction landing with his audience.</div><div class="ritem">Several factual claims this episode (the Navier-Stokes solve, the Iran/Claude story, OpenAI training on submitted math problems) are relayed from the week's news cycle and discussed as-reported, not verified firsthand by either speaker.</div><div class="ritem">Auto-captions garbled at least one proper noun (the crypto valuation researcher's name) badly enough that the attribution above is a best-effort guess, not a confirmed identification.</div><div class="ritem">Political framing (Fed independence, Bessent/Trump/Warsh alignment) reflects Visser's own read of incentives, not disclosed policy intent from any of the named officials.</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;Why anyone would care about this when earnings are growing 30 plus% is beyond me.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I feel bad for their children's portfolios 'cause it's probably not going to work out for them.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;If clarity goes through, I think crypto would go up far faster than people realize.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't think it's going to happen... I kind of hope it does happen so we can just get rid of it.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The reason the market isn't higher is because of the worries people have. No question about it.&#8221; <cite>— Jordi Visser</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><p class="empty">Nothing notable found in this category for this video.</p></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Clarity Act</b> &mdash; Proposed US crypto market-structure legislation; Visser sees its passage as the key near-term catalyst for pension-fund entry into crypto.</div><div><b>Robinhood Chain</b> &mdash; Robinhood's blockchain infrastructure, built on Ethereum via Arbitrum, hosting 24/7 tokenized trading currently dominated by memecoin volume.</div><div><b>Static vs. dynamic thinkers</b> &mdash; Visser's framework for people who reason linearly from past patterns (static) versus those who adapt reasoning to new information and feedback loops (dynamic).</div><div><b>$2 trillion club</b> &mdash; Visser's grouping of Bitcoin, SpaceX, Anthropic, and OpenAI — all roughly $2T valuations, none profitable at that scale, together worth roughly $8T.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
