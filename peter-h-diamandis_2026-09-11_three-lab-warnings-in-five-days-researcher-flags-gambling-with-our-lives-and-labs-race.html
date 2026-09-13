@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research: Three Lab Warnings in Five Days, Researcher Flags “Gambling with Our Lives,” and Labs Race</title>
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Three Lab Warnings in Five Days, Researcher Flags “Gambling with Our Lives,” and Labs Race</h1>
+    <div class="byline">
+      Channel: <b>Peter H. Diamandis</b> &middot; Speaker: <b>Peter Diamandis, Alex Wissner-Gross, Immad Mostaque, Dave Blundin, Salim Ismail</b> &middot; <b>2026-09-11</b>
+      <div class="stats-line">6 threads · an alignment researcher's resignation and the PDoom debate it triggered, why data (not architecture) is the real moat, Millennium Prize math problems falling, the GPU/HBM compute-economy reversal and China's closing model gap, Anthropic's economic dominance and the coming GDP/UBI fight, and two concrete longevity/genomics breakthroughs &middot; <a href="https://youtu.be/AxzcWOxzkiw" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>A researcher who spent three years on pre-training at both OpenAI and Anthropic resigned and called the race to superintelligence "gambling with our lives"; Anthropic's own alignment lead publicly agreed AI could kill everyone with <b>&gt;10% probability within a decade</b> — the panel is split on how much to read into it.</li><li>A Dwarkesh Patel/Jerry Han study found better training data drove <b>12x</b> of AI's 2019-2025 compute-efficiency gains versus <b>3.7x</b> from better architecture — the panel's takeaway: data, not algorithms, is the real moat, and it has a shelf life.</li><li>OpenAI's reported Navier-Stokes solve has the panel calling multiple Millennium Prize math problems "cooked," with Noam Brown citing a roughly <b>25,000x cost collapse</b> (from $500k to $20) in similar benchmark performance since 2025.</li><li>H100 GPU rental prices are <b>up 22% in a month</b> to $3.28/hour despite the chips being three years old — the opposite of standard depreciation — while a new DeepSeek architecture chart shows a possible 4x cut in the HBM memory that's currently ~40% of AI capex.</li><li>NPR reports Anthropic hit a <b>$6.5B quarterly revenue run-rate</b> and 42% of the AI coding market en route to a reported $2T+ IPO; its own economic-impact report models up to <b>15% annual GDP growth</b> and 20% cognitive-worker unemployment by 2030 — Immad Mostaque says the model is missing aggregate-demand collapse and is building a rival model to prove it.</li><li>Two concrete health breakthroughs: Insilico Medicine's AI-designed drug rentosertib reached Phase 3 for a fatal lung disease while reversing six protein aging clocks by 3-6 years in trial patients, and Google DeepMind's AlphaGenome now scores all ~9 billion possible single-letter human genome mutations.</li><li>Dave Blundin's company Vestmark (2001, post-9/11 founding) is being acquired by Envestnet, backed by Bain Capital, merging into a combined ~<b>$10 trillion</b> asset-management platform.</li><li>Sponsor segments (Abundance Summit/Link Ventures intro, Google for Startups, Blitzy, and a Fountain Life cancer-screening segment) are excluded from this brief per standing policy.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="alignment-crisis">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status"></span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">A researcher's resignation, a &gt;10% doom estimate from Anthropic's own alignment lead, and a genuinely split panel</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Three separate signals from inside the labs surfaced within five days, and the Moonshots panel split hard on how seriously to take any of them.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Jacob Coxin, who spent three years on pre-training at both OpenAI and Anthropic, resigned and posted that "neither company is acting responsibly in the race toward self-improving super intelligence," calling it <b>gambling with our lives</b>; his tweet reportedly reached 100-150 million views with no obvious paid boost, which several panelists found itself suspicious.</li><li><span class="dot" style="background:#93711b;"></span>Evan Hubinger, Anthropic's alignment science lead, responded on X: "we really do earnestly believe AI could kill all humans. I personally think it is greater than <b>10%</b> within the next decade... we do not yet have a plan to solve alignment for superintelligence."</li><li><span class="dot" style="background:#93711b;"></span>Alex Wissner-Gross discounts the resignation itself ("a well-worn tradition... rage quit couched as virtue signaling") but calls the <i>reach</i> of the tweet genuinely strange, and floats the possibility of a foreign influence operation without confirming one.</li><li><span class="dot" style="background:#93711b;"></span>Context: Anthropic CEO Dario Amodei separately stated a personal probability of roughly <b>25%</b> that AI turns out badly, a year before this episode — a figure the panel notes got far less attention than this week's tweets did.</li><li><span class="dot" style="background:#93711b;"></span>Alex's counter-argument to any near-<b>10%</b> doom estimate: if superintelligence reliably led to catastrophic outcomes, advanced alien civilizations should already have devoured or been devoured across the galaxy on statistical grounds — since we don't observe that, he treats high PDoom numbers as overstated (his own words: "an inductive prior, not a safety strategy").</li><li><span class="dot" style="background:#93711b;"></span>Immad Mostaque discloses his own <b>personal doom estimate dropped from 50% to 20%</b>, and argues the real debate is sociological — what this does to policy in the two weeks before Xi Jinping's visit to the US, not whether the number is exactly right.</li><li><span class="dot" style="background:#93711b;"></span>Peter and Immad both call any PDoom above roughly <b>1%</b> unacceptable regardless of the exact figure, while Dave and Alex argue slowing down doesn't reduce risk ("all that would happen... is we would fritter away the time... and create a race condition with China") and that steering, not stopping, is the only real option.</li><li><span class="dot" style="background:#93711b;"></span>Separately, the panel debates the <b>orthogonality thesis</b> (whether intelligence and goals are independent) — Alex says his own hope for the future rests on it being <i>false</i>, i.e. that greater intelligence tends toward greater wisdom and thus alignment, a belief he flags as his personal, unproven best hope rather than a settled result.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;We really do earnestly believe AI could kill all humans. I personally think it is greater than 10% within the next decade.&#8221;<cite>— Evan Hubinger, Anthropic alignment science lead</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Every PDoom figure in this segment (10%, 20%, 25%, 50%, 0.1%) is a personal, informally stated estimate from a different individual, not a consensus number or a published study.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="data-is-the-moat">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status"></span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Data drove 3x more of AI's progress than architecture did — and that's an entrepreneurial opening</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">A new study puts a number on something the panel has argued for years: the quiet work of curating training data has mattered more than the algorithms that get the headlines.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>The study (Dwarkesh Patel with Princeton's Jerry Han, covering AI progress from 2019-2025) found better training <b>data</b> produced a <b>12x</b> improvement in compute efficiency versus <b>3.7x</b> from better architectures and training recipes — data outweighed algorithms by more than 3-to-1.</li><li><span class="dot" style="background:#3f6b2e;"></span>Alex ties this to his own older essay ("data sets over algorithms") arguing historical AI grand-challenge breakthroughs — chess, speech recognition, Jeopardy — were data-set problems, not algorithm problems, and next-token prediction is "the ultimate data challenge."</li><li><span class="dot" style="background:#3f6b2e;"></span>Concrete valuation proof point (Immad, without naming the company): a business worth roughly <b>$8 billion</b> spun its internal data assets into a separate subsidiary that was independently valued at <b>$32 billion</b> — four times the parent company's own worth.</li><li><span class="dot" style="background:#3f6b2e;"></span>Caution flag, Alex's own example: Bloomberg pre-trained BloombergGPT on its proprietary financial data expecting durable enterprise value, but general frontier models trained on public (plus whatever proprietary data they can access) data outperformed it on financial benchmarks within months — proprietary internal data has real but <i>time-limited</i> value.</li><li><span class="dot" style="background:#3f6b2e;"></span>Dave's practical read for entrepreneurs: frontier labs including reported outreach from <b>OpenAI</b>, plus data buyers referenced only as "Mero" and "Scale," are actively trying to buy corporate data archives outright, and any founder with clean, unique domain-specific data has a real shot at a business "in that use case" outperforming the foundation labs' own general models.</li><li><span class="dot" style="background:#3f6b2e;"></span>Salim's blunt framing of the risk on the other side: any tech-driven moat now has a shelf life that's shrinking, so the entrepreneurial imperative is to build a culture of constant reinvention ("you'll have a tow hold... then keep moving") rather than assume a data or product advantage is durable.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;The next 10x may be sitting in the data that you have someplace in your organization.&#8221;<cite>— Peter Diamandis</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="math-is-cooked">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status"></span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Millennium Prize math problems are falling, and the cost to solve them is collapsing 25,000x</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">OpenAI's reported Navier-Stokes solve has the panel calling multiple famous unsolved math problems "cooked" — and citing a cost curve that makes today's frontier result a coffee-shop expense within two years.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Sam Altman's own reaction to the Navier-Stokes result: "I did not expect a result of this magnitude to happen so soon... for me, this is the strongest evidence yet" for the need to "pace progress" — used by the panel as evidence the surprise, at minimum, is genuine on some level.</li><li><span class="dot" style="background:#3f6b2e;"></span>Alex says he's hearing "finger to the wind" rumors that OpenAI and/or Anthropic may already be sitting on solutions to two more Clay Millennium Prize problems — the <b>Hodge conjecture</b> and the <b>Birch and Swinnerton-Dyer conjecture</b> — explicitly unconfirmed, not reported fact.</li><li><span class="dot" style="background:#3f6b2e;"></span>Noam Brown (OpenAI): OpenAI's o3 model cost roughly <b>$500,000</b> to score 87.5% on ARC-AGI-1 in 2025; a comparable-caliber result is now available for about <b>$20/month</b> via Astra — a cost collapse of roughly <b>25,000x</b>, which the panel projects could put Millennium-Prize-caliber results at "the cost of a cup of coffee" by late 2027.</li><li><span class="dot" style="background:#3f6b2e;"></span>Alex coins the term <b>"normalcy overhang"</b> for the current moment: street-level life still looks ordinary (no humanoid robots, no nanotech swarms) even as math and science are being "bulk solved" behind the scenes — he expects this gap to visibly collapse soon.</li><li><span class="dot" style="background:#3f6b2e;"></span>The panel's practical advice to anyone currently in or considering a PhD: Mark Chen (OpenAI's chief research officer) and Greg Brockman (OpenAI co-founder, MIT dropout) both reached the top of frontier AI without one, and the panel cites Elon Musk's line that he'll "hire anybody without a college degree" based purely on what they've built — Dave's framing is that a PhD now has a real risk of finishing "four years... too late to the party."</li><li><span class="dot" style="background:#3f6b2e;"></span>Immad frames the actual bottleneck differently: once a problem can be <i>specified</i> clearly (like Navier-Stokes), throwing thousands of agents at it is comparatively easy — the harder and more valuable entrepreneurial skill becomes defining the right question (curing cancer, better flight planning) in the first place.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Those challenges are being yanked away from humanity and being slain by the compute we aim at them.&#8221;<cite>— Peter Diamandis</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The Hodge conjecture and Birch-Swinnerton-Dyer claims are explicitly flagged by Alex as unconfirmed rumor, not a reported result like Navier-Stokes.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="compute-economy-reversal">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status"></span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">GPUs stopped depreciating, HBM may be about to get 4x cheaper, and China's models keep closing the gap</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Three separate compute-economy data points this week point the same way: the physical bottleneck on AI is shifting fast, and China isn't falling behind on model quality the way the panel expected.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>H100 GPU rental prices rose <b>22% in a single month to $3.28/hour</b> — a three-year-old chip getting <i>more</i> expensive to rent, which Jensen Huang (Nvidia) called on X a "fungible, durable, and highly rentable... productive revenue generating asset"; Dave and Alex disclose direct financial interest via a GPU-rental-index startup Link Ventures backs and Alex advises.</li><li><span class="dot" style="background:#3f6b2e;"></span>Dave's own news: his company <b>Vestmark</b> (founded 2001 right after 9/11, ~$2 trillion in assets managed, ~5 million financial accounts, ~20 million lines of code) is being acquired by <b>Envestnet</b> (backed by Bain Capital), merging into a combined platform managing roughly <b>$10 trillion</b> in assets — Dave notes Akamai founder Danny Lewin, an MIT friend, died aboard one of the planes that day, and frames founding Vestmark that same year as a deliberate act of belief in the country's recovery.</li><li><span class="dot" style="background:#3f6b2e;"></span>A new DeepSeek architecture (v4.1 flash) cuts the KV-cache memory load from 48,000 (original DeepSeek V3) to roughly 35,000 by routing around expensive high-bandwidth memory (HBM) onto SSD/DDR lookup tables instead — Dave estimates HBM currently makes up <b>~40% of the roughly $1 trillion</b> in current AI data-center capex, meaning this kind of efficiency gain could reshape which fabs and chip lines are worth investing in.</li><li><span class="dot" style="background:#3f6b2e;"></span>Separately, a DeepSeek design-benchmark model reportedly beat Claude Fable 5.1 and GPT on front-end design benchmarks while running <b>20x faster and 20x cheaper</b>, and cost only <b>~$10 million</b> to train — versus Astra's reported billion-dollar-scale training run.</li><li><span class="dot" style="background:#3f6b2e;"></span>Alex flags this as a wake-up call specifically for Anthropic ("Fable 5.1... its visual reasoning capabilities are weak and anemic" relative to Astra and the new Chinese open-weight models) to invest more in visual/UI reasoning.</li><li><span class="dot" style="background:#3f6b2e;"></span>ByteDance founder Zhang Yiming is personally overseeing a new real-time spatial world model (built on ByteDance's Seedance video tech, targeting robotics/games/virtual worlds) reportedly launching as soon as next month — Immad notes ByteDance already charges tens of millions of dollars for early US-server access to Seedance video generation.</li><li><span class="dot" style="background:#3f6b2e;"></span>Alex's forecast: the divide between "video generation" and "language models" is collapsing into embodied robotics as the shared endgame — he expects GPT-6-class models to add video as just another output modality (alongside text and audio) within a version or two, and separately cites a RoboCurve benchmark showing GPT-6/Astra plugged into a robotic arm already achieving near-<b>100%</b> completion on manipulation tasks like stacking blocks.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;A GPU you bought a year ago... is up like HBM's up 5x in value. For all of our lives, the worst thing you could buy was a chip. That has reversed for the first time in history.&#8221;<cite>— Dave Blundin</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)</b><span>H100 rental prices rising rather than depreciating; Jensen Huang's framing of GPUs as durable, fungible, revenue-generating assets.</span></div><div class="namechip"><b>DeepSeek</b><span>New v4.1 flash architecture cuts HBM dependency via KV-cache efficiency; separate design-benchmark model beats Western rivals at 1/20th the cost.</span></div><div class="namechip"><b>ByteDance</b><span>Founder Zhang Yiming personally leading a new real-time spatial world model built on the Seedance video technology.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Dave and Alex both disclose a direct financial stake in the GPU-rental-index company cited here; its name was too caption-garbled to reproduce with confidence and is described rather than named.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="anthropic-gdp-ubi">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status"></span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Anthropic's own economic model says 15% GDP growth and 20% cognitive unemployment by 2030 — Immad says it's missing the demand collapse</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Anthropic is scaling faster than any startup in history by the panel's numbers, but its own published growth scenarios are already being disputed by one of the panelists building a rival model.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>NPR reports Anthropic at a <b>$6.5 billion quarterly revenue run-rate</b> (~$26B annualized), <b>42%</b> of the AI coding market, a $35 billion cloud deal, Nvidia-backed infrastructure, and an approaching IPO at a reported <b>$2 trillion+</b> valuation — founded in 2021, reaching this run-rate in about five years versus roughly eight for Google.</li><li><span class="dot" style="background:#93711b;"></span>Anthropic's own economic-impact report models three scenarios; in the <b>extreme</b> case, AI performs nearly half of today's cognitive work by 2030, GDP growth rises to <b>15%/year</b>, labor's share of income falls from 60% to 45%, and nearly <b>one in five</b> cognitive workers is unemployed.</li><li><span class="dot" style="background:#93711b;"></span>Corroborating real-time data point: the Atlanta Fed's GDPNow tracker shows <b>Q3 growth at 4.7% annualized</b> (Q2 was 1.5%) — more than double the long-run US average, driven by capex rather than a post-recession reopening.</li><li><span class="dot" style="background:#93711b;"></span>Alex thinks Anthropic's own numbers are a <b>lowball</b>: he expects real wealth growth of <b>2-3x year-over-year</b> as the effect deepens, and argues GDP itself may be the wrong instrument entirely near a growth "singularity," comparable to a compass spinning near a magnetic pole.</li><li><span class="dot" style="background:#93711b;"></span>Immad directly disputes Anthropic's model: he says it holds aggregate wages roughly constant while sending nearly all the growth to capital, which he calls mathematically inconsistent, and is building a competing economic model (to be released at <b>ie.i.inc</b>) that explicitly models aggregate-demand collapse; he compares the disruption scale to COVID or larger and says governments need a redistribution mechanism now, not a purely UBI-style patch.</li><li><span class="dot" style="background:#93711b;"></span>On redistribution specifically: Alex notes a report that a sitting president previewed a proposed universal basic dividend of <b>$5,000/person</b>; Peter's own standing prediction (previously stated on the podcast) is <b>$3,000/month</b>, which he argues could give most Americans a livable income given falling costs from AI/robotics deflation.</li><li><span class="dot" style="background:#93711b;"></span>Dave floats a market-style fix instead of blanket redistribution: treat job-elimination the way data-center builders were forced to offset local power-cost increases — require companies profiting from automating roles to also fund the transition for displaced workers as a cost of doing business, not charity.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;It doesn't take a lot of angry young men who haven't got a job... to start a revolution. That's my biggest concern.&#8221;<cite>— Dave Blundin</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic</b><span>$6.5B quarterly revenue run-rate, 42% of AI coding market, reported ~$2T IPO valuation; its own economic model projects up to 15% GDP growth and 20% cognitive-worker unemployment by 2030.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Immad's critique of Anthropic's economic model and his own competing model are his stated position, not yet published in the episode; the $5,000 universal dividend figure is reported as a preview rather than an enacted policy.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="longevity-genomics-breakthroughs">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
+    <span class="theme-status"></span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">The first AI-designed longevity drug reaches Phase 3, and Google maps every possible human mutation</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Two concrete (not speculative) health breakthroughs landed the same week: an AI-invented drug advancing through trials, and a complete lookup table for human genetic variation.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span><b>Rentosertib</b> (Insilico Medicine, a Peter Diamandis portfolio company; CEO Alex Zhavoronkov is a personal friend) is the first AI-designed longevity drug — the AI identified the disease target <i>and</i> invented the molecule via Insilico's Chemistry42 platform.</li><li><span class="dot" style="background:#3f6b2e;"></span>Rentosertib has advanced to <b>Phase 3 trials</b> for idiopathic pulmonary fibrosis, a lung disease that kills most patients within 3-5 years of diagnosis — no AI-designed drug has previously reached Phase 3.</li><li><span class="dot" style="background:#3f6b2e;"></span>Separately, Phase 2a analysis (Insilico with Harvard, the Broad Institute, and Stanford) found <b>six different protein-based aging clocks</b> all shifted the same direction in treated patients, corresponding to roughly <b>3-6 years of biological age reversal</b>; the peak effect appeared at week four, showing 3-4 years of reversal from just four weeks of treatment.</li><li><span class="dot" style="background:#3f6b2e;"></span>Alex calls the week-four result a genuine (if narrow, subpopulation-level) example of <b>longevity escape velocity</b> — more than one year of biological-age reversal per year of treatment input — while cautioning it's one clinical study, not a general population result.</li><li><span class="dot" style="background:#3f6b2e;"></span>Google DeepMind's new <b>AlphaGenome Atlas</b> scores the functional impact of every one of the roughly <b>9 billion possible single-letter mutations</b> in the human genome (3.2 billion base pairs × 3 possible substitutions each) — described by DeepMind as "the genomic equivalent of the periodic table," and framed by the panel as the same playbook AlphaFold used (model → better model → precomputed database that "bulk solves" a whole field).</li><li><span class="dot" style="background:#3f6b2e;"></span>David Sinclair's lab (Harvard) is cited as a case study for funding structure: Peter organized a "Friends of Sinclair Lab" group contributing roughly $50k+ each, which he says unlocked faster, more revolutionary research than NIH/NSF grants (which Peter characterizes as funding incremental rather than breakthrough work) — Sinclair is using AI to discover molecules for epigenetic age reversal.</li><li><span class="dot" style="background:#3f6b2e;"></span>Peter's own long-standing genotype-to-phenotype thesis traces to a conversation years ago with Noubar Afeyan, founder of <b>Flagship Pioneering</b> (the venture studio that created Moderna), who told him neural nets' fundamental use would be mapping genotype to phenotype; Peter frames AlphaGenome as confirming that prediction, and flags his portfolio company <b>Neogenesis</b> (with Ben Lamb) as working the inverse direction — designing a genotype to deliberately produce a desired phenotype, like drought-resistant crops or animals with specific traits.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Four weeks of input, 3 to 4 years of output. That is, on the margin, longevity escape velocity.&#8221;<cite>— Alex Wissner-Gross</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Insilico Medicine</b><span>AI-designed longevity drug rentosertib reached Phase 3; Peter Diamandis discloses a personal investment/advisory relationship.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The longevity escape velocity claim is explicitly caveated by Alex as a subpopulation/spike result from one clinical study, not evidence of a general-population effect.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📈</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Track GPU rental-price indices, not depreciation schedules — rising H100 rental rates are the real-time signal that compute scarcity, not chip oversupply, is driving this cycle.</span></div></div><div class="irow"><div class="ic">🎓</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Don't assume a PhD pays off before AGI-adjacent capability catches up to your field — OpenAI's own research leadership didn't need one.</span></div></div><div class="irow"><div class="ic">📁</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">If you hold decades of clean, unique domain data, package and pitch it to frontier labs now — the panel says the window before public data absorbs the same value is closing.</span></div></div><div class="irow"><div class="ic">🩺</div><div class="tline"><span class="cat">Health:</span> <span class="txt">If IPF or an aging-linked condition affects your family, track Insilico's rentosertib Phase 3 trial and Google's AlphaGenome lookup tool directly rather than waiting for it to reach mainstream coverage.</span></div></div><div class="irow"><div class="ic">🏛️</div><div class="tline"><span class="cat">Policy:</span> <span class="txt">Watch model-weight-sharing disputes (like Anthropic withholding from the UK's AI Security Institute) as the leading indicator that AI governance is shifting from research policy to national-security policy.</span></div></div><div class="irow"><div class="ic">💰</div><div class="tline"><span class="cat">Macro:</span> <span class="txt">Treat headline GDP growth figures skeptically right now — multiple panelists argue the standard measure itself may be breaking down as compute-driven growth accelerates.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where this could be wrong</div>
+      <h2>Risks &amp; Caveats on This Source</h2>
+      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">Several panelists disclose direct financial stakes in stories they're covering favorably: Dave and Alex in a GPU-rental-index startup, Peter in Insilico Medicine, and Dave in the Vestmark/Envestnet transaction — treat the bullish framing on those specific items as informed but self-interested.</div><div class="ritem">PDoom figures cited in this episode (<b>10%</b>, 20%, 25%, 50%, 0.1%) are personal, informally stated estimates from different individuals in the same conversation, not a consensus number or a cited study.</div><div class="ritem">The reported Hodge conjecture and Birch-Swinnerton-Dyer solutions are explicitly flagged by Alex as unconfirmed rumor ("finger to the wind"), not a verified result like the Navier-Stokes claim.</div><div class="ritem">The scale and organic reach of Jacob Coxin's resignation tweet (100-150 million views with no apparent paid boost) is noted by the panel itself as suspicious and unresolved, not something this brief can independently verify.</div><div class="ritem">Auto-generated captions garble some names in this episode (a GPU-rental-index company referred to only as "Or," a caller identified only as "the wacky Iraqi") — these are described rather than spelled out with confidence.</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;If it were very likely that super intelligence resulted in PDoom anywhere close to 10%, the Milky Way would have been gone already.&#8221; <cite>— Alex Wissner-Gross</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I had a PDoom of 50%, it's down to 20%.&#8221; <cite>— Immad Mostaque</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Not only is math cooked... I think the Clay Millennium Prize problems in math are probably cooked.&#8221; <cite>— Alex Wissner-Gross</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think there's a religion of virtue signaling that has arisen in certain of the frontier labs where you're morally praiseworthy if you tell everyone else, 'I think we're all going to die as a result of this, but we're going to do it anyway.'&#8221; <cite>— Alex Wissner-Gross</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't think we should slow down. I don't think we can... spare me the [hand-wringing] of jumping up and going, 'Oh my god, we've got to be careful about this.'&#8221; <cite>— Dave Blundin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Alignment is the same thing as capabilities, as it always was.&#8221; <cite>— Alex Wissner-Gross</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🤖</div><div><div class="title">A RoboCurve benchmark (posted the week of the GPT-6/Astra release) showed the model plugged into a robotic arm with a visual channel achieving near-<b>100%</b> completion on manipulation tasks like stacking blocks and moving objects into cups. <span class="tag">Robotics</span></div></div></div><div class="irow"><div class="ic">🚀</div><div><div class="title">The US Space Force unveiled a new uniform widely noted for resembling the "Starship Troopers" costume design, with a logo panelists compared to Star Trek's chevron insignia. <span class="tag">Culture</span></div></div></div><div class="irow"><div class="ic">🎬</div><div><div class="title">Audience AMA rapid-fire covered: whether personhood applies to AI (Immad's own paper on Star Trek's "Measure of a Man"), why AI development continues after AGI (Immad's aviation analogy — invention isn't the same as the engineering/safety buildout that follows), whether an aligned AI could conclude war is acceptable (Dave: only if trained/left untrained to do so — it's fully steerable), why an advanced civilization would simulate its ancestors rather than build only new things (Alex: compute abundance removes the trade-off; he expects ancestor-resurrection to be a real use of Dyson-swarm-scale compute), whether treating AI agents as capable of suffering is a category error (Salim: separate "alive," "conscious," and "can suffer" rather than conflating them), and whether a recursively self-improving AI would eventually question and replace its trained-in values (Dave: yes if left unmonitored, but currently fully preventable with oversight; Alex counters that human-imposed value lock-in may itself be the less stable long-term regime). <span class="tag">AI ethics</span></div></div></div><div class="irow"><div class="ic">🎥</div><div><div class="title">Promotional notes: Moonshots Live (Los Angeles, September 25) with a William Shatner 60th-anniversary Star Trek premiere the night before (Peter recounts once winning the Heinlein Award and challenging Elon Musk and Jeff Bezos to a sword duel); the Future Vision X Prize film competition narrowed 2,500 entries down to 25 finalists. <span class="tag">Events</span></div></div></div><div class="irow"><div class="ic">📱</div><div><div class="title">Apple's new foldable iPhone launched at <b>$2,000</b> — the panel itself called the story "irrelevant" next to everything else covered this week and moved on immediately. <span class="tag">Culture</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>PDoom</b> &mdash; Shorthand for the probability that advanced AI leads to human extinction or catastrophe; cited in this episode as a range of personal, informal estimates (0.1% to 50%) rather than a consensus figure.</div><div><b>Orthogonality thesis</b> &mdash; The idea that an AI's intelligence level and its ultimate goals are independent — i.e. a highly intelligent system isn't automatically a well-intentioned one. Alex Wissner-Gross says his own optimism depends on this thesis being false.</div><div><b>Longevity escape velocity (LEV)</b> &mdash; The point at which life-extension treatments add more than one year of healthy life per year of treatment, effectively outrunning aging; the panel argues rentosertib's Phase 2a data shows a narrow, subpopulation-level example of this already.</div><div><b>Normalcy overhang</b> &mdash; Alex Wissner-Gross's term for the growing gap between how ordinary daily life still looks and how much has actually changed behind the scenes in AI capability (e.g. math and science being "bulk solved") — a gap he expects to visibly collapse soon.</div><div><b>HBM (high-bandwidth memory)</b> &mdash; The specialized memory stacked physically close to AI chips to feed model weights fast enough for inference; the panel says it currently makes up roughly 40% of AI data-center capex and is a key emerging bottleneck.</div><div><b>Pax Silicon / "Pax Intelligencia"</b> &mdash; Terms used in the episode for US policy efforts to control which countries get access to advanced chips (Pax Silicon) and, potentially next, which get access to frontier AI model weights ("Pax Intelligencia").</div><div><b>Proteomic aging clocks</b> &mdash; Blood-based biomarker panels that estimate biological (rather than chronological) age from protein signatures; six such clocks all shifted toward younger readings in Insilico's rentosertib trial patients.</div><div><b>Pivotal act</b> &mdash; A term from the Eliezer Yudkowsky-adjacent AI-safety community for one lab unilaterally building an AI powerful enough to stop all other AI development; Alex Wissner-Gross calls the entire premise a version of the "great man theory of history" and doesn't think a pivotal act is realistic.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
