@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research: Jensen Huang: The Doomer Hoax, Superintelligence is Here, and The Future of AI (ft. President Trump)</title>
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Jensen Huang: The Doomer Hoax, Superintelligence is Here, and The Future of AI (ft. President Trump)</h1>
+    <div class="byline">
+      Channel: <b>All-In Podcast</b> &middot; Speaker: <b>Jensen Huang (Founder, President &amp; CEO, Nvidia), with a surprise call-in from President Trump</b> &middot; <b>2026-09-14</b>
+      <div class="stats-line">6 threads: Jensen's pushback on doom predictions, his third-party-auditor pitch for AI safety, the open-vs-closed-model economics behind the Hugging Face deal, a surprise Trump call-in on data centers, Nvidia's capital-allocation strategy, and Nvidia's frontier bets outside chips &middot; <a href="https://www.youtube.com/watch?v=S7CrlFLAmEA" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Jensen dismantles a string of AI doom predictions point by point (radiology automation, <b>90%</b> AI-written code, entry-job wipeouts, GPT-2/Llama 3 'too unsafe') and calls extinction-risk framing from frontier labs 'made up' and unscientific.</li><li>He explains recursive self-improvement <b>(RSI)</b> as a known, sensible toolkit — not a runaway spiral — while noting Chinese lab Z.ai just raised $5B with $3B earmarked for an RSI training run.</li><li>His actual safety proposal: financial-audit-style third-party evaluators for AI labs, with multiple auditors so no single one gets captured or influenced.</li><li>Open models get the 'bottled water' framing — free/open by default, paid for convenience in specific cases — with <b>80%</b> of the $400B in recent AI-native venture funding going to companies built on open models.</li><li>President Trump calls in live, declares AI/data-center doom fears 'a hoax,' claims <b>$20T</b> of investment has entered the US in one year, and says robots 'are not going to be taking over the world.'</li><li>Jensen details Nvidia's capital-allocation strategy — financing deals with Cloverleaf, BlackRock and Goldman, supply-chain bets with Corning/Lumentum/TSMC — and says he wants 50-1,000 agile regional NeoClouds, not just a handful of hyperscalers.</li><li>He gives Elon's 100-million-square-foot Terrafab chip plan a respectful but non-committal nod ('if anybody could do it, he can') and predicts China reaches native advanced lithography by 2030.</li><li>Asked if we're at AGI or superintelligence, Jensen says yes on both, at least in narrow domains — citing self-driving cars already running at one-tenth the human accident rate.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="doom-pushback">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">Contested</span>
+    <span class="theme-status">JENSEN'S POSITION, NOT INDUSTRY CONSENSUS</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">Jensen's case that extinction-risk framing is 'made up'</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jensen argues frontier labs' safety essays keep making falsifiable predictions that keep turning out false, and that pattern is itself the evidence against taking the extinction framing literally.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span>He walks through a list of prior AI predictions he says have all proven wrong: radiology fully automated within 5 years (radiologist demand instead <i>rose</i>, though AI now handles scan-reading), <b>90%</b> of code AI-written within 6-12 months, <b>50%</b> of entry-level jobs wiped out within 6-9 months, GPT-2 and Llama 3 both called "too unsafe to release," and "half of white-collar jobs gone next year."</li><li><span class="dot" style="background:#a23f22;"></span>On Anthropic's Dario Amodei essay and the internal whistleblower ("Coxin"): Jensen separates the two — he calls the whistleblowing itself an act of courage worth taking seriously, but says the accompanying extinction-risk prediction "is not grounded on science" even though it was voiced by a scientist.</li><li><span class="dot" style="background:#a23f22;"></span>He frames safety and speed as a false choice — "you're able to innovate quickly... and to do it safely" — and argues incidents at frontier labs are expected because they hold the most compute and are mid-transition from research culture to engineering discipline, not evidence of an uncontrollable technology.</li><li><span class="dot" style="background:#a23f22;"></span>Recursive self-improvement <b>(RSI)</b> gets the technical explainer: a known toolkit of in-context learning, skills, reflection, reinforcement learning, synthetic data generation, and LoRA-based weight updates — a sensible productivity technique, not a runaway spiral, because every product still has to be evaluated and re-tested before release.</li><li><span class="dot" style="background:#a23f22;"></span>He notes Chinese lab <b>Z.ai</b> (maker of GLM) just raised <b>$5 billion</b>, with <b>$3 billion</b> earmarked for an RSI-focused training run — cited as evidence RSI is already mainstream practice, not a fringe risk.</li><li><span class="dot" style="background:#a23f22;"></span>On the "four incidents from one lab, one giant incident from another": Jensen assumes each was root-caused and fixed with better sandboxes, runtimes, and continuous monitoring, and doubts any lab's honest position is "we have no idea how to control this."</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;We shouldn't [scare people], because it's made up. These are well-educated researchers... and the prediction is alarming and troubling and it shouldn't be done. It's irresponsible.&#8221;<cite>— Jensen Huang</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic</b><span>Source of the referenced safety essay and the internal whistleblower episode Jensen partially defends, partially disputes.</span></div><div class="namechip"><b>Z.ai</b><span>Chinese lab (maker of GLM) that raised $5B with $3B earmarked for a recursive self-improvement training run.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Jensen has a direct commercial interest in this framing — Nvidia sells the compute that both the safety-conscious and safety-skeptical labs run on, and he says outright he works closely with these labs as business partners.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="third-party-audits">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Proposed, not adopted</span>
+    <span class="theme-status">JENSEN'S OWN PROPOSAL</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Jensen's actual safety fix: financial-audit-style third-party evaluators</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Instead of new regulation, Jensen wants multiple independent evaluators auditing frontier labs the way outside auditors check financial statements.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Core proposal: third-party evaluators who don't need to be as expert as the labs themselves, just "ask the right questions" — modeled explicitly on financial auditing.</li><li><span class="dot" style="background:#93711b;"></span>He insists on <b>multiple</b> auditors, not one, so no single evaluator can become "pilled or somehow influenced" by any one lab.</li><li><span class="dot" style="background:#93711b;"></span>Two alternate proposals get name-checked without endorsement: Satya Nadella's push to nail measurement/standardization/engineering basics before any regulation, and Demis Hassabis's suggestion of a FINRA-like oversight body.</li><li><span class="dot" style="background:#93711b;"></span>Nvidia's internal culture note, offered as a contrast to labs whose staff post individually about existential risk: the company is explicitly apolitical/bipartisan, bars political and religious discourse internally, and doesn't let employees speak publicly on the company's behalf.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">This is Jensen's personal proposal stated live in conversation — no lab, evaluator body, or government has confirmed adopting it.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="open-vs-closed">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">AS DESCRIBED SEPTEMBER 2026</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Open models as "bottled water" — and why the Hugging Face deal matters</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jensen frames open vs. closed models as a commodity choice, not a competition, and treats the Hugging Face acquisition as a strategic bet on the open side.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Closed models are "bottled water" — open/free by default (like tap water), with closed access paid for in specific situations; he personally uses several closed frontier models and says they "work terrifically."</li><li><span class="dot" style="background:#3f6b2e;"></span>In the last <b>6 months</b>, <b>$400 billion</b> of venture funding went into AI-native companies, and <b>80%</b> of them build on open models — his argument for why open models matter beyond ideology.</li><li><span class="dot" style="background:#3f6b2e;"></span>China is, by his account, the largest current contributor to global open-source software by volume (citing Linux and Kubernetes precedent), a function of sheer engineering headcount from universities like Tsinghua — and once downloaded, a model "is yours" regardless of origin.</li><li><span class="dot" style="background:#3f6b2e;"></span>His framing for the actual competition: the last industrial revolution's inventors (Maxwell, Volta, Ampère) weren't American, but the US won by exploiting the technology commercially better than anyone — he wants the same pattern to repeat with AI.</li><li><span class="dot" style="background:#3f6b2e;"></span>Nvidia has acquired <b>Hugging Face</b> (plus references to Poolside and Lambda in the same breath) — Jensen calls the Hugging Face deal "one of the most consequential acquisitions," and says Nvidia claims frontier-level standing in five separate model domains.</li><li><span class="dot" style="background:#3f6b2e;"></span>Scale context: about 18 months ago Nvidia's platform ran mostly OpenAI's models; it now runs Meta/Llama, Grok, Gemini, and a scaling Anthropic workload alongside a growing list of independent labs.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Water is free. I don't want to burst everybody's bubble, but water's free... you use the right water in the right places.&#8221;<cite>— Jensen Huang</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)</b><span>Acquired Hugging Face; runs the large majority of frontier models (open and closed) on its platform.</span></div><div class="namechip"><b>Meta (META)</b><span>Llama models named as one of the major model families now running on Nvidia's platform.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="trump-call-in">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Political framing, not a market claim</span>
+    <span class="theme-status">LIVE CALL-IN, SEPTEMBER 2026</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">Trump calls in live: AI/data-center backlash is "a hoax"</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">President Trump interrupted the taping by phone to declare data-center and AI-doom fears a hoax and tie AI leadership directly to national economic strength.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>Trump: "The robots are not going to be taking over the world... the whole thing is a hoax," framing opposition to data centers and AI buildout as coming from people who "don't want to see it happen" — including, in his view, China.</li><li><span class="dot" style="background:#65695f;"></span>He claims <b>$20 trillion</b> of investment has entered the US in one year under his administration, versus "much less than $1 trillion" over four years under the previous administration — a figure stated on the call, not sourced to any report.</li><li><span class="dot" style="background:#65695f;"></span>He describes data centers as making previously struggling communities and states wealthy, calling them "the oil of the next 20-25 years" and bigger than the internet.</li><li><span class="dot" style="background:#65695f;"></span>He references Google wanting to build a large data center in Finland and says he's unhappy about it specifically because of US permitting friction pushing that investment offshore.</li><li><span class="dot" style="background:#65695f;"></span>Coda: "Whoever wins AI wins" — his framing for why he backs continued buildout despite the political heat around data centers.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#65695f;"><div class="lbl">Pull quote</div>&#8220;It's all a hoax. The data centers are great, and they make people wealthy and they make states wealthy. It's the oil of the next 20-25 years.&#8221;<cite>— President Trump</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Google (GOOGL)</b><span>Named by Trump as planning a large data center in Finland, which he frames as lost US investment due to permitting delays.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">These are the President's own stated figures and framing on a live call-in, not independently reported numbers — the $20T figure in particular has no cited source on the call.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="nvidia-capital-strategy">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">ONGOING BUILD-OUT</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Nvidia's supply-chain financing and the push for 50-1,000 NeoClouds</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jensen describes Nvidia acting as financier and supply-chain anchor across the entire AI stack, while deliberately avoiding a scramble to dominate the hyperscaler layer.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Financing deals named: <b>Cloverleaf</b> for land/power/shell buildouts, plus infrastructure financing arrangements with <b>BlackRock</b> and <b>Goldman Sachs</b>.</li><li><span class="dot" style="background:#3f6b2e;"></span>Supply-chain partners named: <b>Corning</b>, <b>Lumentum</b>, <b>TSMC</b>, and unnamed memory makers — Nvidia says it works with these companies years ahead of demand to keep the chain ready.</li><li><span class="dot" style="background:#3f6b2e;"></span>Stated strategic posture: "go up as far as we need to, and as low as possible" — Nvidia builds enabling technology (cuDNN, Megatron-Core) so a broad ecosystem can build on top, rather than capturing every layer itself.</li><li><span class="dot" style="background:#3f6b2e;"></span>On hyperscaler concentration risk: Jensen says he'd be happy with <b>five</b> hyperscalers but actively wants <b>50, 100, or even 1,000</b> regional NeoClouds/NCPs instead, because hyperscalers "plan once a year" and are "almost always wrong" in a fast-moving market, while regional operators can react faster and understand local land/power/permitting dynamics.</li><li><span class="dot" style="background:#3f6b2e;"></span>Named build-outs: multiple gigawatts added in Australia (with Fermi and others), plus Southeast Asia capacity additions with IOH and other regional partners — framed against a broader trend of countries reserving domestic power for their own AI companies.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Our strategy is: go up as far as we need to, and as low as possible.&#8221;<cite>— Jensen Huang</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Corning (GLW)</b><span>Named supply-chain partner Nvidia works with years ahead of demand.</span></div><div class="namechip"><b>TSMC (TSM)</b><span>Named as a long-lead supply-chain partner alongside Corning and Lumentum.</span></div><div class="namechip"><b>BlackRock (BLK), Goldman Sachs (GS)</b><span>Named partners in Nvidia's AI infrastructure financing arrangements.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="frontier-bets">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Speculative on timelines</span>
+    <span class="theme-status">MIXED — SOME SHIPPED, SOME PROJECTED</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Beyond chips: self-driving, protein models, Terrafab, and a 2030 China call</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jensen claims frontier standing in self-driving and biology models, gives Elon's Terrafab a respectful nod, and puts a firm 2030 date on China's homegrown lithography.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span><b>Alpamo</b> is described as "the world's first thinking self-driving car" — reasoning about novel situations from prior experience instead of requiring billions of hours of raw road-data training.</li><li><span class="dot" style="background:#93711b;"></span>Nvidia says it built key biology/protein models — <b>ESM2, ESMFold, OpenFold, AlphaFold2</b> (with Cuequivariance), and <b>Proteina</b> for protein synthesis and virtual screening — because pharma partners named as <b>Eli Lilly</b> and <b>Merck</b> needed the capability and couldn't build the stack themselves.</li><li><span class="dot" style="background:#93711b;"></span>On Elon's 100-million-square-foot Terrafab chip fab announcement: "if anybody could do it, he can" — Jensen recounts discussing it with Musk on a shared flight, but stops short of endorsing the timeline; Nvidia itself designs chips but doesn't fab them, though it says it has deep process-technology and memory expertise.</li><li><span class="dot" style="background:#93711b;"></span>On China's native advanced lithography: Jensen predicts China gets there <b>"by 2030"</b> and calls China "really good at high-volume production" once it does — framed as inevitable rather than a live race to block.</li><li><span class="dot" style="background:#93711b;"></span>Asked whether the industry has reached AGI or superintelligence: Jensen says yes to both, at least in narrow domains, citing self-driving cars already running at roughly <b>one-tenth</b> the human accident rate as one concrete example.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I think we're already there [at superintelligence] — in narrow domains, it's better than a human. One-tenth the accident rate.&#8221;<cite>— Jensen Huang</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Eli Lilly (LLY), Merck (MRK)</b><span>Named pharma partners whose need for protein/biology models drove Nvidia to build ESM2, AlphaFold2, and Proteina.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The AGI/superintelligence claim is scoped by Jensen himself to narrow domains (self-driving, protein synthesis) — he is not claiming general superintelligence has arrived.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🧪</div><div class="tline"><span class="cat">AI policy:</span> <span class="txt">Watch whether any lab or government actually adopts Jensen's multi-auditor, financial-audit-style evaluation model — right now it's a proposal, not a standard.</span></div></div><div class="irow"><div class="ic">💸</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Track Nvidia's NeoCloud count as a leading indicator — Jensen wants 50-1,000 regional operators, not concentration in a handful of hyperscalers.</span></div></div><div class="irow"><div class="ic">🌍</div><div class="tline"><span class="cat">Geopolitics:</span> <span class="txt">Treat China's 2030 native-lithography timeline as Jensen's own estimate, not a confirmed technical milestone, when weighing chip-supply-chain risk.</span></div></div><div class="irow"><div class="ic">🏥</div><div class="tline"><span class="cat">Health:</span> <span class="txt">Note Nvidia's stated role in AlphaFold2, ESM2, and Proteina if evaluating AI-driven drug discovery plays tied to Lilly or Merck.</span></div></div><div class="irow"><div class="ic">🗣️</div><div class="tline"><span class="cat">Policy:</span> <span class="txt">Read the doom-prediction track record (radiology, code-gen, entry jobs) Jensen cites before weighting any single lab's forward-looking risk claim.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where this could be wrong</div>
+      <h2>Risks &amp; Caveats on This Source</h2>
+      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">Jensen has a direct commercial stake in downplaying AI existential-risk narratives — Nvidia sells the compute to every lab on both sides of this debate, and he says he works closely with these labs as business partners.</div><div class="ritem">The Trump call-in is an unscripted, live interruption; his cited figures (the <b>$20 trillion</b> investment claim in particular) are stated in conversation, not sourced to any report on the call.</div><div class="ritem">Several of Jensen's own numbers (the 2030 China lithography call, the one-tenth self-driving accident rate, the five-domains frontier claim) are his own working estimates and characterizations, not third-party verified figures.</div><div class="ritem">Auto-generated captions on a live, multi-speaker, energetic panel (including a phone call-in) carry real risk of garbled names and numbers; company names in this brief were cross-checked for plausibility before inclusion.</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;We shouldn't [use extinction-risk framing], because it's made up. It's irresponsible.&#8221; <cite>— Jensen Huang</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I'm surprisingly uncompetitive... I'd be more than happy with five hyperscalers.&#8221; <cite>— Jensen Huang</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;They're going to get there by 2030 [on native advanced lithography].&#8221; <cite>— Jensen Huang</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think we're already there [at superintelligence] — in narrow domains, it's better than a human.&#8221; <cite>— Jensen Huang</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;It's all a hoax. The robots are not going to be taking over the world.&#8221; <cite>— President Trump</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;We have 20 trillion dollars of investment coming into the country... as opposed to much less than 1 trillion under sleepy Joe Biden.&#8221; <cite>— President Trump</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📱</div><div><div class="title">Jensen's running joke about software engineering: "the best software is the smallest software" and his favorite key is backspace — offered as a broader point that most engineering work historically wasn't typing/coding at all. <span class="tag">Careers</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>RSI (Recursive Self-Improvement)</b> &mdash; Using AI itself — via in-context learning, reflection, reinforcement learning, and synthetic data generation — to improve AI systems' own performance over time, including optionally updating model weights via techniques like LoRA.</div><div><b>NeoCloud / NCP</b> &mdash; A regional or specialized cloud compute provider (distinct from the major hyperscalers) that builds out AI data center capacity, often faster and more locally attuned than a large hyperscaler.</div><div><b>Alpamo</b> &mdash; Nvidia's self-driving car platform, described as reasoning about novel driving situations from prior experience rather than requiring massive amounts of raw road-data training.</div><div><b>Land, power, shell</b> &mdash; Shorthand for the three physical prerequisites to building a data center — securing land, securing electrical power, and constructing the building itself — cited as the actual bottleneck ahead of compute deployment.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
