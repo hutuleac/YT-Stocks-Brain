@@ -26,6 +26,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "doom-pushback",
+        "tags": ["policy", "ai-infra"],
         "color": "red",
         "badge": "Contested",
         "status": "JENSEN'S POSITION, NOT INDUSTRY CONSENSUS",
@@ -42,12 +43,13 @@ THEMES = [
         "quote": {"text": "We shouldn't [scare people], because it's made up. These are well-educated researchers... and the prediction is alarming and troubling and it shouldn't be done. It's irresponsible.", "cite": "— Jensen Huang"},
         "watch": "Jensen has a direct commercial interest in this framing — Nvidia sells the compute that both the safety-conscious and safety-skeptical labs run on, and he says outright he works closely with these labs as business partners.",
         "names": [
-            {"name": "Anthropic", "blurb": "Source of the referenced safety essay and the internal whistleblower episode Jensen partially defends, partially disputes."},
-            {"name": "Z.ai", "blurb": "Chinese lab (maker of GLM) that raised $5B with $3B earmarked for a recursive self-improvement training run."},
+            {"name": "Anthropic", "stance": "NEGATIVE VIEW", "conviction": "High", "horizon": None, "blurb": "Source of the referenced safety essay and the internal whistleblower episode Jensen partially defends, partially disputes."},
+            {"name": "Z.ai", "stance": "CASUAL MENTION", "conviction": None, "horizon": None, "blurb": "Chinese lab (maker of GLM) that raised $5B with $3B earmarked for a recursive self-improvement training run."},
         ],
     },
     {
         "id": "third-party-audits",
+        "tags": ["policy"],
         "color": "amber",
         "badge": "Proposed, not adopted",
         "status": "JENSEN'S OWN PROPOSAL",
@@ -65,6 +67,7 @@ THEMES = [
     },
     {
         "id": "open-vs-closed",
+        "tags": ["ai-infra", "software"],
         "color": "green",
         "badge": "High conviction",
         "status": "AS DESCRIBED SEPTEMBER 2026",
@@ -81,12 +84,13 @@ THEMES = [
         "quote": {"text": "Water is free. I don't want to burst everybody's bubble, but water's free... you use the right water in the right places.", "cite": "— Jensen Huang"},
         "watch": None,
         "names": [
-            {"name": "Nvidia (NVDA)", "blurb": "Acquired Hugging Face; runs the large majority of frontier models (open and closed) on its platform."},
-            {"name": "Meta (META)", "blurb": "Llama models named as one of the major model families now running on Nvidia's platform."},
+            {"name": "Nvidia (NVDA)", "stance": "OWNS", "conviction": "High", "horizon": None, "blurb": "Acquired Hugging Face; runs the large majority of frontier models (open and closed) on its platform."},
+            {"name": "Meta (META)", "stance": "CASUAL MENTION", "conviction": None, "horizon": None, "blurb": "Llama models named as one of the major model families now running on Nvidia's platform."},
         ],
     },
     {
         "id": "trump-call-in",
+        "tags": ["policy", "ai-infra"],
         "color": "gray",
         "badge": "Political framing, not a market claim",
         "status": "LIVE CALL-IN, SEPTEMBER 2026",
@@ -102,11 +106,12 @@ THEMES = [
         "quote": {"text": "It's all a hoax. The data centers are great, and they make people wealthy and they make states wealthy. It's the oil of the next 20-25 years.", "cite": "— President Trump"},
         "watch": "These are the President's own stated figures and framing on a live call-in, not independently reported numbers — the $20T figure in particular has no cited source on the call.",
         "names": [
-            {"name": "Google (GOOGL)", "blurb": "Named by Trump as planning a large data center in Finland, which he frames as lost US investment due to permitting delays."},
+            {"name": "Google (GOOGL)", "stance": "CASUAL MENTION", "conviction": None, "horizon": None, "blurb": "Named by Trump as planning a large data center in Finland, which he frames as lost US investment due to permitting delays."},
         ],
     },
     {
         "id": "nvidia-capital-strategy",
+        "tags": ["ai-infra", "semis", "finance"],
         "color": "green",
         "badge": "High conviction",
         "status": "ONGOING BUILD-OUT",
@@ -122,13 +127,14 @@ THEMES = [
         "quote": {"text": "Our strategy is: go up as far as we need to, and as low as possible.", "cite": "— Jensen Huang"},
         "watch": None,
         "names": [
-            {"name": "Corning (GLW)", "blurb": "Named supply-chain partner Nvidia works with years ahead of demand."},
-            {"name": "TSMC (TSM)", "blurb": "Named as a long-lead supply-chain partner alongside Corning and Lumentum."},
-            {"name": "BlackRock (BLK), Goldman Sachs (GS)", "blurb": "Named partners in Nvidia's AI infrastructure financing arrangements."},
+            {"name": "Corning (GLW)", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": "multi-year supply planning", "blurb": "Named supply-chain partner Nvidia works with years ahead of demand."},
+            {"name": "TSMC (TSM)", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": "multi-year supply planning", "blurb": "Named as a long-lead supply-chain partner alongside Corning and Lumentum."},
+            {"name": "BlackRock (BLK), Goldman Sachs (GS)", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None, "blurb": "Named partners in Nvidia's AI infrastructure financing arrangements."},
         ],
     },
     {
         "id": "frontier-bets",
+        "tags": ["semis", "biotech", "robotics", "geopolitics"],
         "color": "amber",
         "badge": "Speculative on timelines",
         "status": "MIXED — SOME SHIPPED, SOME PROJECTED",
@@ -144,7 +150,7 @@ THEMES = [
         "quote": {"text": "I think we're already there [at superintelligence] — in narrow domains, it's better than a human. One-tenth the accident rate.", "cite": "— Jensen Huang"},
         "watch": "The AGI/superintelligence claim is scoped by Jensen himself to narrow domains (self-driving, protein synthesis) — he is not claiming general superintelligence has arrived.",
         "names": [
-            {"name": "Eli Lilly (LLY), Merck (MRK)", "blurb": "Named pharma partners whose need for protein/biology models drove Nvidia to build ESM2, AlphaFold2, and Proteina."},
+            {"name": "Eli Lilly (LLY), Merck (MRK)", "stance": "CASUAL MENTION", "conviction": None, "horizon": None, "blurb": "Named pharma partners whose need for protein/biology models drove Nvidia to build ESM2, AlphaFold2, and Proteina."},
         ],
     },
 ]
@@ -157,13 +163,6 @@ TAKEAWAYS = [
     {"icon": "\U0001F5E3️", "tag": "Policy", "title": "Read the doom-prediction track record (radiology, code-gen, entry jobs) Jensen cites before weighting any single lab's forward-looking risk claim."},
 ]
 
-RISKS = [
-    "Jensen has a direct commercial stake in downplaying AI existential-risk narratives — Nvidia sells the compute to every lab on both sides of this debate, and he says he works closely with these labs as business partners.",
-    "The Trump call-in is an unscripted, live interruption; his cited figures (the $20 trillion investment claim in particular) are stated in conversation, not sourced to any report on the call.",
-    "Several of Jensen's own numbers (the 2030 China lithography call, the one-tenth self-driving accident rate, the five-domains frontier claim) are his own working estimates and characterizations, not third-party verified figures.",
-    "Auto-generated captions on a live, multi-speaker, energetic panel (including a phone call-in) carry real risk of garbled names and numbers; company names in this brief were cross-checked for plausibility before inclusion.",
-]
-
 HOT_TAKES = [
     {"take": "We shouldn't [use extinction-risk framing], because it's made up. It's irresponsible.", "cite": "— Jensen Huang", "why": "direct dismissal of a named competitor's public safety framing"},
     {"take": "I'm surprisingly uncompetitive... I'd be more than happy with five hyperscalers.", "cite": "— Jensen Huang", "why": "counterintuitive stance for the CEO whose company benefits from more buyers"},
@@ -171,6 +170,32 @@ HOT_TAKES = [
     {"take": "I think we're already there [at superintelligence] — in narrow domains, it's better than a human.", "cite": "— Jensen Huang", "why": "a claim that would draw real pushback from AI-safety-minded listeners"},
     {"take": "It's all a hoax. The robots are not going to be taking over the world.", "cite": "— President Trump", "why": "flat dismissal of AI-risk concerns from a sitting president, made live on air"},
     {"take": "We have 20 trillion dollars of investment coming into the country... as opposed to much less than 1 trillion under sleepy Joe Biden.", "cite": "— President Trump", "why": "a specific, checkable economic claim with a partisan jab attached"},
+]
+
+CLAIMS = [
+    {"who": "Jensen Huang", "claim": "China reaches native advanced lithography and becomes strong at high-volume chip production", "metric": "native advanced lithography", "target": "achieved", "by": "2030", "condition": None, "entity": "China"},
+    {"who": "Jensen Huang", "claim": "Nvidia wants 50 to 1,000 regional NeoClouds/NCPs rather than concentration in a handful of hyperscalers", "metric": "regional NeoCloud count", "target": "50-1,000", "by": None, "condition": None, "entity": "Nvidia (NVDA)"},
+    {"who": "Jensen Huang", "claim": "80% of the $400B in AI-native venture funding over the last 6 months went to companies built on open models", "metric": "share of AI-native venture funding on open models", "target": "80% of $400B", "by": None, "condition": None, "entity": None},
+    {"who": "Jensen Huang", "claim": "Superintelligence has already arrived in narrow domains, with self-driving at one-tenth the human accident rate", "metric": "self-driving accident rate vs human", "target": "0.1x", "by": "now", "condition": None, "entity": None},
+    {"who": "Jensen Huang", "claim": "Z.ai will spend $3B of its $5B raise on a recursive self-improvement training run", "metric": "RSI training spend", "target": "$3B", "by": None, "condition": None, "entity": "Z.ai"},
+    {"who": "President Trump", "claim": "$20 trillion of investment has entered the US in one year, versus under $1T over four years under the prior administration", "metric": "inbound US investment", "target": "$20T", "by": "one year", "condition": None, "entity": "United States"},
+    {"who": "President Trump", "claim": "Data centers are the oil of the next 20-25 years and bigger than the internet", "metric": "data-center economic importance", "target": "'oil of the next 20-25 years'", "by": "2046-2051", "condition": None, "entity": None},
+]
+
+RELATIONS = [
+    {"from": "Nvidia (NVDA)", "rel": "acquires", "to": "Hugging Face", "note": "Jensen calls it one of the most consequential acquisitions; a bet on open models."},
+    {"from": "Nvidia (NVDA)", "rel": "acquires", "to": "Poolside", "note": "Named alongside Hugging Face and Lambda."},
+    {"from": "Nvidia (NVDA)", "rel": "acquires", "to": "Lambda", "note": "Named alongside Hugging Face and Poolside."},
+    {"from": "Nvidia (NVDA)", "rel": "partners_with", "to": "Cloverleaf", "note": "Financing land/power/shell data-center buildouts."},
+    {"from": "Nvidia (NVDA)", "rel": "partners_with", "to": "BlackRock (BLK)", "note": "AI infrastructure financing arrangements."},
+    {"from": "Nvidia (NVDA)", "rel": "partners_with", "to": "Goldman Sachs (GS)", "note": "AI infrastructure financing arrangements."},
+    {"from": "Corning (GLW)", "rel": "supplies", "to": "Nvidia (NVDA)", "note": "Long-lead supply-chain partner worked with years ahead of demand."},
+    {"from": "Lumentum (LITE)", "rel": "supplies", "to": "Nvidia (NVDA)", "note": "Long-lead supply-chain partner."},
+    {"from": "TSMC (TSM)", "rel": "supplies", "to": "Nvidia (NVDA)", "note": "Long-lead supply-chain partner."},
+    {"from": "Eli Lilly (LLY)", "rel": "customer_of", "to": "Nvidia (NVDA)", "note": "Pharma partner whose need drove Nvidia's protein/biology models."},
+    {"from": "Merck (MRK)", "rel": "customer_of", "to": "Nvidia (NVDA)", "note": "Pharma partner whose need drove Nvidia's protein/biology models."},
+    {"from": "Jensen Huang", "rel": "criticizes", "to": "Anthropic", "note": "Calls the extinction-risk framing in Dario Amodei's essay 'made up' and irresponsible."},
+    {"from": "Jensen Huang", "rel": "endorses", "to": "Terrafab", "note": "'If anybody could do it, he can' — respectful nod to Elon's fab plan, no timeline endorsement."},
 ]
 
 OTHER_NEWS = [

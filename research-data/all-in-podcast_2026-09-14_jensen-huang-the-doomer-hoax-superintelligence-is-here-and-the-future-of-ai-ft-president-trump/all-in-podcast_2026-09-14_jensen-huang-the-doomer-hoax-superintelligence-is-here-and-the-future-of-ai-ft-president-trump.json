@@ -21,6 +21,10 @@
  "themes": [
   {
    "id": "doom-pushback",
+   "tags": [
+    "policy",
+    "ai-infra"
+   ],
    "color": "red",
    "badge": "Contested",
    "status": "JENSEN'S POSITION, NOT INDUSTRY CONSENSUS",
@@ -42,16 +46,25 @@
    "names": [
     {
      "name": "Anthropic",
+     "stance": "NEGATIVE VIEW",
+     "conviction": "High",
+     "horizon": null,
      "blurb": "Source of the referenced safety essay and the internal whistleblower episode Jensen partially defends, partially disputes."
     },
     {
      "name": "Z.ai",
+     "stance": "CASUAL MENTION",
+     "conviction": null,
+     "horizon": null,
      "blurb": "Chinese lab (maker of GLM) that raised $5B with $3B earmarked for a recursive self-improvement training run."
     }
    ]
   },
   {
    "id": "third-party-audits",
+   "tags": [
+    "policy"
+   ],
    "color": "amber",
    "badge": "Proposed, not adopted",
    "status": "JENSEN'S OWN PROPOSAL",
@@ -69,6 +82,10 @@
   },
   {
    "id": "open-vs-closed",
+   "tags": [
+    "ai-infra",
+    "software"
+   ],
    "color": "green",
    "badge": "High conviction",
    "status": "AS DESCRIBED SEPTEMBER 2026",
@@ -90,16 +107,26 @@
    "names": [
     {
      "name": "Nvidia (NVDA)",
+     "stance": "OWNS",
+     "conviction": "High",
+     "horizon": null,
      "blurb": "Acquired Hugging Face; runs the large majority of frontier models (open and closed) on its platform."
     },
     {
      "name": "Meta (META)",
+     "stance": "CASUAL MENTION",
+     "conviction": null,
+     "horizon": null,
      "blurb": "Llama models named as one of the major model families now running on Nvidia's platform."
     }
    ]
   },
   {
    "id": "trump-call-in",
+   "tags": [
+    "policy",
+    "ai-infra"
+   ],
    "color": "gray",
    "badge": "Political framing, not a market claim",
    "status": "LIVE CALL-IN, SEPTEMBER 2026",
@@ -120,12 +147,20 @@
    "names": [
     {
      "name": "Google (GOOGL)",
+     "stance": "CASUAL MENTION",
+     "conviction": null,
+     "horizon": null,
      "blurb": "Named by Trump as planning a large data center in Finland, which he frames as lost US investment due to permitting delays."
     }
    ]
   },
   {
    "id": "nvidia-capital-strategy",
+   "tags": [
+    "ai-infra",
+    "semis",
+    "finance"
+   ],
    "color": "green",
    "badge": "High conviction",
    "status": "ONGOING BUILD-OUT",
@@ -146,20 +181,35 @@
    "names": [
     {
      "name": "Corning (GLW)",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Medium",
+     "horizon": "multi-year supply planning",
      "blurb": "Named supply-chain partner Nvidia works with years ahead of demand."
     },
     {
      "name": "TSMC (TSM)",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Medium",
+     "horizon": "multi-year supply planning",
      "blurb": "Named as a long-lead supply-chain partner alongside Corning and Lumentum."
     },
     {
      "name": "BlackRock (BLK), Goldman Sachs (GS)",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Medium",
+     "horizon": null,
      "blurb": "Named partners in Nvidia's AI infrastructure financing arrangements."
     }
    ]
   },
   {
    "id": "frontier-bets",
+   "tags": [
+    "semis",
+    "biotech",
+    "robotics",
+    "geopolitics"
+   ],
    "color": "amber",
    "badge": "Speculative on timelines",
    "status": "MIXED — SOME SHIPPED, SOME PROJECTED",
@@ -180,6 +230,9 @@
    "names": [
     {
      "name": "Eli Lilly (LLY), Merck (MRK)",
+     "stance": "CASUAL MENTION",
+     "conviction": null,
+     "horizon": null,
      "blurb": "Named pharma partners whose need for protein/biology models drove Nvidia to build ESM2, AlphaFold2, and Proteina."
     }
    ]
@@ -212,12 +265,6 @@
    "title": "Read the doom-prediction track record (radiology, code-gen, entry jobs) Jensen cites before weighting any single lab's forward-looking risk claim."
   }
  ],
- "risks": [
-  "Jensen has a direct commercial stake in downplaying AI existential-risk narratives — Nvidia sells the compute to every lab on both sides of this debate, and he says he works closely with these labs as business partners.",
-  "The Trump call-in is an unscripted, live interruption; his cited figures (the $20 trillion investment claim in particular) are stated in conversation, not sourced to any report on the call.",
-  "Several of Jensen's own numbers (the 2030 China lithography call, the one-tenth self-driving accident rate, the five-domains frontier claim) are his own working estimates and characterizations, not third-party verified figures.",
-  "Auto-generated captions on a live, multi-speaker, energetic panel (including a phone call-in) carry real risk of garbled names and numbers; company names in this brief were cross-checked for plausibility before inclusion."
- ],
  "hot_takes": [
   {
    "take": "We shouldn't [use extinction-risk framing], because it's made up. It's irresponsible.",
@@ -248,6 +295,151 @@
    "take": "We have 20 trillion dollars of investment coming into the country... as opposed to much less than 1 trillion under sleepy Joe Biden.",
    "cite": "— President Trump",
    "why": "a specific, checkable economic claim with a partisan jab attached"
+  }
+ ],
+ "claims": [
+  {
+   "who": "Jensen Huang",
+   "claim": "China reaches native advanced lithography and becomes strong at high-volume chip production",
+   "metric": "native advanced lithography",
+   "target": "achieved",
+   "by": "2030",
+   "condition": null,
+   "entity": "China"
+  },
+  {
+   "who": "Jensen Huang",
+   "claim": "Nvidia wants 50 to 1,000 regional NeoClouds/NCPs rather than concentration in a handful of hyperscalers",
+   "metric": "regional NeoCloud count",
+   "target": "50-1,000",
+   "by": null,
+   "condition": null,
+   "entity": "Nvidia (NVDA)"
+  },
+  {
+   "who": "Jensen Huang",
+   "claim": "80% of the $400B in AI-native venture funding over the last 6 months went to companies built on open models",
+   "metric": "share of AI-native venture funding on open models",
+   "target": "80% of $400B",
+   "by": null,
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Jensen Huang",
+   "claim": "Superintelligence has already arrived in narrow domains, with self-driving at one-tenth the human accident rate",
+   "metric": "self-driving accident rate vs human",
+   "target": "0.1x",
+   "by": "now",
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Jensen Huang",
+   "claim": "Z.ai will spend $3B of its $5B raise on a recursive self-improvement training run",
+   "metric": "RSI training spend",
+   "target": "$3B",
+   "by": null,
+   "condition": null,
+   "entity": "Z.ai"
+  },
+  {
+   "who": "President Trump",
+   "claim": "$20 trillion of investment has entered the US in one year, versus under $1T over four years under the prior administration",
+   "metric": "inbound US investment",
+   "target": "$20T",
+   "by": "one year",
+   "condition": null,
+   "entity": "United States"
+  },
+  {
+   "who": "President Trump",
+   "claim": "Data centers are the oil of the next 20-25 years and bigger than the internet",
+   "metric": "data-center economic importance",
+   "target": "'oil of the next 20-25 years'",
+   "by": "2046-2051",
+   "condition": null,
+   "entity": null
+  }
+ ],
+ "relations": [
+  {
+   "from": "Nvidia (NVDA)",
+   "rel": "acquires",
+   "to": "Hugging Face",
+   "note": "Jensen calls it one of the most consequential acquisitions; a bet on open models."
+  },
+  {
+   "from": "Nvidia (NVDA)",
+   "rel": "acquires",
+   "to": "Poolside",
+   "note": "Named alongside Hugging Face and Lambda."
+  },
+  {
+   "from": "Nvidia (NVDA)",
+   "rel": "acquires",
+   "to": "Lambda",
+   "note": "Named alongside Hugging Face and Poolside."
+  },
+  {
+   "from": "Nvidia (NVDA)",
+   "rel": "partners_with",
+   "to": "Cloverleaf",
+   "note": "Financing land/power/shell data-center buildouts."
+  },
+  {
+   "from": "Nvidia (NVDA)",
+   "rel": "partners_with",
+   "to": "BlackRock (BLK)",
+   "note": "AI infrastructure financing arrangements."
+  },
+  {
+   "from": "Nvidia (NVDA)",
+   "rel": "partners_with",
+   "to": "Goldman Sachs (GS)",
+   "note": "AI infrastructure financing arrangements."
+  },
+  {
+   "from": "Corning (GLW)",
+   "rel": "supplies",
+   "to": "Nvidia (NVDA)",
+   "note": "Long-lead supply-chain partner worked with years ahead of demand."
+  },
+  {
+   "from": "Lumentum (LITE)",
+   "rel": "supplies",
+   "to": "Nvidia (NVDA)",
+   "note": "Long-lead supply-chain partner."
+  },
+  {
+   "from": "TSMC (TSM)",
+   "rel": "supplies",
+   "to": "Nvidia (NVDA)",
+   "note": "Long-lead supply-chain partner."
+  },
+  {
+   "from": "Eli Lilly (LLY)",
+   "rel": "customer_of",
+   "to": "Nvidia (NVDA)",
+   "note": "Pharma partner whose need drove Nvidia's protein/biology models."
+  },
+  {
+   "from": "Merck (MRK)",
+   "rel": "customer_of",
+   "to": "Nvidia (NVDA)",
+   "note": "Pharma partner whose need drove Nvidia's protein/biology models."
+  },
+  {
+   "from": "Jensen Huang",
+   "rel": "criticizes",
+   "to": "Anthropic",
+   "note": "Calls the extinction-risk framing in Dario Amodei's essay 'made up' and irresponsible."
+  },
+  {
+   "from": "Jensen Huang",
+   "rel": "endorses",
+   "to": "Terrafab",
+   "note": "'If anybody could do it, he can' — respectful nod to Elon's fab plan, no timeline endorsement."
   }
  ],
  "other_news": [

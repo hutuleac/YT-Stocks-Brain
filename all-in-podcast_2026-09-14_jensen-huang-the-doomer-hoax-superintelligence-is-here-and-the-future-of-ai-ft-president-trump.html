@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="doom-pushback">
   <div class="theme-badgerow">
     <span class="badge" style="background:#a23f22;">Contested</span>
-    <span class="theme-status">JENSEN'S POSITION, NOT INDUSTRY CONSENSUS</span>
+    <span class="theme-status">JENSEN'S POSITION, NOT INDUSTRY CONSENSUS</span><span class="ttag">policy</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #a23f22;">Jensen's case that extinction-risk framing is 'made up'</h2>
   <div class="theme-body">
@@ -131,7 +136,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;We shouldn't [scare people], because it's made up. These are well-educated researchers... and the prediction is alarming and troubling and it shouldn't be done. It's irresponsible.&#8221;<cite>— Jensen Huang</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic</b><span>Source of the referenced safety essay and the internal whistleblower episode Jensen partially defends, partially disputes.</span></div><div class="namechip"><b>Z.ai</b><span>Chinese lab (maker of GLM) that raised $5B with $3B earmarked for a recursive self-improvement training run.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · High</span></b><span>Source of the referenced safety essay and the internal whistleblower episode Jensen partially defends, partially disputes.</span></div><div class="namechip"><b>Z.ai<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Chinese lab (maker of GLM) that raised $5B with $3B earmarked for a recursive self-improvement training run.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Jensen has a direct commercial interest in this framing — Nvidia sells the compute that both the safety-conscious and safety-skeptical labs run on, and he says outright he works closely with these labs as business partners.</div></div>
     </div>
   </div>
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="third-party-audits">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Proposed, not adopted</span>
-    <span class="theme-status">JENSEN'S OWN PROPOSAL</span>
+    <span class="theme-status">JENSEN'S OWN PROPOSAL</span><span class="ttag">policy</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Jensen's actual safety fix: financial-audit-style third-party evaluators</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="open-vs-closed">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">AS DESCRIBED SEPTEMBER 2026</span>
+    <span class="theme-status">AS DESCRIBED SEPTEMBER 2026</span><span class="ttag">ai-infra</span><span class="ttag">software</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Open models as "bottled water" — and why the Hugging Face deal matters</h2>
   <div class="theme-body">
@@ -169,7 +174,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Water is free. I don't want to burst everybody's bubble, but water's free... you use the right water in the right places.&#8221;<cite>— Jensen Huang</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)</b><span>Acquired Hugging Face; runs the large majority of frontier models (open and closed) on its platform.</span></div><div class="namechip"><b>Meta (META)</b><span>Llama models named as one of the major model families now running on Nvidia's platform.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>Acquired Hugging Face; runs the large majority of frontier models (open and closed) on its platform.</span></div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Llama models named as one of the major model families now running on Nvidia's platform.</span></div></div>
       
     </div>
   </div>
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="trump-call-in">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Political framing, not a market claim</span>
-    <span class="theme-status">LIVE CALL-IN, SEPTEMBER 2026</span>
+    <span class="theme-status">LIVE CALL-IN, SEPTEMBER 2026</span><span class="ttag">policy</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">Trump calls in live: AI/data-center backlash is "a hoax"</h2>
   <div class="theme-body">
@@ -188,7 +193,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#65695f;"><div class="lbl">Pull quote</div>&#8220;It's all a hoax. The data centers are great, and they make people wealthy and they make states wealthy. It's the oil of the next 20-25 years.&#8221;<cite>— President Trump</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Google (GOOGL)</b><span>Named by Trump as planning a large data center in Finland, which he frames as lost US investment due to permitting delays.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Google (GOOGL)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Named by Trump as planning a large data center in Finland, which he frames as lost US investment due to permitting delays.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">These are the President's own stated figures and framing on a live call-in, not independently reported numbers — the $20T figure in particular has no cited source on the call.</div></div>
     </div>
   </div>
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="nvidia-capital-strategy">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">ONGOING BUILD-OUT</span>
+    <span class="theme-status">ONGOING BUILD-OUT</span><span class="ttag">ai-infra</span><span class="ttag">semis</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Nvidia's supply-chain financing and the push for 50-1,000 NeoClouds</h2>
   <div class="theme-body">
@@ -207,7 +212,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Our strategy is: go up as far as we need to, and as low as possible.&#8221;<cite>— Jensen Huang</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Corning (GLW)</b><span>Named supply-chain partner Nvidia works with years ahead of demand.</span></div><div class="namechip"><b>TSMC (TSM)</b><span>Named as a long-lead supply-chain partner alongside Corning and Lumentum.</span></div><div class="namechip"><b>BlackRock (BLK), Goldman Sachs (GS)</b><span>Named partners in Nvidia's AI infrastructure financing arrangements.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Corning (GLW)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium · multi-year supply planning</span></b><span>Named supply-chain partner Nvidia works with years ahead of demand.</span></div><div class="namechip"><b>TSMC (TSM)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium · multi-year supply planning</span></b><span>Named as a long-lead supply-chain partner alongside Corning and Lumentum.</span></div><div class="namechip"><b>BlackRock (BLK), Goldman Sachs (GS)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Named partners in Nvidia's AI infrastructure financing arrangements.</span></div></div>
       
     </div>
   </div>
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="frontier-bets">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Speculative on timelines</span>
-    <span class="theme-status">MIXED — SOME SHIPPED, SOME PROJECTED</span>
+    <span class="theme-status">MIXED — SOME SHIPPED, SOME PROJECTED</span><span class="ttag">semis</span><span class="ttag">biotech</span><span class="ttag">robotics</span><span class="ttag">geopolitics</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Beyond chips: self-driving, protein models, Terrafab, and a 2030 China call</h2>
   <div class="theme-body">
@@ -226,7 +231,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I think we're already there [at superintelligence] — in narrow domains, it's better than a human. One-tenth the accident rate.&#8221;<cite>— Jensen Huang</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Eli Lilly (LLY), Merck (MRK)</b><span>Named pharma partners whose need for protein/biology models drove Nvidia to build ESM2, AlphaFold2, and Proteina.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Eli Lilly (LLY), Merck (MRK)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Named pharma partners whose need for protein/biology models drove Nvidia to build ESM2, AlphaFold2, and Proteina.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The AGI/superintelligence claim is scoped by Jensen himself to narrow domains (self-driving, protein synthesis) — he is not claiming general superintelligence has arrived.</div></div>
     </div>
   </div>
@@ -240,15 +245,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">Jensen has a direct commercial stake in downplaying AI existential-risk narratives — Nvidia sells the compute to every lab on both sides of this debate, and he says he works closely with these labs as business partners.</div><div class="ritem">The Trump call-in is an unscripted, live interruption; his cited figures (the <b>$20 trillion</b> investment claim in particular) are stated in conversation, not sourced to any report on the call.</div><div class="ritem">Several of Jensen's own numbers (the 2030 China lithography call, the one-tenth self-driving accident rate, the five-domains frontier claim) are his own working estimates and characterizations, not third-party verified figures.</div><div class="ritem">Auto-generated captions on a live, multi-speaker, energetic panel (including a phone call-in) carry real risk of garbled names and numbers; company names in this brief were cross-checked for plausibility before inclusion.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;We shouldn't [use extinction-risk framing], because it's made up. It's irresponsible.&#8221; <cite>— Jensen Huang</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I'm surprisingly uncompetitive... I'd be more than happy with five hyperscalers.&#8221; <cite>— Jensen Huang</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;They're going to get there by 2030 [on native advanced lithography].&#8221; <cite>— Jensen Huang</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think we're already there [at superintelligence] — in narrow domains, it's better than a human.&#8221; <cite>— Jensen Huang</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;It's all a hoax. The robots are not going to be taking over the world.&#8221; <cite>— President Trump</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;We have 20 trillion dollars of investment coming into the country... as opposed to much less than 1 trillion under sleepy Joe Biden.&#8221; <cite>— President Trump</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Jensen Huang:</b> China reaches native advanced lithography and becomes strong at high-volume chip production <span class="cmeta">native advanced lithography · achieved · 2030</span> <span class="tag">China</span></div><div class="ritem"><b>Jensen Huang:</b> Nvidia wants 50 to 1,000 regional NeoClouds/NCPs rather than concentration in a handful of hyperscalers <span class="cmeta">regional NeoCloud count · 50-1,000</span> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>Jensen Huang:</b> 80% of the $400B in AI-native venture funding over the last 6 months went to companies built on open models <span class="cmeta">share of AI-native venture funding on open models · 80% of $400B</span></div><div class="ritem"><b>Jensen Huang:</b> Superintelligence has already arrived in narrow domains, with self-driving at one-tenth the human accident rate <span class="cmeta">self-driving accident rate vs human · 0.1x · now</span></div><div class="ritem"><b>Jensen Huang:</b> Z.ai will spend $3B of its $5B raise on a recursive self-improvement training run <span class="cmeta">RSI training spend · $3B</span> <span class="tag">Z.ai</span></div><div class="ritem"><b>President Trump:</b> $20 trillion of investment has entered the US in one year, versus under $1T over four years under the prior administration <span class="cmeta">inbound US investment · $20T · one year</span> <span class="tag">United States</span></div><div class="ritem"><b>President Trump:</b> Data centers are the oil of the next 20-25 years and bigger than the internet <span class="cmeta">data-center economic importance · 'oil of the next 20-25 years' · 2046-2051</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">acquires</span> <b>Hugging Face</b> &mdash; Jensen calls it one of the most consequential acquisitions; a bet on open models.</div><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">acquires</span> <b>Poolside</b> &mdash; Named alongside Hugging Face and Lambda.</div><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">acquires</span> <b>Lambda</b> &mdash; Named alongside Hugging Face and Poolside.</div><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">partners with</span> <b>Cloverleaf</b> &mdash; Financing land/power/shell data-center buildouts.</div><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">partners with</span> <b>BlackRock (BLK)</b> &mdash; AI infrastructure financing arrangements.</div><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">partners with</span> <b>Goldman Sachs (GS)</b> &mdash; AI infrastructure financing arrangements.</div><div class="ritem"><b>Corning (GLW)</b> <span class="rel">supplies</span> <b>Nvidia (NVDA)</b> &mdash; Long-lead supply-chain partner worked with years ahead of demand.</div><div class="ritem"><b>Lumentum (LITE)</b> <span class="rel">supplies</span> <b>Nvidia (NVDA)</b> &mdash; Long-lead supply-chain partner.</div><div class="ritem"><b>TSMC (TSM)</b> <span class="rel">supplies</span> <b>Nvidia (NVDA)</b> &mdash; Long-lead supply-chain partner.</div><div class="ritem"><b>Eli Lilly (LLY)</b> <span class="rel">customer of</span> <b>Nvidia (NVDA)</b> &mdash; Pharma partner whose need drove Nvidia's protein/biology models.</div><div class="ritem"><b>Merck (MRK)</b> <span class="rel">customer of</span> <b>Nvidia (NVDA)</b> &mdash; Pharma partner whose need drove Nvidia's protein/biology models.</div><div class="ritem"><b>Jensen Huang</b> <span class="rel">criticizes</span> <b>Anthropic</b> &mdash; Calls the extinction-risk framing in Dario Amodei's essay 'made up' and irresponsible.</div><div class="ritem"><b>Jensen Huang</b> <span class="rel">endorses</span> <b>Terrafab</b> &mdash; 'If anybody could do it, he can' — respectful nod to Elon's fab plan, no timeline endorsement.</div></div></div>
     </section>
 
     <section class="sec">

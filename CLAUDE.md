@@ -28,7 +28,7 @@ Key things baked into the current skill that aren't obvious from a first read:
   descriptive "character of the claim" language for anything else — never force ticker/stance
   vocabulary onto non-market content).
 - **Sponsor content is always excluded.** No sponsor segment, plug, discount code, or "this video
-  is sponsored by" read ever goes into a brief — not as a theme, OTHER_NEWS item, RISKS caveat, or
+  is sponsored by" read ever goes into a brief — not as a theme, OTHER_NEWS item, CLAIMS row, or
   glossary term. This was an explicit standing instruction, not a default of the skill template.
 - `index.html` has four tabs: All Briefs, By Channel, By Company/Ticker, and Dev & Workflows
   (filtered to `category: "dev"`). Rebuilt automatically on every `generate.py` run, or standalone
@@ -39,10 +39,14 @@ Key things baked into the current skill that aren't obvious from a first read:
   deliberate (`"JPMorgan (JPM), Goldman Sachs (GS)"` = two rows); join with `/` when you don't
   want a split. Verify after generating:
   `python3 -c "import json;d=json.load(open('library.json'));b=d['briefs'][0];print(b['html']);print([e['display'] for e in b['entities']])"`
-- **RISKS labels provenance; it never sends the reader off to verify.** These briefs carry
-  forward-looking opinion that mostly can't be fact-checked and isn't meant to be. Flagging a
-  conflict of interest or an undisclosed position is always in scope; grading the truth of a
-  prediction is not. No audit vocabulary (`unverified`, `uncorroborated`).
+- **There is no RISKS section (removed Sept 2026).** Conflicts of interest and undisclosed
+  positions go in the affected theme's `watch`. Label provenance, never grade a prediction, no
+  audit vocabulary (`unverified`, `uncorroborated`), never tell the reader to go verify.
+- **Graph layer (since Sept 2026):** every `names` entry carries `stance`/`conviction`/`horizon`;
+  each theme has `tags` from the fixed `TAGS` set in `generate.py`; top-level `CLAIMS` (dated/
+  numeric calls) and `RELATIONS` (entity edges with a fixed verb set) are the knowledge-graph
+  payload. `generate.py` warns on unknown tag/stance/verb — a clean run prints no `warning:`.
+  Older briefs lack these fields and regenerate fine; no backfill unless asked.
 - **Coverage is checked mechanically, not from memory:**
   `python3 <skill-folder>/check_coverage.py <inventory.md> <slug> --ignore=Surname`
   Point it at the slug, never at `library.json` — that's the manifest and has no bullets, so it

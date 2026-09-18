@@ -1,6 +1,6 @@
 ---
 name: yt-stocks-brain
-version: 1.0.0
+version: 1.1.0
 metadata:
   author: Peter <peter@example.com>
   tags: [youtube, research, transcript, brief, investing, knowledge-graph]
@@ -57,7 +57,14 @@ keeping and roughly which Section 4 theme it belongs to: named numbers/metrics (
 ones), named companies/products (even in passing comparisons), explanatory analogies the speaker
 uses (these carry real reasoning, not just color), standalone-quotable lines, opinions the speaker
 would be on the hook for (hot takes, contrarian calls, dated predictions — these feed `HOT_TAKES`),
-and named sources, dates, or forward-looking claims. For a short, single-topic video a direct read-and-place pass is
+named sources, dates, or forward-looking claims — and the four things the knowledge graph is
+built from: **an explicit stance on a named asset** (owns / buying / watching / positive /
+negative, plus how strongly and over what horizon — feeds per-entity `stance`), **any call with a
+number or a date attached** (feeds `CLAIMS`), **any stated tie between two named entities**
+(acquires, partners, supplies, invests in, competes with — feeds `RELATIONS`), and **who said it**
+when speakers disagree (attribute the bullet to the speaker; a panel disagreement is signal, not
+noise). Also register upcoming catalysts the speaker points at (an earnings date, a launch, a
+ruling, a rate decision) — those go in `CLAIMS` with the date as `by`. For a short, single-topic video a direct read-and-place pass is
 enough; past the thresholds below, write the list.
 
 Write an explicit flat inventory list before drafting themes — one line per fact, checked off
@@ -101,6 +108,11 @@ one it's most central to — mention it once, not twice.**
 For each theme, capture:
 - `id` (short anchor slug), `color`, `badge`, `status` — see the category-conditional rules below;
   these three fields carry different meaning depending on `META["category"]`.
+- `tags` — 1-3 sector/topic tags from the fixed list in `generate.py` (`TAGS`: `ai-infra`, `semis`,
+  `software`, `macro-rates`, `crypto`, `energy`, `space`, `biotech`, `robotics`, `geopolitics`,
+  `policy`, `consumer`, `finance`, `dev-workflow`, `career`, `health`). These aggregate across
+  briefs in the graph, so never coin a new one per video — the generator warns on unknown tags;
+  if none fits, pick the nearest and move on.
 - `title` — a specific, concrete headline (not a category name)
 - `lead` — one bold sentence giving the point before any detail. The whole line already renders
   bold via CSS — don't wrap it in `**...**`, that's redundant (harmless if you do, just pointless).
@@ -108,8 +120,8 @@ For each theme, capture:
   cutting a fact when a thread is genuinely dense (e.g. an earnings-call theme with many distinct
   guided figures) — never a dense paragraph either way (see Section 7).
   **Emphasis for scanning:** text fields across the brief (bullets, `SNAPSHOT`, `TAKEAWAYS` titles,
-  `RISKS`, `OTHER_NEWS`) support `**bold**` and `*italic*` markdown. The renderer also auto-bolds
-  the first `$`-amount, `%`, or `(TICKER)` in each bullet/snapshot/risk/news line for you — don't
+  `OTHER_NEWS`) support `**bold**` and `*italic*` markdown. The renderer also auto-bolds
+  the first `$`-amount, `%`, or `(TICKER)` in each bullet/snapshot/news line for you — don't
   hand-bold those, you'll just get a redundant nested tag. Reach for manual `**bold**` only on a
   bullet that has no such figure but still has one keyword worth anchoring the eye on (a named
   company, a dated claim, "non-consensus", etc.) — one bold phrase per line, never more; the point
@@ -117,9 +129,19 @@ For each theme, capture:
   render markdown too but get no auto-bold — leave those as clean verbatim quotes.
 - `quote` (optional) — the single best verbatim quote for this theme, or none
 - `watch` (optional) — an explicit "this isn't settled" caveat when the speaker themselves
-  hedges
+  hedges, **or** a conflict of interest / undisclosed position that colors this theme's claim
+  (e.g. "he sells the compute both sides of this debate run on"). Provenance lives here, next
+  to the claim it affects — there is no separate caveats section. Never audit vocabulary
+  (`unverified`, `uncorroborated`) and never tell the reader to go verify; label, don't grade.
 - `names` (optional) — see the category-conditional rules below; omit entirely (`None`) when a
   theme has no company/product/person worth naming, which is common and fine outside `market`.
+  Each entry is `{"name", "blurb", "stance", "conviction", "horizon"}`. `stance` is one of
+  `OWNS` / `BUYING-ADDING` / `WATCHING` / `POSITIVE VIEW` / `NEGATIVE VIEW` / `CASUAL MENTION` /
+  `UNCERTAIN`, `conviction` is `High` / `Medium` / `Low` / `None`, `horizon` is short text
+  (`"12-18 months"`, `"by 2030"`) or `None`. **This per-entity stance is what the ticker index and
+  the graph read** — the theme's `color`/`badge` describe the thread, not each name in it, and a
+  bullish name can sit inside a red-flag theme. Only label what's explicitly said; a name merely
+  mentioned gets `CASUAL MENTION` with `conviction: None`.
 
 **Category-conditional vocabulary** (`META["category"]`, set above):
 
@@ -127,11 +149,11 @@ For each theme, capture:
   — `green`=positive/bullish/confirmed-good, `amber`=mixed/contested/one-eye-open, `gray`=
   speculative/low-confidence, `red`=negative/bearish/red-flag. `badge`/`status` use conviction
   language: `badge` e.g. "High conviction" / "Contested" / "Speculative" / "Confirmed event";
-  `status` e.g. "HOLDING — reduced but not exited", "RELEASED July 27, 2026". Any stance/conviction
-  wording is never inferred — label only what's explicitly said: `OWNS` / `BUYING-ADDING` /
-  `WATCHING` / `POSITIVE VIEW` / `NEGATIVE VIEW` / `CASUAL MENTION` / `UNCERTAIN`, with conviction
-  `High` (clear thesis + explicit action/holding + repeated emphasis) / `Medium` (clear view + some
-  reasoning, no confirmed action) / `Low` (passing/speculative). For any publicly-tradeable entity
+  `status` e.g. "HOLDING — reduced but not exited", "RELEASED July 27, 2026". Per-entity `stance`
+  and `conviction` (fields on each `names` entry, vocabulary above) are never inferred — label only
+  what's explicitly said. Conviction `High` = clear thesis + explicit action/holding + repeated
+  emphasis; `Medium` = clear view + some reasoning, no confirmed action; `Low` = passing/
+  speculative. For any publicly-tradeable entity
   in `names`, write `"Company (TICKER)"` (e.g. `"Nvidia (NVDA)"`, `"RSP"` for a bare-ticker ETF) —
   the index's cross-reference view parses this pattern into a per-ticker mention history across
   every brief. Several tickers sharing one bullet get comma-separated in `name`, e.g. `"Apollo,
@@ -165,8 +187,8 @@ For each theme, capture:
   Warsh→"Worsh", KOSPI→"Cosby"). Resolving an obvious one is fine; guessing at a company you can't
   identify is not, because `names` and tickers are durable index data and a wrong entry is
   permanent damage. When you can't identify a company with confidence, describe it by spec in a
-  bullet ("a ~10 MW micro-reactor firm building five-unit pods") and leave it out of `names`
-  entirely. Note the unresolved ones in `RISKS`.
+  bullet ("a ~10 MW micro-reactor firm building five-unit pods") and leave it out of `names`,
+  `CLAIMS` and `RELATIONS` entirely.
 
 - **Any other `category`** (e.g. `"dev"` — dev/systems/knowledge/AI-workflow content, or a future
   category): don't force stock-conviction vocabulary onto content that isn't a stance on an asset.
@@ -199,7 +221,7 @@ named source or a named person's stated view.
 
 EXCLUDED — sponsor content never goes in the brief. Skip paid sponsorship segments, "this video
 is sponsored by" reads, host-endorsed sponsor products/tools, and sponsor discount codes/links
-entirely — do not give them a theme, an OTHER_NEWS entry, a RISKS caveat, or a GLOSSARY term. If
+entirely — do not give them a theme, an OTHER_NEWS entry, a CLAIMS row, a RELATIONS edge, or a GLOSSARY term. If
 a sponsor segment interrupts an otherwise substantive discussion mid-transcript, skip only the
 sponsor material and continue capturing the surrounding content normally.
 
@@ -213,17 +235,23 @@ sponsor material and continue capturing the surrounding content normally.
   when none fit, but keep it a topic label, not an action verb like "Watch" or "Track"; the
   imperative verb belongs in `title` itself). It renders inline, leading the takeaway text on the
   same line ("Markets: Track RSP and IGV first...") — never a separate line below.
-- `RISKS` — meta caveats about trusting THIS source (sponsorships, self-reported claims, auto-
-  caption errors, conflicts of interest). Don't repeat a theme's own `watch` flag here — that's
-  a different kind of caveat (about the claim), this one is about the source.
-  **Label provenance; don't send the reader off to verify.** These briefs carry forward-looking
-  opinion, speculation and fresh connections — material that mostly can't be fact-checked and
-  isn't meant to be. The brief's job is faithful transmission of what was said, never adjudicating
-  whether the speaker is right. So write "these are his working numbers, quoted in conversation
-  rather than read off a report" — not "verify before acting on any of them." Avoid audit
-  vocabulary (`unverified`, `uncorroborated`, `unsubstantiated`) and imperatives telling the reader
-  to go check. Flagging a conflict of interest, an undisclosed position or a claim the speaker
-  himself hedges is always in scope; grading the truth of a prediction is not.
+- `CLAIMS` — the graph's checkable-predictions layer: one row per call that carries a number
+  or a date, `{"who", "claim", "metric", "target", "by", "condition", "entity"}`. `who` is the
+  speaker; `claim` is one plain sentence; `metric`/`target`/`by` hold the checkable part split out
+  ("China native lithography" / "achieved" / "2030"; "Nvidia NeoClouds" / "50-1,000" / None) — at
+  least one of the three is filled; `condition` is the speaker's own "if" or `None`; `entity` is
+  the `"Company (TICKER)"`, asset, or region the call is about, or `None`. Include upcoming
+  catalysts the speaker points at (earnings dates, launches, rulings) with the date as `by`.
+  A claim that already lives in a bullet or hot take still gets a row here — this section is
+  structure over the same material, so the no-duplicate rule does NOT apply. Numbers stated as
+  history ("we did $400B last quarter") are bullets, not claims; a claim is something the future
+  can prove wrong.
+- `RELATIONS` — edges between named entities as stated in the video:
+  `{"from", "rel", "to", "note"}` with `rel` from the fixed set `acquires` / `invests_in` /
+  `partners_with` / `supplies` / `customer_of` / `competes_with` / `owns_stake` / `endorses` /
+  `criticizes`. `from`/`to` use the same canonical `"Company (TICKER)"` string as `names` so the
+  graph can join them. Only stated relationships — a comparison in passing is not an edge.
+  `note` is one short clause or `None`. Empty is fine when the video names none.
 - `HOT_TAKES` — 0-6 opinions the speaker personally owns and would be quoted on: hot takes,
   contrarian/unpopular calls, personal convictions, dismissals ("X is dead", "nobody needs Y"),
   and predictions carrying a number or a date. Shape: `{"take": ..., "cite": "— Speaker",
@@ -249,7 +277,7 @@ fill a section.
 ### 6. Generate outputs
 `generate.py` itself is never edited per video — it takes a per-video **data file** as an
 argument instead. Copy `<skill-folder>/scripts/TEMPLATE.py` into the working directory (any filename,
-e.g. `_data.py`), fill in `META`, `SNAPSHOT`, `THEMES`, `TAKEAWAYS`, `RISKS`, `HOT_TAKES`, `OTHER_NEWS`,
+e.g. `_data.py`), fill in `META`, `SNAPSHOT`, `THEMES`, `TAKEAWAYS`, `HOT_TAKES`, `CLAIMS`, `RELATIONS`, `OTHER_NEWS`,
 `GLOSSARY`, then:
 
 ```bash
@@ -270,12 +298,13 @@ upload date giving chronological order within each creator):
   Ticker**, and **Dev & Workflows** (briefs with `META["category"] == "dev"` only). The ticker view
   parses every theme's `names` field (current schema) or `conviction_map` topic (legacy schema)
   into a cross-reference: click a ticker's group to see every brief that mentioned it, with date,
-  channel, stance color, and blurb — this is what turns a growing pile of briefs into an
+  channel, per-entity stance/conviction/horizon, and blurb — this is what turns a growing pile of briefs into an
   investing-thesis tool instead of just a list of pages. Run `python3 <skill-folder>/scripts/generate.py
   --reindex` to rebuild it standalone (e.g. after manually deleting or renaming a brief).
 - `library.json` — rebuilt alongside `index.html` at the **working directory root**: a flat
-  machine-readable manifest of every brief plus its extracted ticker/company entities, meant to
-  be fed directly into an external AI/knowledge-graph tool rather than scraped from the HTML.
+  machine-readable manifest of every brief plus its tags and extracted ticker/company entities
+  (with stance/conviction/horizon), meant to be fed directly into an external AI/knowledge-graph
+  tool. `CLAIMS` and `RELATIONS` live in each per-brief `.json` under `research-data/`.
 
 Filename convention: lowercase, non-alphanumerics → single hyphen, diacritics stripped, date as
 `YYYY-MM-DD` (from `META["date"]`). Example: `jordi-visser_2026-08-09_the-ai-crash-is-over.html`.
@@ -318,11 +347,17 @@ correction pass rather than re-deriving a fresh data file from the transcript.
   ```
   Every row must be a company/fund/organization. A country, product name or concept in that list
   means a `names` entry needs to move into `bullets`.
+- Graph fields are complete and vocabulary-clean: every `names` entry in a `market` brief has a
+  `stance`; every `CLAIMS` row has `who` plus at least one of `metric`/`target`/`by`; every
+  `RELATIONS` row uses a verb from the fixed set and canonical entity strings; every theme has
+  `tags`. `generate.py` prints a `warning:` line for any unknown tag, stance or verb — a clean
+  run has none.
 - No fact appears in two theme cards (see the dedup rule in Section 4). `HOT_TAKES` is exempt —
   it deliberately re-surfaces lines that also live in a theme.
 - `HOT_TAKES` entries are verbatim/near-verbatim and each one would actually make someone
   disagree or hold the speaker to it. A bland consensus statement in there means it should be cut.
 - Every major claim has transcript evidence; ownership/buying intent is never inferred.
+- Conflicts of interest sit in the relevant theme's `watch`, not in a bullet and not dropped.
 - Bullets are short and concrete — no dense multi-sentence paragraphs inside a theme.
 - HTML well-formed, closes `</html>`.
 - Working folder root only gained the `.html`; transcript/JSON live in `research-data/<slug>/`.

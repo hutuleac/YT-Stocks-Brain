@@ -3,8 +3,8 @@
 YouTube Research Brief generator (v3 — data-file driven, theme-grouped, mobile-first).
 
 This script never needs editing per video. Instead, create a per-video data file
-(copy TEMPLATE.py, fill in META / SNAPSHOT / THEMES / TAKEAWAYS / RISKS / OTHER_NEWS /
-GLOSSARY — see SKILL.md Sections 3-5 for what each field means), then:
+(copy TEMPLATE.py, fill in META / SNAPSHOT / THEMES / TAKEAWAYS / HOT_TAKES / CLAIMS /
+RELATIONS / OTHER_NEWS / GLOSSARY — see SKILL.md Sections 3-5 for what each field means), then:
 
     python3 generate.py <data_file.py>
 
@@ -60,7 +60,7 @@ a data file for a video.
   space; the reader scrolls straight from the snapshot into the theme cards.
 - Takeaways and Other Notable News are icon-only cards (no colored side accent bar — keep those
   reserved for theme cards so the color-coding stays meaningful, not decorative everywhere).
-  Risk/caveat cards keep a red-orange side accent bar since they're explicitly about doubt. No
+  Claim/relation/hot-take boxes reuse one bordered card with a colored side accent bar. No
   warning-triangle glyph anywhere — a plain colored bar carries the "caution" meaning.
 - Glossary renders as a grid-template-columns:repeat(auto-fill,minmax(260px,1fr)) grid — pure
   CSS, no media query needed, it reflows column count on its own as the viewport narrows.
@@ -82,8 +82,25 @@ import unicodedata
 
 sys.dont_write_bytecode = True  # don't litter the working directory with __pycache__
 
-REQUIRED_FIELDS = ["META", "SNAPSHOT", "THEMES", "TAKEAWAYS", "RISKS", "OTHER_NEWS", "GLOSSARY"]
-# HOT_TAKES is optional so data files written before it existed still regenerate.
+REQUIRED_FIELDS = ["META", "SNAPSHOT", "THEMES", "TAKEAWAYS", "OTHER_NEWS", "GLOSSARY"]
+# HOT_TAKES / CLAIMS / RELATIONS are optional so data files written before they existed still
+# regenerate. RISKS (removed) is silently ignored if an old data file still defines it.
+OPTIONAL_LISTS = ["HOT_TAKES", "CLAIMS", "RELATIONS"]
+
+# Knowledge-graph vocabularies. Data files must draw from these — unknown values print a
+# warning (not a hard fail) so an old brief can never be blocked from regenerating.
+TAGS = {
+    "ai-infra", "semis", "software", "macro-rates", "crypto", "energy", "space", "biotech",
+    "robotics", "geopolitics", "policy", "consumer", "finance", "dev-workflow", "career", "health",
+}
+REL_VERBS = {
+    "acquires", "invests_in", "partners_with", "supplies", "customer_of", "competes_with",
+    "owns_stake", "endorses", "criticizes",
+}
+STANCES = {
+    "OWNS", "BUYING-ADDING", "WATCHING", "POSITIVE VIEW", "NEGATIVE VIEW", "CASUAL MENTION",
+    "UNCERTAIN",
+}
 
 
 def load_data(path):
@@ -93,8 +110,19 @@ def load_data(path):
     missing = [f for f in REQUIRED_FIELDS if not hasattr(mod, f)]
     if missing:
         sys.exit(f"{path} is missing required field(s): {', '.join(missing)}")
-    if not hasattr(mod, "HOT_TAKES"):
-        mod.HOT_TAKES = []
+    for f in OPTIONAL_LISTS:
+        if not hasattr(mod, f):
+            setattr(mod, f, [])
+    for t in mod.THEMES:
+        for tag in set(t.get("tags") or []) - TAGS:
+            print(f"warning: theme '{t.get('id')}' has unknown tag '{tag}' (TAGS in generate.py)")
+        for n in t.get("names") or []:
+            st = n.get("stance")
+            if st and st not in STANCES:
+                print(f"warning: '{n.get('name')}' has unknown stance '{st}' (STANCES in generate.py)")
+    for r in mod.RELATIONS:
+        if r.get("rel") not in REL_VERBS:
+            print(f"warning: relation {r.get('from')} -> {r.get('to')} has unknown rel '{r.get('rel')}'")
     return mod
 
 
@@ -191,7 +219,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -337,10 +370,13 @@ def render_theme(t):
     names_html = ""
     names = t.get("names")
     if names:
-        chips = "".join(
-            f'<div class="namechip"><b>{esc(n["name"])}</b><span>{esc(n["blurb"])}</span></div>'
-            for n in names
-        )
+        chips = []
+        for n in names:
+            bits = [x for x in (n.get("stance"), n.get("conviction"), n.get("horizon")) if x]
+            chip = (f'<span class="stance" style="background:{STANCE_COLORS[_stance_color(n.get("stance"))]};">'
+                    f'{esc(" · ".join(bits))}</span>') if bits else ""
+            chips.append(f'<div class="namechip"><b>{esc(n["name"])}{chip}</b><span>{esc(n["blurb"])}</span></div>')
+        chips = "".join(chips)
         names_html = (
             f'<div class="sidecard" style="--sc-accent:{NAMES_ACCENT};">'
             f'<div class="lbl">Names in play</div>{chips}</div>'
@@ -353,11 +389,12 @@ def render_theme(t):
             f'<div class="txt">{esc(t["watch"])}</div></div>'
         )
 
+    tags_html = "".join(f'<span class="ttag">{esc(x)}</span>' for x in t.get("tags") or [])
     return f"""
 <section class="theme" id="{t['id']}">
   <div class="theme-badgerow">
     <span class="badge" style="background:{color};">{esc(t.get('badge',''))}</span>
-    <span class="theme-status">{esc(t.get('status',''))}</span>
+    <span class="theme-status">{esc(t.get('status',''))}</span>{tags_html}
   </div>
   <h2 style="border-left:4px solid {color};">{esc(t['title'])}</h2>
   <div class="theme-body">
@@ -407,11 +444,32 @@ def render_icards(items, icon_default="\U0001F4CC", with_tag_detail=False, inlin
     return '<div class="icardbox">' + "".join(rows) + '</div>'
 
 
-def render_risks(items):
+def claim_line(c):
+    """One-line rendering of a CLAIMS row; also used as its search-hit text."""
+    head = " · ".join(esc(x) for x in (c.get("metric"), c.get("target"), c.get("by")) if x)
+    tail = f' <i>if {esc(c["condition"])}</i>' if c.get("condition") else ""
+    ent = f' <span class="tag">{esc(c["entity"])}</span>' if c.get("entity") else ""
+    return (f'<b>{esc(c.get("who",""))}:</b> {emph(c.get("claim",""), auto=False)}'
+            + (f' <span class="cmeta">{head}</span>' if head else "") + tail + ent)
+
+
+def render_claims(items):
     if not items:
-        return '<p class="empty">No specific caveats flagged for this source.</p>'
-    rows = "".join(f'<div class="ritem">{emph(r)}</div>' for r in items)
-    return f'<div class="riskbox">{rows}</div>'
+        return '<p class="empty">No dated or numeric calls made in this video.</p>'
+    rows = "".join(f'<div class="ritem">{claim_line(c)}</div>' for c in items)
+    return f'<div class="riskbox" style="--box-accent:#2d6a4f;">{rows}</div>'
+
+
+def render_relations(items):
+    if not items:
+        return '<p class="empty">No company-to-company relationships stated in this video.</p>'
+    rows = "".join(
+        f'<div class="ritem"><b>{esc(r.get("from",""))}</b> '
+        f'<span class="rel">{esc(r.get("rel","")).replace("_", " ")}</span> <b>{esc(r.get("to",""))}</b>'
+        + (f' &mdash; {emph(r["note"], auto=False)}' if r.get("note") else "") + '</div>'
+        for r in items
+    )
+    return f'<div class="riskbox" style="--box-accent:#3b5b8c;">{rows}</div>'
 
 
 def render_hot_takes(items):
@@ -475,15 +533,21 @@ def build_html(data):
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;">{render_risks(data.RISKS)}</div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;">{render_hot_takes(data.HOT_TAKES)}</div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;">{render_claims(data.CLAIMS)}</div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;">{render_relations(data.RELATIONS)}</div>
     </section>
 
     <section class="sec">
@@ -510,8 +574,9 @@ def build_json(data):
         "snapshot": data.SNAPSHOT,
         "themes": data.THEMES,
         "takeaways": data.TAKEAWAYS,
-        "risks": data.RISKS,
         "hot_takes": data.HOT_TAKES,
+        "claims": data.CLAIMS,
+        "relations": data.RELATIONS,
         "other_news": data.OTHER_NEWS,
         "glossary": data.GLOSSARY,
     }
@@ -586,16 +651,19 @@ def _entities_from_theme(theme):
         blurb = n.get("blurb", "")
         for piece in _split_entity_list(raw):
             ticker, display = _parse_ticker(piece)
+            stance = n.get("stance")
             out.append({
                 "ticker": ticker, "display": display or piece,
-                "stance_label": theme.get("badge", ""), "conviction": None,
-                "color": theme.get("color", "gray"), "blurb": blurb,
+                "stance_label": stance or theme.get("badge", ""),
+                "conviction": n.get("conviction"), "horizon": n.get("horizon"),
+                "color": _stance_color(stance) if stance else theme.get("color", "gray"),
+                "blurb": blurb,
             })
     return out
 
 
 def _entities_from_conviction(conviction_map):
-    out = []
+    out = []  # legacy schema: no per-entity horizon
     for c in conviction_map or []:
         raw = c.get("topic", "")
         category = c.get("category", "") or ""
@@ -628,7 +696,7 @@ def _legacy_thread_line(d):
 
 def _content_hits(d):
     """Flatten a brief's raw JSON into searchable snippets — quotes, hot takes/
-    predictions, risks, recommendations, glossary terms, company notes — each
+    claims, relations, recommendations, glossary terms, company notes — each
     optionally anchored to the theme section it came from (current schema only;
     legacy fixed-table briefs link to the brief page itself). Powers the
     Quotes & Takes search view. Handles both the current ('meta'/'themes') and
@@ -654,10 +722,12 @@ def _content_hits(d):
                 add("Company note", f'{n.get("name","")}: {n.get("blurb","")}', theme_id=tid)
         for it in d.get("takeaways", []) or []:
             add("Takeaway", it.get("title", ""), it.get("tag", ""))
-        for r in d.get("risks", []) or []:
-            add("Risk", r)
         for it in d.get("hot_takes", []) or []:
             add("Hot take", it.get("take", ""), it.get("cite", ""))
+        for c in d.get("claims", []) or []:
+            add("Claim", " ".join(x for x in (c.get("claim"), c.get("metric"), c.get("target"), c.get("by")) if x), c.get("who", ""))
+        for r in d.get("relations", []) or []:
+            add("Relation", f'{r.get("from","")} {r.get("rel","").replace("_"," ")} {r.get("to","")}' + (f' — {r["note"]}' if r.get("note") else ""))
         for it in d.get("other_news", []) or []:
             add("News", it.get("title", ""), it.get("tag", ""))
         for g in d.get("glossary", []) or []:
@@ -675,8 +745,6 @@ def _content_hits(d):
             add("Prediction", p.get("prediction", ""), p.get("horizon", ""))
         for q in d.get("notable_quotes", []) or []:
             add("Quote", q.get("quote", ""), q.get("speaker", ""))
-        for r in d.get("risks", []) or []:
-            add("Risk", r.get("text", "") if isinstance(r, dict) else r, r.get("kind", "") if isinstance(r, dict) else "")
         for it in d.get("actionable_takeaways", []) or []:
             add("Takeaway", it.get("item", ""), it.get("type", ""))
         for it in d.get("other_notable_news", []) or []:
@@ -702,6 +770,7 @@ def _load_brief(json_path):
         thread_line = m.get("thread_line", "")
         category = m.get("category") or "market"
         entities = [e for t in d.get("themes", []) for e in _entities_from_theme(t)]
+        tags = sorted({x for t in d.get("themes", []) for x in (t.get("tags") or [])})
     elif "metadata" in d:  # legacy fixed-table schema
         m = d["metadata"]
         date = m.get("publication_date") or m.get("analysis_date", "")
@@ -709,6 +778,7 @@ def _load_brief(json_path):
         thread_line = _legacy_thread_line(d)
         category = "market"
         entities = _entities_from_conviction(d.get("conviction_map"))
+        tags = []
     else:
         return None
     return {
@@ -719,6 +789,7 @@ def _load_brief(json_path):
         "speakers": speakers,
         "thread_line": thread_line,
         "category": category,
+        "tags": tags,
         "entities": entities,
         "hits": _content_hits(d),
     }
@@ -737,7 +808,7 @@ def _search_blob(*parts):
 
 def _render_chrono_view(briefs):
     rows = "".join(
-        f'<tr class="row" data-search="{_search_blob(b["title"], b["channel"], b["thread_line"])}">'
+        f'<tr class="row" data-search="{_search_blob(b["title"], b["channel"], b["thread_line"], " ".join(b["tags"]))}">'
         f'<td class="idx-date">{esc(b["date"])}</td>'
         f'<td class="idx-channel">{esc(b["channel"])}</td>'
         f'<td class="idx-title"><a href="{esc(b["html"])}">{esc(b["title"])}</a></td>'
@@ -869,7 +940,7 @@ INDEX_JS = """
   function renderHits(term){
     var mount = document.getElementById('hits-mount');
     if (!term){
-      mount.innerHTML = '<p class="empty">Type to search quotes, recommendations, risks, and opinions across every indexed brief.</p>';
+      mount.innerHTML = '<p class="empty">Type to search quotes, recommendations, claims, and opinions across every indexed brief.</p>';
       return;
     }
     var matches = getHits().filter(function(h){ return h.s.indexOf(term) !== -1; });
@@ -947,7 +1018,7 @@ def build_index():
     <div id="view-chrono" class="view active">{_render_chrono_view(briefs)}</div>
     <div id="view-channel" class="view">{_render_channel_view(briefs)}</div>
     <div id="view-entity" class="view">{_render_entity_view(briefs)}</div>
-    <div id="view-content" class="view"><div id="hits-mount"><p class="empty">Type to search quotes, recommendations, risks, and opinions across every indexed brief.</p></div></div>
+    <div id="view-content" class="view"><div id="hits-mount"><p class="empty">Type to search quotes, recommendations, claims, and opinions across every indexed brief.</p></div></div>
     <div id="view-dev" class="view">{_render_chrono_view(dev_briefs)}</div>
   </div>
 </div>
@@ -962,7 +1033,8 @@ def build_index():
         "generated_from": "youtube-research-brief generate.py --reindex",
         "briefs": [{k: v for k, v in b.items() if k not in ("entities", "hits")} | {
             "entities": [{"ticker": e["ticker"], "display": e["display"], "stance": e["stance_label"],
-                          "conviction": e["conviction"], "color": e["color"]} for e in b["entities"]]
+                          "conviction": e["conviction"], "horizon": e.get("horizon"), "color": e["color"]}
+                         for e in b["entities"]]
         } for b in briefs],
     }
     with open("library.json", "w", encoding="utf-8") as f:
