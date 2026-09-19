@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research: AI Has Outgrown the Hardware Running It | The Next Endeavour 2026</title>
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>AI Has Outgrown the Hardware Running It | The Next Endeavour 2026</h1>
+    <div class="byline">
+      Channel: <b>Imagination in Action</b> &middot; Speaker: <b>Andrew Feldman (Cerebras CEO), Atiq Raza (chip-industry veteran), Dave Blundin; moderated by John Werner</b> &middot; <b>2026-09-17</b>
+      <div class="stats-line">6 threads · Cerebras's demand wave · the real bottleneck · architecture after the GPU · China, open source and robots · what speed unlocks · bubble or foundation &middot; <a href="https://www.youtube.com/watch?v=t_zMMjjIjFc" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li><b>Cerebras</b> says it has a $25B backlog, will raise manufacturing 8x this year and 8x next, and goes from several hundred MW to contracts for gigawatts by year-end.</li><li>Feldman's binding constraint today is <b>data-center availability</b> ("data centers move like real estate"); in three years it is fab capacity.</li><li>Dave Blundin calls shuttling weights out of HBM for every token "utterly idiotic" and says 1,000x-1,000,000x more efficient designs arrive once the supply chain catches up, within ~3 years.</li><li>Architecture framework worth keeping: every chip innovation is in <b>cores, memory, or IO</b> — ask which one a new chip actually moves.</li><li>China: the chip embargo forced quantization and hybrid-attention innovation; open models trail OpenAI/Anthropic by a steady 4-8 months, and the US is "getting clobbered" in robots.</li><li>Speed is the new axis now that models are smart enough: coding and personal agents are useless if slow — Netflix only became a studio once the internet got fast.</li><li>Bubble question: all three reject the Pets.com frame — expect bumps and misallocated capital, but AI is "the biggest thing in human history" 20 years out.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="cerebras-demand">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">PUBLIC SINCE MAY 2026 — $25B BACKLOG</span><span class="ttag">semis</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Cerebras: ten years early, now under-forecasting its own market</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Feldman says the inference wave came bigger than any Cerebras forecast — the first time in five startups he guessed a market too small.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>$25B backlog; manufacturing up <b>8x this year and 8x next</b>; entered 2026 with several hundred MW under management, exits with contracts for gigawatts.</li><li><span class="dot" style="background:#3f6b2e;"></span>The wafer-scale chip: 46,000 mm², 4 trillion transistors, roughly <b>$1 million</b> each; pitched as 10-50x faster than a GPU.</li><li><span class="dot" style="background:#3f6b2e;"></span>Solved "a 75-year-old problem" in 2020 and <b>nobody cared</b> — fast AI was pointless while AI was dumb; premise was "probably seven years too early."</li><li><span class="dot" style="background:#3f6b2e;"></span>Chip share only moves on new workloads: Ethernet switching killed Nortel and 3Com in the late 90s; AMD and Intel got zero share of phones in the mid-2000s.</li><li><span class="dot" style="background:#3f6b2e;"></span>Early believers, per Feldman: Atiq Raza, Andy Bechtolsheim and maybe Lip-Bu Tan — "everybody said you're out of your mind."</li><li><span class="dot" style="background:#3f6b2e;"></span>May IPO was the largest semiconductor IPO ever (Dave: biggest IPO of any kind until SpaceX); 1,000+ staff; "the IPO solves nothing" technically.</li><li><span class="dot" style="background:#3f6b2e;"></span>Scale check: <b>$50</b>-60B Cerebras vs ~$5 trillion Nvidia; Feldman's lesson is Nvidia's grit trading near cash for a decade (2003-2013), not CUDA.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;The right way to get the timing right in a startup is to be wrong for a long time and not be dead.&#8221;<cite>— Andrew Feldman</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Cerebras<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High · 2026-2027</span></b><span>$25B backlog, 8x/8x manufacturing ramp, gigawatt contracts; wafer-scale inference 10-50x GPU speed</span></div><div class="namechip"><b>Nvidia<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>~$5T; Feldman admires its 2003-2013 grind as a near-cash public company; jokes he'd call Jensen to buy him</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Every number here is the CEO describing his own company on stage; Feldman himself warns that as a public-market CEO he sees "everybody selling their own book all the time." Raza notes Cerebras made mistakes that "got corrected before the public knew."</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="bottleneck">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">CONSTRAINT SHIFTS: DATA CENTERS NOW → FABS IN 3 YEARS</span><span class="ttag">ai-infra</span><span class="ttag">energy</span><span class="ttag">semis</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">The bottleneck: data centers today, fabs next — and weights that shouldn't move</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Asked to remove one constraint, Feldman picks data-center availability now and fab capacity in three years; Blundin says the real waste is inside the chip.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Feldman: software moves at software speed, <b>data centers move like real estate</b> — that is holding the whole industry back.</li><li><span class="dot" style="background:#93711b;"></span>Raza splits it: energy and building data centers "we can't fix"; what goes inside them the people on stage can.</li><li><span class="dot" style="background:#93711b;"></span>Blundin: burning energy on HBM, "the most expensive chips in the world," to move weights into a GPU for a picosecond and dump them is idiotic; weight-stationary designs are 1,000x-1,000,000x more efficient.</li><li><span class="dot" style="background:#93711b;"></span>Why they don't exist yet: the supply chain is slow and nobody wants to hardwire an algorithm that software then obsoletes.</li><li><span class="dot" style="background:#93711b;"></span>Raza: inference is going consumer → enterprise → multi-stage with fan-outs as context windows swell; each step must carry prior context, so it gets far more <b>memory-intensive</b>. In-memory compute is moving from edge to data center, but it also needs workload scheduling.</li><li><span class="dot" style="background:#93711b;"></span>Whole supply chain "stretched past breaking": memory, CPUs, GPUs, accelerators, PCBs, substrates, power regulators.</li><li><span class="dot" style="background:#93711b;"></span>Backup gas generators are short; Caterpillar and GE Vernova gear saw "no innovation in 30 years" — now diesel gensets, turbines, fuel cells and power switching are all innovating.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;Well, what we do right now at AI inference is utterly idiotic. The weights do not need to move.&#8221;<cite>— Dave Blundin</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Caterpillar<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Backup generators now short for data centers after decades without innovation</span></div><div class="namechip"><b>GE Vernova<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Named alongside Caterpillar as a gen-set/turbine supplier suddenly under data-center demand pressure</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Blundin's 1,000-1,000,000x range is his own estimate, and he says he is starting new companies in this stack.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="architecture">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Speculative</span>
+    <span class="theme-status">TRANSFORMERS FOR 'SEVERAL YEARS'; PHOTONICS AND EXOTIC COMPUTE BEYOND</span><span class="ttag">semis</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">Architecture after the GPU: cores, memory, IO — and light</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Feldman reduces all computer architecture to three levers, and the panel bets photonics and hardware no one has built yet pull them next.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>Framework: every chip is faster cores, better memory/bandwidth, or better IO; Cerebras's bet was memory placed closer to compute to widen the aperture.</li><li><span class="dot" style="background:#65695f;"></span>Blundin, from scratch: all matmuls photonic, transistor math in between; Raza: connectivity definitely goes photonic, compute and memory are an open question.</li><li><span class="dot" style="background:#65695f;"></span>Feldman: transformer-based for at least several years — a dominant design with five or six companies pouring money in; attention is "a big matrix multiply"; proof is shipping volume, not conference slides.</li><li><span class="dot" style="background:#65695f;"></span>Daniela Rus's Liquid AI changes attention granularity and has shown inference 3-4x faster; Kimi K3 mixes one attention layer with three KDA state-space layers, reconciling the two paths.</li><li><span class="dot" style="background:#65695f;"></span><b>New Moore's law</b>: transistor doubling slid from 18 months to 3-4 years, but Feldman says models are getting more than 2x smarter every 18 months — an exponential, not a line.</li><li><span class="dot" style="background:#65695f;"></span>Blundin: fabs cap chip output for 3-4 years; within four years AI invents compute in crystals and liquids, largely in space on solar — "not an Nvidia rack floating around in space."</li><li><span class="dot" style="background:#65695f;"></span>Raza's counter: Moore's law carried its death from day one (atomic limits) and token-efficiency gains will slow the same way.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#65695f;"><div class="lbl">Pull quote</div>&#8220;With that very simple framework, you understand all of computer architecture. That's all we do. Turns out it's really hard.&#8221;<cite>— Andrew Feldman</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Liquid AI<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Daniela Rus's company; finer-granularity attention/state-space models, 3-4x faster inference shown</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="china-race">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">Contested</span>
+    <span class="theme-status">OPEN-SOURCE GAP HOLDING AT 4-8 MONTHS; ROBOTS LOST</span><span class="ttag">geopolitics</span><span class="ttag">robotics</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">The embargo made China better at efficiency — and the US is behind on robots</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Starving China of Nvidia chips forced quantization and hybrid-model innovation the US is now scrambling to backport.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span>Transformers were born in PyTorch on CUDA in FP32; China shrank weights and activations to tiny data types and "it's worked shockingly well."</li><li><span class="dot" style="background:#a23f22;"></span>Blundin: nobody optimized data types since his MIT days in the 1990s; embargo started under Biden, accelerated under Trump — "no party component."</li><li><span class="dot" style="background:#a23f22;"></span>Raza's anecdote: a Stanford-PhD Chinese VC said the GPU cutoff was "the best thing that has happened to me" — now local innovation is investable.</li><li><span class="dot" style="background:#a23f22;"></span>Feldman: open models (Kimi) sit a steady 4-8 months behind OpenAI and Anthropic and he sees no reason it changes in the next several years; China leans on <b>distillation</b> from frontier models.</li><li><span class="dot" style="background:#a23f22;"></span>Frontier edge compounds: OpenAI gave its fast Cerebras inference entirely to its own engineers for the first six months; Dell's fast-follower, tiny-R&amp;D model can't do that.</li><li><span class="dot" style="background:#a23f22;"></span>Raza: being even slightly behind multiplies in agentic workloads, so you spend more on compute even if the model is free.</li><li><span class="dot" style="background:#a23f22;"></span>Robots: "we're getting clobbered" — China is embarrassingly ahead, and Feldman knows of zero credible US actuator makers.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;Well, it's not great to say but we're getting clobbered in robots.&#8221;<cite>— Andrew Feldman</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>OpenAI<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium · several years</span></b><span>Cerebras customer; gave the fast inference to its own engineers for six months; frontier lead of 4-8 months</span></div><div class="namechip"><b>Anthropic<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Co-leader of the frontier that open models trail by 4-8 months</span></div><div class="namechip"><b>Dell<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Low</span></b><span>Feldman's example of a fast follower spending absurdly little on R&amp;D</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Feldman has a commercial relationship with OpenAI, the frontier lab in his gap comparison.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="speed-unlocks">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">SPEED NOW OUTRANKS MARGINAL INTELLIGENCE</span><span class="ttag">software</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Once models are smart enough, speed is the product</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">"Dumb fast" helps no one, but with open, closed and small models all smart, the bottleneck becomes waiting for the answer.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Feldman's test: punish a naughty 12-year-old by setting their phone to <b>dial-up</b> — slowness is punishment.</li><li><span class="dot" style="background:#3f6b2e;"></span>Netflix went from mailing DVDs to being a studio only because the internet got fast; a four-hour download never gets you there.</li><li><span class="dot" style="background:#3f6b2e;"></span>Coding agents and personal agents (Instinct, Muse) die if slow — nobody waits eight minutes for an agent to order a burrito.</li><li><span class="dot" style="background:#3f6b2e;"></span>Law and accounting billing every six minutes would be less offensive with 30x the work done per block; Workday-to-ADP and Salesforce-to-accounting shuffling "all goes away."</li><li><span class="dot" style="background:#3f6b2e;"></span>Blundin: smaller Chinese models like GLM hit near-frontier benchmarks at 4x+ fewer parameters; fit one on a single Cerebras wafer or ten and throughput rises 10-100x.</li><li><span class="dot" style="background:#3f6b2e;"></span>Domain-shrunk models drop knowledge like Taylor Swift's Eras Tour you don't need to design a chip or rocket; Raza adds that edge devices and robots need exactly that.</li><li><span class="dot" style="background:#3f6b2e;"></span>Blundin: vision transformers (16x16 pixel patches treated as words) let a coding agent look at its own GUI and fix it — impossible six months ago; "that unlock is pure speed."</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;If your 12-year-old has been naughty, don't take away their phone. Set it to dial-up rate.&#8221;<cite>— Andrew Feldman</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Netflix<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Analogy: fast internet turned a DVD mailer into a studio</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Feldman sells the fastest inference hardware — speed-as-the-axis is also his book, and he says so himself.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="bubble">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">"BUMPS" EXPECTED — NOT A PETS.COM</span><span class="ttag">macro-rates</span><span class="ttag">biotech</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Bubble or foundation: overheating yes, bubble no</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The panel expects misallocated capital and a panic, but calls AI the foundation of a new economy, like the internet was.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Feldman: take a 10-15-year view of Pets.com and online pet food is a great business — Chewy, and a big share of what Amazon sells; expect cul-de-sacs to back out of.</li><li><span class="dot" style="background:#3f6b2e;"></span>Blundin: Google was born in the middle of the dot-com collapse; the internet "was never a bubble," people just panicked — "America always overheats."</li><li><span class="dot" style="background:#3f6b2e;"></span>Feldman: someone born in 20 years may never know anyone who dies of cancer or is hit by a drunk driver (car accidents: top killer of healthy adults).</li><li><span class="dot" style="background:#3f6b2e;"></span>Moderator's cautionary tale: DEC — Georges Doriot put in <b>$70,000, </b>it went head-to-head with IBM, then Ken Olsen couldn't imagine people wanting small computers; Olsen came out of MIT's Project Whirlwind.</li><li><span class="dot" style="background:#3f6b2e;"></span>Raza: tools now attacking Navier-Stokes have Terence Tao worried about his own role — warrants a pause on socioeconomic impact.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;AI will still 20 years from today be the biggest thing that's happened in human history by far.&#8221;<cite>— Dave Blundin</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Chewy<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Proof that the Pets.com idea worked on a 10-15 year view</span></div><div class="namechip"><b>Google<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Born during the dot-com collapse — Blundin's rebuttal to the bubble frame</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🏭</div><div class="tline"><span class="cat">Semis:</span> <span class="txt">Watch Cerebras's backlog conversion and 8x ramp — the ramp, not the demand, is the stated risk.</span></div></div><div class="irow"><div class="ic">⚡</div><div class="tline"><span class="cat">Energy:</span> <span class="txt">Look past chips to the dull data-center supply chain — generators, turbines, fuel cells, substrates, power regulators.</span></div></div><div class="irow"><div class="ic">🧭</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Classify every new chip pitch by cores, memory or IO before believing the headline speed-up.</span></div></div><div class="irow"><div class="ic">🌏</div><div class="tline"><span class="cat">Geopolitics:</span> <span class="txt">Price in a durable 4-8 month open-model lag and Chinese efficiency gains, not a US runaway.</span></div></div><div class="irow"><div class="ic">🤖</div><div class="tline"><span class="cat">Robotics:</span> <span class="txt">Treat US robot plays skeptically until a credible domestic actuator supplier exists.</span></div></div><div class="irow"><div class="ic">🛠</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Build where the stack sits just below or above the transformer — kernels, chain-of-thought loops, simulators.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;What we do right now at AI inference is utterly idiotic. The weights do not need to move.&#8221; <cite>— Dave Blundin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;We'll be running most likely on the upper end of a thousand to millionx more efficiently by not moving the weights — easily within three years.&#8221; <cite>— Dave Blundin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;We're getting clobbered in robots... there are zero credible US actuator makers.&#8221; <cite>— Andrew Feldman</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The internet was never a bubble. It's just people panicked and bailed out.&#8221; <cite>— Dave Blundin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;There's a chance that someone born in 20 years never knows anyone who dies of cancer.&#8221; <cite>— Andrew Feldman</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The models are certainly getting more than 2x smarter every 18 months... it's not a line, it's an exponential.&#8221; <cite>— Andrew Feldman</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Andrew Feldman:</b> Cerebras increases manufacturing 8x this year and 8x again next year. <span class="cmeta">manufacturing capacity · 8x per year · 2027</span> <span class="tag">Cerebras</span></div><div class="ritem"><b>Andrew Feldman:</b> Cerebras ends 2026 with contracts for gigawatts, up from several hundred MW. <span class="cmeta">contracted capacity · gigawatts · end of 2026</span> <span class="tag">Cerebras</span></div><div class="ritem"><b>Andrew Feldman:</b> The industry's binding constraint shifts from data-center availability to fab capacity. <span class="cmeta">binding constraint · fab capacity · 2029</span></div><div class="ritem"><b>Dave Blundin:</b> Weight-stationary inference hardware runs 1,000x-1,000,000x more efficiently once the supply chain catches up. <span class="cmeta">inference efficiency · 1,000x-1,000,000x · 2029</span> <i>if supply chain figured out</i></div><div class="ritem"><b>Andrew Feldman:</b> Open models such as Kimi stay 4-8 months behind OpenAI and Anthropic. <span class="cmeta">open-vs-frontier gap · 4-8 months · next several years</span> <span class="tag">OpenAI</span></div><div class="ritem"><b>Andrew Feldman:</b> AI stays transformer-based. <span class="cmeta">dominant architecture · transformer · next several years</span></div><div class="ritem"><b>Andrew Feldman:</b> Model intelligence more than doubles every 18 months, on an exponential. <span class="cmeta">model intelligence · &gt;2x per 18 months</span></div><div class="ritem"><b>Dave Blundin:</b> Chip supply is fab-constrained for 3-4 years, then AI-invented non-GPU compute comes online. <span class="cmeta">new compute substrates · online · 2030</span></div><div class="ritem"><b>Dave Blundin:</b> Shrunk domain models fitted on one to ten Cerebras wafers gain 10-100x throughput. <span class="cmeta">throughput · 10-100x</span> <i>if parameter count cut ~4x at equal task quality</i> <span class="tag">Cerebras</span></div><div class="ritem"><b>Andrew Feldman:</b> Someone born in 20 years may never know anyone who dies of cancer or is hit by a drunk driver. <span class="cmeta">cancer and drunk-driving deaths · effectively eliminated · 2046</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Cerebras</b> <span class="rel">supplies</span> <b>OpenAI</b> &mdash; big inference deal; OpenAI gave it to its engineers for six months</div><div class="ritem"><b>Cerebras</b> <span class="rel">competes with</span> <b>Nvidia</b> &mdash; wafer-scale inference pitched as 10-50x faster than GPUs</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🎓</div><div><div class="title">Talent: an <b>upside-down labor market</b> — new AI PhDs out of MIT and Stanford are the domain experts and will reverse-mentor mid-career engineers; at the chip layer, experience (logic, place-and-route, fab and IP-vendor relationships) still pays hugely. Blundin calls today's AI-native grads (MIT, Harvard, Princeton, Northeastern; Raza adds Stanford) unlike anything he's seen — unlike Einstein in the patent office, they won't wait years for recognition. <span class="tag">Careers</span></div></div></div><div class="irow"><div class="ic">🧱</div><div><div class="title">What to build (Blundin): just below the transformer, kernel-performance startups like <b>Standard Kernel</b> worth 2-10x in the compute stack; just above it, chain-of-thought looping (under a year old); longer term, full-cell simulators and any domain where you can simulate or create a data feedback loop. <span class="tag">Startups</span></div></div></div><div class="irow"><div class="ic">🐆</div><div><div class="title">Feldman's founder advice: hardware was cool in the late 90s, then uncool for 15-16 years from ~2001 — "the world wants ducks. Don't stop being a leopard." <span class="tag">Careers</span></div></div></div><div class="irow"><div class="ic">📜</div><div><div class="title">Chip history from Raza: saw Shockley in his office, beat Intel when it was so powerful "even Microsoft would not cross the line," introduced out-of-order execution, branch prediction and prefetching; recalls Jensen telling him GPUs would enter data centers, then building CUDA and seeding Stanford labs. Cerebras was originally built for HPC, not AI. Feldman grew up next to Shockley ("his wife gave full-size candy bars at Halloween"). <span class="tag">History</span></div></div></div><div class="irow"><div class="ic">☕</div><div><div class="title">Valley intensity: Feldman's 7 a.m. Sunday coffee meeting in Menlo Park had ~20 other AI meetings around it; stressed "at 11" before and after the boom, per his wife of 33 years (they've danced Argentine tango for 30). Dave recently sold a company for <b>$100M</b> and plans to put it into chips. <span class="tag">Culture</span></div></div></div><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: Terence Tao's stated worry about AI solving Navier-Stokes; Daniela Rus's attention research (Liquid AI); Kimi K3 and GLM model architectures. No outside publications or shows cited. <span class="tag">Sources</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>HBM</b> &mdash; High-bandwidth memory stacked next to GPUs; the panel's example of costly weight-shuttling.</div><div><b>Wafer-scale chip</b> &mdash; Cerebras's single chip built from a whole silicon wafer, keeping memory next to compute.</div><div><b>Quantization</b> &mdash; Shrinking weights/activations from FP32 to smaller data types to cut memory and boost speed.</div><div><b>KDA / state-space layers</b> &mdash; Non-attention sequence layers mixed with attention layers in hybrid models such as Kimi K3.</div><div><b>Vision transformer</b> &mdash; Splits an image into 16x16-pixel patches treated as words so an LLM can read images.</div><div><b>In-memory compute</b> &mdash; Doing math inside memory arrays to cut data movement, once edge-only, now pitched for data centers.</div><div><b>Distillation</b> &mdash; Training a model on a stronger model's outputs — how followers cheaply learn from the frontier.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>

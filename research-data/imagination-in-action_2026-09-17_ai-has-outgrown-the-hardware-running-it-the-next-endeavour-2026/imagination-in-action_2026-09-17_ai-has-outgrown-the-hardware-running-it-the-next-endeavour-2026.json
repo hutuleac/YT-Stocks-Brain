@@ -1,0 +1,499 @@
+{
+ "meta": {
+  "title": "AI Has Outgrown the Hardware Running It | The Next Endeavour 2026",
+  "channel": "Imagination in Action",
+  "speakers": "Andrew Feldman (Cerebras CEO), Atiq Raza (chip-industry veteran), Dave Blundin; moderated by John Werner",
+  "date": "2026-09-17",
+  "video_url": "https://www.youtube.com/watch?v=t_zMMjjIjFc",
+  "thread_line": "6 threads · Cerebras's demand wave · the real bottleneck · architecture after the GPU · China, open source and robots · what speed unlocks · bubble or foundation",
+  "category": "market"
+ },
+ "snapshot": [
+  "**Cerebras** says it has a $25B backlog, will raise manufacturing 8x this year and 8x next, and goes from several hundred MW to contracts for gigawatts by year-end.",
+  "Feldman's binding constraint today is **data-center availability** (\"data centers move like real estate\"); in three years it is fab capacity.",
+  "Dave Blundin calls shuttling weights out of HBM for every token \"utterly idiotic\" and says 1,000x-1,000,000x more efficient designs arrive once the supply chain catches up, within ~3 years.",
+  "Architecture framework worth keeping: every chip innovation is in **cores, memory, or IO** — ask which one a new chip actually moves.",
+  "China: the chip embargo forced quantization and hybrid-attention innovation; open models trail OpenAI/Anthropic by a steady 4-8 months, and the US is \"getting clobbered\" in robots.",
+  "Speed is the new axis now that models are smart enough: coding and personal agents are useless if slow — Netflix only became a studio once the internet got fast.",
+  "Bubble question: all three reject the Pets.com frame — expect bumps and misallocated capital, but AI is \"the biggest thing in human history\" 20 years out."
+ ],
+ "themes": [
+  {
+   "id": "cerebras-demand",
+   "tags": [
+    "semis",
+    "ai-infra"
+   ],
+   "color": "green",
+   "badge": "High conviction",
+   "status": "PUBLIC SINCE MAY 2026 — $25B BACKLOG",
+   "title": "Cerebras: ten years early, now under-forecasting its own market",
+   "lead": "Feldman says the inference wave came bigger than any Cerebras forecast — the first time in five startups he guessed a market too small.",
+   "bullets": [
+    "$25B backlog; manufacturing up **8x this year and 8x next**; entered 2026 with several hundred MW under management, exits with contracts for gigawatts.",
+    "The wafer-scale chip: 46,000 mm², 4 trillion transistors, roughly $1 million each; pitched as 10-50x faster than a GPU.",
+    "Solved \"a 75-year-old problem\" in 2020 and **nobody cared** — fast AI was pointless while AI was dumb; premise was \"probably seven years too early.\"",
+    "Chip share only moves on new workloads: Ethernet switching killed Nortel and 3Com in the late 90s; AMD and Intel got zero share of phones in the mid-2000s.",
+    "Early believers, per Feldman: Atiq Raza, Andy Bechtolsheim and maybe Lip-Bu Tan — \"everybody said you're out of your mind.\"",
+    "May IPO was the largest semiconductor IPO ever (Dave: biggest IPO of any kind until SpaceX); 1,000+ staff; \"the IPO solves nothing\" technically.",
+    "Scale check: $50-60B Cerebras vs ~$5 trillion Nvidia; Feldman's lesson is Nvidia's grit trading near cash for a decade (2003-2013), not CUDA."
+   ],
+   "quote": {
+    "text": "The right way to get the timing right in a startup is to be wrong for a long time and not be dead.",
+    "cite": "— Andrew Feldman"
+   },
+   "watch": "Every number here is the CEO describing his own company on stage; Feldman himself warns that as a public-market CEO he sees \"everybody selling their own book all the time.\" Raza notes Cerebras made mistakes that \"got corrected before the public knew.\"",
+   "names": [
+    {
+     "name": "Cerebras",
+     "blurb": "$25B backlog, 8x/8x manufacturing ramp, gigawatt contracts; wafer-scale inference 10-50x GPU speed",
+     "stance": "POSITIVE VIEW",
+     "conviction": "High",
+     "horizon": "2026-2027"
+    },
+    {
+     "name": "Nvidia",
+     "blurb": "~$5T; Feldman admires its 2003-2013 grind as a near-cash public company; jokes he'd call Jensen to buy him",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Low",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "bottleneck",
+   "tags": [
+    "ai-infra",
+    "energy",
+    "semis"
+   ],
+   "color": "amber",
+   "badge": "Contested",
+   "status": "CONSTRAINT SHIFTS: DATA CENTERS NOW → FABS IN 3 YEARS",
+   "title": "The bottleneck: data centers today, fabs next — and weights that shouldn't move",
+   "lead": "Asked to remove one constraint, Feldman picks data-center availability now and fab capacity in three years; Blundin says the real waste is inside the chip.",
+   "bullets": [
+    "Feldman: software moves at software speed, **data centers move like real estate** — that is holding the whole industry back.",
+    "Raza splits it: energy and building data centers \"we can't fix\"; what goes inside them the people on stage can.",
+    "Blundin: burning energy on HBM, \"the most expensive chips in the world,\" to move weights into a GPU for a picosecond and dump them is idiotic; weight-stationary designs are 1,000x-1,000,000x more efficient.",
+    "Why they don't exist yet: the supply chain is slow and nobody wants to hardwire an algorithm that software then obsoletes.",
+    "Raza: inference is going consumer → enterprise → multi-stage with fan-outs as context windows swell; each step must carry prior context, so it gets far more **memory-intensive**. In-memory compute is moving from edge to data center, but it also needs workload scheduling.",
+    "Whole supply chain \"stretched past breaking\": memory, CPUs, GPUs, accelerators, PCBs, substrates, power regulators.",
+    "Backup gas generators are short; Caterpillar and GE Vernova gear saw \"no innovation in 30 years\" — now diesel gensets, turbines, fuel cells and power switching are all innovating."
+   ],
+   "quote": {
+    "text": "Well, what we do right now at AI inference is utterly idiotic. The weights do not need to move.",
+    "cite": "— Dave Blundin"
+   },
+   "watch": "Blundin's 1,000-1,000,000x range is his own estimate, and he says he is starting new companies in this stack.",
+   "names": [
+    {
+     "name": "Caterpillar",
+     "blurb": "Backup generators now short for data centers after decades without innovation",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "GE Vernova",
+     "blurb": "Named alongside Caterpillar as a gen-set/turbine supplier suddenly under data-center demand pressure",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "architecture",
+   "tags": [
+    "semis",
+    "ai-infra"
+   ],
+   "color": "gray",
+   "badge": "Speculative",
+   "status": "TRANSFORMERS FOR 'SEVERAL YEARS'; PHOTONICS AND EXOTIC COMPUTE BEYOND",
+   "title": "Architecture after the GPU: cores, memory, IO — and light",
+   "lead": "Feldman reduces all computer architecture to three levers, and the panel bets photonics and hardware no one has built yet pull them next.",
+   "bullets": [
+    "Framework: every chip is faster cores, better memory/bandwidth, or better IO; Cerebras's bet was memory placed closer to compute to widen the aperture.",
+    "Blundin, from scratch: all matmuls photonic, transistor math in between; Raza: connectivity definitely goes photonic, compute and memory are an open question.",
+    "Feldman: transformer-based for at least several years — a dominant design with five or six companies pouring money in; attention is \"a big matrix multiply\"; proof is shipping volume, not conference slides.",
+    "Daniela Rus's Liquid AI changes attention granularity and has shown inference 3-4x faster; Kimi K3 mixes one attention layer with three KDA state-space layers, reconciling the two paths.",
+    "**New Moore's law**: transistor doubling slid from 18 months to 3-4 years, but Feldman says models are getting more than 2x smarter every 18 months — an exponential, not a line.",
+    "Blundin: fabs cap chip output for 3-4 years; within four years AI invents compute in crystals and liquids, largely in space on solar — \"not an Nvidia rack floating around in space.\"",
+    "Raza's counter: Moore's law carried its death from day one (atomic limits) and token-efficiency gains will slow the same way."
+   ],
+   "quote": {
+    "text": "With that very simple framework, you understand all of computer architecture. That's all we do. Turns out it's really hard.",
+    "cite": "— Andrew Feldman"
+   },
+   "watch": null,
+   "names": [
+    {
+     "name": "Liquid AI",
+     "blurb": "Daniela Rus's company; finer-granularity attention/state-space models, 3-4x faster inference shown",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Low",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "china-race",
+   "tags": [
+    "geopolitics",
+    "robotics",
+    "ai-infra"
+   ],
+   "color": "red",
+   "badge": "Contested",
+   "status": "OPEN-SOURCE GAP HOLDING AT 4-8 MONTHS; ROBOTS LOST",
+   "title": "The embargo made China better at efficiency — and the US is behind on robots",
+   "lead": "Starving China of Nvidia chips forced quantization and hybrid-model innovation the US is now scrambling to backport.",
+   "bullets": [
+    "Transformers were born in PyTorch on CUDA in FP32; China shrank weights and activations to tiny data types and \"it's worked shockingly well.\"",
+    "Blundin: nobody optimized data types since his MIT days in the 1990s; embargo started under Biden, accelerated under Trump — \"no party component.\"",
+    "Raza's anecdote: a Stanford-PhD Chinese VC said the GPU cutoff was \"the best thing that has happened to me\" — now local innovation is investable.",
+    "Feldman: open models (Kimi) sit a steady 4-8 months behind OpenAI and Anthropic and he sees no reason it changes in the next several years; China leans on **distillation** from frontier models.",
+    "Frontier edge compounds: OpenAI gave its fast Cerebras inference entirely to its own engineers for the first six months; Dell's fast-follower, tiny-R&D model can't do that.",
+    "Raza: being even slightly behind multiplies in agentic workloads, so you spend more on compute even if the model is free.",
+    "Robots: \"we're getting clobbered\" — China is embarrassingly ahead, and Feldman knows of zero credible US actuator makers."
+   ],
+   "quote": {
+    "text": "Well, it's not great to say but we're getting clobbered in robots.",
+    "cite": "— Andrew Feldman"
+   },
+   "watch": "Feldman has a commercial relationship with OpenAI, the frontier lab in his gap comparison.",
+   "names": [
+    {
+     "name": "OpenAI",
+     "blurb": "Cerebras customer; gave the fast inference to its own engineers for six months; frontier lead of 4-8 months",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Medium",
+     "horizon": "several years"
+    },
+    {
+     "name": "Anthropic",
+     "blurb": "Co-leader of the frontier that open models trail by 4-8 months",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Dell",
+     "blurb": "Feldman's example of a fast follower spending absurdly little on R&D",
+     "stance": "NEGATIVE VIEW",
+     "conviction": "Low",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "speed-unlocks",
+   "tags": [
+    "software",
+    "ai-infra"
+   ],
+   "color": "green",
+   "badge": "High conviction",
+   "status": "SPEED NOW OUTRANKS MARGINAL INTELLIGENCE",
+   "title": "Once models are smart enough, speed is the product",
+   "lead": "\"Dumb fast\" helps no one, but with open, closed and small models all smart, the bottleneck becomes waiting for the answer.",
+   "bullets": [
+    "Feldman's test: punish a naughty 12-year-old by setting their phone to **dial-up** — slowness is punishment.",
+    "Netflix went from mailing DVDs to being a studio only because the internet got fast; a four-hour download never gets you there.",
+    "Coding agents and personal agents (Instinct, Muse) die if slow — nobody waits eight minutes for an agent to order a burrito.",
+    "Law and accounting billing every six minutes would be less offensive with 30x the work done per block; Workday-to-ADP and Salesforce-to-accounting shuffling \"all goes away.\"",
+    "Blundin: smaller Chinese models like GLM hit near-frontier benchmarks at 4x+ fewer parameters; fit one on a single Cerebras wafer or ten and throughput rises 10-100x.",
+    "Domain-shrunk models drop knowledge like Taylor Swift's Eras Tour you don't need to design a chip or rocket; Raza adds that edge devices and robots need exactly that.",
+    "Blundin: vision transformers (16x16 pixel patches treated as words) let a coding agent look at its own GUI and fix it — impossible six months ago; \"that unlock is pure speed.\""
+   ],
+   "quote": {
+    "text": "If your 12-year-old has been naughty, don't take away their phone. Set it to dial-up rate.",
+    "cite": "— Andrew Feldman"
+   },
+   "watch": "Feldman sells the fastest inference hardware — speed-as-the-axis is also his book, and he says so himself.",
+   "names": [
+    {
+     "name": "Netflix",
+     "blurb": "Analogy: fast internet turned a DVD mailer into a studio",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "bubble",
+   "tags": [
+    "macro-rates",
+    "biotech"
+   ],
+   "color": "green",
+   "badge": "High conviction",
+   "status": "\"BUMPS\" EXPECTED — NOT A PETS.COM",
+   "title": "Bubble or foundation: overheating yes, bubble no",
+   "lead": "The panel expects misallocated capital and a panic, but calls AI the foundation of a new economy, like the internet was.",
+   "bullets": [
+    "Feldman: take a 10-15-year view of Pets.com and online pet food is a great business — Chewy, and a big share of what Amazon sells; expect cul-de-sacs to back out of.",
+    "Blundin: Google was born in the middle of the dot-com collapse; the internet \"was never a bubble,\" people just panicked — \"America always overheats.\"",
+    "Feldman: someone born in 20 years may never know anyone who dies of cancer or is hit by a drunk driver (car accidents: top killer of healthy adults).",
+    "Moderator's cautionary tale: DEC — Georges Doriot put in $70,000, it went head-to-head with IBM, then Ken Olsen couldn't imagine people wanting small computers; Olsen came out of MIT's Project Whirlwind.",
+    "Raza: tools now attacking Navier-Stokes have Terence Tao worried about his own role — warrants a pause on socioeconomic impact."
+   ],
+   "quote": {
+    "text": "AI will still 20 years from today be the biggest thing that's happened in human history by far.",
+    "cite": "— Dave Blundin"
+   },
+   "watch": null,
+   "names": [
+    {
+     "name": "Chewy",
+     "blurb": "Proof that the Pets.com idea worked on a 10-15 year view",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Google",
+     "blurb": "Born during the dot-com collapse — Blundin's rebuttal to the bubble frame",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  }
+ ],
+ "takeaways": [
+  {
+   "icon": "🏭",
+   "tag": "Semis",
+   "title": "Watch Cerebras's backlog conversion and 8x ramp — the ramp, not the demand, is the stated risk."
+  },
+  {
+   "icon": "⚡",
+   "tag": "Energy",
+   "title": "Look past chips to the dull data-center supply chain — generators, turbines, fuel cells, substrates, power regulators."
+  },
+  {
+   "icon": "🧭",
+   "tag": "Markets",
+   "title": "Classify every new chip pitch by cores, memory or IO before believing the headline speed-up."
+  },
+  {
+   "icon": "🌏",
+   "tag": "Geopolitics",
+   "title": "Price in a durable 4-8 month open-model lag and Chinese efficiency gains, not a US runaway."
+  },
+  {
+   "icon": "🤖",
+   "tag": "Robotics",
+   "title": "Treat US robot plays skeptically until a credible domestic actuator supplier exists."
+  },
+  {
+   "icon": "🛠",
+   "tag": "Careers",
+   "title": "Build where the stack sits just below or above the transformer — kernels, chain-of-thought loops, simulators."
+  }
+ ],
+ "hot_takes": [
+  {
+   "take": "What we do right now at AI inference is utterly idiotic. The weights do not need to move.",
+   "cite": "— Dave Blundin",
+   "why": "dismisses the dominant HBM/GPU design"
+  },
+  {
+   "take": "We'll be running most likely on the upper end of a thousand to millionx more efficiently by not moving the weights — easily within three years.",
+   "cite": "— Dave Blundin",
+   "why": "numeric, dated prediction"
+  },
+  {
+   "take": "We're getting clobbered in robots... there are zero credible US actuator makers.",
+   "cite": "— Andrew Feldman",
+   "why": "blunt US-deficit call"
+  },
+  {
+   "take": "The internet was never a bubble. It's just people panicked and bailed out.",
+   "cite": "— Dave Blundin",
+   "why": "contrarian read of 2000"
+  },
+  {
+   "take": "There's a chance that someone born in 20 years never knows anyone who dies of cancer.",
+   "cite": "— Andrew Feldman",
+   "why": "dated, bold outcome claim"
+  },
+  {
+   "take": "The models are certainly getting more than 2x smarter every 18 months... it's not a line, it's an exponential.",
+   "cite": "— Andrew Feldman",
+   "why": "quantified new Moore's law"
+  }
+ ],
+ "claims": [
+  {
+   "who": "Andrew Feldman",
+   "claim": "Cerebras increases manufacturing 8x this year and 8x again next year.",
+   "metric": "manufacturing capacity",
+   "target": "8x per year",
+   "by": "2027",
+   "condition": null,
+   "entity": "Cerebras"
+  },
+  {
+   "who": "Andrew Feldman",
+   "claim": "Cerebras ends 2026 with contracts for gigawatts, up from several hundred MW.",
+   "metric": "contracted capacity",
+   "target": "gigawatts",
+   "by": "end of 2026",
+   "condition": null,
+   "entity": "Cerebras"
+  },
+  {
+   "who": "Andrew Feldman",
+   "claim": "The industry's binding constraint shifts from data-center availability to fab capacity.",
+   "metric": "binding constraint",
+   "target": "fab capacity",
+   "by": "2029",
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Dave Blundin",
+   "claim": "Weight-stationary inference hardware runs 1,000x-1,000,000x more efficiently once the supply chain catches up.",
+   "metric": "inference efficiency",
+   "target": "1,000x-1,000,000x",
+   "by": "2029",
+   "condition": "supply chain figured out",
+   "entity": null
+  },
+  {
+   "who": "Andrew Feldman",
+   "claim": "Open models such as Kimi stay 4-8 months behind OpenAI and Anthropic.",
+   "metric": "open-vs-frontier gap",
+   "target": "4-8 months",
+   "by": "next several years",
+   "condition": null,
+   "entity": "OpenAI"
+  },
+  {
+   "who": "Andrew Feldman",
+   "claim": "AI stays transformer-based.",
+   "metric": "dominant architecture",
+   "target": "transformer",
+   "by": "next several years",
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Andrew Feldman",
+   "claim": "Model intelligence more than doubles every 18 months, on an exponential.",
+   "metric": "model intelligence",
+   "target": ">2x per 18 months",
+   "by": null,
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Dave Blundin",
+   "claim": "Chip supply is fab-constrained for 3-4 years, then AI-invented non-GPU compute comes online.",
+   "metric": "new compute substrates",
+   "target": "online",
+   "by": "2030",
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Dave Blundin",
+   "claim": "Shrunk domain models fitted on one to ten Cerebras wafers gain 10-100x throughput.",
+   "metric": "throughput",
+   "target": "10-100x",
+   "by": null,
+   "condition": "parameter count cut ~4x at equal task quality",
+   "entity": "Cerebras"
+  },
+  {
+   "who": "Andrew Feldman",
+   "claim": "Someone born in 20 years may never know anyone who dies of cancer or is hit by a drunk driver.",
+   "metric": "cancer and drunk-driving deaths",
+   "target": "effectively eliminated",
+   "by": "2046",
+   "condition": null,
+   "entity": null
+  }
+ ],
+ "relations": [
+  {
+   "from": "Cerebras",
+   "rel": "supplies",
+   "to": "OpenAI",
+   "note": "big inference deal; OpenAI gave it to its engineers for six months"
+  },
+  {
+   "from": "Cerebras",
+   "rel": "competes_with",
+   "to": "Nvidia",
+   "note": "wafer-scale inference pitched as 10-50x faster than GPUs"
+  }
+ ],
+ "other_news": [
+  {
+   "icon": "🎓",
+   "title": "Talent: an **upside-down labor market** — new AI PhDs out of MIT and Stanford are the domain experts and will reverse-mentor mid-career engineers; at the chip layer, experience (logic, place-and-route, fab and IP-vendor relationships) still pays hugely. Blundin calls today's AI-native grads (MIT, Harvard, Princeton, Northeastern; Raza adds Stanford) unlike anything he's seen — unlike Einstein in the patent office, they won't wait years for recognition.",
+   "tag": "Careers"
+  },
+  {
+   "icon": "🧱",
+   "title": "What to build (Blundin): just below the transformer, kernel-performance startups like **Standard Kernel** worth 2-10x in the compute stack; just above it, chain-of-thought looping (under a year old); longer term, full-cell simulators and any domain where you can simulate or create a data feedback loop.",
+   "tag": "Startups"
+  },
+  {
+   "icon": "🐆",
+   "title": "Feldman's founder advice: hardware was cool in the late 90s, then uncool for 15-16 years from ~2001 — \"the world wants ducks. Don't stop being a leopard.\"",
+   "tag": "Careers"
+  },
+  {
+   "icon": "📜",
+   "title": "Chip history from Raza: saw Shockley in his office, beat Intel when it was so powerful \"even Microsoft would not cross the line,\" introduced out-of-order execution, branch prediction and prefetching; recalls Jensen telling him GPUs would enter data centers, then building CUDA and seeding Stanford labs. Cerebras was originally built for HPC, not AI. Feldman grew up next to Shockley (\"his wife gave full-size candy bars at Halloween\").",
+   "tag": "History"
+  },
+  {
+   "icon": "☕",
+   "title": "Valley intensity: Feldman's 7 a.m. Sunday coffee meeting in Menlo Park had ~20 other AI meetings around it; stressed \"at 11\" before and after the boom, per his wife of 33 years (they've danced Argentine tango for 30). Dave recently sold a company for $100M and plans to put it into chips.",
+   "tag": "Culture"
+  },
+  {
+   "icon": "📚",
+   "title": "Sources referenced: Terence Tao's stated worry about AI solving Navier-Stokes; Daniela Rus's attention research (Liquid AI); Kimi K3 and GLM model architectures. No outside publications or shows cited.",
+   "tag": "Sources"
+  }
+ ],
+ "glossary": [
+  {
+   "term": "HBM",
+   "def": "High-bandwidth memory stacked next to GPUs; the panel's example of costly weight-shuttling."
+  },
+  {
+   "term": "Wafer-scale chip",
+   "def": "Cerebras's single chip built from a whole silicon wafer, keeping memory next to compute."
+  },
+  {
+   "term": "Quantization",
+   "def": "Shrinking weights/activations from FP32 to smaller data types to cut memory and boost speed."
+  },
+  {
+   "term": "KDA / state-space layers",
+   "def": "Non-attention sequence layers mixed with attention layers in hybrid models such as Kimi K3."
+  },
+  {
+   "term": "Vision transformer",
+   "def": "Splits an image into 16x16-pixel patches treated as words so an LLM can read images."
+  },
+  {
+   "term": "In-memory compute",
+   "def": "Doing math inside memory arrays to cut data movement, once edge-only, now pitched for data centers."
+  },
+  {
+   "term": "Distillation",
+   "def": "Training a model on a stronger model's outputs — how followers cheaply learn from the frontier."
+  }
+ ]
+}
