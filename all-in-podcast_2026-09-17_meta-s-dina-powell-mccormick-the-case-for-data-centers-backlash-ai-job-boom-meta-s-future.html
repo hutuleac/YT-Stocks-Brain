@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research: Meta's Dina Powell McCormick: The Case for Data Centers, Backlash, AI Job Boom &amp; Meta's Future</title>
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Meta's Dina Powell McCormick: The Case for Data Centers, Backlash, AI Job Boom &amp; Meta's Future</h1>
+    <div class="byline">
+      Channel: <b>All-In Podcast</b> &middot; Speaker: <b>Dina Powell McCormick (Meta president &amp; vice chair); guests Sheldon (Richland Parish superintendent), Susan (Louisiana economic development secretary); hosts Jason Calacanis, Chamath Palihapitiya, David Sacks</b> &middot; <b>2026-09-17</b>
+      <div class="stats-line">5 threads · Richland Parish: a data center pays teachers $50K checks · Meta's community compact and the backlash · a paid trades pipeline (America's Workforce Academy) · the teen-use settlement and new defaults · glasses, Muse and open-source superintelligence &middot; <a href="https://www.youtube.com/watch?v=qp2IbgJ5Z-8" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Meta's largest data center, in rural Richland Parish, Louisiana, sent school sales-tax collections up as much as ~<b>260%</b> — certified teachers got a ~$50K check this June vs. ~$10K the year before.</li><li>Data centers poll around -80 in the US; Dina's answer is a compact: pay your own power and drive rates down, use less water, fund teachers and first responders, and let communities opt out.</li><li>Louisiana calls Meta's Entergy deal the prototype: Meta paid for its own generation, grid upgrades, resilience and even hurricane storm costs.</li><li>America's Workforce Academy — paid 4-5 week training with a guaranteed data-center job — drew 40,000 applicants in four months, graduated 250 with <b>90%</b> retention; the building-trades unions now back only pro-data-center candidates.</li><li>Jason presses on Meta's record teen-harm settlement; Dina rejects the premise and cites a 52-AG deal: under-18s capped at 2 hours a day, off at night, 1 hour if YouTube, TikTok and Snap join.</li><li>Meta glasses: 10 years of engineering, conversation focus and translation, and an unplanned breakout use case with blind veterans.</li><li>On Dario's essay: safety is paramount, but Zuckerberg believes distributing superintelligence to 3.6B daily users makes society more stable — Meta just shipped the first American open-source model.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="richland-parish">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
+    <span class="theme-status">META'S FIRST IN LOUISIANA · GROUNDBREAKING DEC 2024</span><span class="ttag">ai-infra</span><span class="ttag">energy</span><span class="ttag">policy</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Richland Parish: Meta's biggest data center turned into $50K teacher checks</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Louisiana's superintendent and economic-development secretary show how a data center's sales tax flowed straight to teacher pay in a parish that had been losing people.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>First contact with Meta in summer 2024 at the local community college — "The game has changed"; groundbreaking December 2024.</li><li><span class="dot" style="background:#3f6b2e;"></span>School sales-tax collections, normally +5-10%, jumped to ~60% and peaked around <b>+260%</b> as construction staffing rose; the school board collects 51% of parish taxes.</li><li><span class="dot" style="background:#3f6b2e;"></span>A 1-cent and half-cent sales tax go to salaries by law: December 2025's check doubled (~<b>$4K</b> → ~$8K), and June's certified-staff check hit ~$50K vs. ~$10K a year earlier — about $45K net more.</li><li><span class="dot" style="background:#3f6b2e;"></span>Before Meta, average wages were ~<b>$36</b>-38K; young people left; now caterers went from 40 meals to 400 a week, teacher recruiting is easy, and people are moving home.</li><li><span class="dot" style="background:#3f6b2e;"></span>Communication must reach "the least informed person in the community," not the most informed.</li><li><span class="dot" style="background:#3f6b2e;"></span>Louisiana's governor signed an executive order setting a framework for large-load users; with a sales-tax exemption, the state now "gets to be choosy" — "not saying no" but "yes and." Rural parishes are calling asking for the next one.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;I just sat there and I said, the game has changed.&#8221;<cite>— Sheldon, Richland Parish superintendent</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Largest data center in Richland Parish, LA; the state's prototype deal.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Meta produced the video and brought the officials; both guests describe their own deal. Dina says the teacher bonuses were a state law, not Meta's idea.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="compact-backlash">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">DATA CENTERS POLL ~ -80 IN THE US</span><span class="ttag">ai-infra</span><span class="ttag">energy</span><span class="ttag">geopolitics</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Meta's community compact vs. the data-center backlash</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jason lists the real grievances; Dina says the industry has communicated badly, but a compact on power, water and local benefits answers them — and adversaries may be fanning the backlash.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Jason's list: pollution, rising electricity bills, water, noise, ugly buildings — "not journalism... it's facts" from communities that got bad neighbors.</li><li><span class="dot" style="background:#93711b;"></span>Water: on former farmland, Meta chose a costlier, more efficient cooling system that uses <i>less</i> water than the farm did.</li><li><span class="dot" style="background:#93711b;"></span>Power: Louisiana has ~32,000 miles of gas pipelines; under Meta's deal with <b>Entergy</b>, it paid for its own generation, grid upgrades, resilience and hurricane storm costs from day one — before any presidential or governor order.</li><li><span class="dot" style="background:#93711b;"></span>Meta's compact: pay your own electricity and push rates down; AI-driven water tech; tax surplus to teachers and first responders; small-business growth — and if a community doesn't want a data center, "they get to choose."</li><li><span class="dot" style="background:#93711b;"></span>Dina, a former deputy national security advisor: Senate intel chairs Cotton and Warner believe adversaries are stoking the backlash — "if you wanted to stop America right now... this is exactly what you would try to do."</li><li><span class="dot" style="background:#93711b;"></span>Sacks: the federated republic means "some states are going to be idiots and they're going to lose"; Meta also cites Texas and Ohio sites.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I don't think that our industry has done a good job communicating. Just flat out.&#8221;<cite>— Dina Powell McCormick</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Entergy (ETR)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Louisiana utility; Meta paid for its own generation and grid costs.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Dina can't confirm the foreign-influence evidence ("I can't comment on that"); she's describing a position that serves Meta's buildout.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="workforce">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">LAUNCHED ~4 MONTHS AGO · 40,000 APPLICANTS</span><span class="ttag">career</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">America's Workforce Academy: paid training, guaranteed jobs, unions on board</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Meta couldn't find enough fiber technicians, so it built a fast-track, paid program that guarantees a data-center job — and is pulling in unions, rivals and other employers.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Bottleneck: welders, pipefitters, electricians and especially fiber technicians; Meta built the curriculum with partners including CBRE.</li><li><span class="dot" style="background:#3f6b2e;"></span>A 4-5 week program with safety/OSHA and "job site ready" certification; Meta guarantees graduates a job on its sites, and the credential is portable.</li><li><span class="dot" style="background:#3f6b2e;"></span>The unlock: trainees are paid what the job pays during training — waitresses, Uber drivers and home-health aides can't afford unpaid courses.</li><li><span class="dot" style="background:#3f6b2e;"></span>Results: ~40,000 applied in four months, 250 graduated, <b>90%</b> retention; Sacks' estimate is 500,000 open trade jobs over the next couple of years. Pittsburgh welders earn $100-120K.</li><li><span class="dot" style="background:#3f6b2e;"></span>Deliberately not branded Meta; partners include the Associated Builders and Contractors, and Ruth Porat's Google-led workforce alliance (with Larry Fink's BlackRock), which Meta is joining — "we compete on models... not on people."</li><li><span class="dot" style="background:#3f6b2e;"></span>GM's Mary Barra asked for 1,000 workers; NABTU's Sean McGarvey and the building trades now oppose the backlash and will back only pro-data-center candidates.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;We might compete on models and products, but we don't want to compete on people.&#8221;<cite>— Dina Powell McCormick</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>CBRE (CBRE)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Curriculum partner for fiber-technician training.</span></div><div class="namechip"><b>Google (GOOGL)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Ruth Porat leads an industry workforce alliance Meta is joining.</span></div><div class="namechip"><b>BlackRock (BLK)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Larry Fink joined the workforce alliance.</span></div><div class="namechip"><b>General Motors (GM)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Mary Barra asked for 1,000 trained workers.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Jason jokes that AI-displaced developers can retrain as electricians — the panel doesn't address how many of these roles outlast construction.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="teen-settlement">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">52 BIPARTISAN AGs · UNDER-18 CAP 2 HRS/DAY</span><span class="ttag">policy</span><span class="ttag">consumer</span><span class="ttag">health</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">The teen-harm settlement: Jason's fastball vs. Meta's new defaults</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jason calls Meta's settlement second only to tobacco and asks what changed; Dina rejects "every single premise" and pitches an industry-wide time cap.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Jason: the settlement ranks behind only tobacco and ahead of BP; Facebook knew products were addictive, and Muse and character-based AI companions could be worse.</li><li><span class="dot" style="background:#93711b;"></span>Dina (8 months at Meta after its board; mother of six daughters): the deal with 52 bipartisan attorneys general caps under-18s (not 16) at 2 hours a day, shuts the app at night, and blocks school-day notifications.</li><li><span class="dot" style="background:#93711b;"></span>Meta offered more money and a 1-hour cap if <b>YouTube, TikTok and Snap</b> join — because kids just switch apps.</li><li><span class="dot" style="background:#93711b;"></span>Chamath: for parents it's "whack-a-mole" since his five kids live on YouTube for school; he loved his son hitting the limit at dinner. Texas fans told Dina the cutoff hurts Instagram-driven football recruiting.</li><li><span class="dot" style="background:#93711b;"></span>Sacks defends Meta: adults suing over a voluntary product plus AGs and trial lawyers is "a little bit of a shakedown"; parents, not government, should decide — but the new defaults are an improvement.</li><li><span class="dot" style="background:#93711b;"></span>Chamath's warning: with RSI and a reward function of time, any app becomes an addiction engine ("Microsoft Word will keep you there for 9 hours if it can") unless companies set hard thresholds.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;Well, I totally disagree with basically every single premise in your question.&#8221;<cite>— Dina Powell McCormick</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Snap (SNAP)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Meta wants it to join a 1-hour teen cap.</span></div><div class="namechip"><b>TikTok<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Meta wants it to join a 1-hour teen cap.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The settlement dollar figures in the captions are garbled; Dina says Jason's numbers were wrong.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="glasses-open-source">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">FIRST AMERICAN OPEN-SOURCE MODEL SHIPPED WEEKS AGO</span><span class="ttag">consumer</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Glasses as the AI form factor, and Zuckerberg's case for distributing superintelligence</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Dina says AI makes glasses sticky at last, and that Meta's answer to Dario's pacing essay is broad distribution, not restriction.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Chamath's challenge: Google Glass and Apple's VR became drawer relics — what's the repeat use case? Dina: music, calls, photos and video hands-free; Oakleys for extreme sports.</li><li><span class="dot" style="background:#3f6b2e;"></span>New features: conversation focus (hear only the person you're looking at) and live translation; the product took ~10 years of engineering, with Zuckerberg obsessing over weight and style.</li><li><span class="dot" style="background:#3f6b2e;"></span>Breakout use case: blind veterans at an Austin VFW (with Chris Stapleton, on 9/11) co-designed features; one called his son on his own for the first time.</li><li><span class="dot" style="background:#3f6b2e;"></span>Jason, a user since Google Glass: battery and fidelity finally work, unlike Siri — "time for people to reconsider." Meta has an exclusive partnership with EssilorLuxottica (Ray-Ban).</li><li><span class="dot" style="background:#3f6b2e;"></span>On Dario's essay (and an unconfirmed report that Zuckerberg said "go as fast as we can"): safety is paramount, and Alexandr Wang and Nat Friedman run the lab with a dedicated safety team.</li><li><span class="dot" style="background:#3f6b2e;"></span>Zuckerberg's view ("the future is for everyone"): with 3.6B daily users and 200M small businesses, spreading superintelligence makes society more stable; Meta shipped the first American open-source model a few weeks ago.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;The democratization of artificial intelligence will actually lead to a more stable society. That is just a fundamental belief that he has.&#8221;<cite>— Dina Powell McCormick, on Mark Zuckerberg</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>EssilorLuxottica<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Meta's exclusive eyewear partner (Ray-Ban, Oakley).</span></div><div class="namechip"><b>Apple (AAPL)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>VR headset cited as a sticky-less face product; Chamath bought AirPods 5.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Dina listens to All-In on her Meta glasses — the hosts are friendly toward the product; Sacks notes a well-designed hit invites addiction lawsuits either way.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🏫</div><div class="tline"><span class="cat">Energy:</span> <span class="txt">Judge data-center deals by who pays for generation, grid and storm costs — Meta's Louisiana terms are the template to ask for.</span></div></div><div class="irow"><div class="ic">💵</div><div class="tline"><span class="cat">Policy:</span> <span class="txt">Tie local AI-infrastructure tax windfalls to named beneficiaries (teachers, responders) in law, so residents see the dividend.</span></div></div><div class="irow"><div class="ic">🛠</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Consider paid, 4-5 week data-center trade programs as a fast route into <b>$100K</b>+ electrical and welding work.</span></div></div><div class="irow"><div class="ic">📱</div><div class="tline"><span class="cat">Parenting:</span> <span class="txt">Set cross-app screen limits yourself — single-platform caps just push kids to YouTube or TikTok.</span></div></div><div class="irow"><div class="ic">👓</div><div class="tline"><span class="cat">Consumer:</span> <span class="txt">Retest AI glasses if you wrote them off: translation, conversation focus and accessibility are the real use cases.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;If you wanted to stop America right now, what would you do? This is exactly what you would try to do.&#8221; <cite>— Dina Powell McCormick</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Some states are going to win, some states are going to be idiots, and they're going to lose.&#8221; <cite>— David Sacks</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;You just paid the largest settlement second only to the tobacco industry and just ahead of BP oil.&#8221; <cite>— Jason Calacanis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Let's acknowledge that there is a little bit of a shakedown going on here as well.&#8221; <cite>— David Sacks</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Microsoft Word will keep you there for 9 hours if it can.&#8221; <cite>— Chamath Palihapitiya</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The democratization of artificial intelligence will actually lead to a more stable society.&#8221; <cite>— Dina Powell McCormick (on Zuckerberg's view)</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>David Sacks (cited by Dina Powell McCormick):</b> About 500,000 data-center trade jobs will open over the next couple of years. <span class="cmeta">open trade jobs · 500,000 · ~2028</span></div><div class="ritem"><b>Dina Powell McCormick:</b> Meta will cut the under-18 daily cap to 1 hour and add money if YouTube, TikTok and Snap join the standard. <span class="cmeta">teen daily app limit · 1 hour</span> <i>if if YouTube, TikTok and Snap join</i> <span class="tag">Meta (META)</span></div><div class="ritem"><b>Dina Powell McCormick:</b> Richland Parish may become the best school district in Louisiana. <span class="cmeta">district ranking · #1 in state</span></div><div class="ritem"><b>Chamath Palihapitiya:</b> RSI will be the dominant AI term over the next 18 months. <span class="cmeta">RSI salience · dominant · March 2028</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Meta (META)</b> <span class="rel">customer of</span> <b>Entergy (ETR)</b> &mdash; paid for its own generation and grid upgrades</div><div class="ritem"><b>Meta (META)</b> <span class="rel">partners with</span> <b>CBRE (CBRE)</b> &mdash; fiber-technician curriculum</div><div class="ritem"><b>Meta (META)</b> <span class="rel">partners with</span> <b>Google (GOOGL)</b> &mdash; joining Ruth Porat's workforce alliance</div><div class="ritem"><b>Meta (META)</b> <span class="rel">partners with</span> <b>EssilorLuxottica</b> &mdash; exclusive glasses partner</div><div class="ritem"><b>Meta (META)</b> <span class="rel">competes with</span> <b>Snap (SNAP)</b> &mdash; teen attention; invited into 1-hour cap</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: Senators Tom Cotton and Mark Warner (intelligence committees), Zuckerberg's "The future is for everyone" essay, David Sacks' 500K jobs figure, and an unconfirmed report of Zuckerberg urging Meta to "go as fast as we can." <span class="tag">Sources</span></div></div></div><div class="irow"><div class="ic">🏈</div><div><div class="title">Asides: Dina was at the Texas-Ohio State game; she joked her panel should beat Senator McCormick's All-In views ("put it on Polymarket"); the pre-roll quotes 3.5B people on Meta daily and "the next 3 years could be the whole game." <span class="tag">Culture</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Large-load user</b> &mdash; A customer, like a data center, whose power draw requires special utility and state frameworks.</div><div><b>Job site ready</b> &mdash; A certification that a trainee has the safety training to start on a construction site.</div><div><b>NABTU</b> &mdash; North America's Building Trades Unions, led by Sean McGarvey.</div><div><b>RSI</b> &mdash; Recursive self-improvement — an AI optimizing itself against a reward function.</div><div><b>Conversation focus</b> &mdash; Meta glasses feature that isolates the voice of the person you're looking at.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
