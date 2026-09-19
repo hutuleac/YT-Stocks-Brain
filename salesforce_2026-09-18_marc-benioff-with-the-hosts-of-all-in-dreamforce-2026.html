@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research: Marc Benioff with the Hosts of All-In | Dreamforce 2026</title>
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Marc Benioff with the Hosts of All-In | Dreamforce 2026</h1>
+    <div class="byline">
+      Channel: <b>Salesforce</b> &middot; Speaker: <b>Marc Benioff (host); Jason Calacanis, Chamath Palihapitiya, David Sacks, David Friedberg</b> &middot; <b>2026-09-18</b>
+      <div class="stats-line">4 threads · responsibility over pauses — the week-after verdict on AI safety · diffusion vs. control and the Andrew Yang drumbeat · Salesforce's AI turn: ZDR, headless, Slack as the oracle · Dario's track record and who gets to decide &middot; <a href="https://www.youtube.com/watch?v=t1VuziHp0yY" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>A week after the "pace the frontier" panic, the All-In hosts and Benioff converge on one answer: <b>companies own their products' safety</b>, government sets incentives, nobody pauses.</li><li>Sacks' three options for AI regulation: pause (hands the frontier to China), regulators decide (too slow, too technical), or companies internalize responsibility under product liability, transparency and audits.</li><li>Chamath: history (Gutenberg vs. the Vatican, OPEC) shows diffusion beats control; Friedberg frames the choice as <b>$50 </b>vs. $0.15 per million tokens.</li><li>Benioff: no Salesforce customer data has gone into any model — audited zero data retention with Anthropic and OpenAI.</li><li>Sacks calls the "SaaS-pocalypse" overdone and grades Benioff a B+ (per Jason); Chamath and Jason praise headless Salesforce and Slack as the enterprise AI control plane.</li><li>Benioff takes Dario "unusually seriously": a year ago at Dreamforce he forecast ~<b>$100B</b> revenue from ~$5B, "and all the things that he said that he was going to do, he did."</li><li>Chamath's tell: when push came to shove, Dario and Sam showed up at a sales conference — "they're fundamentally trying to sell more tokens."</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="responsibility">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">ONE WEEK AFTER THE 'PACE THE FRONTIER' PANIC</span><span class="ttag">policy</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Own your product: responsibility and liability beat pauses and regulators</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Benioff and Sacks argue AI safety starts with companies taking accountability, as aviation does after a crash, with government supplying penalties and audits rather than approvals.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Benioff: social media's lesson is that CEOs didn't step up and change products when kids, companies and countries got hurt — labs must own this.</li><li><span class="dot" style="background:#3f6b2e;"></span>Aircraft analogy (from Benioff's on-stage talk with Sam Altman): Hugging Face wasn't a loss of life, but like a crash it demands full investigation and accountability.</li><li><span class="dot" style="background:#3f6b2e;"></span>Sacks: "a week ago there was almost a panic"; lab leaders talked "as if the frontier was somebody else." Three paths — pause (hands China the frontier), regulators decide (too slow), or companies internalize under product liability, transparency and audits.</li><li><span class="dot" style="background:#3f6b2e;"></span>Chamath: social media teams were young and naive; growth isn't rewarded for slowing down, so fixes came "10 or 15 years late" — observe the distribution of outcomes up front this time.</li><li><span class="dot" style="background:#3f6b2e;"></span>Chamath backs Jensen's and Elon's two-step: run a real engineering org with root-cause analysis, then peer-test each other publicly. Jason: if models are that dangerous, don't release them or require KYC.</li><li><span class="dot" style="background:#3f6b2e;"></span>Jason's counterexample: Tesla's FSD has been at <b>99.999%</b> for a year or two and 2-3x safer than humans, yet Elon slow-rolls robotaxis — "if we have an accident, it will be scrutinized 10,000% more."</li><li><span class="dot" style="background:#3f6b2e;"></span>Friedberg's potato test: if his company's new seeds harmed someone, he'd be held responsible — existing laws and regulators already cover that.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;We had the leaders of these labs talking as if the frontier was somebody else. It's not.&#8221;<cite>— David Sacks</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Tesla (TSLA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>FSD at 99.999% but Elon slow-rolls robotaxis — Jason's model of self-imposed safety.</span></div><div class="namechip"><b>Hugging Face<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>The summer incident treated as a technical accident needing full investigation.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Sacks served as the White House AI czar that Benioff and Chamath credit with keeping the President from intervening; Tesla's robotaxi timing is Jason's read of Elon, not a disclosed plan.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="diffusion-control">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">ANDREW YANG ON CNBC THIS MORNING</span><span class="ttag">policy</span><span class="ttag">geopolitics</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Diffusion beats control — and every 'non-technical' answer is a power grab</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Chamath and Friedberg say controlled technologies historically went worse than diffused ones, and that calls for human control over technical fixes signal a scramble for power.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Gutenberg: the Pope tried to control printing to protect his power; OPEC (1960s) shows what metered control of a critical resource costs — "the organization that wants to meter it out is called Meter."</li><li><span class="dot" style="background:#93711b;"></span>Friedberg: <b>80%</b> of Chinese are excited about AI and the US is the reverse — "we have more to lose"; the choice is paternalism vs. liberty, or "$50 for a million tokens or 15 cents."</li><li><span class="dot" style="background:#93711b;"></span>Friedberg: the genie is out (open weights, servers, electricity everywhere) — "Bernie Sanders isn't going to get what he wants"; focus on what breaks, like DNS servers and banks facing bot-swarm attacks.</li><li><span class="dot" style="background:#93711b;"></span>Andrew Yang on CNBC relayed a lab source on self-replicating code across the internet; Chamath: why not deploy the NSA, Google, CrowdStrike and Palo Alto Networks to inspect endpoints instead of reaching for control?</li><li><span class="dot" style="background:#93711b;"></span>Jason's demo: he tweeted a prompt telling bots to replicate and asked @Grok to run it — models can simply be built not to execute internet prompts; Trump and Lina Khan agree companies are liable for their software.</li><li><span class="dot" style="background:#93711b;"></span>Sacks on why technical fixes lose: at a dinner party he steel-manned the doomers, then explained root-cause engineering — "my side of the argument is just way too boring."</li><li><span class="dot" style="background:#93711b;"></span>Chamath: both things are true — bot-swarm risk is real <i>and</i> circles of power want to seize the moment. "Nobody should be in charge."</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;Whenever the answer is non-technological, I think we should pause and just ask the simple question, why not the technological solution?&#8221;<cite>— Chamath Palihapitiya</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>METR<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Low</span></b><span>AI evaluation org Chamath mocks as the group that wants to 'meter' AI.</span></div><div class="namechip"><b>CrowdStrike (CRWD)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Chamath's example of a technical responder to bot-swarm threats.</span></div><div class="namechip"><b>Palo Alto Networks (PANW)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Chamath's example of a technical responder to bot-swarm threats.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Chamath credits President Trump's decision not to intervene as historic — a political read from hosts close to the administration.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="salesforce-ai">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">DREAMFORCE 2026 — 50,000 IN SAN FRANCISCO</span><span class="ttag">software</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Salesforce's AI turn: zero data retention, headless, and Slack as the oracle</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Benioff insists customer data never trains models; the hosts say Salesforce weathered the "SaaS-pocalypse" by going headless and turning Slack into the AI workflow layer.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Benioff: "none of their data has ever gone into any of these models" — audited zero data retention architected with both Anthropic and OpenAI.</li><li><span class="dot" style="background:#3f6b2e;"></span>He credits frontier labs for inspiring the industry and open source (much of it from universities like Stanford) as critical to a decade of AI progress; he expects both to coexist.</li><li><span class="dot" style="background:#3f6b2e;"></span>Sacks: "the whole SaaS-pocalypse was completely overdone," like the jobs-pocalypse and "humanity-pocalypse"; Benioff has led on social, mobile, data and now AI (Sacks recalls Yammer). Jason's verdict: "a solid B+."</li><li><span class="dot" style="background:#3f6b2e;"></span>Chamath: making Salesforce headless defused the fear that models would absorb the data moat; his firm 8090 runs on Slack as its control plane, and Slack's coding features keep AI in the governed workflow instead of employees using web models.</li><li><span class="dot" style="background:#3f6b2e;"></span>Jason: Benioff personally pushed Slack to unlock his 25-person VC firm's data, which now powers a decade-deep decision "oracle"; the new Slack Today daily brief (out ~3 weeks, about a third of users) does what they were hand-building — "Salesforce is Slack."</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;This concept that intellectual property is passing somehow from our customers into models is simply not true.&#8221;<cite>— Marc Benioff</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Salesforce (CRM)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>ZDR with Anthropic/OpenAI, headless platform, Slack as AI control plane.</span></div><div class="namechip"><b>Slack<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Salesforce-owned; hosts call it the enterprise knowledge 'oracle'.</span></div><div class="namechip"><b>8090<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Chamath's company, runs on Slack as its control plane.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Salesforce's own event and channel; Salesforce made an early bet on Anthropic. Chamath sat on Slack's board, and Chamath and Jason are both Slack power users.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="dario-track-record">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">DARIO AT DREAMFORCE 2025: '$100B' FROM ~$5B</span><span class="ttag">ai-infra</span><span class="ttag">policy</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Take Dario seriously — but don't hand him the keys</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Benioff says Dario has delivered everything he forecast, so his warnings deserve weight; Chamath agrees he's prophetic but says that still doesn't justify letting him decide.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Benioff: a year ago on this stage Dario said he'd reach ~<b>$100B</b> revenue from ~$5B — "all the things that he said that he was going to do, he did."</li><li><span class="dot" style="background:#93711b;"></span>"I do take his words unusually seriously"; Benioff posted clips of Dario's Dreamforce comments on X.</li><li><span class="dot" style="background:#93711b;"></span>Chamath: grant Dario is prophetic — the question is whether an unknown-probability risk means "we just give him the keys and say he can decide." His answer is no.</li><li><span class="dot" style="background:#93711b;"></span>Chamath's tell: Dario and Sam came to Dreamforce to talk practical business — "they're fundamentally trying to sell more tokens," which he says is fine.</li><li><span class="dot" style="background:#93711b;"></span>Benioff: China moves fast in AI and robotics because business and government are tightly bound and firms "know they're going to be held responsible."</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;Nobody should be in charge. The solution to one person being in charge is nobody should be.&#8221;<cite>— Chamath Palihapitiya</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Dario forecast ~$100B revenue from ~$5B and delivered, per Benioff; Salesforce's early bet.</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>ZDR partner of Salesforce; Sam Altman appeared at Dreamforce.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Salesforce is an Anthropic investor and partner — Benioff's praise of Dario comes from a stakeholder.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🛡</div><div class="tline"><span class="cat">AI policy:</span> <span class="txt">Frame AI risk as product liability plus audits in your own org — and write the incident review before you ship.</span></div></div><div class="irow"><div class="ic">🔐</div><div class="tline"><span class="cat">Enterprise AI:</span> <span class="txt">Get zero-data-retention terms in writing from every model vendor, and bring employees' AI use back inside governed tools.</span></div></div><div class="irow"><div class="ic">💬</div><div class="tline"><span class="cat">Workflow:</span> <span class="txt">Mine your Slack or chat history as a decision archive before building a separate knowledge base.</span></div></div><div class="irow"><div class="ic">💸</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Treat the 'SaaS-pocalypse' narrative skeptically for incumbents that own the workflow layer.</span></div></div><div class="irow"><div class="ic">🧯</div><div class="tline"><span class="cat">Security:</span> <span class="txt">Stress-test DNS, banking and endpoint defenses against bot-swarm attacks rather than waiting for a pause.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;It's just software, folks.&#8221; <cite>— Jason Calacanis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The whole SaaS-pocalypse was completely overdone, just like the jobs-pocalypse was overdone, just like the humanity-pocalypse of the past week has been overdone.&#8221; <cite>— David Sacks</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Would you like to pay $50 for a million tokens or 15 cents for a million tokens? That's the choice.&#8221; <cite>— David Friedberg</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Bernie Sanders isn't going to get what he wants. You're not going to put the genie back in the bottle.&#8221; <cite>— David Friedberg</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;When push comes to shove, they are not in the lab shutting their company down... They're fundamentally trying to sell more tokens.&#8221; <cite>— Chamath Palihapitiya</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;My side of the argument is just way too boring.&#8221; <cite>— David Sacks</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Marc Benioff (recalling Dario Amodei):</b> Anthropic forecast ~$100B revenue from ~$5B a year ago and has delivered on its stated plans. <span class="cmeta">Anthropic revenue · ~$100B</span> <span class="tag">Anthropic</span></div><div class="ritem"><b>David Sacks:</b> A pause would hand the AI frontier to China. <span class="cmeta">US frontier lead · lost to China</span> <i>if if the US pauses</i> <span class="tag">China</span></div><div class="ritem"><b>David Friedberg:</b> Bot swarms will test whether DNS servers and banks can keep functioning under AI-driven attack. <span class="cmeta">critical infrastructure resilience · stress-tested</span></div><div class="ritem"><b>Jason Calacanis:</b> Tesla's FSD runs at 99.999% and 2-3x safer than an average human driver, yet robotaxi rollout stays slow. <span class="cmeta">FSD safety vs. humans · 2-3x</span> <span class="tag">Tesla (TSLA)</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Salesforce (CRM)</b> <span class="rel">partners with</span> <b>Anthropic</b> &mdash; audited zero data retention</div><div class="ritem"><b>Salesforce (CRM)</b> <span class="rel">partners with</span> <b>OpenAI</b> &mdash; audited zero data retention</div><div class="ritem"><b>Salesforce (CRM)</b> <span class="rel">invests in</span> <b>Anthropic</b> &mdash; 'prescient bet', per Jason</div><div class="ritem"><b>Salesforce (CRM)</b> <span class="rel">owns stake</span> <b>Slack</b></div><div class="ritem"><b>8090</b> <span class="rel">customer of</span> <b>Slack</b> &mdash; Slack as control plane</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🎤</div><div><div class="title">Dreamforce drew ~50,000 people; Usher and Gwen Stefani performed. On the All-In LA stage Monday, President Trump called Jensen's phone live to debunk the AI "hoax"; Satya debunked the data-center hoax and another guest the jobs hoax. <span class="tag">Events</span></div></div></div><div class="irow"><div class="ic">👔</div><div><div class="title">Banter: Jason "coaches" Benioff to add a zero to enterprise deals and runs an imaginary Gwen Stefani AI SPV (<b>10%</b> load, 40% carry); Benioff's look is a Tom Ford suit with a Uniqlo mock turtleneck. <span class="tag">Culture</span></div></div></div><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: Sam Altman's and Dario Amodei's Dreamforce sessions, Andrew Yang on CNBC, Elon's peer-review and robotaxi comments, Jensen's proposal, and Lina Khan's liability stance. <span class="tag">Sources</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>ZDR</b> &mdash; Zero data retention — the model provider keeps no customer prompts or outputs.</div><div><b>Headless</b> &mdash; Exposing a platform's data and logic via APIs so agents can use it without the UI.</div><div><b>SaaS-pocalypse</b> &mdash; The 2026 fear that AI models would wipe out SaaS vendors' moats.</div><div><b>KYC</b> &mdash; Know your customer — gating access to a product by verifying who the user is.</div><div><b>METR</b> &mdash; An AI model-evaluation organization (pronounced 'meter').</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
