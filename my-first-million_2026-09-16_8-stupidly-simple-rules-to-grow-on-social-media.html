@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research: 8 (stupidly simple) rules to grow on social media</title>
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>8 (stupidly simple) rules to grow on social media</h1>
+    <div class="byline">
+      Channel: <b>My First Million</b> &middot; Speaker: <b>Shaan Puri (solo)</b> &middot; <b>2026-09-16</b>
+      <div class="stats-line">4 threads · who over how many · inner nerd + the five D's · content before packaging · sell a feeling, make 100 &middot; <a href="https://www.youtube.com/watch?v=47jy_FxuuBg" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Shaan Puri's non-obvious creator playbook, built on <b>100M+ podcast downloads</b>, ~1M YouTube subscribers and ~500K on Twitter over ~5 years.</li><li><b>Who follows you beats how many</b> — 100 Fortune-100 CEOs outweigh 100,000 random readers; Ferrari vs. GM is the business version.</li><li>Find your <b>inner nerd</b>: the oddly specific obsession eliminates competition and turns success into something you win daily.</li><li>Be <i>known well</i>, not well known — the <b>five D's</b> (done, deliver, do, dreams, dork out) double as a year-long content list.</li><li>No such thing as too long, only too boring; ship <b>A+ content with C- delivery</b> before polishing packaging.</li><li>Early on, build a <b>binge bank</b> (one great hour of content); people buy a feeling, not information; then run Mr. Beast's <b>rule of 100</b>.</li><li>Closing bet: in an AI-content world, the scarce thing is a person who feels real.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="who-not-how-many">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">RULE 1 — AUDIENCE QUALITY OVER SIZE</span><span class="ttag">career</span><span class="ttag">consumer</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">100 Fortune-100 CEOs beat 100,000 random readers</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Pick the exact audience you care about and accept fewer views if the right people are listening.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Borrowed from <b>Tim Ferriss</b>: would you rather have 100,000 random people read your book, or the 100 CEOs of the Fortune 100? The 100 are worth more.</li><li><span class="dot" style="background:#3f6b2e;"></span>Example: making sports content for athletes means designing for that specific person, not for likes.</li><li><span class="dot" style="background:#3f6b2e;"></span>Car analogy: GM sells ~2.5M cars a year and is worth ~<b>$50B</b>; Ferrari sells ~13,000 (about 200x fewer) yet is worth more because its buyers are luxury customers (he said "$80 million" — he means billions).</li><li><span class="dot" style="background:#3f6b2e;"></span>His own lane is "upmarket", more intelligent content, not mass market — unless mass market is the game you actually want.</li><li><span class="dot" style="background:#3f6b2e;"></span>Test from the recap: imagine that target person in the chair — could you say this with a straight face, or would they find it "kind of whack"?</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;I'm okay getting less views. I'm okay getting less likes as long as it's the right people and the right likes.&#8221;<cite>— Shaan Puri</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="inner-nerd-five-ds">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">RULES 2-3 — WHAT TO TALK ABOUT</span><span class="ttag">career</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Find your inner nerd, then be known well through the five D's</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Talk about what you're oddly obsessed with, not what you think the audience wants, and let people know your whole story.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Advice from his trainer: the best products are a founder pushing a bit of themselves out, "inside out". Ask <i>what do I nerd out about most?</i>, not <i>what does the audience want?</i></li><li><span class="dot" style="background:#3f6b2e;"></span>His uncle's basement model railway with realistic green/yellow signal timing: "biggest dork", but the internet will find the other 1,000-1,000,000 people just as nerdy.</li><li><span class="dot" style="background:#3f6b2e;"></span>Examples: a woman running <b>perfume tours</b> in New York (her nerd is scent); a menswear writer who puts 1,000 words into pant cuffs, hems and cuts.</li><li><span class="dot" style="background:#3f6b2e;"></span>Payoff 1: almost no competition, "a crowded room, yet you have five feet of space all around you". Payoff 2: success is guaranteed, since playing is winning (odds go from &lt;<b>1%</b> to 100%).</li><li><span class="dot" style="background:#3f6b2e;"></span><b>Five D's</b>: Done (track record), Deliver (value to followers), Do (work and hobbies), Dreams (e.g. Gary V openly wants to buy the Jets), Dork out (what you collect).</li><li><span class="dot" style="background:#3f6b2e;"></span>Payoff: connection, plus luck. Followers send deals, recommendations and finds; for him that's niche internet businesses and highly intentional lifestyles, so "every day is like Christmas".</li><li><span class="dot" style="background:#3f6b2e;"></span>Workflow: spend 10 minutes brainstorming storylines under each D and you have about a year of content pipeline.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;The goal is not to be well known, it is to be known well.&#8221;<cite>— Shaan Puri</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="content-before-packaging">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">RULES 4-6 — LENGTH, POLISH, EARLY NUMBERS</span><span class="ttag">career</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">No such thing as too long, and A+ content with C- delivery</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Interest sets the length and content comes before production; when numbers are tiny, build an asset instead of watching counts.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span><b>Joe Rogan</b>, "the number one podcaster in the world", averages ~3-hour episodes; friends told him to do 22 or 44 minutes to match the average American commute.</li><li><span class="dot" style="background:#3f6b2e;"></span>If something feels too long, reframe it as too boring and make it more interesting. Content should be as long as it's interesting.</li><li><span class="dot" style="background:#3f6b2e;"></span>A+ delivery with C- content is a "death trap": hours lost on packaging and post-production instead of finding interesting things to say.</li><li><span class="dot" style="background:#3f6b2e;"></span>Evidence: sort by oldest. Chris Williamson's early videos; Mr. Beast in his bedroom in a white t-shirt counting to 100,000; Rogan's first episode with After Effects snowflakes and an old webcam. "Find heat first before you find polish."</li><li><span class="dot" style="background:#3f6b2e;"></span><b>Binge bank</b>: when eight people are viewing, build one binge-worthy hour (6-8 posts, videos or episodes, a "first season") so anyone who binges it walks away asking why nobody is talking about this person.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;There's no such thing as too long, only too boring.&#8221;<cite>— Shaan Puri</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="sell-a-feeling-rule-of-100">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">RULES 7-8 — FEELING, REPS, AUTHENTICITY</span><span class="ttag">career</span><span class="ttag">consumer</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Sell a feeling, make 100 videos, stay real in an AI flood</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Fans remember the feeling, not the information; getting good takes 100 reps with one improvement each time.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>He was wrong for a long time: he treated content as information transfer, but even fans struggle to name a favorite episode or something they learned. It goes in one ear and out the other, and a feeling is what's left.</li><li><span class="dot" style="background:#3f6b2e;"></span>Frame: your channel is a small shop in the world's most crowded flea market, and you sell a feeling.</li><li><span class="dot" style="background:#3f6b2e;"></span>Feelings sold: <b>David Blaine</b> awe (frog swallowing, 18 hours in ice, levitating); <b>James Clear</b> self-control; Dana White's UFC "holy moments live on pay-per-view"; Tony Robbins motivation; CrossFit a satisfying sweat ("not the best workout", but addictive).</li><li><span class="dot" style="background:#3f6b2e;"></span>A feeling once or twice earns a follow; the same feeling every day, more reliably than anywhere else, earns a lifelong fan.</li><li><span class="dot" style="background:#3f6b2e;"></span><b>Mr. Beast's rule of 100</b> (Puri is a friend): make 100 videos and improve one thing each time (thumbnail, hook, storytelling, color). It filters out the unserious, and the serious won't need advice by video 100. "This is the real algorithm."</li><li><span class="dot" style="background:#3f6b2e;"></span>Creator culture now feels like "processed food" because big rewards drew the wrong mentality; as AI makes hyper-addictive content, the edge is a person who feels real, e.g. bodybuilder <b>Sam Sulek</b> filming workouts "letting you in".</li><li><span class="dot" style="background:#3f6b2e;"></span>The whole playbook is a concrete version of "just be yourself", advice he calls hollow when given without steps.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;People do not want information, they want a feeling.&#8221;<cite>— Shaan Puri</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">His own reach is the evidence behind the playbook. The Ferrari/GM figures, Rogan's episode length and the Mr. Beast rule are cited from memory and anecdote.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🎯</div><div class="tline"><span class="cat">Audience:</span> <span class="txt">Name the 100 people you most want following you, and write every piece for them</span></div></div><div class="irow"><div class="ic">📝</div><div class="tline"><span class="cat">Content:</span> <span class="txt">Spend 10 minutes brainstorming storylines under each of the five D's to fill a year of topics</span></div></div><div class="irow"><div class="ic">📺</div><div class="tline"><span class="cat">Content:</span> <span class="txt">Ship your first 6-8 pieces as a one-hour binge bank before you look at view counts</span></div></div><div class="irow"><div class="ic">✨</div><div class="tline"><span class="cat">Positioning:</span> <span class="txt">Write down the one feeling your work delivers and cut anything that doesn't produce it</span></div></div><div class="irow"><div class="ic">🔁</div><div class="tline"><span class="cat">Craft:</span> <span class="txt">Commit to 100 pieces, and pick one element to improve on each</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;There is no such thing as too long, there is only too boring.&#8221; <cite>— Shaan Puri</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;You need A+ content with C- delivery... A+ delivery with C- content, that's a death trap.&#8221; <cite>— Shaan Puri</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;People do not want information, they want a feeling.&#8221; <cite>— Shaan Puri</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;This rule of a hundred is the real algorithm that you should follow. Forget the news feed.&#8221; <cite>— Shaan Puri</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;In a world of AI... what's going to be left is when you bump into a person that feels real.&#8221; <cite>— Shaan Puri</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;You shift your odds of success from less than 1% to 100%.&#8221; <cite>— Shaan Puri</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Shaan Puri:</b> Making 100 pieces of content and improving one thing each time will make a creator so good they can't be ignored. <span class="cmeta">pieces of content · 100</span> <i>if improve one element per piece</i></div><div class="ritem"><b>Shaan Puri:</b> As AI produces hyper-addictive content, creators who feel real become the lasting edge. <span class="cmeta">authenticity as differentiator · what sustains</span> <i>if AI-generated content floods feeds</i></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><p class="empty">No company-to-company relationships stated in this video.</p></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📚</div><div><div class="title">People cited: Tim Ferriss (100 CEOs framing), Gary Vaynerchuk (Jets dream), Joe Rogan, Chris Williamson, Mr. Beast, David Blaine, James Clear, Dana White/UFC, Tony Robbins, CrossFit, Sam Sulek; the perfume-tour creator was discussed on a past My First Million episode. <span class="tag">Sources</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Inner nerd</b> &mdash; The topic you're abnormally obsessed with, used as your content niche instead of guessing what the audience wants.</div><div><b>Five D's</b> &mdash; Done, Deliver, Do, Dreams, Dork out: the five things an audience should know about you to know you well.</div><div><b>Binge bank</b> &mdash; An early, roughly one-hour set of content good enough that anyone who binges it becomes a fan.</div><div><b>Rule of 100</b> &mdash; Mr. Beast's advice: make 100 videos and improve one thing on each.</div><div><b>A+ content, C- delivery</b> &mdash; Prioritize interesting substance over production polish when starting out.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
