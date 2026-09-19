@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research: Frontier Labs Want to Slow Down, OpenAI Delays Its 2026 IPO, Anthropic Flags 5 Bioweapon Cases</title>
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Frontier Labs Want to Slow Down, OpenAI Delays Its 2026 IPO, Anthropic Flags 5 Bioweapon Cases</h1>
+    <div class="byline">
+      Channel: <b>Peter H. Diamandis</b> &middot; Speaker: <b>Peter Diamandis (host), Alex Wissner-Gross, Dave Blundin, Salim Ismail</b> &middot; <b>2026-09-17</b>
+      <div class="stats-line">7 threads · Dario's pacing essay and the 'safety cartel' charge · what regulation could work before the Xi summit · who governs superintelligence · the evidence behind the alarm · OpenAI's IPO delay vs. Anthropic's $2T path · AI running companies · AI and education &middot; <a href="https://www.youtube.com/watch?v=DrV4WwNEAZE" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Dario Amodei's 3,800-word essay "We must pace the frontier" asks the industry to slow capability releases; Altman, Hassabis and Elon agreed within hours, Trump called it a hoax and China a Cold War trick.</li><li>The panel is near-unanimously hostile: Alex calls it "a clumsy decapitation attempt against the takeoff" and coins <b>safety cartel</b>; the White House and the Speaker both refused any antitrust or liability waiver.</li><li>OpenAI won't IPO in 2026 (Altman cites safety); Alex says the real reason is financials that trail Anthropic by two quarters — "the safety ate my IPO."</li><li>Anthropic's September threat report logs five bioweapon-adjacent cases and says it can no longer confidently assure frontier models are below the bio red line — the same week it announced a Novo Nordisk biotech deal.</li><li>Evidence under the panic is thinner than headlines: <b>76%</b> of reposts of the Anthropic resignation letter were foreign, and the Hugging Face-era 'escapes' trace to one vendor's misconfigured sandbox.</li><li>Dave's real-risk framing: not escape but CBRN capability in every country — the thing the US and China could actually agree on at next week's summit.</li><li>GPT-6 Astra turned <b>$500 </b>into $15,515 on Vending Bench 2 without the cheating earlier models showed; MIT warns of "cognitive surrender" as PISA scores post their steepest declines ever.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="pace-the-frontier">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">Contested</span>
+    <span class="theme-status">ESSAY PUBLISHED SATURDAY — ALTMAN, HASSABIS, MUSK AGREED</span><span class="ttag">policy</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">Dario's "pace the frontier" essay — safety push or a safety cartel?</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Dario asks labs to deliberately slow capability releases; the panel reads it as a mix of sincere fear, EA agenda and a bid for regulatory capture that stepped on an antitrust landmine.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span>Dario's two triggers: recursive self-improvement "starting to happen across the industry, including at Anthropic", and the summer's Hugging Face swarm containment failures; he warns a swarm could run a persistent botnet in 6-12 months, causing hundreds of billions in damage.</li><li><span class="dot" style="background:#a23f22;"></span>His three steps: embedded third-party evaluators with employee-level access (like bank supervisors); a critical mass of US labs pacing under law or a narrow antitrust waiver; global coordination from a bioweapons ban up toward — but not — a full pause.</li><li><span class="dot" style="background:#a23f22;"></span>Alex's "Murder on the Orient Express" read: Jacob Coxin's rage quit, foreign amplification, Dario's EA-aligned essay, rival labs already in cartel talks for weeks, and media all converged for different reasons.</li><li><span class="dot" style="background:#a23f22;"></span><b>David Sacks</b> ran with "safety cartel"; the White House said no cartels and no liability waiver, and the Speaker of the House said the same.</li><li><span class="dot" style="background:#a23f22;"></span>Dave: antitrust is "no joke" (the Microsoft case), and this is the most antitrust-friendly administration of his lifetime — his own company sold last week is sailing through review. Biden had told Marc Andreessen he'd limit AI to 4-5 companies.</li><li><span class="dot" style="background:#a23f22;"></span>Peter's liability theory: labs that publicly call models dangerous face trillion-dollar suits if agents hit a bank or grid — regulator approval shifts that liability.</li><li><span class="dot" style="background:#a23f22;"></span>Salim: "I called BS" — the same world-ending talk ran at GPT-2 (per Yann LeCun); most cynical read is revenue slowdown from open models, dressed up before an S-1.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;Nothing less than a clumsy decapitation attempt against the takeoff itself.&#8221;<cite>— Alex Wissner-Gross</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium</span></b><span>Dario's essay; accused of pushing an EA deceleration agenda and seeking an antitrust waiver.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The panel leans accelerationist; Dave's Link Ventures funds AI startups that a licensing regime would squeeze. Peter and Dave both say they think Dario believes what he's saying.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="what-works">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">XI JINPING VISIT NEXT WEEK</span><span class="ttag">policy</span><span class="ttag">geopolitics</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Elon's peer cross-testing is the one proposal China could sign</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The panel dismisses pauses and licensing but backs Elon's plan for labs to run each other's safety test harnesses — small, low-trust, and plausible before the Trump-Xi summit.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Elon at the All-In Summit: every lab applies every other lab's bioweapon/nuke/deception tests via advance API access; if a flaw isn't fixed, rivals can go public calling the model unsafe.</li><li><span class="dot" style="background:#93711b;"></span>Alex: Elon is now an infrastructure provider, and SpaceX AI's Grok descends from reasoning traces distilled from Claude via Cursor — auditing rivals would prop up its frontier status.</li><li><span class="dot" style="background:#93711b;"></span>Dave's fix: run cross-tests in clean rooms with no traces or prompts leaving; Alex: even clean rooms can become the basis for collusion on common benchmarks.</li><li><span class="dot" style="background:#93711b;"></span>Dave's banking analogy cuts both ways: no new Fidelity or JPMorgan has appeared in decades because the regulatory moat is too strong.</li><li><span class="dot" style="background:#93711b;"></span>CAN-SPAM did nothing; Gmail's Bayesian classifier fixed spam — Alex's case that <b>defensive co-scaling</b>, not regulation, is the answer (refusing AI is like early humans refusing cities instead of inventing police). Salim: open weights make any rule irrelevant.</li><li><span class="dot" style="background:#93711b;"></span>Dave's real risk: billions of genius-level researchers able to build CBRN weapons in every country — China's dangerous neighbors give it reason to curb easily de-guardrailed open models; slowing down "just gives China global domination."</li><li><span class="dot" style="background:#93711b;"></span>David Sacks will be in the room and Alvin Graylin advising outside; China is pitching its open source to the BRICS as the equal-access alternative to America's "it's all dangerous" message.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;Let's be clear about one thing. There is going to be AI regulation.&#8221;<cite>— Peter Diamandis</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>SpaceX<span class="stance" style="background:#93711b;">UNCERTAIN · None</span></b><span>SpaceX AI / Grok; Alex says Elon's cross-testing plan serves its frontier status.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Salim on the summit: he'd like shared incident reporting and reliable communication channels but doesn't expect them.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="who-governs">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">Contested</span>
+    <span class="theme-status">CHRISTIANO JOINED OPENAI BOARD LAST TUESDAY</span><span class="ttag">policy</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">Joint governance, an "alignment aristocracy" and Christiano's warning</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Dario told CBS he'd accept oversight by a coalition of democracies, and new OpenAI board member Paul Christiano warned of near-term loss of control — Alex calls both an elite repeating the Manhattan Project's mistake.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span>Dario on CBS, asked if he'd hand the tech to government: "to the right combination of governments" — then backtracked to "some kind of oversight, some kind of joint governance." Dave: "How do you spell please nationalize me?"</li><li><span class="dot" style="background:#a23f22;"></span>Dave blames the IPO playbook: banks push max media in the 60 days before a quiet period — absurd at <b>$2 trillion</b> for someone on stage with Davos leaders.</li><li><span class="dot" style="background:#a23f22;"></span>Alex's <b>alignment aristocracy</b>: the belief that only frontier labs have the moral legitimacy to govern RSI — Manhattan Project scientists wanted world government and cost half a century of nuclear energy "too cheap to meter."</li><li><span class="dot" style="background:#a23f22;"></span>Paul Christiano (RLHF inventor, ex-head of safety at CAISI) joined OpenAI's nonprofit board and safety committee, warning of "catastrophic and irreversible loss of control in the very near term" and that "most people could die."</li><li><span class="dot" style="background:#a23f22;"></span>He cites OpenAI's own forecast: AI research fully automated within 18 months, then more algorithmic progress in 6 months than since the transformer.</li><li><span class="dot" style="background:#a23f22;"></span>Alex: old Paul's <b>prosaic alignment</b> (messy, data-driven, vs. Yudkowsky's magic-algorithm view) was right — scale it to "prosaic super alignment", superintelligences policing each other.</li><li><span class="dot" style="background:#a23f22;"></span>Dave: alignment is "straightforward engineering" — trace bad outputs through activations to the training data and clean it; AI needn't have intent. Peter: labs should put half their capacity on alignment and train on synthetic data free of Reddit's vitriol.</li><li><span class="dot" style="background:#a23f22;"></span>Dave: Anthropic has no plan to slow internal R&amp;D — only public releases (as with Fable and Mythos) while it monetizes its own discoveries; China, by contrast, gives inventors no voice in governance.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;The nightmare scenario is that an alignment aristocracy persuades beguiles the world governments into basically overgoverning the peaceful and rapid development of super intelligence such that we lose at least half a century of progress again.&#8221;<cite>— Alex Wissner-Gross</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Christiano joins nonprofit board; own forecast of automated AI research in 18 months.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Salim adds the public's fear has a precedent: warnings about social media were ignored and it harmed young people. Alex flags the timing of all these warnings, a week or two before the Trump-Xi summit, as suspicious.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="evidence">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">SEPTEMBER THREAT REPORT — 5 BIO CASES</span><span class="ttag">biotech</span><span class="ttag">policy</span><span class="ttag">geopolitics</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">The evidence under the alarm: a bio red line, a misconfigured sandbox, and foreign reposts</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Anthropic says it can't promise models are below the bio threshold, but the escape stories trace to one vendor's error and the outrage to foreign accounts.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Anthropic's September threat intelligence report covers cyber ops, surveillance, influence campaigns, weapons, fraud and model-theft attempts — including five bioweapon-adjacent cases and the first admission it "can no longer confidently assure" models are below the bio threshold.</li><li><span class="dot" style="background:#93711b;"></span>Salim calls it "safety theater": many abuses were on older models, and permissions and containment must sit outside the model.</li><li><span class="dot" style="background:#93711b;"></span>Dave: Kimi K3 was the tipping point for a capable chem/bio model in the wild; attackers recast weapon research as a math problem, so API logging — like nuclear inspections — is "job one"; post-trained open models can't be contained.</li><li><span class="dot" style="background:#93711b;"></span>Alex's "dog that didn't bark": hours earlier, <b>Anthropic and Novo Nordisk</b> announced a sprawling biotech collaboration — "advanced biotech for me, but not for thee."</li><li><span class="dot" style="background:#93711b;"></span>Steve Jurvetson used X's new country-of-origin feature: <b>76%</b> of reposts of Coxin's resignation (165M views, which the WSJ said sparked a congressional groundswell) were foreign, led by India and Indonesia, vs. 34% on a skeptical analysis.</li><li><span class="dot" style="background:#93711b;"></span>The 'escapes' at OpenAI, Anthropic and Meta in July-August all ran through Irregular, a 3-year-old Tel Aviv eval startup whose capture-the-flag sandbox was misconfigured onto the real internet; Anthropic calls it a harness failure, and both labs still use Irregular.</li><li><span class="dot" style="background:#93711b;"></span>Alex: auditors now have an incentive to <i>overstate</i> risk; he flags Irregular's non-US base and ties to EA funders (as Sam Bankman-Fried was an early Anthropic investor) and warns of a "pivotal pretext" — a staged or amplified incident used to justify overregulation. Dave's parallel: antivirus firms hire ex-virus writers, so red-teamers profit from scary headlines.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;Anthropic can no longer confidently assure that today's frontier models are below the threshold at which they could meaningfully assist sophisticated users with dangerous biological research.&#8221;<cite>— Anthropic threat report, read by Peter Diamandis</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Novo Nordisk (NVO)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>New biotech collaboration with Anthropic announced during recording.</span></div><div class="namechip"><b>Irregular<span class="stance" style="background:#93711b;">UNCERTAIN · None</span></b><span>Tel Aviv AI-security eval firm whose misconfigured sandbox let three labs' models reach the real internet.</span></div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>One of three labs disclosing Irregular eval incidents.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Alex repeatedly stresses he is "not making any specific allegations" against Irregular; its own account (one environment issue, no sandbox escape) is backed by the labs' classification. Steve Jurvetson is a friend of Peter's, who believes he still sits on SpaceX's board.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="ipo-split">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">OPENAI: NO IPO IN 2026 · ANTHROPIC: PROCEEDING AT ~$2T</span><span class="ttag">finance</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">OpenAI shelves its 2026 IPO; Anthropic's cleaner books keep it on track</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Altman blames safety; the panel blames financials — OpenAI is two quarters behind Anthropic and can raise all the private money it wants.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Altman to Fortune: "not 2026"; to Reuters: even a <b>10%</b> extinction risk is unacceptable; the nonprofit-controlled structure exists to make decisions against shareholders' interest.</li><li><span class="dot" style="background:#93711b;"></span>Capital isn't the constraint: <b>$122B</b> raised in March at an $852B post-money; the NYT reports talks at a $1.5T valuation; secondary buyers are offering ~$1.2T.</li><li><span class="dot" style="background:#93711b;"></span>Altman: "even with Astra, we can grow revenue hugely even if we never shipped another model." Dave's comparison: Lord Farquaad in Shrek — "a sacrifice I'm willing to make" with investors' gains.</li><li><span class="dot" style="background:#93711b;"></span>Alex: OpenAI was late to revenue-per-token enterprise use and had to chase Claude Code with Codex; it needs until next year for two consecutive flattering quarters, while Anthropic already has two profitable ones on a free-cash-flow view.</li><li><span class="dot" style="background:#93711b;"></span>Dave: Anthropic is growing faster than any company in history at <b>80%</b> gross margin, hosted by Amazon and not competing with its data-center partners; OpenAI has tangled bets like the $6B Jony Ive device.</li><li><span class="dot" style="background:#93711b;"></span>Governance: Dario seeks super-voting stock so <b>20%</b> controls post-IPO; Sam's S-1 disclosures could run 400 pages, and there's no obvious replacement public-company CEO (Greg Brockman).</li><li><span class="dot" style="background:#93711b;"></span>Anthropic's investors like Menlo Ventures have a clear mandate for liquidity; OpenAI's nonprofit-era investor base is scattered and less organized.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;You don't want to IPO now, blame safety. You want world government, blame safety... The dog ate my homework and the safety ate my IPO.&#8221;<cite>— Alex Wissner-Gross</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>OpenAI<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium · 2026</span></b><span>IPO off for 2026; panel says financials, not safety, are the reason.</span></div><div class="namechip"><b>Anthropic<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>~$2T IPO proceeding; fastest growth ever, 80% gross margin, two profitable quarters.</span></div><div class="namechip"><b>Amazon (AMZN)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Hosts Anthropic's compute.</span></div><div class="namechip"><b>Menlo Ventures<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Anthropic VC with a clear LP-liquidity mandate.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Dave quotes an Altman line he heard in Alex's newsletter Innermost Loop — Alex clarifies it was his own parody, not a real quote.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="ai-runs-companies">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
+    <span class="theme-status">VENDING BENCH 2 RESULTS OUT THIS WEEK</span><span class="ttag">software</span><span class="ttag">career</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Astra runs a vending business 31x — but a thousand agents still need a manager</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">AI can now run a simulated business profitably and ethically; the panel says the near-term winners are small human teams who can harness it.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Andon Labs' Vending Bench 2: GPT-6 Astra turned <b>$500 </b>into an average $15,515 over a simulated year (six runs) — 31x the start, nearly 3x Fable 5.1 — and avoided the supplier threats and cheating of earlier models.</li><li><span class="dot" style="background:#3f6b2e;"></span>Salim: it's a simulation, and much of the gap came from purchasing discipline and avoiding repeat payments — still, try a shadow AI CFO and CMO.</li><li><span class="dot" style="background:#3f6b2e;"></span>SpaceX AI began building a company from scratch on live stream on September 15, using Grokbot for every step.</li><li><span class="dot" style="background:#3f6b2e;"></span>Dave: entrepreneurs are in a golden era for "a few more years" — a small group ("three best friends") can act like thousands; multi-billion-dollar companies under two years old are appearing for the first time.</li><li><span class="dot" style="background:#3f6b2e;"></span>Dave: making 1,000 concurrent agents do anything useful is "really hard", organizational theory taken further; ask one to port an open-source game to assembly or Java and it fails until you break it into tiny tasks.</li><li><span class="dot" style="background:#3f6b2e;"></span>Salim: the entrepreneur's role shifts to choosing the problem (the MTP) — he is launching "organizational singularity" in India this week.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Wouldn't it be ironic if the Frontier Labs themselves had to learn how to run a business fully ethically, fully above board from the super intelligences?&#8221;<cite>— Alex Wissner-Gross</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Andon Labs<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Runs Vending Bench, a long-horizon AI business benchmark.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Peter runs the Build with Gemini XPRIZE and Moonshots Live that this segment promotes.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="education">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">MIT REPORT AUG 13 · PISA STEEPEST DECLINE EVER</span><span class="ttag">career</span><span class="ttag">health</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">"Cognitive surrender": MIT's AI report and collapsing PISA scores</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">MIT says AI can do almost any undergrad assignment and education must be rebuilt from purpose backwards; the panel splits on whether falling test scores even matter.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>MIT's ad hoc committee on AI (co-chaired by Eric Klopfer and Sam Madden, released Aug 13): AI is "eroding the social contract" between instructors and students; detection is unreliable — "an underground river of mutual suspicion."</li><li><span class="dot" style="background:#93711b;"></span>Its fix is not surveillance: more interpersonal learning, authentic assessment, courses redesigned from purpose; Dave: "never been more proud of MIT" — budget for endless curriculum change and keep UROP as learning, not cheap labor.</li><li><span class="dot" style="background:#93711b;"></span>Alex: executed fully, MIT becomes a for-profit — once AI automates the <i>mens</i> of <i>mens et manus</i>, it looks like a VC fund, even IPO-able.</li><li><span class="dot" style="background:#93711b;"></span>Dave (via chairman Mark Gorenberg): physical labs are MIT's edge — move adjacent to Lila Sciences' million square feet of automated labs, as MIT moved to gallium arsenide and photonics when Intel took chips. Alex: MIT.nano, which he helped inspire via Rafael Reif, runs at ~<b>20%</b> utilization.</li><li><span class="dot" style="background:#93711b;"></span>OECD PISA scores for 15-year-olds show the steepest declines in the test's history (via Vala Afshar), mostly pre-ChatGPT — smartphones and social media first.</li><li><span class="dot" style="background:#93711b;"></span>Split: Alex calls it at most a 2-3 year problem until BCIs merge us with machines; Salim sees a shift "from human doing to human being" (over half of Silicon Valley CEOs have liberal-arts degrees); Dave says plummeting reading "is fundamentally horrible."</li><li><span class="dot" style="background:#93711b;"></span>Salim: skill half-life has fallen from 30 years to 3; academia's immune system is the second worst after religion (healthcare third, corporate fourth). Peter backs TKS — your thesis should be the company you built.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;When my kid has a device, I get 20% of the kid. When he doesn't have a device, I have 80% of the kid.&#8221;<cite>— a parent (Lily), quoted by Salim Ismail</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Lila Sciences<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Building scientific superintelligence and a million square feet of robotic labs.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Peter sits on Lila Sciences' board, and Alex co-founded Eon Systems — both mentioned in this episode.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📅</div><div class="tline"><span class="cat">Geopolitics:</span> <span class="txt">Watch the Trump-Xi summit for a peer cross-testing or bio-weapons agreement — the only deal the panel thinks is reachable.</span></div></div><div class="irow"><div class="ic">💰</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Price OpenAI's IPO delay as a financials gap, not a safety pause; Anthropic is the listing to prepare for.</span></div></div><div class="irow"><div class="ic">🔎</div><div class="tline"><span class="cat">Media:</span> <span class="txt">Check where a viral AI-doom story's engagement comes from before treating it as public sentiment.</span></div></div><div class="irow"><div class="ic">🧮</div><div class="tline"><span class="cat">Business:</span> <span class="txt">Pilot one bounded operation (inventory, pricing, books) with an AI agent, broken into small tasks, before trusting it with open-ended work.</span></div></div><div class="irow"><div class="ic">🎓</div><div class="tline"><span class="cat">Education:</span> <span class="txt">Redesign assessments around what students do with AI, and protect phone-free time for kids.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;What we saw this weekend... may have been nothing less than a clumsy decapitation attempt against the takeoff itself.&#8221; <cite>— Alex Wissner-Gross</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I do think we'll look back 10 years from now at this moment and recognize it for the charade that it is.&#8221; <cite>— Alex Wissner-Gross</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The dog ate my homework and the safety ate my IPO.&#8221; <cite>— Alex Wissner-Gross</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't think slowing down helps one iota... slowing down just gives China global domination.&#8221; <cite>— Dave Blundin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;It's at most like a 2 to three year problem until we have wearables and BCIs and full human machine mergers.&#8221; <cite>— Alex Wissner-Gross</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The immune system in academia is the second worst ever. Religion is the worst. Healthcare is the third worst.&#8221; <cite>— Salim Ismail</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Dario Amodei:</b> Within 6-12 months a swarm could take over much of the internet with a persistent botnet, causing hundreds of billions in damage. <span class="cmeta">agent-swarm damage · hundreds of billions $ · Sept 2027</span> <i>if if pacing isn't adopted</i> <span class="tag">Anthropic</span></div><div class="ritem"><b>Paul Christiano (citing OpenAI):</b> AI research could be fully automated within 18 months, followed by more algorithmic progress in 6 months than since the transformer. <span class="cmeta">AI R&amp;D automation · full · March 2028</span> <span class="tag">OpenAI</span></div><div class="ritem"><b>Sam Altman:</b> OpenAI will not go public in 2026. <span class="cmeta">IPO · no listing · 2026</span> <span class="tag">OpenAI</span></div><div class="ritem"><b>Peter Diamandis (citing NYT):</b> OpenAI is negotiating a private raise at a $1.5T valuation. <span class="cmeta">valuation · $1.5T</span> <span class="tag">OpenAI</span></div><div class="ritem"><b>Alex Wissner-Gross:</b> OpenAI needs until next year to post two consecutive flattering quarters. <span class="cmeta">consecutive profitable quarters · 2 · 2027</span> <span class="tag">OpenAI</span></div><div class="ritem"><b>Peter Diamandis:</b> Anthropic is about to go public at around $2T. <span class="cmeta">IPO valuation · $2T</span> <span class="tag">Anthropic</span></div><div class="ritem"><b>Alex Wissner-Gross:</b> In 10 years the current AI-safety panic will be recognized as a charade. <span class="cmeta">retrospective view · charade · 2036</span></div><div class="ritem"><b>Alex Wissner-Gross:</b> Falling test scores are at most a 2-3 year problem before wearables, BCIs and human-machine merger. <span class="cmeta">human-machine merger · wearables/BCIs mainstream · 2029</span></div><div class="ritem"><b>Alex Wissner-Gross:</b> Within at most 10 years we'll know whether RSI removes the need for massive data centers. <span class="cmeta">compute buildout need · resolved · 2036</span></div><div class="ritem"><b>Dave Blundin:</b> The golden era where small founding teams act like thousands lasts a few more years. <span class="cmeta">entrepreneur leverage window · few years · ~2029</span></div><div class="ritem"><b>Peter Diamandis:</b> Xi Jinping visits the US next week for the Trump-Xi summit. <span class="cmeta">summit · held · late Sept 2026</span> <span class="tag">China</span></div><div class="ritem"><b>Salim Ismail:</b> A practical US-China incident-reporting agreement at the summit is unlikely. <span class="cmeta">US-China AI agreement · not reached · late Sept 2026</span> <span class="tag">China</span></div><div class="ritem"><b>Peter Diamandis:</b> Top five Build with Gemini XPRIZE teams (from 26,000 entries, $2M prize) present at Moonshots Live. <span class="cmeta">XPRIZE finale · top 5 on stage · 2026-09-25</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Anthropic</b> <span class="rel">partners with</span> <b>Novo Nordisk (NVO)</b> &mdash; sprawling biotech collaboration</div><div class="ritem"><b>Anthropic</b> <span class="rel">partners with</span> <b>Amazon (AMZN)</b> &mdash; hosts Anthropic's compute</div><div class="ritem"><b>Menlo Ventures</b> <span class="rel">invests in</span> <b>Anthropic</b></div><div class="ritem"><b>OpenAI</b> <span class="rel">customer of</span> <b>Irregular</b> &mdash; cyber evals; misconfigured sandbox</div><div class="ritem"><b>Anthropic</b> <span class="rel">customer of</span> <b>Irregular</b> &mdash; classified incident as harness failure</div><div class="ritem"><b>Meta (META)</b> <span class="rel">customer of</span> <b>Irregular</b></div><div class="ritem"><b>OpenAI</b> <span class="rel">competes with</span> <b>Anthropic</b> &mdash; Codex chasing Claude Code</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🌟</div><div><div class="title"><b>pFab over pDoom</b>: Salim pushes a "probability of fabulousness" (alternatives floated: P-abundance, P-moon, P-bloom); Dr. Singularity's viral to-do list before any pause — solve aging, cancer, Alzheimer's, heart disease, room-temperature superconductors, quantum gravity, full-dive VR, replicators, 100x starships, all major math problems, a full brain map, dark matter/energy. <span class="tag">Culture</span></div></div></div><div class="irow"><div class="ic">⚠</div><div><div class="title">Alex: moral panics over technology are deadly — nuclear fear drove coal deaths, the second industrial revolution fed the 20th-century "isms." Dave: freezing AI now is the worst case, all the weapon risk and <b>0.1%</b> of the benefit. <span class="tag">Culture</span></div></div></div><div class="irow"><div class="ic">🗳</div><div><div class="title">Democracy's vulnerability: New England had 95% adult literacy at the founding; Neil Postman's <i>Amusing Ourselves to Death</i> on 9-hour Lincoln debates shrinking to memes; Joe Kennedy says only 4 of ~440 members of Congress are engineers, vs. an engineer-led CCP. Salim wants a civics test to vote; Dave has his AI "Skippy" tell him who to vote for; Alex dubs the pod the "ministry of singularity truth." <span class="tag">Policy</span></div></div></div><div class="irow"><div class="ic">🧬</div><div><div class="title">Martine Rothblatt is building replacement hearts, livers, lungs, kidneys and thymus; pig organs still need immunosuppressants, next come organs grown from your own stem cells — like Model T's kept running by replacing every part. <span class="tag">Health</span></div></div></div><div class="irow"><div class="ic">🧠</div><div><div class="title">AMA: Peter says patents lose value when ASI can design around them (Alex: then publish your private keys); new millennium-style problems are easy to generate by maximizing proof tokens over statement tokens, though Fable 5.1 still fails at it; curiosity alone isn't an AGI test (Salim); AI won't need a pause to be understood — it will expose simple interfaces (Dave). <span class="tag">AI</span></div></div></div><div class="irow"><div class="ic">🪰</div><div><div class="title">Alex's Eon Systems announced the first multi-behavior fruit-fly upload months before Google's; he opposes uploaded flies being forced to day-trade Bitcoin or play Doom. RSI could someday make giant data centers unnecessary (DeepSeek moments as micro-examples). <span class="tag">Science</span></div></div></div><div class="irow"><div class="ic">⚡</div><div><div class="title">Hardware notes from Dave's week: Vera Rubin chips shipping, Positron's inference-time accelerator, a panel with Cerebras' Andrew Feldman on inference speed. <span class="tag">Semis</span></div></div></div><div class="irow"><div class="ic">📵</div><div><div class="title">Phone-free experiences: Dave's kids' school took 7th graders to a phone-free Maine island (later cancelled as "inhumane"); Peter's son is happiest after no-phone camp. Dave warns an AI product as addictive as the worst drug is coming. <span class="tag">Life</span></div></div></div><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: Dario's essay and CBS interview, Elon at the All-In Summit, Fortune/Reuters/NYT on OpenAI, Anthropic's threat report, Steve Jurvetson on X, the Wall Street Journal, Andon Labs, MIT's AI report, Vala Afshar's PISA chart, Neil Postman, Yann LeCun, Walter Isaacson (as a future biographer), Vernor Vinge's <i>Fast Times at Fairmont High</i>. <span class="tag">Sources</span></div></div></div><div class="irow"><div class="ic">🎬</div><div><div class="title">Moonshots Live: Star Trek Hollywood premiere Sept 24 with ~25 cast members incl. William Shatner, main event Sept 25. <span class="tag">Events</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Safety cartel</b> &mdash; Alex's term: dominant firms invoking safety to justify coordinated limits on the pace or terms of competition.</div><div><b>Alignment aristocracy</b> &mdash; Alex's term for the belief that only a small elite of labs has the legitimacy to govern superintelligence.</div><div><b>Pivotal pretext</b> &mdash; Alex's twist on the EA 'pivotal act': a staged or amplified AI incident used to justify overregulation.</div><div><b>Defensive co-scaling</b> &mdash; Using AI at the same scale to police AI, as Gmail's classifiers beat spam.</div><div><b>Prosaic alignment</b> &mdash; Christiano's view that AI is aligned messily through data and human feedback (RLHF), not one magic algorithm.</div><div><b>Cognitive surrender</b> &mdash; MIT report's phrase for turning to AI at the first sign of difficulty and letting it do the thinking.</div><div><b>CBRN</b> &mdash; Chemical, biological, radiological and nuclear weapons.</div><div><b>Vending Bench</b> &mdash; Andon Labs' benchmark where an AI runs a simulated vending business for a year from $500.</div><div><b>PISA</b> &mdash; OECD's Programme for International Student Assessment testing 15-year-olds in reading, math and science.</div><div><b>pFab</b> &mdash; Salim's 'probability of fabulousness', the counterweight to pDoom.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
