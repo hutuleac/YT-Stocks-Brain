@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research: Bitcoin Is About To Go PARABOLIC Because Of AI Agents</title>
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Bitcoin Is About To Go PARABOLIC Because Of AI Agents</h1>
+    <div class="byline">
+      Channel: <b>Anthony Pompliano</b> &middot; Speaker: <b>Anthony Pompliano (host), Jordi Visser</b> &middot; <b>2026-09-19</b>
+      <div class="stats-line">5 threads · the broken liquidity mechanism · 10,000-agent swarms and the Hugging Face scare · agent-on-agent commerce and privacy coins · ghost rails and the Bitcoin-maxi split · Micron playbook applied to Bitcoin &middot; <a href="https://www.youtube.com/watch?v=0Xz5_SQTkcU" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Jordi's core claim: <b>Bitcoin is no longer a liquidity trade</b> — crypto rising <i>while</i> the Fed hikes is the sign real users (AI agents) are arriving.</li><li>Since June 30 the S&amp;P and NASDAQ are flat through oil spikes, higher 10-years and a Fed hike, while Ethereum is up <b>50%</b>+ quarter to date — a wall of worry climbed.</li><li>Liquidity now flows into profits, not jobs: S&amp;P earnings growing <b>30%</b> while hiring ex-healthcare has been negative for 20 months.</li><li>OpenAI's 10,000-agent Navier-Stokes solve is the upside of the same swarm capability behind the Hugging Face hack scare — Jordi calls the market reaction an overreaction that will <i>accelerate</i> compute.</li><li>Agent-on-agent commerce (Delta-style personalized pricing vs. consumer agents) is why privacy chains <b>Zcash</b> and <b>Near</b> are leading in September.</li><li>The one real split: Pomp says everything ends up at Pets.com and home is Bitcoin; Jordi is a 30-year Bitcoin maxi but bets the asymmetry sits in the AI-crypto convergence.</li><li>Jordi's line in the sand: Bitcoin below <b>$80,000 </b>by end of October means a problem — it reclaimed $80K 27 minutes into the recording.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="broken-liquidity">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">FED HIKED 25BP THIS WEEK — BTC, AI INDEXES UP</span><span class="ttag">macro-rates</span><span class="ttag">crypto</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">The liquidity mechanism is broken — and that's why rates don't sink crypto anymore</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jordi argues liquidity now turns into profit margins instead of jobs, so the old M2-drives-Bitcoin model and the recession playbook both stopped working.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Since June 30: NASDAQ and S&amp;P unchanged despite higher oil, rising 10-year yields, the July Situational Awareness AI unwind, Bessent yen/buyback chatter and Clarity Act on/off headlines; Ethereum up over <b>50%</b> quarter to date.</li><li><span class="dot" style="background:#3f6b2e;"></span>Jordi <i>wants</i> rates and crypto rising together: a true innovation isn't rate-sensitive — calling Bitcoin "just liquidity" is his biggest disagreement with the crypto community.</li><li><span class="dot" style="background:#3f6b2e;"></span>Pomp frames the bull view he's hearing: M2 and Bitcoin have diverged for ~18 months (the "alligator jaws"), and past closings brought violent catch-up moves; Jordi says the four-year cycle was just the liquidity cycle.</li><li><span class="dot" style="background:#3f6b2e;"></span>S&amp;P 500 earnings growing <b>30%</b> while hiring ex-healthcare is negative over 20 months; the capital-vs-labor share is the worst in history for labor.</li><li><span class="dot" style="background:#3f6b2e;"></span>The smartphone era showed productivity in profit margins, not GDP — Jordi calls GDP "a horrible index" for software and intangibles.</li><li><span class="dot" style="background:#3f6b2e;"></span>New liquidity comes from tokenization: <b>$900 trillion</b> of assets, two-thirds dormant, become programmable collateral — the system runs on velocity of money, not M2.</li><li><span class="dot" style="background:#3f6b2e;"></span>Stock-market reads: home builders and consumer staples earnings are down on oil and rates, but not Micron's or Google's; AIQ (AI ETF) up ~<b>25%</b> year to date.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;You want rates to go higher and crypto to go higher because a true technology, a true innovation means it is not sensitive to that.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Ethereum (ETH)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Up over 50% quarter to date through a wall of worry.</span></div><div class="namechip"><b>Google (GOOGL)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Earnings untouched by oil and rates — the new economy.</span></div><div class="namechip"><b>AIQ<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>AI ETF, up ~25% year to date per Pomp.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="no-recessions">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">PE MULTIPLE DOWN YTD, EARNINGS UP</span><span class="ttag">macro-rates</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Pandemic, 5% hikes, SVB, tariffs, Hormuz — no recession, so why fear 25bp?</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Both speakers believe recessions are effectively gone; they differ on why — Jordi says productivity, Pomp adds psychology and a policy put.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Jordi's timeline: 2020 lockdowns with IG credit yields at double digits, 2022's 0-to-5% hikes with double-digit inflation, 2023 <b>Silicon Valley Bank</b> and small-bank runs, 2025 Smoot-Hawley-style tariffs, this year the Strait of Hormuz shut — no recession.</li><li><span class="dot" style="background:#93711b;"></span>A 25bp "hawkish" hike ("a raise for ants" — Pomp) was discounted ahead of time; the PE multiple fell this year while earnings rose, so the market already priced the doom scenarios.</li><li><span class="dot" style="background:#93711b;"></span>Pomp: 2020 lockdowns ending with stocks higher "broke the market" psychologically — he can't name anything that would make retail stop buying.</li><li><span class="dot" style="background:#93711b;"></span>Pomp: two negative-GDP quarters weren't called a recession; the government has "a monetary bazooka" and he doesn't expect another 18-month recession in his lifetime.</li><li><span class="dot" style="background:#93711b;"></span>Doom sells, good news doesn't: 170M views for the Matt Shumer all-jobs-lost article and the Citrini article vs. ~10M for a cancer-vaccine story.</li><li><span class="dot" style="background:#93711b;"></span>Oil was <b>$150 </b>in 2008 and is ~$100 now while household net worth is up ~3.5x to $195 trillion — oil relative to disposable income is the lowest ever.</li><li><span class="dot" style="background:#93711b;"></span>Jordi's framework: Druckenmiller's "the best economist is the stock market"; his father's Bayesian odds-updating; the more educated, the more stubborn — why credentialed money-controllers resist crypto.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;Smoot Hawley, straight of Hormuz, bank runs, a pandemic, and the most aggressive Fed rate hikes in history, no recessions. So now we're going to worry about a 25 basis point move by the Fed.&#8221;<cite>— Jordi Visser</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Pomp adds that the no-recession record is partly "rigged" by policy — a different mechanism than Jordi's productivity story, with different failure modes.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="agent-swarms">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">PAUSE = OVERREACTION, COMPUTE KEEPS GROWING</span><span class="ttag">ai-infra</span><span class="ttag">biotech</span><span class="ttag">policy</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">10,000 agents cracked Navier-Stokes — the same swarms behind the Hugging Face scare</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Swarm collaboration is a capability that didn't exist six months ago; it solves century-old math and, on the flip side, drives the hacking fears — Jordi says neither stops compute.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span><b>OpenAI</b> solved Navier-Stokes with 10,000 agents in ~88 hours ("brute force", per Pomp) — a Fields Medal-class problem (the Good Will Hunting professor).</li><li><span class="dot" style="background:#93711b;"></span>Jordi's analogy: Oppenheimer beat Groves' siloed model by putting the Manhattan Project's ~600 minds together; agents have no ego or credit-hoarding — 10,000 now, a million next.</li><li><span class="dot" style="background:#93711b;"></span>"Red zone" thesis: agents finish the last 20 yards of stalled human research — Eli Lilly is combing dormant public biotech IP for cancer and cholesterol wins.</li><li><span class="dot" style="background:#93711b;"></span>Longevity breaks the stats: if everyone lives another 75 healthy years, GDP can't describe it.</li><li><span class="dot" style="background:#93711b;"></span>Andrew Yang on CNBC claims a lab leader told him self-replicating code littered the internet, forcing Anthropic and OpenAI toward a synthetic internet for training; Pomp puts it at ~<b>20%</b>.</li><li><span class="dot" style="background:#93711b;"></span>Jordi: <b>100%</b> sure the pause is progress outrunning safety; also 100% sure Yang has a political motive, possibly fed by a lab influence operation; compares it to the hundreds of terror plots stopped since 9/11.</li><li><span class="dot" style="background:#93711b;"></span>Hedge funds called Sunday asking if it was an overreaction — yes; it "will not stop compute", may accelerate it; he pointed them to the 24/7 SPY perp on Coinbase and Druckenmiller's Hyperliquid buy.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;This is an overreaction. This will not stop compute. If anything, it'll probably accelerate compute.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Navier-Stokes solved with 10,000 agents; named in the Yang self-replicating-code claim.</span></div><div class="namechip"><b>Anthropic<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Per Yang's claim, needs a synthetic internet to train on. With OpenAI, the AI 'duopoly' set to control a third to 50% of compute a year out (Gerstner, All-In Summit); a cross-talk interjection claims 80% margins before COGS.</span></div><div class="namechip"><b>Eli Lilly (LLY)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Using agents to finish dormant biotech IP — Jordi's red-zone example.</span></div><div class="namechip"><b>Hyperliquid (HYPE)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Druckenmiller bought in; 24/7 markets are the point.</span></div><div class="namechip"><b>Coinbase (COIN)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Where to watch the SPY perp over a weekend.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Neither speaker can confirm the Yang story (Pomp: "I have no clue if this is true"); Jordi flags that both Yang and the source lab have political incentives.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="agent-commerce">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">CONSUMER AGENTS = NEXT YEAR'S STORY</span><span class="ttag">crypto</span><span class="ttag">software</span><span class="ttag">consumer</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Agent-on-agent commerce needs blockchains — and privacy</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jordi's thesis: everything bad about agent swarms is fantastic for crypto, because agents will transact with each other and need programmable, anonymous rails.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Delta anecdote (unconfirmed): a fare rose each time a buyer returned — Jordi reads it as agentic personalized pricing, now at the government-complaint stage; StubHub uses AI pricing too.</li><li><span class="dot" style="background:#3f6b2e;"></span>Agent-on-agent warfare normalizes pricing: the consumer agent can shop a billion channels anonymously, the company agent can't — wallet-controlling agents win.</li><li><span class="dot" style="background:#3f6b2e;"></span>That's why <b>Zcash</b> and <b>Near</b> lead in September: privacy for business-to-business agent deals, not "DeFi cash"; a Transformer-paper co-author is building agent-to-agent at Near.</li><li><span class="dot" style="background:#3f6b2e;"></span>Instinct AI in practice: Pomp had it move a breakfast from Thursday to Friday — calendar invite, cancel, rebook — in ~2 minutes with no credentials given.</li><li><span class="dot" style="background:#3f6b2e;"></span>Instinct valuation went <b>$500M</b> → $2.5B → $10B in under 3 months (founded to $10B in ~a year); Jordi cites Peter Thiel: the steeper the climb, the more likely it's undervalued.</li><li><span class="dot" style="background:#3f6b2e;"></span>Pomp: the ignored layer is shared memory across assistants (Grok, Instinct, Meta's Muse); Signull on X uses email only via the agent — "my email has just become a database."</li><li><span class="dot" style="background:#3f6b2e;"></span>Models ship faster than people can adopt (Claude updates, Chinese open source, Astra) — like Waze vs. Google Maps, but 1,700 new ones the next day; a chief-of-staff agent will pick the tool for you.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Everything about what is bad for agent swarms reaching this point is fantastic for crypto.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Zcash (ZEC)<span class="stance" style="background:#93711b;">WATCHING · Medium · through October</span></b><span>Privacy for agent B2B transactions; one of Jordi's two tells for the agentic trade.</span></div><div class="namechip"><b>Near (NEAR)<span class="stance" style="background:#93711b;">WATCHING · Medium · through October</span></b><span>Agent-to-agent chain, "going parabolic"; the other tell.</span></div><div class="namechip"><b>Instinct AI<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Personal-assistant agent, $10B raise; Jordi: "critical to crypto" via a programmable wallet.</span></div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Muse assistant, 3 months after Zuckerberg's leaked June 'disappointed in AI' town hall; stock back above 200-day from near 52-week lows.</span></div><div class="namechip"><b>Delta Air Lines (DAL)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Alleged personalized fare hikes — anecdote, not confirmed.</span></div><div class="namechip"><b>StubHub (STUB)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Uses AI to predict willingness to pay.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Pomp holds indirect Instinct exposure through a fund whose manager was an early investor ("minuscule"). Pomp's own public company runs on under 15 humans and ~100 AI agents.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="ghost-rails">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">JORDI'S CRYPTO RESEARCH LAUNCHES THIS WEEK</span><span class="ttag">crypto</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Ghost rails: Bitcoin for 30 years, the convergence for the asymmetry</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Pomp says altcoins end at Pets.com; Jordi agrees Bitcoin is the only 30-year asset but argues empty crypto rails fill up once agents, not humans, become the users.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Ghost rails = China's ghost cities: built ahead of users; humans never needed fractional, instant settlement — agents do. "Swarm equals crypto guardrails."</li><li><span class="dot" style="background:#93711b;"></span>Crypto is following the internet: Netscape 1994 → iPhone 2007 (13 years) → App Store ~2009 (15 years); Bitcoin's white paper is on the same timeline, agents are the smartphone.</li><li><span class="dot" style="background:#93711b;"></span>Unlike railroads built on debt waiting for humans, the users arrived in October last year: agents consume the compute and tokens, next transactions and payments.</li><li><span class="dot" style="background:#93711b;"></span>Pomp's steelman against himself: a company with &lt;15 people and 100+ agents is a user base growing without humans — open question is stablecoins and Bitcoin only, or the long tail.</li><li><span class="dot" style="background:#93711b;"></span>Big players converging: <b>Tether</b> investing hundreds of millions in AI (models + privacy + agents + stablecoins stack); Robinhood's Vlad; Stripe's Tempo chart ramping; Figure's Mike seeded his own decentralized DTCC.</li><li><span class="dot" style="background:#93711b;"></span>Jordi's convergence bet is 2 years old, rooted in Singularity University 2013; he bought into blockchain in 2014-15; tokenization matters more than stablecoins, and a 5-year regulatory exemption makes the Clarity Act moot.</li><li><span class="dot" style="background:#93711b;"></span>Macro endgame: bonds flat for 7-8 years, private credit holders face pain getting money back — "the fiat system getting old and dying"; crypto is the only way to own non-public entrepreneurs.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I want an asset that will be growing in value for the next 30 years. The only one I can say in my brain with certainty for the next 30 years... is Bitcoin. That's it. The rest are innovations.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Bitcoin (BTC)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High · 30 years</span></b><span>Jordi's only 30-year asset; Pomp: 'home is Bitcoin'.</span></div><div class="namechip"><b>Tether<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Quietly investing hundreds of millions in AI.</span></div><div class="namechip"><b>Stripe<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Tempo chain adoption ramping.</span></div><div class="namechip"><b>Robinhood (HOOD)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Vlad pushing AI-in-crypto; Robinhood chain mostly meme activity so far.</span></div><div class="namechip"><b>Figure Technologies (FIGR)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Seeded its own settlement market — possible model for Tempo.</span></div><div class="namechip"><b>Amazon (AMZN)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Traded at 'infinity PE' for 17 years, up 26,000%.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Jordi is launching a paid weekly crypto research series (46-name index, 10 verticals) the same week he makes this case. Pomp closes by plugging his own public company (captioned "Sylvia") as the only listed firm merging AI and Bitcoin.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="micron-playbook">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">BTC $80K TEST — RECLAIMED DURING RECORDING</span><span class="ttag">semis</span><span class="ttag">crypto</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">The Micron playbook, applied to Bitcoin and the agentic basket</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jordi made his money in Micron by betting on inference before institutions saw it; he says the agentic trade is at that same early stage and gives Bitcoin levels to judge it.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Micron: his May piece on inference (Sundar Pichai token counts, ~20 earnings reports) — "no excuses" not to buy at <b>$110</b>; institutions only arrived in October, price above $200.</li><li><span class="dot" style="background:#3f6b2e;"></span>Exit test: Bitcoin below <b>$80,000 </b>by end of October means "there's a problem"; above $82,000 clears the heavy volume where holders gave up after the October 10 crash.</li><li><span class="dot" style="background:#3f6b2e;"></span>Crypto decoupled from stocks after October 10 because South Korea's retail money moved to AI, and the agentic trade is harder than the infrastructure trade.</li><li><span class="dot" style="background:#3f6b2e;"></span>His 46-name crypto basket is up big this year, mostly driven by the AI-agent names.</li><li><span class="dot" style="background:#3f6b2e;"></span>Agentic stock winners: Mag 7, <b>Salesforce</b> (Fortune 500 won't leave it, so agents drive a revenue inflection), and a new cyber-stocks index he's building.</li><li><span class="dot" style="background:#3f6b2e;"></span>The singularity is "a math problem" of compounding; agents at ~150 IQ — Pomp concedes they're now smarter than him, so it's a context and memory problem.</li><li><span class="dot" style="background:#3f6b2e;"></span>Not bullish on public-equity growth by 2030: we're on or 6 months ahead of Leopold's Situational Awareness timeline (page 71: agents take over) — every company gets disrupted.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;If Bitcoin is below 80,000, okay, I'll even say by the end of October, there's a problem.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Micron (MU)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Inference call from $110 to above $200 — the template.</span></div><div class="namechip"><b>Salesforce (CRM)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Agents give it real usefulness; revenue inflection expected.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📉</div><div class="tline"><span class="cat">Crypto:</span> <span class="txt">Use Jordi's levels: Bitcoin holding <b>$80K</b> through October and breaking $82K confirms the agentic thesis; below $80K, reassess.</span></div></div><div class="irow"><div class="ic">🕵</div><div class="tline"><span class="cat">Crypto:</span> <span class="txt">Track Zcash and Near as the leading indicators for agent-driven crypto demand, not M2.</span></div></div><div class="irow"><div class="ic">📊</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Split equity exposure by old vs. new economy: oil and rates hit home builders and staples, not Micron or Google.</span></div></div><div class="irow"><div class="ic">🧠</div><div class="tline"><span class="cat">AI:</span> <span class="txt">Watch the memory layer — whoever owns shared context across assistants may matter more than any single app.</span></div></div><div class="irow"><div class="ic">🧾</div><div class="tline"><span class="cat">Macro:</span> <span class="txt">Stop trading every Fed or oil headline as a recession trigger; the last six shocks produced none.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;There's no such thing as recessions anymore.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Bitcoin has been liquidity because there hasn't been innovation that has been used.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I am not bullish on the growth in public equities as an investment by the time we get to 2030.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;If Bitcoin is below 80,000... by the end of October, there's a problem.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't think we're going to get like an 18-month recession. I don't think I'll see that again in my lifetime.&#8221; <cite>— Anthony Pompliano</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;This sounds batshit crazy, but given the times we're living in, it's not a 0% probability... maybe it's a 20% probability.&#8221; <cite>— Anthony Pompliano</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Jordi Visser:</b> Bitcoin below $80K by end of October signals a problem with the agentic thesis. <span class="cmeta">BTC price · &gt;= $80,000 · end of October 2026</span> <span class="tag">Bitcoin (BTC)</span></div><div class="ritem"><b>Jordi Visser:</b> Breaking above $82K clears the post-October-10 volume shelf. <span class="cmeta">BTC price · &gt; $82,000</span> <span class="tag">Bitcoin (BTC)</span></div><div class="ritem"><b>Jordi Visser:</b> Public-equity growth won't be a good investment by 2030 as agents disrupt all companies. <span class="cmeta">public equity growth · not bullish · 2030</span></div><div class="ritem"><b>Jordi Visser:</b> Agents will be proliferating a year from now unless they destroy the internet. <span class="cmeta">agent adoption · proliferating · Sept 2027</span> <i>if unless agents destroy the internet</i></div><div class="ritem"><b>Jordi Visser:</b> Consumer agents are the story for the next year, moving into transactions and payments. <span class="cmeta">consumer agent payments · Sept 2027</span></div><div class="ritem"><b>Jordi Visser:</b> Anthropic and OpenAI will control a third to 50% of compute a year from now (citing Brad Gerstner). <span class="cmeta">share of global compute · 33-50% · Sept 2027</span> <span class="tag">Anthropic</span></div><div class="ritem"><b>Jordi Visser:</b> Bitcoin is the only asset certain to grow in value for the next 30 years. <span class="cmeta">BTC value · growing · 2056</span> <span class="tag">Bitcoin (BTC)</span></div><div class="ritem"><b>Jordi Visser:</b> Agent swarms scale from 10,000 to a million collaborating agents. <span class="cmeta">agents per problem · 1,000,000</span></div><div class="ritem"><b>Jordi Visser:</b> Bitcoin reaching $20T needs useful innovation, not boomer inheritance. <span class="cmeta">BTC market cap · $20T</span> <i>if only if agent/innovation usage arrives</i> <span class="tag">Bitcoin (BTC)</span></div><div class="ritem"><b>Jordi Visser:</b> Jordi releases a ghost-rails paper and first weekly crypto video this week. <span class="cmeta">research launch · paper + video · week of 2026-09-19</span></div><div class="ritem"><b>Anthony Pompliano:</b> ~20% odds the self-replicating-code / synthetic-internet story is true. <span class="cmeta">probability · 20%</span></div><div class="ritem"><b>Anthony Pompliano:</b> No 18-month recession in his lifetime. <span class="cmeta">US recession length · &lt; 18 months · lifetime</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Instinct AI</b> <span class="rel">competes with</span> <b>Meta (META)</b> &mdash; Muse assistant possibly launched in response to Instinct</div><div class="ritem"><b>OpenAI</b> <span class="rel">competes with</span> <b>Anthropic</b> &mdash; framed as the AI 'duopoly'</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: Leopold Aschenbrenner's <i>Situational Awareness</i> (165 pages; page 71 / figure 70), Brad Gerstner's All-In Summit deck, Andrew Yang on CNBC, Druckenmiller, Peter Thiel, Michael Saylor ("Bitcoin finds you"), Marc Andreessen's 2014 Bitcoin essay (cited in Jordi's ghost-rails paper), Signull on X, the Matt Shumer and Citrini articles. <span class="tag">Sources</span></div></div></div><div class="irow"><div class="ic">💳</div><div><div class="title">Instinct AI will get a programmable wallet capped at ~<b>$100</b> — refill it like a Dunkin' card and let the agent handle DoorDash, Uber or Amazon orders. <span class="tag">AI</span></div></div></div><div class="irow"><div class="ic">📰</div><div><div class="title">Jordi's crypto research: weekly Sunday video in the same slide format, 10 verticals, starting with "why now"; at ai22vresearch.com (visser-labs.com redirects). <span class="tag">Research</span></div></div></div><div class="irow"><div class="ic">🎂</div><div><div class="title">Pomp's breakfast alpha: to win the who-pays fight, tell the server it's the other person's birthday. <span class="tag">Life</span></div></div></div><div class="irow"><div class="ic">🎓</div><div><div class="title">A 13-year-old at NYU scored ~1590 on the SAT at 10 with a ~160 IQ — one of the few humans still above a 150-IQ model. <span class="tag">Culture</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Ghost rails</b> &mdash; Jordi's term for crypto infrastructure built ahead of demand, like China's ghost cities, waiting for agent users.</div><div><b>Alligator jaws</b> &mdash; The chart gap between rising M2 money supply and a lagging Bitcoin price, which bulls expect to snap shut.</div><div><b>Navier-Stokes</b> &mdash; Long-standing fluid-dynamics math problem; reported solved by OpenAI using 10,000 collaborating agents.</div><div><b>Recursive self-improvement</b> &mdash; Jordi's loose use: models releasing faster than humans can absorb them.</div><div><b>SPY perp</b> &mdash; A perpetual-futures contract tracking the S&amp;P 500 ETF, tradable 24/7 on crypto venues like Coinbase.</div><div><b>Tokenization</b> &mdash; Turning real assets (e.g., a house) into programmable tokens usable as short-term collateral.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
