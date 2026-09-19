@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research: Tesla's Robotaxi Is Finally Real—Now What Happens to $TSLA?</title>
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Tesla's Robotaxi Is Finally Real—Now What Happens to $TSLA?</h1>
+    <div class="byline">
+      Channel: <b>Dumb Money Live</b> &middot; Speaker: <b>Dave, Chris, Jordan</b> &middot; <b>2026-09-04</b>
+      <div class="stats-line">6 threads · Cyber Cab launches but is fully priced in, Optimus is the real bet and it's behind, shorting Uber as the cleaner robotaxi trade, Take-Two survives a chaotic GTA6 week, Amazon becomes the top conviction buy, and Robinhood's tokenization push &middot; <a href="https://www.youtube.com/watch?v=AMjOTHmsg9o" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Tesla's Cyber Cab robotaxi opened to the public in Austin on Sept 4, 2026, but the hosts argue all of the near-term robotaxi economics are already priced into TSLA — <b>zero upside</b> from this specific catalyst.</li><li>Optimus, not Cyber Cab, is the trade that actually matters — Elon has pegged it at <b>80%</b> of Tesla's future value, and Chris says the program is behind schedule with no Optimus 3 reveal and thin leadership.</li><li>Hosts favor shorting Uber over betting on Tesla directly to play robotaxi's disruption of ride-hailing economics, though timing is unclear.</li><li>Chris's Take-Two trade survived a volatile week around the GTA 6 gameplay trailer — strong fan reception supports his bullish unit-sales and microtransaction thesis into the <b>November 2026</b> release.</li><li>Chris rotated capital out of Take-Two and into Amazon on a lawsuit/rate-hike driven dip, calling his Amazon conviction the highest it's ever been.</li><li>Robinhood's foreign-market stock tokenization push (and Vlad Tenev's dismissive reply to AMC's CEO) reinforces Dave's thesis that Robinhood <b>"slaughters"</b> in a bull crypto market.</li><li>Hosts publicly fade Michael Burry's long-Lululemon/short-Nebius pair trade, saying no data supported a Lululemon earnings beat.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="cybercab-launch">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested — priced in</span>
+    <span class="theme-status">LAUNCHED PUBLICLY SEPT 4, 2026 (Austin geofence)</span><span class="ttag">robotics</span><span class="ttag">consumer</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Cyber Cab goes live in Austin — but the hosts say the upside is already priced in</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Public robotaxi rides finally started in Austin, but every dollar of theoretical robo-taxi profit is already baked into Tesla's stock price.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Only <b>45</b> gold Cyber Cabs are on the road in the Austin geofence versus ~500 regular robotaxi Model Ys — about a 1-in-10 chance of getting the gold car, and it's a strict two-seat max.</li><li><span class="dot" style="background:#93711b;"></span>A widely cited "1,000 cyber cabs on the road" claim is debunked as misleading — that's the transportation-safety audit's fleet population figure, not the number of registered Cyber Cabs (45 in Texas).</li><li><span class="dot" style="background:#93711b;"></span>The factory's true maximum capacity is <b>125,000</b> Cyber Cabs/year, but that's a ceiling, not current output — hosts warn against multiplying max capacity by best-case economics.</li><li><span class="dot" style="background:#93711b;"></span>No confirmed retail price or delivery schedule: the sub-<b>$30,000 </b>target is likely off by up to 50%, and the original ~$25,000 goal (first floated years ago) would inflation-adjust to roughly $37,000.</li><li><span class="dot" style="background:#93711b;"></span>The <b>$0.20/mile</b> target ride cost is an unsupported "made-up number" — Tesla's own aspirational goal, not a current figure.</li><li><span class="dot" style="background:#93711b;"></span>Tesla isn't selling Cyber Cabs yet, only taking fleet-interest signups; its model is to sell vehicles to third-party fleet operators and take a cut of ride revenue, avoiding fleet-operation headaches like cleaning.</li><li><span class="dot" style="background:#93711b;"></span>Hosts calculate that 2 million deployed cybercabs could generate <b>$105B</b> in annual bookings at a 30% operating margin — <b>$31B</b> of annual profit that, at a mature-business multiple, is "a fraction of Tesla's valuation already today."</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;So all of the future potential theoretical economic benefit from robo cab is fully baked into Tesla stock right now. So there's essentially zero upside. Zero.&#8221;<cite>— Dave</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Tesla (TSLA)<span class="stance" style="background:#93711b;">UNCERTAIN · Medium</span></b><span>Robotaxi economics are viewed as fully priced in; near-term catalyst carries no incremental upside on its own.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Tesla deliberately kept the launch low-key — no livestream, no Elon, no new city timelines or final pricing — which the hosts say explains the stock's hype-then-deflate move over the following two days.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="optimus-reality-check">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">Red flag — execution behind schedule</span>
+    <span class="theme-status">NO OPTIMUS 3 REVEAL AS OF SEPT 2026</span><span class="ttag">robotics</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">Optimus, not Cyber Cab, is Tesla's real thesis — and it's not winning right now</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Robotaxi's real function is as a proof point for Optimus, and Chris's sourcing says the humanoid-robot program is falling behind.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span>Elon has said Optimus will be <b>~80%</b> of Tesla's future value, and that robo taxi is 100-1,000x smaller in scale — robotaxi success mainly matters as evidence Tesla can execute on the harder Optimus problem.</li><li><span class="dot" style="background:#a23f22;"></span>If Optimus succeeds at scale, hosts frame a theoretical <b>$10-20 trillion</b> Tesla valuation as the real payoff — not robotaxi's near-term unit economics.</li><li><span class="dot" style="background:#a23f22;"></span>Chris says he predicted back in October 2025 that Optimus 3 would not launch in March/April 2026 — confirmed correct, with no reveal or announced date as of September 2026.</li><li><span class="dot" style="background:#a23f22;"></span>Per Chris's industry sourcing, the Optimus program has lost key talent and lacks "bleeding-edge" leadership in generalized humanoid robotics.</li><li><span class="dot" style="background:#a23f22;"></span>Chris dismisses Jason Calacanis's (All-In Pod) claim of having seen an impressive, undisclosed Optimus 3 demo video as hype from someone without deep robotics-industry sourcing.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;If you're investing aggressively in Tesla right now because of Optimus, just do your homework... it's not winning right now, guys.&#8221;<cite>— Chris</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Tesla (TSLA)<span class="stance" style="background:#93711b;">WATCHING · Medium · will add once Optimus shows real progress</span></b><span>Waiting for concrete Optimus progress before adding; sees robotaxi launch as a positive engineering signal but not the real catalyst.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Chris explicitly flags his own rooting interest — he wants Optimus to succeed "not even for the money, for humanity" — while still reporting the program is behind.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="robotaxi-fallout-uber-waymo">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">High conviction short thesis</span>
+    <span class="theme-status">OPEN SHORT THESIS — TIMING UNCLEAR</span><span class="ttag">consumer</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">Robotaxi economics threaten to shatter Uber's model — hosts favor shorting Uber over Tesla itself</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Tesla's cost advantage doesn't need to make robotaxi a great business for Tesla — it just needs to wreck the economics of pricier competitors.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span>Dave's read: even a mediocre robotaxi business for Tesla can still "destroy the economic model" of higher-cost rivals like Waymo and, ultimately, Uber and Lyft.</li><li><span class="dot" style="background:#a23f22;"></span>Waymo has more cars on the road today but runs expensive, lidar-heavy vehicles and faces the same regulatory hurdles as Tesla without Tesla's mass-manufacturing cost edge.</li><li><span class="dot" style="background:#a23f22;"></span>Dave's trade: short Uber rather than short Tesla directly — Uber's economics "get shattered no matter how you look at this," even if Uber builds its own driverless fleet.</li><li><span class="dot" style="background:#a23f22;"></span>Chris pushes back that a straight Uber short is risky and timing is unclear, since Uber is a broader logistics company (Uber Eats) than just ride-hailing.</li><li><span class="dot" style="background:#a23f22;"></span>Personal Uber complaints — dirty, malodorous cars and a feedback loop that doesn't fix driver behavior — are used as evidence Uber's management "is incapable of existing in a world of driverless cars."</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;I do not see how Uber survives with the existing economics that they've been enjoying because the economics are going to get shattered no matter how you look at this.&#8221;<cite>— Dave</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Uber (UBER)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · High · long term, timing unclear</span></b><span>Dave's short thesis: robotaxi economics erase Uber's margin advantage even if it keeps its riders.</span></div><div class="namechip"><b>Lyft (LYFT)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Named alongside Uber in a personal ride-quality comparison; no stated investment position.</span></div><div class="namechip"><b>Waymo<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium</span></b><span>Seen as structurally disadvantaged vs. Tesla on cost despite being ahead on current deployment.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Chris cautions the timeline is "a whole different story" and suggests a relative Tesla-vs-Uber trade may be safer than an outright short.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="gta6-take-two-trade">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction, position trimmed on volatility</span>
+    <span class="theme-status">GTA 6 RELEASE TARGETED NOV 2026</span><span class="ttag">consumer</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">GTA 6's trailer lands well with gamers — Chris's Take-Two trade survives a chaotic week</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">A strong fan reaction to the GTA 6 gameplay trailer keeps Chris's Take-Two thesis intact despite a volatile, rumor-driven trading week.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Chris read "well over 10,000" fan comments over the 72 hours after the 27-minute gameplay trailer dropped and found roughly <b>90%</b> positive.</li><li><span class="dot" style="background:#3f6b2e;"></span>His updated thesis: high engagement should push first-quarter unit sales toward the high end of the <b>30-50 million</b> estimate range and support <b>$2-3B/year</b> in microtransaction revenue once the online mode launches.</li><li><span class="dot" style="background:#3f6b2e;"></span>Bank of America reiterated a <b>$367</b> price target on Take-Two (~70% upside) despite one skeptical line from the report going viral out of context.</li><li><span class="dot" style="background:#3f6b2e;"></span>A trader shorted <b>$700K</b> of Take-Two puts Monday morning, and an unsubstantiated online-mode delay rumor spooked the stock — wiping out the gains from Chris's one-day options trade (which had made "a few hundred thousand") and leaving him net down a few hundred thousand after his equity position dropped.</li><li><span class="dot" style="background:#3f6b2e;"></span>Chris doubled his Take-Two position on the Monday sell-off, then trimmed it to fund adding Amazon on the same down day — Take-Two fell from his #2 to #5 position by size.</li><li><span class="dot" style="background:#3f6b2e;"></span>Sensor Tower's low GTA6 pre-sale numbers (under 5M vs. 7M for GTA5 in 2013) went viral, but Chris discounts them: it's a digital game with no reason to pre-purchase, over two months remain before release, and Sensor Tower has never modeled console pre-sales before (only Steam).</li><li><span class="dot" style="background:#3f6b2e;"></span>Chris argues a rumored two-year delay to GTA6's online mode is implausible: the last GTA (2013) launched its online mode within 2-3 weeks of the story mode, and so much of GTA's revenue model depends on microtransactions going live quickly.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;We had stupidity on top of stupidity on top of stupidity on top of stupidity... as an investor, don't fight it.&#8221;<cite>— Chris</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Take-Two Interactive (TTWO)<span class="stance" style="background:#3f6b2e;">BUYING-ADDING · High · into Nov 2026 release</span></b><span>Chris holds a sizable long position into the November 2026 GTA 6 release, trimmed slightly this week to fund an Amazon add.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Chris flags real remaining risk himself: only 27 minutes of gameplay has been shown, narrative or complexity could disappoint, and most investors don't actually know the unit-sales/ARPU benchmarks the stock needs to beat.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="amazon-conviction-buy">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">ACTIVELY ADDING ON WEAKNESS</span><span class="ttag">consumer</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Amazon dip becomes Chris's top conviction buy of the week</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">A lawsuit- and rate-hike-driven Amazon selloff gets rotated into with fresh Take-Two profits.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Amazon sold off on a new North Carolina lawsuit over delivery-driver employment classification (expected to run for years) plus a rate hike the next day, even as the company is growing profits by roughly <b>40%</b>.</li><li><span class="dot" style="background:#3f6b2e;"></span>Chris rotated capital out of Take-Two and into Amazon on the down day, pushing Amazon back into his largest portfolio position.</li><li><span class="dot" style="background:#3f6b2e;"></span>He says his conviction "has never been higher" on a company of Amazon's size and frames further drops as buying opportunities rather than losses.</li><li><span class="dot" style="background:#3f6b2e;"></span>NYC mayoral candidate Mamdani's push to force Amazon to directly employ its Manhattan delivery drivers is flagged as a risk that could end free delivery in the city and squeeze small delivery-fleet operators.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;I know at some point in the future, I'm gonna look back at September of 2026 and wish I went deeper into Amazon.&#8221;<cite>— Chris</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Amazon (AMZN)<span class="stance" style="background:#3f6b2e;">BUYING-ADDING · High · long term</span></b><span>Chris's highest-conviction current buy; adding on any weakness tied to one-off legal/macro noise.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="robinhood-tokenization">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction, crypto-linked</span>
+    <span class="theme-status">TOKENIZATION EXPANSION ONGOING</span><span class="ttag">crypto</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Robinhood's tokenization push draws fire from AMC's CEO — Vlad shrugs it off</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Vlad Tenev's combative reply to AMC's CEO reinforces the thesis that Robinhood is at its best when crypto is running.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>AMC's CEO publicly told Vlad Tenev that tokenizing AMC stock would be illegal; Vlad's dismissive reply ("what's the problem here?") is read by hosts as confidence, not recklessness.</li><li><span class="dot" style="background:#3f6b2e;"></span>Robinhood is tokenizing company stock for sale in foreign markets (not the US), giving international investors access to US equities, with each token backed 1:1 by an actual share held in custody.</li><li><span class="dot" style="background:#3f6b2e;"></span>Vlad has said (on a separate podcast appearance) that demand for Korean stocks is part of what's driving the foreign-stock tokenization push.</li><li><span class="dot" style="background:#3f6b2e;"></span>Dave's reasoning for holding Robinhood: the company "wins without crypto, but with crypto, Robinhood slaughters" — he plans to add more as crypto sentiment turns more bullish.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;I'm invested in Robin Hood for that exact tweet.&#8221;<cite>— Dave</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Robinhood (HOOD)<span class="stance" style="background:#3f6b2e;">OWNS · High · adding on crypto strength</span></b><span>Held partly for its crypto-market leverage and aggressive tokenization strategy; adding more as crypto turns bullish.</span></div><div class="namechip"><b>AMC Entertainment (AMC)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>CEO publicly disputed Robinhood's ability to legally tokenize AMC stock.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">AMC's CEO's "illegal" claim about tokenizing AMC stock is an unresolved regulatory question that hosts dismiss but that hasn't actually been settled by regulators.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🎯</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Treat Cyber Cab's public launch as confirmation, not a new catalyst — near-term robotaxi economics are already priced into TSLA.</span></div></div><div class="irow"><div class="ic">🤖</div><div class="tline"><span class="cat">Robotics:</span> <span class="txt">Wait for concrete Optimus 3 progress before adding to Tesla on the humanoid-robot thesis.</span></div></div><div class="irow"><div class="ic">🚗</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Weigh a structured Uber short, or a relative Tesla-vs-Uber trade, over a straight Tesla bet to play robotaxi disruption.</span></div></div><div class="irow"><div class="ic">🎮</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Track Take-Two into the November 2026 GTA 6 release — the real test is online-mode ARPU, not pre-sale hype.</span></div></div><div class="irow"><div class="ic">📦</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Size up Amazon on dips tied to one-off legal or macro noise rather than fundamentals.</span></div></div><div class="irow"><div class="ic">🔍</div><div class="tline"><span class="cat">Research:</span> <span class="txt">Verify a hot trade call, like Burry's, against actual earnings data before following it.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;So all of the future potential theoretical economic benefit from robo Cab is fully baked into Tesla stock right now. So there's essentially zero upside. Zero.&#8221; <cite>— Dave</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I do not see how Uber survives with the existing economics that they've been enjoying... the riskreward here is in your favor long term of shorting Uber.&#8221; <cite>— Dave</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The Optimus program is nowhere near where it needs to be... it's not winning right now, guys.&#8221; <cite>— Chris</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;He's a normie walking into a space he knows nothing about.&#8221; <cite>— Chris</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't want to hear one thing ever again about how smart Burry is because I am telling you there is absolutely no data that pointed to them having a great quarter.&#8221; <cite>— Dave</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The inverse Burry index will beat the S&amp;P this year 100%.&#8221; <cite>— Jordan</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Elon Musk:</b> Optimus will become the large majority of Tesla's value <span class="cmeta">share of Tesla's future value · 80%</span> <span class="tag">Tesla (TSLA)</span></div><div class="ritem"><b>Dave:</b> At 2 million cybercabs deployed, robotaxi could generate roughly $31B in annual operating profit <span class="cmeta">annual operating profit · $31 billion</span> <i>if 2 million cybercabs deployed, 30% operating margin, $105B annual bookings</i> <span class="tag">Tesla (TSLA)</span></div><div class="ritem"><b>Chris:</b> Tesla could be worth $10-20 trillion if Optimus succeeds and scales <span class="cmeta">market capitalization · $10-20 trillion</span> <i>if if Optimus executes and scales successfully</i> <span class="tag">Tesla (TSLA)</span></div><div class="ritem"><b>Chris:</b> Optimus 3 would not launch in March or April 2026 (predicted Oct 2025) <span class="cmeta">Optimus 3 launch · no launch · March-April 2026</span> <span class="tag">Tesla (TSLA)</span></div><div class="ritem"><b>Tesla:</b> Cyber Cab factory can produce up to 125,000 vehicles per year at max capacity <span class="cmeta">max annual production capacity · 125,000 units</span> <span class="tag">Tesla (TSLA)</span></div><div class="ritem"><b>Tesla:</b> Aspirational ride cost target of 20 cents per mile <span class="cmeta">cost per mile · $0.20</span> <i>if unconfirmed, aspirational only</i> <span class="tag">Tesla (TSLA)</span></div><div class="ritem"><b>Bank of America:</b> Take-Two price target reiterated at $367, implying roughly 70% upside <span class="cmeta">price target · $367 (~70% upside)</span> <span class="tag">Take-Two (TTWO)</span></div><div class="ritem"><b>Chris:</b> GTA 6 first-quarter unit sales likely to land at the high end of estimates <span class="cmeta">first-quarter unit sales · 30-50 million (high end)</span> <span class="tag">Take-Two (TTWO)</span></div><div class="ritem"><b>Chris:</b> GTA 6 online mode could generate $2-3B a year once it launches <span class="cmeta">annual microtransaction revenue · $2-3 billion/year</span> <i>if once online mode launches</i> <span class="tag">Take-Two (TTWO)</span></div><div class="ritem"><b>Rockstar Games:</b> GTA 6 targeted release date <span class="cmeta">release date · November 2026</span> <span class="tag">Take-Two (TTWO)</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Tesla (TSLA)</b> <span class="rel">competes with</span> <b>Waymo</b> &mdash; Robotaxi cost and manufacturing-scale advantage threatens Waymo's position</div><div class="ritem"><b>Tesla (TSLA)</b> <span class="rel">competes with</span> <b>Uber (UBER)</b> &mdash; Robotaxi economics threaten to shatter Uber's ride-hailing margins</div><div class="ritem"><b>AMC Entertainment (AMC)</b> <span class="rel">criticizes</span> <b>Robinhood (HOOD)</b> &mdash; AMC's CEO said Robinhood cannot legally tokenize AMC stock</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🐻</div><div><div class="title">Hosts publicly fade Michael Burry's long-Lululemon/short-Nebius pair trade, saying no data supported a Lululemon earnings beat and joking about an "inverse Burry index" <span class="tag">Markets</span></div></div></div><div class="irow"><div class="ic">🗽</div><div><div class="title">NYC mayoral candidate Mamdani's push to force Amazon to directly employ its Manhattan delivery drivers could end free delivery in the city and squeeze small fleet operators, hosts warn <span class="tag">Policy</span></div></div></div><div class="irow"><div class="ic">📱</div><div><div class="title">iOS 27 will let two phones share one number and hand off calls — seen as the fix that could make a rumored foldable iPhone practical alongside a regular Pro <span class="tag">Tech</span></div></div></div><div class="irow"><div class="ic">🚗</div><div><div class="title">Hosts say the redesigned Tesla Model Y interior is a dramatic upgrade — warm materials and comfort replacing the brand's previous cold, futuristic feel <span class="tag">Product</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Cyber Cab</b> &mdash; Tesla's purpose-built two-seat robotaxi vehicle with no steering wheel or pedals, the hardware behind its robo taxi service.</div><div><b>Robo Taxi</b> &mdash; The autonomous ride-hailing service Tesla operates using Cyber Cab and modified Model Y vehicles.</div><div><b>Geofenced</b> &mdash; A service restricted to a defined geographic area — Cyber Cab's Austin launch is limited to a mapped zone.</div><div><b>ARPU</b> &mdash; Average revenue per user/player — the key metric for whether GTA 6's online mode can sustain billions in microtransaction revenue.</div><div><b>Stock tokenization</b> &mdash; Issuing a blockchain token backed 1:1 by an actual share held in custody, giving investors (often outside a market's home country) economic exposure to that stock.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
