@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research: Billionaire Reveals The 41 Principles That Built a $125B Empire</title>
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Billionaire Reveals The 41 Principles That Built a $125B Empire</h1>
+    <div class="byline">
+      Channel: <b>Anthony Pompliano</b> &middot; Speaker: <b>Anthony Pompliano (host), Chase Koch</b> &middot; <b>2026-09-09</b>
+      <div class="stats-line">5 threads · capability-led M&amp;A (Georgia-Pacific, Infor, Molex) · failure as tuition (Purina, Brazil) · values-first talent and comparative advantage · Koch as capital provider for family-business succession · Stand Together and the micro-school push &middot; <a href="https://www.youtube.com/watch?v=AQpqTXvyekE" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Koch Industries: ~<b>$125B</b>+ revenue, 145,000 employees, ~60 countries, grown over 10,000x since Charles took over in 1961 with 300 employees.</li><li>Chase credits <b>principle-based management</b> — bottom-up empowerment from 41 principles — for that growth; he co-wrote <i>Becoming a Principle-Driven Leader</i> with his father.</li><li>Koch grows by horizontal capabilities, not vertical market share, and now calls itself "more of a technology company" after ~<b>$50B</b> in tech investment over ~8 years.</li><li>Its worst failures (Purina's "gas to bread spread") came from breaking its own principles — skipping the scientific method in diligence.</li><li>Talent rule: values first, skills second, credentials last; 5 of 12 business units are now run by people hired at 21-24.</li><li>Chase's biggest opportunity: the &gt;<b>$100T</b> generational wealth transfer — Koch wants to be the first call for family businesses facing succession or a PE exit.</li><li>Through Stand Together, Koch-backed funding has built 5,000+ micro-schools; Chase's 13-year-old built him an app with Claude Code in 35 minutes.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="capabilities-ma">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">~$50B TECH INVESTMENT OVER ~8 YEARS</span><span class="ttag">finance</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Grow by capabilities, not industries: Georgia-Pacific, Infor, Molex</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Koch expanded from Oklahoma crude gathering by carrying three core capabilities — heavy engineering/operations, trading and logistics — horizontally into depressed industries, then buying capabilities it lacked.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Instead of chasing 20% → 40% share in pipelines or refining, Koch asks where its capabilities add value elsewhere: farmland bought out of bankruptcy (~2003), <b>Georgia-Pacific</b> wood products (2005, still its largest deal).</li><li><span class="dot" style="background:#3f6b2e;"></span>Infor (ERP software) brought 30,000+ software engineers overnight — bought as a capability to fix under-invested systems "held together with bubble gum and baling wire."</li><li><span class="dot" style="background:#3f6b2e;"></span>Molex (2013): connectors and cables in iPhones, Philips Medisize healthcare devices, autos and data centers; the Krehbiel family sold for legacy, not price; Koch bought it to fill an IoT gap.</li><li><span class="dot" style="background:#3f6b2e;"></span>Molex paradigm shift: public to private, top-line to bottom-line value creation, top-down to bottom-up — Chase calls it a case study in transforming return on capital.</li><li><span class="dot" style="background:#3f6b2e;"></span>Deals are "much more reactive and opportunistic" than five-year plans; Pomp compares the model to Berkshire's capital-allocation edge.</li><li><span class="dot" style="background:#3f6b2e;"></span>Koch Disruptive Technologies (2016-17) began in ag after Monsanto paid <b>$1.1B</b> for David Friedberg's Climate Corp at ~$10-20M revenue, plus Amol Deshpande's Farmers Business Network; pitch to founders: one call reaches ~80% of industries.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;We're more of a technology company than an industrial company. I think that's a better framing for what reality is today.&#8221;<cite>— Chase Koch</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Koch Industries<span class="stance" style="background:#3f6b2e;">OWNS · High · multi-generational</span></b><span>Private conglomerate, ~$125B+ revenue; 12 platforms (8 operating, 4 investment).</span></div><div class="namechip"><b>Infor<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>Koch-owned ERP software platform; 30,000+ engineers.</span></div><div class="namechip"><b>Molex<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>Koch-owned connectors/cables, pushed into data centers after going private.</span></div><div class="namechip"><b>Georgia-Pacific<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>Koch's largest acquisition (2005).</span></div><div class="namechip"><b>Climate Corp<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Friedberg's ag data-science firm, sold to Monsanto for $1.1B.</span></div><div class="namechip"><b>Farmers Business Network<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Direct-to-farmer 'Amazon of agriculture'; early KDT interest.</span></div><div class="namechip"><b>Berkshire Hathaway (BRK.B)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Pomp's comparison for capital-allocation-as-edge.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Koch is private and reports no financials — revenue, growth and deal figures are Chase's own.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="failure-tuition">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">Confirmed event</span>
+    <span class="theme-status">LESSONS FROM NEAR-BANKRUPTCIES</span><span class="ttag">finance</span><span class="ttag">consumer</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">Purina and Brazil: what happens when Koch breaks its own principles</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Chase says Koch's near-disasters trace to specific violated principles, and it learns "a hell of a lot more from failure than success."</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span><b>Purina</b> was "bankrupt the day we bought it": the "gas to bread spread" vision (natural gas → nitrogen → grain → pizza crust) overreached Koch's capabilities.</li><li><span class="dot" style="background:#a23f22;"></span>Deal fever skipped the scientific method in diligence — Koch inherited out-of-the-money hog contracts hundreds of millions underwater.</li><li><span class="dot" style="background:#a23f22;"></span>Rule since: make a "responsible sized bet" roughly equal to your knowledge; it isn't failure if the learning is worth more than the loss (experimental discovery).</li><li><span class="dot" style="background:#a23f22;"></span>Quarterly reviews require each business to show its experiments — killing one isn't punished if the lesson is applied; being private allows tolerating red ink for 3 months.</li><li><span class="dot" style="background:#a23f22;"></span>Brazil: a fertilizer terminal at Paranaguá planned for 9 months took 4 years — bureaucracy, red tape and protectionism made his father's lessons real.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;Purina was bankrupt the day we bought it because we didn't apply the scientific method... to the diligence process.&#8221;<cite>— Chase Koch</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Purina<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · High</span></b><span>Koch's failed ag/food value-chain acquisition.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="talent">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">5 OF 12 UNITS RUN BY HIRES FROM AGE 21-24</span><span class="ttag">career</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Values first, credentials last — and put everyone where their comparative advantage is</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Koch hires for contribution motivation over pedigree, removes the corporate ladder, and Chase says his own failure as an operator taught him comparative advantage.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Hire on values first, skills second, credentials last — "farm team kids" with grit from overlooked Midwest schools, not Ivy League 4.0s; one reason Koch stays in Wichita, Kansas.</li><li><span class="dot" style="background:#3f6b2e;"></span>Biggest failures: leaving a smart but "destructively motivated" leader at the top too long — culture is downstream of the leader, and cleanup takes years.</li><li><span class="dot" style="background:#3f6b2e;"></span>No ladder: the 21-year-old lead analyst on Georgia-Pacific is now CEO of Guardian Glass; 5 of 12 unit heads were hired at 21-24.</li><li><span class="dot" style="background:#3f6b2e;"></span>A bad hire costs ~2 years; Koch runs 7-8 interviewers each probing different principles, then a 360 vote — and now uses HappyRobot AI to filter the top 10 of 100.</li><li><span class="dot" style="background:#3f6b2e;"></span>Chase ran fertilizer (Koch's third-largest profit driver, 30 countries, 4-5,000 people) and realized he's "a builder, not an operator" — that failure produced Koch Disruptive Technologies.</li><li><span class="dot" style="background:#3f6b2e;"></span>Aspiration: "people know what to do without being told" — a vision, not reality; Charles scores Koch only 4/10 on principle application because the horizon keeps moving.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;I want the big title. I feel like I have to have hundreds of people reporting to me... We think all of that is BS.&#8221;<cite>— Chase Koch</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Guardian Glass<span class="stance" style="background:#3f6b2e;">OWNS · Medium</span></b><span>Koch-owned glass maker, run by a Georgia-Pacific-deal alum.</span></div><div class="namechip"><b>HappyRobot<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>AI vendor Koch uses to screen candidates at scale.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Pomp adds Facebook's PM loop (three hidden-role interviewers, at least two strong hires) as a parallel.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="capital-provider">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">TARGETING &gt;$100T WEALTH TRANSFER</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Koch wants to be the first call when family businesses hit succession</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">With half its capital in investment businesses and a board that meets in 24 hours, Koch pitches itself as the long-term home PE can't be for family-owned companies.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Structure: eight operating businesses plus four investment businesses spanning early-stage VC to funds and credit — about half of Koch sits in investments.</li><li><span class="dot" style="background:#3f6b2e;"></span>Liquidity is strategic: dry powder so it can act fast on "the next Georgia-Pacific, the next Molex."</li><li><span class="dot" style="background:#3f6b2e;"></span>Chase's focus: generational wealth transfer north of <b>$100 trillion</b> over 20 years — mature, cash-generative family businesses facing succession, PE exits or growth-capital needs.</li><li><span class="dot" style="background:#3f6b2e;"></span>MITER Brands (MI Windows and Doors, DeSoto family): a ~<b>$300M</b> investment grew to ~$1.5B as EBITDA went from ~$80M to ~$600M in 5-6 years.</li><li><span class="dot" style="background:#3f6b2e;"></span>Pitch: "we've been through all the family problems" — minority stakes or full buyouts, private equity "is not thinking long-term."</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Our goal is to be the first call with these family businesses when they run into problems such as succession.&#8221;<cite>— Chase Koch</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>MITER Brands<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>MI Windows and Doors; Koch stake grew ~$300M → ~$1.5B.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The whole interview doubles as a book launch and a deal-sourcing pitch — Chase says he's here to "get the story out."</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="stand-together">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">5,000+ MICRO-SCHOOLS BUILT</span><span class="ttag">policy</span><span class="ttag">career</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Stand Together's bet: close the motivation gap with micro-schools and AI</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Chase spends a third of his time (Charles half) on Stand Together, which applies bottom-up principles to social problems, with education as the lead case.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Stand Together (since 2003) gathers 1,000+ business leaders on poverty, addiction, violence, criminal justice and education, now using sports, music and YouTube to scale.</li><li><span class="dot" style="background:#3f6b2e;"></span>Only ~<b>20%</b> of families were open to new school models pre-COVID; ~80% are now.</li><li><span class="dot" style="background:#3f6b2e;"></span>The VELA Fund (with the Walton family) — venture capital for education entrepreneurs — has helped build 5,000+ micro-schools in 5-6 years.</li><li><span class="dot" style="background:#3f6b2e;"></span>Models he backs: Khan Academy (Sal Khan) and Alpha School (AI crams the curriculum into 2 hours of an 8-hour day); Joe Liemandt says <b>90%</b> of failing students just lack motivation.</li><li><span class="dot" style="background:#3f6b2e;"></span>His son Charlie, 13, learned Claude Code from a friend and built Chase a workout app from a spreadsheet in ~35 minutes.</li><li><span class="dot" style="background:#3f6b2e;"></span>Societal diagnosis: Gen Z has a "crisis of purpose"; <b>52%</b> of Americans think we can't solve our own problems; the country needs to shift from zero-sum to mutual benefit.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;All these other problems, addiction, mental health issues, our broken criminal justice system are downstream of a bad education.&#8221;<cite>— Chase Koch</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Stand Together<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Koch philanthropy and social-change network.</span></div><div class="namechip"><b>Alpha School<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>AI-first school model, 2 hours of core curriculum a day.</span></div><div class="namechip"><b>Anthropic<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Claude Code let a 13-year-old ship a phone app in 35 minutes.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Chase's own kids attend a Wichita micro-school; Stand Together is the Koch family's philanthropy network. Pomp adds Clayton Christensen's warning not to outsource raising kids, and his own chore-chart experiment.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🧩</div><div class="tline"><span class="cat">Strategy:</span> <span class="txt">Map your company's capabilities, not its industry, before choosing where to expand.</span></div></div><div class="irow"><div class="ic">🔬</div><div class="tline"><span class="cat">M&amp;A:</span> <span class="txt">Assign a team to argue every reason not to do a deal; size bets to what you actually know.</span></div></div><div class="irow"><div class="ic">👥</div><div class="tline"><span class="cat">Hiring:</span> <span class="txt">Split interviews by principle across several people, then vote with specific examples.</span></div></div><div class="irow"><div class="ic">💰</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Watch family-business succession as a deal flow for long-term capital as the &gt;<b>$100T</b> wealth transfer starts.</span></div></div><div class="irow"><div class="ic">🎓</div><div class="tline"><span class="cat">Education:</span> <span class="txt">Give kids AI tools on projects they care about — motivation, not content, is the bottleneck.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;Purina was bankrupt the day we bought it.&#8221; <cite>— Chase Koch</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Where'd you go to school, your GPA and all that — we feel like all that's nonsense.&#8221; <cite>— Chase Koch</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I'm a builder, not an operator. I'm not a good operator.&#8221; <cite>— Chase Koch</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Private equity is not thinking long-term.&#8221; <cite>— Chase Koch</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I'd score Koch on principle application at about four out of 10.&#8221; <cite>— Charles Koch, via Chase</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Chase Koch:</b> Generational wealth transfer over the next 20 years will exceed $100 trillion, creating family-business deal flow. <span class="cmeta">wealth transfer · &gt; $100T · ~2046</span> <span class="tag">Koch Industries</span></div><div class="ritem"><b>Chase Koch:</b> Koch aims to be the first call for family businesses facing succession or PE exits. <span class="cmeta">family-business deal share · first call</span> <span class="tag">Koch Industries</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Koch Industries</b> <span class="rel">acquires</span> <b>Molex</b> &mdash; 2013; bought to fill IoT gap</div><div class="ritem"><b>Koch Industries</b> <span class="rel">acquires</span> <b>Infor</b> &mdash; ERP software capability</div><div class="ritem"><b>Koch Industries</b> <span class="rel">acquires</span> <b>Georgia-Pacific</b> &mdash; 2005, largest deal</div><div class="ritem"><b>Koch Industries</b> <span class="rel">acquires</span> <b>Purina</b> &mdash; failed 'gas to bread spread' bet</div><div class="ritem"><b>Koch Industries</b> <span class="rel">owns stake</span> <b>Guardian Glass</b></div><div class="ritem"><b>Koch Industries</b> <span class="rel">invests in</span> <b>MITER Brands</b> &mdash; ~$300M grew to ~$1.5B</div><div class="ritem"><b>Koch Industries</b> <span class="rel">customer of</span> <b>HappyRobot</b> &mdash; AI candidate screening</div><div class="ritem"><b>Monsanto</b> <span class="rel">acquires</span> <b>Climate Corp</b> &mdash; $1.1B</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📖</div><div><div class="title">Charles Koch's method: from his mid-20s he read Hayek, von Mises and Milton Friedman, but also Mao, Lenin and Hitler to disprove his own views, compared Venezuela vs. Chile, Hong Kong vs. China, North vs. South Korea, and first tested principle-based management inside Koch in the early 1980s. <span class="tag">Ideas</span></div></div></div><div class="irow"><div class="ic">🏠</div><div><div class="title">Family: Sunday economics lessons with quizzes every 15 minutes, and a 6 p.m. dinner check-in on five values — love, courage, faith, honor, loyalty; Fred Koch handed Charles the company in 1961 on one condition: don't sell it. Chase was employee 8,548 at 15. <span class="tag">Family</span></div></div></div><div class="irow"><div class="ic">📱</div><div><div class="title">The book ships with a free Principle Companion app: type in a current problem and it teaches one or two relevant principles. Chase: "I learned more in the last 18 months than I've learned in the last 18 years" writing it; Charles is on his fifth book (after <i>Good Profit</i>). <span class="tag">Books</span></div></div></div><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: Joseph Schumpeter (creative destruction), Maslow (self-actualization), Clayton Christensen's <i>How Will You Measure Your Life?</i>, Joe Liemandt, and critics' books on the Murdochs and Peter Thiel that Pomp reads for balance. <span class="tag">Sources</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Principle-based management</b> &mdash; Koch's operating system: teach principles, then let people closest to the problem decide.</div><div><b>Contribution motivated</b> &mdash; Koch's hiring ideal — humble, open to challenge, driven to add value rather than by power or entitlement.</div><div><b>Destructively motivated</b> &mdash; A leader driven by power and control; Koch's costliest failure mode.</div><div><b>Comparative advantage</b> &mdash; Put each person where their gift is strongest relative to the rest of the team, not in a vacuum.</div><div><b>Experimental discovery</b> &mdash; Make bets sized to your knowledge; a failure is fine if the learning outweighs the loss.</div><div><b>Gas to bread spread</b> &mdash; Koch's failed plan to own the chain from natural gas to fertilizer to food.</div><div><b>Micro-school</b> &mdash; A small, individualized school where the teacher acts as a guide and students set much of their day.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
