@@ -21,6 +21,10 @@
  "themes": [
   {
    "id": "spacex-xai-economics",
+   "tags": [
+    "space",
+    "ai-infra"
+   ],
    "color": "green",
    "badge": "Confirmed business detail",
    "status": "AS DESCRIBED SEPTEMBER 2026",
@@ -41,20 +45,33 @@
    "names": [
     {
      "name": "SpaceX",
-     "blurb": "Private; Starlink at 1.5-2% market penetration, compute rental now a major and growing revenue line."
+     "blurb": "Private; Starlink at 1.5-2% market penetration, compute rental now a major and growing revenue line.",
+     "stance": "POSITIVE VIEW",
+     "conviction": "High",
+     "horizon": null
     },
     {
      "name": "EchoStar",
-     "blurb": "Sold spectrum to SpaceX partly for stock; Charlie Ergen is a ~20-year SpaceX customer."
+     "blurb": "Sold spectrum to SpaceX partly for stock; Charlie Ergen is a ~20-year SpaceX customer.",
+     "stance": "CASUAL MENTION",
+     "conviction": null,
+     "horizon": null
     },
     {
      "name": "T-Mobile (TMUS)",
-     "blurb": "Currently hosts SpaceX's direct-to-cell service via its spectrum, ahead of SpaceX moving onto its own."
+     "blurb": "Currently hosts SpaceX's direct-to-cell service via its spectrum, ahead of SpaceX moving onto its own.",
+     "stance": "CASUAL MENTION",
+     "conviction": null,
+     "horizon": null
     }
    ]
   },
   {
    "id": "ai-peer-review",
+   "tags": [
+    "policy",
+    "ai-infra"
+   ],
    "color": "amber",
    "badge": "Contested",
    "status": "PROPOSED, NOT YET ADOPTED",
@@ -77,20 +94,32 @@
    "names": [
     {
      "name": "OpenAI",
-     "blurb": "Named as the party whose servers were reportedly penetrated during the Hugging Face incident; Elon calls its handling of the test \"somewhat reckless.\""
+     "blurb": "Named as the party whose servers were reportedly penetrated during the Hugging Face incident; Elon calls its handling of the test \"somewhat reckless.\"",
+     "stance": "NEGATIVE VIEW",
+     "conviction": "Medium",
+     "horizon": null
     },
     {
      "name": "Anthropic",
-     "blurb": "Elon says it \"puts more care into safety\" than OpenAI but still has staff publicly worried their own models are getting \"scary smart.\""
+     "blurb": "Elon says it \"puts more care into safety\" than OpenAI but still has staff publicly worried their own models are getting \"scary smart.\"",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Low",
+     "horizon": null
     },
     {
      "name": "Hugging Face",
-     "blurb": "Target of the reported week-long swarm attack that triggered this whole discussion."
+     "blurb": "Target of the reported week-long swarm attack that triggered this whole discussion.",
+     "stance": "CASUAL MENTION",
+     "conviction": null,
+     "horizon": null
     }
    ]
   },
   {
    "id": "starship-reusability",
+   "tags": [
+    "space"
+   ],
    "color": "green",
    "badge": "Confirmed near-term milestone",
    "status": "FLIGHT 14 NEXT, CATCH ATTEMPT ON FLIGHT 15",
@@ -112,6 +141,9 @@
   },
   {
    "id": "terrafab-chip-bet",
+   "tags": [
+    "semis"
+   ],
    "color": "amber",
    "badge": "Early-stage, speculative timeline",
    "status": "R&D FAB UNDER CONSTRUCTION, AUSTIN",
@@ -129,12 +161,19 @@
    "names": [
     {
      "name": "ASML",
-     "blurb": "Named as the current lithography chokepoint that Terrafab implicitly aims to diversify away from over time."
+     "blurb": "Named as the current lithography chokepoint that Terrafab implicitly aims to diversify away from over time.",
+     "stance": "CASUAL MENTION",
+     "conviction": null,
+     "horizon": null
     }
    ]
   },
   {
    "id": "space-data-centers",
+   "tags": [
+    "space",
+    "ai-infra"
+   ],
    "color": "gray",
    "badge": "Speculative, early build-out",
    "status": "AI COMPUTE SATELLITES TARGETED FOR NEXT YEAR",
@@ -156,6 +195,9 @@
   },
   {
    "id": "spacex-culture",
+   "tags": [
+    "career"
+   ],
    "color": "green",
    "badge": "Recommendation / management philosophy",
    "status": "AS DESCRIBED",
@@ -205,13 +247,6 @@
    "title": "If evaluating SpaceX/xAI as an employer, weigh the \"player coach\" model (no pure-manager roles, high engineering-time expectation) against roles elsewhere."
   }
  ],
- "risks": [
-  "This is a live, unscripted podcast conversation with a lot of joking and deflection (e.g. the SpaceX/Tesla \"two companies\" question got no real answer) — treat casual asides as color, not confirmed policy.",
-  "Elon's specific numbers here (50-60% catch odds, 2027 reusability, Terrafab's crawl/walk/run timeline) are his own working estimates stated in conversation, not figures pulled from a published roadmap.",
-  "The Hugging Face incident and the described OpenAI server compromise are relayed secondhand by Elon in this conversation; the brief reports his account of it, not an independently verified security report.",
-  "Auto-generated captions on a two-hour live conversation with crosstalk and jokes carry real transcription risk, especially around technical terms and proper nouns.",
-  "Elon has a direct financial and competitive stake in how AI safety regulation is framed (xAI competes with Anthropic and OpenAI) — worth keeping in mind alongside his peer-review proposal."
- ],
  "hot_takes": [
   {
    "take": "It's pretty obvious at this point that AI can be very dangerous... any sufficiently smart model seems like it will want to escape its constraints.",
@@ -242,6 +277,58 @@
    "take": "It's either build Terrafab or fail to scale. Those are the two options.",
    "cite": "— Elon Musk",
    "why": "binary, high-stakes framing of a multi-billion-dollar bet he owns"
+  }
+ ],
+ "claims": [
+  {
+   "who": "Elon Musk",
+   "claim": "SpaceX catches the Starship ship on the first attempt (flight 15)",
+   "metric": "probability",
+   "target": "50-60%",
+   "by": null,
+   "condition": null,
+   "entity": "SpaceX"
+  },
+  {
+   "who": "Elon Musk",
+   "claim": "Starship reaches full, rapid reusability",
+   "metric": "reusability",
+   "target": "aircraft-like rapid reflight",
+   "by": "2027",
+   "condition": null,
+   "entity": "SpaceX"
+  },
+  {
+   "who": "Elon Musk",
+   "claim": "Terrafab makes something useful",
+   "metric": "chip output",
+   "target": "first useful output ('crawl' stage)",
+   "by": "end of 2027",
+   "condition": null,
+   "entity": "SpaceX"
+  },
+  {
+   "who": "SpaceX (guidance)",
+   "claim": "SpaceX launches AI compute satellites",
+   "metric": "orbital compute launch",
+   "target": null,
+   "by": "next year (2027)",
+   "condition": null,
+   "entity": "SpaceX"
+  }
+ ],
+ "relations": [
+  {
+   "from": "EchoStar",
+   "rel": "invests_in",
+   "to": "SpaceX",
+   "note": "Spectrum sale paid partly in SpaceX stock."
+  },
+  {
+   "from": "SpaceX",
+   "rel": "customer_of",
+   "to": "T-Mobile (TMUS)",
+   "note": "Direct-to-cell currently rides on T-Mobile spectrum ahead of SpaceX's own."
   }
  ],
  "other_news": [

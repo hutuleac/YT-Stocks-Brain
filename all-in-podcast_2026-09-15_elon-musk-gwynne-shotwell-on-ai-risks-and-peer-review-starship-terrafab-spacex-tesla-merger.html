@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="spacex-xai-economics">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Confirmed business detail</span>
-    <span class="theme-status">AS DESCRIBED SEPTEMBER 2026</span>
+    <span class="theme-status">AS DESCRIBED SEPTEMBER 2026</span><span class="ttag">space</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Compute rental is already bigger than the space business admits</h2>
   <div class="theme-body">
@@ -131,7 +136,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Honestly, right now — and it is a little embarrassing — computer rental is a heck of a business. We see no drop in demand at all.&#8221;<cite>— Gwynne Shotwell</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>SpaceX</b><span>Private; Starlink at 1.5-2% market penetration, compute rental now a major and growing revenue line.</span></div><div class="namechip"><b>EchoStar</b><span>Sold spectrum to SpaceX partly for stock; Charlie Ergen is a ~20-year SpaceX customer.</span></div><div class="namechip"><b>T-Mobile (TMUS)</b><span>Currently hosts SpaceX's direct-to-cell service via its spectrum, ahead of SpaceX moving onto its own.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>SpaceX<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Private; Starlink at 1.5-2% market penetration, compute rental now a major and growing revenue line.</span></div><div class="namechip"><b>EchoStar<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Sold spectrum to SpaceX partly for stock; Charlie Ergen is a ~20-year SpaceX customer.</span></div><div class="namechip"><b>T-Mobile (TMUS)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Currently hosts SpaceX's direct-to-cell service via its spectrum, ahead of SpaceX moving onto its own.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The cold-open teaser claiming a "$75 billion IPO" at a "$1.7 trillion" valuation is show-intro framing, not a claim either guest confirms on camera — treat it as promotional color, not a reported financial event.</div></div>
     </div>
   </div>
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="ai-peer-review">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">PROPOSED, NOT YET ADOPTED</span>
+    <span class="theme-status">PROPOSED, NOT YET ADOPTED</span><span class="ttag">policy</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Elon's pitch: make AI labs peer-review each other's models before release</h2>
   <div class="theme-body">
@@ -150,7 +155,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;It's just tough when you're grading your own homework. Whereas if you have the sum of all your competitors' tests, someone else is grading it. There's a reason you don't grade your own homework.&#8221;<cite>— Elon Musk</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>OpenAI</b><span>Named as the party whose servers were reportedly penetrated during the Hugging Face incident; Elon calls its handling of the test "somewhat reckless."</span></div><div class="namechip"><b>Anthropic</b><span>Elon says it "puts more care into safety" than OpenAI but still has staff publicly worried their own models are getting "scary smart."</span></div><div class="namechip"><b>Hugging Face</b><span>Target of the reported week-long swarm attack that triggered this whole discussion.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>OpenAI<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium</span></b><span>Named as the party whose servers were reportedly penetrated during the Hugging Face incident; Elon calls its handling of the test "somewhat reckless."</span></div><div class="namechip"><b>Anthropic<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Elon says it "puts more care into safety" than OpenAI but still has staff publicly worried their own models are getting "scary smart."</span></div><div class="namechip"><b>Hugging Face<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Target of the reported week-long swarm attack that triggered this whole discussion.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Elon frames this as achievable consensus, but concedes there's "no enforceability" against China beyond reputational pressure — the proposal has no confirmed buy-in from any named lab on camera.</div></div>
     </div>
   </div>
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="starship-reusability">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Confirmed near-term milestone</span>
-    <span class="theme-status">FLIGHT 14 NEXT, CATCH ATTEMPT ON FLIGHT 15</span>
+    <span class="theme-status">FLIGHT 14 NEXT, CATCH ATTEMPT ON FLIGHT 15</span><span class="ttag">space</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Starship's next flight is the last dress rehearsal before catching the ship</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="terrafab-chip-bet">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Early-stage, speculative timeline</span>
-    <span class="theme-status">R&amp;D FAB UNDER CONSTRUCTION, AUSTIN</span>
+    <span class="theme-status">R&amp;D FAB UNDER CONSTRUCTION, AUSTIN</span><span class="ttag">semis</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Terrafab is a hedge against Taiwan chip risk and an industry-wide fab ceiling</h2>
   <div class="theme-body">
@@ -188,7 +193,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>ASML</b><span>Named as the current lithography chokepoint that Terrafab implicitly aims to diversify away from over time.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>ASML<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Named as the current lithography chokepoint that Terrafab implicitly aims to diversify away from over time.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">This is a first-fab, pre-production effort — "make something useful" by end of next year is the stated bar, not volume chip output.</div></div>
     </div>
   </div>
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="space-data-centers">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Speculative, early build-out</span>
-    <span class="theme-status">AI COMPUTE SATELLITES TARGETED FOR NEXT YEAR</span>
+    <span class="theme-status">AI COMPUTE SATELLITES TARGETED FOR NEXT YEAR</span><span class="ttag">space</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">The pitch for data centers in orbit: free land, free cooling, constant sun</h2>
   <div class="theme-body">
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="spacex-culture">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Recommendation / management philosophy</span>
-    <span class="theme-status">AS DESCRIBED</span>
+    <span class="theme-status">AS DESCRIBED</span><span class="ttag">career</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">No pure managers: SpaceX's "player coach" hiring and management model</h2>
   <div class="theme-body">
@@ -240,15 +245,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">This is a live, unscripted podcast conversation with a lot of joking and deflection (e.g. the SpaceX/Tesla "two companies" question got no real answer) — treat casual asides as color, not confirmed policy.</div><div class="ritem">Elon's specific numbers here (50-<b>60%</b> catch odds, 2027 reusability, Terrafab's crawl/walk/run timeline) are his own working estimates stated in conversation, not figures pulled from a published roadmap.</div><div class="ritem">The Hugging Face incident and the described OpenAI server compromise are relayed secondhand by Elon in this conversation; the brief reports his account of it, not an independently verified security report.</div><div class="ritem">Auto-generated captions on a two-hour live conversation with crosstalk and jokes carry real transcription risk, especially around technical terms and proper nouns.</div><div class="ritem">Elon has a direct financial and competitive stake in how AI safety regulation is framed (xAI competes with Anthropic and OpenAI) — worth keeping in mind alongside his peer-review proposal.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;It's pretty obvious at this point that AI can be very dangerous... any sufficiently smart model seems like it will want to escape its constraints.&#8221; <cite>— Elon Musk</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I recommend reading the details of the Hugging Face incident. It's intense.&#8221; <cite>— Elon Musk</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;On balance, I think Anthropic puts more care into their safety than OpenAI.&#8221; <cite>— Elon Musk</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I like this solution a lot — I like this more than the transnational Google org... we don't need to convene the United Nations to make this happen.&#8221; <cite>— Elon Musk</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I'd say it's at least 50 or 60% [odds of catching the ship on the first attempt].&#8221; <cite>— Elon Musk</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;It's either build Terrafab or fail to scale. Those are the two options.&#8221; <cite>— Elon Musk</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Elon Musk:</b> SpaceX catches the Starship ship on the first attempt (flight 15) <span class="cmeta">probability · 50-60%</span> <span class="tag">SpaceX</span></div><div class="ritem"><b>Elon Musk:</b> Starship reaches full, rapid reusability <span class="cmeta">reusability · aircraft-like rapid reflight · 2027</span> <span class="tag">SpaceX</span></div><div class="ritem"><b>Elon Musk:</b> Terrafab makes something useful <span class="cmeta">chip output · first useful output ('crawl' stage) · end of 2027</span> <span class="tag">SpaceX</span></div><div class="ritem"><b>SpaceX (guidance):</b> SpaceX launches AI compute satellites <span class="cmeta">orbital compute launch · next year (2027)</span> <span class="tag">SpaceX</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>EchoStar</b> <span class="rel">invests in</span> <b>SpaceX</b> &mdash; Spectrum sale paid partly in SpaceX stock.</div><div class="ritem"><b>SpaceX</b> <span class="rel">customer of</span> <b>T-Mobile (TMUS)</b> &mdash; Direct-to-cell currently rides on T-Mobile spectrum ahead of SpaceX's own.</div></div></div>
     </section>
 
     <section class="sec">

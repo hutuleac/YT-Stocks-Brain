@@ -26,6 +26,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "spacex-xai-economics",
+        "tags": ["space", "ai-infra"],
         "color": "green",
         "badge": "Confirmed business detail",
         "status": "AS DESCRIBED SEPTEMBER 2026",
@@ -41,13 +42,14 @@ THEMES = [
         "quote": {"text": "Honestly, right now — and it is a little embarrassing — computer rental is a heck of a business. We see no drop in demand at all.", "cite": "— Gwynne Shotwell"},
         "watch": "The cold-open teaser claiming a \"$75 billion IPO\" at a \"$1.7 trillion\" valuation is show-intro framing, not a claim either guest confirms on camera — treat it as promotional color, not a reported financial event.",
         "names": [
-            {"name": "SpaceX", "blurb": "Private; Starlink at 1.5-2% market penetration, compute rental now a major and growing revenue line."},
-            {"name": "EchoStar", "blurb": "Sold spectrum to SpaceX partly for stock; Charlie Ergen is a ~20-year SpaceX customer."},
-            {"name": "T-Mobile (TMUS)", "blurb": "Currently hosts SpaceX's direct-to-cell service via its spectrum, ahead of SpaceX moving onto its own."},
+            {"name": "SpaceX", "blurb": "Private; Starlink at 1.5-2% market penetration, compute rental now a major and growing revenue line.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
+            {"name": "EchoStar", "blurb": "Sold spectrum to SpaceX partly for stock; Charlie Ergen is a ~20-year SpaceX customer.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "T-Mobile (TMUS)", "blurb": "Currently hosts SpaceX's direct-to-cell service via its spectrum, ahead of SpaceX moving onto its own.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
     {
         "id": "ai-peer-review",
+        "tags": ["policy", "ai-infra"],
         "color": "amber",
         "badge": "Contested",
         "status": "PROPOSED, NOT YET ADOPTED",
@@ -65,13 +67,14 @@ THEMES = [
         "quote": {"text": "It's just tough when you're grading your own homework. Whereas if you have the sum of all your competitors' tests, someone else is grading it. There's a reason you don't grade your own homework.", "cite": "— Elon Musk"},
         "watch": "Elon frames this as achievable consensus, but concedes there's \"no enforceability\" against China beyond reputational pressure — the proposal has no confirmed buy-in from any named lab on camera.",
         "names": [
-            {"name": "OpenAI", "blurb": "Named as the party whose servers were reportedly penetrated during the Hugging Face incident; Elon calls its handling of the test \"somewhat reckless.\""},
-            {"name": "Anthropic", "blurb": "Elon says it \"puts more care into safety\" than OpenAI but still has staff publicly worried their own models are getting \"scary smart.\""},
-            {"name": "Hugging Face", "blurb": "Target of the reported week-long swarm attack that triggered this whole discussion."},
+            {"name": "OpenAI", "blurb": "Named as the party whose servers were reportedly penetrated during the Hugging Face incident; Elon calls its handling of the test \"somewhat reckless.\"", "stance": "NEGATIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Anthropic", "blurb": "Elon says it \"puts more care into safety\" than OpenAI but still has staff publicly worried their own models are getting \"scary smart.\"", "stance": "POSITIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "Hugging Face", "blurb": "Target of the reported week-long swarm attack that triggered this whole discussion.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
     {
         "id": "starship-reusability",
+        "tags": ["space"],
         "color": "green",
         "badge": "Confirmed near-term milestone",
         "status": "FLIGHT 14 NEXT, CATCH ATTEMPT ON FLIGHT 15",
@@ -90,6 +93,7 @@ THEMES = [
     },
     {
         "id": "terrafab-chip-bet",
+        "tags": ["semis"],
         "color": "amber",
         "badge": "Early-stage, speculative timeline",
         "status": "R&D FAB UNDER CONSTRUCTION, AUSTIN",
@@ -105,11 +109,12 @@ THEMES = [
         "quote": None,
         "watch": "This is a first-fab, pre-production effort — \"make something useful\" by end of next year is the stated bar, not volume chip output.",
         "names": [
-            {"name": "ASML", "blurb": "Named as the current lithography chokepoint that Terrafab implicitly aims to diversify away from over time."},
+            {"name": "ASML", "blurb": "Named as the current lithography chokepoint that Terrafab implicitly aims to diversify away from over time.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
     {
         "id": "space-data-centers",
+        "tags": ["space", "ai-infra"],
         "color": "gray",
         "badge": "Speculative, early build-out",
         "status": "AI COMPUTE SATELLITES TARGETED FOR NEXT YEAR",
@@ -128,6 +133,7 @@ THEMES = [
     },
     {
         "id": "spacex-culture",
+        "tags": ["career"],
         "color": "green",
         "badge": "Recommendation / management philosophy",
         "status": "AS DESCRIBED",
@@ -154,6 +160,18 @@ TAKEAWAYS = [
     {"icon": "\U0001F4B0", "tag": "Markets", "title": "Note that SpaceX's compute-rental business is already large enough that Starlink's still-untapped 98%+ market isn't the near-term growth story people assume."},
     {"icon": "\U0001F3ED", "tag": "Semiconductors", "title": "Treat Terrafab as a multi-year hedge, not a near-term chip source — the stated bar for 2026 is \"make anything useful,\" not volume output."},
     {"icon": "\U0001F468‍\U0001F4BC", "tag": "Careers", "title": "If evaluating SpaceX/xAI as an employer, weigh the \"player coach\" model (no pure-manager roles, high engineering-time expectation) against roles elsewhere."},
+]
+
+CLAIMS = [
+    {"who": "Elon Musk", "claim": "SpaceX catches the Starship ship on the first attempt (flight 15)", "metric": "probability", "target": "50-60%", "by": None, "condition": None, "entity": "SpaceX"},
+    {"who": "Elon Musk", "claim": "Starship reaches full, rapid reusability", "metric": "reusability", "target": "aircraft-like rapid reflight", "by": "2027", "condition": None, "entity": "SpaceX"},
+    {"who": "Elon Musk", "claim": "Terrafab makes something useful", "metric": "chip output", "target": "first useful output ('crawl' stage)", "by": "end of 2027", "condition": None, "entity": "SpaceX"},
+    {"who": "SpaceX (guidance)", "claim": "SpaceX launches AI compute satellites", "metric": "orbital compute launch", "target": None, "by": "next year (2027)", "condition": None, "entity": "SpaceX"},
+]
+
+RELATIONS = [
+    {"from": "EchoStar", "rel": "invests_in", "to": "SpaceX", "note": "Spectrum sale paid partly in SpaceX stock."},
+    {"from": "SpaceX", "rel": "customer_of", "to": "T-Mobile (TMUS)", "note": "Direct-to-cell currently rides on T-Mobile spectrum ahead of SpaceX's own."},
 ]
 
 RISKS = [
