@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="bond-panic-overblown">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">POSITIVE VIEW — no yield-panic trade</span>
+    <span class="theme-status">POSITIVE VIEW — no yield-panic trade</span><span class="ttag">macro-rates</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">The Bond-Yield "Collapse" Is, In Visser's Words, "The Biggest Marketing Scam I've Ever Seen"</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="agent-spend-explosion">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Casual mention</span>
-    <span class="theme-status">PERSONAL ANECDOTE, NOT A MARKET CALL</span>
+    <span class="theme-status">PERSONAL ANECDOTE, NOT A MARKET CALL</span><span class="ttag">dev-workflow</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">Both Hosts Are Now Spending Thousands a Month Managing Dozens of AI Agents</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="tokenization-thesis">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">POSITIVE VIEW — building product around it</span>
+    <span class="theme-status">POSITIVE VIEW — building product around it</span><span class="ttag">crypto</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Tokenization Is Visser's New Main Focus: "It's Real. It's Going to Happen. And It Is a Race."</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="no-rebalance-portfolio">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">OWNS — never sold, never rebalanced</span>
+    <span class="theme-status">OWNS — never sold, never rebalanced</span><span class="ttag">crypto</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">The "Idiot-Proof" Portfolio: A Third Nasdaq, a Third S&amp;P, a Third Bitcoin — and Never Touch It</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="compute-bottleneck-and-humanoids">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">SPECULATIVE — 5+ year horizon</span>
+    <span class="theme-status">SPECULATIVE — 5+ year horizon</span><span class="ttag">robotics</span><span class="ttag">energy</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Compute and Energy Scarcity Are a Good Thing — and Humanoids Go to the Mines First</h2>
   <div class="theme-body">
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="everything-code-book">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Confirmed event</span>
-    <span class="theme-status">PRE-ORDER OPEN</span>
+    <span class="theme-status">PRE-ORDER OPEN</span><span class="ttag">dev-workflow</span><span class="ttag">consumer</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">Jordi's New Book Was Written by Training AI on His Own Back Catalog</h2>
   <div class="theme-body">
@@ -240,15 +245,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">This is two market participants' real-time working views, not a published report — figures like the <b>$100 trillion</b> digital-asset-market estimate and the 33% Bitcoin floor are Jordi's own back-of-envelope framework, stated in conversation.</div><div class="ritem">Jordi discloses a direct conflict of interest throughout: he holds the Bitcoin/Ethereum/crypto-basket positions he's describing, and runs a paid Real Vision/GMI subscription business built around this exact tokenization and portfolio thesis.</div><div class="ritem">One hedge fund name in the tokenization segment (heard as "Marshall Waste") could not be confidently resolved from auto-captions and was left out of the brief's entity index rather than guessed.</div><div class="ritem">A Pyth Network sponsor segment and a Token2049 Singapore event promotion were excluded from this brief entirely, per standing policy on sponsor/promotional content.</div><div class="ritem">Jordi's new book, discussed in this same episode, is itself an AI-generated product he is promoting — he discloses this directly rather than it being an outside claim.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;This is the most the biggest marketing scam I've ever seen in terms of people so fixated on this quote unquote collapse in bonds around the globe on 30-year yields.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I've never sold a Bitcoin. I've never sold anything in it... I've never had a transaction that brings money back into the bank.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think Ethereum will outperform Bitcoin over the next year because of the tokenization boom and the stable coin boom.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Since the Bitcoin white paper, you don't need to do anything else. You're outperforming everything that needs to happen.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;How many people do you meet our age... using it as actively and in the ways that we are? Zero.&#8221; <cite>— Raoul Pal</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think humanoids is going to have a bigger impact on the input cost of commodities and us getting us closer to abundance of cheaper commodities... but I don't think it's ever going to go parabolic.&#8221; <cite>— Jordi Visser</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Jordi Visser:</b> Nvidia revenue growth beats street estimate <span class="cmeta">revenue growth guidance · 70% vs. 44% street estimate · next year</span> <i>if his own citation of Nvidia's guidance</i> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>Jordi Visser:</b> Ethereum outperforms Bitcoin <span class="cmeta">relative performance · ETH beats BTC · next year</span> <i>if his own dated call, credits tokenization/stablecoin demand</i> <span class="tag">Ethereum (ETH)</span></div><div class="ritem"><b>Jordi Visser:</b> humanoid robots deflate commodity input costs <span class="cmeta">commodity prices (oil, copper, gold) · declining, but not parabolic · next 5 years</span> <i>if his own speculative framing</i></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Millennium</b> <span class="rel">competes with</span> <b>D.E. Shaw</b> &mdash; named together as multi-pod aggregator hedge funds Visser expects tokenization to restructure</div></div></div>
     </section>
 
     <section class="sec">

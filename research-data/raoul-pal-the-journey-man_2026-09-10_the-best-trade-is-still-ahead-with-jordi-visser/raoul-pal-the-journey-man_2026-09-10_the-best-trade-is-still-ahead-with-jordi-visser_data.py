@@ -25,6 +25,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "bond-panic-overblown",
+        "tags": ["macro-rates", "finance"],
         "color": "green",
         "badge": "High conviction",
         "status": "POSITIVE VIEW — no yield-panic trade",
@@ -46,6 +47,7 @@ THEMES = [
     },
     {
         "id": "agent-spend-explosion",
+        "tags": ["dev-workflow", "ai-infra"],
         "color": "gray",
         "badge": "Casual mention",
         "status": "PERSONAL ANECDOTE, NOT A MARKET CALL",
@@ -65,6 +67,7 @@ THEMES = [
     },
     {
         "id": "tokenization-thesis",
+        "tags": ["crypto", "finance"],
         "color": "green",
         "badge": "High conviction",
         "status": "POSITIVE VIEW — building product around it",
@@ -91,6 +94,7 @@ THEMES = [
     },
     {
         "id": "no-rebalance-portfolio",
+        "tags": ["crypto", "finance"],
         "color": "green",
         "badge": "High conviction",
         "status": "OWNS — never sold, never rebalanced",
@@ -114,6 +118,7 @@ THEMES = [
     },
     {
         "id": "compute-bottleneck-and-humanoids",
+        "tags": ["robotics", "energy"],
         "color": "amber",
         "badge": "Contested",
         "status": "SPECULATIVE — 5+ year horizon",
@@ -136,6 +141,7 @@ THEMES = [
     },
     {
         "id": "everything-code-book",
+        "tags": ["dev-workflow", "consumer"],
         "color": "gray",
         "badge": "Confirmed event",
         "status": "PRE-ORDER OPEN",
@@ -158,6 +164,16 @@ TAKEAWAYS = [
     {"icon": "\U0001F916", "tag": "AI workflows", "title": "If you're running more than a handful of AI agents, budget for a dedicated coordinator ('chief of staff') agent or role — both hosts hit real coordination overhead without one."},
     {"icon": "\U0001F517", "tag": "Crypto", "title": "Track Ethereum's institutional trust-factor narrative into next year — Visser's dated call is that ETH outperforms Bitcoin on tokenization and stablecoin demand."},
     {"icon": "\U000026A1", "tag": "Energy", "title": "Don't assume US data-center political pushback caps AI capex — watch behind-the-meter power solutions (repurposed turbines, spare gas pipeline capacity) as the actual release valve."},
+]
+
+CLAIMS = [
+    {"who": "Jordi Visser", "claim": "Nvidia revenue growth beats street estimate", "metric": "revenue growth guidance", "target": "70% vs. 44% street estimate", "by": "next year", "condition": "his own citation of Nvidia's guidance", "entity": "Nvidia (NVDA)"},
+    {"who": "Jordi Visser", "claim": "Ethereum outperforms Bitcoin", "metric": "relative performance", "target": "ETH beats BTC", "by": "next year", "condition": "his own dated call, credits tokenization/stablecoin demand", "entity": "Ethereum (ETH)"},
+    {"who": "Jordi Visser", "claim": "humanoid robots deflate commodity input costs", "metric": "commodity prices (oil, copper, gold)", "target": "declining, but not parabolic", "by": "next 5 years", "condition": "his own speculative framing"},
+]
+
+RELATIONS = [
+    {"from": "Millennium", "rel": "competes_with", "to": "D.E. Shaw", "note": "named together as multi-pod aggregator hedge funds Visser expects tokenization to restructure"},
 ]
 
 RISKS = [
