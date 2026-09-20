@@ -27,6 +27,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "openclaw-multiplayer",
+        "tags": ["software", "dev-workflow"],
         "color": "amber",
         "badge": "Contested",
         "status": "RELEASED THIS WEEK",
@@ -46,6 +47,7 @@ THEMES = [
     },
     {
         "id": "gatik-waymo-jobs",
+        "tags": ["robotics", "career"],
         "color": "amber",
         "badge": "Confirmed event",
         "status": "GATIK: OPERATING DRIVERLESS · WAYMO: INCIDENT ON CAMERA",
@@ -76,6 +78,7 @@ THEMES = [
     },
     {
         "id": "perplexity-hybrid-compute",
+        "tags": ["ai-infra", "software"],
         "color": "green",
         "badge": "Confirmed event",
         "status": "LAUNCHED TODAY",
@@ -99,6 +102,7 @@ THEMES = [
     },
     {
         "id": "slack-oracle",
+        "tags": ["software", "ai-infra"],
         "color": "amber",
         "badge": "Structural critique",
         "status": "ONGOING",
@@ -120,6 +124,7 @@ THEMES = [
     },
     {
         "id": "mhs-physical-ai",
+        "tags": ["robotics", "ai-infra"],
         "color": "green",
         "badge": "Confirmed event",
         "status": "MHS RELEASED THIS WEEK",
@@ -141,6 +146,7 @@ THEMES = [
     },
     {
         "id": "pangram-watermarking",
+        "tags": ["policy", "ai-infra"],
         "color": "amber",
         "badge": "Contested",
         "status": "ONGOING DEBATE",
@@ -165,6 +171,18 @@ TAKEAWAYS = [
     {"icon": "\U0001F4AC", "tag": "Enterprise AI", "title": "Assume every message on a work Slack/computer can end up training or feeding an internal AI \"Oracle\" — write accordingly"},
     {"icon": "\U0001F393", "tag": "AI ethics", "title": "Don't lean on a single AI-detection score for high-stakes academic or hiring decisions — pair it with provenance evidence"},
     {"icon": "\U0001F527", "tag": "Hardware", "title": "Watch bespoke hardware (Claude-designed circuit boards, 3D-printed robot parts) as a cheap new prototyping path"},
+]
+
+CLAIMS = [
+    {"who": "Gatik", "claim": "Series D funding round", "metric": "funding amount", "target": "$200 million", "by": "a week ago", "condition": "self-reported", "entity": "Gatik"},
+    {"who": "Jason Calacanis", "claim": "AV safety perception solved", "metric": "perceived safety multiple vs. humans", "target": "2-4x safer than humans", "by": "24 months", "condition": "his own on-air prediction, disputed by Gatik's CEO"},
+    {"who": "Gotham Nagi", "claim": "home robot capability maturity", "metric": "years to maturity", "target": "15-20 years, possibly up to 50", "by": None, "condition": "his own on-air forecast", "entity": "Gatik"},
+]
+
+RELATIONS = [
+    {"from": "Gatik", "rel": "customer_of", "to": "Nvidia", "note": "runs onboard scene-representation and planning models on Nvidia hardware"},
+    {"from": "PepsiCo", "rel": "customer_of", "to": "Gatik", "note": "long-term customer since 2022, logo on the trucks"},
+    {"from": "Anthropic", "rel": "partners_with", "to": "Salesforce", "note": "Dario Amodei appeared on Salesforce's earnings call for their joint enterprise-AI product"},
 ]
 
 RISKS = [

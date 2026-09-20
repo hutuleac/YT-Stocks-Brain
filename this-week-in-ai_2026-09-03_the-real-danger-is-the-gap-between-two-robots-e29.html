@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="openclaw-multiplayer">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">RELEASED THIS WEEK</span>
+    <span class="theme-status">RELEASED THIS WEEK</span><span class="ttag">software</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">OpenClaw 2.0 bets everything on multiplayer agents</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="gatik-waymo-jobs">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Confirmed event</span>
-    <span class="theme-status">GATIK: OPERATING DRIVERLESS · WAYMO: INCIDENT ON CAMERA</span>
+    <span class="theme-status">GATIK: OPERATING DRIVERLESS · WAYMO: INCIDENT ON CAMERA</span><span class="ttag">robotics</span><span class="ttag">career</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Gatik's $200M round lands the same week Waymo has a bad one on camera</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="perplexity-hybrid-compute">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
-    <span class="theme-status">LAUNCHED TODAY</span>
+    <span class="theme-status">LAUNCHED TODAY</span><span class="ttag">ai-infra</span><span class="ttag">software</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Perplexity splits AI work between the cloud and your own Mac</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="slack-oracle">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Structural critique</span>
-    <span class="theme-status">ONGOING</span>
+    <span class="theme-status">ONGOING</span><span class="ttag">software</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Slack is enterprise AI's default interface — and everything in it is being tracked</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="mhs-physical-ai">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
-    <span class="theme-status">MHS RELEASED THIS WEEK</span>
+    <span class="theme-status">MHS RELEASED THIS WEEK</span><span class="ttag">robotics</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">MCP gets a hardware cousin, and the panel is already buying robots</h2>
   <div class="theme-body">
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="pangram-watermarking">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">ONGOING DEBATE</span>
+    <span class="theme-status">ONGOING DEBATE</span><span class="ttag">policy</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Can Pangram actually catch AI writing — and should professors trust it?</h2>
   <div class="theme-body">
@@ -240,15 +245,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">Several product and model names in this episode were garbled by auto-captions and left unresolved rather than guessed: the exact name of Salesforce and Anthropic's joint product (heard as "Quad force salespropic"), the specific open-weight coding models referenced (heard as "Neotron," "Laguna," and a company heard as "Poolside"), and the large model needing ~6TB of memory to run in full (heard as "K3"). Treat these as directionally correct, not verified proper nouns.</div><div class="ritem">Funding figures, customer counts, market counts and technical specs (Gatik's Series D size, market/state counts, Mac memory requirements) are quoted as stated in conversation by the guests, not independently verified against filings or press releases.</div><div class="ritem">Gotham Nagi is Gatik's own CEO discussing his company's safety record and business model — treat his safety and timeline claims as the company's own framing, not third-party audit results (an independent safety audit is mentioned but not detailed on-air).</div><div class="ritem">This episode's exclusive sponsor segment (PayPal) has been excluded from this brief entirely.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;I think in 24 months we won't be talking about safety anymore. It would be just abundantly clear these things are literally 2, three, four times safer than humans.&#8221; <cite>— Jason Calacanis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;If it's going to be 10 times safer, why would it take decades?&#8221; <cite>— Jason Calacanis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;These universities are all in a giant scam. They're charging $100,000 a year to these students who then don't have to write their actual work... It's all a freaking fraud.&#8221; <cite>— Jason Calacanis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I predicted this like two years ago that Apple would be the sleeper.&#8221; <cite>— Jason Calacanis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;It depends on the application — for autonomous vehicles it's 5 years... home robots I'm more closer to 15, 20 years. I would put go as far as 50.&#8221; <cite>— Gotham Nagi</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Gatik:</b> Series D funding round <span class="cmeta">funding amount · $200 million · a week ago</span> <i>if self-reported</i> <span class="tag">Gatik</span></div><div class="ritem"><b>Jason Calacanis:</b> AV safety perception solved <span class="cmeta">perceived safety multiple vs. humans · 2-4x safer than humans · 24 months</span> <i>if his own on-air prediction, disputed by Gatik's CEO</i></div><div class="ritem"><b>Gotham Nagi:</b> home robot capability maturity <span class="cmeta">years to maturity · 15-20 years, possibly up to 50</span> <i>if his own on-air forecast</i> <span class="tag">Gatik</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Gatik</b> <span class="rel">customer of</span> <b>Nvidia</b> &mdash; runs onboard scene-representation and planning models on Nvidia hardware</div><div class="ritem"><b>PepsiCo</b> <span class="rel">customer of</span> <b>Gatik</b> &mdash; long-term customer since 2022, logo on the trucks</div><div class="ritem"><b>Anthropic</b> <span class="rel">partners with</span> <b>Salesforce</b> &mdash; Dario Amodei appeared on Salesforce's earnings call for their joint enterprise-AI product</div></div></div>
     </section>
 
     <section class="sec">
