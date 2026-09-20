@@ -42,6 +42,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "seven-sigma-week",
+        "tags": ["crypto"],
         "color": "green",
         "badge": "High conviction",
         "status": "BITCOIN +22-23% IN 7 DAYS",
@@ -74,12 +75,13 @@ THEMES = [
         "watch": "Visser explicitly rejects the four-year-cycle framework even while noting this move rhymes "
                  "with two prior cycle-turn moments — he's using the sigma/200-day signal, not calendar timing.",
         "names": [
-            {"name": "Bitcoin (BTC)", "blurb": "7-sigma weekly move, broke above the 200-day moving average"},
-            {"name": "Glassnode", "blurb": "co-founder Raphael's sigma-move forward-return study cited"},
+            {"name": "Bitcoin (BTC)", "blurb": "7-sigma weekly move, broke above the 200-day moving average", "stance": "OWNS", "conviction": "High", "horizon": None},
+            {"name": "Glassnode", "blurb": "co-founder Raphael's sigma-move forward-return study cited", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
     {
         "id": "purest-ai-trade",
+        "tags": ["crypto", "ai-infra"],
         "color": "green",
         "badge": "High conviction",
         "status": "CORE THESIS",
@@ -119,16 +121,17 @@ THEMES = [
                  "3-8 years out — a forecast, not a settled fact, that Visser uses to justify multiple "
                  "compression across the AI trade.",
         "names": [
-            {"name": "Nvidia (NVDA)", "blurb": "up ~80% since June 2024 but entire gain in 4 of 24 months"},
-            {"name": "Micron (MU)", "blurb": "bought on the dip; realized vol ~4x Bitcoin's"},
-            {"name": "Marvell (MRVL)", "blurb": "still held as an infrastructure position"},
-            {"name": "Eli Lilly (LLY)", "blurb": "part of Visser's rotation into the scarcity/application-layer trade"},
-            {"name": "Bitcoin (BTC)", "blurb": "core scarcity-trade holding, the 'purest AI trade'"},
-            {"name": "Silver", "blurb": "framed as 'the AI mineral' — monetary asset plus industrial shortage"},
+            {"name": "Nvidia (NVDA)", "blurb": "up ~80% since June 2024 but entire gain in 4 of 24 months", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Micron (MU)", "blurb": "bought on the dip; realized vol ~4x Bitcoin's", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "Marvell (MRVL)", "blurb": "still held as an infrastructure position", "stance": "OWNS", "conviction": "Low", "horizon": None},
+            {"name": "Eli Lilly (LLY)", "blurb": "part of Visser's rotation into the scarcity/application-layer trade", "stance": "OWNS", "conviction": "High", "horizon": None},
+            {"name": "Bitcoin (BTC)", "blurb": "core scarcity-trade holding, the 'purest AI trade'", "stance": "OWNS", "conviction": "High", "horizon": None},
+            {"name": "Silver", "blurb": "framed as 'the AI mineral' — monetary asset plus industrial shortage", "stance": "OWNS", "conviction": "Medium", "horizon": None},
         ],
     },
     {
         "id": "portfolio-allocation",
+        "tags": ["crypto", "finance"],
         "color": "amber",
         "badge": "Framework, not a number",
         "status": "PERSONAL FINANCE",
@@ -156,6 +159,7 @@ THEMES = [
     },
     {
         "id": "stripe-ramp-router-war",
+        "tags": ["software", "ai-infra"],
         "color": "amber",
         "badge": "Contested",
         "status": "THIS WEEK'S M&A",
@@ -190,15 +194,16 @@ THEMES = [
                  "number in conversation, not a number this brief can verify from the transcript alone — "
                  "treat it as his working figure.",
         "names": [
-            {"name": "Stripe", "blurb": "acquired Open Router this week to own the model-routing layer"},
-            {"name": "Ramp", "blurb": "launched router.com the same week, its own routing play"},
-            {"name": "Anthropic", "blurb": "one of two frontier labs whose revenue share is exposed to routing"},
-            {"name": "OpenAI", "blurb": "the other frontier lab exposed to the routing shift"},
-            {"name": "Palantir (PLTR)", "blurb": "Visser likes it for the orchestration/AI-sovereignty layer"},
+            {"name": "Stripe", "blurb": "acquired Open Router this week to own the model-routing layer", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Ramp", "blurb": "launched router.com the same week, its own routing play", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Anthropic", "blurb": "one of two frontier labs whose revenue share is exposed to routing", "stance": "WATCHING", "conviction": "Medium", "horizon": None},
+            {"name": "OpenAI", "blurb": "the other frontier lab exposed to the routing shift", "stance": "WATCHING", "conviction": "Medium", "horizon": None},
+            {"name": "Palantir (PLTR)", "blurb": "Visser likes it for the orchestration/AI-sovereignty layer", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
         ],
     },
     {
         "id": "ai-labs-like-early-bitcoin",
+        "tags": ["crypto", "ai-infra"],
         "color": "amber",
         "badge": "Structural comparison",
         "status": "ADOPTION-CURVE PARALLEL",
@@ -235,12 +240,13 @@ THEMES = [
         "watch": "The professor's identity is not confirmed in the transcript (auto-captions didn't render "
                  "a clean name), so he's described by role rather than named.",
         "names": [
-            {"name": "Anthropic", "blurb": "valuation jump from small to multiple trillions in ~a year, called unprecedented"},
-            {"name": "Bitcoin (BTC)", "blurb": "fear has fully dissipated compared to lingering AI-existential fear"},
+            {"name": "Anthropic", "blurb": "valuation jump from small to multiple trillions in ~a year, called unprecedented", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Bitcoin (BTC)", "blurb": "fear has fully dissipated compared to lingering AI-existential fear", "stance": "OWNS", "conviction": "High", "horizon": None},
         ],
     },
     {
         "id": "moderna-ai-drug-discovery",
+        "tags": ["biotech"],
         "color": "green",
         "badge": "Confirmed event",
         "status": "STOCK MORE THAN DOUBLED IN A DAY",
@@ -269,12 +275,13 @@ THEMES = [
         "quote": None,
         "watch": None,
         "names": [
-            {"name": "Moderna (MRNA)", "blurb": "stock more than doubled in a day on phase 3 melanoma vaccine news"},
-            {"name": "Eli Lilly (LLY)", "blurb": "heavy AI/data-center investment, revenue +50% YoY at trillion-dollar scale"},
+            {"name": "Moderna (MRNA)", "blurb": "stock more than doubled in a day on phase 3 melanoma vaccine news", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Eli Lilly (LLY)", "blurb": "heavy AI/data-center investment, revenue +50% YoY at trillion-dollar scale", "stance": "OWNS", "conviction": "High", "horizon": None},
         ],
     },
     {
         "id": "bayesian-brain",
+        "tags": ["career"],
         "color": "amber",
         "badge": "Mindset framework",
         "status": "WHY SMART PEOPLE BELIEVE FALSE THINGS",
@@ -328,6 +335,16 @@ TAKEAWAYS = [
      "conclusions — especially on fast-moving AI and crypto narratives"},
     {"icon": "\U0001F48A", "tag": "Health", "title": "Don't write off pharma as a no-growth defensive sector "
      "— AI-accelerated discovery is an underpriced application-layer story"},
+]
+
+CLAIMS = [
+    {"who": "Jordi Visser", "claim": "Marc Andreessen's 20-year Bitcoin adoption arc completes", "metric": "adoption timeline", "target": "full adoption", "by": "2034", "condition": None, "entity": "Bitcoin (BTC)"},
+    {"who": "Glassnode (Raphael)", "claim": "Average forward return after a 5-sigma+ Bitcoin move", "metric": "6-month forward return", "target": "~80% appreciation", "by": "6 months", "condition": None, "entity": "Bitcoin (BTC)"},
+]
+
+RELATIONS = [
+    {"from": "Stripe", "rel": "acquires", "to": "Open Router", "note": "Bought this week to own the AI model-routing layer."},
+    {"from": "Ramp", "rel": "competes_with", "to": "Stripe", "note": "Launched router.com the same week as Stripe's Open Router acquisition."},
 ]
 
 RISKS = [

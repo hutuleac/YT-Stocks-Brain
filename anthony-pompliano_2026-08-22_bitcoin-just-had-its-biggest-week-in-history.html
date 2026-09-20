@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="seven-sigma-week">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">BITCOIN +22-23% IN 7 DAYS</span>
+    <span class="theme-status">BITCOIN +22-23% IN 7 DAYS</span><span class="ttag">crypto</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">A seven-sigma week, and Visser says the tape just confirmed the bull case</h2>
   <div class="theme-body">
@@ -131,7 +136,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;The tape doesn't lie... I've said, I'm going to keep quiet on Bitcoin until the tape tells me that it's time to be loud again. It's time.&#8221;<cite>— Jordi Visser</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Bitcoin (BTC)</b><span>7-sigma weekly move, broke above the 200-day moving average</span></div><div class="namechip"><b>Glassnode</b><span>co-founder Raphael's sigma-move forward-return study cited</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Bitcoin (BTC)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>7-sigma weekly move, broke above the 200-day moving average</span></div><div class="namechip"><b>Glassnode<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>co-founder Raphael's sigma-move forward-return study cited</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Visser explicitly rejects the four-year-cycle framework even while noting this move rhymes with two prior cycle-turn moments — he's using the sigma/200-day signal, not calendar timing.</div></div>
     </div>
   </div>
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="purest-ai-trade">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">CORE THESIS</span>
+    <span class="theme-status">CORE THESIS</span><span class="ttag">crypto</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Bitcoin as 'the purest AI trade' — a hedge against abundance, not a bet on AI</h2>
   <div class="theme-body">
@@ -150,7 +155,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Bitcoin needs to be in people's portfolio because it is a hedge against abundance. It cannot be destroyed because it is built on beliefs.&#8221;<cite>— Jordi Visser</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)</b><span>up ~80% since June 2024 but entire gain in 4 of 24 months</span></div><div class="namechip"><b>Micron (MU)</b><span>bought on the dip; realized vol ~4x Bitcoin's</span></div><div class="namechip"><b>Marvell (MRVL)</b><span>still held as an infrastructure position</span></div><div class="namechip"><b>Eli Lilly (LLY)</b><span>part of Visser's rotation into the scarcity/application-layer trade</span></div><div class="namechip"><b>Bitcoin (BTC)</b><span>core scarcity-trade holding, the 'purest AI trade'</span></div><div class="namechip"><b>Silver</b><span>framed as 'the AI mineral' — monetary asset plus industrial shortage</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>up ~80% since June 2024 but entire gain in 4 of 24 months</span></div><div class="namechip"><b>Micron (MU)<span class="stance" style="background:#3f6b2e;">OWNS · Medium</span></b><span>bought on the dip; realized vol ~4x Bitcoin's</span></div><div class="namechip"><b>Marvell (MRVL)<span class="stance" style="background:#3f6b2e;">OWNS · Low</span></b><span>still held as an infrastructure position</span></div><div class="namechip"><b>Eli Lilly (LLY)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>part of Visser's rotation into the scarcity/application-layer trade</span></div><div class="namechip"><b>Bitcoin (BTC)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>core scarcity-trade holding, the 'purest AI trade'</span></div><div class="namechip"><b>Silver<span class="stance" style="background:#3f6b2e;">OWNS · Medium</span></b><span>framed as 'the AI mineral' — monetary asset plus industrial shortage</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The thesis leans on 'humanoids coming' and terminal-value uncertainty for public companies 3-8 years out — a forecast, not a settled fact, that Visser uses to justify multiple compression across the AI trade.</div></div>
     </div>
   </div>
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="portfolio-allocation">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Framework, not a number</span>
-    <span class="theme-status">PERSONAL FINANCE</span>
+    <span class="theme-status">PERSONAL FINANCE</span><span class="ttag">crypto</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">How much Bitcoin? Size the position to your probability estimate</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="stripe-ramp-router-war">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">THIS WEEK'S M&amp;A</span>
+    <span class="theme-status">THIS WEEK'S M&amp;A</span><span class="ttag">software</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Stripe and Ramp are racing to own the AI model-router layer</h2>
   <div class="theme-body">
@@ -188,7 +193,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Stripe</b><span>acquired Open Router this week to own the model-routing layer</span></div><div class="namechip"><b>Ramp</b><span>launched router.com the same week, its own routing play</span></div><div class="namechip"><b>Anthropic</b><span>one of two frontier labs whose revenue share is exposed to routing</span></div><div class="namechip"><b>OpenAI</b><span>the other frontier lab exposed to the routing shift</span></div><div class="namechip"><b>Palantir (PLTR)</b><span>Visser likes it for the orchestration/AI-sovereignty layer</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Stripe<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>acquired Open Router this week to own the model-routing layer</span></div><div class="namechip"><b>Ramp<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>launched router.com the same week, its own routing play</span></div><div class="namechip"><b>Anthropic<span class="stance" style="background:#93711b;">WATCHING · Medium</span></b><span>one of two frontier labs whose revenue share is exposed to routing</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">WATCHING · Medium</span></b><span>the other frontier lab exposed to the routing shift</span></div><div class="namechip"><b>Palantir (PLTR)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Visser likes it for the orchestration/AI-sovereignty layer</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The '$78 billion' figure Visser cites for Stripe's Open Router acquisition is his stated number in conversation, not a number this brief can verify from the transcript alone — treat it as his working figure.</div></div>
     </div>
   </div>
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="ai-labs-like-early-bitcoin">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Structural comparison</span>
-    <span class="theme-status">ADOPTION-CURVE PARALLEL</span>
+    <span class="theme-status">ADOPTION-CURVE PARALLEL</span><span class="ttag">crypto</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Frontier AI labs are living through Bitcoin's 2010-2014 adoption fear cycle</h2>
   <div class="theme-body">
@@ -207,7 +212,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;Almost nobody has a fear of Bitcoin right... the only thing that is debated is will it be worth more or less in the future.&#8221;<cite>— Jordi Visser</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic</b><span>valuation jump from small to multiple trillions in ~a year, called unprecedented</span></div><div class="namechip"><b>Bitcoin (BTC)</b><span>fear has fully dissipated compared to lingering AI-existential fear</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>valuation jump from small to multiple trillions in ~a year, called unprecedented</span></div><div class="namechip"><b>Bitcoin (BTC)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>fear has fully dissipated compared to lingering AI-existential fear</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The professor's identity is not confirmed in the transcript (auto-captions didn't render a clean name), so he's described by role rather than named.</div></div>
     </div>
   </div>
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="moderna-ai-drug-discovery">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
-    <span class="theme-status">STOCK MORE THAN DOUBLED IN A DAY</span>
+    <span class="theme-status">STOCK MORE THAN DOUBLED IN A DAY</span><span class="ttag">biotech</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Moderna's mRNA cancer breakthrough shows biotech isn't the 'no-growth' sector people assumed</h2>
   <div class="theme-body">
@@ -226,7 +231,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Moderna (MRNA)</b><span>stock more than doubled in a day on phase 3 melanoma vaccine news</span></div><div class="namechip"><b>Eli Lilly (LLY)</b><span>heavy AI/data-center investment, revenue +50% YoY at trillion-dollar scale</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Moderna (MRNA)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>stock more than doubled in a day on phase 3 melanoma vaccine news</span></div><div class="namechip"><b>Eli Lilly (LLY)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>heavy AI/data-center investment, revenue +50% YoY at trillion-dollar scale</span></div></div>
       
     </div>
   </div>
@@ -235,7 +240,7 @@ i{font-style:italic;}
 <section class="theme" id="bayesian-brain">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Mindset framework</span>
-    <span class="theme-status">WHY SMART PEOPLE BELIEVE FALSE THINGS</span>
+    <span class="theme-status">WHY SMART PEOPLE BELIEVE FALSE THINGS</span><span class="ttag">career</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Being 'overeducated' doesn't protect you from confidently believing false things</h2>
   <div class="theme-body">
@@ -259,15 +264,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">This is a single-guest conversation carrying forward-looking opinion and Visser's own trading positions (he discloses holdings in Micron, Marvell, Eli Lilly, silver, and Bitcoin) — these are his working views in real time, not audited research.</div><div class="ritem">The '<b>$78 billion</b>' Stripe/Open Router acquisition figure and the exact scale of the professor's AI safety credentials are as stated in conversation; auto-captions can mangle numbers and names, so treat unverifiable specifics as Visser's recollection rather than confirmed fact.</div><div class="ritem">Visser is a repeat guest with a standing bullish thesis on Bitcoin and is actively building paid subscriber content around this exact call — worth knowing before weighting his conviction.</div><div class="ritem">Two sponsor segments (Figure Markets crypto-backed loans; a testosterone supplement) were excluded entirely from this brief per standing policy.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;For Bitcoin, it will always be the purest AI trade.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think hedge fund leverage has peaked and will forever go down.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Multiple compression to me represents the risk that in 3 years there's actually no growth anymore.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Pharmaceuticals will eventually be the biggest winners out of AI from the application side.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;As much as I don't think we should be having a lot of regulation to slow it down, friction to some degree, when you're moving this fast, actually might be a positive.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I said, I know for a fact that at least 70% of what you just said to me is not true.&#8221; <cite>— Jordi Visser</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Jordi Visser:</b> Marc Andreessen's 20-year Bitcoin adoption arc completes <span class="cmeta">adoption timeline · full adoption · 2034</span> <span class="tag">Bitcoin (BTC)</span></div><div class="ritem"><b>Glassnode (Raphael):</b> Average forward return after a 5-sigma+ Bitcoin move <span class="cmeta">6-month forward return · ~80% appreciation · 6 months</span> <span class="tag">Bitcoin (BTC)</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Stripe</b> <span class="rel">acquires</span> <b>Open Router</b> &mdash; Bought this week to own the AI model-routing layer.</div><div class="ritem"><b>Ramp</b> <span class="rel">competes with</span> <b>Stripe</b> &mdash; Launched router.com the same week as Stripe's Open Router acquisition.</div></div></div>
     </section>
 
     <section class="sec">
