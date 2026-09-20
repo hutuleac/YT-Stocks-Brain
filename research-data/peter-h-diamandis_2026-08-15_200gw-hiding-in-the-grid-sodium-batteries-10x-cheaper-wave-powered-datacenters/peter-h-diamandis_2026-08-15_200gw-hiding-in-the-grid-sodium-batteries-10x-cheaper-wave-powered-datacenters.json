@@ -21,6 +21,10 @@
  "themes": [
   {
    "id": "grid-bottleneck",
+   "tags": [
+    "energy",
+    "ai-infra"
+   ],
    "color": "red",
    "badge": "High conviction — core thesis",
    "status": "STRUCTURAL CONSTRAINT — ERCOT LOAD REQUESTS TODAY GET POWER ~2031–32",
@@ -69,6 +73,9 @@
   },
   {
    "id": "behind-the-meter",
+   "tags": [
+    "energy"
+   ],
    "color": "amber",
    "badge": "Confirmed trend — supply constrained",
    "status": "GRID-SCALE GAS TURBINES SOLD OUT ~7 YEARS",
@@ -108,6 +115,9 @@
   },
   {
    "id": "grid-flexibility",
+   "tags": [
+    "energy"
+   ],
    "color": "green",
    "badge": "High conviction — near-term win",
    "status": "ERCOT INTERRUPTIBLE-LOAD RULE PASSED JUNE 2026; FERC LETTERS SENT TO SIX GRIDS",
@@ -147,6 +157,9 @@
   },
   {
    "id": "solar-batteries",
+   "tags": [
+    "energy"
+   ],
    "color": "green",
    "badge": "High conviction — with an explicit ceiling",
    "status": "FIRST 24/7 SOLAR+BATTERY PLANTS LIVE — UAE, CHILE",
@@ -177,6 +190,9 @@
   },
   {
    "id": "fission-fusion",
+   "tags": [
+    "energy"
+   ],
    "color": "amber",
    "badge": "Contested — timelines will slip",
    "status": "SMRs OPTIMISTICALLY 2030–EARLY 2030s; HELION TARGETS 50 MW FOR MICROSOFT IN 2028",
@@ -238,6 +254,10 @@
   },
   {
    "id": "space-ocean",
+   "tags": [
+    "energy",
+    "space"
+   ],
    "color": "gray",
    "badge": "Speculative — 15–20 year horizon",
    "status": "SPACEX FIRST DATA CENTER LAUNCH TARGETED 2028; OCEAN UNITS ALREADY IN THE WATER",
@@ -305,14 +325,6 @@
    "title": "Discount every SMR, fusion and orbital date you're quoted — the speaker's own portfolio companies included"
   }
  ],
- "risks": [
-  "Naam is a venture investor discussing his own portfolio throughout. He discloses stakes in the interruptible-load battery startup, WeaveGrid, The Nuclear Company's founder's prior company, the ocean data center company (bought twice this year), a Caltech pB11 fusion company and a CUDA-alternative company — plus a possible new European cooling investment.",
-  "The sharpest conflict is the Texas one: he invested in a company that helped drive the June ERCOT interruptible-load rule, and that rule is the centerpiece of his near-term thesis. The analysis may be right and the incentive is still real.",
-  "Several load-bearing claims are not his. The '20x overpriced GPU' markup stack and the 500-concurrent-threads efficiency math are Dave Blundin's; the Venezuela/Iran-to-deter-Taiwan theory and the 144-year upmass extrapolation are Alex Wissner-Gross's — and Naam rejected the geopolitical one as stated.",
-  "He explicitly refuses to say whether utility stocks are buys or sells while describing a large windfall for regional monopolies — an observation about where the money lands, not a stance on the equities.",
-  "The figures throughout are Naam's working numbers as a forecaster — 230 GW of chip-implied demand, ~100 GW of grid buildout, 4-8x of solar decline left, $6/W in the UAE — narrated from slides rather than read off a filing. He says himself that every forecaster lands on a different number for grid buildout and AI demand. Read them as the shape of his argument rather than as settled data.",
-  "Auto-captions mangle names badly (ERCOT, FERC, Cerebras, Boom, Mumgaard, Kirtley all appear garbled). Three companies — the ~10 MW micro-reactor firm, the CUDA-alternative portfolio company, and the ocean data center company — could not be identified with confidence and are described by spec instead of named."
- ],
  "hot_takes": [
   {
    "take": "CUDA has been the moat, and I think the CUDA moat is broken this year and next year.",
@@ -343,6 +355,55 @@
    "take": "I believe something when I see movement on a graph.",
    "cite": "— Ramez Naam",
    "why": "His stated epistemic bar for fusion and everything else — announcements and engineering-problem claims don't qualify."
+  }
+ ],
+ "claims": [
+  {
+   "who": "Elon Musk",
+   "claim": "orbital AI compute buildout",
+   "metric": "power capacity in orbit",
+   "target": "100 GW/yr",
+   "by": "before 2030",
+   "condition": "stated ambition; first launch targeted 2028",
+   "entity": "SpaceX"
+  },
+  {
+   "who": "Helion",
+   "claim": "fusion power purchase agreement with Microsoft",
+   "metric": "power capacity",
+   "target": "50 MW",
+   "by": "2028",
+   "condition": "most aggressive delivery date among billion-dollar-plus fusion companies",
+   "entity": "Helion"
+  },
+  {
+   "who": "Ramez Naam",
+   "claim": "AI chip power demand will outrun grid buildout",
+   "metric": "gigawatts of power demand vs. supply",
+   "target": "~230 GW chip-implied demand vs. ~100 GW projected grid buildout",
+   "by": "2030",
+   "condition": "forecaster's working estimate, not settled data",
+   "entity": "US power grid"
+  }
+ ],
+ "relations": [
+  {
+   "from": "Nvidia (NVDA)",
+   "rel": "invests_in",
+   "to": "Emerald AI",
+   "note": "software-only grid-flexibility orchestration, run by Varun Sivaram — Nvidia's actual bet on the power problem"
+  },
+  {
+   "from": "Anthropic",
+   "rel": "customer_of",
+   "to": "SpaceX",
+   "note": "leases Colossus data center capacity, originally stood up on behind-the-meter gas cogeneration"
+  },
+  {
+   "from": "Helion",
+   "rel": "supplies",
+   "to": "Microsoft (MSFT)",
+   "note": "50 MW fusion power purchase agreement targeting 2028"
   }
  ],
  "other_news": [

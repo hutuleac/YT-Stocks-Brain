@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="grid-bottleneck">
   <div class="theme-badgerow">
     <span class="badge" style="background:#a23f22;">High conviction — core thesis</span>
-    <span class="theme-status">STRUCTURAL CONSTRAINT — ERCOT LOAD REQUESTS TODAY GET POWER ~2031–32</span>
+    <span class="theme-status">STRUCTURAL CONSTRAINT — ERCOT LOAD REQUESTS TODAY GET POWER ~2031–32</span><span class="ttag">energy</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #a23f22;">The bottleneck is speed-to-power, and it is the wires — not generation, not cost</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="behind-the-meter">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Confirmed trend — supply constrained</span>
-    <span class="theme-status">GRID-SCALE GAS TURBINES SOLD OUT ~7 YEARS</span>
+    <span class="theme-status">GRID-SCALE GAS TURBINES SOLD OUT ~7 YEARS</span><span class="ttag">energy</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Behind-the-meter gas is how it's actually happening — and everything adjacent to a turbine is pivoting</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="grid-flexibility">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction — near-term win</span>
-    <span class="theme-status">ERCOT INTERRUPTIBLE-LOAD RULE PASSED JUNE 2026; FERC LETTERS SENT TO SIX GRIDS</span>
+    <span class="theme-status">ERCOT INTERRUPTIBLE-LOAD RULE PASSED JUNE 2026; FERC LETTERS SENT TO SIX GRIDS</span><span class="ttag">energy</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">200 GW is already hiding in the grid — flexibility is the undervalued near-term trade</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="solar-batteries">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction — with an explicit ceiling</span>
-    <span class="theme-status">FIRST 24/7 SOLAR+BATTERY PLANTS LIVE — UAE, CHILE</span>
+    <span class="theme-status">FIRST 24/7 SOLAR+BATTERY PLANTS LIVE — UAE, CHILE</span><span class="ttag">energy</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Solar+battery is the fastest megawatt you can buy — but the next 1000x isn't coming</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="fission-fusion">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested — timelines will slip</span>
-    <span class="theme-status">SMRs OPTIMISTICALLY 2030–EARLY 2030s; HELION TARGETS 50 MW FOR MICROSOFT IN 2028</span>
+    <span class="theme-status">SMRs OPTIMISTICALLY 2030–EARLY 2030s; HELION TARGETS 50 MW FOR MICROSOFT IN 2028</span><span class="ttag">energy</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Nuclear's problem is that we do it rarely — and AI may be the best thing that ever happened to it</h2>
   <div class="theme-body">
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="space-ocean">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Speculative — 15–20 year horizon</span>
-    <span class="theme-status">SPACEX FIRST DATA CENTER LAUNCH TARGETED 2028; OCEAN UNITS ALREADY IN THE WATER</span>
+    <span class="theme-status">SPACEX FIRST DATA CENTER LAUNCH TARGETED 2028; OCEAN UNITS ALREADY IN THE WATER</span><span class="ttag">energy</span><span class="ttag">space</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">Orbit is a launch-cadence problem; the ocean is quietly the nearer moonshot</h2>
   <div class="theme-body">
@@ -240,15 +245,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">Naam is a venture investor discussing his own portfolio throughout. He discloses stakes in the interruptible-load battery startup, WeaveGrid, The Nuclear Company's founder's prior company, the ocean data center company (bought twice this year), a Caltech pB11 fusion company and a CUDA-alternative company — plus a possible new European cooling investment.</div><div class="ritem">The sharpest conflict is the Texas one: he invested in a company that helped drive the June ERCOT interruptible-load rule, and that rule is the centerpiece of his near-term thesis. The analysis may be right and the incentive is still real.</div><div class="ritem">Several load-bearing claims are not his. The '20x overpriced GPU' markup stack and the 500-concurrent-threads efficiency math are Dave Blundin's; the Venezuela/Iran-to-deter-Taiwan theory and the 144-year upmass extrapolation are Alex Wissner-Gross's — and Naam rejected the geopolitical one as stated.</div><div class="ritem">He explicitly refuses to say whether utility stocks are buys or sells while describing a large windfall for regional monopolies — an observation about where the money lands, not a stance on the equities.</div><div class="ritem">The figures throughout are Naam's working numbers as a forecaster — 230 GW of chip-implied demand, ~100 GW of grid buildout, 4-8x of solar decline left, <b>$6</b>/W in the UAE — narrated from slides rather than read off a filing. He says himself that every forecaster lands on a different number for grid buildout and AI demand. Read them as the shape of his argument rather than as settled data.</div><div class="ritem">Auto-captions mangle names badly (ERCOT, FERC, Cerebras, Boom, Mumgaard, Kirtley all appear garbled). Three companies — the ~10 MW micro-reactor firm, the CUDA-alternative portfolio company, and the ocean data center company — could not be identified with confidence and are described by spec instead of named.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;CUDA has been the moat, and I think the CUDA moat is broken this year and next year.&#8221; <cite>— Ramez Naam</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;If I was Nvidia, I would be focused on changing the regulatory landscape for monopoly utilities.&#8221; <cite>— Ramez Naam</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Every startup exaggerates how quickly they can get things done — founders of mine who are listening, please don't take this as an insult.&#8221; <cite>— Ramez Naam</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Elon's real motivation for 100 gigawatts of solar manufacturing is not the on-land US market — it's space-based solar.&#8221; <cite>— Ramez Naam</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;We have this big winter problem that I think a lot of people are not reckoning with.&#8221; <cite>— Ramez Naam</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I believe something when I see movement on a graph.&#8221; <cite>— Ramez Naam</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Elon Musk:</b> orbital AI compute buildout <span class="cmeta">power capacity in orbit · 100 GW/yr · before 2030</span> <i>if stated ambition; first launch targeted 2028</i> <span class="tag">SpaceX</span></div><div class="ritem"><b>Helion:</b> fusion power purchase agreement with Microsoft <span class="cmeta">power capacity · 50 MW · 2028</span> <i>if most aggressive delivery date among billion-dollar-plus fusion companies</i> <span class="tag">Helion</span></div><div class="ritem"><b>Ramez Naam:</b> AI chip power demand will outrun grid buildout <span class="cmeta">gigawatts of power demand vs. supply · ~230 GW chip-implied demand vs. ~100 GW projected grid buildout · 2030</span> <i>if forecaster's working estimate, not settled data</i> <span class="tag">US power grid</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">invests in</span> <b>Emerald AI</b> &mdash; software-only grid-flexibility orchestration, run by Varun Sivaram — Nvidia's actual bet on the power problem</div><div class="ritem"><b>Anthropic</b> <span class="rel">customer of</span> <b>SpaceX</b> &mdash; leases Colossus data center capacity, originally stood up on behind-the-meter gas cogeneration</div><div class="ritem"><b>Helion</b> <span class="rel">supplies</span> <b>Microsoft (MSFT)</b> &mdash; 50 MW fusion power purchase agreement targeting 2028</div></div></div>
     </section>
 
     <section class="sec">

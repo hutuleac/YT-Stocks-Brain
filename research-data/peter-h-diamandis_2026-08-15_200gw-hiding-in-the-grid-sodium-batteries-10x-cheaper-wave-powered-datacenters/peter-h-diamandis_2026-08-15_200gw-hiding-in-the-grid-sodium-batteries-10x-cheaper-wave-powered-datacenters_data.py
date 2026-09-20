@@ -22,6 +22,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "grid-bottleneck",
+        "tags": ["energy", "ai-infra"],
         "color": "red",
         "badge": "High conviction — core thesis",
         "status": "STRUCTURAL CONSTRAINT — ERCOT LOAD REQUESTS TODAY GET POWER ~2031–32",
@@ -52,6 +53,7 @@ THEMES = [
     },
     {
         "id": "behind-the-meter",
+        "tags": ["energy"],
         "color": "amber",
         "badge": "Confirmed trend — supply constrained",
         "status": "GRID-SCALE GAS TURBINES SOLD OUT ~7 YEARS",
@@ -79,6 +81,7 @@ THEMES = [
     },
     {
         "id": "grid-flexibility",
+        "tags": ["energy"],
         "color": "green",
         "badge": "High conviction — near-term win",
         "status": "ERCOT INTERRUPTIBLE-LOAD RULE PASSED JUNE 2026; FERC LETTERS SENT TO SIX GRIDS",
@@ -106,6 +109,7 @@ THEMES = [
     },
     {
         "id": "solar-batteries",
+        "tags": ["energy"],
         "color": "green",
         "badge": "High conviction — with an explicit ceiling",
         "status": "FIRST 24/7 SOLAR+BATTERY PLANTS LIVE — UAE, CHILE",
@@ -133,6 +137,7 @@ THEMES = [
     },
     {
         "id": "fission-fusion",
+        "tags": ["energy"],
         "color": "amber",
         "badge": "Contested — timelines will slip",
         "status": "SMRs OPTIMISTICALLY 2030–EARLY 2030s; HELION TARGETS 50 MW FOR MICROSOFT IN 2028",
@@ -167,6 +172,7 @@ THEMES = [
     },
     {
         "id": "space-ocean",
+        "tags": ["energy", "space"],
         "color": "gray",
         "badge": "Speculative — 15–20 year horizon",
         "status": "SPACEX FIRST DATA CENTER LAUNCH TARGETED 2028; OCEAN UNITS ALREADY IN THE WATER",
@@ -201,6 +207,18 @@ TAKEAWAYS = [
     {"icon": "\U0001f504", "tag": "Energy", "title": "Prefer factory-built over field-assembled in every energy bet — manufacturing gets cheap, construction never does"},
     {"icon": "\U0001f5fa️", "tag": "Energy", "title": "Site new compute where the energy is: equatorial deserts, Australia, Chile, Mexico — and treat winter latitude, not nighttime, as the disqualifier"},
     {"icon": "⚠️", "tag": "Energy", "title": "Discount every SMR, fusion and orbital date you're quoted — the speaker's own portfolio companies included"},
+]
+
+CLAIMS = [
+    {"who": "Elon Musk", "claim": "orbital AI compute buildout", "metric": "power capacity in orbit", "target": "100 GW/yr", "by": "before 2030", "condition": "stated ambition; first launch targeted 2028", "entity": "SpaceX"},
+    {"who": "Helion", "claim": "fusion power purchase agreement with Microsoft", "metric": "power capacity", "target": "50 MW", "by": "2028", "condition": "most aggressive delivery date among billion-dollar-plus fusion companies", "entity": "Helion"},
+    {"who": "Ramez Naam", "claim": "AI chip power demand will outrun grid buildout", "metric": "gigawatts of power demand vs. supply", "target": "~230 GW chip-implied demand vs. ~100 GW projected grid buildout", "by": "2030", "condition": "forecaster's working estimate, not settled data", "entity": "US power grid"},
+]
+
+RELATIONS = [
+    {"from": "Nvidia (NVDA)", "rel": "invests_in", "to": "Emerald AI", "note": "software-only grid-flexibility orchestration, run by Varun Sivaram — Nvidia's actual bet on the power problem"},
+    {"from": "Anthropic", "rel": "customer_of", "to": "SpaceX", "note": "leases Colossus data center capacity, originally stood up on behind-the-meter gas cogeneration"},
+    {"from": "Helion", "rel": "supplies", "to": "Microsoft (MSFT)", "note": "50 MW fusion power purchase agreement targeting 2028"},
 ]
 
 RISKS = [
