@@ -3,170 +3,276 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Research: AI&#x27;s Speed Crash Is Creating the Next Opportunity</title>
+<title>Research: AI's Speed Crash Is Creating the Next Opportunity</title>
 <style>
-.backlink{margin-bottom:12px;}
-.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
-.backlink a:hover{color:var(--brand);border-color:var(--brand);}
-
 :root{
   --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
-  --brand:#8a5a2e; --brand-soft:#f4e9db;
-  --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
-  --g:#eaf3e6; --gk:#3f6b2e; --r:#f8ebe6; --rk:#a23f22;
-  --y:#f8f0dd; --yk:#93711b; --gr:#eeece3; --grk:#65695f;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-  font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased;}
-.page{max-width:1720px;width:100%;margin:0 auto;background:var(--card);min-height:100vh;
-  box-shadow:0 0 0 1px var(--line);}
-.hero{padding:clamp(18px,2.4vw,34px) clamp(20px,4vw,56px) clamp(14px,1.8vw,22px);
-  border-bottom:1px solid var(--line);}
-.hero .kicker{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--brand);margin-bottom:10px;}
-.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(28px,3vw,42px);line-height:1.15;
-  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:38ch;}
-.hero-row{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;
-  border-top:1px solid var(--line);padding-top:12px;}
-.hero .meta{color:var(--muted);font-size:15px;line-height:1.55;}
-.hero .meta b{color:var(--ink);font-weight:600;}
-.hero .stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:14.5px;margin-top:4px;}
-.watch-btn{flex:none;display:inline-flex;align-items:center;gap:7px;background:var(--brand);color:#fffdf8;
-  text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.01em;padding:9px 18px;
-  border-radius:999px;white-space:nowrap;transition:.15s;}
-.watch-btn:hover{background:#734a24}
-.inner{padding:10px clamp(20px,4vw,56px) 44px;}
-.sec{margin:0;padding:34px 0;border-top:1px solid var(--line);}
-.sec:first-child{border-top:none;padding-top:20px;}
-.sec-head{margin-bottom:16px;}
-.sec-eye{font-family:var(--serif);font-style:italic;font-size:14.5px;color:var(--brand);margin-bottom:4px;}
-.sec h2{font-family:var(--serif);margin:0;font-size:clamp(22px,2vw,27px);font-weight:600;color:#171916;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
   border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
-.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:26px 28px;}
-.snap{list-style:none;margin:0;padding:0;max-width:1200px;}
-.snap li{position:relative;padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:16.5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
 .snap li:last-child{border-bottom:none}
-.snap b{color:#171916}
-.badge{display:inline-block;padding:4px 12px;border-radius:3px;font-size:12.5px;font-weight:700;
-  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;}
-.g{background:var(--g);color:var(--gk)} .r{background:var(--r);color:var(--rk)}
-.y{background:var(--y);color:var(--yk)} .gr{background:var(--gr);color:var(--grk)}
-.muted{color:var(--muted);font-size:13.5px;font-weight:400}
-.legend{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0 0;}
-.legend span{display:inline-flex;align-items:center;gap:7px}
-.legend .dot{width:10px;height:10px;border-radius:50%}
-.legend .dot.g{background:var(--gk)} .legend .dot.r{background:var(--rk)}
-.legend .dot.y{background:var(--yk)} .legend .dot.gr{background:var(--grk)}
-.legend .t{font-size:13px;color:var(--muted)}
-.tablewrap{overflow-x:auto;}
-table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:15.5px;}
-th,td{text-align:left;padding:12px 14px;vertical-align:top;border-bottom:1px solid var(--line);
-  overflow-wrap:break-word;word-break:break-word;}
-th{font-family:var(--serif);font-weight:600;font-style:italic;color:var(--brand);font-size:15px;
-  padding:8px 14px 10px;border-bottom:2px solid var(--brand);}
-tbody tr{transition:background .12s}
-tbody tr:hover{background:#f5efe2}
-tr.row-g:hover{background:var(--g)}
-tr.row-r:hover{background:var(--r)}
-tr.row-y:hover{background:var(--y)}
-tr.row-gr:hover{background:var(--gr)}
-tr[class*="row-"] td:first-child{position:relative;padding-left:26px;}
-tr[class*="row-"] td:first-child::before{content:"";position:absolute;left:10px;top:8px;bottom:8px;
-  width:7px;border-radius:5px;background:var(--line);}
-tr.row-g td:first-child::before{background:var(--gk)}
-tr.row-r td:first-child::before{background:var(--rk)}
-tr.row-y td:first-child::before{background:var(--yk)}
-tr.row-gr td:first-child::before{background:var(--grk)}
-tr.conv-hi td:first-child::before{width:8px}
-tr.conv-md td:first-child::before{width:6px}
-tr.conv-lo td:first-child::before{width:4px;opacity:.6}
-.c-topic{width:13%;min-width:110px}
-.c-cat{width:8%;min-width:70px}
-.c-stance{width:6%;min-width:64px}
-.c-conv{width:7%;min-width:70px}
-.c-act{width:16%} .c-text{width:auto}
-.wf{border:1px solid var(--line);border-left:3px solid var(--brand);padding:16px 18px;margin:12px 0;
-  background:#fffefb;}
-.wf-name{font-family:var(--serif);font-weight:600;font-size:18px;color:#171916;margin-bottom:7px;}
-.wf-row{margin:5px 0;font-size:15px;color:#3a3d35}
-.wf-row .lbl{display:inline-block;min-width:128px;font-weight:600;color:var(--brand);
-  font-style:italic;font-family:var(--serif);}
-.c-wf-name{width:14%;min-width:140px}
-table.wf-tbl td:first-child b{font-weight:700;color:#171916}
-.tk{position:relative;display:flex;gap:14px;align-items:flex-start;background:#fffefb;
-  border:1px solid var(--line);border-radius:12px;padding:14px 16px 14px 26px;margin:11px 0;max-width:1200px;
-  transition:background .12s;}
-.tk:hover{background:var(--tk-bg,var(--brand-soft))}
-.tk::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
-  background:var(--tk-c,var(--brand));}
-.tk-ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
-  font-size:14px;background:var(--tk-bg,var(--brand-soft));line-height:1;}
-.tk-bd{flex:1;min-width:0}
-.tk-title{font-weight:600;font-size:15.5px;color:#171916;line-height:1.42;margin-bottom:5px;}
-.tk-tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:13.5px;font-weight:600;
-  letter-spacing:.01em;padding:0;background:none;color:var(--tk-c,var(--brand));}
-.tk-detail{margin-top:5px;font-size:14px;color:#4a4d44;line-height:1.55;}
-.risk{position:relative;display:flex;gap:14px;align-items:flex-start;background:#fffefb;
-  border:1px solid var(--line);border-radius:12px;padding:14px 16px 14px 26px;margin:11px 0;max-width:1200px;
-  transition:background .12s;}
-.risk:hover{background:var(--r)}
-.risk::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
-  background:var(--rk);}
-.risk-ic{flex:none;width:28px;height:28px;border-radius:6px;display:grid;place-items:center;
-  font-size:14px;background:var(--r);line-height:1;}
-.risk-bd{flex:1;min-width:0}
-.risk-title{font-weight:500;font-size:15px;color:#171916;line-height:1.5;}
-.quote{font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.55;color:#2c2f28;
-  border-left:3px solid var(--brand);padding:7px 0 7px 22px;margin:16px 0;max-width:900px;}
-.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
-  color:var(--muted);margin-top:7px;}
-.quote-ctx{font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;color:var(--muted);margin-top:4px;}
-.gloss{display:grid;grid-template-columns:repeat(3,1fr);gap:10px 30px;}
-.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:14.3px;line-height:1.55;}
-.gloss b{font-family:var(--serif);color:#171916}
-ul,ol{margin:5px 0;padding-left:22px} li{margin:4px 0}
-ol li::marker{font-weight:700;color:var(--brand)}
-@media(max-width:1300px){
-  .gloss{grid-template-columns:1fr 1fr}
-}
-@media(max-width:900px){
-  body{font-size:16px}
-  .hero h1{font-size:26px}
-  .sec h2{font-size:22px}
-  .c-cat{display:none} th:nth-child(2),td:nth-child(2){display:none}
-  .gloss{grid-template-columns:1fr}
-  table{table-layout:auto}
-  .c-topic{width:auto;min-width:100px}
-  .hero-row{flex-direction:column;align-items:flex-start;gap:14px}
-}
-@media(max-width:620px){
-  body{font-size:15px}
-  .c-conv{display:none} th:nth-child(4),td:nth-child(4){display:none}
-  table{font-size:13.5px} th,td{padding:9px 9px}
-  .wf-row .lbl{display:block;min-width:0;margin-bottom:2px}
-  .quote{font-size:18px}
-}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
 </style>
 </head>
 <body>
 <div class="page">
   <header class="hero">
     <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
-
     <div class="kicker">A YouTube Research Brief</div>
-    <h1>AI&#x27;s Speed Crash Is Creating the Next Opportunity</h1>
-    <div class="hero-row">
-      <div class="meta">
-        Channel: <b>Jordi Visser</b> &middot; Speaker: <b>Jordi Visser (solo)</b> &middot; <b>2026-07-12</b>
-        <div class="stats-line">16 conviction calls &middot; 14 companies tracked &middot; 50% high conviction</div>
-      </div>
-      <a class="watch-btn" href="https://www.youtube.com/watch?v=vu2zBT3ced8" target="_blank" rel="noopener">Watch on YouTube &#8599;</a>
+    <h1>AI's Speed Crash Is Creating the Next Opportunity</h1>
+    <div class="byline">
+      Channel: <b>Jordi Visser</b> &middot; Speaker: <b>Jordi Visser (solo)</b> &middot; <b>2026-07-12</b>
+      <div class="stats-line">6 threads · why the AI drawdown is a 'speed crash' inside a structural bull market rather than a bubble popping, the memory shortage now pushed 'beyond 2030,' why the token expenditure index is being misread, consumer AI agents as the next and bigger demand wave, Bessent's speech reframing crypto as US financial statecraft, and Visser's own portfolio/Fed positioning. &middot; <a href="https://www.youtube.com/watch?v=vu2zBT3ced8" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
     </div>
   </header>
   <div class="inner">
-    <section class="sec" id="snap"><div class="sec-head"><div class="sec-eye">The one-paragraph takeaway</div><h2>Video Snapshot</h2></div><div class="card"><ol class="snap"><li>Highest-signal ideas:.</li><li>Jordi declares the AI &#x27;midcycle slowdown&#x27; is ending and calls this a sentiment/technical cleanse inside a structural bull market built on exponential token demand vs linear memory supply.</li><li>He is turning bullish again on memory semis (Micron, Samsung, SK Hynix) after cutting hard in May, citing shortages &#x27;beyond 2030&#x27; and analyst estimates of Samsung 2026 operating profit &gt;$217B.</li><li>He frames the recent AI selloff as a &#x27;speed crash&#x27; (Samsung -21% 10-day, worst since COVID/Lehman) within a bull market, not a top.</li><li>Next theme = consumer AI agents (&#x27;far bigger than Opus 4.5&#x27;); coding agents were just the first token explosion; Goldman cited ~24x token upside.</li><li>He is launching a crypto-forward channel, arguing tokenization/stablecoins are US financial statecraft and &#x27;Bitcoin is the S&amp;P 500 of the future of tokenization.&#x27;.</li><li>Macro: he expects the Fed (Warsh) to either hike once (25, &#x27;one and done&#x27;) or do nothing, with tailwinds for Bitcoin either way.</li></ol></div></section><section class="sec" id="conv"><div class="sec-head"><div class="sec-eye">What they actually believe &mdash; and how strongly</div><h2>Conviction Map</h2></div><div class="card"><div class="tablewrap"><table><thead><tr><th class="c-topic">Topic<br>Asset</th><th class="c-cat">Cat.</th><th class="c-conv">Conv.</th><th class="c-act">Action status</th><th class="c-text">Core thesis</th><th class="c-text">Risks<br>conditions</th></tr></thead><tbody><tr class="row-g conv-hi"><td class="c-topic"><b>Micron (MU)</b></td><td class="c-cat">stock</td><td class="c-conv">High</td><td class="c-act">Cut hard in mid-May; says &#x27;I&#x27;m probably going to be buying some back at some point soon&#x27; after the SK Hynix deal</td><td class="c-text">Memory shortage beyond 2030; long-term supply deals; Micron $200B+ supply agreement; his biggest prior position</td><td class="c-text">Gave back ~50% of AI rally; still below 200-day MA; could go lower</td></tr><tr class="row-y conv-hi"><td class="c-topic"><b>Samsung</b></td><td class="c-cat">stock</td><td class="c-conv">High</td><td class="c-act">Watching the pullback as entry; cites &#x27;4 PE on Samsung with earnings growing 524% this year&#x27;</td><td class="c-text">Preliminary Q profit up 19-fold; 2026 operating profit could exceed $217B (&gt;cumulative 40-yr profit); shortage persists</td><td class="c-text">Cyclicality of memory; sentiment; could fall further</td></tr><tr class="row-y conv-hi"><td class="c-topic"><b>SK Hynix</b></td><td class="c-cat">stock</td><td class="c-conv">High</td><td class="c-act">Positive on deal that &#x27;went through today&#x27;; part of concentrated basket</td><td class="c-text">Memory crunch to persist beyond 2030; capacity growing only 20-30%/yr vs demand doubling</td><td class="c-text">Speed crash already hit SKH ~38-50% correction</td></tr><tr class="row-y conv-md"><td class="c-topic"><b>Nvidia (NVDA)</b></td><td class="c-cat">stock</td><td class="c-conv">Medium</td><td class="c-act">One of 10 names in his concentrated basket; &#x27;closing above 20-day MA, holding 200-day, MACD buy, lowest valuation in a decade&#x27;</td><td class="c-text">Peaked May 14, ~3 weeks before AI infra trade; barometer for rate-of-change slowdown</td><td class="c-text">Already peaked; deceleration in second derivative</td></tr><tr class="row-g conv-hi"><td class="c-topic"><b>Bitcoin (BTC)</b></td><td class="c-cat">crypto</td><td class="c-conv">High</td><td class="c-act">Owns; moved some money into BTC in the pullback; &#x27;Bitcoin is the S&amp;P 500 of the future of tokenization&#x27;</td><td class="c-text">Debasement + tokenization thesis; positive response to bad news (Saylor sold ~3,500 BTC, BTC closed higher); Fed tailwind</td><td class="c-text">Still a bear market technically; below 50-day MA; needs &gt;50-day then &gt;200-day</td></tr><tr class="row-g conv-md"><td class="c-topic"><b>Palantir (PLTR)</b></td><td class="c-cat">stock</td><td class="c-conv">Medium</td><td class="c-act">Owns; bought ~$130 in early Feb; still ~$130; name in his 100-name portfolio</td><td class="c-text">Owning your own stack before Anthropic/OpenAI &#x27;steal it&#x27;; consolidation looks constructive</td><td class="c-text">Talking its own book (Palantir); consolidating flat</td></tr><tr class="row-y conv-md"><td class="c-topic"><b>Apple (AAPL)</b></td><td class="c-cat">stock</td><td class="c-conv">Medium</td><td class="c-act">Watching; closed at all-time highs; rallied on memory-price-driven 20% handset price hike</td><td class="c-text">Consumer-agent interface (Siri/phone) = next token explosion; expensive on PEG but &#x27;more to this story&#x27;</td><td class="c-text">Expensive; sell-the-news risk; consumer AI slow until UX matures</td></tr><tr class="row-g conv-md"><td class="c-topic"><b>Meta (META)</b></td><td class="c-cat">stock</td><td class="c-conv">Medium</td><td class="c-act">Wrote a paper on Meta; &#x27;getting more interested in consumer agent thing&#x27;</td><td class="c-text">Consumer AI agents the next theme; Zuck town hall acknowledged Zentic AI slower than expected (capex sale would be UX delay, not bearish)</td><td class="c-text">Consumer AI products still immature; capex execution</td></tr><tr class="row-g conv-lo"><td class="c-topic"><b>Tesla (TSLA)</b></td><td class="c-cat">stock</td><td class="c-conv">Low</td><td class="c-act">Uses Grok in Tesla; cites humanoids/terafab</td><td class="c-text">Elon building terafab for humanoid memory; FSD = enormous video compute; consumer-agent interface via car</td><td class="c-text">Early; long horizon</td></tr><tr class="row-r conv-md"><td class="c-topic"><b>Salesforce (CRM)</b></td><td class="c-cat">stock</td><td class="c-conv">Medium</td><td class="c-act">&#x27;want to be short abundance&#x27; — anything built on code replicable by computer</td><td class="c-text">Down to 10-11 PE; exemplar of AI-disruptable software; &#x27;long scarcity, short abundance&#x27;</td><td class="c-text">Could re-rate if AI disruption overstated</td></tr><tr class="row-g conv-lo"><td class="c-topic"><b>Silver</b></td><td class="c-cat">commodity</td><td class="c-conv">Low</td><td class="c-act">Moved some money into silver in the pullback (hasn&#x27;t worked as well)</td><td class="c-text">Scarcity/real-asset hedge alongside Bitcoin</td><td class="c-text">&#x27;hasn&#x27;t worked out as well&#x27; recently</td></tr><tr class="row-g conv-hi"><td class="c-topic"><b>Hyperscalers (MSFT/GOOG/AMZN/ORCL)</b></td><td class="c-cat">stock</td><td class="c-conv">High</td><td class="c-act">Cites backlog: MSFT $627B, GOOG $462B, AMZN $225B, ORCL $638B commitments</td><td class="c-text">Demand exceeds capacity; Tranium sold out; compute constrained; capex $11.1T (SemiAnalysis) vs Goldman $7.6T</td><td class="c-text">Capex air pocket; execution; power constraints</td></tr><tr class="row-g conv-hi"><td class="c-topic"><b>Consumer AI agents</b></td><td class="c-cat">technology trend</td><td class="c-conv">High</td><td class="c-act">Spending most time here; &#x27;far bigger than Opus 4.5&#x27;</td><td class="c-text">Coding agents = first token explosion; consumer agents = bigger user base; Goldman ~24x token upside; habit formation pending</td><td class="c-text">Product layer immature; interface friction; slower than hoped</td></tr><tr class="row-g conv-md"><td class="c-topic"><b>Open-source vs frontier models</b></td><td class="c-cat">AI model<br>tool</td><td class="c-conv">Medium</td><td class="c-act">&#x27;Frontier intelligence will remain at the forefront&#x27;; enterprises still 89% closed models (down from 19% open to 11%)</td><td class="c-text">Frontier for discovery/orchestration; open-source for mature workflows; both grow (Jevons)</td><td class="c-text">Open-source eats later-stage production over time</td></tr><tr class="row-g conv-hi"><td class="c-topic"><b>S&amp;P 500</b></td><td class="c-cat">macro</td><td class="c-conv">High</td><td class="c-act">&#x27;I don&#x27;t know how you can look at that chart and not be bullish&#x27;</td><td class="c-text">Structural bull market; broke out of triangle; tech lagging but financials/healthcare rotating in</td><td class="c-text">Near-term volatility from speed crashes</td></tr><tr class="row-r conv-hi"><td class="c-topic"><b>SaaS / legacy software</b></td><td class="c-cat">sector</td><td class="c-conv">High</td><td class="c-act">&#x27;short abundance&#x27; — code replicable by computer</td><td class="c-text">Long scarcity, short abundance theme; AI displaces seat-based software</td><td class="c-text">None stated</td></tr></tbody></table></div><p class="muted legend"><span><span class="dot g"></span><span class="t">green = owns / buying / positive</span></span><span><span class="dot r"></span><span class="t">red = sold / avoids / negative</span></span><span><span class="dot y"></span><span class="t">yellow = watching / uncertain</span></span><span><span class="dot gr"></span><span class="t">gray = casual mention</span></span></p></div></section><section class="sec" id="cos"><div class="sec-head"><div class="sec-eye">Positions, views and why they care</div><h2>Stocks, Funds &amp; Companies</h2></div><div class="card"><div class="tablewrap"><table><thead><tr><th class="c-topic">Company<br>Ticker</th><th class="c-text">Speaker view</th><th class="c-text">Why they care</th><th class="c-text">Catalysts</th><th class="c-text">Risks</th><th class="c-conv">Evidence</th></tr></thead><tbody><tr class="row-g"><td class="c-topic"><b>Micron (MU)</b></td><td class="c-text">Bullish; memory shortage beyond 2030</td><td class="c-text">Cut hard mid-May; intends to buy back soon after SK Hynix deal; biggest prior position</td><td class="c-text">Memory crunch, long-term supply deals, $200B+ Micron agreement</td><td class="c-text">Down ~50% from AI rally high; below 200-day</td><td class="c-conv">High</td></tr><tr class="row-y"><td class="c-topic"><b>Samsung</b></td><td class="c-text">Very bullish on valuation</td><td class="c-text">Preliminary Q profit +19-fold; &#x27;4 PE with earnings +524% this year&#x27;</td><td class="c-text">2026 operating profit could exceed $217B</td><td class="c-text">Memory cyclicality; sentiment</td><td class="c-conv">High</td></tr><tr class="row-y"><td class="c-topic"><b>SK Hynix</b></td><td class="c-text">Bullish</td><td class="c-text">Deal &#x27;went through today&#x27;; in concentrated basket</td><td class="c-text">Memory shortage beyond 2030</td><td class="c-text">Already corrected 38-50%</td><td class="c-conv">High</td></tr><tr class="row-y"><td class="c-topic"><b>Nvidia (NVDA)</b></td><td class="c-text">Constructive</td><td class="c-text">In 10-name basket; above 20-day, holds 200-day, MACD buy, cheapest in a decade</td><td class="c-text">Agentic compute demand</td><td class="c-text">Peaked May 14 ahead of group</td><td class="c-conv">Medium</td></tr><tr class="row-g"><td class="c-topic"><b>Palantir (PLTR)</b></td><td class="c-text">Owns; constructive consolidation</td><td class="c-text">Bought ~$130 early Feb; in 100-name portfolio; &#x27;own your own stack&#x27;</td><td class="c-text">Enterprise AI data layer</td><td class="c-text">Talking its book; flat</td><td class="c-conv">Medium</td></tr><tr class="row-y"><td class="c-topic"><b>Apple (AAPL)</b></td><td class="c-text">More interested; ATH close</td><td class="c-text">Rallied on 20% handset price hike from memory costs; consumer-agent angle</td><td class="c-text">Consumer agents via Siri/phone</td><td class="c-text">Expensive PEG; sell-the-news</td><td class="c-conv">Medium</td></tr><tr class="row-g"><td class="c-topic"><b>Meta (META)</b></td><td class="c-text">Increasing interest</td><td class="c-text">Wrote paper; consumer-agent thesis; Zuck acknowledged Zentic slower (UX, not death)</td><td class="c-text">Consumer AI agents</td><td class="c-text">Product immaturity</td><td class="c-conv">Medium</td></tr><tr class="row-g"><td class="c-topic"><b>Tesla (TSLA)</b></td><td class="c-text">Bullish on humanoids</td><td class="c-text">Grok in car; terafab for memory; FSD video compute</td><td class="c-text">Embodied AI</td><td class="c-text">Early</td><td class="c-conv">Low</td></tr><tr class="row-r"><td class="c-topic"><b>Salesforce (CRM)</b></td><td class="c-text">Short / avoid (abundance)</td><td class="c-text">Exemplar of code replicable by AI; 10-11 PE</td><td class="c-text">N/A</td><td class="c-text">AI disruption</td><td class="c-conv">Medium</td></tr><tr class="row-g"><td class="c-topic"><b>Microsoft / Google / Amazon / Oracle</b></td><td class="c-text">Demand &gt; capacity</td><td class="c-text">Backlog $627B/$462B/$225B/$638B; Tranium sold out; compute constrained</td><td class="c-text">Capex $11.1T buildout</td><td class="c-text">Power/capex execution</td><td class="c-conv">High</td></tr><tr class="row-g"><td class="c-topic"><b>Circle (CRCL)</b></td><td class="c-text">In his 40-name crypto index (equal weight)</td><td class="c-text">Tokenization/public-co crossover</td><td class="c-text">Stablecoin legislation (GENIUS Act)</td><td class="c-text">Public, volatile</td><td class="c-conv">Low</td></tr><tr class="row-y"><td class="c-topic"><b>Dogecoin (DOGE)</b></td><td class="c-text">Retail energy gauge</td><td class="c-text">Wants it above 200-day as sign of retail comfort</td><td class="c-text">Retail sentiment</td><td class="c-text">Below 20-day</td><td class="c-conv">Low</td></tr><tr class="row-g"><td class="c-topic"><b>Silver</b></td><td class="c-text">Scarcity hedge</td><td class="c-text">Moved money in during pullback; &#x27;hasn&#x27;t worked as well&#x27;</td><td class="c-text">Debasement</td><td class="c-text">Recent underperformance</td><td class="c-conv">Low</td></tr><tr class="row-g"><td class="c-topic"><b>Anthropic / OpenAI</b></td><td class="c-text">Frontier models dominate enterprise early stage</td><td class="c-text">Enterprise spend 89% closed (down from 19% open to 11%)</td><td class="c-text">Agent workflows</td><td class="c-text">Open-source later-stage</td><td class="c-conv">Medium</td></tr></tbody></table></div></div></section><section class="sec" id="tech"><div class="sec-head"><div class="sec-eye">Themes, tools and what matters</div><h2>Technology &amp; AI Views</h2></div><div class="card"><div class="tablewrap"><table><thead><tr><th class="c-topic">Theme</th><th class="c-text">Speaker&#x27;s view</th><th class="c-text">Companies<br>tools</th><th class="c-text">Why it matters</th><th class="c-conv">Horizon</th><th class="c-conv">Conv.</th></tr></thead><tbody><tr><td class="c-topic"><b>Memory shortage (exponential demand vs linear supply)</b></td><td class="c-text">Most important; shortage &#x27;beyond 2030&#x27;</td><td class="c-text">Micron, Samsung, SK Hynix</td><td class="c-text">Capacity +20-30%/yr vs demand doubling; long-term contracts; phones/cars/PCs all short</td><td class="c-conv">Through 2030+</td><td class="c-conv">High</td></tr><tr><td class="c-topic"><b>Speed crash vs bubble</b></td><td class="c-text">Recent selloff is a speed crash inside a structural bull market, NOT a top</td><td class="c-text">Samsung, SK Hynix, semis</td><td class="c-text">Samsung -21% 10-day (worst since COVID/Lehman); but bullish S&amp;P; constraints prevent bubble</td><td class="c-conv">Now</td><td class="c-conv">High</td></tr><tr><td class="c-topic"><b>Consumer AI agents</b></td><td class="c-text">Next major theme, &#x27;far bigger than Opus 4.5&#x27;</td><td class="c-text">Apple, Meta, OpenAI, Anthropic</td><td class="c-text">Coding agents = first token explosion; consumer agents bigger base; Goldman ~24x token upside</td><td class="c-conv">12-36 months</td><td class="c-conv">High</td></tr><tr><td class="c-topic"><b>Token expenditure index</b></td><td class="c-text">Misused; should trend to zero; not a P&amp;L measure</td><td class="c-text">Anthropic, OpenClaw, open models</td><td class="c-text">Bill-shock + summer lull distorted it; adoption still rising (Dylan Patel $100K-&gt;$11M spend)</td><td class="c-conv">Now</td><td class="c-conv">Medium</td></tr><tr><td class="c-topic"><b>Open-source vs frontier models</b></td><td class="c-text">Frontier leads discovery; open-source wins mature workflows</td><td class="c-text">Anthropic, OpenAI, Meta, open models</td><td class="c-text">Enterprise spend 89% closed; Jevons paradox both grow</td><td class="c-conv">12+ months</td><td class="c-conv">Medium</td></tr><tr><td class="c-topic"><b>Model routing / workload-based model choice</b></td><td class="c-text">Cheapest model for fixed workflows; smartest for assistant work</td><td class="c-text">Claude, Anthropic, open models</td><td class="c-text">Patel: smartest model can be cheaper overall (fewer tokens/iterations/human time)</td><td class="c-conv">Now</td><td class="c-conv">Medium</td></tr><tr><td class="c-topic"><b>Embodied AI / humanoids / FSD</b></td><td class="c-text">Enormous future compute demand</td><td class="c-text">Tesla, humanoid makers, semis</td><td class="c-text">Elon terafab; FSD video compute; each wave new consumption surface</td><td class="c-conv">24-60 months</td><td class="c-conv">Medium</td></tr><tr><td class="c-topic"><b>AI capex buildout</b></td><td class="c-text">Tightening; $11.1T (SemiAnalysis) vs Goldman $7.6T</td><td class="c-text">MSFT, GOOG, AMZN, ORCL</td><td class="c-text">Backlogs; Tranium sold out; compute constrained</td><td class="c-conv">2-3 years</td><td class="c-conv">High</td></tr><tr><td class="c-topic"><b>Tokenization / stablecoins / agentic commerce</b></td><td class="c-text">US financial statecraft; &#x27;Bitcoin = S&amp;P 500 of tokenization&#x27;</td><td class="c-text">Bitcoin, Ethereum, Circle, Stripe</td><td class="c-text">Bessent speech; GENIUS Act; agentic commerce settles on-chain</td><td class="c-conv">Now<br>year+</td><td class="c-conv">High</td></tr><tr><td class="c-topic"><b>Power / energy constraint</b></td><td class="c-text">Being solved (diesels, trains, boats converted) — not a stopper</td><td class="c-text">Utilities, genset converters</td><td class="c-text">Patel: figuring out gigawatts; data centers not stopping</td><td class="c-conv">12-24 months</td><td class="c-conv">Medium</td></tr></tbody></table></div></div></section><section class="sec" id="wf"><div class="sec-head"><div class="sec-eye">Repeatable systems worth stealing</div><h2>AI Workflows, Tools &amp; Prompts</h2></div><div class="card"><div class="tablewrap"><table class="wf-tbl"><thead><tr><th class="c-wf-name">Workflow</th><th class="c-text">Goal</th><th class="c-text">Tools<br>setup</th><th class="c-text">Approach<br>prompt</th><th class="c-text">Why it works</th></tr></thead><tbody><tr><td class="c-wf-name"><b>Technical &#x27;entry score&#x27; screen (Claude Co-Work)</b></td><td class="c-text">Build a repeatable oversold/bull-market entry signal on his 100-name thematic portfolio</td><td class="c-text">Claude Co-Work; updates files; 20-day % above, 50-day %, 200-day %; RSI; MACD</td><td class="c-text">Track % of 100 names above 20/50/200-day and average RSI. Got to 21/100 above 20-day (oversold); bullish when &gt;40% above 50-day and 200-day still rising (86/100). He says he&#x27;ll show how to do it yourself by updating files in Claude Co-Work.</td><td class="c-text">Identifies sentiment/technical cleanse bottoms inside a structural bull market</td></tr><tr><td class="c-wf-name"><b>Long scarcity / short abundance framework</b></td><td class="c-text">Separate winners from losers as AI commoditizes code</td><td class="c-text">Mental model (no tool); applied to portfolio</td><td class="c-text">Long anything physically constrained by linear humans that spenders are buying (memory, compute, power, Bitcoin). Short anything built on code replicable by a computer (SaaS/seat software like Salesforce).</td><td class="c-text">Encodes exponential token demand vs linear supply into a positioning rule</td></tr><tr><td class="c-wf-name"><b>Token-budget / model-choice discipline (from Dylan Patel)</b></td><td class="c-text">Cut AI cost without cutting capability</td><td class="c-text">Claude Code / Opus 4.5; cheaper models for workflows</td><td class="c-text">Fixed workflows -&gt; cheaper models; assistant-style work -&gt; smartest model (fewer tokens, fewer iterations, less human time). Scale example: SemiAnalysis spend $100K (Nov) -&gt; $4M (Jan) -&gt; ~$11M annualized; peak week ~$14M for 90-person firm. Cut other SaaS/legacy spend, not AI.</td><td class="c-text">Jevons paradox: cheaper intelligence raises total usage; right model choice lowers effective cost</td></tr></tbody></table></div></div></section><section class="sec" id="pred"><div class="sec-head"><div class="sec-eye">Bets on the future and their invalidators</div><h2>Predictions &amp; Trends</h2></div><div class="card"><div class="tablewrap"><table><thead><tr><th class="c-topic">Prediction<br>trend</th><th class="c-conv">Horizon</th><th class="c-text">Supporting reasoning</th><th class="c-text">What could invalidate it</th><th class="c-text">Assets affected</th></tr></thead><tbody><tr><td class="c-topic"><b>Midcycle slowdown is ending; sentiment/technical cleanse inside a structural bull market</b></td><td class="c-conv">Now<br>next 3-6 months</td><td class="c-text">Damage done (50% giveback from Opus 4.5); V flushed leverage; 200-day still rising (86/100)</td><td class="c-text">Fresh deleveraging; breakdown of 200-day</td><td class="c-text">AI semis, broad tech</td></tr><tr><td class="c-topic"><b>Memory names (Micron/Samsung/SK Hynix) significantly higher within 6 months</b></td><td class="c-conv">6 months</td><td class="c-text">Shortage beyond 2030; estimates of Samsung &gt;$217B op profit; cheap PEG</td><td class="c-text">New capacity; demand disappointment; deeper correction</td><td class="c-text">Micron, Samsung, SK Hynix</td></tr><tr><td class="c-topic"><b>Consumer AI agents are the next big token explosion (bigger than Opus 4.5)</b></td><td class="c-conv">12-36 months</td><td class="c-text">Coding agents were first; Goldman ~24x token upside; habit formation pending</td><td class="c-text">UX friction unresolved; slower adoption</td><td class="c-text">Apple, Meta, model labs</td></tr><tr><td class="c-topic"><b>Bitcoin is the &#x27;S&amp;P 500 of the future of tokenization&#x27;</b></td><td class="c-conv">12+ months</td><td class="c-text">Bessent doctrine; GENIUS Act; agentic commerce settles on-chain; positive response to bad news</td><td class="c-text">Regulatory reversal; sentiment stays bearish</td><td class="c-text">Bitcoin, ETH, crypto basket</td></tr><tr><td class="c-topic"><b>Fed (Warsh) hikes once (25, &#x27;one and done&#x27;) or does nothing; both tailwinds for BTC</b></td><td class="c-conv">July<br>near-term</td><td class="c-text">If hike, long rates fall on Fed credibility; if not, BTC tailwind; July is the only realistic month</td><td class="c-text">Hawkish surprises; inflation re-acceleration</td><td class="c-text">Bitcoin, crypto, rates</td></tr><tr><td class="c-topic"><b>AI capex buildout continues to tighten; $11.1T (SemiAnalysis) over 2-3 yrs</b></td><td class="c-conv">2-3 years</td><td class="c-text">Backlogs (MSFT $627B etc.); Tranium sold out; compute constrained</td><td class="c-text">Capex air pocket; demand softens</td><td class="c-text">Hyperscalers, semis</td></tr><tr><td class="c-topic"><b>Open-source eats later-stage enterprise production over time, but frontier dominates discovery now</b></td><td class="c-conv">12+ months</td><td class="c-text">Enterprise open-source spend fell 19%-&gt;11%; Jevons paradox</td><td class="c-text">Mature open models + tooling</td><td class="c-text">Anthropic, OpenAI, Meta, open models</td></tr></tbody></table></div></div></section><section class="sec" id="quotes"><div class="sec-head"><div class="sec-eye">Said it best &mdash; in their own words</div><h2>Notable Quotes</h2></div><div class="card"><p class="muted">No standout verbatim quotes captured for this video.</p></div></section><section class="sec" id="risk"><div class="sec-head"><div class="sec-eye">Where this could be wrong</div><h2>Risks, Counterarguments &amp; Blind Spots</h2></div><div class="card"><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">Speaker is talking his book in part (owns Micron, Palantir, Bitcoin, silver; runs a 100-name thematic portfolio and an RIA/subscriber product).</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">He cut Micron hard in mid-May and is only now &#x27;probably&#x27; buying back — entry timing uncertain; he admits he sold before the top unintentionally.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">Comparisons to 2007 (mutual-fund behavior) and &#x27;feeling a little like 2007&#x27; — he notes it could end like the first 10 days then; downside not ruled out.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">Memory &#x27;cyclicality&#x27; cut both ways: if you believe the cycle, the cheap PEG is a value trap (he acknowledges this explicitly).</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">Consumer-agent thesis depends on UX maturing (habit formation, trust, permissions) — explicitly &#x27;coming soon,&#x27; not here.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">Crypto call rests on Bessent&#x27;s doctrine + GENIUS Act + agentic commerce; these are policy/regulatory dependent and partly aspirational.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">He says Bitcoin is &#x27;still a bear market technically&#x27; (below 50-day MA); needs &gt;50-day then &gt;200-day to confirm.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">Capex numbers (SemiAnalysis $11.1T) are forecasts, not commitments; &#x27;capex air pocket&#x27; risk he himself wrote about.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">Open-source vs frontier split is presented with his lean; enterprise data (89% closed) could shift fast.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">No specific price targets or position sizes beyond &#x27;some&#x27;; concentrated basket = 10 names not individually disclosed (webinar July 15).</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">Claim that memory shortage persists &#x27;beyond 2030&#x27; is a forecast sourced to industry quotes (Micron/SK Hynix/Dylan Patel), verify independently.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div></div></section><section class="sec" id="take"><div class="sec-head"><div class="sec-eye">What to do with this</div><h2>Best Actionable Takeaways</h2></div><div class="card"><div class="tk" style="--tk-c:var(--gk);--tk-bg:var(--g)"><div class="tk-ic">&#10003;</div><div class="tk-bd"><div class="tk-title">Study the memory supply/demand gap (capacity +20-30%/yr vs demand doubling; shortages beyond 2030) before the next print</div><span class="tk-tag">Speaker claim</span></div></div><div class="tk" style="--tk-c:var(--brand);--tk-bg:var(--brand-soft)"><div class="tk-ic">&#128161;</div><div class="tk-bd"><div class="tk-title">Build the oversold &#x27;entry score&#x27; screen (%-above-20/50/200-day + RSI + MACD) on an AI basket; replicate via Claude Co-Work</div><span class="tk-tag">Speaker claim (method shared)</span></div></div><div class="tk" style="--tk-c:var(--gk);--tk-bg:var(--g)"><div class="tk-ic">&#10003;</div><div class="tk-bd"><div class="tk-title">Add consumer-AI-agent enablers (Apple, Meta, model labs) to watchlist; track interface/UX maturation as the trigger</div><span class="tk-tag">Speaker claim</span></div></div><div class="tk" style="--tk-c:var(--brand);--tk-bg:var(--brand-soft)"><div class="tk-ic">&#128161;</div><div class="tk-bd"><div class="tk-title">Read Scott Bessent&#x27;s NY Economic Club speech + Mohamed El-Erian op-ed on crypto as US financial statecraft</div><span class="tk-tag">Speaker claim (verify primary sources)</span></div></div><div class="tk" style="--tk-c:var(--brand);--tk-bg:var(--brand-soft)"><div class="tk-ic">&#128202;</div><div class="tk-bd"><div class="tk-title">Validate the &#x27;long scarcity / short abundance&#x27; framing against your own book; consider SaaS exposure</div><span class="tk-tag">Analyst interpretation</span></div></div><div class="tk" style="--tk-c:var(--gk);--tk-bg:var(--g)"><div class="tk-ic">&#10003;</div><div class="tk-bd"><div class="tk-title">Watch the Fed hike-odds path into July; map both hike and no-hike scenarios to BTC</div><span class="tk-tag">Speaker claim</span></div></div><div class="tk" style="--tk-c:var(--yk);--tk-bg:var(--y)"><div class="tk-ic">&#128161;</div><div class="tk-bd"><div class="tk-title">Independently verify SemiAnalysis $11.1T capex forecast and hyperscaler backlogs before treating as base case</div><span class="tk-tag">Needs verification</span></div></div></div></section><section class="sec" id="oth"><div class="sec-head"><div class="sec-eye">Strong convictions, recommendations &amp; non-investment news</div><h2>Other Notable News (Non-Stock)</h2></div><div class="card"><p class="muted">No notable non-stock items in this video.</p></div></section><section class="sec" id="gloss"><div class="sec-head"><div class="sec-eye">Names and terms at a glance</div><h2>Glossary &amp; Entities</h2></div><div class="card"><p class="muted">No additional terms, people, or entities to define for this video.</p></div></section>
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Visser's core framing: the last 4-6 weeks of AI-name weakness is a 'speed crash' (fast, sentiment/leverage-driven) inside a structural bull market, not a bubble deflating — tech momentum realized volatility spiked from ~70 to 87, flushing out over-leveraged retail and systematic funds globally.</li><li>Samsung's preliminary quarterly profit beat estimates by a huge margin and the stock still sold off — Visser reads this as leftover deleveraging, not a real 'news failure,' and cites Samsung's 2026 operating profit potentially exceeding its entire cumulative operating profit of the last 40 years.</li><li>The memory shortage guidance has gotten worse, not better: language shifted from 'shortage until 2030' to 'shortage beyond 2030,' with Micron signing long-term supply agreements and memory capacity growing only 20-<b>30%</b>/year against demand that's doubling — Visser explicitly rejects comparisons to the fracking supply-glut cycle.</li><li>The widely-watched 'token expenditure index' is, in Visser's view, being misread as a bubble gauge when it's really tracking adoption-phase noise (coding-agent FOMO, then 'bill shock' as budgets got figured out) — actual enterprise AI spend keeps climbing, illustrated by SemiAnalysis's own internal AI spend going from ~<b>$100K</b> to an ~$11M annualized run-rate in six months.</li><li>Consumer AI agents are framed as the next, much bigger token-demand wave than coding agents — cites Meta's Zuckerberg and CTO Andrew Bosworth acknowledging consumer-agent progress has lagged models themselves, and Goldman Sachs estimating AI agents could drive token consumption up roughly 24x to ~120 quadrillion/month.</li><li>Treasury Secretary Scott Bessent's speech (plus a Mohamed El-Erian op-ed on it) is treated as a watershed: reframing stablecoins/tokenization/digital assets as US 'financial statecraft,' not speculation — Visser draws a direct line to Marc Andreessen's 2014 'Why Bitcoin Matters' essay and announces a new crypto-focused YouTube format.</li><li>Portfolio notes: trimmed Micron in mid-May before the SK Hynix deal, moved some proceeds into silver and Bitcoin ('haven't worked out as well'), technical indicators (RSI, % above 50/200-day) suggest an oversold bounce setup, and Visser puts July's Fed meeting at roughly <b>50%</b> odds for a 'one and done' 25bp hike.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="speed-crash-not-bubble">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">WATCHING — expects meaningfully higher levels by year-end</span><span class="ttag">semis</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">This Is a 'Speed Crash' Inside a Structural Bull Market, Not a Bubble Popping</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>Visser's framing for the last month of AI-name weakness:</b> tech momentum volatility spiked hard (60-day realized vol ~70 to 87) and flushed out leveraged retail, systematic quant funds, and pods globally — a sentiment/positioning cleanse, not a demand-side breakdown.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Samsung's preliminary quarterly profit beat estimates by a wide margin and the stock still sold off the same day, with Micron falling too — Visser argues this looks like a 'news failure' only because the correction had already happened beforehand, not because good news is actually bearish.</li><li><span class="dot" style="background:#3f6b2e;"></span>Samsung's 10-day rate of change was the largest since mid-COVID panic and the biggest outside of the period right after Lehman Brothers — a genuine speed crash by his metrics, even though it doesn't 'feel' that dramatic within an overall uptrend.</li><li><span class="dot" style="background:#3f6b2e;"></span>On valuation: Samsung's PE for next year is cheap enough that analysts estimate 2026 operating profit could exceed the company's entire cumulative operating profit over the past 40 years — Visser calls dismissing this as 'just another AI overbuild' story 'silly.'</li><li><span class="dot" style="background:#3f6b2e;"></span>Systematic long-short quant managers gave back about a third of their year-to-date gains in a rough stretch (still positive for the year); retail using 2x leverage gave back <b>62%</b> even though the underlying names were down only ~23-38% — evidence of a leverage flush, not a fundamental repricing.</li><li><span class="dot" style="background:#3f6b2e;"></span>Technical read across his own 100-name thematic portfolio: percent of names above the 20-day moving average bottomed at <b>21%</b> (from 73%) then bounced to 31%; percent above the 200-day (his 'structural bull market' gauge) stayed elevated at 86%, which he reads as still-intact trend strength underneath the correction.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;I don't subscribe to the fact that when you've already had a correction... and you get good news, that you should sit there and say that this is bearish.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Samsung Electronics<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Preliminary profit beat estimates sharply; stock sold off anyway on leftover deleveraging, not the earnings themselves.</span></div><div class="namechip"><b>Salesforce (CRM)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium</span></b><span>Cited as the kind of 'short abundance' (software easily replicated by AI) name he's avoided while memory bears wanted to buy it on weakness.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Visser explicitly says this trade will not repeat its prior magnitude (a 5x in Micron/SK Hynix over the next five years is plausible versus the 20x seen from March last year to now) — the pace is slowing precisely because the story is no longer a secret.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="memory-shortage-worsens">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">BUYING-ADDING — trimmed in May, expects to rebuild</span><span class="ttag">semis</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">The Memory Shortage Guidance Just Got Worse, Not Better — and It's Not Fracking</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>Visser directly rebuts the 'this is just like fracking, supply will crush the price' comparison</b> he says he keeps hearing, arguing token/AI demand is structurally different from any prior physical-commodity demand cycle.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Industry guidance shifted from 'memory shortage until 2030' (March) to 'shortage beyond 2030' (a recent update) — long-term supply contracts are now being signed for the first time, and memory capacity is growing only 20-<b>30%</b> a year against demand that's doubling.</li><li><span class="dot" style="background:#3f6b2e;"></span>Core distinction from fracking/oil: fracking was a supply-side parabola against flat human-driven demand; here, demand is driven by AI agents/tokens, which scale on a fundamentally different (exponential, non-human) curve that physical, human-built supply structurally can't catch up to quickly.</li><li><span class="dot" style="background:#3f6b2e;"></span>Cites Elon Musk building a dedicated 'Terafab' specifically because he doesn't believe there will be enough memory/chips for humanoid demand by 2030 as further evidence the constraint is real and industry-wide, not confined to hyperscalers.</li><li><span class="dot" style="background:#3f6b2e;"></span>Trimmed his own Micron position significantly starting in mid-May (largest reduction in his concentrated basket), explicitly not trying to time the exact top — expects to start rebuying given the SK Hynix deal and reduced bottleneck concerns after the latest earnings.</li><li><span class="dot" style="background:#3f6b2e;"></span>States a 6-month forward view that prices will be 'significantly higher' than current levels once this pullback phase resolves, given the supply side (TSMC discipline, gas-turbine/power constraints) structurally prevents the kind of overbuild that would create a real bubble.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;The only thing that's just like fracking is the amount of people that are saying it's just like fracking.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Micron (MU)<span class="stance" style="background:#93711b;">WATCHING · High · 6 months</span></b><span>Trimmed significantly in mid-May; expects to rebuild the position given tightening long-term supply guidance.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Visser flags that the fix for this bottleneck (algorithmic efficiency reducing memory needs per token) is a 'long shot' / 'Hail Mary' he doesn't expect to arrive soon enough to change the near-term supply math.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="token-index-misread">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">WATCHING — index should trend toward zero over time, per Visser</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">The Token Expenditure Index Is Being Misread as a Bubble Gauge</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>Visser says he's been asked about this index more than anything else in three weeks</b> — his position is it should be read as an adoption-cycle artifact, not a signal that AI demand is fading.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Traces the index's rise and fall: a coding-agent capability shock, then OpenClaw driving a surge of AI-native/open-source token usage, then enterprise FOMO ('token maxing') causing a step-up, then a 'bill shock' pullback as budgets got scrutinized and usage patterns normalized (including seasonal effects like school ending and summer vacations).</li><li><span class="dot" style="background:#93711b;"></span>Argues the index doesn't capture the underlying adoption still happening — illustrated by SemiAnalysis founder Dylan Patel's own firm going from a ~<b>$100K</b> AI budget in November to an ~$11M annualized run-rate today (peak week equivalent to ~$14M) for a 90-person firm.</li><li><span class="dot" style="background:#93711b;"></span>Cites Patel's point that the 'smartest model' can actually be cheaper overall for assistant-style work because it needs fewer tokens, fewer iterations, and less human correction time — cheap models fit fixed workflows, expensive models fit variable/judgment-heavy work.</li><li><span class="dot" style="background:#93711b;"></span>Backlog data from the most recent earnings season as direct evidence demand still exceeds supply: <b>$627B</b> commitment backlog for Microsoft, $462B for Google, $225B for Amazon, $638B for Oracle, with Microsoft, Google, and Meta all separately confirming demand still exceeds their build capacity.</li><li><span class="dot" style="background:#93711b;"></span>Notes Anthropic is reportedly reaching cash-flow-positive or operating-profit territory, which he reads as margins coming through as expected — undercutting the 'nobody's making money on this' bear case.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;This is not an index of making or losing money.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Microsoft (MSFT)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Confirmed demand continuing to exceed capacity; $627B commitment backlog cited from latest earnings.</span></div><div class="namechip"><b>Alphabet (GOOGL)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Allocating compute under a strict ROIC framework; $462B commitment backlog cited.</span></div><div class="namechip"><b>Amazon (AMZN)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>$225B commitment backlog cited from latest earnings.</span></div><div class="namechip"><b>Oracle (ORCL)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>$638B commitment backlog cited, the largest of the four hyperscalers mentioned.</span></div><div class="namechip"><b>Anthropic<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Reportedly approaching cash-flow-positive or operating-profit territory.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="consumer-agents-next-wave">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">WATCHING — habit-formation phase, ahead of an expected token explosion</span><span class="ttag">ai-infra</span><span class="ttag">robotics</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Consumer AI Agents Are the Next, Much Bigger Token-Demand Wave</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>Visser argues consumer agents (not coding agents) will be the defining token-demand story of the next 12 months</b> — the bottleneck isn't model capability, it's product/interface maturity.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Cites a Mark Zuckerberg town hall reportedly acknowledging Meta's agentic AI progress has been slower than expected, plus a separate interview with Meta CTO Andrew Bosworth arguing the industry is moving beyond one monolithic model toward a mix of open-source and frontier models.</li><li><span class="dot" style="background:#3f6b2e;"></span>His framing for why consumer AI has lagged: the product layer, not the model, is the constraint — consumer AI needs to 'disappear into daily life' the way search, maps, or the camera did, which requires solving context, trust, timing, and permissions, not just raw intelligence.</li><li><span class="dot" style="background:#3f6b2e;"></span>Personal anecdote: used Grok conversationally through an entire Tesla drive this week in a way he says isn't yet replicable on a phone — sees this kind of ambient, voice-first interaction as the missing habit-formation piece, comparable to how mobile data usage was originally friction-constrained before the iPhone.</li><li><span class="dot" style="background:#3f6b2e;"></span>Cites a Goldman Sachs estimate that AI agents could drive token consumption up roughly 24x, to around 120 quadrillion tokens/month — with FSD/robotaxis and humanoids (vision-language models, not just LLMs) representing an even larger step-function in compute demand beyond that.</li><li><span class="dot" style="background:#3f6b2e;"></span>Reads Apple's stock action as consistent with this thesis: the stock made an all-time high on its AI/Siri announcement, sold off ('sell the news'), dipped again on a <b>20%</b>+ price hike tied to memory costs, then went right back to all-time highs — a pattern he reads as the market pricing in more consumer-agent upside than the current PEG ratio reflects.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;When the consumer AI interface problem is solved, token usage should explode.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Apple (AAPL)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Returned to all-time highs despite a sell-the-news dip and a 20%+ price hike tied to memory costs — read as the market pricing in consumer-agent upside.</span></div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#93711b;">WATCHING · Medium</span></b><span>Acknowledged agentic AI progress has lagged expectations; still compute-constrained per latest earnings.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Visser is explicit this thesis requires believing in humanoids, consumer agents, and Meta's stated roadmap — he flags this directly for anyone skeptical of that broader picture.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="bessent-crypto-statecraft">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">OWNS — Bitcoin, still technically in a bear market</span><span class="ttag">crypto</span><span class="ttag">policy</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Bessent's Speech Reframes Crypto as US 'Financial Statecraft' — Visser Launches a Crypto-Focused Format</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>Treasury Secretary Scott Bessent's speech at the New York Economic Club</b> is treated by Visser as a watershed moment — digital assets, stablecoins, and tokenization framed explicitly as national economic/security strategy, not speculation.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Cites Mohamed El-Erian's characterization of the speech as 'remarkably important,' arguing the Bessent administration sees economic security as inseparable from national security — trade, tech standards, supply chains, and now the payment system and the dollar's role are treated as tools of strategic power.</li><li><span class="dot" style="background:#3f6b2e;"></span>Draws a direct parallel to Marc Andreessen's January 2014 essay 'Why Bitcoin Matters,' arguing Andreessen told investors why Bitcoin mattered before the state understood it, and Bessent is now telling policymakers the same thing 12 years later — with agentic AI commerce (agents transacting, settling invoices, managing subscriptions) as the accelerant this time.</li><li><span class="dot" style="background:#3f6b2e;"></span>Personal parallel drawn to his own AI positioning: says crypto sentiment right now looks 'very reminiscent' of where AI sentiment was roughly 14 months ago when he was buying Micron under <b>$100 </b>and being told nothing was happening — explicitly dismisses Jeremy Grantham's public 'Bitcoin is worthless' commentary the same way he dismissed AI skeptics last year.</li><li><span class="dot" style="background:#3f6b2e;"></span>Describes his own 40-name, eight-vertical crypto index (34 private/token names, 6 public companies) as an overlay against Bitcoin, and restates his framing: 'Bitcoin is the S&amp;P 500 of the future of tokenization.'</li><li><span class="dot" style="background:#3f6b2e;"></span>Announces a new, crypto-focused YouTube format spending roughly two-thirds of each video specifically on crypto/tokenization/stablecoins/the new payment system, aimed at traditional finance viewers who've mostly ignored the space.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;You can no longer have no view on crypto... this will disrupt businesses, public stocks. We will have tokenization.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Bitcoin (BTC)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>Still technically in a bear market per Visser's own charts; watching for a close above the 50-day moving average as the next confirmation level.</span></div><div class="namechip"><b>Dogecoin (DOGE)<span class="stance" style="background:#93711b;">WATCHING · Low</span></b><span>Used as his 'retail energy' gauge; still below its 20-day moving average, signaling retail isn't yet comfortable re-engaging with crypto.</span></div><div class="namechip"><b>Strategy (MSTR)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Michael Saylor sold roughly 3,500 Bitcoin; the coin closed higher than its pre-announcement level, which Visser reads as a positive-response-to-bad-news signal.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Visser explicitly separates this from a short-term trading call: Bitcoin is described as still technically in a bear market, with the 50-day moving average as his next line in the sand before he'll re-assess the 200-day.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="portfolio-fed-positioning">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">WATCHING — Fed decision seen as the key near-term catalyst</span><span class="ttag">finance</span><span class="ttag">macro-rates</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Portfolio and Fed Positioning: Nvidia's Early Peak, Oversold Signals, and a ~50% July Hike Call</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>Visser lays out his near-term tactical read</b>: technical oversold signals across his portfolio, Nvidia's leadership role in the recent peak/trough, and a specific, dated call on the Fed's July meeting.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Notes Nvidia peaked on May 14, three weeks before the broader AI infrastructure trade topped out — flags this as a leading indicator worth tracking, and highlights Nvidia (one of his 10-name concentrated basket) closing above its 20-day moving average for the first time since June 2, holding the 200-day, with a MACD buy signal at its lowest valuation in a decade.</li><li><span class="dot" style="background:#93711b;"></span>Cites Jeff deGraaf-style breadth data: nearly <b>87%</b> of S&amp;P 500 semiconductor names registered oversold on a 14-day basis, historically a strong (though not perfect) bottoming signal.</li><li><span class="dot" style="background:#93711b;"></span>States a specific, dated macro call: puts the odds of a July Fed rate hike at close to <b>50%</b>, expects it (if it happens) to be a 'one and done' 25bp move with long-term rates likely falling afterward on restored Fed credibility — bases this partly on Kevin Warsh's confirmation-hearing language and a recent ECB forum interview.</li><li><span class="dot" style="background:#93711b;"></span>Still holds Palantir in his 100-name portfolio (bought around <b>$130 </b>in Q1, roughly flat since) and continues to find its 'own your own compute/data' thesis credible despite acknowledging Palantir is 'talking its own book.'</li><li><span class="dot" style="background:#93711b;"></span>Plans to detail his concentrated 10-name basket and specific re-entry levels in a subscriber webinar the following week, framing the current pullback as a reset rather than a reason to abandon the structural bull thesis.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I think there's a lot of things... in terms of the impact that AI is going to have on the Fed.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">BUYING-ADDING · Medium</span></b><span>Peaked May 14, ahead of the broader AI infra trade; recently closed above its 20-day MA with a MACD buy signal at a decade-low valuation.</span></div><div class="namechip"><b>Palantir (PLTR)<span class="stance" style="background:#3f6b2e;">OWNS · Medium</span></b><span>Still held in the 100-name portfolio, bought around $130 in Q1, roughly flat since.</span></div><div class="namechip"><b>Silver<span class="stance" style="background:#3f6b2e;">OWNS · Low</span></b><span>Moved some Micron sale proceeds into silver; performance described as disappointing so far.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The July rate-hike call is explicitly framed as a probability (~50%), not a certainty — Visser lays out expected market behavior under both the hike and no-hike scenarios.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📉</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Separate a leverage-driven 'speed crash' from a genuine demand breakdown before reading a sharp AI-name selloff as bearish.</span></div></div><div class="irow"><div class="ic">💾</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Track memory-shortage guidance language (2030 vs. 'beyond 2030') as a leading indicator, not headline volatility.</span></div></div><div class="irow"><div class="ic">🤖</div><div class="tline"><span class="cat">AI infra:</span> <span class="txt">Watch enterprise AI spend data (like SemiAnalysis's own budget growth) over sentiment indexes to gauge real adoption.</span></div></div><div class="irow"><div class="ic">📱</div><div class="tline"><span class="cat">AI infra:</span> <span class="txt">Position for consumer AI agents as the next token-demand wave — watch for ambient, voice-first product launches as the real trigger, not model announcements.</span></div></div><div class="irow"><div class="ic">₿</div><div class="tline"><span class="cat">Crypto:</span> <span class="txt">Read Bessent's stablecoin/tokenization framing as a policy-level signal worth acting on, not just a speculative-sector news item.</span></div></div><div class="irow"><div class="ic">🏦</div><div class="tline"><span class="cat">Macro:</span> <span class="txt">Prepare for both a 'one and done' July hike and a no-hike scenario — Visser sees Bitcoin tailwinds specifically in the no-hike case.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;The only thing that's just like fracking is the amount of people that are saying it's just like fracking.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;You want to be short abundance... and long scarcity. That's it.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;You can no longer have no view on crypto.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Bitcoin is the S&amp;P 500 of the future of tokenization.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;When the consumer AI interface problem is solved, token usage should explode.&#8221; <cite>— Jordi Visser</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Analysts (cited by Jordi Visser):</b> Samsung's 2026 operating profit could exceed its entire cumulative operating profit of the last 40 years <span class="cmeta">operating profit · over $217 billion in 2026 · 2026</span> <span class="tag">Samsung Electronics</span></div><div class="ritem"><b>Memory industry guidance (cited by Jordi Visser):</b> memory chip shortage duration <span class="cmeta">shortage persistence · beyond 2030 (revised up from 'until 2030') · beyond 2030</span></div><div class="ritem"><b>Goldman Sachs (cited by Jordi Visser):</b> AI agents could drive a large increase in token consumption <span class="cmeta">monthly token consumption · ~24x increase, to roughly 120 quadrillion tokens/month</span></div><div class="ritem"><b>Jordi Visser:</b> probability and shape of a July Fed rate decision <span class="cmeta">rate-hike probability / size · ~50% probability of a hike; if it happens, a 'one and done' 25bp move · July 2026</span> <i>if his own reading of Kevin Warsh's confirmation-hearing and ECB forum remarks</i></div><div class="ritem"><b>Dylan Patel (cited by Jordi Visser):</b> SemiAnalysis's own internal AI token spend growth <span class="cmeta">annualized AI spend · from ~$100K (November) to ~$11M annualized (peak week equivalent ~$14M) · 6 months</span> <i>if his own firm's data, a 90-person company</i></div><div class="ritem"><b>SemiAnalysis (cited by Jordi Visser):</b> total global AI capex buildout forecast <span class="cmeta">capex forecast · $11.1 trillion (vs. Goldman Sachs' $7.6 trillion)</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Scott Bessent (US Treasury)</b> <span class="rel">endorses</span> <b>Bitcoin (BTC)</b> &mdash; New York Economic Club speech framing stablecoins/tokenization as US financial statecraft, cited by Visser as a landmark policy shift</div><div class="ritem"><b>Strategy (MSTR)</b> <span class="rel">owns stake</span> <b>Bitcoin (BTC)</b> &mdash; Michael Saylor sold roughly 3,500 Bitcoin; price closed higher than its pre-announcement level</div><div class="ritem"><b>Elon Musk</b> <span class="rel">invests in</span> <b>Micron (MU)</b> &mdash; Building a dedicated 'Terafab' specifically due to anticipated memory/chip shortages for humanoid production</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🎤</div><div><div class="title">Sources referenced this episode: Dylan Patel (SemiAnalysis) on a WisdomTree interview and elsewhere on memory/power/token-spend data; Aaron Levy's post on open-source vs. frontier AI economics; Jesse Zhang's note that his company runs <b>90%</b> of workloads on open-source models; Andrew Bosworth's (Meta CTO) interview with Alex Kantrowitz; Jeremy Grantham's public 'Bitcoin is worthless' commentary (dismissed); Mohamed El-Erian's NYT op-ed on Scott Bessent's speech; Marc Andreessen's January 2014 essay 'Why Bitcoin Matters.' <span class="tag">Sources cited</span></div></div></div><div class="irow"><div class="ic">📡</div><div><div class="title">Visser is launching a new, crypto-focused YouTube format devoting roughly two-thirds of each episode to stablecoins, tokenization, and the new payment system, aimed at traditional-finance viewers who've largely ignored crypto. <span class="tag">Format change</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Speed crash</b> &mdash; Visser's term for a fast, sharp price decline driven by leverage unwinds and volatility-forced selling within an intact longer-term uptrend, as opposed to a bubble genuinely deflating on broken fundamentals.</div><div><b>Token expenditure index</b> &mdash; A market-watched gauge of AI token spending trends; Visser argues it reflects adoption-cycle phases (FOMO spend, then budget scrutiny) rather than whether real AI demand is rising or falling.</div><div><b>Second derivative (slowdown)</b> &mdash; When growth is still positive but decelerating in rate — used here to describe AI infrastructure spending still rising, just no longer accelerating at its prior pace.</div><div><b>PEG ratio</b> &mdash; Price/earnings ratio divided by expected earnings growth rate — used to argue certain AI-exposed names (Samsung, Apple) are cheap relative to their growth even after large share-price gains.</div></div></div>
+    </section>
   </div>
 </div>
 </body>
