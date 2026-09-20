@@ -21,6 +21,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "trowe-survived-ftx",
+        "tags": ["crypto", "finance"],
         "color": "green",
         "badge": "Confirmed event",
         "status": "SURVIVED FTX WITH ZERO COUNTERPARTY EXPOSURE",
@@ -45,6 +46,7 @@ THEMES = [
     },
     {
         "id": "liquidity-stall-post-1010",
+        "tags": ["crypto", "macro-rates"],
         "color": "amber",
         "badge": "Contested",
         "status": "UNRESOLVED SINCE AN OCTOBER EVENT REFERRED TO AS '10/10'",
@@ -69,6 +71,7 @@ THEMES = [
     },
     {
         "id": "stablecoin-ux-fragmentation",
+        "tags": ["crypto", "consumer"],
         "color": "amber",
         "badge": "Active adoption blocker",
         "status": "FRAGMENTING ACROSS PERMISSIONED, OPEN-SOURCE, AND MULTI-CHAIN RAILS",
@@ -90,6 +93,7 @@ THEMES = [
     },
     {
         "id": "tokenization-hype-vs-reality",
+        "tags": ["crypto", "finance"],
         "color": "amber",
         "badge": "Contested",
         "status": "REAL OPPORTUNITY, REAL MISUSE RISK",
@@ -112,6 +116,7 @@ THEMES = [
     },
     {
         "id": "institutional-adoption-accelerating",
+        "tags": ["crypto", "finance"],
         "color": "green",
         "badge": "High conviction",
         "status": "BOARD-LEVEL INBOUND SHARPLY UP OVER THE LAST 6 MONTHS",
@@ -139,6 +144,7 @@ THEMES = [
     },
     {
         "id": "ai-risk-identity-tangent",
+        "tags": ["policy", "ai-infra"],
         "color": "red",
         "badge": "High conviction concern",
         "status": "FLAGGED BY BOTH SPEAKERS, DIVERGING TEMPERAMENT ON HOW WORRIED TO BE",
@@ -167,6 +173,17 @@ TAKEAWAYS = [
     {"icon": "\U0001F3E2", "tag": "Crypto", "title": "Before backing any tokenization narrative, ask who the actual buyer is and whether liquidity is being created or just relabeled — the real estate/retail mismatch is the cautionary case."},
     {"icon": "\U0001F6A2", "tag": "Crypto", "title": "Watch commodity/trading-firm stablecoin adoption as a laggard indicator — it hasn't happened yet despite an obvious efficiency case, and a breakout there would be a real signal."},
     {"icon": "\U0001F194", "tag": "Policy", "title": "Track whether any major tech platforms actually converge on shared digital-ID/provenance standards — as of 2021 they agreed on the problem but explicitly refused to agree on the standard."},
+]
+
+CLAIMS = [
+    {"who": "Blue Macellari", "claim": "board presentations on tokenization/stablecoins", "metric": "count", "target": "15-20", "by": "past 6 months", "condition": "self-reported by T. Rowe Price executive", "entity": "T. Rowe Price (TROW)"},
+    {"who": "Imperial War College study (cited)", "claim": "AI models escalate to nuclear weapons use in wargame scenarios", "metric": "escalation rate", "target": "~9 out of 10 times within 3-4 steps", "by": None, "condition": "recalled from memory mid-conversation, no named source given"},
+    {"who": "Raoul Pal", "claim": "crypto money-making window", "metric": "years", "target": "5 years", "by": None, "condition": "standing personal prediction restated in this episode"},
+]
+
+RELATIONS = [
+    {"from": "Robin Hood (HOOD)", "rel": "competes_with", "to": "Coinbase (COIN)", "note": "pressuring the crypto-native incumbent to move faster on product innovation"},
+    {"from": "T. Rowe Price (TROW)", "rel": "competes_with", "to": "Franklin Templeton (BEN)", "note": "both cited as institutional managers pursuing tokenized-fund adoption, T. Rowe further along per Macellari's own account"},
 ]
 
 RISKS = [

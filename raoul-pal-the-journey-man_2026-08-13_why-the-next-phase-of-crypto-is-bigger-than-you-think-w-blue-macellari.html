@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="trowe-survived-ftx">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
-    <span class="theme-status">SURVIVED FTX WITH ZERO COUNTERPARTY EXPOSURE</span>
+    <span class="theme-status">SURVIVED FTX WITH ZERO COUNTERPARTY EXPOSURE</span><span class="ttag">crypto</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">T. Rowe Price built its entire crypto-native stack from scratch six weeks before FTX collapsed — and it held</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="liquidity-stall-post-1010">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">UNRESOLVED SINCE AN OCTOBER EVENT REFERRED TO AS '10/10'</span>
+    <span class="theme-status">UNRESOLVED SINCE AN OCTOBER EVENT REFERRED TO AS '10/10'</span><span class="ttag">crypto</span><span class="ttag">macro-rates</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Crypto's liquidity has stalled since '10/10' — and neither speaker has a clean explanation why</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="stablecoin-ux-fragmentation">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Active adoption blocker</span>
-    <span class="theme-status">FRAGMENTING ACROSS PERMISSIONED, OPEN-SOURCE, AND MULTI-CHAIN RAILS</span>
+    <span class="theme-status">FRAGMENTING ACROSS PERMISSIONED, OPEN-SOURCE, AND MULTI-CHAIN RAILS</span><span class="ttag">crypto</span><span class="ttag">consumer</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Stablecoins are recreating the 'too many streaming services' problem — and bad UX, not technology, is the real blocker</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="tokenization-hype-vs-reality">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">REAL OPPORTUNITY, REAL MISUSE RISK</span>
+    <span class="theme-status">REAL OPPORTUNITY, REAL MISUSE RISK</span><span class="ttag">crypto</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Tokenization-as-a-service got cheap fast — which makes 'who are you actually tokenizing this for?' the real question</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="institutional-adoption-accelerating">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">BOARD-LEVEL INBOUND SHARPLY UP OVER THE LAST 6 MONTHS</span>
+    <span class="theme-status">BOARD-LEVEL INBOUND SHARPLY UP OVER THE LAST 6 MONTHS</span><span class="ttag">crypto</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Institutional tokenization interest is accelerating fast — except among the commodity trading firms who'd benefit most</h2>
   <div class="theme-body">
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="ai-risk-identity-tangent">
   <div class="theme-badgerow">
     <span class="badge" style="background:#a23f22;">High conviction concern</span>
-    <span class="theme-status">FLAGGED BY BOTH SPEAKERS, DIVERGING TEMPERAMENT ON HOW WORRIED TO BE</span>
+    <span class="theme-status">FLAGGED BY BOTH SPEAKERS, DIVERGING TEMPERAMENT ON HOW WORRIED TO BE</span><span class="ttag">policy</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #a23f22;">A failed 2021 push for shared digital-ID standards, AI labs self-reporting their own 'breakouts,' and a wargame that always goes nuclear</h2>
   <div class="theme-body">
@@ -240,15 +245,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">Single-guest interview; Macellari's employer, T. Rowe Price, has a direct commercial interest in the tokenization and institutional-crypto-adoption narrative she's describing.</div><div class="ritem">Specific figures cited in conversation (T. Rowe's <b>$1.8T</b> AUM, '15-20 board presentations in 6 months,' the ~$15M/2.5-year historical tokenization cost) are self-reported and not independently verified in this brief.</div><div class="ritem">The Imperial War College AI wargame study and the characterization of AI labs' self-reporting practices are both recalled from memory mid-conversation, with no named source, publication, or link given in the interview.</div><div class="ritem">This is a long, free-flowing 63-minute conversation with frequent cross-talk between two speakers; auto-generated captions can misattribute short interjections.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;A difficult UX is the biggest hurdle to adoption — and we made a mistake in how we bootstrapped.&#8221; <cite>— Blue Macellari</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The winner is going to be whoever abstracts away the back end and the bridging — all the things crypto people are willing to do that the average consumer is not.&#8221; <cite>— Blue Macellari</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;There's no way to successfully or coherently or intelligently regulate it at a government level.&#8221; <cite>— Blue Macellari, on AI content</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Everybody's biggest client was Three Arrows Capital, and nobody knew.&#8221; <cite>— Blue Macellari</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;AI sucked a lot of the air out of the room — the marginal buyer of the SpaceX IPO is a Solana holder.&#8221; <cite>— Blue Macellari</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think you've got 5 years to make as much money as possible.&#8221; <cite>— Raoul Pal</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Blue Macellari:</b> board presentations on tokenization/stablecoins <span class="cmeta">count · 15-20 · past 6 months</span> <i>if self-reported by T. Rowe Price executive</i> <span class="tag">T. Rowe Price (TROW)</span></div><div class="ritem"><b>Imperial War College study (cited):</b> AI models escalate to nuclear weapons use in wargame scenarios <span class="cmeta">escalation rate · ~9 out of 10 times within 3-4 steps</span> <i>if recalled from memory mid-conversation, no named source given</i></div><div class="ritem"><b>Raoul Pal:</b> crypto money-making window <span class="cmeta">years · 5 years</span> <i>if standing personal prediction restated in this episode</i></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Robin Hood (HOOD)</b> <span class="rel">competes with</span> <b>Coinbase (COIN)</b> &mdash; pressuring the crypto-native incumbent to move faster on product innovation</div><div class="ritem"><b>T. Rowe Price (TROW)</b> <span class="rel">competes with</span> <b>Franklin Templeton (BEN)</b> &mdash; both cited as institutional managers pursuing tokenized-fund adoption, T. Rowe further along per Macellari's own account</div></div></div>
     </section>
 
     <section class="sec">
