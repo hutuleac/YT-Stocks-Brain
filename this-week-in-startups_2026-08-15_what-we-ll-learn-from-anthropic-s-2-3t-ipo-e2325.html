@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="anthropic-ipo">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Confirmed event</span>
-    <span class="theme-status">IPO EXPECTED OCTOBER 2026 — reported valuation $2-3T</span>
+    <span class="theme-status">IPO EXPECTED OCTOBER 2026 — reported valuation $2-3T</span><span class="ttag">finance</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Anthropic's $2-3T IPO: What the S-1 Will Finally Reveal</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="decart-ma-wave">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">In talks — unannounced</span>
-    <span class="theme-status">REPORTED ~$6B, largest Anthropic acquisition to date</span>
+    <span class="theme-status">REPORTED ~$6B, largest Anthropic acquisition to date</span><span class="ttag">ai-infra</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">The Decart Deal and the Reopening of the M&amp;A Market</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="wisewell">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Recommendation</span>
-    <span class="theme-status">OWNS — Jason disclosed he is personally negotiating a stake</span>
+    <span class="theme-status">OWNS — Jason disclosed he is personally negotiating a stake</span><span class="ttag">health</span><span class="ttag">consumer</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Wisewell: Betting on Distributed Water Infrastructure — and the Microplastics Case Behind It</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="grit-robotics">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">POSITIVE VIEW — Series A/B, $32M raised, 18 months old</span>
+    <span class="theme-status">POSITIVE VIEW — Series A/B, $32M raised, 18 months old</span><span class="ttag">robotics</span><span class="ttag">energy</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Grit Robotics: Teaching Off-the-Shelf Arms to Install Solar 4-8x Faster</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="off-duty">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Recommendation</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">consumer</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">Off Duty: Dictation Gear, Emoji Trends, and What's Worth Watching</h2>
   <div class="theme-body">
@@ -221,15 +226,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">Jason discloses he is personally negotiating an equity stake in Wisewell — his on-air enthusiasm for the product carries a direct financial conflict of interest.</div><div class="ritem">Ramp's enterprise-AI-spend percentages are drawn from card/subscription transaction data, not an independent, audited market census.</div><div class="ritem">Anthropic's IPO valuation, ARR figure, and the Decart deal terms are all pre-announcement reporting (Financial Times sourcing, described as insider conversations), not confirmed regulatory filings.</div><div class="ritem">Wisewell's microplastics, fertility, and dementia-cadaver figures are the founder's own conversational summary of existing research, not citations shown or verified on screen.</div><div class="ritem">One M&amp;A example Jason cites in passing — 'Cursor bought... for <b>$60 billion</b>' — is an offhand aside during the show that doesn't clearly match public reporting; treat it as his conversational claim rather than a confirmed deal.</div><div class="ritem">Sponsor segments (Ro, PayPal/Launch, CLA, Odoo) are excluded from this brief entirely, per standing policy on paid ad reads.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;I don't think in today's day and age you need to race into IPOs — the bankers and the CEOs price IPOs to perfection.&#8221; <cite>— Jason Calacanis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Let the good times roll. Let the acquisitions happen. Only one in 10 has to work.&#8221; <cite>— Jason Calacanis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Every time we double the production of solar panels, the price comes down by 48% — and it's happening every 18 months.&#8221; <cite>— Punit Puri, Grit Robotics</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;41% of the US skilled workforce in construction will retire by 2031.&#8221; <cite>— Punit Puri, Grit Robotics</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't think you should try to follow what everyone else is doing.&#8221; <cite>— Jason Calacanis</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Financial Times (reported):</b> Anthropic IPO valuation target <span class="cmeta">valuation · $2-3 trillion · October 2026</span> <i>if pre-announcement reporting, not a confirmed filing</i> <span class="tag">Anthropic</span></div><div class="ritem"><b>investors (cited):</b> Anthropic annual recurring revenue <span class="cmeta">ARR · $100-120B · year-end 2026</span> <i>if market expectation ahead of the IPO, not confirmed</i> <span class="tag">Anthropic</span></div><div class="ritem"><b>Grit Robotics:</b> contracted solar panel installation pipeline <span class="cmeta">panels/capacity · ~6 million panels (~2.8 GW) · 18-24 months</span> <i>if self-reported contract backlog</i> <span class="tag">Grit Robotics</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Anthropic</b> <span class="rel">acquires</span> <b>Decart AI</b> &mdash; reportedly in talks for ~$6B, its largest acquisition to date</div><div class="ritem"><b>Anthropic</b> <span class="rel">competes with</span> <b>OpenAI</b> &mdash; 43.5% vs. 39.7% share of US enterprise AI spend per Ramp card-spend data</div></div></div>
     </section>
 
     <section class="sec">

@@ -22,6 +22,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "anthropic-ipo",
+        "tags": ["finance", "ai-infra"],
         "color": "amber",
         "badge": "Confirmed event",
         "status": "IPO EXPECTED OCTOBER 2026 — reported valuation $2-3T",
@@ -43,6 +44,7 @@ THEMES = [
     },
     {
         "id": "decart-ma-wave",
+        "tags": ["ai-infra", "finance"],
         "color": "green",
         "badge": "In talks — unannounced",
         "status": "REPORTED ~$6B, largest Anthropic acquisition to date",
@@ -63,6 +65,7 @@ THEMES = [
     },
     {
         "id": "wisewell",
+        "tags": ["health", "consumer"],
         "color": "green",
         "badge": "Recommendation",
         "status": "OWNS — Jason disclosed he is personally negotiating a stake",
@@ -84,6 +87,7 @@ THEMES = [
     },
     {
         "id": "grit-robotics",
+        "tags": ["robotics", "energy"],
         "color": "green",
         "badge": "High conviction",
         "status": "POSITIVE VIEW — Series A/B, $32M raised, 18 months old",
@@ -105,6 +109,7 @@ THEMES = [
     },
     {
         "id": "off-duty",
+        "tags": ["consumer", "dev-workflow"],
         "color": "gray",
         "badge": "Recommendation",
         "title": "Off Duty: Dictation Gear, Emoji Trends, and What's Worth Watching",
@@ -127,6 +132,17 @@ TAKEAWAYS = [
     {"icon": "\U0001F91D", "tag": "Markets", "title": "Track small-scale acquisitions (like Decart) at trillion-dollar companies as a liquidity/M&A-thaw signal, not just deal-specific news."},
     {"icon": "\U0001F6E0️", "tag": "Robotics", "title": "For automation/robotics startups, weight contracted pipeline (Grit's ~6M-panel backlog) and team pedigree over how viral the demo video looks."},
     {"icon": "\U0001F3A4", "tag": "AI tools", "title": "Use a wireless lav mic and 2-3 minutes of stream-of-consciousness dictation into your LLM instead of short typed prompts."},
+]
+
+CLAIMS = [
+    {"who": "Financial Times (reported)", "claim": "Anthropic IPO valuation target", "metric": "valuation", "target": "$2-3 trillion", "by": "October 2026", "condition": "pre-announcement reporting, not a confirmed filing", "entity": "Anthropic"},
+    {"who": "investors (cited)", "claim": "Anthropic annual recurring revenue", "metric": "ARR", "target": "$100-120B", "by": "year-end 2026", "condition": "market expectation ahead of the IPO, not confirmed", "entity": "Anthropic"},
+    {"who": "Grit Robotics", "claim": "contracted solar panel installation pipeline", "metric": "panels/capacity", "target": "~6 million panels (~2.8 GW)", "by": "18-24 months", "condition": "self-reported contract backlog", "entity": "Grit Robotics"},
+]
+
+RELATIONS = [
+    {"from": "Anthropic", "rel": "acquires", "to": "Decart AI", "note": "reportedly in talks for ~$6B, its largest acquisition to date"},
+    {"from": "Anthropic", "rel": "competes_with", "to": "OpenAI", "note": "43.5% vs. 39.7% share of US enterprise AI spend per Ramp card-spend data"},
 ]
 
 RISKS = [
