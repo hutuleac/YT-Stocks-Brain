@@ -22,6 +22,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "steering-vs-deterministic-checks",
+        "tags": ["dev-workflow"],
         "color": "amber",
         "badge": "Structural critique",
         "status": "PRACTICE SHIFT, DEC 2025-AUG 2026",
@@ -40,6 +41,7 @@ THEMES = [
     },
     {
         "id": "crap-and-mutation-testing-revival",
+        "tags": ["dev-workflow"],
         "color": "green",
         "badge": "Recommendation",
         "status": "TOOLS ORIGINALLY SHELVED AS IMPRACTICAL, c. 2000",
@@ -58,6 +60,7 @@ THEMES = [
     },
     {
         "id": "five-agent-pipeline",
+        "tags": ["dev-workflow"],
         "color": "green",
         "badge": "Recommendation",
         "status": "CURRENT WORKFLOW, ~1HR PER FEATURE",
@@ -79,6 +82,7 @@ THEMES = [
     },
     {
         "id": "context-trajectory",
+        "tags": ["dev-workflow"],
         "color": "amber",
         "badge": "Structural critique",
         "status": "OBSERVED PATTERN, NOT A CITED STUDY",
@@ -95,6 +99,7 @@ THEMES = [
     },
     {
         "id": "module-structure-as-agent-leverage",
+        "tags": ["dev-workflow"],
         "color": "green",
         "badge": "Recommendation",
         "status": "TOOLING IN PROGRESS, ARCHITECTURE ENFORCEMENT PARTIALLY MANUAL",
@@ -113,6 +118,7 @@ THEMES = [
     },
     {
         "id": "which-disciplines-transfer-to-agents",
+        "tags": ["dev-workflow"],
         "color": "amber",
         "badge": "Structural critique",
         "status": "REVISED PRINCIPLE FROM CLEAN CODE ERA",
@@ -132,6 +138,7 @@ THEMES = [
     },
     {
         "id": "learning-strategic-programming",
+        "tags": ["dev-workflow", "career"],
         "color": "amber",
         "badge": "Structural critique",
         "status": "OPEN QUESTION, NO SETTLED ANSWER OFFERED",

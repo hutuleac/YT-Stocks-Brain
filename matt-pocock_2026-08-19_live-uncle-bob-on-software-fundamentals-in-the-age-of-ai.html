@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="steering-vs-deterministic-checks">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Structural critique</span>
-    <span class="theme-status">PRACTICE SHIFT, DEC 2025-AUG 2026</span>
+    <span class="theme-status">PRACTICE SHIFT, DEC 2025-AUG 2026</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Prompt-based "steering" documents don't hold — deterministic tools in an enforced loop do</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="crap-and-mutation-testing-revival">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Recommendation</span>
-    <span class="theme-status">TOOLS ORIGINALLY SHELVED AS IMPRACTICAL, c. 2000</span>
+    <span class="theme-status">TOOLS ORIGINALLY SHELVED AS IMPRACTICAL, c. 2000</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Two early-2000s tools he'd abandoned as too slow for humans are now core to his agent harness</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="five-agent-pipeline">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Recommendation</span>
-    <span class="theme-status">CURRENT WORKFLOW, ~1HR PER FEATURE</span>
+    <span class="theme-status">CURRENT WORKFLOW, ~1HR PER FEATURE</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">A 5-stage specifier -&gt; coder -&gt; cleaner -&gt; hardener -&gt; QA pipeline, each agent single-purpose and short-lived</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="context-trajectory">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Structural critique</span>
-    <span class="theme-status">OBSERVED PATTERN, NOT A CITED STUDY</span>
+    <span class="theme-status">OBSERVED PATTERN, NOT A CITED STUDY</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">A context window develops a "trajectory" that contaminates everything after it — the only fix is a clean context</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="module-structure-as-agent-leverage">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Recommendation</span>
-    <span class="theme-status">TOOLING IN PROGRESS, ARCHITECTURE ENFORCEMENT PARTIALLY MANUAL</span>
+    <span class="theme-status">TOOLING IN PROGRESS, ARCHITECTURE ENFORCEMENT PARTIALLY MANUAL</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Well-partitioned modules with deep, narrow interfaces are the single biggest lever for agent (and human) performance</h2>
   <div class="theme-body">
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="which-disciplines-transfer-to-agents">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Structural critique</span>
-    <span class="theme-status">REVISED PRINCIPLE FROM CLEAN CODE ERA</span>
+    <span class="theme-status">REVISED PRINCIPLE FROM CLEAN CODE ERA</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Human process disciplines don't automatically transfer to agents — even when the underlying value does</h2>
   <div class="theme-body">
@@ -235,7 +240,7 @@ i{font-style:italic;}
 <section class="theme" id="learning-strategic-programming">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Structural critique</span>
-    <span class="theme-status">OPEN QUESTION, NO SETTLED ANSWER OFFERED</span>
+    <span class="theme-status">OPEN QUESTION, NO SETTLED ANSWER OFFERED</span><span class="ttag">dev-workflow</span><span class="ttag">career</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">AI has eaten tactical programming — Martin's tentative path for juniors to still learn strategic programming</h2>
   <div class="theme-body">
@@ -259,15 +264,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">Nearly every specific number in this brief (CRAP thresholds of 4 vs. 6-8, the ~4-5x productivity multiplier, the ~1hr pipeline runtime, the ~1-year junior ramp estimate) is Martin's own working figure from personal experimentation, quoted in conversation rather than published or peer-reviewed.</div><div class="ritem">This is a single practitioner's evolving personal workflow as of the interview date, not a documented or open-sourced framework the audience can currently install — Martin says explicitly not to try to reuse his own tools verbatim, only the approach.</div><div class="ritem">The 'lost in the middle' and 'trajectory' mechanisms are presented as Martin's and Pocock's working mental models of model behavior, not citations to specific published research.</div><div class="ritem">Long, informal live-conversation format on auto-generated captions — some phrasing (e.g., tool names, acronym pronunciations) may be imprecisely transcribed; verify exact wording against the video before quoting directly.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;I'm a big advocate of test-driven development. But I cannot and will not enforce that on the agents.&#8221; <cite>— Robert C. Martin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The cost of change has plummeted to as close to zero as I think we're ever going to get it.&#8221; <cite>— Robert C. Martin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I have a massive issue with the spec-driven development label.&#8221; <cite>— Matt Pocock</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;A young person coming out of training should be treated like an agent — several months being horribly unproductive but learning a hell of a lot.&#8221; <cite>— Robert C. Martin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The key with agents is to trim that initial prompt down to its absolute minimum.&#8221; <cite>— Robert C. Martin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The old books — the ones that nobody reads because they're old.&#8221; <cite>— Robert C. Martin</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><p class="empty">No dated or numeric calls made in this video.</p></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><p class="empty">No company-to-company relationships stated in this video.</p></div>
     </section>
 
     <section class="sec">
