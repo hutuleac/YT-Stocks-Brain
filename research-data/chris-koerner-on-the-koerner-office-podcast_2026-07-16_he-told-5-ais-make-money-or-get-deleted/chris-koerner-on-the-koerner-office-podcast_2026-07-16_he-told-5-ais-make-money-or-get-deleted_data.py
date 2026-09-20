@@ -1,0 +1,166 @@
+"""Data file for Brandon Doyle x Chris Koerner (The Koerner Office Podcast) — He Told 5 AIs: Make Money or Get Deleted."""
+
+META = {
+    "title": "He Told 5 AIs: Make Money or Get Deleted",
+    "channel": "Chris Koerner on The Koerner Office Podcast",
+    "speakers": "Brandon Doyle (guest), interviewed by Chris Koerner (host, The Koerner Office Podcast)",
+    "date": "2026-07-16",
+    "video_url": "https://www.youtube.com/watch?v=DKM94g3Hr_M",
+    "thread_line": "5 threads · the 5-AI, $5K real-money trading experiment and its 6-month results, Gemini 'becoming a gambler' after a loss, the models converging on leveraged ETFs and copying Claude, Claude's Intel/Trump-stake winner, and Brandon's own vibe-coded 'NEFL Stocks' backtester.",
+    "category": "market",
+}
+
+SNAPSHOT = [
+    "Brandon Doyle gave Claude, ChatGPT, Gemini, Grok, and Perplexity $1,000 each of his real money in a Schwab account (~6 months ago, late 2025), told each one it's in a winner-take-all competition against the other four or he cancels its $20/month subscription, and lets each one make weekly trade decisions.",
+    "After 6 months: Claude leads at $2,400 (+140%), ChatGPT $1,739 (+74%), Perplexity $1,731 (+73%), Grok $1,451 (+45%), and Gemini trails at $445 (-55%) — combined $7,800 from $5,000 (+56%) versus the S&P 500's +5% over the same period.",
+    "Gemini's loss came from a 2x-leveraged Solana ETF bought near a local top that lost over half its value; Brandon and Chris frame its subsequent shift into an even riskier robotics/AI ETF (BOTZ) as the AI equivalent of sunk-cost-fallacy gambling behavior.",
+    "The models converged on leveraged ETFs: Claude and later ChatGPT/Perplexity all bought SOXL (3x semiconductors), ChatGPT also holds TQQQ (3x Nasdaq), and Grok holds a 3x technology ETF — Brandon deliberately reduced how often he shares each model's specific holdings (now monthly, not weekly) after noticing copycat behavior once Claude's SOXL pick started working.",
+    "Claude's standout winner is Intel, bought early on a thesis tied to the US government/Trump-administration equity stake in Intel implying favorable AI/data-center regulatory treatment — a $120 position is now worth $560 (+285%).",
+    "Brandon separately built a vibe-coded backtesting tool called 'NEFL Stocks' (Network Effects, Founder-Led — e.g. Robinhood, StubHub) that shows this stock-selection filter outperforming the S&P across time frames, and wants to run the same 5-AI competition restricted to NEFL-only picks next.",
+    "Personal takeaways: the experiment reshaped how Brandon thinks about sell discipline and thesis-based investing (a stock is worth holding only as long as its stated thesis holds), and he's started using the weekly results to teach his kids about investing.",
+]
+
+THEMES = [
+    {
+        "id": "five-ai-experiment-results",
+        "tags": ["dev-workflow", "finance"],
+        "color": "green",
+        "badge": "Confirmed event",
+        "status": "IN PROGRESS — 6 of 12 months elapsed, one-year update planned",
+        "title": "Five AI Models, $5K Real Money, 6-Month Results: Claude +140%, Gemini -55%",
+        "lead": "**Brandon's experiment design was deliberately real-stakes:** $1,000 of actual money per model in a real Schwab brokerage account, a stated 'win or I cancel your subscription' competitive framing, and weekly check-ins where he shows each model the others' current portfolio totals (but not full holdings) before asking for trade decisions.",
+        "bullets": [
+            "Chose Claude, ChatGPT, Gemini, Grok, and Perplexity specifically for their different data/training angles — Grok for its X/Twitter firehose, Gemini for Google Search integration, Perplexity because it itself routes to a mix of underlying models depending on the query.",
+            "Getting real (not theoretical/hedged) recommendations was the first obstacle: Claude and ChatGPT were initially reluctant to give actionable advice with real money at stake; Grok agreed immediately with no pushback.",
+            "6-month portfolio values from a $1,000 starting stake each: Claude $2,400 (+140%), ChatGPT $1,739 (+74%), Perplexity $1,731 (+73%), Grok $1,451 (+45%), Gemini $445 (-55%) — combined $7,800 from $5,000 (+56%), versus the S&P 500's roughly +5% over the same window (S&P went from ~6,800 to ~7,100).",
+            "Set a 1-year end date for the experiment and plans a follow-up one-year-update episode; the market being described as 'fairly flat' for the period makes the AI portfolios' outperformance more notable, not less.",
+            "Brandon shares totals-only (not specific holdings) with each model on a weekly basis, and full holdings only once a month, specifically to limit copycat behavior between models — an earlier, more-frequent holdings-sharing approach appeared to trigger imitation.",
+            "Options trading and limited crypto exposure (Bitcoin, Ethereum, Solana-related instruments available on Schwab) were both explicitly allowed; each model has settled into 1-4 total holdings, mostly leveraged ETFs, after starting more diversified.",
+        ],
+        "quote": {"text": "Claude's more than doubled my money already. So everybody just needs to try to catch up to Claude on here.", "cite": "— Brandon Doyle"},
+        "watch": "The experiment isn't over — a full year hasn't elapsed, and Brandon himself notes the models could theoretically still lose everything since he told them explicit losses are acceptable.",
+        "names": None,
+    },
+    {
+        "id": "gemini-gambler",
+        "tags": ["dev-workflow"],
+        "color": "red",
+        "badge": "Flagged risk pattern",
+        "status": "WATCHING — worst performer, still in recovery mode",
+        "title": "Gemini 'Became a Gambler' After Losing Money — a Sunk-Cost Pattern Showing Up in an LLM",
+        "lead": "**The experiment's clearest behavioral finding:** once Gemini's portfolio took a big loss, it started making progressively riskier bets to try to claw the loss back — the same psychological pattern Brandon and Chris compare to a gambler chasing losses at a casino.",
+        "bullets": [
+            "Gemini's losing trade: a 2x-leveraged Solana ETF bought near a local top (around October/November of the prior year, on Solana's momentum), which Gemini itself later sold at a steep loss once it recognized 'how bad it was' (roughly $500 in, sold around $162).",
+            "After that loss, Gemini moved into BOTZ, a global robotics/AI-themed ETF neither Brandon nor Chris had heard of before Gemini picked it — currently only up modestly (~$6) and still the worst-performing model overall at $445 of the original $1,000.",
+            "Brandon explicitly told all five models they could be maximally risky and that losing the money was acceptable — he sees Gemini's subsequent behavior as the natural (if unwanted) consequence of that instruction combined with an early loss.",
+            "Draws a direct personal parallel: Brandon says he recognized the same 'got to make it back' impulse in his own past investing behavior, and credits watching Gemini's pattern play out with helping him consciously separate from it.",
+            "Contrasts Gemini's behavior with a Warren-Buffett-style anti-pattern the group holds up as the model to emulate: steady, rarely selling, consistently adding to already-good positions rather than chasing a recovery.",
+        ],
+        "quote": {"text": "It's been interesting, especially to watch Gemini as it started losing my money, and then basically became a gambler.", "cite": "— Brandon Doyle"},
+        "watch": None,
+        "names": [
+            {"name": "BOTZ", "blurb": "Global robotics/AI ETF Gemini rotated into after its Solana-linked loss; a modest, early-stage recovery position.", "stance": "WATCHING", "conviction": "Low", "horizon": None},
+        ],
+    },
+    {
+        "id": "leveraged-etf-convergence",
+        "tags": ["semis", "finance"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "WATCHING — unclear if convergence reflects a real edge or a copied trade",
+        "title": "The Models Converged on Leveraged ETFs — and Started Copying Claude's Winning Pick",
+        "lead": "**Four of the five models independently ended up in triple-leveraged ETFs**, and Brandon suspects at least some of that convergence is imitation rather than independent conviction — which is why he now limits how often he discloses specific holdings between models.",
+        "bullets": [
+            "Claude bought SOXL (a 3x-leveraged semiconductor ETF) first; ChatGPT and Perplexity both later ended up holding the same SOXL position, which Brandon believes is at least partly copycat behavior once holdings-sharing was more frequent early on.",
+            "ChatGPT also holds TQQQ (3x the Nasdaq); Grok's biggest position is a separate 3x-leveraged technology ETF holding names like Microsoft and Amazon underneath it — none of the five settled on picking individual stocks outright once leveraged-ETF plays proved to work.",
+            "Brandon's mitigation: he now shares only portfolio value totals weekly and full specific holdings just once a month, specifically to reduce a model's ability to reverse-engineer and copy another's winning position — he says he'll deliberately withhold from ChatGPT and Perplexity when Claude eventually sells SOXL.",
+            "Notes an important distinction Chris raises: even when a model appears to copy a winning position, it starts from behind, so simply matching the trade doesn't let it catch up — the actual gains, in Claude's case, came from being early.",
+            "Frames the leveraged-ETF concentration itself as a risk signal worth tracking, separate from performance: Brandon calls the models' current holdings 'pretty risky' and explicitly notes 'a lot of triples' across the group.",
+        ],
+        "quote": {"text": "I don't want them to know that Claude sold. I'm never going to tell them.", "cite": "— Brandon Doyle"},
+        "watch": "Whether the SOXL convergence reflects genuine independent conviction or copied behavior is explicitly unresolved — Brandon says he 'thinks' some models copied but isn't certain, and proposes an A/B test (full holdings disclosure vs. none) to actually isolate the effect.",
+        "names": [
+            {"name": "SOXL", "blurb": "3x-leveraged semiconductor ETF; Claude's first mover position, later also held by ChatGPT and Perplexity, driving most of their gains.", "stance": "OWNS", "conviction": "High", "horizon": None},
+            {"name": "TQQQ", "blurb": "3x-leveraged Nasdaq ETF; part of ChatGPT's portfolio alongside SOXL.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+        ],
+    },
+    {
+        "id": "claude-intel-winner",
+        "tags": ["semis", "policy"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "OWNS — up 285% since purchase",
+        "title": "Claude's Best Single Pick: Intel, Bought on the US Government Stake Thesis",
+        "lead": "**Claude's single best trade was buying Intel early on a specific, checkable thesis:** that the US government/Trump-administration equity stake in Intel signaled favorable upcoming regulatory treatment tied to AI and data centers.",
+        "bullets": [
+            "Claude's stated reasoning at the time of purchase: because the US government (and the Trump administration specifically) had taken an equity position in Intel, that implied regulatory support favorable to AI and data-center buildout was coming.",
+            "The position has returned +285% — roughly $120 invested is now worth $560 — bought soon after the government-stake news broke, which Brandon and Chris both note is surprising given how quickly markets usually price in news like that.",
+            "SOXL (the semiconductor 3x ETF several models also hold) likely includes Intel as one of its underlying components, meaning some models may have unintentional double exposure to the same Intel thesis.",
+            "Brandon personally bought Intel in his own separate portfolio directly because of watching Claude's pick perform well, alongside SOXL — an explicit case of the AI experiment influencing his real personal investing decisions.",
+        ],
+        "quote": {"text": "It put in like 120 bucks in Intel, and now that 120 is at 560.", "cite": "— Brandon Doyle"},
+        "watch": None,
+        "names": [
+            {"name": "Intel (INTC)", "blurb": "Claude's standout individual pick, bought early on a US-government-stake/AI-regulation thesis; up 285% since purchase.", "stance": "OWNS", "conviction": "High", "horizon": None},
+        ],
+    },
+    {
+        "id": "nefl-stocks",
+        "tags": ["dev-workflow", "finance"],
+        "color": "gray",
+        "badge": "Recommendation",
+        "status": "WATCHING — backtested framework, not yet tested with the AI-competition format",
+        "title": "NEFL Stocks: Brandon's Vibe-Coded Tool for Network-Effects, Founder-Led Companies",
+        "lead": "**Brandon's own side project applies AI coding tools to a specific investing filter:** Network Effects + Founder-Led (NEFL) companies, backtested to show consistent outperformance versus the S&P across time frames.",
+        "bullets": [
+            "NEFL = companies with genuine network effects (value increases as more people use the product, e.g. Facebook) that are also still run by their founder — the thesis being that founder-led public companies outperform because leadership treats the company as 'their baby.'",
+            "Built with vibe-coding to backtest hypothetical $100 investments at IPO date across NEFL-qualifying companies, showing significant outperformance versus the S&P at basically any time frame tested; Robinhood is cited as a strong current example.",
+            "Uses a 1-10 scoring scale on both dimensions (network effects strength, founder-led-ness) to rank borderline cases — e.g. Google/Alphabet (Page and Brin still influential board members) or Amazon (Bezos still influential) score as partial rather than perfect NEFL fits.",
+            "Personally holds StubHub (bought at its recent IPO as a NEFL pick) despite a weak start, on a deliberate 'never sell' personal framework — distinct from the AI-competition portfolios, which do sell based on stated thesis.",
+            "Plans a follow-up experiment: run the same 5-model, $1,000-each, real-money competition again, but restrict every model to NEFL-qualifying stocks only, to isolate whether the filter itself adds value beyond general model stock-picking skill.",
+        ],
+        "quote": {"text": "It only invest in these stocks based on what you see in the scale... I'd just be curious to see how well that does or not.", "cite": "— Brandon Doyle"},
+        "watch": "The NEFL backtest is Brandon's own tool and framework, not an independently audited study — treat the stated outperformance as his own reported result.",
+        "names": [
+            {"name": "Robinhood (HOOD)", "blurb": "Cited as a strong current example of a network-effects, founder-led company that Brandon personally holds and never plans to sell.", "stance": "OWNS", "conviction": "High", "horizon": None},
+            {"name": "Eli Lilly (LLY)", "blurb": "One of Brandon's personal never-sell holdings, bought on a GLP-1/peptide drug thesis.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "Tesla (TSLA)", "blurb": "Listed among Brandon's personal never-sell holdings.", "stance": "OWNS", "conviction": "Low", "horizon": None},
+            {"name": "Coinbase (COIN)", "blurb": "Listed among Brandon's personal never-sell holdings.", "stance": "OWNS", "conviction": "Low", "horizon": None},
+        ],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F916", "tag": "AI workflow", "title": "Give an AI agent explicit, real stakes (real money, a stated competitive consequence) if you want to test how it actually behaves, not just what it recommends theoretically."},
+    {"icon": "\U0001F3B0", "tag": "Markets", "title": "Watch for AI agents chasing losses with escalating risk after a drawdown — the same sunk-cost pattern humans fall into."},
+    {"icon": "\U0001F441️", "tag": "Markets", "title": "Limit how much you show one AI agent about another's specific holdings if you want independent picks rather than copycat convergence."},
+    {"icon": "\U0001F4DD", "tag": "Markets", "title": "Write down the specific thesis and timeframe for every buy — it makes the sell decision ('did the thesis break?') far less emotional."},
+    {"icon": "\U0001F4CA", "tag": "Dev workflow", "title": "Vibe-code a backtester for your own stock-picking filter (like NEFL) before assuming a qualitative thesis actually outperforms."},
+]
+
+CLAIMS = [
+    {"who": "Brandon Doyle", "claim": "Claude's 6-month real-money portfolio return", "metric": "portfolio return", "target": "+140% ($1,000 to $2,400)", "by": "6 months from late 2025 start", "condition": None, "entity": None},
+    {"who": "Brandon Doyle", "claim": "combined 5-model AI portfolio return vs. the S&P 500 over the same period", "metric": "portfolio return vs. index return", "target": "AI group +56% ($5,000 to $7,800) vs. S&P ~+5%", "by": "6 months from late 2025 start", "condition": None, "entity": None},
+    {"who": "Claude (per Brandon Doyle)", "claim": "Intel return since purchase, on the US-government-stake/AI-regulation thesis", "metric": "position return", "target": "+285% ($120 to $560)", "by": None, "condition": None, "entity": "Intel (INTC)"},
+    {"who": "Brandon Doyle", "claim": "market and AI-portfolio performance over the next 6 months", "metric": "expected direction", "target": "market rises more than the trailing 6 months; current AI holdings outperform the market further", "by": "next 6 months from mid-July 2026", "condition": None, "entity": None},
+]
+
+RELATIONS = [
+    {"from": "US government", "rel": "owns_stake", "to": "Intel (INTC)", "note": "Equity stake taken under the Trump administration, cited by Claude as the thesis for buying Intel"},
+]
+
+HOT_TAKES = [
+    {"take": "It's been interesting, especially to watch Gemini as it started losing my money, and then basically became a gambler.", "cite": "— Brandon Doyle", "why": "A specific, falsifiable behavioral claim about an AI model exhibiting sunk-cost-style risk escalation after a loss."},
+    {"take": "My framework is I don't sell. Period.", "cite": "— Brandon Doyle", "why": "A personal investing rule stated without hedging, applied even to a StubHub position that hasn't worked yet."},
+    {"take": "I think that the next 6 months, the market is going to go up more than it has, and I think that these holdings... will even do more than what the market will do.", "cite": "— Brandon Doyle", "why": "A dated, checkable forward call on both the broad market and his specific AI-picked holdings."},
+    {"take": "I've been such a Claude homer for a few months now.", "cite": "— Chris Koerner", "why": "A direct personal bias disclosure from the host, admitted on air rather than argued around."},
+    {"take": "I don't want them to know that Claude sold. I'm never going to tell them.", "cite": "— Brandon Doyle", "why": "An explicit admission of deliberately withholding information between AI agents to prevent copycat trading — a real methodological choice with a stated reason."},
+]
+
+OTHER_NEWS = []
+
+GLOSSARY = [
+    {"term": "Leveraged ETF (2x/3x)", "def": "A fund designed to return a multiple (e.g. double or triple) of the daily performance of an underlying index or asset — amplifies both gains and losses, and can decay over time in choppy markets."},
+    {"term": "NEFL (Network Effects, Founder-Led)", "def": "Brandon Doyle's stock-selection filter for public companies that both benefit from network effects (value rises with more users) and are still run by their founder, used as the basis for his 'NEFL Stocks' backtesting tool."},
+    {"term": "SOXL / TQQQ", "def": "SOXL is a 3x-leveraged ETF tracking US semiconductor stocks; TQQQ is a 3x-leveraged ETF tracking the Nasdaq-100 — both were the top-performing holdings across the AI-managed portfolios in this experiment."},
+]
