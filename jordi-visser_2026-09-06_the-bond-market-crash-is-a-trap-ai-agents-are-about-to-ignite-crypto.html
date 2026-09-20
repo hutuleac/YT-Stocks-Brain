@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="bond-fear-trap">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">POSITIVE VIEW — no crisis signal</span>
+    <span class="theme-status">POSITIVE VIEW — no crisis signal</span><span class="ttag">macro-rates</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">"Stop with the bond fears" — the crash narrative is a trap</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="ai-trade-stuck-in-mud">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">OWNS — Nvidia high conviction</span>
+    <span class="theme-status">OWNS — Nvidia high conviction</span><span class="ttag">ai-infra</span><span class="ttag">semis</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">The AI trade is "stuck in the mud" — but three companies are all that matter</h2>
   <div class="theme-body">
@@ -150,7 +155,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;If a technician is bearish on semiconductors, go see if they're bullish on yields. If they're also bearish on Bitcoin, there might be a thing here where they're developing an endgame bias.&#8221;<cite>— Jordi Visser</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)</b><span>OWNS, high conviction — now sized as large in his portfolio as Marvell; center of the "three companies that matter" thesis</span></div><div class="namechip"><b>Micron (MU)</b><span>REDUCED — sold down since May/June rotating into crypto; still expects it could double next year but says the bigger trade already happened</span></div><div class="namechip"><b>Marvell (MRVL)</b><span>CASUAL MENTION — named alongside Dell and Micron as a beneficiary of the circular AI financing loop</span></div><div class="namechip"><b>Dell (DELL)</b><span>CASUAL MENTION — stock +9% after raising AI server revenue guidance from doubling to tripling</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>Now sized as large in his portfolio as Marvell; center of the "three companies that matter" thesis.</span></div><div class="namechip"><b>Micron (MU)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium</span></b><span>Sold down since May/June rotating into crypto; still expects it could double next year but says the bigger trade already happened.</span></div><div class="namechip"><b>Marvell (MRVL)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Named alongside Dell and Micron as a beneficiary of the circular AI financing loop.</span></div><div class="namechip"><b>Dell (DELL)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Stock +9% after raising AI server revenue guidance from doubling to tripling.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">He explicitly rotated capital out of this trade (selling down Micron since May/June) into crypto — he still thinks Micron could double in the next year, but says "that trade has already happened" for the bigger multiple.</div></div>
     </div>
   </div>
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="agi-agents-inflection">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">POSITIVE VIEW — urgent for workers and enterprises</span>
+    <span class="theme-status">POSITIVE VIEW — urgent for workers and enterprises</span><span class="ttag">software</span><span class="ttag">career</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">GPT-6 Astra and the AGI/agent swarm — "you have no time to wait anymore"</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="ai-crypto-convergence">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">OWNS — high conviction</span>
+    <span class="theme-status">OWNS — high conviction</span><span class="ttag">crypto</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">"AI is the crypto killer app" — Bitcoin as the purest AI hedge</h2>
   <div class="theme-body">
@@ -188,7 +193,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Not humans, but AI agents will be the biggest users of crypto. So think about that. If you believe that crypto volumes are going to explode... that means we are about to see billions of consumers.&#8221;<cite>— Jordi Visser</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Bitcoin (BTC)</b><span>OWNS, high conviction — "the purest AI hedge"; up 36% quarter-to-date, consolidating above a key technical level</span></div><div class="namechip"><b>Ethereum (ETH)</b><span>OWNS — one of his weekly "three horsemen"; up 56% quarter-to-date, 200-day moving average turned up</span></div><div class="namechip"><b>Solana (SOL)</b><span>OWNS — up 38% quarter-to-date, 200-day moving average turned up, consolidating at current levels</span></div><div class="namechip"><b>Robinhood (HOOD)</b><span>OWNS, part of his 46-name crypto portfolio — upgraded by Wall Street on its new layer-2 stock-tokenization chain</span></div><div class="namechip"><b>BlackRock (BLK)</b><span>CASUAL MENTION — building tokenized money-market-fund collateral driving the RWA market's growth</span></div><div class="namechip"><b>Franklin Templeton (BEN)</b><span>CASUAL MENTION — same tokenized money-market-fund activity as BlackRock</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Bitcoin (BTC)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>"The purest AI hedge"; up 36% quarter-to-date, consolidating above a key technical level.</span></div><div class="namechip"><b>Ethereum (ETH)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>One of his weekly "three horsemen"; up 56% quarter-to-date, 200-day moving average turned up.</span></div><div class="namechip"><b>Solana (SOL)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>Up 38% quarter-to-date, 200-day moving average turned up, consolidating at current levels.</span></div><div class="namechip"><b>Robinhood (HOOD)<span class="stance" style="background:#3f6b2e;">OWNS · Medium</span></b><span>Part of his 46-name crypto portfolio — upgraded by Wall Street on its new layer-2 stock-tokenization chain.</span></div><div class="namechip"><b>BlackRock (BLK)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Building tokenized money-market-fund collateral driving the RWA market's growth.</span></div><div class="namechip"><b>Franklin Templeton (BEN)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Same tokenized money-market-fund activity as BlackRock.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">This whole thread rests on Andreessen's framing being right that agents — not human adoption — drive crypto's next leg; Visser says explicitly "you don't have to agree with me on this," it's his own thesis, not a consensus call.</div></div>
     </div>
   </div>
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="portfolio-and-sizing">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">REPOSITIONED — crypto now larger than AI stocks, beta-adjusted</span>
+    <span class="theme-status">REPOSITIONED — crypto now larger than AI stocks, beta-adjusted</span><span class="ttag">finance</span><span class="ttag">crypto</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">His own rotation, and an explicit rule for sizing a speculative conviction</h2>
   <div class="theme-body">
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="visserlabs-business">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Confirmed event</span>
-    <span class="theme-status">ANNOUNCED — rolling out this month</span>
+    <span class="theme-status">ANNOUNCED — rolling out this month</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">The free show is shrinking: more of his output moves behind a paywall</h2>
   <div class="theme-body">
@@ -240,15 +245,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">This is one analyst's personal weekly market read, built on his own charts and his own thematic/crypto portfolios that he also sells subscription access to — a direct conflict of interest inherent to the show's business model.</div><div class="ritem">Auto-generated captions garbled several names and terms that couldn't be reliably resolved (Treasury Secretary "Bessent" appears as "Besson," a bond-volatility index appears as "Bonval," a payments provider appears as "Moonay," and a perpetual-futures reference appears as "PERS") — these are described by function rather than guessed at by name.</div><div class="ritem">Figures on OpenAI/Anthropic margin math, the 1,200-agent swarm, and Bill Gates's shift are all secondhand — drawn from a podcast episode or reports he read this week, not primary sources he cites directly.</div><div class="ritem">Nearly every forward-looking call in this episode (bond yields, AGI timing, crypto share of fiat wealth, his own position sizing) is explicitly labeled by him as his own opinion and not advice — the brief carries that framing forward rather than treating any of it as fact.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;Everyone in X... the same people who were saying AI is a bubble are telling you that the bond market is going to explode higher. Guys, don't believe the hype.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The three companies that matter the most are Anthropic, OpenAI, and Nvidia... interest rates are a rounding error on inference P&amp;L.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;If your major plan is to give everyone Anthropic, you are falling behind. That's what this says. That is not a joke. That is a reality.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The agent economy is Bitcoin, plain and simple for me. You guys don't have to agree, but that's just a reality for me.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;If you think there's a 5% chance it happens, you should have 5% of your money in it. That's my opinion. That is not advice.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Do I think it'll double between now and next year? Probably. But a double's not 10 times. That trade has already happened.&#8221; <cite>— Jordi Visser (on Micron)</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Jordi Visser:</b> Micron could double <span class="cmeta">price return · 2x</span> <i>if within the next year</i> <span class="tag">Micron (MU)</span></div><div class="ritem"><b>Jordi Visser:</b> A 10-year yield move costs Anthropic/OpenAI inference margin far less than model-price compression does <span class="cmeta">margin impact comparison · 200bps yield rise ≈ 1 margin point vs. 10% model-price decline ≈ 3 margin points</span></div><div class="ritem"><b>Jordi Visser:</b> Crypto captures a rising share of fiat-denominated wealth <span class="cmeta">share of fiat wealth · rising</span> <i>if over the next five years, driven by AI disruption plus rate suppression</i></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>xAI</b> <span class="rel">partners with</span> <b>Moonpay</b> &mdash; Grok can buy or lend crypto via Moonpay integration</div><div class="ritem"><b>xAI</b> <span class="rel">partners with</span> <b>Stripe</b> &mdash; Grok can purchase items online via Stripe Link</div><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">supplies</span> <b>OpenAI</b> &mdash; circular financing loop: compute revenue funds model revenue which funds compute purchases</div><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">supplies</span> <b>Anthropic</b> &mdash; circular financing loop: compute revenue funds model revenue which funds compute purchases</div></div></div>
     </section>
 
     <section class="sec">

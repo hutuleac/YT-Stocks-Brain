@@ -24,6 +24,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "bond-fear-trap",
+        "tags": ["macro-rates"],
         "color": "green",
         "badge": "High conviction",
         "status": "POSITIVE VIEW — no crisis signal",
@@ -43,6 +44,7 @@ THEMES = [
     },
     {
         "id": "ai-trade-stuck-in-mud",
+        "tags": ["ai-infra", "semis"],
         "color": "green",
         "badge": "High conviction",
         "status": "OWNS — Nvidia high conviction",
@@ -60,14 +62,15 @@ THEMES = [
         "quote": {"text": "If a technician is bearish on semiconductors, go see if they're bullish on yields. If they're also bearish on Bitcoin, there might be a thing here where they're developing an endgame bias.", "cite": "— Jordi Visser"},
         "watch": "He explicitly rotated capital out of this trade (selling down Micron since May/June) into crypto — he still thinks Micron could double in the next year, but says \"that trade has already happened\" for the bigger multiple.",
         "names": [
-            {"name": "Nvidia (NVDA)", "blurb": "OWNS, high conviction — now sized as large in his portfolio as Marvell; center of the \"three companies that matter\" thesis"},
-            {"name": "Micron (MU)", "blurb": "REDUCED — sold down since May/June rotating into crypto; still expects it could double next year but says the bigger trade already happened"},
-            {"name": "Marvell (MRVL)", "blurb": "CASUAL MENTION — named alongside Dell and Micron as a beneficiary of the circular AI financing loop"},
-            {"name": "Dell (DELL)", "blurb": "CASUAL MENTION — stock +9% after raising AI server revenue guidance from doubling to tripling"},
+            {"name": "Nvidia (NVDA)", "blurb": "Now sized as large in his portfolio as Marvell; center of the \"three companies that matter\" thesis.", "stance": "OWNS", "conviction": "High", "horizon": None},
+            {"name": "Micron (MU)", "blurb": "Sold down since May/June rotating into crypto; still expects it could double next year but says the bigger trade already happened.", "stance": "NEGATIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Marvell (MRVL)", "blurb": "Named alongside Dell and Micron as a beneficiary of the circular AI financing loop.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Dell (DELL)", "blurb": "Stock +9% after raising AI server revenue guidance from doubling to tripling.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
     {
         "id": "agi-agents-inflection",
+        "tags": ["software", "career"],
         "color": "amber",
         "badge": "Contested",
         "status": "POSITIVE VIEW — urgent for workers and enterprises",
@@ -87,6 +90,7 @@ THEMES = [
     },
     {
         "id": "ai-crypto-convergence",
+        "tags": ["crypto", "ai-infra"],
         "color": "green",
         "badge": "High conviction",
         "status": "OWNS — high conviction",
@@ -104,16 +108,17 @@ THEMES = [
         "quote": {"text": "Not humans, but AI agents will be the biggest users of crypto. So think about that. If you believe that crypto volumes are going to explode... that means we are about to see billions of consumers.", "cite": "— Jordi Visser"},
         "watch": "This whole thread rests on Andreessen's framing being right that agents — not human adoption — drive crypto's next leg; Visser says explicitly \"you don't have to agree with me on this,\" it's his own thesis, not a consensus call.",
         "names": [
-            {"name": "Bitcoin (BTC)", "blurb": "OWNS, high conviction — \"the purest AI hedge\"; up 36% quarter-to-date, consolidating above a key technical level"},
-            {"name": "Ethereum (ETH)", "blurb": "OWNS — one of his weekly \"three horsemen\"; up 56% quarter-to-date, 200-day moving average turned up"},
-            {"name": "Solana (SOL)", "blurb": "OWNS — up 38% quarter-to-date, 200-day moving average turned up, consolidating at current levels"},
-            {"name": "Robinhood (HOOD)", "blurb": "OWNS, part of his 46-name crypto portfolio — upgraded by Wall Street on its new layer-2 stock-tokenization chain"},
-            {"name": "BlackRock (BLK)", "blurb": "CASUAL MENTION — building tokenized money-market-fund collateral driving the RWA market's growth"},
-            {"name": "Franklin Templeton (BEN)", "blurb": "CASUAL MENTION — same tokenized money-market-fund activity as BlackRock"},
+            {"name": "Bitcoin (BTC)", "blurb": "\"The purest AI hedge\"; up 36% quarter-to-date, consolidating above a key technical level.", "stance": "OWNS", "conviction": "High", "horizon": None},
+            {"name": "Ethereum (ETH)", "blurb": "One of his weekly \"three horsemen\"; up 56% quarter-to-date, 200-day moving average turned up.", "stance": "OWNS", "conviction": "High", "horizon": None},
+            {"name": "Solana (SOL)", "blurb": "Up 38% quarter-to-date, 200-day moving average turned up, consolidating at current levels.", "stance": "OWNS", "conviction": "High", "horizon": None},
+            {"name": "Robinhood (HOOD)", "blurb": "Part of his 46-name crypto portfolio — upgraded by Wall Street on its new layer-2 stock-tokenization chain.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "BlackRock (BLK)", "blurb": "Building tokenized money-market-fund collateral driving the RWA market's growth.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Franklin Templeton (BEN)", "blurb": "Same tokenized money-market-fund activity as BlackRock.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
     {
         "id": "portfolio-and-sizing",
+        "tags": ["finance", "crypto"],
         "color": "green",
         "badge": "High conviction",
         "status": "REPOSITIONED — crypto now larger than AI stocks, beta-adjusted",
@@ -133,6 +138,7 @@ THEMES = [
     },
     {
         "id": "visserlabs-business",
+        "tags": ["finance"],
         "color": "gray",
         "badge": "Confirmed event",
         "status": "ANNOUNCED — rolling out this month",
@@ -173,6 +179,19 @@ HOT_TAKES = [
     {"take": "The agent economy is Bitcoin, plain and simple for me. You guys don't have to agree, but that's just a reality for me.", "cite": "— Jordi Visser", "why": "core, unhedged conviction call equating an entire emerging economy with a single asset"},
     {"take": "If you think there's a 5% chance it happens, you should have 5% of your money in it. That's my opinion. That is not advice.", "cite": "— Jordi Visser", "why": "a concrete, personally-owned position-sizing rule a listener could act on and hold him to"},
     {"take": "Do I think it'll double between now and next year? Probably. But a double's not 10 times. That trade has already happened.", "cite": "— Jordi Visser (on Micron)", "why": "explicit, dated call that the bigger AI-hardware trade is over even while conceding more upside remains"},
+]
+
+CLAIMS = [
+    {"who": "Jordi Visser", "claim": "Micron could double", "metric": "price return", "target": "2x", "by": None, "condition": "within the next year", "entity": "Micron (MU)"},
+    {"who": "Jordi Visser", "claim": "A 10-year yield move costs Anthropic/OpenAI inference margin far less than model-price compression does", "metric": "margin impact comparison", "target": "200bps yield rise ≈ 1 margin point vs. 10% model-price decline ≈ 3 margin points", "by": None, "condition": None, "entity": None},
+    {"who": "Jordi Visser", "claim": "Crypto captures a rising share of fiat-denominated wealth", "metric": "share of fiat wealth", "target": "rising", "by": None, "condition": "over the next five years, driven by AI disruption plus rate suppression", "entity": None},
+]
+
+RELATIONS = [
+    {"from": "xAI", "rel": "partners_with", "to": "Moonpay", "note": "Grok can buy or lend crypto via Moonpay integration"},
+    {"from": "xAI", "rel": "partners_with", "to": "Stripe", "note": "Grok can purchase items online via Stripe Link"},
+    {"from": "Nvidia (NVDA)", "rel": "supplies", "to": "OpenAI", "note": "circular financing loop: compute revenue funds model revenue which funds compute purchases"},
+    {"from": "Nvidia (NVDA)", "rel": "supplies", "to": "Anthropic", "note": "circular financing loop: compute revenue funds model revenue which funds compute purchases"},
 ]
 
 OTHER_NEWS = [
