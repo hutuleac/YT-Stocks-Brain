@@ -25,6 +25,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "opinion-first-culture",
+        "tags": ["dev-workflow", "career"],
         "color": "red",
         "badge": "Structural critique",
         "status": "PATTERN, NOT ONE COMPANY",
@@ -42,6 +43,7 @@ THEMES = [
     },
     {
         "id": "three-fake-ai-metrics",
+        "tags": ["dev-workflow"],
         "color": "amber",
         "badge": "Structural critique",
         "status": "\"TOKEN MAXING\"",
@@ -59,6 +61,7 @@ THEMES = [
     },
     {
         "id": "coordination-tax-study",
+        "tags": ["dev-workflow"],
         "color": "amber",
         "badge": "Preprint evidence",
         "status": "2026 PREPRINT, UNREPLICATED",
@@ -76,6 +79,7 @@ THEMES = [
     },
     {
         "id": "four-real-metrics",
+        "tags": ["dev-workflow", "career"],
         "color": "green",
         "badge": "Recommendation",
         "status": "WHAT TO MEASURE INSTEAD",
@@ -93,6 +97,7 @@ THEMES = [
     },
     {
         "id": "organizational-singularity-book",
+        "tags": ["dev-workflow", "career"],
         "color": "gray",
         "badge": "Self-promotion, disclosed",
         "status": "NEW BOOK + FREE TOOL",
@@ -110,6 +115,7 @@ THEMES = [
     },
     {
         "id": "three-question-test",
+        "tags": ["dev-workflow"],
         "color": "amber",
         "badge": "Self-diagnostic",
         "status": "RUN IN ~4 MINUTES",

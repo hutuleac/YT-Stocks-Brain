@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="opinion-first-culture">
   <div class="theme-badgerow">
     <span class="badge" style="background:#a23f22;">Structural critique</span>
-    <span class="theme-status">PATTERN, NOT ONE COMPANY</span>
+    <span class="theme-status">PATTERN, NOT ONE COMPANY</span><span class="ttag">dev-workflow</span><span class="ttag">career</span>
   </div>
   <h2 style="border-left:4px solid #a23f22;">Companies Run on "Opinion First, Evidence Second, Selected for Fit"</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="three-fake-ai-metrics">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Structural critique</span>
-    <span class="theme-status">"TOKEN MAXING"</span>
+    <span class="theme-status">"TOKEN MAXING"</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Seats, Spend, and Task Speed Are the Three Metrics Everyone Tracks — and All Three Are Wrong</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="coordination-tax-study">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Preprint evidence</span>
-    <span class="theme-status">2026 PREPRINT, UNREPLICATED</span>
+    <span class="theme-status">2026 PREPRINT, UNREPLICATED</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">A John Hopkins Preprint Found 74% of Workflows Need No Coordination at All</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="four-real-metrics">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Recommendation</span>
-    <span class="theme-status">WHAT TO MEASURE INSTEAD</span>
+    <span class="theme-status">WHAT TO MEASURE INSTEAD</span><span class="ttag">dev-workflow</span><span class="ttag">career</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Four Metrics That Actually Measure AI Transformation</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="organizational-singularity-book">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Self-promotion, disclosed</span>
-    <span class="theme-status">NEW BOOK + FREE TOOL</span>
+    <span class="theme-status">NEW BOOK + FREE TOOL</span><span class="ttag">dev-workflow</span><span class="ttag">career</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">The Organizational Singularity — a Sequel to Exponential Organizations, Built as a Diagnostic Skill</h2>
   <div class="theme-body">
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="three-question-test">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Self-diagnostic</span>
-    <span class="theme-status">RUN IN ~4 MINUTES</span>
+    <span class="theme-status">RUN IN ~4 MINUTES</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">The Three-Question Test: Leaderboard, Geometry, Latency</h2>
   <div class="theme-body">
@@ -240,15 +245,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">This is disclosed self-promotion: Ismail names his own consulting business as the reason the diagnostic tool exists ("we build a business on the far side of this work") — the framework and metrics he recommends are also the product he sells.</div><div class="ritem">The coordination-tax study (<b>74%</b> monotonic, 24%-57% tax) is a single 2026 preprint he cites from memory in conversation, not a report he's reading from — he flags it as unreplicated himself.</div><div class="ritem">The researcher's name (heard as "Haran Jou") and the two metric sources ("Michelle Krivcovich", "Mark Jenkins at OpenText") come through auto-captions and may be misspelled or mistranscribed — treat the specific spellings as approximate, the ideas attributed to them as his own paraphrase in conversation.</div><div class="ritem">Figures like the L0-L5 ladder and the override-rate metric are his firm's own framework, presented with conviction but without independent validation data in this video.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;You've just paid a bonus for burning inference. That's Goodhart's law with a budget line.&#8221; <cite>— Salim Ismail</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;If nobody owns the counter case, you don't have an evidence culture, you have a ratification process.&#8221; <cite>— Salim Ismail</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;You've electrified the old factory. You've put a motor on every machine and left the drive shaft running down the ceiling. This is not going to work over time.&#8221; <cite>— Salim Ismail</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Most companies with a loud AI narrative are sitting at L1.&#8221; <cite>— Salim Ismail</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;A single yes puts you below L3, no matter what you are spending.&#8221; <cite>— Salim Ismail</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Charging for the thermometer would not be very fair, it would be kind of absurd.&#8221; <cite>— Salim Ismail</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><p class="empty">No dated or numeric calls made in this video.</p></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><p class="empty">No company-to-company relationships stated in this video.</p></div>
     </section>
 
     <section class="sec">
