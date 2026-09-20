@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="claude-watermark">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Confirmed policy, contested framing</span>
-    <span class="theme-status">ROLLING OUT NOW — COMPLIANCE DEADLINE WAS AUG 2, 2026</span>
+    <span class="theme-status">ROLLING OUT NOW — COMPLIANCE DEADLINE WAS AUG 2, 2026</span><span class="ttag">policy</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Anthropic watermarks every word Claude writes, citing the EU AI Act</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="zuck-manifesto">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Praised for vision, called out for hypocrisy</span>
-    <span class="theme-status">PUBLISHED THIS WEEK — 6,500 WORDS</span>
+    <span class="theme-status">PUBLISHED THIS WEEK — 6,500 WORDS</span><span class="ttag">policy</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Zuckerberg's "The Future is for Everyone" pitches decentralized AI — while Meta sues anyone who distills its own data</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="texas-data-centers">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested — pause, not ban</span>
-    <span class="theme-status">ORDERED MONDAY THIS WEEK BY GOV. GREG ABBOTT</span>
+    <span class="theme-status">ORDERED MONDAY THIS WEEK BY GOV. GREG ABBOTT</span><span class="ttag">energy</span><span class="ttag">policy</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Texas freezes new data center grid connections pending a statewide audit</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="is-software-dead">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">ONGOING PANEL DEBATE</span>
+    <span class="theme-status">ONGOING PANEL DEBATE</span><span class="ttag">software</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">"Is software dead?" — the panel splits on whether packaged enterprise software survives</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="founder-moat">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Opinion / closing riff</span>
-    <span class="theme-status">COMMENTARY, NOT NEWS</span>
+    <span class="theme-status">COMMENTARY, NOT NEWS</span><span class="ttag">career</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">Jason's thesis: in an AI-commoditized world, the founder's obsession is the moat</h2>
   <div class="theme-body">
@@ -221,15 +226,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">This is a panel of founders discussing their own and adjacent companies (Exa, Aragon, Tax GPT) and Jason's portfolio investments — commentary on competitors and regulation may reflect commercial incentives.</div><div class="ritem">Figures like the <b>$1.5B</b> Anthropic settlement, the 474 GW Texas figure, and manifesto quotes are relayed verbally from news items read on air, not independently verified against primary sources in this brief.</div><div class="ritem">Auto-generated captions can misattribute speakers in fast, overlapping panel crosstalk; some quotes/attributions in this brief are best-effort based on context.</div><div class="ritem">Jason Calacanis has a direct financial relationship with two of the three guests (Aragon, Tax GPT) as an investor, which may shape the tenor of discussion.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;Are you so deranged that your customers believe you're never quitting, you're never leaving? That's the moat.&#8221; <cite>— Jason</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Human logins to CRMs and ERPs are already obsolete now that agents can act on the underlying data directly.&#8221; <cite>— Josh Serota</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Some have tried to frame distillation as harmful, but it is important to protect the principle that you can learn from anything you can observe.&#8221; <cite>— Mark Zuckerberg, quoted on the show</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;No one is really writing the syntax of the code — everyone is managing their agents and using judgment about what to build.&#8221; <cite>— This Week in AI panel</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Open source, controlled by nobody, was better and more stable in the mind of enterprises.&#8221; <cite>— This Week in AI panel</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Simply put, Texans must come first.&#8221; <cite>— Gov. Greg Abbott, quoted on the show</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Anthropic:</b> copyright infringement settlement paid <span class="cmeta">settlement amount · $1.5B · past 30 days</span> <i>if reported as the largest such settlement on record</i> <span class="tag">Anthropic</span></div><div class="ritem"><b>ERCOT:</b> data center grid connection requests <span class="cmeta">requested capacity · 474 GW across 1,800 projects</span> <i>if self-reported tracking, may include duplicate requests from the same operator</i></div><div class="ritem"><b>Kash Ali:</b> Tax GPT agent-action revenue share <span class="cmeta">share of revenue from agent actions · ~1/3 · within 6 months of launch</span> <i>if self-reported by the founder</i> <span class="tag">Tax GPT / Taxfyle</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><p class="empty">No company-to-company relationships stated in this video.</p></div>
     </section>
 
     <section class="sec">

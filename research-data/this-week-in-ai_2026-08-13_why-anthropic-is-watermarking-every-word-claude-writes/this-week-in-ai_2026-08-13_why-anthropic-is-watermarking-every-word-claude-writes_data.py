@@ -21,6 +21,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "claude-watermark",
+        "tags": ["policy", "ai-infra"],
         "color": "amber",
         "badge": "Confirmed policy, contested framing",
         "status": "ROLLING OUT NOW — COMPLIANCE DEADLINE WAS AUG 2, 2026",
@@ -45,6 +46,7 @@ THEMES = [
     },
     {
         "id": "zuck-manifesto",
+        "tags": ["policy", "ai-infra"],
         "color": "amber",
         "badge": "Praised for vision, called out for hypocrisy",
         "status": "PUBLISHED THIS WEEK — 6,500 WORDS",
@@ -70,6 +72,7 @@ THEMES = [
     },
     {
         "id": "texas-data-centers",
+        "tags": ["energy", "policy"],
         "color": "amber",
         "badge": "Contested — pause, not ban",
         "status": "ORDERED MONDAY THIS WEEK BY GOV. GREG ABBOTT",
@@ -95,6 +98,7 @@ THEMES = [
     },
     {
         "id": "is-software-dead",
+        "tags": ["software", "dev-workflow"],
         "color": "amber",
         "badge": "Contested",
         "status": "ONGOING PANEL DEBATE",
@@ -121,6 +125,7 @@ THEMES = [
     },
     {
         "id": "founder-moat",
+        "tags": ["career", "dev-workflow"],
         "color": "gray",
         "badge": "Opinion / closing riff",
         "status": "COMMENTARY, NOT NEWS",
@@ -147,6 +152,12 @@ TAKEAWAYS = [
     {"icon": "\U0001F3D7️", "tag": "Energy", "title": "If building a Texas data center, structure it as BYOE (on-site power) to sidestep the grid-connection moratorium entirely."},
     {"icon": "\U0001F4B0", "tag": "Markets", "title": "Consider hybrid per-seat + outcome-based pricing for AI products selling into skeptical enterprise buyers — Tax GPT's model is a working reference point."},
     {"icon": "\U0001F916", "tag": "Hiring", "title": "Reframe software engineering hiring around judgment and agent management, not code-reading — that shift is already happening at Exa."},
+]
+
+CLAIMS = [
+    {"who": "Anthropic", "claim": "copyright infringement settlement paid", "metric": "settlement amount", "target": "$1.5B", "by": "past 30 days", "condition": "reported as the largest such settlement on record", "entity": "Anthropic"},
+    {"who": "ERCOT", "claim": "data center grid connection requests", "metric": "requested capacity", "target": "474 GW across 1,800 projects", "by": None, "condition": "self-reported tracking, may include duplicate requests from the same operator"},
+    {"who": "Kash Ali", "claim": "Tax GPT agent-action revenue share", "metric": "share of revenue from agent actions", "target": "~1/3", "by": "within 6 months of launch", "condition": "self-reported by the founder", "entity": "Tax GPT / Taxfyle"},
 ]
 
 RISKS = [
