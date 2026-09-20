@@ -32,6 +32,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "founder-psychology",
+        "tags": ["career"],
         "color": "gray",
         "badge": "Personal reflection",
         "status": "CAREER RETROSPECTIVE",
@@ -55,6 +56,7 @@ THEMES = [
     },
     {
         "id": "markdown-employee",
+        "tags": ["dev-workflow"],
         "color": "amber",
         "badge": "Structural thesis",
         "status": "CORE ARGUMENT OF THE INTERVIEW",
@@ -79,6 +81,7 @@ THEMES = [
     },
     {
         "id": "saas-not-precious",
+        "tags": ["dev-workflow"],
         "color": "amber",
         "badge": "Contested",
         "status": "MARKET-STRUCTURE SHIFT, PER TAN",
@@ -96,6 +99,7 @@ THEMES = [
     },
     {
         "id": "yc-access-model",
+        "tags": ["career"],
         "color": "green",
         "badge": "Structural critique",
         "status": "CONFIRMED — YC'S OWN STATED MODEL",
@@ -113,6 +117,7 @@ THEMES = [
     },
     {
         "id": "white-pill-timeline",
+        "tags": ["dev-workflow", "career"],
         "color": "amber",
         "badge": "Contrarian framing",
         "status": "TAN'S OWN TIMELINE CALL",
@@ -131,6 +136,7 @@ THEMES = [
     },
     {
         "id": "sf-local-politics",
+        "tags": ["policy"],
         "color": "amber",
         "badge": "Personal advocacy",
         "status": "ONGOING — TAN'S OWN CIVIC ORGANIZING",
@@ -157,6 +163,15 @@ TAKEAWAYS = [
     {"icon": "\U0001F3E2", "tag": "Org design", "title": "Push mid-level coordination (conflict resolution, status-tracking) to agents; keep humans on setting direction and execution, not managing the seven-plus-or-minus-two bottleneck."},
     {"icon": "\U0001F30D", "tag": "Civic engagement", "title": "Act local first — Tan argues state and national politics fix themselves once local government (housing, crime, schools) is functional."},
     {"icon": "⏳", "tag": "AI timeline", "title": "Plan on a ~20-year institutional adoption curve, not overnight disruption — bureaucracy is the brake, and that's time to adapt, not a reason to panic."},
+]
+
+CLAIMS = [
+    {"who": "Garry Tan", "claim": "Frontier-level compute drops to roughly $50-100, triggering a 'harness wars' phase over AI agent interfaces", "metric": "compute cost", "target": "$50-100", "by": "2027", "condition": None, "entity": None},
+    {"who": "Garry Tan", "claim": "AI-driven institutional disruption plays out over roughly two decades, gated by human/bureaucratic coordination limits rather than model intelligence", "metric": "adoption timeline", "target": None, "by": "~2046 (20 years out)", "condition": None, "entity": None},
+]
+
+RELATIONS = [
+    {"from": "Y Combinator", "rel": "invests_in", "to": "Kolabtree", "note": "YC-funded company Tan cites as an early example of agent-facing (not human-facing) product design."},
 ]
 
 RISKS = [

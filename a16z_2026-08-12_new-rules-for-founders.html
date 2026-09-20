@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="founder-psychology">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Personal reflection</span>
-    <span class="theme-status">CAREER RETROSPECTIVE</span>
+    <span class="theme-status">CAREER RETROSPECTIVE</span><span class="ttag">career</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">Chasing 'hot' cost Tan a shot at both Facebook-era web and Palantir</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="markdown-employee">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Structural thesis</span>
-    <span class="theme-status">CORE ARGUMENT OF THE INTERVIEW</span>
+    <span class="theme-status">CORE ARGUMENT OF THE INTERVIEW</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">"A markdown file is an employee" — Tan's model for the agentic company</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="saas-not-precious">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">MARKET-STRUCTURE SHIFT, PER TAN</span>
+    <span class="theme-status">MARKET-STRUCTURE SHIFT, PER TAN</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Code stopped being precious — and so did the SaaS multiple</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="yc-access-model">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Structural critique</span>
-    <span class="theme-status">CONFIRMED — YC'S OWN STATED MODEL</span>
+    <span class="theme-status">CONFIRMED — YC'S OWN STATED MODEL</span><span class="ttag">career</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">YC replaced Silicon Valley's insider social network with a form</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="white-pill-timeline">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contrarian framing</span>
-    <span class="theme-status">TAN'S OWN TIMELINE CALL</span>
+    <span class="theme-status">TAN'S OWN TIMELINE CALL</span><span class="ttag">dev-workflow</span><span class="ttag">career</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">The white pill: humans and bureaucracy — not model intelligence — are the bottleneck</h2>
   <div class="theme-body">
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="sf-local-politics">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Personal advocacy</span>
-    <span class="theme-status">ONGOING — TAN'S OWN CIVIC ORGANIZING</span>
+    <span class="theme-status">ONGOING — TAN'S OWN CIVIC ORGANIZING</span><span class="ttag">policy</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Tan's other project: organizing San Francisco politics around 'act local'</h2>
   <div class="theme-body">
@@ -240,15 +245,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">This is a single-guest interview — every figure (the '<b>$2</b>-4B mistake,' the '$50-100k/year' agent cost, 'zero to $15M ARR in four months') is Tan's own self-reported estimate, offered in conversation rather than backed by a report or audit.</div><div class="ritem">Tan runs Y Combinator and is a direct beneficiary of the founder/agentic-tooling narrative he's describing — his SaaS-is-dying and 'harness wars' calls are stated as personal conviction, not disclosed as neutral market analysis.</div><div class="ritem">The San Francisco politics section presents one side of a contested local political period (a named DA, a school board, and named media outlet) — it's Tan's own advocacy framing, not independently verified in this conversation.</div><div class="ritem">Auto-generated captions likely mangled some names/tools in the agentic-tooling section (e.g., a Brex tool referenced as 'Craptrack') — treat unfamiliar proper nouns in that stretch as approximate.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;It was like a $2 billion to $4 billion mistake at this point.&#8221; <cite>— Garry Tan</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;A pure per-seat SaaS thing... not totally clear it will exist in another 5 or 10 years.&#8221; <cite>— Garry Tan</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;An org like Microsoft can't. But a startup can. And every startup must.&#8221; <cite>— Garry Tan</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;It's going to be 20 years and that's not a bad thing... society is way slower than you think.&#8221; <cite>— Garry Tan</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;A markdown file is an employee.&#8221; <cite>— Garry Tan</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Garry Tan:</b> Frontier-level compute drops to roughly $50-100, triggering a 'harness wars' phase over AI agent interfaces <span class="cmeta">compute cost · $50-100 · 2027</span></div><div class="ritem"><b>Garry Tan:</b> AI-driven institutional disruption plays out over roughly two decades, gated by human/bureaucratic coordination limits rather than model intelligence <span class="cmeta">adoption timeline · ~2046 (20 years out)</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Y Combinator</b> <span class="rel">invests in</span> <b>Kolabtree</b> &mdash; YC-funded company Tan cites as an early example of agent-facing (not human-facing) product design.</div></div></div>
     </section>
 
     <section class="sec">
