@@ -26,6 +26,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "gpt6-astra",
+        "tags": ["software", "ai-infra"],
         "color": "amber",
         "badge": "Confirmed event — contested benchmarks",
         "status": "RELEASED THIS WEEK",
@@ -45,6 +46,7 @@ THEMES = [
     },
     {
         "id": "fable-5-1",
+        "tags": ["software"],
         "color": "green",
         "badge": "Benchmark leader",
         "status": "RELEASED THIS WEEK",
@@ -63,6 +65,7 @@ THEMES = [
     },
     {
         "id": "ai-governance-split",
+        "tags": ["policy"],
         "color": "amber",
         "badge": "Contested",
         "status": "SAME WEEK",
@@ -82,6 +85,7 @@ THEMES = [
     },
     {
         "id": "cybercab",
+        "tags": ["robotics", "consumer"],
         "color": "green",
         "badge": "Confirmed event",
         "status": "LAUNCHED THIS WEEK",
@@ -104,6 +108,7 @@ THEMES = [
     },
     {
         "id": "space-news",
+        "tags": ["space"],
         "color": "green",
         "badge": "Confirmed event",
         "status": "THIS WEEK",
@@ -124,6 +129,7 @@ THEMES = [
     },
     {
         "id": "ai-healthcare",
+        "tags": ["health", "biotech"],
         "color": "amber",
         "badge": "Confirmed event — mixed with speculative extrapolation",
         "status": "THIS WEEK",
@@ -144,6 +150,7 @@ THEMES = [
     },
     {
         "id": "world-labs-atlas",
+        "tags": ["software"],
         "color": "green",
         "badge": "Confirmed event",
         "status": "RELEASED THIS WEEK",
@@ -161,6 +168,7 @@ THEMES = [
     },
     {
         "id": "the-champion",
+        "tags": ["policy", "robotics"],
         "color": "gray",
         "badge": "Speculative proposal",
         "status": "EARLY-STAGE IDEA, NOT AN INVESTMENT OFFERING",
@@ -185,6 +193,18 @@ TAKEAWAYS = [
     {"icon": "\U0001F697", "tag": "Transportation", "title": "If you're in a market where Cybercab, Waymo or Zoox is expanding, model out ride-hailing cost dropping toward 20 cents/mile, not today's few-dollars-a-mile baseline."},
     {"icon": "\U0001F9EC", "tag": "Health", "title": "Talk to your physician before treating a GLP-1 drug as a longevity intervention — the mouse lifespan data is real but hasn't been shown to translate directly to humans."},
     {"icon": "\U0001F3E5", "tag": "Health", "title": "If you or your practice uses Epic, expect AI-assisted record review to become a standard-of-care expectation faster than most institutions are prepared for."},
+]
+
+CLAIMS = [
+    {"who": "Nevada regulators", "claim": "Cybercab rollout approval", "metric": "vehicles approved", "target": "up to 5,000 Cybercabs in Las Vegas", "by": "within 12 months", "condition": "regulatory approval already granted", "entity": "Tesla (TSLA)"},
+    {"who": "NASA", "claim": "Roman Space Telescope exoplanet survey", "metric": "additional exoplanets found", "target": "up to 100,000", "by": None, "condition": "mission objective, not yet achieved", "entity": "NASA"},
+    {"who": "Moonshot Mates panel", "claim": "robotaxi cost-per-mile decline", "metric": "cost per mile", "target": "roughly 20 cents/mile", "by": None, "condition": "hosts' own extrapolation from early Cybercab pricing", "entity": "Tesla (TSLA)"},
+]
+
+RELATIONS = [
+    {"from": "Nvidia (NVDA)", "rel": "acquires", "to": "Hugging Face", "note": "~$18B combined acquisition of Hugging Face and Poolside, positioning inside the open-weights ecosystem"},
+    {"from": "OpenAI", "rel": "partners_with", "to": "Epic Systems", "note": "ChatGPT now connects directly to Epic's EHR system (~325M patients)"},
+    {"from": "NASA", "rel": "customer_of", "to": "Blue Origin", "note": "selected over SpaceX to build the Mars telecommunications relay network"},
 ]
 
 RISKS = [
