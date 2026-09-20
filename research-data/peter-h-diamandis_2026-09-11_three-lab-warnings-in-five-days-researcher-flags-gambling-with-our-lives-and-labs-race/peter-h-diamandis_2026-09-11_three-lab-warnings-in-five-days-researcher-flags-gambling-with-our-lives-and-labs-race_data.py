@@ -24,6 +24,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "alignment-crisis",
+        "tags": ["policy", "ai-infra"],
         "color": "amber",
         "badge": "Contested",
         "status": "",
@@ -45,6 +46,7 @@ THEMES = [
     },
     {
         "id": "data-is-the-moat",
+        "tags": ["software", "ai-infra"],
         "color": "green",
         "badge": "High conviction",
         "status": "",
@@ -64,6 +66,7 @@ THEMES = [
     },
     {
         "id": "math-is-cooked",
+        "tags": ["ai-infra", "software"],
         "color": "green",
         "badge": "High conviction",
         "status": "",
@@ -83,6 +86,7 @@ THEMES = [
     },
     {
         "id": "compute-economy-reversal",
+        "tags": ["semis", "ai-infra"],
         "color": "green",
         "badge": "High conviction",
         "status": "",
@@ -107,6 +111,7 @@ THEMES = [
     },
     {
         "id": "anthropic-gdp-ubi",
+        "tags": ["macro-rates", "policy", "finance"],
         "color": "amber",
         "badge": "Contested",
         "status": "",
@@ -129,6 +134,7 @@ THEMES = [
     },
     {
         "id": "longevity-genomics-breakthroughs",
+        "tags": ["biotech", "health"],
         "color": "green",
         "badge": "Confirmed event",
         "status": "",
@@ -158,6 +164,17 @@ TAKEAWAYS = [
     {"icon": "\U0001FA7A", "tag": "Health", "title": "If IPF or an aging-linked condition affects your family, track Insilico's rentosertib Phase 3 trial and Google's AlphaGenome lookup tool directly rather than waiting for it to reach mainstream coverage."},
     {"icon": "\U0001F3DB️", "tag": "Policy", "title": "Watch model-weight-sharing disputes (like Anthropic withholding from the UK's AI Security Institute) as the leading indicator that AI governance is shifting from research policy to national-security policy."},
     {"icon": "\U0001F4B0", "tag": "Macro", "title": "Treat headline GDP growth figures skeptically right now — multiple panelists argue the standard measure itself may be breaking down as compute-driven growth accelerates."},
+]
+
+CLAIMS = [
+    {"who": "Evan Hubinger", "claim": "AI kills all humans", "metric": "probability", "target": ">10%", "by": "within a decade", "condition": "personal estimate, Anthropic's own alignment science lead", "entity": "Anthropic"},
+    {"who": "Anthropic economic-impact report", "claim": "GDP growth acceleration from AI", "metric": "annual GDP growth", "target": "15%/year", "by": "2030", "condition": "extreme scenario; Immad Mostaque disputes it as mathematically inconsistent", "entity": "Anthropic"},
+    {"who": "Peter Diamandis", "claim": "universal dividend income", "metric": "monthly payment", "target": "$3,000/month", "by": None, "condition": "standing personal prediction, not enacted policy"},
+]
+
+RELATIONS = [
+    {"from": "Envestnet", "rel": "acquires", "to": "Vestmark", "note": "Bain Capital-backed acquisition merging into a combined ~$10 trillion asset-management platform"},
+    {"from": "DeepSeek", "rel": "competes_with", "to": "Anthropic", "note": "new DeepSeek design-benchmark model reportedly beat Fable 5.1 on front-end design benchmarks at 1/20th the cost"},
 ]
 
 RISKS = [

@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="alignment-crisis">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">policy</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">A researcher's resignation, a &gt;10% doom estimate from Anthropic's own alignment lead, and a genuinely split panel</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="data-is-the-moat">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">software</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Data drove 3x more of AI's progress than architecture did — and that's an entrepreneurial opening</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="math-is-cooked">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">ai-infra</span><span class="ttag">software</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Millennium Prize math problems are falling, and the cost to solve them is collapsing 25,000x</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="compute-economy-reversal">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">semis</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">GPUs stopped depreciating, HBM may be about to get 4x cheaper, and China's models keep closing the gap</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="anthropic-gdp-ubi">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">macro-rates</span><span class="ttag">policy</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Anthropic's own economic model says 15% GDP growth and 20% cognitive unemployment by 2030 — Immad says it's missing the demand collapse</h2>
   <div class="theme-body">
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="longevity-genomics-breakthroughs">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">biotech</span><span class="ttag">health</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">The first AI-designed longevity drug reaches Phase 3, and Google maps every possible human mutation</h2>
   <div class="theme-body">
@@ -240,15 +245,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">Several panelists disclose direct financial stakes in stories they're covering favorably: Dave and Alex in a GPU-rental-index startup, Peter in Insilico Medicine, and Dave in the Vestmark/Envestnet transaction — treat the bullish framing on those specific items as informed but self-interested.</div><div class="ritem">PDoom figures cited in this episode (<b>10%</b>, 20%, 25%, 50%, 0.1%) are personal, informally stated estimates from different individuals in the same conversation, not a consensus number or a cited study.</div><div class="ritem">The reported Hodge conjecture and Birch-Swinnerton-Dyer solutions are explicitly flagged by Alex as unconfirmed rumor ("finger to the wind"), not a verified result like the Navier-Stokes claim.</div><div class="ritem">The scale and organic reach of Jacob Coxin's resignation tweet (100-150 million views with no apparent paid boost) is noted by the panel itself as suspicious and unresolved, not something this brief can independently verify.</div><div class="ritem">Auto-generated captions garble some names in this episode (a GPU-rental-index company referred to only as "Or," a caller identified only as "the wacky Iraqi") — these are described rather than spelled out with confidence.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;If it were very likely that super intelligence resulted in PDoom anywhere close to 10%, the Milky Way would have been gone already.&#8221; <cite>— Alex Wissner-Gross</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I had a PDoom of 50%, it's down to 20%.&#8221; <cite>— Immad Mostaque</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Not only is math cooked... I think the Clay Millennium Prize problems in math are probably cooked.&#8221; <cite>— Alex Wissner-Gross</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think there's a religion of virtue signaling that has arisen in certain of the frontier labs where you're morally praiseworthy if you tell everyone else, 'I think we're all going to die as a result of this, but we're going to do it anyway.'&#8221; <cite>— Alex Wissner-Gross</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't think we should slow down. I don't think we can... spare me the [hand-wringing] of jumping up and going, 'Oh my god, we've got to be careful about this.'&#8221; <cite>— Dave Blundin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Alignment is the same thing as capabilities, as it always was.&#8221; <cite>— Alex Wissner-Gross</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Evan Hubinger:</b> AI kills all humans <span class="cmeta">probability · &gt;10% · within a decade</span> <i>if personal estimate, Anthropic's own alignment science lead</i> <span class="tag">Anthropic</span></div><div class="ritem"><b>Anthropic economic-impact report:</b> GDP growth acceleration from AI <span class="cmeta">annual GDP growth · 15%/year · 2030</span> <i>if extreme scenario; Immad Mostaque disputes it as mathematically inconsistent</i> <span class="tag">Anthropic</span></div><div class="ritem"><b>Peter Diamandis:</b> universal dividend income <span class="cmeta">monthly payment · $3,000/month</span> <i>if standing personal prediction, not enacted policy</i></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Envestnet</b> <span class="rel">acquires</span> <b>Vestmark</b> &mdash; Bain Capital-backed acquisition merging into a combined ~$10 trillion asset-management platform</div><div class="ritem"><b>DeepSeek</b> <span class="rel">competes with</span> <b>Anthropic</b> &mdash; new DeepSeek design-benchmark model reportedly beat Fable 5.1 on front-end design benchmarks at 1/20th the cost</div></div></div>
     </section>
 
     <section class="sec">
