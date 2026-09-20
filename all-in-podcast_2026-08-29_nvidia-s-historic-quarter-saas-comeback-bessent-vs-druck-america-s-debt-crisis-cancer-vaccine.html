@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="nvidia-open-source">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
-    <span class="theme-status">REPORTED THIS WEEK</span>
+    <span class="theme-status">REPORTED THIS WEEK</span><span class="ttag">semis</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Nvidia's most profitable quarter ever, and Jensen's quiet open-source land grab</h2>
   <div class="theme-body">
@@ -131,7 +136,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;He's now owning the distribution layer for open-source... I think this is actually the huge story.&#8221;<cite>— Jason Calacanis</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)</b><span>Most profitable quarter ever ($60B net profit); bought Hugging Face and Poolside for ~$20B combined to control open-source AI distribution.</span></div><div class="namechip"><b>Hugging Face</b><span>Leading open-source AI model host, acquired by Nvidia for $12B.</span></div><div class="namechip"><b>Poolside</b><span>AI coding-model startup (Laguna model) acquihired by Nvidia for $6B, ~100 engineers.</span></div><div class="namechip"><b>OpenAI</b><span>Cut its own AMD chip deal and announced the in-house Jalapeno inference chip, reportedly prompting Jensen's open-source push.</span></div><div class="namechip"><b>AMD</b><span>Signed a chip deal with OpenAI that the hosts say provoked Nvidia's open-source acquisition spree.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Most profitable quarter ever ($60B net profit); bought Hugging Face and Poolside for ~$20B combined to control open-source AI distribution.</span></div><div class="namechip"><b>Hugging Face<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Leading open-source AI model host, acquired by Nvidia for $12B.</span></div><div class="namechip"><b>Poolside<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>AI coding-model startup (Laguna model) acquihired by Nvidia for $6B, ~100 engineers.</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Cut its own AMD chip deal and announced the in-house Jalapeno inference chip, reportedly prompting Jensen's open-source push.</span></div><div class="namechip"><b>AMD<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Signed a chip deal with OpenAI that the hosts say provoked Nvidia's open-source acquisition spree.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The exact scope of the Poolside deal (whether Nvidia is acquiring its coding model, its agent harness, or both) was unclear to the hosts from the announcement itself — they say the reporting, not confirmed detail, is what they're reacting to.</div></div>
     </div>
   </div>
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="salesforce-saas">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">STOCK UP 20%+ THIS WEEK</span>
+    <span class="theme-status">STOCK UP 20%+ THIS WEEK</span><span class="ttag">software</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Salesforce's blowout quarter and the death of the 'SaaS apocalypse' narrative</h2>
   <div class="theme-body">
@@ -150,7 +155,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;I do not believe that core systems of record like CRM are going to get ripped and replaced with something vibe coded.&#8221;<cite>— David Sacks</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Salesforce (CRM)</b><span>Beat-and-raise quarter, stock up 20%+, integrating Claude as Salesforce's AI front end.</span></div><div class="namechip"><b>Anthropic</b><span>Its Claude models are becoming the primary AI front-end/interface layer for Salesforce's data and workflows.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Salesforce (CRM)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Beat-and-raise quarter, stock up 20%+, integrating Claude as Salesforce's AI front end.</span></div><div class="namechip"><b>Anthropic<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Its Claude models are becoming the primary AI front-end/interface layer for Salesforce's data and workflows.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Sacks explicitly frames the AI-job-loss narrative the same way — as a 'simplistic extrapolation' that ignores workers adapting to the tools — a stance offered as an opinion, not a settled outcome.</div></div>
     </div>
   </div>
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="debt-bond-fight">
   <div class="theme-badgerow">
     <span class="badge" style="background:#a23f22;">Confirmed event</span>
-    <span class="theme-status">30-YEAR YIELD AT A 19-YEAR HIGH</span>
+    <span class="theme-status">30-YEAR YIELD AT A 19-YEAR HIGH</span><span class="ttag">macro-rates</span><span class="ttag">policy</span>
   </div>
   <h2 style="border-left:4px solid #a23f22;">Bessent is fighting the bond market; Druckenmiller says he's fighting the wrong battle</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="ai-op-ed-fight">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">LIVE DISAGREEMENT ON THE SHOW</span>
+    <span class="theme-status">LIVE DISAGREEMENT ON THE SHOW</span><span class="ttag">policy</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Should an AI-assisted op-ed disclose it?</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="china-ai-optimism">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">OPINION, NOT A MEASURED FINDING</span>
+    <span class="theme-status">OPINION, NOT A MEASURED FINDING</span><span class="ttag">geopolitics</span><span class="ttag">robotics</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">China's robot Olympics: real progress, or just very good propaganda?</h2>
   <div class="theme-body">
@@ -207,7 +212,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;The US is ahead of China in every category except one, which is optimism. And that is the biggest risk to us winning this AI race against China.&#8221;<cite>— David Sacks</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Tesla (TSLA)</b><span>Elon reportedly showed hosts an unpublished, advanced Optimus robot demo not yet released publicly.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Tesla (TSLA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Elon reportedly showed hosts an unpublished, advanced Optimus robot demo not yet released publicly.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The Optimus demo and the robot-Olympics 'staged' claim are both secondhand and unverified by the hosts themselves — one is a private demo relayed by a host, the other is the hosts' own speculation about production choices, not a confirmed finding.</div></div>
     </div>
   </div>
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="moderna-cancer-vaccine">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">STOCK TRIPLED ON POSITIVE READOUTS</span>
+    <span class="theme-status">STOCK TRIPLED ON POSITIVE READOUTS</span><span class="ttag">biotech</span><span class="ttag">health</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Moderna's cancer vaccine breakthrough is real science — and a pricing fight waiting to happen</h2>
   <div class="theme-body">
@@ -226,7 +231,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I don't think that this technique... should now be patented, FDA approved, and charged half a million dollars for people to get treated for this.&#8221;<cite>— David Friedberg</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Moderna (MRNA)</b><span>Market cap roughly tripled to $60B on cancer-vaccine (neoantigen immunotherapy) readouts; reportedly pricing the treatment around $500,000.</span></div><div class="namechip"><b>Grail</b><span>Maker of the Galleri blood test for early cancer detection, referenced as the necessary screening complement to these new therapies.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Moderna (MRNA)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Low</span></b><span>Market cap roughly tripled to $60B on cancer-vaccine (neoantigen immunotherapy) readouts; reportedly pricing the treatment around $500,000.</span></div><div class="namechip"><b>Grail<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Maker of the Galleri blood test for early cancer detection, referenced as the necessary screening complement to these new therapies.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The $500,000 price point and the $50,000 clinic-based alternative are figures Friedberg cites in conversation, not numbers independently verified in this brief.</div></div>
     </div>
   </div>
@@ -240,15 +245,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">A significant sponsor segment for the All-In Summit (Iron, merch.com's gifting boutique, Oracle's F1 simulator, EY's meeting pods) has been excluded from this brief entirely.</div><div class="ritem">Several figures cited in conversation (Optimus demo authenticity, robot-Olympics staging, Chamath's 2026-2028/2030-2032 breakpoints, Moderna's <b>$500K</b> price and the $50K clinic alternative) are the hosts' own estimates or secondhand claims relayed on air, not independently verified here.</div><div class="ritem">Sacks's characterization of the Russia-Ukraine war (Russia's 'steady progress,' Ukraine's troop and funding shortfalls) is his own contested reading of the conflict, offered opposite the hosts' own framing of the CIA-visit story as unconfirmed speculation — flagged as opinion, not adjudicated fact.</div><div class="ritem">David Sacks has a disclosed financial and advisory relationship to policy circles discussed on the show (e.g. AI policy); his comments on regulation and the AI race should be read with that context in mind.</div><div class="ritem">Auto-generated captions were the transcript source; a few names (e.g. 'Katsios,' referenced only once in the science-conformity intro discussion) could not be confidently resolved and are described rather than spelled out.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;We're not going to underwrite this anymore... this is idiotic. What are we doing?&#8221; <cite>— David Friedberg</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't think that this technique... should now be patented, FDA approved, and charged half a million dollars for people to get treated for this.&#8221; <cite>— David Friedberg</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;If you want to give me your opinion as interpreted through the AI magic guessing word box, you need to tell me... I don't like people phoning it in.&#8221; <cite>— Jason Calacanis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The US is ahead of China in every category except one, which is optimism. And that is the biggest risk to us winning this AI race against China.&#8221; <cite>— David Sacks</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Frankly, I don't think Ukraine's going to come out on top on this thing... Zelensky should have listened when President Trump told him you don't have the cards in this war.&#8221; <cite>— David Sacks</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Something will get terribly broken... it's the beginning of a death spiral. It's not going to be immediate, okay? So don't freak out, but it is the beginning of some extreme pain.&#8221; <cite>— Chamath Palihapitiya</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Nvidia (guidance):</b> Nvidia grows revenue 70% next year <span class="cmeta">revenue growth · 70% · next fiscal year</span> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>David Friedberg:</b> US government must refinance its debt load <span class="cmeta">debt refinanced · $10 trillion · next 12 months</span></div><div class="ritem"><b>Chamath Palihapitiya:</b> Persistent inflation/unaffordability pushes voters toward more socialist-leaning candidates <span class="cmeta">political shift · 2026-2028</span></div><div class="ritem"><b>Chamath Palihapitiya:</b> Social Security and state pension obligations run dry, forcing bailouts or restructuring <span class="cmeta">pension shortfall · 2030-2032</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">acquires</span> <b>Hugging Face</b> &mdash; $12B deal for the leading open-source AI model host.</div><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">acquires</span> <b>Poolside</b> &mdash; $6B acquihire of the AI coding-model startup, ~100 engineers.</div><div class="ritem"><b>AMD</b> <span class="rel">supplies</span> <b>OpenAI</b> &mdash; Chip deal reportedly provoking Nvidia's open-source acquisition spree.</div><div class="ritem"><b>Anthropic</b> <span class="rel">partners with</span> <b>Salesforce (CRM)</b> &mdash; Claude becoming the AI front-end interface to Salesforce's data and workflows.</div></div></div>
     </section>
 
     <section class="sec">

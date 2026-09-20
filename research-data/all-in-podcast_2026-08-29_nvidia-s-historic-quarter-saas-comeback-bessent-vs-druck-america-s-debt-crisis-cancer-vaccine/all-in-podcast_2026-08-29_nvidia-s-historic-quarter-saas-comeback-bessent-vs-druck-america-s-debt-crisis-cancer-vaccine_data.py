@@ -26,6 +26,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "nvidia-open-source",
+        "tags": ["semis", "ai-infra"],
         "color": "green",
         "badge": "Confirmed event",
         "status": "REPORTED THIS WEEK",
@@ -45,15 +46,16 @@ THEMES = [
         },
         "watch": "The exact scope of the Poolside deal (whether Nvidia is acquiring its coding model, its agent harness, or both) was unclear to the hosts from the announcement itself — they say the reporting, not confirmed detail, is what they're reacting to.",
         "names": [
-            {"name": "Nvidia (NVDA)", "blurb": "Most profitable quarter ever ($60B net profit); bought Hugging Face and Poolside for ~$20B combined to control open-source AI distribution."},
-            {"name": "Hugging Face", "blurb": "Leading open-source AI model host, acquired by Nvidia for $12B."},
-            {"name": "Poolside", "blurb": "AI coding-model startup (Laguna model) acquihired by Nvidia for $6B, ~100 engineers."},
-            {"name": "OpenAI", "blurb": "Cut its own AMD chip deal and announced the in-house Jalapeno inference chip, reportedly prompting Jensen's open-source push."},
-            {"name": "AMD", "blurb": "Signed a chip deal with OpenAI that the hosts say provoked Nvidia's open-source acquisition spree."},
+            {"name": "Nvidia (NVDA)", "blurb": "Most profitable quarter ever ($60B net profit); bought Hugging Face and Poolside for ~$20B combined to control open-source AI distribution.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
+            {"name": "Hugging Face", "blurb": "Leading open-source AI model host, acquired by Nvidia for $12B.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Poolside", "blurb": "AI coding-model startup (Laguna model) acquihired by Nvidia for $6B, ~100 engineers.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "OpenAI", "blurb": "Cut its own AMD chip deal and announced the in-house Jalapeno inference chip, reportedly prompting Jensen's open-source push.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "AMD", "blurb": "Signed a chip deal with OpenAI that the hosts say provoked Nvidia's open-source acquisition spree.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
     {
         "id": "salesforce-saas",
+        "tags": ["software"],
         "color": "green",
         "badge": "High conviction",
         "status": "STOCK UP 20%+ THIS WEEK",
@@ -73,12 +75,13 @@ THEMES = [
         },
         "watch": "Sacks explicitly frames the AI-job-loss narrative the same way — as a 'simplistic extrapolation' that ignores workers adapting to the tools — a stance offered as an opinion, not a settled outcome.",
         "names": [
-            {"name": "Salesforce (CRM)", "blurb": "Beat-and-raise quarter, stock up 20%+, integrating Claude as Salesforce's AI front end."},
-            {"name": "Anthropic", "blurb": "Its Claude models are becoming the primary AI front-end/interface layer for Salesforce's data and workflows."},
+            {"name": "Salesforce (CRM)", "blurb": "Beat-and-raise quarter, stock up 20%+, integrating Claude as Salesforce's AI front end.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
+            {"name": "Anthropic", "blurb": "Its Claude models are becoming the primary AI front-end/interface layer for Salesforce's data and workflows.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
     {
         "id": "debt-bond-fight",
+        "tags": ["macro-rates", "policy"],
         "color": "red",
         "badge": "Confirmed event",
         "status": "30-YEAR YIELD AT A 19-YEAR HIGH",
@@ -102,6 +105,7 @@ THEMES = [
     },
     {
         "id": "ai-op-ed-fight",
+        "tags": ["policy"],
         "color": "amber",
         "badge": "Contested",
         "status": "LIVE DISAGREEMENT ON THE SHOW",
@@ -123,6 +127,7 @@ THEMES = [
     },
     {
         "id": "china-ai-optimism",
+        "tags": ["geopolitics", "robotics"],
         "color": "amber",
         "badge": "Contested",
         "status": "OPINION, NOT A MEASURED FINDING",
@@ -141,11 +146,12 @@ THEMES = [
         },
         "watch": "The Optimus demo and the robot-Olympics 'staged' claim are both secondhand and unverified by the hosts themselves — one is a private demo relayed by a host, the other is the hosts' own speculation about production choices, not a confirmed finding.",
         "names": [
-            {"name": "Tesla (TSLA)", "blurb": "Elon reportedly showed hosts an unpublished, advanced Optimus robot demo not yet released publicly."},
+            {"name": "Tesla (TSLA)", "blurb": "Elon reportedly showed hosts an unpublished, advanced Optimus robot demo not yet released publicly.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
         ],
     },
     {
         "id": "moderna-cancer-vaccine",
+        "tags": ["biotech", "health"],
         "color": "amber",
         "badge": "Contested",
         "status": "STOCK TRIPLED ON POSITIVE READOUTS",
@@ -165,8 +171,8 @@ THEMES = [
         },
         "watch": "The $500,000 price point and the $50,000 clinic-based alternative are figures Friedberg cites in conversation, not numbers independently verified in this brief.",
         "names": [
-            {"name": "Moderna (MRNA)", "blurb": "Market cap roughly tripled to $60B on cancer-vaccine (neoantigen immunotherapy) readouts; reportedly pricing the treatment around $500,000."},
-            {"name": "Grail", "blurb": "Maker of the Galleri blood test for early cancer detection, referenced as the necessary screening complement to these new therapies."},
+            {"name": "Moderna (MRNA)", "blurb": "Market cap roughly tripled to $60B on cancer-vaccine (neoantigen immunotherapy) readouts; reportedly pricing the treatment around $500,000.", "stance": "NEGATIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "Grail", "blurb": "Maker of the Galleri blood test for early cancer detection, referenced as the necessary screening complement to these new therapies.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
 ]
@@ -177,6 +183,20 @@ TAKEAWAYS = [
     {"icon": "\U0001F4B0", "tag": "Macro", "title": "Track the $10 trillion refinancing wall over the next 12 months as the real test of the debt story, not any single Bessent buyback headline."},
     {"icon": "\U0001F916", "tag": "AI ethics", "title": "Decide your own disclosure bar for AI-assisted writing before the next controversy forces the question on you."},
     {"icon": "\U0001F3E5", "tag": "Health", "title": "Watch for medical-tourism pricing on neoantigen cancer therapy as a real test of whether Moderna's patent position holds internationally."},
+]
+
+CLAIMS = [
+    {"who": "Nvidia (guidance)", "claim": "Nvidia grows revenue 70% next year", "metric": "revenue growth", "target": "70%", "by": "next fiscal year", "condition": None, "entity": "Nvidia (NVDA)"},
+    {"who": "David Friedberg", "claim": "US government must refinance its debt load", "metric": "debt refinanced", "target": "$10 trillion", "by": "next 12 months", "condition": None, "entity": None},
+    {"who": "Chamath Palihapitiya", "claim": "Persistent inflation/unaffordability pushes voters toward more socialist-leaning candidates", "metric": "political shift", "target": None, "by": "2026-2028", "condition": None, "entity": None},
+    {"who": "Chamath Palihapitiya", "claim": "Social Security and state pension obligations run dry, forcing bailouts or restructuring", "metric": "pension shortfall", "target": None, "by": "2030-2032", "condition": None, "entity": None},
+]
+
+RELATIONS = [
+    {"from": "Nvidia (NVDA)", "rel": "acquires", "to": "Hugging Face", "note": "$12B deal for the leading open-source AI model host."},
+    {"from": "Nvidia (NVDA)", "rel": "acquires", "to": "Poolside", "note": "$6B acquihire of the AI coding-model startup, ~100 engineers."},
+    {"from": "AMD", "rel": "supplies", "to": "OpenAI", "note": "Chip deal reportedly provoking Nvidia's open-source acquisition spree."},
+    {"from": "Anthropic", "rel": "partners_with", "to": "Salesforce (CRM)", "note": "Claude becoming the AI front-end interface to Salesforce's data and workflows."},
 ]
 
 RISKS = [
