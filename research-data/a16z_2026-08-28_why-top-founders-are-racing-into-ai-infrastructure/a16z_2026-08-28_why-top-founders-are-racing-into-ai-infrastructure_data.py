@@ -32,6 +32,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "machine-age-fund",
+        "tags": ["ai-infra", "finance"],
         "color": "green",
         "badge": "Confirmed event",
         "status": "NEW FUND LAUNCH ANNOUNCED",
@@ -55,6 +56,7 @@ THEMES = [
     },
     {
         "id": "demand-outstrips-supply",
+        "tags": ["ai-infra", "semis"],
         "color": "green",
         "badge": "High conviction",
         "status": "PANEL'S CENTRAL THESIS",
@@ -77,6 +79,7 @@ THEMES = [
     },
     {
         "id": "physical-infra-limits",
+        "tags": ["ai-infra", "energy"],
         "color": "amber",
         "badge": "High conviction",
         "status": "STRUCTURAL BOTTLENECK, PER THE PANEL",
@@ -99,6 +102,7 @@ THEMES = [
     },
     {
         "id": "asic-economics",
+        "tags": ["semis", "ai-infra"],
         "color": "amber",
         "badge": "Speculative",
         "status": "EMERGING FRAMEWORK, PANEL HEDGES ITSELF",
@@ -116,6 +120,7 @@ THEMES = [
     },
     {
         "id": "agent-as-employee",
+        "tags": ["dev-workflow"],
         "color": "amber",
         "badge": "Contested",
         "status": "EMERGING PRACTICE, PER THE PANEL",
@@ -136,6 +141,7 @@ THEMES = [
     },
     {
         "id": "who-wins",
+        "tags": ["ai-infra", "finance"],
         "color": "green",
         "badge": "High conviction",
         "status": "MARKET-STRUCTURE ARGUMENT",
@@ -165,6 +171,21 @@ TAKEAWAYS = [
     {"icon": "\U0001F4B5", "tag": "Venture", "title": "Expect hardware/systems startups to raise unusually large pre-product rounds — capital intensity is now a feature of the category, not a red flag."},
     {"icon": "\U0001F916", "tag": "AI workflows", "title": "Design agent integrations as a new category of 'employee' with its own access and accountability, not as an extension of a human user's credentials."},
     {"icon": "\U0001F3D7", "tag": "Careers", "title": "Expect hardware-founder demand to pull in more experienced, older builders — and expect a new generation of hardware talent to spin out of today's frontier chip/systems startups the way SpaceX alumni did for aerospace."},
+]
+
+CLAIMS = [
+    {"who": "a16z partner (Machine Age Fund panel)", "claim": "Hyperscaler capex reaches roughly $1 trillion collectively", "metric": "hyperscaler capex", "target": "$1 trillion", "by": "2027", "condition": None, "entity": None},
+    {"who": "a16z partner (Machine Age Fund panel)", "claim": "Chip and compute supply is booked out", "metric": "supply backlog", "target": "sold out", "by": "2027-2028", "condition": None, "entity": None},
+    {"who": "a16z partner (Machine Age Fund panel)", "claim": "New data centers face a power shortfall against grid additions", "metric": "power gap", "target": "44 GW shortfall vs. ~25 GW grid additions", "by": "2028", "condition": None, "entity": None},
+    {"who": "a16z partner (Machine Age Fund panel)", "claim": "Token demand grows close to 1,000% a year, outpacing supply growth", "metric": "token demand growth", "target": "~1,000%/year", "by": None, "condition": None, "entity": None},
+]
+
+RELATIONS = [
+    {"from": "a16z", "rel": "invests_in", "to": "SpaceX", "note": "Cited early hardware bet predating the Machine Age Fund."},
+    {"from": "a16z", "rel": "invests_in", "to": "Anduril", "note": "Cited early hardware bet predating the Machine Age Fund."},
+    {"from": "a16z", "rel": "invests_in", "to": "Astranis", "note": "Cited early hardware bet predating the Machine Age Fund."},
+    {"from": "a16z", "rel": "invests_in", "to": "Waymo", "note": "Cited early hardware-adjacent bet predating the Machine Age Fund."},
+    {"from": "Meta (META)", "rel": "endorses", "to": "DC power electrician training", "note": "Launched a free program to certify electricians on 800V data-center DC power."},
 ]
 
 RISKS = [
