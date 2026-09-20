@@ -25,6 +25,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "iran-fed-yen",
+        "tags": ["geopolitics", "macro-rates"],
         "color": "amber",
         "badge": "Contestat",
         "status": "VEDERE: soc de scurta durata, nu o schimbare de trend",
@@ -44,6 +45,7 @@ THEMES = [
     },
     {
         "id": "labor-consumer-cooling",
+        "tags": ["macro-rates", "consumer"],
         "color": "amber",
         "badge": "Contestat",
         "status": "VEDERE: racire graduala, nu criza",
@@ -63,6 +65,7 @@ THEMES = [
     },
     {
         "id": "earnings-week",
+        "tags": ["semis", "software", "finance"],
         "color": "green",
         "badge": "Contestat",
         "status": "POZITIONARE MIXTA - vanzari si cumparari punctuale",
@@ -80,23 +83,24 @@ THEMES = [
         "quote": {"text": "Speranta nu este o strategie in piata de capital si asta stim.", "cite": "— Valentin Dragu"},
         "watch": "Valentin recunoaste ca supraevaluarea la Snowflake, Palantir si CrowdStrike e \"oarecum justificata\" de cresterea anuala mare - deci teza lui e o urmarire conditionata a scaderii forward P/E, nu o respingere completa a acestor companii.",
         "names": [
-            {"name": "Broadcom (AVGO)", "blurb": "URMARESTE - pe lista scurta de cumparare daca scade sub un anumit pret, langa AMD"},
-            {"name": "Nvidia (NVDA)", "blurb": "DETINE, conviction redusa pe crestere viitoare - vandut/reintrat/profit luat; nu mai vede potential de +100% in 2-3 ani"},
-            {"name": "AMD (AMD)", "blurb": "MENTIUNE CASUALA - companie langa care vrea sa adauge Broadcom in portofoliu"},
-            {"name": "UiPath (PATH)", "blurb": "MENTIUNE CASUALA - target de 18$ atins, recomandare de rebalansare graduala pentru angajatii cu actiuni in pachetul salarial"},
-            {"name": "Snowflake (SNOW)", "blurb": "VEDERE NEGATIVA pe termen scurt - supraevaluata dupa revenirea de 6 luni, ar cumpara cu prudenta"},
-            {"name": "Palantir (PLTR)", "blurb": "MENTIUNE CASUALA - comparat cu Snowflake, supraevaluat dar justificat de crestere"},
+            {"name": "Broadcom (AVGO)", "blurb": "Pe lista scurta de cumparare daca scade sub un anumit pret, langa AMD.", "stance": "WATCHING", "conviction": "Medium", "horizon": None},
+            {"name": "Nvidia (NVDA)", "blurb": "Vandut/reintrat/profit luat; nu mai vede potential de +100% in 2-3 ani.", "stance": "OWNS", "conviction": "Low", "horizon": None},
+            {"name": "AMD (AMD)", "blurb": "Companie langa care vrea sa adauge Broadcom in portofoliu.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "UiPath (PATH)", "blurb": "Target de 18$ atins, recomandare de rebalansare graduala pentru angajatii cu actiuni in pachetul salarial.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Snowflake (SNOW)", "blurb": "Supraevaluata dupa revenirea de 6 luni, ar cumpara cu prudenta.", "stance": "NEGATIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Palantir (PLTR)", "blurb": "Comparat cu Snowflake, supraevaluat dar justificat de crestere.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
             {"name": "CrowdStrike (CRWD)", "blurb": "vezi tema de cybersecurity pentru pozitia completa"},
-            {"name": "AppLovin (APP)", "blurb": "URMARESTE - potential exploziv de revenire dupa 2-3 raportari bune"},
-            {"name": "Dell (DELL)", "blurb": "VEDERE NEGATIVA pe cumparare acum - raport excelent, dar cresterea prea exploziva pentru a mai intra"},
-            {"name": "Walmart (WMT)", "blurb": "POZITIVA - atractiva pentru profil de risc moderat-dinamic"},
-            {"name": "Google (GOOGL)", "blurb": "POZITIVA - atractiva pentru profil de risc moderat-dinamic"},
-            {"name": "Costco (COST)", "blurb": "MENTIUNE CASUALA - sursa semnalului despre migrarea consumatorului catre carne mai ieftina"},
-            {"name": "McDonald's (MCD)", "blurb": "MENTIUNE CASUALA - destinatia consumatorilor care renunta la restaurante obisnuite"},
+            {"name": "AppLovin (APP)", "blurb": "Potential exploziv de revenire dupa 2-3 raportari bune.", "stance": "WATCHING", "conviction": "Medium", "horizon": None},
+            {"name": "Dell (DELL)", "blurb": "Raport excelent, dar cresterea prea exploziva pentru a mai intra.", "stance": "NEGATIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Walmart (WMT)", "blurb": "Atractiva pentru profil de risc moderat-dinamic.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Google (GOOGL)", "blurb": "Atractiva pentru profil de risc moderat-dinamic.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Costco (COST)", "blurb": "Sursa semnalului despre migrarea consumatorului catre carne mai ieftina.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "McDonald's (MCD)", "blurb": "Destinatia consumatorilor care renunta la restaurante obisnuite.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
     {
         "id": "energy-robotics-musk",
+        "tags": ["energy", "robotics", "ai-infra"],
         "color": "amber",
         "badge": "Contestat",
         "status": "VEDERE: energia e blocajul real, nu cipurile",
@@ -114,12 +118,13 @@ THEMES = [
         "quote": {"text": "Nu poti sa investesti in toate zonele. Nu poti sa investesti si in panouri solare, nu poti sa investesti si in zona nucleara, nu poti sa investesti in gaz, petrol si asa mai departe.", "cite": "— Valentin Dragu"},
         "watch": "Anecdota despre Davos e o sursa secundara, informala (un angajat de restaurant, nu un participant citat oficial) - Valentin insusi o prezinta ca un detaliu de culoare, nu ca informatie confirmata.",
         "names": [
-            {"name": "Tesla (TSLA)", "blurb": "URMARESTE cu conviction - semnalat membrilor la 320-330$ ca zona de minim, tezata pe robotaxi, megapack-uri si Optimus"},
-            {"name": "Constellation Energy", "blurb": "MENTIUNE CASUALA - exemplu de companie americana importanta din energie, in contextul discutiei despre nuclear"},
+            {"name": "Tesla (TSLA)", "blurb": "Semnalat membrilor la 320-330$ ca zona de minim, tezata pe robotaxi, megapack-uri si Optimus.", "stance": "WATCHING", "conviction": "High", "horizon": None},
+            {"name": "Constellation Energy", "blurb": "Exemplu de companie americana importanta din energie, in contextul discutiei despre nuclear.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
     {
         "id": "cybersecurity-anthropic",
+        "tags": ["software", "finance"],
         "color": "green",
         "badge": "Conviction ridicata",
         "status": "DETINE / A VANDUT recent cu profit - asteapta reintrare",
@@ -136,17 +141,18 @@ THEMES = [
         "quote": {"text": "Daca ai cat de cat toti neuronii la tine... iti dai seama ca trebuie sa profiti la maxim de un astfel de moment al pietei.", "cite": "— Valentin Dragu (despre glitch-ul CrowdStrike)"},
         "watch": None,
         "names": [
-            {"name": "CrowdStrike (CRWD)", "blurb": "A VANDUT recent cu profit, asteapta un glitch similar celui din trecut ca sa reintre agresiv"},
-            {"name": "Cloudflare (NET)", "blurb": "A VANDUT recent cu profit, dispus sa vanda alte pozitii sau sa foloseasca fonduri de rezerva pentru a recumpara"},
-            {"name": "Palo Alto Networks (PANW)", "blurb": "DETINE - parte din teza lui timpurie pe cybersecurity"},
-            {"name": "Fortinet (FTNT)", "blurb": "DETINE - parte din teza lui timpurie pe cybersecurity"},
-            {"name": "SentinelOne (S)", "blurb": "DETINE - parte din teza lui timpurie pe cybersecurity"},
-            {"name": "Anthropic", "blurb": "MENTIUNE CASUALA - parteneriate noi cu CrowdStrike si OpenAI, tinta a unui hacking originar din China"},
-            {"name": "OpenAI", "blurb": "MENTIUNE CASUALA - parteneriat cu Anthropic care a compensat miscarea actiunii CrowdStrike"},
+            {"name": "CrowdStrike (CRWD)", "blurb": "A vandut recent cu profit, asteapta un glitch similar celui din trecut ca sa reintre agresiv.", "stance": "WATCHING", "conviction": "High", "horizon": None},
+            {"name": "Cloudflare (NET)", "blurb": "A vandut recent cu profit, dispus sa vanda alte pozitii sau sa foloseasca fonduri de rezerva pentru a recumpara.", "stance": "WATCHING", "conviction": "Medium", "horizon": None},
+            {"name": "Palo Alto Networks (PANW)", "blurb": "Parte din teza lui timpurie pe cybersecurity.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "Fortinet (FTNT)", "blurb": "Parte din teza lui timpurie pe cybersecurity.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "SentinelOne (S)", "blurb": "Parte din teza lui timpurie pe cybersecurity.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "Anthropic", "blurb": "Parteneriate noi cu CrowdStrike si OpenAI, tinta a unui hacking originar din China.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "OpenAI", "blurb": "Parteneriat cu Anthropic care a compensat miscarea actiunii CrowdStrike.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
     {
         "id": "bvb-pension-risk",
+        "tags": ["finance", "policy"],
         "color": "red",
         "badge": "Risc semnalat",
         "status": "VEDERE NEGATIVA pe BVB dupa cresterea recenta",
@@ -165,12 +171,12 @@ THEMES = [
         "quote": {"text": "Alte tari au nationalizat pilon doi de pensii private pentru ca au avut nevoie de bani. Nu exista de domeniul SF-ului.", "cite": "— Valentin Dragu"},
         "watch": "Valentin subliniaza explicit ca nu vrea sa \"bage frica in oameni\" spunand ca nationalizarea sigur se va intampla - e un risc pe care el personal il ia in calcul, nu o predictie ferma.",
         "names": [
-            {"name": "Banca Transilvania", "blurb": "MENTIUNE CASUALA - companie pe care fondurile de pensii ar putea sa o cumpere, dar nu o fac"},
-            {"name": "OMV Petrom", "blurb": "MENTIUNE CASUALA - la fel"},
-            {"name": "Transgaz", "blurb": "MENTIUNE CASUALA - la fel"},
-            {"name": "Romgaz", "blurb": "MENTIUNE CASUALA - la fel"},
-            {"name": "Nuclear Electrica", "blurb": "MENTIUNE CASUALA - la fel"},
-            {"name": "Hidroelectrica", "blurb": "MENTIUNE CASUALA - la fel"},
+            {"name": "Banca Transilvania", "blurb": "Companie pe care fondurile de pensii ar putea sa o cumpere, dar nu o fac.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "OMV Petrom", "blurb": "La fel.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Transgaz", "blurb": "La fel.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Romgaz", "blurb": "La fel.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Nuclear Electrica", "blurb": "La fel.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Hidroelectrica", "blurb": "La fel.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
 ]
@@ -199,6 +205,18 @@ HOT_TAKES = [
     {"take": "As spune ca ar fi o idee buna, dupa o crestere atat de agresiva, sa analizeze un moment de exit pentru a investi in companii cu adevarat importante, in companii americane.", "cite": "— Valentin Dragu (despre investitorii de pe BVB)", "why": "recomandare directa, contrarie optimismului local dupa raliul indicelui BET"},
     {"take": "Nu, nu mi se pare o chestie care se poate intampla oricand... Alte tari au nationalizat pilon doi de pensii private pentru ca au avut nevoie de bani. Nu exista de domeniul SF-ului.", "cite": "— Valentin Dragu", "why": "predictie cu numar de consecinte reale, pe care asculatorii isi pot aminti si verifica in timp"},
     {"take": "Cu siguranta ca nu as investi eu bani suplimentari pe langa cei pe care compania mea ii vireaza catre pilonul doi de pensii private.", "cite": "— Valentin Dragu", "why": "actiune personala concreta, luata pe baza propriei sale predictii de risc politic"},
+]
+
+CLAIMS = [
+    {"who": "Valentin Dragu", "claim": "Fondurile de pensii Pilon 2 sunt fortate sa vanda actiuni catre titluri de stat", "metric": "alocare in actiuni vs. procent minim in titluri de stat", "target": "vanzari fortate", "by": None, "condition": "daca BET continua sa creasca peste procentul permis de alocare", "entity": None},
+    {"who": "Valentin Dragu", "claim": "Statul roman nationalizeaza Pilonul 2 de pensii private", "metric": "nationalizare", "target": None, "by": None, "condition": "daca Romania ramane fara lichiditate externa", "entity": None},
+    {"who": "Valentin Dragu", "claim": "Nvidia nu mai are potential de crestere de +100%", "metric": "randament asteptat", "target": "sub 100%", "by": None, "condition": "in urmatorii 2-3 ani", "entity": "Nvidia (NVDA)"},
+    {"who": "Valentin Dragu", "claim": "Broadcom si AMD accelereaza veniturile", "metric": "crestere venituri", "target": "accelerare", "by": "2027-2028", "condition": None, "entity": "Broadcom (AVGO)"},
+]
+
+RELATIONS = [
+    {"from": "Anthropic", "rel": "partners_with", "to": "CrowdStrike (CRWD)", "note": "parteneriat pe securitatea API-urilor"},
+    {"from": "Anthropic", "rel": "partners_with", "to": "OpenAI", "note": "parteneriat similar celui cu CrowdStrike, a compensat miscarea actiunii CrowdStrike"},
 ]
 
 OTHER_NEWS = []
