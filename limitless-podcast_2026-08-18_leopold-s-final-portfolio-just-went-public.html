@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="leopold-blowup">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Confirmed event</span>
-    <span class="theme-status">LIQUIDATED — thesis intact, leverage fatal</span>
+    <span class="theme-status">LIQUIDATED — thesis intact, leverage fatal</span><span class="ttag">finance</span><span class="ttag">semis</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Leopold Aschenbrenner's Fund Got Liquidated — But the Thesis Didn't</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="memory-validated">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">SUPPLY SOLD OUT INTO 2027</span>
+    <span class="theme-status">SUPPLY SOLD OUT INTO 2027</span><span class="ttag">semis</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">The Memory Selloff Looks Like a Leverage Panic, Not a Demand Top</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="berkshire-google">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">$17B ADD — LARGEST BUY OF THE QUARTER</span>
+    <span class="theme-status">$17B ADD — LARGEST BUY OF THE QUARTER</span><span class="ttag">ai-infra</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Berkshire's Greg Abel Makes Google the Quarter's Biggest Bet</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="gersner-baker">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested — high risk, high conviction</span>
-    <span class="theme-status">CONCENTRATED INFRASTRUCTURE BETS</span>
+    <span class="theme-status">CONCENTRATED INFRASTRUCTURE BETS</span><span class="ttag">ai-infra</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Gersner and Baker Push Further Out the Risk Curve — Into Optics and a Market Hedge</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="nvidia-circular">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">$30B INTEL STAKE — LARGEST NVIDIA HOLDING</span>
+    <span class="theme-status">$30B INTEL STAKE — LARGEST NVIDIA HOLDING</span><span class="ttag">ai-infra</span><span class="ttag">semis</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Nvidia's Own 13F Shows a Circular AI Economy</h2>
   <div class="theme-body">
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="payments-rewire">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Speculative</span>
-    <span class="theme-status">NEW POSITIONS, UNPROVEN THESIS</span>
+    <span class="theme-status">NEW POSITIONS, UNPROVEN THESIS</span><span class="ttag">finance</span><span class="ttag">software</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">Ackman's Payments Bet Collides With an AI-Agent Router Land Grab</h2>
   <div class="theme-body">
@@ -235,7 +240,7 @@ i{font-style:italic;}
 <section class="theme" id="consensus-and-edge">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
-    <span class="theme-status">MOST-ADDED NAMES OF THE QUARTER</span>
+    <span class="theme-status">MOST-ADDED NAMES OF THE QUARTER</span><span class="ttag">ai-infra</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">The Consensus Trade Is Alphabet, Amazon, TSMC and SpaceX — and Almost No One Holds Nvidia Directly</h2>
   <div class="theme-body">
@@ -259,15 +264,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">Position sizes and percentages are the hosts' own reading of 13F filings and an on-screen portfolio artifact, not figures pulled directly from SEC documents in this video.</div><div class="ritem">Several company names in the source audio are unclear or auto-caption-mangled (a fund manager cited as running <b>$35.4B</b>, and part of Berkshire's smaller adds); where a name couldn't be confidently resolved, it's described by role rather than guessed.</div><div class="ritem">The claim that Leopold made a new ~<b>$500M</b> private investment and is rebuilding an equity position comes from unnamed Bloomberg/Reuters reports the hosts reference secondhand, not a filing.</div><div class="ritem">The hosts state their own standing bias toward memory, Nvidia, and Google at the close of the episode — a disclosed lean worth weighing against their bullish framing throughout.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;The thesis is coherent and it still stands — there was nothing wrong about his positions or his directional ideas of where the market was going.&#8221; <cite>— Limitless Podcast</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Google actually this year takes the crown for spending the most — on track for around $250 billion by the end of the year.&#8221; <cite>— Limitless Podcast</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;There's no one better than Jensen Huang, who has a much deeper insight as to what is actually being built and where the demand actually is.&#8221; <cite>— Limitless Podcast</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;If everyone's focused here, is there an edge elsewhere?&#8221; <cite>— Limitless Podcast</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;This could all be a house of cards and a lot of people think so, and I don't want to negate that fact.&#8221; <cite>— Limitless Podcast</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Andy Jassy:</b> Amazon AI capex guidance <span class="cmeta">annual capex · ~$200 billion · 2026</span> <span class="tag">Amazon (AMZN)</span></div><div class="ritem"><b>Limitless Podcast hosts:</b> Every $1 Google invests has historically returned <span class="cmeta">return on invested capital · ~$2.8</span> <i>if since inception</i> <span class="tag">Alphabet (GOOGL)</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Berkshire Hathaway (BRK.A)</b> <span class="rel">invests in</span> <b>Alphabet (GOOGL)</b> &mdash; $17B add, the quarter's largest single buy</div><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">invests in</span> <b>Intel (INTC)</b> &mdash; $30B stake, Nvidia's largest 13F holding, alongside the US government</div><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">invests in</span> <b>SpaceX</b> &mdash; second-largest Nvidia 13F holding; SpaceX buys Nvidia GPUs almost exclusively</div><div class="ritem"><b>Stripe</b> <span class="rel">acquires</span> <b>Open Router</b> &mdash; racing to own AI-agent payment infrastructure</div></div></div>
     </section>
 
     <section class="sec">

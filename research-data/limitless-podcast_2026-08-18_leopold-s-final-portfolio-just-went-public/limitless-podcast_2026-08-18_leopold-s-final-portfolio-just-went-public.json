@@ -21,6 +21,10 @@
  "themes": [
   {
    "id": "leopold-blowup",
+   "tags": [
+    "finance",
+    "semis"
+   ],
    "color": "amber",
    "badge": "Confirmed event",
    "status": "LIQUIDATED — thesis intact, leverage fatal",
@@ -63,6 +67,10 @@
   },
   {
    "id": "memory-validated",
+   "tags": [
+    "semis",
+    "ai-infra"
+   ],
    "color": "green",
    "badge": "High conviction",
    "status": "SUPPLY SOLD OUT INTO 2027",
@@ -93,6 +101,10 @@
   },
   {
    "id": "berkshire-google",
+   "tags": [
+    "ai-infra",
+    "finance"
+   ],
    "color": "green",
    "badge": "High conviction",
    "status": "$17B ADD — LARGEST BUY OF THE QUARTER",
@@ -129,6 +141,10 @@
   },
   {
    "id": "gersner-baker",
+   "tags": [
+    "ai-infra",
+    "finance"
+   ],
    "color": "amber",
    "badge": "Contested — high risk, high conviction",
    "status": "CONCENTRATED INFRASTRUCTURE BETS",
@@ -183,6 +199,10 @@
   },
   {
    "id": "nvidia-circular",
+   "tags": [
+    "ai-infra",
+    "semis"
+   ],
    "color": "amber",
    "badge": "Contested",
    "status": "$30B INTEL STAKE — LARGEST NVIDIA HOLDING",
@@ -226,6 +246,10 @@
   },
   {
    "id": "payments-rewire",
+   "tags": [
+    "finance",
+    "software"
+   ],
    "color": "gray",
    "badge": "Speculative",
    "status": "NEW POSITIONS, UNPROVEN THESIS",
@@ -267,6 +291,10 @@
   },
   {
    "id": "consensus-and-edge",
+   "tags": [
+    "ai-infra",
+    "finance"
+   ],
    "color": "green",
    "badge": "Confirmed event",
    "status": "MOST-ADDED NAMES OF THE QUARTER",
@@ -342,12 +370,6 @@
    "title": "Watch for Leopold's next 13F to see whether — and how much — he rebuilds."
   }
  ],
- "risks": [
-  "Position sizes and percentages are the hosts' own reading of 13F filings and an on-screen portfolio artifact, not figures pulled directly from SEC documents in this video.",
-  "Several company names in the source audio are unclear or auto-caption-mangled (a fund manager cited as running $35.4B, and part of Berkshire's smaller adds); where a name couldn't be confidently resolved, it's described by role rather than guessed.",
-  "The claim that Leopold made a new ~$500M private investment and is rebuilding an equity position comes from unnamed Bloomberg/Reuters reports the hosts reference secondhand, not a filing.",
-  "The hosts state their own standing bias toward memory, Nvidia, and Google at the close of the episode — a disclosed lean worth weighing against their bullish framing throughout."
- ],
  "hot_takes": [
   {
    "take": "The thesis is coherent and it still stands — there was nothing wrong about his positions or his directional ideas of where the market was going.",
@@ -373,6 +395,52 @@
    "take": "This could all be a house of cards and a lot of people think so, and I don't want to negate that fact.",
    "cite": "— Limitless Podcast",
    "why": "Stated alongside a 'strong belief' the AI capex thesis plays out — conviction and the bear case held at once."
+  }
+ ],
+ "claims": [
+  {
+   "who": "Andy Jassy",
+   "claim": "Amazon AI capex guidance",
+   "metric": "annual capex",
+   "target": "~$200 billion",
+   "by": "2026",
+   "condition": null,
+   "entity": "Amazon (AMZN)"
+  },
+  {
+   "who": "Limitless Podcast hosts",
+   "claim": "Every $1 Google invests has historically returned",
+   "metric": "return on invested capital",
+   "target": "~$2.8",
+   "by": null,
+   "condition": "since inception",
+   "entity": "Alphabet (GOOGL)"
+  }
+ ],
+ "relations": [
+  {
+   "from": "Berkshire Hathaway (BRK.A)",
+   "rel": "invests_in",
+   "to": "Alphabet (GOOGL)",
+   "note": "$17B add, the quarter's largest single buy"
+  },
+  {
+   "from": "Nvidia (NVDA)",
+   "rel": "invests_in",
+   "to": "Intel (INTC)",
+   "note": "$30B stake, Nvidia's largest 13F holding, alongside the US government"
+  },
+  {
+   "from": "Nvidia (NVDA)",
+   "rel": "invests_in",
+   "to": "SpaceX",
+   "note": "second-largest Nvidia 13F holding; SpaceX buys Nvidia GPUs almost exclusively"
+  },
+  {
+   "from": "Stripe",
+   "rel": "acquires",
+   "to": "Open Router",
+   "note": "racing to own AI-agent payment infrastructure"
   }
  ],
  "other_news": [

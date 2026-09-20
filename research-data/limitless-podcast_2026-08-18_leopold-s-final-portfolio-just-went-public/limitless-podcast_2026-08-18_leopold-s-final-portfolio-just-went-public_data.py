@@ -26,6 +26,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "leopold-blowup",
+        "tags": ["finance", "semis"],
         "color": "amber",
         "badge": "Confirmed event",
         "status": "LIQUIDATED — thesis intact, leverage fatal",
@@ -53,6 +54,7 @@ THEMES = [
     },
     {
         "id": "memory-validated",
+        "tags": ["semis", "ai-infra"],
         "color": "green",
         "badge": "High conviction",
         "status": "SUPPLY SOLD OUT INTO 2027",
@@ -77,6 +79,7 @@ THEMES = [
     },
     {
         "id": "berkshire-google",
+        "tags": ["ai-infra", "finance"],
         "color": "green",
         "badge": "High conviction",
         "status": "$17B ADD — LARGEST BUY OF THE QUARTER",
@@ -104,6 +107,7 @@ THEMES = [
     },
     {
         "id": "gersner-baker",
+        "tags": ["ai-infra", "finance"],
         "color": "amber",
         "badge": "Contested — high risk, high conviction",
         "status": "CONCENTRATED INFRASTRUCTURE BETS",
@@ -134,6 +138,7 @@ THEMES = [
     },
     {
         "id": "nvidia-circular",
+        "tags": ["ai-infra", "semis"],
         "color": "amber",
         "badge": "Contested",
         "status": "$30B INTEL STAKE — LARGEST NVIDIA HOLDING",
@@ -159,6 +164,7 @@ THEMES = [
     },
     {
         "id": "payments-rewire",
+        "tags": ["finance", "software"],
         "color": "gray",
         "badge": "Speculative",
         "status": "NEW POSITIONS, UNPROVEN THESIS",
@@ -185,6 +191,7 @@ THEMES = [
     },
     {
         "id": "consensus-and-edge",
+        "tags": ["ai-infra", "finance"],
         "color": "green",
         "badge": "Confirmed event",
         "status": "MOST-ADDED NAMES OF THE QUARTER",
@@ -239,6 +246,18 @@ HOT_TAKES = [
      "cite": '— Limitless Podcast', "why": 'Turned on their own coverage: the 13F data shows the large funds crowded into one trade, which they treat as a reason to look away from it.'},
     {"take": "This could all be a house of cards and a lot of people think so, and I don't want to negate that fact.",
      "cite": '— Limitless Podcast', "why": "Stated alongside a 'strong belief' the AI capex thesis plays out — conviction and the bear case held at once."},
+]
+
+CLAIMS = [
+    {"who": "Andy Jassy", "claim": "Amazon AI capex guidance", "metric": "annual capex", "target": "~$200 billion", "by": "2026", "condition": None, "entity": "Amazon (AMZN)"},
+    {"who": "Limitless Podcast hosts", "claim": "Every $1 Google invests has historically returned", "metric": "return on invested capital", "target": "~$2.8", "by": None, "condition": "since inception", "entity": "Alphabet (GOOGL)"},
+]
+
+RELATIONS = [
+    {"from": "Berkshire Hathaway (BRK.A)", "rel": "invests_in", "to": "Alphabet (GOOGL)", "note": "$17B add, the quarter's largest single buy"},
+    {"from": "Nvidia (NVDA)", "rel": "invests_in", "to": "Intel (INTC)", "note": "$30B stake, Nvidia's largest 13F holding, alongside the US government"},
+    {"from": "Nvidia (NVDA)", "rel": "invests_in", "to": "SpaceX", "note": "second-largest Nvidia 13F holding; SpaceX buys Nvidia GPUs almost exclusively"},
+    {"from": "Stripe", "rel": "acquires", "to": "Open Router", "note": "racing to own AI-agent payment infrastructure"},
 ]
 
 OTHER_NEWS = [
