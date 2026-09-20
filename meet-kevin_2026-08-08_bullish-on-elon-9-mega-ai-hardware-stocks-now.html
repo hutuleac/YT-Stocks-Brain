@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="elon-thesis">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">BASE CASE 13,000 RACKS ORDERED — BULL CASE UP TO 68,800</span>
+    <span class="theme-status">BASE CASE 13,000 RACKS ORDERED — BULL CASE UP TO 68,800</span><span class="ttag">ai-infra</span><span class="ttag">space</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">The Drunken-Sailor Thesis: Elon Will Overspend Regardless of ROI</h2>
   <div class="theme-body">
@@ -131,7 +136,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;None of that freaking crap matters. All that matters is that the richest guy in the world believes it.&#8221;<cite>— Kevin, on why Elon will overspend regardless of ROI</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>SpaceX / Elon Musk</b><span>The demand driver for the whole thesis; not a stock pick in this video — Kevin explicitly separates 'is Elon overspending good or bad' from 'who benefits if he does.'</span></div><div class="namechip"><b>Foxconn</b><span>Manufacturing partner receiving the 13,000-rack base-case order; also the entity Wells Fargo flagged as a potential direct-order risk that could bypass Dell (see Dell theme).</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>SpaceX / Elon Musk<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>The demand driver for the whole thesis; not a stock pick in this video — Kevin explicitly separates 'is Elon overspending good or bad' from 'who benefits if he does.'</span></div><div class="namechip"><b>Foxconn<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Manufacturing partner receiving the 13,000-rack base-case order; also the entity Wells Fargo flagged as a potential direct-order risk that could bypass Dell (see Dell theme).</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The entire nine-stock thesis rests on Elon continuing to spend aggressively and on capital markets continuing to fund it via borrowing — Kevin's own framing is that this works 'as long as the stock performs okay, like it stabilizes somewhere,' which is a conditional, not a certainty.</div></div>
     </div>
   </div>
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="nvidia">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">TOP PICK — 'DIRT FREAKING CHEAP'</span>
+    <span class="theme-status">TOP PICK — 'DIRT FREAKING CHEAP'</span><span class="ttag">semis</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Nvidia — Biggest Direct Beneficiary, Still Underpriced</h2>
   <div class="theme-body">
@@ -150,7 +155,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Nvidia is dirt freaking cheap. None of this is personalized financial advice, but Nvidia is dirt freaking cheap.&#8221;<cite>— Kevin, closing line of the video</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)</b><span>Fair value $795-850 per Kevin's model (mid-to-high 2s PEG target); current PE ~25, forward growth 34%/yr over 4 years, PEG 0.76. Market cap $5.4T.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Fair value $795-850 per Kevin's model (mid-to-high 2s PEG target); current PE ~25, forward growth 34%/yr over 4 years, PEG 0.76. Market cap $5.4T.</span></div></div>
       
     </div>
   </div>
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="marvell-lattice">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">#2 AND #3 FAVORITES — SMALLER, MORE VOLATILE</span>
+    <span class="theme-status">#2 AND #3 FAVORITES — SMALLER, MORE VOLATILE</span><span class="ttag">semis</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Marvell and Lattice Semiconductor — The Custom-Silicon Runners-Up</h2>
   <div class="theme-body">
@@ -169,7 +174,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Marvell (MRVL)</b><span>$191B market cap; strategic Nvidia partnership on custom silicon and optical networking.</span></div><div class="namechip"><b>Lattice Semiconductor (LSCC)</b><span>~$18B market cap, ~$130/share; recently acquired a firmware/platform-management company, which is pressuring margins short-term but expected to lift them later.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Marvell (MRVL)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>$191B market cap; strategic Nvidia partnership on custom silicon and optical networking.</span></div><div class="namechip"><b>Lattice Semiconductor (LSCC)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>~$18B market cap, ~$130/share; recently acquired a firmware/platform-management company, which is pressuring margins short-term but expected to lift them later.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Lattice's small size means there's no dependable 4-year estimate — Kevin explicitly frames the $225-763 range as high-volatility and speculative, not a tight forecast band.</div></div>
     </div>
   </div>
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="cooling-power">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Mixed</span>
-    <span class="theme-status">VERTIV = 'NVIDIA PROXY' · EATON = BALANCE-SHEET RED FLAG</span>
+    <span class="theme-status">VERTIV = 'NVIDIA PROXY' · EATON = BALANCE-SHEET RED FLAG</span><span class="ttag">energy</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Cooling and Power Infrastructure: Vertiv vs. Eaton</h2>
   <div class="theme-body">
@@ -188,7 +193,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;The balance sheet strength is absolute trash... the cash is exploded. Like there's no cash. It's gone.&#8221;<cite>— Kevin, on Eaton's balance sheet</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Vertiv (VRT)</b><span>~$100B market cap; smaller analyst coverage than the mega-caps, so estimates (and the valuation range) carry more uncertainty.</span></div><div class="namechip"><b>Eaton (ETN)</b><span>Data-center orders +85% YoY, but weak balance sheet — Kevin's least-favorite of the 'good demand story' names.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Vertiv (VRT)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>~$100B market cap; smaller analyst coverage than the mega-caps, so estimates (and the valuation range) carry more uncertainty.</span></div><div class="namechip"><b>Eaton (ETN)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium</span></b><span>Data-center orders +85% YoY, but weak balance sheet — Kevin's least-favorite of the 'good demand story' names.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Eaton could still do well purely on order volume from SpaceX-adjacent demand — Kevin's caution is specifically about balance-sheet risk and valuation room, not about the underlying demand story.</div></div>
     </div>
   </div>
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="field-players">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Speculative / value plays</span>
-    <span class="theme-status">SCHNEIDER SKIPPED · DELL AT RISK · ENPHASE AND ARM ARE OPTIONALITY</span>
+    <span class="theme-status">SCHNEIDER SKIPPED · DELL AT RISK · ENPHASE AND ARM ARE OPTIONALITY</span><span class="ttag">ai-infra</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">The Rest of the Field: Schneider, Dell, Enphase, ARM</h2>
   <div class="theme-body">
@@ -207,7 +212,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Schneider Electric (OTC ADR)</b><span>French company; least-favored name in the video on both momentum and valuation grounds.</span></div><div class="namechip"><b>Dell Technologies</b><span>Foxconn-direct order risk flagged by Wells Fargo; high volume, low margin business model.</span></div><div class="namechip"><b>Enphase Energy (ENPH)</b><span>Highest free cash flow yield in the group (~7%); 2028 data-center optionality plus rate-cut sensitivity.</span></div><div class="namechip"><b>ARM Holdings</b><span>CPU-core licensing model; OpenAI and Meta are buying its custom silicon, but valuation already reflects a lot of future growth.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Schneider Electric (OTC ADR)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium</span></b><span>French company; least-favored name in the video on both momentum and valuation grounds.</span></div><div class="namechip"><b>Dell Technologies<span class="stance" style="background:#93711b;">UNCERTAIN</span></b><span>Foxconn-direct order risk flagged by Wells Fargo; high volume, low margin business model.</span></div><div class="namechip"><b>Enphase Energy (ENPH)<span class="stance" style="background:#93711b;">WATCHING · Low · 2028</span></b><span>Highest free cash flow yield in the group (~7%); 2028 data-center optionality plus rate-cut sensitivity.</span></div><div class="namechip"><b>ARM Holdings<span class="stance" style="background:#93711b;">WATCHING · Low</span></b><span>CPU-core licensing model; OpenAI and Meta are buying its custom silicon, but valuation already reflects a lot of future growth.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Kevin's own valuation platform (app.meetkevin.com) is explicitly labeled beta — he discloses one confirmed model error live in the video (Dell's growth assumption), which is a reason to treat any single fair-value number from this source as directional, not precise.</div></div>
     </div>
   </div>
@@ -221,15 +226,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">This is a single YouTuber's personal valuation model (app.meetkevin.com), explicitly labeled 'beta' — Kevin discloses one confirmed calculation error live in the video (Dell's growth assumption), so treat every fair-value number here as directional, not audited.</div><div class="ritem">Kevin discloses a material conflict: his venture fund holds 7-figure SpaceX exposure bought near a ~<b>$330B</b> valuation, and he sells access to the valuation platform referenced throughout (course/app members). His stock picks in this video benefit from the same 'Elon overspends' thesis that benefits his own SpaceX position.</div><div class="ritem">All PEG ratios and fair-value targets depend on forward growth estimates that are themselves projections, not reported results — small-cap names in particular (Lattice, Vertiv) are flagged by Kevin himself as having thin or unreliable multi-year analyst coverage.</div><div class="ritem">The transcript is auto-generated from a ~35-minute solo monologue with informal phrasing and occasional crosstalk with a third party at the end — numeric figures (PE/PEG ratios, price targets) have been transcribed as stated but not independently re-verified against company filings.</div><div class="ritem">Kevin explicitly states this is not personalized financial advice and that this video is not a recommendation on SpaceX itself, only on which public-market stocks could benefit if Elon overspends.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;Elon will literally expand supply no matter what, because he's drunk on the idea that we need so many data centers.&#8221; <cite>— Kevin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;If you just use PE ratios, I think you're unfairly looking at the stocks, because you're not factoring in the growth.&#8221; <cite>— Kevin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The market has really unpriced a lot of this with China.&#8221; <cite>— Kevin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The big favorites from Elon's buying spree, hands down: Nvidia, Marvell, and Lattice Semiconductor, in declining order.&#8221; <cite>— Kevin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The market has honestly forgotten that there is a CPU coming from Nvidia.&#8221; <cite>— Kevin</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Kevin:</b> Nvidia fair value <span class="cmeta">fair value per share · $795-850</span> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>Kevin:</b> A full 10-gigawatt buildout raises Nvidia's 2028 revenue estimates <span class="cmeta">revenue estimate increase · up to 50% · 2028</span> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>Kevin:</b> Marvell fair value <span class="cmeta">fair value per share · ~$370 (≈69% upside)</span> <span class="tag">Marvell (MRVL)</span></div><div class="ritem"><b>Kevin:</b> Lattice Semiconductor fair value <span class="cmeta">fair value per share · $225-763 (high volatility range)</span> <span class="tag">Lattice Semiconductor (LSCC)</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>SpaceX / Elon Musk</b> <span class="rel">customer of</span> <b>Nvidia (NVDA)</b> &mdash; confirmed direct deal, 13,000-rack GB300 base-case order</div><div class="ritem"><b>SpaceX / Elon Musk</b> <span class="rel">customer of</span> <b>Foxconn</b> &mdash; base-case GB300 rack order placed through Foxconn</div><div class="ritem"><b>Marvell (MRVL)</b> <span class="rel">partners with</span> <b>Nvidia (NVDA)</b> &mdash; NVLink Fusion lets Marvell's custom silicon interoperate with Nvidia GPUs and Vera CPUs</div><div class="ritem"><b>OpenAI</b> <span class="rel">customer of</span> <b>ARM Holdings</b> &mdash; buying ARM custom silicon, ramping 2027</div><div class="ritem"><b>Meta (META)</b> <span class="rel">customer of</span> <b>ARM Holdings</b> &mdash; buying ARM custom silicon, ramping 2027</div></div></div>
     </section>
 
     <section class="sec">
