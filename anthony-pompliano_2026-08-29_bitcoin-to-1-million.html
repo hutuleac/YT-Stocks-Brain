@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="bitcoin-price-target">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">POSITIVE VIEW — HOLDING, ADDING</span>
+    <span class="theme-status">POSITIVE VIEW — HOLDING, ADDING</span><span class="ttag">crypto</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Visser's Bitcoin math: $600K to $1M, if the crypto pie gets to $100 trillion</h2>
   <div class="theme-body">
@@ -131,7 +136,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;That number to me has to be a hundred trillion in the future... you can come up with whatever number you want. It gets you up somewhere at 600,000 or somewhere 800,000 to a million.&#8221;<cite>— Jordi Visser</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Bitcoin (BTC)</b><span>Consolidating between 74K support and 82K resistance; Visser's long-run target is $600K-$1M if crypto reaches a $100T total market cap.</span></div><div class="namechip"><b>Dogecoin (DOGE)</b><span>Up 23% over the month, roughly matching Bitcoin's 22% — treated as a retail-energy signal, not a fundamental one.</span></div><div class="namechip"><b>Gold</b><span>Bitcoin-gold correlation is at its highest ever; both framed as the market's chosen 'scarcity' assets.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Bitcoin (BTC)<span class="stance" style="background:#3f6b2e;">OWNS · High · multi-year</span></b><span>Consolidating between 74K support and 82K resistance; Visser's long-run target is $600K-$1M if crypto reaches a $100T total market cap.</span></div><div class="namechip"><b>Dogecoin (DOGE)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Up 23% over the month, roughly matching Bitcoin's 22% — treated as a retail-energy signal, not a fundamental one.</span></div><div class="namechip"><b>Gold<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Bitcoin-gold correlation is at its highest ever; both framed as the market's chosen 'scarcity' assets.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Visser explicitly flags he's gun-shy on specific numbers after expecting Bitcoin to hit $250,000 last year and being wrong — his $600K-$1M figure is framed as a long-run, multi-year scenario, not a near-term call.</div></div>
     </div>
   </div>
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="eth-sol-rotation">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Medium conviction</span>
-    <span class="theme-status">BUYING-ADDING — SHIFTING WEIGHT FROM BTC TO ETH/SOL</span>
+    <span class="theme-status">BUYING-ADDING — SHIFTING WEIGHT FROM BTC TO ETH/SOL</span><span class="ttag">crypto</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">The real trade, per Visser, is Ethereum and Solana as AI-agent 'financial guardrails'</h2>
   <div class="theme-body">
@@ -150,7 +155,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I don't think people have done the homework yet, the same way they didn't do the homework on the AI infrastructure trade, and then you fast forward a year, now they're all in it.&#8221;<cite>— Jordi Visser</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Ethereum (ETH)</b><span>Broken out and outperforming Bitcoin; Visser holds more Ethereum than ever on the tokenization/stablecoin-rail thesis.</span></div><div class="namechip"><b>Solana (SOL)</b><span>Up 50% month-to-date, its biggest monthly move since 2024, recently outperforming Ethereum.</span></div><div class="namechip"><b>Coinbase (COIN)</b><span>Referenced this week over a Bitcoin-as-mortgage-collateral move.</span></div><div class="namechip"><b>Robinhood (HOOD)</b><span>Vlad Tenev's views on tokenization cited as one Visser weighs closely.</span></div><div class="namechip"><b>Hyperliquid</b><span>Flagged by Visser as crypto infrastructure that accrues value without fitting a normal equity bucket.</span></div><div class="namechip"><b>Stripe</b><span>Referenced in passing for its work on stablecoin payment rails.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Ethereum (ETH)<span class="stance" style="background:#3f6b2e;">BUYING-ADDING · Medium · 12 months</span></b><span>Broken out and outperforming Bitcoin; Visser holds more Ethereum than ever on the tokenization/stablecoin-rail thesis.</span></div><div class="namechip"><b>Solana (SOL)<span class="stance" style="background:#3f6b2e;">BUYING-ADDING · Medium · 12 months</span></b><span>Up 50% month-to-date, its biggest monthly move since 2024, recently outperforming Ethereum.</span></div><div class="namechip"><b>Coinbase (COIN)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Referenced this week over a Bitcoin-as-mortgage-collateral move.</span></div><div class="namechip"><b>Robinhood (HOOD)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Vlad Tenev's views on tokenization cited as one Visser weighs closely.</span></div><div class="namechip"><b>Hyperliquid<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Flagged by Visser as crypto infrastructure that accrues value without fitting a normal equity bucket.</span></div><div class="namechip"><b>Stripe<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Referenced in passing for its work on stablecoin payment rails.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Visser is explicit that he expects Bitcoin's share of total crypto market cap to fall over the next 3-5 years even as he expects its dollar price to keep rising — a nuance that puts him at odds with Pompliano's Bitcoin-dominance framing in the same conversation.</div></div>
     </div>
   </div>
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="nvidia-scarcity">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">POSITIVE VIEW — SCARCITY THESIS, TIME-LIMITED</span>
+    <span class="theme-status">POSITIVE VIEW — SCARCITY THESIS, TIME-LIMITED</span><span class="ttag">semis</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Nvidia is doing $1B a day — so why is the stock only up 25% this year?</h2>
   <div class="theme-body">
@@ -169,7 +174,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;If all of the sudden that PV starts to change 'cause you're like, you know what, we won't need any GPUs in 10 years — well, then Nvidia is not going to be worth as much as it is.&#8221;<cite>— Jordi Visser</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)</b><span>Over $1B/day in revenue, guided to ~70% growth next year; stock up only 25% over the past year despite the growth rate.</span></div><div class="namechip"><b>OpenAI</b><span>Its in-house Jalapeno chip is viewed as a longer-term threat to Nvidia's CUDA moat; also flagged as a candidate for a compute-driven monopoly dynamic.</span></div><div class="namechip"><b>Anthropic</b><span>Alongside OpenAI, cited as a high-margin lab able to absorb effectively unlimited compute, and a reason both may be pursuing public listings.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium · year-end</span></b><span>Over $1B/day in revenue, guided to ~70% growth next year; stock up only 25% over the past year despite the growth rate.</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">WATCHING · Medium</span></b><span>Its in-house Jalapeno chip is viewed as a longer-term threat to Nvidia's CUDA moat; also flagged as a candidate for a compute-driven monopoly dynamic.</span></div><div class="namechip"><b>Anthropic<span class="stance" style="background:#93711b;">WATCHING · Medium</span></b><span>Alongside OpenAI, cited as a high-margin lab able to absorb effectively unlimited compute, and a reason both may be pursuing public listings.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Visser frames Nvidia's long-term risk explicitly as a scarcity/terminal-value question, not a near-term earnings concern — he expects Nvidia (and AI infrastructure broadly) to outperform the S&amp;P by year-end despite the stock's underwhelming one-year return.</div></div>
     </div>
   </div>
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="bessent-warsh-debt">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">SPECULATIVE — VISSER'S OWN READ</span>
+    <span class="theme-status">SPECULATIVE — VISSER'S OWN READ</span><span class="ttag">macro-rates</span><span class="ttag">policy</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">The Bessent-Warsh-Druckenmiller triangle and the 'run it hot' bet on AI</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="ai-safety-convergence">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Speculative</span>
-    <span class="theme-status">CASUAL MENTION — CROSS-REFERENCE, NOT A POSITION</span>
+    <span class="theme-status">CASUAL MENTION — CROSS-REFERENCE, NOT A POSITION</span><span class="ttag">crypto</span><span class="ttag">policy</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">An AI-safety expert and a crypto strategist landed on the same conclusion, from opposite directions</h2>
   <div class="theme-body">
@@ -221,15 +226,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">Two sponsor segments (Arch Public, an automated trading platform; Simple Mining, a Bitcoin mining hosting company) have been excluded from this brief entirely.</div><div class="ritem">Jordi Visser holds a long position in the crypto and AI-infrastructure names he discusses and says outright he has been buying more Bitcoin and Ethereum — his framing throughout is that of an active market participant, not a neutral analyst.</div><div class="ritem">Visser's specific price targets (Bitcoin at <b>$600K</b>-$1M, crypto at $100 trillion, corporate tax hikes tied to humanoids) are his own long-run scenario math stated in conversation, not projections from a published model.</div><div class="ritem">The characterization of the Bessent-Warsh-Druckenmiller relationship and the idea that the WSJ op-ed was coordinated is Visser's own speculation — he says directly there's no way to confirm it.</div><div class="ritem">Auto-generated captions were the transcript source for this brief.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;That number to me has to be a hundred trillion in the future... it gets you up somewhere at 600,000 or somewhere 800,000 to a million.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I fully believe a year from now people will look back and wish they had paid attention to crypto at this stage.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Bitcoin is just the S&amp;P 500 of the future. It's the purest AI trade.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think the val- the percentage will go down. That's my view.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I believe there will be higher corporate taxes in the future because of humanoids to help pay down the debt.&#8221; <cite>— Jordi Visser</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Jordi Visser:</b> Crypto total market cap reaches $100 trillion, implying $600K-$1M per Bitcoin at ~33% share <span class="cmeta">crypto market cap · $100 trillion</span> <i>if Bitcoin holds ~33% share</i> <span class="tag">Bitcoin (BTC)</span></div><div class="ritem"><b>Jordi Visser:</b> Bitcoin's share of total crypto market cap declines even as its dollar price rises <span class="cmeta">BTC dominance · declining · 3-5 years</span> <span class="tag">Bitcoin (BTC)</span></div><div class="ritem"><b>Market (per Visser):</b> Fed hikes rates at the September FOMC meeting <span class="cmeta">probability · ~40% · September 2026</span></div><div class="ritem"><b>Jordi Visser:</b> Stablecoins scale enough to help absorb Treasury issuance <span class="cmeta">stablecoin market size · up to $3 trillion</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Coinbase (COIN)</b> <span class="rel">endorses</span> <b>Bitcoin (BTC)</b> &mdash; Enabled posting Bitcoin as mortgage collateral this week.</div><div class="ritem"><b>OpenAI</b> <span class="rel">competes with</span> <b>Nvidia (NVDA)</b> &mdash; In-house Jalapeno inference chip viewed as a longer-term threat to Nvidia's CUDA moat.</div></div></div>
     </section>
 
     <section class="sec">

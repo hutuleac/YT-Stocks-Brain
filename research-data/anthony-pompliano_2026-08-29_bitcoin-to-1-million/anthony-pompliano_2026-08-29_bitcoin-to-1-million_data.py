@@ -26,6 +26,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "bitcoin-price-target",
+        "tags": ["crypto"],
         "color": "green",
         "badge": "High conviction",
         "status": "POSITIVE VIEW — HOLDING, ADDING",
@@ -46,13 +47,14 @@ THEMES = [
         },
         "watch": "Visser explicitly flags he's gun-shy on specific numbers after expecting Bitcoin to hit $250,000 last year and being wrong — his $600K-$1M figure is framed as a long-run, multi-year scenario, not a near-term call.",
         "names": [
-            {"name": "Bitcoin (BTC)", "blurb": "Consolidating between 74K support and 82K resistance; Visser's long-run target is $600K-$1M if crypto reaches a $100T total market cap."},
-            {"name": "Dogecoin (DOGE)", "blurb": "Up 23% over the month, roughly matching Bitcoin's 22% — treated as a retail-energy signal, not a fundamental one."},
-            {"name": "Gold", "blurb": "Bitcoin-gold correlation is at its highest ever; both framed as the market's chosen 'scarcity' assets."},
+            {"name": "Bitcoin (BTC)", "blurb": "Consolidating between 74K support and 82K resistance; Visser's long-run target is $600K-$1M if crypto reaches a $100T total market cap.", "stance": "OWNS", "conviction": "High", "horizon": "multi-year"},
+            {"name": "Dogecoin (DOGE)", "blurb": "Up 23% over the month, roughly matching Bitcoin's 22% — treated as a retail-energy signal, not a fundamental one.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Gold", "blurb": "Bitcoin-gold correlation is at its highest ever; both framed as the market's chosen 'scarcity' assets.", "stance": "POSITIVE VIEW", "conviction": "Low", "horizon": None},
         ],
     },
     {
         "id": "eth-sol-rotation",
+        "tags": ["crypto"],
         "color": "amber",
         "badge": "Medium conviction",
         "status": "BUYING-ADDING — SHIFTING WEIGHT FROM BTC TO ETH/SOL",
@@ -72,16 +74,17 @@ THEMES = [
         },
         "watch": "Visser is explicit that he expects Bitcoin's share of total crypto market cap to fall over the next 3-5 years even as he expects its dollar price to keep rising — a nuance that puts him at odds with Pompliano's Bitcoin-dominance framing in the same conversation.",
         "names": [
-            {"name": "Ethereum (ETH)", "blurb": "Broken out and outperforming Bitcoin; Visser holds more Ethereum than ever on the tokenization/stablecoin-rail thesis."},
-            {"name": "Solana (SOL)", "blurb": "Up 50% month-to-date, its biggest monthly move since 2024, recently outperforming Ethereum."},
-            {"name": "Coinbase (COIN)", "blurb": "Referenced this week over a Bitcoin-as-mortgage-collateral move."},
-            {"name": "Robinhood (HOOD)", "blurb": "Vlad Tenev's views on tokenization cited as one Visser weighs closely."},
-            {"name": "Hyperliquid", "blurb": "Flagged by Visser as crypto infrastructure that accrues value without fitting a normal equity bucket."},
-            {"name": "Stripe", "blurb": "Referenced in passing for its work on stablecoin payment rails."},
+            {"name": "Ethereum (ETH)", "blurb": "Broken out and outperforming Bitcoin; Visser holds more Ethereum than ever on the tokenization/stablecoin-rail thesis.", "stance": "BUYING-ADDING", "conviction": "Medium", "horizon": "12 months"},
+            {"name": "Solana (SOL)", "blurb": "Up 50% month-to-date, its biggest monthly move since 2024, recently outperforming Ethereum.", "stance": "BUYING-ADDING", "conviction": "Medium", "horizon": "12 months"},
+            {"name": "Coinbase (COIN)", "blurb": "Referenced this week over a Bitcoin-as-mortgage-collateral move.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Robinhood (HOOD)", "blurb": "Vlad Tenev's views on tokenization cited as one Visser weighs closely.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Hyperliquid", "blurb": "Flagged by Visser as crypto infrastructure that accrues value without fitting a normal equity bucket.", "stance": "POSITIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "Stripe", "blurb": "Referenced in passing for its work on stablecoin payment rails.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
     {
         "id": "nvidia-scarcity",
+        "tags": ["semis", "ai-infra"],
         "color": "amber",
         "badge": "Contested",
         "status": "POSITIVE VIEW — SCARCITY THESIS, TIME-LIMITED",
@@ -100,13 +103,14 @@ THEMES = [
         },
         "watch": "Visser frames Nvidia's long-term risk explicitly as a scarcity/terminal-value question, not a near-term earnings concern — he expects Nvidia (and AI infrastructure broadly) to outperform the S&P by year-end despite the stock's underwhelming one-year return.",
         "names": [
-            {"name": "Nvidia (NVDA)", "blurb": "Over $1B/day in revenue, guided to ~70% growth next year; stock up only 25% over the past year despite the growth rate."},
-            {"name": "OpenAI", "blurb": "Its in-house Jalapeno chip is viewed as a longer-term threat to Nvidia's CUDA moat; also flagged as a candidate for a compute-driven monopoly dynamic."},
-            {"name": "Anthropic", "blurb": "Alongside OpenAI, cited as a high-margin lab able to absorb effectively unlimited compute, and a reason both may be pursuing public listings."},
+            {"name": "Nvidia (NVDA)", "blurb": "Over $1B/day in revenue, guided to ~70% growth next year; stock up only 25% over the past year despite the growth rate.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": "year-end"},
+            {"name": "OpenAI", "blurb": "Its in-house Jalapeno chip is viewed as a longer-term threat to Nvidia's CUDA moat; also flagged as a candidate for a compute-driven monopoly dynamic.", "stance": "WATCHING", "conviction": "Medium", "horizon": None},
+            {"name": "Anthropic", "blurb": "Alongside OpenAI, cited as a high-margin lab able to absorb effectively unlimited compute, and a reason both may be pursuing public listings.", "stance": "WATCHING", "conviction": "Medium", "horizon": None},
         ],
     },
     {
         "id": "bessent-warsh-debt",
+        "tags": ["macro-rates", "policy"],
         "color": "amber",
         "badge": "Contested",
         "status": "SPECULATIVE — VISSER'S OWN READ",
@@ -129,6 +133,7 @@ THEMES = [
     },
     {
         "id": "ai-safety-convergence",
+        "tags": ["crypto", "policy"],
         "color": "gray",
         "badge": "Speculative",
         "status": "CASUAL MENTION — CROSS-REFERENCE, NOT A POSITION",
@@ -154,6 +159,18 @@ TAKEAWAYS = [
     {"icon": "\U0001F4B5", "tag": "Macro", "title": "Watch dollar/yen, not equities, for the real signal on whether Bessent and Warsh are coordinated on rates."},
     {"icon": "\U0001F9E0", "tag": "Crypto", "title": "Size a personal crypto allocation to your own estimated probability of AI disrupting your other assets, per Visser's framework."},
     {"icon": "\U0001F4F0", "tag": "Method", "title": "Read Annie Duke's 'Thinking in Bets' if you want the Bayesian, real-time-updating mindset Visser says the current market rewards."},
+]
+
+CLAIMS = [
+    {"who": "Jordi Visser", "claim": "Crypto total market cap reaches $100 trillion, implying $600K-$1M per Bitcoin at ~33% share", "metric": "crypto market cap", "target": "$100 trillion", "by": None, "condition": "Bitcoin holds ~33% share", "entity": "Bitcoin (BTC)"},
+    {"who": "Jordi Visser", "claim": "Bitcoin's share of total crypto market cap declines even as its dollar price rises", "metric": "BTC dominance", "target": "declining", "by": "3-5 years", "condition": None, "entity": "Bitcoin (BTC)"},
+    {"who": "Market (per Visser)", "claim": "Fed hikes rates at the September FOMC meeting", "metric": "probability", "target": "~40%", "by": "September 2026", "condition": None, "entity": None},
+    {"who": "Jordi Visser", "claim": "Stablecoins scale enough to help absorb Treasury issuance", "metric": "stablecoin market size", "target": "up to $3 trillion", "by": None, "condition": None, "entity": None},
+]
+
+RELATIONS = [
+    {"from": "Coinbase (COIN)", "rel": "endorses", "to": "Bitcoin (BTC)", "note": "Enabled posting Bitcoin as mortgage collateral this week."},
+    {"from": "OpenAI", "rel": "competes_with", "to": "Nvidia (NVDA)", "note": "In-house Jalapeno inference chip viewed as a longer-term threat to Nvidia's CUDA moat."},
 ]
 
 RISKS = [
