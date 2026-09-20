@@ -21,6 +21,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "google-shakeup",
+        "tags": ["ai-infra", "career"],
         "color": "amber",
         "badge": "Contested",
         "status": "ANNOUNCED THIS WEEK — DEMIS TO CHAIRMAN, DEAN DEPARTING",
@@ -45,6 +46,7 @@ THEMES = [
     },
     {
         "id": "astra-math",
+        "tags": ["software"],
         "color": "green",
         "badge": "Confirmed event",
         "status": "MANUSCRIPT PUBLISHED AUGUST 1, 2026",
@@ -65,6 +67,7 @@ THEMES = [
     },
     {
         "id": "spacex-trillion",
+        "tags": ["space", "ai-infra", "semis"],
         "color": "green",
         "badge": "High conviction",
         "status": "FIRST-EVER SPACEX EARNINGS CALL, EARLY AUGUST 2026",
@@ -88,6 +91,7 @@ THEMES = [
     },
     {
         "id": "consciousness-personhood",
+        "tags": ["policy"],
         "color": "gray",
         "badge": "Speculative",
         "status": "PAPER PUBLISHED THIS WEEK / DEBATE FROM JUNE 13, 2026",
@@ -110,6 +114,7 @@ THEMES = [
     },
     {
         "id": "qwen-vs-framework",
+        "tags": ["software", "policy", "geopolitics"],
         "color": "amber",
         "badge": "Contested",
         "status": "QWEN RELEASED THIS WEEK / FRAMEWORK CONFIRMED, NOT PUBLISHED",
@@ -133,6 +138,7 @@ THEMES = [
     },
     {
         "id": "hark-handoff",
+        "tags": ["software", "robotics", "finance"],
         "color": "gray",
         "badge": "Speculative",
         "status": "PRODUCT LAUNCHED THIS WEEK",
@@ -183,6 +189,18 @@ HOT_TAKES = [
      "cite": '— Alex', "why": 'On open-weight releases pushing the cost-capability frontier while US evaluation stays voluntary and secret.'},
     {"take": 'As robots and AI do more and more of the doing, humans spend much, much more time being.',
      "cite": '— Immad Mustafa', "why": 'The optimistic reading, offered in the same segment as the AI-personhood and consciousness debate.'},
+]
+
+CLAIMS = [
+    {"who": "Elon Musk", "claim": "SpaceX reaches an ARR target", "metric": "annual recurring revenue", "target": "$100B+", "by": "2026-12", "condition": None, "entity": "SpaceX"},
+    {"who": "Elon Musk", "claim": "SpaceX reaches a trillion-dollar revenue milestone", "metric": "annual revenue", "target": "$1 trillion", "by": "2030", "condition": "non-zero chance of 2029", "entity": "SpaceX"},
+    {"who": "Alex", "claim": "A physics breakthrough of similar magnitude to Astra's math results emerges", "metric": "capability milestone", "target": "physics breakthrough", "by": None, "condition": "within 1-2 months, possibly by year-end", "entity": None},
+]
+
+RELATIONS = [
+    {"from": "SpaceX", "rel": "partners_with", "to": "Tesla (TSLA)", "note": "$16.8B joint investment in the Terrafab chip megafacility"},
+    {"from": "SpaceX", "rel": "partners_with", "to": "Nvidia (NVDA)", "note": "jointly designing Starmine orbital data-center satellite compute payload around Rubin GPUs and Vera CPUs"},
+    {"from": "Jeff Dean", "rel": "invests_in", "to": "Discovery Loop", "note": "co-founded the recursive-self-improvement public-benefit corp, reportedly funded fast by VC firm Venode"},
 ]
 
 OTHER_NEWS = [

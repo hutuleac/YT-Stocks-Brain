@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="google-shakeup">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">ANNOUNCED THIS WEEK — DEMIS TO CHAIRMAN, DEAN DEPARTING</span>
+    <span class="theme-status">ANNOUNCED THIS WEEK — DEMIS TO CHAIRMAN, DEAN DEPARTING</span><span class="ttag">ai-infra</span><span class="ttag">career</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Demis steps back, Jeff Dean walks out: Gemini 'has lost the mandate of heaven'</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="astra-math">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
-    <span class="theme-status">MANUSCRIPT PUBLISHED AUGUST 1, 2026</span>
+    <span class="theme-status">MANUSCRIPT PUBLISHED AUGUST 1, 2026</span><span class="ttag">software</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">OpenAI's Astra bulk-solves 10 decade-old math problems for about $2,000</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="spacex-trillion">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">FIRST-EVER SPACEX EARNINGS CALL, EARLY AUGUST 2026</span>
+    <span class="theme-status">FIRST-EVER SPACEX EARNINGS CALL, EARLY AUGUST 2026</span><span class="ttag">space</span><span class="ttag">ai-infra</span><span class="ttag">semis</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">SpaceX's first earnings call and the $16.8B Terrafab: two paths to a trillion dollars by 2030</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="consciousness-personhood">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Speculative</span>
-    <span class="theme-status">PAPER PUBLISHED THIS WEEK / DEBATE FROM JUNE 13, 2026</span>
+    <span class="theme-status">PAPER PUBLISHED THIS WEEK / DEBATE FROM JUNE 13, 2026</span><span class="ttag">policy</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">Strip an AI's safety training and it starts believing in God: consciousness engineering meets the personhood debate</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="qwen-vs-framework">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">QWEN RELEASED THIS WEEK / FRAMEWORK CONFIRMED, NOT PUBLISHED</span>
+    <span class="theme-status">QWEN RELEASED THIS WEEK / FRAMEWORK CONFIRMED, NOT PUBLISHED</span><span class="ttag">software</span><span class="ttag">policy</span><span class="ttag">geopolitics</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Qwen 3.8 Max goes open-weight and cheap the same week Washington's AI review framework goes secret</h2>
   <div class="theme-body">
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="hark-handoff">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Speculative</span>
-    <span class="theme-status">PRODUCT LAUNCHED THIS WEEK</span>
+    <span class="theme-status">PRODUCT LAUNCHED THIS WEEK</span><span class="ttag">software</span><span class="ttag">robotics</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">Brett Adcock's Hark launches Handoff — a browsing agent, or a recapitalization play?</h2>
   <div class="theme-body">
@@ -240,15 +245,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">This is a five-person panel podcast with strong pre-existing positions (Alex is an outspoken AI-consciousness/personhood advocate; Peter/Dave are SpaceX shareholders/bulls) — treat 'hot takes' explicitly labeled as such as opinion, not confirmed reporting.</div><div class="ritem">Several headline claims (the free-electron-laser EUV interpretation of the Terrafab, the Hark recapitalization theory, the 'DeepMind won a knife fight with Google Brain' account of Jeff Dean's exit) are the panel's own speculative reconstruction from public signals, not confirmed by Google, SpaceX, or Hark.</div><div class="ritem">Auto-generated captions were used to produce this brief; names (e.g. Corey Kavukcuoglu, Discovery Loop, Terrafab) and technical terms may contain transcription errors despite cross-checking against context.</div><div class="ritem">The episode contains two sponsor segments (Google for Startups, Blitzy) and a Fountain Life health-sponsor interview — treat product/benchmark claims in those segments as marketing content, not independent panel analysis.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;Gemini has lost the mandate of heaven.&#8221; <cite>— Alex</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Everything that will be economically productive in this next century, Elon's going full stack on.&#8221; <cite>— Salim</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The old gods are being slaughtered by the new machine gods.&#8221; <cite>— Will Kinney, cosmologist</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Elon has taught the entire economy that if you're a founder of a well-capitalized company and you want to increase your equity stake, the best thing you can do is start a parallel company.&#8221; <cite>— Alex</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;This is China and Chinese labs forcing the western frontier labs to dance.&#8221; <cite>— Alex</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;As robots and AI do more and more of the doing, humans spend much, much more time being.&#8221; <cite>— Immad Mustafa</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Elon Musk:</b> SpaceX reaches an ARR target <span class="cmeta">annual recurring revenue · $100B+ · 2026-12</span> <span class="tag">SpaceX</span></div><div class="ritem"><b>Elon Musk:</b> SpaceX reaches a trillion-dollar revenue milestone <span class="cmeta">annual revenue · $1 trillion · 2030</span> <i>if non-zero chance of 2029</i> <span class="tag">SpaceX</span></div><div class="ritem"><b>Alex:</b> A physics breakthrough of similar magnitude to Astra's math results emerges <span class="cmeta">capability milestone · physics breakthrough</span> <i>if within 1-2 months, possibly by year-end</i></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>SpaceX</b> <span class="rel">partners with</span> <b>Tesla (TSLA)</b> &mdash; $16.8B joint investment in the Terrafab chip megafacility</div><div class="ritem"><b>SpaceX</b> <span class="rel">partners with</span> <b>Nvidia (NVDA)</b> &mdash; jointly designing Starmine orbital data-center satellite compute payload around Rubin GPUs and Vera CPUs</div><div class="ritem"><b>Jeff Dean</b> <span class="rel">invests in</span> <b>Discovery Loop</b> &mdash; co-founded the recursive-self-improvement public-benefit corp, reportedly funded fast by VC firm Venode</div></div></div>
     </section>
 
     <section class="sec">
