@@ -42,6 +42,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "ownership-mission",
+        "tags": ["finance", "consumer"],
         "color": "green",
         "badge": "Confirmed growth",
         "status": "AUM $125B, +50% IN ONE YEAR",
@@ -79,6 +80,7 @@ THEMES = [
     },
     {
         "id": "agentic-trading",
+        "tags": ["ai-infra", "finance"],
         "color": "amber",
         "badge": "Early-stage, unproven ROI",
         "status": "100,000+ AGENTIC ACCOUNTS CREATED",
@@ -112,6 +114,7 @@ THEMES = [
     },
     {
         "id": "private-markets",
+        "tags": ["finance", "ai-infra"],
         "color": "green",
         "badge": "Structural bet",
         "status": "RVI (PRE-IPO) + RV2 (SEED/SERIES A, W/ YC)",
@@ -145,6 +148,7 @@ THEMES = [
     },
     {
         "id": "robinhood-chain",
+        "tags": ["crypto", "finance"],
         "color": "green",
         "badge": "Confirmed event",
         "status": "TOP-5 DEX VOLUME WITHIN WEEKS OF LAUNCH",
@@ -174,6 +178,7 @@ THEMES = [
     },
     {
         "id": "valuation-alarm-bells",
+        "tags": ["macro-rates", "policy"],
         "color": "amber",
         "badge": "Contested",
         "status": "SPECULATIVE CHIP/ENERGY DEMAND FLAGGED",
@@ -212,6 +217,17 @@ TAKEAWAYS = [
     {"icon": "\U0001F30E", "tag": "Markets", "title": "Track Robinhood Ventures Fund 2 (seed/Series A via YC) if you want early-stage private exposure without accredited-investor status."},
     {"icon": "\U0001F4CA", "tag": "Markets", "title": "Watch for sudden shifts in what average retail investors are asking for (e.g. a specific foreign market) as a rough, informal overheating indicator."},
     {"icon": "\U0001F3DB️", "tag": "Policy", "title": "If you hold concentrated founder/executive equity in a high-tax state, model a wealth-tax scenario now rather than after a referendum passes."},
+]
+
+CLAIMS = [
+    {"who": "Vlad Tenev", "claim": "Robinhood AUM growth", "metric": "assets under custody", "target": "$125B, +50% YoY", "by": None, "condition": "self-reported by company CEO", "entity": "Robinhood (HOOD)"},
+    {"who": "Vlad Tenev", "claim": "more software engineers and lawyers exist", "metric": "employment counts", "target": "higher than today", "by": "2035", "condition": "his own stated hot take, offered without defending it"},
+]
+
+RELATIONS = [
+    {"from": "Robinhood (HOOD)", "rel": "acquires", "to": "Bitstamp", "note": "described as the longest continuously running crypto exchange"},
+    {"from": "Robinhood (HOOD)", "rel": "invests_in", "to": "OpenAI", "note": "held in Robinhood Ventures Fund 1's late-stage pre-IPO basket"},
+    {"from": "Robinhood (HOOD)", "rel": "partners_with", "to": "Y Combinator", "note": "co-runs Robinhood Ventures Fund 2's seed/Series A program"},
 ]
 
 RISKS = [
