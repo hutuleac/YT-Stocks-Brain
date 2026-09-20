@@ -1,0 +1,194 @@
+"""Data file for Jordi Visser (solo) — AI's Speed Crash: The Structural Bull Market Isn't Over."""
+
+META = {
+    "title": "AI's Speed Crash: The Structural Bull Market Isn't Over",
+    "channel": "Jordi Visser",
+    "speakers": "Jordi Visser (solo)",
+    "date": "2026-07-19",
+    "video_url": "https://www.youtube.com/watch?v=tAUIFAptWvo",
+    "thread_line": "6 threads · tech momentum's worst 18-day unwind since 1998 as a market-structure story rather than a business-cycle one, a blowout bank earnings season confirming 'as good as it gets,' Visser rebuilding his Micron position on a technical setup, Warsh's 'reform not hawkish' Fed framing plus Demis Hassabis's AGI essay, Ethereum's best month since last August, and a portfolio update after a ~40% thematic-portfolio correction.",
+    "category": "market",
+}
+
+SNAPSHOT = [
+    "Visser frames the week's AI selloff through his 'bubbles, parabolas, and speed crashes' lens: the Morgan Stanley tech momentum factor's 18-day rate of change hit -40%, the worst unwind in Bloomberg's data going back to 1998 — a market-structure/leverage story (vol-controlled strategies, AI-agent-driven trading) rather than a business-cycle one.",
+    "Q2 bank earnings came in extremely strong (JPMorgan +34% surprise and stock up 10% near all-time highs, Goldman Sachs +45%, Morgan Stanley +18%), with Jamie Dimon calling conditions 'close to as good as it gets' — Visser uses this, plus near-zero hyperscaler debt-to-equity, to push back hard on AI-debt-bubble fears circulating that week.",
+    "Visser is actively rebuilding his Micron position (after selling out in early June) on rising DRAM prices across multiple product generations, new long-term supply contracts, and a technical setup (early VWAP reclaim, biggest first-hour volume since the peak) he compares to Nvidia's and Amazon's historical head-and-shoulders neckline breaks.",
+    "Kevin Warsh is again defended as 'reform, not hawkish' — cooling CPI/PCE data (sticky core, trueflation, core CPI, trimmed mean all at or near lows) is read as supporting no July hike, while a widely-shared Demis Hassabis essay on AGI ('a few short years away') is cited as the most credible AGI-timing signal Visser tracks.",
+    "Crypto section: Bitcoin is still technically in a bear market (bouncing between its 20-day and 50-day) but Ethereum is having its best month since August of the prior year (+17% MTD), with Visser calling Ethereum 'the one to watch' as the agent-revolution/tokenization trade — plus Stripe's reported bid for PayPal, JPMorgan/BlackRock/Goldman tokenizing stocks and treasuries, and Japan/South Korea reclassifying crypto as financial assets.",
+    "Portfolio update: his 100-name thematic portfolio is down roughly 40% from its peak (a 'fairly normal' correction after a big move), Marvell (his largest single semiconductor position besides Nvidia) is down 62% but still held, and much of what he rotated out of AI names went into Bitcoin, Ethereum, and silver.",
+]
+
+THEMES = [
+    {
+        "id": "speed-crash-structure",
+        "tags": ["finance"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "WATCHING — expects this volatility regime to persist",
+        "title": "Tech Momentum's Worst 18-Day Unwind Since 1998 Is a Market-Structure Story, Not a Business Cycle One",
+        "lead": "**Visser's core argument:** markets are shifting from the old 'manias, panics, and crashes' framework to 'bubbles, parabolas, and speed crashes' — faster up, faster down, structurally different — driven increasingly by AI-agent trading, momentum-chasing, and vol-controlled leverage that unwinds violently when volatility spikes.",
+        "bullets": [
+            "The Morgan Stanley tech momentum factor's 18-day rate of change hit -40%, the worst unwind in Bloomberg's published data going back to 1998 — industrial momentum (his other AI-proxy factor) gave up even more than tech.",
+            "Explicitly distances this from a 2007-style credit unwind: spreads are not widening and there's no recession signal (his own recession marker, S&P 500 year-over-year turning negative, isn't close to triggering) — he had a real recession signal in September 2007 and doesn't have one now.",
+            "Cites a Bank of England warning about AI agents causing market meltdowns, and personal data points he tracks: as of May, Robinhood opened its platform to agent-driven trading, and he sees a growing 'bubble of optimized portfolios' where investors mistakenly believe their risk control is tighter than it actually is.",
+            "Compares the current volatility spike directly to other recent single-asset speed crashes he's tracked: gold's biggest 3-day move in 35 years, silver's 40% five-day fall, and Bitcoin's own 40% drawdowns in 18-day windows — arguing this pattern (fast, violent, then digesting) is becoming the new normal across assets, not just AI names.",
+            "His read on the path forward: he doesn't expect a big straight bounce, but also isn't worried this correction is systemic — small caps 'didn't budge' during the selloff and sector-momentum data show this as a rotation (industrials and tech reverting after being 'way out of whack') rather than broad-based deleveraging.",
+        ],
+        "quote": {"text": "Markets are moving from manias, panics, and crashes to bubbles, parabolas, and speed crashes — faster up, faster down, and structurally different.", "cite": "— Jordi Visser"},
+        "watch": "Visser explicitly says he doesn't expect this higher-volatility regime to go away — he expects '100-year storm' vol events to recur far more often as portfolios get more crowded and AI-agent trading grows.",
+        "names": None,
+    },
+    {
+        "id": "earnings-as-good-as-gets",
+        "tags": ["finance", "ai-infra"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "WATCHING — earnings strength read as broad-based, not narrow",
+        "title": "Bank Earnings Come In 'As Good As It Gets' — Debt-Fear Narratives Dismissed",
+        "lead": "**A blowout Q2 bank earnings season is used to directly rebut the AI-debt-bubble narrative** Visser says he got asked about at least ten times this week.",
+        "bullets": [
+            "JPMorgan beat by 34% and traded up 10% near all-time highs — Visser says he can't find a prior instance of JPMorgan making that kind of move on an earnings beat while already near highs; Goldman Sachs beat by 45% and hit an all-time high; Morgan Stanley beat by 18%; JB Hunt beat by 10%.",
+            "Jamie Dimon's characterization ('getting as close as it gets to as good as it gets') is read as broad-based strength across consumer banking, credit cards, commercial lending, investment banking, trading, payments, and wealth management — not a narrow pocket of strength.",
+            "Directly addresses AI-infrastructure debt fears: hyperscaler debt-to-equity is 'next to nothing,' and the debt that exists funds compute buildout to fill contractual backlogs (RPOs) they already can't service — explicitly excludes OpenAI and Anthropic from this comfort, noting the leading US model companies would likely be protected by government policy given the China race regardless.",
+            "Uses David Solomon's similar commentary (Goldman's AI-infrastructure financing/M&A business) and near-all-time-tight junk spreads as further evidence credit markets aren't pricing distress — dismisses circulating 'Zero Hedge'-style debt-crisis framing as noise.",
+            "States plainly that compute demand is 'insatiable' and that the industry won't have enough compute for the billions of agents coming within the next four years, regardless of near-term earnings volatility in individual names.",
+        ],
+        "quote": {"text": "The compute demand is insatiable. Don't listen to anything you hear from people that argue otherwise.", "cite": "— Jordi Visser"},
+        "watch": None,
+        "names": [
+            {"name": "JPMorgan (JPM)", "blurb": "Beat estimates by 34% and traded up 10% near all-time highs on the report.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
+            {"name": "Goldman Sachs (GS)", "blurb": "Beat estimates by 45% and hit a new all-time high.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
+            {"name": "Morgan Stanley (MS)", "blurb": "Beat estimates by 18%.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "UnitedHealth (UNH)", "blurb": "Referenced in passing as 'a dead company' within a broader discussion of insurers.", "stance": "NEGATIVE VIEW", "conviction": "Low", "horizon": None},
+        ],
+    },
+    {
+        "id": "micron-rebuild",
+        "tags": ["semis"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "BUYING-ADDING — rebuilding after a June exit",
+        "title": "Rebuilding Micron: 'AI Equals Memory,' Plus a Technical Setup He's Watched Before",
+        "lead": "**Visser is actively buying Micron back** after selling his last shares in early June, citing both fresh fundamental news (rising DRAM prices, new long-term contracts) and a technical pattern he's traded successfully before in Nvidia and Amazon.",
+        "bullets": [
+            "DRAM prices across multiple product generations (three, four, and five) are all still rising — memory remains in shortage, with suppliers signing long-term contracts and Micron's earnings estimates getting revised up dramatically since his exit.",
+            "States his short, memorable thesis directly: 'AI equals memory,' and says he's bought some shares even above his average exit price, explicitly not trying to time the exact bottom.",
+            "Technical case: Micron reclaimed its VWAP early in Friday's session with the biggest first-hour volume since its peak — read as a possible trend-change signal — and Visser is watching for a head-and-shoulders neckline break followed by an immediate reversal higher, a pattern he says previously worked in Nvidia (2023-24) and originally sent him to Silicon Valley to study Amazon's similar behavior back in 2013.",
+            "Direct historical comparison: Nvidia was a roughly 12-bagger before topping, then returned about 48% over the following two years (still 20%+ compounded) — Visser doesn't expect Micron's next leg to repeat its prior violent multiple expansion, noting Micron's current multiple is roughly six times lower than Nvidia's was at its peak.",
+            "Frames the setup explicitly as probabilistic, not certain: 'my gut tells me this is where we are in Micron right now,' while acknowledging the pattern could play out differently.",
+        ],
+        "quote": {"text": "AI equals memory, and I'm going to keep saying that AI equals memory.", "cite": "— Jordi Visser"},
+        "watch": "Visser is explicit the head-and-shoulders neckline break-and-reverse pattern hasn't actually happened yet in Micron — he's describing what he's watching for, not a confirmed signal.",
+        "names": [
+            {"name": "Micron (MU)", "blurb": "Rebuilding the position after exiting in early June, on rising DRAM prices, new long-term contracts, and an early technical trend-change signal.", "stance": "BUYING-ADDING", "conviction": "High", "horizon": None},
+            {"name": "Nvidia (NVDA)", "blurb": "Held alongside Marvell as his only remaining semiconductor positions; used as the historical pattern reference for Micron's current setup.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+        ],
+    },
+    {
+        "id": "warsh-reform-agi",
+        "tags": ["macro-rates", "ai-infra"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "WATCHING — cooling inflation data supports no July hike",
+        "title": "Warsh Is 'Reform, Not Hawkish' — and Demis Hassabis Says AGI Is 'A Few Short Years Away'",
+        "lead": "**Two threads converge on the same point for Visser:** the Fed should be weighted toward forward-looking data given how fast AI is compressing the economy's pace of change, and the most credible AI-lab voice on timing says AGI itself is near.",
+        "bullets": [
+            "This week's inflation data came in soft across the board: sticky core CPI (Atlanta Fed) at new lows, trueflation at new lows, core CPI turned down, and trimmed mean also soft — Visser reiterates his view that Kevin Warsh is 'rhetorically hawkish about the inflation outcome but intellectually reformist,' and that people are broadly misreading him.",
+            "Cites Warsh's own language (in a European interview and congressional testimony) that AI will raise prices but that shouldn't automatically be called inflation, and that decisions should weight forward-looking data more heavily than backward-looking prints given the pace of AI-driven change.",
+            "Highlights Demis Hassabis's essay on AGI as the most credible timing signal he tracks: Hassabis first floated an AGI timeline (~2030) back in 2010, and his newer writing frames AGI as 'probably only a few short years away' — a civilizational transformation comparable to the discovery of fire or electricity, not routine technological innovation.",
+            "Uses this AGI framing to reinforce his broader public-company disruption thesis: by 2030, he doesn't expect confidence that any given public company (even 'physical' businesses) has a guaranteed 3-year horizon, given the pace of AI-driven scientific and business breakthroughs Hassabis describes.",
+            "Notes Morgan Stanley data showing continued capex strength (rebutting 'capex is slowing' narratives) and dismisses the idea that a new open-weight model beating a frontier model (a recurring weekly headline) signals 'the end of Anthropic' or any single lab.",
+        ],
+        "quote": {"text": "It would be a huge mistake for a central banker to be making decisions based on one month's data... when you're staring at something this powerful.", "cite": "— Jordi Visser"},
+        "watch": None,
+        "names": [
+            {"name": "Anthropic", "blurb": "Referenced in the context of open-weight models beating frontier benchmarks — Visser dismisses the idea that this signals Anthropic's decline.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "ethereum-best-month",
+        "tags": ["crypto"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "WATCHING — Bitcoin still technically in a bear market",
+        "title": "Ethereum's Best Month Since Last August, Stripe Bids for PayPal, and Tokenization Adoption Accelerates",
+        "lead": "**Bitcoin remains technically stuck**, but Visser highlights Ethereum's quiet outperformance and a cluster of institutional tokenization news as evidence the crypto ecosystem is entering its early-adoption phase.",
+        "bullets": [
+            "Bitcoin bounced between its 20-day and 50-day moving averages all week without a clean breakout — still technically in a bear market by Visser's own read, though not showing signs of breaking to new lows either.",
+            "Ethereum, by contrast, is having its best month since August of the prior year (+17% month-to-date), with its 20-day crossing above its 50-day and a trendline break — Visser reiterates Ethereum as 'the one to watch' if the agent-revolution thesis plays out, since agent-driven activity should disproportionately benefit Ethereum's ecosystem.",
+            "Stripe has reportedly put in a bid for PayPal — Visser connects this to Stripe's October 2024 acquisition of stablecoin infrastructure from Bridge for $1.1 billion, framing both as the same stablecoin/payments consolidation story; PayPal sits in his (still-unreleased) 40-name crypto thematic index, due out for subscribers in late September/early October.",
+            "Cites a wave of institutional tokenization news from the same week: JPMorgan, BlackRock, and Goldman Sachs tokenizing stocks and treasuries; Bitcoin banking-adoption reportedly reaching 32% average integration among major financial institutions; and growing open interest in blockchain-based prediction markets.",
+            "Notes Japan reclassified Bitcoin/crypto as financial assets and South Korea wrote crypto into its state asset rulebook (after 76 years) and moved toward allowing spot Bitcoin ETFs this same week — puts Clarity Act passage odds at roughly 40% (below 50%), important for the US but, in his view, less consequential for crypto globally than the agent-driven adoption wave itself.",
+        ],
+        "quote": {"text": "Ethereum is the one to watch... having its best month, up 17% month-to-date since August of last year.", "cite": "— Jordi Visser"},
+        "watch": "Visser explicitly doesn't expect Bitcoin to break above its 200-day moving average before Q4 (October/November) at the earliest — he frames a breakout as a second-half story, not an immediate signal.",
+        "names": [
+            {"name": "Bitcoin (BTC)", "blurb": "Still technically in a bear market, oscillating between its 20-day and 50-day moving averages; not expected to clear the 200-day before Q4.", "stance": "OWNS", "conviction": "Medium", "horizon": "Q4 2026"},
+            {"name": "Ethereum (ETH)", "blurb": "Best month since August of the prior year (+17% MTD); called 'the one to watch' for the agent-revolution thesis.", "stance": "BUYING-ADDING", "conviction": "High", "horizon": None},
+            {"name": "PayPal (PYPL)", "blurb": "Reported acquisition target of a Stripe bid; sits in Visser's unreleased 40-name crypto thematic index as a stablecoin/payments play.", "stance": "WATCHING", "conviction": "Low", "horizon": None},
+        ],
+    },
+    {
+        "id": "portfolio-recap",
+        "tags": ["finance", "semis"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "OWNS — Nvidia, Marvell, Bitcoin, Ethereum, silver",
+        "title": "Portfolio Recap: ~40% Thematic Correction, Marvell Down 62% but Still Held",
+        "lead": "**A direct update on his own positioning after a rough week:** his 100-name thematic portfolio has corrected roughly 40% from its peak, which he calls a 'fairly normal correction' after the size of the prior move.",
+        "bullets": [
+            "The S&P fell 1.5% and the Nasdaq 4% on the week while small caps 'didn't budge' — Visser reads this divergence as confirming the selloff is sector rotation and factor unwinds, not a systemic risk-off event.",
+            "Marvell is his largest single position behind only Eli Lilly overall, and his biggest remaining semiconductor holding besides Nvidia — down 62% from its highs, which he calls 'painful' but notes he's still net profitable on the position after selling some on the way up.",
+            "Holds small positions in several other semi-adjacent names (Entegris, FLNC, Kimoris among those mentioned) that are also down; the only two semiconductor names he still owns outright are Marvell and Nvidia.",
+            "Most of the proceeds from names he exited were rotated into Bitcoin, Ethereum, and silver — notes these haven't bounced much in absolute terms but have held up meaningfully better than AI names on a relative basis.",
+            "Closing framing: Apple's own price action this week (bad Siri-related news, stock still rallying) is offered as a second way to play the consumer-agent thesis beyond pure infrastructure names — 'you can play it through that way or you can play it through crypto.'",
+        ],
+        "quote": {"text": "This is a fairly normal correction, particularly after a big move.", "cite": "— Jordi Visser"},
+        "watch": None,
+        "names": [
+            {"name": "Marvell (MRVL)", "blurb": "Down 62% from highs, his second-largest position after Eli Lilly and his largest semiconductor holding besides Nvidia; still held.", "stance": "OWNS", "conviction": "High", "horizon": None},
+            {"name": "Apple (AAPL)", "blurb": "Rallied despite bad Siri-related news this week; offered as an alternative way to play the consumer-agent thesis.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Silver", "blurb": "Received rotated proceeds from exited AI positions; hasn't bounced much in absolute terms but held up relatively well.", "stance": "OWNS", "conviction": "Low", "horizon": None},
+        ],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F4C9", "tag": "Markets", "title": "Read a fast, sharp AI-name drawdown as a leverage/vol-control unwind first — check credit spreads and recession signals before assuming it's systemic."},
+    {"icon": "\U0001F3E6", "tag": "Markets", "title": "Weight bank earnings commentary (Dimon, Solomon) as a broad economic health check, not just a sector-specific read."},
+    {"icon": "\U0001F4BE", "tag": "Markets", "title": "Track DRAM pricing and long-term supply contracts, not just headline stock moves, when deciding whether a memory-name selloff is a buying opportunity."},
+    {"icon": "₿", "tag": "Crypto", "title": "Watch Ethereum's relative strength versus Bitcoin as a leading indicator for the agent-driven crypto adoption thesis."},
+    {"icon": "\U0001F3E6", "tag": "Macro", "title": "Weight forward-looking AI-driven data over backward-looking inflation prints when assessing Fed decision risk."},
+]
+
+CLAIMS = [
+    {"who": "Jordi Visser", "claim": "tech momentum factor's 18-day unwind severity, relative to history", "metric": "18-day rate of change", "target": "-40%, the worst on record back to 1998", "by": None, "condition": "based on Morgan Stanley/Bloomberg data", "entity": None},
+    {"who": "Demis Hassabis (cited by Jordi Visser)", "claim": "AGI arrival timing", "metric": "AGI arrival", "target": "probably only a few short years away", "by": None, "condition": "from his own essay; he first floated a ~2030 timeline in 2010", "entity": None},
+    {"who": "Jordi Visser", "claim": "Ethereum's month-to-date performance versus its recent history", "metric": "MTD return", "target": "+17%, best month since August of the prior year", "by": "July 2026", "condition": None, "entity": "Ethereum (ETH)"},
+    {"who": "Jordi Visser", "claim": "probability of the Clarity Act passing", "metric": "passage probability", "target": "roughly 40% (below 50%)", "by": None, "condition": "his own estimate", "entity": None},
+    {"who": "Jordi Visser", "claim": "no public company will have a guaranteed 3-year survival horizon given AGI-driven disruption", "metric": "corporate survival confidence", "target": "no guaranteed 3-year horizon for any company", "by": "2030", "condition": "conditional on Demis Hassabis's AGI timeline being correct", "entity": None},
+]
+
+RELATIONS = [
+    {"from": "Stripe", "rel": "acquires", "to": "PayPal (PYPL)", "note": "Reported bid; Stripe previously acquired stablecoin infrastructure from Bridge for $1.1 billion in October 2024, per Jordi Visser"},
+]
+
+HOT_TAKES = [
+    {"take": "The compute demand is insatiable. Don't listen to anything you hear from people that argue otherwise.", "cite": "— Jordi Visser", "why": "A flat, repeated dismissal of the AI-overbuild bear case, staked directly against a circulating debt-crisis narrative."},
+    {"take": "AI equals memory, and I'm going to keep saying that AI equals memory.", "cite": "— Jordi Visser", "why": "A deliberately simplified, repeatable thesis he's staking his Micron re-entry on."},
+    {"take": "In 2030, I don't know if we're going to know any company that will have a three-year horizon where they're guaranteed to be around.", "cite": "— Jordi Visser", "why": "A sweeping, dated claim about corporate survivability tied directly to Demis Hassabis's AGI timeline."},
+    {"take": "Bitcoin has a moat. It's the purest AI trade because it cannot be disrupted from AI — it's built on scarcity and there is no competition for it.", "cite": "— Jordi Visser", "why": "A structural claim placing Bitcoin outside his own AI-disruption thesis, comparing its 'moat' to gold and religion."},
+    {"take": "The odds on the tote board are now fair. I have been doing little buys on this this week.", "cite": "— Jordi Visser", "why": "A personal, checkable trading decision (citing his father's betting analogy) made in real time during a selloff."},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F3A4", "title": "Sources referenced this episode: a Bank of England warning about AI agents causing market meltdowns; Demis Hassabis's essay on AGI; a lengthy discussion on the Pomp podcast this week about AI model routers and open-source adoption timelines; Morgan Stanley capex commentary rebutting 'capex is slowing' narratives.", "tag": "Sources cited"},
+    {"icon": "\U0001F1EF\U0001F1F5", "title": "Japan reclassified Bitcoin and crypto as financial assets this week; South Korea wrote crypto into its state asset rulebook (its first update in 76 years) and moved toward allowing spot Bitcoin ETFs.", "tag": "Regulatory"},
+]
+
+GLOSSARY = [
+    {"term": "Vol-controlled strategy", "def": "A trading strategy (systematic or discretionary) that automatically reduces position size as realized volatility rises — a mechanical source of forced selling when volatility spikes, independent of any change in fundamentals."},
+    {"term": "Head and shoulders (neckline break)", "def": "A technical chart pattern signaling a potential trend reversal; Visser specifically watches for a break below the pattern's 'neckline' followed by an immediate reversal back above it as a bullish continuation signal within an intact uptrend."},
+    {"term": "VWAP (volume-weighted average price)", "def": "The average price a security has traded at throughout the day, weighted by volume — traders use a stock reclaiming its VWAP early in a session as a signal of shifting intraday momentum."},
+]
