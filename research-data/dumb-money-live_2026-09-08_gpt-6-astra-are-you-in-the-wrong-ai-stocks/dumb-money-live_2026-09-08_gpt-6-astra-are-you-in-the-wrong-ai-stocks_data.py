@@ -24,6 +24,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "astra-infra",
+        "tags": ["ai-infra"],
         "color": "green",
         "badge": "High conviction",
         "status": "RELEASED FRIDAY, SEPTEMBER 5, 2026",
@@ -44,6 +45,7 @@ THEMES = [
     },
     {
         "id": "amazon-triple-play",
+        "tags": ["ai-infra", "finance"],
         "color": "green",
         "badge": "High conviction",
         "status": "OWNS — ADDING (increased position again today)",
@@ -61,16 +63,17 @@ THEMES = [
         "quote": None,
         "watch": "Two same-day headwinds noted and dismissed as noise: a Prime-branded plane crash (Amazon doesn't operate the flight — third-party carrier) and oil above $100/barrel on the Iran conflict, a modest cost headwind for Amazon's logistics.",
         "names": [
-            {"name": "Amazon (AMZN)", "blurb": "OWNS, adding — $50B into OpenAI, ~8-9% of Anthropic, $100B AWS/OpenAI compute expansion, new ad-tech angle from AI-generated video ads"},
-            {"name": "OpenAI", "blurb": "Released GPT-6 Astra; $100B AWS compute expansion; Amazon and Microsoft are its largest strategic investors"},
-            {"name": "Anthropic", "blurb": "Reportedly filing for an IPO at a $2-2.5 trillion valuation; Amazon owns ~8-9%"},
-            {"name": "Microsoft (MSFT)", "blurb": "Owns an estimated 20-25% of OpenAI"},
-            {"name": "Oracle (ORCL)", "blurb": "Up a couple percent on the day; hosts estimate OpenAI is 50-60% of Oracle's future infrastructure buildout"},
-            {"name": "Qualcomm (QCOM)", "blurb": "Headline this morning: partnering with Amazon on custom chips for Amazon's data centers"},
+            {"name": "Amazon (AMZN)", "blurb": "OWNS, adding — $50B into OpenAI, ~8-9% of Anthropic, $100B AWS/OpenAI compute expansion, new ad-tech angle from AI-generated video ads", "stance": "BUYING-ADDING", "conviction": "High", "horizon": None},
+            {"name": "OpenAI", "blurb": "Released GPT-6 Astra; $100B AWS compute expansion; Amazon and Microsoft are its largest strategic investors", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Anthropic", "blurb": "Reportedly filing for an IPO at a $2-2.5 trillion valuation; Amazon owns ~8-9%", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Microsoft (MSFT)", "blurb": "Owns an estimated 20-25% of OpenAI", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Oracle (ORCL)", "blurb": "Up a couple percent on the day; hosts estimate OpenAI is 50-60% of Oracle's future infrastructure buildout", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Qualcomm (QCOM)", "blurb": "Headline this morning: partnering with Amazon on custom chips for Amazon's data centers", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
     {
         "id": "unity-new-pick",
+        "tags": ["software", "ai-infra"],
         "color": "green",
         "badge": "New position",
         "status": "BUYING — opened a moderate position today",
@@ -86,11 +89,12 @@ THEMES = [
         "quote": None,
         "watch": "This is a brand-new, moderate-sized position opened same-day — not a long-held conviction call like Amazon or Bloom.",
         "names": [
-            {"name": "Unity (U)", "blurb": "BUYING, new moderate position — OpenAI's Astra launch case study, $18B market cap, floated as a possible acquisition target"},
+            {"name": "Unity (U)", "blurb": "BUYING, new moderate position — OpenAI's Astra launch case study, $18B market cap, floated as a possible acquisition target", "stance": "BUYING-ADDING", "conviction": "Medium", "horizon": None},
         ],
     },
     {
         "id": "gaming-derisked",
+        "tags": ["software", "consumer"],
         "color": "amber",
         "badge": "Contested",
         "title": "Gaming stocks: AI game generation looks bearish, hosts argue it's the opposite",
@@ -105,11 +109,12 @@ THEMES = [
         "quote": None,
         "watch": "This is explicitly a contrarian, non-consensus read against a \"knee-jerk\" bearish market reaction — Take-Two's flat/down price action on the day partly reflects the bearish framing the hosts are arguing against.",
         "names": [
-            {"name": "Take-Two Interactive (TTWO)", "blurb": "OWNS — long-held; thesis is AI lowers Take-Two's cost to expand and enrich GTA 6's universe rather than threatening it"},
+            {"name": "Take-Two Interactive (TTWO)", "blurb": "OWNS — long-held; thesis is AI lowers Take-Two's cost to expand and enrich GTA 6's universe rather than threatening it", "stance": "OWNS", "conviction": "High", "horizon": None},
         ],
     },
     {
         "id": "memory-energy-trade",
+        "tags": ["energy", "semis"],
         "color": "green",
         "badge": "High conviction",
         "status": "HOLDING — adding on weakness",
@@ -125,15 +130,16 @@ THEMES = [
         "quote": None,
         "watch": "Bloom's ~70% run in a matter of weeks is explicitly flagged by the hosts as the kind of move that scares investors out right before it continues — sizing and entry point matter more here than the thesis itself.",
         "names": [
-            {"name": "Bloom Energy (BE)", "blurb": "OWNS, adding on weakness — S&P 500 inclusion Friday, up ~70% in weeks to ~$280"},
-            {"name": "Vistra (VST)", "blurb": "BUYING — new position last week, pure grid-power-consumption play"},
-            {"name": "Micron (MU)", "blurb": "BUYING — bought the dip"},
-            {"name": "Nebius (NBIS)", "blurb": "OWNS, added during an earlier drawdown a few months ago"},
-            {"name": "Vanguard Energy ETF (VDE)", "blurb": "Cited as up 44% year-to-date on AI-driven power demand"},
+            {"name": "Bloom Energy (BE)", "blurb": "OWNS, adding on weakness — S&P 500 inclusion Friday, up ~70% in weeks to ~$280", "stance": "BUYING-ADDING", "conviction": "High", "horizon": None},
+            {"name": "Vistra (VST)", "blurb": "BUYING — new position last week, pure grid-power-consumption play", "stance": "BUYING-ADDING", "conviction": "Medium", "horizon": None},
+            {"name": "Micron (MU)", "blurb": "BUYING — bought the dip", "stance": "BUYING-ADDING", "conviction": "Medium", "horizon": None},
+            {"name": "Nebius (NBIS)", "blurb": "OWNS, added during an earlier drawdown a few months ago", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "Vanguard Energy ETF (VDE)", "blurb": "Cited as up 44% year-to-date on AI-driven power demand", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
     {
         "id": "openai-anthropic-ipo",
+        "tags": ["ai-infra", "finance"],
         "color": "amber",
         "badge": "Speculative",
         "status": "WATCHING — evaluating SoftBank this week",
@@ -149,9 +155,9 @@ THEMES = [
         "quote": {"text": "There's going to be a new open model that's going to scare the crap out of everyone... before OpenAI and Anthropic come right back at you with an AI/ASI-looking model that makes you think these guys have such a unique advantage that the value of them is in the trillions.", "cite": "— Dave"},
         "watch": "Everything here is pre-IPO speculation based on reported filings, not confirmed pricing — SoftBank is explicitly a trade Dave is not yet in and is still evaluating.",
         "names": [
-            {"name": "SoftBank", "blurb": "WATCHING — ~13% of OpenAI, owns ARM, Dave researching this week as \"the purest way to play OpenAI\""},
-            {"name": "SK Telecom (SKM)", "blurb": "OWNS — Dave's indirect Anthropic exposure, estimated ~20% of Anthropic shares"},
-            {"name": "ARM (ARM)", "blurb": "Held by SoftBank, mentioned in passing as part of SoftBank's asset base"},
+            {"name": "SoftBank", "blurb": "WATCHING — ~13% of OpenAI, owns ARM, Dave researching this week as \"the purest way to play OpenAI\"", "stance": "WATCHING", "conviction": None, "horizon": None},
+            {"name": "SK Telecom (SKM)", "blurb": "OWNS — Dave's indirect Anthropic exposure, estimated ~20% of Anthropic shares", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "ARM (ARM)", "blurb": "Held by SoftBank, mentioned in passing as part of SoftBank's asset base", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
 ]
@@ -178,6 +184,23 @@ HOT_TAKES = [
     {"take": "I love how dumb investors are right now. I love how dumb Wall Street is.", "cite": "— Dave", "why": "contrarian, market-participants-are-wrong conviction used to justify buying Bloom Energy on every dip"},
     {"take": "They can literally buy them for 30 billion. Not even think about it. 35 billion.", "cite": "— Dave (on a frontier lab acquiring Unity)", "why": "specific, dated-feeling dollar figure on a speculative M&A call nobody has confirmed"},
     {"take": "I think we're now quarters away, not years away, on this efficiency trade... we will get an avalanche of earnings revisions.", "cite": "— Dave", "why": "concrete, falsifiable timing prediction on a market-wide re-rating"},
+]
+
+CLAIMS = [
+    {"who": "Dave", "claim": "Amazon's AI-driven cost efficiencies become visible in its earnings", "metric": "margin story", "target": "visible to market", "by": "2026-10-29", "condition": None, "entity": "Amazon (AMZN)"},
+    {"who": "Dave", "claim": "The AI efficiency trade shows up broadly across earnings calls", "metric": "earnings revisions", "target": "avalanche of upward revisions", "by": None, "condition": "quarters away, not years", "entity": None},
+    {"who": "Dave", "claim": "A frontier lab could acquire Unity cheaply", "metric": "acquisition price", "target": "$30-35 billion", "by": None, "condition": "speculative, not signaled by either company", "entity": "Unity (U)"},
+    {"who": "Dave", "claim": "Fully custom AI-generated games become mainstream", "metric": "timeline", "target": "5 to 10 years out", "by": None, "condition": None, "entity": None},
+]
+
+RELATIONS = [
+    {"from": "Amazon (AMZN)", "rel": "invests_in", "to": "OpenAI", "note": "$15B plus $35B ($50B total); AWS $100B/8-year compute expansion including 2GW Trainium"},
+    {"from": "Amazon (AMZN)", "rel": "owns_stake", "to": "Anthropic", "note": "~8-9% ownership stake"},
+    {"from": "Microsoft (MSFT)", "rel": "owns_stake", "to": "OpenAI", "note": "estimated 20-25% ownership"},
+    {"from": "SoftBank", "rel": "owns_stake", "to": "OpenAI", "note": "~13% stake, alongside owning ARM"},
+    {"from": "SK Telecom (SKM)", "rel": "owns_stake", "to": "Anthropic", "note": "estimated ~20% of Anthropic shares"},
+    {"from": "Qualcomm (QCOM)", "rel": "partners_with", "to": "Amazon (AMZN)", "note": "custom chips for Amazon's data centers"},
+    {"from": "OpenAI", "rel": "customer_of", "to": "Unity (U)", "note": "Astra launch case study, 50% fewer manual fixes via Unity's AI gateway"},
 ]
 
 OTHER_NEWS = [
