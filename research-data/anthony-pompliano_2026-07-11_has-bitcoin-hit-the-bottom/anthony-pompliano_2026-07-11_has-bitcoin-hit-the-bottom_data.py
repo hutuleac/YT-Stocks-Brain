@@ -21,6 +21,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "consumer-agents-repricing",
+        "tags": ["ai-infra", "consumer"],
         "color": "green",
         "badge": "High conviction",
         "status": "MIDCYCLE SLOWDOWN CALLED OVER",
@@ -41,12 +42,13 @@ THEMES = [
         },
         "watch": None,
         "names": [
-            {"name": "Apple (AAPL)", "blurb": "Positive view, high conviction — Visser expects it to be repriced as consumer-agent compute demand becomes visible; describes its post-Siri-announcement selloff-then-recovery as bullish."},
-            {"name": "Meta (META)", "blurb": "Uncertain, medium conviction — Visser is 'not convinced yet' on Meta specifically, citing a weaker technical chart than Apple's despite sharing the same consumer-agent thesis."},
+            {"name": "Apple (AAPL)", "blurb": "Visser expects it to be repriced as consumer-agent compute demand becomes visible; describes its post-Siri-announcement selloff-then-recovery as bullish.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": "6 months"},
+            {"name": "Meta (META)", "blurb": "Visser is 'not convinced yet' on Meta specifically, citing a weaker technical chart than Apple's despite sharing the same consumer-agent thesis.", "stance": "UNCERTAIN", "conviction": "Medium", "horizon": None},
         ],
     },
     {
         "id": "memory-stock-correction",
+        "tags": ["semis"],
         "color": "amber",
         "badge": "Reduced — long-term positive view",
         "status": "SOLD NEAR THE TOP, STILL BULLISH ON THE MULTI-YEAR TREND",
@@ -66,12 +68,13 @@ THEMES = [
         },
         "watch": "Visser explicitly sold his Micron position and is currently on the sidelines waiting to re-enter — the long-term price target is a standing view, not a current holding.",
         "names": [
-            {"name": "Micron (MU)", "blurb": "Watching, high conviction on the long-term thesis — sold near the top on visible leverage buildup, targets 4,000-5,000 before this cycle ends."},
-            {"name": "Samsung, SK Hynix", "blurb": "Casual mention, positive view — cited as evidence the memory correction is a leverage unwind, not a fundamentals problem, given record earnings and oversubscribed ADR demand."},
+            {"name": "Micron (MU)", "blurb": "Sold near the top on visible leverage buildup, targets 4,000-5,000 before this cycle ends.", "stance": "WATCHING", "conviction": "High", "horizon": None},
+            {"name": "Samsung, SK Hynix", "blurb": "Cited as evidence the memory correction is a leverage unwind, not a fundamentals problem, given record earnings and oversubscribed ADR demand.", "stance": "POSITIVE VIEW", "conviction": "Low", "horizon": None},
         ],
     },
     {
         "id": "bitcoin-bottom-thesis",
+        "tags": ["crypto", "macro-rates"],
         "color": "green",
         "badge": "High conviction",
         "status": "NEAR THE BOTTOM OF THE RANGE — MULTI-YEAR BULL CALL",
@@ -92,11 +95,12 @@ THEMES = [
         },
         "watch": "The July 29 FOMC hike probability (35-40%) is Visser's own subjective estimate, not a market-implied or sourced figure.",
         "names": [
-            {"name": "Bitcoin (BTC)", "blurb": "Positive view, high conviction — multi-year bull call built on a technical bottom signal, AI-capital-rotation unwind, and an explicit administration policy tailwind toward tokenization and stablecoins."},
+            {"name": "Bitcoin (BTC)", "blurb": "Multi-year bull call built on a technical bottom signal, AI-capital-rotation unwind, and an explicit administration policy tailwind toward tokenization and stablecoins.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": "multi-year"},
         ],
     },
     {
         "id": "other-names-in-play",
+        "tags": ["biotech", "finance"],
         "color": "amber",
         "badge": "Mixed conviction, several names",
         "status": "GRAB-BAG OF SECONDARY IDEAS",
@@ -111,11 +115,12 @@ THEMES = [
         "quote": None,
         "watch": None,
         "names": [
-            {"name": "Eli Lilly (LLY)", "blurb": "Owns, high conviction — says he wouldn't sell even on a 3x move, citing AI-accelerated drug discovery and the company's own sovereign AI compute buildout."},
+            {"name": "Eli Lilly (LLY)", "blurb": "Says he wouldn't sell even on a 3x move, citing AI-accelerated drug discovery and the company's own sovereign AI compute buildout.", "stance": "OWNS", "conviction": "High", "horizon": None},
         ],
     },
     {
         "id": "compute-not-oil",
+        "tags": ["robotics", "ai-infra"],
         "color": "green",
         "badge": "High conviction",
         "status": "STRUCTURALLY BULLISH ON COMPUTE DEMAND",
@@ -134,7 +139,7 @@ THEMES = [
         },
         "watch": None,
         "names": [
-            {"name": "1X", "blurb": "Casual mention — maker of a tendon-based robotic hand demo cited as evidence AI-assisted robotics R&D is accelerating."},
+            {"name": "1X", "blurb": "Maker of a tendon-based robotic hand demo cited as evidence AI-assisted robotics R&D is accelerating.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
 ]
@@ -145,6 +150,17 @@ TAKEAWAYS = [
     {"icon": "₿", "tag": "Crypto", "title": "Watch for a confirmed break above the 200-day moving average (~$76-77k at time of taping) as Visser's stated second-stage confirmation for the bottom thesis, not just the initial short-covering bounce."},
     {"icon": "\U0001F3E6", "tag": "Policy", "title": "Read Bessent's Treasury/economic-club speeches directly for administration signals on tokenization and stablecoins — Visser treats this as a structural tailwind, not noise."},
     {"icon": "\U0001F916", "tag": "Robotics", "title": "Track dexterous-manipulation demos (like 1X's hand) as a leading indicator for humanoid robot timelines — Visser frames the hand, not locomotion, as the historically hardest unsolved problem."},
+]
+
+CLAIMS = [
+    {"who": "Jordi Visser", "claim": "Bitcoin trades above $100k", "metric": "BTC price", "target": "$100,000+", "by": "1 year out", "condition": None, "entity": "Bitcoin (BTC)"},
+    {"who": "Jordi Visser", "claim": "Bitcoin could dip further before bottoming", "metric": "BTC price", "target": "$45,000-50,000", "by": None, "condition": "near-term downside case", "entity": "Bitcoin (BTC)"},
+    {"who": "Jordi Visser", "claim": "Micron reaches a new high multiple of its prior peak", "metric": "MU price", "target": "4,000-5,000", "by": None, "condition": None, "entity": "Micron (MU)"},
+    {"who": "Jordi Visser", "claim": "Fed hikes at the July FOMC meeting", "metric": "probability", "target": "35-40%", "by": "July 29, 2026", "condition": None, "entity": None},
+]
+
+RELATIONS = [
+    {"from": "Eli Lilly (LLY)", "rel": "customer_of", "to": "Nvidia (NVDA)", "note": "Roughly 1,000 Blackwell chips on campus used with biotech partners for AI-accelerated drug discovery."},
 ]
 
 RISKS = [

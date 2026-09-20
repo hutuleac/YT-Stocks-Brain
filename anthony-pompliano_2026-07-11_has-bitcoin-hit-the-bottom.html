@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="consumer-agents-repricing">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">MIDCYCLE SLOWDOWN CALLED OVER</span>
+    <span class="theme-status">MIDCYCLE SLOWDOWN CALLED OVER</span><span class="ttag">ai-infra</span><span class="ttag">consumer</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Not a price war: Meta and xAI's cost-cutting moves are revenue-strategy repositioning as consumer agents become the next compute step function</h2>
   <div class="theme-body">
@@ -131,7 +136,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;If you're not spending more money every year, you're going out of business.&#8221;<cite>— Dylan Patel (SemiAnalysis), quoted by Jordi Visser</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Apple (AAPL)</b><span>Positive view, high conviction — Visser expects it to be repriced as consumer-agent compute demand becomes visible; describes its post-Siri-announcement selloff-then-recovery as bullish.</span></div><div class="namechip"><b>Meta (META)</b><span>Uncertain, medium conviction — Visser is 'not convinced yet' on Meta specifically, citing a weaker technical chart than Apple's despite sharing the same consumer-agent thesis.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Apple (AAPL)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High · 6 months</span></b><span>Visser expects it to be repriced as consumer-agent compute demand becomes visible; describes its post-Siri-announcement selloff-then-recovery as bullish.</span></div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#93711b;">UNCERTAIN · Medium</span></b><span>Visser is 'not convinced yet' on Meta specifically, citing a weaker technical chart than Apple's despite sharing the same consumer-agent thesis.</span></div></div>
       
     </div>
   </div>
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="memory-stock-correction">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Reduced — long-term positive view</span>
-    <span class="theme-status">SOLD NEAR THE TOP, STILL BULLISH ON THE MULTI-YEAR TREND</span>
+    <span class="theme-status">SOLD NEAR THE TOP, STILL BULLISH ON THE MULTI-YEAR TREND</span><span class="ttag">semis</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">The memory-stock selloff was a leverage unwind, not a bubble popping — Samsung's earnings prove it</h2>
   <div class="theme-body">
@@ -150,7 +155,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I still think you'll see 4,000, 5,000 in Micron before this is done.&#8221;<cite>— Jordi Visser</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Micron (MU)</b><span>Watching, high conviction on the long-term thesis — sold near the top on visible leverage buildup, targets 4,000-5,000 before this cycle ends.</span></div><div class="namechip"><b>Samsung, SK Hynix</b><span>Casual mention, positive view — cited as evidence the memory correction is a leverage unwind, not a fundamentals problem, given record earnings and oversubscribed ADR demand.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Micron (MU)<span class="stance" style="background:#93711b;">WATCHING · High</span></b><span>Sold near the top on visible leverage buildup, targets 4,000-5,000 before this cycle ends.</span></div><div class="namechip"><b>Samsung, SK Hynix<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Cited as evidence the memory correction is a leverage unwind, not a fundamentals problem, given record earnings and oversubscribed ADR demand.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Visser explicitly sold his Micron position and is currently on the sidelines waiting to re-enter — the long-term price target is a standing view, not a current holding.</div></div>
     </div>
   </div>
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="bitcoin-bottom-thesis">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">NEAR THE BOTTOM OF THE RANGE — MULTI-YEAR BULL CALL</span>
+    <span class="theme-status">NEAR THE BOTTOM OF THE RANGE — MULTI-YEAR BULL CALL</span><span class="ttag">crypto</span><span class="ttag">macro-rates</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Bitcoin's bottom thesis: a technical RSI signal, an AI-capital-rotation unwind, and an explicit federal policy tailwind</h2>
   <div class="theme-body">
@@ -169,7 +174,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;If they don't [hike], then I think Bitcoin will be above 70,000 when that time comes.&#8221;<cite>— Jordi Visser</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Bitcoin (BTC)</b><span>Positive view, high conviction — multi-year bull call built on a technical bottom signal, AI-capital-rotation unwind, and an explicit administration policy tailwind toward tokenization and stablecoins.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Bitcoin (BTC)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High · multi-year</span></b><span>Multi-year bull call built on a technical bottom signal, AI-capital-rotation unwind, and an explicit administration policy tailwind toward tokenization and stablecoins.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The July 29 FOMC hike probability (35-40%) is Visser's own subjective estimate, not a market-implied or sourced figure.</div></div>
     </div>
   </div>
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="other-names-in-play">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Mixed conviction, several names</span>
-    <span class="theme-status">GRAB-BAG OF SECONDARY IDEAS</span>
+    <span class="theme-status">GRAB-BAG OF SECONDARY IDEAS</span><span class="ttag">biotech</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Beyond AI and crypto: Eli Lilly conviction, a regional-bank M&amp;A thesis, and a conditional gold/silver call</h2>
   <div class="theme-body">
@@ -188,7 +193,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Eli Lilly (LLY)</b><span>Owns, high conviction — says he wouldn't sell even on a 3x move, citing AI-accelerated drug discovery and the company's own sovereign AI compute buildout.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Eli Lilly (LLY)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>Says he wouldn't sell even on a 3x move, citing AI-accelerated drug discovery and the company's own sovereign AI compute buildout.</span></div></div>
       
     </div>
   </div>
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="compute-not-oil">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">STRUCTURALLY BULLISH ON COMPUTE DEMAND</span>
+    <span class="theme-status">STRUCTURALLY BULLISH ON COMPUTE DEMAND</span><span class="ttag">robotics</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">A 1X robotic-hand demo and why hyperscaler compute demand isn't the next fracking bust</h2>
   <div class="theme-body">
@@ -207,7 +212,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Intelligence is not the same as oil... The only thing that slows down AI is the data centers, the gas turbines — the physical stuff which cannot be made quickly.&#8221;<cite>— Jordi Visser</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>1X</b><span>Casual mention — maker of a tendon-based robotic hand demo cited as evidence AI-assisted robotics R&amp;D is accelerating.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>1X<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Maker of a tendon-based robotic hand demo cited as evidence AI-assisted robotics R&amp;D is accelerating.</span></div></div>
       
     </div>
   </div>
@@ -221,15 +226,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">Jordi Visser discloses an active trading relationship with several names discussed (sold Micron, describes exact Bitcoin entry/stop levels) — this is a market participant's live positioning commentary, not independent research.</div><div class="ritem">Several specific figures (Dylan Patel's AI spend numbers, Samsung's <b>$217B</b> earnings estimate, the Goldman Sachs 30x consumer-agent compute claim) are relayed verbally in conversation and not independently sourced within this brief.</div><div class="ritem">The July 29 FOMC hike probability (35-<b>40%</b>) and the Bitcoin price-level calls are Visser's own subjective estimates, explicitly framed as trading opinions, not consensus or market-implied figures.</div><div class="ritem">This is a fast-moving, jargon-dense macro conversation; auto-generated captions can misrender specific numbers or tickers — cross-check exact figures against the video before citing them elsewhere.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;If you're not spending more money every year, you're going out of business.&#8221; <cite>— Dylan Patel (SemiAnalysis), quoted by Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I still think you'll see 4,000, 5,000 in Micron before this is done.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;If they don't hike, then I think Bitcoin will be above 70,000 when that time comes.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Intelligence is not the same as oil. The only thing that slows down AI is the data centers, the gas turbines — the physical stuff that cannot be made quickly.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;OpenAI and Anthropic already own the enterprise fight.&#8221; <cite>— Jordi Visser</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Jordi Visser:</b> Bitcoin trades above $100k <span class="cmeta">BTC price · $100,000+ · 1 year out</span> <span class="tag">Bitcoin (BTC)</span></div><div class="ritem"><b>Jordi Visser:</b> Bitcoin could dip further before bottoming <span class="cmeta">BTC price · $45,000-50,000</span> <i>if near-term downside case</i> <span class="tag">Bitcoin (BTC)</span></div><div class="ritem"><b>Jordi Visser:</b> Micron reaches a new high multiple of its prior peak <span class="cmeta">MU price · 4,000-5,000</span> <span class="tag">Micron (MU)</span></div><div class="ritem"><b>Jordi Visser:</b> Fed hikes at the July FOMC meeting <span class="cmeta">probability · 35-40% · July 29, 2026</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Eli Lilly (LLY)</b> <span class="rel">customer of</span> <b>Nvidia (NVDA)</b> &mdash; Roughly 1,000 Blackwell chips on campus used with biotech partners for AI-accelerated drug discovery.</div></div></div>
     </section>
 
     <section class="sec">
