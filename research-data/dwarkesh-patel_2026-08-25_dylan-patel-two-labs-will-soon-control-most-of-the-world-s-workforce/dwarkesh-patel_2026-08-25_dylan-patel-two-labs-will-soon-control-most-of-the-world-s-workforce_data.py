@@ -26,6 +26,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "compute-centralization",
+        "tags": ["ai-infra"],
         "color": "amber",
         "badge": "High-conviction forecast",
         "status": "PROJECTED — 40-50% of world compute by 2027",
@@ -48,6 +49,7 @@ THEMES = [
     },
     {
         "id": "revenue-per-megawatt",
+        "tags": ["ai-infra", "finance"],
         "color": "amber",
         "badge": "Confirmed trend, contrarian forward call",
         "status": "IN PROGRESS — margins turned positive in 2026",
@@ -68,6 +70,7 @@ THEMES = [
     },
     {
         "id": "value-capture-fab-economics",
+        "tags": ["semis", "ai-infra"],
         "color": "green",
         "badge": "Structural argument",
         "status": "STRUCTURAL — ~100x capex-to-revenue leverage",
@@ -97,6 +100,7 @@ THEMES = [
     },
     {
         "id": "spacex-meta-pricing",
+        "tags": ["ai-infra", "finance"],
         "color": "amber",
         "badge": "Live market data point",
         "status": "ACCELERATING — new price floor being set",
@@ -117,6 +121,7 @@ THEMES = [
     },
     {
         "id": "capex-debt-sovereign-crisis",
+        "tags": ["macro-rates", "finance"],
         "color": "red",
         "badge": "Explicit red-flag risk",
         "status": "UNRESOLVED — could break either way by 2029",
@@ -142,6 +147,7 @@ THEMES = [
     },
     {
         "id": "china-compute-trajectory",
+        "tags": ["geopolitics", "semis"],
         "color": "gray",
         "badge": "Speculative, wide error bars",
         "status": "WIDENING — US lead growing, not shrinking",
@@ -187,6 +193,25 @@ HOT_TAKES = [
     {"take": "I think most compute will still continue to transact at sub-$20 billion a gigawatt, even at the end of next year.", "cite": "— Dylan Patel", "why": "A specific pricing call that sits in tension with the $40B/gigawatt SpaceX-Google deal he'd just described as recent."},
     {"take": "Meta trading at ~$1.5 trillion is silly — they're worth way more than that, at least in a logical sense.", "cite": "— Dylan Patel", "why": "An explicit, checkable mispricing call on a specific public stock, tied to Meta's compute-hoarding optionality."},
     {"take": "Every country that is not involved in the production of AI defaults. Every stock that is not an AI stock is like worth basically zero.", "cite": "— Dylan Patel", "why": "A stark, falsifiable macro call with real stakes for anyone whose portfolio or economy sits outside the AI buildout."},
+]
+
+CLAIMS = [
+    {"who": "Dylan Patel", "claim": "OpenAI and Anthropic's combined share of world incremental compute", "metric": "share of world incremental compute", "target": "40-50%", "by": "2027", "condition": None, "entity": None},
+    {"who": "Dylan Patel", "claim": "OpenAI and Anthropic combined compute", "metric": "combined gigawatts", "target": "up to 100 gigawatts", "by": "end of 2028", "condition": "Dylan's own bullish upper bound", "entity": None},
+    {"who": "Dylan Patel", "claim": "Anthropic revenue per megawatt of compute", "metric": "revenue/megawatt", "target": "50M+, potentially 70-80M blended", "by": "end of 2027", "condition": None, "entity": "Anthropic"},
+    {"who": "Dylan Patel", "claim": "Most compute continues to transact below the current premium price", "metric": "price per gigawatt", "target": "sub-$20 billion/gigawatt", "by": "end of 2027", "condition": None, "entity": None},
+    {"who": "Dylan Patel", "claim": "Cumulative AI infrastructure capex", "metric": "cumulative capex 2024-2029", "target": "~$11 trillion, ~$5T debt-funded", "by": "2029", "condition": None, "entity": None},
+    {"who": "Dylan Patel", "claim": "China's domestic compute buildout stays capped", "metric": "China domestic compute", "target": "under ~30 gigawatts", "by": "2028", "condition": None, "entity": "China"},
+    {"who": "Dylan Patel", "claim": "China's incremental compute could reach a large raw figure but quality-adjusted is much lower", "metric": "incremental compute, quality-adjusted", "target": "50 raw GW ≈ 20 GW of American-chip equivalent", "by": "2029", "condition": None, "entity": "China"},
+]
+
+RELATIONS = [
+    {"from": "SpaceX", "rel": "supplies", "to": "Anthropic", "note": "sold compute at ~$40B/gigawatt, roughly double the prior norm"},
+    {"from": "SpaceX", "rel": "supplies", "to": "Alphabet (GOOGL)", "note": "sold compute at ~$40B/gigawatt"},
+    {"from": "Meta (META)", "rel": "customer_of", "to": "Anthropic", "note": "rumored to be up to 10% of Anthropic's business, using models to improve ad-targeting"},
+    {"from": "Jane Street", "rel": "customer_of", "to": "OpenAI", "note": "exclusive GPT-5.6 ultra-fast-mode deal, estimated $300-500M/megawatt of value captured"},
+    {"from": "Nvidia (NVDA)", "rel": "supplies", "to": "China", "note": "smuggled Nvidia chips reportedly reaching China via third countries including Malaysia"},
+    {"from": "Samsung (005930.KS)", "rel": "supplies", "to": "China", "note": "HBM reportedly reaching China via third countries"},
 ]
 
 OTHER_NEWS = [

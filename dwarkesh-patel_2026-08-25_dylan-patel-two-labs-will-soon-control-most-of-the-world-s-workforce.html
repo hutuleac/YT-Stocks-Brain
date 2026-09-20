@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="compute-centralization">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">High-conviction forecast</span>
-    <span class="theme-status">PROJECTED — 40-50% of world compute by 2027</span>
+    <span class="theme-status">PROJECTED — 40-50% of world compute by 2027</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Two labs are on pace to control most of the world's usable compute — and effectively its labor supply</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="revenue-per-megawatt">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Confirmed trend, contrarian forward call</span>
-    <span class="theme-status">IN PROGRESS — margins turned positive in 2026</span>
+    <span class="theme-status">IN PROGRESS — margins turned positive in 2026</span><span class="ttag">ai-infra</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Lab economics just flipped from burning cash to minting it — and Dylan thinks they'll keep more of the upside for themselves</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="value-capture-fab-economics">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Structural argument</span>
-    <span class="theme-status">STRUCTURAL — ~100x capex-to-revenue leverage</span>
+    <span class="theme-status">STRUCTURAL — ~100x capex-to-revenue leverage</span><span class="ttag">semis</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Fab capex has a ~100x leverage on AI revenue — but the supply chain, and value capture, keep shifting</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="spacex-meta-pricing">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Live market data point</span>
-    <span class="theme-status">ACCELERATING — new price floor being set</span>
+    <span class="theme-status">ACCELERATING — new price floor being set</span><span class="ttag">ai-infra</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">SpaceX and Meta are hoarding compute and becoming the market's de facto #3 supplier</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="capex-debt-sovereign-crisis">
   <div class="theme-badgerow">
     <span class="badge" style="background:#a23f22;">Explicit red-flag risk</span>
-    <span class="theme-status">UNRESOLVED — could break either way by 2029</span>
+    <span class="theme-status">UNRESOLVED — could break either way by 2029</span><span class="ttag">macro-rates</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #a23f22;">The capex bill could hit $10T a year — and the debt behind it could trigger a second Volcker shock</h2>
   <div class="theme-body">
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="china-compute-trajectory">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Speculative, wide error bars</span>
-    <span class="theme-status">WIDENING — US lead growing, not shrinking</span>
+    <span class="theme-status">WIDENING — US lead growing, not shrinking</span><span class="ttag">geopolitics</span><span class="ttag">semis</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">China's compute gap: far behind today, catching up on paper by 2029, but quality-discounted</h2>
   <div class="theme-body">
@@ -240,15 +245,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">This is a two-person deep-dive built substantially on Dylan Patel's own SemiAnalysis modeling; figures like fab capex, EUV tool counts, and future compute buildouts are his firm's estimates, not disclosed guidance from the labs or chipmakers themselves.</div><div class="ritem">Several numbers — future interest rates, the 2029 capex debt/cash split — are explicitly called out by Dylan as "vibing a number," a deliberate ballpark rather than a modeled forecast.</div><div class="ritem">Jane Street sponsors this episode and is also cited approvingly inside the conversation as the single biggest beneficiary of AI's value chain; worth keeping that overlap in mind when weighing how favorably Jane Street comes across.</div><div class="ritem">Auto-generated captions garble several proper nouns (e.g. "Carl's Ice" for Carl Zeiss, "KSMC" for TSMC, "Hopper" for economist Basil Halpern); names have been resolved here only where context made them unambiguous.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;It's really by the end of next year that half the world's incremental compute goes to just OpenAI and Anthropic.&#8221; <cite>— Dylan Patel</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't see why it wouldn't be 50-plus million dollars a megawatt by end of '27... it could get to 70, 80 million a megawatt, blended across the company.&#8221; <cite>— Dylan Patel</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The standard belief of most people is, oh, most compute will go to inference... I think this is very non-consensus — labs will actually allocate less compute to inference over time, not more.&#8221; <cite>— Dylan Patel</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think most compute will still continue to transact at sub-$20 billion a gigawatt, even at the end of next year.&#8221; <cite>— Dylan Patel</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Meta trading at ~$1.5 trillion is silly — they're worth way more than that, at least in a logical sense.&#8221; <cite>— Dylan Patel</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Every country that is not involved in the production of AI defaults. Every stock that is not an AI stock is like worth basically zero.&#8221; <cite>— Dylan Patel</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Dylan Patel:</b> OpenAI and Anthropic's combined share of world incremental compute <span class="cmeta">share of world incremental compute · 40-50% · 2027</span></div><div class="ritem"><b>Dylan Patel:</b> OpenAI and Anthropic combined compute <span class="cmeta">combined gigawatts · up to 100 gigawatts · end of 2028</span> <i>if Dylan's own bullish upper bound</i></div><div class="ritem"><b>Dylan Patel:</b> Anthropic revenue per megawatt of compute <span class="cmeta">revenue/megawatt · 50M+, potentially 70-80M blended · end of 2027</span> <span class="tag">Anthropic</span></div><div class="ritem"><b>Dylan Patel:</b> Most compute continues to transact below the current premium price <span class="cmeta">price per gigawatt · sub-$20 billion/gigawatt · end of 2027</span></div><div class="ritem"><b>Dylan Patel:</b> Cumulative AI infrastructure capex <span class="cmeta">cumulative capex 2024-2029 · ~$11 trillion, ~$5T debt-funded · 2029</span></div><div class="ritem"><b>Dylan Patel:</b> China's domestic compute buildout stays capped <span class="cmeta">China domestic compute · under ~30 gigawatts · 2028</span> <span class="tag">China</span></div><div class="ritem"><b>Dylan Patel:</b> China's incremental compute could reach a large raw figure but quality-adjusted is much lower <span class="cmeta">incremental compute, quality-adjusted · 50 raw GW ≈ 20 GW of American-chip equivalent · 2029</span> <span class="tag">China</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>SpaceX</b> <span class="rel">supplies</span> <b>Anthropic</b> &mdash; sold compute at ~$40B/gigawatt, roughly double the prior norm</div><div class="ritem"><b>SpaceX</b> <span class="rel">supplies</span> <b>Alphabet (GOOGL)</b> &mdash; sold compute at ~$40B/gigawatt</div><div class="ritem"><b>Meta (META)</b> <span class="rel">customer of</span> <b>Anthropic</b> &mdash; rumored to be up to 10% of Anthropic's business, using models to improve ad-targeting</div><div class="ritem"><b>Jane Street</b> <span class="rel">customer of</span> <b>OpenAI</b> &mdash; exclusive GPT-5.6 ultra-fast-mode deal, estimated $300-500M/megawatt of value captured</div><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">supplies</span> <b>China</b> &mdash; smuggled Nvidia chips reportedly reaching China via third countries including Malaysia</div><div class="ritem"><b>Samsung (005930.KS)</b> <span class="rel">supplies</span> <b>China</b> &mdash; HBM reportedly reaching China via third countries</div></div></div>
     </section>
 
     <section class="sec">
