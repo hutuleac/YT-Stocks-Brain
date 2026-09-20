@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="linear-vs-exponential">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">macro-rates</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Oil, bonds and the Fed stopped being the story in 2008 — AI capex is</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="agi-arrived">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Confirmed event, interpretation is Visser's</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">ai-infra</span><span class="ttag">software</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Jensen Huang: AGI has arrived with Astra — and agents reportedly solved Navier-Stokes</h2>
   <div class="theme-body">
@@ -150,7 +155,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;We're really trying to empower the individual to make it so that you can have superpowers, you can accomplish more.&#8221;<cite>— Greg Brockman</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)</b><span>Vera Rubin chips cited as the successor architecture behind the next Astra-scale model; Visser separately expects its multiple to compress even as demand stays strong.</span></div><div class="namechip"><b>Microsoft (MSFT)</b><span>Reiterated a capacity shortage this week and plans to triple its data-center compute build-out.</span></div><div class="namechip"><b>OpenAI</b><span>Released Astra; Greg Brockman describes it as merging chat, agents, desktop and Codex into one product.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Vera Rubin chips cited as the successor architecture behind the next Astra-scale model; Visser separately expects its multiple to compress even as demand stays strong.</span></div><div class="namechip"><b>Microsoft (MSFT)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Reiterated a capacity shortage this week and plans to triple its data-center compute build-out.</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Released Astra; Greg Brockman describes it as merging chat, agents, desktop and Codex into one product.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The Navier-Stokes "solve" and the 3.1x research-agent productivity figure are as reported in coverage Visser read this week, not independently verified by him.</div></div>
     </div>
   </div>
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="gpu-depreciation-debate">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">semis</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">The GPU-depreciation bear case (Burry, Chanos) looks wrong — rental prices are rising</h2>
   <div class="theme-body">
@@ -169,7 +174,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)</b><span>Central to the depreciation debate — H100 rental prices unchanged to higher over three years.</span></div><div class="namechip"><b>Microsoft (MSFT)</b><span>Reiterated a capacity/compute shortage this week, cited as demand-side evidence.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Central to the depreciation debate — H100 rental prices unchanged to higher over three years.</span></div><div class="namechip"><b>Microsoft (MSFT)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Reiterated a capacity/compute shortage this week, cited as demand-side evidence.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">This is Visser relaying Gavin Baker's thesis and his own read of rental-price data, not an independent audit of hyperscaler books; Paul Tudor Jones's more skeptical note on AI this week is mentioned but not engaged with in detail.</div></div>
     </div>
   </div>
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="ethereum-valuation-thesis">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">crypto</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">How Visser values Ethereum: network effects, trust, and an Amazon-in-1997 analogy</h2>
   <div class="theme-body">
@@ -188,7 +193,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;I really do believe we're going to see a similar number at a similar time where someone who's in TradFi is finally going to give up and say, 'I don't understand how to value this thing.'&#8221;<cite>— Jordi Visser</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Ethereum (ETH)</b><span>Broke out to its highest level since January; Visser's central long-term crypto thesis this episode.</span></div><div class="namechip"><b>Bitcoin (BTC)</b><span>The comparison asset — Visser expects Ethereum to outperform it in this bull-market phase.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Ethereum (ETH)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>Broke out to its highest level since January; Visser's central long-term crypto thesis this episode.</span></div><div class="namechip"><b>Bitcoin (BTC)<span class="stance" style="background:#3f6b2e;">OWNS · Medium</span></b><span>The comparison asset — Visser expects Ethereum to outperform it in this bull-market phase.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Visser flags his own history here as a caution, not an endorsement of timing it perfectly: he was macro/oil-focused and dismissed Amazon as un-investable at the time, by his own account.</div></div>
     </div>
   </div>
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="robinhood-tokenization">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">crypto</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Robinhood is becoming the AI-crypto-TradFi convergence play, Visser argues</h2>
   <div class="theme-body">
@@ -207,7 +212,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Robin Hood is basically the epicenter of AI crypto macro nexus.&#8221;<cite>— Jordi Visser</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Robinhood (HOOD)</b><span>Visser's central tokenization/AI-agent convergence thesis for the episode; Bernstein sees 31% upside.</span></div><div class="namechip"><b>Arbitrum (ARB)</b><span>Ethereum layer-2 underlying Robinhood Chain's app layer; up 7.87% on the fee news.</span></div><div class="namechip"><b>Nasdaq (NDAQ)</b><span>Invested $100M in Kraken this week, eyeing 2027 tokenized-stock trading.</span></div><div class="namechip"><b>Kraken</b><span>Received a $100M investment from Nasdaq tied to 2027 tokenized-stock ambitions.</span></div><div class="namechip"><b>Coinbase (COIN)</b><span>Brian Armstrong said the Clarity Act is ready for a yes vote.</span></div><div class="namechip"><b>Visa (V)</b><span>Stablecoin card business described as "exploding" this week.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Robinhood (HOOD)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Visser's central tokenization/AI-agent convergence thesis for the episode; Bernstein sees 31% upside.</span></div><div class="namechip"><b>Arbitrum (ARB)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Ethereum layer-2 underlying Robinhood Chain's app layer; up 7.87% on the fee news.</span></div><div class="namechip"><b>Nasdaq (NDAQ)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Invested $100M in Kraken this week, eyeing 2027 tokenized-stock trading.</span></div><div class="namechip"><b>Kraken<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Received a $100M investment from Nasdaq tied to 2027 tokenized-stock ambitions.</span></div><div class="namechip"><b>Coinbase (COIN)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Brian Armstrong said the Clarity Act is ready for a yes vote.</span></div><div class="namechip"><b>Visa (V)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Stablecoin card business described as "exploding" this week.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The Clarity Act probability and the Apple-strategy comparison are Visser's own estimates, not something Robinhood itself has stated.</div></div>
     </div>
   </div>
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="ai-trading-system">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Recommendation</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">dev-workflow</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">Visser built his own AI-agent trading system this week — and is sharing the workflow</h2>
   <div class="theme-body">
@@ -240,15 +245,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">Visser sells subscriber products (video series, trading-system build, GitHub archive) built on the same theses argued in this video — a direct commercial interest in viewers agreeing with the AI/crypto framing.</div><div class="ritem">Figures like the <b>$500</b>-to-$5,100 trading result, the 99%-rejection back-test funnel, and the Navier-Stokes/3.1x-productivity claims are relayed as reported or self-built this week, not independently verified by Visser.</div><div class="ritem">Paul Tudor Jones's more skeptical AI note is mentioned but summarized through Visser's own framing rather than quoted directly, so readers only get one side of that exchange.</div><div class="ritem">Auto-generated captions garble several proper nouns in this episode; a few speaker/source references (e.g., a name near the Jackson Hole discussion) couldn't be confidently resolved and were left out rather than guessed.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;AGI has arrived.&#8221; <cite>— Jensen Huang, relayed by Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think Ethereum should be outperforming Bitcoin when we're actually in the bull market.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;There is no day after tomorrow if China wins this [the AI race].&#8221; <cite>— Scott Bessent, relayed by Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Astra is the most dangerous AI model right now.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;AI may need to kill people before regulation is kickstarted.&#8221; <cite>— Greg Jensen, relayed by Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The model of GDP is wrong. You can't say that GDP... is the right metric to be using to say productivity is not higher.&#8221; <cite>— Jordi Visser</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Jensen Huang:</b> AGI has arrived <span class="cmeta">capability milestone · AGI reached</span></div><div class="ritem"><b>Jordi Visser:</b> Ethereum outperforms Bitcoin in this cycle <span class="cmeta">relative performance · ETH &gt; BTC</span> <i>if in a real bull-market phase</i> <span class="tag">Ethereum (ETH)</span></div><div class="ritem"><b>Jordi Visser:</b> Clarity Act passes this year <span class="cmeta">legislative passage probability · under 20% · end of 2026</span></div><div class="ritem"><b>Bernstein:</b> Robinhood shares have further upside <span class="cmeta">share price upside · 31%</span> <span class="tag">Robinhood (HOOD)</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Robinhood (HOOD)</b> <span class="rel">partners with</span> <b>Crypto.com</b> &mdash; deal struck this week</div><div class="ritem"><b>Nasdaq (NDAQ)</b> <span class="rel">invests in</span> <b>Kraken</b> &mdash; $100M investment eyeing 2027 tokenized-stock trading</div><div class="ritem"><b>Arbitrum (ARB)</b> <span class="rel">supplies</span> <b>Robinhood (HOOD)</b> &mdash; Ethereum layer-2 underlying Robinhood Chain's app layer</div></div></div>
     </section>
 
     <section class="sec">

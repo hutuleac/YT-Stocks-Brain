@@ -24,6 +24,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "linear-vs-exponential",
+        "tags": ["macro-rates", "ai-infra"],
         "color": "green",
         "badge": "High conviction",
         "status": "",
@@ -42,6 +43,7 @@ THEMES = [
     },
     {
         "id": "agi-arrived",
+        "tags": ["ai-infra", "software"],
         "color": "green",
         "badge": "Confirmed event, interpretation is Visser's",
         "status": "",
@@ -58,13 +60,14 @@ THEMES = [
         "quote": {"text": "We're really trying to empower the individual to make it so that you can have superpowers, you can accomplish more.", "cite": "— Greg Brockman"},
         "watch": "The Navier-Stokes \"solve\" and the 3.1x research-agent productivity figure are as reported in coverage Visser read this week, not independently verified by him.",
         "names": [
-            {"name": "Nvidia (NVDA)", "blurb": "Vera Rubin chips cited as the successor architecture behind the next Astra-scale model; Visser separately expects its multiple to compress even as demand stays strong."},
-            {"name": "Microsoft (MSFT)", "blurb": "Reiterated a capacity shortage this week and plans to triple its data-center compute build-out."},
-            {"name": "OpenAI", "blurb": "Released Astra; Greg Brockman describes it as merging chat, agents, desktop and Codex into one product."},
+            {"name": "Nvidia (NVDA)", "blurb": "Vera Rubin chips cited as the successor architecture behind the next Astra-scale model; Visser separately expects its multiple to compress even as demand stays strong.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Microsoft (MSFT)", "blurb": "Reiterated a capacity shortage this week and plans to triple its data-center compute build-out.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "OpenAI", "blurb": "Released Astra; Greg Brockman describes it as merging chat, agents, desktop and Codex into one product.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
     {
         "id": "gpu-depreciation-debate",
+        "tags": ["semis", "ai-infra"],
         "color": "amber",
         "badge": "Contested",
         "status": "",
@@ -81,12 +84,13 @@ THEMES = [
         "quote": None,
         "watch": "This is Visser relaying Gavin Baker's thesis and his own read of rental-price data, not an independent audit of hyperscaler books; Paul Tudor Jones's more skeptical note on AI this week is mentioned but not engaged with in detail.",
         "names": [
-            {"name": "Nvidia (NVDA)", "blurb": "Central to the depreciation debate — H100 rental prices unchanged to higher over three years."},
-            {"name": "Microsoft (MSFT)", "blurb": "Reiterated a capacity/compute shortage this week, cited as demand-side evidence."},
+            {"name": "Nvidia (NVDA)", "blurb": "Central to the depreciation debate — H100 rental prices unchanged to higher over three years.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Microsoft (MSFT)", "blurb": "Reiterated a capacity/compute shortage this week, cited as demand-side evidence.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
     {
         "id": "ethereum-valuation-thesis",
+        "tags": ["crypto"],
         "color": "green",
         "badge": "High conviction",
         "status": "",
@@ -103,12 +107,13 @@ THEMES = [
         "quote": {"text": "I really do believe we're going to see a similar number at a similar time where someone who's in TradFi is finally going to give up and say, 'I don't understand how to value this thing.'", "cite": "— Jordi Visser"},
         "watch": "Visser flags his own history here as a caution, not an endorsement of timing it perfectly: he was macro/oil-focused and dismissed Amazon as un-investable at the time, by his own account.",
         "names": [
-            {"name": "Ethereum (ETH)", "blurb": "Broke out to its highest level since January; Visser's central long-term crypto thesis this episode."},
-            {"name": "Bitcoin (BTC)", "blurb": "The comparison asset — Visser expects Ethereum to outperform it in this bull-market phase."},
+            {"name": "Ethereum (ETH)", "blurb": "Broke out to its highest level since January; Visser's central long-term crypto thesis this episode.", "stance": "OWNS", "conviction": "High", "horizon": None},
+            {"name": "Bitcoin (BTC)", "blurb": "The comparison asset — Visser expects Ethereum to outperform it in this bull-market phase.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
         ],
     },
     {
         "id": "robinhood-tokenization",
+        "tags": ["crypto", "finance"],
         "color": "green",
         "badge": "High conviction",
         "status": "",
@@ -125,16 +130,17 @@ THEMES = [
         "quote": {"text": "Robin Hood is basically the epicenter of AI crypto macro nexus.", "cite": "— Jordi Visser"},
         "watch": "The Clarity Act probability and the Apple-strategy comparison are Visser's own estimates, not something Robinhood itself has stated.",
         "names": [
-            {"name": "Robinhood (HOOD)", "blurb": "Visser's central tokenization/AI-agent convergence thesis for the episode; Bernstein sees 31% upside."},
-            {"name": "Arbitrum (ARB)", "blurb": "Ethereum layer-2 underlying Robinhood Chain's app layer; up 7.87% on the fee news."},
-            {"name": "Nasdaq (NDAQ)", "blurb": "Invested $100M in Kraken this week, eyeing 2027 tokenized-stock trading."},
-            {"name": "Kraken", "blurb": "Received a $100M investment from Nasdaq tied to 2027 tokenized-stock ambitions."},
-            {"name": "Coinbase (COIN)", "blurb": "Brian Armstrong said the Clarity Act is ready for a yes vote."},
-            {"name": "Visa (V)", "blurb": "Stablecoin card business described as \"exploding\" this week."},
+            {"name": "Robinhood (HOOD)", "blurb": "Visser's central tokenization/AI-agent convergence thesis for the episode; Bernstein sees 31% upside.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
+            {"name": "Arbitrum (ARB)", "blurb": "Ethereum layer-2 underlying Robinhood Chain's app layer; up 7.87% on the fee news.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Nasdaq (NDAQ)", "blurb": "Invested $100M in Kraken this week, eyeing 2027 tokenized-stock trading.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Kraken", "blurb": "Received a $100M investment from Nasdaq tied to 2027 tokenized-stock ambitions.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Coinbase (COIN)", "blurb": "Brian Armstrong said the Clarity Act is ready for a yes vote.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Visa (V)", "blurb": "Stablecoin card business described as \"exploding\" this week.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
     {
         "id": "ai-trading-system",
+        "tags": ["dev-workflow", "finance"],
         "color": "gray",
         "badge": "Recommendation",
         "status": "",
@@ -176,6 +182,19 @@ HOT_TAKES = [
     {"take": "Astra is the most dangerous AI model right now.", "cite": "— Jordi Visser", "why": "personal, strong characterization of a specific model"},
     {"take": "AI may need to kill people before regulation is kickstarted.", "cite": "— Greg Jensen, relayed by Jordi Visser", "why": "stark, quotable warning about the regulatory lag"},
     {"take": "The model of GDP is wrong. You can't say that GDP... is the right metric to be using to say productivity is not higher.", "cite": "— Jordi Visser", "why": "dismisses a standard economic measure outright, contrarian to mainstream economist commentary he names (Goldman, Morgan Stanley)"},
+]
+
+CLAIMS = [
+    {"who": "Jensen Huang", "claim": "AGI has arrived", "metric": "capability milestone", "target": "AGI reached", "by": None, "condition": None, "entity": None},
+    {"who": "Jordi Visser", "claim": "Ethereum outperforms Bitcoin in this cycle", "metric": "relative performance", "target": "ETH > BTC", "by": None, "condition": "in a real bull-market phase", "entity": "Ethereum (ETH)"},
+    {"who": "Jordi Visser", "claim": "Clarity Act passes this year", "metric": "legislative passage probability", "target": "under 20%", "by": "end of 2026", "condition": None, "entity": None},
+    {"who": "Bernstein", "claim": "Robinhood shares have further upside", "metric": "share price upside", "target": "31%", "by": None, "condition": None, "entity": "Robinhood (HOOD)"},
+]
+
+RELATIONS = [
+    {"from": "Robinhood (HOOD)", "rel": "partners_with", "to": "Crypto.com", "note": "deal struck this week"},
+    {"from": "Nasdaq (NDAQ)", "rel": "invests_in", "to": "Kraken", "note": "$100M investment eyeing 2027 tokenized-stock trading"},
+    {"from": "Arbitrum (ARB)", "rel": "supplies", "to": "Robinhood (HOOD)", "note": "Ethereum layer-2 underlying Robinhood Chain's app layer"},
 ]
 
 OTHER_NEWS = [
