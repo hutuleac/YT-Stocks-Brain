@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="physics-consciousness-priors">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Speculative</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">ai-infra</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">Can AI out-think the human biases baked into its own training data?</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="post-llm-roadmap">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Speculative</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">ai-infra</span><span class="ttag">energy</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">What replaces LLMs — and does AI-driven chip/energy efficiency solve the power bottleneck?</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="bci-disability">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Recommendation</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">health</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">BCI as the near-term unlock for disability — and eventually for everyone</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="ai-era-playbook">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Recommendation</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">career</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">The AI-era playbook: sell your data, fund your hardware startup, reinvent mid-career</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="overregulation-risk">
   <div class="theme-badgerow">
     <span class="badge" style="background:#a23f22;">Structural critique</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">policy</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #a23f22;">Alex's real fear isn't AI risk — it's regulating AI too early</h2>
   <div class="theme-body">
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="institutions-education-collapse">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Structural critique</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">policy</span><span class="ttag">career</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Institutions are breaking before abundance arrives, and school hasn't noticed yet</h2>
   <div class="theme-body">
@@ -240,15 +245,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">All four speakers recommend programs and communities they're personally affiliated with throughout (Fountain Life, TKS.world, Abundance 360, EXO, Moonshots Live) — treat those as founder endorsements, not independent reviews.</div><div class="ritem">This is a live, unscripted call-in AMA: figures like "150,000 deaths per day," the 18-months-to-2-years photonics timeline, and the 10-20 year institutional-adjustment window are working estimates stated in conversation, not sourced from a report.</div><div class="ritem">One caller's reference to another podcast guest who became a White House/UN adviser on the China AI race was too caption-garbled to name with confidence and was described rather than named directly.</div><div class="ritem">Sponsor segments (Abundance Summit/Link Ventures, Google for Startups, Blitzy, and a Fountain Life-branded heart-disease segment) are excluded from this brief entirely per standing policy, even though the Fountain Life segment contained specific medical statistics.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;I am deathly concerned that we will overregulate our way into losing a superintelligence race with China.&#8221; <cite>— Alex Wissner-Gross</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't think this is a real issue... I'm not at all concerned that any inductive priors present in pre-training data will somehow hamstring AI's ability to make new scientific discoveries.&#8221; <cite>— Alex Wissner-Gross</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Either there is no God and we're just moving towards a wonderful future driven by technology, or there's a simulation, and in which case it kind of doesn't matter anyway.&#8221; <cite>— Alex Wissner-Gross</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I am 100% sure that the compute substrate is going to move to photonics.&#8221; <cite>— Dave Blundin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;A child with an AI today in an hour can learn what they could learn sitting in a classroom for the whole day. That impedance mismatch will break the existing system.&#8221; <cite>— Salim Ismail</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't think super intelligence is... human civilization's last invention. I think there are going to be many, many inventions after super intelligence.&#8221; <cite>— Alex Wissner-Gross</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><p class="empty">No dated or numeric calls made in this video.</p></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><p class="empty">No company-to-company relationships stated in this video.</p></div>
     </section>
 
     <section class="sec">

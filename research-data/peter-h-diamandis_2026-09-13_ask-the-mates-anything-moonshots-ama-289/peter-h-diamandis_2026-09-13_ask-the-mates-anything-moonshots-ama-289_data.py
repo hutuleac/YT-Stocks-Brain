@@ -24,6 +24,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "physics-consciousness-priors",
+        "tags": ["ai-infra", "dev-workflow"],
         "color": "gray",
         "badge": "Speculative",
         "status": "",
@@ -43,6 +44,7 @@ THEMES = [
     },
     {
         "id": "post-llm-roadmap",
+        "tags": ["ai-infra", "energy"],
         "color": "gray",
         "badge": "Speculative",
         "status": "",
@@ -61,6 +63,7 @@ THEMES = [
     },
     {
         "id": "bci-disability",
+        "tags": ["health", "dev-workflow"],
         "color": "amber",
         "badge": "Recommendation",
         "status": "",
@@ -80,6 +83,7 @@ THEMES = [
     },
     {
         "id": "ai-era-playbook",
+        "tags": ["career", "dev-workflow"],
         "color": "amber",
         "badge": "Recommendation",
         "status": "",
@@ -100,6 +104,7 @@ THEMES = [
     },
     {
         "id": "overregulation-risk",
+        "tags": ["policy", "ai-infra"],
         "color": "red",
         "badge": "Structural critique",
         "status": "",
@@ -118,6 +123,7 @@ THEMES = [
     },
     {
         "id": "institutions-education-collapse",
+        "tags": ["policy", "career"],
         "color": "amber",
         "badge": "Structural critique",
         "status": "",
