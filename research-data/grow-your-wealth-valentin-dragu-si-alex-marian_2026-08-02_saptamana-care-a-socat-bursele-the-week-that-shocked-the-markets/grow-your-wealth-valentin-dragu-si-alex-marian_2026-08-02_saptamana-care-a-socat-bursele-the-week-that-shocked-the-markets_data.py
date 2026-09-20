@@ -1,0 +1,193 @@
+"""Data file for Valentin Dragu & Alex Marian (Grow Your Wealth) — SAPTAMANA CARE A SOCAT BURSELE!"""
+
+META = {
+    "title": "SAPTAMANA CARE A SOCAT BURSELE! (The Week That Shocked the Markets!)",
+    "channel": "Grow your WEALTH - Valentin Dragu si Alex Marian",
+    "speakers": "Valentin Dragu si Alex Marian (co-prezentatori)",
+    "date": "2026-08-02",
+    "video_url": "https://www.youtube.com/watch?v=nAuilj-6Gg8",
+    "thread_line": "6 fire narative · incetinirea GDP-ului american si pauza Fed inainte de midterms, tragedia umana din spatele prabusirii KOSPI in Coreea de Sud, executarea fondului lui Leopold Aschenbrenner de catre Citadel, raportarile Magnificent Seven (Microsoft/Amazon puternice, Apple si Meta slabe), teoria centrelor de date pentru 'control total', si cele patru riscuri majore ale bursei de la Bucuresti.",
+    "category": "market",
+}
+
+SNAPSHOT = [
+    "GDP-ul american a incetinit la 1,5% (de la 2,1%) si PCE a iesit sub asteptari — gazdele citesc combinatia ca pregatind terenul pentru ca Fed-ul sa anunte ca nu va creste dobanzile inainte de midterm elections, un scenariu pe care il considera anticipat deliberat.",
+    "FOMC a mentinut dobanda in banda 3,50-3,75%, decizie contestata de trei membri care doreau o crestere; Kevin Warsh e descris ca extrem de zgarcit la declaratii, spre deosebire de predecesorul sau, ceea ce lasa analistii fara semnale clare de pozitionare.",
+    "Tema centrala si cea mai grea emotional a episodului: prabusirea indicelui KOSPI din Coreea de Sud, unde Samsung si SK Hynix reprezinta aproape 50% din indice — gazdele au avertizat de mai multe ori in trecut despre acest risc de concentrare si vorbesc despre sute de mii de investitori retail care si-au pierdut economiile, cu linii telefonice de criza activate dupa valul de lichidari fortate.",
+    "Fondul lui Leopold Aschenbrenner (fost cercetator OpenAI) a fost practic executat de Citadel/Ken Griffin, care i-a cumparat activele la circa 30 de centi la dolar dupa o declaratie publica ce a accentuat scaderile — activele au crescut 40-50% chiar a doua zi.",
+    "Raportari Magnificent Seven cu directii opuse: Microsoft (Azure puternic, dar retineri fata de asocierea cu OpenAI) si Amazon (AWS 'masina de facut bani', tinta posibila $280-300) au impresionat; Apple (presiune pe preturi din cauza memoriei, dar a depasit Nvidia la capitalizare) si Meta (raport slab, ratare pe actiune) au dezamagit.",
+    "Gazdele specula (marcat explicit ca opinie personala, nu fapt confirmat) ca centrele de date construite de marile companii tech ar putea servi, pe langa cloud si AI, si unor scopuri de supraveghere/securitate nationala — punand exemplul unui centru de date Amazon din Anglia construit pentru sectorul militar britanic.",
+    "Pe zona Romania: patru riscuri majore identificate pentru bursa de la Bucuresti (politic, valutar, de tara, regional), cu un avertisment specific ca o eventuala nationalizare a pilonului II de pensii private ar putea prabusi BVB-ul de doua ori mai rau decat bursa din Seul.",
+]
+
+THEMES = [
+    {
+        "id": "gdp-fed-pauza",
+        "tags": ["macro-rates"],
+        "color": "amber",
+        "badge": "Contestat"
+,
+        "status": "URMARIM — decizie clara asteptata inainte de midterms",
+        "title": "GDP-ul American Incetineste, Fed-ul se Pregateste sa Nu Creasca Dobanzile Inainte de Midterms",
+        "lead": "**Gazdele citesc combinatia de GDP slab si PCE sub asteptari ca un cadru deliberat construit pentru ca Fed-ul sa poata anunta ca nu va creste dobanzile** — un scenariu pe care il descriu ca fiind anticipat inca de la inceputul anului.",
+        "bullets": [
+            "GDP-ul american a venit la 1,5% in prima citire pentru trimestrul doi, in scadere de la 2,1% — o valoare considerata 'nu rea' in sine, dar gazdele nu au incredere in cifrele oficiale de statistica, indiferent de tara.",
+            "PCE-ul (indicatorul de inflatie preferat de Fed) a iesit tot in scadere, ceea ce a influentat pozitiv piata inainte chiar de citirea GDP-ului — combinatia celor doua a fost citita ca semnal ca Fed-ul nu isi mai permite sa creasca dobanzile fara sa puna presiune suplimentara pe o economie deja in incetinire.",
+            "FOMC a mentinut dobanda in banda 3,50-3,75%, decizie contestata de trei membri care ar fi dorit o crestere — gazdele noteaza (fara sa poata confirma) ca acesti membri ar putea fi aliniati cu interese legate de Citadel.",
+            "Kevin Warsh e descris ca avand un stil de comunicare mult mai rezervat decat predecesorul sau — spune lucruri pertinente, dar nu ofera niciun indiciu despre directia viitoare a politicii monetare, lasand analistii fara ancore clare de pozitionare.",
+            "Gazdele leaga toata aceasta secventa (probleme create, apoi 'solutii salvatoare') de o strategie mai larga condusa de Trump impreuna cu Bessent (Trezorerie) si Warsh (Fed), cu rezultate care se vor clarifica mai aproape de midterm elections.",
+        ],
+        "quote": {"text": "Se creeaza o problema destul de grea, se creeaza o panica, o frica, pentru ca ulterior sa se vina cu o solutie pozitiva si lucrurile sa revina la normal.", "cite": "— Alex Marian"},
+        "watch": "Gazdele recunosc explicit ca nu au incredere in cifrele oficiale de statistica si trateaza interpretarea lor ca fiind simbolica/politica, nu o certitudine economica.",
+        "names": None,
+    },
+    {
+        "id": "kospi-tragedie",
+        "tags": ["semis", "finance"],
+        "color": "red",
+        "badge": "Eveniment confirmat, cu impact devastator",
+        "status": "URMARIM — lectie pentru investitorii globali",
+        "title": "Coreea de Sud: Prabusirea KOSPI Devine o Tragedie Umana, Nu Doar o Corectie de Piata",
+        "lead": "**Gazdele au avertizat de mai multe ori in trecut ca indicele KOSPI e periculos de concentrat** (Samsung si SK Hynix reprezinta aproape 50% din greutatea lui) — iar cand corectia a venit, a fost insotita de lichidari fortate pe scara larga si tragedii personale.",
+        "bullets": [
+            "Sectorul memoriei este ciclic prin natura lui; cand un astfel de sector concentrat intr-un indice se corecteaza, o scadere de 40-50% pentru intreaga bursa devine posibila — exact scenariul pe care gazdele l-au semnalat inainte sa se intample.",
+            "Guvernul sud-coreean a interzis ETF-urile cu levier abia dupa ce criza s-a produs deja — gazdele considera masura tardiva si inutila in acel moment.",
+            "Estimare citata: intre 3% si 5% din populatia Coreei de Sud (potential sute de mii de oameni/familii) au fost lichidati, unii pierzandu-si economiile de-o viata si chiar locuintele; au fost instalate linii telefonice de criza si sisteme AI de monitorizare pentru a preveni gesturi suicidale.",
+            "SK Hynix e citat ca exemplu specific: dupa un raport slab, CEO-ul a decis sa cumpere actiuni ale companiei chiar in mijlocul turbulentei, in loc sa amane decizia cateva zile pentru a calma piata — companie care, ironic, s-a listat recent si pe bursa americana, alimentand si mai mult hype-ul inainte de prabusire.",
+            "Gazdele leaga fenomenul de lacomie umana generala ('binele e dusmanul binelui') — investitori care, dupa castiguri mari, au adaugat bani imprumutati si expunere pe ETF-uri cu levier in loc sa isi asigure profitul, repetand greselile din crash-uri istorice anterioare (inclusiv cel japonez).",
+        ],
+        "quote": {"text": "Ne apropiem de un moment in care cresterile nu sunt normale si vom avea o corectie.", "cite": "— Alex Marian"},
+        "watch": "Gazdele subliniaza ca disciplina si perseverenta sud-coreenilor in general nu i-au protejat de aceasta greseala specifica de piata de capital — nu e o problema de caracter national, ci de structura de piata si lacomie.",
+        "names": [
+            {"name": "Samsung Electronics", "blurb": "Impreuna cu SK Hynix, reprezinta aproape 50% din indicele KOSPI — concentrare sectoriala identificata drept cauza structurala a riscului de corectie majora.", "stance": "NEGATIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "SK Hynix", "blurb": "Raport slab urmat de o revenire agresiva; citata ca exemplu de poveste de succes transformata in tragedie pentru investitorii de retail din Coreea de Sud.", "stance": "NEGATIVE VIEW", "conviction": "Medium", "horizon": None},
+        ],
+    },
+    {
+        "id": "leopold-citadel",
+        "tags": ["finance"],
+        "color": "red",
+        "badge": "Eveniment confirmat, contestat etic",
+        "status": "URMARIM — mecanism de piata expus, nu neaparat rezolvat",
+        "title": "Fondul lui Leopold Aschenbrenner, 'Executat' de Ken Griffin si Citadel",
+        "lead": "**Un tanar fost cercetator OpenAI care a strans un fond de la cateva sute de milioane la circa 10 miliarde de dolari a fost prins supra-expus pe marja si pe produse cu levier** — iar Citadel, condus de Ken Griffin, a profitat de moment.",
+        "bullets": [
+            "Ken Griffin a facut o declaratie publica exact in perioada in care piata scadea agresiv si Federal Reserve avea sedinta, sustinand ca e un moment bun pentru cresterea dobanzii de referinta — declaratie care a accentuat scaderile pe SK Hynix, SanDisk si alte nume expuse.",
+            "Citadel controleaza si una dintre cele mai mari firme de market making (Citadel Securities), ceea ce ii da acces la informatii despre pozitionarea globala a investitorilor — combinatia intre declaratia publica si activitatea de market making a fost interpretata de gazde ca posibil coordonata.",
+            "Activele fondului lui Leopold Aschenbrenner au fost preluate de Griffin la aproximativ 30 de centi la dolar (o reducere de circa 70%) — a doua zi dupa tranzactie, activele respective valorau deja cu 40-50% mai mult.",
+            "Gazdele noteaza ca Citadel Securities Hong Kong a avut probleme cu autoritatea sud-coreeana in 2023 pentru practici neconforme si i-a fost retras accesul ca market maker in Coreea — desi nu pot demonstra o legatura directa, considera plauzibil ca Citadel a jucat un rol si in scaderea din Coreea de Sud, prin alte fonduri interpuse.",
+            "Concluzia practica pentru investitorii de retail: nu poti concura cu acesti actori care au acces la date de pozitionare in timp real — singura strategie rezonabila e o viziune pe termen lung, pozitii de baza solide si evitarea marjei/levierului, mai degraba decat incercarea de a anticipa miscarile lor.",
+        ],
+        "quote": {"text": "Consider ca unul dintre actorii principali care a cauzat scaderea din South Korea este Citadel, chiar daca prin alte fonduri prin care are acces.", "cite": "— Valentin Dragu"},
+        "watch": "Gazdele recunosc explicit ca nu pot demonstra legatura directa dintre Citadel si scaderea din Coreea de Sud — e o suspiciune motivata, nu o dovada.",
+        "names": None,
+    },
+    {
+        "id": "mag7-earnings",
+        "tags": ["ai-infra", "finance"],
+        "color": "amber",
+        "badge": "Contestat"
+,
+        "status": "URMARIM — reactii divergente in interiorul grupului",
+        "title": "Magnificent Seven: Microsoft si Amazon Stralucesc pe Cloud, Apple Trece de Nvidia, Meta Dezamageste",
+        "lead": "**Un sezon de raportari cu directii clar diferite in interiorul grupului**: cloud-ul (Azure, AWS) ramane motorul de profit, in timp ce Apple si Meta se confrunta cu probleme specifice.",
+        "bullets": [
+            "Microsoft a raportat bine pe baza diviziei Azure, dar reactia pozitiva a venit intr-un context de piata deja in revenire agresiva — gazdele raman precaute fata de parteneriatul Microsoft-OpenAI ('aproape orice atinge OpenAI e ca un virus'), preferand asocierea cu Anthropic; Microsoft a anuntat si un parteneriat cu Revolut pentru acces gratuit la ChatGPT pentru unii utilizatori.",
+            "Amazon a raportat spectaculos pe baza AWS ('o masina de facut bani'), cu un capex foarte mare recunoscut deschis — gazdele vad o posibilitate reala ca actiunea sa ajunga rapid la $280-300 daca cheltuielile de investitii incep sa se tempereze.",
+            "Apple a avut un raport slab, cu presiune pe preturile viitoare ale telefoanelor din cauza costurilor mai mari la memorie si o strategie diferita de restul Magnificent Seven (rascumparari de actiuni, dividende, investitii AI mai modeste) — a depasit totusi Nvidia ca cea mai valoroasa companie dupa capitalizare, desi gazdele vad rolurile putand sa se inverseze din nou pe termen scurt.",
+            "Bloom Energy a revenit spectaculos (+40% in doar doua zile) dupa un raport bun legat de contracte de livrare energie catre centre de date — gazdele nu recomanda nici cumparare, nici vanzare, dar semnaleaza explicit ca o crestere de 40% in doua zile nu e o miscare sanatoasa si creste riscul unei corectii pentru cei care cumpara acum.",
+            "Meta a inchis lista cu cel mai slab raport din grup (ratare pe actiune, desi cresterea veniturilor a fost buna) — gazdele se asteapta la inca doua-trei trimestre de sentiment negativ inainte de o posibila rasturnare, comparand tiparul cu retragerea anterioara din pariul pe metavers.",
+        ],
+        "quote": {"text": "Amazon Web Services produce, este o masina de facut bani, ceea ce pune intr-o postura extrem de pozitiva evolutia pretului actiunii pe mai departe.", "cite": "— Valentin Dragu"},
+        "watch": "Recomandarea despre Bloom Energy e explicit neutra — gazdele refuza sa recomande cumparare sau vanzare, semnaland doar riscul crescut al miscarii recente.",
+        "names": [
+            {"name": "Microsoft (MSFT)", "blurb": "Raport bun pe Azure, dar gazdele raman precaute fata de asocierea cu OpenAI si nu se asteapta la o crestere rapida spre $500.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Amazon (AMZN)", "blurb": "AWS descris ca 'masina de facut bani'; posibila tinta $280-300 daca se tempereaza capex-ul.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
+            {"name": "Apple (AAPL)", "blurb": "Raport slab, presiune pe preturile telefoanelor din cauza memoriei, dar a depasit Nvidia la capitalizare de piata.", "stance": "NEGATIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Nvidia (NVDA)", "blurb": "Depasita temporar de Apple la capitalizare de piata; gazdele vad posibil ca rolurile sa se inverseze din nou pe termen scurt.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Meta (META)", "blurb": "Cel mai slab raport din Magnificent Seven; sentiment negativ asteptat sa persiste inca doua-trei trimestre.", "stance": "NEGATIVE VIEW", "conviction": "High", "horizon": "2-3 trimestre"},
+            {"name": "Bloom Energy (BE)", "blurb": "Revenire de 40% in doua zile dupa un raport bun legat de contracte energetice pentru centre de date — miscare marcata explicit ca nesanatoasa/riscanta.", "stance": "UNCERTAIN", "conviction": "Low", "horizon": None},
+            {"name": "OpenAI", "blurb": "Asociere vazuta cu retinere de gazde ('ca un virus'), spre deosebire de Anthropic.", "stance": "NEGATIVE VIEW", "conviction": "Medium", "horizon": None},
+        ],
+    },
+    {
+        "id": "centre-date-control",
+        "tags": ["ai-infra", "policy"],
+        "color": "gray",
+        "badge": "Speculativ"
+,
+        "status": "OPINIE PERSONALA — marcata explicit ca atare",
+        "title": "Teoria Centrelor de Date pentru 'Control Total' — Speculatie Explicita, Nu Fapt Confirmat",
+        "lead": "**Gazdele avanseaza o teorie pe care o recunosc deschis ca poate parea o 'conspiratie'**: ca centrele de date construite acum de marile companii tech ar putea servi, dincolo de cloud si AI, si unor scopuri de supraveghere si securitate nationala.",
+        "bullets": [
+            "Argumentul pleaca de la o sursa personala (un cunoscut care a lucrat la un centru de date Amazon in Anglia, construit pentru sectorul militar si de securitate al Regatului Unit) si de la observatia ca Meta ofera foarte putine detalii despre multe dintre facilitatile pe care le construieste.",
+            "Gazdele noteaza ca Meta s-a finantat istoric, ca si alte companii mari de tehnologie, prin legaturi cu comunitatea de securitate americana — un fapt cunoscut, nu o noutate, dar folosit ca argument suplimentar pentru teoria lor.",
+            "Leaga speculatia de un tipar mai larg de proiecte greu de inteles complet in acest moment: Optimus (robot umanoid Tesla), robotaxiuri si full self-driving, satelitii Starlink cu date — toate descrise ca piese ale unui puzzle mai mare pe care il gasesc greu de descifrat complet.",
+            "Recunosc explicit tensiunea cu acest tip de discurs si il conecteaza (fara sa afirme o legatura directa) cu discutii separate despre supravegherea video extinsa, folosind exemplul liniilor de criza si monitorizarii activate in Coreea de Sud ca ilustrare a unui scenariu unde supravegherea mai intensa ar putea fi vazuta ca 'normala'.",
+        ],
+        "quote": {"text": "Consider ca toate aceste centre de date care sunt sustinute cu banii companiilor mari vor fi acele centre de date care vor fi folosite pentru noua paradigma... pentru un control total.", "cite": "— Valentin Dragu"},
+        "watch": "Gazdele isi cer scuze in prealabil si recunosc explicit ca teoria poate parea o conspiratie — e prezentata clar ca opinie personala speculativa, nu ca fapt verificat.",
+        "names": None,
+    },
+    {
+        "id": "bvb-riscuri",
+        "tags": ["policy", "finance"],
+        "color": "red",
+        "badge": "Risc semnalat"
+,
+        "status": "URMARIM — patru riscuri identificate, fara pozitii pe BVB",
+        "title": "Patru Riscuri Majore pentru Bursa de la Bucuresti si Spectrul Nationalizarii Pensiilor Private",
+        "lead": "**Gazdele nu au si nu recomanda expunere pe BVB**, citand patru riscuri structurale specifice si un avertisment concret legat de posibila nationalizare a pilonului II de pensii private.",
+        "bullets": [
+            "Cele patru riscuri identificate pentru BVB: riscul politic (cel mai mare), riscul valutar (cursul leu-euro), riscul de tara (posibilitatea unui downgrade de rating) si riscul regional (zona cu potential de escaladare a unor probleme).",
+            "Cel mai mare pericol punctual: daca guvernul roman ar discuta serios o nationalizare a pilonului II de pensii private, companiile care administreaza aceste fonduri ar fi fortate sa vanda masiv, fara cumparatori suficienti — un scenariu care ar putea prabusi BVB-ul de doua ori mai rau decat bursa din Seul, desi gazdele subliniaza ca nu afirma ca se va intampla, doar ca iau in calcul riscul.",
+            "Analiza tehnica ad-hoc: graficul BVB suprapus peste KOSPI arata o similitudine ingrijoratoare in opinia gazdelor, desi recunosc o diferenta structurala importanta — pe BVB nu exista derivate sau levier de tipul celor care au amplificat prabusirea din Coreea de Sud.",
+            "Motivatie personala explicita: unul dintre gazde a fost expus pe BVB in trecut si s-a retras dupa o ordonanta guvernamentala din care a iesit avantajat, dar noteaza ca multi alti investitori de retail au fost dezavantajati de aceeasi masura.",
+            "Concluzie mai larga: numarul redus de investitori romani raportat la populatie inseamna ca Romania nu poate repeta la aceeasi scara tragedia sud-coreeana, dar situatia economica, politica si imobiliara raman toate descrise ca 'nu tocmai bune' pe termen scurt, cu speranta de imbunatatire in urmatorii doi ani.",
+        ],
+        "quote": {"text": "In acel moment, bursa de la Bucuresti va ajunge de doua ori mai rau decat bursa de la Seul din Coreea.", "cite": "— Valentin Dragu"},
+        "watch": "Gazdele sunt explicite ca scenariul de nationalizare a pensiilor e un risc luat in calcul, nu un eveniment anuntat sau confirmat.",
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F4C9", "tag": "Piete", "title": "Verifica gradul de concentrare sectoriala al unui indice (cum e KOSPI cu Samsung/SK Hynix) inainte sa il consideri diversificat."},
+    {"icon": "\U0001F3E6", "tag": "Macro", "title": "Urmareste combinatia GDP+PCE, nu doar declaratiile Fed, pentru a anticipa pauzele de dobanda inainte de evenimente politice majore."},
+    {"icon": "⚠️", "tag": "Piete", "title": "Evita marja si produsele cu levier ridicat, mai ales in perioade de volatilitate accentuata provocata deliberat de actori institutionali mari."},
+    {"icon": "☁️", "tag": "AI infra", "title": "Separa performanta diviziilor de cloud (Azure, AWS) de restul afacerii cand evaluezi un raport Magnificent Seven — acolo se vede motorul real de profit."},
+    {"icon": "\U0001F1F7\U0001F1F4", "tag": "Romania", "title": "Monitorizeaza discutiile despre pilonul II de pensii private ca semnal de risc politic pentru BVB, dincolo de stirile economice obisnuite."},
+]
+
+CLAIMS = [
+    {"who": "Valentin Dragu si Alex Marian", "claim": "Fed nu va creste dobanzile inainte de midterm elections", "metric": "numar de cresteri de dobanda", "target": "zero cresteri de dobanda", "by": "septembrie-octombrie 2026", "condition": "bazat pe framing-ul cifrelor GDP/PCE recente", "entity": None},
+    {"who": "Valentin Dragu si Alex Marian", "claim": "actiunea Amazon poate ajunge rapid la o tinta ridicata", "metric": "pret tinta", "target": "$280-300", "by": None, "condition": "daca se tempereaza usor cheltuielile de capital (capex)", "entity": "Amazon (AMZN)"},
+    {"who": "Valentin Dragu si Alex Marian", "claim": "KOSPI risca o corectie suplimentara majora daca sectorul memoriei se corecteaza", "metric": "potential de scadere suplimentara", "target": "40-50%", "by": None, "condition": "data fiind concentrarea Samsung+SK Hynix la aproape 50% din indice", "entity": None},
+    {"who": "Valentin Dragu", "claim": "o eventuala nationalizare a pilonului II de pensii ar prabusi BVB-ul mai rau decat KOSPI", "metric": "severitate relativa a unei posibile corectii", "target": "de doua ori mai rau decat bursa din Seul", "by": None, "condition": "scenariu ipotetic, marcat explicit ca neconfirmat", "entity": None},
+]
+
+RELATIONS = [
+    {"from": "Citadel Securities", "rel": "acquires", "to": "fondul lui Leopold Aschenbrenner", "note": "Active preluate la circa 30 de centi la dolar dupa executare silita, in urma unei declaratii publice a lui Ken Griffin"},
+    {"from": "Amazon (AMZN)", "rel": "owns_stake", "to": "Anthropic", "note": "Detine actiuni in Anthropic, citat de gazde ca motiv de incredere mai mare fata de asocierea cu OpenAI"},
+    {"from": "Microsoft (MSFT)", "rel": "partners_with", "to": "OpenAI", "note": "Parteneriat mentionat cu retineri explicite de catre gazde"},
+]
+
+HOT_TAKES = [
+    {"take": "Cam tot ceea ce atinge OpenAI este ca un virus. Nu prea este bine sa te asociezi cu numele OpenAI.", "cite": "— Alex Marian", "why": "O pozitie ferma si negativa fata de un partener de business al Microsoft, exprimata direct pe numele companiei."},
+    {"take": "Consider ca unul dintre actorii principali care a cauzat scaderea din South Korea este Citadel, chiar daca prin alte fonduri prin care are acces.", "cite": "— Valentin Dragu", "why": "O acuzatie specifica si verificabila la adresa unui actor de piata major, recunoscuta explicit ca nedemonstrabila."},
+    {"take": "Consider ca toate aceste centre de date vor fi folosite pentru noua paradigma in care va trai societatea, pentru un control total.", "cite": "— Valentin Dragu", "why": "O teorie speculativa personala pe care gazda o recunoaste deschis ca poate parea o conspiratie, dar o sustine oricum."},
+    {"take": "In momentul in care ai facut foarte multi bani deja, poate ar fi bine sa marchezi profitul si sa securizezi acei bani.", "cite": "— Alex Marian", "why": "Un sfat direct impotriva lacomiei, aplicat explicit la cazul investitorilor sud-coreeni care nu si-au asigurat castigurile."},
+    {"take": "Arata a Cospi. BVB-ul arata a Cospi din Coreea.", "cite": "— Alex Marian", "why": "O comparatie tehnica directa si ingrijoratoare intre bursa romaneasca si un indice care tocmai a suferit o prabusire devastatoare."},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F4F1", "title": "Microsoft si OpenAI au anuntat un parteneriat cu Revolut prin care unii utilizatori Revolut vor primi acces gratuit la ChatGPT pentru o perioada (posibil un an).", "tag": "Parteneriat produs"},
+    {"icon": "\U0001F30D", "title": "Discutie tangentiala despre valurile de migratie in Spania si Italia si tensiunile politice asociate (mentionat noul general italian, considerat ferm impotriva imigratiei ilegale, spre deosebire de abordarea guvernului socialist spaniol) — legata de gazde de o discutie mai larga despre supraveghere si control social.", "tag": "Discutie"},
+]
+
+GLOSSARY = [
+    {"term": "ETF cu levier (leveraged ETF)", "def": "Fond tranzactionat la bursa care multiplica (de obicei de 2x sau 3x) miscarea zilnica a unui activ sau index subiacent — amplifica atat castigurile cat si pierderile, si a fost un factor major in prabusirea pietei sud-coreene."},
+    {"term": "Market maker", "def": "Firma care furnizeaza lichiditate pe piata cumparand si vanzand constant actiuni, castigand din diferenta de pret (spread) pe volume foarte mari de tranzactii — Citadel Securities este unul dintre cei mai mari jucatori globali de acest tip."},
+    {"term": "Pilonul II de pensii private", "def": "Componenta obligatorie a sistemului de pensii din Romania administrata de fonduri private, alimentata dintr-o parte a contributiilor sociale ale angajatilor — o eventuala nationalizare ar insemna transferarea acestor active catre bugetul de stat."},
+    {"term": "Capex (capital expenditure)", "def": "Cheltuieli de capital facute de o companie pentru investitii in infrastructura (centre de date, echipamente) — mentionat repetat in contextul cheltuielilor uriase ale Magnificent Seven pe AI si cloud."},
+]
