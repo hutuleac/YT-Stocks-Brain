@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="stack-as-hiding-spot">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Self-critique, since resolved</span>
-    <span class="theme-status">PERSONAL ADMISSION</span>
+    <span class="theme-status">PERSONAL ADMISSION</span><span class="ttag">career</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Habit #1: loyalty to one tech stack, dressed up as valuing 'structure'</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="tenure-vs-growth">
   <div class="theme-badgerow">
     <span class="badge" style="background:#a23f22;">Structural / incentive critique</span>
-    <span class="theme-status">SYSTEMIC, NOT INDIVIDUAL FAULT</span>
+    <span class="theme-status">SYSTEMIC, NOT INDIVIDUAL FAULT</span><span class="ttag">career</span>
   </div>
   <h2 style="border-left:4px solid #a23f22;">Habit #2: mistaking 'how we've always done it' for expertise — because companies reward tenure, not range</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="ai-dependency-atrophy">
   <div class="theme-badgerow">
     <span class="badge" style="background:#a23f22;">Skill-atrophy warning</span>
-    <span class="theme-status">CITES RESEARCH, BUT UNNAMED/UNLINKED</span>
+    <span class="theme-status">CITES RESEARCH, BUT UNNAMED/UNLINKED</span><span class="ttag">dev-workflow</span><span class="ttag">career</span>
   </div>
   <h2 style="border-left:4px solid #a23f22;">Habit #3: outsourcing the struggle to AI outsources the growth that comes with it</h2>
   <div class="theme-body">
@@ -183,15 +188,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">The central 'research shows heavy AI users perform worse without it' claim is asserted without naming a study, author, or publication — treat as an unverified claim pending a source.</div><div class="ritem">This is a single creator's personal essay/opinion piece based on self-reported anecdotes (his own career, one colleague's reaction) rather than data across a broader developer population.</div><div class="ritem">Auto-generated captions on a short, fast-paced solo video can occasionally mangle proper nouns or phrasing — cross-check exact wording against the video if quoting directly.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;You can't outsource struggle without also outsourcing the growth attached to it.&#8221; <cite>— CodeHead</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Comfortable gets rewarded in most orgs. Growth just doesn't, not directly anyway.&#8221; <cite>— CodeHead</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;What changed is that it's a choice now instead of a hiding spot.&#8221; <cite>— CodeHead</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The senior dev solving every problem exactly as they did in year one is correctly reading their company's incentives.&#8221; <cite>— CodeHead</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><p class="empty">No dated or numeric calls made in this video.</p></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><p class="empty">No company-to-company relationships stated in this video.</p></div>
     </section>
 
     <section class="sec">

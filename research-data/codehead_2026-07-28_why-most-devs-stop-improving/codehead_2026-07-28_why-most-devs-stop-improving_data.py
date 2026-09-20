@@ -20,6 +20,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "stack-as-hiding-spot",
+        "tags": ["career", "dev-workflow"],
         "color": "amber",
         "badge": "Self-critique, since resolved",
         "status": "PERSONAL ADMISSION",
@@ -39,6 +40,7 @@ THEMES = [
     },
     {
         "id": "tenure-vs-growth",
+        "tags": ["career"],
         "color": "red",
         "badge": "Structural / incentive critique",
         "status": "SYSTEMIC, NOT INDIVIDUAL FAULT",
@@ -58,6 +60,7 @@ THEMES = [
     },
     {
         "id": "ai-dependency-atrophy",
+        "tags": ["dev-workflow", "career"],
         "color": "red",
         "badge": "Skill-atrophy warning",
         "status": "CITES RESEARCH, BUT UNNAMED/UNLINKED",
