@@ -26,6 +26,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "nvidia-earnings-openai-chip",
+        "tags": ["semis", "ai-infra"],
         "color": "amber",
         "badge": "Contested",
         "status": "REPORTED — $96.2B quarter, guidance raised",
@@ -50,6 +51,7 @@ THEMES = [
     },
     {
         "id": "spacex-3-5-trillion",
+        "tags": ["space", "ai-infra"],
         "color": "gray",
         "badge": "Speculative",
         "status": "PROJECTED — $3.5T revenue by 2033",
@@ -69,6 +71,7 @@ THEMES = [
     },
     {
         "id": "tesla-cybercab-rollout",
+        "tags": ["robotics", "consumer"],
         "color": "amber",
         "badge": "Confirmed event",
         "status": "EXPANDING — Texas + Las Vegas rollout underway",
@@ -89,6 +92,7 @@ THEMES = [
     },
     {
         "id": "china-world-models",
+        "tags": ["geopolitics", "software"],
         "color": "amber",
         "badge": "Contested",
         "status": "DIVERGING — video vs. language model bets",
@@ -110,6 +114,7 @@ THEMES = [
     },
     {
         "id": "ai-companions-intimacy",
+        "tags": ["policy", "consumer"],
         "color": "gray",
         "badge": "Speculative",
         "status": "UNCERTAIN — regulatory patchwork forming",
@@ -128,6 +133,7 @@ THEMES = [
     },
     {
         "id": "circular-economy-debate",
+        "tags": ["ai-infra", "finance"],
         "color": "amber",
         "badge": "Contested",
         "status": "UNRESOLVED — healthy growth or self-referential bubble",
@@ -145,6 +151,7 @@ THEMES = [
     },
     {
         "id": "data-center-backlash",
+        "tags": ["ai-infra", "geopolitics"],
         "color": "amber",
         "badge": "Confirmed event",
         "status": "CONFIRMED — bot farm identified by X",
@@ -162,6 +169,7 @@ THEMES = [
     },
     {
         "id": "flock-surveillance",
+        "tags": ["policy"],
         "color": "red",
         "badge": "Structural critique",
         "status": "FLAGGED — civil-liberties risk",
@@ -180,6 +188,7 @@ THEMES = [
     },
     {
         "id": "jobs-debate",
+        "tags": ["career", "policy"],
         "color": "green",
         "badge": "Confirmed-good, contested framing",
         "status": "DATA-BACKED — actual survey contradicts doom narrative",
@@ -200,6 +209,7 @@ THEMES = [
     },
     {
         "id": "health-breakthroughs",
+        "tags": ["health", "biotech"],
         "color": "green",
         "badge": "Confirmed-good",
         "status": "APPROVED — new drug and lab result this week",
@@ -220,6 +230,7 @@ THEMES = [
     },
     {
         "id": "energy-abundance",
+        "tags": ["energy", "geopolitics"],
         "color": "green",
         "badge": "Confirmed-good",
         "status": "PROGRESSING — new fuel supply, China's solar surge",
@@ -240,6 +251,7 @@ THEMES = [
     },
     {
         "id": "lunar-economy",
+        "tags": ["space"],
         "color": "gray",
         "badge": "Speculative",
         "status": "SPECULATIVE — consultant estimates called lowball by the panel",
@@ -260,6 +272,7 @@ THEMES = [
     },
     {
         "id": "weather-modification",
+        "tags": ["policy"],
         "color": "gray",
         "badge": "Speculative",
         "status": "DEMONSTRATED — 19M gallons from 10 drones",
@@ -277,6 +290,7 @@ THEMES = [
     },
     {
         "id": "apple-ai-strategy",
+        "tags": ["software", "semis"],
         "color": "red",
         "badge": "Contested",
         "status": "NEGATIVE VIEW — Medium conviction",
@@ -319,6 +333,22 @@ HOT_TAKES = [
     {"take": "It's just embarrassing that a company with that much cash flow has no AI strategy. They don't even deserve to be a Mag 7 company anymore.", "cite": "— Dave Blundin", "why": "A blunt, checkable verdict on a specific public company (Apple) that most tech observers would push back on."},
     {"take": "I don't actually think [motion-capture training for intimacy robots] is that promising as an approach — pretraining or post-training directly off internet video will win instead. This is like a very 2026 story.", "cite": "— Alex Wissner-Gross", "why": "Explicitly flagged by the speaker himself as a hot take, with a specific technical bet on how the approach will age."},
     {"take": "I have a difficult time getting myself worked up over collapse of human population... I don't think it's going to be a major X-risk at all.", "cite": "— Alex Wissner-Gross", "why": "A direct, named departure from Elon Musk's public pro-natalist alarm, on a topic with real policy stakes."},
+]
+
+CLAIMS = [
+    {"who": "Jensen Huang", "claim": "Nvidia revenue growth guidance for 2028", "metric": "YoY growth", "target": "70%", "by": "2028", "condition": "vs. Wall Street consensus of 44%", "entity": "Nvidia (NVDA)"},
+    {"who": "OpenAI", "claim": "Jalapeño chip throughput gain over Nvidia architecture", "metric": "throughput-per-second-per-user", "target": "up to 54x", "by": None, "condition": "hosting open-source GPT-OSS model", "entity": "OpenAI"},
+    {"who": "Elon Musk", "claim": "SpaceX revenue target", "metric": "annual revenue", "target": "$3.5 trillion", "by": "2033", "condition": "revised up from an earlier $1T-by-2030 claim", "entity": "SpaceX"},
+    {"who": "Deloitte", "claim": "Cumulative lunar economic value", "metric": "cumulative value", "target": "$566 billion", "by": "2050", "condition": None, "entity": "SpaceX"},
+    {"who": "Panel (extrapolated from Musk's Star Mine concept)", "claim": "Lunar/orbital compute gross revenue at full scale", "metric": "annual gross revenue", "target": "~$2 quadrillion/year", "by": None, "condition": "panel's own extrapolation, not stated by Musk directly", "entity": "SpaceX"},
+    {"who": "Alex Wissner-Gross", "claim": "The CCP reverses course and embraces AI companions as an ideological-control tool", "metric": "policy reversal", "target": "reversal", "by": None, "condition": "within 1-3 years", "entity": None},
+]
+
+RELATIONS = [
+    {"from": "OpenAI", "rel": "partners_with", "to": "Broadcom (AVGO)", "note": "co-developed the Jalapeño inference chip"},
+    {"from": "OpenAI", "rel": "competes_with", "to": "Nvidia (NVDA)", "note": "Jalapeño chip targets Nvidia's inference-compute dominance"},
+    {"from": "Nvidia (NVDA)", "rel": "customer_of", "to": "TSMC (TSM)", "note": "sole chip manufacturer, roughly a third of TSMC's capacity"},
+    {"from": "Apple (AAPL)", "rel": "customer_of", "to": "TSMC (TSM)", "note": "roughly a third of TSMC's capacity, alongside Nvidia"},
 ]
 
 OTHER_NEWS = [

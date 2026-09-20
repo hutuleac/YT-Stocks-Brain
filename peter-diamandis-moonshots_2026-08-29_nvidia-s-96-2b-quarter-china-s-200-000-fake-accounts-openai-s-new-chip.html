@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="nvidia-earnings-openai-chip">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">REPORTED — $96.2B quarter, guidance raised</span>
+    <span class="theme-status">REPORTED — $96.2B quarter, guidance raised</span><span class="ttag">semis</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Nvidia's blowout quarter meets its first real inference competitor</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="spacex-3-5-trillion">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Speculative</span>
-    <span class="theme-status">PROJECTED — $3.5T revenue by 2033</span>
+    <span class="theme-status">PROJECTED — $3.5T revenue by 2033</span><span class="ttag">space</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">Elon's new SpaceX number: $3.5 trillion in revenue by 2033</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="tesla-cybercab-rollout">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Confirmed event</span>
-    <span class="theme-status">EXPANDING — Texas + Las Vegas rollout underway</span>
+    <span class="theme-status">EXPANDING — Texas + Las Vegas rollout underway</span><span class="ttag">robotics</span><span class="ttag">consumer</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Tesla's Cybercab fleet is moving from experiment to real rollout</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="china-world-models">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">DIVERGING — video vs. language model bets</span>
+    <span class="theme-status">DIVERGING — video vs. language model bets</span><span class="ttag">geopolitics</span><span class="ttag">software</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">China is betting on "world models," America is betting on language models</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="ai-companions-intimacy">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Speculative</span>
-    <span class="theme-status">UNCERTAIN — regulatory patchwork forming</span>
+    <span class="theme-status">UNCERTAIN — regulatory patchwork forming</span><span class="ttag">policy</span><span class="ttag">consumer</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">AI companions, China's demographic crackdown, and a $300 intimacy robot</h2>
   <div class="theme-body">
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="circular-economy-debate">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">UNRESOLVED — healthy growth or self-referential bubble</span>
+    <span class="theme-status">UNRESOLVED — healthy growth or self-referential bubble</span><span class="ttag">ai-infra</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Is the AI economy a healthy new economy, or a closed financing loop?</h2>
   <div class="theme-body">
@@ -235,7 +240,7 @@ i{font-style:italic;}
 <section class="theme" id="data-center-backlash">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Confirmed event</span>
-    <span class="theme-status">CONFIRMED — bot farm identified by X</span>
+    <span class="theme-status">CONFIRMED — bot farm identified by X</span><span class="ttag">ai-infra</span><span class="ttag">geopolitics</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">A 200,000-account Chinese bot farm is pushing anti-data-center narratives — while Quincy, WA tells the opposite story</h2>
   <div class="theme-body">
@@ -254,7 +259,7 @@ i{font-style:italic;}
 <section class="theme" id="flock-surveillance">
   <div class="theme-badgerow">
     <span class="badge" style="background:#a23f22;">Structural critique</span>
-    <span class="theme-status">FLAGGED — civil-liberties risk</span>
+    <span class="theme-status">FLAGGED — civil-liberties risk</span><span class="ttag">policy</span>
   </div>
   <h2 style="border-left:4px solid #a23f22;">Flock Safety and the disappearing cost of mass surveillance</h2>
   <div class="theme-body">
@@ -273,7 +278,7 @@ i{font-style:italic;}
 <section class="theme" id="jobs-debate">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Confirmed-good, contested framing</span>
-    <span class="theme-status">DATA-BACKED — actual survey contradicts doom narrative</span>
+    <span class="theme-status">DATA-BACKED — actual survey contradicts doom narrative</span><span class="ttag">career</span><span class="ttag">policy</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Three competing jobs stories — and the actual survey data</h2>
   <div class="theme-body">
@@ -292,7 +297,7 @@ i{font-style:italic;}
 <section class="theme" id="health-breakthroughs">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Confirmed-good</span>
-    <span class="theme-status">APPROVED — new drug and lab result this week</span>
+    <span class="theme-status">APPROVED — new drug and lab result this week</span><span class="ttag">health</span><span class="ttag">biotech</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">A new pancreatic cancer drug and the first real tooth-enamel regrowth</h2>
   <div class="theme-body">
@@ -311,7 +316,7 @@ i{font-style:italic;}
 <section class="theme" id="energy-abundance">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Confirmed-good</span>
-    <span class="theme-status">PROGRESSING — new fuel supply, China's solar surge</span>
+    <span class="theme-status">PROGRESSING — new fuel supply, China's solar surge</span><span class="ttag">energy</span><span class="ttag">geopolitics</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">A uranium-enrichment breakthrough and China's 8x solar surge</h2>
   <div class="theme-body">
@@ -330,7 +335,7 @@ i{font-style:italic;}
 <section class="theme" id="lunar-economy">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Speculative</span>
-    <span class="theme-status">SPECULATIVE — consultant estimates called lowball by the panel</span>
+    <span class="theme-status">SPECULATIVE — consultant estimates called lowball by the panel</span><span class="ttag">space</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">Deloitte says the lunar economy is worth $566B by 2050 — Elon's own numbers imply quadrillions</h2>
   <div class="theme-body">
@@ -349,7 +354,7 @@ i{font-style:italic;}
 <section class="theme" id="weather-modification">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Speculative</span>
-    <span class="theme-status">DEMONSTRATED — 19M gallons from 10 drones</span>
+    <span class="theme-status">DEMONSTRATED — 19M gallons from 10 drones</span><span class="ttag">policy</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">Weather modification just went from theory to a measurable drone product</h2>
   <div class="theme-body">
@@ -368,7 +373,7 @@ i{font-style:italic;}
 <section class="theme" id="apple-ai-strategy">
   <div class="theme-badgerow">
     <span class="badge" style="background:#a23f22;">Contested</span>
-    <span class="theme-status">NEGATIVE VIEW — Medium conviction</span>
+    <span class="theme-status">NEGATIVE VIEW — Medium conviction</span><span class="ttag">software</span><span class="ttag">semis</span>
   </div>
   <h2 style="border-left:4px solid #a23f22;">Apple's new Mac Studio: real hardware, but a panel split on whether it's too little AI strategy</h2>
   <div class="theme-body">
@@ -392,15 +397,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">This episode was sponsored by Google for Startups, Blitzy, and Fountain Life — those segments are excluded from this brief entirely, but note Fountain Life is host Peter Diamandis's own company.</div><div class="ritem">Many of the largest figures here (SpaceX's <b>$3.5T</b>, Star Mine's implied $2 quadrillion/year) are Elon Musk's own public predictions or tweets, repeated and extrapolated by the panel in conversation rather than independently modeled.</div><div class="ritem">Several numbers are quick back-of-envelope host estimates made live (Tesla robotaxi revenue, the lunar-economy compute-to-revenue calculation) rather than formal projections.</div><div class="ritem">Auto-generated captions garbled several names (OpenAI's chip rendered as "Jalapino"/"Halleluino," the uranium startup "Actonide," a source "Basil Hopper"-style pattern); names here are resolved only where context made them unambiguous.</div><div class="ritem">Dave Blundin discloses SpaceX as his largest personal financial position, and the show separately promotes Diamandis's own ventures (Fountain Life, X-Prize) — worth keeping that overlap in mind alongside the bullish framing.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;I don't buy the premise that we don't already have superintelligence. We hit AGI no later than summer of 2020 with LLMs.&#8221; <cite>— Alex Wissner-Gross</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think the CCP decides that having a sizable fraction of Chinese youth deeply engaged with party-controlled AI companions is net helpful, not net harmful — I think the party does an about-face on AI companions within the next year or two or three.&#8221; <cite>— Alex Wissner-Gross</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;As a futurist, [Bill Gates has] a somewhat dismal track record — he missed the internet, he missed mobile. Ray Dalio, Larry Fink, Yuval Harari... they tend to be unbelievably great at framing the past, somewhat questionable on the future.&#8221; <cite>— Salim Ismail</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;It's just embarrassing that a company with that much cash flow has no AI strategy. They don't even deserve to be a Mag 7 company anymore.&#8221; <cite>— Dave Blundin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't actually think [motion-capture training for intimacy robots] is that promising as an approach — pretraining or post-training directly off internet video will win instead. This is like a very 2026 story.&#8221; <cite>— Alex Wissner-Gross</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I have a difficult time getting myself worked up over collapse of human population... I don't think it's going to be a major X-risk at all.&#8221; <cite>— Alex Wissner-Gross</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Jensen Huang:</b> Nvidia revenue growth guidance for 2028 <span class="cmeta">YoY growth · 70% · 2028</span> <i>if vs. Wall Street consensus of 44%</i> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>OpenAI:</b> Jalapeño chip throughput gain over Nvidia architecture <span class="cmeta">throughput-per-second-per-user · up to 54x</span> <i>if hosting open-source GPT-OSS model</i> <span class="tag">OpenAI</span></div><div class="ritem"><b>Elon Musk:</b> SpaceX revenue target <span class="cmeta">annual revenue · $3.5 trillion · 2033</span> <i>if revised up from an earlier $1T-by-2030 claim</i> <span class="tag">SpaceX</span></div><div class="ritem"><b>Deloitte:</b> Cumulative lunar economic value <span class="cmeta">cumulative value · $566 billion · 2050</span> <span class="tag">SpaceX</span></div><div class="ritem"><b>Panel (extrapolated from Musk's Star Mine concept):</b> Lunar/orbital compute gross revenue at full scale <span class="cmeta">annual gross revenue · ~$2 quadrillion/year</span> <i>if panel's own extrapolation, not stated by Musk directly</i> <span class="tag">SpaceX</span></div><div class="ritem"><b>Alex Wissner-Gross:</b> The CCP reverses course and embraces AI companions as an ideological-control tool <span class="cmeta">policy reversal · reversal</span> <i>if within 1-3 years</i></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>OpenAI</b> <span class="rel">partners with</span> <b>Broadcom (AVGO)</b> &mdash; co-developed the Jalapeño inference chip</div><div class="ritem"><b>OpenAI</b> <span class="rel">competes with</span> <b>Nvidia (NVDA)</b> &mdash; Jalapeño chip targets Nvidia's inference-compute dominance</div><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">customer of</span> <b>TSMC (TSM)</b> &mdash; sole chip manufacturer, roughly a third of TSMC's capacity</div><div class="ritem"><b>Apple (AAPL)</b> <span class="rel">customer of</span> <b>TSMC (TSM)</b> &mdash; roughly a third of TSMC's capacity, alongside Nvidia</div></div></div>
     </section>
 
     <section class="sec">
