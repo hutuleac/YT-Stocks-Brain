@@ -1,0 +1,193 @@
+"""Data file for George Buhnici (Curiosity 335) — China Lider la AI, Apple da in judecata OpenAI, Pretul la KWh, Starlink de 1 Gigabit."""
+
+META = {
+    "title": "China Lider la AI, Apple da in judecata OpenAI, Pretul la KWh, Starlink de 1 Gigabit #CURIOSITY 335",
+    "channel": "George Buhnici",
+    "speakers": "George Buhnici (gazda), Radu (co-prezentator)",
+    "date": "2026-07-18",
+    "video_url": "https://www.youtube.com/watch?v=UBdx_0BfpZ4",
+    "thread_line": "6 fire narative · Kimi K3 depaseste Fable 5 si GPT-5.6 in benchmark-uri, scandalul de colectare a datelor de la xAI/Grok, procesul Apple vs OpenAI pentru furt de secrete, energia si centrele de date din Romania, scumpirea continua a RAM-ului plus leak-uri Samsung, si Patch Tuesday record la Microsoft.",
+    "category": "market",
+}
+
+SNAPSHOT = [
+    "George Buhnici face o predictie riscanta (marcata explicit ca atare) ca bursa americana de tehnologie va deschide in scadere dupa lansarea Kimi K3, model chinezesc de la Moonshot AI care depaseste in benchmark-uri atat Fable 5 (Anthropic) cat si GPT-5.6, la un pret comparabil sau chiar mai mic.",
+    "xAI (Grok) e prins colectand agresiv date din repository-urile utilizatorilor (un caz documentat unde un dezvoltator a descoperit ca intreaga lui baza de cod a ajuns intr-un bucket Google Drive al xAI) — compania a raspuns oferind opt-out gratuit, dar doar pentru abonamentele enterprise.",
+    "Apple da in judecata OpenAI pentru furt de secrete comerciale, acuzand-o pe langa altele ca fostul VP de hardware Apple, acum sef de hardware la OpenAI, ar fi cerut candidatilor sa aduca echipamente reale de la Apple ca sa fie angajati — tensiune amplificata si de parteneriatul Johnny Ive-Sam Altman pe hardware AI.",
+    "Nvidia are discutii avansate cu statul roman pentru investitii in centre de date, dar Buhnici subliniaza ca Romania nu are inca energia stabila si ieftina necesara — mai ales cu reactorul 1 de la Cernavoda intrand in retehnologizare si reactoarele 3-4 inca neconstruite.",
+    "Preturile la memoria RAM continua sa creasca (13-18% estimat in T3, dupa +60% in T2), cu penurie de HBM (high bandwidth memory) prognozata pana in 2027; in paralel circula primele specificatii pentru Samsung Galaxy Z Fold 8 si Z Fold 8 Ultra.",
+    "Microsoft a avut cel mai mare Patch Tuesday inregistrat (570 de vulnerabilitati, doua zero-day-uri deja exploatate), iar Accenture a avut 35GB de cod si chei furate — pe fondul unui val general de atacuri cibernetice asistate de AI (inclusiv servicii de ransomware-as-a-service de tip Jade Puffer).",
+    "SpaceX a anulat la T0 zborul de test al Starship v3 (motoare Raptor care nu au pornit), zbor menit sa lanseze primii sateliti Starlink V3 de generatie terabit (10x capacitate fata de generatia anterioara, latenta teoretica de pana la 5ms).",
+]
+
+THEMES = [
+    {
+        "id": "kimi-k3-frontier",
+        "tags": ["ai-infra", "geopolitics"],
+        "color": "red",
+        "badge": "Eveniment confirmat, cu impact incert"
+,
+        "status": "URMARIM — Buhnici a facut o predictie riscanta pe bursa",
+        "title": "Kimi K3 Depaseste Fable 5 si GPT-5.6 — Laboratoarele Chineze Ajung la Paritate de Pret si Performanta",
+        "lead": "**Buhnici deschide episodul cu o predictie riscanta, marcata explicit ca atare:** lansarea peste noapte a Kimi K3 (Moonshot AI) va zdruncina modul in care laboratoarele americane fac pricing la modelele de inteligenta artificiala.",
+        "bullets": [
+            "Kimi K3 (2,8 trilioane de parametri, fereastra de context de 1 milion de tokeni) apare in clasamentul Arena AI cu zeci de puncte peste Fable 5 (Anthropic) si peste GPT-5.6 pe extra high, plus peste GLM 5.2 — la abonamente ceva mai ieftine decat Anthropic.",
+            "Radu contrabalanseaza entuziasmul: diferenta reala e de aproximativ 40-50 de puncte dintr-un total de peste 1600, deci proportional mai mica decat pare din grafic — 'diferenta e ca la franare, 54m versus 56m', nu o depasire zdrobitoare.",
+            "Grok 4.5 de la xAI a devenit disponibil si pe IP-uri din Romania (era limitat la SUA) si Buhnici il declara noul lui model standard pentru un agent de open-code, la doar 1$ mai scump la milionul de tokeni decat Sonnet.",
+            "Deja 80% din piata de modele open-source eficiente e acoperita de laboratoare chinezesti, iar Moonshot AI a anuntat ca va publica greutatile (weights) modelului Kimi K3 pana la finalul lunii, permitand rularea pe hardware propriu.",
+            "Buhnici specula (marcat explicit ca speculatie) ca o parte din performanta modelelor chinezesti ar putea veni din distilare — antrenarea pe raspunsurile modelelor americane obtinute prin abonamente cumparate in masa sau printr-un tert (revine la discutia anterioara despre SK Telecom si proiectul Glasswing).",
+            "Contextul oficial pentru retragerea temporara a Fable de pe piata luna trecuta: guvernul american ar fi atras atentia ca accesul modelului era exploatat/spart de un competitor chinez, ceea ce a dus la un ordin de interdictie la export inainte de revenirea in abonamentele Anthropic pe 18 iulie.",
+        ],
+        "quote": {"text": "Cred ca stirea asta o sa schimbe radical felul in care companiile americane fac pricing-ul si abonamentele la modelele de inteligenta artificiala.", "cite": "— George Buhnici"},
+        "watch": "Predictia despre bursa e explicit marcata de Buhnici ca 'riscanta' si el insusi cere sa fie evaluata ulterior daca s-a adeverit sau nu — nu e o certitudine, e un pariu declarat.",
+        "names": [
+            {"name": "Anthropic", "blurb": "Fable 5 depasit in benchmark-uri de Kimi K3; a reintrat in abonamente pe 18 iulie dupa retragerea temporara legata de un incident de securitate.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "xai-data-collection",
+        "tags": ["ai-infra", "policy"],
+        "color": "red",
+        "badge": "Risc de confidentialitate confirmat",
+        "status": "URMARIM — opt-out disponibil doar pe enterprise",
+        "title": "xAI Colecteaza Agresiv Datele Utilizatorilor Grok — Opt-Out Doar pe Abonamentele Enterprise",
+        "lead": "**Un caz documentat public a scos la iveala ca xAI copia mult mai multe date decat era necesar** dintr-un repository conectat la Grok, ridicand o problema mai larga despre ce se intampla cu datele urcate in orice serviciu AI gratuit sau chiar platit.",
+        "bullets": [
+            "Un dezvoltator (denumit in discutie 'Cyber Satoshi') a descoperit, in timp ce lucra cu Grok, ca intreaga lui baza de date de cod fusese copiata intr-un Google Drive Bucket al xAI, desi sarcina necesita doar ~115-120KB de context.",
+            "xAI a raspuns public afirmand ca ofera drept de opt-out si zero data retention (ZDR), dar Buhnici si Radu observa ca acest opt-out functioneaza in mod gratuit doar pe abonamentele enterprise — pe planurile gratuite si Pro, tot ce introduci ramane pe serverele lor.",
+            "Regula generala repetata de Buhnici: 'cand vezi gratis, tu esti produsul' — se aplica la fel de mult si pe planurile platite de tip Pro/business, unde clauzele de confidentialitate permit retentia partiala de date pentru imbunatatirea serviciului.",
+            "Radu adauga un unghi mai putin discutat: chiar si pe ZDR enterprise, o parte din informatii tot ajunge inapoi la furnizor, in masura permisa legal, pentru imbunatatirea modelului — 'fine print'-ul exista peste tot, doar ca e mai bine criptat.",
+            "Concluzia practica pentru cine construieste ceva inovator: singura varianta relativ sigura de a proteja un avantaj competitiv real ramane rularea locala a modelelor, cu compromisul ca ai acces la mai putin 'knowledge' fata de un model cloud de frontiera.",
+        ],
+        "quote": {"text": "Cand vezi gratis, tu esti produsul de foarte multe ori.", "cite": "— George Buhnici"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "apple-vs-openai",
+        "tags": ["ai-infra", "policy"],
+        "color": "red",
+        "badge": "Litigiu confirmat, in instanta"
+,
+        "status": "URMARIM — proces in desfasurare",
+        "title": "Apple da in Judecata OpenAI pentru Furt de Secrete Comerciale",
+        "lead": "**Tensiunea dintre Apple si OpenAI a ajuns in instanta:** Apple acuza OpenAI de furt sistematic de secrete comerciale, cu acuzatii concrete legate de fostul VP de hardware al Apple, devenit intre timp sef de hardware la OpenAI.",
+        "bullets": [
+            "Tang Tan, fost vicepresedinte de hardware la Apple si acum sef de hardware la OpenAI, ar fi cerut candidatilor la angajare sa aduca echipamente reale (laptopuri, piese) de la locurile lor de munca — un angajat concret, Cheng Liu, ar fi furat un laptop ca sa il convinga pe Tan sa il angajeze.",
+            "Buhnici sublinieaza contrastul etic: in mod normal furtul de la un fost angajator descalifica un candidat; aici pare sa fi fost intampinat cu 'bratele deschise si bonusuri'.",
+            "Tensiunea s-a amplificat cand Johnny Ive (fost designer-sef Apple) a semnat cu Sam Altman pentru a dezvolta hardware AI — vazut de Apple ca un atac direct pe teritoriul ei (hardware direct-to-consumer), nu doar o colaborare inofensiva.",
+            "In paralel, se discuta din nou propunerea (neconfirmata oficial) ca Sam Altman i-ar fi cerut lui Donald Trump ca statul american sa preia o participatie de 5% (extensibila la 10%) intr-un fond public din laboratoarele de AI, pe modelul fondului petrolier norvegian sau al celui din Alaska — ceea ce ar transforma statul intr-un actionar cu interes direct in profitabilitatea sectorului, nu doar reglementator.",
+        ],
+        "quote": {"text": "Vino cu secretele companiei la care ai lucrat si o sa fii mai bine rasplatit — nu e o problema de etica, e mai adanca de atat.", "cite": "— George Buhnici"},
+        "watch": "Litigiul e explicit in curs — Buhnici insusi spune ca 'nu are habar' cine va castiga, doar ca disputa e deja in instanta.",
+        "names": [
+            {"name": "Apple (AAPL)", "blurb": "A dat in judecata OpenAI pentru furt de secrete comerciale, inclusiv acuzatii legate de fostul ei VP de hardware.", "stance": "NEGATIVE VIEW", "conviction": "Medium", "horizon": None},
+        ],
+    },
+    {
+        "id": "energie-centre-date-romania",
+        "tags": ["energy", "policy"],
+        "color": "amber",
+        "badge": "Contestat"
+,
+        "status": "URMARIM — Romania nu are inca infrastructura energetica necesara",
+        "title": "Nvidia Discuta Investitii in Romania, dar Energia Ramane Blocajul Real",
+        "lead": "**Un vicepresedinte Nvidia a avut discutii cu oficiali romani** despre potentialul Romaniei de a deveni 'Norvegia Europei Centrale si de Est' pe zona de centre de date — dar Buhnici argumenteaza ca lipsa de energie stabila si ieftina face acest lucru imposibil pe termen scurt.",
+        "bullets": [
+            "Orice hyperscaler (companie care investeste masiv in infrastructura de AI) are nevoie de aviz tehnic de racordare la reteaua de inalta tensiune pentru consumuri de ordinul megawatt-gigawatt — echivalentul consumului unor orase intregi — intr-o zona cu energie constanta si predictibila ca pret.",
+            "Nuclearelectrica a luat un imprumut (posibil de la Banca Mondiala) pentru retehnologizarea reactorului 1 de la Cernavoda — ceea ce, combinat cu faptul ca reactoarele 3 si 4 inca nu sunt construite, ar lasa Romania doar cu reactorul 2 functional pe termen scurt.",
+            "Leaga acest lucru direct de episodul recent in care pretul la kWh a atins 1 euro/ora de varf dupa oprirea unui reactor la Cernavoda — Buhnici nu crede ca a fost un accident izolat si se asteapta sa se repete.",
+            "Solutia lui pe termen lung: productie urgenta de curent din orice sursa in afara de carbune (gaze naturale, hidro neexploatat inca in zone neprotejate, geotermal — mentioneaza potentialul neexploatat din nordul Bucurestiului, folosit acum doar pentru apa calda la terme).",
+            "Punct suplimentar de ingrijorare: daca statul american devine actionar in laboratoarele de AI (vezi tema anterioara), paralela romaneasca e ca statul e de multa vreme actionar in Hidroelectrica si Nuclearelectrica fara sa fi facut investitiile necesare — 'ani si ani de zile ne-a interesat doar sa scoatem profit... fara sa facem investitii'.",
+        ],
+        "quote": {"text": "Pana nu dam drumul la reactoarele 3 si 4, nu cred ca ne permitem deocamdata sa primim centre de date in Romania.", "cite": "— George Buhnici"},
+        "watch": "Discutiile Nvidia-stat roman sunt descrise ca 'avansate' dar neconfirmate/nefinalizate — nu exista inca un acord public.",
+        "names": [
+            {"name": "Nvidia (NVDA)", "blurb": "Discutii avansate, neconfirmate, cu oficiali romani pentru investitii in centre de date legate de productia de energie.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "ram-samsung-starlink",
+        "tags": ["semis", "space"],
+        "color": "amber",
+        "badge": "Contestat"
+,
+        "status": "URMARIM — scumpiri continue, lansare Starship reprogramata",
+        "title": "RAM-ul Continua sa se Scumpeasca, Apar Specificatiile Galaxy Z Fold 8, Starlink V3 Intarziat",
+        "lead": "**Trei fire hardware separate converg spre acelasi mesaj:** constrangerile de productie (memorie, baterii, motoare de racheta) raman blocajul real al industriei, nu lipsa de cerere.",
+        "bullets": [
+            "Preturile RAM se estimeaza ca vor creste 13-18% in T3 2026, dupa +60% in T2 — conform Tom's Hardware, penuria de HBM (high bandwidth memory) va persista pana in 2027; Buhnici recomanda sa nu cumperi memorie noua de PC in acest moment daca poti evita.",
+            "Primele specificatii scurse pentru Samsung Galaxy Z Fold 8 si Z Fold 8 Ultra: baterie de doar 4800mAh pe varianta standard (5000mAh pe Ultra), incarcare de 45W — considerate de Buhnici insuficiente si dezamagitoare fata de generatiile anterioare si fata de competitie.",
+            "Comparatie directa Fold 7 vs Fold 8 Ultra arata diferente minore (acelasi procesor pe 3nm, ecran aproape identic) — principala imbunatatire reala fiind bateria (4400 la 5000mAh) si incarcarea wireless (60W); pretul de lansare (2200€ vs 1100€ actual pentru Fold 7) e vazut ca exagerat.",
+            "Zborul de test 13 al SpaceX (Starship v3) a fost anulat la T0 din cauza unor motoare Raptor care nu au pornit — misiunea urma sa testeze un repornire de motor pentru controlul mai bun al aterizarii in apa si sa lanseze primii 20 de sateliti Starlink V3.",
+            "Noua generatie Starlink V3 promite 1 terabit per satelit (de la 96GB anterior, o crestere de 10x), sateliti de aproape 2 tone (de 3 ori mai grei), si o latenta teoretica de pana la 5 milisecunde — apropiata de fibra optica, pentru obiecte care orbiteaza la 27.000 km/h.",
+        ],
+        "quote": {"text": "Pretul nu se opreste din crescut pentru ca n-ar fi siliciu — avem nisip — ci pentru ca s-a lovit de zidul din portofelul nostru.", "cite": "— George Buhnici"},
+        "watch": "Cifrele Starlink V3 (1 terabit, 5ms latenta) sunt descrise explicit ca maxime teoretice, atinse doar in teste pana acum, nu ca performanta garantata in productie.",
+        "names": None,
+    },
+    {
+        "id": "cybersecurity",
+        "tags": ["ai-infra", "policy"],
+        "color": "red",
+        "badge": "Risc confirmat"
+,
+        "status": "URMARIM — val general de atacuri asistate de AI",
+        "title": "Patch Tuesday Record la Microsoft — 570 de Vulnerabilitati, Doua Zero-Day Deja Exploatate",
+        "lead": "**Buhnici leaga un val de incidente cibernetice de saptamana asta direct de proliferarea uneltelor AI**, atat pentru atac cat si pentru descoperirea vulnerabilitatilor.",
+        "bullets": [
+            "Microsoft a lansat cel mai mare Patch Tuesday inregistrat: 570 de vulnerabilitati corectate intr-o singura luna, inclusiv doua zero-day-uri deja exploatate activ.",
+            "Accenture a avut 35GB de cod si chei de acces furate; grupul de ransomware-as-a-service 'Jade Puffer' (mentionat in episoade anterioare) isi vinde acum inclusiv servicii de 'educatie' pentru cine vrea sa invete sa faca acelasi lucru.",
+            "Anecdota personala a lui Buhnici: un audit facut cu ajutorul lui Fable pe un server propriu a descoperit o instanta Grafana neactualizata din 2023 cu doua zero-day-uri, un SSD din doua nefunctional dupa un restart nereusit, si un SSD 'prajit' (110% uzura peste pragul producatorului) din cauza unui script de backup care se bloca si rescria constant timp de trei ani.",
+            "Concluzia practica: a pus un bot de Telegram (creat cu ajutorul unui model AI) care il anunta automat despre orice desincronizare pe server, trecand de la verificari manuale ocazionale la monitorizare proactiva — si a refolosit capacitatea eliberata de pe server pentru conversii video automate.",
+        ],
+        "quote": {"text": "Mi se pare mult mai important in momentul de fata sa stai sa iti faci update de securitate la orice — la telefon, la aplicatii — decat sa amani update-urile.", "cite": "— George Buhnici"},
+        "watch": None,
+        "names": [
+            {"name": "Microsoft (MSFT)", "blurb": "A lansat cel mai mare Patch Tuesday inregistrat, cu 570 de vulnerabilitati si doua zero-day-uri deja exploatate.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Accenture (ACN)", "blurb": "A avut 35GB de cod si chei de acces furate intr-un atac cibernetic recent.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F9E0", "tag": "AI", "title": "Testeaza Kimi K3 si Grok 4.5 pe langa Fable/GPT — diferenta de performanta fata de liderii americani s-a redus mult mai mult decat estimau majoritatea."},
+    {"icon": "\U0001F512", "tag": "Confidentialitate", "title": "Foloseste zero data retention doar pe abonamente enterprise daca lucrezi cu date sensibile — pe planurile gratuite si Pro, presupune ca datele tale sunt retinute."},
+    {"icon": "⚡", "tag": "Energie", "title": "Urmareste evolutia retehnologizarii reactorului 1 de la Cernavoda — un nou soc de pret la kWh e un scenariu plauzibil, nu un accident izolat."},
+    {"icon": "\U0001F4BE", "tag": "Hardware", "title": "Amana achizitiile mari de RAM daca poti — penuria de HBM e estimata sa tina pana in 2027."},
+    {"icon": "\U0001F6E1️", "tag": "Cybersecurity", "title": "Fa un audit al serverelor proprii (chiar si cu ajutorul unui model AI) — desincronizari sau uzuri anormale pot sta ascunse ani de zile fara monitorizare activa."},
+]
+
+CLAIMS = [
+    {"who": "George Buhnici", "claim": "bursa americana de tehnologie va deschide in scadere dupa lansarea Kimi K3", "metric": "directia pietei la deschidere", "target": "scadere pe actiunile de tehnologie americane", "by": "17-18 iulie 2026", "condition": "predictie proprie, marcata explicit ca riscanta", "entity": None},
+    {"who": "Sam Altman (citat de George Buhnici)", "claim": "propunere catre Donald Trump ca statul american sa devina actionar in laboratoarele de AI", "metric": "participatie in fond public", "target": "5% initial, extindere pana la 10%", "by": None, "condition": "propunere neconfirmata oficial", "entity": "OpenAI"},
+    {"who": "George Buhnici, citand Tom's Hardware", "claim": "preturile RAM vor continua sa creasca in trimestrul urmator", "metric": "crestere trimestriala a preturilor RAM", "target": "13-18% in T3 2026 (dupa +60% in T2)", "by": "T3 2026", "condition": None, "entity": None},
+    {"who": "Producatorii de memorie (citati de George Buhnici)", "claim": "penuria de memorie de mare banda (HBM) va persista", "metric": "disponibilitate HBM", "target": None, "by": "2027", "condition": None, "entity": None},
+    {"who": "SpaceX (citat de George Buhnici)", "claim": "noua generatie de sateliti Starlink V3 ofera capacitate mult mai mare pe satelit", "metric": "capacitate per satelit / latenta teoretica", "target": "1 terabit per satelit (de la 96GB), latenta teoretica de pana la 5ms", "by": None, "condition": "maxim teoretic, atins doar in teste pana acum", "entity": None},
+]
+
+RELATIONS = [
+    {"from": "Apple (AAPL)", "rel": "criticizes", "to": "OpenAI", "note": "Actiune in instanta pentru furt de secrete comerciale, inclusiv acuzatii legate de fostul VP de hardware Apple, Tang Tan"},
+    {"from": "Nvidia (NVDA)", "rel": "invests_in", "to": "Romania", "note": "Discutii avansate, neconfirmate, pentru investitii in centre de date legate de productia de energie"},
+]
+
+HOT_TAKES = [
+    {"take": "Cred ca stirea asta o sa schimbe radical felul in care companiile americane fac pricing-ul si abonamentele la modelele de inteligenta artificiala.", "cite": "— George Buhnici", "why": "O predictie concreta si verificabila despre impactul Kimi K3 asupra strategiei de preturi a laboratoarelor americane, facuta chiar in ziua lansarii."},
+    {"take": "Cand vezi gratis, tu esti produsul de foarte multe ori.", "cite": "— George Buhnici", "why": "O critica directa la adresa modelului de business al platformelor AI gratuite, aplicata explicit inclusiv pe planurile platite Pro/business."},
+    {"take": "Nu cred ca a fost un accident — eu cred ca se va repeta, pentru ca odata ce reactorul unu de la Cernavoda intra in revizie, vom ramane doar cu reactorul doi.", "cite": "— George Buhnici", "why": "O predictie specifica si datata despre riscul de noi socuri de pret la energie, bazata pe o cauza structurala pe care o numeste explicit."},
+    {"take": "Ma intristeaza de fiecare data cand ma intalnesc cu oameni care nu pun mana pe inteligenta artificiala pentru afacerile lor sau munca lor — vad asta ca un risc foarte important pentru fiecare dintre noi.", "cite": "— George Buhnici", "why": "O opinie personala ferma despre adoptarea AI, prezentata ca motivul central pentru care continua sa faca acest tip de continut."},
+    {"take": "Statul roman este un administrator foarte prost pe niste active foarte valoroase, mai ales in perioada asta.", "cite": "— George Buhnici", "why": "O critica directa si fara ocolisuri la adresa administrarii Hidroelectrica/Nuclearelectrica, facuta pe numele lor."},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F3D4️", "title": "Doi alpinisti romani (Emil Gheorghe si Cornel Roman) au murit in Alpii italieni (Gran Paradiso), cazuti intr-o crevasa acoperita de un 'pod' de zapada creat de topirea accelerata a ghetarului — gasiti la aproximativ 3700m dupa trei zile de cautari. Separat, o alpinista de 36 de ani a murit in muntii Bucegi dupa o cadere de 10m cand coarda s-a rupt, intr-un caz in care patru oameni erau asigurati intr-un singur punct de prindere, contrar recomandarilor de siguranta (minim doua puncte).", "tag": "Siguranta montana"},
+    {"icon": "\U0001F52C", "title": "Aproape 4 miliarde de dolari investiti in ultimul an in solutii de longevitate (peptide, tratamente) — Buhnici e sceptic ca va aparea o 'pastila minune', dar noteaza ca somnul, ridicarea de greutati si sauna (reducere de pana la 60% a riscului cardiovascular la barbatii peste 40 de ani) raman cele mai ignorate interventii cu impact real.", "tag": "Stiinta"},
+    {"icon": "\U0001F3AC", "title": "Omagiu adus actorului Sam Neill (Jurassic Park), recent decedat. Recomandare de film: 'The Odyssey' al lui Christopher Nolan (cu Matt Damon, Tom Holland, Anne Hathaway, Robert Pattinson). Recomandare de podcast: 'The Skeptics Guide to the Universe', condus de Steven Novella.", "tag": "Recomandari"},
+]
+
+GLOSSARY = [
+    {"term": "Distilare (AI)", "def": "Tehnica prin care un model mai nou invata sa raspunda comparand raspunsurile unui model concurent la aceleasi intrebari si copiind tiparul — o forma de 'copiere a temei', suspectata (dar neconfirmata) in cazul unor modele chinezesti."},
+    {"term": "Zero Data Retention (ZDR)", "def": "Angajament contractual prin care furnizorul de AI nu pastreaza datele/promptu-rile utilizatorului dupa procesare — de regula disponibil doar pe abonamentele enterprise, nu pe planurile gratuite sau Pro."},
+    {"term": "Patch Tuesday", "def": "A doua marti a fiecarei luni, cand Microsoft lanseaza in mod regulat actualizari de securitate pentru produsele sale — un 'Patch Tuesday record' inseamna un numar neobisnuit de mare de vulnerabilitati corectate deodata."},
+    {"term": "HBM (High Bandwidth Memory)", "def": "Tip de memorie de mare viteza folosita in special in placile video si acceleratoarele AI de ultima generatie — penuria actuala de HBM contribuie direct la scumpirea generala a memoriei RAM."},
+]
