@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="compute-insatiable">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">STRUCTURAL BULL — STANDING THESIS</span>
+    <span class="theme-status">STRUCTURAL BULL — STANDING THESIS</span><span class="ttag">ai-infra</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Compute Demand Has No Ceiling — and the Capital Is Now Showing Up to Match It</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="google-brain-drain">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">TALENT FLIGHT RISK — MULTIPLE AT STAKE</span>
+    <span class="theme-status">TALENT FLIGHT RISK — MULTIPLE AT STAKE</span><span class="ttag">ai-infra</span><span class="ttag">career</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Google's Capital-Allocator Pivot and the AI Talent Exodus</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="spacex-terrabase">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">GUIDED 6-8GW+ IN 2027 ALONE</span>
+    <span class="theme-status">GUIDED 6-8GW+ IN 2027 ALONE</span><span class="ttag">space</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">SpaceX's Space-Based Data Center Bet</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="portfolio-scorecard">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">10-NAME PORTFOLIO +94% YTD</span>
+    <span class="theme-status">10-NAME PORTFOLIO +94% YTD</span><span class="ttag">ai-infra</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">The Portfolio Scorecard and a Reusable Conviction-Tracking Prompt</h2>
   <div class="theme-body">
@@ -188,7 +193,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)</b><span>Worst performer of his 10-name portfolio, still up 16.5% YTD and outperforming the S&amp;P by 13%.</span></div><div class="namechip"><b>Micron (MU)</b><span>Fully exited May 17 in a risk-reduction move; re-bought once it broke below $900.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">OWNS · Medium</span></b><span>Worst performer of his 10-name portfolio, still up 16.5% YTD and outperforming the S&amp;P by 13%.</span></div><div class="namechip"><b>Micron (MU)<span class="stance" style="background:#3f6b2e;">BUYING-ADDING · Medium</span></b><span>Fully exited May 17 in a risk-reduction move; re-bought once it broke below $900.</span></div></div>
       
     </div>
   </div>
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="crypto-financial-rails">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">High conviction, still emerging</span>
-    <span class="theme-status">NEWEST THESIS — STAKED ON PUBLICLY</span>
+    <span class="theme-status">NEWEST THESIS — STAKED ON PUBLICLY</span><span class="ttag">crypto</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Crypto Becomes the Next Compute Constraint: Financial Guardrails for AI Agents</h2>
   <div class="theme-body">
@@ -207,7 +212,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;Bitcoin is a representation of the S&amp;P 500 of the future.&#8221;<cite>— Jordi Visser</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Bitcoin (BTC)</b><span>Framed by Visser as 'the S&amp;P 500 of the future'; anchor of his new ~45-name crypto ecosystem index.</span></div><div class="namechip"><b>Figure</b><span>Reported $4.3B in consumer loan marketplace volume this week, up 132% YoY, with Figure Connect nearing 70% of volume.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Bitcoin (BTC)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Framed by Visser as 'the S&amp;P 500 of the future'; anchor of his new ~45-name crypto ecosystem index.</span></div><div class="namechip"><b>Figure</b><span>Reported $4.3B in consumer loan marketplace volume this week, up 132% YoY, with Figure Connect nearing 70% of volume.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Visser explicitly stakes his own credibility on this being his newest and least-tested thesis, rather than presenting it as settled.</div></div>
     </div>
   </div>
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="macro-debasement">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">WEAK LABOR + STICKY FED — GOLD/SILVER MOVED, BITCOIN HASN'T</span>
+    <span class="theme-status">WEAK LABOR + STICKY FED — GOLD/SILVER MOVED, BITCOIN HASN'T</span><span class="ttag">macro-rates</span><span class="ttag">crypto</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">The Debasement Trade: Weak Labor Data, a Contested Fed, and Gold/Silver/Bitcoin</h2>
   <div class="theme-body">
@@ -226,7 +231,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;AI and stable coins could reshape rather than simply destroy dollar dominance.&#8221;<cite>— Louis Gave, via Visser's summary</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Bitcoin (BTC)</b><span>Part of the 'debasement trade'; hasn't moved yet despite gold and silver already re-rating.</span></div><div class="namechip"><b>Gold</b><span>Already moved as part of the debasement trade; China added 20 tons in July, its largest monthly purchase since October 2023.</span></div><div class="namechip"><b>Silver</b><span>Already moved as part of the debasement trade, alongside gold.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Bitcoin (BTC)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Part of the 'debasement trade'; hasn't moved yet despite gold and silver already re-rating.</span></div><div class="namechip"><b>Gold<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Already moved as part of the debasement trade; China added 20 tons in July, its largest monthly purchase since October 2023.</span></div><div class="namechip"><b>Silver<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Already moved as part of the debasement trade, alongside gold.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Visser is relaying Gave's framing and his own charts here — the rate-path and PCE-methodology claims aren't independently sourced beyond that in this video.</div></div>
     </div>
   </div>
@@ -240,15 +245,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">Visser explicitly discloses his own portfolio positioning and long-standing bullish bias throughout — his own thematic portfolios are levered to the exact compute/AI/crypto themes he's describing, so treat the framing as a disclosed, not neutral, lens.</div><div class="ritem">Several figures (Fed rate-cut odds, PCE methodology commentary, Figure's volume numbers) are relayed secondhand from Bill Dudley, Louis Gave, and company earnings releases rather than verified against primary filings inside this video.</div><div class="ritem">A macro strategist's name is caption-garbled across the transcript ('Lewis Gau,' 'Gavka') — resolved here with high confidence to Louis-Vincent Gave of Gavekal Research given the exact contextual fit (his firm name, his known yen/AI/debt commentary), consistent with the skill's guidance on resolving obvious cases rather than leaving a clearly-identifiable source unnamed.</div><div class="ritem">The video opens with an unrelated personal segment (Maine, a 9/11 remembrance) and a scam warning — Visser states he never DMs trades via WhatsApp, X, or LinkedIn, which is useful context for evaluating any message claiming to be from him but isn't a stock-related claim.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;Go against things you've heard from Michael Burry and Jim Chanos in particular — they don't ever turn around and say, you know what, we were wrong.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;We will never be able to pick a bottom. Nobody can do that, and certainly not me.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I like to be bearish equally as bullish if I think it's going to save me money.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Academics ask what the evidence tells us has happened under comparable conditions. Markets ask what's going to happen before everyone else realizes it. This is the money-making side.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The new businesses being created would have to come from the frontier model side — that's my opinion, at higher probability.&#8221; <cite>— Jordi Visser</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Elon Musk:</b> SpaceX builds incremental data center capacity <span class="cmeta">gigawatts · 6-8 GW, possibly above 10 GW · 2027</span> <span class="tag">SpaceX</span></div><div class="ritem"><b>Jordi Visser:</b> The next binding AI constraint shifts from compute to financial rails <span class="cmeta">constraint type · stablecoins/tokenization become the bottleneck</span> <i>if if proven wrong within a year, this is why</i></div><div class="ritem"><b>Jordi Visser:</b> New businesses in AI come from the frontier-model side, not the application layer <span class="cmeta">source of new company formation · frontier labs</span> <i>if his opinion, at higher probability</i></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>SpaceX</b> <span class="rel">customer of</span> <b>Nvidia (NVDA)</b> &mdash; exclusive Vera Rubin-architecture GPU deal for in-orbit data centers</div><div class="ritem"><b>Alphabet (GOOGL)</b> <span class="rel">competes with</span> <b>OpenAI</b> &mdash; AI talent now favors OpenAI/Anthropic/xAI over Google per Moonshots podcast framing</div></div></div>
     </section>
 
     <section class="sec">

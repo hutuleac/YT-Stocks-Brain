@@ -25,6 +25,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "compute-insatiable",
+        "tags": ["ai-infra", "finance"],
         "color": "green",
         "badge": "High conviction",
         "status": "STRUCTURAL BULL — STANDING THESIS",
@@ -59,6 +60,7 @@ THEMES = [
     },
     {
         "id": "google-brain-drain",
+        "tags": ["ai-infra", "career"],
         "color": "amber",
         "badge": "Contested",
         "status": "TALENT FLIGHT RISK — MULTIPLE AT STAKE",
@@ -89,6 +91,7 @@ THEMES = [
     },
     {
         "id": "spacex-terrabase",
+        "tags": ["space", "ai-infra"],
         "color": "green",
         "badge": "High conviction",
         "status": "GUIDED 6-8GW+ IN 2027 ALONE",
@@ -110,6 +113,7 @@ THEMES = [
     },
     {
         "id": "portfolio-scorecard",
+        "tags": ["ai-infra", "finance"],
         "color": "green",
         "badge": "High conviction",
         "status": "10-NAME PORTFOLIO +94% YTD",
@@ -125,12 +129,13 @@ THEMES = [
         "quote": None,
         "watch": None,
         "names": [
-            {"name": "Nvidia (NVDA)", "blurb": "Worst performer of his 10-name portfolio, still up 16.5% YTD and outperforming the S&P by 13%."},
-            {"name": "Micron (MU)", "blurb": "Fully exited May 17 in a risk-reduction move; re-bought once it broke below $900."},
+            {"name": "Nvidia (NVDA)", "blurb": "Worst performer of his 10-name portfolio, still up 16.5% YTD and outperforming the S&P by 13%.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "Micron (MU)", "blurb": "Fully exited May 17 in a risk-reduction move; re-bought once it broke below $900.", "stance": "BUYING-ADDING", "conviction": "Medium", "horizon": None},
         ],
     },
     {
         "id": "crypto-financial-rails",
+        "tags": ["crypto", "finance"],
         "color": "amber",
         "badge": "High conviction, still emerging",
         "status": "NEWEST THESIS — STAKED ON PUBLICLY",
@@ -150,12 +155,13 @@ THEMES = [
         },
         "watch": "Visser explicitly stakes his own credibility on this being his newest and least-tested thesis, rather than presenting it as settled.",
         "names": [
-            {"name": "Bitcoin (BTC)", "blurb": "Framed by Visser as 'the S&P 500 of the future'; anchor of his new ~45-name crypto ecosystem index."},
+            {"name": "Bitcoin (BTC)", "blurb": "Framed by Visser as 'the S&P 500 of the future'; anchor of his new ~45-name crypto ecosystem index.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
             {"name": "Figure", "blurb": "Reported $4.3B in consumer loan marketplace volume this week, up 132% YoY, with Figure Connect nearing 70% of volume."},
         ],
     },
     {
         "id": "macro-debasement",
+        "tags": ["macro-rates", "crypto"],
         "color": "amber",
         "badge": "Contested",
         "status": "WEAK LABOR + STICKY FED — GOLD/SILVER MOVED, BITCOIN HASN'T",
@@ -176,9 +182,9 @@ THEMES = [
         },
         "watch": "Visser is relaying Gave's framing and his own charts here — the rate-path and PCE-methodology claims aren't independently sourced beyond that in this video.",
         "names": [
-            {"name": "Bitcoin (BTC)", "blurb": "Part of the 'debasement trade'; hasn't moved yet despite gold and silver already re-rating."},
-            {"name": "Gold", "blurb": "Already moved as part of the debasement trade; China added 20 tons in July, its largest monthly purchase since October 2023."},
-            {"name": "Silver", "blurb": "Already moved as part of the debasement trade, alongside gold."},
+            {"name": "Bitcoin (BTC)", "blurb": "Part of the 'debasement trade'; hasn't moved yet despite gold and silver already re-rating.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Gold", "blurb": "Already moved as part of the debasement trade; China added 20 tons in July, its largest monthly purchase since October 2023.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
+            {"name": "Silver", "blurb": "Already moved as part of the debasement trade, alongside gold.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
         ],
     },
 ]
@@ -209,6 +215,17 @@ HOT_TAKES = [
      "cite": '— Jordi Visser', "why": 'Explicitly ranks anticipation over evidence — the framing behind everything else he does on the show.'},
     {"take": "The new businesses being created would have to come from the frontier model side — that's my opinion, at higher probability.",
      "cite": '— Jordi Visser', "why": 'Puts the next wave of company formation inside the labs rather than in the application layer everyone else is crowding into.'},
+]
+
+CLAIMS = [
+    {"who": "Elon Musk", "claim": "SpaceX builds incremental data center capacity", "metric": "gigawatts", "target": "6-8 GW, possibly above 10 GW", "by": "2027", "condition": None, "entity": "SpaceX"},
+    {"who": "Jordi Visser", "claim": "The next binding AI constraint shifts from compute to financial rails", "metric": "constraint type", "target": "stablecoins/tokenization become the bottleneck", "by": None, "condition": "if proven wrong within a year, this is why", "entity": None},
+    {"who": "Jordi Visser", "claim": "New businesses in AI come from the frontier-model side, not the application layer", "metric": "source of new company formation", "target": "frontier labs", "by": None, "condition": "his opinion, at higher probability", "entity": None},
+]
+
+RELATIONS = [
+    {"from": "SpaceX", "rel": "customer_of", "to": "Nvidia (NVDA)", "note": "exclusive Vera Rubin-architecture GPU deal for in-orbit data centers"},
+    {"from": "Alphabet (GOOGL)", "rel": "competes_with", "to": "OpenAI", "note": "AI talent now favors OpenAI/Anthropic/xAI over Google per Moonshots podcast framing"},
 ]
 
 OTHER_NEWS = [
