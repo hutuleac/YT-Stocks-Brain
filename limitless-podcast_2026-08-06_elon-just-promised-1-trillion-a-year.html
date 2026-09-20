@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="earnings-beat">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
-    <span class="theme-status">REPORTED AUG 4, 2026 — BEAT ON EVERY HEADLINE METRIC</span>
+    <span class="theme-status">REPORTED AUG 4, 2026 — BEAT ON EVERY HEADLINE METRIC</span><span class="ttag">ai-infra</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">SpaceX's First Public Earnings Call Silences the Bears</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="trillion-bet">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">GUIDANCE — PULLED FORWARD FROM 2031 TO 2030</span>
+    <span class="theme-status">GUIDANCE — PULLED FORWARD FROM 2031 TO 2030</span><span class="ttag">ai-infra</span><span class="ttag">semis</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">The $1 Trillion Bet: Musk Goes All-In on Nvidia</h2>
   <div class="theme-body">
@@ -150,7 +155,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;Going forward, we've decided to build exclusively on Nvidia because we think that the Vera Rubin architecture is the best architecture.&#8221;<cite>— Elon Musk, SpaceX Q2 2026 earnings call</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia</b><span>Exclusive GPU/compute partner for SpaceX going forward; hosts estimate SpaceX's buildout alone could route $100-200B into Nvidia's pocket by end of 2027.</span></div><div class="namechip"><b>Walmart</b><span>Today's largest company on Earth by revenue ($680B) — the benchmark SpaceX's 2030 target would clear by 40-47%.</span></div><div class="namechip"><b>Amazon / Google (hyperscalers)</b><span>Cited as proof the AI-bubble bear case is weak — their cloud units (AWS, Google Cloud, Azure) are reportedly compounding revenue ~40-45% per quarter with expanding margins, evidence that GPU capex is being repaid by real demand.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Exclusive GPU/compute partner for SpaceX going forward; hosts estimate SpaceX's buildout alone could route $100-200B into Nvidia's pocket by end of 2027.</span></div><div class="namechip"><b>Walmart<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Today's largest company on Earth by revenue ($680B) — the benchmark SpaceX's 2030 target would clear by 40-47%.</span></div><div class="namechip"><b>Amazon / Google (hyperscalers)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Cited as proof the AI-bubble bear case is weak — their cloud units (AWS, Google Cloud, Azure) are reportedly compounding revenue ~40-45% per quarter with expanding margins, evidence that GPU capex is being repaid by real demand.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Hitting $1T by 2030 requires a ~122% compound annual growth rate for five straight years — this is Musk's own guidance, not an independent forecast, and the sell-side gap above is wide enough to flag prominently rather than take at face value.</div></div>
     </div>
   </div>
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="data-center-economics">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Speaker claim</span>
-    <span class="theme-status">CFO CLAIM — UNVERIFIED PAYBACK FIGURE</span>
+    <span class="theme-status">CFO CLAIM — UNVERIFIED PAYBACK FIGURE</span><span class="ttag">ai-infra</span><span class="ttag">space</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Data Centers Pay Back in 12 Months — SpaceX's Claimed Unfair Advantage</h2>
   <div class="theme-body">
@@ -169,7 +174,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;This is like the New York Yankees playing in a little league.&#8221;<cite>— Elon Musk, on SpaceX's terrestrial data-center execution speed</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic</b><span>Buyer of SpaceX compute per the hosts; separately signed its own deal with AMD (up to 2GW of MI450 GPUs, up to $5B AMD investment, confirmed ~July 22, 2026) — shows compute-vendor diversification happening industry-wide even as SpaceX itself goes Nvidia-exclusive.</span></div><div class="namechip"><b>Google</b><span>Also cited as a buyer of SpaceX's AI compute capacity, alongside Anthropic.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Buyer of SpaceX compute per the hosts; separately signed its own deal with AMD (up to 2GW of MI450 GPUs, up to $5B AMD investment, confirmed ~July 22, 2026) — shows compute-vendor diversification happening industry-wide even as SpaceX itself goes Nvidia-exclusive.</span></div><div class="namechip"><b>Google<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Also cited as a buyer of SpaceX's AI compute capacity, alongside Anthropic.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The 12-month payback figure is CFO self-reporting relayed second-hand by the hosts, not an independently audited number — treat as a claim to verify in future filings, not a confirmed fact.</div></div>
     </div>
   </div>
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="starlink-growth">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Mixed signal</span>
-    <span class="theme-status">SUBSCRIBERS DOUBLING, REVENUE PER USER FALLING</span>
+    <span class="theme-status">SUBSCRIBERS DOUBLING, REVENUE PER USER FALLING</span><span class="ttag">space</span><span class="ttag">consumer</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Starlink's Quiet Hockey Stick, With a Catch</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="unlock-and-thesis">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Speculative</span>
-    <span class="theme-status">UNLOCK OCCURRED AUG 6 — HOSTS WATCHING, NOT BUYING YET</span>
+    <span class="theme-status">UNLOCK OCCURRED AUG 6 — HOSTS WATCHING, NOT BUYING YET</span><span class="ttag">finance</span><span class="ttag">space</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">$100B Share Unlock and the Tesla Parallel</h2>
   <div class="theme-body">
@@ -207,7 +212,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;It's mostly a matter of if, not when. Or perhaps if and when.&#8221;<cite>— Josh, on whether SpaceX converts its guided buildout into the trillion-dollar outcome</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Tesla</b><span>Historical parallel for the current short-interest/skepticism setup, plus the source of an unconfirmed SpaceX-merger rumor.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Tesla<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Historical parallel for the current short-interest/skepticism setup, plus the source of an unconfirmed SpaceX-merger rumor.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Hosts themselves call the unlock's market impact 'TBD' — whether it turns out net bullish or bearish over the following weeks/months is explicitly unresolved, not a confident call.</div></div>
     </div>
   </div>
@@ -221,15 +226,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">This episode contains a paid sponsorship segment (Ledger, a crypto hardware-wallet/AI-agent security product) — read as advertising, not independent analysis.</div><div class="ritem">Both hosts are podcasters covering a publicly traded stock <b>(SPCX)</b> without disclosing personal positions in this episode; their media business benefits from sustained audience excitement about the stock's story, which is worth weighing against their consistently bullish framing.</div><div class="ritem">The <b>$18.37B</b> capex and $15.8B AI-infrastructure figures, and the CFO's 12-month payback claim, are self-reported by SpaceX on its own earnings call, not independently audited — treat as company guidance, not verified fact.</div><div class="ritem">External context added in this brief (the AMD-Anthropic deal, Walmart's revenue, Wall Street analyst estimates) is sourced externally, not stated in the video itself — clearly marked in the relevant theme's name-chips and watch-flags throughout.</div><div class="ritem">The transcript is auto-generated from a ~32-minute, 2-person conversation with cross-talk and colloquial phrasing; figures in this brief have been reconciled against SpaceX's independently confirmed Q2 2026 earnings release — verify precise numbers against the original filing before citing.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;Everyone thought he was absolutely insane about GPUs in space — but every earnings report, a different picture starts to form.&#8221; <cite>— Limitless Podcast</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Even if everything falls to the wayside, Elon still has a very profitable business, and people are discounting that massively right now.&#8221; <cite>— Limitless Podcast</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;No one even has to pick up the phone and they're collecting $50 billion, just because of their ability to build these data centers.&#8221; <cite>— Limitless Podcast</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;You can equally be very bullish SpaceX over the long term and be bearish over the short term.&#8221; <cite>— Limitless Podcast</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;If you have any cash sitting in a bank account, you have a problem.&#8221; <cite>— Limitless Podcast</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Elon Musk:</b> SpaceX reaches a revenue target <span class="cmeta">annual revenue · $1 trillion · 2030</span> <i>if non-zero chance of 2029</i> <span class="tag">SpaceX</span></div><div class="ritem"><b>Elon Musk:</b> SpaceX reaches an ARR run rate <span class="cmeta">annual recurring revenue run rate · $100 billion · 2026-12</span> <span class="tag">SpaceX</span></div><div class="ritem"><b>Elon Musk:</b> SpaceX compute capacity buildout <span class="cmeta">gigawatts of compute · 10 GW · end of 2027</span> <span class="tag">SpaceX</span></div><div class="ritem"><b>Elon Musk:</b> SpaceX compute capacity buildout <span class="cmeta">gigawatts of compute · 15-20 GW · 2030</span> <span class="tag">SpaceX</span></div><div class="ritem"><b>Morgan Stanley:</b> SpaceX revenue forecast <span class="cmeta">annual revenue · $330 billion · 2030</span> <span class="tag">SpaceX</span></div><div class="ritem"><b>Goldman Sachs:</b> SpaceX revenue forecast <span class="cmeta">annual revenue · $470 billion · 2030</span> <span class="tag">SpaceX</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>SpaceX</b> <span class="rel">customer of</span> <b>Nvidia</b> &mdash; committed exclusively to Nvidia's Vera Rubin architecture</div><div class="ritem"><b>Anthropic</b> <span class="rel">customer of</span> <b>SpaceX</b> &mdash; buys AI compute capacity from SpaceX</div><div class="ritem"><b>Google</b> <span class="rel">customer of</span> <b>SpaceX</b> &mdash; buys AI compute capacity from SpaceX</div><div class="ritem"><b>Anthropic</b> <span class="rel">customer of</span> <b>AMD</b> &mdash; separate deal for up to 2GW of MI450 GPUs, up to $5B AMD investment</div></div></div>
     </section>
 
     <section class="sec">
