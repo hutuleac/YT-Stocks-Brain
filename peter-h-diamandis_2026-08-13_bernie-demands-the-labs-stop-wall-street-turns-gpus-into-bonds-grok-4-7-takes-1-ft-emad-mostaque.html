@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="healthspan-xprize">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Confirmed milestone</span>
-    <span class="theme-status">FIRST PRIZES AWARDED LAST NIGHT — UNIVERSITY OF UTAH</span>
+    <span class="theme-status">FIRST PRIZES AWARDED LAST NIGHT — UNIVERSITY OF UTAH</span><span class="ttag">health</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">The $101M Healthspan XPRIZE hands out its first checks — 800 teams, one goal: reverse 20 years of aging</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="hollywood-ai-collapse">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Confirmed trend, contested implications</span>
-    <span class="theme-status">ACCELERATING NOW — MULTIPLE RELEASES THIS WEEK</span>
+    <span class="theme-status">ACCELERATING NOW — MULTIPLE RELEASES THIS WEEK</span><span class="ttag">consumer</span><span class="ttag">software</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">A $2M, 4-week AI movie just undercut Hollywood's cost structure by 98%</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="grok-frontier-sprint">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">High conviction on catch-up, contested on leapfrog</span>
-    <span class="theme-status">GROK 4.6 RELEASED THIS MORNING; 4.7 RUMORED IN 2 WEEKS</span>
+    <span class="theme-status">GROK 4.6 RELEASED THIS MORNING; 4.7 RUMORED IN 2 WEEKS</span><span class="ttag">software</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Grok's monthly release cadence is closing the gap on the frontier — the open question is whether it can pass it</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="nvidia-compute-financialization">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested — bull case vs. MBS-style risk</span>
-    <span class="theme-status">PARTNERSHIP ANNOUNCED THIS WEEK</span>
+    <span class="theme-status">PARTNERSHIP ANNOUNCED THIS WEEK</span><span class="ttag">ai-infra</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Nvidia turns GPU compute into a $500B+ tradeable financial asset — and draws its own mortgage-crisis comparison</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="sanders-pause-vs-evo2">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested — alarm vs. dismissal</span>
-    <span class="theme-status">LETTER SENT AND EVO2 RESULTS PUBLISHED THIS WEEK</span>
+    <span class="theme-status">LETTER SENT AND EVO2 RESULTS PUBLISHED THIS WEEK</span><span class="ttag">policy</span><span class="ttag">biotech</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Bernie Sanders demands a pause the same week Stanford proves AI can already design viable new viruses</h2>
   <div class="theme-body">
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="zuck-personal-ai">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Praised for openness, doubted on motive</span>
-    <span class="theme-status">PUBLISHED THIS WEEK — 6,500 WORDS PLUS VIDEO</span>
+    <span class="theme-status">PUBLISHED THIS WEEK — 6,500 WORDS PLUS VIDEO</span><span class="ttag">software</span><span class="ttag">consumer</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Zuckerberg's 'personal intelligence' manifesto pairs open-source models with a community-benefits pitch — and the panel doesn't fully buy the framing</h2>
   <div class="theme-body">
@@ -240,15 +245,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">Multiple panelists (especially Alex Wissner-Gross, who discloses financial interest in compute-securitization and post-transformer-architecture ventures) are discussing markets and companies they are personally invested in.</div><div class="ritem">Several figures (GLP-1 LEV percentages, Grok's exact cost figures, the '<b>$10B</b> for Cursor data' number, CyberGym scores) are relayed verbally from memory during a live discussion and are explicitly caveated by the speakers themselves as rough or unverified in places.</div><div class="ritem">A recurring product name transcribed as 'Fable' appears throughout the video (used interchangeably with 'its competitors,' priced around <b>$50</b>-60 vs. Grok's $6-8) that could not be confidently identified from context — likely an auto-caption artifact for another frontier AI product name; treat these specific mentions with caution.</div><div class="ritem">Auto-generated captions on a 3-hour, 6-person crosstalk-heavy panel are prone to misattributed speakers and mistranscribed names or figures.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;How much of your wealth would you spend for an extra 30 years of life? The honest answer is nearly all of it.&#8221; <cite>— Peter Diamandis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Financial assets want predictable depreciation, and exponential technologies don't give you predictable depreciation.&#8221; <cite>— Salim Ismail</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Privacy is dead — and there's a benefit to that, which is that malevolent actors are going to get heard, seen, and caught.&#8221; <cite>— Peter Diamandis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;You never need to reshoot a scene now.&#8221; <cite>— Emad Mostaque</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Facebook saying 'we're going to be your best friend AI' is like McDonald's saying they came out with the biggest health food you've ever heard of.&#8221; <cite>— Moonshot Mates panel</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;This competition will be won by 2030.&#8221; <cite>— Peter Diamandis, on the Healthspan XPRIZE</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>xAI:</b> next Grok pretraining run <span class="cmeta">parameter count · Grok 4.7, ~2T params · roughly 2 weeks after Aug 13, 2026</span> <i>if rumored</i> <span class="tag">xAI (Grok)</span></div><div class="ritem"><b>Elon Musk:</b> Grok parameter scaling target <span class="cmeta">parameter count · Grok 5 at 6-10T params</span> <i>if delayed from an original ~May 2026 target</i> <span class="tag">xAI (Grok)</span></div><div class="ritem"><b>XPRIZE Healthspan:</b> reverse functional aging <span class="cmeta">years of functional age reversed · 20 years · 2030</span> <i>if winner decided by human-trial results</i> <span class="tag">XPRIZE Healthspan</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">partners with</span> <b>Apollo, BlackRock, Blackstone, Brookfield, KKR</b> &mdash; $500B+ third-party financing structure letting institutional capital invest directly in AI compute</div><div class="ritem"><b>xAI (Grok)</b> <span class="rel">acquires</span> <b>Cursor</b> &mdash; reportedly $10B, for reasoning-trace data used to post-train Grok toward the frontier</div><div class="ritem"><b>Archer Aviation</b> <span class="rel">acquires</span> <b>Boeing eVTOL units (Whisk Aero, Insitu, SkyGrid AI)</b> &mdash; Boeing takes an equity stake in the combined entity</div></div></div>
     </section>
 
     <section class="sec">

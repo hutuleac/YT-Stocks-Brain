@@ -21,6 +21,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "healthspan-xprize",
+        "tags": ["health"],
         "color": "green",
         "badge": "Confirmed milestone",
         "status": "FIRST PRIZES AWARDED LAST NIGHT — UNIVERSITY OF UTAH",
@@ -45,6 +46,7 @@ THEMES = [
     },
     {
         "id": "hollywood-ai-collapse",
+        "tags": ["consumer", "software"],
         "color": "amber",
         "badge": "Confirmed trend, contested implications",
         "status": "ACCELERATING NOW — MULTIPLE RELEASES THIS WEEK",
@@ -71,6 +73,7 @@ THEMES = [
     },
     {
         "id": "grok-frontier-sprint",
+        "tags": ["software", "ai-infra"],
         "color": "amber",
         "badge": "High conviction on catch-up, contested on leapfrog",
         "status": "GROK 4.6 RELEASED THIS MORNING; 4.7 RUMORED IN 2 WEEKS",
@@ -95,6 +98,7 @@ THEMES = [
     },
     {
         "id": "nvidia-compute-financialization",
+        "tags": ["ai-infra", "finance"],
         "color": "amber",
         "badge": "Contested — bull case vs. MBS-style risk",
         "status": "PARTNERSHIP ANNOUNCED THIS WEEK",
@@ -120,6 +124,7 @@ THEMES = [
     },
     {
         "id": "sanders-pause-vs-evo2",
+        "tags": ["policy", "biotech"],
         "color": "amber",
         "badge": "Contested — alarm vs. dismissal",
         "status": "LETTER SENT AND EVO2 RESULTS PUBLISHED THIS WEEK",
@@ -145,6 +150,7 @@ THEMES = [
     },
     {
         "id": "zuck-personal-ai",
+        "tags": ["software", "consumer"],
         "color": "amber",
         "badge": "Praised for openness, doubted on motive",
         "status": "PUBLISHED THIS WEEK — 6,500 WORDS PLUS VIDEO",
@@ -175,6 +181,18 @@ TAKEAWAYS = [
     {"icon": "\U0001F4B5", "tag": "Markets", "title": "Before treating AI compute deals as bond-like fixed income, price in architecture-obsolescence risk explicitly via hedging rather than assuming GPU cash flows are as predictable as they're being marketed."},
     {"icon": "\U0001F9EA", "tag": "AI safety", "title": "Track physical chokepoints (DNA/RNA synthesizers, GPU export controls) rather than model-capability caps as the more enforceable lever in AI biosecurity debates."},
     {"icon": "\U0001F916", "tag": "AI tools", "title": "If evaluating xAI's Grok for coding/agent work, weigh its price advantage ($2-6/M tokens) against reasoning-trace catch-up limits — it may match but not yet exceed frontier reasoning models."},
+]
+
+CLAIMS = [
+    {"who": "xAI", "claim": "next Grok pretraining run", "metric": "parameter count", "target": "Grok 4.7, ~2T params", "by": "roughly 2 weeks after Aug 13, 2026", "condition": "rumored", "entity": "xAI (Grok)"},
+    {"who": "Elon Musk", "claim": "Grok parameter scaling target", "metric": "parameter count", "target": "Grok 5 at 6-10T params", "by": None, "condition": "delayed from an original ~May 2026 target", "entity": "xAI (Grok)"},
+    {"who": "XPRIZE Healthspan", "claim": "reverse functional aging", "metric": "years of functional age reversed", "target": "20 years", "by": "2030", "condition": "winner decided by human-trial results", "entity": "XPRIZE Healthspan"},
+]
+
+RELATIONS = [
+    {"from": "Nvidia (NVDA)", "rel": "partners_with", "to": "Apollo, BlackRock, Blackstone, Brookfield, KKR", "note": "$500B+ third-party financing structure letting institutional capital invest directly in AI compute"},
+    {"from": "xAI (Grok)", "rel": "acquires", "to": "Cursor", "note": "reportedly $10B, for reasoning-trace data used to post-train Grok toward the frontier"},
+    {"from": "Archer Aviation", "rel": "acquires", "to": "Boeing eVTOL units (Whisk Aero, Insitu, SkyGrid AI)", "note": "Boeing takes an equity stake in the combined entity"},
 ]
 
 RISKS = [
