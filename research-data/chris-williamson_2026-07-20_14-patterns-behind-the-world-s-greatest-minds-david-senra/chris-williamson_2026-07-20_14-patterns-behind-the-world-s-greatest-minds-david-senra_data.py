@@ -1,0 +1,172 @@
+"""Data file for David Senra x Chris Williamson (Modern Wisdom) — 14 Patterns Behind the World's Greatest Minds."""
+
+META = {
+    "title": "14 Patterns Behind the World's Greatest Minds - David Senra",
+    "channel": "Chris Williamson",
+    "speakers": "David Senra (guest, host of the Founders podcast), interviewed by Chris Williamson (host, Modern Wisdom)",
+    "date": "2026-07-20",
+    "video_url": "https://www.youtube.com/watch?v=0AfsC-9pIo4",
+    "thread_line": "6 threads · turning outsider status into drive ('chips on shoulders'), creating for your own taste instead of an audience, finding one simple idea and taking it seriously, why the best listen instead of surrounding themselves with yes-men, treating wisdom as prevention rather than problem-solving, and the four specific ways success destroys people.",
+    "category": "dev",
+}
+
+SNAPSHOT = [
+    "David Senra (Founders podcast, 400+ biography episodes) draws recurring patterns from history's great entrepreneurs and from guests on his new interview show, organized around one core idea: 'chips on shoulders put chips in pockets' — outsider status and a need to prove something is a repeated fuel source, from AppLovin's founder to Kanye West to Senra's own Cuban-immigrant family story.",
+    "Rick Rubin's 'house on the mountain' test (design as if no one will ever see it) and a 'would you consume your own content' filter both argue for creating according to personal taste rather than for an audience, algorithm, or market — while a later theme (David Ogilvy's 'you can't save souls in an empty church') pushes back that great work still has to reach people.",
+    "'Find a simple idea and take it seriously' runs through Todd Graves (Raising Cane's, one menu item, 30 years, still 90%+ owner), James Dyson (5,127 failed vacuum prototypes over 15 years before the one that worked), and Charlie Munger's observation that extreme business success usually comes from maximizing or minimizing just one or two variables, not many.",
+    "'Successful people listen' — Michael Jordan is framed as an information sponge, not a tyrant; Steve Jobs fired two Pixar board members specifically because they never disagreed with him; Charlie Munger reportedly steelmanned the best counterargument before making his own case.",
+    "Charlie Munger's 'wisdom is prevention, not problem-solving' anchors a theme about ruthlessly curating your circle — Daniel Ek's recurring advice to Senra is simply 'stay away from the circus,' and the claim is that most of life's frustration comes from a handful of low-quality relationships, not external circumstance.",
+    "Jimmy Iovine's four ways he's watched successful people self-destruct — drugs, alcohol, megalomania, and relationships gone wrong — anchor a closing theme on why some people can't handle success (Kanye West, Conor McGregor, Lewis Capaldi cited as examples), with Senra stating a personal preference to 'never make it' rather than make it and lose it.",
+]
+
+THEMES = [
+    {
+        "id": "chips-on-shoulders",
+        "tags": ["career"],
+        "color": "green",
+        "badge": "Recurring pattern",
+        "status": "Pattern observed across founders and entertainers",
+        "title": "Chips on Shoulders Put Chips in Pockets",
+        "lead": "**Senra's most-repeated maxim (credited to venture capitalist Josh Wolf):** a feeling of not belonging, of being 'born into the wrong spot,' recurs as fuel across the founders he's studied and interviewed.",
+        "bullets": [
+            "AppLovin founder Adam is described as deliberately hiring 'dysfunctional people with something to prove' over conventionally credentialed hires — his second-in-command, Raph, was a high-school dropout who lived in the office as a teenager and is now a multi-billion-dollar shareholder.",
+            "Adam's own origin story: every top VC turned down his ask to sell 25% of his company for $1M (implying a $4M valuation) and funded his competitors instead — he says that rejection became the company's explicit motivation to outcompete those same investors.",
+            "Senra ties his own drive to his family history: his Cuban immigrant grandfather fled Castro's Cuba with no English, no money, and no education, and that single decision — which Senra had no say in — he credits with fundamentally changing the trajectory of his life.",
+            "Cites Kanye West's early pre-fame 'spazzing out' clip (refusing to be compared to other producers, teaching himself to rap) and a Shia LaBeouf clip about deliberately cutting out anyone who gave him discouraging feedback as the same pattern playing out in entertainment, not just business.",
+            "Frames this as a double-edged trait: it can also curdle into what Jimmy Iovine later calls megalomania once external validation replaces the original chip — a warning flagged explicitly in a later theme.",
+        ],
+        "quote": {"text": "Chips on shoulders put chips in pockets.", "cite": "— David Senra, citing VC Josh Wolf"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "house-on-the-mountain",
+        "tags": ["career", "dev-workflow"],
+        "color": "green",
+        "badge": "Recommendation",
+        "status": "Contested by the 'empty church' counterpoint later in the conversation",
+        "title": "Design Your Life Like Nobody's Watching — Rick Rubin's 'House on the Mountain' Test",
+        "lead": "**Rick Rubin's central creative principle, as relayed by Senra:** imagine you built a house so remote no one will ever visit it — would you still put in your best effort decorating it? That answer is your actual, revealed preference.",
+        "bullets": [
+            "Rubin's own practice: he says he makes the music he personally wants to listen to, not what he predicts an audience wants, reasoning that his own taste is rarely as unique as people assume — if he likes something, a large audience likely will too.",
+            "Senra and Chris Williamson both apply this directly to podcasting: they describe making the show they'd want to listen to themselves, listening to episodes before release, and using a personal rule of thumb — 'would you consume your own content? If not, don't post it.'",
+            "Extends the test beyond creative work to daily life: the parts of your life nobody else ever sees should get the same care and intentionality as the parts you perform publicly.",
+            "The conversation explicitly complicates this later with David Ogilvy's counterpoint ('you can't save souls in an empty church') — taste and personal conviction get you the work, but Senra argues there's a moral obligation to actually get good work in front of as many people as possible once it exists.",
+        ],
+        "quote": {"text": "Create according to your own taste, not for applause, critics, algorithms, or market demand.", "cite": "— Rick Rubin"},
+        "watch": "Senra pairs this directly with its own counterargument (Ogilvy's empty-church line) rather than presenting it as an unqualified rule — pure taste-driven creation still has to reach an audience to matter.",
+        "names": None,
+    },
+    {
+        "id": "simple-idea-taken-seriously",
+        "tags": ["career"],
+        "color": "green",
+        "badge": "Recommendation",
+        "status": "Pattern observed across multiple founders",
+        "title": "Find a Simple Idea and Take It Seriously",
+        "lead": "**A Charlie Munger maxim Senra says explains 'extreme business success':** winning systems usually come from ridiculously maximizing or minimizing just one or two variables, not juggling many — even when the underlying execution is genuinely complex.",
+        "bullets": [
+            "Todd Graves (Raising Cane's) built a single-item menu — chicken fingers, in three or four portion sizes, essentially unchanged in 30 years — modeled explicitly on In-N-Out's single-minded focus; the company has grown to over 900 company-owned stores (no franchising) and Graves has rejected multiple multi-billion-dollar acquisition offers, still owning over 90% of it himself.",
+            "James Dyson produced 5,127 failed vacuum-cleaner prototypes over roughly 15 years — while going broke, crying himself to sleep, and watching his kids grow up during the failure years — before the one that worked; Senra calls Dyson's autobiography 'Against the Odds' the single most important book he's read for his own career.",
+            "Dyson's stated organizing principle in old age: he still compulsively picks up any object, asks 'how can I make this better,' makes a small improvement, and puts it down — described as a lifelong habit rather than a project with an end date.",
+            "Senra explicitly credits rereading Dyson's book during his own unprofitable early years of podcasting (which took five and a half years to become financially sustainable) as the reason he didn't quit — reasoning that if Dyson could persist for over a decade, he could persist for one year.",
+            "Notes the through-line to Elon Musk (frequently mentioned by Toby Lütke, Shopify's founder, in conversation with Senra): rockets are enormously complex, but Musk's own stated approach is relentless simplification — deleting steps and reducing complexity rather than adding process.",
+        ],
+        "quote": {"text": "Find a simple idea and take it seriously.", "cite": "— Charlie Munger, cited by David Senra"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "successful-people-listen",
+        "tags": ["career"],
+        "color": "green",
+        "badge": "Recommendation",
+        "status": "Pattern observed across founders and athletes",
+        "title": "Successful People Listen — There's No Upside in Being Wrong",
+        "lead": "**Senra's reframe of a widely-misread Michael Jordan quote:** the popular image of Jordan (and similar high performers) as tyrannical is backwards — the actual pattern is voracious, ego-free information-seeking.",
+        "bullets": [
+            "Michael Jordan is described (via a 700-page biography by Roland Lazenby) as 'a sponge' who wants only useful information relevant to his goals, not deference — the opposite of the 'dictator' image from public commentary.",
+            "Steve Jobs, per Pixar co-founder Ed Catmull (who worked with Jobs for 24 years), fired two Pixar board members during its 10 years as a public company specifically because they never disagreed with him — reasoning that agreement without friction adds no value to decision-making.",
+            "Charlie Munger reportedly had a habit, when trying to persuade someone, of first stating the strongest version of the opposing argument himself before making his own case — Senra frames this as evidence Munger had thought a position through so thoroughly he could pre-empt every objection.",
+            "Contrasts this with a common failure mode: people who mistake ignoring all feedback for 'self-belief' and end up stuck in a local maximum — Senra explicitly favors 'strong opinions, loosely held' over people who never truly examined their own worldview and just drifted into it.",
+        ],
+        "quote": {"text": "Successful people listen. Those that don't listen don't last long.", "cite": "— Michael Jordan"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "wisdom-is-prevention",
+        "tags": ["career"],
+        "color": "amber",
+        "badge": "Structural critique",
+        "status": "Ongoing personal practice for Senra",
+        "title": "Wisdom Is Prevention, Not Problem-Solving — Ruthlessly Curate Who Gets Access to You",
+        "lead": "**Charlie Munger's framing, relayed from a personal dinner Senra had with him:** the smart move isn't solving problems well, it's structuring your life (and especially your relationships) so most problems never happen in the first place.",
+        "bullets": [
+            "Munger's own life included his young son's death from then-incurable leukemia during a divorce — Senra frames Munger's later composure ('nothing can faze him') as earned through genuine catastrophe, not theoretical detachment.",
+            "Munger's stated formula: keep a small number (four or five) of genuinely high-quality, loved people around you for life, find great work and stay in it, and most controllable sources of life's problems disappear — uncontrollable problems (illness, external shocks) still happen regardless.",
+            "Spotify founder Daniel Ek — described by Senra as his personal 'one-person board of directors' — repeatedly gives the same advice: 'stay away from the circus,' meaning skip conferences, extra dinners, and networking events that don't serve the actual work.",
+            "Senra frames curating access as especially urgent for anyone with a public platform, since people with something to gain will act differently around you than their real selves — his practical fix is to trust close, existing friends' read of a new person over his own first impression.",
+            "The 'frustration budget' concept: a single draining relationship or bad night's sleep caused by someone else's choices reduces the emotional capacity available for unrelated, genuinely important problems the next day.",
+        ],
+        "quote": {"text": "Wise people don't solve problems, they avoid them. Wisdom is prevention.", "cite": "— Charlie Munger, cited by David Senra"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "four-ways-success-destroys-you",
+        "tags": ["career"],
+        "color": "red",
+        "badge": "Cautionary pattern"
+,
+        "status": "Flagged risk, not a resolved framework",
+        "title": "Jimmy Iovine's Four Ways Success Destroys People — and Why Senra Would Rather Never Make It",
+        "lead": "**Music executive Jimmy Iovine's framework, from decades working with major recording artists:** he's watched successful people fail in only four recurring ways — drugs, alcohol, megalomania, and destructive relationships — not from external competition.",
+        "bullets": [
+            "Iovine's megalomania mechanism: an artist is told nightly by thousands of fans how great they are, starts believing the validation reflects who they are rather than the work they put in, stops doing the work, and enters a decline — Senra ties this directly back to Kanye West's public trajectory.",
+            "Conor McGregor's own quote ('if you go to sleep on a win, you'll wake up with a loss') is presented as advice its own source failed to follow — Senra notes the irony that McGregor, like several other examples, 'entertained the circus' once success arrived.",
+            "James Dyson is offered as the counter-example: even after decades of success he says he 'never slept on a win,' continuing to compulsively improve everyday objects purely because he loves the activity itself, not the status it produces.",
+            "Season 8 'Biggest Loser' winner Danny is cited for a related but distinct point: there's a specific extra shame in failing after having already tasted success, versus never having made it at all — which Senra says he'd personally prefer (never making it) over making it and then losing it, a fear-of-failure framing he says several ultra-wealthy people he's interviewed share.",
+            "Closing framework for judging his own work: an 'internal scorecard' (a line Senra attributes to Steve Jobs — 'did I make something I'm proud of') rather than an external one based on downloads, revenue, or others' opinions, while still holding that good work carries a moral obligation to reach people.",
+        ],
+        "quote": {"text": "I would rather never make it than make it, and then lose it.", "cite": "— David Senra"},
+        "watch": "Senra frames this fear-of-failure orientation as a personal preference he shares with several successful people he's interviewed (Michael Dell, Daniel Ek, Todd Graves), not as universal advice for everyone.",
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F525", "tag": "Careers", "title": "Use outsider status or a chip on your shoulder as durable fuel rather than something to resolve or apologize for."},
+    {"icon": "\U0001F3D4️", "tag": "Careers", "title": "Build the version of your work you'd want for yourself even if no one else ever saw it — then still make the effort to get it in front of people."},
+    {"icon": "\U0001F3AF", "tag": "Careers", "title": "Pick one simple idea and maximize it ruthlessly rather than diversifying across many mediocre ones."},
+    {"icon": "\U0001F442", "tag": "Careers", "title": "Actively seek people and feedback that can prove you wrong — treat unanimous agreement as a warning sign, not comfort."},
+    {"icon": "\U0001F6AA", "tag": "Careers", "title": "Prevent problems by curating who has access to you, rather than getting good at solving the drama low-quality relationships create."},
+    {"icon": "\U0001F3C6", "tag": "Careers", "title": "Judge your own work by an internal scorecard (would I be proud of this) before checking external metrics of success."},
+]
+
+CLAIMS = []
+
+RELATIONS = [
+    {"from": "Disney (DIS)", "rel": "acquires", "to": "Pixar", "note": "$7.6 billion acquisition after Pixar's 10 years as a public company, per Ed Catmull"},
+    {"from": "Apple (AAPL)", "rel": "acquires", "to": "Interscope/Beats", "note": "Jimmy Iovine's music/audio business sold to Apple for roughly $3 billion"},
+]
+
+HOT_TAKES = [
+    {"take": "Chips on shoulders put chips in pockets.", "cite": "— David Senra", "why": "The maxim he says he thinks about constantly and applies to himself, not just the founders he studies."},
+    {"take": "Create according to your own taste, not for applause, critics, algorithms, or market demand.", "cite": "— Rick Rubin", "why": "A direct rejection of audience-first, algorithm-optimized creative work from one of the most commercially successful producers alive."},
+    {"take": "Successful people listen. Those that don't listen don't last long.", "cite": "— Michael Jordan", "why": "Reframes a widely misunderstood public figure's actual operating principle, against the popular 'tyrant' narrative."},
+    {"take": "Wise people don't solve problems, they avoid them.", "cite": "— Charlie Munger", "why": "A pointed rejection of problem-solving as the mark of intelligence, from someone who lived through genuine catastrophe."},
+    {"take": "If you go to sleep on a win, you'll wake up with a loss.", "cite": "— Conor McGregor", "why": "Advice its own source is cited as having failed to live by — Senra uses it as a cautionary example, not just a maxim."},
+    {"take": "I would rather never make it than make it, and then lose it.", "cite": "— David Senra", "why": "An explicit, personally-owned statement of fear-of-failure over fear-of-mediocrity, stated as a deliberate life choice."},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F399", "title": "Sources and guests referenced throughout: Rick Rubin's book Creative Act; James Dyson's autobiography Against the Odds; a 700-page Michael Jordan biography by Roland Lazenby; a Joseph Pulitzer biography; interviews Senra has conducted for his new show with Toby Lutke (Shopify), Daniel Ek (Spotify), Dana White (UFC), John Mackey (Whole Foods), Todd Graves (Raising Cane's), James Dyson, and Jimmy Iovine; and Tim Urban's essay on Elon Musk introducing the 'Grand Theft Life' framing.", "tag": "Sources cited"},
+    {"icon": "\U0001F3AC", "title": "Senra mentions having just recorded an unreleased episode with Mr. Beast, whom he describes as a longtime fan of his original Founders podcast.", "tag": "Upcoming"},
+]
+
+GLOSSARY = [
+    {"term": "House on the mountain test", "def": "Rick Rubin's gut-check for genuine creative taste: if you built a house so remote no one would ever see it, would you still put in your best effort decorating it? Your answer reveals what you actually want to make, independent of any audience."},
+    {"term": "Grand Theft Life", "def": "A framework (from writer Tim Urban's essay on Elon Musk) for stepping outside your own first-person experience and viewing your life the way you'd direct a video-game character — surfacing blind spots you can't see from inside your own perspective."},
+    {"term": "Internal scorecard", "def": "Judging your own success by a private, self-defined standard (e.g. 'did I make something I'm proud of') rather than by external metrics like downloads, revenue, or other people's opinions."},
+]
