@@ -26,6 +26,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "skip-recruiting",
+        "tags": ["career", "dev-workflow"],
         "color": "green",
         "badge": "Recommendation",
         "status": "",
@@ -44,6 +45,7 @@ THEMES = [
     },
     {
         "id": "pshe-ladder",
+        "tags": ["career", "dev-workflow"],
         "color": "green",
         "badge": "Framework",
         "status": "",
@@ -61,6 +63,7 @@ THEMES = [
     },
     {
         "id": "ai-not-replace",
+        "tags": ["career", "dev-workflow"],
         "color": "amber",
         "badge": "Structural critique",
         "status": "",
@@ -78,6 +81,7 @@ THEMES = [
     },
     {
         "id": "eigenquestion",
+        "tags": ["career", "dev-workflow"],
         "color": "green",
         "badge": "Hiring technique",
         "status": "",
@@ -95,6 +99,7 @@ THEMES = [
     },
     {
         "id": "agent-stack",
+        "tags": ["software", "dev-workflow"],
         "color": "amber",
         "badge": "Product demo (self-interested)",
         "status": "",
@@ -114,6 +119,7 @@ THEMES = [
     },
     {
         "id": "bill-campbell",
+        "tags": ["career"],
         "color": "green",
         "badge": "Mentorship lesson",
         "status": "",
@@ -137,6 +143,14 @@ TAKEAWAYS = [
     {"icon": "\U0001F916", "tag": "AI workflows", "title": "Give your AI agents \"help\"-style triggers that act unprompted inside your existing tools, not just a chat window you have to remember to open."},
     {"icon": "\U0001F9E9", "tag": "Hiring", "title": "Borrow the teleportation-device exercise (or invent your own) to test whether a candidate finds the real question, not just a good answer."},
     {"icon": "\U0001F91D", "tag": "Leadership", "title": "Pick one number that measures your team's success through other people's success, the way Bill Campbell tracked mentees who became CEOs."},
+]
+
+CLAIMS = [
+    {"who": "Shishir Mehrotra", "claim": "Grammarly LLM query volume", "metric": "weekly LLM queries", "target": "100 billion+", "by": None, "condition": "vendor-reported by the company's own CEO", "entity": "Grammarly"},
+]
+
+RELATIONS = [
+    {"from": "Superhuman", "rel": "acquires", "to": "Grammarly", "note": "Superhuman's CEO now leads the combined company, which includes Grammarly's 40M+ daily users"},
 ]
 
 RISKS = [

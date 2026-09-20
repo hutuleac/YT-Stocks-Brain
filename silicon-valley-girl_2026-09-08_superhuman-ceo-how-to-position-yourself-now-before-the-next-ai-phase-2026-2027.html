@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="skip-recruiting">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Recommendation</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">career</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Skip the Recruiting Funnel, Learn to Manage</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="pshe-ladder">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Framework</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">career</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">PSHE and the "Valley of Disappointment"</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="ai-not-replace">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Structural critique</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">career</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">"AI Replaces Jobs" Is the Wrong Frame, He Argues</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="eigenquestion">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Hiring technique</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">career</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">The "Self-Eigenquestion" — His Signature Hiring Exercise</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="agent-stack">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Product demo (self-interested)</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">software</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Inside Grammarly/Superhuman Go's Agent Stack — Chat, To-Do, and "Help"</h2>
   <div class="theme-body">
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="bill-campbell">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Mentorship lesson</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">career</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Bill Campbell's Real Lesson: Measure Yourself by Other People's Success</h2>
   <div class="theme-body">
@@ -240,15 +245,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">Shishir is CEO of Superhuman/Grammarly — the agent-stack theme is a live product pitch from someone with a direct financial interest in you adopting it, not an independent test; treat the usage stats and workflow claims as vendor-reported.</div><div class="ritem">This episode included a MongoDB sponsor segment, excluded entirely from this brief per standing policy.</div><div class="ritem">Auto-captions garbled several terms (e.g. "self-eigenquestion" rendered as "self-meaning/self-importance questions," "Superhuman" as "Ship human") — cleaned for readability here, but a reminder this is a machine transcript, not a verified script.</div><div class="ritem">The Bill Campbell anecdotes and the "~20 people, later Fortune 500 CEOs" figure are Shishir's own recollection from over two decades ago, quoted as he told it in conversation rather than sourced from a written record.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;I don't like the word 'replace' because I feel like 'replace' signals a zero-sum game.&#8221; <cite>— Shishir Mehrotra</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Your ability to judge [an AI-proposed solution] is in your head, and it can very rarely do anything without a good hint.&#8221; <cite>— Shishir Mehrotra</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;You need someone who comes up with great, wonderful stories. Claude can expand on them, but if you can't come up with that great idea, you'll never be able to create the next ones.&#8221; <cite>— Shishir Mehrotra</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;We're probably your number one LLM generator — over 3,000 requests per user per day.&#8221; <cite>— Shishir Mehrotra</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I've been lucky all my life. At the moment, everything I receive goes directly to charity.&#8221; <cite>— Bill Campbell (via Shishir Mehrotra)</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Shishir Mehrotra:</b> Grammarly LLM query volume <span class="cmeta">weekly LLM queries · 100 billion+</span> <i>if vendor-reported by the company's own CEO</i> <span class="tag">Grammarly</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Superhuman</b> <span class="rel">acquires</span> <b>Grammarly</b> &mdash; Superhuman's CEO now leads the combined company, which includes Grammarly's 40M+ daily users</div></div></div>
     </section>
 
     <section class="sec">
