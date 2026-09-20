@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="bitcoin-sigma-breakout">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">BITCOIN +22-23% IN 7 DAYS, 200-DAY MA BROKEN</span>
+    <span class="theme-status">BITCOIN +22-23% IN 7 DAYS, 200-DAY MA BROKEN</span><span class="ttag">crypto</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">A 7-sigma week: Visser says the tape just confirmed the Bitcoin bull case</h2>
   <div class="theme-body">
@@ -131,7 +136,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;As Michael Saylor says, you don't find Bitcoin, Bitcoin finds you. We are at the Bitcoin finds you moment.&#8221;<cite>— Jordi Visser</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Bitcoin (BTC)</b><span>7-sigma weekly move, +22-23%, broke above the 200-day MA</span></div><div class="namechip"><b>Ethereum (ETH)</b><span>200-day MA turned up; Visser recently added a position, expects it to lead the next leg</span></div><div class="namechip"><b>Silver</b><span>multi-sigma move alongside Bitcoin/gold; Visser long via SLV and SIL</span></div><div class="namechip"><b>MicroStrategy (MSTR)</b><span>up ~600% (~76%/yr) since end of 2022, cited as a Bitcoin-proxy return case study</span></div><div class="namechip"><b>Bitdeer (BTDR)</b><span>one of the Bitcoin miners Stan Druckenmiller's family office added exposure to this week</span></div><div class="namechip"><b>Riot Platforms (RIOT)</b><span>Bitcoin mining exposure added by Druckenmiller's family office</span></div><div class="namechip"><b>Hut 8 (HUT)</b><span>Bitcoin mining exposure added by Druckenmiller's family office</span></div><div class="namechip"><b>IREN (IREN)</b><span>Bitcoin mining exposure added by Druckenmiller's family office</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Bitcoin (BTC)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>7-sigma weekly move, +22-23%, broke above the 200-day MA</span></div><div class="namechip"><b>Ethereum (ETH)<span class="stance" style="background:#3f6b2e;">BUYING-ADDING · Medium</span></b><span>200-day MA turned up; Visser recently added a position, expects it to lead the next leg</span></div><div class="namechip"><b>Silver<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>multi-sigma move alongside Bitcoin/gold; Visser long via SLV and SIL</span></div><div class="namechip"><b>MicroStrategy (MSTR)</b><span>up ~600% (~76%/yr) since end of 2022, cited as a Bitcoin-proxy return case study</span></div><div class="namechip"><b>Bitdeer (BTDR)</b><span>one of the Bitcoin miners Stan Druckenmiller's family office added exposure to this week</span></div><div class="namechip"><b>Riot Platforms (RIOT)</b><span>Bitcoin mining exposure added by Druckenmiller's family office</span></div><div class="namechip"><b>Hut 8 (HUT)</b><span>Bitcoin mining exposure added by Druckenmiller's family office</span></div><div class="namechip"><b>IREN (IREN)</b><span>Bitcoin mining exposure added by Druckenmiller's family office</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Visser explicitly says the pattern resembles the four-year cycle even while distancing himself from that framework — he's calling it off the sigma/200-day signal, not the calendar.</div></div>
     </div>
   </div>
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="ai-terminal-value-destruction">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">STRUCTURAL THESIS, IN PROGRESS</span>
+    <span class="theme-status">STRUCTURAL THESIS, IN PROGRESS</span><span class="ttag">ai-infra</span><span class="ttag">software</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Why Visser thinks AI is quietly destroying 'terminal value' for every public company</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="fed-treasury-pivot">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">IN PROGRESS — WARSH FED-CHAIR PROCESS ONGOING</span>
+    <span class="theme-status">IN PROGRESS — WARSH FED-CHAIR PROCESS ONGOING</span><span class="ttag">macro-rates</span><span class="ttag">crypto</span><span class="ttag">policy</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Bessent's yen intervention and Kevin Warsh's Fed-chair bid are reframing the rate debate</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="not-a-bubble">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">S&amp;P FORWARD P/E DOWN ~20% DESPITE PRICE GAINS</span>
+    <span class="theme-status">S&amp;P FORWARD P/E DOWN ~20% DESPITE PRICE GAINS</span><span class="ttag">ai-infra</span><span class="ttag">semis</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Visser's case that AI stocks aren't in a bubble — falling multiples, not exuberance</h2>
   <div class="theme-body">
@@ -188,7 +193,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;Every time you hear bubble, it's total BS.&#8221;<cite>— Jordi Visser, on Nvidia</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)</b><span>PEG ratio under 1 for most of 3 years; up ~14x since 2022 low but lagged S&amp;P 22 of last 26 months</span></div><div class="namechip"><b>Micron (MU)</b><span>cited as another '14-bagger' since 2022 despite AI-bubble fears; Druckenmiller exited this name</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>PEG ratio under 1 for most of 3 years; up ~14x since 2022 low but lagged S&amp;P 22 of last 26 months</span></div><div class="namechip"><b>Micron (MU)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>cited as another '14-bagger' since 2022 despite AI-bubble fears; Druckenmiller exited this name</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Visser concedes this is his own interpretation of multiple compression as healthy — he does not claim consensus support for reading falling P/Es as bullish.</div></div>
     </div>
   </div>
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="portfolio-rotation">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">ROTATED OUT OF AI INFRA IN MAY/JUNE, INTO SILVER/BITCOIN</span>
+    <span class="theme-status">ROTATED OUT OF AI INFRA IN MAY/JUNE, INTO SILVER/BITCOIN</span><span class="ttag">finance</span><span class="ttag">biotech</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Visser's own book: reduced AI infrastructure, loaded up on silver, Bitcoin, and Eli Lilly</h2>
   <div class="theme-body">
@@ -207,7 +212,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Eli Lilly (LLY)</b><span>new all-time highs; Visser's pharma AI re-rating thesis, expects it to become the biggest company within 5 years</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Eli Lilly (LLY)<span class="stance" style="background:#3f6b2e;">OWNS · High · within 5 years</span></b><span>new all-time highs; Visser's pharma AI re-rating thesis, expects it to become the biggest company within 5 years</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Visser states repeatedly this is educational, not investment advice, and that his own trading (he trades constantly) may not match what he says on any given video.</div></div>
     </div>
   </div>
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="grokbot-workflow">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Recommendation</span>
-    <span class="theme-status">PERSONAL AI USAGE UP ~100X</span>
+    <span class="theme-status">PERSONAL AI USAGE UP ~100X</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Grokbot demo: how Visser runs a team of AI 'digital employees' for his research</h2>
   <div class="theme-body">
@@ -240,15 +245,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">Visser is an active trader disclosing his own live positions (Bitcoin, silver/SLV/SIL, Ethereum, MicroStrategy, Eli Lilly) throughout — he states this is education, not investment advice, and that he trades in and out constantly without necessarily updating viewers in real time.</div><div class="ritem">This is a self-produced, single-speaker video; volatility figures, sigma calculations, and portfolio return numbers (e.g. MicroStrategy's ~<b>600%</b> return, Nvidia's 14x) are Visser's own working numbers quoted live, not pulled from a filed report.</div><div class="ritem">Two positions referenced by Visser — one he calls 'Marll' and a small crypto-token holding he calls 'EOS' — could not be reliably identified from the auto-generated captions and are described by context only; they are intentionally left out of the company/ticker index rather than guessed at.</div><div class="ritem">Auto-generated captions were used for this transcript; several proper nouns (e.g. Bitcoin miners Bitdeer/Riot/Hut 8/IREN, the Fed-chair candidate Kevin Warsh, the KOSPI index) required inference from context and were cross-checked where possible.</div><div class="ritem">Visser explicitly frames his S&amp;P and AI-bubble views as contrarian and non-consensus ('I am not positive on the S&amp;P 500') — treat the 'not a bubble' argument as his stated thesis, not a market view.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;I've said publicly that Eli Lilly will be the biggest company in 5 years.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I believe beta is going to lead in crypto and Bitcoin will not be the leader.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;By 2030 we will be at the point where you can say safely we will be able to stop all disease in the foreseeable future — that people won't have to die from disease.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The Anthropic thing, which scared the hell out of people and got everyone going, it is just complete noise, guys.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Everyone else is trying to trade treasuries and trade FX and short the NASDAQ and wait — they're just wasting their time playing around in an old age home inside that market.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I believe we will look back on the last week of July as one of the moments when the merging of the credit-backed fiat world and the AI-fueled digital economy stopped being theoretical.&#8221; <cite>— Jordi Visser</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Jordi Visser:</b> Bitcoin's price roughly doubles after a sigma-breakout week like this one <span class="cmeta">price move · roughly doubling</span> <i>if within about two months of breaking above the 200-day moving average, per the two prior comparable instances</i> <span class="tag">Bitcoin (BTC)</span></div><div class="ritem"><b>Jordi Visser:</b> Eli Lilly becomes the biggest company by market cap <span class="cmeta">market cap rank · #1</span> <i>if within 5 years</i> <span class="tag">Eli Lilly (LLY)</span></div><div class="ritem"><b>Jordi Visser:</b> Anthropic's valuation increases <span class="cmeta">valuation · $3 trillion</span> <i>if plausible, from a current ~$2 trillion</i> <span class="tag">Anthropic</span></div><div class="ritem"><b>Jordi Visser:</b> Most disease can be said to be stoppable <span class="cmeta">medical capability claim · most disease preventable · 2030</span></div><div class="ritem"><b>Jordi Visser:</b> Ethereum and broader crypto beta outperform Bitcoin <span class="cmeta">relative performance · beta leads, not Bitcoin</span> <i>if next leg of the cycle</i> <span class="tag">Ethereum (ETH)</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Stripe</b> <span class="rel">acquires</span> <b>Open Router</b> &mdash; building AI-agent-economy financial infrastructure stack</div><div class="ritem"><b>Stan Druckenmiller (family office)</b> <span class="rel">invests in</span> <b>Bitdeer (BTDR)</b> &mdash; added Bitcoin mining exposure</div><div class="ritem"><b>Stan Druckenmiller (family office)</b> <span class="rel">invests in</span> <b>Riot Platforms (RIOT)</b> &mdash; added Bitcoin mining exposure</div><div class="ritem"><b>Stan Druckenmiller (family office)</b> <span class="rel">invests in</span> <b>Hut 8 (HUT)</b> &mdash; added Bitcoin mining exposure</div><div class="ritem"><b>Stan Druckenmiller (family office)</b> <span class="rel">invests in</span> <b>IREN (IREN)</b> &mdash; added Bitcoin mining exposure</div></div></div>
     </section>
 
     <section class="sec">

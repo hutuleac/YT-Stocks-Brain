@@ -40,6 +40,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "bitcoin-sigma-breakout",
+        "tags": ["crypto"],
         "color": "green",
         "badge": "High conviction",
         "status": "BITCOIN +22-23% IN 7 DAYS, 200-DAY MA BROKEN",
@@ -74,9 +75,9 @@ THEMES = [
         "watch": "Visser explicitly says the pattern resembles the four-year cycle even while distancing "
                  "himself from that framework — he's calling it off the sigma/200-day signal, not the calendar.",
         "names": [
-            {"name": "Bitcoin (BTC)", "blurb": "7-sigma weekly move, +22-23%, broke above the 200-day MA"},
-            {"name": "Ethereum (ETH)", "blurb": "200-day MA turned up; Visser recently added a position, expects it to lead the next leg"},
-            {"name": "Silver", "blurb": "multi-sigma move alongside Bitcoin/gold; Visser long via SLV and SIL"},
+            {"name": "Bitcoin (BTC)", "blurb": "7-sigma weekly move, +22-23%, broke above the 200-day MA", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
+            {"name": "Ethereum (ETH)", "blurb": "200-day MA turned up; Visser recently added a position, expects it to lead the next leg", "stance": "BUYING-ADDING", "conviction": "Medium", "horizon": None},
+            {"name": "Silver", "blurb": "multi-sigma move alongside Bitcoin/gold; Visser long via SLV and SIL", "stance": "OWNS", "conviction": "High", "horizon": None},
             {"name": "MicroStrategy (MSTR)", "blurb": "up ~600% (~76%/yr) since end of 2022, cited as a Bitcoin-proxy return case study"},
             {"name": "Bitdeer (BTDR)", "blurb": "one of the Bitcoin miners Stan Druckenmiller's family office added exposure to this week"},
             {"name": "Riot Platforms (RIOT)", "blurb": "Bitcoin mining exposure added by Druckenmiller's family office"},
@@ -86,6 +87,7 @@ THEMES = [
     },
     {
         "id": "ai-terminal-value-destruction",
+        "tags": ["ai-infra", "software"],
         "color": "amber",
         "badge": "Contested",
         "status": "STRUCTURAL THESIS, IN PROGRESS",
@@ -130,6 +132,7 @@ THEMES = [
     },
     {
         "id": "fed-treasury-pivot",
+        "tags": ["macro-rates", "crypto", "policy"],
         "color": "amber",
         "badge": "Contested",
         "status": "IN PROGRESS — WARSH FED-CHAIR PROCESS ONGOING",
@@ -171,6 +174,7 @@ THEMES = [
     },
     {
         "id": "not-a-bubble",
+        "tags": ["ai-infra", "semis"],
         "color": "amber",
         "badge": "Contested",
         "status": "S&P FORWARD P/E DOWN ~20% DESPITE PRICE GAINS",
@@ -207,12 +211,13 @@ THEMES = [
         "watch": "Visser concedes this is his own interpretation of multiple compression as healthy — he "
                  "does not claim consensus support for reading falling P/Es as bullish.",
         "names": [
-            {"name": "Nvidia (NVDA)", "blurb": "PEG ratio under 1 for most of 3 years; up ~14x since 2022 low but lagged S&P 22 of last 26 months"},
-            {"name": "Micron (MU)", "blurb": "cited as another '14-bagger' since 2022 despite AI-bubble fears; Druckenmiller exited this name"},
+            {"name": "Nvidia (NVDA)", "blurb": "PEG ratio under 1 for most of 3 years; up ~14x since 2022 low but lagged S&P 22 of last 26 months", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Micron (MU)", "blurb": "cited as another '14-bagger' since 2022 despite AI-bubble fears; Druckenmiller exited this name", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
     {
         "id": "portfolio-rotation",
+        "tags": ["finance", "biotech"],
         "color": "green",
         "badge": "High conviction",
         "status": "ROTATED OUT OF AI INFRA IN MAY/JUNE, INTO SILVER/BITCOIN",
@@ -248,11 +253,12 @@ THEMES = [
         "watch": "Visser states repeatedly this is educational, not investment advice, and that his own "
                  "trading (he trades constantly) may not match what he says on any given video.",
         "names": [
-            {"name": "Eli Lilly (LLY)", "blurb": "new all-time highs; Visser's pharma AI re-rating thesis, expects it to become the biggest company within 5 years"},
+            {"name": "Eli Lilly (LLY)", "blurb": "new all-time highs; Visser's pharma AI re-rating thesis, expects it to become the biggest company within 5 years", "stance": "OWNS", "conviction": "High", "horizon": "within 5 years"},
         ],
     },
     {
         "id": "grokbot-workflow",
+        "tags": ["dev-workflow"],
         "color": "green",
         "badge": "Recommendation",
         "status": "PERSONAL AI USAGE UP ~100X",
@@ -318,6 +324,22 @@ HOT_TAKES = [
      "cite": "\u2014 Jordi Visser", "why": "Dismisses the entire traditional macro playbook as the wrong game, not just the wrong trade."},
     {"take": "I believe we will look back on the last week of July as one of the moments when the merging of the credit-backed fiat world and the AI-fueled digital economy stopped being theoretical.",
      "cite": "\u2014 Jordi Visser", "why": "He puts a specific week on the inflection point and says he called it two weeks earlier on his own and Pompliano's shows."},
+]
+
+CLAIMS = [
+    {"who": "Jordi Visser", "claim": "Bitcoin's price roughly doubles after a sigma-breakout week like this one", "metric": "price move", "target": "roughly doubling", "by": None, "condition": "within about two months of breaking above the 200-day moving average, per the two prior comparable instances", "entity": "Bitcoin (BTC)"},
+    {"who": "Jordi Visser", "claim": "Eli Lilly becomes the biggest company by market cap", "metric": "market cap rank", "target": "#1", "by": None, "condition": "within 5 years", "entity": "Eli Lilly (LLY)"},
+    {"who": "Jordi Visser", "claim": "Anthropic's valuation increases", "metric": "valuation", "target": "$3 trillion", "by": None, "condition": "plausible, from a current ~$2 trillion", "entity": "Anthropic"},
+    {"who": "Jordi Visser", "claim": "Most disease can be said to be stoppable", "metric": "medical capability claim", "target": "most disease preventable", "by": "2030", "condition": None, "entity": None},
+    {"who": "Jordi Visser", "claim": "Ethereum and broader crypto beta outperform Bitcoin", "metric": "relative performance", "target": "beta leads, not Bitcoin", "by": None, "condition": "next leg of the cycle", "entity": "Ethereum (ETH)"},
+]
+
+RELATIONS = [
+    {"from": "Stripe", "rel": "acquires", "to": "Open Router", "note": "building AI-agent-economy financial infrastructure stack"},
+    {"from": "Stan Druckenmiller (family office)", "rel": "invests_in", "to": "Bitdeer (BTDR)", "note": "added Bitcoin mining exposure"},
+    {"from": "Stan Druckenmiller (family office)", "rel": "invests_in", "to": "Riot Platforms (RIOT)", "note": "added Bitcoin mining exposure"},
+    {"from": "Stan Druckenmiller (family office)", "rel": "invests_in", "to": "Hut 8 (HUT)", "note": "added Bitcoin mining exposure"},
+    {"from": "Stan Druckenmiller (family office)", "rel": "invests_in", "to": "IREN (IREN)", "note": "added Bitcoin mining exposure"},
 ]
 
 OTHER_NEWS = [
