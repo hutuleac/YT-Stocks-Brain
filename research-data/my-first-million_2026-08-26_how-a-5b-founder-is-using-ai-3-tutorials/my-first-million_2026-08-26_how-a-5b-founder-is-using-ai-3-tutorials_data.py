@@ -21,6 +21,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "robot-staff",
+        "tags": ["dev-workflow"],
         "color": "green",
         "badge": "Recommendation",
         "status": "FOSTER'S DAILY WORKFLOW, AS OF AUG 2026",
@@ -40,6 +41,7 @@ THEMES = [
     },
     {
         "id": "war-council",
+        "tags": ["dev-workflow"],
         "color": "amber",
         "badge": "Structural critique",
         "status": "ONGOING PRACTICE, PUBLISHED ON ZAPIER'S GITHUB",
@@ -58,6 +60,7 @@ THEMES = [
     },
     {
         "id": "ai-in-hiring",
+        "tags": ["career", "dev-workflow"],
         "color": "amber",
         "badge": "Structural critique",
         "status": "PRACTICE SHIFT, PRE- VS. POST-AI",
@@ -78,6 +81,7 @@ THEMES = [
     },
     {
         "id": "model-personality",
+        "tags": ["dev-workflow"],
         "color": "gray",
         "badge": "Structural critique",
         "status": "EMERGING TREND, NO CONSENSUS",
@@ -96,6 +100,7 @@ THEMES = [
     },
     {
         "id": "agent-fleets-and-org-structure",
+        "tags": ["dev-workflow", "career"],
         "color": "amber",
         "badge": "Structural critique",
         "status": "OPEN QUESTION, NO SETTLED ANSWER",
