@@ -22,6 +22,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "sec-disclosure-rollback",
+        "tags": ["policy", "ai-infra"],
         "color": "amber",
         "badge": "Bullish short-term, risk flag long-term",
         "status": "SEC RULE CHANGE — CONFIRMED AUG 2026",
@@ -37,12 +38,13 @@ THEMES = [
         "quote": {"text": "Who needs disclosure or rules? ... this is literally what happened here.", "cite": "— Kevin, on the SEC exemption"},
         "watch": "Kevin says explicitly: 'I don't actually think it's healthy what's going on with these SEC disclosure rules. It is going to just accelerate the bubble even more... short term, bullish. Longer term, cautious.'",
         "names": [
-            {"name": "Nvidia (NVDA)", "blurb": "Central beneficiary of the new $500B data-center financing vehicle; Kevin estimates ~40% of that fund flows directly to Nvidia. Not explicitly named as a fresh buy in this video, but framed as the biggest structural winner of the disclosure rollback."},
+            {"name": "Nvidia (NVDA)", "blurb": "Central beneficiary of the new $500B data-center financing vehicle; Kevin estimates ~40% of that fund flows directly to Nvidia. Not explicitly named as a fresh buy in this video, but framed as the biggest structural winner of the disclosure rollback.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
             {"name": "Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs, KKR", "blurb": "Asset managers co-mobilizing the $500B fund; Kevin's point is they profit on AUM fees regardless of the quality of the GPUs backing the securitizations — mentioned as context/participants, not stock recommendations."},
         ],
     },
     {
         "id": "elon-spacex-spend",
+        "tags": ["ai-infra", "space"],
         "color": "gray",
         "badge": "Macro tailwind, not a stock pick — SpaceX is private",
         "status": "SPACEX RALLIED 9% ON COMPUTE COMMENTS",
@@ -60,6 +62,7 @@ THEMES = [
     },
     {
         "id": "kevin-bullish-picks",
+        "tags": ["software", "finance"],
         "color": "green",
         "badge": "High conviction — actively buying",
         "status": "OWNS / BUYING — enterprise inference compute thesis",
@@ -75,15 +78,16 @@ THEMES = [
         "quote": {"text": "The second portion that I'm also very bullish on is IGV, the software ETF.", "cite": "— Kevin"},
         "watch": None,
         "names": [
-            {"name": "RSP", "blurb": "S&P 500 equal-weight ETF; Kevin's #1 favorite index-level pick, buys dips at the 200-day moving average."},
-            {"name": "IGV", "blurb": "Software ETF; Kevin's #2 favorite, tied to his Q3/Q4 software-bottoming thesis."},
-            {"name": "Microsoft (MSFT)", "blurb": "Named as one of the stocks driving the software-bottoming thesis; buy alert sent per Kevin."},
-            {"name": "Palantir (PLTR)", "blurb": "Same — named inside the IGV/software-bottoming thesis, buy alert sent."},
-            {"name": "Axon (AXON)", "blurb": "Same — named inside the IGV/software-bottoming thesis, buy alert sent."},
+            {"name": "RSP", "blurb": "S&P 500 equal-weight ETF; Kevin's #1 favorite index-level pick, buys dips at the 200-day moving average.", "stance": "BUYING-ADDING", "conviction": "High", "horizon": None},
+            {"name": "IGV", "blurb": "Software ETF; Kevin's #2 favorite, tied to his Q3/Q4 software-bottoming thesis.", "stance": "BUYING-ADDING", "conviction": "High", "horizon": None},
+            {"name": "Microsoft (MSFT)", "blurb": "Named as one of the stocks driving the software-bottoming thesis; buy alert sent per Kevin.", "stance": "BUYING-ADDING", "conviction": "Medium", "horizon": None},
+            {"name": "Palantir (PLTR)", "blurb": "Same — named inside the IGV/software-bottoming thesis, buy alert sent.", "stance": "BUYING-ADDING", "conviction": "Medium", "horizon": None},
+            {"name": "Axon (AXON)", "blurb": "Same — named inside the IGV/software-bottoming thesis, buy alert sent.", "stance": "BUYING-ADDING", "conviction": "Medium", "horizon": None},
         ],
     },
     {
         "id": "coreweave-red-flag",
+        "tags": ["ai-infra", "finance"],
         "color": "red",
         "badge": "Red flag — balance-sheet warning",
         "status": "CRWV EARNINGS BEAT ON BACKLOG, NOT ON BALANCE-SHEET STRENGTH",
@@ -100,12 +104,13 @@ THEMES = [
         "quote": {"text": "In English, here's just ANOTHER WACC LIE... this is how you blow up a bubble.", "cite": "— Kevin, on CoreWeave's debt disclosures"},
         "watch": "Kevin isn't calling an imminent CoreWeave blowup — he frames this as a symptom of bubble stress worth monitoring, not a collapse prediction.",
         "names": [
-            {"name": "CoreWeave (CRWV)", "blurb": "$6B cash vs $18B of debt due within 12 months; disclosed 9% WACC vs. an effective >10.5% real borrowing cost per WSJ reporting on its discounted $2.6B loan sale."},
-            {"name": "Nebius (NBIS)", "blurb": "Moved up on CoreWeave's earnings as a sector read-through; only a passing mention, no independent balance-sheet check given."},
+            {"name": "CoreWeave (CRWV)", "blurb": "$6B cash vs $18B of debt due within 12 months; disclosed 9% WACC vs. an effective >10.5% real borrowing cost per WSJ reporting on its discounted $2.6B loan sale.", "stance": "NEGATIVE VIEW", "conviction": "High", "horizon": None},
+            {"name": "Nebius (NBIS)", "blurb": "Moved up on CoreWeave's earnings as a sector read-through; only a passing mention, no independent balance-sheet check given.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
     {
         "id": "macro-backdrop",
+        "tags": ["macro-rates"],
         "color": "amber",
         "badge": "Supports the near-term bullish case",
         "status": "CPI/PPI COOLER THAN FEARED, RATE-HIKE ODDS FALLING",
@@ -123,7 +128,7 @@ THEMES = [
         "quote": {"text": "This tire is rated for 70 PSI and we are just at 50 or maybe we're at 69... this puppy can stretch. We can probably pump it up to 100, 120 before it blows.", "cite": "— Kevin, bubble analogy"},
         "watch": "Kevin flags his own base case as short-term bullish only — he has a near-term price target on QQQ he says is about to be hit early, but is explicitly more cautious about 2027 than 2026.",
         "names": [
-            {"name": "QQQ", "blurb": "Kevin has a near-term price target on QQQ for the upcoming Tuesday, which he says is about to be hit early — a near-term bullish signal, not a long-hold thesis on its own in this video."},
+            {"name": "QQQ", "blurb": "Kevin has a near-term price target on QQQ for the upcoming Tuesday, which he says is about to be hit early — a near-term bullish signal, not a long-hold thesis on its own in this video.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
         ],
     },
 ]
@@ -155,6 +160,16 @@ HOT_TAKES = [
      "cite": '— Kevin', "why": "Against the rolling-over-capex consensus, with a claim that the biggest spending wave hasn't started."},
     {"take": 'Short term, bullish. Longer term, cautious.',
      "cite": '— Kevin', "why": 'He states the timeline split explicitly rather than picking one — more worried about 2027 than 2026.'},
+]
+
+CLAIMS = [
+    {"who": "Elon Musk", "claim": "SpaceX compute buildout revenue", "metric": "annual revenue", "target": "$300-500 billion/year", "by": None, "condition": None, "entity": "SpaceX"},
+    {"who": "Kevin", "claim": "Roughly 40% of the $500B Nvidia financing vehicle flows directly to Nvidia revenue", "metric": "share of fund flowing to Nvidia", "target": "~40%", "by": None, "condition": None, "entity": "Nvidia (NVDA)"},
+    {"who": "Kevin", "claim": "CoreWeave's true cost of capital is understated", "metric": "effective borrowing cost", "target": "above 10.5%, vs. disclosed 9% WACC", "by": None, "condition": None, "entity": "CoreWeave (CRWV)"},
+]
+
+RELATIONS = [
+    {"from": "Nvidia (NVDA)", "rel": "partners_with", "to": "Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs, KKR", "note": "$500B data-center financing vehicle announced Aug 10"},
 ]
 
 OTHER_NEWS = []

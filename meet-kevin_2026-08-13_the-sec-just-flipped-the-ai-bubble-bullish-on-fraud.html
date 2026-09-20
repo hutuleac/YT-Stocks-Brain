@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="sec-disclosure-rollback">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Bullish short-term, risk flag long-term</span>
-    <span class="theme-status">SEC RULE CHANGE — CONFIRMED AUG 2026</span>
+    <span class="theme-status">SEC RULE CHANGE — CONFIRMED AUG 2026</span><span class="ttag">policy</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">SEC Exempts Data-Center Securities From Dodd-Frank Disclosure Rules</h2>
   <div class="theme-body">
@@ -131,7 +136,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;Who needs disclosure or rules? ... this is literally what happened here.&#8221;<cite>— Kevin, on the SEC exemption</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)</b><span>Central beneficiary of the new $500B data-center financing vehicle; Kevin estimates ~40% of that fund flows directly to Nvidia. Not explicitly named as a fresh buy in this video, but framed as the biggest structural winner of the disclosure rollback.</span></div><div class="namechip"><b>Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs, KKR</b><span>Asset managers co-mobilizing the $500B fund; Kevin's point is they profit on AUM fees regardless of the quality of the GPUs backing the securitizations — mentioned as context/participants, not stock recommendations.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Central beneficiary of the new $500B data-center financing vehicle; Kevin estimates ~40% of that fund flows directly to Nvidia. Not explicitly named as a fresh buy in this video, but framed as the biggest structural winner of the disclosure rollback.</span></div><div class="namechip"><b>Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs, KKR</b><span>Asset managers co-mobilizing the $500B fund; Kevin's point is they profit on AUM fees regardless of the quality of the GPUs backing the securitizations — mentioned as context/participants, not stock recommendations.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Kevin says explicitly: 'I don't actually think it's healthy what's going on with these SEC disclosure rules. It is going to just accelerate the bubble even more... short term, bullish. Longer term, cautious.'</div></div>
     </div>
   </div>
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="elon-spacex-spend">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Macro tailwind, not a stock pick — SpaceX is private</span>
-    <span class="theme-status">SPACEX RALLIED 9% ON COMPUTE COMMENTS</span>
+    <span class="theme-status">SPACEX RALLIED 9% ON COMPUTE COMMENTS</span><span class="ttag">ai-infra</span><span class="ttag">space</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">Elon's Spending Is a Market-Wide Tailwind, Not an Investable Ticker</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="kevin-bullish-picks">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction — actively buying</span>
-    <span class="theme-status">OWNS / BUYING — enterprise inference compute thesis</span>
+    <span class="theme-status">OWNS / BUYING — enterprise inference compute thesis</span><span class="ttag">software</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Kevin's Actual Buys: RSP, IGV, and the Software-Bottoming Names Inside It</h2>
   <div class="theme-body">
@@ -169,7 +174,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;The second portion that I'm also very bullish on is IGV, the software ETF.&#8221;<cite>— Kevin</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>RSP</b><span>S&amp;P 500 equal-weight ETF; Kevin's #1 favorite index-level pick, buys dips at the 200-day moving average.</span></div><div class="namechip"><b>IGV</b><span>Software ETF; Kevin's #2 favorite, tied to his Q3/Q4 software-bottoming thesis.</span></div><div class="namechip"><b>Microsoft (MSFT)</b><span>Named as one of the stocks driving the software-bottoming thesis; buy alert sent per Kevin.</span></div><div class="namechip"><b>Palantir (PLTR)</b><span>Same — named inside the IGV/software-bottoming thesis, buy alert sent.</span></div><div class="namechip"><b>Axon (AXON)</b><span>Same — named inside the IGV/software-bottoming thesis, buy alert sent.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>RSP<span class="stance" style="background:#3f6b2e;">BUYING-ADDING · High</span></b><span>S&amp;P 500 equal-weight ETF; Kevin's #1 favorite index-level pick, buys dips at the 200-day moving average.</span></div><div class="namechip"><b>IGV<span class="stance" style="background:#3f6b2e;">BUYING-ADDING · High</span></b><span>Software ETF; Kevin's #2 favorite, tied to his Q3/Q4 software-bottoming thesis.</span></div><div class="namechip"><b>Microsoft (MSFT)<span class="stance" style="background:#3f6b2e;">BUYING-ADDING · Medium</span></b><span>Named as one of the stocks driving the software-bottoming thesis; buy alert sent per Kevin.</span></div><div class="namechip"><b>Palantir (PLTR)<span class="stance" style="background:#3f6b2e;">BUYING-ADDING · Medium</span></b><span>Same — named inside the IGV/software-bottoming thesis, buy alert sent.</span></div><div class="namechip"><b>Axon (AXON)<span class="stance" style="background:#3f6b2e;">BUYING-ADDING · Medium</span></b><span>Same — named inside the IGV/software-bottoming thesis, buy alert sent.</span></div></div>
       
     </div>
   </div>
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="coreweave-red-flag">
   <div class="theme-badgerow">
     <span class="badge" style="background:#a23f22;">Red flag — balance-sheet warning</span>
-    <span class="theme-status">CRWV EARNINGS BEAT ON BACKLOG, NOT ON BALANCE-SHEET STRENGTH</span>
+    <span class="theme-status">CRWV EARNINGS BEAT ON BACKLOG, NOT ON BALANCE-SHEET STRENGTH</span><span class="ttag">ai-infra</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #a23f22;">CoreWeave's 'Fantastic' Earnings Hide an Ugly Balance Sheet and a WACC That Doesn't Add Up</h2>
   <div class="theme-body">
@@ -188,7 +193,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;In English, here's just ANOTHER WACC LIE... this is how you blow up a bubble.&#8221;<cite>— Kevin, on CoreWeave's debt disclosures</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>CoreWeave (CRWV)</b><span>$6B cash vs $18B of debt due within 12 months; disclosed 9% WACC vs. an effective &gt;10.5% real borrowing cost per WSJ reporting on its discounted $2.6B loan sale.</span></div><div class="namechip"><b>Nebius (NBIS)</b><span>Moved up on CoreWeave's earnings as a sector read-through; only a passing mention, no independent balance-sheet check given.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>CoreWeave (CRWV)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · High</span></b><span>$6B cash vs $18B of debt due within 12 months; disclosed 9% WACC vs. an effective &gt;10.5% real borrowing cost per WSJ reporting on its discounted $2.6B loan sale.</span></div><div class="namechip"><b>Nebius (NBIS)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Moved up on CoreWeave's earnings as a sector read-through; only a passing mention, no independent balance-sheet check given.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Kevin isn't calling an imminent CoreWeave blowup — he frames this as a symptom of bubble stress worth monitoring, not a collapse prediction.</div></div>
     </div>
   </div>
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="macro-backdrop">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Supports the near-term bullish case</span>
-    <span class="theme-status">CPI/PPI COOLER THAN FEARED, RATE-HIKE ODDS FALLING</span>
+    <span class="theme-status">CPI/PPI COOLER THAN FEARED, RATE-HIKE ODDS FALLING</span><span class="ttag">macro-rates</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Cooling Inflation and Softening Labor Data Argue Against a September Hike</h2>
   <div class="theme-body">
@@ -207,7 +212,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;This tire is rated for 70 PSI and we are just at 50 or maybe we're at 69... this puppy can stretch. We can probably pump it up to 100, 120 before it blows.&#8221;<cite>— Kevin, bubble analogy</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>QQQ</b><span>Kevin has a near-term price target on QQQ for the upcoming Tuesday, which he says is about to be hit early — a near-term bullish signal, not a long-hold thesis on its own in this video.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>QQQ<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Kevin has a near-term price target on QQQ for the upcoming Tuesday, which he says is about to be hit early — a near-term bullish signal, not a long-hold thesis on its own in this video.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Kevin flags his own base case as short-term bullish only — he has a near-term price target on QQQ he says is about to be hit early, but is explicitly more cautious about 2027 than 2026.</div></div>
     </div>
   </div>
@@ -221,15 +226,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">Meet Kevin promotes his own paid subscription (meetkevin.com) throughout the video and has a financial incentive to keep viewers bullish and engaged with his platform.</div><div class="ritem">Stock 'buy alerts' referenced (Microsoft, Palantir, Axon) are self-reported by the speaker, not independently verified against a public track record in this video.</div><div class="ritem">This is a fast-paced, heavily editorialized solo monologue mixing jokes, opinion, and factual claims — hard numbers (CoreWeave's debt figures, WACC math, CPI internals) should be checked against primary sources (filings, WSJ, BLS).</div><div class="ritem">Auto-generated captions may contain transcription errors, particularly around tickers and numeric figures.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;Who needs disclosure or rules? This is literally what happened here.&#8221; <cite>— Kevin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;In English, here's just another WACC lie. This is how you blow up a bubble.&#8221; <cite>— Kevin, on CoreWeave's debt disclosures</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;This tire is rated for 70 PSI and we are just at 50, maybe 69. This puppy can stretch — we can probably pump it up to 100, 120 before it blows.&#8221; <cite>— Kevin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Nvidia's new $500 billion fund is completely underrated in the market. I don't think we've actually seen the real hardware push yet.&#8221; <cite>— Kevin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Short term, bullish. Longer term, cautious.&#8221; <cite>— Kevin</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Elon Musk:</b> SpaceX compute buildout revenue <span class="cmeta">annual revenue · $300-500 billion/year</span> <span class="tag">SpaceX</span></div><div class="ritem"><b>Kevin:</b> Roughly 40% of the $500B Nvidia financing vehicle flows directly to Nvidia revenue <span class="cmeta">share of fund flowing to Nvidia · ~40%</span> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>Kevin:</b> CoreWeave's true cost of capital is understated <span class="cmeta">effective borrowing cost · above 10.5%, vs. disclosed 9% WACC</span> <span class="tag">CoreWeave (CRWV)</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">partners with</span> <b>Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs, KKR</b> &mdash; $500B data-center financing vehicle announced Aug 10</div></div></div>
     </section>
 
     <section class="sec">
