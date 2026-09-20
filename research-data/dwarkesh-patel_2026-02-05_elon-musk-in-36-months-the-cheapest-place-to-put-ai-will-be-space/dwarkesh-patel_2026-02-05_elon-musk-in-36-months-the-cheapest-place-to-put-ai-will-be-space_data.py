@@ -26,6 +26,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "space-based-ai-compute",
+        "tags": ["space", "ai-infra"],
         "color": "gray",
         "badge": "Speculative",
         "status": "PROJECTED — cheapest option in 30-36 months",
@@ -47,6 +48,7 @@ THEMES = [
     },
     {
         "id": "bottleneck-stack",
+        "tags": ["ai-infra", "energy", "semis"],
         "color": "amber",
         "badge": "High conviction",
         "status": "STATED — power bottleneck now, chip bottleneck by ~2029",
@@ -72,6 +74,7 @@ THEMES = [
     },
     {
         "id": "xai-alignment-philosophy",
+        "tags": ["software", "policy"],
         "color": "gray",
         "badge": "Speculative",
         "status": "STATED — Musk's own alignment framework",
@@ -93,6 +96,7 @@ THEMES = [
     },
     {
         "id": "digital-labor-tam",
+        "tags": ["software", "consumer"],
         "color": "gray",
         "badge": "Speculative",
         "status": "PROJECTED — by end of this year",
@@ -117,6 +121,7 @@ THEMES = [
     },
     {
         "id": "optimus-humanoid-robots",
+        "tags": ["robotics"],
         "color": "amber",
         "badge": "Contested",
         "status": "IN PROGRESS — Optimus 3 targeting ~1M units/year",
@@ -138,6 +143,7 @@ THEMES = [
     },
     {
         "id": "china-manufacturing-dominance",
+        "tags": ["geopolitics", "semis"],
         "color": "red",
         "badge": "High conviction",
         "status": "FLAGGED — structural competitive gap",
@@ -159,6 +165,7 @@ THEMES = [
     },
     {
         "id": "starship-steel-heat-shield",
+        "tags": ["space"],
         "color": "green",
         "badge": "Confirmed event",
         "status": "ONGOING — heat shield is the last major unsolved problem",
@@ -178,6 +185,7 @@ THEMES = [
     },
     {
         "id": "management-philosophy",
+        "tags": ["career"],
         "color": "green",
         "badge": "High conviction",
         "status": "STATED — described in operational detail",
@@ -197,6 +205,7 @@ THEMES = [
     },
     {
         "id": "doge-fraud-and-politics",
+        "tags": ["policy", "geopolitics"],
         "color": "red",
         "badge": "Contested",
         "status": "DISPUTED — Musk's estimate vs. a cited IG report",
@@ -239,6 +248,26 @@ HOT_TAKES = [
     {"take": "In retrospect, we should have started with steel in the beginning. It was dumb not to do steel.", "cite": "— Elon Musk", "why": "A rare, specific, self-critical admission of an expensive multi-year engineering mistake, on the record."},
     {"take": "We definitely can't win on the human front... it's not just that there's four times the population, the amount of work people put in is higher [in China].", "cite": "— Elon Musk", "why": "A blunt, controversial comparative claim about national work ethic that most listeners would push back on."},
     {"take": "Government is just a corporation in the limit — the biggest corporation with a monopoly on violence. Corporations have better morality than the government.", "cite": "— Elon Musk", "why": "A sharply contrarian political claim stated as flat fact, not hedged opinion."},
+]
+
+CLAIMS = [
+    {"who": "Elon Musk", "claim": "Space becomes the cheapest place to run AI compute", "metric": "cost vs. terrestrial compute", "target": "cheapest option", "by": None, "condition": "36 months or less, maybe 30", "entity": "SpaceX"},
+    {"who": "Elon Musk", "claim": "More AI compute launched into space annually than cumulative total operating on Earth", "metric": "annual launched compute vs. Earth's cumulative total", "target": "exceeds it", "by": None, "condition": "5 years from now", "entity": "SpaceX"},
+    {"who": "Elon Musk", "claim": "Chip production outpaces the ability to power (\"turn on\") those chips", "metric": "power vs. chip supply", "target": "power becomes binding constraint", "by": "end of 2026", "condition": None, "entity": None},
+    {"who": "Elon Musk", "claim": "Digital human emulation (AI doing anything a human at a computer can do) is solved", "metric": "capability milestone", "target": "solved", "by": "end of 2026", "condition": None, "entity": "xAI"},
+    {"who": "Elon Musk", "claim": "AI exceeds the sum of human intelligence", "metric": "aggregate intelligence", "target": "AI > all humans combined", "by": None, "condition": "5-6 years", "entity": None},
+    {"who": "Elon Musk", "claim": "Terafab reaches high-volume wafer production", "metric": "wafer output", "target": "north of a million wafers/month", "by": "2030", "condition": None, "entity": "Tesla (TSLA)"},
+    {"who": "Elon Musk", "claim": "Optimus 3 scales to a target annual production rate", "metric": "units/year", "target": "~1 million units/year", "by": None, "condition": None, "entity": "Tesla (TSLA)"},
+    {"who": "Elon Musk", "claim": "China's electricity output exceeds US electricity output", "metric": "electricity output multiple", "target": "3x US output", "by": "end of 2026", "condition": None, "entity": None},
+]
+
+RELATIONS = [
+    {"from": "Tesla (TSLA)", "rel": "customer_of", "to": "TSMC (TSM)", "note": "fully booked AI chip fab capacity; Musk pushing for faster fab builds with guaranteed offtake"},
+    {"from": "Tesla (TSLA)", "rel": "customer_of", "to": "Samsung (005930.KS)", "note": "fab partner fully booked on chip capacity"},
+    {"from": "TSMC (TSM)", "rel": "supplies", "to": "Tesla (TSLA)", "note": "chip fabrication, capacity constrained"},
+    {"from": "ASML (ASML)", "rel": "supplies", "to": "TSMC (TSM)", "note": "leading-edge lithography equipment; export bans on ASML tools are why China lacks leading-edge chips, per Musk"},
+    {"from": "xAI", "rel": "endorses", "to": "Anthropic", "note": "Musk credits Anthropic's interpretability work as the model xAI's own AI-debugging approach is based on"},
+    {"from": "BYD (1211.HK)", "rel": "competes_with", "to": "Tesla (TSLA)", "note": "reaching Tesla-scale sales volume, signaling a coming wave of competitively priced Chinese vehicles"},
 ]
 
 OTHER_NEWS = [

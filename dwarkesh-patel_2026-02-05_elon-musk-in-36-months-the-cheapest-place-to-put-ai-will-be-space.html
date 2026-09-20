@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="space-based-ai-compute">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Speculative</span>
-    <span class="theme-status">PROJECTED — cheapest option in 30-36 months</span>
+    <span class="theme-status">PROJECTED — cheapest option in 30-36 months</span><span class="ttag">space</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">"The cheapest place to put AI will be space" — Musk's 36-month prediction</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="bottleneck-stack">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">High conviction</span>
-    <span class="theme-status">STATED — power bottleneck now, chip bottleneck by ~2029</span>
+    <span class="theme-status">STATED — power bottleneck now, chip bottleneck by ~2029</span><span class="ttag">ai-infra</span><span class="ttag">energy</span><span class="ttag">semis</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">The bottleneck stack: power today, chips within 3-4 years</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="xai-alignment-philosophy">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Speculative</span>
-    <span class="theme-status">STATED — Musk's own alignment framework</span>
+    <span class="theme-status">STATED — Musk's own alignment framework</span><span class="ttag">software</span><span class="ttag">policy</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">xAI's alignment bet: radical truth-seeking over "political correctness"</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="digital-labor-tam">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Speculative</span>
-    <span class="theme-status">PROJECTED — by end of this year</span>
+    <span class="theme-status">PROJECTED — by end of this year</span><span class="ttag">software</span><span class="ttag">consumer</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">"Digital human emulation": the trillion-dollar bet behind xAI's business model</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="optimus-humanoid-robots">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">IN PROGRESS — Optimus 3 targeting ~1M units/year</span>
+    <span class="theme-status">IN PROGRESS — Optimus 3 targeting ~1M units/year</span><span class="ttag">robotics</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Optimus: the hand is the hardest problem, and there's no existing supply chain</h2>
   <div class="theme-body">
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="china-manufacturing-dominance">
   <div class="theme-badgerow">
     <span class="badge" style="background:#a23f22;">High conviction</span>
-    <span class="theme-status">FLAGGED — structural competitive gap</span>
+    <span class="theme-status">FLAGGED — structural competitive gap</span><span class="ttag">geopolitics</span><span class="ttag">semis</span>
   </div>
   <h2 style="border-left:4px solid #a23f22;">"We can't win on the human front": Musk's stark read on China's manufacturing lead</h2>
   <div class="theme-body">
@@ -235,7 +240,7 @@ i{font-style:italic;}
 <section class="theme" id="starship-steel-heat-shield">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
-    <span class="theme-status">ONGOING — heat shield is the last major unsolved problem</span>
+    <span class="theme-status">ONGOING — heat shield is the last major unsolved problem</span><span class="ttag">space</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Starship's steel pivot, and the one problem Musk says remains unsolved: a reusable heat shield</h2>
   <div class="theme-body">
@@ -254,7 +259,7 @@ i{font-style:italic;}
 <section class="theme" id="management-philosophy">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">STATED — described in operational detail</span>
+    <span class="theme-status">STATED — described in operational detail</span><span class="ttag">career</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">How Musk actually runs his companies: limiting-factor focus and 50th-percentile deadlines</h2>
   <div class="theme-body">
@@ -273,7 +278,7 @@ i{font-style:italic;}
 <section class="theme" id="doge-fraud-and-politics">
   <div class="theme-badgerow">
     <span class="badge" style="background:#a23f22;">Contested</span>
-    <span class="theme-status">DISPUTED — Musk's estimate vs. a cited IG report</span>
+    <span class="theme-status">DISPUTED — Musk's estimate vs. a cited IG report</span><span class="ttag">policy</span><span class="ttag">geopolitics</span>
   </div>
   <h2 style="border-left:4px solid #a23f22;">DOGE's fraud numbers — and why Musk still defends the Twitter deal and backing Trump</h2>
   <div class="theme-body">
@@ -297,15 +302,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">This episode was sponsored by Mercury, Jane Street, and Labelbox — those segments are excluded from this brief entirely.</div><div class="ritem">Nearly every forward timeline here (the 30-36 month space-compute prediction, digital human emulation "solved by end of this year," the Terafab's 2030 wafer target) is Musk's own prediction about businesses he runs and financially benefits from being believed.</div><div class="ritem">The DOGE fraud figures are actively disputed within the conversation itself — Musk's implied scale runs well above a 2024 Inspector General report Dwarkesh directly cites for the specific mechanism Musk describes.</div><div class="ritem">Musk repeatedly flags his own numbers as rough approximations ("give or take an order of magnitude," "roughly") rather than precise figures — treat specific quantities here as directionally stated in conversation, not modeled.</div><div class="ritem">Reported/informal business details (a possible SpaceX IPO, informal revenue figures for OpenAI/Anthropic/xAI) are discussed casually rather than confirmed via filings; Musk explicitly declines to elaborate on pre-IPO company specifics.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;My prediction is that it will be by far the cheapest place to put AI — space — in 36 months or less. Maybe 30 months.&#8221; <cite>— Elon Musk</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't think humans will be in control of something that is vastly more intelligent than humans.&#8221; <cite>— Elon Musk</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;We are 1,000% going to go bankrupt as a country and fail as a country without AI and robots. Nothing else will solve the national debt.&#8221; <cite>— Elon Musk</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;In retrospect, we should have started with steel in the beginning. It was dumb not to do steel.&#8221; <cite>— Elon Musk</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;We definitely can't win on the human front... it's not just that there's four times the population, the amount of work people put in is higher [in China].&#8221; <cite>— Elon Musk</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Government is just a corporation in the limit — the biggest corporation with a monopoly on violence. Corporations have better morality than the government.&#8221; <cite>— Elon Musk</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Elon Musk:</b> Space becomes the cheapest place to run AI compute <span class="cmeta">cost vs. terrestrial compute · cheapest option</span> <i>if 36 months or less, maybe 30</i> <span class="tag">SpaceX</span></div><div class="ritem"><b>Elon Musk:</b> More AI compute launched into space annually than cumulative total operating on Earth <span class="cmeta">annual launched compute vs. Earth's cumulative total · exceeds it</span> <i>if 5 years from now</i> <span class="tag">SpaceX</span></div><div class="ritem"><b>Elon Musk:</b> Chip production outpaces the ability to power ("turn on") those chips <span class="cmeta">power vs. chip supply · power becomes binding constraint · end of 2026</span></div><div class="ritem"><b>Elon Musk:</b> Digital human emulation (AI doing anything a human at a computer can do) is solved <span class="cmeta">capability milestone · solved · end of 2026</span> <span class="tag">xAI</span></div><div class="ritem"><b>Elon Musk:</b> AI exceeds the sum of human intelligence <span class="cmeta">aggregate intelligence · AI &gt; all humans combined</span> <i>if 5-6 years</i></div><div class="ritem"><b>Elon Musk:</b> Terafab reaches high-volume wafer production <span class="cmeta">wafer output · north of a million wafers/month · 2030</span> <span class="tag">Tesla (TSLA)</span></div><div class="ritem"><b>Elon Musk:</b> Optimus 3 scales to a target annual production rate <span class="cmeta">units/year · ~1 million units/year</span> <span class="tag">Tesla (TSLA)</span></div><div class="ritem"><b>Elon Musk:</b> China's electricity output exceeds US electricity output <span class="cmeta">electricity output multiple · 3x US output · end of 2026</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Tesla (TSLA)</b> <span class="rel">customer of</span> <b>TSMC (TSM)</b> &mdash; fully booked AI chip fab capacity; Musk pushing for faster fab builds with guaranteed offtake</div><div class="ritem"><b>Tesla (TSLA)</b> <span class="rel">customer of</span> <b>Samsung (005930.KS)</b> &mdash; fab partner fully booked on chip capacity</div><div class="ritem"><b>TSMC (TSM)</b> <span class="rel">supplies</span> <b>Tesla (TSLA)</b> &mdash; chip fabrication, capacity constrained</div><div class="ritem"><b>ASML (ASML)</b> <span class="rel">supplies</span> <b>TSMC (TSM)</b> &mdash; leading-edge lithography equipment; export bans on ASML tools are why China lacks leading-edge chips, per Musk</div><div class="ritem"><b>xAI</b> <span class="rel">endorses</span> <b>Anthropic</b> &mdash; Musk credits Anthropic's interpretability work as the model xAI's own AI-debugging approach is based on</div><div class="ritem"><b>BYD (1211.HK)</b> <span class="rel">competes with</span> <b>Tesla (TSLA)</b> &mdash; reaching Tesla-scale sales volume, signaling a coming wave of competitively priced Chinese vehicles</div></div></div>
     </section>
 
     <section class="sec">
