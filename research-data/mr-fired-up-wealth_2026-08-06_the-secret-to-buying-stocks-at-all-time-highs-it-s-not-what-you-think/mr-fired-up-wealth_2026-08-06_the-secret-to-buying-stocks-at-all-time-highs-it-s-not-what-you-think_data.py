@@ -25,6 +25,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "all-time-highs",
+        "tags": ["finance"],
         "color": "green",
         "badge": "Historical framework",
         "status": "S&P AT ALL-TIME HIGH 7723 — FIRST CLOSE OVER 7700 EVER",
@@ -44,6 +45,7 @@ THEMES = [
     },
     {
         "id": "mercado-libre",
+        "tags": ["consumer", "finance"],
         "color": "green",
         "badge": "High conviction — actively buying",
         "status": "OWNS — ADDED MORE TODAY",
@@ -60,12 +62,13 @@ THEMES = [
         "quote": None,
         "watch": "The bull case leans on the host's own rough estimate of MELI's e-commerce vs. fintech margin split, since the company doesn't publish the exact breakdown — treat the 40%/60% figures as an educated guess, not disclosed data.",
         "names": [
-            {"name": "Mercado Libre (MELI)", "blurb": "~4% of the community portfolio today, target 5%; the only name the host says he's actively buying in this video."},
-            {"name": "Amazon (comparison)", "blurb": "Cited as the historical parallel for prioritizing capex/growth over near-term margins — with the caveat that MELI lacks an AWS-equivalent cloud business."},
+            {"name": "Mercado Libre (MELI)", "blurb": "~4% of the community portfolio today, target 5%; the only name the host says he's actively buying in this video.", "stance": "BUYING-ADDING", "conviction": "High", "horizon": "10-year hold"},
+            {"name": "Amazon (comparison)", "blurb": "Cited as the historical parallel for prioritizing capex/growth over near-term margins — with the caveat that MELI lacks an AWS-equivalent cloud business.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
     {
         "id": "k-shaped-economy",
+        "tags": ["consumer", "macro-rates"],
         "color": "amber",
         "badge": "Contested / macro read",
         "status": "CONSUMER-FACING NAMES DIVERGING FROM THE INDEX",
@@ -83,14 +86,15 @@ THEMES = [
         "quote": {"text": "High earners and asset owners climb the upward arm of the K... while lower-income groups and labor-dependent sectors slide down due to persistent inflation, tighter budgets, and not benefiting from things like the stock market.", "cite": "— Mr. FIRED Up Wealth"},
         "watch": "This is the host's own macro interpretation stitched together from two single-company earnings misses plus a gas-price anecdote — it's a plausible narrative, not a rigorously sourced macro dataset.",
         "names": [
-            {"name": "Celsius (CELH)", "blurb": "Small ~0.85% spec position; double miss on EPS and revenue, guidance soft, not being added to right now."},
-            {"name": "Wingstop (WING)", "blurb": "Beat EPS but missed revenue with negative same-store sales; fundamentals flagged as broken down, not currently held or being bought."},
-            {"name": "McDonald's (comparison)", "blurb": "Cited only as a contrasting dividend/income name, not a growth pick — comparable sales positive but modest."},
-            {"name": "Monster Beverage (comparison)", "blurb": "Cited as historical proof the energy-drink category can produce huge winners (~49,000% all-time), not as a current recommendation."},
+            {"name": "Celsius (CELH)", "blurb": "Small ~0.85% spec position; double miss on EPS and revenue, guidance soft, not being added to right now.", "stance": "OWNS", "conviction": "Low", "horizon": None},
+            {"name": "Wingstop (WING)", "blurb": "Beat EPS but missed revenue with negative same-store sales; fundamentals flagged as broken down, not currently held or being bought.", "stance": "NEGATIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "McDonald's (comparison)", "blurb": "Cited only as a contrasting dividend/income name, not a growth pick — comparable sales positive but modest.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Monster Beverage (comparison)", "blurb": "Cited as historical proof the energy-drink category can produce huge winners (~49,000% all-time), not as a current recommendation.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
     {
         "id": "headline-vs-reality",
+        "tags": ["consumer", "software"],
         "color": "green",
         "badge": "Mixed signal — bullish once explained",
         "status": "BOTH SOLD OFF ON HEADLINE NUMBERS THAT DON'T TELL THE FULL STORY",
@@ -108,12 +112,13 @@ THEMES = [
         "quote": {"text": "These numbers are good. You look at mobility, 20%. Delivery, 25%. Freight, 25%. The company's doing well.", "cite": "— Mr. FIRED Up Wealth, on Uber's real growth beneath the accounting-distorted headline"},
         "watch": "The DataDog-as-AI-observability-standard claim (used \"almost exclusively\" by OpenAI and Anthropic) is the host's own characterization, not a sourced disclosure from either company — worth independently checking before treating it as confirmed vendor lock-in.",
         "names": [
-            {"name": "Uber (UBER)", "blurb": "~2% community-portfolio position; liked more at $65 or below, more so near $59."},
-            {"name": "DataDog (DDOG)", "blurb": "Recently trimmed; cost basis reportedly in the $70s from early positions, now trading far above that; 200-day moving average ~$169 at time of recording."},
+            {"name": "Uber (UBER)", "blurb": "~2% community-portfolio position; liked more at $65 or below, more so near $59.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "DataDog (DDOG)", "blurb": "Recently trimmed; cost basis reportedly in the $70s from early positions, now trading far above that; 200-day moving average ~$169 at time of recording.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
         ],
     },
     {
         "id": "applovin-sentiment",
+        "tags": ["software", "finance"],
         "color": "amber",
         "badge": "Strong fundamentals, low conviction",
         "status": "DOWN ~20% ON THE PRINT DESPITE A BEAT",
@@ -130,8 +135,8 @@ THEMES = [
         "quote": {"text": "Is it a strong buy, or is it the next Trade Desk?", "cite": "— Mr. FIRED Up Wealth, on AppLovin"},
         "watch": "This is explicitly a sentiment-based hesitation, not a fundamentals-based one — the host repeatedly says the numbers themselves look strong; the caution is entirely about pattern-matching to a prior stock's collapse (Trade Desk), which may or may not be a valid comparison.",
         "names": [
-            {"name": "AppLovin (APP)", "blurb": "Not currently held or being bought by the host despite strong fundamentals; flagged as more speculative, not on his high-conviction 'best of breed' list."},
-            {"name": "Trade Desk (comparison)", "blurb": "Cited as a cautionary sentiment parallel — a stock the host says 'was great until it wasn't.'"},
+            {"name": "AppLovin (APP)", "blurb": "Not currently held or being bought by the host despite strong fundamentals; flagged as more speculative, not on his high-conviction 'best of breed' list.", "stance": "UNCERTAIN", "conviction": None, "horizon": None},
+            {"name": "Trade Desk (comparison)", "blurb": "Cited as a cautionary sentiment parallel — a stock the host says 'was great until it wasn't.'", "stance": "NEGATIVE VIEW", "conviction": None, "horizon": None},
         ],
     },
 ]
@@ -166,6 +171,17 @@ HOT_TAKES = [
      "cite": '— Mr Fired Up Wealth', "why": 'Talks his own audience out of the most exciting idea in the video.'},
     {"take": 'The harder you work, the luckier you get.',
      "cite": '— Mr Fired Up Wealth', "why": 'His stated stance on stock picking: nobody knows for sure, so the work is the edge.'},
+]
+
+CLAIMS = [
+    {"who": "Mr. FIRED Up Wealth", "claim": "Celsius could break below $20/share", "metric": "share price", "target": "under $20", "by": None, "condition": "without a catalyst, no V-shaped recovery", "entity": "Celsius (CELH)"},
+    {"who": "Mr. FIRED Up Wealth", "claim": "He'd buy Mercado Libre heavily", "metric": "buy trigger price", "target": "under $1,500", "by": None, "condition": None, "entity": "Mercado Libre (MELI)"},
+]
+
+RELATIONS = [
+    {"from": "OpenAI", "rel": "customer_of", "to": "DataDog (DDOG)", "note": "reportedly uses DataDog almost exclusively for AI observability, per the host's characterization"},
+    {"from": "Anthropic", "rel": "customer_of", "to": "DataDog (DDOG)", "note": "reportedly uses DataDog almost exclusively for AI observability, per the host's characterization"},
+    {"from": "PepsiCo", "rel": "owns_stake", "to": "Celsius (CELH)", "note": "Pepsi owns 11% of Celsius"},
 ]
 
 OTHER_NEWS = [
