@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="fear-mongering-regulatory-capture">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Structural critique</span>
-    <span class="theme-status">NO SOURCE NAMED</span>
+    <span class="theme-status">NO SOURCE NAMED</span><span class="ttag">policy</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">AI doom messaging is PR strategy from a handful of labs, not a reflection of reality</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="task-automation-not-job-apocalypse">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Recommendation</span>
-    <span class="theme-status">CITES NAMED ECONOMISTS</span>
+    <span class="theme-status">CITES NAMED ECONOMISTS</span><span class="ttag">career</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">AI automates tasks, not jobs — and software engineering is the leading indicator</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="human-context-advantage">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Core thesis</span>
-    <span class="theme-status">HIS EXPLANATION FOR 'TASTE'</span>
+    <span class="theme-status">HIS EXPLANATION FOR 'TASTE'</span><span class="ttag">career</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Humans keep a durable edge because of accumulated context AI has no way to acquire</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="ai-bad-for-learning-learnvector">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Skill-atrophy warning</span>
-    <span class="theme-status">BACKED BY $100M COURSERA INVESTMENT</span>
+    <span class="theme-status">BACKED BY $100M COURSERA INVESTMENT</span><span class="ttag">career</span><span class="ttag">consumer</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">AI models are 'terrible for learning' as commonly used — LearnVector is his fix</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="internal-ai-workflows">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Recommendation</span>
-    <span class="theme-status">CONCRETE EXAMPLES FROM HIS OWN TEAMS</span>
+    <span class="theme-status">CONCRETE EXAMPLES FROM HIS OWN TEAMS</span><span class="ttag">dev-workflow</span><span class="ttag">career</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">What AI-native actually looks like inside his companies: everyone codes, engineers get embedded everywhere</h2>
   <div class="theme-body">
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="privacy-safety-agi">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Mixed signal</span>
-    <span class="theme-status">SEVERAL DISTINCT CLAIMS</span>
+    <span class="theme-status">SEVERAL DISTINCT CLAIMS</span><span class="ttag">policy</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Trusts hyperscalers over lesser-known AI vendors; AGI is 'decades away' by his definition</h2>
   <div class="theme-body">
@@ -240,15 +245,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">Ng has direct financial and reputational stakes in several claims here: he co-founded Coursera (which just invested <b>$100M</b> in his new venture LearnVector) and champions open-source/cheap AI against the 'handful of leading AI companies' he accuses of fear-mongering, without naming them.</div><div class="ritem">Several central claims — the unnamed companies behind AI fear-mongering, the unnamed AI vendor that quietly changed data-retention terms, and the 'multiple studies' behind AI hurting learning retention — are asserted without being sourced to a specific company, vendor, or publication.</div><div class="ritem">This is a single long-form interview built on Ng's own experience running his companies (AI Fund, Landing AI, AI Aspire, LearnVector) and anecdotes from his teams — not independently verified data on the broader labor market.</div><div class="ritem">Auto-generated captions on this episode garble several proper nouns (e.g. 'Corsera' for Coursera, 'chai GPT' for ChatGPT, 'Metamuse' likely for Meta/Llama) — cross-check exact wording against the video before quoting directly.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;The job apocalypse, this idea that AI will take over 50% of jobs, people will be out of work, rioting in the streets — that's just not going to happen.&#8221; <cite>— Andrew Ng</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;It's just so clear that LLMs, as they are most commonly used, are terrible for learning.&#8221; <cite>— Andrew Ng</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;When you go and say AI is like nuclear weapons, which is an analogy that has no basis in fact — what do they have to even do with each other?&#8221; <cite>— Andrew Ng</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;One of the most disgusting things I've ever seen or heard of is non-consensual intimate deep fake imagery.&#8221; <cite>— Andrew Ng</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Frankly, making people give up is one of the worst things we'll be doing in this era, when people that lean in will thrive.&#8221; <cite>— Andrew Ng</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't know what's the best major... it's like, what's the best job in the world?&#8221; <cite>— Andrew Ng</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Coursera:</b> invests in LearnVector <span class="cmeta">investment amount · $100M</span> <i>if disclosed investment backing Ng's new venture</i> <span class="tag">Coursera</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Coursera</b> <span class="rel">invests in</span> <b>LearnVector</b> &mdash; $100M investment backing Ng's new one-to-one AI tutoring venture</div></div></div>
     </section>
 
     <section class="sec">

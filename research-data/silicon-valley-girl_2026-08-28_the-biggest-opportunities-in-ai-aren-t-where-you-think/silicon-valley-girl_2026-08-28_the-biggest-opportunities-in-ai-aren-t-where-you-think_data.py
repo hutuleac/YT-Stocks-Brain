@@ -22,6 +22,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "fear-mongering-regulatory-capture",
+        "tags": ["policy", "ai-infra"],
         "color": "amber",
         "badge": "Structural critique",
         "status": "NO SOURCE NAMED",
@@ -42,6 +43,7 @@ THEMES = [
     },
     {
         "id": "task-automation-not-job-apocalypse",
+        "tags": ["career", "dev-workflow"],
         "color": "green",
         "badge": "Recommendation",
         "status": "CITES NAMED ECONOMISTS",
@@ -63,6 +65,7 @@ THEMES = [
     },
     {
         "id": "human-context-advantage",
+        "tags": ["career", "dev-workflow"],
         "color": "green",
         "badge": "Core thesis",
         "status": "HIS EXPLANATION FOR 'TASTE'",
@@ -82,6 +85,7 @@ THEMES = [
     },
     {
         "id": "ai-bad-for-learning-learnvector",
+        "tags": ["career", "consumer"],
         "color": "amber",
         "badge": "Skill-atrophy warning",
         "status": "BACKED BY $100M COURSERA INVESTMENT",
@@ -107,6 +111,7 @@ THEMES = [
     },
     {
         "id": "internal-ai-workflows",
+        "tags": ["dev-workflow", "career"],
         "color": "green",
         "badge": "Recommendation",
         "status": "CONCRETE EXAMPLES FROM HIS OWN TEAMS",
@@ -128,6 +133,7 @@ THEMES = [
     },
     {
         "id": "privacy-safety-agi",
+        "tags": ["policy", "ai-infra"],
         "color": "amber",
         "badge": "Mixed signal",
         "status": "SEVERAL DISTINCT CLAIMS",
@@ -159,6 +165,14 @@ TAKEAWAYS = [
     {"icon": "\U0001F6E0️", "tag": "AI tools", "title": "Build small internal tools yourself even outside engineering — Ng's marketing, finance, and recruiting teams all ship their own scripts and apps now."},
     {"icon": "\U0001F512", "tag": "Privacy", "title": "For sensitive or material non-public data, default to a hyperscaler with airtight terms of service or a local open-weight model (Llama, Qwen) — not a lesser-known AI vendor."},
     {"icon": "\U0001F3AF", "tag": "Careers", "title": "Treat deciding what to build, not how to code it, as the real bottleneck now that building with AI is cheap — talk to customers before you build."},
+]
+
+CLAIMS = [
+    {"who": "Coursera", "claim": "invests in LearnVector", "metric": "investment amount", "target": "$100M", "by": None, "condition": "disclosed investment backing Ng's new venture", "entity": "Coursera"},
+]
+
+RELATIONS = [
+    {"from": "Coursera", "rel": "invests_in", "to": "LearnVector", "note": "$100M investment backing Ng's new one-to-one AI tutoring venture"},
 ]
 
 RISKS = [
