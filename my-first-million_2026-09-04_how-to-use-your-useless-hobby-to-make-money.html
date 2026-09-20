@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="enthusiasm-moat">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Founder playbook</span>
-    <span class="theme-status">CASE STUDIES</span>
+    <span class="theme-status">CASE STUDIES</span><span class="ttag">career</span><span class="ttag">consumer</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Enthusiasm as a Competitive Moat: Turning Niche Passion Into a Business</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="experience-tours">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Case study</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">consumer</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Real Experience Tours: A Repeatable Local Playbook</h2>
   <div class="theme-body">
@@ -150,7 +155,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;If niche doesn't work, niche even deeper.&#8221;<cite>— My First Million</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>DoorDash (DASH)</b><span>Named as the delivery platform behind Sendo Sushi's ghost-kitchen revenue — a passing mention, not a stance on the stock.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>DoorDash (DASH)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Named as the delivery platform behind Sendo Sushi's ghost-kitchen revenue — a passing mention, not a stance on the stock.</span></div></div>
       
     </div>
   </div>
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="equine-network">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Confirmed exit ($300M)</span>
-    <span class="theme-status">SOLD ~6 MONTHS BEFORE RECORDING</span>
+    <span class="theme-status">SOLD ~6 MONTHS BEFORE RECORDING</span><span class="ttag">consumer</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">The Equine Network Roll-Up: a 600K-Visitor Niche Site to a $300M Exit</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="dolly-business">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Retrospective (millionaire of the week)</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">consumer</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Dolly Parton's Business Empire, and the Rights Decision That Made Her Rich</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="dolly-legacy">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Retrospective (millionaire of the week)</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">consumer</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Dolly Parton's Philanthropy and Personal Mystique</h2>
   <div class="theme-body">
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="lebron-bond">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Financial engineering</span>
-    <span class="theme-status">2018 BOND ISSUE</span>
+    <span class="theme-status">2018 BOND ISSUE</span><span class="ttag">finance</span><span class="ttag">consumer</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">LeBron's "Bowie Bond" Move — and How a Guggenheim Insurance Rule Led to the Lakers Sale</h2>
   <div class="theme-body">
@@ -226,7 +231,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;He gets $300 million in cash now, without waiting for that lifetime contract — and he doesn't pay taxes on it.&#8221;<cite>— My First Million</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nike (NKE)</b><span>LeBron's lifetime endorsement deal with Nike is the collateral behind his 2018 King James Fund bond issue.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nike (NKE)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>LeBron's lifetime endorsement deal with Nike is the collateral behind his 2018 King James Fund bond issue.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The insurance-float and related-party figures are the hosts' summary of reporting they recall reading, not sourced firsthand in this episode.</div></div>
     </div>
   </div>
@@ -235,7 +240,7 @@ i{font-style:italic;}
 <section class="theme" id="athlete-frugality">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Culture trend (speculative)</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">finance</span><span class="ttag">career</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">Athletes Are Flexing Frugality Now — LeBron as the "Owner, Not Employee" Blueprint</h2>
   <div class="theme-body">
@@ -259,15 +264,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">This episode ran a HubSpot sponsor segment (a free "business ideas database" plug), excluded entirely from this brief per standing policy.</div><div class="ritem">Financial and revenue figures throughout (Aisha Grant's perfume-tour revenue, Museum Hack's <b>$2.9M</b>, Equine Network's $85M revenue and $300M sale, LeBron's bond terms, Dolly Parton's net worth and royalty income) are the hosts' own estimates, guesses, or secondhand recollection — not sourced from filings or the businesses themselves within this episode.</div><div class="ritem">The two hosts trade lines throughout without clear speaker labels in the auto-captions; quotes in this brief are attributed to "My First Million" generically rather than guessed to an individual host where the transcript didn't make the speaker clear.</div><div class="ritem">A couple of names in the transcript (e.g. the Equine Network founders' full names, spelled only as "Andy and Tom") could not be confidently resolved from auto-captions and were left approximate rather than guessed further.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;You don't want to be the best, you want to be the only one.&#8221; <cite>— My First Million</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The tour is just actors — the real business is building a brand online.&#8221; <cite>— My First Million</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't think God wanted me to have children — so everyone else's children can be mine.&#8221; <cite>— Dolly Parton (as recounted)</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;She turns Elvis down to do better. It's like a Sylvester Stallone move — she bets on herself.&#8221; <cite>— My First Million</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;If niche doesn't work, niche even deeper.&#8221; <cite>— My First Million</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think being financially responsible will become fashionable.&#8221; <cite>— My First Million</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><p class="empty">No dated or numeric calls made in this video.</p></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><p class="empty">No company-to-company relationships stated in this video.</p></div>
     </section>
 
     <section class="sec">

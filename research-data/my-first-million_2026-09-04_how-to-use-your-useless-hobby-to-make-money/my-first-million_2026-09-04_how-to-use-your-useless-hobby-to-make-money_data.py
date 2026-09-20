@@ -26,6 +26,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "enthusiasm-moat",
+        "tags": ["career", "consumer"],
         "color": "green",
         "badge": "Founder playbook",
         "status": "CASE STUDIES",
@@ -44,6 +45,7 @@ THEMES = [
     },
     {
         "id": "experience-tours",
+        "tags": ["consumer"],
         "color": "green",
         "badge": "Case study",
         "status": "",
@@ -57,10 +59,11 @@ THEMES = [
         ],
         "quote": {"text": "If niche doesn't work, niche even deeper.", "cite": "— My First Million"},
         "watch": None,
-        "names": [{"name": "DoorDash (DASH)", "blurb": "Named as the delivery platform behind Sendo Sushi's ghost-kitchen revenue — a passing mention, not a stance on the stock."}],
+        "names": [{"name": "DoorDash (DASH)", "blurb": "Named as the delivery platform behind Sendo Sushi's ghost-kitchen revenue — a passing mention, not a stance on the stock.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None}],
     },
     {
         "id": "equine-network",
+        "tags": ["consumer"],
         "color": "green",
         "badge": "Confirmed exit ($300M)",
         "status": "SOLD ~6 MONTHS BEFORE RECORDING",
@@ -79,6 +82,7 @@ THEMES = [
     },
     {
         "id": "dolly-business",
+        "tags": ["consumer"],
         "color": "green",
         "badge": "Retrospective (millionaire of the week)",
         "status": "",
@@ -96,6 +100,7 @@ THEMES = [
     },
     {
         "id": "dolly-legacy",
+        "tags": ["consumer"],
         "color": "green",
         "badge": "Retrospective (millionaire of the week)",
         "status": "",
@@ -114,6 +119,7 @@ THEMES = [
     },
     {
         "id": "lebron-bond",
+        "tags": ["finance", "consumer"],
         "color": "amber",
         "badge": "Financial engineering",
         "status": "2018 BOND ISSUE",
@@ -128,10 +134,11 @@ THEMES = [
         ],
         "quote": {"text": "He gets $300 million in cash now, without waiting for that lifetime contract — and he doesn't pay taxes on it.", "cite": "— My First Million"},
         "watch": "The insurance-float and related-party figures are the hosts' summary of reporting they recall reading, not sourced firsthand in this episode.",
-        "names": [{"name": "Nike (NKE)", "blurb": "LeBron's lifetime endorsement deal with Nike is the collateral behind his 2018 King James Fund bond issue."}],
+        "names": [{"name": "Nike (NKE)", "blurb": "LeBron's lifetime endorsement deal with Nike is the collateral behind his 2018 King James Fund bond issue.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None}],
     },
     {
         "id": "athlete-frugality",
+        "tags": ["finance", "career"],
         "color": "gray",
         "badge": "Culture trend (speculative)",
         "status": "",
