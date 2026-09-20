@@ -3,170 +3,238 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Research: Bitcoin Is The Best Hedge Fund That&#x27;s Ever Existed</title>
+<title>Research: Bitcoin Is The Best Hedge Fund That's Ever Existed</title>
 <style>
-.backlink{margin-bottom:12px;}
-.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
-.backlink a:hover{color:var(--brand);border-color:var(--brand);}
-
 :root{
   --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
-  --brand:#8a5a2e; --brand-soft:#f4e9db;
-  --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
-  --g:#eaf3e6; --gk:#3f6b2e; --r:#f8ebe6; --rk:#a23f22;
-  --y:#f8f0dd; --yk:#93711b; --gr:#eeece3; --grk:#65695f;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-  font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased;}
-.page{max-width:1720px;width:100%;margin:0 auto;background:var(--card);min-height:100vh;
-  box-shadow:0 0 0 1px var(--line);}
-.hero{padding:clamp(18px,2.4vw,34px) clamp(20px,4vw,56px) clamp(14px,1.8vw,22px);
-  border-bottom:1px solid var(--line);}
-.hero .kicker{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--brand);margin-bottom:10px;}
-.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(28px,3vw,42px);line-height:1.15;
-  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:38ch;}
-.hero-row{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;
-  border-top:1px solid var(--line);padding-top:12px;}
-.hero .meta{color:var(--muted);font-size:15px;line-height:1.55;}
-.hero .meta b{color:var(--ink);font-weight:600;}
-.hero .stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:14.5px;margin-top:4px;}
-.watch-btn{flex:none;display:inline-flex;align-items:center;gap:7px;background:var(--brand);color:#fffdf8;
-  text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.01em;padding:9px 18px;
-  border-radius:999px;white-space:nowrap;transition:.15s;}
-.watch-btn:hover{background:#734a24}
-.inner{padding:10px clamp(20px,4vw,56px) 44px;}
-.sec{margin:0;padding:34px 0;border-top:1px solid var(--line);}
-.sec:first-child{border-top:none;padding-top:20px;}
-.sec-head{margin-bottom:16px;}
-.sec-eye{font-family:var(--serif);font-style:italic;font-size:14.5px;color:var(--brand);margin-bottom:4px;}
-.sec h2{font-family:var(--serif);margin:0;font-size:clamp(22px,2vw,27px);font-weight:600;color:#171916;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
   border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
-.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:26px 28px;}
-.snap{list-style:none;margin:0;padding:0;max-width:1200px;}
-.snap li{position:relative;padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:16.5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
 .snap li:last-child{border-bottom:none}
-.snap b{color:#171916}
-.badge{display:inline-block;padding:4px 12px;border-radius:3px;font-size:12.5px;font-weight:700;
-  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;}
-.g{background:var(--g);color:var(--gk)} .r{background:var(--r);color:var(--rk)}
-.y{background:var(--y);color:var(--yk)} .gr{background:var(--gr);color:var(--grk)}
-.muted{color:var(--muted);font-size:13.5px;font-weight:400}
-.legend{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0 0;}
-.legend span{display:inline-flex;align-items:center;gap:7px}
-.legend .dot{width:10px;height:10px;border-radius:50%}
-.legend .dot.g{background:var(--gk)} .legend .dot.r{background:var(--rk)}
-.legend .dot.y{background:var(--yk)} .legend .dot.gr{background:var(--grk)}
-.legend .t{font-size:13px;color:var(--muted)}
-.tablewrap{overflow-x:auto;}
-table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:15.5px;}
-th,td{text-align:left;padding:12px 14px;vertical-align:top;border-bottom:1px solid var(--line);
-  overflow-wrap:break-word;word-break:break-word;}
-th{font-family:var(--serif);font-weight:600;font-style:italic;color:var(--brand);font-size:15px;
-  padding:8px 14px 10px;border-bottom:2px solid var(--brand);}
-tbody tr{transition:background .12s}
-tbody tr:hover{background:#f5efe2}
-tr.row-g:hover{background:var(--g)}
-tr.row-r:hover{background:var(--r)}
-tr.row-y:hover{background:var(--y)}
-tr.row-gr:hover{background:var(--gr)}
-tr[class*="row-"] td:first-child{position:relative;padding-left:26px;}
-tr[class*="row-"] td:first-child::before{content:"";position:absolute;left:10px;top:8px;bottom:8px;
-  width:7px;border-radius:5px;background:var(--line);}
-tr.row-g td:first-child::before{background:var(--gk)}
-tr.row-r td:first-child::before{background:var(--rk)}
-tr.row-y td:first-child::before{background:var(--yk)}
-tr.row-gr td:first-child::before{background:var(--grk)}
-tr.conv-hi td:first-child::before{width:8px}
-tr.conv-md td:first-child::before{width:6px}
-tr.conv-lo td:first-child::before{width:4px;opacity:.6}
-.c-topic{width:13%;min-width:110px}
-.c-cat{width:8%;min-width:70px}
-.c-stance{width:6%;min-width:64px}
-.c-conv{width:7%;min-width:70px}
-.c-act{width:16%} .c-text{width:auto}
-.wf{border:1px solid var(--line);border-left:3px solid var(--brand);padding:16px 18px;margin:12px 0;
-  background:#fffefb;}
-.wf-name{font-family:var(--serif);font-weight:600;font-size:18px;color:#171916;margin-bottom:7px;}
-.wf-row{margin:5px 0;font-size:15px;color:#3a3d35}
-.wf-row .lbl{display:inline-block;min-width:128px;font-weight:600;color:var(--brand);
-  font-style:italic;font-family:var(--serif);}
-.c-wf-name{width:14%;min-width:140px}
-table.wf-tbl td:first-child b{font-weight:700;color:#171916}
-.tk{position:relative;display:flex;gap:14px;align-items:flex-start;background:#fffefb;
-  border:1px solid var(--line);border-radius:12px;padding:14px 16px 14px 26px;margin:11px 0;max-width:1200px;
-  transition:background .12s;}
-.tk:hover{background:var(--tk-bg,var(--brand-soft))}
-.tk::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
-  background:var(--tk-c,var(--brand));}
-.tk-ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
-  font-size:14px;background:var(--tk-bg,var(--brand-soft));line-height:1;}
-.tk-bd{flex:1;min-width:0}
-.tk-title{font-weight:600;font-size:15.5px;color:#171916;line-height:1.42;margin-bottom:5px;}
-.tk-tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:13.5px;font-weight:600;
-  letter-spacing:.01em;padding:0;background:none;color:var(--tk-c,var(--brand));}
-.tk-detail{margin-top:5px;font-size:14px;color:#4a4d44;line-height:1.55;}
-.risk{position:relative;display:flex;gap:14px;align-items:flex-start;background:#fffefb;
-  border:1px solid var(--line);border-radius:12px;padding:14px 16px 14px 26px;margin:11px 0;max-width:1200px;
-  transition:background .12s;}
-.risk:hover{background:var(--r)}
-.risk::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
-  background:var(--rk);}
-.risk-ic{flex:none;width:28px;height:28px;border-radius:6px;display:grid;place-items:center;
-  font-size:14px;background:var(--r);line-height:1;}
-.risk-bd{flex:1;min-width:0}
-.risk-title{font-weight:500;font-size:15px;color:#171916;line-height:1.5;}
-.quote{font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.55;color:#2c2f28;
-  border-left:3px solid var(--brand);padding:7px 0 7px 22px;margin:16px 0;max-width:900px;}
-.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
-  color:var(--muted);margin-top:7px;}
-.quote-ctx{font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;color:var(--muted);margin-top:4px;}
-.gloss{display:grid;grid-template-columns:repeat(3,1fr);gap:10px 30px;}
-.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:14.3px;line-height:1.55;}
-.gloss b{font-family:var(--serif);color:#171916}
-ul,ol{margin:5px 0;padding-left:22px} li{margin:4px 0}
-ol li::marker{font-weight:700;color:var(--brand)}
-@media(max-width:1300px){
-  .gloss{grid-template-columns:1fr 1fr}
-}
-@media(max-width:900px){
-  body{font-size:16px}
-  .hero h1{font-size:26px}
-  .sec h2{font-size:22px}
-  .c-cat{display:none} th:nth-child(2),td:nth-child(2){display:none}
-  .gloss{grid-template-columns:1fr}
-  table{table-layout:auto}
-  .c-topic{width:auto;min-width:100px}
-  .hero-row{flex-direction:column;align-items:flex-start;gap:14px}
-}
-@media(max-width:620px){
-  body{font-size:15px}
-  .c-conv{display:none} th:nth-child(4),td:nth-child(4){display:none}
-  table{font-size:13.5px} th,td{padding:9px 9px}
-  .wf-row .lbl{display:block;min-width:0;margin-bottom:2px}
-  .quote{font-size:18px}
-}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
 </style>
 </head>
 <body>
 <div class="page">
   <header class="hero">
     <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
-
     <div class="kicker">A YouTube Research Brief</div>
-    <h1>Bitcoin Is The Best Hedge Fund That&#x27;s Ever Existed</h1>
-    <div class="hero-row">
-      <div class="meta">
-        Channel: <b>Anthony Pompliano</b> &middot; Speaker: <b>Anthony Pompliano (interviewer), Jordi Visser &#x27;Jordy&#x27; (guest)</b> &middot; <b>2026-08-01</b>
-        <div class="stats-line">5 conviction calls &middot; 5 companies tracked &middot; 100% high conviction</div>
-      </div>
-      <a class="watch-btn" href="https://www.youtube.com/watch?v=03S1ECNLBnA" target="_blank" rel="noopener">Watch on YouTube &#8599;</a>
+    <h1>Bitcoin Is The Best Hedge Fund That's Ever Existed</h1>
+    <div class="byline">
+      Channel: <b>Anthony Pompliano</b> &middot; Speaker: <b>Jordi Visser (guest, macro/portfolio manager), interviewed by Anthony Pompliano (host)</b> &middot; <b>2026-08-01</b>
+      <div class="stats-line">5 threads · the Leopold Aschenbrenner hedge-fund unwind as a leverage 'cleansing event,' the compute-scarcity case for why OpenAI and Anthropic 'gobble' rather than lend out compute, Warsh's Fed doing nothing on purpose, Bitcoin as the best hedge fund that's ever existed, and Visser's scarcity-investing playbook (Micron, GE Vernova, gold) for a world of AI-driven multiple compression. &middot; <a href="https://www.youtube.com/watch?v=03S1ECNLBnA" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
     </div>
   </header>
   <div class="inner">
-    <section class="sec" id="snap"><div class="sec-head"><div class="sec-eye">The one-paragraph takeaway</div><h2>Video Snapshot</h2></div><div class="card"><ol class="snap"><li>The Leopold hedge fund unwind was a &#x27;cleansing event&#x27; - forced liquidation of positions via prime brokers. He was up 400% YTD through June with ~$25B in the fund, suffered ~80% drawdown in July, still has $10B+ remaining. Everyone was crowded into the same AI trades.</li><li>Market structure is fundamentally changing: AI agents are entering decision-making, hedge fund leverage was at all-time highs, and &#x27;speed crashes&#x27; will happen more frequently. What used to take 30 years now takes 3 years. Leverage won&#x27;t return to highs.</li><li>Compute scarcity is the defining constraint: OpenAI and Anthropic underestimated supply needs. SpaceX and Meta have excess capacity they&#x27;ll eventually need. Demand (especially for video/token-hungry use cases) vastly exceeds supply. &#x27;We underestimated the amount of supply.&#x27;.</li><li>Bitcoin is the best hedge fund ever - its early returns mirror Leopold&#x27;s pattern (huge drawdowns then compounding). The MicroStrategy situation will become the norm as AI creates competitive pressure + debasement.</li><li>Over 5 years, $700T global net worth will see money redistributed into crypto (targeting $100T in a decade). Tokenization of real-world assets will unlock dormant capital through fractionalization and daily liquidity.</li><li>Borders are breaking down: with crypto + AI + stablecoins, you can run a business from anywhere with AI agents replacing employees. The Philippines economy was already transformed by Axie Infinity.</li></ol></div></section><section class="sec" id="conv"><div class="sec-head"><div class="sec-eye">What they actually believe &mdash; and how strongly</div><h2>Conviction Map</h2></div><div class="card"><div class="tablewrap"><table><thead><tr><th class="c-topic">Topic<br>Asset</th><th class="c-cat">Cat.</th><th class="c-conv">Conv.</th><th class="c-act">Action status</th><th class="c-text">Core thesis</th><th class="c-text">Risks<br>conditions</th></tr></thead><tbody><tr class="row-g conv-hi"><td class="c-topic"><b>Bitcoin as Best Hedge Fund Ever</b></td><td class="c-cat">Crypto<br>Macro</td><td class="c-conv">High</td><td class="c-act">CORE THESIS</td><td class="c-text">Bitcoin&#x27;s early returns look like Leopold&#x27;s hedge fund pattern - huge drawdowns (70-80%) then compounding. &#x27;You don&#x27;t find Bitcoin, Bitcoin finds you&#x27; - it appears when businesses/funds are destroyed and need a store of value. Every business will end up in a MicroStrategy-like situation within 5 years as AI creates competitive pressure and debasement.</td><td class="c-text">Regulatory crackdown; technological obsolescence; correlation with risk assets during crisis; adoption slower than predicted</td></tr><tr class="row-g conv-hi"><td class="c-topic"><b>Compute (Chips/Energy) Scarcity</b></td><td class="c-cat">AI Infrastructure</td><td class="c-conv">High</td><td class="c-act">STRONGLY EMPHASIZED</td><td class="c-text">OpenAI and Anthropic underestimated compute supply. SpaceX and Meta have excess capacity they&#x27;ll eventually need. Demand (especially video/token-hungry use cases like Disney movie production) vastly exceeds supply. Sam Altman said &#x27;we underestimated the amount of supply.&#x27; Physical constraints (molecules) limit digital transformation (bits).</td><td class="c-text">Algorithmic breakthroughs reduce demand; new capacity comes online faster; demand destruction from economic downturn</td></tr><tr class="row-g conv-hi"><td class="c-topic"><b>Tokenization of Real-World Assets</b></td><td class="c-cat">Financial Innovation</td><td class="c-conv">High</td><td class="c-act">PREDICTED AS CERTAINTY</td><td class="c-text">Tokenization will unlock $700T of dormant assets through fractionalization and daily liquidity. ETFs tokenized will give access to every asset class. Just as no one believed in ETFs in 2000, tokenization will dominate by default. Fed can delever via tokenization releasing money supply.</td><td class="c-text">Regulatory pushback; technical delays; traditional finance resistance; custody/security concerns</td></tr><tr class="row-r conv-hi"><td class="c-topic"><b>AI Agents Disrupting Public Companies</b></td><td class="c-cat">Market Structure</td><td class="c-conv">High</td><td class="c-act">PREDICTED STRUCTURAL CHANGE</td><td class="c-text">AI will destroy the growth certainty of all companies as AI-native startups (often 1 person with an AI agent running 100 businesses) compete on everything. Multiples should compress. Small businesses win. Public markets may be effectively unchanged but private businesses grow valuations.</td><td class="c-text">Timeline longer than expected; regulation could slow AI adoption; AI-native dominance may not materialize</td></tr><tr class="row-g conv-hi"><td class="c-topic"><b>Decreasing Leverage in Financial System</b></td><td class="c-cat">Macro</td><td class="c-conv">High</td><td class="c-act">PREDICTED TREND</td><td class="c-text">Hedge fund leverage won&#x27;t return to highs. Fed wants to delever (shrink balance sheet). More bubbles, parabolas, and speed crashes ahead. Prime brokers will extend less leverage after Leopold-style events. Agentic trading platforms provide discipline for individuals.</td><td class="c-text">Inflation forces Fed to re-expand balance sheet; crisis requires aggressive policy response; leveraged demand returns</td></tr></tbody></table></div><p class="muted legend"><span><span class="dot g"></span><span class="t">green = owns / buying / positive</span></span><span><span class="dot r"></span><span class="t">red = sold / avoids / negative</span></span><span><span class="dot y"></span><span class="t">yellow = watching / uncertain</span></span><span><span class="dot gr"></span><span class="t">gray = casual mention</span></span></p></div></section><section class="sec" id="cos"><div class="sec-head"><div class="sec-eye">Positions, views and why they care</div><h2>Stocks, Funds &amp; Companies</h2></div><div class="card"><div class="tablewrap"><table><thead><tr><th class="c-topic">Company<br>Ticker</th><th class="c-text">Speaker view</th><th class="c-text">Why they care</th><th class="c-text">Catalysts</th><th class="c-text">Risks</th><th class="c-conv">Evidence</th></tr></thead><tbody><tr class="row-r"><td class="c-topic"><b>Leopold (unidentified hedge fund)</b></td><td class="c-text">Young hedge fund manager, ~25 years old, built a $25B fund with 400% YTD gains through June. Suffered ~80% drawdown in July during the AI stock unwind. Forced to liquidate entire book via prime brokers. Still had $10B+ remaining. Represented the crowded AI trade narrative. &#x27;Cleansing event&#x27; rather than catastrophe.</td><td class="c-text">Exemplifies the dangers of crowded trades + excessive leverage in the age of faster markets. Prime broker network amplified the liquidation.</td><td class="c-text">AI stock correction; Fed meeting; prime broker liquidation cascade</td><td class="c-text">Career recovery; fundraising future; reputation damage</td><td class="c-conv">High</td></tr><tr class="row-g"><td class="c-topic"><b>SpaceX</b></td><td class="c-text">Not currently needing all its AI compute capacity (reserved for future humanoid/robotics projects). Has sold excess capacity to Anthropic and Google. Elon can outbuild virtually anyone when needed. Excess capacity positions SpaceX as a compute landlord.</td><td class="c-text">Represents the physical infrastructure (energy/molecules) side that constrains digital AI. Elon&#x27;s &#x27;builder&#x27; reputation gives edge in compute race.</td><td class="c-text">Starship launches; Optimus humanoid deployment; Dojo supercomputer scaling</td><td class="c-text">Starship failures; regulatory pushback; competition from Amazon/Google/Microsoft</td><td class="c-conv">Medium</td></tr><tr class="row-g"><td class="c-topic"><b>Meta</b></td><td class="c-text">Has excess compute capacity beyond current AI agent needs (personal agents not yet mature). Building out massive data center infrastructure. Could monetize excess capacity if market conditions change.</td><td class="c-text">Meta&#x27;s compute build-out represents the physical constraint side of the AI revolution. Positioned as infrastructure owner.</td><td class="c-text">Llama model releases; Ray-Ban smart glasses; metaverse development</td><td class="c-text">Adoption slower than projected; regulatory AI restrictions; competition</td><td class="c-conv">Medium</td></tr><tr class="row-g"><td class="c-topic"><b>Micron (MU)</b></td><td class="c-text">Jordi is adding positions - bought 2 weeks ago, added more at lower prices. Physical scarcity (HBM/memory) drives earnings growth. Margins at levels never seen before in memory stocks. Short-term multiple compression risk but secular demand intact.</td><td class="c-text">Memory/silicon scarcity is the bottleneck for AI compute. Micron benefits from finite supply + exploding demand for AI infrastructure.</td><td class="c-text">HBM demand; AI server deployment; pricing power</td><td class="c-text">Cyclical downturn; new memory capacity; AI capex pause</td><td class="c-conv">High</td></tr><tr class="row-g"><td class="c-topic"><b>GE Vernova</b></td><td class="c-text">Part of Jordi&#x27;s scarcity thesis - along with Bitcoin and Micron, represents the &#x27;molecule&#x27; side (physical energy infrastructure) that constrains the &#x27;bits&#x27; (digital AI) transformation.</td><td class="c-text">Energy is a physical constraint that can&#x27;t be solved by software alone. Nuclear, natural gas, grid modernization required for AI data centers.</td><td class="c-text">Grid modernization; nuclear renaissance; offshore wind projects</td><td class="c-text">Policy changes; interest rate sensitivity; execution risk</td><td class="c-conv">Medium</td></tr></tbody></table></div></div></section><section class="sec" id="tech"><div class="sec-head"><div class="sec-eye">Themes, tools and what matters</div><h2>Technology &amp; AI Views</h2></div><div class="card"><div class="tablewrap"><table><thead><tr><th class="c-topic">Theme</th><th class="c-text">Speaker&#x27;s view</th><th class="c-text">Companies<br>tools</th><th class="c-text">Why it matters</th><th class="c-conv">Horizon</th><th class="c-conv">Conv.</th></tr></thead><tbody><tr><td class="c-topic"><b>Compute (HBM/Memory) Scarcity</b></td><td class="c-text">The real bottleneck for AI is not chips/GPUs but HBM memory and energy. OpenAI and Anthropic underestimated supply needs. SpaceX and Meta have excess capacity they&#x27;ll eventually need. Demand (video, personal agents) vastly exceeds supply. Sam Altman admitted &#x27;we underestimated.&#x27;</td><td class="c-text">OpenAI, Anthropic, SpaceX, Meta, Nvidia, Micron, Samsung, SK Hynix</td><td class="c-text">Physical constraints (molecules) limit digital transformation (bits). Compute scarcity caps AI adoption speed.</td><td class="c-conv">2026-2028</td><td class="c-conv">High</td></tr><tr><td class="c-topic"><b>AI Agents Entering Financial Decision-Making</b></td><td class="c-text">Market structure changing as AI agents make faster decisions. What took 30 years now takes 3 years. Speed crashes (like Leopold) will happen more. Leverage decreasing. Agentic trading platforms (Arch Public) automate capital rotation across asset classes.</td><td class="c-text">Leopold, Citadel, Arch Public, Figure Markets, Or Public</td><td class="c-text">Enables faster decision cycles, reduces human emotion in trading, creates new market dynamics.</td><td class="c-conv">Now - accelerating</td><td class="c-conv">High</td></tr><tr><td class="c-topic"><b>China&#x27;s AI Plan via Open Source</b></td><td class="c-text">China pursuing AI dominance through open-source strategy. Kevin Rudd (via Ezra Klein) revealed China&#x27;s AI plan aimed at addressing K-shaped economy and Western decline. Views socialism rising in the West as opportunity. China owns manufacturing (&#x27;molecules&#x27;) already.</td><td class="c-text">China (state), Moonshot AI, Kevin Rudd</td><td class="c-text">Geopolitical implications for global AI leadership and supply chains.</td><td class="c-conv">2026-2030</td><td class="c-conv">Medium</td></tr></tbody></table></div></div></section><section class="sec" id="wf"><div class="sec-head"><div class="sec-eye">Repeatable systems worth stealing</div><h2>AI Workflows, Tools &amp; Prompts</h2></div><div class="card"><div class="tablewrap"><table class="wf-tbl"><thead><tr><th class="c-wf-name">Workflow</th><th class="c-text">Goal</th><th class="c-text">Tools<br>setup</th><th class="c-text">Approach<br>prompt</th><th class="c-text">Why it works</th></tr></thead><tbody><tr><td class="c-wf-name"><b>Agentic Capital Rotation</b></td><td class="c-text">Automatically take profits in outperforming markets and rotate capital into emerging opportunities without emotional interference</td><td class="c-text">Or Public agentic trading platform, crypto-backed loans (Figure Markets), tax loss harvesting across asset classes</td><td class="c-text">Set rules: when one market hits new all-time highs, automatically take profits and rotate capital into other markets showing more opportunity. Platform handles tax loss harvesting using crypto&#x27;s exemption from wash sale rules. Works across stocks, commodities, ETFs, and crypto.</td><td class="c-text">Removes emotion from trading. Ensures capital is always working optimally. Captures gains at peaks and redeploy into emerging opportunities automatically.</td></tr><tr><td class="c-wf-name"><b>Crypto-Backed Liquidity (Figure Markets)</b></td><td class="c-text">Unlock capital from Bitcoin holdings without selling or triggering taxes</td><td class="c-text">Figure Markets crypto-backed loans at 8.91% interest with 50% LTV, decentralized MPC custody, liquidation protection</td><td class="c-text">Instead of selling Bitcoin while it&#x27;s down (which locks in losses and loses future upside), use it as collateral for a loan. Bitcoin stays in segregated wallet, is never rehypothecated or pooled, and you get cash without taxes or giving up exposure.</td><td class="c-text">Preserves Bitcoin upside while providing liquidity. Critical for long-term holders who need capital without selling. Solves the &#x27;worst move is selling while down&#x27; problem.</td></tr></tbody></table></div></div></section><section class="sec" id="pred"><div class="sec-head"><div class="sec-eye">Bets on the future and their invalidators</div><h2>Predictions &amp; Trends</h2></div><div class="card"><div class="tablewrap"><table><thead><tr><th class="c-topic">Prediction<br>trend</th><th class="c-conv">Horizon</th><th class="c-text">Supporting reasoning</th><th class="c-text">What could invalidate it</th><th class="c-text">Assets affected</th></tr></thead><tbody><tr><td class="c-topic"><b>Every business will end up in a MicroStrategy-like situation within 5 years</b></td><td class="c-conv">2026-2030</td><td class="c-text">AI creates competitive pressure + monetary debasement. Businesses that don&#x27;t hold appreciating assets (like Bitcoin) will lose to those that do. Bitcoin finds you when your business is destroyed by competition or debasement.</td><td class="c-text">Crypto regulatory crackdown; Bitcoin price stays flat/declines for 5+ years; businesses find better stores of value</td><td class="c-text">MicroStrategy, Tesla, Bitcoin miners</td></tr><tr><td class="c-topic"><b>Global net worth redistributes from $3T crypto to $100T within a decade</b></td><td class="c-conv">2030-2036</td><td class="c-text">Total household net worth is ~$700T. Crypto is ~$3T. Over 5 years, money redistributes as people discover value in tokenized assets. Private businesses with AI-native models grow faster than public markets. Tokenization enables fractional ownership and daily liquidity.</td><td class="c-text">Major crypto collapse; regulatory shutdown; traditional finance successfully blocks tokenization</td><td class="c-text">Ethereum, Solana, Sui, BitTensor, tokenization platforms</td></tr><tr><td class="c-topic"><b>Speed crashes will become more frequent as AI agents speed up financial markets</b></td><td class="c-conv">2026-2030</td><td class="c-text">AI agents make decisions faster. What took 30 years now takes 3 years. Leverage was at all-time highs. The Leopold event is a harbinger - expect more leverage-induced unwinds, faster market corrections. Leverage won&#x27;t return to previous highs.</td><td class="c-text">AI adoption slows; regulators cap leverage reduction; market stabilizes</td><td class="c-text">Short volatility strategies, leveraged ETFs</td></tr></tbody></table></div></div></section><section class="sec" id="quotes"><div class="sec-head"><div class="sec-eye">Said it best &mdash; in their own words</div><h2>Notable Quotes</h2></div><div class="card"><div class="quote">&#8220;You don&#x27;t find Bitcoin, Bitcoin finds you.&#8221;<cite>&mdash; Jordi Visser</cite><div class="quote-ctx">On how Bitcoin adoption happens - it appears when businesses/funds are destroyed and need a store of value to park money while figuring out a plan. Most people reject it as a scam initially.</div></div><div class="quote">&#8220;We underestimated the amount of supply.&#8221;<cite>&mdash; Sam Altman (via Jordi Visser recounting)</cite><div class="quote-ctx">On OpenAI&#x27;s realization that compute demand vastly exceeds supply. Physical constraints of building data centers and securing chips/HBM memory were underestimated by everyone.</div></div><div class="quote">&#8220;Speed crashes are going to happen more.&#8221;<cite>&mdash; Jordi Visser</cite><div class="quote-ctx">On the new market regime - what took 30 years now takes 3 years. AI agents speed up everything. More bubbles, more parabolas, and more speed crashes ahead.</div></div><div class="quote">&#8220;I&#x27;m excited to meet my maker.&#8221;<cite>&mdash; Ben Wilson</cite><div class="quote-ctx">Told to Chris Williamson 6 weeks after being diagnosed with stage 4 cancer - expressing excitement about death rather than fear, rooted in faith.</div></div><div class="quote">&#8220;The million in My First Million doesn&#x27;t necessarily mean dollars, but it means the first unit of richness that you can have in your life.&#8221;<cite>&mdash; Chris Williamson (Shawn)</cite><div class="quote-ctx">Clarifying the podcast&#x27;s core thesis - richness in life comes in many forms beyond money.</div></div><div class="quote">&#8220;If you don&#x27;t believe in Bitcoin, you have to go back at some point and go listen to the Michael Saylor interviews in 2021 about why he did this.&#8221;<cite>&mdash; Jordi Visser</cite><div class="quote-ctx">On understanding Bitcoin as a hedge against competitive innovation + debasement, following Michael Saylor&#x27;s Two Forces framework.</div></div><div class="quote">&#8220;What took 30 years is now taking 3 years.&#8221;<cite>&mdash; Jordi Visser</cite><div class="quote-ctx">On the acceleration of everything due to AI agents - markets, innovation, competition, and market corrections all happen faster now.</div></div><div class="quote">&#8220;I think over the course of the next 5 years AI will destroy all public companies.&#8221;<cite>&mdash; Jordi Visser</cite><div class="quote-ctx">On how AI will destroy growth certainty of companies as AI-native startups (often 1 person + AI agent) compete on everything. Not business failure - just multiple compression and unpredictability.</div></div></div></section><section class="sec" id="risk"><div class="sec-head"><div class="sec-eye">Where this could be wrong</div><h2>Risks, Counterarguments &amp; Blind Spots</h2></div><div class="card"><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">Jordi&#x27;s track record on calls is mixed - he&#x27;s had bullish calls that didn&#x27;t pan out. His livelihood depends on bullish narratives, creating inherent bias toward positive outcomes.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Bull bias</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">The $100T crypto market cap prediction requires massive institutional adoption, regulatory clarity, and infrastructure scaling that may not occur within a decade.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Adoption risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">The &#x27;every business ends up like MicroStrategy&#x27; scenario assumes Bitcoin appreciation outpaces all other investment opportunities, which is not guaranteed.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Assumption risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">China AI plan assessment relies on secondhand reporting (Ezra Klein to Kevin Rudd). The geopolitical narrative may be oversimplified or filtered through Western perspectives.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Secondhand sourcing</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">Transcript from auto-captions may have errors, especially around the hedge fund details, technical AI descriptions, and the unnamed billionaire&#x27;s claims.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Transcription limitation</span></div></div></div></section><section class="sec" id="take"><div class="sec-head"><div class="sec-eye">What to do with this</div><h2>Best Actionable Takeaways</h2></div><div class="card"><div class="tk" style="--tk-c:var(--gk);--tk-bg:var(--g)"><div class="tk-ic">&#10003;</div><div class="tk-bd"><div class="tk-title">Bitcoin is for crisis moments - when competitive pressure or debasement hits. Position now before your business faces its &#x27;MicroStrategy moment.&#x27; The &#x27;worst move is selling while down.&#x27;</div><span class="tk-tag">Speaker claim</span></div></div><div class="tk" style="--tk-c:var(--brand);--tk-bg:var(--brand-soft)"><div class="tk-ic">&#128161;</div><div class="tk-bd"><div class="tk-title">Use crypto-backed loans (Figure Markets: 8.91%, 50% LTV, MPC custody) instead of selling Bitcoin. Unlock liquidity without taxes or losing future upside.</div><span class="tk-tag">Sponsor recommendation</span></div></div><div class="tk" style="--tk-c:var(--gk);--tk-bg:var(--g)"><div class="tk-ic">&#10003;</div><div class="tk-bd"><div class="tk-title">Reduce leverage in your personal/corporate portfolio. Speed crashes are coming more frequently. AI agents speed up markets - what took 30 years now takes 3.</div><span class="tk-tag">Speaker claim</span></div></div><div class="tk" style="--tk-c:var(--brand);--tk-bg:var(--brand-soft)"><div class="tk-ic">&#128202;</div><div class="tk-bd"><div class="tk-title">Build a &#x27;clean sheet&#x27; approach to investing - regularly reset your portfolio, don&#x27;t let crowded positions define you. After drawdowns, you can be more attractive with a chip on your shoulder.</div><span class="tk-tag">Analyst interpretation</span></div></div><div class="tk" style="--tk-c:var(--brand);--tk-bg:var(--brand-soft)"><div class="tk-ic">&#128202;</div><div class="tk-bd"><div class="tk-title">Practice curiosity across geopolitical and technical domains - Jordi connects dots from Kurdish politics to Chinese AI plans to tokenomics. Broad knowledge compounds.</div><span class="tk-tag">Analyst interpretation</span></div></div></div></section><section class="sec" id="oth"><div class="sec-head"><div class="sec-eye">Strong convictions, recommendations &amp; non-investment news</div><h2>Other Notable News (Non-Stock)</h2></div><div class="card"><div class="tk" style="--tk-c:var(--brand);--tk-bg:var(--brand-soft)"><div class="tk-ic">&#128204;</div><div class="tk-bd"><div class="tk-title">Ben Wilson&#x27;s Stage 4 Cancer Diagnosis</div><span class="tk-tag">Personal Finance</span><div class="tk-detail">Ben Wilson (former MFM producer, host of &#x27;How to Take Over the World&#x27;) was diagnosed with stage 4 lung cancer 6 weeks prior. Never smoked, never drank. Responded with extraordinary dignity - moved house, raised $400K fundraiser, started a 365-day journal (&#x27;zero to 365&#x27;) for his kids. Expressed excitement to &#x27;meet his maker.&#x27;</div></div></div><div class="tk" style="--tk-c:var(--brand);--tk-bg:var(--brand-soft)"><div class="tk-ic">&#128204;</div><div class="tk-bd"><div class="tk-title">Ferrero Family Dynasty: 3 Generations</div><span class="tk-tag">Business History</span><div class="tk-detail">Gen 1: post-WWII chocolate bar pioneer (too hard to spread). Gen 2: son rebranded to Nutella with hazelnuts, created Tic Tac form factor. Gen 3: grandson adopted Buffett-style private equity, acquiring value brands (Butterfingers, Baby Ruth, Crunch). Ultra-secretive - like Area 51.</div></div></div><div class="tk" style="--tk-c:var(--brand);--tk-bg:var(--brand-soft)"><div class="tk-ic">&#128204;</div><div class="tk-bd"><div class="tk-title">China&#x27;s Open-Source AI Strategy via Kevin Rudd</div><span class="tk-tag">Geopolitics</span><div class="tk-detail">Kevin Rudd (former Australian PM) told Ezra Klein that China views the Western K-shaped economy as an opportunity - socialism rising as inequality grows. China owns manufacturing (&#x27;molecules&#x27;) already and is pursuing AI dominance through open-source strategy.</div></div></div></div></section><section class="sec" id="gloss"><div class="sec-head"><div class="sec-eye">Names and terms at a glance</div><h2>Glossary &amp; Entities</h2></div><div class="card"><div class="gloss"><div><b>Leopold (Hedge Fund)</b> &mdash; Unidentified young hedge fund manager (~25yo) that was up 400% YTD through June on ~$25B AUM, suffered ~80% drawdown in July during AI stock unwind, forced to liquidate via prime brokers. Still had $10B+ remaining. Became a cautionary tale about crowded trades + leverage.</div><div><b>Two Forces (Saylor)</b> &mdash; Michael Saylor&#x27;s framework: (1) Competitive innovation destroying businesses, (2) Monetary debasement eroding cash value. Both make Bitcoin a necessary hedge. Every business will face these forces within 5 years.</div><div><b>Molecules vs Bits</b> &mdash; Physical constraints (energy, chips, labor - molecules) limit digital transformation (AI, software, algorithms - bits). AI development is gated by physical infrastructure buildout, not algorithmic breakthroughs alone.</div><div><b>Speed Crash</b> &mdash; Rapid market corrections enabled by faster AI-driven decision-making. What took 30 years now takes 3 years. More frequent as leverage decreases and AI agents enter decision-making.</div><div><b>Tokenization</b> &mdash; Digitization of real-world assets (real estate, stocks, bonds) onto blockchain, enabling fractional ownership, 24/7 trading, and daily liquidity. Jordi sees $700T global net worth redistributing via $100T crypto within a decade.</div><div><b>Agentic Trading</b> &mdash; AI agents making autonomous financial decisions, including capital rotation, tax loss harvesting, and cross-asset allocation. Platforms like Or Public and Figure Markets bring this to retail investors.</div><div><b>Being Great vs Achieving Greatness</b> &mdash; Distinction between external accomplishments (what you build/hold) and internal character (how you respond to life&#x27;s worst moments). Ben Wilson embodies &#x27;being great&#x27; during his cancer battle.</div><div><b>Clean Sheet</b> &mdash; Hedge fund term for starting over with a fresh portfolio after a major drawdown. Jordi suggests Leopold&#x27;s situation was a cleansing event that forced de-risking and re-approach to positions.</div></div></div></section>
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Jordi Visser reads the Leopold Aschenbrenner hedge-fund forced-liquidation (down from +<b>400%</b>/$25B to reportedly ~$10B) as a leverage 'cleansing event' comparable to LTCM, the 2007 quant unwind, and Archegos — not evidence the AI thesis is broken, and he doesn't believe rumors that Citadel's Fed-hike leak was intentional.</li><li>South Korea's market fell <b>45%</b> in ~40 days (still up 56% YTD) with 1.2M leveraged retail accounts margin-called, and Japan lost ~$200B in a single day — Visser reads both as leverage/positioning stories layered on the same AI mid-cycle deceleration he's flagged before, not a US-contagion signal.</li><li>Citing a widely-discussed contrarian piece (attributed to Dwarkesh Patel, echoed by Gavin Baker), Visser argues OpenAI and Anthropic are compute 'gobblers' who will control more of AI than people think — because finite compute goes to whoever pays most per token (his Disney-buys-all-the-compute analogy) — while xAI and Meta can afford to sell excess capacity since they don't need it yet.</li><li>Warsh's Fed held rates by doing nothing and giving no forward guidance, which Visser reads as a deliberate delevering of the Fed's own balance sheet (paired with tokenization unlocking dormant asset value) rather than a hawkish or dovish signal.</li><li>Central thesis: Bitcoin is 'the best hedge fund that's ever existed' and the only real store of value left as AI's deflationary pressure and 'multiple compression' erode every public company's terminal value over the next 5 years — he frames Michael Saylor/MicroStrategy's 2021 pivot as the template every business will eventually face.</li><li>His portfolio response is 'scarcity investing': more Micron (bought the dip again), GE Vernova, Bitcoin, and gold as a secondary store of value — plus Ethereum and an eight-vertical, 40-name crypto basket he says is outperforming Bitcoin as agentic/stablecoin adoption accelerates.</li><li>Explicitly flags his own knowledge gaps: hasn't researched BitTensor enough to have a view yet, and is still forming an opinion on how migration/remittances/border-erosion (prompted by Anthony's question about migrant flows into Spain) connects to the crypto/tokenization story.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="leopold-cleansing-event">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">WATCHING — more liquidations expected into early August</span><span class="ttag">finance</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Leopold Aschenbrenner's Forced Unwind Was a Leverage 'Cleansing Event,' Not a Broken Thesis</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>Visser, who lived through LTCM, the 2007 quant unwind, and Archegos, reads the Leopold Aschenbrenner blowup the same way:</b> crowded leveraged positioning forced a liquidation once prime brokers saw the exposure and started hedging — the AI mid-cycle slowdown was the trigger, not the cause.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Reportedly up ~<b>400%</b> through June with ~$25B in the fund he started 2-3 years ago, Leopold's fund gave back a large share of gains (widely reported near 70-80%) in a four-day move that intensified in the two hours after the Fed decision — Visser says he's still up roughly 80% year-to-date.</li><li><span class="dot" style="background:#93711b;"></span>Visser doesn't believe (and says nobody will ever confirm) the theory that Citadel intentionally leaked a surprise-rate-hike story to force Leopold's hand — points out the market-implied hike probability was already close to <b>40%</b> independent of any leak.</li><li><span class="dot" style="background:#93711b;"></span>July saw a 'record factor unwind' as narratives cycled weekly (Anthropic in trouble, hyperscalers in trouble, open-source threat) even though nothing fundamental changed — same pattern as Liberation Day's <b>20%</b> drawdown with no change to earnings or the economy.</li><li><span class="dot" style="background:#93711b;"></span>Structural read: hedge fund gross leverage hit an all-time high this year (Goldman Sachs called it the largest 5-month increase in gross exposure on record) at the same time terminal value (the ability to value a company 3 years out) was falling — a mismatch he says guarantees more 'speed crashes,' not fewer.</li><li><span class="dot" style="background:#93711b;"></span>Expects prime brokers to extend less leverage going forward given quarterly-liquidity hedge funds can't exit AI-adjacent positions fast enough when momentum unwinds — predicts multiple compression in indices and more Leopold-style blowups within individual funds, not a return to prior leverage levels.</li><li><span class="dot" style="background:#93711b;"></span>On his own trading: bought more Micron into this specific weakness (a second purchase after an initial nibble two weeks earlier), and plans a 'Combing Through the Carnage' report naming which AI names technically held up versus broke down.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;This was a cleansing event in my opinion. It doesn't mean that we're not going to see continued volatility.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Micron (MU)<span class="stance" style="background:#3f6b2e;">BUYING-ADDING · High</span></b><span>Bought further into this week's weakness after an initial small purchase two weeks earlier — a second, deliberate add on the dip.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Visser explicitly says nobody will ever know whether Citadel's rate-hike commentary was coincidental or targeted — he treats the conspiracy theory as unconfirmable, not as fact.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="compute-gobblers">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">WATCHING — compute scarcity thesis, not yet fully proven in ARR</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">OpenAI and Anthropic Are Compute 'Gobblers,' Not Lenders — and That's the Bull Case</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>A contrarian piece Visser cites approvingly (attributed to Dwarkesh Patel, echoed by investor Gavin Baker) argues finite compute concentrates power with whoever can pay the most per token</b> — which favors OpenAI and Anthropic over hyperscalers currently willing to lend out spare capacity.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Disney thought experiment: if compute is scarce enough that a single buyer could corner it, a studio able to make a <b>$3B</b> movie for $50M in tokens would happily outbid everyone else for that capacity given its ticket-pricing power — the same logic Visser says explains Micron's unprecedented memory margins right now.</li><li><span class="dot" style="background:#3f6b2e;"></span>Amazon, Microsoft, and Google's combined contracted compute backlog is 'nearing <b>$2 trillion</b>'; adding Oracle pushes the total over $2 trillion — all four said on earnings calls that CapEx is matched to existing orders, and none of them cut CapEx this quarter.</li><li><span class="dot" style="background:#3f6b2e;"></span>Sam Altman, in an interview with Patrick O'Shaughnessy, admitted OpenAI — the most aggressive spender in the space — 'underestimated the amount of supply' needed; Visser says Dario Amodei is now 'scrambling to find compute from anywhere' after warning last year that OpenAI was overspending.</li><li><span class="dot" style="background:#3f6b2e;"></span>Explains why xAI and Meta can afford to sell excess compute (to Anthropic and to Google's cloud arm, respectively) while OpenAI and Anthropic cannot: xAI doesn't need its full buildout yet (humanoids, full self-driving come later) and Meta's current need is smaller than what it's already built for personal agents.</li><li><span class="dot" style="background:#3f6b2e;"></span>Frames the current bottleneck as barely first-inning: coding agents are the only mature use case so far — voice-native personal agents (a working Siri or Alexa) require hardware and on-device memory that doesn't exist yet, which is why he says supply won't catch demand for a long time.</li><li><span class="dot" style="background:#3f6b2e;"></span>Direct rebuttal to overbuilt-capacity skeptics: 'every single smart person that's involved with building this stuff and seeing the demand is saying they can't keep up with it' — contrasts this with investor emails claiming the industry has already overbuilt.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Compute scarcity is a reality, and I don't care what anyone says about all the CDS on the hyperscalers and all of this.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Framed as a compute 'gobbler' advantaged by scarcity, though Dario Amodei is described as actively scrambling for more capacity.</span></div><div class="namechip"><b>Alphabet (GOOGL)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Raised $80 billion and bought excess compute capacity from SpaceX despite being a major cloud provider without enough of its own.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="warsh-does-nothing">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">WATCHING — rate cuts + balance-sheet runoff conditional on inflation/labor data</span><span class="ttag">macro-rates</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Warsh 'Stole the Show by Doing Nothing' — a Deliberate Delevering of the Fed's Own Balance Sheet</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>Visser reads the Fed's no-hike, no-forward-guidance decision as intentional structural reform</b>, not indecision — the market had already tightened on its own (10-year and 2-year yields both rose), so the Fed didn't need to act.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Argues Warsh is right that old academic models built on stale, revisable government data can't keep pace with an economy where AI compresses years of change into months — market pricing had ~<b>40%</b> odds of a hike going into the meeting with no pre-released guidance, which Visser expects adds more volatility going forward, not less.</li><li><span class="dot" style="background:#3f6b2e;"></span>Connects this to hedge fund leverage: the Fed itself was a source of system-wide leverage via QE (growing its balance sheet whenever assets fell); Warsh wants the opposite — a smaller, less-levered Fed balance sheet.</li><li><span class="dot" style="background:#3f6b2e;"></span>Ties the delevering to tokenization: Visser believes Warsh and Treasury Secretary Bessent both see tokenization unlocking money supply from dormant assets (via fractionalized, tradeable ownership), which lets the Fed shrink its role without tightening conditions.</li><li><span class="dot" style="background:#3f6b2e;"></span>On the K-shaped economy: attributes it partly to two decades of Fed balance-sheet expansion since the financial crisis; expects balance-sheet runoff plus eventual rate cuts (once inflation and labor data cooperate) to help redistribute wealth rather than worsen the K-shape.</li><li><span class="dot" style="background:#3f6b2e;"></span>Notes hyperscaler credit-default-swap spreads widening is not a red flag in his view — it reflects unprecedented capital-market tapping (citing Google's <b>$80B</b> raise) that takes time to digest, on 'the best balance sheets in the world,' not distress.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;I actually like what Kevin Warsh is doing. I believe using old academic models is going to be a problem.&#8221;<cite>— Jordi Visser</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="bitcoin-best-hedge-fund">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">OWNS — Bitcoin, gold, Ethereum, 40-name crypto basket</span><span class="ttag">crypto</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Bitcoin Is 'The Best Hedge Fund That's Ever Existed' — the Scarcity Trade for a World of Multiple Compression</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>Visser's central 5-year thesis:</b> AI's deflationary pressure will eventually compress the terminal value of every public company and business idea, which is why he's rotating into things that can't be out-competed — Bitcoin, gold, and physical scarcity (Micron, GE Vernova).</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Compares Bitcoin's own drawdown history (giving back 70-<b>80%</b> of early gains, then continuing to compound) directly to Leopold's trajectory, arguing Bitcoin's return profile is what kept 'famous investors' from ever backing it — those return patterns don't happen, until eventually the market starts pricing in the asset anyway.</li><li><span class="dot" style="background:#3f6b2e;"></span>Big-picture math: total global household net worth is roughly <b>$700 trillion</b> against a ~$3 trillion crypto market; his call is this total stays roughly flat while wealth redistributes, and crypto's share could reach ~$100 trillion within a decade as AI-native, low-headcount private businesses (his own company, Cursor, Anthropic, OpenAI as examples) capture more value that stays privately owned rather than needing to IPO.</li><li><span class="dot" style="background:#3f6b2e;"></span>Frames Michael Saylor's 2021 MicroStrategy pivot as the template every business faces: he couldn't compete with Microsoft's scale (competitive disruption) or with zero interest rates (currency debasement), so he moved treasury into something non-disputable — Visser expects most businesses to face this same choice within 5 years as AI-native competitors proliferate.</li><li><span class="dot" style="background:#3f6b2e;"></span>Names his scarcity basket explicitly: Bitcoin, gold (as a secondary store-of-value pick, chosen over other crypto because he can't be confident Ethereum, Solana, Sui, or BitTensor will still be relevant in 3 years), Micron, and GE Vernova — all things tied to physical constraints AI can't deflate away quickly.</li><li><span class="dot" style="background:#3f6b2e;"></span>Ethereum is outperforming Bitcoin, which he reads as a signal the crypto ecosystem's 'network effects' (agentic volume, stablecoin adoption, Stripe's acquisition activity in payments) are kicking in; his 40-name, eight-vertical crypto basket is also outperforming Bitcoin on the same signal.</li><li><span class="dot" style="background:#3f6b2e;"></span>Explicitly flags a research gap: he hasn't spent enough time on BitTensor (the most AI-crypto-overlapping asset) to have a real view yet, and is deliberately researching China's AI strategy (via an Ezra Klein interview with former Australian PM Kevin Rudd) before forming a stronger opinion on how geopolitics factors into his crypto allocation.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;You don't find Bitcoin, Bitcoin finds you. You don't find Bitcoin until you're either personally or your business has been so destructed that you can't get out of a hole.&#8221;<cite>— Jordi Visser, quoting Michael Saylor</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Bitcoin (BTC)<span class="stance" style="background:#3f6b2e;">OWNS · High · 5 years</span></b><span>Central store-of-value holding; framed as the best hedge fund that's ever existed and the asset least exposed to AI-driven multiple compression.</span></div><div class="namechip"><b>Ethereum (ETH)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>Outperforming Bitcoin; read as evidence agentic/stablecoin network effects are kicking in across his 40-name basket.</span></div><div class="namechip"><b>Gold<span class="stance" style="background:#3f6b2e;">OWNS · Medium · 3 years</span></b><span>Chosen as his secondary store-of-value pick over other crypto assets given uncertainty about which altcoins survive 3 years out.</span></div><div class="namechip"><b>Micron (MU)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>Core 'scarcity' holding tied to physical memory constraints AI can't deflate away quickly.</span></div><div class="namechip"><b>GE Vernova (GEV)<span class="stance" style="background:#3f6b2e;">OWNS · Medium</span></b><span>Named alongside Micron as a physical-scarcity holding within his AI-infrastructure thesis.</span></div><div class="namechip"><b>BitTensor<span class="stance" style="background:#93711b;">UNCERTAIN · None</span></b><span>The most AI-crypto-overlapping asset on his radar, but he says he hasn't researched it enough yet to hold a real view.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Visser is explicit that his BitTensor view isn't formed yet and that his crypto-share-of-wealth number ($100 trillion in a decade) is his own working framework, not a modeled forecast.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📉</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Read hedge-fund blowups like Leopold's as leverage-cleansing events, not thesis breaks, before assuming the underlying trade is dead.</span></div></div><div class="irow"><div class="ic">🖥️</div><div class="tline"><span class="cat">AI infra:</span> <span class="txt">Track hyperscaler contracted backlog (~<b>$2T</b>+) and public compute-lending signals (who's hoarding vs. selling capacity) as the real gauge of AI demand, not sentiment.</span></div></div><div class="irow"><div class="ic">🏦</div><div class="tline"><span class="cat">Macro:</span> <span class="txt">Treat Fed 'no action' meetings as potentially deliberate policy (balance-sheet delevering) rather than indecision — re-read the framing, not just the rate decision.</span></div></div><div class="irow"><div class="ic">💰</div><div class="tline"><span class="cat">Crypto:</span> <span class="txt">Size Bitcoin and gold as the scarcity hedge against AI-driven multiple compression, distinct from higher-beta altcoin bets.</span></div></div><div class="irow"><div class="ic">🔍</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Say 'not enough research yet' out loud (as Visser does on BitTensor) rather than forming a view before doing the work.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;Bitcoin is the best hedge fund that's ever existed.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Over the course of the next 5 years, AI will destroy all public companies — meaning it will destroy the growth certainty of all companies going forward.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Compute scarcity is a reality, and I don't care what anyone says about all the CDS on the hyperscalers.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I actually like what Kevin Warsh is doing. I believe using old academic models is going to be a problem.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't know if Ethereum is safe [as a 3-year store of value]. I don't know if Solana is. I don't know if Sui is. I don't know if BitTensor is.&#8221; <cite>— Jordi Visser</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Jordi Visser:</b> crypto's share of global household wealth over the next decade <span class="cmeta">total crypto market value · ~$100 trillion (from ~$3 trillion) · within a decade</span> <i>if his own redistribution framework, assuming total household net worth (~$700T today) stays roughly flat</i></div><div class="ritem"><b>Sam Altman (cited by Jordi Visser):</b> OpenAI underestimated the compute supply it would need <span class="cmeta">compute supply estimate</span> <i>if admitted in an interview with Patrick O'Shaughnessy</i> <span class="tag">OpenAI</span></div><div class="ritem"><b>Jordi Visser:</b> hyperscaler contracted compute backlog <span class="cmeta">contracted order value · ~$2 trillion across Amazon, Microsoft, Google, plus Oracle pushing it over $2T</span></div><div class="ritem"><b>Leopold Aschenbrenner (cited by Jordi Visser):</b> AGI arrival and government involvement timeline, from his 'Situational Awareness' paper <span class="cmeta">AGI arrival · 2027</span> <i>if Visser says events are tracking slightly ahead of this forecast</i></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>SpaceX</b> <span class="rel">supplies</span> <b>Anthropic</b> &mdash; Sold excess compute capacity it doesn't yet need for humanoids/FSD, per Jordi Visser</div><div class="ritem"><b>SpaceX</b> <span class="rel">supplies</span> <b>Alphabet (GOOGL)</b> &mdash; Sold excess compute capacity to Google's cloud arm despite Google being a major cloud provider itself, per Jordi Visser</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🎤</div><div><div class="title">Sources referenced this episode: a contrarian compute-scarcity piece attributed to Dwarkesh Patel (echoed by investor Gavin Baker) anchors the 'gobblers vs. lenders' theme; Sam Altman's interview with Patrick O'Shaughnessy on Invest Like the Best; Ezra Klein's interview with former Australian PM Kevin Rudd on China's AI/socialism strategy; David Friedberg's 'molecules to bits' framing from the All-In podcast. <span class="tag">Sources cited</span></div></div></div><div class="irow"><div class="ic">🌍</div><div><div class="title">Prompted by footage of migrants arriving in Spain, Anthony and Jordi discussed how digitized money and AI-native, low-headcount businesses are eroding the economic reasons people historically had to migrate — cites Marco Papic's 2021 paper on the metaverse and border erosion as an early, largely-correct framework. <span class="tag">Discussion</span></div></div></div><div class="irow"><div class="ic">🎮</div><div><div class="title">Visser cites Axie Infinity's real economic impact on the Philippines (a play-to-earn game that briefly reshaped household income there) as a preview of gaming/crypto economies with real financial stakes, alongside Fortnite as an already-normalized 'metaverse' behavior. <span class="tag">Reference</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Factor unwind</b> &mdash; A rapid, broad-based reversal in stocks that share a common characteristic (e.g. high momentum, AI exposure) as leveraged funds holding similar positions are forced to sell at the same time.</div><div><b>Terminal value</b> &mdash; The estimated value of a company's cash flows far into the future; Visser argues AI is making this unknowable for most public companies, which should structurally compress valuation multiples even as near-term earnings grow.</div><div><b>CDS (credit default swap) spread</b> &mdash; The cost of insuring against a company's debt default; widening spreads on hyperscaler debt are read by bears as a distress signal, but by Visser as a byproduct of unprecedented capital-raise volume being digested by the market.</div><div><b>Tokens per watt</b> &mdash; A measure of AI compute efficiency — how much useful model output (tokens) a given unit of energy produces — cited as the metric that will matter most once compute becomes the binding constraint on AI economics.</div></div></div>
+    </section>
   </div>
 </div>
 </body>
