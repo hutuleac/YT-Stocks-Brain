@@ -22,6 +22,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "ai-trade",
+        "tags": ["semis", "ai-infra"],
         "color": "green",
         "badge": "High conviction — positioning disclosed",
         "status": "REBUILDING MICRON POSITION; 22V AI INDEX BOUNCED >50% OF THE DRAWDOWN",
@@ -42,16 +43,17 @@ THEMES = [
         },
         "watch": "The Korean market is his cautionary chart: KOSPI 200 'broke down hard' and looks like Bitcoin's drawdown compressed from nine months into one — yet it's still up 70% year to date. Expect roughly a hundred more scares of that shape, none individually decisive.",
         "names": [
-            {"name": "Micron (MU)", "blurb": "Sold after an eight-bagger, re-entered in the $700s above his own exit. The thesis change: long-term supply agreements mean earnings should no longer be cyclical, and DRAM pricing is rising into accelerating compute demand."},
-            {"name": "Nvidia (NVDA)", "blurb": "Core holding in the disclosed 10-name correlated subset of his AI index."},
-            {"name": "Intel (INTC)", "blurb": "Held specifically for CPU exposure as distinct from the GPU trade."},
-            {"name": "Marvell (MRVL)", "blurb": "The optical-side semiconductor exposure in his index construction."},
-            {"name": "Caterpillar (CAT)", "blurb": "Included as non-semiconductor AI infrastructure exposure — the physical buildout leg of the index."},
-            {"name": "Corning (GLW)", "blurb": "Named alongside Caterpillar as a component broadening the index beyond chips."},
+            {"name": "Micron (MU)", "blurb": "Sold after an eight-bagger, re-entered in the $700s above his own exit. The thesis change: long-term supply agreements mean earnings should no longer be cyclical, and DRAM pricing is rising into accelerating compute demand.", "stance": "OWNS", "conviction": "High", "horizon": "5 years"},
+            {"name": "Nvidia (NVDA)", "blurb": "Core holding in the disclosed 10-name correlated subset of his AI index.", "stance": "OWNS", "conviction": "High", "horizon": None},
+            {"name": "Intel (INTC)", "blurb": "Held specifically for CPU exposure as distinct from the GPU trade.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "Marvell (MRVL)", "blurb": "The optical-side semiconductor exposure in his index construction.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "Caterpillar (CAT)", "blurb": "Included as non-semiconductor AI infrastructure exposure — the physical buildout leg of the index.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "Corning (GLW)", "blurb": "Named alongside Caterpillar as a component broadening the index beyond chips.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
         ],
     },
     {
         "id": "inflation-context",
+        "tags": ["macro-rates"],
         "color": "amber",
         "badge": "Contested — near-term benign, three-year view higher",
         "status": "CORE CPI 2.6% → 2.5%; VISSER STILL SEES HEADWINDS TOWARD HIGHER IN 3 YEARS",
@@ -72,12 +74,13 @@ THEMES = [
         },
         "watch": "He is explicit that this is a probabilistic view being updated, not a forecast being defended: he critiques people 'for being stubborn and for not adjusting to new information,' not for being wrong. His own inflation call has already moved with the data.",
         "names": [
-            {"name": "Lemonade (LMND)", "blurb": "Cited as live evidence of AI deflation — a startup insurer willing to sell car insurance at lower prices as AI-driven margin improvement enables price competition."},
-            {"name": "Tesla (TSLA)", "blurb": "Appears only as a personal anecdote: insurance on his five-year-old Tesla now runs 5–10% of the car's value annually, which he blames on 2020-era money printing rather than on the company."},
+            {"name": "Lemonade (LMND)", "blurb": "Cited as live evidence of AI deflation — a startup insurer willing to sell car insurance at lower prices as AI-driven margin improvement enables price competition.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Tesla (TSLA)", "blurb": "Appears only as a personal anecdote: insurance on his five-year-old Tesla now runs 5–10% of the car's value annually, which he blames on 2020-era money printing rather than on the company.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
     {
         "id": "middleman-unwind",
+        "tags": ["crypto", "finance"],
         "color": "green",
         "badge": "High conviction — building a product around it",
         "status": "FIGURE REPORTED REVENUE +100% YoY, EBITDA +50% YoY",
@@ -97,17 +100,18 @@ THEMES = [
         },
         "watch": "The bank call is explicitly relative, not absolute — 'the reason JP Morgan is a short, not in an absolute basis, but relative to companies like Figure.' His argument is growth rate, not business quality: incumbents have the eyeballs, deposits and money, but carry legacy employees and accumulated bureaucracy that can 'only grow at human speed.'",
         "names": [
-            {"name": "Figure Technologies", "blurb": "The centerpiece example — 100%+ revenue growth, 50%+ EBITDA growth, third-largest US HELOC originator. Visser wanted to connect its HELOC business to the tokenization thesis but was declined a management call."},
-            {"name": "Robinhood (HOOD)", "blurb": "Seven or eight business lines each above $100M revenue; named as a holding in the converged crypto-plus-public-equity index he's constructing."},
-            {"name": "PayPal (PYPL), Coinbase (COIN)", "blurb": "The other already-public names in that index — the listed leg of a crypto-native disruption trade."},
-            {"name": "Stripe", "blurb": "Cited alongside Figure and Robinhood as the same automation-and-friction-removal pattern in private markets."},
-            {"name": "JPMorgan (JPM), Goldman Sachs (GS), Visa (V), Mastercard (MA)", "blurb": "The relative-short bloc. Not bad businesses — but bureaucracies carrying legacy employees and decades of accumulated acquisitions (Chemical Bank et al.), structurally unable to convert to crypto-native speed."},
-            {"name": "Salesforce (CRM)", "blurb": "Offered as proof that selling agentic AI doesn't rescue an incumbent from the same conversion problem."},
-            {"name": "Ford (F)", "blurb": "The contrast case for growth rate — an old company with debt and pensions whose revenue simply cannot compound like Micron's earnings."},
+            {"name": "Figure Technologies", "blurb": "The centerpiece example — 100%+ revenue growth, 50%+ EBITDA growth, third-largest US HELOC originator. Visser wanted to connect its HELOC business to the tokenization thesis but was declined a management call.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
+            {"name": "Robinhood (HOOD)", "blurb": "Seven or eight business lines each above $100M revenue; named as a holding in the converged crypto-plus-public-equity index he's constructing.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "PayPal (PYPL), Coinbase (COIN)", "blurb": "The other already-public names in that index — the listed leg of a crypto-native disruption trade.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "Stripe", "blurb": "Cited alongside Figure and Robinhood as the same automation-and-friction-removal pattern in private markets.", "stance": "POSITIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "JPMorgan (JPM), Goldman Sachs (GS), Visa (V), Mastercard (MA)", "blurb": "The relative-short bloc. Not bad businesses — but bureaucracies carrying legacy employees and decades of accumulated acquisitions (Chemical Bank et al.), structurally unable to convert to crypto-native speed.", "stance": "NEGATIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Salesforce (CRM)", "blurb": "Offered as proof that selling agentic AI doesn't rescue an incumbent from the same conversion problem.", "stance": "NEGATIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "Ford (F)", "blurb": "The contrast case for growth rate — an old company with debt and pensions whose revenue simply cannot compound like Micron's earnings.", "stance": "NEGATIVE VIEW", "conviction": "Low", "horizon": None},
         ],
     },
     {
         "id": "time-thesis",
+        "tags": ["crypto", "ai-infra"],
         "color": "amber",
         "badge": "Core thesis — philosophical, deliberately unfalsifiable near-term",
         "status": "ANTHROPIC IPO RUMORED; ~$120B ARR EXPECTED BY YEAR END (SPEAKER ESTIMATE)",
@@ -128,13 +132,14 @@ THEMES = [
         },
         "watch": "He holds this loosely by his own account: 'If I believed it was 100%, I'd have all my money in it. I'd be leveraged.' He assigns a non-zero probability that Bitcoin goes to zero — just a low one relative to the alternative.",
         "names": [
-            {"name": "Anthropic", "blurb": "IPO rumored within months and reportedly tightening its belt. Revenue concentrated in Fortune 500 deployments; the bear case is a visible growth-rate slowdown compressing the multiple, not an absolute revenue miss."},
-            {"name": "OpenAI", "blurb": "A run of executive departures, with a rumor that OpenAI itself is forcing the changes. Grouped with Anthropic as the labs public-market investors are holding cash to buy."},
-            {"name": "Palantir (PLTR)", "blurb": "Visser cites 149% revenue growth as the comparison bar — a company having 'a bad year relative to Anthropic' while still compounding at a rate that resets terminal-value math."},
+            {"name": "Anthropic", "blurb": "IPO rumored within months and reportedly tightening its belt. Revenue concentrated in Fortune 500 deployments; the bear case is a visible growth-rate slowdown compressing the multiple, not an absolute revenue miss.", "stance": "WATCHING", "conviction": "Medium", "horizon": "IPO within months"},
+            {"name": "OpenAI", "blurb": "A run of executive departures, with a rumor that OpenAI itself is forcing the changes. Grouped with Anthropic as the labs public-market investors are holding cash to buy.", "stance": "WATCHING", "conviction": "Medium", "horizon": None},
+            {"name": "Palantir (PLTR)", "blurb": "Visser cites 149% revenue growth as the comparison bar — a company having 'a bad year relative to Anthropic' while still compounding at a rate that resets terminal-value math.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
     {
         "id": "mainstream-adoption",
+        "tags": ["consumer", "dev-workflow"],
         "color": "green",
         "badge": "Confirmed shift — anecdotal evidence",
         "status": "SENTIMENT TURNING FROM 'AI TAKES JOBS' TO 'TEAM HUMAN'",
@@ -158,6 +163,7 @@ THEMES = [
     },
     {
         "id": "noise-vs-signal",
+        "tags": ["policy", "ai-infra"],
         "color": "gray",
         "badge": "Framework — explicitly apolitical",
         "status": "TEXAS SLOWDOWN MET WITH COOPERATION; NEW YORK TREATED AS A BLANKET BAN",
@@ -178,7 +184,7 @@ THEMES = [
         },
         "watch": "He applies the same skepticism to the numbers underlying these debates as to the debates themselves — every published statistic exists because someone published it for a reason, and a counter-statistic exists for the opposite reason.",
         "names": [
-            {"name": "Hut 8 (HUT)", "blurb": "Named as a data center builder that publicly welcomed the Texas review and offered to collaborate. A second builder was named on air but the audio is unclear, so it's left unattributed here."},
+            {"name": "Hut 8 (HUT)", "blurb": "Named as a data center builder that publicly welcomed the Texas review and offered to collaborate. A second builder was named on air but the audio is unclear, so it's left unattributed here.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
 ]
@@ -190,6 +196,18 @@ TAKEAWAYS = [
     {"icon": "\U0001f3e6", "tag": "Markets", "title": "Judge incumbents on convertible speed, not balance sheet — the relative-short case against banks is bureaucracy, not credit"},
     {"icon": "\U0001f9ed", "tag": "Macro", "title": "Read inflation against what conditions imply, not against the 2% target — the surprise is the gap, not the level"},
     {"icon": "\U0001f507", "tag": "Markets", "title": "Filter politics out of the thesis entirely — ask only whether the data centers are still being plugged in"},
+]
+
+CLAIMS = [
+    {"who": "Jordi Visser", "claim": "Anthropic reaches roughly $120B ARR by year end", "metric": "ARR", "target": "$120 billion", "by": "year-end 2026", "condition": None, "entity": "Anthropic"},
+    {"who": "Jordi Visser", "claim": "Anthropic's growth rate visibly slows and the multiple compresses even if it lands near $200B ARR", "metric": "ARR", "target": "~$200 billion", "by": "2027", "condition": None, "entity": "Anthropic"},
+    {"who": "Jordi Visser", "claim": "Inflation faces headwinds pushing it higher", "metric": "core inflation", "target": "higher than current 2.5%", "by": "3 years", "condition": None, "entity": None},
+    {"who": "Jordi Visser", "claim": "Crypto becomes a mainstream allocator focus once Clarity Act regulatory clarity lands", "metric": "hedge fund crypto adoption", "target": None, "by": "2-3 years", "condition": "Clarity Act passes", "entity": None},
+]
+
+RELATIONS = [
+    {"from": "Figure Technologies", "rel": "competes_with", "to": "JPMorgan (JPM), Goldman Sachs (GS), Visa (V), Mastercard (MA)", "note": "Middleman-disruption thesis — Figure's HELOC/tokenized-lending speed vs. legacy bank bureaucracy."},
+    {"from": "Figure Technologies", "rel": "partners_with", "to": "Plaid", "note": "Bank-account verification enabling 5-minute HELOC approval decisions."},
 ]
 
 RISKS = [

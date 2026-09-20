@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="ai-trade">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction — positioning disclosed</span>
-    <span class="theme-status">REBUILDING MICRON POSITION; 22V AI INDEX BOUNCED &gt;50% OF THE DRAWDOWN</span>
+    <span class="theme-status">REBUILDING MICRON POSITION; 22V AI INDEX BOUNCED &gt;50% OF THE DRAWDOWN</span><span class="ttag">semis</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">The AI trade bounced hard — and the lesson isn't the bottom, it's the Bayesian reset</h2>
   <div class="theme-body">
@@ -131,7 +136,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Never, never, never tell me I've picked a bottom or a top. It's bad juju, but it's also not true.&#8221;<cite>— Jordi Visser</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Micron (MU)</b><span>Sold after an eight-bagger, re-entered in the $700s above his own exit. The thesis change: long-term supply agreements mean earnings should no longer be cyclical, and DRAM pricing is rising into accelerating compute demand.</span></div><div class="namechip"><b>Nvidia (NVDA)</b><span>Core holding in the disclosed 10-name correlated subset of his AI index.</span></div><div class="namechip"><b>Intel (INTC)</b><span>Held specifically for CPU exposure as distinct from the GPU trade.</span></div><div class="namechip"><b>Marvell (MRVL)</b><span>The optical-side semiconductor exposure in his index construction.</span></div><div class="namechip"><b>Caterpillar (CAT)</b><span>Included as non-semiconductor AI infrastructure exposure — the physical buildout leg of the index.</span></div><div class="namechip"><b>Corning (GLW)</b><span>Named alongside Caterpillar as a component broadening the index beyond chips.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Micron (MU)<span class="stance" style="background:#3f6b2e;">OWNS · High · 5 years</span></b><span>Sold after an eight-bagger, re-entered in the $700s above his own exit. The thesis change: long-term supply agreements mean earnings should no longer be cyclical, and DRAM pricing is rising into accelerating compute demand.</span></div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>Core holding in the disclosed 10-name correlated subset of his AI index.</span></div><div class="namechip"><b>Intel (INTC)<span class="stance" style="background:#3f6b2e;">OWNS · Medium</span></b><span>Held specifically for CPU exposure as distinct from the GPU trade.</span></div><div class="namechip"><b>Marvell (MRVL)<span class="stance" style="background:#3f6b2e;">OWNS · Medium</span></b><span>The optical-side semiconductor exposure in his index construction.</span></div><div class="namechip"><b>Caterpillar (CAT)<span class="stance" style="background:#3f6b2e;">OWNS · Medium</span></b><span>Included as non-semiconductor AI infrastructure exposure — the physical buildout leg of the index.</span></div><div class="namechip"><b>Corning (GLW)<span class="stance" style="background:#3f6b2e;">OWNS · Medium</span></b><span>Named alongside Caterpillar as a component broadening the index beyond chips.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The Korean market is his cautionary chart: KOSPI 200 'broke down hard' and looks like Bitcoin's drawdown compressed from nine months into one — yet it's still up 70% year to date. Expect roughly a hundred more scares of that shape, none individually decisive.</div></div>
     </div>
   </div>
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="inflation-context">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested — near-term benign, three-year view higher</span>
-    <span class="theme-status">CORE CPI 2.6% → 2.5%; VISSER STILL SEES HEADWINDS TOWARD HIGHER IN 3 YEARS</span>
+    <span class="theme-status">CORE CPI 2.6% → 2.5%; VISSER STILL SEES HEADWINDS TOWARD HIGHER IN 3 YEARS</span><span class="ttag">macro-rates</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Inflation is far weaker than the context says it should be — and AI may be why</h2>
   <div class="theme-body">
@@ -150,7 +155,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;Inflation to me is something that should be higher than it is today based on everything we're seeing. And contextually, I will argue again and again that we're starting to see the deflationary pressures of AI.&#8221;<cite>— Jordi Visser</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Lemonade (LMND)</b><span>Cited as live evidence of AI deflation — a startup insurer willing to sell car insurance at lower prices as AI-driven margin improvement enables price competition.</span></div><div class="namechip"><b>Tesla (TSLA)</b><span>Appears only as a personal anecdote: insurance on his five-year-old Tesla now runs 5–10% of the car's value annually, which he blames on 2020-era money printing rather than on the company.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Lemonade (LMND)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Cited as live evidence of AI deflation — a startup insurer willing to sell car insurance at lower prices as AI-driven margin improvement enables price competition.</span></div><div class="namechip"><b>Tesla (TSLA)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Appears only as a personal anecdote: insurance on his five-year-old Tesla now runs 5–10% of the car's value annually, which he blames on 2020-era money printing rather than on the company.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">He is explicit that this is a probabilistic view being updated, not a forecast being defended: he critiques people 'for being stubborn and for not adjusting to new information,' not for being wrong. His own inflation call has already moved with the data.</div></div>
     </div>
   </div>
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="middleman-unwind">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction — building a product around it</span>
-    <span class="theme-status">FIGURE REPORTED REVENUE +100% YoY, EBITDA +50% YoY</span>
+    <span class="theme-status">FIGURE REPORTED REVENUE +100% YoY, EBITDA +50% YoY</span><span class="ttag">crypto</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">The middlemen are the S&amp;P 500 — and tokenized finance is eating their float</h2>
   <div class="theme-body">
@@ -169,7 +174,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;The middlemen are the S&amp;P 500. The companies like Figure are not middlemen — they are actually trying to disrupt that business.&#8221;<cite>— Jordi Visser</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Figure Technologies</b><span>The centerpiece example — 100%+ revenue growth, 50%+ EBITDA growth, third-largest US HELOC originator. Visser wanted to connect its HELOC business to the tokenization thesis but was declined a management call.</span></div><div class="namechip"><b>Robinhood (HOOD)</b><span>Seven or eight business lines each above $100M revenue; named as a holding in the converged crypto-plus-public-equity index he's constructing.</span></div><div class="namechip"><b>PayPal (PYPL), Coinbase (COIN)</b><span>The other already-public names in that index — the listed leg of a crypto-native disruption trade.</span></div><div class="namechip"><b>Stripe</b><span>Cited alongside Figure and Robinhood as the same automation-and-friction-removal pattern in private markets.</span></div><div class="namechip"><b>JPMorgan (JPM), Goldman Sachs (GS), Visa (V), Mastercard (MA)</b><span>The relative-short bloc. Not bad businesses — but bureaucracies carrying legacy employees and decades of accumulated acquisitions (Chemical Bank et al.), structurally unable to convert to crypto-native speed.</span></div><div class="namechip"><b>Salesforce (CRM)</b><span>Offered as proof that selling agentic AI doesn't rescue an incumbent from the same conversion problem.</span></div><div class="namechip"><b>Ford (F)</b><span>The contrast case for growth rate — an old company with debt and pensions whose revenue simply cannot compound like Micron's earnings.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Figure Technologies<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>The centerpiece example — 100%+ revenue growth, 50%+ EBITDA growth, third-largest US HELOC originator. Visser wanted to connect its HELOC business to the tokenization thesis but was declined a management call.</span></div><div class="namechip"><b>Robinhood (HOOD)<span class="stance" style="background:#3f6b2e;">OWNS · Medium</span></b><span>Seven or eight business lines each above $100M revenue; named as a holding in the converged crypto-plus-public-equity index he's constructing.</span></div><div class="namechip"><b>PayPal (PYPL), Coinbase (COIN)<span class="stance" style="background:#3f6b2e;">OWNS · Medium</span></b><span>The other already-public names in that index — the listed leg of a crypto-native disruption trade.</span></div><div class="namechip"><b>Stripe<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Cited alongside Figure and Robinhood as the same automation-and-friction-removal pattern in private markets.</span></div><div class="namechip"><b>JPMorgan (JPM), Goldman Sachs (GS), Visa (V), Mastercard (MA)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium</span></b><span>The relative-short bloc. Not bad businesses — but bureaucracies carrying legacy employees and decades of accumulated acquisitions (Chemical Bank et al.), structurally unable to convert to crypto-native speed.</span></div><div class="namechip"><b>Salesforce (CRM)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Low</span></b><span>Offered as proof that selling agentic AI doesn't rescue an incumbent from the same conversion problem.</span></div><div class="namechip"><b>Ford (F)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Low</span></b><span>The contrast case for growth rate — an old company with debt and pensions whose revenue simply cannot compound like Micron's earnings.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The bank call is explicitly relative, not absolute — 'the reason JP Morgan is a short, not in an absolute basis, but relative to companies like Figure.' His argument is growth rate, not business quality: incumbents have the eyeballs, deposits and money, but carry legacy employees and accumulated bureaucracy that can 'only grow at human speed.'</div></div>
     </div>
   </div>
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="time-thesis">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Core thesis — philosophical, deliberately unfalsifiable near-term</span>
-    <span class="theme-status">ANTHROPIC IPO RUMORED; ~$120B ARR EXPECTED BY YEAR END (SPEAKER ESTIMATE)</span>
+    <span class="theme-status">ANTHROPIC IPO RUMORED; ~$120B ARR EXPECTED BY YEAR END (SPEAKER ESTIMATE)</span><span class="ttag">crypto</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Everything is priced off human time — Bitcoin is the one thing that isn't</h2>
   <div class="theme-body">
@@ -188,7 +193,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;It is the S&amp;P 500 of 10 years from now, not because of anything special about it from an innovation perspective. It's because it doesn't suffer from time, because it's not based on time.&#8221;<cite>— Jordi Visser, on Bitcoin</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic</b><span>IPO rumored within months and reportedly tightening its belt. Revenue concentrated in Fortune 500 deployments; the bear case is a visible growth-rate slowdown compressing the multiple, not an absolute revenue miss.</span></div><div class="namechip"><b>OpenAI</b><span>A run of executive departures, with a rumor that OpenAI itself is forcing the changes. Grouped with Anthropic as the labs public-market investors are holding cash to buy.</span></div><div class="namechip"><b>Palantir (PLTR)</b><span>Visser cites 149% revenue growth as the comparison bar — a company having 'a bad year relative to Anthropic' while still compounding at a rate that resets terminal-value math.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic<span class="stance" style="background:#93711b;">WATCHING · Medium · IPO within months</span></b><span>IPO rumored within months and reportedly tightening its belt. Revenue concentrated in Fortune 500 deployments; the bear case is a visible growth-rate slowdown compressing the multiple, not an absolute revenue miss.</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">WATCHING · Medium</span></b><span>A run of executive departures, with a rumor that OpenAI itself is forcing the changes. Grouped with Anthropic as the labs public-market investors are holding cash to buy.</span></div><div class="namechip"><b>Palantir (PLTR)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Visser cites 149% revenue growth as the comparison bar — a company having 'a bad year relative to Anthropic' while still compounding at a rate that resets terminal-value math.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">He holds this loosely by his own account: 'If I believed it was 100%, I'd have all my money in it. I'd be leveraged.' He assigns a non-zero probability that Bitcoin goes to zero — just a low one relative to the alternative.</div></div>
     </div>
   </div>
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="mainstream-adoption">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Confirmed shift — anecdotal evidence</span>
-    <span class="theme-status">SENTIMENT TURNING FROM 'AI TAKES JOBS' TO 'TEAM HUMAN'</span>
+    <span class="theme-status">SENTIMENT TURNING FROM 'AI TAKES JOBS' TO 'TEAM HUMAN'</span><span class="ttag">consumer</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">The moms have the agents now — and that's the tailwind for the trade</h2>
   <div class="theme-body">
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="noise-vs-signal">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Framework — explicitly apolitical</span>
-    <span class="theme-status">TEXAS SLOWDOWN MET WITH COOPERATION; NEW YORK TREATED AS A BLANKET BAN</span>
+    <span class="theme-status">TEXAS SLOWDOWN MET WITH COOPERATION; NEW YORK TREATED AS A BLANKET BAN</span><span class="ttag">policy</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">The market moves on earnings — everything on the street corner is noise</h2>
   <div class="theme-body">
@@ -226,7 +231,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#65695f;"><div class="lbl">Pull quote</div>&#8220;You tell me the rules. I will adjust to what I think the rules are going to be.&#8221;<cite>— Jordi Visser</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Hut 8 (HUT)</b><span>Named as a data center builder that publicly welcomed the Texas review and offered to collaborate. A second builder was named on air but the audio is unclear, so it's left unattributed here.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Hut 8 (HUT)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Named as a data center builder that publicly welcomed the Texas review and offered to collaborate. A second builder was named on air but the audio is unclear, so it's left unattributed here.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">He applies the same skepticism to the numbers underlying these debates as to the debates themselves — every published statistic exists because someone published it for a reason, and a counter-statistic exists for the opposite reason.</div></div>
     </div>
   </div>
@@ -240,15 +245,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">The headline figures are Visser's working numbers, quoted from memory in conversation rather than read off a report: Figure's rule-of-150, an expectation of ~<b>$120B</b> ARR for Anthropic, and Palantir at 149% revenue growth (which he pairs with a sub-$1B revenue base). Read them as the shape of his argument rather than as reported data.</div><div class="ritem">Visser discloses that he asked Figure's management for a call and was declined — so his read on his own flagship example is assembled from public interviews and filings, not from access. He volunteers this himself.</div><div class="ritem">He is simultaneously building a commercial index that includes Figure, Robinhood, PayPal and Coinbase, and is publicly bullish on the exact names it would hold. The analysis may be sound and the product incentive is real.</div><div class="ritem">He discloses an active Micron position being rebuilt and an existing 22V AI thematic portfolio whose components he names on air — this is a book being talked, by his own account.</div><div class="ritem">He is also launching a crypto research franchise and soliciting data for it, which sits underneath his 'you will all be paying attention to crypto a year from now' call.</div><div class="ritem">Visser repeatedly disclaims: nothing said is investment advice, nothing from any expert is truth, and he'd be all-in and levered on Bitcoin if he actually believed his own thesis at <b>100%</b>.</div><div class="ritem">Auto-captions garble several names (KOSPI 200, Bayesian, HELOC, EBITDA, Caitlin Long, Mike Cagney, Kevin Warsh, Demis Hassabis, Palantir). One data center builder named alongside Hut 8 could not be identified with confidence and is left unnamed.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;The mistake people are going to make with AI is trying to pick tops and bottoms.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;School is a complete waste of time.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The biggest risk to Anthropic is not whether their ARR gets to a trillion dollars next year.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;We're now doing what used to take 10 years in 3 months.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I will never sit there and show people my guesses on things without providing some sort of documentation, proof or data to support the reasoning.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;There will never be a time that everyone's going to be like, you know what, that's a good idea — and I think it's a good thing.&#8221; <cite>— Jordi Visser</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Jordi Visser:</b> Anthropic reaches roughly $120B ARR by year end <span class="cmeta">ARR · $120 billion · year-end 2026</span> <span class="tag">Anthropic</span></div><div class="ritem"><b>Jordi Visser:</b> Anthropic's growth rate visibly slows and the multiple compresses even if it lands near $200B ARR <span class="cmeta">ARR · ~$200 billion · 2027</span> <span class="tag">Anthropic</span></div><div class="ritem"><b>Jordi Visser:</b> Inflation faces headwinds pushing it higher <span class="cmeta">core inflation · higher than current 2.5% · 3 years</span></div><div class="ritem"><b>Jordi Visser:</b> Crypto becomes a mainstream allocator focus once Clarity Act regulatory clarity lands <span class="cmeta">hedge fund crypto adoption · 2-3 years</span> <i>if Clarity Act passes</i></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Figure Technologies</b> <span class="rel">competes with</span> <b>JPMorgan (JPM), Goldman Sachs (GS), Visa (V), Mastercard (MA)</b> &mdash; Middleman-disruption thesis — Figure's HELOC/tokenized-lending speed vs. legacy bank bureaucracy.</div><div class="ritem"><b>Figure Technologies</b> <span class="rel">partners with</span> <b>Plaid</b> &mdash; Bank-account verification enabling 5-minute HELOC approval decisions.</div></div></div>
     </section>
 
     <section class="sec">
