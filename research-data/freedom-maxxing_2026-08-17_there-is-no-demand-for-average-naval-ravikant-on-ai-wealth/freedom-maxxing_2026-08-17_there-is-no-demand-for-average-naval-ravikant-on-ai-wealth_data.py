@@ -22,6 +22,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "software-uninvestable",
+        "tags": ["software", "dev-workflow"],
         "color": "amber",
         "badge": "Structural critique",
         "status": "STATED AS CURRENT VIEW, MID-2026",
@@ -40,6 +41,7 @@ THEMES = [
     },
     {
         "id": "solo-creator-renaissance",
+        "tags": ["dev-workflow", "career"],
         "color": "green",
         "badge": "Recommendation",
         "status": "ONGOING SHIFT, PER NAVAL",
@@ -58,6 +60,7 @@ THEMES = [
     },
     {
         "id": "agency-vs-intelligence",
+        "tags": ["dev-workflow"],
         "color": "amber",
         "badge": "Contested",
         "status": "LIVE DISAGREEMENT ON CAMERA",
@@ -74,6 +77,7 @@ THEMES = [
     },
     {
         "id": "human-desire-moat",
+        "tags": ["dev-workflow"],
         "color": "gray",
         "badge": "Structural critique",
         "status": "PHILOSOPHICAL CLAIM",
@@ -92,6 +96,7 @@ THEMES = [
     },
     {
         "id": "waste-tokens-save-time",
+        "tags": ["dev-workflow"],
         "color": "green",
         "badge": "Recommendation",
         "status": "PRACTICAL GUIDANCE, MID-2026",
@@ -108,6 +113,7 @@ THEMES = [
     },
     {
         "id": "taste-bottleneck",
+        "tags": ["dev-workflow", "career"],
         "color": "amber",
         "badge": "Structural critique",
         "status": "CURRENT-STATE OBSERVATION",

@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="software-uninvestable">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Structural critique</span>
-    <span class="theme-status">STATED AS CURRENT VIEW, MID-2026</span>
+    <span class="theme-status">STATED AS CURRENT VIEW, MID-2026</span><span class="ttag">software</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">"Pure software is uninvestable" — Cloud code burns down the software castle</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="solo-creator-renaissance">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Recommendation</span>
-    <span class="theme-status">ONGOING SHIFT, PER NAVAL</span>
+    <span class="theme-status">ONGOING SHIFT, PER NAVAL</span><span class="ttag">dev-workflow</span><span class="ttag">career</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">One- and two-person companies can now scale to millions of users</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="agency-vs-intelligence">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">LIVE DISAGREEMENT ON CAMERA</span>
+    <span class="theme-status">LIVE DISAGREEMENT ON CAMERA</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Agency vs. intelligence: two competing bets on what wins going forward</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="human-desire-moat">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Structural critique</span>
-    <span class="theme-status">PHILOSOPHICAL CLAIM</span>
+    <span class="theme-status">PHILOSOPHICAL CLAIM</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">Human desire is the one thing AI can't replace — so humans stay in the loop</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="waste-tokens-save-time">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Recommendation</span>
-    <span class="theme-status">PRACTICAL GUIDANCE, MID-2026</span>
+    <span class="theme-status">PRACTICAL GUIDANCE, MID-2026</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">"Waste tokens, save time" — and $100K/year in tokens buys you 2028 living standards today</h2>
   <div class="theme-body">
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="taste-bottleneck">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Structural critique</span>
-    <span class="theme-status">CURRENT-STATE OBSERVATION</span>
+    <span class="theme-status">CURRENT-STATE OBSERVATION</span><span class="ttag">dev-workflow</span><span class="ttag">career</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Recent coding-model gains trace back to elite engineers' taste, not just bigger training runs</h2>
   <div class="theme-body">
@@ -240,15 +245,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">This is a compilation stitched from four separate Naval podcast episodes recorded between February and July 2026 — timeline phrases like "a couple of years back" or "recently" are anchored to whichever original episode that clip came from, not to this compilation's August 2026 upload date.</div><div class="ritem">Speaker attribution beyond Naval is partial — auto-captions mark speaker changes with "&gt;&gt;" but only one co-panelist is named ("Max"); other voices are transcribed but not identifiable by name, so quotes not explicitly attributed to Naval above are left unnamed rather than guessed.</div><div class="ritem">All dollar figures and percentages (the <b>$100K</b>/year token-spend claim, the 70/30 and 99/1 agency-intelligence splits) are Naval's or a co-panelist's own illustrative numbers from conversation, not sourced from a study or report.</div><div class="ritem">The compilation is framed by its uploader as educational/commentary content built from Naval's own podcast; the source episodes named in the description ("A Motorcycle for the Mind," "A Return to Code," "The AI Industrial Revolution," "Live in the Future") were not independently re-checked against this transcript.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;There's no market for venture-backed software anymore — pure software is not venture investable.&#8221; <cite>— Naval Ravikant</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think it's 99% intelligence and 1% agency, because then the agents will exercise the agency.&#8221; <cite>— Naval Ravikant (responding to "Max")</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;No matter how expensive these models might seem, they're still way cheaper than a human. Just waste tokens, save time.&#8221; <cite>— Naval Ravikant</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The bigger reason coding models got really good recently might just be that a lot of the best software engineers started using them in the last few months.&#8221; <cite>— Naval Ravikant</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't think they have any long-lived theory of mind of their own — they're always kind of morphing towards you.&#8221; <cite>— Naval Ravikant</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><p class="empty">No dated or numeric calls made in this video.</p></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><p class="empty">No company-to-company relationships stated in this video.</p></div>
     </section>
 
     <section class="sec">
