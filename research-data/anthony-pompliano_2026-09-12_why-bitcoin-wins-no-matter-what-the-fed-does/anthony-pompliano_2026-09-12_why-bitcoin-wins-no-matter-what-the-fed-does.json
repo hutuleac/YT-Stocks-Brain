@@ -21,6 +21,9 @@
  "themes": [
   {
    "id": "rates-dont-matter",
+   "tags": [
+    "macro-rates"
+   ],
    "color": "green",
    "badge": "High conviction",
    "status": "FED DECISION PENDING — 81% odds of a 25bp hike (Polymarket, morning of taping)",
@@ -45,6 +48,9 @@
   },
   {
    "id": "market-structure",
+   "tags": [
+    "finance"
+   ],
    "color": "amber",
    "badge": "Structural critique",
    "status": null,
@@ -62,6 +68,10 @@
   },
   {
    "id": "ethereum-robinhood",
+   "tags": [
+    "crypto",
+    "finance"
+   ],
    "color": "green",
    "badge": "High conviction",
    "status": "Q3-TO-DATE — Ethereum ~2x Bitcoin's return; S&P 500/Nasdaq roughly flat",
@@ -82,20 +92,32 @@
    "names": [
     {
      "name": "Ethereum (ETH)",
-     "blurb": "Best-performing major asset quarter-to-date, ~2x Bitcoin's return."
+     "blurb": "Best-performing major asset quarter-to-date, ~2x Bitcoin's return.",
+     "stance": "POSITIVE VIEW",
+     "conviction": "High",
+     "horizon": null
     },
     {
      "name": "Robinhood (HOOD)",
-     "blurb": "Morgan Stanley-upgraded on multi-revenue-stream thesis; prediction markets now outearn stock trading."
+     "blurb": "Morgan Stanley-upgraded on multi-revenue-stream thesis; prediction markets now outearn stock trading.",
+     "stance": "POSITIVE VIEW",
+     "conviction": "High",
+     "horizon": null
     },
     {
      "name": "Bitcoin (BTC)",
-     "blurb": "Underperformed Ethereum this quarter but still outpaced flat US equity indices."
+     "blurb": "Underperformed Ethereum this quarter but still outpaced flat US equity indices.",
+     "stance": "OWNS",
+     "conviction": "Medium",
+     "horizon": null
     }
    ]
   },
   {
    "id": "valuing-crypto",
+   "tags": [
+    "crypto"
+   ],
    "color": "gray",
    "badge": "Speculative framework",
    "status": null,
@@ -113,6 +135,10 @@
   },
   {
    "id": "ai-week",
+   "tags": [
+    "ai-infra",
+    "policy"
+   ],
    "color": "amber",
    "badge": "Contested event",
    "status": "WEEK OF SEPTEMBER 8, 2026",
@@ -134,24 +160,40 @@
    "names": [
     {
      "name": "OpenAI",
-     "blurb": "Astra release and reported Navier-Stokes solve; also Jensen Huang's AGI claim about the company."
+     "blurb": "Astra release and reported Navier-Stokes solve; also Jensen Huang's AGI claim about the company.",
+     "stance": "CASUAL MENTION",
+     "conviction": null,
+     "horizon": null
     },
     {
      "name": "Anthropic (via Claude)",
-     "blurb": "Reportedly flagged Iran's alleged attempt to use Claude for war planning; also the ex-employee doomer exit story."
+     "blurb": "Reportedly flagged Iran's alleged attempt to use Claude for war planning; also the ex-employee doomer exit story.",
+     "stance": "CASUAL MENTION",
+     "conviction": null,
+     "horizon": null
     },
     {
      "name": "Boston Scientific, Stryker",
-     "blurb": "Boston Scientific hacked, warned on earnings; Stryker's stock affected in sympathy."
+     "blurb": "Boston Scientific hacked, warned on earnings; Stryker's stock affected in sympathy.",
+     "stance": "NEGATIVE VIEW",
+     "conviction": "Low",
+     "horizon": null
     },
     {
      "name": "Galvanic",
-     "blurb": "Critical-infrastructure cybersecurity startup Jordi Visser is an investor in, founded by an ex-White House staffer."
+     "blurb": "Critical-infrastructure cybersecurity startup Jordi Visser is an investor in, founded by an ex-White House staffer.",
+     "stance": "OWNS",
+     "conviction": "Medium",
+     "horizon": null
     }
    ]
   },
   {
    "id": "washington-alignment",
+   "tags": [
+    "policy",
+    "crypto"
+   ],
    "color": "green",
    "badge": "High conviction",
    "status": null,
@@ -199,12 +241,6 @@
    "title": "Reassess Robinhood as a multi-revenue platform business (prediction markets, tokenization, agentic trading) rather than a commission-free brokerage."
   }
  ],
- "risks": [
-  "Visser is a working money manager and content creator (Sylvia/CFOSylvia.com) with a direct commercial interest in bullish AI/crypto conviction landing with his audience.",
-  "Several factual claims this episode (the Navier-Stokes solve, the Iran/Claude story, OpenAI training on submitted math problems) are relayed from the week's news cycle and discussed as-reported, not verified firsthand by either speaker.",
-  "Auto-captions garbled at least one proper noun (the crypto valuation researcher's name) badly enough that the attribution above is a best-effort guess, not a confirmed identification.",
-  "Political framing (Fed independence, Bessent/Trump/Warsh alignment) reflects Visser's own read of incentives, not disclosed policy intent from any of the named officials."
- ],
  "hot_takes": [
   {
    "take": "Why anyone would care about this when earnings are growing 30 plus% is beyond me.",
@@ -230,6 +266,49 @@
    "take": "The reason the market isn't higher is because of the worries people have. No question about it.",
    "cite": "— Jordi Visser",
    "why": "States a causal market claim with total certainty rather than as one hypothesis among several."
+  }
+ ],
+ "claims": [
+  {
+   "who": "Market (Polymarket, per Visser)",
+   "claim": "Fed hikes 25bp at the pending FOMC meeting",
+   "metric": "probability",
+   "target": "81%",
+   "by": "September 2026",
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Market (Polymarket, per Visser)",
+   "claim": "Clarity Act passes this year",
+   "metric": "probability",
+   "target": "under 20%",
+   "by": "end of 2026",
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Jordi Visser",
+   "claim": "Clarity Act passage would trigger a faster-than-expected Bitcoin move by unlocking pension-fund allocation",
+   "metric": "BTC price reaction",
+   "target": null,
+   "by": null,
+   "condition": "Clarity Act passes",
+   "entity": "Bitcoin (BTC)"
+  }
+ ],
+ "relations": [
+  {
+   "from": "Robinhood (HOOD)",
+   "rel": "partners_with",
+   "to": "Ethereum (ETH)",
+   "note": "Robinhood Chain built on Ethereum via Arbitrum as its tokenization bridge."
+  },
+  {
+   "from": "Iran",
+   "rel": "customer_of",
+   "to": "Anthropic (via Claude)",
+   "note": "Reportedly attempted to use Claude for war planning; Anthropic reportedly flagged the activity."
   }
  ],
  "other_news": [],

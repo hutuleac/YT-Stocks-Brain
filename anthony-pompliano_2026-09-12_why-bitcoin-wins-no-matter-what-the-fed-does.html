@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="rates-dont-matter">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">FED DECISION PENDING — 81% odds of a 25bp hike (Polymarket, morning of taping)</span>
+    <span class="theme-status">FED DECISION PENDING — 81% odds of a 25bp hike (Polymarket, morning of taping)</span><span class="ttag">macro-rates</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">"Why anyone would care about 25 basis points is beyond me"</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="market-structure">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Structural critique</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">AI agents are front-running hedge funds' own drawdown rules</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="ethereum-robinhood">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">Q3-TO-DATE — Ethereum ~2x Bitcoin's return; S&amp;P 500/Nasdaq roughly flat</span>
+    <span class="theme-status">Q3-TO-DATE — Ethereum ~2x Bitcoin's return; S&amp;P 500/Nasdaq roughly flat</span><span class="ttag">crypto</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Ethereum's outperformance and Robinhood's tokenization bridge</h2>
   <div class="theme-body">
@@ -169,7 +174,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Robinhood merges not just these technologies together — I think it merges this community aspect.&#8221;<cite>— Jordi Visser</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Ethereum (ETH)</b><span>Best-performing major asset quarter-to-date, ~2x Bitcoin's return.</span></div><div class="namechip"><b>Robinhood (HOOD)</b><span>Morgan Stanley-upgraded on multi-revenue-stream thesis; prediction markets now outearn stock trading.</span></div><div class="namechip"><b>Bitcoin (BTC)</b><span>Underperformed Ethereum this quarter but still outpaced flat US equity indices.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Ethereum (ETH)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Best-performing major asset quarter-to-date, ~2x Bitcoin's return.</span></div><div class="namechip"><b>Robinhood (HOOD)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Morgan Stanley-upgraded on multi-revenue-stream thesis; prediction markets now outearn stock trading.</span></div><div class="namechip"><b>Bitcoin (BTC)<span class="stance" style="background:#3f6b2e;">OWNS · Medium</span></b><span>Underperformed Ethereum this quarter but still outpaced flat US equity indices.</span></div></div>
       
     </div>
   </div>
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="valuing-crypto">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Speculative framework</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">crypto</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">"We don't know what the metrics are" — valuing crypto like the 1990s internet</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="ai-week">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested event</span>
-    <span class="theme-status">WEEK OF SEPTEMBER 8, 2026</span>
+    <span class="theme-status">WEEK OF SEPTEMBER 8, 2026</span><span class="ttag">ai-infra</span><span class="ttag">policy</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">A week's worth of AI progress — and AI risk — compressed into days</h2>
   <div class="theme-body">
@@ -207,7 +212,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I don't know if you heard the Boston Scientific news this week... they had a hacking and they basically said they're not going to meet their earnings numbers for the rest of this year.&#8221;<cite>— Jordi Visser</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>OpenAI</b><span>Astra release and reported Navier-Stokes solve; also Jensen Huang's AGI claim about the company.</span></div><div class="namechip"><b>Anthropic (via Claude)</b><span>Reportedly flagged Iran's alleged attempt to use Claude for war planning; also the ex-employee doomer exit story.</span></div><div class="namechip"><b>Boston Scientific, Stryker</b><span>Boston Scientific hacked, warned on earnings; Stryker's stock affected in sympathy.</span></div><div class="namechip"><b>Galvanic</b><span>Critical-infrastructure cybersecurity startup Jordi Visser is an investor in, founded by an ex-White House staffer.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Astra release and reported Navier-Stokes solve; also Jensen Huang's AGI claim about the company.</span></div><div class="namechip"><b>Anthropic (via Claude)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Reportedly flagged Iran's alleged attempt to use Claude for war planning; also the ex-employee doomer exit story.</span></div><div class="namechip"><b>Boston Scientific, Stryker<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Low</span></b><span>Boston Scientific hacked, warned on earnings; Stryker's stock affected in sympathy.</span></div><div class="namechip"><b>Galvanic<span class="stance" style="background:#3f6b2e;">OWNS · Medium</span></b><span>Critical-infrastructure cybersecurity startup Jordi Visser is an investor in, founded by an ex-White House staffer.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The Navier-Stokes solve, the Iran/Claude story, and the OpenAI training-on-submissions allegation are all reported/discussed claims from this news cycle, not independently verified by the hosts.</div></div>
     </div>
   </div>
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="washington-alignment">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">policy</span><span class="ttag">crypto</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Bessent, Trump, and Warsh are effectively long AI and crypto</h2>
   <div class="theme-body">
@@ -240,15 +245,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">Visser is a working money manager and content creator (Sylvia/CFOSylvia.com) with a direct commercial interest in bullish AI/crypto conviction landing with his audience.</div><div class="ritem">Several factual claims this episode (the Navier-Stokes solve, the Iran/Claude story, OpenAI training on submitted math problems) are relayed from the week's news cycle and discussed as-reported, not verified firsthand by either speaker.</div><div class="ritem">Auto-captions garbled at least one proper noun (the crypto valuation researcher's name) badly enough that the attribution above is a best-effort guess, not a confirmed identification.</div><div class="ritem">Political framing (Fed independence, Bessent/Trump/Warsh alignment) reflects Visser's own read of incentives, not disclosed policy intent from any of the named officials.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;Why anyone would care about this when earnings are growing 30 plus% is beyond me.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I feel bad for their children's portfolios 'cause it's probably not going to work out for them.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;If clarity goes through, I think crypto would go up far faster than people realize.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't think it's going to happen... I kind of hope it does happen so we can just get rid of it.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The reason the market isn't higher is because of the worries people have. No question about it.&#8221; <cite>— Jordi Visser</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Market (Polymarket, per Visser):</b> Fed hikes 25bp at the pending FOMC meeting <span class="cmeta">probability · 81% · September 2026</span></div><div class="ritem"><b>Market (Polymarket, per Visser):</b> Clarity Act passes this year <span class="cmeta">probability · under 20% · end of 2026</span></div><div class="ritem"><b>Jordi Visser:</b> Clarity Act passage would trigger a faster-than-expected Bitcoin move by unlocking pension-fund allocation <span class="cmeta">BTC price reaction</span> <i>if Clarity Act passes</i> <span class="tag">Bitcoin (BTC)</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Robinhood (HOOD)</b> <span class="rel">partners with</span> <b>Ethereum (ETH)</b> &mdash; Robinhood Chain built on Ethereum via Arbitrum as its tokenization bridge.</div><div class="ritem"><b>Iran</b> <span class="rel">customer of</span> <b>Anthropic (via Claude)</b> &mdash; Reportedly attempted to use Claude for war planning; Anthropic reportedly flagged the activity.</div></div></div>
     </section>
 
     <section class="sec">

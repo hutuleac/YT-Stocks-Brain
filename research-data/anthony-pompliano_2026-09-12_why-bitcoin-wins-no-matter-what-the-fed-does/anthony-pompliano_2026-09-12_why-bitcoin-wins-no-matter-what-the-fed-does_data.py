@@ -26,6 +26,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "rates-dont-matter",
+        "tags": ["macro-rates"],
         "color": "green",
         "badge": "High conviction",
         "status": "FED DECISION PENDING — 81% odds of a 25bp hike (Polymarket, morning of taping)",
@@ -47,6 +48,7 @@ THEMES = [
     },
     {
         "id": "market-structure",
+        "tags": ["finance"],
         "color": "amber",
         "badge": "Structural critique",
         "status": None,
@@ -64,6 +66,7 @@ THEMES = [
     },
     {
         "id": "ethereum-robinhood",
+        "tags": ["crypto", "finance"],
         "color": "green",
         "badge": "High conviction",
         "status": "Q3-TO-DATE — Ethereum ~2x Bitcoin's return; S&P 500/Nasdaq roughly flat",
@@ -79,13 +82,14 @@ THEMES = [
         "quote": {"text": "Robinhood merges not just these technologies together — I think it merges this community aspect.", "cite": "— Jordi Visser"},
         "watch": None,
         "names": [
-            {"name": "Ethereum (ETH)", "blurb": "Best-performing major asset quarter-to-date, ~2x Bitcoin's return."},
-            {"name": "Robinhood (HOOD)", "blurb": "Morgan Stanley-upgraded on multi-revenue-stream thesis; prediction markets now outearn stock trading."},
-            {"name": "Bitcoin (BTC)", "blurb": "Underperformed Ethereum this quarter but still outpaced flat US equity indices."},
+            {"name": "Ethereum (ETH)", "blurb": "Best-performing major asset quarter-to-date, ~2x Bitcoin's return.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
+            {"name": "Robinhood (HOOD)", "blurb": "Morgan Stanley-upgraded on multi-revenue-stream thesis; prediction markets now outearn stock trading.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
+            {"name": "Bitcoin (BTC)", "blurb": "Underperformed Ethereum this quarter but still outpaced flat US equity indices.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
         ],
     },
     {
         "id": "valuing-crypto",
+        "tags": ["crypto"],
         "color": "gray",
         "badge": "Speculative framework",
         "status": None,
@@ -103,6 +107,7 @@ THEMES = [
     },
     {
         "id": "ai-week",
+        "tags": ["ai-infra", "policy"],
         "color": "amber",
         "badge": "Contested event",
         "status": "WEEK OF SEPTEMBER 8, 2026",
@@ -119,14 +124,15 @@ THEMES = [
         "quote": {"text": "I don't know if you heard the Boston Scientific news this week... they had a hacking and they basically said they're not going to meet their earnings numbers for the rest of this year.", "cite": "— Jordi Visser"},
         "watch": "The Navier-Stokes solve, the Iran/Claude story, and the OpenAI training-on-submissions allegation are all reported/discussed claims from this news cycle, not independently verified by the hosts.",
         "names": [
-            {"name": "OpenAI", "blurb": "Astra release and reported Navier-Stokes solve; also Jensen Huang's AGI claim about the company."},
-            {"name": "Anthropic (via Claude)", "blurb": "Reportedly flagged Iran's alleged attempt to use Claude for war planning; also the ex-employee doomer exit story."},
-            {"name": "Boston Scientific, Stryker", "blurb": "Boston Scientific hacked, warned on earnings; Stryker's stock affected in sympathy."},
-            {"name": "Galvanic", "blurb": "Critical-infrastructure cybersecurity startup Jordi Visser is an investor in, founded by an ex-White House staffer."},
+            {"name": "OpenAI", "blurb": "Astra release and reported Navier-Stokes solve; also Jensen Huang's AGI claim about the company.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Anthropic (via Claude)", "blurb": "Reportedly flagged Iran's alleged attempt to use Claude for war planning; also the ex-employee doomer exit story.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Boston Scientific, Stryker", "blurb": "Boston Scientific hacked, warned on earnings; Stryker's stock affected in sympathy.", "stance": "NEGATIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "Galvanic", "blurb": "Critical-infrastructure cybersecurity startup Jordi Visser is an investor in, founded by an ex-White House staffer.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
         ],
     },
     {
         "id": "washington-alignment",
+        "tags": ["policy", "crypto"],
         "color": "green",
         "badge": "High conviction",
         "status": None,
@@ -151,6 +157,17 @@ TAKEAWAYS = [
     {"icon": "\U0001F916", "tag": "AI", "title": "Treat this week's AI headline cluster (Astra, Navier-Stokes, AGI claims, hacks) as a pace-of-change signal, not a single verified fact set — cross-check before acting on any one claim."},
     {"icon": "\U0001F4B8", "tag": "Macro", "title": "Stop weighting a 25bp Fed move heavily in a portfolio thesis if earnings growth and AI capex are the actual drivers of this cycle."},
     {"icon": "\U0001F3E6", "tag": "Companies", "title": "Reassess Robinhood as a multi-revenue platform business (prediction markets, tokenization, agentic trading) rather than a commission-free brokerage."},
+]
+
+CLAIMS = [
+    {"who": "Market (Polymarket, per Visser)", "claim": "Fed hikes 25bp at the pending FOMC meeting", "metric": "probability", "target": "81%", "by": "September 2026", "condition": None, "entity": None},
+    {"who": "Market (Polymarket, per Visser)", "claim": "Clarity Act passes this year", "metric": "probability", "target": "under 20%", "by": "end of 2026", "condition": None, "entity": None},
+    {"who": "Jordi Visser", "claim": "Clarity Act passage would trigger a faster-than-expected Bitcoin move by unlocking pension-fund allocation", "metric": "BTC price reaction", "target": None, "by": None, "condition": "Clarity Act passes", "entity": "Bitcoin (BTC)"},
+]
+
+RELATIONS = [
+    {"from": "Robinhood (HOOD)", "rel": "partners_with", "to": "Ethereum (ETH)", "note": "Robinhood Chain built on Ethereum via Arbitrum as its tokenization bridge."},
+    {"from": "Iran", "rel": "customer_of", "to": "Anthropic (via Claude)", "note": "Reportedly attempted to use Claude for war planning; Anthropic reportedly flagged the activity."},
 ]
 
 RISKS = [
