@@ -21,6 +21,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "fable-5-standing-duty",
+        "tags": ["policy", "software"],
         "color": "amber",
         "badge": "Contested",
         "status": "BACK ONLINE JULY 1 UNDER 3 NEW GOVERNMENT GUARANTEES",
@@ -47,6 +48,7 @@ THEMES = [
     },
     {
         "id": "claude-jspace-paper",
+        "tags": ["software"],
         "color": "amber",
         "badge": "Contested",
         "status": "PUBLISHED THIS WEEK — MAPS TO 5 PROPERTIES OF GLOBAL WORKSPACE THEORY",
@@ -70,6 +72,7 @@ THEMES = [
     },
     {
         "id": "altman-equity-hypertithe",
+        "tags": ["policy", "finance"],
         "color": "amber",
         "badge": "Contested",
         "status": "REPORTED IN TALKS WITH TRUMP, LUTNICK, BESSENT, AND SANDERS",
@@ -95,6 +98,7 @@ THEMES = [
     },
     {
         "id": "palantir-nvidia-token-tax-rant",
+        "tags": ["software", "ai-infra"],
         "color": "amber",
         "badge": "Contested",
         "status": "PRODUCT LAUNCH PLUS A VIRAL CEO RANT",
@@ -121,6 +125,7 @@ THEMES = [
     },
     {
         "id": "ai-jobs-data",
+        "tags": ["career"],
         "color": "green",
         "badge": "High conviction",
         "status": "NEW STUDY COUNTERS THE AI-JOB-LOSS NARRATIVE",
@@ -142,6 +147,7 @@ THEMES = [
     },
     {
         "id": "ai-designed-chips-patents",
+        "tags": ["semis", "policy"],
         "color": "amber",
         "badge": "Contested",
         "status": "REAL TECHNICAL BREAKTHROUGH, UNRESOLVED LEGAL IMPLICATIONS",
@@ -191,6 +197,16 @@ HOT_TAKES = [
      "cite": '— Moonshot Mates panel', "why": 'Against the AI-layoffs narrative: heavy AI spenders grew entry-level headcount more, not less.'},
     {"take": "If we can understand the innermost thoughts of these models, then there's a chance to actually shape them.",
      "cite": '— Peter Diamandis', "why": 'On Anthropic finding a self-organized structure inside Claude that resembles the machinery of conscious thought.'},
+]
+
+CLAIMS = [
+    {"who": "Sam Altman", "claim": "OpenAI equity offered to a government sovereign fund", "metric": "equity stake", "target": "5% (~$42.6B off an $852B valuation)", "by": None, "condition": "reported, not confirmed policy", "entity": "OpenAI"},
+]
+
+RELATIONS = [
+    {"from": "Palantir (PLTR)", "rel": "partners_with", "to": "Nvidia (NVDA)", "note": "sovereign-AI stack built on Nvidia's open Nemotron models"},
+    {"from": "Anthropic", "rel": "partners_with", "to": "Samsung (005930.KS)", "note": "inference-accelerator partnership announced around the same time"},
+    {"from": "Anthropic", "rel": "partners_with", "to": "Amazon (AMZN)", "note": "trusted hosting partner and investor; an Amazon researcher discovered the exploit that triggered Fable 5's shutdown"},
 ]
 
 OTHER_NEWS = [

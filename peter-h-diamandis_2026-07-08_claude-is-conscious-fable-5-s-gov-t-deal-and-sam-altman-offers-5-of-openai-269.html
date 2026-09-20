@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="fable-5-standing-duty">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">BACK ONLINE JULY 1 UNDER 3 NEW GOVERNMENT GUARANTEES</span>
+    <span class="theme-status">BACK ONLINE JULY 1 UNDER 3 NEW GOVERNMENT GUARANTEES</span><span class="ttag">policy</span><span class="ttag">software</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Fable 5's shutdown-and-return leaves Anthropic with the first 'standing duty' to the US government — and the exploit wasn't even unique to it</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="claude-jspace-paper">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">PUBLISHED THIS WEEK — MAPS TO 5 PROPERTIES OF GLOBAL WORKSPACE THEORY</span>
+    <span class="theme-status">PUBLISHED THIS WEEK — MAPS TO 5 PROPERTIES OF GLOBAL WORKSPACE THEORY</span><span class="ttag">software</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Anthropic finds a self-organized 'JSpace' inside Claude that looks like the machinery of conscious thought — but the panel splits on whether that earns real trust</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="altman-equity-hypertithe">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">REPORTED IN TALKS WITH TRUMP, LUTNICK, BESSENT, AND SANDERS</span>
+    <span class="theme-status">REPORTED IN TALKS WITH TRUMP, LUTNICK, BESSENT, AND SANDERS</span><span class="ttag">policy</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Sam Altman is discussing a 5% OpenAI equity stake with the government — panel splits on whether this is a serious UBI proposal or a relevance play</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="palantir-nvidia-token-tax-rant">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">PRODUCT LAUNCH PLUS A VIRAL CEO RANT</span>
+    <span class="theme-status">PRODUCT LAUNCH PLUS A VIRAL CEO RANT</span><span class="ttag">software</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Palantir and Nvidia pitch sovereign, on-prem AI — while Alex Karp warns enterprises they may be leaking their 'alpha' to frontier labs one token at a time</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="ai-jobs-data">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">NEW STUDY COUNTERS THE AI-JOB-LOSS NARRATIVE</span>
+    <span class="theme-status">NEW STUDY COUNTERS THE AI-JOB-LOSS NARRATIVE</span><span class="ttag">career</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">New data says AI-heavy companies are hiring more, not less — even as several high-profile layoffs got blamed on AI the same week</h2>
   <div class="theme-body">
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="ai-designed-chips-patents">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">REAL TECHNICAL BREAKTHROUGH, UNRESOLVED LEGAL IMPLICATIONS</span>
+    <span class="theme-status">REAL TECHNICAL BREAKTHROUGH, UNRESOLVED LEGAL IMPLICATIONS</span><span class="ttag">semis</span><span class="ttag">policy</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">AI is now designing the chips that power AI — and Japan just ruled AI can't legally invent anything</h2>
   <div class="theme-body">
@@ -240,15 +245,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">Host Peter Diamandis explicitly states optimism-promotion as part of the show's mission ('keep you optimistic about the future'), which may bias story selection and framing toward positive interpretations.</div><div class="ritem">Several technical claims (GPT-5.6 benchmark rumors, METER's reward-hacking findings) are relayed from public reporting and rumor, not primary sources verified within this brief.</div><div class="ritem">The RAMP/Ravelin Labs jobs study is described secondhand in the episode; the study's own authors are quoted as cautioning correlation is not causation, a caveat the panel's optimistic framing partially glosses over.</div><div class="ritem">This is a fast-moving, four-person crosstalk-heavy panel with significant technical jargon (mechanistic interpretability, Jacobians); auto-generated captions may misattribute short interjections or mistranscribe technical terms.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;The idea that the government is going to set up some intelligent sovereign wealth equity thing is absolutely insane. The next president will immediately sell it all and use it to buy votes.&#8221; <cite>— Dave London</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Why are they charging for tokens if it's so valuable?&#8221; <cite>— Alex Karp, CEO of Palantir</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;This is probably close to the best scenario we could have hoped for.&#8221; <cite>— Alex (AWG)</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Anyone who's AI native, their demand for that person is through the roof.&#8221; <cite>— Moonshot Mates panel</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;If we can understand the innermost thoughts of these models, then there's a chance to actually shape them.&#8221; <cite>— Peter Diamandis</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Sam Altman:</b> OpenAI equity offered to a government sovereign fund <span class="cmeta">equity stake · 5% (~$42.6B off an $852B valuation)</span> <i>if reported, not confirmed policy</i> <span class="tag">OpenAI</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Palantir (PLTR)</b> <span class="rel">partners with</span> <b>Nvidia (NVDA)</b> &mdash; sovereign-AI stack built on Nvidia's open Nemotron models</div><div class="ritem"><b>Anthropic</b> <span class="rel">partners with</span> <b>Samsung (005930.KS)</b> &mdash; inference-accelerator partnership announced around the same time</div><div class="ritem"><b>Anthropic</b> <span class="rel">partners with</span> <b>Amazon (AMZN)</b> &mdash; trusted hosting partner and investor; an Amazon researcher discovered the exploit that triggered Fable 5's shutdown</div></div></div>
     </section>
 
     <section class="sec">
