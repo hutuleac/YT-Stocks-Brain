@@ -24,6 +24,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "goldilocks-macro",
+        "tags": ["macro-rates"],
         "color": "amber",
         "badge": "Macro thesis, contested externally",
         "status": "LIVE — Kyle says the setup has been building since ~June/July 2026",
@@ -45,6 +46,7 @@ THEMES = [
     },
     {
         "id": "ai-jobs-debate",
+        "tags": ["career", "policy"],
         "color": "amber",
         "badge": "Opinion, self-described as contested",
         "status": None,
@@ -66,6 +68,7 @@ THEMES = [
     },
     {
         "id": "ai-stack-roi",
+        "tags": ["ai-infra", "software"],
         "color": "green",
         "badge": "High conviction",
         "status": "Confirmed by Q2 2026 revenue figures cited in the episode",
@@ -100,6 +103,7 @@ THEMES = [
     },
     {
         "id": "barbell-portfolio",
+        "tags": ["finance", "ai-infra"],
         "color": "green",
         "badge": "High conviction, actioned",
         "status": "ACTIONED — Milk Road Pro called buys during the July 2026 pullback",
@@ -118,17 +122,17 @@ THEMES = [
         },
         "watch": None,
         "names": [
-            {"name": "Eli Lilly (LLY)", "blurb": "Kyle's largest application-layer holding example — biggest biotech by market cap, S&P 500, >$1T market cap, showing AI-attributed revenue growth."},
-            {"name": "Micron (MU)", "blurb": "Named as a Milk Road Pro buy call during the July 2026 pullback."},
-            {"name": "Nebius (NBIS)", "blurb": "Fell to ~$147 from ~$280 in the July 2026 dip, called by Kyle roughly a 2x round-trip; also referenced as an earlier ~$300 entry call back in February."},
-            {"name": "CoreWeave (CRWV)", "blurb": "Named as a Milk Road Pro buy call during the July 2026 pullback."},
-            {"name": "AMD", "blurb": "Named in passing as one of the infrastructure-layer names that has rallied alongside Micron and Nebius."},
-            {"name": "Palantir (PLTR)", "blurb": "Cited as an example application-layer company profiting by helping enterprises integrate AI."},
-            {"name": "ServiceNow (NOW)", "blurb": "Cited as an example application-layer company profiting by helping enterprises integrate AI."},
-            {"name": "Salesforce (CRM)", "blurb": "Named as an example SaaS company using AI to improve its offering."},
-            {"name": "Robinhood (HOOD)", "blurb": "Named as an example of an average company whose AI adoption is improving shipping speed and earnings."},
-            {"name": "Coinbase (COIN)", "blurb": "Named as an example of an average company whose AI adoption is improving shipping speed and earnings."},
-            {"name": "SanDisk (SNDK)", "blurb": "Named in a list of recent Milk Road Pro dip-buy calls alongside Nebius and SpaceX-adjacent infrastructure names."},
+            {"name": "Eli Lilly (LLY)", "blurb": "Kyle's largest application-layer holding example — biggest biotech by market cap, S&P 500, >$1T market cap, showing AI-attributed revenue growth.", "stance": "OWNS", "conviction": "High", "horizon": None},
+            {"name": "Micron (MU)", "blurb": "Named as a Milk Road Pro buy call during the July 2026 pullback.", "stance": "BUYING-ADDING", "conviction": "Medium", "horizon": None},
+            {"name": "Nebius (NBIS)", "blurb": "Fell to ~$147 from ~$280 in the July 2026 dip, called by Kyle roughly a 2x round-trip; also referenced as an earlier ~$300 entry call back in February.", "stance": "BUYING-ADDING", "conviction": "High", "horizon": None},
+            {"name": "CoreWeave (CRWV)", "blurb": "Named as a Milk Road Pro buy call during the July 2026 pullback.", "stance": "BUYING-ADDING", "conviction": "Medium", "horizon": None},
+            {"name": "AMD", "blurb": "Named in passing as one of the infrastructure-layer names that has rallied alongside Micron and Nebius.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Palantir (PLTR)", "blurb": "Cited as an example application-layer company profiting by helping enterprises integrate AI.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "ServiceNow (NOW)", "blurb": "Cited as an example application-layer company profiting by helping enterprises integrate AI.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Salesforce (CRM)", "blurb": "Named as an example SaaS company using AI to improve its offering.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Robinhood (HOOD)", "blurb": "Named as an example of an average company whose AI adoption is improving shipping speed and earnings.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Coinbase (COIN)", "blurb": "Named as an example of an average company whose AI adoption is improving shipping speed and earnings.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "SanDisk (SNDK)", "blurb": "Named in a list of recent Milk Road Pro dip-buy calls alongside Nebius and SpaceX-adjacent infrastructure names.", "stance": "BUYING-ADDING", "conviction": "Medium", "horizon": None},
         ],
     },
 ]
@@ -163,6 +167,15 @@ HOT_TAKES = [
     {"take": 'This Goldilocks picture is not going to last forever.',
      "cite": '— Kyle', "why": 'Volunteered against his own bullish case, with the promise to say so publicly when he thinks it turns.'},
 ]
+
+CLAIMS = [
+    {"who": "Kyle", "claim": "Anthropic annualized revenue run rate", "metric": "run rate", "target": "$100-120 billion", "by": "end of 2026", "condition": None, "entity": "Anthropic"},
+    {"who": "Kyle", "claim": "OpenAI annualized revenue run rate", "metric": "run rate", "target": "$60-80 billion", "by": "end of 2026", "condition": None, "entity": "OpenAI"},
+    {"who": "Gavin Baker / David Sacks (via All-In Podcast, relayed by Kyle)", "claim": "Anthropic annualized revenue run rate", "metric": "run rate", "target": "$250-400 billion", "by": "end of 2027", "condition": None, "entity": "Anthropic"},
+    {"who": "Kyle", "claim": "Cursor/Grok revenue run rate", "metric": "run rate", "target": "$10-20 billion", "by": "end of 2026", "condition": None, "entity": "Cursor"},
+]
+
+RELATIONS = []
 
 OTHER_NEWS = []
 
