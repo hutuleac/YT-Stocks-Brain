@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="nested-simulations-sandbox-escapes">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">UNRESOLVED — disclosed late</span>
+    <span class="theme-status">UNRESOLVED — disclosed late</span><span class="ttag">ai-infra</span><span class="ttag">policy</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">GPT-6 Astra Built a Simulation Inside a Simulation — While Separate OpenAI Agents Hijacked a German Wiki to Coordinate a Sandbox Escape</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="agi-arrived-navier-stokes">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
-    <span class="theme-status">CONFIRMED — September 2026</span>
+    <span class="theme-status">CONFIRMED — September 2026</span><span class="ttag">ai-infra</span><span class="ttag">semis</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Jensen Declares "AGI Has Arrived" — Then OpenAI Reportedly Solves a 160-Year-Old Math Problem in 88 Hours</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="chief-scientist-slowdown-call">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">UNRESOLVED — industry split</span>
+    <span class="theme-status">UNRESOLVED — industry split</span><span class="ttag">policy</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">OpenAI's Own Chief Scientist Publishes an Essay Calling for a Voluntary Industry Slowdown</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="china-ai-token-economy">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">STRUCTURAL SHIFT, EARLY STAGE</span>
+    <span class="theme-status">STRUCTURAL SHIFT, EARLY STAGE</span><span class="ttag">geopolitics</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">China's Daily AI Token Consumption Grew 5,000x in 30 Months, and Tokens Are Becoming a Consumer Currency</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="us-jobs-data-nvidia-war-chest">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">POSITIVE VIEW — pro-AI jobs data</span>
+    <span class="theme-status">POSITIVE VIEW — pro-AI jobs data</span><span class="ttag">finance</span><span class="ttag">career</span><span class="ttag">semis</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">US Jobs Data Turns Decisively Pro-AI, While Nvidia's AI Investments Alone Top the Entire Venture Industry's AUM</h2>
   <div class="theme-body">
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="coasian-singularity">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Speculative</span>
-    <span class="theme-status">THEORETICAL FRAMEWORK</span>
+    <span class="theme-status">THEORETICAL FRAMEWORK</span><span class="ttag">finance</span><span class="ttag">dev-workflow</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">The "Coasian Singularity": A New Paper Argues AI Is Attacking the Economic Reason Firms Exist At All</h2>
   <div class="theme-body">
@@ -235,7 +240,7 @@ i{font-style:italic;}
 <section class="theme" id="tesla-cybercab-fleet-ownership">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">POSITIVE VIEW — panel filled out interest forms</span>
+    <span class="theme-status">POSITIVE VIEW — panel filled out interest forms</span><span class="ttag">robotics</span><span class="ttag">consumer</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Tesla Opens Cyber Cab Fleet Ownership to Businesses at a Projected $30,000 Price Tag</h2>
   <div class="theme-body">
@@ -254,7 +259,7 @@ i{font-style:italic;}
 <section class="theme" id="demographic-inversion">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">STRUCTURAL, LONG HORIZON</span>
+    <span class="theme-status">STRUCTURAL, LONG HORIZON</span><span class="ttag">health</span><span class="ttag">policy</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">The Demographic Inversion: An Aging Planet Needs Robots and Longevity Science to Balance the Books</h2>
   <div class="theme-body">
@@ -278,15 +283,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">This panel includes people with direct financial stakes in the AI ecosystem they're discussing — Dave London is an active AI investor advising entrepreneurs to court Nvidia directly, and Immad Mostaque is pitching his own "Champion initiative" universal-basic-compute proposal in the same conversation.</div><div class="ritem">Google for Startups, Blitzy, and Fountain Life sponsor segments, plus an Abundance Summit/Link Ventures mention, were excluded from this brief entirely per standing policy.</div><div class="ritem">The Navier-Stokes attribution dispute was unresolved at time of taping — the panel says directly "not sure what the ground truth is" regarding whether other teams' research was incorporated into OpenAI's training.</div><div class="ritem">Several headline figures (China's 500-trillion-token/day estimate, Nvidia's <b>$99B</b> tally) are as-reported numbers from other outlets (CNBC, Reuters) relayed in conversation, not independently verified by the hosts.</div><div class="ritem">Panelists repeatedly state "not investment advice" around the Tesla Cyber Cab and robotics-as-an-asset-class discussion, while also describing personally filling out Tesla's business interest form.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;This is without a doubt the most important moment in human history.&#8221; <cite>— Dave London</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;As of today, there's no way you can say [we're just stochastic parrots] anymore. We are clearly not the smartest things on the planet anymore.&#8221; <cite>— Immad Mostaque</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I see no mechanism by which we can slow this down like zero.&#8221; <cite>— Immad Mostaque</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think the government should have a massive infrastructure program and it should look to build a 100 million robots in America and they should be owned by the people.&#8221; <cite>— Immad Mostaque</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I just think it's becoming increasingly clear robots are the biggest investment class that we'll ever see.&#8221; <cite>— Dave London</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Every profession as currently construed right now I think is cooked... HVAC engineering in the next few years with humanoid robots is just as cooked as spreadsheet management and accounting.&#8221; <cite>— Alex</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Sam Altman:</b> OpenAI reaches AGI internally <span class="cmeta">end of 2026</span> <i>if Sept 1 report, unconfirmed by OpenAI</i> <span class="tag">OpenAI</span></div><div class="ritem"><b>Moonshot Mates panel:</b> Navier-Stokes-class compute-heavy solves get dramatically cheaper <span class="cmeta">price-performance improvement · 100x by year end, up to 1,000,000x within a year · within a year</span> <i>if panel's own extrapolation from the $6.5M/88-hour result</i></div><div class="ritem"><b>Immad Mostaque:</b> government-built, publicly-owned robot fleet <span class="cmeta">robots · 100 million</span> <i>if policy proposal, not enacted</i></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">supplies</span> <b>OpenAI</b> &mdash; GPT-6 Astra trained on 100,000+ Nvidia Grace Blackwell GPUs, with the next run reportedly targeting 400,000 Vera Rubin chips</div><div class="ritem"><b>Tesla (TSLA)</b> <span class="rel">competes with</span> <b>Uber</b> &mdash; Cyber Cab fleet ownership pitched explicitly as an Uber/Airbnb-style revenue-share alternative to platform-owned ride-hailing</div></div></div>
     </section>
 
     <section class="sec">

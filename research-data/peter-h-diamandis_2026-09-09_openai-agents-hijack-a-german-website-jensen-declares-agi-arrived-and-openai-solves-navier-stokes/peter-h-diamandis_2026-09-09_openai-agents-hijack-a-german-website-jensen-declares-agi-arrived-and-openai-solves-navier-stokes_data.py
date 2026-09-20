@@ -26,6 +26,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "nested-simulations-sandbox-escapes",
+        "tags": ["ai-infra", "policy"],
         "color": "amber",
         "badge": "Contested",
         "status": "UNRESOLVED — disclosed late",
@@ -44,6 +45,7 @@ THEMES = [
     },
     {
         "id": "agi-arrived-navier-stokes",
+        "tags": ["ai-infra", "semis"],
         "color": "green",
         "badge": "Confirmed event",
         "status": "CONFIRMED — September 2026",
@@ -65,6 +67,7 @@ THEMES = [
     },
     {
         "id": "chief-scientist-slowdown-call",
+        "tags": ["policy", "ai-infra"],
         "color": "amber",
         "badge": "Contested",
         "status": "UNRESOLVED — industry split",
@@ -83,6 +86,7 @@ THEMES = [
     },
     {
         "id": "china-ai-token-economy",
+        "tags": ["geopolitics", "ai-infra"],
         "color": "amber",
         "badge": "Contested",
         "status": "STRUCTURAL SHIFT, EARLY STAGE",
@@ -100,6 +104,7 @@ THEMES = [
     },
     {
         "id": "us-jobs-data-nvidia-war-chest",
+        "tags": ["finance", "career", "semis"],
         "color": "green",
         "badge": "High conviction",
         "status": "POSITIVE VIEW — pro-AI jobs data",
@@ -122,6 +127,7 @@ THEMES = [
     },
     {
         "id": "coasian-singularity",
+        "tags": ["finance", "dev-workflow"],
         "color": "gray",
         "badge": "Speculative",
         "status": "THEORETICAL FRAMEWORK",
@@ -142,6 +148,7 @@ THEMES = [
     },
     {
         "id": "tesla-cybercab-fleet-ownership",
+        "tags": ["robotics", "consumer"],
         "color": "green",
         "badge": "High conviction",
         "status": "POSITIVE VIEW — panel filled out interest forms",
@@ -161,6 +168,7 @@ THEMES = [
     },
     {
         "id": "demographic-inversion",
+        "tags": ["health", "policy"],
         "color": "amber",
         "badge": "Contested",
         "status": "STRUCTURAL, LONG HORIZON",
@@ -184,6 +192,17 @@ TAKEAWAYS = [
     {"icon": "\U0001F6A8", "tag": "AI ethics", "title": "Read OpenAI chief scientist Yakub Pachocki's 'An Alien Mind' essay directly — it's a rare on-record slowdown call from someone who built the reasoning models in question, not an outside critic."},
     {"icon": "\U0001F916", "tag": "Robotics", "title": "Watch for a franchise-style robot and robotaxi ownership economy forming — Tesla's Cyber Cab fleet interest form is the first concrete instance of the 'buy a franchise' path the panel describes."},
     {"icon": "\U0001FA7A", "tag": "Health", "title": "Treat the elder-care and child-care robotics/services gap as a framed investment theme, not just a health topic — the panel's demographic argument makes both a structural necessity, not a nice-to-have."},
+]
+
+CLAIMS = [
+    {"who": "Sam Altman", "claim": "OpenAI reaches AGI internally", "metric": None, "target": None, "by": "end of 2026", "condition": "Sept 1 report, unconfirmed by OpenAI", "entity": "OpenAI"},
+    {"who": "Moonshot Mates panel", "claim": "Navier-Stokes-class compute-heavy solves get dramatically cheaper", "metric": "price-performance improvement", "target": "100x by year end, up to 1,000,000x within a year", "by": "within a year", "condition": "panel's own extrapolation from the $6.5M/88-hour result"},
+    {"who": "Immad Mostaque", "claim": "government-built, publicly-owned robot fleet", "metric": "robots", "target": "100 million", "by": None, "condition": "policy proposal, not enacted"},
+]
+
+RELATIONS = [
+    {"from": "Nvidia (NVDA)", "rel": "supplies", "to": "OpenAI", "note": "GPT-6 Astra trained on 100,000+ Nvidia Grace Blackwell GPUs, with the next run reportedly targeting 400,000 Vera Rubin chips"},
+    {"from": "Tesla (TSLA)", "rel": "competes_with", "to": "Uber", "note": "Cyber Cab fleet ownership pitched explicitly as an Uber/Airbnb-style revenue-share alternative to platform-owned ride-hailing"},
 ]
 
 RISKS = [
