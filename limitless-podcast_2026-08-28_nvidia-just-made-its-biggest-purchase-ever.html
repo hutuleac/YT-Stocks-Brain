@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="nvidia-earnings">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
-    <span class="theme-status">REPORTED THIS WEEK</span>
+    <span class="theme-status">REPORTED THIS WEEK</span><span class="ttag">semis</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Nvidia's quarter was 'about as good as you can guess' — and Wall Street agrees</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="hugging-face-buy">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">ANNOUNCED THIS WEEK — $13B</span>
+    <span class="theme-status">ANNOUNCED THIS WEEK — $13B</span><span class="ttag">ai-infra</span><span class="ttag">software</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Nvidia's $13B Hugging Face buy: a hedge, a demand engine, and maybe a cloud business in disguise</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="chinese-silicon">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">FIRST OF ITS KIND, PER THE HOSTS</span>
+    <span class="theme-status">FIRST OF ITS KIND, PER THE HOSTS</span><span class="ttag">semis</span><span class="ttag">geopolitics</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">A free 100-trillion-token giveaway turned out to be Chinese silicon's coming-out party</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="robotaxi-hardware">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
-    <span class="theme-status">WAYMO CHIP SHIPPED; CYBER CAB LAUNCHES SEPT 3</span>
+    <span class="theme-status">WAYMO CHIP SHIPPED; CYBER CAB LAUNCHES SEPT 3</span><span class="ttag">robotics</span><span class="ttag">consumer</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Robotaxi hardware just got a lot cheaper, on two different bets</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="leopold-probe">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">SEC SUBPOENAS ISSUED</span>
+    <span class="theme-status">SEC SUBPOENAS ISSUED</span><span class="ttag">finance</span><span class="ttag">policy</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Leopold Aschenbrenner's fund is now under SEC scrutiny</h2>
   <div class="theme-body">
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="anthropic-usage-chart">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Speculative</span>
-    <span class="theme-status">DISPUTED BY THE HOSTS</span>
+    <span class="theme-status">DISPUTED BY THE HOSTS</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">A viral FT chart claims Fable usage has stalled — the hosts call it a 'nothing burger'</h2>
   <div class="theme-body">
@@ -240,15 +245,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">This episode is sponsored by Ledger (an AI-agent security tooling company); that sponsor segment is excluded from this brief entirely.</div><div class="ritem">Several figures (Waymo/Cyber Cab hardware costs, Sam Altman's watch valuation, Mac Studio pricing) are the hosts' verbal estimates stated in real time, not verified specs or receipts.</div><div class="ritem">The 'Nvidia building a cloud business via Hugging Face' theory is explicitly labeled speculation by the hosts, not a claim from Nvidia.</div><div class="ritem">Claims about Chinese silicon's capabilities are relayed from public announcements the hosts reacted to on-air, not independently benchmarked by them.</div><div class="ritem">Auto-generated captions were used as the transcript source; some names (e.g. the Sam Altman watchmaker brand) could not be confidently resolved and are described rather than named.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;We're the kings here. We've been doing this for 33 years. You've been doing this for 3 months.&#8221; <cite>— Jensen Huang (via hosts, on OpenAI's Jalapeno chip)</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Buckle up because we are up only for the foreseeable future.&#8221; <cite>— Host (Limitless Podcast)</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;All these people talking about free model, free model that. Like, just how about you just pay for like a subscription or like an API key... Buy an Nvidia GPU at this point, dude.&#8221; <cite>— Host (Limitless Podcast)</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I personally think it would be higher because there's only seven of them.&#8221; <cite>— Host (Limitless Podcast)</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Leopold we trust, man. I'm still rooting for the guy.&#8221; <cite>— Host (Limitless Podcast)</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Nvidia (guidance):</b> Nvidia revenue growth rate for 2028 <span class="cmeta">YoY revenue growth · 70% · 2028</span> <i>if raised from a prior 44% expectation</i> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>Analyst price targets:</b> Nvidia share price target <span class="cmeta">price target · $420/share</span> <i>if highest bank target shown</i> <span class="tag">Nvidia (NVDA)</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">acquires</span> <b>Hugging Face</b> &mdash; $13B acquisition, Nvidia's biggest purchase ever</div><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">invests in</span> <b>Poolside</b> &mdash; ~$9B investment, acquihire of ~100 employees</div><div class="ritem"><b>Huawei</b> <span class="rel">supplies</span> <b>Z.AI</b> &mdash; GLM 5.3 Flash inference runs entirely on a Huawei-built silicon cluster</div><div class="ritem"><b>Citadel</b> <span class="rel">acquires</span> <b>Leopold Aschenbrenner's fund</b> &mdash; bought out the fund after an earlier drawdown</div></div></div>
     </section>
 
     <section class="sec">

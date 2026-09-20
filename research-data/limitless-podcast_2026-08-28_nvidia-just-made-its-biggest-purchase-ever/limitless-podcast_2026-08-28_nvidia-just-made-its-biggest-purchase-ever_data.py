@@ -25,6 +25,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "nvidia-earnings",
+        "tags": ["semis", "ai-infra"],
         "color": "green",
         "badge": "Confirmed event",
         "status": "REPORTED THIS WEEK",
@@ -50,6 +51,7 @@ THEMES = [
     },
     {
         "id": "hugging-face-buy",
+        "tags": ["ai-infra", "software"],
         "color": "green",
         "badge": "High conviction",
         "status": "ANNOUNCED THIS WEEK — $13B",
@@ -71,6 +73,7 @@ THEMES = [
     },
     {
         "id": "chinese-silicon",
+        "tags": ["semis", "geopolitics"],
         "color": "amber",
         "badge": "Contested",
         "status": "FIRST OF ITS KIND, PER THE HOSTS",
@@ -90,6 +93,7 @@ THEMES = [
     },
     {
         "id": "robotaxi-hardware",
+        "tags": ["robotics", "consumer"],
         "color": "green",
         "badge": "Confirmed event",
         "status": "WAYMO CHIP SHIPPED; CYBER CAB LAUNCHES SEPT 3",
@@ -110,6 +114,7 @@ THEMES = [
     },
     {
         "id": "leopold-probe",
+        "tags": ["finance", "policy"],
         "color": "amber",
         "badge": "Contested",
         "status": "SEC SUBPOENAS ISSUED",
@@ -128,6 +133,7 @@ THEMES = [
     },
     {
         "id": "anthropic-usage-chart",
+        "tags": ["ai-infra"],
         "color": "gray",
         "badge": "Speculative",
         "status": "DISPUTED BY THE HOSTS",
@@ -186,6 +192,18 @@ HOT_TAKES = [
         "cite": "— Host (Limitless Podcast)",
         "why": "A personal vote of confidence in someone currently under SEC scrutiny — a stance the host is on record taking before the probe's outcome is known.",
     },
+]
+
+CLAIMS = [
+    {"who": "Nvidia (guidance)", "claim": "Nvidia revenue growth rate for 2028", "metric": "YoY revenue growth", "target": "70%", "by": "2028", "condition": "raised from a prior 44% expectation", "entity": "Nvidia (NVDA)"},
+    {"who": "Analyst price targets", "claim": "Nvidia share price target", "metric": "price target", "target": "$420/share", "by": None, "condition": "highest bank target shown", "entity": "Nvidia (NVDA)"},
+]
+
+RELATIONS = [
+    {"from": "Nvidia (NVDA)", "rel": "acquires", "to": "Hugging Face", "note": "$13B acquisition, Nvidia's biggest purchase ever"},
+    {"from": "Nvidia (NVDA)", "rel": "invests_in", "to": "Poolside", "note": "~$9B investment, acquihire of ~100 employees"},
+    {"from": "Huawei", "rel": "supplies", "to": "Z.AI", "note": "GLM 5.3 Flash inference runs entirely on a Huawei-built silicon cluster"},
+    {"from": "Citadel", "rel": "acquires", "to": "Leopold Aschenbrenner's fund", "note": "bought out the fund after an earlier drawdown"},
 ]
 
 OTHER_NEWS = [
