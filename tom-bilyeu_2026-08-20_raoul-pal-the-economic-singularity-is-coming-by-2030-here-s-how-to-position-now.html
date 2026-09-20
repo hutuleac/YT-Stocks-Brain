@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="economic-singularity">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Speculative framework</span>
-    <span class="theme-status">WATCHING — self-hedged by Raoul himself</span>
+    <span class="theme-status">WATCHING — self-hedged by Raoul himself</span><span class="ttag">macro-rates</span><span class="ttag">robotics</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">By 2030, Raoul Says Nobody Knows How the Economy Even Works</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="liquidity-not-dead-tech">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">WATCHING — liquidity gap flagged as temporary</span>
+    <span class="theme-status">WATCHING — liquidity gap flagged as temporary</span><span class="ttag">crypto</span><span class="ttag">macro-rates</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Crypto's Stall Is a Liquidity Story, Not a Broken-Tech Story</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="cape-ratio-debate">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">WATCHING — Tom's bear case vs Raoul's debasement rebuttal</span>
+    <span class="theme-status">WATCHING — Tom's bear case vs Raoul's debasement rebuttal</span><span class="ttag">finance</span><span class="ttag">macro-rates</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Cape Ratio at 40x: Bubble Signal or Debasement Math?</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="amazon-k-shaped">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Structural bull case, social cost flagged</span>
-    <span class="theme-status">WATCHING — K-shaped tension unresolved</span>
+    <span class="theme-status">WATCHING — K-shaped tension unresolved</span><span class="ttag">robotics</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Amazon Is the Productivity-Miracle Preview — Colliding With a Widening K</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="portfolio-psychology">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Personal framework, since validated</span>
-    <span class="theme-status">OWNS — equities, short-term T-bills, some gold, some crypto</span>
+    <span class="theme-status">OWNS — equities, short-term T-bills, some gold, some crypto</span><span class="ttag">finance</span><span class="ttag">career</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">How Raoul Actually Invests Through the Cycle (Learned the Hard Way)</h2>
   <div class="theme-body">
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="universal-code">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Speculative framework</span>
-    <span class="theme-status"></span>
+    <span class="theme-status"></span><span class="ttag">ai-infra</span><span class="ttag">crypto</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">Reed's Law and the 'Universal Code': Why Raoul Thinks Capital Can't Stop Flowing to AI</h2>
   <div class="theme-body">
@@ -240,15 +245,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">Raoul runs Real Vision and Global Macro Investor and is discussing views he sells as research products — his framework and his business incentives point the same direction, which is worth keeping in mind while weighing his conviction.</div><div class="ritem">Figures like the ~<b>4%</b> hyperscaler debt-to-market-cap ratio, the ~30% capex build-out completion, and the liquidity growth percentages are his working numbers, quoted in conversation rather than read off a cited report.</div><div class="ritem">His 30-year personal relationship with Scott Bessent (and past professional overlap) is disclosed in the conversation itself and colors his read of current Treasury/Fed policy as well-intentioned and competent.</div><div class="ritem">Auto-generated captions on proper nouns (policy names, smaller company names) were cleaned up where the reference was unambiguous; anything not confidently identifiable was left out of the structured index rather than guessed.</div><div class="ritem">The 'universal code' segment is explicitly self-described by Raoul as heuristic speculation outside his stated expertise, not a vetted scientific model.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;It's very clear to me that by 2030 we have no clue how the world's going to work, really.&#8221; <cite>— Raoul Pal</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't think we're going to have long inflation. I think we'll have deflation back again, because that's what population shrinkage and technology does.&#8221; <cite>— Raoul Pal</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think China's really making a play to back the Yuan with gold.&#8221; <cite>— Tom Bilyeu</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;AI is easily the greatest discovery humanity will ever make, because we've created intelligence.&#8221; <cite>— Raoul Pal</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Nobody's going to go back to the gold standard — but I don't think anybody's got an answer to how we get away from the dollar.&#8221; <cite>— Raoul Pal</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Never get so scared that you don't invest or too cautious, because you will never get out of the cave.&#8221; <cite>— Raoul Pal</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Raoul Pal:</b> positioning window before the economic singularity <span class="cmeta">years remaining · ~4 years</span> <i>if his own narrowing countdown, previously stated as 6 then 5 years</i></div><div class="ritem"><b>Raoul Pal:</b> Anthropic revenue scaling <span class="cmeta">annual revenue · ~$100 billion this year</span> <i>if his own cited figure, up from near-zero 18 months earlier</i> <span class="tag">Anthropic</span></div><div class="ritem"><b>Raoul Pal:</b> US liquidity growth shortfall <span class="cmeta">liquidity growth rate · ~4% vs. ~8% needed to service debt/interest</span> <i>if his own working number, not from a cited report</i></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Berkshire Hathaway (BRK.B)</b> <span class="rel">owns stake</span> <b>Apple (AAPL)</b> &mdash; Buffett trimmed this position, cited by Tom as a bearish tell</div><div class="ritem"><b>Berkshire Hathaway (BRK.B)</b> <span class="rel">owns stake</span> <b>Alphabet (GOOGL)</b> &mdash; Buffett added to this position even while backing away from Apple</div></div></div>
     </section>
 
     <section class="sec">

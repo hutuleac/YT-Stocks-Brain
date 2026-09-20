@@ -24,6 +24,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "economic-singularity",
+        "tags": ["macro-rates", "robotics"],
         "color": "gray",
         "badge": "Speculative framework",
         "status": "WATCHING — self-hedged by Raoul himself",
@@ -45,6 +46,7 @@ THEMES = [
     },
     {
         "id": "liquidity-not-dead-tech",
+        "tags": ["crypto", "macro-rates"],
         "color": "green",
         "badge": "High conviction",
         "status": "WATCHING — liquidity gap flagged as temporary",
@@ -69,6 +71,7 @@ THEMES = [
     },
     {
         "id": "cape-ratio-debate",
+        "tags": ["finance", "macro-rates"],
         "color": "amber",
         "badge": "Contested",
         "status": "WATCHING — Tom's bear case vs Raoul's debasement rebuttal",
@@ -97,6 +100,7 @@ THEMES = [
     },
     {
         "id": "amazon-k-shaped",
+        "tags": ["robotics", "finance"],
         "color": "amber",
         "badge": "Structural bull case, social cost flagged",
         "status": "WATCHING — K-shaped tension unresolved",
@@ -118,6 +122,7 @@ THEMES = [
     },
     {
         "id": "portfolio-psychology",
+        "tags": ["finance", "career"],
         "color": "green",
         "badge": "Personal framework, since validated",
         "status": "OWNS — equities, short-term T-bills, some gold, some crypto",
@@ -138,6 +143,7 @@ THEMES = [
     },
     {
         "id": "universal-code",
+        "tags": ["ai-infra", "crypto"],
         "color": "gray",
         "badge": "Speculative framework",
         "title": "Reed's Law and the 'Universal Code': Why Raoul Thinks Capital Can't Stop Flowing to AI",
@@ -164,6 +170,17 @@ TAKEAWAYS = [
     {"icon": "\U0001F4B0", "tag": "Markets", "title": "When assessing hyperscaler risk, separate the core cash-generative players from leveraged special-purpose vehicles (CoreWeave-style structures) instead of treating 'AI debt' as one bucket."},
     {"icon": "\U0001F947", "tag": "Markets", "title": "Hold a deliberate cash allocation specifically earmarked to buy into a 50%+ drawdown, rather than trying to time an exit and re-entry."},
     {"icon": "\U0001F6D1", "tag": "Markets", "title": "Avoid leverage into secular growth themes — Raoul's repeated warning is that leverage, not the drawdown itself, is what actually wipes people out."},
+]
+
+CLAIMS = [
+    {"who": "Raoul Pal", "claim": "positioning window before the economic singularity", "metric": "years remaining", "target": "~4 years", "by": None, "condition": "his own narrowing countdown, previously stated as 6 then 5 years"},
+    {"who": "Raoul Pal", "claim": "Anthropic revenue scaling", "metric": "annual revenue", "target": "~$100 billion this year", "by": None, "condition": "his own cited figure, up from near-zero 18 months earlier", "entity": "Anthropic"},
+    {"who": "Raoul Pal", "claim": "US liquidity growth shortfall", "metric": "liquidity growth rate", "target": "~4% vs. ~8% needed to service debt/interest", "by": None, "condition": "his own working number, not from a cited report"},
+]
+
+RELATIONS = [
+    {"from": "Berkshire Hathaway (BRK.B)", "rel": "owns_stake", "to": "Apple (AAPL)", "note": "Buffett trimmed this position, cited by Tom as a bearish tell"},
+    {"from": "Berkshire Hathaway (BRK.B)", "rel": "owns_stake", "to": "Alphabet (GOOGL)", "note": "Buffett added to this position even while backing away from Apple"},
 ]
 
 RISKS = [
