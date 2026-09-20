@@ -21,6 +21,9 @@
  "themes": [
   {
    "id": "fermi-explorer",
+   "tags": [
+    "space"
+   ],
    "color": "green",
    "badge": "Confirmed event",
    "status": "ANNOUNCED THIS WEEK",
@@ -54,6 +57,10 @@
   },
   {
    "id": "openai-cursor-agi",
+   "tags": [
+    "software",
+    "ai-infra"
+   ],
    "color": "amber",
    "badge": "Contested",
    "status": "DEVELOPING THIS WEEK",
@@ -89,6 +96,10 @@
   },
   {
    "id": "outcome-based-pricing",
+   "tags": [
+    "software",
+    "finance"
+   ],
    "color": "green",
    "badge": "Confirmed event",
    "status": "SHIFT UNDERWAY",
@@ -120,6 +131,10 @@
   },
   {
    "id": "architect-labs-redwood",
+   "tags": [
+    "semis",
+    "software"
+   ],
    "color": "amber",
    "badge": "Confirmed event",
    "status": "ANNOUNCED THIS WEEK",
@@ -151,6 +166,10 @@
   },
   {
    "id": "elon-energy-geoengineering",
+   "tags": [
+    "energy",
+    "space"
+   ],
    "color": "amber",
    "badge": "Contested",
    "status": "ONGOING",
@@ -183,6 +202,10 @@
   },
   {
    "id": "nuclear-mars-ship",
+   "tags": [
+    "space",
+    "policy"
+   ],
    "color": "green",
    "badge": "Confirmed event",
    "status": "ANNOUNCED 3 DAYS AGO",
@@ -229,12 +252,6 @@
    "title": "Watch for OpenAI's Astra release details — the real test is whether it solves long-context \"compaction,\" not a single capability jump"
   }
  ],
- "risks": [
-  "Alex Wissner-Gross and Peter Diamandis are disclosed investors/advisors in Architect Labs (via Link Ventures and personally); Dave Blundin discloses SpaceX as his largest personal holding. Their commentary on those companies should be read as interested, not neutral.",
-  "Several names were garbled by auto-captions and left unresolved rather than guessed: OpenAI's chief scientist's name (heard as \"Yakob Phatsky\"/\"Jacob Pahhatsky\" — likely Jakub Pachocki), one Architect Labs co-founder's name (heard as \"Aditya Sabidi\"), and the Musk-linked chip-fab project Alex predicts will replace TSMC for Nvidia (heard as \"Terraab\"/\"Terrab\").",
-  "Token counts, funding figures, performance specs and Musk's own tweeted numbers (15GW, 100GW/year, 3.4x, 10 billion tokens) are quoted as stated on the show or in the source tweets/announcements, not independently verified against filings.",
-  "This episode's paid sponsor segments (Google for Startups, Blitzy, VoiceRun) and a branded health segment (Fountain Life, Peter Diamandis's own company) have been excluded from this brief entirely."
- ],
  "hot_takes": [
   {
    "take": "Is this an incredible threat to Nvidia? Yeah, absolutely.",
@@ -265,6 +282,55 @@
    "take": "There's no way they're buddies two years from now.",
    "cite": "— Dave Blundin",
    "why": "dated prediction about the Musk-Amodei alliance breaking down"
+  }
+ ],
+ "claims": [
+  {
+   "who": "Sam Altman",
+   "claim": "internal AGI-level milestone",
+   "metric": "capability milestone",
+   "target": "AGI-level, unreleased model Astra",
+   "by": "end of 2026 (~4 months out)",
+   "condition": "self-reported to Time, unverified",
+   "entity": "OpenAI"
+  },
+  {
+   "who": "NASA",
+   "claim": "nuclear-powered Mars spacecraft launch",
+   "metric": "mission launch date",
+   "target": "Mars mission launch",
+   "by": "2028",
+   "condition": "announced by the Trump administration",
+   "entity": "NASA"
+  },
+  {
+   "who": "Elon Musk",
+   "claim": "solar buildout to fix the AI power bottleneck",
+   "metric": "solar capacity added per year",
+   "target": "100 GW/year each at SpaceX and Tesla",
+   "by": null,
+   "condition": "self-reported via tweet, not independently audited",
+   "entity": "SpaceX"
+  }
+ ],
+ "relations": [
+  {
+   "from": "SpaceX",
+   "rel": "acquires",
+   "to": "Cursor",
+   "note": "$60B acquisition; OpenAI cut off Cursor's GPT access days later"
+  },
+  {
+   "from": "Anthropic",
+   "rel": "partners_with",
+   "to": "Cursor",
+   "note": "backed Cursor with Claude access within hours of OpenAI's cutoff"
+  },
+  {
+   "from": "Anthropic",
+   "rel": "customer_of",
+   "to": "SpaceX",
+   "note": "relies on Musk's Colossus compute in Tennessee"
   }
  ],
  "other_news": [

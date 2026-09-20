@@ -27,6 +27,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "fermi-explorer",
+        "tags": ["space"],
         "color": "green",
         "badge": "Confirmed event",
         "status": "ANNOUNCED THIS WEEK",
@@ -51,6 +52,7 @@ THEMES = [
     },
     {
         "id": "openai-cursor-agi",
+        "tags": ["software", "ai-infra"],
         "color": "amber",
         "badge": "Contested",
         "status": "DEVELOPING THIS WEEK",
@@ -74,6 +76,7 @@ THEMES = [
     },
     {
         "id": "outcome-based-pricing",
+        "tags": ["software", "finance"],
         "color": "green",
         "badge": "Confirmed event",
         "status": "SHIFT UNDERWAY",
@@ -96,6 +99,7 @@ THEMES = [
     },
     {
         "id": "architect-labs-redwood",
+        "tags": ["semis", "software"],
         "color": "amber",
         "badge": "Confirmed event",
         "status": "ANNOUNCED THIS WEEK",
@@ -118,6 +122,7 @@ THEMES = [
     },
     {
         "id": "elon-energy-geoengineering",
+        "tags": ["energy", "space"],
         "color": "amber",
         "badge": "Contested",
         "status": "ONGOING",
@@ -141,6 +146,7 @@ THEMES = [
     },
     {
         "id": "nuclear-mars-ship",
+        "tags": ["space", "policy"],
         "color": "green",
         "badge": "Confirmed event",
         "status": "ANNOUNCED 3 DAYS AGO",
@@ -164,6 +170,18 @@ TAKEAWAYS = [
     {"icon": "\U0001F5A5️", "tag": "Semiconductors", "title": "Track Architect Labs and Nvidia's response (a Chip Nemo release, or an acquisition) as an early signal on AI-designed chips' real threat level"},
     {"icon": "⚡", "tag": "Energy", "title": "Follow data-center power buildout (transformers, turbines, land, solar) as the more investable bottleneck story than chip supply itself"},
     {"icon": "\U0001F916", "tag": "AI infrastructure", "title": "Watch for OpenAI's Astra release details — the real test is whether it solves long-context \"compaction,\" not a single capability jump"},
+]
+
+CLAIMS = [
+    {"who": "Sam Altman", "claim": "internal AGI-level milestone", "metric": "capability milestone", "target": "AGI-level, unreleased model Astra", "by": "end of 2026 (~4 months out)", "condition": "self-reported to Time, unverified", "entity": "OpenAI"},
+    {"who": "NASA", "claim": "nuclear-powered Mars spacecraft launch", "metric": "mission launch date", "target": "Mars mission launch", "by": "2028", "condition": "announced by the Trump administration", "entity": "NASA"},
+    {"who": "Elon Musk", "claim": "solar buildout to fix the AI power bottleneck", "metric": "solar capacity added per year", "target": "100 GW/year each at SpaceX and Tesla", "by": None, "condition": "self-reported via tweet, not independently audited", "entity": "SpaceX"},
+]
+
+RELATIONS = [
+    {"from": "SpaceX", "rel": "acquires", "to": "Cursor", "note": "$60B acquisition; OpenAI cut off Cursor's GPT access days later"},
+    {"from": "Anthropic", "rel": "partners_with", "to": "Cursor", "note": "backed Cursor with Claude access within hours of OpenAI's cutoff"},
+    {"from": "Anthropic", "rel": "customer_of", "to": "SpaceX", "note": "relies on Musk's Colossus compute in Tennessee"},
 ]
 
 RISKS = [
