@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="google-ai-brain-drain">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">DEMIS HASSABIS MOVED TO CHAIR OF DEEPMIND; JEFF DEAN + 3 LEFT FOR A NEW STARTUP</span>
+    <span class="theme-status">DEMIS HASSABIS MOVED TO CHAIR OF DEEPMIND; JEFF DEAN + 3 LEFT FOR A NEW STARTUP</span><span class="ttag">ai-infra</span><span class="ttag">software</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Google's AI Brain Drain: Rational Capital Shift or Real Crisis?</h2>
   <div class="theme-body">
@@ -131,7 +136,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I think that the market for frontier intelligence has become a duopoly.&#8221;<cite>— David Sacks</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Google / Alphabet</b><span>Down 4% on the Jeff Dean news; committed $200B to AI infrastructure capex this year.</span></div><div class="namechip"><b>Anthropic &amp; OpenAI</b><span>The panel's named 'duopoly' — Anthropic's ARR reportedly tracking to $110-120B+ by year-end, well above its own initial $100B target.</span></div><div class="namechip"><b>Discovery Loop</b><span>New company founded by Jeff Dean and three other departing Google AI researchers, focused on deep scientific breakthroughs.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Google / Alphabet<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Down 4% on the Jeff Dean news; committed $200B to AI infrastructure capex this year.</span></div><div class="namechip"><b>Anthropic &amp; OpenAI<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>The panel's named 'duopoly' — Anthropic's ARR reportedly tracking to $110-120B+ by year-end, well above its own initial $100B target.</span></div><div class="namechip"><b>Discovery Loop<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>New company founded by Jeff Dean and three other departing Google AI researchers, focused on deep scientific breakthroughs.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Both Jensen Huang's claim that closed models are actually cheaper once training/fine-tuning/safety costs are included, and Elon Musk's claim that frontier models remain "a world of difference" ahead, are relayed secondhand by the panel from other public statements this week — not independently verified in this episode.</div></div>
     </div>
   </div>
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="spacex-bull-case">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
-    <span class="theme-status">FIRST EARNINGS AS A PUBLIC COMPANY — STOCK FELL 13% DESPITE A BEAT-AND-RAISE</span>
+    <span class="theme-status">FIRST EARNINGS AS A PUBLIC COMPANY — STOCK FELL 13% DESPITE A BEAT-AND-RAISE</span><span class="ttag">ai-infra</span><span class="ttag">space</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">SpaceX's Q2: A Beat-and-Raise That the Market Sold Anyway</h2>
   <div class="theme-body">
@@ -150,7 +155,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Putting up data centers is nothing compared to the difficulty of putting up a rocket.&#8221;<cite>— Elon Musk, on SpaceX's Q2 earnings call, as relayed by David Sacks</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>SpaceX (Starlink / AI compute / Space segments)</b><span>Valuation settled near $1.4 trillion post-IPO, down from over $2 trillion at listing.</span></div><div class="namechip"><b>Grok &amp; Cursor</b><span>SpaceX/xAI's frontier-model business, called "the sleeper" by Brad Gerstner — Grok tripled tokens in July; Cursor was already tracking from $3B to $10B ARR; combined could reach $10-20B ARR by year-end at a much higher multiple than the compute-rental business.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>SpaceX (Starlink / AI compute / Space segments)<span class="stance" style="background:#93711b;">WATCHING · Medium · 12-18 months</span></b><span>Valuation settled near $1.4 trillion post-IPO, down from over $2 trillion at listing.</span></div><div class="namechip"><b>Grok &amp; Cursor<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium · by year-end</span></b><span>SpaceX/xAI's frontier-model business, called "the sleeper" by Brad Gerstner — Grok tripled tokens in July; Cursor was already tracking from $3B to $10B ARR; combined could reach $10-20B ARR by year-end at a much higher multiple than the compute-rental business.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">SpaceX's price-to-sales ratio has already compressed from ~160x at IPO to ~45x as revenue has scaled — some real repricing has happened, but Brad Gerstner is explicit that entry price still matters: he publicly said on CNBC the day of the IPO that he wanted to own the company but wasn't sure that was the day to buy it above a $2 trillion valuation.</div></div>
     </div>
   </div>
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="spacex-financing-risk">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Unresolved risk</span>
-    <span class="theme-status">WHO FINANCES THE NEXT $300B?</span>
+    <span class="theme-status">WHO FINANCES THE NEXT $300B?</span><span class="ttag">ai-infra</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">The Financing Question Nobody on the Call Answered</h2>
   <div class="theme-body">
@@ -169,7 +174,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I can't believe that we're all just taking in stride this level of seller financing.&#8221;<cite>— Bill Gurley, as relayed by Brad Gerstner</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia</b><span>Potential financier/backstop of SpaceX's compute buildout; shareholder appetite for unlimited backstopping is an open question.</span></div><div class="namechip"><b>CoreWeave (comparison)</b><span>Cited as an example of a GPU-rental business trading at a low multiple, and as the name that fell ~40% during July's Kimi-driven demand scare.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Potential financier/backstop of SpaceX's compute buildout; shareholder appetite for unlimited backstopping is an open question.</span></div><div class="namechip"><b>CoreWeave (comparison)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Cited as an example of a GPU-rental business trading at a low multiple, and as the name that fell ~40% during July's Kimi-driven demand scare.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">This entire theme is the panel's own forward-looking risk assessment, not a resolved conclusion — multiple speakers explicitly flag their own base case (no demand slowdown for 12-24 months) as an assumption that could break, not a certainty.</div></div>
     </div>
   </div>
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="airtable-bending-spoons">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Case study — not a stock pick</span>
-    <span class="theme-status">SOLD FOR ~10% OF ITS 2021 PEAK VALUATION</span>
+    <span class="theme-status">SOLD FOR ~10% OF ITS 2021 PEAK VALUATION</span><span class="ttag">software</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Airtable's Sale Is a Lesson in Forcing Sales-Led Growth on a PLG Company</h2>
   <div class="theme-body">
@@ -188,7 +193,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;Nobody buys Microsoft because Microsoft writes the best code. They buy Microsoft because Microsoft is the rail that everything else runs on.&#8221;<cite>— quoted by David Sacks from an online post</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Airtable</b><span>Sold for $1.28B (~10% of 2021 peak); spun out its AI-agent business, Hyperagent, as a separate company before the sale to retain venture upside separately.</span></div><div class="namechip"><b>Bending Spoons</b><span>Italian serial acquirer of 'challenged but interesting' businesses — past deals include AOL's legacy business, Evernote, Eventbrite, Vimeo, and Meetup.com; recently IPO'd.</span></div><div class="namechip"><b>Leopold Aschenbrenner (comparison)</b><span>His fund's losses during the correction were partly attributed to being short Adobe and other SaaS names that didn't fall as expected — cited as evidence the 'short all SaaS' trade was wrong.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Airtable<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Sold for $1.28B (~10% of 2021 peak); spun out its AI-agent business, Hyperagent, as a separate company before the sale to retain venture upside separately.</span></div><div class="namechip"><b>Bending Spoons<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Italian serial acquirer of 'challenged but interesting' businesses — past deals include AOL's legacy business, Evernote, Eventbrite, Vimeo, and Meetup.com; recently IPO'd.</span></div><div class="namechip"><b>Leopold Aschenbrenner (comparison)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>His fund's losses during the correction were partly attributed to being short Adobe and other SaaS names that didn't fall as expected — cited as evidence the 'short all SaaS' trade was wrong.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The panel's EBITDA and payback-period projections for Bending Spoons's Airtable turnaround ($300-400M EBITDA, ~3-year payback) are their own speculative estimates during the segment, not disclosed deal terms or company guidance.</div></div>
     </div>
   </div>
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="china-data-export">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Unresolved policy debate</span>
-    <span class="theme-status">LIVE DISAGREEMENT BETWEEN CO-HOSTS, NO CONSENSUS REACHED</span>
+    <span class="theme-status">LIVE DISAGREEMENT BETWEEN CO-HOSTS, NO CONSENSUS REACHED</span><span class="ttag">geopolitics</span><span class="ttag">policy</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">US Data Labelers Are Selling Training Data to Chinese AI Labs — Should They?</h2>
   <div class="theme-body">
@@ -207,7 +212,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I don't think it's very patriotic to be giving them an advantage. I wouldn't do it.&#8221;<cite>— Jason Calacanis</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Surge AI &amp; Mercor</b><span>Named data-labeling companies at the center of the Forbes report, both reportedly valued over $20B.</span></div><div class="namechip"><b>Micro1</b><span>Jason Calacanis-backed data company whose founder reportedly chose not to sell training data to Chinese labs.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Surge AI &amp; Mercor<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Named data-labeling companies at the center of the Forbes report, both reportedly valued over $20B.</span></div><div class="namechip"><b>Micro1<span class="stance" style="background:#3f6b2e;">OWNS · Medium</span></b><span>Jason Calacanis-backed data company whose founder reportedly chose not to sell training data to Chinese labs.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">This entire segment is a live, unresolved disagreement between two co-hosts (Sacks and Calacanis) — there is no fact-checked conclusion here, only competing framings of the same Forbes report.</div></div>
     </div>
   </div>
@@ -221,15 +226,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">This is unscripted, live commentary from four investors (Friedberg, Gerstner, Sacks, Calacanis) who are actively invested in many of the companies and sectors discussed — Gerstner (Altimeter) discloses SaaS-era investments and SpaceX fund exposure; Calacanis discloses direct investment in Micro1 and other data-labeling startups; none of the specific figures cited are independently sourced within the episode itself, only stated verbally from memory or from public earnings calls and press reports.</div><div class="ritem">Several numbers are the panel's own back-of-envelope math relayed live on air (e.g. Sacks's <b>$300B</b> financing estimate for SpaceX's 2027 compute buildout, Freeberg's Starlink $40B-revenue/$1T-valuation extrapolation, Sacks's projected $300-400M EBITDA for Airtable post-acquisition) — treat these as informed speculation, not company guidance or independently modeled forecasts.</div><div class="ritem">The China-data-export segment is a live policy debate between co-hosts with visibly different views that ends unresolved — there is no consensus conclusion in the source video to report as settled fact.</div><div class="ritem">David Sacks has a documented AI/crypto policy background in the Trump administration, which may inform his framing of the export-control and China-competition questions in this episode.</div><div class="ritem">The transcript is auto-generated from a roughly 75-minute, four-person conversation with frequent interruptions, cross-talk, and colloquial phrasing; figures have been transcribed as stated but not independently re-verified against company filings or the original Forbes/Axios reporting cited in the episode.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;I think that the market for frontier intelligence has become a duopoly.&#8221; <cite>— David Sacks</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I can't believe that we're all just taking in stride this level of seller financing.&#8221; <cite>— Bill Gurley, as relayed by Brad Gerstner</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Nobody buys Microsoft because Microsoft writes the best code. They buy Microsoft because Microsoft is the rail that everything else runs on.&#8221; <cite>— quoted by David Sacks</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't think it's very patriotic to be giving them an advantage. I wouldn't do it.&#8221; <cite>— Jason Calacanis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Putting up data centers is nothing compared to the difficulty of putting up a rocket.&#8221; <cite>— Elon Musk on SpaceX's earnings call, as relayed by David Sacks</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Elon Musk:</b> SpaceX hits $1 trillion ARR <span class="cmeta">ARR · $1 trillion · 2030</span> <span class="tag">SpaceX</span></div><div class="ritem"><b>SpaceX (guidance):</b> SpaceX hits $100B ARR by year-end <span class="cmeta">ARR · $100 billion · year-end 2026</span> <span class="tag">SpaceX</span></div><div class="ritem"><b>David Sacks:</b> Scaling SpaceX compute from 2 to 8 gigawatts next year costs roughly $300B <span class="cmeta">capex · $300 billion · 2027</span> <i>if at ~$50B/gigawatt</i> <span class="tag">SpaceX</span></div><div class="ritem"><b>SpaceX (guidance):</b> SpaceX compute capacity reaches 5-10 gigawatts <span class="cmeta">compute capacity · 5-10 GW · end of 2027</span> <span class="tag">SpaceX</span></div><div class="ritem"><b>David Friedberg:</b> Starlink alone could be worth roughly $1 trillion <span class="cmeta">valuation · $1 trillion · ~18 months</span> <i>if at a 30x multiple on ~$30B free cash flow</i> <span class="tag">SpaceX</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>SpaceX</b> <span class="rel">supplies</span> <b>Anthropic &amp; OpenAI</b> &mdash; Rents Colossus AI compute cluster to both labs ("Elon Web Services").</div><div class="ritem"><b>Bending Spoons</b> <span class="rel">acquires</span> <b>Airtable</b> &mdash; $1.28B deal (~10% of Airtable's 2021 peak valuation).</div><div class="ritem"><b>Jeff Dean</b> <span class="rel">endorses</span> <b>Discovery Loop</b> &mdash; Left Google after 27 years to co-found the new company with three other AI researchers.</div><div class="ritem"><b>Surge AI &amp; Mercor</b> <span class="rel">customer of</span> <b>Anthropic &amp; OpenAI</b> &mdash; Sells expert-curated AI training data to both US labs and, per Forbes, top Chinese AI labs simultaneously.</div></div></div>
     </section>
 
     <section class="sec">

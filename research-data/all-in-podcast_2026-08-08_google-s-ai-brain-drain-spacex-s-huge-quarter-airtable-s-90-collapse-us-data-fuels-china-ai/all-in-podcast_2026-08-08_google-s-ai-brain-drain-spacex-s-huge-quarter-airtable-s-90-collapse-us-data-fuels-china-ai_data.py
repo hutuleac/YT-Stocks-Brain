@@ -9,6 +9,7 @@ META = {
     "date": "2026-08-08",
     "video_url": "https://www.youtube.com/watch?v=muRIXCDw-k0",
     "thread_line": "5 threads · Google's AI brain drain, SpaceX Q2 earnings bull case, SpaceX's compute financing risk, Airtable/Bending Spoons SaaS lesson, US data fueling Chinese AI",
+    "category": "market",
 }
 
 SNAPSHOT = [
@@ -25,6 +26,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "google-ai-brain-drain",
+        "tags": ["ai-infra", "software"],
         "color": "amber",
         "badge": "Contested",
         "status": "DEMIS HASSABIS MOVED TO CHAIR OF DEEPMIND; JEFF DEAN + 3 LEFT FOR A NEW STARTUP",
@@ -42,13 +44,14 @@ THEMES = [
         "quote": {"text": "I think that the market for frontier intelligence has become a duopoly.", "cite": "— David Sacks"},
         "watch": "Both Jensen Huang's claim that closed models are actually cheaper once training/fine-tuning/safety costs are included, and Elon Musk's claim that frontier models remain \"a world of difference\" ahead, are relayed secondhand by the panel from other public statements this week — not independently verified in this episode.",
         "names": [
-            {"name": "Google / Alphabet", "blurb": "Down 4% on the Jeff Dean news; committed $200B to AI infrastructure capex this year."},
-            {"name": "Anthropic & OpenAI", "blurb": "The panel's named 'duopoly' — Anthropic's ARR reportedly tracking to $110-120B+ by year-end, well above its own initial $100B target."},
-            {"name": "Discovery Loop", "blurb": "New company founded by Jeff Dean and three other departing Google AI researchers, focused on deep scientific breakthroughs."},
+            {"name": "Google / Alphabet", "blurb": "Down 4% on the Jeff Dean news; committed $200B to AI infrastructure capex this year.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Anthropic & OpenAI", "blurb": "The panel's named 'duopoly' — Anthropic's ARR reportedly tracking to $110-120B+ by year-end, well above its own initial $100B target.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Discovery Loop", "blurb": "New company founded by Jeff Dean and three other departing Google AI researchers, focused on deep scientific breakthroughs.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
     {
         "id": "spacex-bull-case",
+        "tags": ["ai-infra", "space"],
         "color": "green",
         "badge": "Confirmed event",
         "status": "FIRST EARNINGS AS A PUBLIC COMPANY — STOCK FELL 13% DESPITE A BEAT-AND-RAISE",
@@ -66,12 +69,13 @@ THEMES = [
         "quote": {"text": "Putting up data centers is nothing compared to the difficulty of putting up a rocket.", "cite": "— Elon Musk, on SpaceX's Q2 earnings call, as relayed by David Sacks"},
         "watch": "SpaceX's price-to-sales ratio has already compressed from ~160x at IPO to ~45x as revenue has scaled — some real repricing has happened, but Brad Gerstner is explicit that entry price still matters: he publicly said on CNBC the day of the IPO that he wanted to own the company but wasn't sure that was the day to buy it above a $2 trillion valuation.",
         "names": [
-            {"name": "SpaceX (Starlink / AI compute / Space segments)", "blurb": "Valuation settled near $1.4 trillion post-IPO, down from over $2 trillion at listing."},
-            {"name": "Grok & Cursor", "blurb": "SpaceX/xAI's frontier-model business, called \"the sleeper\" by Brad Gerstner — Grok tripled tokens in July; Cursor was already tracking from $3B to $10B ARR; combined could reach $10-20B ARR by year-end at a much higher multiple than the compute-rental business."},
+            {"name": "SpaceX (Starlink / AI compute / Space segments)", "blurb": "Valuation settled near $1.4 trillion post-IPO, down from over $2 trillion at listing.", "stance": "WATCHING", "conviction": "Medium", "horizon": "12-18 months"},
+            {"name": "Grok & Cursor", "blurb": "SpaceX/xAI's frontier-model business, called \"the sleeper\" by Brad Gerstner — Grok tripled tokens in July; Cursor was already tracking from $3B to $10B ARR; combined could reach $10-20B ARR by year-end at a much higher multiple than the compute-rental business.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": "by year-end"},
         ],
     },
     {
         "id": "spacex-financing-risk",
+        "tags": ["ai-infra", "finance"],
         "color": "amber",
         "badge": "Unresolved risk",
         "status": "WHO FINANCES THE NEXT $300B?",
@@ -88,12 +92,13 @@ THEMES = [
         "quote": {"text": "I can't believe that we're all just taking in stride this level of seller financing.", "cite": "— Bill Gurley, as relayed by Brad Gerstner"},
         "watch": "This entire theme is the panel's own forward-looking risk assessment, not a resolved conclusion — multiple speakers explicitly flag their own base case (no demand slowdown for 12-24 months) as an assumption that could break, not a certainty.",
         "names": [
-            {"name": "Nvidia", "blurb": "Potential financier/backstop of SpaceX's compute buildout; shareholder appetite for unlimited backstopping is an open question."},
-            {"name": "CoreWeave (comparison)", "blurb": "Cited as an example of a GPU-rental business trading at a low multiple, and as the name that fell ~40% during July's Kimi-driven demand scare."},
+            {"name": "Nvidia", "blurb": "Potential financier/backstop of SpaceX's compute buildout; shareholder appetite for unlimited backstopping is an open question.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "CoreWeave (comparison)", "blurb": "Cited as an example of a GPU-rental business trading at a low multiple, and as the name that fell ~40% during July's Kimi-driven demand scare.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
     {
         "id": "airtable-bending-spoons",
+        "tags": ["software", "finance"],
         "color": "amber",
         "badge": "Case study — not a stock pick",
         "status": "SOLD FOR ~10% OF ITS 2021 PEAK VALUATION",
@@ -111,13 +116,14 @@ THEMES = [
         "quote": {"text": "Nobody buys Microsoft because Microsoft writes the best code. They buy Microsoft because Microsoft is the rail that everything else runs on.", "cite": "— quoted by David Sacks from an online post"},
         "watch": "The panel's EBITDA and payback-period projections for Bending Spoons's Airtable turnaround ($300-400M EBITDA, ~3-year payback) are their own speculative estimates during the segment, not disclosed deal terms or company guidance.",
         "names": [
-            {"name": "Airtable", "blurb": "Sold for $1.28B (~10% of 2021 peak); spun out its AI-agent business, Hyperagent, as a separate company before the sale to retain venture upside separately."},
-            {"name": "Bending Spoons", "blurb": "Italian serial acquirer of 'challenged but interesting' businesses — past deals include AOL's legacy business, Evernote, Eventbrite, Vimeo, and Meetup.com; recently IPO'd."},
-            {"name": "Leopold Aschenbrenner (comparison)", "blurb": "His fund's losses during the correction were partly attributed to being short Adobe and other SaaS names that didn't fall as expected — cited as evidence the 'short all SaaS' trade was wrong."},
+            {"name": "Airtable", "blurb": "Sold for $1.28B (~10% of 2021 peak); spun out its AI-agent business, Hyperagent, as a separate company before the sale to retain venture upside separately.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Bending Spoons", "blurb": "Italian serial acquirer of 'challenged but interesting' businesses — past deals include AOL's legacy business, Evernote, Eventbrite, Vimeo, and Meetup.com; recently IPO'd.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Leopold Aschenbrenner (comparison)", "blurb": "His fund's losses during the correction were partly attributed to being short Adobe and other SaaS names that didn't fall as expected — cited as evidence the 'short all SaaS' trade was wrong.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
     },
     {
         "id": "china-data-export",
+        "tags": ["geopolitics", "policy"],
         "color": "amber",
         "badge": "Unresolved policy debate",
         "status": "LIVE DISAGREEMENT BETWEEN CO-HOSTS, NO CONSENSUS REACHED",
@@ -133,8 +139,8 @@ THEMES = [
         "quote": {"text": "I don't think it's very patriotic to be giving them an advantage. I wouldn't do it.", "cite": "— Jason Calacanis"},
         "watch": "This entire segment is a live, unresolved disagreement between two co-hosts (Sacks and Calacanis) — there is no fact-checked conclusion here, only competing framings of the same Forbes report.",
         "names": [
-            {"name": "Surge AI & Mercor", "blurb": "Named data-labeling companies at the center of the Forbes report, both reportedly valued over $20B."},
-            {"name": "Micro1", "blurb": "Jason Calacanis-backed data company whose founder reportedly chose not to sell training data to Chinese labs."},
+            {"name": "Surge AI & Mercor", "blurb": "Named data-labeling companies at the center of the Forbes report, both reportedly valued over $20B.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Micro1", "blurb": "Jason Calacanis-backed data company whose founder reportedly chose not to sell training data to Chinese labs.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
         ],
     },
 ]
@@ -146,6 +152,21 @@ TAKEAWAYS = [
     {"icon": "⚖️", "tag": "Markets", "title": "Don't extrapolate Airtable's outcome to all of SaaS — the panel explicitly separates deeply embedded, compliance-locked enterprise software (Microsoft, Salesforce) from exposed no-code tools, citing IGV, Snowflake, and Databricks as counter-evidence."},
     {"icon": "\U0001F9EA", "tag": "Geopolitics", "title": "Independently verify the Forbes/Surge AI/Mercor China-data-selling claims before treating them as confirmed — both Sacks and Brad question whether the underlying data is genuinely proprietary or replicable domestically in China."},
     {"icon": "\U0001F4C9", "tag": "Markets", "title": "Watch how CoreWeave and semiconductor/AI-infrastructure stocks react to any future \"cheap open-source model\" scares (like July's Kimi selloff) as a real-time gauge of how fragile sentiment is around AI-infrastructure demand durability."},
+]
+
+CLAIMS = [
+    {"who": "Elon Musk", "claim": "SpaceX hits $1 trillion ARR", "metric": "ARR", "target": "$1 trillion", "by": "2030", "condition": None, "entity": "SpaceX"},
+    {"who": "SpaceX (guidance)", "claim": "SpaceX hits $100B ARR by year-end", "metric": "ARR", "target": "$100 billion", "by": "year-end 2026", "condition": None, "entity": "SpaceX"},
+    {"who": "David Sacks", "claim": "Scaling SpaceX compute from 2 to 8 gigawatts next year costs roughly $300B", "metric": "capex", "target": "$300 billion", "by": "2027", "condition": "at ~$50B/gigawatt", "entity": "SpaceX"},
+    {"who": "SpaceX (guidance)", "claim": "SpaceX compute capacity reaches 5-10 gigawatts", "metric": "compute capacity", "target": "5-10 GW", "by": "end of 2027", "condition": None, "entity": "SpaceX"},
+    {"who": "David Friedberg", "claim": "Starlink alone could be worth roughly $1 trillion", "metric": "valuation", "target": "$1 trillion", "by": "~18 months", "condition": "at a 30x multiple on ~$30B free cash flow", "entity": "SpaceX"},
+]
+
+RELATIONS = [
+    {"from": "SpaceX", "rel": "supplies", "to": "Anthropic & OpenAI", "note": "Rents Colossus AI compute cluster to both labs (\"Elon Web Services\")."},
+    {"from": "Bending Spoons", "rel": "acquires", "to": "Airtable", "note": "$1.28B deal (~10% of Airtable's 2021 peak valuation)."},
+    {"from": "Jeff Dean", "rel": "endorses", "to": "Discovery Loop", "note": "Left Google after 27 years to co-found the new company with three other AI researchers."},
+    {"from": "Surge AI & Mercor", "rel": "customer_of", "to": "Anthropic & OpenAI", "note": "Sells expert-curated AI training data to both US labs and, per Forbes, top Chinese AI labs simultaneously."},
 ]
 
 RISKS = [
