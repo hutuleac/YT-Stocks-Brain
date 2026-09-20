@@ -23,6 +23,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "openai-pause",
+        "tags": ["policy", "software"],
         "color": "amber",
         "badge": "Contested",
         "status": "WATCHING — governance move or PR positioning",
@@ -46,6 +47,7 @@ THEMES = [
     },
     {
         "id": "elon-100x",
+        "tags": ["software"],
         "color": "green",
         "badge": "High conviction",
         "status": "CONFIRMED — cited as already realized, per the panel",
@@ -69,6 +71,7 @@ THEMES = [
     },
     {
         "id": "model-convergence-mind-virus",
+        "tags": ["software"],
         "color": "amber",
         "badge": "Structural risk",
         "status": "NEW RESEARCH — both papers published recently",
@@ -90,6 +93,7 @@ THEMES = [
     },
     {
         "id": "anthropic-ipo-governance",
+        "tags": ["policy", "finance"],
         "color": "amber",
         "badge": "Contested",
         "status": "REPORTED — Anthropic IPO structure still developing",
@@ -113,6 +117,7 @@ THEMES = [
     },
     {
         "id": "memory-bottleneck",
+        "tags": ["ai-infra", "semis"],
         "color": "amber",
         "badge": "Structural constraint",
         "status": "ESCALATING — SK Hynix CEO calls 2027 the worst supply year on record",
@@ -138,6 +143,7 @@ THEMES = [
     },
     {
         "id": "physical-ai",
+        "tags": ["robotics"],
         "color": "green",
         "badge": "Confirmed events",
         "status": "SHIPPING — robot record set, drone delivery scaling this year",
@@ -162,6 +168,7 @@ THEMES = [
     },
     {
         "id": "biotech-week",
+        "tags": ["biotech", "health"],
         "color": "green",
         "badge": "Confirmed event",
         "status": "CONFIRMED — Phase 3 trial success, stock reaction already realized",
@@ -192,6 +199,17 @@ TAKEAWAYS = [
     {"icon": "\U0001F9EC", "tag": "Health", "title": "Moderna's mRNA cancer-vaccine result and the IDO cell simulator are both platform technologies — expect more disease categories to follow the same personalized-antigen or in-silico pipeline rather than treating this as a one-off."},
     {"icon": "\U0001F916", "tag": "Robotics", "title": "As humanoid robots hit superhuman speed/strength benchmarks, expect road-style tiering by power/torque density rather than an outright ban — plan product or investment bets accordingly."},
     {"icon": "\U0001F4E6", "tag": "Robotics", "title": "In autonomous delivery and mobility, track whether platforms like Uber stay neutral aggregators or whether suppliers like Zipline/Waymo go direct to consumers — that split determines who captures the margin."},
+]
+
+CLAIMS = [
+    {"who": "SK Hynix", "claim": "memory supply crunch deepens", "metric": "supply-demand gap", "target": "worst supply year in memory-industry history", "by": "2027", "condition": "CEO's own forecast", "entity": "SK Hynix"},
+    {"who": "Uber / Zipline", "claim": "autonomous drone delivery scale target", "metric": "deliveries per day", "target": "1,000,000+", "by": None, "condition": "partnership just announced, not yet operating at scale", "entity": "Zipline"},
+    {"who": "Polymarket", "claim": "Anthropic IPO timing and valuation", "metric": "IPO valuation and odds", "target": "~$2T valuation, 89% odds before year-end", "by": "end of 2026", "condition": "prediction-market pricing, not confirmed", "entity": "Anthropic"},
+]
+
+RELATIONS = [
+    {"from": "Moderna", "rel": "partners_with", "to": "Merck", "note": "co-developing the personalized mRNA melanoma vaccine that hit its Phase 3 endpoint"},
+    {"from": "Uber", "rel": "invests_in", "to": "Zipline", "note": "partnership targeting 1M+ autonomous drone deliveries/day via Uber Eats"},
 ]
 
 RISKS = [

@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="openai-pause">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">WATCHING — governance move or PR positioning</span>
+    <span class="theme-status">WATCHING — governance move or PR positioning</span><span class="ttag">policy</span><span class="ttag">software</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">OpenAI's Frontier RL Pause: Real Guardrail or Pre-IPO Marketing?</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="elon-100x">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">CONFIRMED — cited as already realized, per the panel</span>
+    <span class="theme-status">CONFIRMED — cited as already realized, per the panel</span><span class="ttag">software</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Elon's 100x Prediction 'Landed' — Now the Panel Argues About the Next 100x</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="model-convergence-mind-virus">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Structural risk</span>
-    <span class="theme-status">NEW RESEARCH — both papers published recently</span>
+    <span class="theme-status">NEW RESEARCH — both papers published recently</span><span class="ttag">software</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">AI Models Are Converging — and Anthropic Just Showed Their Ideas Can Spread Like Viruses</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="anthropic-ipo-governance">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">REPORTED — Anthropic IPO structure still developing</span>
+    <span class="theme-status">REPORTED — Anthropic IPO structure still developing</span><span class="ttag">policy</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Anthropic's Super-Voting IPO Plan, and the Fight Over Whether Dario's Safety Pitch Is Sincere</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="memory-bottleneck">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Structural constraint</span>
-    <span class="theme-status">ESCALATING — SK Hynix CEO calls 2027 the worst supply year on record</span>
+    <span class="theme-status">ESCALATING — SK Hynix CEO calls 2027 the worst supply year on record</span><span class="ttag">ai-infra</span><span class="ttag">semis</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Memory, Not GPUs, Is Now the Real AI Bottleneck</h2>
   <div class="theme-body">
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="physical-ai">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Confirmed events</span>
-    <span class="theme-status">SHIPPING — robot record set, drone delivery scaling this year</span>
+    <span class="theme-status">SHIPPING — robot record set, drone delivery scaling this year</span><span class="ttag">robotics</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Physical AI Week: A Robot Beats Usain Bolt, and Zipline Targets a Million Drone Deliveries a Day</h2>
   <div class="theme-body">
@@ -235,7 +240,7 @@ i{font-style:italic;}
 <section class="theme" id="biotech-week">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
-    <span class="theme-status">CONFIRMED — Phase 3 trial success, stock reaction already realized</span>
+    <span class="theme-status">CONFIRMED — Phase 3 trial success, stock reaction already realized</span><span class="ttag">biotech</span><span class="ttag">health</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">A Breakout Week for Biotech: Moderna's mRNA Cancer Vaccine and an AI 'Virtual Cell' Simulator</h2>
   <div class="theme-body">
@@ -259,15 +264,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">This episode is a five-person panel riffing in real time; claims about internal-only models, Hugging Face's alleged self-hack, and internal Anthropic meeting comments are explicitly flagged by the speakers themselves as inference or secondhand ('reading between the lines,' 'not validated') rather than confirmed fact.</div><div class="ritem">Several figures (<b>10%</b> of compute on RL monitoring, 6% of companies seeing AI ROI, 40% of OpenAI staff watching the podcast, the $1.5T SK Hynix capacity-expansion cost) come from the hosts' private conversations and meetings rather than published sources, and are presented as such.</div><div class="ritem">Auto-generated captions garbled several proper nouns (e.g. the melanoma vaccine's brand name, a cited researcher's surname); names that couldn't be confidently resolved were described by role rather than guessed.</div><div class="ritem">The panel has a direct stake in several topics discussed — Peter runs Abundance/XPRIZE/Moonshots events referenced in the episode, and multiple panelists disclose personal investments, family ties (Dave's daughter works at Moderna), or missed-investment regrets (Etched) relevant to the stocks and companies covered.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;Everyone around the office is noticing a very significant decline in the intelligence of the frontier models that they're pumping out.&#8221; <cite>— Moonshot Mates panel</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't think there's necessarily a bright future for specialized models — the arrow of progress is going in the exact opposite direction.&#8221; <cite>— Alex Wissner-Gross</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The flops must flow, and the flops want to flow to the highest revenue-per-token use case.&#8221; <cite>— Alex Wissner-Gross</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;They all had 10-for-one super-voting stock for the founders, but nobody's ever retroactively installed it as far as I can tell.&#8221; <cite>— Dave Blundin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;It doesn't make economic sense to have genius-level intelligence offered as a service to everyone when you can use it better yourself.&#8221; <cite>— Moonshot Mates panel</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't think it's going to come from outside frontier AI labs.&#8221; <cite>— Peter Diamandis</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>SK Hynix:</b> memory supply crunch deepens <span class="cmeta">supply-demand gap · worst supply year in memory-industry history · 2027</span> <i>if CEO's own forecast</i> <span class="tag">SK Hynix</span></div><div class="ritem"><b>Uber / Zipline:</b> autonomous drone delivery scale target <span class="cmeta">deliveries per day · 1,000,000+</span> <i>if partnership just announced, not yet operating at scale</i> <span class="tag">Zipline</span></div><div class="ritem"><b>Polymarket:</b> Anthropic IPO timing and valuation <span class="cmeta">IPO valuation and odds · ~$2T valuation, 89% odds before year-end · end of 2026</span> <i>if prediction-market pricing, not confirmed</i> <span class="tag">Anthropic</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Moderna</b> <span class="rel">partners with</span> <b>Merck</b> &mdash; co-developing the personalized mRNA melanoma vaccine that hit its Phase 3 endpoint</div><div class="ritem"><b>Uber</b> <span class="rel">invests in</span> <b>Zipline</b> &mdash; partnership targeting 1M+ autonomous drone deliveries/day via Uber Eats</div></div></div>
     </section>
 
     <section class="sec">
