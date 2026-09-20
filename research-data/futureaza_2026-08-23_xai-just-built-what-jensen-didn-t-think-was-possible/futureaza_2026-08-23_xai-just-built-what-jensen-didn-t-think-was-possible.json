@@ -21,6 +21,9 @@
  "themes": [
   {
    "id": "colossus-2",
+   "tags": [
+    "ai-infra"
+   ],
    "color": "green",
    "badge": "Confirmed build, revised layout",
    "status": "COLOSSUS 2 — TWO BUILDINGS UP, THIRD COMING",
@@ -42,20 +45,33 @@
    "names": [
     {
      "name": "xAI",
-     "blurb": "POSITIVE VIEW / High — Colossus 1 + 2 deploying faster than any competitor, three buildings and counting."
+     "blurb": "Colossus 1 + 2 deploying faster than any competitor, three buildings and counting.",
+     "stance": "POSITIVE VIEW",
+     "conviction": "High",
+     "horizon": null
     },
     {
      "name": "SpaceX",
-     "blurb": "POSITIVE VIEW / High — merged entity funding and building the compute; strong cash reserve to draw down during the ramp."
+     "blurb": "Merged entity funding and building the compute; strong cash reserve to draw down during the ramp.",
+     "stance": "POSITIVE VIEW",
+     "conviction": "High",
+     "horizon": null
     },
     {
      "name": "Tesla",
-     "blurb": "CASUAL MENTION / Medium — $329M of Megapacks bought this year for the Colossus site."
+     "blurb": "$329M of Megapacks bought this year for the Colossus site.",
+     "stance": "CASUAL MENTION",
+     "conviction": "Medium",
+     "horizon": null
     }
    ]
   },
   {
    "id": "payback-math",
+   "tags": [
+    "ai-infra",
+    "finance"
+   ],
    "color": "amber",
    "badge": "Working model, aggressive assumptions",
    "status": "~1-YEAR PAYBACK ON BUILT COMPUTE",
@@ -81,16 +97,26 @@
    "names": [
     {
      "name": "Nvidia",
-     "blurb": "POSITIVE VIEW / Medium — didn't believe a coherent 100,000+ GPU cluster was possible; now the likely capital source above self-funding, and wants chips deployed and used."
+     "blurb": "Didn't believe a coherent 100,000+ GPU cluster was possible; now the likely capital source above self-funding, and wants chips deployed and used.",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Medium",
+     "horizon": null
     },
     {
      "name": "Google",
-     "blurb": "CASUAL MENTION / Medium — named as one of the large companies renting Colossus compute rather than building it themselves."
+     "blurb": "Named as one of the large companies renting Colossus compute rather than building it themselves.",
+     "stance": "CASUAL MENTION",
+     "conviction": "Medium",
+     "horizon": null
     }
    ]
   },
   {
    "id": "memphis-power",
+   "tags": [
+    "energy",
+    "ai-infra"
+   ],
    "color": "amber",
    "badge": "Guided range, contested scale",
    "status": "MEMPHIS — 1.5–2 GW TODAY, 5–10 GW GUIDED",
@@ -112,6 +138,9 @@
   },
   {
    "id": "demand-durability",
+   "tags": [
+    "ai-infra"
+   ],
    "color": "green",
    "badge": "High conviction",
    "status": "BOTH SPEAKERS BULLISH ON DEMAND",
@@ -136,6 +165,10 @@
   },
   {
    "id": "space-compute",
+   "tags": [
+    "space",
+    "ai-infra"
+   ],
    "color": "gray",
    "badge": "Speculative",
    "status": "ORBITAL COMPUTE — DESIGN LOGIC ONLY",
@@ -153,6 +186,10 @@
   },
   {
    "id": "ai-ux-robots",
+   "tags": [
+    "software",
+    "robotics"
+   ],
    "color": "amber",
    "badge": "Structural critique",
    "status": "USER-SIDE VIEW FROM BOTH SPEAKERS",
@@ -174,7 +211,10 @@
    "names": [
     {
      "name": "Unitree",
-     "blurb": "CASUAL MENTION / Low — cited by Brian as a counterexample to the 3–4 year useful-humanoid timeline because it's about to go public."
+     "blurb": "Cited by Brian as a counterexample to the 3–4 year useful-humanoid timeline because it's about to go public.",
+     "stance": "CASUAL MENTION",
+     "conviction": "Low",
+     "horizon": null
     }
    ]
   }
@@ -206,13 +246,6 @@
    "title": "Both speakers rate AI by whether it interrogates before answering — a usable proxy for whether a model is ready for real-world tasks."
   }
  ],
- "risks": [
-  "Giesige is presenting his own published analysis and says it has already significantly changed since he put it out three weeks ago — these are his working figures spoken in conversation, not a current report.",
-  "Cost and revenue per gigawatt are deliberately chosen assumptions, not disclosed numbers: he picks $50B/GW capex against Gavin Baker's $60B/GW specifically to model the bull case.",
-  "Brian is a supporter of Giesige's Patreon and is presenting his slides on-screen; this is a friendly-channel conversation between two creators who cross-promote.",
-  "Auto-captions garbled several proper nouns — one SpaceX product listed alongside Starlink came through as 'cursor' and a name in the Memphis segment came through as 'Hank Taipale'; neither is named here because neither could be resolved with confidence.",
-  "Both speakers are long-standing Tesla/SpaceX-ecosystem commentators; the framing throughout assumes Elon's companies execute faster and cheaper than peers."
- ],
  "hot_takes": [
   {
    "take": "With artificial intelligence, it seems really it's so good already, but compared to what it's going to be, I still see it as really stupid.",
@@ -243,6 +276,79 @@
    "take": "ChatGPT has probably as many users as there are people who have ever lived, because when people run out of tokens they create a second account.",
    "cite": "— Brian, FutureAzA",
    "why": "Hyperbole aimed at a real point — he doesn't believe today's token prices reflect what the compute costs."
+  }
+ ],
+ "claims": [
+  {
+   "who": "Jordan Giesige",
+   "claim": "Built compute pays for itself",
+   "metric": "payback period",
+   "target": "roughly one year",
+   "by": null,
+   "condition": null,
+   "entity": "xAI"
+  },
+  {
+   "who": "xAI earnings call",
+   "claim": "Memphis compute buildout target",
+   "metric": "gigawatts",
+   "target": "5-10 GW total",
+   "by": null,
+   "condition": null,
+   "entity": "xAI"
+  },
+  {
+   "who": "Jordan Giesige",
+   "claim": "A financing gap opens between compute spend and booked revenue",
+   "metric": "financing gap",
+   "target": "$100-200B",
+   "by": null,
+   "condition": "at an 8 GW/year build pace with a 3-6 month revenue lag",
+   "entity": "SpaceX"
+  },
+  {
+   "who": "SpaceX (per analysts)",
+   "claim": "SpaceX stays cash-flow negative",
+   "metric": "cash flow",
+   "target": "negative",
+   "by": "2030-2035",
+   "condition": null,
+   "entity": "SpaceX"
+  },
+  {
+   "who": "Jordan Giesige",
+   "claim": "A genuinely useful consumer humanoid robot arrives",
+   "metric": "timeline",
+   "target": "3-4 years out",
+   "by": null,
+   "condition": "usefulness for an average person, not industry",
+   "entity": null
+  }
+ ],
+ "relations": [
+  {
+   "from": "SpaceX",
+   "rel": "partners_with",
+   "to": "xAI",
+   "note": "merged entity funding and building the Colossus compute buildout"
+  },
+  {
+   "from": "xAI",
+   "rel": "customer_of",
+   "to": "Tesla",
+   "note": "$329M spent on Megapacks this year for the Colossus site"
+  },
+  {
+   "from": "Alphabet (GOOGL)",
+   "rel": "customer_of",
+   "to": "xAI",
+   "note": "Google rents Colossus compute rather than building it themselves"
+  },
+  {
+   "from": "xAI",
+   "rel": "customer_of",
+   "to": "Nvidia",
+   "note": "likely capital source above self-funding; Nvidia wants chips deployed and used"
   }
  ],
  "other_news": [

@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="colossus-2">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Confirmed build, revised layout</span>
-    <span class="theme-status">COLOSSUS 2 — TWO BUILDINGS UP, THIRD COMING</span>
+    <span class="theme-status">COLOSSUS 2 — TWO BUILDINGS UP, THIRD COMING</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">The Colossus 2 site didn't grow the way anyone drew it — it grew sideways, then upward</h2>
   <div class="theme-body">
@@ -131,7 +136,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;No matter how much of it his companies acquire, he seems to always be running out of land.&#8221;<cite>— Jordan Giesige</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>xAI</b><span>POSITIVE VIEW / High — Colossus 1 + 2 deploying faster than any competitor, three buildings and counting.</span></div><div class="namechip"><b>SpaceX</b><span>POSITIVE VIEW / High — merged entity funding and building the compute; strong cash reserve to draw down during the ramp.</span></div><div class="namechip"><b>Tesla</b><span>CASUAL MENTION / Medium — $329M of Megapacks bought this year for the Colossus site.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>xAI<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Colossus 1 + 2 deploying faster than any competitor, three buildings and counting.</span></div><div class="namechip"><b>SpaceX<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Merged entity funding and building the compute; strong cash reserve to draw down during the ramp.</span></div><div class="namechip"><b>Tesla<span class="stance" style="background:#93711b;">CASUAL MENTION · Medium</span></b><span>$329M of Megapacks bought this year for the Colossus site.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Giesige's own video on this is three weeks old and he says it has already significantly changed — the site is moving faster than the analysis of it.</div></div>
     </div>
   </div>
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="payback-math">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Working model, aggressive assumptions</span>
-    <span class="theme-status">~1-YEAR PAYBACK ON BUILT COMPUTE</span>
+    <span class="theme-status">~1-YEAR PAYBACK ON BUILT COMPUTE</span><span class="ttag">ai-infra</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Build a gigawatt for $50B, rent it out for $50B a year</h2>
   <div class="theme-body">
@@ -150,7 +155,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;If something costs a dollar and you make $2 off of it, are you still going to pay a $1.50 for it? Probably.&#8221;<cite>— Jordan Giesige</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia</b><span>POSITIVE VIEW / Medium — didn't believe a coherent 100,000+ GPU cluster was possible; now the likely capital source above self-funding, and wants chips deployed and used.</span></div><div class="namechip"><b>Google</b><span>CASUAL MENTION / Medium — named as one of the large companies renting Colossus compute rather than building it themselves.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Didn't believe a coherent 100,000+ GPU cluster was possible; now the likely capital source above self-funding, and wants chips deployed and used.</span></div><div class="namechip"><b>Google<span class="stance" style="background:#93711b;">CASUAL MENTION · Medium</span></b><span>Named as one of the large companies renting Colossus compute rather than building it themselves.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Upside case is Vera Rubin GPUs renting for materially more; downside is unexpected deployment costs. Giesige says he tried to sit mid-range rather than go double like some do.</div></div>
     </div>
   </div>
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="memphis-power">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Guided range, contested scale</span>
-    <span class="theme-status">MEMPHIS — 1.5–2 GW TODAY, 5–10 GW GUIDED</span>
+    <span class="theme-status">MEMPHIS — 1.5–2 GW TODAY, 5–10 GW GUIDED</span><span class="ttag">energy</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">A data center that draws more power than the city it sits next to</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="demand-durability">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">BOTH SPEAKERS BULLISH ON DEMAND</span>
+    <span class="theme-status">BOTH SPEAKERS BULLISH ON DEMAND</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Infinite demand, uncertain price — and a bear case about consolidation</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="space-compute">
   <div class="theme-badgerow">
     <span class="badge" style="background:#65695f;">Speculative</span>
-    <span class="theme-status">ORBITAL COMPUTE — DESIGN LOGIC ONLY</span>
+    <span class="theme-status">ORBITAL COMPUTE — DESIGN LOGIC ONLY</span><span class="ttag">space</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #65695f;">A compute satellite barely needs batteries, for a reason most people get backwards</h2>
   <div class="theme-body">
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="ai-ux-robots">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Structural critique</span>
-    <span class="theme-status">USER-SIDE VIEW FROM BOTH SPEAKERS</span>
+    <span class="theme-status">USER-SIDE VIEW FROM BOTH SPEAKERS</span><span class="ttag">software</span><span class="ttag">robotics</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Today's AI is 'really stupid' because it won't ask you a question</h2>
   <div class="theme-body">
@@ -226,7 +231,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;It's so good already, but compared to what it's going to be, I still see it as really stupid.&#8221;<cite>— Jordan Giesige</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Unitree</b><span>CASUAL MENTION / Low — cited by Brian as a counterexample to the 3–4 year useful-humanoid timeline because it's about to go public.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Unitree<span class="stance" style="background:#93711b;">CASUAL MENTION · Low</span></b><span>Cited by Brian as a counterexample to the 3–4 year useful-humanoid timeline because it's about to go public.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Brian pushes back on the 3–4 year humanoid timeline given Unitree is about to go public; Giesige narrows his claim to usefulness for an average consumer, not industry.</div></div>
     </div>
   </div>
@@ -240,15 +245,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">Giesige is presenting his own published analysis and says it has already significantly changed since he put it out three weeks ago — these are his working figures spoken in conversation, not a current report.</div><div class="ritem">Cost and revenue per gigawatt are deliberately chosen assumptions, not disclosed numbers: he picks <b>$50B</b>/GW capex against Gavin Baker's $60B/GW specifically to model the bull case.</div><div class="ritem">Brian is a supporter of Giesige's Patreon and is presenting his slides on-screen; this is a friendly-channel conversation between two creators who cross-promote.</div><div class="ritem">Auto-captions garbled several proper nouns — one SpaceX product listed alongside Starlink came through as 'cursor' and a name in the Memphis segment came through as 'Hank Taipale'; neither is named here because neither could be resolved with confidence.</div><div class="ritem">Both speakers are long-standing Tesla/SpaceX-ecosystem commentators; the framing throughout assumes Elon's companies execute faster and cheaper than peers.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;With artificial intelligence, it seems really it's so good already, but compared to what it's going to be, I still see it as really stupid.&#8221; <cite>— Jordan Giesige</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;A truly useful humanoid robot is probably 3 to 4 years away.&#8221; <cite>— Jordan Giesige</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;There's pretty much going to be infinite demand, because the more AI you use, the more AI you use.&#8221; <cite>— Jordan Giesige</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;90 to 95% of the businesses out there still haven't worked out how to get that juice out of the lemon.&#8221; <cite>— Jordan Giesige</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Google's products tend to get worse every day. I still have all my Google Home smart speakers, but they're getting dumb.&#8221; <cite>— Brian, FutureAzA</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;ChatGPT has probably as many users as there are people who have ever lived, because when people run out of tokens they create a second account.&#8221; <cite>— Brian, FutureAzA</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Jordan Giesige:</b> Built compute pays for itself <span class="cmeta">payback period · roughly one year</span> <span class="tag">xAI</span></div><div class="ritem"><b>xAI earnings call:</b> Memphis compute buildout target <span class="cmeta">gigawatts · 5-10 GW total</span> <span class="tag">xAI</span></div><div class="ritem"><b>Jordan Giesige:</b> A financing gap opens between compute spend and booked revenue <span class="cmeta">financing gap · $100-200B</span> <i>if at an 8 GW/year build pace with a 3-6 month revenue lag</i> <span class="tag">SpaceX</span></div><div class="ritem"><b>SpaceX (per analysts):</b> SpaceX stays cash-flow negative <span class="cmeta">cash flow · negative · 2030-2035</span> <span class="tag">SpaceX</span></div><div class="ritem"><b>Jordan Giesige:</b> A genuinely useful consumer humanoid robot arrives <span class="cmeta">timeline · 3-4 years out</span> <i>if usefulness for an average person, not industry</i></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>SpaceX</b> <span class="rel">partners with</span> <b>xAI</b> &mdash; merged entity funding and building the Colossus compute buildout</div><div class="ritem"><b>xAI</b> <span class="rel">customer of</span> <b>Tesla</b> &mdash; $329M spent on Megapacks this year for the Colossus site</div><div class="ritem"><b>Alphabet (GOOGL)</b> <span class="rel">customer of</span> <b>xAI</b> &mdash; Google rents Colossus compute rather than building it themselves</div><div class="ritem"><b>xAI</b> <span class="rel">customer of</span> <b>Nvidia</b> &mdash; likely capital source above self-funding; Nvidia wants chips deployed and used</div></div></div>
     </section>
 
     <section class="sec">
