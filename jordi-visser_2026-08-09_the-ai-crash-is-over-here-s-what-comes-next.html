@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="speed-crash-over">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">BOTTOM CALLED — ON A PROBABILITY BASIS</span>
+    <span class="theme-status">BOTTOM CALLED — ON A PROBABILITY BASIS</span><span class="ttag">ai-infra</span><span class="ttag">macro-rates</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">The AI "Speed Crash" Is Over, Bottom Is In</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="hedging-framework">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Methodology</span>
-    <span class="theme-status">NEW FRAMEWORK — REPLACES INDEX PUTS</span>
+    <span class="theme-status">NEW FRAMEWORK — REPLACES INDEX PUTS</span><span class="ttag">ai-infra</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Hedging AI: Why Index Puts Stopped Working</h2>
   <div class="theme-body">
@@ -150,7 +155,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;Terminal value gets harder to estimate, which makes it more difficult—companies all of a sudden can go from trading at a 30 P/E to a 20 P/E in a very short amount of time.&#8221;<cite>— Jordi Visser</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Palantir</b><span>Visser's only personally-held software stock; he says shorts and skeptics are "missing something" — see its Q2 numbers in Other Notable News.</span></div><div class="namechip"><b>Micron</b><span>Sold entirely in July after his rate-of-change signal flagged risk; proceeds rotated into silver, Bitcoin, and Eli Lilly.</span></div><div class="namechip"><b>Eaton &amp; Schneider Electric</b><span>Both reported earnings this week and are both Vera Rubin ecosystem participants on the electrical/power side — used as the demo case for his new AI-generated "earnings mosaic" tool.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Palantir<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>Visser's only personally-held software stock; he says shorts and skeptics are "missing something" — see its Q2 numbers in Other Notable News.</span></div><div class="namechip"><b>Micron<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium</span></b><span>Sold entirely in July after his rate-of-change signal flagged risk; proceeds rotated into silver, Bitcoin, and Eli Lilly.</span></div><div class="namechip"><b>Eaton &amp; Schneider Electric<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Both reported earnings this week and are both Vera Rubin ecosystem participants on the electrical/power side — used as the demo case for his new AI-generated "earnings mosaic" tool.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The 50-day/50% rate-of-change threshold is Visser's own proprietary signal built on his own 100-name index — it isn't a widely available or standardized indicator, and he says explicitly there's no off-the-shelf diversified benchmark that does this.</div></div>
     </div>
   </div>
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="gavin-baker-compute">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">Must-listen (speaker's endorsement)</span>
-    <span class="theme-status">GAVIN BAKER INTERVIEW — KEY QUOTES RELAYED</span>
+    <span class="theme-status">GAVIN BAKER INTERVIEW — KEY QUOTES RELAYED</span><span class="ttag">ai-infra</span><span class="ttag">semis</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">Gavin Baker's Case: We're in an Acute Compute Shortage</h2>
   <div class="theme-body">
@@ -169,7 +174,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;We are in acute compute shortage.&#8221;<cite>— Gavin Baker, as relayed by Jordi Visser</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia</b><span>Lowest forward P/E in 10 years per Baker; both Baker and Visser see it as one of the safer, already-de-rated AI names.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Lowest forward P/E in 10 years per Baker; both Baker and Visser see it as one of the safer, already-de-rated AI names.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">This entire theme is Visser's summary of someone else's interview, not his own primary research — he frames it as "a must listen regardless of your views," i.e. worth checking against the original interview rather than taking as second-hand fact.</div></div>
     </div>
   </div>
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="cracks-beneath-boom">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested / mixed</span>
-    <span class="theme-status">HYPERSCALER FCF TIMELINE, GOOGLE EXITS, MEMORY BOTTLENECK</span>
+    <span class="theme-status">HYPERSCALER FCF TIMELINE, GOOGLE EXITS, MEMORY BOTTLENECK</span><span class="ttag">ai-infra</span><span class="ttag">semis</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Cracks Beneath the Boom: Hyperscaler Economics, Google's Talent Exodus, and the Memory Bottleneck</h2>
   <div class="theme-body">
@@ -188,7 +193,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;The limiting factor currently is memory... supply is increasing by about 20% a year, the demand is increasing by 200% a year, maybe higher.&#8221;<cite>— Elon Musk on SpaceX's earnings call, as cited by Jordi Visser</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Google / Alphabet</b><span>Jeff Dean's departure and Demis Hassabis's internal move used as Visser's example of large-company AI bureaucracy friction.</span></div><div class="namechip"><b>Micron</b><span>Central name in Visser's memory-bottleneck thesis; sold in July, watched for re-entry as the supply/demand gap plays out.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Google / Alphabet<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium</span></b><span>Jeff Dean's departure and Demis Hassabis's internal move used as Visser's example of large-company AI bureaucracy friction.</span></div><div class="namechip"><b>Micron<span class="stance" style="background:#93711b;">WATCHING · Medium</span></b><span>Central name in Visser's memory-bottleneck thesis; sold in July, watched for re-entry as the supply/demand gap plays out.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The hyperscaler FCF-positive timeline is a Goldman Sachs estimate relayed secondhand, and the Musk memory-demand figures are Musk's own self-reported claim on an earnings call — both are worth checking against the primary sources before trading on them.</div></div>
     </div>
   </div>
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="fed-yen-debasement">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Mixed / speculative</span>
-    <span class="theme-status">FIRST COORDINATED US-JAPAN FX MOVE SINCE 1998</span>
+    <span class="theme-status">FIRST COORDINATED US-JAPAN FX MOVE SINCE 1998</span><span class="ttag">macro-rates</span><span class="ttag">crypto</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">Fed, Yen Intervention, and the Debasement Trade</h2>
   <div class="theme-body">
@@ -207,7 +212,7 @@ i{font-style:italic;}
     </div>
     <div class="theme-side">
       <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;Nothing stops this fiscal train.&#8221;<cite>— Jordi Visser, citing Lyn Alden</cite></div>
-      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Gold / Silver / Platinum</b><span>All three broke back above their 50-day moving averages this week; Visser holds a sizeable silver position for both AI-demand and debasement reasons.</span></div><div class="namechip"><b>Bitcoin</b><span>Still technically in a bear market per Visser's own framing, pending a breakout above a level he references but doesn't fully specify.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Gold / Silver / Platinum<span class="stance" style="background:#3f6b2e;">OWNS · Medium</span></b><span>All three broke back above their 50-day moving averages this week; Visser holds a sizeable silver position for both AI-demand and debasement reasons.</span></div><div class="namechip"><b>Bitcoin<span class="stance" style="background:#93711b;">UNCERTAIN</span></b><span>Still technically in a bear market per Visser's own framing, pending a breakout above a level he references but doesn't fully specify.</span></div></div>
       <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Bitcoin is explicitly still in what Visser calls "a bear market until we get above there" (a level he references but doesn't fully quantify on screen) — he's constructive on the broader debasement trade but not yet calling Bitcoin's breakout confirmed; separately, the Clarity Act's odds of passing this year reportedly fell from as high as ~50% to just 17% over the prior three weeks.</div></div>
     </div>
   </div>
@@ -221,15 +226,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">This is one investor's personal, self-directed market commentary and trading framework (Jordi Visser and his fund's "thematic portfolio") — he discloses personal positions throughout (Palantir, silver, previously Micron), useful transparency but also a conflict worth weighing against the bullish framing.</div><div class="ritem">Several of the most important figures here are second-hand: the Gavin Baker interview quotes, the Goldman Sachs hyperscaler free-cash-flow timeline, and Elon Musk's SpaceX-earnings-call memory comments are all relayed by Visser, not sourced directly — verify against the originals before treating as confirmed.</div><div class="ritem">Visser's core hedging signal (50-day rate-of-change on his proprietary 100-name AI thematic index) is not a public, standardized indicator — it can't be independently reproduced without his specific portfolio construction and data feed.</div><div class="ritem">A handful of individual stock names mentioned as personal holdings were not fully clear from auto-generated captions (heard as "Camores," "Enterrist") — treat those specific tickers as unconfirmed rather than accurate company names.</div><div class="ritem">The transcript is auto-generated from a ~35-minute solo market-update monologue with rapid topic-switching and informal phrasing; figures (percentages, dates, price levels) have been transcribed as stated but not independently re-verified against source data or filings.</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;The bottom is in as far as I'm concerned on a probability basis. If we take out the lows, I'd be surprised.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I'm negative on all public companies by the time we get to 2030, because bureaucracy will be a killer.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Using index puts is not going to work the way that it used to.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Terminal value gets harder to estimate — companies can go from a 30 P/E to a 20 P/E in a very short amount of time.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Nothing stops this fiscal train.&#8221; <cite>— Jordi Visser, citing Lyn Alden</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Your kids have to be doing this.&#8221; <cite>— Jordi Visser</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Jordi Visser:</b> The 2026 AI speed-crash bottom is in <span class="cmeta">market bottom · lows not retested</span> <i>if on a probability basis</i></div><div class="ritem"><b>Gavin Baker:</b> AI compute demand keeps accelerating <span class="cmeta">GPU rental pricing · rising, not falling</span></div><div class="ritem"><b>Elon Musk:</b> Memory, not compute, is the binding AI buildout constraint <span class="cmeta">supply vs. demand growth · supply +20%/yr vs. demand +200%/yr</span> <span class="tag">Micron</span></div><div class="ritem"><b>Jordi Visser:</b> Public companies underperform AI-native rivals due to bureaucracy <span class="cmeta">competitive position · negative view on all public companies · 2030</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>SpaceX</b> <span class="rel">criticizes</span> <b>Micron</b> &mdash; Elon Musk flagged memory supply growth (~20%/yr) lagging demand growth (~200%/yr) on SpaceX's earnings call</div></div></div>
     </section>
 
     <section class="sec">
