@@ -86,7 +86,12 @@ i{font-style:italic;}
 .riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
 .riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
   padding:2px 18px 2px 28px;}
-.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
 .riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
 .riskbox .ritem+.ritem{border-top:1px solid var(--line);}
 .riskcard.takecard::before{background:#6d4b9c;}
@@ -121,7 +126,7 @@ i{font-style:italic;}
 <section class="theme" id="electrons-to-tokens-moat">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">STATED — Jensen's core thesis, largely unchallenged</span>
+    <span class="theme-status">STATED — Jensen's core thesis, largely unchallenged</span><span class="ttag">ai-infra</span><span class="ttag">software</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">"Electrons to tokens": why Jensen doesn't think software commoditization touches Nvidia</h2>
   <div class="theme-body">
@@ -140,7 +145,7 @@ i{font-style:italic;}
 <section class="theme" id="supply-chain-lockup">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">STATED — up to $250B in commitments, 2-3yr bottleneck horizon</span>
+    <span class="theme-status">STATED — up to $250B in commitments, 2-3yr bottleneck horizon</span><span class="ttag">ai-infra</span><span class="ttag">semis</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">The $250B supply-chain lock-up — and Jensen's "no bottleneck lasts more than 2-3 years" claim</h2>
   <div class="theme-body">
@@ -159,7 +164,7 @@ i{font-style:italic;}
 <section class="theme" id="tpu-asic-competition">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Contested</span>
-    <span class="theme-status">CONTESTED — Anthropic/TPU pushback from Dwarkesh</span>
+    <span class="theme-status">CONTESTED — Anthropic/TPU pushback from Dwarkesh</span><span class="ttag">semis</span><span class="ttag">ai-infra</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">"Anthropic is a unique instance, not a trend": Jensen's answer to the TPU threat</h2>
   <div class="theme-body">
@@ -178,7 +183,7 @@ i{font-style:italic;}
 <section class="theme" id="investment-philosophy">
   <div class="theme-badgerow">
     <span class="badge" style="background:#93711b;">Confirmed event</span>
-    <span class="theme-status">CONFIRMED — up to $30B OpenAI, $10B Anthropic stakes reported</span>
+    <span class="theme-status">CONFIRMED — up to $30B OpenAI, $10B Anthropic stakes reported</span><span class="ttag">ai-infra</span><span class="ttag">finance</span>
   </div>
   <h2 style="border-left:4px solid #93711b;">"Do as little as possible": Nvidia's investing philosophy, and the OpenAI/Anthropic stakes it now holds</h2>
   <div class="theme-body">
@@ -197,7 +202,7 @@ i{font-style:italic;}
 <section class="theme" id="gpu-allocation-trust">
   <div class="theme-badgerow">
     <span class="badge" style="background:#3f6b2e;">High conviction</span>
-    <span class="theme-status">STATED — first-in-first-out, fixed pricing</span>
+    <span class="theme-status">STATED — first-in-first-out, fixed pricing</span><span class="ttag">ai-infra</span><span class="ttag">semis</span>
   </div>
   <h2 style="border-left:4px solid #3f6b2e;">No highest bidder, no legal contract: how Nvidia says it allocates scarce GPUs</h2>
   <div class="theme-body">
@@ -216,7 +221,7 @@ i{font-style:italic;}
 <section class="theme" id="china-export-controls">
   <div class="theme-badgerow">
     <span class="badge" style="background:#a23f22;">Contested</span>
-    <span class="theme-status">UNRESOLVED — active policy debate, no consensus reached</span>
+    <span class="theme-status">UNRESOLVED — active policy debate, no consensus reached</span><span class="ttag">geopolitics</span><span class="ttag">policy</span><span class="ttag">semis</span>
   </div>
   <h2 style="border-left:4px solid #a23f22;">The China chip debate: Jensen vs. Dwarkesh on export controls</h2>
   <div class="theme-body">
@@ -240,15 +245,21 @@ i{font-style:italic;}
     </section>
 
     <section class="sec">
-      <div class="sec-eye">Where this could be wrong</div>
-      <h2>Risks &amp; Caveats on This Source</h2>
-      <div style="margin-top:16px;"><div class="riskbox"><div class="ritem">This episode was sponsored by Crusoe, Cursor, and Jane Street — those segments are excluded from this brief entirely.</div><div class="ritem">This is a CEO defending his own company's competitive position; every moat, margin, and market-share claim here is Jensen's own framing, not independently verified.</div><div class="ritem">Financial figures repeated in the conversation (up to <b>$30B</b> into OpenAI, $10B into Anthropic, $100-250B in purchase commitments) are as reported by outside analysts and media, not precisely confirmed by Jensen on the record.</div><div class="ritem">The China chip-capability comparisons (Huawei shipment volumes, H200-vs-910C flop/bandwidth ratios, researcher-count estimates) are competing back-of-envelope figures from both speakers in live conversation, not sourced from an audited dataset.</div><div class="ritem">Some technical names are caption-resolved with reasonable but not certain confidence (the silicon-photonics partners "Lum and Coherent," read here as Lumentum and Coherent Corp; the neocloud "NBS," read here as Nebius).</div></div></div>
-    </section>
-
-    <section class="sec">
       <div class="sec-eye">Where they stuck their neck out</div>
       <h2>Hot Takes &amp; Personal Convictions</h2>
       <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;Comparing AI chips to enriched uranium is lunacy — it's a lousy, illogical analogy.&#8221; <cite>— Jensen Huang</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The day that DeepSeek comes out on Huawei first, that is a horrible outcome for our nation.&#8221; <cite>— Jensen Huang</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;It's still okay to have regrets — I didn't deeply internalize that OpenAI and Anthropic needed multi-billion-dollar strategic backing no VC could provide. That was my miss.&#8221; <cite>— Jensen Huang</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't think the United States is a loser. Our industry is now a loser? That losing mindset makes no sense to me.&#8221; <cite>— Jensen Huang</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Without Anthropic, why would there be any TPU growth at all? It's 100% Anthropic.&#8221; <cite>— Jensen Huang</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;When the US wants to export its tech stack and standards to India, the Middle East, Africa, and Southeast Asia, I want you and I to have this same conversation again — and I'll tell you how this policy caused the US to concede the second-largest market in the world for no good reason.&#8221; <cite>— Jensen Huang</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Jensen Huang:</b> Every remaining supply-chain bottleneck (foundry, packaging, EUV) resolves given a firm demand signal <span class="cmeta">bottleneck duration · resolved</span> <i>if within 2-3 years</i></div><div class="ritem"><b>Jensen Huang:</b> Nvidia's architecture cadence continues on an annual cycle <span class="cmeta">new generation ships · Vera Rubin, then Vera Rubin Ultra, then Feynman</span> <i>if one new generation per year</i> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>Jensen Huang:</b> Token costs keep falling <span class="cmeta">cost per token · roughly an order of magnitude drop</span> <i>if per year</i> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>Jensen Huang:</b> Restricting chip sales to China concedes the world's second-largest tech market with no security gain <span class="cmeta">market share ceded · roughly 40% of the world's technology market</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">invests in</span> <b>OpenAI</b> &mdash; reported stake up to $30B</div><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">invests in</span> <b>Anthropic</b> &mdash; reported stake of $10B</div><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">acquires</span> <b>Groq</b> &mdash; folded into Nvidia's CUDA ecosystem</div><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">customer of</span> <b>TSMC (TSM)</b> &mdash; sole foundry partner for nearly 30 years, no formal legal contract</div><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">customer of</span> <b>Micron (MU)</b> &mdash; early deep HBM/LPDDR memory commitment made roughly five years ago</div><div class="ritem"><b>Anthropic</b> <span class="rel">customer of</span> <b>Broadcom (AVGO)</b> &mdash; new multi-gigawatt TPU-related hardware deal</div><div class="ritem"><b>Anthropic</b> <span class="rel">customer of</span> <b>Alphabet (GOOGL)</b> &mdash; trains primarily on Google TPUs</div><div class="ritem"><b>OpenAI</b> <span class="rel">partners with</span> <b>AMD (AMD)</b> &mdash; building in-development "Titan" custom accelerator</div><div class="ritem"><b>Anthropic</b> <span class="rel">customer of</span> <b>Amazon (AMZN)</b> &mdash; Jensen says Amazon's Trainium growth is almost entirely attributable to Anthropic's usage</div></div></div>
     </section>
 
     <section class="sec">

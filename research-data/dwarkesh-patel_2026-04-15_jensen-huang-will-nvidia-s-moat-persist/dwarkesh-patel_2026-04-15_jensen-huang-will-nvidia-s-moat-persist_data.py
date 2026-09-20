@@ -25,6 +25,7 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "electrons-to-tokens-moat",
+        "tags": ["ai-infra", "software"],
         "color": "green",
         "badge": "High conviction",
         "status": "STATED — Jensen's core thesis, largely unchallenged",
@@ -46,6 +47,7 @@ THEMES = [
     },
     {
         "id": "supply-chain-lockup",
+        "tags": ["ai-infra", "semis"],
         "color": "green",
         "badge": "High conviction",
         "status": "STATED — up to $250B in commitments, 2-3yr bottleneck horizon",
@@ -74,6 +76,7 @@ THEMES = [
     },
     {
         "id": "tpu-asic-competition",
+        "tags": ["semis", "ai-infra"],
         "color": "amber",
         "badge": "Contested",
         "status": "CONTESTED — Anthropic/TPU pushback from Dwarkesh",
@@ -99,6 +102,7 @@ THEMES = [
     },
     {
         "id": "investment-philosophy",
+        "tags": ["ai-infra", "finance"],
         "color": "amber",
         "badge": "Confirmed event",
         "status": "CONFIRMED — up to $30B OpenAI, $10B Anthropic stakes reported",
@@ -123,6 +127,7 @@ THEMES = [
     },
     {
         "id": "gpu-allocation-trust",
+        "tags": ["ai-infra", "semis"],
         "color": "green",
         "badge": "High conviction",
         "status": "STATED — first-in-first-out, fixed pricing",
@@ -141,6 +146,7 @@ THEMES = [
     },
     {
         "id": "china-export-controls",
+        "tags": ["geopolitics", "policy", "semis"],
         "color": "red",
         "badge": "Contested",
         "status": "UNRESOLVED — active policy debate, no consensus reached",
@@ -188,6 +194,25 @@ HOT_TAKES = [
     {"take": "I don't think the United States is a loser. Our industry is now a loser? That losing mindset makes no sense to me.", "cite": "— Jensen Huang", "why": "A pointed, personal dismissal of the premise behind export-control advocacy, not a neutral policy statement."},
     {"take": "Without Anthropic, why would there be any TPU growth at all? It's 100% Anthropic.", "cite": "— Jensen Huang", "why": "A specific, checkable claim that minimizes a real competitive threat to a single customer relationship."},
     {"take": "When the US wants to export its tech stack and standards to India, the Middle East, Africa, and Southeast Asia, I want you and I to have this same conversation again — and I'll tell you how this policy caused the US to concede the second-largest market in the world for no good reason.", "cite": "— Jensen Huang", "why": "A dated, falsifiable prediction that current export restrictions will prove to be a strategic mistake."},
+]
+
+CLAIMS = [
+    {"who": "Jensen Huang", "claim": "Every remaining supply-chain bottleneck (foundry, packaging, EUV) resolves given a firm demand signal", "metric": "bottleneck duration", "target": "resolved", "by": None, "condition": "within 2-3 years", "entity": None},
+    {"who": "Jensen Huang", "claim": "Nvidia's architecture cadence continues on an annual cycle", "metric": "new generation ships", "target": "Vera Rubin, then Vera Rubin Ultra, then Feynman", "by": None, "condition": "one new generation per year", "entity": "Nvidia (NVDA)"},
+    {"who": "Jensen Huang", "claim": "Token costs keep falling", "metric": "cost per token", "target": "roughly an order of magnitude drop", "by": None, "condition": "per year", "entity": "Nvidia (NVDA)"},
+    {"who": "Jensen Huang", "claim": "Restricting chip sales to China concedes the world's second-largest tech market with no security gain", "metric": "market share ceded", "target": "roughly 40% of the world's technology market", "by": None, "condition": None, "entity": None},
+]
+
+RELATIONS = [
+    {"from": "Nvidia (NVDA)", "rel": "invests_in", "to": "OpenAI", "note": "reported stake up to $30B"},
+    {"from": "Nvidia (NVDA)", "rel": "invests_in", "to": "Anthropic", "note": "reported stake of $10B"},
+    {"from": "Nvidia (NVDA)", "rel": "acquires", "to": "Groq", "note": "folded into Nvidia's CUDA ecosystem"},
+    {"from": "Nvidia (NVDA)", "rel": "customer_of", "to": "TSMC (TSM)", "note": "sole foundry partner for nearly 30 years, no formal legal contract"},
+    {"from": "Nvidia (NVDA)", "rel": "customer_of", "to": "Micron (MU)", "note": "early deep HBM/LPDDR memory commitment made roughly five years ago"},
+    {"from": "Anthropic", "rel": "customer_of", "to": "Broadcom (AVGO)", "note": "new multi-gigawatt TPU-related hardware deal"},
+    {"from": "Anthropic", "rel": "customer_of", "to": "Alphabet (GOOGL)", "note": "trains primarily on Google TPUs"},
+    {"from": "OpenAI", "rel": "partners_with", "to": "AMD (AMD)", "note": "building in-development \"Titan\" custom accelerator"},
+    {"from": "Anthropic", "rel": "customer_of", "to": "Amazon (AMZN)", "note": "Jensen says Amazon's Trainium growth is almost entirely attributable to Anthropic's usage"},
 ]
 
 OTHER_NEWS = []
