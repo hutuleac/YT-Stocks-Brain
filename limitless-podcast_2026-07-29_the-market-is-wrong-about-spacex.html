@@ -5,168 +5,236 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Research: The Market Is Wrong About SpaceX</title>
 <style>
-.backlink{margin-bottom:12px;}
-.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
-.backlink a:hover{color:var(--brand);border-color:var(--brand);}
-
 :root{
   --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
-  --brand:#8a5a2e; --brand-soft:#f4e9db;
-  --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
-  --g:#eaf3e6; --gk:#3f6b2e; --r:#f8ebe6; --rk:#a23f22;
-  --y:#f8f0dd; --yk:#93711b; --gr:#eeece3; --grk:#65695f;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-  font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased;}
-.page{max-width:1720px;width:100%;margin:0 auto;background:var(--card);min-height:100vh;
-  box-shadow:0 0 0 1px var(--line);}
-.hero{padding:clamp(18px,2.4vw,34px) clamp(20px,4vw,56px) clamp(14px,1.8vw,22px);
-  border-bottom:1px solid var(--line);}
-.hero .kicker{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--brand);margin-bottom:10px;}
-.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(28px,3vw,42px);line-height:1.15;
-  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:38ch;}
-.hero-row{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;
-  border-top:1px solid var(--line);padding-top:12px;}
-.hero .meta{color:var(--muted);font-size:15px;line-height:1.55;}
-.hero .meta b{color:var(--ink);font-weight:600;}
-.hero .stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:14.5px;margin-top:4px;}
-.watch-btn{flex:none;display:inline-flex;align-items:center;gap:7px;background:var(--brand);color:#fffdf8;
-  text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.01em;padding:9px 18px;
-  border-radius:999px;white-space:nowrap;transition:.15s;}
-.watch-btn:hover{background:#734a24}
-.inner{padding:10px clamp(20px,4vw,56px) 44px;}
-.sec{margin:0;padding:34px 0;border-top:1px solid var(--line);}
-.sec:first-child{border-top:none;padding-top:20px;}
-.sec-head{margin-bottom:16px;}
-.sec-eye{font-family:var(--serif);font-style:italic;font-size:14.5px;color:var(--brand);margin-bottom:4px;}
-.sec h2{font-family:var(--serif);margin:0;font-size:clamp(22px,2vw,27px);font-weight:600;color:#171916;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
   border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
-.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:26px 28px;}
-.snap{list-style:none;margin:0;padding:0;max-width:1200px;}
-.snap li{position:relative;padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:16.5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
 .snap li:last-child{border-bottom:none}
-.snap b{color:#171916}
-.badge{display:inline-block;padding:4px 12px;border-radius:3px;font-size:12.5px;font-weight:700;
-  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;}
-.g{background:var(--g);color:var(--gk)} .r{background:var(--r);color:var(--rk)}
-.y{background:var(--y);color:var(--yk)} .gr{background:var(--gr);color:var(--grk)}
-.muted{color:var(--muted);font-size:13.5px;font-weight:400}
-.legend{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0 0;}
-.legend span{display:inline-flex;align-items:center;gap:7px}
-.legend .dot{width:10px;height:10px;border-radius:50%}
-.legend .dot.g{background:var(--gk)} .legend .dot.r{background:var(--rk)}
-.legend .dot.y{background:var(--yk)} .legend .dot.gr{background:var(--grk)}
-.legend .t{font-size:13px;color:var(--muted)}
-.tablewrap{overflow-x:auto;}
-table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:15.5px;}
-th,td{text-align:left;padding:12px 14px;vertical-align:top;border-bottom:1px solid var(--line);
-  overflow-wrap:break-word;word-break:break-word;}
-th{font-family:var(--serif);font-weight:600;font-style:italic;color:var(--brand);font-size:15px;
-  padding:8px 14px 10px;border-bottom:2px solid var(--brand);}
-tbody tr{transition:background .12s}
-tbody tr:hover{background:#f5efe2}
-tr.row-g:hover{background:var(--g)}
-tr.row-r:hover{background:var(--r)}
-tr.row-y:hover{background:var(--y)}
-tr.row-gr:hover{background:var(--gr)}
-tr[class*="row-"] td:first-child{position:relative;padding-left:26px;}
-tr[class*="row-"] td:first-child::before{content:"";position:absolute;left:10px;top:8px;bottom:8px;
-  width:7px;border-radius:5px;background:var(--line);}
-tr.row-g td:first-child::before{background:var(--gk)}
-tr.row-r td:first-child::before{background:var(--rk)}
-tr.row-y td:first-child::before{background:var(--yk)}
-tr.row-gr td:first-child::before{background:var(--grk)}
-tr.conv-hi td:first-child::before{width:8px}
-tr.conv-md td:first-child::before{width:6px}
-tr.conv-lo td:first-child::before{width:4px;opacity:.6}
-.c-topic{width:13%;min-width:110px}
-.c-cat{width:8%;min-width:70px}
-.c-stance{width:6%;min-width:64px}
-.c-conv{width:7%;min-width:70px}
-.c-act{width:16%} .c-text{width:auto}
-.wf{border:1px solid var(--line);border-left:3px solid var(--brand);padding:16px 18px;margin:12px 0;
-  background:#fffefb;}
-.wf-name{font-family:var(--serif);font-weight:600;font-size:18px;color:#171916;margin-bottom:7px;}
-.wf-row{margin:5px 0;font-size:15px;color:#3a3d35}
-.wf-row .lbl{display:inline-block;min-width:128px;font-weight:600;color:var(--brand);
-  font-style:italic;font-family:var(--serif);}
-.c-wf-name{width:14%;min-width:140px}
-table.wf-tbl td:first-child b{font-weight:700;color:#171916}
-.tk{position:relative;display:flex;gap:14px;align-items:flex-start;background:#fffefb;
-  border:1px solid var(--line);border-radius:12px;padding:14px 16px 14px 26px;margin:11px 0;max-width:1200px;
-  transition:background .12s;}
-.tk:hover{background:var(--tk-bg,var(--brand-soft))}
-.tk::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
-  background:var(--tk-c,var(--brand));}
-.tk-ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
-  font-size:14px;background:var(--tk-bg,var(--brand-soft));line-height:1;}
-.tk-bd{flex:1;min-width:0}
-.tk-title{font-weight:600;font-size:15.5px;color:#171916;line-height:1.42;margin-bottom:5px;}
-.tk-tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:13.5px;font-weight:600;
-  letter-spacing:.01em;padding:0;background:none;color:var(--tk-c,var(--brand));}
-.tk-detail{margin-top:5px;font-size:14px;color:#4a4d44;line-height:1.55;}
-.risk{position:relative;display:flex;gap:14px;align-items:flex-start;background:#fffefb;
-  border:1px solid var(--line);border-radius:12px;padding:14px 16px 14px 26px;margin:11px 0;max-width:1200px;
-  transition:background .12s;}
-.risk:hover{background:var(--r)}
-.risk::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
-  background:var(--rk);}
-.risk-ic{flex:none;width:28px;height:28px;border-radius:6px;display:grid;place-items:center;
-  font-size:14px;background:var(--r);line-height:1;}
-.risk-bd{flex:1;min-width:0}
-.risk-title{font-weight:500;font-size:15px;color:#171916;line-height:1.5;}
-.quote{font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.55;color:#2c2f28;
-  border-left:3px solid var(--brand);padding:7px 0 7px 22px;margin:16px 0;max-width:900px;}
-.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
-  color:var(--muted);margin-top:7px;}
-.quote-ctx{font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;color:var(--muted);margin-top:4px;}
-.gloss{display:grid;grid-template-columns:repeat(3,1fr);gap:10px 30px;}
-.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:14.3px;line-height:1.55;}
-.gloss b{font-family:var(--serif);color:#171916}
-ul,ol{margin:5px 0;padding-left:22px} li{margin:4px 0}
-ol li::marker{font-weight:700;color:var(--brand)}
-@media(max-width:1300px){
-  .gloss{grid-template-columns:1fr 1fr}
-}
-@media(max-width:900px){
-  body{font-size:16px}
-  .hero h1{font-size:26px}
-  .sec h2{font-size:22px}
-  .c-cat{display:none} th:nth-child(2),td:nth-child(2){display:none}
-  .gloss{grid-template-columns:1fr}
-  table{table-layout:auto}
-  .c-topic{width:auto;min-width:100px}
-  .hero-row{flex-direction:column;align-items:flex-start;gap:14px}
-}
-@media(max-width:620px){
-  body{font-size:15px}
-  .c-conv{display:none} th:nth-child(4),td:nth-child(4){display:none}
-  table{font-size:13.5px} th,td{padding:9px 9px}
-  .wf-row .lbl{display:block;min-width:0;margin-bottom:2px}
-  .quote{font-size:18px}
-}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
 </style>
 </head>
 <body>
 <div class="page">
   <header class="hero">
     <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
-
     <div class="kicker">A YouTube Research Brief</div>
     <h1>The Market Is Wrong About SpaceX</h1>
-    <div class="hero-row">
-      <div class="meta">
-        Channel: <b>Limitless Podcast</b> &middot; Speaker: <b>Limitless Podcast hosts (Josh and co-host)</b> &middot; <b>2026-07-29</b>
-        <div class="stats-line">5 conviction calls &middot; 4 companies tracked &middot; 60% high conviction</div>
-      </div>
-      <a class="watch-btn" href="https://www.youtube.com/watch?v=nbt7ZI9bW2o" target="_blank" rel="noopener">Watch on YouTube &#8599;</a>
+    <div class="byline">
+      Channel: <b>Limitless Podcast</b> &middot; Speaker: <b>Josh and EJ (co-hosts, Limitless Podcast)</b> &middot; <b>2026-07-29</b>
+      <div class="stats-line">5 threads · the bear case for SpaceX's post-IPO crash (valuation dispersion, low float, upcoming supply unlock), Starship flight 13's real technical wins, SpaceX's fast-growing AI/compute business (Grok, Colossus, selling capacity to Anthropic), the manufacturing flywheel across Starship/Starlink/Tesla, and historical precedent for painful post-IPO drawdowns in eventual winners. &middot; <a href="https://www.youtube.com/watch?v=nbt7ZI9bW2o" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
     </div>
   </header>
   <div class="inner">
-    <section class="sec" id="snap"><div class="sec-head"><div class="sec-eye">The one-paragraph takeaway</div><h2>Video Snapshot</h2></div><div class="card"><ol class="snap"><li>SpaceX stock is down more than 50% from its post-IPO all-time high (IPO&#x27;d at $135, peaked near $225, hit an all-time low of $107) six weeks after going public, and the hosts argue the market is badly mispricing it — bull case, not investment advice.</li><li>The bear case is real: ~80x trailing sales multiple (vs. Palantir&#x27;s ~60x as the next-highest), a 2025 net loss of ~$4.5B, only ~4% of shares (~16B total) currently floating, with roughly 1B more shares unlocking August 6 (two days before the first-ever quarterly earnings) and ~56% of total supply unlocking by year-end — a major overhang risk.</li><li>The bull case rests on four pillars: Starship (Flight 13 success — reached orbit, deployed live Starlink V3 satellites, soft ocean splashdown, improving heat shields), Starlink (V3 satellites ~20x the bandwidth of V2), the AI opportunity (Grok 4.5 at ~80-90% of frontier capability and cheap; Colossus GPU clusters sold as compute-as-a-service, e.g. Anthropic paying ~$1.25B/month), and manufacturing (Starships now built in ~2 weeks each, 7 in simultaneous production, data centers built in 160 days and shrinking).</li><li>Framed as a single stock giving exposure to four business types at once: a space-launch company, a telecom company (Starlink), a GPU/compute cloud, and a frontier AI lab (via the SpaceX–xAI merger) — plus optionality with Tesla (robotics/Optimus, shared components like Cybertruck steel).</li><li>Historical parallels cited: Meta traded below its IPO price for ~a year before a &#x27;meteoric&#x27; rise; Tesla was the most-shorted stock in the market before a ~10x repricing; the last 15 largest US IPOs since 2006 averaged a 50% post-IPO drawdown and finished their IPO year down ~33% on average.</li><li>Hosts&#x27; bottom line: short-term (weeks/this-year) this is a rough, high-volatility trade with real supply-unlock risk around Aug 6-7 and year-end; long-term (10-year horizon) they hold high personal conviction the company is a &#x27;once-in-a-generation&#x27; bet, contingent on execution across all four business lines simultaneously.</li></ol></div></section><section class="sec" id="conv"><div class="sec-head"><div class="sec-eye">What they actually believe &mdash; and how strongly</div><h2>Conviction Map</h2></div><div class="card"><div class="tablewrap"><table><thead><tr><th class="c-topic">Topic<br>Asset</th><th class="c-cat">Cat.</th><th class="c-conv">Conv.</th><th class="c-act">Action status</th><th class="c-text">Core thesis</th><th class="c-text">Risks<br>conditions</th></tr></thead><tbody><tr class="row-g conv-hi"><td class="c-topic"><b>SpaceX (post-IPO)</b></td><td class="c-cat">Space<br>Aerospace</td><td class="c-conv">High</td><td class="c-act">BOTH HOSTS SAY THEY BOUGHT THE IPO</td><td class="c-text">Down &gt;50% from all-time high (IPO $135, peak ~$225, low $107) six weeks post-IPO. Hosts argue the market cannot price a company promising future value across four business lines at once, and hold a long-term (10-year) bullish thesis despite the drawdown.</td><td class="c-text">~80x trailing sales multiple; 2025 net loss ~$4.5B; low float now, ~56% of total share supply unlocking by year-end, first unlock Aug 6 two days before first-ever quarterly earnings</td></tr><tr class="row-g conv-hi"><td class="c-topic"><b>Starship / Flight 13</b></td><td class="c-cat">Space<br>Aerospace</td><td class="c-conv">High</td><td class="c-act">TECHNICAL MILESTONE ACHIEVED</td><td class="c-text">16th flight attempt; reached orbit, deployed live production Starlink V3 satellites for the first time, soft ocean splashdown (didn&#x27;t explode, floated ~3 days), improving heat shield performance flight-over-flight. Next flight will test booster-catch landing.</td><td class="c-text">High historical error rate on this program; next-flight ship landing test still unproven</td></tr><tr class="row-g conv-md"><td class="c-topic"><b>SpaceX AI / Compute business (xAI merger, Grok, Colossus)</b></td><td class="c-cat">AI<br>Compute</td><td class="c-conv">Medium</td><td class="c-act">WATCHING — new business line, not yet proven profitable</td><td class="c-text">SpaceX-xAI merger gives it Grok models (Grok 4.5 ~80-90% of frontier capability, cheap/fast) plus some of the largest GPU compute clusters (Colossus), sold as compute-as-a-service — Anthropic reportedly paying ~$1.25B/month, ~$60B of compute sales planned over 9-12 months.</td><td class="c-text">Losing money overall; compute-selling business unproven at scale; dependent on continued AI enterprise demand</td></tr><tr class="row-g conv-hi"><td class="c-topic"><b>Manufacturing / iteration speed as a moat</b></td><td class="c-cat">Manufacturing</td><td class="c-conv">High</td><td class="c-act">OBSERVED TREND</td><td class="c-text">Starship build time down to ~2 weeks per ship with 7 in simultaneous production; Raptor engine efficiency up 2-3x per generation; data center build time dropped from 160 days toward a target of 50; framed as a hardware/manufacturing capability most AI-software companies lack entirely.</td><td class="c-text">Execution risk at scale; capital intensity of continuous hardware iteration</td></tr><tr class="row-r conv-md"><td class="c-topic"><b>Near-term share price / supply unlock risk</b></td><td class="c-cat">Market Structure</td><td class="c-conv">Medium</td><td class="c-act">CAUTION FOR SHORT-TERM TRADERS</td><td class="c-text">Only ~4% of ~16B shares currently float; ~1B shares unlock Aug 6 (2 days before Q3 earnings), ~56% of total supply unlocks by year-end. Hosts compare to Meta (traded below IPO price ~1 year) and Tesla (most-shorted stock before a ~10x re-rate) as historical analogues for a rough near-term ride before a possible re-rating.</td><td class="c-text">Insufficient market demand to absorb unlocked supply at current price; no guarantee of a Tesla/Meta-style recovery</td></tr></tbody></table></div><p class="muted legend"><span><span class="dot g"></span><span class="t">green = owns / buying / positive</span></span><span><span class="dot r"></span><span class="t">red = sold / avoids / negative</span></span><span><span class="dot y"></span><span class="t">yellow = watching / uncertain</span></span><span><span class="dot gr"></span><span class="t">gray = casual mention</span></span></p></div></section><section class="sec" id="cos"><div class="sec-head"><div class="sec-eye">Positions, views and why they care</div><h2>Stocks, Funds &amp; Companies</h2></div><div class="card"><div class="tablewrap"><table><thead><tr><th class="c-topic">Company<br>Ticker</th><th class="c-text">Speaker view</th><th class="c-text">Why they care</th><th class="c-text">Catalysts</th><th class="c-text">Risks</th><th class="c-conv">Evidence</th></tr></thead><tbody><tr class="row-g"><td class="c-topic"><b>SpaceX (space launch + Starlink)</b></td><td class="c-text">Long-term bull despite &gt;50% drawdown from ATH; short-term (weeks/this year) volatile and risky.</td><td class="c-text">Believed to hold monopoly-like advantages in cheap access to space and satellite broadband.</td><td class="c-text">Starship Flight 14 (ship-landing test); Q3 earnings (~Aug 8); Starlink V3 rollout</td><td class="c-text">56% of share supply unlocking by year-end; 80x sales multiple; ~$4.5B 2025 net loss</td><td class="c-conv">High</td></tr><tr class="row-g"><td class="c-topic"><b>xAI / Grok (merged into SpaceX)</b></td><td class="c-text">Grok 4.5 is ~80-90% of frontier capability, cheap and fast; positioned as a cost-cutting option for enterprises; rapid release cadence (4.5 -&gt; 4.7 -&gt; 5 every ~2 weeks per hosts&#x27; claim).</td><td class="c-text">Adds a frontier-AI-lab business line to the SpaceX stock without a separate investment.</td><td class="c-text">Grok 4.7 and Grok 5 releases; enterprise adoption for cost reasons</td><td class="c-text">Not yet a true frontier model per hosts; competition from Anthropic/OpenAI/Google</td><td class="c-conv">Medium</td></tr><tr class="row-gr"><td class="c-topic"><b>Anthropic (as a SpaceX/Colossus customer)</b></td><td class="c-text">Cited as one of the largest purchasers of SpaceX/Colossus compute, paying ~$1.25B/month.</td><td class="c-text">Used as evidence SpaceX&#x27;s compute business is commercially real, not speculative.</td><td class="c-text">n/a</td><td class="c-text">n/a — mentioned only as a customer data point, not as an investment view on Anthropic itself</td><td class="c-conv">Low (single figure cited, not independently verified in video)</td></tr><tr class="row-g"><td class="c-topic"><b>Tesla</b></td><td class="c-text">Framed as a synergistic/eventually-merging company with SpaceX via shared materials (Cybertruck steel used in Starship), Starlink-equipped Cybercabs, and Optimus needing Grok-trained &#x27;brains.&#x27;</td><td class="c-text">Supports the broader &#x27;buy the ecosystem&#x27; thesis around Elon Musk companies.</td><td class="c-text">Cybercab rollout; Optimus scaling</td><td class="c-text">Thesis depends on informal cross-company synergy, not a confirmed merger</td><td class="c-conv">Low</td></tr></tbody></table></div></div></section><section class="sec" id="tech"><div class="sec-head"><div class="sec-eye">Themes, tools and what matters</div><h2>Technology &amp; AI Views</h2></div><div class="card"><div class="tablewrap"><table><thead><tr><th class="c-topic">Theme</th><th class="c-text">Speaker&#x27;s view</th><th class="c-text">Companies<br>tools</th><th class="c-text">Why it matters</th><th class="c-conv">Horizon</th><th class="c-conv">Conv.</th></tr></thead><tbody><tr><td class="c-topic"><b>Starship reusability progress</b></td><td class="c-text">Flight 13 showed a soft, non-explosive ocean landing and improving heat shield performance across flights 10-13; next flight will test the ship landing on &#x27;chopstick&#x27; arms.</td><td class="c-text">SpaceX</td><td class="c-text">Rapid reusability is the core unlock for cutting launch cost and enabling the high launch cadence the bull case depends on.</td><td class="c-conv">Next Starship flight (weeks)</td><td class="c-conv">High</td></tr><tr><td class="c-topic"><b>GPU compute clusters as a SpaceX revenue line</b></td><td class="c-text">Colossus data centers, built far faster than competitors (160 days for the first one, targeting ~50 days for later ones), are being sold as compute capacity to AI labs.</td><td class="c-text">SpaceX/xAI, Anthropic (customer), OpenAI, Google</td><td class="c-text">Turns SpaceX&#x27;s manufacturing/build-speed advantage into a near-term (pre-Mars) revenue stream that could offset space-travel losses.</td><td class="c-conv">Next 9-12 months</td><td class="c-conv">Medium</td></tr><tr><td class="c-topic"><b>AI model release cadence as a competitive signal</b></td><td class="c-text">Grok&#x27;s rapid iteration (4.5 to 4.7 to 5 roughly every 2 weeks per hosts) tied to SpaceX/xAI&#x27;s outsized compute access, potentially closing the gap to Anthropic/OpenAI over time.</td><td class="c-text">xAI/Grok, Anthropic, OpenAI, Meta</td><td class="c-text">More compute -&gt; larger models -&gt; faster iteration is presented as the scaling-law logic behind why Grok could catch up.</td><td class="c-conv">Coming weeks<br>months</td><td class="c-conv">Medium</td></tr></tbody></table></div></div></section><section class="sec" id="wf"><div class="sec-head"><div class="sec-eye">Repeatable systems worth stealing</div><h2>AI Workflows, Tools &amp; Prompts</h2></div><div class="card"><p class="muted">No reusable AI workflow, tool, or prompt pattern surfaced in this video.</p></div></section><section class="sec" id="pred"><div class="sec-head"><div class="sec-eye">Bets on the future and their invalidators</div><h2>Predictions &amp; Trends</h2></div><div class="card"><div class="tablewrap"><table><thead><tr><th class="c-topic">Prediction<br>trend</th><th class="c-conv">Horizon</th><th class="c-text">Supporting reasoning</th><th class="c-text">What could invalidate it</th><th class="c-text">Assets affected</th></tr></thead><tbody><tr><td class="c-topic"><b>Starship will launch roughly once per month in 2026, scaling to 1-400 launches in 2027</b></td><td class="c-conv">2026-2027</td><td class="c-text">Attributed to SpaceX COO Gwynne Shotwell; based on current build cadence (1 ship per 14 days, 7 ships in simultaneous production).</td><td class="c-text">Manufacturing delays; launch failures; regulatory/range constraints</td><td class="c-text">SpaceX / Starship</td></tr><tr><td class="c-topic"><b>SpaceX share price faces a rough, high-volatility near-term stretch before a possible sharp re-rating (Meta/Tesla-style)</b></td><td class="c-conv">Through end of 2026 into 2027+</td><td class="c-text">Historical analogues: Meta traded below IPO price for ~1 year before a &#x27;meteoric&#x27; rise; Tesla was the most-shorted stock in the market before a ~10x move; last 15 largest US IPOs since 2006 averaged a 50% post-IPO drawdown.</td><td class="c-text">Failure to reach profitability; execution failures across Starship/Starlink/AI/manufacturing simultaneously; insufficient buyer demand at share-unlock dates</td><td class="c-text">SpaceX stock</td></tr><tr><td class="c-topic"><b>Data center build times will keep compressing (160 days -&gt; ~100 -&gt; ~50 days)</b></td><td class="c-conv">Next several Colossus builds</td><td class="c-text">Pattern of iterative manufacturing improvement already observed across Raptor engines, Starlink terminals, and Starship build cadence.</td><td class="c-text">Supply chain or power-procurement bottlenecks (hosts cite Elon personally buying $1B of power to speed one build)</td><td class="c-text">SpaceX/xAI Colossus compute business</td></tr></tbody></table></div></div></section><section class="sec" id="quotes"><div class="sec-head"><div class="sec-eye">Said it best &mdash; in their own words</div><h2>Notable Quotes</h2></div><div class="card"><div class="quote">&#8220;This might be a hot take, but I think that the market is incredibly wrong about SpaceX, and I think it&#x27;s an incredibly mispriced asset.&#8221;<cite>&mdash; Host (Limitless Podcast)</cite><div class="quote-ctx">Opening thesis of the episode, stated up front as a personal/hot take, not investment advice.</div></div><div class="quote">&#8220;We have Morningstar putting it at $63, and then we have Morgan Stanley on their bull case putting it at $600.&#8221;<cite>&mdash; Host (Limitless Podcast)</cite><div class="quote-ctx">Cited as evidence of how wide the professional valuation dispersion on SpaceX currently is.</div></div><div class="quote">&#8220;If SpaceX was just an AI company, it would be the most remarkable AI company in the world because of its ability to manufacture data centers at scale.&#8221;<cite>&mdash; Host (Limitless Podcast)</cite><div class="quote-ctx">On SpaceX&#x27;s manufacturing speed as a differentiator versus pure-software AI labs.</div></div><div class="quote">&#8220;You have to be sort of crazy or delusional to believe in the vision that SpaceX and any Elon Musk company is pitching out there at the time.&#8221;<cite>&mdash; Host (Limitless Podcast)</cite><div class="quote-ctx">Acknowledging the speculative nature of the long-term thesis before restating personal conviction in it.</div></div><div class="quote">&#8220;The last 15 largest US IPOs since 2006... have averaged drawing down 50% since the IPO and have averaged finishing the year down 33%.&#8221;<cite>&mdash; Host (Limitless Podcast)</cite><div class="quote-ctx">Statistic offered as historical context for why a rough post-IPO stretch isn&#x27;t unusual, not unique to SpaceX.</div></div><div class="quote">&#8220;Do you know how long it takes to build a Starship now? It&#x27;s two weeks.&#8221;<cite>&mdash; Josh (Limitless Podcast)</cite><div class="quote-ctx">On SpaceX&#x27;s current Starship manufacturing cadence — 7 ships in simultaneous production.</div></div></div></section><section class="sec" id="risk"><div class="sec-head"><div class="sec-eye">Where this could be wrong</div><h2>Risks, Counterarguments &amp; Blind Spots</h2></div><div class="card"><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">This is explicitly framed by the hosts as their own bull-case opinion, not investment advice — both hosts disclose they personally bought the SpaceX IPO, which is a direct financial bias in favor of the bullish framing presented.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">Key figures (valuation multiples, $4.5B net loss, $1.25B/month Anthropic compute payment, $60B compute sales pipeline, share unlock percentages/dates) are stated verbally without on-screen sourcing in this transcript and should be verified against SpaceX&#x27;s actual filings/earnings before being relied on.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">The historical analogues (Meta, Tesla re-ratings) are survivorship-biased examples; the same data set that produced them also includes IPOs that never recovered, which the hosts acknowledge only briefly via the 50%-drawdown IPO statistic.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">The AI/compute business line (Colossus compute sales, Grok cadence claims) is new and unaudited in this discussion; &#x27;Grok 4.7 in 2 weeks, Grok 5 two weeks after that&#x27; is a stated expectation, not a confirmed roadmap.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">Transcript is from YouTube auto-captions and may contain minor errors in figures, dates, or names (e.g., &#x27;fable and mythos models&#x27; as a garbled reference to Anthropic&#x27;s model names) — verify exact numbers before citing.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div></div></section><section class="sec" id="take"><div class="sec-head"><div class="sec-eye">What to do with this</div><h2>Best Actionable Takeaways</h2></div><div class="card"><div class="tk" style="--tk-c:var(--gk);--tk-bg:var(--g)"><div class="tk-ic">&#10003;</div><div class="tk-bd"><div class="tk-title">SpaceX&#x27;s near-term share price faces concrete, dated catalysts worth tracking: the ~1B share unlock around August 6 and the first-ever quarterly earnings ~2 days later (~August 8) — both are named as key near-term volatility events.</div><span class="tk-tag">Speaker claim</span></div></div><div class="tk" style="--tk-c:var(--gk);--tk-bg:var(--g)"><div class="tk-ic">&#10003;</div><div class="tk-bd"><div class="tk-title">~56% of total share supply is expected to unlock by year-end 2026 — treat this as a structural overhang on the stock price regardless of operational performance.</div><span class="tk-tag">Speaker claim</span></div></div><div class="tk" style="--tk-c:var(--brand);--tk-bg:var(--brand-soft)"><div class="tk-ic">&#128202;</div><div class="tk-bd"><div class="tk-title">The bull case is a bet that all four business lines (launch/Starship, Starlink, AI/compute via xAI-Grok-Colossus, and manufacturing) succeed together; a failure in any one weakens the combined thesis.</div><span class="tk-tag">Analyst interpretation</span></div></div><div class="tk" style="--tk-c:var(--gk);--tk-bg:var(--g)"><div class="tk-ic">&#10003;</div><div class="tk-bd"><div class="tk-title">Watch Q3 earnings for whether any individual business unit (especially Grok/compute) shows a path to profitability, since the company as a whole posted a ~$4.5B net loss in 2025.</div><span class="tk-tag">Speaker claim</span></div></div><div class="tk" style="--tk-c:var(--brand);--tk-bg:var(--brand-soft)"><div class="tk-ic">&#128202;</div><div class="tk-bd"><div class="tk-title">Historical precedent (Meta, Tesla) suggests a rough 6-12+ month stretch is normal for ambitious-vision IPOs before any potential re-rating — don&#x27;t expect a quick recovery even if the long-term thesis is correct.</div><span class="tk-tag">Analyst interpretation</span></div></div><div class="tk" style="--tk-c:var(--yk);--tk-bg:var(--y)"><div class="tk-ic">&#128161;</div><div class="tk-bd"><div class="tk-title">Independently verify the compute-business figures cited (SpaceX/Colossus compute sales pipeline, Anthropic&#x27;s reported monthly payment) before treating them as confirmed revenue, since they are stated without a cited source in the discussion.</div><span class="tk-tag">Needs verification</span></div></div></div></section><section class="sec" id="oth"><div class="sec-head"><div class="sec-eye">Strong convictions, recommendations &amp; non-investment news</div><h2>Other Notable News (Non-Stock)</h2></div><div class="card"><div class="tk" style="--tk-c:var(--brand);--tk-bg:var(--brand-soft)"><div class="tk-ic">&#128204;</div><div class="tk-bd"><div class="tk-title">Starship Flight 13 Achieves Multiple Firsts</div><span class="tk-tag">Space / Science</span><div class="tk-detail">16th Starship test flight deployed live production Starlink V3 satellites for the first time (not dummy units), achieved a soft ocean splashdown that didn&#x27;t destroy the vehicle (it floated for ~3 days), and showed continued heat-shield improvement across flights 10-13.</div></div></div><div class="tk" style="--tk-c:var(--brand);--tk-bg:var(--brand-soft)"><div class="tk-ic">&#128204;</div><div class="tk-bd"><div class="tk-title">SpaceX Building 7 Starships Simultaneously, One Every 14 Days</div><span class="tk-tag">Manufacturing / Industry</span><div class="tk-detail">Ships numbered 41 through 48 are cited as being in simultaneous production, with SpaceX COO Gwynne Shotwell reportedly targeting one Starship launch per month in 2026 and 1-400 launches in 2027.</div></div></div><div class="tk" style="--tk-c:var(--brand);--tk-bg:var(--brand-soft)"><div class="tk-ic">&#128204;</div><div class="tk-bd"><div class="tk-title">SpaceX/xAI&#x27;s Colossus Data Centers Built at Record Speed</div><span class="tk-tag">AI / Infrastructure</span><div class="tk-detail">First Colossus data center reportedly built in ~160 days; described as targeting ~100 then ~50 days for subsequent builds, framed as far faster than any competing company&#x27;s data center construction timeline.</div></div></div></div></section><section class="sec" id="gloss"><div class="sec-head"><div class="sec-eye">Names and terms at a glance</div><h2>Glossary &amp; Entities</h2></div><div class="card"><div class="gloss"><div><b>Starship</b> &mdash; SpaceX&#x27;s fully reusable next-generation rocket system, intended for Moon and Mars missions; Flight 13 was its 16th test flight.</div><div><b>Starlink V3</b> &mdash; Third-generation Starlink satellite, described as having roughly 20x the broadband capacity of the prior (V2) generation, including direct-to-cell capability.</div><div><b>Colossus</b> &mdash; xAI/SpaceX&#x27;s large GPU data center cluster used to train Grok models and sold as compute capacity to other AI companies.</div><div><b>Grok 4.5</b> &mdash; xAI&#x27;s current-generation language model, described in the video as roughly 80-90% of frontier-model capability but notably cheaper and faster to run.</div><div><b>Float (share float)</b> &mdash; The portion of a company&#x27;s total shares actually available for public trading; SpaceX&#x27;s float was cited as only ~4% of ~16 billion total shares at time of recording.</div><div><b>Gwynne Shotwell</b> &mdash; SpaceX&#x27;s COO, described in the video as the company&#x27;s de facto operational CEO, credited with the 2026-2027 Starship launch cadence targets.</div><div><b>Pez dispenser</b> &mdash; Informal nickname used in the video for the mechanism Starship uses to sequentially deploy Starlink satellites into orbit.</div></div></div></section>
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>SpaceX stock is down more than <b>50%</b> from its all-time high six weeks after IPO ($225 to a new low around $107-111), and the hosts (who both bought the IPO) argue the market is badly mispricing it — bank valuations range wildly from Morningstar's $63 to Morgan Stanley's bull case of $600 per share.</li><li>The bear case laid out plainly: the company took a <b>$4.5B</b> net loss in 2025, trades at roughly 80x trailing sales (versus Palantir's ~60x, itself considered extreme), only ~4% of shares were floated at IPO, and roughly 56% of remaining supply is set to unlock by year-end, starting with a tranche on August 7 — two days after the first-ever quarterly earnings report.</li><li>Starship flight 13 (its 16th attempt) is treated as a genuine technical milestone: successful orbit insertion, the first-ever deployment of real (non-dummy) Starlink V3 satellites from production hardware, and the first soft ocean splashdown of the ship (soft enough it didn't explode and floated for days) — heat shield performance has visibly improved launch over launch.</li><li>SpaceX's AI/compute business is framed as underappreciated: it merged with xAI pre-IPO and now owns the Grok models (Grok 4.5 is ~80-<b>90%</b> of frontier capability at a fraction of the cost), built its Colossus data center in about 160 days, and is selling roughly $60B of compute over the next 9-12 months, with Anthropic alone paying reportedly $1.25B/month as its largest customer.</li><li>The manufacturing flywheel is the hosts' core long-term thesis: Raptor engine efficiency has improved 2-3x per version, each Starlink V3 satellite carries 20x the capacity of V2, Starships are now built in about 2 weeks with 7 in simultaneous production, and COO Gwynne Shotwell has guided to roughly one Starship launch per month in 2026 scaling to 100-400 launches in 2027.</li><li>Historical framing for the drawdown: the last 15 largest US IPOs since 2006 averaged a <b>50%</b> drawdown from IPO and finished their first year down 33% on average (Meta and Uber both traded below their IPO price for roughly a year before large re-ratings) — the hosts frame SpaceX explicitly as a multi-year, not multi-week, bet.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="bear-case-spacex">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">WATCHING — Aug 7 supply unlock and first earnings report as key catalysts</span><span class="ttag">space</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">The Bear Case: A Wildly Mispriced IPO With a Looming Supply Unlock</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>The hosts deliberately lay out the bear case in full before rebutting it</b>, acknowledging SpaceX may have been genuinely overvalued at IPO and that real near-term risks remain.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>SpaceX IPO'd at <b>$135, </b>ran up to $225 (a ~$2.25 trillion market cap), and has since fallen to a new all-time low around $107-111 — down over 50% from its high just six weeks after going public.</li><li><span class="dot" style="background:#93711b;"></span>Valuation dispersion across banks is extreme: Morningstar values the stock at <b>$63 </b>while Morgan Stanley's bull case puts it at $600 — the hosts read this spread itself as evidence the market and professional analysts don't have a shared framework for pricing the company.</li><li><span class="dot" style="background:#93711b;"></span>2025 financials showed a <b>$4.5 billion</b> net loss; the stock trades at roughly 80x trailing sales versus Palantir's ~60x (itself considered an extreme multiple by most investors) — profitability is effectively non-existent today.</li><li><span class="dot" style="background:#93711b;"></span>Only about <b>4%</b> of SpaceX's roughly 16 billion shares were made available at IPO; a further ~1 billion shares unlock around August 6, two days after the company's first quarterly earnings report, with roughly 56% of total remaining supply expected to unlock by year-end 2026 — raising the question of whether enough buying demand exists to absorb that supply at current prices.</li><li><span class="dot" style="background:#93711b;"></span>The hosts draw a direct historical parallel: the last 15 largest US IPOs since 2006 averaged a <b>50%</b> drawdown from their IPO price and finished their first year down 33% on average — framing SpaceX's current pain as consistent with, not unusual versus, large-IPO history.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;If you're an investor that bought that IPO, we're here with you. We feel your pain.&#8221;<cite>— Limitless Podcast hosts</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>SpaceX<span class="stance" style="background:#3f6b2e;">OWNS · High · 10 years</span></b><span>Down over 50% from its post-IPO high six weeks in; hosts disclose they both personally bought the IPO and remain long-term holders.</span></div><div class="namechip"><b>Palantir (PLTR)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Cited as the next-most extreme sales multiple in the market (~60x) after SpaceX's ~80x, for valuation context.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The hosts are explicit this is a long-horizon thesis, not a short-term trade call — they say a 6-week holding period is 'probably not the right kind of asset' for this stock.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="starship-flight-13">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
+    <span class="theme-status">WATCHING — next flight to test ship landing on the launch tower</span><span class="ttag">space</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Starship Flight 13: A Real Technical Milestone, Not Just Marketing</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>The hosts walk through specific, verifiable technical wins from flight 13</b> (the 16th overall Starship attempt) as the core evidence for their bull case, distinct from Elon Musk hype.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>For the first time, Starship deployed real, active Starlink V3 satellites (not dummy test units) from production flight hardware — these satellites are now live on the network with direct-to-cell capability and substantially more bandwidth than prior terminals.</li><li><span class="dot" style="background:#3f6b2e;"></span>The ship achieved a soft ocean splashdown for the first time — soft enough that it didn't explode and remained floating for roughly 2-3 days, a meaningful signal for eventual rapid reusability.</li><li><span class="dot" style="background:#3f6b2e;"></span>Heat shield performance has visibly improved launch-over-launch (compared directly from flight 10 to flight 13 footage) — critical because re-entry heat is one of the central engineering challenges for a rapidly reusable orbital rocket.</li><li><span class="dot" style="background:#3f6b2e;"></span>The booster had a 'pretty decent' landing attempt, though tower-arm catch wasn't part of this specific test; the next Starship flight is planned to test the ship itself landing back on the launch tower's chopstick arms.</li><li><span class="dot" style="background:#3f6b2e;"></span>Scale context: the vehicle is larger than the Statue of Liberty, uses 33 Raptor engines, and carried roughly 5,000 tons of payload to deploy 20 Starlink V3 satellites in a single launch — described as more broadband capacity added than the entire prior Starlink generation combined.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;My major takeaway from this is the technology is so far advanced at SpaceX for spaceship flight... versus any other company.&#8221;<cite>— Limitless Podcast hosts</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="spacex-ai-compute-business">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">WATCHING — underappreciated business unit per the hosts</span><span class="ttag">ai-infra</span><span class="ttag">space</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">SpaceX's AI/Compute Business: Grok, Colossus, and Becoming a 'Near Cloud'</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>The hosts argue SpaceX's compute business is a distinct, underpriced asset on its own</b> — built on the pre-IPO xAI merger and a data-center buildout speed no other company can currently match.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>SpaceX and xAI merged a couple of months before the IPO, giving SpaceX ownership of the Grok models; Grok 4.5 is described as roughly 80-<b>90%</b> of frontier-model capability at a much lower cost and faster inference — attractive to enterprises cutting AI spend.</li><li><span class="dot" style="background:#3f6b2e;"></span>Elon Musk has built one of the largest GPU compute clusters via Colossus, constructed in roughly 160 days (described as many hundreds of days faster than any competitor); a newer Colossus facility is being built even faster, and Musk reportedly personally purchased <b>$1 billion</b> of power specifically to bring an earlier facility online sooner.</li><li><span class="dot" style="background:#3f6b2e;"></span>Model release cadence is aggressive: Grok 4.5 now, Grok 4.7 expected in about 2 weeks, Grok 5 roughly 2 weeks after that — each version substantially larger and more capable, positioned as a credible catch-up path toward Anthropic and OpenAI's frontier models.</li><li><span class="dot" style="background:#3f6b2e;"></span>SpaceX is selling excess compute to other companies (reportedly ~<b>$60B</b> of compute commitments over the next 9-12 months), with Anthropic cited as its largest customer at roughly $1.25B/month — the hosts note Google and other AI labs have also approached SpaceX for compute access because they can't build data centers as fast.</li><li><span class="dot" style="background:#3f6b2e;"></span>Frames this as effectively a hidden fifth business line: 'if SpaceX was just an AI company, it would be the most remarkable AI company in the world,' given its unmatched ability to physically manufacture data center infrastructure at scale.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;If SpaceX was just an AI company, it would be the most remarkable AI company in the world because of its ability to manufacture data centers at scale.&#8221;<cite>— Limitless Podcast hosts</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>SpaceX's largest reported compute customer, paying roughly $1.25 billion per month.</span></div><div class="namechip"><b>Alphabet (GOOGL)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Reportedly among the companies that have approached SpaceX for compute access given its faster data-center build speed.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="manufacturing-flywheel">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">WATCHING — Starship cadence scaling toward 100-400 launches/year by 2027</span><span class="ttag">space</span><span class="ttag">robotics</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">The Manufacturing Flywheel: Raptor, Starlink Iteration, and the Tesla Crossover</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>The hosts' central long-term thesis is that SpaceX's manufacturing speed itself is the moat</b> — a capability they argue almost no other company in the world, software or hardware, currently has at this scale.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Raptor engine efficiency has improved roughly 2-3x with each version while costs have fallen sharply; Starlink V3 satellites each carry roughly 20x the capacity of V2, and the newest (version 5) Starlink terminal is <b>60%</b> more efficient than its predecessor.</li><li><span class="dot" style="background:#3f6b2e;"></span>Starship build time is now about 2 weeks per ship, with 7 ships (numbers 41-48) in simultaneous production; COO Gwynne Shotwell has guided to roughly one Starship launch per month in 2026, scaling to 100-400 launches in 2027.</li><li><span class="dot" style="background:#3f6b2e;"></span>Draws a direct crossover thesis between Tesla and SpaceX: Cybercabs are being equipped with Starlink terminals, and Starship uses the same cold-rolled stainless steel as the Cybertruck — framed as evidence the two companies are becoming operationally intertwined, not just commonly owned.</li><li><span class="dot" style="background:#3f6b2e;"></span>Compares the pattern to Tesla's own 2018 period as the most-shorted stock in the market, which then re-rated roughly 10x within about a year once the market accepted Tesla could actually mass-manufacture cars and solve self-driving — the hosts expect a similar delayed, then explosive, re-rating is possible for SpaceX.</li><li><span class="dot" style="background:#3f6b2e;"></span>Frames this manufacturing capability as historically rare because most of the last 20 years of the most valuable companies built value through software, not physical infrastructure — SpaceX's ability to 'move atoms' at this speed and scale, done domestically in the US, is presented as the differentiator versus AI labs that only ship 'bits on a screen.'</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;A company who's able to move atoms in an organized way efficiently and effectively is so much more valuable than a company that isn't.&#8221;<cite>— Limitless Podcast hosts</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Tesla (TSLA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Framed as an increasingly operationally-linked sister company to SpaceX (Cybercab/Starlink integration, shared materials); its own 2018-19 re-rating used as the historical precedent pattern.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The hosts explicitly acknowledge you have to be 'sort of crazy or delusional' to fully buy this vision, and that if any one of SpaceX's business lines fails to work, the combined investment thesis breaks.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🚀</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Treat wide analyst valuation dispersion (<b>$63</b>-$600 for SpaceX) as a signal the market lacks a shared framework, not as noise to ignore.</span></div></div><div class="irow"><div class="ic">📉</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Watch the August 7 supply unlock and first-ever quarterly earnings as the near-term catalysts most likely to move the stock, not the launch cadence itself.</span></div></div><div class="irow"><div class="ic">🤖</div><div class="tline"><span class="cat">AI infra:</span> <span class="txt">Value SpaceX's compute-selling business (Anthropic at ~<b>$1.25B</b>/month) as a distinct, underpriced revenue line separate from the space-launch business.</span></div></div><div class="irow"><div class="ic">🏭</div><div class="tline"><span class="cat">Space:</span> <span class="txt">Track manufacturing cadence metrics (build time per Starship, simultaneous production count) as the leading indicator for the long-term thesis, more than any single launch outcome.</span></div></div><div class="irow"><div class="ic">⏳</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Size a SpaceX position for a multi-year holding period given historical large-IPO drawdown patterns, not for near-term price stability.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;I think that the market is incredibly wrong about SpaceX, and I think it's an incredibly mispriced asset.&#8221; <cite>— Limitless Podcast hosts</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;If SpaceX was just an AI company, it would be the most remarkable AI company in the world.&#8221; <cite>— Limitless Podcast hosts</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I do think to a certain degree you have to be sort of crazy or delusional to believe in the vision that SpaceX... is pitching out there.&#8221; <cite>— Limitless Podcast hosts</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;AI is probably the most mispriced asset in general because no one knows what any of this is going to do.&#8221; <cite>— Limitless Podcast hosts</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Limitless Podcast hosts:</b> SpaceX valuation range across bank analysts <span class="cmeta">price target range · $63 (Morningstar) to $600 (Morgan Stanley bull case)</span> <span class="tag">SpaceX</span></div><div class="ritem"><b>Limitless Podcast hosts:</b> SpaceX share supply unlock schedule <span class="cmeta">percent of remaining float unlocking · roughly 56% of remaining supply by year-end 2026, first tranche around August 6-7 · end of 2026</span> <span class="tag">SpaceX</span></div><div class="ritem"><b>Limitless Podcast hosts:</b> SpaceX 2025 net loss <span class="cmeta">annual net loss · $4.5 billion · fiscal year 2025</span> <span class="tag">SpaceX</span></div><div class="ritem"><b>Gwynne Shotwell (cited by the hosts):</b> Starship launch cadence targets <span class="cmeta">launches per year · roughly 1/month in 2026, scaling to 100-400 in 2027 · 2027</span> <span class="tag">SpaceX</span></div><div class="ritem"><b>Limitless Podcast hosts:</b> historical drawdown pattern for large US IPOs <span class="cmeta">average drawdown / first-year return · average 50% drawdown from IPO price; average -33% by year-end</span> <i>if based on the last 15 largest US IPOs since 2006</i></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>SpaceX</b> <span class="rel">acquires</span> <b>xAI</b> &mdash; Pre-IPO merger; SpaceX now owns the Grok models</div><div class="ritem"><b>SpaceX</b> <span class="rel">supplies</span> <b>Anthropic</b> &mdash; Selling compute capacity; Anthropic reportedly paying ~$1.25 billion/month, its largest customer</div><div class="ritem"><b>SpaceX</b> <span class="rel">supplies</span> <b>Alphabet (GOOGL)</b> &mdash; Reportedly approached for compute access given SpaceX's faster data-center build speed</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><p class="empty">Nothing notable found in this category for this video.</p></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Float (share float)</b> &mdash; The portion of a company's total shares actually available for public trading; SpaceX floated only about 4% of shares at IPO, which can make the stock price unusually volatile until more shares unlock.</div><div><b>Near cloud</b> &mdash; The hosts' term for SpaceX's emerging role selling excess GPU compute capacity to other companies (like a cloud provider), separate from its core space-launch and satellite businesses.</div><div><b>Pez dispenser (Starlink deployment)</b> &mdash; SpaceX's informal nickname for the mechanism Starship uses to sequentially release Starlink satellites into orbit during a single launch.</div></div></div>
+    </section>
   </div>
 </div>
 </body>

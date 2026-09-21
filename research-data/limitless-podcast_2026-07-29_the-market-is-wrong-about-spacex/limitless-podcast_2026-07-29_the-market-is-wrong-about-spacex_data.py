@@ -1,0 +1,144 @@
+"""Data file for Limitless Podcast (Josh & EJ) — The Market Is Wrong About SpaceX."""
+
+META = {
+    "title": "The Market Is Wrong About SpaceX",
+    "channel": "Limitless Podcast",
+    "speakers": "Josh and EJ (co-hosts, Limitless Podcast)",
+    "date": "2026-07-29",
+    "video_url": "https://www.youtube.com/watch?v=nbt7ZI9bW2o",
+    "thread_line": "5 threads · the bear case for SpaceX's post-IPO crash (valuation dispersion, low float, upcoming supply unlock), Starship flight 13's real technical wins, SpaceX's fast-growing AI/compute business (Grok, Colossus, selling capacity to Anthropic), the manufacturing flywheel across Starship/Starlink/Tesla, and historical precedent for painful post-IPO drawdowns in eventual winners.",
+    "category": "market",
+}
+
+SNAPSHOT = [
+    "SpaceX stock is down more than 50% from its all-time high six weeks after IPO ($225 to a new low around $107-111), and the hosts (who both bought the IPO) argue the market is badly mispricing it — bank valuations range wildly from Morningstar's $63 to Morgan Stanley's bull case of $600 per share.",
+    "The bear case laid out plainly: the company took a $4.5B net loss in 2025, trades at roughly 80x trailing sales (versus Palantir's ~60x, itself considered extreme), only ~4% of shares were floated at IPO, and roughly 56% of remaining supply is set to unlock by year-end, starting with a tranche on August 7 — two days after the first-ever quarterly earnings report.",
+    "Starship flight 13 (its 16th attempt) is treated as a genuine technical milestone: successful orbit insertion, the first-ever deployment of real (non-dummy) Starlink V3 satellites from production hardware, and the first soft ocean splashdown of the ship (soft enough it didn't explode and floated for days) — heat shield performance has visibly improved launch over launch.",
+    "SpaceX's AI/compute business is framed as underappreciated: it merged with xAI pre-IPO and now owns the Grok models (Grok 4.5 is ~80-90% of frontier capability at a fraction of the cost), built its Colossus data center in about 160 days, and is selling roughly $60B of compute over the next 9-12 months, with Anthropic alone paying reportedly $1.25B/month as its largest customer.",
+    "The manufacturing flywheel is the hosts' core long-term thesis: Raptor engine efficiency has improved 2-3x per version, each Starlink V3 satellite carries 20x the capacity of V2, Starships are now built in about 2 weeks with 7 in simultaneous production, and COO Gwynne Shotwell has guided to roughly one Starship launch per month in 2026 scaling to 100-400 launches in 2027.",
+    "Historical framing for the drawdown: the last 15 largest US IPOs since 2006 averaged a 50% drawdown from IPO and finished their first year down 33% on average (Meta and Uber both traded below their IPO price for roughly a year before large re-ratings) — the hosts frame SpaceX explicitly as a multi-year, not multi-week, bet.",
+]
+
+THEMES = [
+    {
+        "id": "bear-case-spacex",
+        "tags": ["space", "finance"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "WATCHING — Aug 7 supply unlock and first earnings report as key catalysts",
+        "title": "The Bear Case: A Wildly Mispriced IPO With a Looming Supply Unlock",
+        "lead": "**The hosts deliberately lay out the bear case in full before rebutting it**, acknowledging SpaceX may have been genuinely overvalued at IPO and that real near-term risks remain.",
+        "bullets": [
+            "SpaceX IPO'd at $135, ran up to $225 (a ~$2.25 trillion market cap), and has since fallen to a new all-time low around $107-111 — down over 50% from its high just six weeks after going public.",
+            "Valuation dispersion across banks is extreme: Morningstar values the stock at $63 while Morgan Stanley's bull case puts it at $600 — the hosts read this spread itself as evidence the market and professional analysts don't have a shared framework for pricing the company.",
+            "2025 financials showed a $4.5 billion net loss; the stock trades at roughly 80x trailing sales versus Palantir's ~60x (itself considered an extreme multiple by most investors) — profitability is effectively non-existent today.",
+            "Only about 4% of SpaceX's roughly 16 billion shares were made available at IPO; a further ~1 billion shares unlock around August 6, two days after the company's first quarterly earnings report, with roughly 56% of total remaining supply expected to unlock by year-end 2026 — raising the question of whether enough buying demand exists to absorb that supply at current prices.",
+            "The hosts draw a direct historical parallel: the last 15 largest US IPOs since 2006 averaged a 50% drawdown from their IPO price and finished their first year down 33% on average — framing SpaceX's current pain as consistent with, not unusual versus, large-IPO history.",
+        ],
+        "quote": {"text": "If you're an investor that bought that IPO, we're here with you. We feel your pain.", "cite": "— Limitless Podcast hosts"},
+        "watch": "The hosts are explicit this is a long-horizon thesis, not a short-term trade call — they say a 6-week holding period is 'probably not the right kind of asset' for this stock.",
+        "names": [
+            {"name": "SpaceX", "blurb": "Down over 50% from its post-IPO high six weeks in; hosts disclose they both personally bought the IPO and remain long-term holders.", "stance": "OWNS", "conviction": "High", "horizon": "10 years"},
+            {"name": "Palantir (PLTR)", "blurb": "Cited as the next-most extreme sales multiple in the market (~60x) after SpaceX's ~80x, for valuation context.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "starship-flight-13",
+        "tags": ["space"],
+        "color": "green",
+        "badge": "Confirmed event",
+        "status": "WATCHING — next flight to test ship landing on the launch tower",
+        "title": "Starship Flight 13: A Real Technical Milestone, Not Just Marketing",
+        "lead": "**The hosts walk through specific, verifiable technical wins from flight 13** (the 16th overall Starship attempt) as the core evidence for their bull case, distinct from Elon Musk hype.",
+        "bullets": [
+            "For the first time, Starship deployed real, active Starlink V3 satellites (not dummy test units) from production flight hardware — these satellites are now live on the network with direct-to-cell capability and substantially more bandwidth than prior terminals.",
+            "The ship achieved a soft ocean splashdown for the first time — soft enough that it didn't explode and remained floating for roughly 2-3 days, a meaningful signal for eventual rapid reusability.",
+            "Heat shield performance has visibly improved launch-over-launch (compared directly from flight 10 to flight 13 footage) — critical because re-entry heat is one of the central engineering challenges for a rapidly reusable orbital rocket.",
+            "The booster had a 'pretty decent' landing attempt, though tower-arm catch wasn't part of this specific test; the next Starship flight is planned to test the ship itself landing back on the launch tower's chopstick arms.",
+            "Scale context: the vehicle is larger than the Statue of Liberty, uses 33 Raptor engines, and carried roughly 5,000 tons of payload to deploy 20 Starlink V3 satellites in a single launch — described as more broadband capacity added than the entire prior Starlink generation combined.",
+        ],
+        "quote": {"text": "My major takeaway from this is the technology is so far advanced at SpaceX for spaceship flight... versus any other company.", "cite": "— Limitless Podcast hosts"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "spacex-ai-compute-business",
+        "tags": ["ai-infra", "space"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "WATCHING — underappreciated business unit per the hosts",
+        "title": "SpaceX's AI/Compute Business: Grok, Colossus, and Becoming a 'Near Cloud'",
+        "lead": "**The hosts argue SpaceX's compute business is a distinct, underpriced asset on its own** — built on the pre-IPO xAI merger and a data-center buildout speed no other company can currently match.",
+        "bullets": [
+            "SpaceX and xAI merged a couple of months before the IPO, giving SpaceX ownership of the Grok models; Grok 4.5 is described as roughly 80-90% of frontier-model capability at a much lower cost and faster inference — attractive to enterprises cutting AI spend.",
+            "Elon Musk has built one of the largest GPU compute clusters via Colossus, constructed in roughly 160 days (described as many hundreds of days faster than any competitor); a newer Colossus facility is being built even faster, and Musk reportedly personally purchased $1 billion of power specifically to bring an earlier facility online sooner.",
+            "Model release cadence is aggressive: Grok 4.5 now, Grok 4.7 expected in about 2 weeks, Grok 5 roughly 2 weeks after that — each version substantially larger and more capable, positioned as a credible catch-up path toward Anthropic and OpenAI's frontier models.",
+            "SpaceX is selling excess compute to other companies (reportedly ~$60B of compute commitments over the next 9-12 months), with Anthropic cited as its largest customer at roughly $1.25B/month — the hosts note Google and other AI labs have also approached SpaceX for compute access because they can't build data centers as fast.",
+            "Frames this as effectively a hidden fifth business line: 'if SpaceX was just an AI company, it would be the most remarkable AI company in the world,' given its unmatched ability to physically manufacture data center infrastructure at scale.",
+        ],
+        "quote": {"text": "If SpaceX was just an AI company, it would be the most remarkable AI company in the world because of its ability to manufacture data centers at scale.", "cite": "— Limitless Podcast hosts"},
+        "watch": None,
+        "names": [
+            {"name": "Anthropic", "blurb": "SpaceX's largest reported compute customer, paying roughly $1.25 billion per month.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Alphabet (GOOGL)", "blurb": "Reportedly among the companies that have approached SpaceX for compute access given its faster data-center build speed.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "manufacturing-flywheel",
+        "tags": ["space", "robotics"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "WATCHING — Starship cadence scaling toward 100-400 launches/year by 2027",
+        "title": "The Manufacturing Flywheel: Raptor, Starlink Iteration, and the Tesla Crossover",
+        "lead": "**The hosts' central long-term thesis is that SpaceX's manufacturing speed itself is the moat** — a capability they argue almost no other company in the world, software or hardware, currently has at this scale.",
+        "bullets": [
+            "Raptor engine efficiency has improved roughly 2-3x with each version while costs have fallen sharply; Starlink V3 satellites each carry roughly 20x the capacity of V2, and the newest (version 5) Starlink terminal is 60% more efficient than its predecessor.",
+            "Starship build time is now about 2 weeks per ship, with 7 ships (numbers 41-48) in simultaneous production; COO Gwynne Shotwell has guided to roughly one Starship launch per month in 2026, scaling to 100-400 launches in 2027.",
+            "Draws a direct crossover thesis between Tesla and SpaceX: Cybercabs are being equipped with Starlink terminals, and Starship uses the same cold-rolled stainless steel as the Cybertruck — framed as evidence the two companies are becoming operationally intertwined, not just commonly owned.",
+            "Compares the pattern to Tesla's own 2018 period as the most-shorted stock in the market, which then re-rated roughly 10x within about a year once the market accepted Tesla could actually mass-manufacture cars and solve self-driving — the hosts expect a similar delayed, then explosive, re-rating is possible for SpaceX.",
+            "Frames this manufacturing capability as historically rare because most of the last 20 years of the most valuable companies built value through software, not physical infrastructure — SpaceX's ability to 'move atoms' at this speed and scale, done domestically in the US, is presented as the differentiator versus AI labs that only ship 'bits on a screen.'",
+        ],
+        "quote": {"text": "A company who's able to move atoms in an organized way efficiently and effectively is so much more valuable than a company that isn't.", "cite": "— Limitless Podcast hosts"},
+        "watch": "The hosts explicitly acknowledge you have to be 'sort of crazy or delusional' to fully buy this vision, and that if any one of SpaceX's business lines fails to work, the combined investment thesis breaks.",
+        "names": [
+            {"name": "Tesla (TSLA)", "blurb": "Framed as an increasingly operationally-linked sister company to SpaceX (Cybercab/Starlink integration, shared materials); its own 2018-19 re-rating used as the historical precedent pattern.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+        ],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F680", "tag": "Markets", "title": "Treat wide analyst valuation dispersion ($63-$600 for SpaceX) as a signal the market lacks a shared framework, not as noise to ignore."},
+    {"icon": "\U0001F4C9", "tag": "Markets", "title": "Watch the August 7 supply unlock and first-ever quarterly earnings as the near-term catalysts most likely to move the stock, not the launch cadence itself."},
+    {"icon": "\U0001F916", "tag": "AI infra", "title": "Value SpaceX's compute-selling business (Anthropic at ~$1.25B/month) as a distinct, underpriced revenue line separate from the space-launch business."},
+    {"icon": "\U0001F3ED", "tag": "Space", "title": "Track manufacturing cadence metrics (build time per Starship, simultaneous production count) as the leading indicator for the long-term thesis, more than any single launch outcome."},
+    {"icon": "⏳", "tag": "Markets", "title": "Size a SpaceX position for a multi-year holding period given historical large-IPO drawdown patterns, not for near-term price stability."},
+]
+
+CLAIMS = [
+    {"who": "Limitless Podcast hosts", "claim": "SpaceX valuation range across bank analysts", "metric": "price target range", "target": "$63 (Morningstar) to $600 (Morgan Stanley bull case)", "by": None, "condition": None, "entity": "SpaceX"},
+    {"who": "Limitless Podcast hosts", "claim": "SpaceX share supply unlock schedule", "metric": "percent of remaining float unlocking", "target": "roughly 56% of remaining supply by year-end 2026, first tranche around August 6-7", "by": "end of 2026", "condition": None, "entity": "SpaceX"},
+    {"who": "Limitless Podcast hosts", "claim": "SpaceX 2025 net loss", "metric": "annual net loss", "target": "$4.5 billion", "by": "fiscal year 2025", "condition": None, "entity": "SpaceX"},
+    {"who": "Gwynne Shotwell (cited by the hosts)", "claim": "Starship launch cadence targets", "metric": "launches per year", "target": "roughly 1/month in 2026, scaling to 100-400 in 2027", "by": "2027", "condition": None, "entity": "SpaceX"},
+    {"who": "Limitless Podcast hosts", "claim": "historical drawdown pattern for large US IPOs", "metric": "average drawdown / first-year return", "target": "average 50% drawdown from IPO price; average -33% by year-end", "by": None, "condition": "based on the last 15 largest US IPOs since 2006", "entity": None},
+]
+
+RELATIONS = [
+    {"from": "SpaceX", "rel": "acquires", "to": "xAI", "note": "Pre-IPO merger; SpaceX now owns the Grok models"},
+    {"from": "SpaceX", "rel": "supplies", "to": "Anthropic", "note": "Selling compute capacity; Anthropic reportedly paying ~$1.25 billion/month, its largest customer"},
+    {"from": "SpaceX", "rel": "supplies", "to": "Alphabet (GOOGL)", "note": "Reportedly approached for compute access given SpaceX's faster data-center build speed"},
+]
+
+HOT_TAKES = [
+    {"take": "I think that the market is incredibly wrong about SpaceX, and I think it's an incredibly mispriced asset.", "cite": "— Limitless Podcast hosts", "why": "The episode's core, checkable thesis stated directly against the stock's 50%+ post-IPO decline."},
+    {"take": "If SpaceX was just an AI company, it would be the most remarkable AI company in the world.", "cite": "— Limitless Podcast hosts", "why": "A bold comparative claim about SpaceX's compute business relative to dedicated AI labs, made without hedging."},
+    {"take": "I do think to a certain degree you have to be sort of crazy or delusional to believe in the vision that SpaceX... is pitching out there.", "cite": "— Limitless Podcast hosts", "why": "A rare, explicit self-aware concession about the speculative nature of their own bull case, rather than pure boosterism."},
+    {"take": "AI is probably the most mispriced asset in general because no one knows what any of this is going to do.", "cite": "— Limitless Podcast hosts", "why": "A sweeping claim about the entire AI sector's pricing, not just SpaceX specifically."},
+]
+
+OTHER_NEWS = []
+
+GLOSSARY = [
+    {"term": "Float (share float)", "def": "The portion of a company's total shares actually available for public trading; SpaceX floated only about 4% of shares at IPO, which can make the stock price unusually volatile until more shares unlock."},
+    {"term": "Near cloud", "def": "The hosts' term for SpaceX's emerging role selling excess GPU compute capacity to other companies (like a cloud provider), separate from its core space-launch and satellite businesses."},
+    {"term": "Pez dispenser (Starlink deployment)", "def": "SpaceX's informal nickname for the mechanism Starship uses to sequentially release Starlink satellites into orbit during a single launch."},
+]
