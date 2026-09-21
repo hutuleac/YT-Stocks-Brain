@@ -1,0 +1,164 @@
+"""Data file for Chris Camillo x Sam Parr & Shaan Puri (My First Million) — I Put 70% of My Portfolio in This ONE Stock."""
+
+META = {
+    "title": "Chris Camillo: I Put 70% of My Portfolio in This ONE Stock",
+    "channel": "My First Million",
+    "speakers": "Chris Camillo (Dumb Money, guest), Sam Parr and Shaan Puri (My First Million, hosts)",
+    "date": "2026-07-29",
+    "video_url": "https://www.youtube.com/watch?v=6TguPg4Fy1w",
+    "thread_line": "6 threads · Chris Camillo's 'observational investing' methodology (entering on information asymmetry, exiting at information parity), his audited $20K-to-$80M track record, real trade case studies (Sphere, Neatos/GAIN, Nintendo Wii), his current ~50-70%-of-portfolio bet on Amazon as the AI infrastructure play, his Pokemon convention exit and new women's-podcasting studio, and his views on the psychology of extreme wealth.",
+    "channel_alt": None,
+    "category": "market",
+}
+
+SNAPSHOT = [
+    "Chris Camillo describes his entire approach as 'observational investing': detecting real-world change (culture, consumer behavior, technology adoption) before the market prices it in, primarily by reading social media comments (especially TikTok) and running informal 'store checks' through his large investor community, rather than fundamental or technical analysis.",
+    "His stated track record: an initial $20,000 portfolio in 2007 grew into roughly $80 million over 15-16 years, with most profits withdrawn annually rather than compounded — he insists any investor should only be judged on long-term, full-portfolio, audited results, not a handful of picks, and pushes back on being credited for three stock picks (Palantir, Bloom Energy, Nvidia) from a prior podcast appearance that all rose sharply since.",
+    "His exit rule is precise: enter a trade at the point of 'information asymmetry' (you know something meaningful the market doesn't) and exit at 'information parity' (once that information becomes widely known/priced in) — illustrated through real trades like Sphere Entertainment (Wizard of Oz show driving a viral TikTok moment, now up roughly 6x from his entry) and a small position in Gladstone Investment (GAIN), parent of viral squishy-toy maker Neatos.",
+    "His current highest-conviction position is Amazon, representing roughly 50% of his portfolio in stock plus additional options exposure that could bring total exposure to around 70% — the thesis centers on Amazon's Trainium AI chips (~$50B in expected next-year revenue), AWS infrastructure, digital advertising position, logistics network, and its roughly 15% stake in Anthropic.",
+    "Side ventures: he built and sold Collecticon (grown from one small Pokemon show in Frisco, Texas to 20 shows and 700,000 attendees) to Ari Emanuel for an undisclosed but 'massive' exit, after entering the space purely through philanthropy; his next project is a podcast incubation studio in Austin focused on developing top women podcast voices into what he calls 'programmatic' shows.",
+    "Closes on the psychology of extreme wealth: argues there's a 'sweet spot' beyond which more money actively reduces happiness through social disconnection, and recommends deliberately capping personal spending (e.g. routing excess wealth into a foundation or illiquid investments) to avoid drifting past that point.",
+]
+
+THEMES = [
+    {
+        "id": "observational-investing-method",
+        "tags": ["finance", "consumer"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "Ongoing methodology, 17+ years in practice",
+        "title": "Observational Investing: Enter on Information Asymmetry, Exit at Information Parity",
+        "lead": "**Camillo's entire investing philosophy in one line:** find a piece of real-world change the market hasn't priced in yet, invest while you have that information edge, and exit the moment everyone else catches up — regardless of whether the stock is up or down at that point.",
+        "bullets": [
+            "Describes the method as detecting change (technological, cultural, consumer-behavior) early, primarily by reading social media comments and community-sourced 'channel checks' (store visits, clerk conversations) across a large network of followers from every profession and region.",
+            "Explicit exit trigger: sell when the information you traded on becomes public — when financial press, analysts, or the company itself starts discussing it — 'that's the point of information parity, and that's when we exit the trade,' regardless of whether the stock happened to go up or down after.",
+            "Distinguishes his approach from Peter Lynch's mall-walking style: Lynch blended observational research into a broader fundamental analysis toolkit, while Camillo treats pure information-asymmetry detection as the entire methodology, arguing this makes competitive investing accessible to people without Wall Street-caliber fundamental analysis skills.",
+            "Makes roughly 80-85 'high conviction' trades over 17 years (the basis of his entire track record), sizing each at 5-30% of his total portfolio in equity or 2-15% in options — trade frequency has risen from 1-2/year in early years to 6-7/year recently as social media makes detecting change faster.",
+            "Frames temperament, not intelligence, as the deciding factor for success: discloses he graduated in the bottom 25% of his high school class with a below-average IQ test result, and argues any ordinary person willing to adopt this discipline can become a top-1% investor with just one or two well-timed, meaningfully-sized bets over a 20-year period.",
+        ],
+        "quote": {"text": "You basically initiate an observational social arb trade at the point of information imbalance... and you exit that investment as the world starts to appreciate that information.", "cite": "— Chris Camillo"},
+        "watch": "Camillo explicitly warns this is a high-concentration, high-risk approach unsuitable for an entire portfolio — he recommends a separate, deliberately-funded 'big money' account for this style rather than co-mingling with retirement or safety-net savings.",
+        "names": None,
+    },
+    {
+        "id": "track-record-case-studies",
+        "tags": ["finance", "consumer"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "Audited 15-16 year track record",
+        "title": "A $20K-to-$80M Track Record, and the Trades Behind It",
+        "lead": "**Camillo insists on being judged only by long-term, audited, full-portfolio results** — and walks through specific real trades that illustrate the methodology in practice.",
+        "bullets": [
+            "States his audited track record: an initial $20,000 portfolio started in 2007 grew to roughly $80 million over 15-16 years, with most profits withdrawn annually rather than reinvested (he estimates the account would be closer to $700M if fully compounded); worst annual drawdown was roughly 20-30%, best year roughly +300%.",
+            "Sphere Entertainment (SPHR) case study: identified the viral 'Wizard of Oz' AI-remastered show as solving Sphere's product-market-fit problem after it went viral on TikTok and drove international tourism specifically to see it; the position is up roughly 6x since his entry in the low $20s.",
+            "Gladstone Investment Corp (GAIN, ticker ~ owns Neatos' parent) case study: a smaller, medium-conviction position (roughly $500K-$1M invested) built on the viral 'Neatos' squishy-toy craze among schoolkids, sized modestly given the outsized unknown-risk profile of investing through a small holding company.",
+            "Historical case study: his most concentrated position ever was Nintendo (via ADR) ahead of the Wii launch, after personally observing the crowd reaction at an E3 conference while Wall Street was focused entirely on Xbox and PlayStation — he held effectively 100% of his portfolio in Nintendo for roughly a year.",
+            "Notes that ordinary, otherwise unremarkable investors who simply happened to drive a Tesla in its early days and put a 'reasonable' (not even large) amount of money into the stock became top-1% investors for a decade-plus purely from that one early, correctly-timed observation.",
+        ],
+        "quote": {"text": "I generated about 80 million off of an initial $20,000 portfolio that I kicked off in 2007.", "cite": "— Chris Camillo"},
+        "watch": "Camillo repeatedly stresses that short-term or small-sample performance (like a handful of picks from a single podcast appearance) tells you nothing meaningful about an investor's skill — only full-portfolio results audited over many years and market cycles do.",
+        "names": [
+            {"name": "Sphere Entertainment (SPHR)", "blurb": "Up roughly 6x since Camillo's entry in the low $20s, on the viral 'Wizard of Oz' AI-remastered show solving the venue's product-market-fit problem.", "stance": "OWNS", "conviction": "High", "horizon": None},
+            {"name": "Gladstone Investment (GAIN)", "blurb": "Small/medium-conviction position (~$500K-$1M) tied to the viral 'Neatos' squishy-toy craze at one of its ~27 portfolio companies.", "stance": "BUYING-ADDING", "conviction": "Medium", "horizon": None},
+            {"name": "Palantir (PLTR)", "blurb": "One of three stocks Camillo named on a prior podcast appearance that has since risen; Camillo explicitly rejects being credited for short-term pick performance.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Bloom Energy (BE)", "blurb": "Named on a prior podcast appearance at $92, cited by the host as up to $240 (+165%) since; Camillo again rejects the framing as meaningful performance evidence.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Nvidia (NVDA)", "blurb": "Third of three stocks named on a prior podcast appearance.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Nintendo", "blurb": "Historical case study: held effectively 100% of his portfolio in Nintendo's ADR for about a year ahead of the Wii, after observing consumer reaction at E3 firsthand.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "amazon-ai-conviction",
+        "tags": ["ai-infra", "finance"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "OWNS — roughly 50-70% of total portfolio",
+        "title": "Amazon Is His Highest-Conviction Trade in Years — the AI Infrastructure Nucleus Thesis",
+        "lead": "**Camillo's single largest position by far, sized at roughly 50% of his portfolio in stock plus additional options exposure** (potentially 70% total), built on a multi-year thesis that Amazon is the company best positioned to benefit from AI-driven productivity gains.",
+        "bullets": [
+            "Traces the thesis to a personal 3-year-old conviction (informed by Nassim Taleb's black swan framing) that AI would be a categorically larger shift than the internet or smartphones — and that markets systematically underprice genuinely unprecedented change until it shows up directly in reported numbers.",
+            "Names four specific pillars of the Amazon thesis: Trainium AI chips (an estimated ~$50 billion in next-year revenue), AWS's cloud infrastructure position, Amazon's status as the third-largest digital advertising company globally (positioned to benefit as AI makes ad targeting more efficient), and two decades of logistics infrastructure investment that no competitor has matched.",
+            "Notes Amazon's roughly 15% stake in Anthropic as an additional embedded upside case: speculates that if Anthropic IPOs next year at a $1-2 trillion valuation, Amazon could profit more from that stake alone than the $200B+ it has spent on AI capex that investors are currently worried about.",
+            "Frames Amazon's stock underperformance despite this spend as a market-sentiment gap, not a red flag — 'the world is still unsure about how this is going to play out. I'm not unsure. I'm willing to bet it all.'",
+            "States he made the trade and then deliberately reduced day-to-day monitoring (citing investor Ed Thorp's practice of stepping back after placing a high-conviction bet), since his Amazon thesis is built to play out over years, not weeks — he explicitly frames near-term market noise as irrelevant to this specific position.",
+        ],
+        "quote": {"text": "The world is still unsure about how this is going to play out. I'm not unsure. I'm willing to bet it all.", "cite": "— Chris Camillo"},
+        "watch": "Camillo is explicit this level of concentration (up to 70% of his portfolio) is not advice for the average investor — he frames it as something only appropriate within a deliberately risk-bucketed 'big money' account, not core savings.",
+        "names": [
+            {"name": "Amazon (AMZN)", "blurb": "Roughly 50% of portfolio in stock plus additional options exposure (up to ~70% total); thesis centers on Trainium chips, AWS, advertising, logistics, and its Anthropic stake.", "stance": "OWNS", "conviction": "High", "horizon": "multi-year"},
+            {"name": "Anthropic", "blurb": "Amazon holds roughly a 15% stake; a potential $1-2 trillion IPO next year could outearn Amazon's entire AI capex spend, per Camillo's speculation.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "collecticon-and-podcast-studio",
+        "tags": ["career", "consumer"],
+        "color": "green",
+        "badge": "Confirmed event",
+        "status": "New venture launching — Austin-based podcast incubation studio",
+        "title": "From a Philanthropy Side Project to a 700,000-Attendee Pokemon Empire — and a New Bet on Women's Podcasting",
+        "lead": "**Camillo's biggest recent venture started entirely as a charity project**, illustrating his stated life philosophy of pursuing things for others first — and his next bet applies the same instinct to an entirely different sector.",
+        "bullets": [
+            "Origin story: bought a record-setting $375,000 Pokemon box (inspired by Logan Paul) purely to break it apart and auction it for charity, throwing a Vegas party (with Steve Aoki and top collector 'Gary King Pokemon') that lost roughly $150K personally but raised hundreds of thousands for charity and led directly to new relationships in the Pokemon community.",
+            "A month later, invested roughly $600,000 for a minority stake in what became Collecticon, growing it from one small show in Frisco, Texas to 20 shows and 700,000 attendees over four years — describes running it as a lean, hands-on 'family business' (including operators hauling their own pipe-and-drape equipment cross-country by truck) before selling to Ari Emanuel for an undisclosed but 'massive' exit.",
+            "Frames his broader life pattern as taking on one major non-stock-market project roughly every five years driven by genuine personal interest, rather than a pursuit of returns — 'don't do things for yourself, just go out there and do things for other people, and it always comes back in your favor.'",
+            "His next project: a boutique podcast incubation studio in Austin, Texas, specifically aimed at developing top women content creators (currently on TikTok/solo platforms) into 'programmatic' podcast formats — cites the roughly 70%-male composition of current podcasting and a belief that friction (camera equipment, editors, staff) has kept talented women creators from bridging into the format.",
+            "Defines 'programmatic' podcasting via reference to a large financial-education YouTube show built around a structured recurring format rather than freeform conversation, and cites a scripted, sitcom-style celebrity podcast as evidence 'real creatives' are beginning to reshape the format — predicts hundreds of podcasts will be worth $100 million or more within 5-8 years.",
+        ],
+        "quote": {"text": "My mission in life is to bring every human on earth into the investor class... and my next thesis is podcasters.", "cite": "— Chris Camillo"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "wealth-psychology",
+        "tags": ["career"],
+        "color": "amber",
+        "badge": "Structural critique",
+        "status": "Personal framework, not a market call",
+        "title": "There's a 'Sweet Spot' of Wealth — and a Point of Deeply Negative Returns Past It",
+        "lead": "**Camillo closes with a candid, non-market discussion of extreme-wealth psychology**, arguing that beyond a certain point, additional money actively reduces happiness through social disconnection rather than increasing it.",
+        "bullets": [
+            "Core claim: once you have enough wealth that money is no longer a constraint, you lose the ability to externalize dissatisfaction ('it's because I don't have that') — forcing a harder confrontation with unresolved personal issues that wealth can no longer mask.",
+            "Describes social disconnection as the dominant mechanism: friends and family begin treating an ultra-wealthy person differently (worried about being 'paid for,' feeling like guests rather than equals), and normal social gestures (splitting a bill, not flying private) become loaded once someone has far more money than their circle.",
+            "Recommends specific deliberate countermeasures: routing excess wealth into a charitable foundation (removing it from personal liquidity) and placing money into illiquid, at-risk investments specifically to keep personal spending and lifestyle from creeping past the 'sweet spot.'",
+            "Explicitly avoids romanticizing financial hardship: emphasizes financial independence itself (full control over time, never needing to work for someone else, being present for family) is genuinely as good as people imagine — the caution is specifically about the far end of the wealth spectrum, not wealth-building itself.",
+        ],
+        "quote": {"text": "There is a point of diminishing returns and then there's a point of deeply, deeply negative returns on every dollar you spend.", "cite": "— Chris Camillo"},
+        "watch": None,
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F4F1", "tag": "Investing", "title": "Track social media comments and community channel checks as an early-warning system for consumer/cultural shifts before they hit financial press."},
+    {"icon": "⚖️", "tag": "Investing", "title": "Exit a thesis-driven trade at 'information parity' (when your edge becomes public knowledge), not based on whether the stock price happened to move favorably."},
+    {"icon": "\U0001F4B0", "tag": "Investing", "title": "Bucket a separate, deliberately-funded 'big money' account for high-conviction, high-risk bets rather than risking retirement or safety-net savings."},
+    {"icon": "\U0001F3AF", "tag": "Investing", "title": "Judge any investor (including yourself) by long-term, full-portfolio audited results — not a handful of picks from a single appearance or period."},
+    {"icon": "\U0001F9E0", "tag": "Careers", "title": "Watch for the personal 'sweet spot' of wealth where additional money stops adding happiness and starts costing social connection — and build deliberate guardrails before crossing it."},
+]
+
+CLAIMS = [
+    {"who": "Chris Camillo", "claim": "audited long-term investment track record", "metric": "portfolio growth", "target": "$20,000 initial portfolio grew to roughly $80 million over 15-16 years (theoretically ~$700M if fully reinvested)", "by": None, "condition": "self-reported, described as independently audited", "entity": None},
+    {"who": "Chris Camillo", "claim": "Amazon's Trainium AI chip revenue", "metric": "annual revenue", "target": "roughly $50 billion", "by": "next fiscal year", "condition": "his own estimate", "entity": "Amazon (AMZN)"},
+    {"who": "Chris Camillo", "claim": "Amazon's total AI capital expenditure", "metric": "annual capex", "target": "over $200 billion", "by": "2026", "condition": None, "entity": "Amazon (AMZN)"},
+    {"who": "Chris Camillo", "claim": "possible Anthropic IPO valuation", "metric": "IPO valuation", "target": "$1-2 trillion", "by": "next year (2027)", "condition": "his own speculative estimate, explicitly hedged ('who knows')", "entity": "Anthropic"},
+    {"who": "Chris Camillo", "claim": "growth of high-value podcasts", "metric": "count of podcasts valued $100M+", "target": "hundreds of podcasts worth $100 million or more", "by": "5-8 years from now", "condition": "his own thesis underlying his new podcast studio venture", "entity": None},
+]
+
+RELATIONS = [
+    {"from": "Amazon (AMZN)", "rel": "owns_stake", "to": "Anthropic", "note": "Roughly 15% stake, per Chris Camillo; a future IPO could generate more profit than Amazon's entire AI capex spend"},
+]
+
+HOT_TAKES = [
+    {"take": "The world is still unsure about how this is going to play out. I'm not unsure. I'm willing to bet it all.", "cite": "— Chris Camillo", "why": "A direct, unhedged statement of conviction backing a position sized at up to 70% of his total portfolio."},
+    {"take": "Being a top 1% observational investor... is easily doable if you're willing to aggressively adopt being an observational purist investor.", "cite": "— Chris Camillo", "why": "A strong, counterintuitive claim that ordinary retail investors (not just the highly credentialed) can realistically achieve top-tier returns."},
+    {"take": "Don't give me any credit for anything from the last show... the only way you could ever analyze any investor is through long-term audits over a long period of time, total portfolio.", "cite": "— Chris Camillo", "why": "A rare instance of a guest actively rejecting flattering short-term performance framing offered by the hosts."},
+    {"take": "There is a point of diminishing returns and then there's a point of deeply, deeply negative returns on every dollar you spend.", "cite": "— Chris Camillo", "why": "A specific, structural claim about wealth psychology that runs counter to the more-is-better framing common in entrepreneurship media."},
+]
+
+OTHER_NEWS = []
+
+GLOSSARY = [
+    {"term": "Observational (social arb) investing", "def": "Chris Camillo's investing methodology: detecting real-world cultural, technological, or consumer-behavior change (often via social media) before it is priced into a stock, then trading purely on that information edge rather than fundamental or technical analysis."},
+    {"term": "Information parity", "def": "The point at which a piece of market-moving information an investor traded on becomes widely known to the broader market (via press, analyst coverage, or company disclosure) — Camillo's defined signal for exiting a position, regardless of the stock's price action."},
+    {"term": "High-conviction trade", "def": "In Camillo's framework, a trade sized at roughly 5-30% of total portfolio (or 2-15% via options), reserved for theses he believes are both highly likely to be correct and not yet appreciated by the broader market."},
+    {"term": "Big money account (bucket strategy)", "def": "A separately funded, deliberately risk-tolerant investment account (distinct from retirement or safety-net savings) that an investor uses specifically to take large, concentrated bets on high-conviction ideas."},
+]
