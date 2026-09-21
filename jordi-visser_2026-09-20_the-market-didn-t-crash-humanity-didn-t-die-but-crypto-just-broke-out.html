@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research: The Market Didn't Crash, Humanity Didn't Die — But Crypto Just Broke Out</title>
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>The Market Didn't Crash, Humanity Didn't Die — But Crypto Just Broke Out</h1>
+    <div class="byline">
+      Channel: <b>Jordi Visser</b> &middot; Speaker: <b>Jordi Visser</b> &middot; <b>2026-09-20</b>
+      <div class="stats-line">5 threads · crypto-as-the-AI-trade thesis, AI-doom bear porn dismissed as noise, why rate hikes and $105 oil no longer move the AI trade, Mag7/portfolio positioning, and the agentic-AI infrastructure build-out into biotech and consumer agents &middot; <a href="https://www.youtube.com/watch?v=BkNzS8Ia-7k" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>A week of maximal bad-news headlines (AI pause, a <b>10%</b> AI-extinction claim, oil spiking, a hawkish Fed hike, 10-year rates at 2007 levels) produced a quiet, flat week for stocks — Visser reads that resilience as bullish, not complacent.</li><li><b>Crypto is the week's real story</b>: his 46-name crypto index broke to new highs for the year, up <b>8.4%</b> on the day, +14% month-to-date, +32% year-to-date, with Bitcoin +53%, Ethereum +66%, Solana +38% quarter-to-date.</li><li>Core thesis: crypto was built for AI agents, not humans — it's the '<b>ghost city</b>' infrastructure phase (his China analogy) waiting for agent-driven demand to fill it, the same 16-year lag as the dot-com build-out to the iPhone/App Store.</li><li>He has rotated his own book from <b>~80% AI trade / 20% crypto</b> to roughly <b>20% AI / crypto+silver as the largest weight</b>, while still holding Nvidia, Marvell, and Eli Lilly as core AI names.</li><li>Dismisses the week's AI-doom headlines (Anthropic researcher's <b>10%</b> extinction estimate, Dario Amodei's "slow down" comment, agent-swarm fears) as noise engineered for engagement, not tradeable signal.</li><li>Argues the AI trade has effectively no rate sensitivity — Nvidia alone is worth more than the entire consumer discretionary sector — so this week's hawkish 25bp hike and <b>$105</b>+ oil didn't dent Mag7, which sit near all-time highs.</li><li>Frames the move as the early agentic-AI economy: Leopold Aschenbrenner's 'automated AI researcher' milestone (Navier-Stokes solved by 10,000 agents in 88 hours), new consumer-agent launches (Meta's Muse, startup Instinct), and a biotech/IP revaluation thesis anchored on Eli Lilly.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="crypto-ai-trade">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">BUYING — largest portfolio weight, rotated out of AI infrastructure names</span><span class="ttag">crypto</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Crypto index breaks to new highs — Visser calls it "the most important macro trade"</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Crypto isn't a side bet on AI — Visser argues it's the actual AI trade, and this week it broke out.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>His 46-name crypto index (6 public stocks — Coinbase, Robinhood, Circle — plus tokens) made new highs for the year: <b>+8.4%</b> on the day, +14% month-to-date, +32% year-to-date; 43 of 46 names above their 50-day moving average.</li><li><span class="dot" style="background:#3f6b2e;"></span>Quarter-to-date: <b>Ethereum +66%</b>, <b>Bitcoin +53%</b>, <b>Solana +38%</b> — the three layer-ones he says to focus on.</li><li><span class="dot" style="background:#3f6b2e;"></span>Thesis: crypto "was built for AI" — wealthy institutions holding the <b>$900 trillion</b> fiat system never needed it, but AI agents transacting digitally do, and that demand is only now arriving.</li><li><span class="dot" style="background:#3f6b2e;"></span>Ghost-city analogy: like Chinese infrastructure built 2003–2013 ahead of demand, or dot-com buildout before the 2007 iPhone, crypto's 16-year infrastructure phase is ending as agent-driven usage (tokenization, stablecoins, on-chain velocity) shows up.</li><li><span class="dot" style="background:#3f6b2e;"></span>Portfolio rotation: roughly <b>80% AI / 20% crypto</b> earlier this year is now <b>~20% AI</b>, with crypto and silver making up most of the book; still adding to crypto, not adding to AI infrastructure names at current levels.</li><li><span class="dot" style="background:#3f6b2e;"></span>Upcoming regulatory tailwinds: US markets expand to <b>23-hour weekday trading on December 6</b>, and the SEC rolled out a <b>5-year exemption for tokenized stocks</b> — though the Clarity Act itself did not pass this week.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;10% chance AI kills humanity. 100% chance crypto was built for AI.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Bitcoin (BTC)<span class="stance" style="background:#3f6b2e;">BUYING-ADDING · High · 12+ months</span></b><span>Up 53% quarter-to-date; Visser sees another ~15% upside from the current breakout level.</span></div><div class="namechip"><b>Ethereum (ETH)<span class="stance" style="background:#3f6b2e;">BUYING-ADDING · High · 12+ months</span></b><span>Up 66% quarter-to-date; one of the three layer-ones he's focused on.</span></div><div class="namechip"><b>Solana (SOL)<span class="stance" style="background:#3f6b2e;">BUYING-ADDING · Medium · 12+ months</span></b><span>Up 38% quarter-to-date.</span></div><div class="namechip"><b>Coinbase, Robinhood, Circle<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>The public-stock names inside his 46-name crypto index.</span></div><div class="namechip"><b>Silver<span class="stance" style="background:#3f6b2e;">BUYING-ADDING · Medium</span></b><span>Now makes up most of his portfolio alongside crypto, following the rotation out of AI names.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">This is Visser's own concentrated, actively-traded position (he names it explicitly) — not a neutral index; he's been telegraphing this specific pivot since May/June.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="ai-doom-noise">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">DISMISSED — treated as noise, not a tradeable signal</span><span class="ttag">ai-infra</span><span class="ttag">geopolitics</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">"Bear porn" week — AI-extinction and agent-swarm headlines dismissed as engineered fear</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">A week stacked with doom headlines moved hedge fund inboxes but not the market — Visser says that's the tell.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>An Anthropic researcher's <b>10% AI-extinction estimate</b> and Dario Amodei's public call to "slow down" drove a rotation (software up, semis down ~10% relative underperformance) but no lasting damage.</li><li><span class="dot" style="background:#93711b;"></span>Elon Musk, in a Ted Cruz interview, put the odds at <b>10-20% chance of AI-driven human extinction within 10 years</b>, but an <b>80-90% chance of extreme prosperity</b> — Visser calls the expected value "basically all upside."</li><li><span class="dot" style="background:#93711b;"></span>Other viral doom content cited: a claim of no jobs by 2028 (87M views), an "Anthropic co-founder warns AI agent swarms could seize the internet within a year" story, and a Hugging Face incident he says triggered real (but overstated) fear.</li><li><span class="dot" style="background:#93711b;"></span>Visser's read: this content pattern is not new — a "why AI will save the world" piece from June 2023 (three months after ChatGPT) shows the doom cycle has repeated for years, and it's timed ahead of the US midterms.</li><li><span class="dot" style="background:#93711b;"></span><i>Geopolitical angle</i>: he argues adversarial states (Russia, China, Iran) benefit from Americans doubting AI/data-center buildout, so skepticism of the narrative's timing and virality (172M views on one clip) is warranted.</li><li><span class="dot" style="background:#93711b;"></span>Names the recurring bear voices he dismisses as "bear porn": Michael Burry, Jim Chanos on an AI bubble, Jeffrey Hinton's long-running AI-danger warnings, and Ray Dalio's US debt-crisis thesis — versus a largely unreported cancer-vaccine breakthrough (11M views) he says gets buried by doom content.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;Everything I read on AI is just a complete gobbledegook of garbage.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Researcher's 10% extinction estimate and Dario Amodei's "slow down" comment drove this week's bear narrative; Visser still credits them (with OpenAI) as ahead on frontier capability.</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Named alongside Anthropic as the two labs "solving the math prizes," i.e. with a durable capability lead over open source.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">This is Visser's own dismissal, not a resolved debate — the underlying safety concerns (Anthropic's, Hinton's) are from credentialed researchers inside the labs, not fringe accounts.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="no-rate-sensitivity">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">CONFIRMED EVENT — 25bp hawkish hike, 10yr at 2007 levels, oil above $105</span><span class="ttag">macro-rates</span><span class="ttag">energy</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Hawkish hike, $105 oil, 10-year at 2007 levels — and the AI trade shrugged</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The macro backdrop looked like a sell signal on paper; Visser says the AI trade has stopped being rate-sensitive.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Fed delivered a hawkish 25bp hike; 10-year rates hit their highest level since 2007, oil rose to <b>$105</b> (Brent briefly $110), yet the S&amp;P finished the week down only ~30bp.</li><li><span class="dot" style="background:#3f6b2e;"></span>Nvidia's <b>$5.25 trillion</b> market cap alone now exceeds the entire consumer discretionary household-durables/retail/restaurant sector (~$1.5 trillion, ex-Amazon) — his argument for why Mag7 has no meaningful rate sensitivity.</li><li><span class="dot" style="background:#3f6b2e;"></span>Unlike 2008, households have record home equity and locked-in low mortgage rates, so rate-sensitive balance-sheet stress isn't present; gas as a share of disposable income is near historic lows despite the oil spike.</li><li><span class="dot" style="background:#3f6b2e;"></span>Credit signals confirm calm: HYG relative to his high-yield proxy made new highs, and bond volatility barely moved despite Iran-related oil risk.</li><li><span class="dot" style="background:#3f6b2e;"></span>The AAII bear reading hit 53 combined with VIX below 20 and S&amp;P above its 50-week average — a combination Visser says has only occurred 9 times in 35 years, with historically strong forward returns (~<b>89%</b> positive, cites a ~50.5% average gain).</li><li><span class="dot" style="background:#3f6b2e;"></span>Cites economist Mark Zandi's read as accurate point-by-point: economy near full potential, full employment, inflation above <b>3%</b> driven mainly by energy/tariffs, and AI infrastructure investment now propping up a non-AI economy that's otherwise struggling.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>At $5.25T market cap, cited as evidence the AI trade has decoupled from rate sensitivity; still one of his two largest holdings.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The AAII/VIX statistical setup is base-rate reasoning over a small sample (9 occurrences) — real, but not a guarantee.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="mag7-portfolio">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">HOLDING — reduced AI weight from ~80% to ~20% of portfolio</span><span class="ttag">ai-infra</span><span class="ttag">semis</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Mag7 rarely all trade above their 50-day — Visser reads the current stretch as a breakout signal</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">All seven Mag7 names have been above their 50-day moving average together on only 8 days all year — and it's happening again now.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>That all-seven-above-50-day condition occurred just 8 days in 2026 (about <b>4.5%</b> of trading days); the last prior instance was June 4.</li><li><span class="dot" style="background:#3f6b2e;"></span>Visser traces much of this year's AI-bubble bearishness to Oracle's CDS blowing out in October of last year, arguing that set the tone even as the group has since rallied.</li><li><span class="dot" style="background:#3f6b2e;"></span>His own holdings: still owns <b>Nvidia</b> and <b>Marvell</b> as his two biggest AI-adjacent positions, plus <b>Eli Lilly</b> as a large position he considers an AI/biotech name; still holds <b>Fluence</b> despite it being down ~80%.</li><li><span class="dot" style="background:#3f6b2e;"></span>He does not think stocks repeat the Q1 2026 magnitude of AI-driven rally, and isn't adding to AI names at current levels — the incremental capital is going to crypto instead.</li><li><span class="dot" style="background:#3f6b2e;"></span>Robotics/physical systems named as the next vertical to watch, with <b>Tesla</b> flagged as a likely beneficiary.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;I don't think we will ever have another big bull market in stocks like the one we saw in the first quarter of this year for AI.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Marvell (MRVL)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>One of his two largest AI-adjacent holdings alongside Nvidia.</span></div><div class="namechip"><b>Eli Lilly (LLY)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>Large position he considers part of his AI/consumer-agent thesis via IP and biotech collaboration value.</span></div><div class="namechip"><b>Fluence<span class="stance" style="background:#3f6b2e;">OWNS · Medium</span></b><span>Still held despite being down roughly 80%.</span></div><div class="namechip"><b>Oracle (ORCL)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Its October CDS blowout is, in Visser's view, the origin point of this year's AI-bubble bearishness.</span></div><div class="namechip"><b>Tesla (TSLA)<span class="stance" style="background:#93711b;">WATCHING · Medium</span></b><span>Flagged as a name to watch as robotics/physical-systems agents become the next vertical.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="agentic-buildout">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">EARLY STAGE — Visser says this was expected for 2027, arriving now</span><span class="ttag">ai-infra</span><span class="ttag">biotech</span><span class="ttag">robotics</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">The "automated AI researcher" milestone is here early — Navier-Stokes solved by agent swarms</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Leopold Aschenbrenner's 2024 roadmap put this milestone in 2027; Visser says the Navier-Stokes and consumer-agent launches this week show it's arriving now.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Citing hedge fund manager Leopold Aschenbrenner's 2024 "Situational Awareness" paper, Visser frames the current moment as the <b>automated AI researcher</b> inflection point — the trigger for a broader economic step-change (GDP, cognitive labor, robotics).</li><li><span class="dot" style="background:#3f6b2e;"></span>Cites a swarm of <b>10,000 AI agents solving the Navier-Stokes problem in 88 hours</b> as evidence — comparing the organizational model to the Manhattan Project's ~600 scientists working in parallel under Groves.</li><li><span class="dot" style="background:#3f6b2e;"></span>Consumer-agent launches this week: Meta's <b>Muse</b> agent and startup <b>Instinct</b> (fundraising at a $2.5B valuation), following Mark Zuckerberg's June comment that Meta was "way behind on the AI side."</li><li><span class="dot" style="background:#3f6b2e;"></span>Biotech/IP thesis: agent-driven collaboration revalues intellectual property — Eli Lilly's continuous IP acquisition and its "Tune Lab" biotech collaboration model are his example; he expects breakout, Moderna-style non-fundamental repricing rather than steady appreciation.</li><li><span class="dot" style="background:#3f6b2e;"></span>Broken macro chain: earnings growing near <b>30%</b> with essentially zero net hiring outside healthcare — Visser argues the traditional liquidity → GDP → hiring chain no longer applies because agent labor is substituting for headcount.</li><li><span class="dot" style="background:#3f6b2e;"></span>US corporate earnings and software revenue-per-employee are both breaking out of multi-decade channels, which he reads as the productivity signature of agent adoption rather than a bubble.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;We're past humans adopting it. That's why this is working.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Launched its Muse personal AI agent last week, following Zuckerberg's June admission Meta was behind on AI agents.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The Navier-Stokes and "automated AI researcher" framing rests entirely on Aschenbrenner's roadmap and unverified claims about the agent swarm result — Visser presents it as fact without independent sourcing.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">💰</div><div class="tline"><span class="cat">Crypto:</span> <span class="txt">Treat crypto as the AI trade itself, not a side bet — track the 46-name breakout and BTC/ETH/SOL quarter-to-date moves, not just headline Bitcoin price.</span></div></div><div class="irow"><div class="ic">📈</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Stop reading rate hikes and oil spikes as automatic AI-trade sell signals — Mag7's lack of rate sensitivity held through this week's hawkish hike and <b>$105 </b>oil.</span></div></div><div class="irow"><div class="ic">🧠</div><div class="tline"><span class="cat">AI ethics:</span> <span class="txt">Discount viral AI-extinction and agent-swarm headlines as engagement bait rather than tradeable risk unless the market itself reacts — it didn't this week.</span></div></div><div class="irow"><div class="ic">🏥</div><div class="tline"><span class="cat">Biotech:</span> <span class="txt">Watch Eli Lilly and similar IP-heavy biotech names for Moderna-style non-fundamental repricing as agent-driven collaboration revalues intellectual property.</span></div></div><div class="irow"><div class="ic">📊</div><div class="tline"><span class="cat">Macro:</span> <span class="txt">Note the rare AAII-bear/low-VIX/structural-bull combination as a historically bullish setup rather than a reason to de-risk.</span></div></div><div class="irow"><div class="ic">🤖</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Expect earnings growth to keep decoupling from hiring as agent labor substitutes for headcount outside healthcare.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;10% chance AI kills humanity. 100% chance crypto was built for AI.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Everything I read on AI is just a complete gobbledegook of garbage.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't think we will ever have another big bull market in stocks like the one we saw in the first quarter of this year for AI.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;There's a 10-20% chance advanced AI leads to human extinction within the next 10 years... but an 80-90% chance of extreme prosperity.&#8221; <cite>— Elon Musk</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;This is far more important than AI.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;We're past humans adopting it. That's why this is working.&#8221; <cite>— Jordi Visser</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Jordi Visser:</b> Bitcoin has further upside from the current breakout level <span class="cmeta">Bitcoin price upside · another ~15%</span> <span class="tag">Bitcoin (BTC)</span></div><div class="ritem"><b>Jordi Visser:</b> His agentic infrastructure portfolio will outperform the S&amp;P 500 <span class="cmeta">outperformance vs S&amp;P 500 · 20-40% per year</span></div><div class="ritem"><b>Elon Musk:</b> Advanced AI carries a meaningful chance of causing human extinction, offset by a much larger chance of extreme prosperity <span class="cmeta">extinction probability · 10-20% · next 10 years</span></div><div class="ritem"><b>US Securities and Exchange Commission:</b> SEC rolled out an exemption period for tokenized stocks <span class="cmeta">exemption length · 5 years</span></div><div class="ritem"><b>Jordi Visser:</b> US equity markets will expand to near round-the-clock weekday trading <span class="cmeta">trading hours · 23-hour weekday trading · December 6, 2026</span></div><div class="ritem"><b>Jordi Visser:</b> Crypto reached its most important macro inflection point, as he predicted in May/June <span class="cmeta">inflection point timing · achieved · September-October 2026</span> <span class="tag">Bitcoin (BTC)</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><p class="empty">No company-to-company relationships stated in this video.</p></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🎙</div><div><div class="title">Jensen Huang spoke at the All-In Summit this week (Trump called in during the appearance); Visser points listeners to that interview and Brad Gerstner's, which he called "very balanced," over the doom headlines. <span class="tag">AI</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Ghost city</b> &mdash; Visser's recurring analogy (from Chinese infrastructure built 2003-2013 ahead of demand) for crypto today: the infrastructure is built, but usage — now expected to come from AI agents — hasn't filled it in yet.</div><div><b>Automated AI researcher</b> &mdash; A milestone from Leopold Aschenbrenner's 2024 "Situational Awareness" paper describing AI systems capable of autonomous research; Visser argues this year's model releases show it arriving earlier than the paper's 2027 estimate.</div><div><b>Recursive self-improvement (RSI)</b> &mdash; AI systems accelerating their own capability gains, which Visser cites as the reason frontier labs are releasing models faster than expected and why safety concerns have intensified.</div><div><b>AAII bear reading</b> &mdash; A weekly retail-investor sentiment survey; a high bear reading combined with low VIX and a structural bull market (S&amp;P above its 50-week average) is a historically rare, bullish-skewed setup Visser cites this week.</div><div><b>HYG relative to EF</b> &mdash; Visser's proxy for high-yield credit spreads (HYG ETF vs. his equity-yield benchmark), used to gauge whether credit markets are signaling stress independent of rates.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
