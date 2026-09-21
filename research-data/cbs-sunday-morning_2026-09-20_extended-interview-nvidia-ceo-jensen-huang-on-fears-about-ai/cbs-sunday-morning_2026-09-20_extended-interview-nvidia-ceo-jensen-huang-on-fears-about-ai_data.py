@@ -1,0 +1,169 @@
+"""
+Per-video data for youtube-research-brief.
+"""
+
+META = {
+    "title": "Extended interview: Nvidia CEO Jensen Huang on fears about AI",
+    "channel": "CBS Sunday Morning",
+    "speakers": "Jensen Huang (Nvidia CEO), CBS interviewer",
+    "date": "2026-09-20",
+    "video_url": "https://www.youtube.com/watch?v=xCUala5j7aQ",
+    "thread_line": "5 threads · AI-doom pushback, China chip-export split with Amodei, data-center backlash, the AI-factory/reindustrialization pitch, and the Prop 50 tax stance",
+    "category": "market",
+}
+
+SNAPSHOT = [
+    "Huang calls \"end of humanity by 2030\" claims **0% probability** and \"completely false,\" and says he agrees with Trump calling AI x-risk fears a \"hoax.\"",
+    "He argues labs (OpenAI, Anthropic) don't need new AI regulation — apply existing cybersecurity/product-liability law first; says both labs had cybersecurity incidents this year that existing law already covers.",
+    "Publicly breaks with Anthropic's Dario Amodei, who wants to ban AI chip/equipment sales to China — Huang: \"our market is not his to seed,\" wants Nvidia to compete for global market share while giving Vera Rubin to American labs first.",
+    "Frames AI as a five-layer stack (energy, chips, models, data, applications) worth pursuing across **$100 trillion** of world economy, ~**$15 trillion** of which he says would benefit from more intelligence.",
+    "Acknowledges bipartisan local backlash against data centers, admits the industry moved too fast without community engagement, and says water/energy-cost fears are now \"a myth.\"",
+    "Pitches AI factories as a reindustrialization story — blue-collar construction/electrician jobs building out compute the way earlier eras built power grids.",
+    "Confirms he's attending a state dinner with Xi Jinping next week and says he'd tell Xi the US and China should share AI safety best practices where not blocked by national-security concerns.",
+    "On California's Prop 50 billionaire tax: says he'd be fine paying it — estimates roughly **$8 billion** over five years — framing it as a privilege of being able to afford it.",
+]
+
+THEMES = [
+    {
+        "id": "ai-doom-pushback",
+        "tags": ["ai-infra", "policy"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "STATED SEPTEMBER 20, 2026",
+        "title": "Huang rejects the \"AI could end humanity\" narrative outright",
+        "lead": "Huang says extinction-by-2030 claims from CEOs like Amodei and whistleblowers are dramatic, ungrounded in science, and carry 0% probability.",
+        "bullets": [
+            "Says the industry is mid-transition from research labs to product companies, and safety spending is naturally rising as part of that shift, not because doom is real.",
+            "Cites that both OpenAI and Anthropic had cybersecurity incidents this year, but argues **existing** cyber/product-liability law already covers them — no new AI-specific law needed yet.",
+            "Reads the push for new regulation as labs actually asking to be *relieved* of laws that already apply to them, which he calls \"a problem.\"",
+            "Agrees explicitly with Trump's framing that the AI-extinction fear is a \"hoax,\" and says he doesn't know the doom-narrative's motive — \"maybe it's political, maybe it's otherwise, maybe just attention grabbing.\"",
+            "Frames the standard as: go as fast as possible but never faster than safety allows, with product-liability law as the backstop if a company ships something unsafe.",
+        ],
+        "quote": {"text": "There is 0% chance that's going to be the end of the world.", "cite": "— Jensen Huang, on 2030 AI-extinction claims"},
+        "watch": "Huang's own company is the largest financial beneficiary of AI capex continuing unslowed — he frames this as alignment of incentives, not conflict, but the stake is direct.",
+        "names": [
+            {"name": "Nvidia (NVDA)", "blurb": "Huang argues Nvidia's value is directly tied to AI being deployed safely, so safety and growth aren't in tension for the company.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
+            {"name": "Anthropic", "blurb": "Named alongside OpenAI as one of the two labs with a 2026 cybersecurity incident; Huang says its call for AI regulation reads as relief from existing law.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "OpenAI", "blurb": "Named alongside Anthropic re: cybersecurity incidents and lab-to-product transition; also cited as a customer/tool Nvidia uses internally.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+        ],
+    },
+    {
+        "id": "china-chip-export-split",
+        "tags": ["semis", "geopolitics", "policy"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "STATED SEPTEMBER 20, 2026",
+        "title": "Huang publicly breaks with Amodei on banning chip sales to China",
+        "lead": "Amodei wants a China ban on AI chips and fab equipment; Huang wants Nvidia's best chips going to American labs first, but otherwise competing for China and every global market.",
+        "bullets": [
+            "Confirms Nvidia's next-gen **Vera Rubin** platform is in volume production and is being made available to American labs (Dario/Sam) first, several years ahead of China on this generation.",
+            "Rejects a blanket China ban: \"I completely disagree that we should ban China of all American products... our market is not his to seed.\"",
+            "Frames AI as a five-layer stack — energy, chips, models, data, applications — and wants every American layer, including the chip industry, to go compete globally rather than cede share.",
+            "Says he'll attend a **state dinner with Xi Jinping next week** and would tell Xi the US and China should share AI safety best practices and possibly set global product standards, except where blocked by military/national-security reasons.",
+            "On the domestic side, name-checks FedEx and Walmart as examples of traditional companies becoming \"AI companies\" — his framing for why every layer of the US stack needs to win, not just one company.",
+        ],
+        "quote": {"text": "Our market is not his to seed. We ought to go compete for the world's market.", "cite": "— Jensen Huang"},
+        "watch": "This is a direct, named disagreement with a peer AI-lab CEO on US export policy — the policy outcome (any formal China chip restriction) is still undecided, not settled by this interview.",
+        "names": [
+            {"name": "Nvidia (NVDA)", "blurb": "Vera Rubin platform now shipping in volume; Huang wants it prioritized for US labs first, then sold globally including where policy allows.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
+            {"name": "Anthropic", "blurb": "Dario Amodei publicly called for banning AI chip and semiconductor equipment sales to China; Huang disagrees with the position.", "stance": "NEGATIVE VIEW", "conviction": "Medium", "horizon": None},
+        ],
+    },
+    {
+        "id": "data-center-backlash",
+        "tags": ["ai-infra", "energy", "consumer"],
+        "color": "amber",
+        "badge": "Structural critique, self-admitted",
+        "status": "ONGOING, SEPTEMBER 2026",
+        "title": "Huang concedes the data-center rollout skipped community buy-in",
+        "lead": "Facing bipartisan local backlash against new data centers, Huang admits the industry moved too fast and should have engaged towns before building.",
+        "bullets": [
+            "Admits: \"we're sorry we didn't come talk to you sooner\" — says the industry should engage communities long before breaking ground, especially in small/rural towns.",
+            "Calls water-consumption fears \"a myth now\": says modern data centers recirculate hot water for cooling and use less water than a swimming pool's annual evaporation.",
+            "Claims data centers should be net-positive for local grids and energy bills — contributing power-generation investment and grid reliability rather than raising costs.",
+            "Says data-center builders should offer towns concrete upside (new schools, roads, lower property taxes, lower energy bills) and commit to better aesthetics and larger setbacks from town centers.",
+            "Frames the current AI capex wave as a rare, decades-long window to invest in every power-generation type at once — solar, nuclear (fission and fusion), hydro — alongside near-term continued reliance on fossil fuel for the next five years.",
+        ],
+        "quote": None,
+        "watch": "Huang's own claims about reduced water/energy impact are his company's talking points in a live political fight — not independently verified in this interview.",
+        "names": None,
+    },
+    {
+        "id": "ai-factory-reindustrialization",
+        "tags": ["ai-infra", "consumer"],
+        "color": "green",
+        "badge": "Recommendation",
+        "status": "STATED SEPTEMBER 20, 2026",
+        "title": "Huang's pitch: data centers are \"AI factories\" reindustrializing America",
+        "lead": "Huang frames data centers as manufacturing plants for intelligence — energy and data in, tokens out — driving a blue-collar construction and skilled-trades boom.",
+        "bullets": [
+            "Describes AI factories as the successor to power plants (which manufactured electricity) and internet data centers (which manufactured connectivity): energy and data go in, intelligence comes out.",
+            "Sizes the addressable opportunity as roughly **$15 trillion** of the world's **$100 trillion** economy that would benefit from more intelligence than it currently has.",
+            "Calls this the first chance in 50-100 years to reindustrialize the US — construction workers, electricians, fitters, and builders are in shortage building out AI factories nationwide.",
+            "Cites OpenAI's newest agentic tool (auto-captioned \"Astra\") as an example of AI doing real-world design work — turning a photo of a backyard into CAD files for contractors — plus Nvidia's own internal use of Cursor, Cognition, and Claude Code.",
+            "Distinguishes this build-out from car manufacturing: it's \"manufacturing electrons,\" invisible output, but still real industrial construction and jobs.",
+        ],
+        "quote": {"text": "Energy comes in, intelligence comes out — it basically is an AI factory.", "cite": "— Jensen Huang"},
+        "watch": None,
+        "names": [
+            {"name": "Nvidia (NVDA)", "blurb": "Positioned as the compute supplier inside every AI factory being built across the US.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
+            {"name": "FedEx", "blurb": "Cited as an example of a traditional company becoming an \"AI company.\"", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Walmart", "blurb": "Cited as an example of a traditional company becoming an \"AI company.\"", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+        ],
+    },
+    {
+        "id": "prop-50-and-origin-story",
+        "tags": ["policy", "career"],
+        "color": "gray",
+        "badge": "Personal stance",
+        "status": "STATED SEPTEMBER 20, 2026",
+        "title": "Huang breaks from fellow billionaires opposing California's Prop 50",
+        "lead": "Unlike peers spending millions to fight California's billionaire tax, Huang says he'd be fine paying it — estimating roughly $8 billion over five years.",
+        "bullets": [
+            "Says he doesn't mind paying taxes and supports the country's civic infrastructure, framing the ability to pay $8B as a privilege rather than a burden.",
+            "Notes he tries to pay Nvidia employees as much as possible rather than as little as possible, calling that a habit tied to the same instinct.",
+            "Revisits his origin story for context: grew up in a 600-person Kentucky town, was a dishwasher and busboy at Denny's before founding Nvidia.",
+        ],
+        "quote": {"text": "I'm not afraid of paying taxes. I'm just afraid of being poor.", "cite": "— Jensen Huang"},
+        "watch": None,
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F4CA", "tag": "Markets", "title": "Track Nvidia (NVDA) export-policy exposure — Huang is now on record against an Amodei-style China chip ban, a live DC policy fight."},
+    {"icon": "\U0001F3D9️", "tag": "Policy", "title": "Watch for formal community-engagement or siting rules on data centers — Huang's own admission of bipartisan backlash signals this becomes a real permitting friction point."},
+    {"icon": "⚖️", "tag": "Geopolitics", "title": "Note the Xi Jinping state dinner next week as a signal moment for any US-China AI safety coordination language."},
+    {"icon": "\U0001F3ED", "tag": "AI infra", "title": "Read the \"AI factory\" framing as Nvidia's messaging for the next capex cycle — energy/chips/models/data/apps as one connected stack, not isolated bets."},
+    {"icon": "\U0001F4B0", "tag": "Policy", "title": "Track California Prop 50 outcome — Huang's public non-opposition is a notable split from other Bay Area billionaires funding the fight against it."},
+]
+
+HOT_TAKES = [
+    {"take": "There is 0% chance that's going to be the end of the world.", "cite": "— Jensen Huang", "why": "Direct numeric dismissal of AI-extinction claims by 2030 — puts him on the record against Anthropic/whistleblower framing."},
+    {"take": "Go and read between the lines. There's a lot of — they're actually not asking for more laws. They're asking to be relieved of the laws we do have.", "cite": "— Jensen Huang", "why": "Accuses peer AI labs of using safety rhetoric to seek exemption from existing law — a pointed, contestable claim about competitors' motives."},
+    {"take": "Our market is not his to seed. We ought to go compete for the world's market.", "cite": "— Jensen Huang", "why": "Named public disagreement with Dario Amodei's call to ban chip sales to China."},
+    {"take": "I'm not afraid of paying taxes. I'm just afraid of being poor.", "cite": "— Jensen Huang", "why": "Breaks from other California billionaires actively funding opposition to Prop 50."},
+    {"take": "Water consumption — that's a myth now.", "cite": "— Jensen Huang", "why": "Blunt dismissal of the primary community objection to data centers, stated as settled fact without citing a source."},
+]
+
+CLAIMS = [
+    {"who": "Jensen Huang", "claim": "AI will not end the world / cause human extinction", "metric": "probability of AI causing world-ending event", "target": "0%", "by": "2030", "condition": None, "entity": None},
+    {"who": "Jensen Huang", "claim": "Roughly $15 trillion of the ~$100 trillion world economy would benefit from more intelligence than it currently has", "metric": "addressable economic value from AI", "target": "$15 trillion of $100 trillion", "by": None, "condition": None, "entity": None},
+    {"who": "Jensen Huang", "claim": "Nvidia's Vera Rubin platform is several years ahead of China's equivalent chip technology", "metric": "generational lead over China", "target": "several years", "by": None, "condition": None, "entity": "Nvidia (NVDA)"},
+    {"who": "Jensen Huang", "claim": "Attending a state dinner with President Xi Jinping", "metric": None, "target": None, "by": "week of 2026-09-27", "condition": None, "entity": None},
+    {"who": "Jensen Huang", "claim": "Would owe roughly $8 billion in taxes over five years if California's Prop 50 billionaire tax passes, and says he'd pay it", "metric": "personal tax liability under Prop 50", "target": "$8 billion", "by": "5 years", "condition": "if California's Proposition 50 passes", "entity": None},
+]
+
+RELATIONS = [
+    {"from": "Nvidia (NVDA)", "rel": "supplies", "to": "OpenAI", "note": "Vera Rubin chips prioritized for American labs first"},
+    {"from": "Nvidia (NVDA)", "rel": "supplies", "to": "Anthropic", "note": "Vera Rubin chips prioritized for American labs first"},
+    {"from": "Anthropic", "rel": "criticizes", "to": "Nvidia (NVDA)", "note": "Dario Amodei called for banning AI chip and fab-equipment sales to China; Huang publicly disagreed"},
+]
+
+OTHER_NEWS = []
+
+GLOSSARY = [
+    {"term": "AI factory", "def": "Huang's term for a data center reframed as a manufacturing plant: energy and data go in, computed intelligence (tokens) comes out."},
+    {"term": "Vera Rubin", "def": "Nvidia's next-generation AI chip platform, now in volume production and being prioritized for American AI labs."},
+    {"term": "Five-layer AI stack", "def": "Huang's framing of the AI industry as energy, chips, models, data, and applications — with the US needing to lead in every layer, not just one."},
+]
