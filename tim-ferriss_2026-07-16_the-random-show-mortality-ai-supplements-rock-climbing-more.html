@@ -5,168 +5,274 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Research: The Random Show! Mortality, AI, Supplements, Rock Climbing, &amp; More</title>
 <style>
-.backlink{margin-bottom:12px;}
-.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
-.backlink a:hover{color:var(--brand);border-color:var(--brand);}
-
 :root{
   --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
-  --brand:#8a5a2e; --brand-soft:#f4e9db;
-  --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
-  --g:#eaf3e6; --gk:#3f6b2e; --r:#f8ebe6; --rk:#a23f22;
-  --y:#f8f0dd; --yk:#93711b; --gr:#eeece3; --grk:#65695f;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-  font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased;}
-.page{max-width:1720px;width:100%;margin:0 auto;background:var(--card);min-height:100vh;
-  box-shadow:0 0 0 1px var(--line);}
-.hero{padding:clamp(18px,2.4vw,34px) clamp(20px,4vw,56px) clamp(14px,1.8vw,22px);
-  border-bottom:1px solid var(--line);}
-.hero .kicker{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--brand);margin-bottom:10px;}
-.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(28px,3vw,42px);line-height:1.15;
-  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:38ch;}
-.hero-row{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;
-  border-top:1px solid var(--line);padding-top:12px;}
-.hero .meta{color:var(--muted);font-size:15px;line-height:1.55;}
-.hero .meta b{color:var(--ink);font-weight:600;}
-.hero .stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:14.5px;margin-top:4px;}
-.watch-btn{flex:none;display:inline-flex;align-items:center;gap:7px;background:var(--brand);color:#fffdf8;
-  text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.01em;padding:9px 18px;
-  border-radius:999px;white-space:nowrap;transition:.15s;}
-.watch-btn:hover{background:#734a24}
-.inner{padding:10px clamp(20px,4vw,56px) 44px;}
-.sec{margin:0;padding:34px 0;border-top:1px solid var(--line);}
-.sec:first-child{border-top:none;padding-top:20px;}
-.sec-head{margin-bottom:16px;}
-.sec-eye{font-family:var(--serif);font-style:italic;font-size:14.5px;color:var(--brand);margin-bottom:4px;}
-.sec h2{font-family:var(--serif);margin:0;font-size:clamp(22px,2vw,27px);font-weight:600;color:#171916;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
   border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
-.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:26px 28px;}
-.snap{list-style:none;margin:0;padding:0;max-width:1200px;}
-.snap li{position:relative;padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:16.5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
 .snap li:last-child{border-bottom:none}
-.snap b{color:#171916}
-.badge{display:inline-block;padding:4px 12px;border-radius:3px;font-size:12.5px;font-weight:700;
-  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;}
-.g{background:var(--g);color:var(--gk)} .r{background:var(--r);color:var(--rk)}
-.y{background:var(--y);color:var(--yk)} .gr{background:var(--gr);color:var(--grk)}
-.muted{color:var(--muted);font-size:13.5px;font-weight:400}
-.legend{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0 0;}
-.legend span{display:inline-flex;align-items:center;gap:7px}
-.legend .dot{width:10px;height:10px;border-radius:50%}
-.legend .dot.g{background:var(--gk)} .legend .dot.r{background:var(--rk)}
-.legend .dot.y{background:var(--yk)} .legend .dot.gr{background:var(--grk)}
-.legend .t{font-size:13px;color:var(--muted)}
-.tablewrap{overflow-x:auto;}
-table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:15.5px;}
-th,td{text-align:left;padding:12px 14px;vertical-align:top;border-bottom:1px solid var(--line);
-  overflow-wrap:break-word;word-break:break-word;}
-th{font-family:var(--serif);font-weight:600;font-style:italic;color:var(--brand);font-size:15px;
-  padding:8px 14px 10px;border-bottom:2px solid var(--brand);}
-tbody tr{transition:background .12s}
-tbody tr:hover{background:#f5efe2}
-tr.row-g:hover{background:var(--g)}
-tr.row-r:hover{background:var(--r)}
-tr.row-y:hover{background:var(--y)}
-tr.row-gr:hover{background:var(--gr)}
-tr[class*="row-"] td:first-child{position:relative;padding-left:26px;}
-tr[class*="row-"] td:first-child::before{content:"";position:absolute;left:10px;top:8px;bottom:8px;
-  width:7px;border-radius:5px;background:var(--line);}
-tr.row-g td:first-child::before{background:var(--gk)}
-tr.row-r td:first-child::before{background:var(--rk)}
-tr.row-y td:first-child::before{background:var(--yk)}
-tr.row-gr td:first-child::before{background:var(--grk)}
-tr.conv-hi td:first-child::before{width:8px}
-tr.conv-md td:first-child::before{width:6px}
-tr.conv-lo td:first-child::before{width:4px;opacity:.6}
-.c-topic{width:13%;min-width:110px}
-.c-cat{width:8%;min-width:70px}
-.c-stance{width:6%;min-width:64px}
-.c-conv{width:7%;min-width:70px}
-.c-act{width:16%} .c-text{width:auto}
-.wf{border:1px solid var(--line);border-left:3px solid var(--brand);padding:16px 18px;margin:12px 0;
-  background:#fffefb;}
-.wf-name{font-family:var(--serif);font-weight:600;font-size:18px;color:#171916;margin-bottom:7px;}
-.wf-row{margin:5px 0;font-size:15px;color:#3a3d35}
-.wf-row .lbl{display:inline-block;min-width:128px;font-weight:600;color:var(--brand);
-  font-style:italic;font-family:var(--serif);}
-.c-wf-name{width:14%;min-width:140px}
-table.wf-tbl td:first-child b{font-weight:700;color:#171916}
-.tk{position:relative;display:flex;gap:14px;align-items:flex-start;background:#fffefb;
-  border:1px solid var(--line);border-radius:12px;padding:14px 16px 14px 26px;margin:11px 0;max-width:1200px;
-  transition:background .12s;}
-.tk:hover{background:var(--tk-bg,var(--brand-soft))}
-.tk::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
-  background:var(--tk-c,var(--brand));}
-.tk-ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
-  font-size:14px;background:var(--tk-bg,var(--brand-soft));line-height:1;}
-.tk-bd{flex:1;min-width:0}
-.tk-title{font-weight:600;font-size:15.5px;color:#171916;line-height:1.42;margin-bottom:5px;}
-.tk-tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:13.5px;font-weight:600;
-  letter-spacing:.01em;padding:0;background:none;color:var(--tk-c,var(--brand));}
-.tk-detail{margin-top:5px;font-size:14px;color:#4a4d44;line-height:1.55;}
-.risk{position:relative;display:flex;gap:14px;align-items:flex-start;background:#fffefb;
-  border:1px solid var(--line);border-radius:12px;padding:14px 16px 14px 26px;margin:11px 0;max-width:1200px;
-  transition:background .12s;}
-.risk:hover{background:var(--r)}
-.risk::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
-  background:var(--rk);}
-.risk-ic{flex:none;width:28px;height:28px;border-radius:6px;display:grid;place-items:center;
-  font-size:14px;background:var(--r);line-height:1;}
-.risk-bd{flex:1;min-width:0}
-.risk-title{font-weight:500;font-size:15px;color:#171916;line-height:1.5;}
-.quote{font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.55;color:#2c2f28;
-  border-left:3px solid var(--brand);padding:7px 0 7px 22px;margin:16px 0;max-width:900px;}
-.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
-  color:var(--muted);margin-top:7px;}
-.quote-ctx{font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;color:var(--muted);margin-top:4px;}
-.gloss{display:grid;grid-template-columns:repeat(3,1fr);gap:10px 30px;}
-.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:14.3px;line-height:1.55;}
-.gloss b{font-family:var(--serif);color:#171916}
-ul,ol{margin:5px 0;padding-left:22px} li{margin:4px 0}
-ol li::marker{font-weight:700;color:var(--brand)}
-@media(max-width:1300px){
-  .gloss{grid-template-columns:1fr 1fr}
-}
-@media(max-width:900px){
-  body{font-size:16px}
-  .hero h1{font-size:26px}
-  .sec h2{font-size:22px}
-  .c-cat{display:none} th:nth-child(2),td:nth-child(2){display:none}
-  .gloss{grid-template-columns:1fr}
-  table{table-layout:auto}
-  .c-topic{width:auto;min-width:100px}
-  .hero-row{flex-direction:column;align-items:flex-start;gap:14px}
-}
-@media(max-width:620px){
-  body{font-size:15px}
-  .c-conv{display:none} th:nth-child(4),td:nth-child(4){display:none}
-  table{font-size:13.5px} th,td{padding:9px 9px}
-  .wf-row .lbl{display:block;min-width:0;margin-bottom:2px}
-  .quote{font-size:18px}
-}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
 </style>
 </head>
 <body>
 <div class="page">
   <header class="hero">
     <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
-
     <div class="kicker">A YouTube Research Brief</div>
     <h1>The Random Show! Mortality, AI, Supplements, Rock Climbing, &amp; More</h1>
-    <div class="hero-row">
-      <div class="meta">
-        Channel: <b>Tim Ferriss</b> &middot; Speaker: <b>Kevin Rose</b> &middot; <b>2026-07-16</b>
-        <div class="stats-line">15 conviction calls &middot; 12 companies tracked &middot; 13% high conviction</div>
-      </div>
-      <a class="watch-btn" href="https://youtu.be/JT7QpL4XRtw" target="_blank" rel="noopener">Watch on YouTube &#8599;</a>
+    <div class="byline">
+      Channel: <b>Tim Ferriss</b> &middot; Speaker: <b>Tim Ferriss and Kevin Rose (The Random Show)</b> &middot; <b>2026-07-16</b>
+      <div class="stats-line">6 threads · grief and living intentionally after losing friends and aging parents, Tim's deepening Zen meditation practice, rock climbing as his next big physical goal, a health/supplement stack update (including a psychedelic GAD drug trial and dementia lucidity case reports), Kevin's home AI automation setup, and how both are using AI for personal retrospective analysis versus creative work. &middot; <a href="https://youtu.be/JT7QpL4XRtw" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
     </div>
   </header>
   <div class="inner">
-    <section class="sec" id="snap"><div class="sec-head"><div class="sec-eye">The one-paragraph takeaway</div><h2>Video Snapshot</h2></div><div class="card"><ol class="snap"><li>The 3-6 highest-signal ideas:.</li><li>Kevin Rose frames the AI model market as consolidating to a &#x27;big three&#x27; — Google (Gemini), Anthropic, and OpenAI — plus a wildcard in Elon&#x27;s xAI/Grok; he notes Anthropic and Google are buying excess compute from &#x27;Colossus&#x27; (xAI&#x27;s data center), implying Grok&#x27;s own product isn&#x27;t fully absorbing its capacity.</li><li>He predicts the future of AI is &#x27;continuous learning&#x27; (self-improving models that get better daily, like a child), with Google betting on a high-throughput/wide-memory architecture and owning the full stack (chips, models, architecture).</li><li>He expects AI model access to commoditize into a cheap &#x27;~$30/month Netflix-type plan&#x27; — i.e., he does NOT see durable pricing power for model labs.</li><li>On investing, Rose treats it as a &#x27;scorecard for thinking,&#x27; uses Claude Code + APIs for a 20-year angel-investing retrospective, and says he is &#x27;not an investor&#x27; in the sense of chasing stock tips; he &#x27;wishes I was an investor in WhisperFlow&#x27; (a voice-capture app he uses daily).</li><li>Longevity/biotech signal: he and Ferriss funded the University of Washington dog-aging study with rapamycin (&#x27;we&#x27;ve got some chips on the table&#x27;) and name-checked Whole Earth is Medicine and This Too Is Me as favorite companies/projects. No explicit public stock holdings, buys, or ticker symbols are stated.</li></ol></div></section><section class="sec" id="conv"><div class="sec-head"><div class="sec-eye">What they actually believe &mdash; and how strongly</div><h2>Conviction Map</h2></div><div class="card"><div class="tablewrap"><table><thead><tr><th class="c-topic">Topic<br>Asset</th><th class="c-cat">Cat.</th><th class="c-conv">Conv.</th><th class="c-act">Action status</th><th class="c-text">Core thesis</th><th class="c-text">Risks<br>conditions</th></tr></thead><tbody><tr class="row-g conv-hi"><td class="c-topic"><b>AI model landscape = &#x27;big three&#x27; (Google/Anthropic/OpenAI)</b></td><td class="c-cat">AI company</td><td class="c-conv">High</td><td class="c-act">WATCHING</td><td class="c-text">Three players will dominate; X/xAI a wildcard due to Elon&#x27;s funding. Rose states &#x27;It&#x27;s the big three.&#x27;</td><td class="c-text">Fast-moving; open-source (e.g. &#x27;Mythos/Fable&#x27;) could disrupt; stated as personal read, not data.</td></tr><tr class="row-g conv-md"><td class="c-topic"><b>Gemini (Google)</b></td><td class="c-cat">AI model<br>tool</td><td class="c-conv">Medium</td><td class="c-act">WATCHING / increasing personal use</td><td class="c-text">Rose uses Gemini &#x27;more and more&#x27; for plug-and-play with G Suite and multimodal (audio/video); calls 3.5 Flash &#x27;a great model.&#x27;</td><td class="c-text">Notes a new &#x27;Sonic&#x27; model launched that day, untested by him.</td></tr><tr class="row-g conv-md"><td class="c-topic"><b>Grok (xAI)</b></td><td class="c-cat">AI model<br>tool</td><td class="c-conv">Medium</td><td class="c-act">WATCHING</td><td class="c-text">Best for current events/synthesis via direct X API access; Rose &#x27;uses Grok more than people might realize&#x27; and &#x27;actually likes Grok.&#x27;</td><td class="c-text">He infers &#x27;no one&#x27;s using Grok&#x27; because Anthropic/Google buy its excess Colossus capacity — implies product underuse.</td></tr><tr class="row-g conv-md"><td class="c-topic"><b>Claude / Anthropic</b></td><td class="c-cat">AI model<br>tool</td><td class="c-conv">Medium</td><td class="c-act">WATCHING / personal tool</td><td class="c-text">Rose uses Claude Code with various APIs (inbox analysis, email drafting); part of the &#x27;big three.&#x27;</td><td class="c-text">No explicit ranking vs others beyond inclusion in big three.</td></tr><tr class="row-g conv-md"><td class="c-topic"><b>OpenAI</b></td><td class="c-cat">AI company</td><td class="c-conv">Medium</td><td class="c-act">WATCHING</td><td class="c-text">Racing to IPO; part of big three; next model rumored in ~2 weeks at time of recording.</td><td class="c-text">IPO outcome uncertain.</td></tr><tr class="row-g conv-hi"><td class="c-topic"><b>Continuous-learning / self-improving models</b></td><td class="c-cat">technology trend</td><td class="c-conv">High</td><td class="c-act">Prediction</td><td class="c-text">Shift from discrete model &#x27;drops&#x27; to always-learning models (12-18 months to self-improving); &#x27;tomorrow it&#x27;ll be better than today, for forever.&#x27;</td><td class="c-text">Timeline is a prediction (&#x27;everyone is saying&#x27;); speculative.</td></tr><tr class="row-r conv-md"><td class="c-topic"><b>AI model pricing -&gt; ~$30/mo Netflix plan</b></td><td class="c-cat">macro<br>AI trend</td><td class="c-conv">Medium</td><td class="c-act">Prediction</td><td class="c-text">Expects access to commoditize to a cheap subscription; &#x27;our extra $30 a month to get all the AI.&#x27;</td><td class="c-text">Contradicts lab economics; prediction, not fact.</td></tr><tr class="row-gr conv-lo"><td class="c-topic"><b>TSMC (supply chain)</b></td><td class="c-cat">stock<br>sector</td><td class="c-conv">Low</td><td class="c-act">CASUAL MENTION</td><td class="c-text">Cited as the leader producing Google&#x27;s (and others&#x27;) chips; Samsung/Micron minor others. Constraint on Google&#x27;s stack.</td><td class="c-text">Mentioned as context, not an investment view.</td></tr><tr class="row-y conv-lo"><td class="c-topic"><b>Apple (AAPL)</b></td><td class="c-cat">stock</td><td class="c-conv">Low</td><td class="c-act">WATCHING</td><td class="c-text">&#x27;I wouldn&#x27;t write off Apple either&#x27; — has unique tech, &#x27;probably another couple years out&#x27; on AI.</td><td class="c-text">Explicitly uncertain (&#x27;I don&#x27;t know&#x27;).</td></tr><tr class="row-g conv-md"><td class="c-topic"><b>Rapamycin / dog-aging study (U. Washington)</b></td><td class="c-cat">biotech<br>longevity</td><td class="c-conv">Medium</td><td class="c-act">OWNS / invested (philanthropic + &#x27;chips on the table&#x27;)</td><td class="c-text">Rose &amp; Ferriss invested in the study because &#x27;this needs to exist... good for the world.&#x27; Longevity conviction.</td><td class="c-text">Not a public equity position; research-stage.</td></tr><tr class="row-g conv-md"><td class="c-topic"><b>WhisperFlow (voice capture app)</b></td><td class="c-cat">company<br>AI tool</td><td class="c-conv">Medium</td><td class="c-act">WISHES HE INVESTED</td><td class="c-text">&#x27;I wish I was an investor in WhisperFlow&#x27; — uses it daily to brain-dump walking, then drops into Claude to clean up. High utility.</td><td class="c-text">Not a public company; likely early-stage/private.</td></tr><tr class="row-g conv-lo"><td class="c-topic"><b>Whole Earth is Medicine</b></td><td class="c-cat">company<br>health</td><td class="c-conv">Low</td><td class="c-act">CASUAL MENTION</td><td class="c-text">Named as one of Rose&#x27;s &#x27;favorites&#x27; (health/longevity space).</td><td class="c-text">Stated as a favorite, no financial detail.</td></tr><tr class="row-g conv-lo"><td class="c-topic"><b>This Too Is Me (meditation, &#x27;Henry&#x27;)</b></td><td class="c-cat">company<br>wellness</td><td class="c-conv">Low</td><td class="c-act">CASUAL MENTION</td><td class="c-text">Meditation product Rose finds &#x27;incredibly relaxing&#x27;; named a favorite.</td><td class="c-text">Wellness, not investable detail given.</td></tr><tr class="row-g conv-md"><td class="c-topic"><b>S&amp;P 500 (passive investing)</b></td><td class="c-cat">ETF<br>macro</td><td class="c-conv">Medium</td><td class="c-act">CASUAL MENTION</td><td class="c-text">Rose: &#x27;you can put everything into S&amp;P 500 and just go to bed&#x27; — acknowledges index as baseline.</td><td class="c-text">Framed as the easy alternative, not a recommendation.</td></tr><tr class="row-r conv-lo"><td class="c-topic"><b>Crypto</b></td><td class="c-cat">crypto</td><td class="c-conv">Low</td><td class="c-act">CASUAL MENTION</td><td class="c-text">Rose: &#x27;I just don&#x27;t want to play that game&#x27; re crypto; only appears as a joke about clickbait &#x27;crypto crashes next week&#x27; thumbnails.</td><td class="c-text">No position stated; explicit disinterest.</td></tr></tbody></table></div><p class="muted legend"><span><span class="dot g"></span><span class="t">green = owns / buying / positive</span></span><span><span class="dot r"></span><span class="t">red = sold / avoids / negative</span></span><span><span class="dot y"></span><span class="t">yellow = watching / uncertain</span></span><span><span class="dot gr"></span><span class="t">gray = casual mention</span></span></p></div></section><section class="sec" id="cos"><div class="sec-head"><div class="sec-eye">Positions, views and why they care</div><h2>Stocks, Funds &amp; Companies</h2></div><div class="card"><div class="tablewrap"><table><thead><tr><th class="c-topic">Company<br>Ticker</th><th class="c-text">Speaker view</th><th class="c-text">Why they care</th><th class="c-text">Catalysts</th><th class="c-text">Risks</th><th class="c-conv">Evidence</th></tr></thead><tbody><tr class="row-g"><td class="c-topic"><b>Google / Gemini (Alphabet, GOOGL) (GOOGL)</b></td><td class="c-text">One of the &#x27;big three&#x27;; Rose uses Gemini more and more (G Suite plug-and-play, multimodal). Google betting on continuous-learning + full-stack (chips, models, architecture); constrained by TSMC.</td><td class="c-text">Core AI incumbent; vertical integration thesis.</td><td class="c-text">Continuous-learning architecture; Gemini 3.5 Flash / new &#x27;Sonic&#x27; model.</td><td class="c-text">TSMC supply constraint; Rose notes they buy excess Colossus capacity.</td><td class="c-conv">High - detailed, repeated.</td></tr><tr class="row-g"><td class="c-topic"><b>Anthropic (Claude)</b></td><td class="c-text">One of the &#x27;big three&#x27;; Rose uses Claude Code + APIs for analysis/email. Buying excess Colossus capacity alongside Google.</td><td class="c-text">Top-tier lab in consolidating market.</td><td class="c-text">Continuous-learning race; product depth.</td><td class="c-text">Private; no ticker.</td><td class="c-conv">Medium.</td></tr><tr class="row-g"><td class="c-topic"><b>OpenAI (private (IPO rumored))</b></td><td class="c-text">One of the &#x27;big three&#x27;; &#x27;racing to IPO.&#x27; Next model rumored in ~2 weeks at recording.</td><td class="c-text">Dominant consumer lab; potential IPO event.</td><td class="c-text">IPO; model cadence.</td><td class="c-text">IPO outcome uncertain; private.</td><td class="c-conv">Medium.</td></tr><tr class="row-y"><td class="c-topic"><b>xAI (Grok) / Colossus</b></td><td class="c-text">Wildcard; Rose likes Grok for current events (X API). Infers Grok underused because Anthropic/Google buy its excess Colossus capacity. &#x27;Never count out Elon&#x27; — has funds.</td><td class="c-text">Potential fourth major player.</td><td class="c-text">Elon&#x27;s capital; X data moat.</td><td class="c-text">Implied low product adoption; private.</td><td class="c-conv">Medium - inference-based.</td></tr><tr class="row-gr"><td class="c-topic"><b>TSMC (TSM)</b></td><td class="c-text">Called the leader producing Google&#x27;s (and others&#x27;) chips; Samsung/Micron minor. Key constraint on Google&#x27;s stack.</td><td class="c-text">Bottleneck in AI supply chain.</td><td class="c-text">AI compute demand.</td><td class="c-text">Geopolitical/concentration risk implied.</td><td class="c-conv">Low - context only.</td></tr><tr class="row-y"><td class="c-topic"><b>Apple (AAPL) (AAPL)</b></td><td class="c-text">&#x27;I wouldn&#x27;t write off Apple either&#x27; — unique tech, &#x27;probably another couple years out&#x27; on AI. Google powers much of Apple&#x27;s AI.</td><td class="c-text">Potential late AI entrant.</td><td class="c-text">Future Apple AI.</td><td class="c-text">Rose uncertain (&#x27;I don&#x27;t know&#x27;).</td><td class="c-conv">Low.</td></tr><tr class="row-g"><td class="c-topic"><b>WhisperFlow</b></td><td class="c-text">&#x27;I wish I was an investor in WhisperFlow.&#x27; Daily-use voice capture -&gt; note -&gt; Claude cleanup workflow.</td><td class="c-text">High personal utility; likely investable if given chance.</td><td class="c-text">Voice/AI capture trend.</td><td class="c-text">Private/early; not public.</td><td class="c-conv">Medium.</td></tr><tr class="row-g"><td class="c-topic"><b>University of Washington (dog-aging / rapamycin study)</b></td><td class="c-text">Rose &amp; Ferriss invested: &#x27;we&#x27;ve got some chips on the table... because we believe in it.&#x27; Longevity research.</td><td class="c-text">Philanthropic + conviction in rapamycin longevity.</td><td class="c-text">Longevity science progress.</td><td class="c-text">Research-stage, non-equity.</td><td class="c-conv">Medium.</td></tr><tr class="row-gr"><td class="c-topic"><b>Whole Earth is Medicine</b></td><td class="c-text">Named a &#x27;favorite&#x27; in health/longevity.</td><td class="c-text">Aligned with longevity interest.</td><td class="c-text">n/a.</td><td class="c-text">No financial detail.</td><td class="c-conv">Low.</td></tr><tr class="row-gr"><td class="c-topic"><b>This Too Is Me</b></td><td class="c-text">Meditation product (&#x27;led by Henry&#x27;) Rose finds relaxing; a &#x27;favorite.&#x27;</td><td class="c-text">Wellness interest.</td><td class="c-text">n/a.</td><td class="c-text">No financial detail.</td><td class="c-conv">Low.</td></tr><tr class="row-gr"><td class="c-topic"><b>Exploding Kittens / Alon Lee</b></td><td class="c-text">Alon Lee (co-founder) recommended the Shokz headset Rose uses for walking/dictation.</td><td class="c-text">Source of a product tip, not an investment.</td><td class="c-text">n/a.</td><td class="c-text">n/a.</td><td class="c-conv">Low.</td></tr><tr class="row-gr"><td class="c-topic"><b>Shokz (OpenComm bone-conduction headset)</b></td><td class="c-text">Rose&#x27;s daily walking/dictation hardware; &#x27;audio quality is fantastic.&#x27;</td><td class="c-text">Enables his AI voice-capture workflow.</td><td class="c-text">n/a.</td><td class="c-text">n/a.</td><td class="c-conv">Low.</td></tr></tbody></table></div></div></section><section class="sec" id="tech"><div class="sec-head"><div class="sec-eye">Themes, tools and what matters</div><h2>Technology &amp; AI Views</h2></div><div class="card"><div class="tablewrap"><table><thead><tr><th class="c-topic">Theme</th><th class="c-text">Speaker&#x27;s view</th><th class="c-text">Companies<br>tools</th><th class="c-text">Why it matters</th><th class="c-conv">Horizon</th><th class="c-conv">Conv.</th></tr></thead><tbody><tr><td class="c-topic"><b>AI market consolidation to &#x27;big three&#x27;</b></td><td class="c-text">Bullish on Google/Anthropic/OpenAI as the enduring players; xAI a funded wildcard. &#x27;It&#x27;s the big three.&#x27;</td><td class="c-text">Google, Anthropic, OpenAI, xAI</td><td class="c-text">Frames competitive landscape and where Rose places strategic attention.</td><td class="c-conv">Few years</td><td class="c-conv">High</td></tr><tr><td class="c-topic"><b>Continuous / self-improving learning as the future</b></td><td class="c-text">Predicts shift from discrete model releases to always-learning models (12-18 mo away); Google betting on high-throughput wide-memory architecture. &#x27;Tomorrow it&#x27;ll be better than today, for forever.&#x27;</td><td class="c-text">Google (architecture), all labs</td><td class="c-text">Reframes the &#x27;model drop&#x27; hype cycle; implies compounding advantage to those with full stack.</td><td class="c-conv">12-18 months (prediction)</td><td class="c-conv">High</td></tr><tr><td class="c-topic"><b>AI access commoditization / pricing</b></td><td class="c-text">Expects model access to settle into a cheap &#x27;~$30/month Netflix-type plan.&#x27; Implies limited durable pricing power for labs.</td><td class="c-text">All AI labs</td><td class="c-text">Bearish signal on long-term model-lab margins/pricing.</td><td class="c-conv">Medium-term (prediction)</td><td class="c-conv">Medium</td></tr><tr><td class="c-topic"><b>Gemini strengths</b></td><td class="c-text">Multimodal (audio/video) is &#x27;actually quite good&#x27;; plug-and-play with G Suite; 3.5 Flash &#x27;a great model.&#x27; Rose increasing usage.</td><td class="c-text">Gemini / Google</td><td class="c-text">Real-world product preference signal.</td><td class="c-conv">Current</td><td class="c-conv">Medium</td></tr><tr><td class="c-topic"><b>Grok strengths &amp; inferred weakness</b></td><td class="c-text">Best for current events/synthesis via direct X API. But Rose infers &#x27;no one&#x27;s using Grok&#x27; because Anthropic/Google buy its excess Colossus capacity (&#x27;their product isn&#x27;t working&#x27; for self-use).</td><td class="c-text">Grok / xAI, Colossus, Anthropic, Google</td><td class="c-text">Suggests capacity sold wholesale, not consumed by own product — a utilization red flag (analyst interpretation of speaker claim).</td><td class="c-conv">Current</td><td class="c-conv">Medium</td></tr><tr><td class="c-topic"><b>Full-stack ownership (Google)</b></td><td class="c-text">Google &#x27;owns the full stack&#x27; — chips, models, architecture — but &#x27;constrained by TSMC&#x27; which produces its chips; Samsung/Micron minor others.</td><td class="c-text">Google, TSMC, Samsung, Micron</td><td class="c-text">Vertical integration as moat; TSMC as bottleneck.</td><td class="c-conv">Current</td><td class="c-conv">Medium</td></tr><tr><td class="c-topic"><b>Apple in AI</b></td><td class="c-text">Not written off; &#x27;unique tech,&#x27; but &#x27;probably another couple years out.&#x27; Google powers much of Apple&#x27;s AI.</td><td class="c-text">Apple, Google</td><td class="c-text">Cautious watch on a late mover.</td><td class="c-conv">Couple years (uncertain)</td><td class="c-conv">Low</td></tr><tr><td class="c-topic"><b>AI as angel-investing analytics</b></td><td class="c-text">Rose runs a 20-year retrospective of his angel investing using Claude Code + APIs (inbox analysis, introductions, misses). Tests his &#x27;stories against data.&#x27;</td><td class="c-text">Claude Code, Gmail API</td><td class="c-text">Practical, repeatable AI-for-self-analysis use case.</td><td class="c-conv">Current</td><td class="c-conv">Medium</td></tr><tr><td class="c-topic"><b>Model release cadence</b></td><td class="c-text">Describes fast cadence: &#x27;model trained, released, out&#x27; — e.g. &#x27;Mythos/Fable&#x27; (mis-transcribed name) goes live, next OpenAI model in ~2 weeks. Old software-deployment analogy.</td><td class="c-text">Multiple labs</td><td class="c-text">High velocity of releases; hard to sustain &#x27;moat&#x27; on any single drop.</td><td class="c-conv">Current</td><td class="c-conv">Medium</td></tr></tbody></table></div></div></section><section class="sec" id="wf"><div class="sec-head"><div class="sec-eye">Repeatable systems worth stealing</div><h2>AI Workflows, Tools &amp; Prompts</h2></div><div class="card"><div class="tablewrap"><table class="wf-tbl"><thead><tr><th class="c-wf-name">Workflow</th><th class="c-text">Goal</th><th class="c-text">Tools<br>setup</th><th class="c-text">Approach<br>prompt</th><th class="c-text">Why it works</th></tr></thead><tbody><tr><td class="c-wf-name"><b>Daily voice brain-dump -&gt; Claude cleanup</b></td><td class="c-text">Capture thoughts/rough emails hands-free and turn them into readable output.</td><td class="c-text">WhisperFlow (voice capture, walking) -&gt; note on phone -&gt; Claude (clean up / draft emails). Shokz OpenComm bone-conduction headset for dictation.</td><td class="c-text">1) Walking, dictate a 10-minute brain dump into WhisperFlow. 2) Drop the transcript into Claude. 3) Ask Claude to &#x27;clean it up and turn it into something readable.&#x27; Especially useful for uncomfortable/procrastinated emails.</td><td class="c-text">Lowers activation cost of writing; shockingly fast consolidation. Rose: &#x27;incredibly helpful.&#x27;</td></tr><tr><td class="c-wf-name"><b>20-year angel-investing retrospective</b></td><td class="c-text">Test personal investing narratives against hard data.</td><td class="c-text">Claude Code + various APIs (Gmail API for inbox/introduction analysis).</td><td class="c-text">1) Pull historical data (introductions made, companies replied/not replied to, successes, turned-down deals). 2) Run counterfactuals (&#x27;what if I did the opposite?&#x27;). 3) Compare stories/batting-average claims to actual numbers. Rose: &#x27;I suspected it&#x27;d be worse than it was... missed that many explicit opportunities&#x27; (i.e., not as many as feared).</td><td class="c-text">Forces evidence over anecdote; frequent, logged decisions enable counterfactual review.</td></tr></tbody></table></div></div></section><section class="sec" id="pred"><div class="sec-head"><div class="sec-eye">Bets on the future and their invalidators</div><h2>Predictions &amp; Trends</h2></div><div class="card"><div class="tablewrap"><table><thead><tr><th class="c-topic">Prediction<br>trend</th><th class="c-conv">Horizon</th><th class="c-text">Supporting reasoning</th><th class="c-text">What could invalidate it</th><th class="c-text">Assets affected</th></tr></thead><tbody><tr><td class="c-topic"><b>AI market consolidates to Google, Anthropic, OpenAI as the &#x27;big three,&#x27; with xAI a funded wildcard.</b></td><td class="c-conv">Few years</td><td class="c-text">Capital, talent, full-stack control; &#x27;never count out Elon.&#x27;</td><td class="c-text">Open-source leap (e.g. &#x27;Mythos/Fable&#x27;), regulatory breakups, new entrant.</td><td class="c-text">GOOGL, Anthropic, OpenAI, xAI</td></tr><tr><td class="c-topic"><b>Self-improving / continuous-learning models arrive in ~12-18 months and become the dominant paradigm (&#x27;better tomorrow than today, for forever&#x27;).</b></td><td class="c-conv">12-18 months</td><td class="c-text">Rose: &#x27;everyone is saying&#x27; this; Google betting architecture on it.</td><td class="c-text">Technical plateaus, compute limits, safety/regulatory constraints.</td><td class="c-text">All AI labs; Google advantage if architecture right</td></tr><tr><td class="c-topic"><b>AI model access commoditizes to a cheap &#x27;~$30/month Netflix-type plan.&#x27;</b></td><td class="c-conv">Medium-term</td><td class="c-text">Rose expects settling/affordability; &#x27;extra $30 a month to get all the AI.&#x27;</td><td class="c-text">Differentiated enterprise/agent pricing; compute cost floors; regulatory/licensing.</td><td class="c-text">All AI labs (bearish on pricing power)</td></tr><tr><td class="c-topic"><b>Anthropic and Google buying excess Colossus (xAI) capacity implies Grok&#x27;s own product is underused.</b></td><td class="c-conv">Current (inference)</td><td class="c-text">Rose: they bought capacity &#x27;for themselves&#x27; -&gt; &#x27;no one&#x27;s using Grok.&#x27;</td><td class="c-text">Capacity could be for training/expansion, not just lack of product use; analyst interpretation.</td><td class="c-text">xAI, Anthropic, Google</td></tr><tr><td class="c-topic"><b>Apple is &#x27;another couple years out&#x27; on competitive AI but shouldn&#x27;t be written off.</b></td><td class="c-conv">Couple years (uncertain)</td><td class="c-text">Unique tech; Google powers much of Apple&#x27;s AI currently.</td><td class="c-text">Apple delivers sooner; or falls further behind.</td><td class="c-text">AAPL</td></tr><tr><td class="c-topic"><b>Rapid model-release cadence continues (&#x27;model trained, released, out&#x27;), with next OpenAI model ~2 weeks and a new Gemini &#x27;Sonic&#x27; just launched.</b></td><td class="c-conv">Weeks</td><td class="c-text">Observed release rhythm at recording time.</td><td class="c-text">Compute/regulatory slowdown.</td><td class="c-text">OpenAI, Google</td></tr></tbody></table></div></div></section><section class="sec" id="quotes"><div class="sec-head"><div class="sec-eye">Said it best &mdash; in their own words</div><h2>Notable Quotes</h2></div><div class="card"><p class="muted">No standout verbatim quotes captured for this video.</p></div></section><section class="sec" id="risk"><div class="sec-head"><div class="sec-eye">Where this could be wrong</div><h2>Risks, Counterarguments &amp; Blind Spots</h2></div><div class="card"><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">This is a casual 1h51m conversation, not an investing thesis; most content (mortality, rock climbing, alcohol, ketamine, meditation) is non-financial.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">No public stock holdings, buys, or ticker symbols are explicitly stated by Rose — ownership claims are limited to a philanthropic stake in the U. Washington rapamycin study and a wished-for stake in private WhisperFlow.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">The &#x27;big three&#x27; and &#x27;continuous learning in 12-18 months&#x27; are the speaker&#x27;s reads/predictions, presented as consensus (&#x27;everyone is saying&#x27;), not verified data.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">The inference that &#x27;no one&#x27;s using Grok&#x27; (from Anthropic/Google buying Colossus capacity) is the analyst/speaker&#x27;s interpretation and could be wrong — excess capacity could serve training or other needs.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">Model/company names are auto-captioned with errors: &#x27;Mythos/Fable&#x27; likely refers to a real lab/model; &#x27;Sonic&#x27; and &#x27;3.5 Flash&#x27; reference Gemini versions; verify exact names/dates via primary sources.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">Rose&#x27;s &#x27;~$30/month Netflix plan&#x27; pricing prediction contradicts the heavy capital expenditure of labs and is speculative.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">Longevity claims (rapamycin) are personal/philanthropic conviction, not medical or investment advice; research-stage.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">Timestamps reference a recording date ~July 2026; model-version claims (Gemini Sonic &#x27;launched today,&#x27; OpenAI &#x27;in 2 weeks&#x27;) are per the episode and will date quickly.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">Independently verify: the Colossus capacity arrangement, TSMC-as-Google&#x27;s-chip-foundry claim, and the actual names of the models discussed.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div></div></section><section class="sec" id="take"><div class="sec-head"><div class="sec-eye">What to do with this</div><h2>Best Actionable Takeaways</h2></div><div class="card"><div class="tk" style="--tk-c:var(--brand);--tk-bg:var(--brand-soft)"><div class="tk-ic">&#128161;</div><div class="tk-bd"><div class="tk-title">Track the AI &#x27;big three&#x27; (Google/Anthropic/OpenAI) plus xAI as the strategic set; monitor whether open-source (&#x27;Mythos/Fable&#x27;-type) disrupts consolidation.</div><span class="tk-tag">Speaker claim (analyst framing)</span><div class="tk-detail">Validate the consolidation thesis against current model-leaderboard and funding data.</div></div></div><div class="tk" style="--tk-c:var(--yk);--tk-bg:var(--y)"><div class="tk-ic">&#128161;</div><div class="tk-bd"><div class="tk-title">Investigate the Anthropic/Google -&gt; Colossus (xAI) excess-capacity arrangement as a utilization signal for Grok.</div><span class="tk-tag">Needs verification</span><div class="tk-detail">Confirm via xAI/Anthropic/Google disclosures or reporting whether capacity is for training vs product.</div></div></div><div class="tk" style="--tk-c:var(--brand);--tk-bg:var(--brand-soft)"><div class="tk-ic">&#128161;</div><div class="tk-bd"><div class="tk-title">Adopt Rose&#x27;s &#x27;Claude Code + API&#x27; retrospective workflow to audit your own decisions against data (investing or otherwise).</div><span class="tk-tag">Speaker claim (workflow)</span><div class="tk-detail">Test with your own archived email/notes; run counterfactuals.</div></div></div><div class="tk" style="--tk-c:var(--brand);--tk-bg:var(--brand-soft)"><div class="tk-ic">&#128161;</div><div class="tk-bd"><div class="tk-title">Try the voice-dump -&gt; Claude cleanup loop (WhisperFlow + bone-conduction headset) for frictionless drafting.</div><span class="tk-tag">Speaker claim (workflow)</span><div class="tk-detail">Pilot on a week of walking brain-dumps; measure time saved.</div></div></div><div class="tk" style="--tk-c:var(--gk);--tk-bg:var(--g)"><div class="tk-ic">&#10003;</div><div class="tk-bd"><div class="tk-title">If researching longevity/biotech, note rapamycin dog-aging study (U. Washington) and the &#x27;Whole Earth is Medicine&#x27; / &#x27;This Too Is Me&#x27; names as Rose&#x27;s conviction areas.</div><span class="tk-tag">Speaker claim</span><div class="tk-detail">Independently verify these entities and any public investment vehicles.</div></div></div><div class="tk" style="--tk-c:var(--yk);--tk-bg:var(--y)"><div class="tk-ic">&#128161;</div><div class="tk-bd"><div class="tk-title">Stress-test the &#x27;AI becomes a $30/mo commodity&#x27; thesis against lab economics before treating it as a bear case on AI pricing.</div><span class="tk-tag">Needs verification</span><div class="tk-detail">Model lab cost-per-token trends and enterprise/agent pricing power.</div></div></div><div class="tk" style="--tk-c:var(--brand);--tk-bg:var(--brand-soft)"><div class="tk-ic">&#128161;</div><div class="tk-bd"><div class="tk-title">Watch TSMC as the structural bottleneck in the AI stack (constrains even Google&#x27;s full-stack ambition).</div><span class="tk-tag">Speaker claim (analyst framing)</span><div class="tk-detail">Monitor TSMC capacity, geopolitics, and Samsung/Micron progress.</div></div></div></div></section><section class="sec" id="oth"><div class="sec-head"><div class="sec-eye">Strong convictions, recommendations &amp; non-investment news</div><h2>Other Notable News (Non-Stock)</h2></div><div class="card"><p class="muted">No notable non-stock items in this video.</p></div></section><section class="sec" id="gloss"><div class="sec-head"><div class="sec-eye">Names and terms at a glance</div><h2>Glossary &amp; Entities</h2></div><div class="card"><p class="muted">No additional terms, people, or entities to define for this video.</p></div></section>
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>A grief-heavy episode: Kevin recounts a scare with his 15-year-old dog Toaster and the recent death of tech writer Om Malik; Tim shares that a friend recently died in a plane crash and discusses Tim Urban's essay 'The Tail End' (most people spend ~90-<b>95%</b> of their total time with parents by high school graduation) as the catalyst for making more effort with aging family.</li><li>Tim describes a recent 5-day silent Zen meditation retreat working on a koan, including a brief but vivid experience of 'nothing lacking' during walking meditation, and plugs The Way (a guided meditation app he's invested in, led by teacher Henry Shukman) as a structured alternative to unfocused meditation-app-hopping.</li><li>Both are targeting new physical goals: Kevin is deep into grip/finger-strength training (citing pull-up champion Michael Eckhardt's course and tools like the 'Nug' hangboard) aiming for outdoor multi-pitch climbing despite a fear of heights; Tim discusses a Norwegian 4x4 VO2 max protocol on a Keiser M3i bike that a neuroscientist told him produces hippocampal volumetric changes lasting up to five years.</li><li>Supplement/health updates: both discuss A2 whey protein and Maui Nui venison as protein sources, exogenous ketones (flagging 1,3-butanediol liver-toxicity concerns as contested), and a JAMA-published Phase 3 trial (run at UCSF Neuroscape, a lab Tim has funded) of MM-120 (lysergide, an LSD-like compound) showing dose-dependent, 12-week anxiety relief in generalized anxiety disorder.</li><li>A tangent on psychedelics and dementia: both discuss case reports of high-dose psilocybin and microdosed LSD producing temporary but dramatic verbal lucidity in dementia patients, plus the separately documented phenomenon of 'terminal lucidity' (sudden clarity shortly before death in long-nonverbal patients) — both flag the serious ethical question of administering hallucinogens to someone who can't consent.</li><li>AI discussion: Kevin describes a fully automated home security/automation setup (Ubiquiti cameras + Claude-coded API integrations that recognize specific people, read license plates to open gates, and trigger custom audio); Tim describes using Claude Code plus the Gmail API to run a 20-year retrospective analysis of his own angel-investing decisions, while separately noting AI-assisted writing has reduced his personal motivation to write long-form himself, comparing it to a top Go player's reaction after losing to AlphaGo.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="grief-and-intentional-living">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Personal reflection</span>
+    <span class="theme-status">Ongoing personal practice</span><span class="ttag">health</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Grief, Loss, and Making the Effort While There's Still Time</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>A grief-heavy opening segment</b>: Kevin's dog scare and the death of tech writer Om Malik lead into a broader conversation about mortality and deliberately spending time with aging parents and friends before it's too late.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Kevin recounts a frightening emergency with his 15-year-old dog Toaster (a stress-induced physical episode after a long vet visit) that turned out okay, and separately the recent death of tech writer and early blogger Om Malik, whom Tim had bonded with deeply on an Antarctica trip organized by Matt Mullenweg.</li><li><span class="dot" style="background:#93711b;"></span>Tim credits Mullenweg with introducing him to Tim Urban's ('Wait But Why') essay 'The Tail End,' which visualizes that most people spend roughly 90-<b>95%</b> of their total lifetime hours with their parents by the time they leave for college — Tim says this directly motivated him to start taking deliberate, sometimes emotionally awkward family trips.</li><li><span class="dot" style="background:#93711b;"></span>References Sam Harris's audio piece 'The Last Time,' about the impossibility of recognizing an ordinary moment (like a final ski trip) as the last one while it's happening — both discuss trying to consciously savor activities they suspect may not last forever (Kevin cites doing a trampoline flip at 49 despite bystanders warning him not to).</li><li><span class="dot" style="background:#93711b;"></span>Tim shares that a friend recently died in a plane crash (reportedly the same NetJets incident referenced in the news) and recommends the fantasy novel series 'The Blade Itself' by Joe Abercrombie as an unusually thoughtful exploration of the randomness of death.</li><li><span class="dot" style="background:#93711b;"></span>Both discuss aging parents directly: Kevin's mother has vascular dementia and recently moved into a care facility using AI-based fall-detection technology; Tim reframes the sorrow of loss as simply 'love manifested through sorrow,' not something to try to eliminate but to recognize as a consequence of having cared deeply.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;That gap is just love at the end of the day. Because I wouldn't have it unless I loved this man so much.&#8221;<cite>— Kevin Rose</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="zen-meditation-practice">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">Ongoing personal practice, ~5 years</span><span class="ttag">health</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Deepening a Zen Practice: Koans, a Silent Retreat, and a Structured Meditation App</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>Tim describes a 5-day silent Zen retreat</b> working on a traditional koan under teacher Henry Shukman and his visiting Roshi, including a brief but vivid meditative experience — and both recommend a structured, single-path approach to meditation over app-hopping.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Describes a roughly 2-second experience during walking meditation of 'nothing lacking' — not an emotion, but a steady sense that everything present was already complete, which he was able to bring directly to his teacher for real-time feedback during the retreat's private interview sessions.</li><li><span class="dot" style="background:#3f6b2e;"></span>Recommends The Way, a guided single-path meditation app led by Henry Shukman that Tim and Kevin are both invested in, framing the investment as ideologically motivated (similar to funding a University of Washington dog-aging study) rather than purely financial — cites specific sessions ('Whole Earth Is Medicine,' 'This Too Is Me') as favorites.</li><li><span class="dot" style="background:#3f6b2e;"></span>Explains a physical technique from the app (dropping the jaw an eighth of an inch, moving it forward slightly) that both opens the airway (useful for snoring/mild sleep apnea, which Tim manages separately with a mandibular device) and appears in the meditation instruction itself — framed as ancient trial-and-error wisdom about breath and posture.</li><li><span class="dot" style="background:#3f6b2e;"></span>Kevin notes Tim has stuck with daily meditation for nearly 5 years, in contrast to typical short-lived habit experiments, and credits the consistency itself (rather than any single technique) as the source of visible benefit.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;I had a sense of nothing lacking. Nothing needed to be added and nothing even possibly could be added, and nothing possibly could be taken away.&#8221;<cite>— Tim Ferriss</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="rock-climbing-goal">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">Active training toward a multi-pitch Yosemite climb</span><span class="ttag">health</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Rock Climbing as the Next Big Physical Goal — Grip Training, Not Big Muscle</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>Both are independently gravitating toward rock climbing</b> as a long-term physical practice, citing its social, puzzle-solving, and longevity-friendly qualities over solitary training.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Kevin is training grip and finger strength daily using a course from pull-up world champion Michael Eckhardt and a small wooden hangboard device called the 'Nug' (small enough to fit in a sweatshirt pocket, used with a carabiner and cable machine), aiming eventually for outdoor multi-pitch climbing in Yosemite.</li><li><span class="dot" style="background:#3f6b2e;"></span>Tim, limited for 15 years by a now-surgically-repaired elbow, describes his own travel-friendly training kit: a resistance band for DNS-style core work, an 'Alpha Ball' for mobility, and 'Abrahamson's' protocol (partial-bodyweight hangs, 10 seconds on/50 seconds off, twice daily) developed by climber Emil Abrahamson.</li><li><span class="dot" style="background:#3f6b2e;"></span>Both cite watching older climbers (60s-70s-plus, doing advanced 5.11+ routes at off-peak gym hours) as more inspiring long-term role models than teenage prodigies, framing climbing as a 'play the long game' pursuit rather than a young person's sport.</li><li><span class="dot" style="background:#3f6b2e;"></span>Tim explicitly contrasts climbing's social nature (swapping route 'beta' with strangers) with archery's solitary repetition, saying he's 'had enough' of solo pursuits and wants a physical goal that's also social — both agree to attempt a Yosemite multi-pitch climb together despite Tim's stated fear of heights.</li><li><span class="dot" style="background:#3f6b2e;"></span>Notes climbing's unusual technical-over-brute-strength profile as a draw: cites that some elite female climbers (5.13-5.14 level) cannot do five pull-ups, illustrating that technique and body positioning matter more than raw strength.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Training to not die sooner than is necessary is not sufficient for me — I'd much rather have something that has a deadline.&#8221;<cite>— Tim Ferriss</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="health-stack-update">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">Personal experimentation, not medical advice</span><span class="ttag">health</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Supplement and Recovery Stack: Protein, Contested Ketones, and a Psychedelic GAD Trial</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>A rapid-fire update on current supplements and training tools</b>, alongside a notable clinical trial result for a psychedelic-derived anxiety treatment.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Both use A2 whey protein (lactose-reduced, from a specific cattle genetic variant) for easier digestion; Tim gets roughly <b>40%</b> of his protein from Maui Nui wild-harvested Hawaiian axis deer venison, discussing shelf-life as a practical heuristic for how minimally processed a meat product actually is versus ultra-processed, nitrate-heavy alternatives.</li><li><span class="dot" style="background:#93711b;"></span>Tim flags exogenous ketones containing 1,3-butanediol as a contested topic — some hypothesize liver toxicity risk, though he notes the people making that claim often sell a competing ketone-salt product; separately raises fall/balance risk in older adults using it, given hip fractures are a major mortality risk factor.</li><li><span class="dot" style="background:#93711b;"></span>Discusses a JAMA-published Phase 3 randomized trial of MM-120 (lysergide, an LSD-related compound, made by a company called Delix/formerly MindMed) for generalized anxiety disorder — a five-arm, dose-dependent study (placebo through 200 micrograms) showing meaningful symptom relief lasting up to 12 weeks at doses of 100mcg and above; the trial turns out to have been run at UCSF's Neuroscape lab, which Tim has personally funded.</li><li><span class="dot" style="background:#93711b;"></span>Both discuss case reports of high-dose psilocybin and microdosed LSD producing striking but temporary verbal fluency improvements in dementia patients, plus the documented but unexplained phenomenon of 'terminal lucidity' (sudden coherent lucidity shortly before death in long-nonverbal patients) — both flag the serious ethical question of administering a hallucinogen to someone who cannot meaningfully consent.</li><li><span class="dot" style="background:#93711b;"></span>Tim also mentions using caffeinated 'Nootropic' toothpicks (from a podcaster's product line, ~20-25mg caffeine each) specifically to pace stimulant intake and avoid the escalating-refill pattern of drinking multiple cups of coffee.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;12 weeks of relief with GAD... that's pretty good.&#8221;<cite>— Tim Ferriss</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Both are explicit that none of this is medical advice, and that the psychedelics-for-dementia discussion is based on isolated case reports, not established clinical protocol.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="home-ai-automation">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">Live, in daily use</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Kevin's Fully Automated Home: Cameras, License-Plate Gate Access, and Custom Alerts, All Coded Against an Open API</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>A concrete demo of consumer-grade home automation built by coding directly against a hardware API</b> — no enterprise-scale budget required.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Kevin's existing Ubiquiti home security system (cameras, sensors, water detectors, roughly <b>$200 </b>per camera) has a full API that a friend pointed him toward, which he now codes against directly using Claude to add custom logic beyond the stock app's features.</li><li><span class="dot" style="background:#3f6b2e;"></span>Cameras already use AI to identify specific known people/pets by sight (his dog Toaster gets a small icon overlay when detected); Kevin extended this with conditional automation — e.g. defining a zone by his front door where a loiterer triggers a custom deterrent audio clip through a connected speaker after 30 seconds.</li><li><span class="dot" style="background:#3f6b2e;"></span>Built additional 'if this, then that'-style automations: reading out a live sports score when he walks in the door wearing a team hat during a game, and license-plate recognition that automatically opens his gate when his own car is detected.</li><li><span class="dot" style="background:#3f6b2e;"></span>Frames the key shift as previously-siloed smart home systems (isolated camera apps, separate hub apps) now being unifiable through a common coding layer, making sophisticated, personalized automation newly accessible to any technically curious homeowner rather than requiring an expensive integrator.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;I'm not talking about $10,000 systems. The camera is like $200. Anyone can do this at home.&#8221;<cite>— Kevin Rose</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="ai-self-analysis-and-creativity">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">Ongoing personal experimentation</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Using AI to Audit Your Own Story — and What It's Doing to the Motivation to Write</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>Tim describes using Claude Code plus the Gmail API to fact-check his own investing narrative against 20 years of real data</b> — while separately describing a real motivational cost AI has had on his own long-form writing.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Ran a full 20-year retrospective analysis of his own angel-investing history (which introductions led where, which declined deals became major successes, which passed-on opportunities mattered) specifically to test his own self-told stories against the actual record, rather than trust memory or narrative alone.</li><li><span class="dot" style="background:#93711b;"></span>Notes the exercise 'would have taken a year full-time with multiple people' to do manually, versus a handful of hours of Claude Code running against his email archive — but is candid that the value is partly intellectual enjoyment (treating investing decisions as a scorecard for his own thinking), not purely practical, since 'you could put everything into the S&amp;P 500 and go to bed.'</li><li><span class="dot" style="background:#93711b;"></span>Cites a device worn by a mutual friend that logs stated intentions/statements against later behavior, finding people's self-reported memory of what they said or wanted is typically only about <b>70%</b> accurate to what actually happened — used to illustrate why AI-assisted, data-backed self-analysis catches things pure introspection misses.</li><li><span class="dot" style="background:#93711b;"></span>Describes a real downside: after training AI models on his own writing style, he finds the output so capable that it has measurably reduced his personal motivation to spend 30 hours writing something AI can approximate in 30 seconds — draws a direct comparison to a champion Go player who lost motivation to play competitively after AlphaGo's victory over a top human player.</li><li><span class="dot" style="background:#93711b;"></span>Both note AI is still better as an editorial co-pilot (cleaning up and structuring existing ideas) than as a source of genuinely novel, audience-engaging ideas — that gap, they agree, hasn't closed yet.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;What they can do in 30 seconds is what would take me 30 hours. It really drains the motivation for me to put in those 30 hours.&#8221;<cite>— Tim Ferriss</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">❤️</div><div class="tline"><span class="cat">Health:</span> <span class="txt">Make deliberate, sometimes uncomfortable time with aging parents now — most of your total lifetime hours with them are already spent by the time you leave home.</span></div></div><div class="irow"><div class="ic">🧘</div><div class="tline"><span class="cat">Health:</span> <span class="txt">Choose one structured meditation path over app-hopping between unrelated techniques for more durable practice gains.</span></div></div><div class="irow"><div class="ic">🧗</div><div class="tline"><span class="cat">Health:</span> <span class="txt">Train grip and finger strength specifically (not general size) if rock climbing or similar longevity-friendly sports are a long-term goal.</span></div></div><div class="irow"><div class="ic">🏠</div><div class="tline"><span class="cat">Dev workflow:</span> <span class="txt">Check whether your existing smart-home hardware exposes an API before assuming you need new equipment for custom automation.</span></div></div><div class="irow"><div class="ic">📊</div><div class="tline"><span class="cat">Dev workflow:</span> <span class="txt">Use AI plus your own historical data (email, records) to fact-check your own self-told narratives rather than trusting memory alone.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;Training to not die sooner than is necessary is not sufficient for me — I'd much rather have something that has a deadline.&#8221; <cite>— Tim Ferriss</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Doing something well does not make it important or worth doing in the first place.&#8221; <cite>— Tim Ferriss</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;What they can do in 30 seconds is what would take me 30 hours. It really drains the motivation for me to put in those 30 hours.&#8221; <cite>— Tim Ferriss</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;That gap is just love at the end of the day. Because I wouldn't have it unless I loved this man so much.&#8221; <cite>— Kevin Rose</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Tim Ferriss, citing a JAMA-published trial:</b> MM-120 (lysergide) anxiety relief duration and dose-response in generalized anxiety disorder <span class="cmeta">symptom relief duration and dose threshold · up to 12 weeks of relief, with 100mcg+ doses showing the strongest effect</span> <i>if Phase 3 randomized clinical trial results, five-arm dose comparison</i></div><div class="ritem"><b>Dr. Tommy Wood (cited by Tim Ferriss):</b> Norwegian 4x4 VO2 max training protocol produces lasting brain volumetric changes <span class="cmeta">duration of hippocampal/neuroanatomical benefit · benefits reportedly persisting up to 5 years</span> <i>if based on 3x/week training for 5-6 months</i></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><p class="empty">No company-to-company relationships stated in this video.</p></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><p class="empty">Nothing notable found in this category for this video.</p></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Koan</b> &mdash; A paradoxical question or statement used in Zen Buddhist practice (e.g. 'the sound of one hand clapping') as a meditation focus intended to exhaust ordinary logical thinking and produce direct insight.</div><div><b>Terminal lucidity</b> &mdash; A documented but not fully understood phenomenon in which a person with severe, long-standing cognitive impairment (e.g. advanced dementia) becomes suddenly and fully coherent shortly before death.</div><div><b>Norwegian 4x4 protocol</b> &mdash; A high-intensity interval training method (four minutes at near-maximal effort, three to four minutes of recovery, repeated four times) associated in some research with cardiovascular and cognitive benefits.</div></div></div>
+    </section>
   </div>
 </div>
 </body>

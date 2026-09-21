@@ -1,0 +1,166 @@
+"""Data file for Tim Ferriss & Kevin Rose — The Random Show! Mortality, AI, Supplements, Rock Climbing, & More."""
+
+META = {
+    "title": "The Random Show! Mortality, AI, Supplements, Rock Climbing, & More",
+    "channel": "Tim Ferriss",
+    "speakers": "Tim Ferriss and Kevin Rose (The Random Show)",
+    "date": "2026-07-16",
+    "video_url": "https://youtu.be/JT7QpL4XRtw",
+    "thread_line": "6 threads · grief and living intentionally after losing friends and aging parents, Tim's deepening Zen meditation practice, rock climbing as his next big physical goal, a health/supplement stack update (including a psychedelic GAD drug trial and dementia lucidity case reports), Kevin's home AI automation setup, and how both are using AI for personal retrospective analysis versus creative work.",
+    "category": "dev",
+}
+
+SNAPSHOT = [
+    "A grief-heavy episode: Kevin recounts a scare with his 15-year-old dog Toaster and the recent death of tech writer Om Malik; Tim shares that a friend recently died in a plane crash and discusses Tim Urban's essay 'The Tail End' (most people spend ~90-95% of their total time with parents by high school graduation) as the catalyst for making more effort with aging family.",
+    "Tim describes a recent 5-day silent Zen meditation retreat working on a koan, including a brief but vivid experience of 'nothing lacking' during walking meditation, and plugs The Way (a guided meditation app he's invested in, led by teacher Henry Shukman) as a structured alternative to unfocused meditation-app-hopping.",
+    "Both are targeting new physical goals: Kevin is deep into grip/finger-strength training (citing pull-up champion Michael Eckhardt's course and tools like the 'Nug' hangboard) aiming for outdoor multi-pitch climbing despite a fear of heights; Tim discusses a Norwegian 4x4 VO2 max protocol on a Keiser M3i bike that a neuroscientist told him produces hippocampal volumetric changes lasting up to five years.",
+    "Supplement/health updates: both discuss A2 whey protein and Maui Nui venison as protein sources, exogenous ketones (flagging 1,3-butanediol liver-toxicity concerns as contested), and a JAMA-published Phase 3 trial (run at UCSF Neuroscape, a lab Tim has funded) of MM-120 (lysergide, an LSD-like compound) showing dose-dependent, 12-week anxiety relief in generalized anxiety disorder.",
+    "A tangent on psychedelics and dementia: both discuss case reports of high-dose psilocybin and microdosed LSD producing temporary but dramatic verbal lucidity in dementia patients, plus the separately documented phenomenon of 'terminal lucidity' (sudden clarity shortly before death in long-nonverbal patients) — both flag the serious ethical question of administering hallucinogens to someone who can't consent.",
+    "AI discussion: Kevin describes a fully automated home security/automation setup (Ubiquiti cameras + Claude-coded API integrations that recognize specific people, read license plates to open gates, and trigger custom audio); Tim describes using Claude Code plus the Gmail API to run a 20-year retrospective analysis of his own angel-investing decisions, while separately noting AI-assisted writing has reduced his personal motivation to write long-form himself, comparing it to a top Go player's reaction after losing to AlphaGo.",
+]
+
+THEMES = [
+    {
+        "id": "grief-and-intentional-living",
+        "tags": ["health"],
+        "color": "amber",
+        "badge": "Personal reflection"
+,
+        "status": "Ongoing personal practice",
+        "title": "Grief, Loss, and Making the Effort While There's Still Time",
+        "lead": "**A grief-heavy opening segment**: Kevin's dog scare and the death of tech writer Om Malik lead into a broader conversation about mortality and deliberately spending time with aging parents and friends before it's too late.",
+        "bullets": [
+            "Kevin recounts a frightening emergency with his 15-year-old dog Toaster (a stress-induced physical episode after a long vet visit) that turned out okay, and separately the recent death of tech writer and early blogger Om Malik, whom Tim had bonded with deeply on an Antarctica trip organized by Matt Mullenweg.",
+            "Tim credits Mullenweg with introducing him to Tim Urban's ('Wait But Why') essay 'The Tail End,' which visualizes that most people spend roughly 90-95% of their total lifetime hours with their parents by the time they leave for college — Tim says this directly motivated him to start taking deliberate, sometimes emotionally awkward family trips.",
+            "References Sam Harris's audio piece 'The Last Time,' about the impossibility of recognizing an ordinary moment (like a final ski trip) as the last one while it's happening — both discuss trying to consciously savor activities they suspect may not last forever (Kevin cites doing a trampoline flip at 49 despite bystanders warning him not to).",
+            "Tim shares that a friend recently died in a plane crash (reportedly the same NetJets incident referenced in the news) and recommends the fantasy novel series 'The Blade Itself' by Joe Abercrombie as an unusually thoughtful exploration of the randomness of death.",
+            "Both discuss aging parents directly: Kevin's mother has vascular dementia and recently moved into a care facility using AI-based fall-detection technology; Tim reframes the sorrow of loss as simply 'love manifested through sorrow,' not something to try to eliminate but to recognize as a consequence of having cared deeply.",
+        ],
+        "quote": {"text": "That gap is just love at the end of the day. Because I wouldn't have it unless I loved this man so much.", "cite": "— Kevin Rose"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "zen-meditation-practice",
+        "tags": ["health"],
+        "color": "green",
+        "badge": "Recommendation",
+        "status": "Ongoing personal practice, ~5 years",
+        "title": "Deepening a Zen Practice: Koans, a Silent Retreat, and a Structured Meditation App",
+        "lead": "**Tim describes a 5-day silent Zen retreat** working on a traditional koan under teacher Henry Shukman and his visiting Roshi, including a brief but vivid meditative experience — and both recommend a structured, single-path approach to meditation over app-hopping.",
+        "bullets": [
+            "Describes a roughly 2-second experience during walking meditation of 'nothing lacking' — not an emotion, but a steady sense that everything present was already complete, which he was able to bring directly to his teacher for real-time feedback during the retreat's private interview sessions.",
+            "Recommends The Way, a guided single-path meditation app led by Henry Shukman that Tim and Kevin are both invested in, framing the investment as ideologically motivated (similar to funding a University of Washington dog-aging study) rather than purely financial — cites specific sessions ('Whole Earth Is Medicine,' 'This Too Is Me') as favorites.",
+            "Explains a physical technique from the app (dropping the jaw an eighth of an inch, moving it forward slightly) that both opens the airway (useful for snoring/mild sleep apnea, which Tim manages separately with a mandibular device) and appears in the meditation instruction itself — framed as ancient trial-and-error wisdom about breath and posture.",
+            "Kevin notes Tim has stuck with daily meditation for nearly 5 years, in contrast to typical short-lived habit experiments, and credits the consistency itself (rather than any single technique) as the source of visible benefit.",
+        ],
+        "quote": {"text": "I had a sense of nothing lacking. Nothing needed to be added and nothing even possibly could be added, and nothing possibly could be taken away.", "cite": "— Tim Ferriss"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "rock-climbing-goal",
+        "tags": ["health"],
+        "color": "green",
+        "badge": "Recommendation",
+        "status": "Active training toward a multi-pitch Yosemite climb",
+        "title": "Rock Climbing as the Next Big Physical Goal — Grip Training, Not Big Muscle",
+        "lead": "**Both are independently gravitating toward rock climbing** as a long-term physical practice, citing its social, puzzle-solving, and longevity-friendly qualities over solitary training.",
+        "bullets": [
+            "Kevin is training grip and finger strength daily using a course from pull-up world champion Michael Eckhardt and a small wooden hangboard device called the 'Nug' (small enough to fit in a sweatshirt pocket, used with a carabiner and cable machine), aiming eventually for outdoor multi-pitch climbing in Yosemite.",
+            "Tim, limited for 15 years by a now-surgically-repaired elbow, describes his own travel-friendly training kit: a resistance band for DNS-style core work, an 'Alpha Ball' for mobility, and 'Abrahamson's' protocol (partial-bodyweight hangs, 10 seconds on/50 seconds off, twice daily) developed by climber Emil Abrahamson.",
+            "Both cite watching older climbers (60s-70s-plus, doing advanced 5.11+ routes at off-peak gym hours) as more inspiring long-term role models than teenage prodigies, framing climbing as a 'play the long game' pursuit rather than a young person's sport.",
+            "Tim explicitly contrasts climbing's social nature (swapping route 'beta' with strangers) with archery's solitary repetition, saying he's 'had enough' of solo pursuits and wants a physical goal that's also social — both agree to attempt a Yosemite multi-pitch climb together despite Tim's stated fear of heights.",
+            "Notes climbing's unusual technical-over-brute-strength profile as a draw: cites that some elite female climbers (5.13-5.14 level) cannot do five pull-ups, illustrating that technique and body positioning matter more than raw strength.",
+        ],
+        "quote": {"text": "Training to not die sooner than is necessary is not sufficient for me — I'd much rather have something that has a deadline.", "cite": "— Tim Ferriss"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "health-stack-update",
+        "tags": ["health"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "Personal experimentation, not medical advice",
+        "title": "Supplement and Recovery Stack: Protein, Contested Ketones, and a Psychedelic GAD Trial",
+        "lead": "**A rapid-fire update on current supplements and training tools**, alongside a notable clinical trial result for a psychedelic-derived anxiety treatment.",
+        "bullets": [
+            "Both use A2 whey protein (lactose-reduced, from a specific cattle genetic variant) for easier digestion; Tim gets roughly 40% of his protein from Maui Nui wild-harvested Hawaiian axis deer venison, discussing shelf-life as a practical heuristic for how minimally processed a meat product actually is versus ultra-processed, nitrate-heavy alternatives.",
+            "Tim flags exogenous ketones containing 1,3-butanediol as a contested topic — some hypothesize liver toxicity risk, though he notes the people making that claim often sell a competing ketone-salt product; separately raises fall/balance risk in older adults using it, given hip fractures are a major mortality risk factor.",
+            "Discusses a JAMA-published Phase 3 randomized trial of MM-120 (lysergide, an LSD-related compound, made by a company called Delix/formerly MindMed) for generalized anxiety disorder — a five-arm, dose-dependent study (placebo through 200 micrograms) showing meaningful symptom relief lasting up to 12 weeks at doses of 100mcg and above; the trial turns out to have been run at UCSF's Neuroscape lab, which Tim has personally funded.",
+            "Both discuss case reports of high-dose psilocybin and microdosed LSD producing striking but temporary verbal fluency improvements in dementia patients, plus the documented but unexplained phenomenon of 'terminal lucidity' (sudden coherent lucidity shortly before death in long-nonverbal patients) — both flag the serious ethical question of administering a hallucinogen to someone who cannot meaningfully consent.",
+            "Tim also mentions using caffeinated 'Nootropic' toothpicks (from a podcaster's product line, ~20-25mg caffeine each) specifically to pace stimulant intake and avoid the escalating-refill pattern of drinking multiple cups of coffee.",
+        ],
+        "quote": {"text": "12 weeks of relief with GAD... that's pretty good.", "cite": "— Tim Ferriss"},
+        "watch": "Both are explicit that none of this is medical advice, and that the psychedelics-for-dementia discussion is based on isolated case reports, not established clinical protocol.",
+        "names": None,
+    },
+    {
+        "id": "home-ai-automation",
+        "tags": ["dev-workflow"],
+        "color": "green",
+        "badge": "Recommendation",
+        "status": "Live, in daily use",
+        "title": "Kevin's Fully Automated Home: Cameras, License-Plate Gate Access, and Custom Alerts, All Coded Against an Open API",
+        "lead": "**A concrete demo of consumer-grade home automation built by coding directly against a hardware API** — no enterprise-scale budget required.",
+        "bullets": [
+            "Kevin's existing Ubiquiti home security system (cameras, sensors, water detectors, roughly $200 per camera) has a full API that a friend pointed him toward, which he now codes against directly using Claude to add custom logic beyond the stock app's features.",
+            "Cameras already use AI to identify specific known people/pets by sight (his dog Toaster gets a small icon overlay when detected); Kevin extended this with conditional automation — e.g. defining a zone by his front door where a loiterer triggers a custom deterrent audio clip through a connected speaker after 30 seconds.",
+            "Built additional 'if this, then that'-style automations: reading out a live sports score when he walks in the door wearing a team hat during a game, and license-plate recognition that automatically opens his gate when his own car is detected.",
+            "Frames the key shift as previously-siloed smart home systems (isolated camera apps, separate hub apps) now being unifiable through a common coding layer, making sophisticated, personalized automation newly accessible to any technically curious homeowner rather than requiring an expensive integrator.",
+        ],
+        "quote": {"text": "I'm not talking about $10,000 systems. The camera is like $200. Anyone can do this at home.", "cite": "— Kevin Rose"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "ai-self-analysis-and-creativity",
+        "tags": ["dev-workflow"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "Ongoing personal experimentation",
+        "title": "Using AI to Audit Your Own Story — and What It's Doing to the Motivation to Write",
+        "lead": "**Tim describes using Claude Code plus the Gmail API to fact-check his own investing narrative against 20 years of real data** — while separately describing a real motivational cost AI has had on his own long-form writing.",
+        "bullets": [
+            "Ran a full 20-year retrospective analysis of his own angel-investing history (which introductions led where, which declined deals became major successes, which passed-on opportunities mattered) specifically to test his own self-told stories against the actual record, rather than trust memory or narrative alone.",
+            "Notes the exercise 'would have taken a year full-time with multiple people' to do manually, versus a handful of hours of Claude Code running against his email archive — but is candid that the value is partly intellectual enjoyment (treating investing decisions as a scorecard for his own thinking), not purely practical, since 'you could put everything into the S&P 500 and go to bed.'",
+            "Cites a device worn by a mutual friend that logs stated intentions/statements against later behavior, finding people's self-reported memory of what they said or wanted is typically only about 70% accurate to what actually happened — used to illustrate why AI-assisted, data-backed self-analysis catches things pure introspection misses.",
+            "Describes a real downside: after training AI models on his own writing style, he finds the output so capable that it has measurably reduced his personal motivation to spend 30 hours writing something AI can approximate in 30 seconds — draws a direct comparison to a champion Go player who lost motivation to play competitively after AlphaGo's victory over a top human player.",
+            "Both note AI is still better as an editorial co-pilot (cleaning up and structuring existing ideas) than as a source of genuinely novel, audience-engaging ideas — that gap, they agree, hasn't closed yet.",
+        ],
+        "quote": {"text": "What they can do in 30 seconds is what would take me 30 hours. It really drains the motivation for me to put in those 30 hours.", "cite": "— Tim Ferriss"},
+        "watch": None,
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "❤️", "tag": "Health", "title": "Make deliberate, sometimes uncomfortable time with aging parents now — most of your total lifetime hours with them are already spent by the time you leave home."},
+    {"icon": "\U0001F9D8", "tag": "Health", "title": "Choose one structured meditation path over app-hopping between unrelated techniques for more durable practice gains."},
+    {"icon": "\U0001F9D7", "tag": "Health", "title": "Train grip and finger strength specifically (not general size) if rock climbing or similar longevity-friendly sports are a long-term goal."},
+    {"icon": "\U0001F3E0", "tag": "Dev workflow", "title": "Check whether your existing smart-home hardware exposes an API before assuming you need new equipment for custom automation."},
+    {"icon": "\U0001F4CA", "tag": "Dev workflow", "title": "Use AI plus your own historical data (email, records) to fact-check your own self-told narratives rather than trusting memory alone."},
+]
+
+CLAIMS = [
+    {"who": "Tim Ferriss, citing a JAMA-published trial", "claim": "MM-120 (lysergide) anxiety relief duration and dose-response in generalized anxiety disorder", "metric": "symptom relief duration and dose threshold", "target": "up to 12 weeks of relief, with 100mcg+ doses showing the strongest effect", "by": None, "condition": "Phase 3 randomized clinical trial results, five-arm dose comparison", "entity": None},
+    {"who": "Dr. Tommy Wood (cited by Tim Ferriss)", "claim": "Norwegian 4x4 VO2 max training protocol produces lasting brain volumetric changes", "metric": "duration of hippocampal/neuroanatomical benefit", "target": "benefits reportedly persisting up to 5 years", "by": None, "condition": "based on 3x/week training for 5-6 months", "entity": None},
+]
+
+RELATIONS = []
+
+HOT_TAKES = [
+    {"take": "Training to not die sooner than is necessary is not sufficient for me — I'd much rather have something that has a deadline.", "cite": "— Tim Ferriss", "why": "A specific personal philosophy on fitness motivation, rejecting pure longevity-optimization as sufficient by itself."},
+    {"take": "Doing something well does not make it important or worth doing in the first place.", "cite": "— Tim Ferriss", "why": "A pointed critique of AI-driven productivity culture, made while simultaneously describing his own heavy AI usage."},
+    {"take": "What they can do in 30 seconds is what would take me 30 hours. It really drains the motivation for me to put in those 30 hours.", "cite": "— Tim Ferriss", "why": "A candid, personally costly admission about AI's effect on his own creative motivation, not a hypothetical concern about others."},
+    {"take": "That gap is just love at the end of the day. Because I wouldn't have it unless I loved this man so much.", "cite": "— Kevin Rose", "why": "A specific emotional reframing of grief, offered in direct response to a real recent loss, not as abstract advice."},
+]
+
+OTHER_NEWS = []
+
+GLOSSARY = [
+    {"term": "Koan", "def": "A paradoxical question or statement used in Zen Buddhist practice (e.g. 'the sound of one hand clapping') as a meditation focus intended to exhaust ordinary logical thinking and produce direct insight."},
+    {"term": "Terminal lucidity", "def": "A documented but not fully understood phenomenon in which a person with severe, long-standing cognitive impairment (e.g. advanced dementia) becomes suddenly and fully coherent shortly before death."},
+    {"term": "Norwegian 4x4 protocol", "def": "A high-intensity interval training method (four minutes at near-maximal effort, three to four minutes of recovery, repeated four times) associated in some research with cardiovascular and cognitive benefits."},
+]
