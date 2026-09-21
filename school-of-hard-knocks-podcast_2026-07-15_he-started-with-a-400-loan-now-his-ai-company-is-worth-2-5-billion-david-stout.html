@@ -5,178 +5,255 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Research: He Started With a $400 Loan… Now His AI Company Is Worth $2.5 Billion | David Stout</title>
 <style>
-.backlink{margin-bottom:12px;}
-.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
-.backlink a:hover{color:var(--brand);border-color:var(--brand);}
-
 :root{
   --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
-  --brand:#8a5a2e; --brand-soft:#f4e9db;
-  --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
-  --g:#eaf3e6; --gk:#3f6b2e; --r:#f8ebe6; --rk:#a23f22;
-  --y:#f8f0dd; --yk:#93711b; --gr:#eeece3; --grk:#65695f;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-  font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased;}
-.page{max-width:1720px;width:100%;margin:0 auto;background:var(--card);min-height:100vh;
-  box-shadow:0 0 0 1px var(--line);}
-.hero{padding:clamp(18px,2.4vw,34px) clamp(20px,4vw,56px) clamp(14px,1.8vw,22px);
-  border-bottom:1px solid var(--line);}
-.hero .kicker{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--brand);margin-bottom:10px;}
-.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(28px,3vw,42px);line-height:1.15;
-  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:38ch;}
-.hero-row{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;
-  border-top:1px solid var(--line);padding-top:12px;}
-.hero .meta{color:var(--muted);font-size:15px;line-height:1.55;}
-.hero .meta b{color:var(--ink);font-weight:600;}
-.hero .stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:14.5px;margin-top:4px;}
-.watch-btn{flex:none;display:inline-flex;align-items:center;gap:7px;background:var(--brand);color:#fffdf8;
-  text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.01em;padding:9px 18px;
-  border-radius:999px;white-space:nowrap;transition:.15s;}
-.watch-btn:hover{background:#734a24}
-.inner{padding:10px clamp(20px,4vw,56px) 44px;}
-.sec{margin:0;padding:34px 0;border-top:1px solid var(--line);}
-.sec:first-child{border-top:none;padding-top:20px;}
-.sec-head{margin-bottom:16px;}
-.sec-eye{font-family:var(--serif);font-style:italic;font-size:14.5px;color:var(--brand);margin-bottom:4px;}
-.sec h2{font-family:var(--serif);margin:0;font-size:clamp(22px,2vw,27px);font-weight:600;color:#171916;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
   border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
-.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:26px 28px;}
-.snap{list-style:none;margin:0;padding:0;max-width:1200px;}
-.snap li{position:relative;padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:16.5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
 .snap li:last-child{border-bottom:none}
-.snap b{color:#171916}
-.badge{display:inline-block;padding:4px 12px;border-radius:3px;font-size:12.5px;font-weight:700;
-  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;}
-.g{background:var(--g);color:var(--gk)} .r{background:var(--r);color:var(--rk)}
-.y{background:var(--y);color:var(--yk)} .gr{background:var(--gr);color:var(--grk)}
-.muted{color:var(--muted);font-size:13.5px;font-weight:400}
-.legend{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0 0;}
-.legend span{display:inline-flex;align-items:center;gap:7px}
-.legend .dot{width:10px;height:10px;border-radius:50%}
-.legend .dot.g{background:var(--gk)} .legend .dot.r{background:var(--rk)}
-.legend .dot.y{background:var(--yk)} .legend .dot.gr{background:var(--grk)}
-.legend .t{font-size:13px;color:var(--muted)}
-.tablewrap{overflow-x:auto;}
-table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:15.5px;}
-th,td{text-align:left;padding:12px 14px;vertical-align:top;border-bottom:1px solid var(--line);
-  overflow-wrap:break-word;word-break:break-word;}
-th{font-family:var(--serif);font-weight:600;font-style:italic;color:var(--brand);font-size:15px;
-  padding:8px 14px 10px;border-bottom:2px solid var(--brand);}
-tbody tr{transition:background .12s}
-tbody tr:hover{background:#f5efe2}
-tr.row-g:hover{background:var(--g)}
-tr.row-r:hover{background:var(--r)}
-tr.row-y:hover{background:var(--y)}
-tr.row-gr:hover{background:var(--gr)}
-tr[class*="row-"] td:first-child{position:relative;padding-left:26px;}
-tr[class*="row-"] td:first-child::before{content:"";position:absolute;left:10px;top:8px;bottom:8px;
-  width:7px;border-radius:5px;background:var(--line);}
-tr.row-g td:first-child::before{background:var(--gk)}
-tr.row-r td:first-child::before{background:var(--rk)}
-tr.row-y td:first-child::before{background:var(--yk)}
-tr.row-gr td:first-child::before{background:var(--grk)}
-tr.conv-hi td:first-child::before{width:8px}
-tr.conv-md td:first-child::before{width:6px}
-tr.conv-lo td:first-child::before{width:4px;opacity:.6}
-.c-topic{width:13%;min-width:110px}
-.c-cat{width:8%;min-width:70px}
-.c-stance{width:6%;min-width:64px}
-.c-conv{width:7%;min-width:70px}
-.c-act{width:16%} .c-text{width:auto}
-.wf{border:1px solid var(--line);border-left:3px solid var(--brand);padding:16px 18px;margin:12px 0;
-  background:#fffefb;}
-.wf-name{font-family:var(--serif);font-weight:600;font-size:18px;color:#171916;margin-bottom:7px;}
-.wf-row{margin:5px 0;font-size:15px;color:#3a3d35}
-.wf-row .lbl{display:inline-block;min-width:128px;font-weight:600;color:var(--brand);
-  font-style:italic;font-family:var(--serif);}
-.c-wf-name{width:14%;min-width:140px}
-table.wf-tbl td:first-child b{font-weight:700;color:#171916}
-.tk{position:relative;display:flex;gap:14px;align-items:flex-start;background:#fffefb;
-  border:1px solid var(--line);border-radius:12px;padding:14px 16px 14px 26px;margin:11px 0;max-width:1200px;
-  transition:background .12s;}
-.tk:hover{background:var(--tk-bg,var(--brand-soft))}
-.tk::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
-  background:var(--tk-c,var(--brand));}
-.tk-ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
-  font-size:14px;background:var(--tk-bg,var(--brand-soft));line-height:1;}
-.tk-bd{flex:1;min-width:0}
-.tk-title{font-weight:600;font-size:15.5px;color:#171916;line-height:1.42;margin-bottom:5px;}
-.tk-tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:13.5px;font-weight:600;
-  letter-spacing:.01em;padding:0;background:none;color:var(--tk-c,var(--brand));}
-.tk-detail{margin-top:5px;font-size:14px;color:#4a4d44;line-height:1.55;}
-.risk{position:relative;display:flex;gap:14px;align-items:flex-start;background:#fffefb;
-  border:1px solid var(--line);border-radius:12px;padding:14px 16px 14px 26px;margin:11px 0;max-width:1200px;
-  transition:background .12s;}
-.risk:hover{background:var(--r)}
-.risk::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
-  background:var(--rk);}
-.risk-ic{flex:none;width:28px;height:28px;border-radius:6px;display:grid;place-items:center;
-  font-size:14px;background:var(--r);line-height:1;}
-.risk-bd{flex:1;min-width:0}
-.risk-title{font-weight:500;font-size:15px;color:#171916;line-height:1.5;}
-.quote{font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.55;color:#2c2f28;
-  border-left:3px solid var(--brand);padding:7px 0 7px 22px;margin:16px 0;max-width:900px;}
-.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
-  color:var(--muted);margin-top:7px;}
-.quote-ctx{font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;color:var(--muted);margin-top:4px;}
-.gloss{display:grid;grid-template-columns:repeat(3,1fr);gap:10px 30px;}
-.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:14.3px;line-height:1.55;}
-.gloss b{font-family:var(--serif);color:#171916}
-ul,ol{margin:5px 0;padding-left:22px} li{margin:4px 0}
-ol li::marker{font-weight:700;color:var(--brand)}
-@media(max-width:1300px){
-  .gloss{grid-template-columns:1fr 1fr}
-}
-@media(max-width:900px){
-  body{font-size:16px}
-  .hero h1{font-size:26px}
-  .sec h2{font-size:22px}
-  .c-cat{display:none} th:nth-child(2),td:nth-child(2){display:none}
-  .gloss{grid-template-columns:1fr}
-  table{table-layout:auto}
-  .c-topic{width:auto;min-width:100px}
-  .hero-row{flex-direction:column;align-items:flex-start;gap:14px}
-}
-@media(max-width:620px){
-  body{font-size:15px}
-  .c-conv{display:none} th:nth-child(4),td:nth-child(4){display:none}
-  table{font-size:13.5px} th,td{padding:9px 9px}
-  .wf-row .lbl{display:block;min-width:0;margin-bottom:2px}
-  .quote{font-size:18px}
-}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
 </style>
 </head>
 <body>
 <div class="page">
   <header class="hero">
     <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
-
     <div class="kicker">A YouTube Research Brief</div>
     <h1>He Started With a $400 Loan… Now His AI Company Is Worth $2.5 Billion | David Stout</h1>
-    <div class="hero-row">
-      <div class="meta">
-        Channel: <b>School of Hard Knocks Podcast</b> &middot; Speaker: <b>School of Hard Knocks Podcast</b> &middot; <b>2026-07-15</b>
-        <div class="stats-line">8 conviction calls &middot; 5 companies tracked &middot; 25% high conviction</div>
-      </div>
-      <a class="watch-btn" href="https://www.youtube.com/watch?v=h-X3h9L4gU8" target="_blank" rel="noopener">Watch on YouTube &#8599;</a>
+    <div class="byline">
+      Channel: <b>School of Hard Knocks Podcast</b> &middot; Speaker: <b>David Stout (WebAI founder/CEO, guest), James, Jack, and Josh (School of Hard Knocks Podcast hosts)</b> &middot; <b>2026-07-15</b>
+      <div class="stats-line">5 threads · WebAI's origin story from a $400 grandfather loan to a $2.5B valuation built on edge/on-device AI, David Stout's thesis that specialized models beat general foundation-model intelligence, WebAI's upcoming local-AI consumer app launch, his critique of data center buildout economics, and lessons on fundraising, recruiting, and faith-driven leadership. &middot; <a href="https://www.youtube.com/watch?v=h-X3h9L4gU8" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
     </div>
   </header>
   <div class="inner">
-    <section class="sec" id="snap"><div class="sec-head"><div class="sec-eye">The one-paragraph takeaway</div><h2>Video Snapshot</h2></div><div class="card"><ol class="snap"><li>David Stout, founder of WebAI (valued at $2.5B, ~200 employees), recounts building an on-device AI company from a $400 loan from his grandfather and one shared computer in a Michigan dorm room.</li><li>The conversation covers: the origin of WebAI&#x27;s local-first AI thesis (2016, pre-transformer era), overcoming investor skepticism that &quot;serious AI can&#x27;t come from Michigan,&quot; the pivot from web services ($750K/yr in college) to deep tech, raising capital after proving the technology works, and a vision for &quot;owning your intelligence&quot; rather than renting it from Big Tech.</li><li>Key themes: decentralized AI ownership, edge inference as a constitutional right (Second Amendment analogy), recruiting through relationships not recruiters, faith as a leadership anchor, and the existential risk of centralized data-center AI.</li><li>Stout owns ~50% of WebAI; the company is bootstrapped until recently, now raising for a consumer product launch from Austin headquarters.</li></ol></div></section><section class="sec" id="conv"><div class="sec-head"><div class="sec-eye">What they actually believe &mdash; and how strongly</div><h2>Conviction Map</h2></div><div class="card"><div class="tablewrap"><table><thead><tr><th class="c-topic">Topic<br>Asset</th><th class="c-cat">Cat.</th><th class="c-conv">Conv.</th><th class="c-act">Action status</th><th class="c-text">Core thesis</th><th class="c-text">Risks<br>conditions</th></tr></thead><tbody><tr class="row-g conv-hi"><td class="c-topic"><b>WebAI (private)</b></td><td class="c-cat">AI company</td><td class="c-conv">High</td><td class="c-act">OWNS (~50%)</td><td class="c-text">On-device AI that lets individuals own their intelligence; specialized models create more value than general-purpose giants</td><td class="c-text">Execution risk on consumer product; capital intensity; talent wars; market timing</td></tr><tr class="row-g conv-hi"><td class="c-topic"><b>On-device / Edge AI</b></td><td class="c-cat">Technology trend</td><td class="c-conv">High</td><td class="c-act">BUILDING</td><td class="c-text">Latency, privacy, and data gravity demand local inference; &quot;AI back home&quot; like Second Amendment right to own intelligence</td><td class="c-text">Model compression limits; hardware fragmentation; developer adoption</td></tr><tr class="row-g conv-md"><td class="c-topic"><b>Specialized AI models</b></td><td class="c-cat">Technology trend</td><td class="c-conv">Medium</td><td class="c-act">WATCHING</td><td class="c-text">Narrow, task-specific models outperform general models on cost/performance for real applications</td><td class="c-text">Market fragmentation; maintenance burden; generalization gaps</td></tr><tr class="row-g conv-md"><td class="c-topic"><b>Decentralized AI ownership</b></td><td class="c-cat">Macro theme</td><td class="c-conv">Medium</td><td class="c-act">ADVOCATING</td><td class="c-text">Centralized AI creates systemic risk; individuals/companies should own their models and data</td><td class="c-text">Regulatory capture by incumbents; network effects favor centralization</td></tr><tr class="row-r conv-md"><td class="c-topic"><b>Data center concentration risk</b></td><td class="c-cat">Risk theme</td><td class="c-conv">Medium</td><td class="c-act">WARNING</td><td class="c-text">Massive centralized data centers are fragile (power, regulation, geopolitical); single points of failure</td><td class="c-text">Counter: economies of scale may keep winning; nuclear power solves energy</td></tr><tr class="row-y conv-lo"><td class="c-topic"><b>Consumer AI product (WebAI)</b></td><td class="c-cat">Product</td><td class="c-conv">Low</td><td class="c-act">PRE-LAUNCH</td><td class="c-text">Upcoming consumer product from Austin HQ; &quot;big news coming soon&quot;</td><td class="c-text">No details disclosed; crowded market; distribution challenge</td></tr><tr class="row-g conv-lo"><td class="c-topic"><b>Recruiting via relationships</b></td><td class="c-cat">Talent strategy</td><td class="c-conv">Low</td><td class="c-act">PRACTICING</td><td class="c-text">Best talent comes from trusted networks, not recruiters; &quot;we need more people building good things in Austin&quot;</td><td class="c-text">Doesn&#x27;t scale; insular culture risk</td></tr><tr class="row-gr conv-lo"><td class="c-topic"><b>Faith-led leadership</b></td><td class="c-cat">Leadership philosophy</td><td class="c-conv">Low</td><td class="c-act">PERSONAL</td><td class="c-text">Faith provides framework for persistence, morality in AI, and legacy orientation</td><td class="c-text">Not a replicable business framework</td></tr></tbody></table></div><p class="muted legend"><span><span class="dot g"></span><span class="t">green = owns / buying / positive</span></span><span><span class="dot r"></span><span class="t">red = sold / avoids / negative</span></span><span><span class="dot y"></span><span class="t">yellow = watching / uncertain</span></span><span><span class="dot gr"></span><span class="t">gray = casual mention</span></span></p></div></section><section class="sec" id="cos"><div class="sec-head"><div class="sec-eye">Positions, views and why they care</div><h2>Stocks, Funds &amp; Companies</h2></div><div class="card"><div class="tablewrap"><table><thead><tr><th class="c-topic">Company<br>Ticker</th><th class="c-text">Speaker view</th><th class="c-text">Why they care</th><th class="c-text">Catalysts</th><th class="c-text">Risks</th><th class="c-conv">Evidence</th></tr></thead><tbody><tr class="row-g"><td class="c-topic"><b>WebAI</b></td><td class="c-text">Founder/CEO; ~50% ownership</td><td class="c-text">Built from $400 loan; $2.5B valuation; 200 employees; on-device AI pioneer</td><td class="c-text">Consumer product launch; capital raise; enterprise adoption</td><td class="c-text">Execution on consumer product; talent retention; capital needs</td><td class="c-conv">Strong — explicit statements throughout</td></tr><tr class="row-gr"><td class="c-topic"><b>NVIDIA (NVDA)</b></td><td class="c-text">Implicitly critical of chip dependency</td><td class="c-text">On-device AI reduces need for massive GPU clusters</td><td class="c-text">Edge chip innovation; Blackwell architecture</td><td class="c-text">Moat in training; CUDA lock-in; data center demand still growing</td><td class="c-conv">Weak — inferred from &quot;chips on shoulder&quot; comment</td></tr><tr class="row-r"><td class="c-topic"><b>OpenAI / Anthropic / Google (PRIVATE/PUBLIC)</b></td><td class="c-text">Centralized &quot;rent your intelligence&quot; model</td><td class="c-text">Contrast to WebAI&#x27;s ownership thesis</td><td class="c-text">Regulatory pressure; open-source competition; cost pressure</td><td class="c-text">Massive distribution; brand trust; reasoning capabilities</td><td class="c-conv">Medium — explicit criticism of centralized approach</td></tr><tr class="row-gr"><td class="c-topic"><b>Tesla (TSLA)</b></td><td class="c-text">Referenced for Darknet model / FSD vision</td><td class="c-text">Example of edge AI at scale (object detection on vehicle)</td><td class="c-text">FSD progress; Dojo supercomputer</td><td class="c-text">Different problem domain (automotive vs general edge)</td><td class="c-conv">Weak — single passing reference</td></tr><tr class="row-gr"><td class="c-topic"><b>Mark Andreessen / a16z</b></td><td class="c-text">Referenced as investor Stout follows on Twitter</td><td class="c-text">Signals tech investor sentiment</td><td class="c-text">—</td><td class="c-text">—</td><td class="c-conv">Weak — name drop only</td></tr></tbody></table></div></div></section><section class="sec" id="tech"><div class="sec-head"><div class="sec-eye">Themes, tools and what matters</div><h2>Technology &amp; AI Views</h2></div><div class="card"><div class="tablewrap"><table><thead><tr><th class="c-topic">Theme</th><th class="c-text">Speaker&#x27;s view</th><th class="c-text">Companies<br>tools</th><th class="c-text">Why it matters</th><th class="c-conv">Horizon</th><th class="c-conv">Conv.</th></tr></thead><tbody><tr><td class="c-topic"><b>On-device / Local AI inference</b></td><td class="c-text">Core thesis: AI must run on user&#x27;s hardware for privacy, latency, ownership, and resilience. Started in 2016 (pre-transformer), proved on i3 processor in dorm room.</td><td class="c-text">WebAI stack; Darknet (YOLO); TensorRT; ONNX Runtime; i3/i5/i7 CPUs; NPUs</td><td class="c-text">Eliminates data center dependency; keeps data local; works offline; &quot;AI back home&quot;</td><td class="c-conv">Now — shipping</td><td class="c-conv">High</td></tr><tr><td class="c-topic"><b>Specialized vs. General models</b></td><td class="c-text">Specialized, narrow models create more practical value per compute dollar. General models are &quot;intense&quot; but most applications need specific capabilities.</td><td class="c-text">WebAI model zoo; task-specific distillation</td><td class="c-text">Cost/performance for real deployments; avoids over-provisioning</td><td class="c-conv">1-3 years</td><td class="c-conv">High</td></tr><tr><td class="c-topic"><b>Data gravity &amp; connectivity</b></td><td class="c-text">Data centers are too far from data sources (farms, factories, devices). Sending TB of video to cloud is infeasible. &quot;Latency kills it.&quot;</td><td class="c-text">Edge deployments; 5G/Starlink mentioned as sparse</td><td class="c-text">Physical constraint favors edge; bandwidth costs; privacy regulations</td><td class="c-conv">Now</td><td class="c-conv">High</td></tr><tr><td class="c-topic"><b>AI as constitutional right (Second Amendment analogy)</b></td><td class="c-text">Individuals/companies should have right to &quot;own AI&quot; — not rent from Big Tech. Mirrors right to bear arms for self-defense.</td><td class="c-text">WebAI philosophy; policy advocacy</td><td class="c-text">Frames decentralization as liberty issue; resonates with US political culture</td><td class="c-conv">Long-term narrative</td><td class="c-conv">Medium</td></tr><tr><td class="c-topic"><b>Centralized data center fragility</b></td><td class="c-text">Massive GPU clusters create single points of failure: power grid, regulation, geopolitics, cooling. &quot;Nobody&#x27;s prepared for what&#x27;s coming.&quot;</td><td class="c-text">Nuclear power for data centers; NY datacenter bans mentioned</td><td class="c-text">Systemic risk if AI concentrates in few facilities</td><td class="c-conv">5-10 years</td><td class="c-conv">Medium</td></tr><tr><td class="c-topic"><b>Model compression / quantization</b></td><td class="c-text">Key enabler: taking large models and making them run on consumer hardware. Darknet → TensorRT pipeline.</td><td class="c-text">INT8 quantization; pruning; knowledge distillation</td><td class="c-text">Makes edge AI economically viable</td><td class="c-conv">Now</td><td class="c-conv">High</td></tr><tr><td class="c-topic"><b>Consumer hardware as AI substrate</b></td><td class="c-text">Phones, laptops, local servers have unused compute. &quot;My phone, my laptop... my computer think?&quot;</td><td class="c-text">Apple Neural Engine; Qualcomm Hexagon; Intel NPU; AMD Ryzen AI</td><td class="c-text">Massive installed base; zero marginal cost for inference</td><td class="c-conv">1-2 years</td><td class="c-conv">High</td></tr><tr><td class="c-topic"><b>Investor skepticism on non-SV AI</b></td><td class="c-text">Early investors rejected WebAI: &quot;serious AI innovation can&#x27;t come from Michigan.&quot; Proved them wrong.</td><td class="c-text">Unnamed VCs; later investors after tech proof</td><td class="c-text">Geographic bias persists; proof &gt; pedigree</td><td class="c-conv">Historical</td><td class="c-conv">Medium</td></tr></tbody></table></div></div></section><section class="sec" id="wf"><div class="sec-head"><div class="sec-eye">Repeatable systems worth stealing</div><h2>AI Workflows, Tools &amp; Prompts</h2></div><div class="card"><div class="tablewrap"><table class="wf-tbl"><thead><tr><th class="c-wf-name">Workflow</th><th class="c-text">Goal</th><th class="c-text">Tools<br>setup</th><th class="c-text">Approach<br>prompt</th><th class="c-text">Why it works</th></tr></thead><tbody><tr><td class="c-wf-name"><b>WebAI Development Stack (2016-Present)</b></td><td class="c-text">Run neural networks on consumer CPUs (i3/i5) with acceptable latency for real-time vision tasks</td><td class="c-text">Darknet (YOLO) → TensorRT / ONNX Runtime → INT8 quantization → custom runtime for edge deployment. Single shared computer in dorm → Austin HQ with 200 people.</td><td class="c-text">1. Start with open-source models (Darknet/YOLO)
-2. Quantize to INT8 for CPU inference
-3. Build custom runtime avoiding heavy dependencies
-4. Optimize for specific hardware (x86, ARM, NPU)
-5. Package as deployable SDK for customers</td><td class="c-text">Model compression + hardware-specific optimization beats throwing GPUs at the problem. 2016 start meant they solved hard problems before transformer hype.</td></tr><tr><td class="c-wf-name"><b>Recruiting Workflow: Trust Network Over Recruiters</b></td><td class="c-text">Hire exceptional engineers without traditional recruiting</td><td class="c-text">—</td><td class="c-text">&quot;We need more people building good things in Austin... relationships for you. When it&#x27;s all said and done, how do you want to be remembered?&quot; Hire from trusted circles; co-founder Ethan from college; brothers as early team; referrals from existing team.</td><td class="c-text">High-trust hires align on mission; lower attrition; cultural cohesion. &quot;Broken family&quot; dynamics modeled as brothers — deep loyalty survives stress.</td></tr><tr><td class="c-wf-name"><b>Fundraising Strategy: Prove First, Raise Later</b></td><td class="c-text">Raise capital without diluting early or accepting bad terms</td><td class="c-text">—</td><td class="c-text">Bootstrap with revenue (web services $750K/yr) → Build tech in stealth → Demo working on-device AI → Raise at $2.5B valuation owning ~50%. &quot;Committing to local AI despite investor skepticism.&quot;</td><td class="c-text">Technical proof eliminates narrative risk. Investors fund working systems, not slides. Geographic bias (Michigan) overcome by undeniable demo.</td></tr><tr><td class="c-wf-name"><b>Leadership Decision Framework</b></td><td class="c-text">Make hiring, strategy, and personal decisions</td><td class="c-text">—</td><td class="c-text">Prompt pattern: &quot;What would make it so that when it&#x27;s all said and done, how do you want to be remembered?&quot; — used for hiring, strategy, and personal decisions.
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>David Stout co-founded WebAI (with high school friend Ethan) starting with a <b>$400 </b>loan from his grandfather to buy a shared computer; the company is now informally valued around $2.5 billion, with Stout retaining roughly 50% ownership — he dropped out of a small Michigan business school (Davenport) after his freshman-year web services startup was already earning $750,000/year with 60 clients.</li><li>WebAI's founding insight (circa 2016-2018) was that AI needed to run locally on-device rather than depend on distant data centers, since latency makes cloud-dependent computer vision (e.g. object detection for cameras) impractical — this 'edge AI' thesis was widely dismissed at the time, including reportedly by someone in a room at a16z who said the market wasn't big enough.</li><li>Stout argues foundation-model 'general intelligence' from labs like Anthropic and OpenAI is becoming a commoditized level playing field, and that real competitive value is shifting to specialized, proprietary models trained on tacit, non-internet data (e.g. how a steel foundry is run, how chicken is packaged) — he cites Palantir CEO Alex Karp's public prediction that most AI companies won't exist in two years as directionally correct for generalist plays, though not for WebAI's specialization strategy.</li><li>WebAI is launching a consumer product (expected August 2026) that runs entirely on-device with no data center dependency, letting users build 'personas' — specialized collaborative models trained on their own files and knowledge — arguing this shifts AI ownership from rented subscriptions to something users permanently own and can pass on.</li><li>Stout is sharply critical of the current data center buildout, framing it (via a Union Pacific railroad analogy) as a capital-intensive bet likely to be technologically obsolete before it pays off, and cites a real example of a Northern Virginia plant nursery bulldozed for a data center on a former Civil War battlefield site as illustrative of the trade-offs being made.</li><li>Closes on leadership and personal philosophy: recruited senior talent (including a former Pentagon Office of Strategic Capital director and a former SCSP AI strategist under Eric Schmidt) via referrals from board member Dave Burnham of Benchmark Capital, credits early investor David Schuman for taking a chance on an unknown Michigan founder, and discusses his Christian faith and mentorship as central to how he wants to lead and be remembered.</li></ol></div>
+    </section>
 
-Faith integration: &quot;You can&#x27;t regulate morality... I think the best possible future for AI is one that kind of mimics the Second Amendment.&quot; Faith provides moral compass for AI ethics, not just business strategy.</td><td class="c-text">—</td></tr><tr><td class="c-wf-name"><b>Practical AI Adoption Advice (from Stout)</b></td><td class="c-text">Guide founders, enterprises, and individuals on AI adoption</td><td class="c-text">—</td><td class="c-text">For Founders: &quot;Focus on a problem that nobody understands yet... the job&#x27;s not done for the whole winter.&quot; Persistence through &quot;lumpy&quot; revenue; cut wood in summer for winter.
+    
+<section class="theme" id="webai-origin-edge-ai">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">Confirmed trajectory — from $400 loan to ~$2.5B valuation</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">From a $400 Grandfather Loan to a $2.5B AI Company, Built on an Edge-AI Bet Nobody Wanted</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>WebAI's founding thesis was contrarian from day one:</b> AI needed to run on local devices, not distant data centers, at a time (2016-2018) when most investors doubted AI was even real, let alone that on-device AI was a viable market.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Stout and co-founder Ethan met in high school, ran a profitable web services company together as college freshmen (<b>$750K</b>/year, 60 clients), then pivoted to studying machine learning around 2016 after Stout grew bored with easy website work and wanted a harder, more overlooked problem.</li><li><span class="dot" style="background:#3f6b2e;"></span>The founding epiphany: trying to run early computer-vision models (a 'darknet' object-detection model, similar to what powers Tesla's driving system) in a college dorm on an i3 processor revealed that sending video data to a distant data center and back introduced too much latency to be usable — this became WebAI's singular focus: making AI work directly on-device.</li><li><span class="dot" style="background:#3f6b2e;"></span>The idea was initially rejected broadly, including reportedly at an a16z meeting where someone in the room said edge AI wasn't a big enough market — Stout frames this as a case where founders should distinguish between 'nobody cares because it's a bad idea' and 'nobody understands it yet,' the latter being where real opportunity often hides.</li><li><span class="dot" style="background:#3f6b2e;"></span>The pivotal fundraising moment came from proving the technology (a working demo of AI running on a laptop with no cloud) rather than pitching an idea — Stout argues raising money on an unproven idea is how founders lose disproportionate equity, since investors price in the risk they're absorbing.</li><li><span class="dot" style="background:#3f6b2e;"></span>Early investor David Schuman (an early backer of Oura Ring) discovered Stout via an NSA report on AI researchers and personally traveled to Michigan to meet him, despite other Bay Area funds reportedly telling Schuman there were no credible AI scientists in Michigan — several of those same funds have since invested in WebAI.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Your job as a founder is to reduce risk every day. That means you retain more, your company is worth more.&#8221;<cite>— David Stout</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Palantir (PLTR)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Cited for comparison on public-sector growth speed; CEO Alex Karp's predictions on AI company survival discussed at length.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">WebAI's $2.5B figure is described in the interview as a 'public valuation' but the company has no public stock ticker — it reflects private/secondary market pricing, not a listed equity valuation.</div></div>
+    </div>
+  </div>
+</section>
 
-For Enterprises: Don&#x27;t send data to cloud. Run models locally. &quot;Get AI back home.&quot; Start with specific, narrow use cases (object detection, anomaly detection) not general chat.
+<section class="theme" id="specialized-models-thesis">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">WATCHING — foundation model economics under pressure</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">'General Intelligence Doesn't Win': Why Specialized Models Beat Foundation Labs</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>Stout's core business thesis is that frontier foundation models (Claude, GPT) are becoming a commoditized level playing field</b>, and that durable competitive advantage will come from narrow, proprietary specialization instead.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Argues that once every company has access to the same frontier-level model (his example: two competitors both using the same 'Opus'-tier model), the model itself stops being a differentiator — the only edge left is which questions you know to ask and what proprietary, non-internet data you can bring to it.</li><li><span class="dot" style="background:#93711b;"></span>Cites Palantir CEO Alex Karp's public statement that most AI companies won't exist within two years as directionally true, specifically for companies whose entire value proposition is wrapping a generic foundation model with no real specialization — notes Karp himself described Palantir as having been a 'delivery mechanism' for Anthropic six months earlier, then treating Anthropic as a supply-chain risk more recently.</li><li><span class="dot" style="background:#93711b;"></span>Describes WebAI's own approach as training specialized models on genuinely tacit industry knowledge unavailable on the public internet (how a steel foundry is run, how chicken is packaged), explicitly contrasted with legal-AI company Harvey — Stout frames WebAI's approach as a level beyond that, since Harvey still runs on a third-party model backend rather than fully proprietary infrastructure.</li><li><span class="dot" style="background:#93711b;"></span>Cites Meta's internal AI spend (reportedly <b>$50,000 </b>per employee per year on token usage) as an unsustainable cost structure that will push companies toward owning rather than perpetually renting intelligence — predicts foundation-model 'rental' will get displaced by locally-owned, specialized models the way contractors historically fought to own their own tools rather than being locked into an employer's equipment.</li><li><span class="dot" style="background:#93711b;"></span>Frames this as analogous to early-20th-century coal miners rioting for the right to own their own tools rather than depend on the mining company's — argues people will eventually want to 'own their own IQ points' rather than indefinitely rent access to centralized intelligence.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;Once everyone has the same intelligence, how do you defeat your competitor? You can't.&#8221;<cite>— David Stout</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium</span></b><span>Cited as an example of the shifting relationship dynamic with Palantir (from 'delivery mechanism' to 'supply chain risk'); framed by Stout as part of the foundation-model commoditization story.</span></div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Cited for its reported ~$50,000/employee/year AI token spend as an example of unsustainable foundation-model rental costs.</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Low</span></b><span>Referenced generally alongside Anthropic as part of the foundation-model layer Stout expects to get commoditized.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Stout's framing of foundation labs as structurally weak is explicitly his own competitive thesis as a rival AI company founder, not a neutral analysis — he has direct financial incentive to argue specialization beats generality.</div></div>
+    </div>
+  </div>
+</section>
 
-For Individuals: &quot;You have a right to own AI... we should have a right to own our own intelligence.&quot; Demand local-first tools; reject subscription-only AI.</td><td class="c-text">—</td></tr></tbody></table></div></div></section><section class="sec" id="pred"><div class="sec-head"><div class="sec-eye">Bets on the future and their invalidators</div><h2>Predictions &amp; Trends</h2></div><div class="card"><div class="tablewrap"><table><thead><tr><th class="c-topic">Prediction<br>trend</th><th class="c-conv">Horizon</th><th class="c-text">Supporting reasoning</th><th class="c-text">What could invalidate it</th><th class="c-text">Assets affected</th></tr></thead><tbody><tr><td class="c-topic"><b>Edge inference becomes default for enterprise AI</b></td><td class="c-conv">2-5 years</td><td class="c-text">Data gravity, privacy laws, latency needs, cost pressure all push to edge</td><td class="c-text">Breakthrough in cheap bandwidth; universal 5G/6G; cloud costs drop 10x</td><td class="c-text">WebAI, NVIDIA (edge chips), Qualcomm, Apple, edge hardware vendors</td></tr><tr><td class="c-topic"><b>Specialized model ecosystem fragments general model dominance</b></td><td class="c-conv">3-7 years</td><td class="c-text">Cost/performance of task-specific models beats general models for 80% of use cases</td><td class="c-text">AGI breakthrough makes general models universally superior</td><td class="c-text">OpenAI, Anthropic, model hubs (Hugging Face), WebAI</td></tr><tr><td class="c-topic"><b>Regulatory recognition of &quot;right to local AI&quot;</b></td><td class="c-conv">5-10 years</td><td class="c-text">Second Amendment framing gains political traction; EU/US data sovereignty laws</td><td class="c-text">National security concerns override; centralized AI deemed critical infrastructure</td><td class="c-text">WebAI, policy landscape, open-source AI</td></tr><tr><td class="c-topic"><b>Data center concentration creates systemic failure event</b></td><td class="c-conv">5-15 years</td><td class="c-text">Power grid limits, cooling water scarcity, geopolitical concentration (Taiwan, US)</td><td class="c-text">Fusion/small modular reactors solve power; distributed training works</td><td class="c-text">NVIDIA, hyperscalers (AWS, Azure, GCP), nuclear startups</td></tr><tr><td class="c-topic"><b>Consumer &quot;AI appliance&quot; category emerges</b></td><td class="c-conv">1-3 years</td><td class="c-text">WebAI consumer product + Apple Intelligence + local LLM devices (Rabbit, Humane lessons)</td><td class="c-text">Smartphones absorb the category; no distinct form factor needed</td><td class="c-text">WebAI, Apple, Samsung, AI hardware startups</td></tr><tr><td class="c-topic"><b>Bootstrapped deep tech outperforms VC-backed in AI</b></td><td class="c-conv">Ongoing</td><td class="c-text">WebAI model: revenue first, prove tech, raise late at high valuation with control</td><td class="c-text">Capital intensity of frontier models (frontier training needs $1B+)</td><td class="c-text">Deep tech founders, VC model</td></tr></tbody></table></div></div></section><section class="sec" id="quotes"><div class="sec-head"><div class="sec-eye">Said it best &mdash; in their own words</div><h2>Notable Quotes</h2></div><div class="card"><p class="muted">No standout verbatim quotes captured for this video.</p></div></section><section class="sec" id="risk"><div class="sec-head"><div class="sec-eye">Where this could be wrong</div><h2>Risks, Counterarguments &amp; Blind Spots</h2></div><div class="card"><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">explicit risks: Execution on consumer product: &quot;Big news coming soon&quot; but no details; consumer market is brutal (referenced Rabbit, Humane failures)</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">explicit risks: Capital intensity: Bootstrapped to $2.5B but now raising; hardware + talent + distribution needs scale capital</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">explicit risks: Talent wars: &quot;We need more people building good things in Austin&quot; — recruiting via network doesn&#x27;t scale</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">explicit risks: Market timing: &quot;Nobody&#x27;s prepared for what&#x27;s coming&quot; — if centralized AI solves energy (nuclear) and latency (edge CDNs), edge thesis weakens</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">explicit risks: Regulatory capture: Incumbents (OpenAI, Google, Microsoft) lobbying for regulations that favor centralized models</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">contradictions tensions: Bootstrapped vs. $2.5B valuation: How did they reach $2.5B with minimal outside capital? Likely paper valuation from small secondary or SAFE notes — not fully diluted.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">contradictions tensions: 50% ownership claim: At $2.5B with 200 employees + investors, 50% for founder is aggressive unless very small raise at high price.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">contradictions tensions: &quot;AI can&#x27;t be regulated&quot; vs. advocating policy: Says morality can&#x27;t be regulated, then frames ownership as constitutional right needing legal protection.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">contradictions tensions: Geographic bias overcome but still in Austin: Moved from Michigan to Austin — still not SV, but Texas tech hub. Contradicts pure &quot;anywhere&quot; thesis.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">assumptions: Model compression continues to close gap between edge and cloud performance</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">assumptions: Consumer hardware NPUs become ubiquitous and programmable</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">assumptions: Privacy regulations (GDPR, CCPA, state laws) tighten, forcing local processing</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">assumptions: Enterprises will pay premium for data sovereignty</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">assumptions: Developer ecosystem will adopt WebAI SDK over ONNX/TensorRT/PyTorch directly</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">missing information: No technical benchmarks: latency, accuracy, model size vs. cloud equivalents</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">missing information: No customer names or revenue figures beyond &quot;growing massively&quot;</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">missing information: Consumer product details entirely absent — vaporware risk</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">missing information: Cap table / investor names not disclosed</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">missing information: IP/patent moat unclear — is it software optimization or hardware-specific?</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">missing information: Competitive differentiation vs. Apple CoreML, Qualcomm SNPE, NVIDIA TensorRT, ONNX Runtime</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">claims needing verification: $2.5B valuation — source? Last round? 409A? Secondary?</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">claims needing verification: ~200 employees — headcount trajectory?</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">claims needing verification: &quot;60 clients first year&quot; → &quot;massive growth&quot; — current ARR?</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">claims needing verification: Technical claims: running Darknet/YOLO on i3 in 2016 — reproducible?</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">claims needing verification: Consumer product timeline — &quot;soon&quot; could be 6-18 months</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div></div></section><section class="sec" id="take"><div class="sec-head"><div class="sec-eye">What to do with this</div><h2>Best Actionable Takeaways</h2></div><div class="card"><div class="tk" style="--tk-c:var(--brand);--tk-bg:var(--brand-soft)"><div class="tk-ic">&#128161;</div><div class="tk-bd"><div class="tk-title">Research WebAI&#x27;s technical benchmarks and customer case studies</div><span class="tk-tag">Speaker claim — needs independent verification</span><div class="tk-detail">Stout claims production deployments with &quot;massive growth.&quot; Find: latency numbers, model accuracy vs. cloud, customer logos, ARR. Critical for evaluating edge AI thesis.</div></div></div><div class="tk" style="--tk-c:var(--brand);--tk-bg:var(--brand-soft)"><div class="tk-ic">&#128161;</div><div class="tk-bd"><div class="tk-title">Monitor edge AI chip ecosystem (NPUs, Apple Neural Engine, Qualcomm Hexagon)</div><span class="tk-tag">Analyst interpretation based on speaker&#x27;s claim</span><div class="tk-detail">WebAI&#x27;s thesis depends on consumer hardware becoming viable inference targets. Track: NPU TOPS/watt, software stack maturity (CoreML, SNPE, ONNX), developer adoption.</div></div></div><div class="tk" style="--tk-c:var(--yk);--tk-bg:var(--y)"><div class="tk-ic">&#128161;</div><div class="tk-bd"><div class="tk-title">Validate $2.5B valuation source and cap table</div><span class="tk-tag">Needs verification</span><div class="tk-detail">Private valuation claims need source: priced round? SAFE? 409A? Secondary? 50% founder ownership at $2.5B with 200 employees implies very small raise — verify dilution.</div></div></div><div class="tk" style="--tk-c:var(--gk);--tk-bg:var(--g)"><div class="tk-ic">&#10003;</div><div class="tk-bd"><div class="tk-title">Track WebAI consumer product launch (Austin HQ)</div><span class="tk-tag">Speaker claim</span><div class="tk-detail">&quot;Big news coming soon&quot; on consumer product. Sign up for WebAI updates; monitor Austin tech scene. Consumer edge AI is graveyard (Rabbit R1, Humane Pin) — watch for differentiated approach.</div></div></div><div class="tk" style="--tk-c:var(--brand);--tk-bg:var(--brand-soft)"><div class="tk-ic">&#128161;</div><div class="tk-bd"><div class="tk-title">Evaluate &quot;specialized models &gt; general models&quot; for your use cases</div><span class="tk-tag">Analyst interpretation based on speaker&#x27;s claim</span><div class="tk-detail">Test: can a distilled 7B model on local hardware beat GPT-4o API for your specific task? Cost/latency/privacy tradeoff. WebAI bets yes for most enterprise tasks.</div></div></div><div class="tk" style="--tk-c:var(--yk);--tk-bg:var(--y)"><div class="tk-ic">&#128161;</div><div class="tk-bd"><div class="tk-title">Assess data center concentration risk in your AI strategy</div><span class="tk-tag">Needs verification</span><div class="tk-detail">Stout warns of systemic fragility. Map your AI dependencies: single cloud? single region? power contracts? GPU allocation? Build redundancy or local fallback options.</div></div></div><div class="tk" style="--tk-c:var(--brand);--tk-bg:var(--brand-soft)"><div class="tk-ic">&#128161;</div><div class="tk-bd"><div class="tk-title">Study WebAI&#x27;s recruiting model: trust network over recruiters</div><span class="tk-tag">Analyst interpretation based on speaker&#x27;s claim</span><div class="tk-detail">For early-stage deep tech: hire from known networks (co-founders, college peers, trusted referrals). &quot;Relationships for you.&quot; Doesn&#x27;t scale past ~50 but critical for 0→1 culture.</div></div></div></div></section><section class="sec" id="oth"><div class="sec-head"><div class="sec-eye">Strong convictions, recommendations &amp; non-investment news</div><h2>Other Notable News (Non-Stock)</h2></div><div class="card"><p class="muted">No notable non-stock items in this video.</p></div></section><section class="sec" id="gloss"><div class="sec-head"><div class="sec-eye">Names and terms at a glance</div><h2>Glossary &amp; Entities</h2></div><div class="card"><p class="muted">No additional terms, people, or entities to define for this video.</p></div></section>
+<section class="theme" id="consumer-launch-personas">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">WATCHING — consumer launch expected August 2026</span><span class="ttag">ai-infra</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">WebAI's Consumer Launch: On-Device 'Personas' You Own Instead of Rent</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>WebAI's first-ever consumer product, expected in August 2026, runs entirely on-device (including in airplane mode)</b> and lets users build specialized, personally-owned collaborative models called 'personas.'</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>The product downloads a model directly onto the user's machine (Mac Studio-class local hardware is cited as a practical entry point); no data center round-trip is required once the model is loaded, and the app automatically selects the right combination of specialized sub-models to answer a given query.</li><li><span class="dot" style="background:#3f6b2e;"></span>Describes 'personas' as a new model type distinct from simple prompt-engineered chatbot personalities — each persona has its own access to specific knowledge bases and files, letting a user build genuinely specialized expert models (e.g. an aircraft-engine expert vs. a marketing expert) rather than one generalized assistant.</li><li><span class="dot" style="background:#3f6b2e;"></span>Frames the business model shift explicitly: rather than a recurring subscription with usage caps ('<b>$20 </b>more to keep going after midnight'), ownership of the model itself becomes the product — Stout predicts a future where individuals sell or subscribe others to time on their own personally-trained AI models as a genuine income source.</li><li><span class="dot" style="background:#3f6b2e;"></span>Recommends small businesses buy low-cost local AI hardware now (citing the 'Mac Mini + Openclaw' local-automation trend) to get ahead of token-cost caps and velocity limits that constrain cloud-subscription AI usage, arguing the hardware itself remains a useful asset regardless of how AI strategy evolves.</li><li><span class="dot" style="background:#3f6b2e;"></span>Positions this as reversing a growing dependency risk: current AI subscriptions are effectively steeply subsidized ('Uber rideshare prices for a Ferrari') by labs burning cash, and Stout expects that subsidy to be unsustainable — recommends using current cheap access to build tacit skills and knowledge bases now, before pricing normalizes.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;The distribution of intelligence, for the first time, is going to be owned by the user — that's really exciting.&#8221;<cite>— David Stout</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The August 2026 launch date and specific product claims are Stout's own stated plans as of this interview, not independently verified shipped features.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="data-center-critique">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">Flagged risk</span>
+    <span class="theme-status">WATCHING — Stout expects local/edge compute to undercut the buildout thesis</span><span class="ttag">energy</span><span class="ttag">policy</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">'We're Making a Bad Investment as a Country': Stout's Data Center Critique</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>Stout argues the current data center buildout boom is a risky, capital-intensive bet on infrastructure that may become technologically obsolete</b> before it fully pays for itself — drawing a direct historical parallel to railroad overbuild.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span>Uses the Union Pacific railroad analogy: railroads were essential infrastructure investment in their era, but today's railroad beds are mostly repurposed as bike paths — argues data centers risk a similar fate if on-device/local AI (his own company's bet) reduces the need for centralized compute over the coming years.</li><li><span class="dot" style="background:#a23f22;"></span>Cites a specific real-world example: a Northern Virginia plant nursery (roughly 100 acres, owned by a co-host's mother) was reportedly bought outright for <b>$160 million</b> specifically to be demolished for data center construction, on land near a Civil War battlefield — used to illustrate the land-use and opportunity-cost tradeoffs of the current buildout pace.</li><li><span class="dot" style="background:#a23f22;"></span>Frames data centers explicitly as the direct successor to room-sized early mainframe computers — physically massive, power- and cooling-intensive centralized processing hubs that current AI queries depend on end-to-end.</li><li><span class="dot" style="background:#a23f22;"></span>Argues the efficiency alternative (better local/edge processing, or eventually more radical options like undersea or space-based compute) is a real long-term risk to the current buildout thesis, and that 'we're going to destroy a lot of jobs' and stranded capital if the industry over-invests in a centralized model that gets displaced by more efficient distributed compute.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;We're building all these data centers and thinking they're going to be there for a while... this bet is not only risky, it's a gamble that's very unlikely to be the core of our society.&#8221;<cite>— David Stout</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">This is explicitly Stout's own contrarian, business-interested view (as the founder of an edge/on-device AI company) rather than an industry consensus position.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="leadership-recruiting-faith">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">Ongoing personal practice</span><span class="ttag">career</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Fundraising Scars, Recruiting Top Talent, and Leading Through Faith</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>Stout closes on the human side of building a ~200-person, multi-billion-dollar company</b>: absorbing dozens of investor rejections, recruiting senior talent through trusted referrals, and grounding his leadership in his Christian faith.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Estimates a roughly 20-to-1 no-to-yes ratio is normal for venture-backed founders, and frames early rejections (including one from a top-tier fund) as painful but often partially correct at the time — argues founders should neither dismiss investor 'no's entirely nor give them too much credit, since many funds that initially passed later invested once the thesis proved out.</li><li><span class="dot" style="background:#3f6b2e;"></span>Credits board member Dave Burnham (an early Benchmark Capital partner, reportedly Steve Jobs' go-to talent advisor for hiring decisions) as the source of his approach to recruiting — used referrals from Burnham's network to recruit a former Pentagon Office of Strategic Capital director and a former SCSP AI strategist under Eric Schmidt to build WebAI's defense/public-sector team, which he says became one of the fastest-growing public-sector software businesses on record.</li><li><span class="dot" style="background:#3f6b2e;"></span>Describes his leadership style as flexible, humble, and servant-leadership oriented, running weekly multi-hour leadership meetings during peak morning focus hours rather than frequent 1-on-1s, given the company now has roughly 200 employees supporting a multi-billion-dollar valuation.</li><li><span class="dot" style="background:#3f6b2e;"></span>Credits his Christian faith (reinforced by mentors including Henry Kerr) as central to how he wants to lead and be remembered, while explicitly acknowledging that some of the worst business behavior he's personally encountered has come from people who publicly advertise their faith — frames consistent, observable behavior over time as the only credible proof of character.</li><li><span class="dot" style="background:#3f6b2e;"></span>Closing message: wants to be remembered as someone who cared deeply about people, treated them with respect, and fought for a future where AI ownership is broadly distributed rather than concentrated in a small number of centralized companies or individuals.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Morality cannot be regulated. I believe the best possible future for AI is one that mimics the Second Amendment — you have the right to own AI, and we should have the right to own our own intelligence.&#8221;<cite>— David Stout</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">💻</div><div class="tline"><span class="cat">AI infra:</span> <span class="txt">Buy low-cost local AI hardware now to start offsetting token-cost and rate-limit risk before cloud-subscription pricing normalizes.</span></div></div><div class="irow"><div class="ic">🎯</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Build proprietary, tacit-knowledge datasets specific to your business rather than betting long-term on generic foundation-model access.</span></div></div><div class="irow"><div class="ic">💰</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Prove a technology with a working demo before fundraising on an idea alone — it materially changes how much equity you have to give up.</span></div></div><div class="irow"><div class="ic">🏢</div><div class="tline"><span class="cat">Energy:</span> <span class="txt">Watch on-device/edge AI adoption trends as a real long-term risk factor for centralized data center buildout economics.</span></div></div><div class="irow"><div class="ic">🤝</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Recruit senior talent through trusted referral networks (a strong board member's Rolodex) rather than cold outbound alone.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;Morality cannot be regulated. I believe the best possible future for AI is one that mimics the Second Amendment — you have the right to own AI.&#8221; <cite>— David Stout</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;There's nothing about AI that scares me. There are things about people and companies that scare me.&#8221; <cite>— David Stout</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Once everyone has the same intelligence, how do you defeat your competitor? You can't.&#8221; <cite>— David Stout</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;We're making a bad investment as a country [on data centers].&#8221; <cite>— David Stout</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Some of the people who have treated me the worst in business have been people who advertise faith.&#8221; <cite>— David Stout</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>David Stout:</b> WebAI's current informal valuation <span class="cmeta">company valuation · $2.5 billion</span> <i>if described as a 'public valuation' but WebAI is a private company with no listed stock ticker</i></div><div class="ritem"><b>David Stout, citing Meta's reported spend:</b> Meta's per-employee AI token spend <span class="cmeta">annual spend per employee · ~$50,000/year</span> <span class="tag">Meta (META)</span></div><div class="ritem"><b>Alex Karp (cited by David Stout):</b> most AI companies will not exist in the near future <span class="cmeta">company survival · most current AI companies gone · within ~2 years of his statement</span> <i>if Karp's own publicly stated view, cited secondhand by Stout</i></div><div class="ritem"><b>David Stout:</b> WebAI's consumer product launch timing <span class="cmeta">launch date · August 2026 · August 2026</span> <i>if his own stated internal timeline as of this interview</i></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Palantir (PLTR)</b> <span class="rel">customer of</span> <b>Anthropic</b> &mdash; Described by David Stout as having been a 'delivery mechanism' for Anthropic six months prior to this interview, per Alex Karp's own comments</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><p class="empty">Nothing notable found in this category for this video.</p></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Edge AI</b> &mdash; AI processing that happens directly on a local device (phone, laptop, camera) rather than being sent to a remote data center — reduces latency and removes dependency on network connectivity and centralized compute.</div><div><b>Tokens (AI usage)</b> &mdash; The unit AI providers use to price and meter usage of their models; heavy or unpredictable usage can push a company's variable AI costs well beyond a flat subscription fee.</div><div><b>Persona (WebAI)</b> &mdash; WebAI's term for a specialized, locally-run collaborative AI model trained on a specific user's or domain's own knowledge base, as distinct from a single general-purpose assistant.</div></div></div>
+    </section>
   </div>
 </div>
 </body>
