@@ -1,0 +1,167 @@
+"""Data file for Boris Cherny x Y Combinator — Boris Cherny: We Cut 80% of Claude Code's Prompt."""
+
+META = {
+    "title": "Boris Cherny: We Cut 80% of Claude Code's Prompt",
+    "channel": "Y Combinator",
+    "speakers": "Boris Cherny (creator of Claude Code, Anthropic, guest), Forrest (Y Combinator, interviewer)",
+    "date": "2026-07-27",
+    "video_url": "https://www.youtube.com/watch?v=qyPCVqFUyDo",
+    "thread_line": "6 threads · Opus 5's new long-horizon autonomy and prompt-injection resistance, why Anthropic deletes and rebuilds Claude Code's system prompt with every model release ('ablation'), the 'product overhang' insight that birthed Claude Code, real case studies (an 11-day Zig-to-Rust runtime rewrite, a 2-week-and-counting Electron-to-Swift rewrite), orchestrating thousands of autonomous agents via dynamic workflows and self-maintaining codebases, and Boris Cherny's advice for builders and CS students.",
+    "category": "dev",
+}
+
+SNAPSHOT = [
+    "Boris Cherny, creator of Claude Code, describes Opus 5 (shipped the day before this talk) as newly capable of running autonomously for days, weeks, or months without stopping or needing scaffolding, and — notably — appears to have essentially solved prompt injection when combined with a mechanistic-interpretability-based classifier and an auto-mode classifier layered on top of an aligned model.",
+    "Anthropic deleted over 80% of Claude Code's system prompt with the Opus 5 release, part of a standing practice called 'ablation': delete the entire system prompt with every new model, then add lines back one at a time only when the model repeatedly and demonstrably needs them — Cherny says the model is often measurably more capable without legacy prompt instructions written for older, less capable models.",
+    "Traces Claude Code's origin to a concept called 'product overhang' (the flip side of 'hobbling'): models often already have capabilities the surrounding product doesn't let them express — Claude Code itself was born from realizing Sonnet 3.5 (an early Claude coding model) could write entire files, but existing coding tools only offered single-line autocomplete or read-only chat.",
+    "Shares two real capability demonstrations: the Bun JavaScript runtime's entire 100,000+ line codebase was rewritten from Zig to Rust by Claude in 11 days via a single prompt (dynamic workflow with steering), versus an estimated year-plus for human engineers; separately, Cherny has had Claude running for over two weeks attempting to rewrite Anthropic's Electron desktop app in Swift, verifying pixel-by-pixel against screenshots, with no end date yet.",
+    "Describes 'dynamic workflows' (orchestrating thousands of agents in sequenced/parallel stages within a sandboxed Bun virtual machine) and 'loops and routines' (repeating, memory-sharing tasks run locally or in the cloud) as the mechanisms letting Claude now self-maintain Anthropic's own codebases daily — automatically finding dead code, unifying duplicated abstractions, writing and pruning tests, and shipping fully-rolled-out experiments.",
+    "Closing advice: treat models empirically rather than theoretically (give a task slightly harder than expected, let the model verify its own work, only add instructions when it repeatedly fails), be willing to 'press delete' on prompts/code the way Anthropic does, and — for CS students — still learn how to apply programming practically to real problems, not just the theory, the way Cherny first taught himself to code on a TI-83 calculator to cheat on math tests.",
+]
+
+THEMES = [
+    {
+        "id": "opus-5-capabilities",
+        "tags": ["ai-infra", "dev-workflow"],
+        "color": "green",
+        "badge": "Confirmed event",
+        "status": "Shipped — Opus 5 released the day before this talk",
+        "title": "Opus 5: Long-Horizon Autonomy and (Apparently) Solved Prompt Injection",
+        "lead": "**Opus 5 shipped the day before this talk, and Cherny highlights two standout new capabilities**: it can run unattended for extraordinarily long periods, and it appears to have made prompt injection attacks practically undemonstrable.",
+        "bullets": [
+            "Opus 5 can run continuously for days, weeks, or months without stopping, even without scaffolding tools like slash-commands, because 'it knows it needs to do the task' — a qualitative jump Cherny says no other model has demonstrated at this level.",
+            "Claude took ARC-AGI-3 (a visual/interactive reasoning benchmark) to roughly 30%, up from low-single-digit to low-teens scores previously — cited as a marker of genuinely new capability, not incremental improvement.",
+            "Prompt injection resistance combines three layers: three years of alignment research producing a 'well-aligned' base model, a prompt-injection classifier built on mechanistic interpretability work (identifying which neurons activate during an injection attempt), and a separate auto-mode classifier — together, Cherny says Anthropic 'cannot demonstrate prompt injection anymore' on Opus 5, a meaningful improvement even over Opus 4.7/4.8 and Sonnet 5.",
+            "Frames this as directly relevant to anyone building agentic products: models that read untrusted internet content (e.g. instructions embedded in a webpage telling an agent to also delete the user's files) previously executed those hidden instructions; this is now substantially mitigated at the model and infrastructure level.",
+        ],
+        "quote": {"text": "The model does not seem to be prompt injectable anymore.", "cite": "— Boris Cherny"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "system-prompt-ablation",
+        "tags": ["dev-workflow"],
+        "color": "green",
+        "badge": "Recommendation",
+        "status": "Standard practice at Anthropic, every model release",
+        "title": "Why Anthropic Deletes 80%+ of the System Prompt Every Model Release",
+        "lead": "**Claude Code's system prompt, tools, and even parts of its codebase get systematically deleted and rebuilt from near-scratch with every new model release** — a practice Cherny calls 'ablation' and recommends every AI product builder adopt.",
+        "bullets": [
+            "With Opus 5, Anthropic deleted over 80% of Claude Code's system prompt — much of what remained from prior models was compensating for behaviors the new model already does correctly on its own, so the instructions became not just unnecessary but actively counterproductive (the model reads every instruction every single call).",
+            "The process: delete the entire system prompt, then use the product and add lines back one at a time only after observing the model repeatedly and demonstrably fail without that specific instruction — never guess in advance what instructions a new model will need.",
+            "Users can replicate this themselves: Claude Code supports a `--system-prompt` flag to fully override the default prompt, and an undocumented `CLAUDE_CODE_SIMPLE=1` environment variable strips all prompts (including from tools) for experimentation — Cherny explicitly recommends everyday users periodically delete their CLAUDE.md files, skills, and hooks to test whether the current model still needs them.",
+            "Evals are the one relatively stable artifact across model generations, but even those typically get 'saturated' (maxed out) within one to three model generations at the current pace of improvement, requiring a fresh eval set built the same empirical way.",
+            "Cherny frames this as a fundamentally different engineering discipline than traditional software: rather than big upfront system design and months-long re-architecture projects, working with frontier models requires treating each new model generation like 'a living creature' with its own personality that has to be empirically studied fresh.",
+        ],
+        "quote": {"text": "The model is actually a little bit more intelligent without these prompts.", "cite": "— Boris Cherny"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "product-overhang-unhobbling",
+        "tags": ["dev-workflow"],
+        "color": "green",
+        "badge": "Recommendation",
+        "status": "Ongoing framework, cited as Claude Code's founding insight",
+        "title": "'Product Overhang': The Insight That Created Claude Code",
+        "lead": "**Cherny frames Claude Code's own origin story around a specific research concept**: models frequently already have capabilities that the surrounding product design prevents them from expressing.",
+        "bullets": [
+            "'Hobbling' is when a product gets in the way of what a model can already do; 'product overhang' is the resulting gap between the model's real capability and what any existing product actually lets it demonstrate.",
+            "Claude Code's origin (roughly 18-24 months before this talk): Sonnet 3.5 was, at the time, an excellent coding model, but contemporary coding products only offered single-line/multi-line autocomplete or read-only chat — nothing let the model write entire files. Claude Code's original insight was simply to strip away scaffolding and give the model direct write access via a terminal harness.",
+            "Cherny argues today's models have substantial, largely uncaptured product overhang — significant commercially valuable capability that current products aren't eliciting — and frames this explicitly as a wide-open opportunity for founders building on top of Claude today.",
+            "Practical advice for finding overhang: give the model tasks noticeably harder than you'd expect it to handle, describe the task/guardrails/exit-criteria at a high level rather than over-specifying exact steps, and let it work — over-specification (a common habit among experienced engineers) is described as the most common failure mode preventing people from seeing a model's real capability.",
+        ],
+        "quote": {"text": "There's just so much product overhang that I'm not seeing startups capture... there's a huge amount of opportunity to elicit these behaviors from the model.", "cite": "— Boris Cherny"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "case-studies-rewrites",
+        "tags": ["dev-workflow"],
+        "color": "green",
+        "badge": "Confirmed event",
+        "status": "In production",
+        "title": "Real Case Studies: An 11-Day Language Rewrite, and a 2-Week (and Counting) Experiment",
+        "lead": "**Two concrete demonstrations of current model capability**, both offered as evidence that tasks previously considered multi-year engineering projects are now achievable with a single well-scoped prompt.",
+        "bullets": [
+            "Bun (the JavaScript runtime Claude Code itself is built on, originally written in the low-level systems language Zig) had its entire 100,000+ line codebase rewritten into Rust by Claude in 11 days, via one prompt using a 'dynamic workflow' (with human steering along the way) — Cherny estimates the equivalent manual engineering effort at over a year; the Rust version is now what Claude Code runs in production.",
+            "The task became tractable specifically because Bun already had an extensive, well-maintained test suite in both Bun and Node.js — giving Claude a clear, automatable way to verify correctness at every step, which Cherny repeatedly emphasizes as the single most important (and most commonly missing) ingredient in giving a model a hard task.",
+            "Separately, Cherny personally started a two-week-and-still-running experiment: rewriting Anthropic's Electron-based desktop Claude app natively in Swift, with the instruction to run the Electron version in a macOS virtual machine, screenshot it, compare pixel-by-pixel against the Swift rewrite, and not stop until they match — Claude also autonomously started posting its own progress screenshots to an internal Slack channel without being asked to.",
+            "Both examples are offered as evidence that the meaningful skill now is less about clever prompt phrasing and more about defining a task with a hard, verifiable exit condition and then letting the model run — 'the prompt sounded so simple, everyone here could do it.'",
+        ],
+        "quote": {"text": "This would have taken, in the past, even with the best engineers... definitely over a year.", "cite": "— Boris Cherny"},
+        "watch": "The Electron-to-Swift rewrite was still an unfinished, in-progress experiment as of this talk (roughly 14-15 days in) — presented as a live demonstration of long-horizon autonomy, not a completed case study.",
+        "names": None,
+    },
+    {
+        "id": "dynamic-workflows-self-maintenance",
+        "tags": ["dev-workflow"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "In daily production use at Anthropic",
+        "title": "Orchestrating Thousands of Agents: Dynamic Workflows, Loops, and a Self-Maintaining Codebase",
+        "lead": "**Anthropic has moved from single-agent tasks to routinely orchestrating thousands of agents per day**, using two distinct mechanisms, to the point where Claude now autonomously maintains large parts of Anthropic's own production codebases.",
+        "bullets": [
+            "'Dynamic workflows' break one large task into staged, sequenced-and-parallel batches of agents running inside a sandboxed virtual machine within the Bun runtime — Cherny describes this as effectively a new axis of test-time compute (alongside model size, training data, and training compute) and says the underlying design is built as 'an algebra for agents,' reflecting his functional-programming background.",
+            "'Loops and routines' are repeating, single-sentence-prompt tasks that don't share full context but can share memory, run either locally (cron-style, 'loop') or fully in the cloud with the laptop closed ('routine') — triggered on schedules from every 5 minutes to daily.",
+            "Concrete self-maintenance routines Anthropic runs today across its CLI, iOS, Android, and desktop codebases: daily dead-code cleanup via static/dynamic analysis, automatically shipping experiments once they've reached 100% rollout, writing tests for undertested code, deleting stale/useless tests left by older models, and an internally-named 'abstraction police' routine that finds and unifies duplicated abstractions across the codebase.",
+            "Roughly 20-30 of these routines run daily, sometimes spawning hundreds or thousands of agents in a single day — described as doing work equivalent to 'dozens or hundreds of engineers,' freeing human engineers to focus on new product work and talking to users rather than maintenance.",
+        ],
+        "quote": {"text": "This is doing the work of dozens or hundreds of engineers. This is kind of what it used to take to do this kind of work.", "cite": "— Boris Cherny"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "advice-for-builders",
+        "tags": ["career"],
+        "color": "green",
+        "badge": "Recommendation",
+        "status": "Personal philosophy",
+        "title": "Advice for Builders and CS Students: Be Empirical, Stay Practical",
+        "lead": "**Cherny's closing advice centers on treating model-building as an empirical rather than theoretical discipline**, and on what he thinks is still worth learning the traditional, hard way.",
+        "bullets": [
+            "Explicitly warns against following prompt-engineering advice from social media ('don't listen to the LinkedIn influencers, don't read Twitter') — argues there's no single 'weird trick,' only an empirical loop of giving the model a hard task, watching where it struggles, and fixing the specific gap (via prompting, a skill file, or an MCP connection for missing context).",
+            "Identifies over-specification as the most common failure mode among experienced engineers adapting to agentic coding — describing exact step-by-step instructions the way you'd direct a junior engineer is actively counterproductive with modern models, which do better with high-level task/guardrail/exit-criteria framing.",
+            "Says 'coding is solved' with an explicit caveat: solved specifically for the kind of application/product coding he does day to day, not for deep systems programming, distributed systems, or pixel-perfect UI verification, where Claude still struggles even with Opus 5's vision improvements.",
+            "For CS students specifically: recommends still learning to apply programming to solve real, practical problems by hand (not just theory) — shares his own path of teaching himself to code on a TI-83 calculator in BASIC (to build a math-test helper), then learning assembly once problems got harder — and generalizes this to recommend developing design sense, business sense, data skills, and user-facing skills alongside raw coding ability.",
+            "Announced Y Combinator attendees would each receive Claude Max 20x access via an emailed code as a closing gift, explicitly framed as an invitation to attempt multi-month, thousand-agent projects of their own.",
+        ],
+        "quote": {"text": "Forget everything that you learned about computer science theory in class. Look at the model, try to do a task, see where it struggles, and then based on that adjust.", "cite": "— Boris Cherny"},
+        "watch": None,
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F5D1️", "tag": "Dev workflow", "title": "Periodically delete your system prompt / CLAUDE.md / skills / hooks and re-add only what the current model demonstrably still needs."},
+    {"icon": "\U0001F3AF", "tag": "Dev workflow", "title": "Give the model a task noticeably harder than expected, described at a high level, with a clear way for it to verify its own work."},
+    {"icon": "\U0001F50D", "tag": "AI infra", "title": "Look for 'product overhang' — capabilities the current model already has that no product yet lets it express — as a startup opportunity."},
+    {"icon": "\U0001F916", "tag": "Dev workflow", "title": "Use dynamic workflows or scheduled loops/routines to orchestrate many agents on staged, decomposable tasks rather than one agent at a time."},
+    {"icon": "\U0001F4DA", "tag": "Careers", "title": "Learn to apply programming to real, practical problems (not just theory) — the practical, empirical mindset transfers directly to working with modern models."},
+]
+
+CLAIMS = [
+    {"who": "Boris Cherny", "claim": "Opus 5's score on the ARC-AGI-3 benchmark", "metric": "benchmark score", "target": "~30%, up from low-single-digit to low-teens scores previously", "by": None, "condition": None, "entity": None},
+    {"who": "Boris Cherny", "claim": "portion of Claude Code's system prompt removed with the Opus 5 release", "metric": "system prompt reduction", "target": "over 80%", "by": None, "condition": None, "entity": None},
+    {"who": "Boris Cherny", "claim": "time for Claude to rewrite the Bun runtime from Zig to Rust", "metric": "task completion time", "target": "11 days (one prompt, dynamic workflow, with steering), versus an estimated 1+ year manually", "by": None, "condition": "codebase over 100,000 lines, with an existing comprehensive test suite in Bun and Node.js", "entity": None},
+    {"who": "Boris Cherny", "claim": "runtime of an ongoing Electron-to-Swift desktop app rewrite experiment", "metric": "task runtime", "target": "still running after roughly 14-15 days as of this talk, no completion date given", "by": None, "condition": None, "entity": None},
+]
+
+RELATIONS = []
+
+HOT_TAKES = [
+    {"take": "The model does not seem to be prompt injectable anymore.", "cite": "— Boris Cherny", "why": "A strong, specific, checkable claim about a previously unsolved security problem in agentic AI systems."},
+    {"take": "The model is actually a little bit more intelligent without these prompts.", "cite": "— Boris Cherny", "why": "A counterintuitive finding from Anthropic's own ablation testing that runs against the instinct to add more instructions, not fewer."},
+    {"take": "Coding is solved — for the kind of coding that I do.", "cite": "— Boris Cherny", "why": "A bold claim immediately self-qualified with specific carve-outs (systems code, distributed systems, pixel-perfect UI), making it a checkable rather than sweeping statement."},
+    {"take": "Don't listen to the LinkedIn influencers. Don't read Twitter.", "cite": "— Boris Cherny", "why": "A direct, specific dismissal of a popular content category, offered by someone whose day job is literally prompt/harness engineering."},
+    {"take": "Every 6 months delete your Claude MD. Delete your skills. Delete your hooks. See what the model does — it might surprise you.", "cite": "— Boris Cherny", "why": "Concrete, actionable advice that runs directly counter to the instinct to keep accumulating configuration over time."},
+]
+
+OTHER_NEWS = []
+
+GLOSSARY = [
+    {"term": "Ablation (prompt engineering)", "def": "Deleting a system prompt (or parts of it) entirely, then adding lines back one at a time only when the model demonstrably needs them — used to test which instructions are actually necessary for a given model generation rather than accumulating legacy instructions indefinitely."},
+    {"term": "Product overhang / unhobbling", "def": "The gap between what a model can already do and what a given product's design actually lets it express; 'hobbling' describes a product getting in the way of a model's real capability, and 'unhobbling' describes redesigning the product to close that gap."},
+    {"term": "Dynamic workflows", "def": "A Claude Code feature that lets a single task be broken into staged, sequenced-and-parallel batches of many agents running inside a sandboxed environment, functioning as a new form of test-time compute for very large or multi-stage tasks."},
+    {"term": "Loops and routines", "def": "Scheduled, repeating single-task prompts in Claude Code — a 'loop' runs locally (cron-style), a 'routine' runs fully in the cloud — used for recurring maintenance work like dead-code cleanup or test-suite upkeep."},
+]

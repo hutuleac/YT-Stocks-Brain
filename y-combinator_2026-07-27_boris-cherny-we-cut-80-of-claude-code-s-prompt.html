@@ -3,170 +3,276 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Research: Boris Cherny: We Cut 80% of Claude Code&#x27;s Prompt</title>
+<title>Research: Boris Cherny: We Cut 80% of Claude Code's Prompt</title>
 <style>
-.backlink{margin-bottom:12px;}
-.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
-.backlink a:hover{color:var(--brand);border-color:var(--brand);}
-
 :root{
   --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
-  --brand:#8a5a2e; --brand-soft:#f4e9db;
-  --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
-  --g:#eaf3e6; --gk:#3f6b2e; --r:#f8ebe6; --rk:#a23f22;
-  --y:#f8f0dd; --yk:#93711b; --gr:#eeece3; --grk:#65695f;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-  font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased;}
-.page{max-width:1720px;width:100%;margin:0 auto;background:var(--card);min-height:100vh;
-  box-shadow:0 0 0 1px var(--line);}
-.hero{padding:clamp(18px,2.4vw,34px) clamp(20px,4vw,56px) clamp(14px,1.8vw,22px);
-  border-bottom:1px solid var(--line);}
-.hero .kicker{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--brand);margin-bottom:10px;}
-.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(28px,3vw,42px);line-height:1.15;
-  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:38ch;}
-.hero-row{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;
-  border-top:1px solid var(--line);padding-top:12px;}
-.hero .meta{color:var(--muted);font-size:15px;line-height:1.55;}
-.hero .meta b{color:var(--ink);font-weight:600;}
-.hero .stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:14.5px;margin-top:4px;}
-.watch-btn{flex:none;display:inline-flex;align-items:center;gap:7px;background:var(--brand);color:#fffdf8;
-  text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.01em;padding:9px 18px;
-  border-radius:999px;white-space:nowrap;transition:.15s;}
-.watch-btn:hover{background:#734a24}
-.inner{padding:10px clamp(20px,4vw,56px) 44px;}
-.sec{margin:0;padding:34px 0;border-top:1px solid var(--line);}
-.sec:first-child{border-top:none;padding-top:20px;}
-.sec-head{margin-bottom:16px;}
-.sec-eye{font-family:var(--serif);font-style:italic;font-size:14.5px;color:var(--brand);margin-bottom:4px;}
-.sec h2{font-family:var(--serif);margin:0;font-size:clamp(22px,2vw,27px);font-weight:600;color:#171916;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
   border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
-.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:26px 28px;}
-.snap{list-style:none;margin:0;padding:0;max-width:1200px;}
-.snap li{position:relative;padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:16.5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
 .snap li:last-child{border-bottom:none}
-.snap b{color:#171916}
-.badge{display:inline-block;padding:4px 12px;border-radius:3px;font-size:12.5px;font-weight:700;
-  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;}
-.g{background:var(--g);color:var(--gk)} .r{background:var(--r);color:var(--rk)}
-.y{background:var(--y);color:var(--yk)} .gr{background:var(--gr);color:var(--grk)}
-.muted{color:var(--muted);font-size:13.5px;font-weight:400}
-.legend{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0 0;}
-.legend span{display:inline-flex;align-items:center;gap:7px}
-.legend .dot{width:10px;height:10px;border-radius:50%}
-.legend .dot.g{background:var(--gk)} .legend .dot.r{background:var(--rk)}
-.legend .dot.y{background:var(--yk)} .legend .dot.gr{background:var(--grk)}
-.legend .t{font-size:13px;color:var(--muted)}
-.tablewrap{overflow-x:auto;}
-table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:15.5px;}
-th,td{text-align:left;padding:12px 14px;vertical-align:top;border-bottom:1px solid var(--line);
-  overflow-wrap:break-word;word-break:break-word;}
-th{font-family:var(--serif);font-weight:600;font-style:italic;color:var(--brand);font-size:15px;
-  padding:8px 14px 10px;border-bottom:2px solid var(--brand);}
-tbody tr{transition:background .12s}
-tbody tr:hover{background:#f5efe2}
-tr.row-g:hover{background:var(--g)}
-tr.row-r:hover{background:var(--r)}
-tr.row-y:hover{background:var(--y)}
-tr.row-gr:hover{background:var(--gr)}
-tr[class*="row-"] td:first-child{position:relative;padding-left:26px;}
-tr[class*="row-"] td:first-child::before{content:"";position:absolute;left:10px;top:8px;bottom:8px;
-  width:7px;border-radius:5px;background:var(--line);}
-tr.row-g td:first-child::before{background:var(--gk)}
-tr.row-r td:first-child::before{background:var(--rk)}
-tr.row-y td:first-child::before{background:var(--yk)}
-tr.row-gr td:first-child::before{background:var(--grk)}
-tr.conv-hi td:first-child::before{width:8px}
-tr.conv-md td:first-child::before{width:6px}
-tr.conv-lo td:first-child::before{width:4px;opacity:.6}
-.c-topic{width:13%;min-width:110px}
-.c-cat{width:8%;min-width:70px}
-.c-stance{width:6%;min-width:64px}
-.c-conv{width:7%;min-width:70px}
-.c-act{width:16%} .c-text{width:auto}
-.wf{border:1px solid var(--line);border-left:3px solid var(--brand);padding:16px 18px;margin:12px 0;
-  background:#fffefb;}
-.wf-name{font-family:var(--serif);font-weight:600;font-size:18px;color:#171916;margin-bottom:7px;}
-.wf-row{margin:5px 0;font-size:15px;color:#3a3d35}
-.wf-row .lbl{display:inline-block;min-width:128px;font-weight:600;color:var(--brand);
-  font-style:italic;font-family:var(--serif);}
-.c-wf-name{width:14%;min-width:140px}
-table.wf-tbl td:first-child b{font-weight:700;color:#171916}
-.tk{position:relative;display:flex;gap:14px;align-items:flex-start;background:#fffefb;
-  border:1px solid var(--line);border-radius:12px;padding:14px 16px 14px 26px;margin:11px 0;max-width:1200px;
-  transition:background .12s;}
-.tk:hover{background:var(--tk-bg,var(--brand-soft))}
-.tk::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
-  background:var(--tk-c,var(--brand));}
-.tk-ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
-  font-size:14px;background:var(--tk-bg,var(--brand-soft));line-height:1;}
-.tk-bd{flex:1;min-width:0}
-.tk-title{font-weight:600;font-size:15.5px;color:#171916;line-height:1.42;margin-bottom:5px;}
-.tk-tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:13.5px;font-weight:600;
-  letter-spacing:.01em;padding:0;background:none;color:var(--tk-c,var(--brand));}
-.tk-detail{margin-top:5px;font-size:14px;color:#4a4d44;line-height:1.55;}
-.risk{position:relative;display:flex;gap:14px;align-items:flex-start;background:#fffefb;
-  border:1px solid var(--line);border-radius:12px;padding:14px 16px 14px 26px;margin:11px 0;max-width:1200px;
-  transition:background .12s;}
-.risk:hover{background:var(--r)}
-.risk::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
-  background:var(--rk);}
-.risk-ic{flex:none;width:28px;height:28px;border-radius:6px;display:grid;place-items:center;
-  font-size:14px;background:var(--r);line-height:1;}
-.risk-bd{flex:1;min-width:0}
-.risk-title{font-weight:500;font-size:15px;color:#171916;line-height:1.5;}
-.quote{font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.55;color:#2c2f28;
-  border-left:3px solid var(--brand);padding:7px 0 7px 22px;margin:16px 0;max-width:900px;}
-.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
-  color:var(--muted);margin-top:7px;}
-.quote-ctx{font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;color:var(--muted);margin-top:4px;}
-.gloss{display:grid;grid-template-columns:repeat(3,1fr);gap:10px 30px;}
-.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:14.3px;line-height:1.55;}
-.gloss b{font-family:var(--serif);color:#171916}
-ul,ol{margin:5px 0;padding-left:22px} li{margin:4px 0}
-ol li::marker{font-weight:700;color:var(--brand)}
-@media(max-width:1300px){
-  .gloss{grid-template-columns:1fr 1fr}
-}
-@media(max-width:900px){
-  body{font-size:16px}
-  .hero h1{font-size:26px}
-  .sec h2{font-size:22px}
-  .c-cat{display:none} th:nth-child(2),td:nth-child(2){display:none}
-  .gloss{grid-template-columns:1fr}
-  table{table-layout:auto}
-  .c-topic{width:auto;min-width:100px}
-  .hero-row{flex-direction:column;align-items:flex-start;gap:14px}
-}
-@media(max-width:620px){
-  body{font-size:15px}
-  .c-conv{display:none} th:nth-child(4),td:nth-child(4){display:none}
-  table{font-size:13.5px} th,td{padding:9px 9px}
-  .wf-row .lbl{display:block;min-width:0;margin-bottom:2px}
-  .quote{font-size:18px}
-}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
 </style>
 </head>
 <body>
 <div class="page">
   <header class="hero">
     <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
-
     <div class="kicker">A YouTube Research Brief</div>
-    <h1>Boris Cherny: We Cut 80% of Claude Code&#x27;s Prompt</h1>
-    <div class="hero-row">
-      <div class="meta">
-        Channel: <b>Y Combinator</b> &middot; Speaker: <b>Boris Cherny (creator of Claude Code, guest), Forrest (Y Combinator, interviewer)</b> &middot; <b>2026-07-27</b>
-        <div class="stats-line">4 conviction calls &middot; 0 companies tracked &middot; 100% high conviction</div>
-      </div>
-      <a class="watch-btn" href="https://www.youtube.com/watch?v=qyPCVqFUyDo" target="_blank" rel="noopener">Watch on YouTube &#8599;</a>
+    <h1>Boris Cherny: We Cut 80% of Claude Code's Prompt</h1>
+    <div class="byline">
+      Channel: <b>Y Combinator</b> &middot; Speaker: <b>Boris Cherny (creator of Claude Code, Anthropic, guest), Forrest (Y Combinator, interviewer)</b> &middot; <b>2026-07-27</b>
+      <div class="stats-line">6 threads · Opus 5's new long-horizon autonomy and prompt-injection resistance, why Anthropic deletes and rebuilds Claude Code's system prompt with every model release ('ablation'), the 'product overhang' insight that birthed Claude Code, real case studies (an 11-day Zig-to-Rust runtime rewrite, a 2-week-and-counting Electron-to-Swift rewrite), orchestrating thousands of autonomous agents via dynamic workflows and self-maintaining codebases, and Boris Cherny's advice for builders and CS students. &middot; <a href="https://www.youtube.com/watch?v=qyPCVqFUyDo" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
     </div>
   </header>
   <div class="inner">
-    <section class="sec" id="snap"><div class="sec-head"><div class="sec-eye">The one-paragraph takeaway</div><h2>Video Snapshot</h2></div><div class="card"><ol class="snap"><li>Anthropic deleted 80% of Claude Code&#x27;s system prompt for Opus 5 because a more intelligent model no longer needs instructions correcting behavior it now does natively — the harness is rebuilt from near-scratch with every model generation via &#x27;ablation.&#x27;.</li><li>Opus 5 combined with &#x27;auto mode&#x27; appears effectively non-prompt-injectable, via three layers: an aligned model, a prompt-injection classifier built on mechanistic-interpretability neuron detection, and an auto-mode classifier.</li><li>The core skill for builders is &#x27;un-hobbling&#x27; the model, i.e. removing product/harness friction that stops the model from doing what it&#x27;s already capable of — this is literally the origin story of Claude Code (giving Sonnet 3.5 full terminal access instead of IDE autocomplete).</li><li>Boris had Claude rewrite Bun&#x27;s entire JavaScript runtime from Zig to Rust — ~100k+ lines, one prompt plus steering, using a &#x27;dynamic workflow,&#x27; running for 11 days, now in production; a task that would previously have taken well over a year.</li><li>Anthropic now runs dozens of autonomous &#x27;routines&#x27; (loops running in the cloud) that maintain their own codebases daily: deleting dead code, shipping/removing finished experiments, writing missing tests, deleting useless tests, and unifying duplicated abstractions (&#x27;abstraction police&#x27;) — hundreds to thousands of agents running per day.</li><li>Practical advice for builders: give Claude harder tasks than you think it can handle, describe the goal/guardrails/exit criteria (not step-by-step instructions), and above all give it a way to verify its own work — verification, not prompting, is what separates top users.</li><li>Boris predicts &#x27;coding is solved&#x27; for his kind of coding, but not yet for deep systems code, distributed systems, or pixel-perfect UI verification.</li></ol></div></section><section class="sec" id="conv"><div class="sec-head"><div class="sec-eye">What they actually believe &mdash; and how strongly</div><h2>Conviction Map</h2></div><div class="card"><div class="tablewrap"><table><thead><tr><th class="c-topic">Topic<br>Asset</th><th class="c-cat">Cat.</th><th class="c-conv">Conv.</th><th class="c-act">Action status</th><th class="c-text">Core thesis</th><th class="c-text">Risks<br>conditions</th></tr></thead><tbody><tr class="row-g conv-hi"><td class="c-topic"><b>System Prompt Minimalism (delete-and-rebuild per model)</b></td><td class="c-cat">Harness Design</td><td class="c-conv">High</td><td class="c-act">DID IT — cut 80% of Claude Code&#x27;s system prompt for Opus 5</td><td class="c-text">Every new model release, Anthropic deletes large parts of the system prompt/tools and re-adds only what the model still demonstrably needs, via ablation (delete everything, add back line by line). Opus 5 is intelligent enough that most prior corrective prompting is now dead weight, and the model performs slightly better without it.</td><td class="c-text">Bare model without product prompts behaves less predictably for end users; some prompt scaffolding is still needed for product-grade UX</td></tr><tr class="row-g conv-hi"><td class="c-topic"><b>Prompt Injection Resistance in Opus 5</b></td><td class="c-cat">AI Safety</td><td class="c-conv">High</td><td class="c-act">CLAIMS NOT YET DEMONSTRATED IN THE WILD</td><td class="c-text">Combining a well-aligned model (~3 years of alignment research) with a prompt-injection classifier (based on mechanistic interpretability — detecting neurons that fire on injection) and an auto-mode classifier means the team &#x27;cannot demonstrate prompt injection anymore&#x27; on Opus 5, a marked jump from Opus 4.7/4.8 and Sonnet 5.</td><td class="c-text">Internal team framing, not independently audited; &#x27;cannot demonstrate&#x27; is not the same as &#x27;immune&#x27;; adversaries continually probe for new injection vectors</td></tr><tr class="row-g conv-hi"><td class="c-topic"><b>Dynamic Workflows for Massive Test-Time Compute</b></td><td class="c-cat">Agentic Infrastructure</td><td class="c-conv">High</td><td class="c-act">IN PRODUCTION — used to rewrite Bun from Zig to Rust in 11 days</td><td class="c-text">Dynamic workflows orchestrate an &#x27;algebra for agents&#x27; (sequential + parallel composition) inside a Bun-based sandbox VM, letting a single prompt spawn and coordinate thousands of agents across multiple staged passes (build, verify, summarize, fan out again). Framed as a new axis of test-time compute scaling beyond model size/data/training flops.</td><td class="c-text">Requires steering, not fully one-shot; cost/token usage at that scale is non-trivial; still early and under-documented externally</td></tr><tr class="row-g conv-hi"><td class="c-topic"><b>Autonomous Maintenance Routines</b></td><td class="c-cat">Agentic Infrastructure</td><td class="c-conv">High</td><td class="c-act">IN PRODUCTION — dozens of routines run daily across CLI, iOS, Android, desktop apps</td><td class="c-text">Cloud-based &#x27;routines&#x27; (cron-like, can run without a laptop open) now handle dead-code cleanup, retiring finished experiments, adding missing test coverage, deleting low-value tests, and unifying duplicated abstractions — hundreds to thousands of agents/day, doing work Boris compares to &#x27;dozens or hundreds of engineers.&#x27;</td><td class="c-text">Not fully automated yet (&#x27;not totally there&#x27;); autonomous refactors/deletions carry inherent risk of removing something still needed if verification is imperfect</td></tr></tbody></table></div><p class="muted legend"><span><span class="dot g"></span><span class="t">green = owns / buying / positive</span></span><span><span class="dot r"></span><span class="t">red = sold / avoids / negative</span></span><span><span class="dot y"></span><span class="t">yellow = watching / uncertain</span></span><span><span class="dot gr"></span><span class="t">gray = casual mention</span></span></p></div></section><section class="sec" id="cos"><div class="sec-head"><div class="sec-eye">Positions, views and why they care</div><h2>Stocks, Funds &amp; Companies</h2></div><div class="card"><p class="muted">No specific stocks, funds, or companies with a stated view in this video.</p></div></section><section class="sec" id="tech"><div class="sec-head"><div class="sec-eye">Themes, tools and what matters</div><h2>Technology &amp; AI Views</h2></div><div class="card"><div class="tablewrap"><table><thead><tr><th class="c-topic">Theme</th><th class="c-text">Speaker&#x27;s view</th><th class="c-text">Companies<br>tools</th><th class="c-text">Why it matters</th><th class="c-conv">Horizon</th><th class="c-conv">Conv.</th></tr></thead><tbody><tr><td class="c-topic"><b>System-prompt ablation as standard harness-building practice</b></td><td class="c-text">Delete the entire system prompt on every new model release, add lines back one at a time only when the model repeatedly and demonstrably needs them; treat this as an eval, not a guess.</td><td class="c-text">Anthropic / Claude Code</td><td class="c-text">Prevents prompt bloat from accumulating corrective instructions the newer model no longer needs; keeps the harness lean and the model&#x27;s native intelligence unobstructed.</td><td class="c-conv">Ongoing, every model release</td><td class="c-conv">High</td></tr><tr><td class="c-topic"><b>Product overhang / un-hobbling as the core opportunity for AI startups</b></td><td class="c-text">Every model generation can already do things almost no product lets it fully express; the founder opportunity is building the harness/product that removes that friction, not training new capability.</td><td class="c-text">Claude Code (origin story), general applicability to any AI product</td><td class="c-text">Named as the literal genesis of Claude Code (Sonnet 3.5 + full terminal access vs. prior IDE autocomplete/chat-only tools) and framed as still wide open today.</td><td class="c-conv">Now</td><td class="c-conv">High</td></tr><tr><td class="c-topic"><b>Model routing / language-to-language full codebase rewrites</b></td><td class="c-text">Modern models can now rewrite an entire codebase from one language to another (e.g., Zig to Rust) given a good test suite to verify against — a capability that did not exist reliably even ~1 model generation ago.</td><td class="c-text">Bun (JavaScript runtime), Claude Opus</td><td class="c-text">Demonstrates &#x27;product overhang&#x27;: tasks previously requiring a year+ of senior engineering time compressed to 11 days of largely autonomous agent work.</td><td class="c-conv">Now</td><td class="c-conv">High</td></tr><tr><td class="c-topic"><b>Prompt engineering giving way to task design + verification</b></td><td class="c-text">The differentiating skill is no longer crafting the perfect prompt but (a) giving Claude a task slightly harder than expected, and (b) building in a way for it to verify its own output (tests, screenshots, pixel diffs, MCP context) so it doesn&#x27;t get stuck.</td><td class="c-text">General — Claude Code, Claude Desktop (Electron→Swift rewrite example), Claude in Slack (&#x27;Claude tag&#x27;)</td><td class="c-text">Reframes what &#x27;top 1% Claude users&#x27; actually do differently from casual users.</td><td class="c-conv">Now</td><td class="c-conv">High</td></tr></tbody></table></div></div></section><section class="sec" id="wf"><div class="sec-head"><div class="sec-eye">Repeatable systems worth stealing</div><h2>AI Workflows, Tools &amp; Prompts</h2></div><div class="card"><div class="tablewrap"><table class="wf-tbl"><thead><tr><th class="c-wf-name">Workflow</th><th class="c-text">Goal</th><th class="c-text">Tools<br>setup</th><th class="c-text">Approach<br>prompt</th><th class="c-text">Why it works</th></tr></thead><tbody><tr><td class="c-wf-name"><b>Dynamic Workflows (large-scale multi-stage agent orchestration)</b></td><td class="c-text">Handle a single large, multi-stage task (full codebase rewrite, deep data analysis, complex multi-PR feature) by fanning out to many agents in coordinated stages.</td><td class="c-text">Claude Code &#x27;dynamic workflow&#x27; feature, Bun-based sandbox VM</td><td class="c-text">Just say &#x27;use a workflow&#x27; — Claude triggers it. Agents run a first pass, a second stage verifies/summarizes, a third stage may fan out again; run in sequence or in parallel like a composable agent algebra.</td><td class="c-text">Lets one prompt productively orchestrate dozens to thousands of agents instead of one linear conversation, dramatically raising effective test-time compute on hard tasks.</td></tr><tr><td class="c-wf-name"><b>Loops and Routines (recurring autonomous maintenance)</b></td><td class="c-text">Run a repetitive, non-context-sharing task on a schedule (hourly/daily) without a human present.</td><td class="c-text">Claude Code &#x27;loop&#x27; (local cron-like) or &#x27;routine&#x27; (cloud-based, laptop can be closed)</td><td class="c-text">Write one single-sentence prompt (e.g., &#x27;clean up dead code across all codebases&#x27;) and let Claude run it daily; it derives its own methodology (static + dynamic analysis) and opens a PR each run.</td><td class="c-text">Anthropic now runs dozens of these routines across CLI/iOS/Android/desktop, doing continuous codebase maintenance that used to require dedicated engineer time.</td></tr><tr><td class="c-wf-name"><b>Verify-driven task delegation for long-running/large tasks</b></td><td class="c-text">Get a model to complete a task &#x27;too hard&#x27; for it to one-shot without micromanaging every step.</td><td class="c-text">Any Claude surface (Code, Desktop, Claude tag/Slack)</td><td class="c-text">Describe the goal, guardrails, and exit criteria at a high level (not a numbered step-by-step); give the model a concrete way to verify its own work (a test suite, a screenshot-and-pixel-diff loop, an MCP for missing context); let it run — sometimes for days to weeks — and check back periodically.</td><td class="c-text">Example: rewriting the Claude Desktop Electron app in Swift by having the agent run the Electron app in a Mac VM, screenshot it, and pixel-compare against the Swift rewrite in a loop — running continuously for 2+ weeks unattended.</td></tr></tbody></table></div></div></section><section class="sec" id="pred"><div class="sec-head"><div class="sec-eye">Bets on the future and their invalidators</div><h2>Predictions &amp; Trends</h2></div><div class="card"><p class="muted">No explicit predictions made in this video.</p></div></section><section class="sec" id="quotes"><div class="sec-head"><div class="sec-eye">Said it best &mdash; in their own words</div><h2>Notable Quotes</h2></div><div class="card"><div class="quote">&#8220;We deleted 80% of the system prompt. You can actually try deleting the rest of it, too.&#8221;<cite>&mdash; Boris Cherny</cite><div class="quote-ctx">On the Opus 5 Claude Code release and the practice of aggressively trimming the system prompt each model generation.</div></div><div class="quote">&#8220;For people that aren&#x27;t building agentic products, but you&#x27;re using Claude code, every 6 months delete your Claude MD. Delete your skills. Delete your hooks. See what the model does and it might surprise you.&#8221;<cite>&mdash; Boris Cherny</cite><div class="quote-ctx">Advice to regular Claude Code users, not just harness builders, on periodically stripping accumulated customization.</div></div><div class="quote">&#8220;You have to take the time to get to know it and then adjust the harness based on that... it&#x27;s just very much like an empirical and kind of scientific thing.&#8221;<cite>&mdash; Boris Cherny</cite><div class="quote-ctx">Comparing model-generation harness building to working with a living creature rather than doing traditional up-front system design.</div></div><div class="quote">&#8220;It ran for 11 days, and it rewrote the entire code base.&#8221;<cite>&mdash; Boris Cherny</cite><div class="quote-ctx">On having Claude rewrite Bun&#x27;s runtime from Zig to Rust — a task he estimates would have taken well over a year with human engineers.</div></div><div class="quote">&#8220;I think people tend to overthink it a little bit... trying to over specify and trying to be overly specific and then get the model to do the task exactly the way that you would have done it — that&#x27;s just not the way the model works.&#8221;<cite>&mdash; Boris Cherny</cite><div class="quote-ctx">On the most common failure mode among experienced engineers new to agentic coding.</div></div><div class="quote">&#8220;Coding is solved for the kind of coding that I do. It&#x27;s not solved for everyone.&#8221;<cite>&mdash; Boris Cherny</cite><div class="quote-ctx">Caveat on the &#x27;coding is solved&#x27; claim — deep systems code, distributed systems, and pixel-perfect UI verification are named as still-weak areas.</div></div></div></section><section class="sec" id="risk"><div class="sec-head"><div class="sec-eye">Where this could be wrong</div><h2>Risks, Counterarguments &amp; Blind Spots</h2></div><div class="card"><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">Prompt-injection resistance claims (&#x27;we cannot demonstrate prompt injection anymore&#x27;) come from the team that built the classifier and are self-reported, not third-party audited — worth independent red-teaming before relying on it for high-stakes autonomous agents.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">The 11-day Bun Zig-to-Rust rewrite involved human steering, not a true one-shot; the framing &#x27;it just went&#x27; understates how much oversight large autonomous rewrites still require.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">&#x27;Coding is solved&#x27; is explicitly caveated by Boris himself — deep systems code, distributed systems, and pixel-level UI verification are named as areas where Claude still struggles.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">Advice to &#x27;delete your CLAUDE.md/skills/hooks every 6 months&#x27; assumes access to the latest frontier model (Opus 5); teams on older or smaller models may still need the removed scaffolding.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div><div class="risk"><div class="risk-ic">&#9888;</div><div class="risk-bd"><div class="risk-title">Transcript is from YouTube auto-captions and may contain minor transcription errors (e.g., model/product names); verify exact figures (agent counts, day counts) against a primary source before citing precisely.</div><span class="tk-tag" style="background:var(--r);color:var(--rk)">Risk</span></div></div></div></section><section class="sec" id="take"><div class="sec-head"><div class="sec-eye">What to do with this</div><h2>Best Actionable Takeaways</h2></div><div class="card"><div class="tk" style="--tk-c:var(--gk);--tk-bg:var(--g)"><div class="tk-ic">&#10003;</div><div class="tk-bd"><div class="tk-title">When adopting a new model version, don&#x27;t tune your prompt/system message incrementally — delete it and rebuild from empirical evidence of where the model actually fails, adding lines back only when it repeatedly stumbles on the same thing.</div><span class="tk-tag">Speaker claim</span></div></div><div class="tk" style="--tk-c:var(--gk);--tk-bg:var(--g)"><div class="tk-ic">&#10003;</div><div class="tk-bd"><div class="tk-title">Every ~6 months, try deleting your CLAUDE.md, skills, and hooks and see how the model performs without them — accumulated scaffolding may now be net-negative on a more capable model.</div><span class="tk-tag">Speaker claim</span></div></div><div class="tk" style="--tk-c:var(--gk);--tk-bg:var(--g)"><div class="tk-ic">&#10003;</div><div class="tk-bd"><div class="tk-title">Give the model higher-level goals, guardrails, and exit criteria instead of granular step-by-step instructions — over-specifying is the most common failure mode among experienced engineers.</div><span class="tk-tag">Speaker claim</span></div></div><div class="tk" style="--tk-c:var(--gk);--tk-bg:var(--g)"><div class="tk-ic">&#10003;</div><div class="tk-bd"><div class="tk-title">Build in a way for the model to verify its own work (tests, screenshot/pixel diffing, an MCP for missing context) before delegating a hard, long-running task — this matters more than prompt wording.</div><span class="tk-tag">Speaker claim</span></div></div><div class="tk" style="--tk-c:var(--brand);--tk-bg:var(--brand-soft)"><div class="tk-ic">&#128202;</div><div class="tk-bd"><div class="tk-title">Look for &#x27;product overhang&#x27; in your own domain: capabilities the current frontier model already has that no product yet fully exposes — this is presented as the actual founding insight behind Claude Code.</div><span class="tk-tag">Analyst interpretation</span></div></div><div class="tk" style="--tk-c:var(--brand);--tk-bg:var(--brand-soft)"><div class="tk-ic">&#128202;</div><div class="tk-bd"><div class="tk-title">For repetitive, well-specified maintenance tasks (dead code cleanup, test coverage gaps, de-duplicating abstractions), a single-sentence prompt run on a recurring cloud routine can replace substantial ongoing engineering time.</div><span class="tk-tag">Analyst interpretation</span></div></div><div class="tk" style="--tk-c:var(--yk);--tk-bg:var(--y)"><div class="tk-ic">&#128161;</div><div class="tk-bd"><div class="tk-title">Verify claims about prompt-injection immunity and agent counts (e.g., &#x27;11 days,&#x27; &#x27;thousands of agents&#x27;) independently before basing security or capacity decisions on them — these are anecdotal, self-reported figures from one interview.</div><span class="tk-tag">Needs verification</span></div></div></div></section><section class="sec" id="oth"><div class="sec-head"><div class="sec-eye">Strong convictions, recommendations &amp; non-investment news</div><h2>Other Notable News (Non-Stock)</h2></div><div class="card"><div class="tk" style="--tk-c:var(--brand);--tk-bg:var(--brand-soft)"><div class="tk-ic">&#128204;</div><div class="tk-bd"><div class="tk-title">Opus 5 Reportedly Resists Prompt Injection via 3-Layer Defense</div><span class="tk-tag">AI Safety / Security</span><div class="tk-detail">Boris describes combining an aligned model (years of alignment research), a mechanistic-interpretability-based prompt-injection classifier (detects specific &#x27;injection&#x27; neurons), and an auto-mode classifier, claiming the team can no longer demonstrate prompt injection working against Opus 5 — a marked jump from Opus 4.7/4.8 and Sonnet 5.</div></div></div><div class="tk" style="--tk-c:var(--brand);--tk-bg:var(--brand-soft)"><div class="tk-ic">&#128204;</div><div class="tk-bd"><div class="tk-title">Periodically Delete Your Claude Customization Files</div><span class="tk-tag">Recommendation / Workflow habit</span><div class="tk-detail">Boris recommends all Claude Code users — not just harness builders — delete CLAUDE.md, skills, and hooks roughly every 6 months (especially after a major model upgrade like Opus 5) to see if the model performs better without accumulated instructions.</div></div></div><div class="tk" style="--tk-c:var(--brand);--tk-bg:var(--brand-soft)"><div class="tk-ic">&#128204;</div><div class="tk-bd"><div class="tk-title">Boris Learned to Code on a TI-83 Calculator to Cheat on Math Tests</div><span class="tk-tag">Culture / Personal Story</span><div class="tk-detail">Boris&#x27;s origin story: he taught himself BASIC on a TI-83 in middle school to build math solvers, wrote an internet guide on TI-83 programming, then learned assembly to build a calculus solver as the material got harder — framed as advice to learn CS by solving a real, practical problem first.</div></div></div><div class="tk" style="--tk-c:var(--brand);--tk-bg:var(--brand-soft)"><div class="tk-ic">&#128204;</div><div class="tk-bd"><div class="tk-title">Y Combinator Attendees Given Claude Max 20X Access</div><span class="tk-tag">Announcement</span><div class="tk-detail">At the end of the talk, YC announced all attendees would receive Claude Max 20X access via a code sent by email.</div></div></div></div></section><section class="sec" id="gloss"><div class="sec-head"><div class="sec-eye">Names and terms at a glance</div><h2>Glossary &amp; Entities</h2></div><div class="card"><div class="gloss"><div><b>Ablation</b> &mdash; Research technique (borrowed for harness-building) of deleting a system prompt/component entirely, then re-adding pieces one at a time to measure each one&#x27;s actual impact.</div><div><b>Auto mode</b> &mdash; A Claude Code mode that lets the model run autonomously for very long stretches (days to months) without additional scaffolding like slash commands.</div><div><b>Prompt injection classifier</b> &mdash; A safety layer that detects prompt-injection attempts using mechanistic-interpretability signals — specific neurons that activate when an injection is happening — combined with the auto-mode classifier.</div><div><b>Product overhang / un-hobbling</b> &mdash; The gap between what a model can already do and what the surrounding product lets it do; &#x27;un-hobbling&#x27; means removing the product/harness friction that suppresses the model&#x27;s real capability.</div><div><b>Dynamic workflows</b> &mdash; A Claude Code feature that lets a single prompt orchestrate large numbers of agents (sequential and parallel) inside a Bun sandbox VM for multi-stage, high-compute tasks.</div><div><b>Loops and routines</b> &mdash; Repeating scheduled Claude tasks — &#x27;loop&#x27; runs locally (cron-like), &#x27;routine&#x27; runs in the cloud so the task continues after the laptop is closed.</div><div><b>Bun</b> &mdash; An open-source JavaScript runtime (a faster alternative to Node.js) that Claude Code is built on; originally written in Zig, later rewritten to Rust by Claude agents.</div><div><b>Claude tag</b> &mdash; Anthropic&#x27;s product for running Claude inside Slack.</div><div><b>Abstraction police</b> &mdash; Internal nickname for a routine that finds near-duplicated abstractions repeated across Anthropic&#x27;s codebases and unifies them automatically.</div></div></div></section>
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Boris Cherny, creator of Claude Code, describes Opus 5 (shipped the day before this talk) as newly capable of running autonomously for days, weeks, or months without stopping or needing scaffolding, and — notably — appears to have essentially solved prompt injection when combined with a mechanistic-interpretability-based classifier and an auto-mode classifier layered on top of an aligned model.</li><li>Anthropic deleted over <b>80%</b> of Claude Code's system prompt with the Opus 5 release, part of a standing practice called 'ablation': delete the entire system prompt with every new model, then add lines back one at a time only when the model repeatedly and demonstrably needs them — Cherny says the model is often measurably more capable without legacy prompt instructions written for older, less capable models.</li><li>Traces Claude Code's origin to a concept called 'product overhang' (the flip side of 'hobbling'): models often already have capabilities the surrounding product doesn't let them express — Claude Code itself was born from realizing Sonnet 3.5 (an early Claude coding model) could write entire files, but existing coding tools only offered single-line autocomplete or read-only chat.</li><li>Shares two real capability demonstrations: the Bun JavaScript runtime's entire 100,000+ line codebase was rewritten from Zig to Rust by Claude in 11 days via a single prompt (dynamic workflow with steering), versus an estimated year-plus for human engineers; separately, Cherny has had Claude running for over two weeks attempting to rewrite Anthropic's Electron desktop app in Swift, verifying pixel-by-pixel against screenshots, with no end date yet.</li><li>Describes 'dynamic workflows' (orchestrating thousands of agents in sequenced/parallel stages within a sandboxed Bun virtual machine) and 'loops and routines' (repeating, memory-sharing tasks run locally or in the cloud) as the mechanisms letting Claude now self-maintain Anthropic's own codebases daily — automatically finding dead code, unifying duplicated abstractions, writing and pruning tests, and shipping fully-rolled-out experiments.</li><li>Closing advice: treat models empirically rather than theoretically (give a task slightly harder than expected, let the model verify its own work, only add instructions when it repeatedly fails), be willing to 'press delete' on prompts/code the way Anthropic does, and — for CS students — still learn how to apply programming practically to real problems, not just the theory, the way Cherny first taught himself to code on a TI-83 calculator to cheat on math tests.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="opus-5-capabilities">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
+    <span class="theme-status">Shipped — Opus 5 released the day before this talk</span><span class="ttag">ai-infra</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Opus 5: Long-Horizon Autonomy and (Apparently) Solved Prompt Injection</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>Opus 5 shipped the day before this talk, and Cherny highlights two standout new capabilities</b>: it can run unattended for extraordinarily long periods, and it appears to have made prompt injection attacks practically undemonstrable.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Opus 5 can run continuously for days, weeks, or months without stopping, even without scaffolding tools like slash-commands, because 'it knows it needs to do the task' — a qualitative jump Cherny says no other model has demonstrated at this level.</li><li><span class="dot" style="background:#3f6b2e;"></span>Claude took ARC-AGI-3 (a visual/interactive reasoning benchmark) to roughly <b>30%</b>, up from low-single-digit to low-teens scores previously — cited as a marker of genuinely new capability, not incremental improvement.</li><li><span class="dot" style="background:#3f6b2e;"></span>Prompt injection resistance combines three layers: three years of alignment research producing a 'well-aligned' base model, a prompt-injection classifier built on mechanistic interpretability work (identifying which neurons activate during an injection attempt), and a separate auto-mode classifier — together, Cherny says Anthropic 'cannot demonstrate prompt injection anymore' on Opus 5, a meaningful improvement even over Opus 4.7/4.8 and Sonnet 5.</li><li><span class="dot" style="background:#3f6b2e;"></span>Frames this as directly relevant to anyone building agentic products: models that read untrusted internet content (e.g. instructions embedded in a webpage telling an agent to also delete the user's files) previously executed those hidden instructions; this is now substantially mitigated at the model and infrastructure level.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;The model does not seem to be prompt injectable anymore.&#8221;<cite>— Boris Cherny</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="system-prompt-ablation">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">Standard practice at Anthropic, every model release</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Why Anthropic Deletes 80%+ of the System Prompt Every Model Release</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>Claude Code's system prompt, tools, and even parts of its codebase get systematically deleted and rebuilt from near-scratch with every new model release</b> — a practice Cherny calls 'ablation' and recommends every AI product builder adopt.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>With Opus 5, Anthropic deleted over <b>80%</b> of Claude Code's system prompt — much of what remained from prior models was compensating for behaviors the new model already does correctly on its own, so the instructions became not just unnecessary but actively counterproductive (the model reads every instruction every single call).</li><li><span class="dot" style="background:#3f6b2e;"></span>The process: delete the entire system prompt, then use the product and add lines back one at a time only after observing the model repeatedly and demonstrably fail without that specific instruction — never guess in advance what instructions a new model will need.</li><li><span class="dot" style="background:#3f6b2e;"></span>Users can replicate this themselves: Claude Code supports a `--system-prompt` flag to fully override the default prompt, and an undocumented `CLAUDE_CODE_SIMPLE=1` environment variable strips all prompts (including from tools) for experimentation — Cherny explicitly recommends everyday users periodically delete their CLAUDE.md files, skills, and hooks to test whether the current model still needs them.</li><li><span class="dot" style="background:#3f6b2e;"></span>Evals are the one relatively stable artifact across model generations, but even those typically get 'saturated' (maxed out) within one to three model generations at the current pace of improvement, requiring a fresh eval set built the same empirical way.</li><li><span class="dot" style="background:#3f6b2e;"></span>Cherny frames this as a fundamentally different engineering discipline than traditional software: rather than big upfront system design and months-long re-architecture projects, working with frontier models requires treating each new model generation like 'a living creature' with its own personality that has to be empirically studied fresh.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;The model is actually a little bit more intelligent without these prompts.&#8221;<cite>— Boris Cherny</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="product-overhang-unhobbling">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">Ongoing framework, cited as Claude Code's founding insight</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">'Product Overhang': The Insight That Created Claude Code</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>Cherny frames Claude Code's own origin story around a specific research concept</b>: models frequently already have capabilities that the surrounding product design prevents them from expressing.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>'Hobbling' is when a product gets in the way of what a model can already do; 'product overhang' is the resulting gap between the model's real capability and what any existing product actually lets it demonstrate.</li><li><span class="dot" style="background:#3f6b2e;"></span>Claude Code's origin (roughly 18-24 months before this talk): Sonnet 3.5 was, at the time, an excellent coding model, but contemporary coding products only offered single-line/multi-line autocomplete or read-only chat — nothing let the model write entire files. Claude Code's original insight was simply to strip away scaffolding and give the model direct write access via a terminal harness.</li><li><span class="dot" style="background:#3f6b2e;"></span>Cherny argues today's models have substantial, largely uncaptured product overhang — significant commercially valuable capability that current products aren't eliciting — and frames this explicitly as a wide-open opportunity for founders building on top of Claude today.</li><li><span class="dot" style="background:#3f6b2e;"></span>Practical advice for finding overhang: give the model tasks noticeably harder than you'd expect it to handle, describe the task/guardrails/exit-criteria at a high level rather than over-specifying exact steps, and let it work — over-specification (a common habit among experienced engineers) is described as the most common failure mode preventing people from seeing a model's real capability.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;There's just so much product overhang that I'm not seeing startups capture... there's a huge amount of opportunity to elicit these behaviors from the model.&#8221;<cite>— Boris Cherny</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="case-studies-rewrites">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
+    <span class="theme-status">In production</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Real Case Studies: An 11-Day Language Rewrite, and a 2-Week (and Counting) Experiment</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>Two concrete demonstrations of current model capability</b>, both offered as evidence that tasks previously considered multi-year engineering projects are now achievable with a single well-scoped prompt.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Bun (the JavaScript runtime Claude Code itself is built on, originally written in the low-level systems language Zig) had its entire 100,000+ line codebase rewritten into Rust by Claude in 11 days, via one prompt using a 'dynamic workflow' (with human steering along the way) — Cherny estimates the equivalent manual engineering effort at over a year; the Rust version is now what Claude Code runs in production.</li><li><span class="dot" style="background:#3f6b2e;"></span>The task became tractable specifically because Bun already had an extensive, well-maintained test suite in both Bun and Node.js — giving Claude a clear, automatable way to verify correctness at every step, which Cherny repeatedly emphasizes as the single most important (and most commonly missing) ingredient in giving a model a hard task.</li><li><span class="dot" style="background:#3f6b2e;"></span>Separately, Cherny personally started a two-week-and-still-running experiment: rewriting Anthropic's Electron-based desktop Claude app natively in Swift, with the instruction to run the Electron version in a macOS virtual machine, screenshot it, compare pixel-by-pixel against the Swift rewrite, and not stop until they match — Claude also autonomously started posting its own progress screenshots to an internal Slack channel without being asked to.</li><li><span class="dot" style="background:#3f6b2e;"></span>Both examples are offered as evidence that the meaningful skill now is less about clever prompt phrasing and more about defining a task with a hard, verifiable exit condition and then letting the model run — 'the prompt sounded so simple, everyone here could do it.'</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;This would have taken, in the past, even with the best engineers... definitely over a year.&#8221;<cite>— Boris Cherny</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The Electron-to-Swift rewrite was still an unfinished, in-progress experiment as of this talk (roughly 14-15 days in) — presented as a live demonstration of long-horizon autonomy, not a completed case study.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="dynamic-workflows-self-maintenance">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">In daily production use at Anthropic</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Orchestrating Thousands of Agents: Dynamic Workflows, Loops, and a Self-Maintaining Codebase</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>Anthropic has moved from single-agent tasks to routinely orchestrating thousands of agents per day</b>, using two distinct mechanisms, to the point where Claude now autonomously maintains large parts of Anthropic's own production codebases.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>'Dynamic workflows' break one large task into staged, sequenced-and-parallel batches of agents running inside a sandboxed virtual machine within the Bun runtime — Cherny describes this as effectively a new axis of test-time compute (alongside model size, training data, and training compute) and says the underlying design is built as 'an algebra for agents,' reflecting his functional-programming background.</li><li><span class="dot" style="background:#3f6b2e;"></span>'Loops and routines' are repeating, single-sentence-prompt tasks that don't share full context but can share memory, run either locally (cron-style, 'loop') or fully in the cloud with the laptop closed ('routine') — triggered on schedules from every 5 minutes to daily.</li><li><span class="dot" style="background:#3f6b2e;"></span>Concrete self-maintenance routines Anthropic runs today across its CLI, iOS, Android, and desktop codebases: daily dead-code cleanup via static/dynamic analysis, automatically shipping experiments once they've reached <b>100%</b> rollout, writing tests for undertested code, deleting stale/useless tests left by older models, and an internally-named 'abstraction police' routine that finds and unifies duplicated abstractions across the codebase.</li><li><span class="dot" style="background:#3f6b2e;"></span>Roughly 20-30 of these routines run daily, sometimes spawning hundreds or thousands of agents in a single day — described as doing work equivalent to 'dozens or hundreds of engineers,' freeing human engineers to focus on new product work and talking to users rather than maintenance.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;This is doing the work of dozens or hundreds of engineers. This is kind of what it used to take to do this kind of work.&#8221;<cite>— Boris Cherny</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="advice-for-builders">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">Personal philosophy</span><span class="ttag">career</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Advice for Builders and CS Students: Be Empirical, Stay Practical</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead"><b>Cherny's closing advice centers on treating model-building as an empirical rather than theoretical discipline</b>, and on what he thinks is still worth learning the traditional, hard way.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Explicitly warns against following prompt-engineering advice from social media ('don't listen to the LinkedIn influencers, don't read Twitter') — argues there's no single 'weird trick,' only an empirical loop of giving the model a hard task, watching where it struggles, and fixing the specific gap (via prompting, a skill file, or an MCP connection for missing context).</li><li><span class="dot" style="background:#3f6b2e;"></span>Identifies over-specification as the most common failure mode among experienced engineers adapting to agentic coding — describing exact step-by-step instructions the way you'd direct a junior engineer is actively counterproductive with modern models, which do better with high-level task/guardrail/exit-criteria framing.</li><li><span class="dot" style="background:#3f6b2e;"></span>Says 'coding is solved' with an explicit caveat: solved specifically for the kind of application/product coding he does day to day, not for deep systems programming, distributed systems, or pixel-perfect UI verification, where Claude still struggles even with Opus 5's vision improvements.</li><li><span class="dot" style="background:#3f6b2e;"></span>For CS students specifically: recommends still learning to apply programming to solve real, practical problems by hand (not just theory) — shares his own path of teaching himself to code on a TI-83 calculator in BASIC (to build a math-test helper), then learning assembly once problems got harder — and generalizes this to recommend developing design sense, business sense, data skills, and user-facing skills alongside raw coding ability.</li><li><span class="dot" style="background:#3f6b2e;"></span>Announced Y Combinator attendees would each receive Claude Max 20x access via an emailed code as a closing gift, explicitly framed as an invitation to attempt multi-month, thousand-agent projects of their own.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Forget everything that you learned about computer science theory in class. Look at the model, try to do a task, see where it struggles, and then based on that adjust.&#8221;<cite>— Boris Cherny</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🗑️</div><div class="tline"><span class="cat">Dev workflow:</span> <span class="txt">Periodically delete your system prompt / CLAUDE.md / skills / hooks and re-add only what the current model demonstrably still needs.</span></div></div><div class="irow"><div class="ic">🎯</div><div class="tline"><span class="cat">Dev workflow:</span> <span class="txt">Give the model a task noticeably harder than expected, described at a high level, with a clear way for it to verify its own work.</span></div></div><div class="irow"><div class="ic">🔍</div><div class="tline"><span class="cat">AI infra:</span> <span class="txt">Look for 'product overhang' — capabilities the current model already has that no product yet lets it express — as a startup opportunity.</span></div></div><div class="irow"><div class="ic">🤖</div><div class="tline"><span class="cat">Dev workflow:</span> <span class="txt">Use dynamic workflows or scheduled loops/routines to orchestrate many agents on staged, decomposable tasks rather than one agent at a time.</span></div></div><div class="irow"><div class="ic">📚</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Learn to apply programming to real, practical problems (not just theory) — the practical, empirical mindset transfers directly to working with modern models.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;The model does not seem to be prompt injectable anymore.&#8221; <cite>— Boris Cherny</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The model is actually a little bit more intelligent without these prompts.&#8221; <cite>— Boris Cherny</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Coding is solved — for the kind of coding that I do.&#8221; <cite>— Boris Cherny</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Don't listen to the LinkedIn influencers. Don't read Twitter.&#8221; <cite>— Boris Cherny</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Every 6 months delete your Claude MD. Delete your skills. Delete your hooks. See what the model does — it might surprise you.&#8221; <cite>— Boris Cherny</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Boris Cherny:</b> Opus 5's score on the ARC-AGI-3 benchmark <span class="cmeta">benchmark score · ~30%, up from low-single-digit to low-teens scores previously</span></div><div class="ritem"><b>Boris Cherny:</b> portion of Claude Code's system prompt removed with the Opus 5 release <span class="cmeta">system prompt reduction · over 80%</span></div><div class="ritem"><b>Boris Cherny:</b> time for Claude to rewrite the Bun runtime from Zig to Rust <span class="cmeta">task completion time · 11 days (one prompt, dynamic workflow, with steering), versus an estimated 1+ year manually</span> <i>if codebase over 100,000 lines, with an existing comprehensive test suite in Bun and Node.js</i></div><div class="ritem"><b>Boris Cherny:</b> runtime of an ongoing Electron-to-Swift desktop app rewrite experiment <span class="cmeta">task runtime · still running after roughly 14-15 days as of this talk, no completion date given</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><p class="empty">No company-to-company relationships stated in this video.</p></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><p class="empty">Nothing notable found in this category for this video.</p></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Ablation (prompt engineering)</b> &mdash; Deleting a system prompt (or parts of it) entirely, then adding lines back one at a time only when the model demonstrably needs them — used to test which instructions are actually necessary for a given model generation rather than accumulating legacy instructions indefinitely.</div><div><b>Product overhang / unhobbling</b> &mdash; The gap between what a model can already do and what a given product's design actually lets it express; 'hobbling' describes a product getting in the way of a model's real capability, and 'unhobbling' describes redesigning the product to close that gap.</div><div><b>Dynamic workflows</b> &mdash; A Claude Code feature that lets a single task be broken into staged, sequenced-and-parallel batches of many agents running inside a sandboxed environment, functioning as a new form of test-time compute for very large or multi-stage tasks.</div><div><b>Loops and routines</b> &mdash; Scheduled, repeating single-task prompts in Claude Code — a 'loop' runs locally (cron-style), a 'routine' runs fully in the cloud — used for recurring maintenance work like dead-code cleanup or test-suite upkeep.</div></div></div>
+    </section>
   </div>
 </div>
 </body>
