@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research: Agentic AI Stocks to Buy! HOLY ROCKETSHIP</title>
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Agentic AI Stocks to Buy! HOLY ROCKETSHIP</h1>
+    <div class="byline">
+      Channel: <b>Meet Kevin</b> &middot; Speaker: <b>Kevin Paffrath</b> &middot; <b>2026-09-22</b>
+      <div class="stats-line">5 threads: Meta's Muse app rockets to #1, Nvidia invades AMD's CPU turf, AMD looks overbought next to Nvidia, Intel/ARM ride the same CPU shift, and the 'stranded RAM' bull case for memory &middot; <a href="https://www.youtube.com/watch?v=r8pa1nIhprg" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Meta jumped <b>11.4%</b> and AMD jumped <b>9.95%</b> (crossing a $1T market cap) in the same session, both driven by agentic-AI enthusiasm.</li><li>Meta's new Muse agent app hit #1 on the App Store free chart, passing ChatGPT (#2); Gemini sits at #8, Claude at #16.</li><li>Nvidia is projecting <b>$20B</b> of CPU demand in 2026 alone — a business it had almost no revenue in a year ago — and is targeting 50% of the CPU TAM by 2030.</li><li>AMD looks overbought (RSI ~73 daily) and priced richer than Nvidia on a PEG basis (~1.5-1.6x vs ~0.7-1.0x) despite far thinner margins.</li><li>AMD gave Meta and OpenAI stock warrants at <b>$0.01/share</b> in exchange for multi-gigawatt chip-purchase commitments — a dilutive echo of Nvidia's own direct-investment ('circular financing') strategy with its customers.</li><li>Intel is showing real pricing power: data center/AI revenue up <b>59%</b> YoY on only 9% more units shipped, amid a severe server-CPU supply shortage.</li><li>A new bull case for memory: agentic AI can fill previously unused ('stranded') VRAM with parallel agent sessions, adding to already-tight DRAM/HBM supply.</li><li>Kevin's price targets: Meta <b>$1,800, </b>Nvidia $600+ (first $10T company), AMD ~$944 — but he says he wouldn't add to AMD at current levels.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="meta-muse-ads">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">HOLDING — Meta call made Aug 28 at $566, target raised to $1,800</span><span class="ttag">ai-infra</span><span class="ttag">consumer</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Meta's Muse App Rockets to #1, Feeding an Ad-Stock Thesis</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Meta's new Muse agent app jumped past ChatGPT to the top of the App Store free charts, and Kevin argues agentic AI is quietly a bull case for advertising platforms, not just chipmakers.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Muse launched September 8 and is now the #1 free app in the App Store, ahead of ChatGPT (#2); Gemini ranks #8, Claude (Anthropic) #16, Instagram #18.</li><li><span class="dot" style="background:#3f6b2e;"></span><b>Amazon</b> is now banning MetaMuse from crawling its site — as agents do more product browsing for users, fewer human eyeballs hit those pages, which Kevin says raises the value of app-store and platform advertising instead.</li><li><span class="dot" style="background:#3f6b2e;"></span>Meta broke through 700 this week (hit 741), still has <b>$15B</b> of free cash flow and over 4 gigawatts of compute; its next Frontier LLM ('watermelon') is expected next month.</li><li><span class="dot" style="background:#3f6b2e;"></span>Kevin's Meta call was made August 28 at ~<b>$566 </b>anticipating a breakout; next chart level flagged at 826.</li><li><span class="dot" style="background:#3f6b2e;"></span>Other ad-platform beneficiaries he names in passing: Google and Netflix, plus Apple and Google as app-store gatekeepers.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;The more agents browse products for you, the less human eyeballs are on them.&#8221;<cite>— Kevin</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>Muse app hit #1 free in the App Store; Kevin holds a large position and raised his target to $1,800.</span></div><div class="namechip"><b>Amazon (AMZN)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Banned MetaMuse from crawling its site to protect product-page traffic.</span></div><div class="namechip"><b>Google (GOOGL)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Gemini competing in the agent-app rankings; also named as an ad-platform beneficiary of the agent shift.</span></div><div class="namechip"><b>Netflix<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Named as an ad-platform beneficiary wherever human eyeballs still concentrate.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="nvidia-cpu-invasion">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">DEVELOPING — Nvidia guiding $20B CPU demand for 2026</span><span class="ttag">ai-infra</span><span class="ttag">semis</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Nvidia Is Coming for AMD's CPU Turf</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Nvidia is projecting $20 billion of CPU demand in 2026 alone — nearly six months of AMD's total revenue — from a business it had almost no presence in a year ago.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Since around March, workloads have been shifting toward CPUs because agentic AI (like Muse) runs efficiently there, unlike GPU-heavy training/chat workloads.</li><li><span class="dot" style="background:#93711b;"></span>Nvidia's <b>$20B</b> projected CPU demand for 2026 would rival roughly three quarters of AMD's entire gross profit, and is about 6 months of AMD's total revenue.</li><li><span class="dot" style="background:#93711b;"></span>Nvidia is targeting <b>50%</b> of the CPU TAM by 2030, up from the high-30s% today.</li><li><span class="dot" style="background:#93711b;"></span>AMD's Epyc Turin (5th-gen) chip is currently projected to reach ~<b>50%</b> of CPU TAM; it's x86, so it avoids ARM licensing fees.</li><li><span class="dot" style="background:#93711b;"></span>Benchmark trade-off: AMD's Helios rack system has <b>50%</b> more high-bandwidth memory and scale-out bandwidth than Nvidia's Vera Rubin, and 10-15% more tokens/sec — but AMD's newer Venice chip claims 2.8x more agents-per-watt vs Vera (a newer-vs-older comparison, per Kevin).</li><li><span class="dot" style="background:#93711b;"></span>Supply commitments through ~2031: AMD has locked ~<b>$30B</b> (wafers/substrates/components) vs Nvidia's $334B in the same window — Nvidia has 11x AMD's committed supply while being only 5x its market cap.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The Helios-vs-Vera-Rubin and Venice-vs-Vera benchmark comparisons mix chip generations (newer AMD product vs an older Nvidia chip) — Kevin flags this himself rather than treating it as apples-to-apples.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="amd-vs-nvidia-valuation">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">AMD overbought — RSI ~73 daily, ~70 weekly</span><span class="ttag">semis</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">AMD Looks Overbought and Overpriced Next to Nvidia</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">AMD's margins have improved sharply but Nvidia is still dramatically more profitable, cheaper on a growth-adjusted basis, and better funded to lock in supply and customers.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>AMD gross margin climbed from 39.8% to <b>53.7%</b>, with 17.2% net margin (just out of a loss); Nvidia sits at 75% gross and 63% net.</li><li><span class="dot" style="background:#93711b;"></span>Operating income: AMD ~<b>$2B</b> in three months vs Nvidia ~$63B — roughly 30x.</li><li><span class="dot" style="background:#93711b;"></span>Valuation: AMD trades near a 1.5-1.6 PEG ratio vs Nvidia's ~0.7-1.0 — AMD is more than <b>2x</b> as expensive on a growth-adjusted basis.</li><li><span class="dot" style="background:#93711b;"></span>AMD gave Meta and OpenAI warrants to buy AMD shares at <b>$0.01/share</b> (exercisable for Meta through Feb 23, 2031, and OpenAI through Oct 5, 2030) in exchange for ~6 gigawatts of chip purchases — dilutive, and Kevin calls it a cash-poor version of what Nvidia does.</li><li><span class="dot" style="background:#93711b;"></span>Nvidia's own version: <b>$42B</b> of equity and $21B of debt purchased in other companies in six months, funded by $70B of free cash flow over that period — vs AMD's $4B FCF in six months (Nvidia ~17.5x richer on cash flow).</li><li><span class="dot" style="background:#93711b;"></span>Kevin's price targets: Nvidia $600+ (would make it the first $10T company) vs AMD ~$944 (current $747, ~82x current-year earnings against ~55% growth); he says he would <b>not add to AMD</b> at current levels — 'a little toasty and a little euphoric.'</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>Far cheaper than AMD on PEG despite better margins and cash flow; target $600+, potential first $10T company.</span></div><div class="namechip"><b>AMD (AMD)<span class="stance" style="background:#93711b;">WATCHING · Medium · near-term</span></b><span>Already holds a position but says he wouldn't add more here given overbought RSI and a richer PEG than Nvidia; target ~$944, ~50% implied upside.</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Received AMD warrants at $0.01/share tied to chip-purchase commitments, exercisable through Oct 5, 2030.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Kevin discloses he holds exposure to most of the names discussed here (Meta, AMD, Nvidia, Intel) and says he isn't short anything — a standing bias he states directly rather than hides.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="intel-arm-pricing-power">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
+    <span class="theme-status">Intel +12% and ARM +17% same session</span><span class="ttag">semis</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Intel's Pricing Power and the ARM Land-Grab</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Severe server-CPU shortages are letting Intel raise prices even on consumer chips, while ARM licensing is quietly riding the same CPU shift through Apple, Google, Amazon, and Microsoft's own silicon.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Intel data center/AI revenue rose <b>59%</b> YoY in Q2 2026 on only 9% more units shipped — implying ~48% pricing power; stock closed +12% (intraday +14%) that day.</li><li><span class="dot" style="background:#3f6b2e;"></span>Intel's CEO cites a severe server CPU shortage, with existing capacity meeting only <b>50%</b> of demand; Intel is raising PC CPU prices ~10%, with bigger increases planned for data-center chips.</li><li><span class="dot" style="background:#3f6b2e;"></span>Intel is projected to double CPU sales between 2026 and 2027.</li><li><span class="dot" style="background:#3f6b2e;"></span>ARM currently sits at ~17-18% of CPU TAM and is projected to grow to 40-50%, competing directly with x86 (AMD/Intel); ARM stock was up <b>17%</b> the same day.</li><li><span class="dot" style="background:#3f6b2e;"></span>ARM-based chips now span the industry: Apple and Nvidia license ARM, Google has its own Axion chip, AWS has Graviton, and Microsoft has Cobalt.</li><li><span class="dot" style="background:#3f6b2e;"></span>OpenAI reportedly bought tens of thousands of Apple Mac Studios and Mac minis for agentic AI compute, another line of ARM-adjacent demand.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Intel (INTC)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium · 2026-2027</span></b><span>Showing real pricing power amid a severe server CPU shortage; projected to double CPU sales 2026-2027.</span></div><div class="namechip"><b>ARM<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Growing from ~17-18% to a projected 40-50% of CPU TAM as the architecture behind Apple, Nvidia, Google Axion, AWS Graviton, and Microsoft Cobalt.</span></div><div class="namechip"><b>Apple (AAPL)<span class="stance" style="background:#93711b;">WATCHING · Low</span></b><span>ARM licensee and CPU-shift beneficiary, plus an app-store ad beneficiary — but Kevin calls the stock 'a little pricey' and doesn't own it.</span></div><div class="namechip"><b>Microsoft (MSFT)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Cobalt is its own ARM-based chip, part of the same architecture shift.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="stranded-ram-memory">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Speculative</span>
+    <span class="theme-status">UNSETTLED — Kevin explicitly torn on memory names</span><span class="ttag">ai-infra</span><span class="ttag">semis</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">The 'Stranded RAM' Case for Memory Stocks</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Agentic AI may finally put idle VRAM capacity to work by running many parallel agent sessions on chips that were previously loading a model but not using all their memory.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>Most current chat workloads don't fill a chip's full VRAM (Kevin uses a hypothetical ~228GB Rubin-class chip) once the model and typical context are loaded, leaving 'stranded' unused capacity.</li><li><span class="dot" style="background:#65695f;"></span>Agentic AI can fill that stranded capacity by running several parallel agent sessions off one loaded model — a new source of demand for high-bandwidth memory (Micron, SK Hynix).</li><li><span class="dot" style="background:#65695f;"></span>DRAM prices are up ~<b>95%</b> in Q1 2026 and still rising; growth is expected to peak by the end of 2027 as more supply comes online.</li><li><span class="dot" style="background:#65695f;"></span>All three DRAM makers are reportedly sold out of high-bandwidth memory; SK Hynix's added capacity isn't expected online until 2028-2029.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Micron (MU)<span class="stance" style="background:#93711b;">UNCERTAIN</span></b><span>HBM beneficiary of the 'stranded RAM' agentic-AI bull case, but Kevin says he's undecided on the stock.</span></div><div class="namechip"><b>SK Hynix<span class="stance" style="background:#93711b;">UNCERTAIN</span></b><span>Sold out of high-bandwidth memory; new capacity doesn't come online until 2028-2029.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Kevin is explicitly more uncertain here than on the chip names — he says he's 'a little bit more torn' on memory stocks and doesn't stake a clear position.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="next-wave-plays">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Speculative</span>
+    <span class="theme-status">WATCHING — small/no positions disclosed</span><span class="ttag">robotics</span><span class="ttag">semis</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">Next Up: Broadcom, Cerebras, and Robotics</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Beyond the AMD/Nvidia/Intel trio, Kevin flags Broadcom and Cerebras as the next names to watch, and robotics as the next theme past agentic AI.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>Broadcom is back at the '355 line' — Kevin doesn't own it but calls it 'the next boomer.'</li><li><span class="dot" style="background:#65695f;"></span>Cerebras has hit a floor in his view; he holds a small, DCA'd position and considers it a buy under ~<b>$250</b>.</li><li><span class="dot" style="background:#65695f;"></span>Robotics is framed as the next opportunity past agents, with Cerebras and Nvidia named as the two big robotics plays.</li><li><span class="dot" style="background:#65695f;"></span>Most ASIC designers in this space (unnamed individually beyond Broadcom) rely on TSMC to manufacture.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Broadcom (AVGO)<span class="stance" style="background:#93711b;">WATCHING · Medium · near-term</span></b><span>Back at the 355 level; flagged as the next name to watch, not currently owned.</span></div><div class="namechip"><b>Cerebras<span class="stance" style="background:#3f6b2e;">BUYING-ADDING · Low</span></b><span>Small DCA position; considers it a buy under $250 and one of the two big robotics plays alongside Nvidia.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Kevin explicitly does not own Broadcom and holds only a small Cerebras position — his conviction sizing here is much lower than for Meta, AMD, or Nvidia.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🎯</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Don't chase AMD at these levels — it's overbought (RSI ~73 daily) and pricier than Nvidia on a PEG basis</span></div></div><div class="irow"><div class="ic">📊</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Track Nvidia's CPU push as a real threat to AMD/Intel, not a footnote — <b>$20B</b> guide for 2026, 50% TAM target by 2030</span></div></div><div class="irow"><div class="ic">📱</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Watch the ARM beneficiaries (Apple, Google Axion, AWS Graviton, Microsoft Cobalt), not just AMD/Intel's x86 fight</span></div></div><div class="irow"><div class="ic">🧩</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Hold off on conviction in memory names until HBM supply clarity improves — even Kevin is undecided here</span></div></div><div class="irow"><div class="ic">🤖</div><div class="tline"><span class="cat">Robotics:</span> <span class="txt">Size Cerebras and Broadcom as small, speculative positions, not core holdings, per Kevin's own disclosed sizing</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;I would not add to AMD at this place. It could keep going. It just right now it feels a little toasty and a little euphoric.&#8221; <cite>— Kevin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;This is an $1,800 stock.&#8221; <cite>— Kevin (on Meta)</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Nvidia is expecting to blow up their CPU competition for a pure play... like AMD.&#8221; <cite>— Kevin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The ultimate winner is the ones selling the chipsets... and that seems to be AMD and Nvidia at the moment.&#8221; <cite>— Kevin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Robotics, you want Cerebras and you want Nvidia. Those are your big robotics plays.&#8221; <cite>— Kevin</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Kevin:</b> Nvidia's CPU demand reaches $20B in calendar year 2026 <span class="cmeta">CPU demand · $20B · 2026</span> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>Kevin:</b> AMD revenue grows 72% next year to reach $88B for the full year <span class="cmeta">revenue growth · 72% / $88B · next year</span> <span class="tag">AMD (AMD)</span></div><div class="ritem"><b>Kevin:</b> Nvidia reaches 50% of the CPU TAM <span class="cmeta">CPU TAM share · 50% · 2030</span> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>Kevin:</b> Meta price target <span class="cmeta">price target · $1,800</span> <span class="tag">Meta (META)</span></div><div class="ritem"><b>Kevin:</b> AMD price target based on PEG-adjusted upside <span class="cmeta">price target · $944</span> <span class="tag">AMD (AMD)</span></div><div class="ritem"><b>Kevin:</b> Nvidia becomes the first $10 trillion market cap company <span class="cmeta">market cap · $10T</span> <i>if if it reaches $600+/share</i> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>Intel CEO:</b> Intel raises PC CPU prices and data-center CPU prices further still <span class="cmeta">price increase · ~10% (PC), more for data center</span> <i>if due to a severe server CPU supply shortage</i> <span class="tag">Intel (INTC)</span></div><div class="ritem"><b>Kevin:</b> DRAM pricing growth peaks <span class="cmeta">DRAM price growth · peak · end of 2027</span> <i>if as more supply comes online</i></div><div class="ritem"><b>Kevin:</b> ARM grows its share of the CPU TAM <span class="cmeta">CPU TAM share · 40-50%</span> <span class="tag">ARM</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>AMD (AMD)</b> <span class="rel">supplies</span> <b>Meta (META)</b> &mdash; warrants to buy AMD at $0.01/share, exercisable through Feb 23, 2031, tied to a multi-gigawatt chip purchase commitment</div><div class="ritem"><b>AMD (AMD)</b> <span class="rel">supplies</span> <b>OpenAI</b> &mdash; warrants to buy AMD at $0.01/share, exercisable through Oct 5, 2030, tied to a chip purchase commitment</div><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">invests in</span> <b>AI/data-center customers</b> &mdash; $42B of equity and $21B of debt purchased in six months ending July 2026, funded by $70B of free cash flow</div><div class="ritem"><b>Amazon (AMZN)</b> <span class="rel">criticizes</span> <b>Meta (META)</b> &mdash; banned the MetaMuse app from crawling Amazon's site</div><div class="ritem"><b>AMD (AMD)</b> <span class="rel">acquires</span> <b>ZT Group</b> &mdash; general-purpose compute infrastructure for hyperscale data center customers</div><div class="ritem"><b>OpenAI</b> <span class="rel">customer of</span> <b>Apple (AAPL)</b> &mdash; bought tens of thousands of Mac Studios and Mac minis for agentic AI compute</div><div class="ritem"><b>ARM</b> <span class="rel">competes with</span> <b>AMD (AMD)</b> &mdash; ARM architecture vs x86 in the race for CPU TAM share</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🚀</div><div><div class="title">SpaceX was down about <b>1%</b> the same day Meta rallied hard — Kevin reads it as rotation/horse-race dynamics ('everybody's going to Metamuse'), not a real fundamental read-through. <span class="tag">Markets</span></div></div></div><div class="irow"><div class="ic">⚠️</div><div><div class="title">Kevin reiterates he's buying the dip because he sees no current signs of his previously-flagged 'two paths to recession' — but says to stay watchful for when that changes. <span class="tag">Macro</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Stranded RAM</b> &mdash; Unused VRAM/DRAM capacity left over after a model's weights and typical context window are loaded — agentic AI's parallel sessions can fill it, a new bull case for memory chips.</div><div><b>PEG ratio</b> &mdash; A stock's P/E ratio divided by its expected growth rate, used here to argue AMD is priced richer than Nvidia despite Nvidia's much larger market cap.</div><div><b>Warrants (call options)</b> &mdash; Rights AMD gave Meta and OpenAI to buy AMD shares at $0.01 each, in exchange for chip-purchase commitments — dilutive to existing AMD shareholders if exercised.</div><div><b>CPU TAM</b> &mdash; Total addressable market for CPUs in data centers — the pool Nvidia, AMD, Intel, and ARM licensees are now all competing to capture.</div><div><b>Circular financing</b> &mdash; A vendor investing in or extending credit to its own customers, who then use that money to buy the vendor's product — cited for both Nvidia's direct equity/debt purchases and AMD's warrant deals.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
