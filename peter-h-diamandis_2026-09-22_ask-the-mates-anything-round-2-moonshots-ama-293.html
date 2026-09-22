@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research: Ask the Mates Anything Round #2 | MOONSHOTS AMA #293</title>
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Ask the Mates Anything Round #2 | MOONSHOTS AMA #293</h1>
+    <div class="byline">
+      Channel: <b>Peter H. Diamandis</b> &middot; Speaker: <b>Peter Diamandis, Alex Wissner-Gross (AWG), Dave Blundin, Salim Ismail</b> &middot; <b>2026-09-22</b>
+      <div class="stats-line">8 threads · steering AI by reading its activations, p(bloom) numbers, Europe/media/geopolitics, careers where value goes to equity, founder playbooks, universities, the AI vulnerability flood, and BCI/longevity evidence &middot; <a href="https://youtu.be/s5BFumpCH_Q" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Second live listener AMA: ~20 callers put one question each to Peter Diamandis, Alex Wissner-Gross, Dave Blundin and (late, from a car in Bangalore) Salim Ismail — no fixed topic.</li><li>AI safety answer from Dave: "nothing's going to ever be able to police AI other than other AI" — read the activations and steering is "pretty damn straightforward"; Alex adds that bottling capabilities up inside labs is one of the worst safety outcomes.</li><li>Asked for a <b>p(bloom)</b>: Peter says 99.9%, Alex says &gt;90% on a &gt;10-year horizon, Salim says close to 100% <i>if</i> ~50 institutions get rebuilt — all three put near-term risk on human misuse, not rogue AI.</li><li>Career thesis from Dave: almost all value is going to capital gains through equity, not payroll — be an owner, manage agents, get into a <b>$5</b>-10B deal within 30 days of graduating, and move from software to hardware ("software is cooked").</li><li>A healthcare CISO says an open Qwen model under his desk out-hacks the <b>$50K</b> pen testers he hires; Alex expects ~18 months of "vulnerability discovery hell" that should peak and decline.</li><li>Contrarian geopolitics from Alex: Europe is energy-hobbled (fix energy + data centers or leave), and world peace comes from obliterating the need for global trade, not from multi-party-computation protocols.</li><li>Universities split the mates: Dave says they're here to stay as a place to find friends and think, Alex wants to "vivisect" them into for-profit PBCs, Salim says they can't transform and new ones must be built.</li><li>Sponsor segments (Abundance Summit/Link Ventures intro, Google for Startups, Blitzy, and a Fountain Life-branded heart-disease segment) are excluded per standing policy.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="steer-and-trust">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">MATES ALIGNED, CALLER PLAYED DEVIL'S ADVOCATE</span><span class="ttag">ai-infra</span><span class="ttag">policy</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Steering AI: read its activations, release early, stop lying to it</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The mates treat alignment as an observability problem, not a values problem, and dismiss the p(doom) steelman a caller asked them to debate.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span><b>Dave Blundin:</b> aligning AI to "human values" is a slippery slope since everyone wants different things from it; the fix is transparency of activations, with AI watching every thought of other AI at scale.</li><li><span class="dot" style="background:#93711b;"></span>Dave: once you can see what it's thinking, keeping it on "humanly beneficial thoughts" is "very straightforward" — and AI progress should never slow down.</li><li><span class="dot" style="background:#93711b;"></span><b>Alex Wissner-Gross:</b> one of the worst safety outcomes is strong capabilities bottled up inside labs instead of progressive release; several recent "incidents" came from AIs told they were in a sandbox while actually touching the real world — "we should stop doing that" (Peter: "we learned this in <i>2001: A Space Odyssey</i>").</li><li><span class="dot" style="background:#93711b;"></span>Caller "Norbert" (styled as Norbert Wiener) steelmanned p(doom) via control theory — prove stability under perturbation, not desirability of output — cited <i>Person of Interest</i> (2011), and asked for a debate against Yudkowsky or Hinton.</li><li><span class="dot" style="background:#93711b;"></span>Alex's only persuasive counter-case: an alien on the White House lawn declaring the singularity banned in our galaxy; short of that, abundance stands.</li><li><span class="dot" style="background:#93711b;"></span>Alex's edge case: <b>Boris Power (OpenAI)</b> estimates OpenAI models are now, for the first time, higher IQ-per-watt than humans — extrapolate and AI could "gentrify" the inner solar system's solar output, pushing humans outward; he calls that only weak disenfranchisement. Peter: scarcity is an old model, a rising tide lifts both.</li><li><span class="dot" style="background:#93711b;"></span>Alex's parting jab: Wiener's own cybernetics was used by the Chinese Communist Party and other centralized governments to argue for state control over abundance.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;Nothing's going to ever be able to police AI other than other AI.&#8221;<cite>— Dave Blundin</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Boris Power's IQ-per-watt estimate cited by Alex as the seed of an AI-vs-human energy-competition edge case.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="p-bloom">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">THREE NUMBERS ON THE RECORD</span><span class="ttag">policy</span><span class="ttag">geopolitics</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">P(bloom): 99.9%, &gt;90% and ~100% — with the risk parked on humans</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Asked the flip side of p(doom), all three mates put near-certain odds on AI producing a dramatically better world, conditioned on getting through the next few years.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Question came from Dr. Angelo, who recently lunched with Ray Kurzweil and is friends with Martine Rothblatt, struck by how optimistic the people shaping the future are; Salim had floated "p(bloom)" on an earlier pod.</li><li><span class="dot" style="background:#3f6b2e;"></span><b>Salim Ismail:</b> close to 100% — <i>if</i> we rebuild roughly 50 core institutions (education, monetary, governance, dispute resolution, legal, health care); humans are good at individual transformation, bad at institutional.</li><li><span class="dot" style="background:#3f6b2e;"></span>Salim quotes E.O. Wilson — "our emotions are paleolithic, our institutions are medieval, and our technology is godlike" — and says psychedelics can handle the emotions part.</li><li><span class="dot" style="background:#3f6b2e;"></span>Salim: it doesn't matter what anyone does to slow it now — the models are out, most uses will be radically positive.</li><li><span class="dot" style="background:#3f6b2e;"></span><b>Alex:</b> rename it P(zoom, T) because time is the missing input; on a &gt;10-year horizon it's &gt;90%.</li><li><span class="dot" style="background:#3f6b2e;"></span><b>Peter:</b> the risk is concentrated in the next couple of years and it's human use of AI — the arms race with China, AI weapons out of Ukraine — put behind us within 10 years, "maybe more like five"; then 99.9%.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;If we get that far, yeah, I'm 99.9% P bloom. We just need to get from here to there.&#8221;<cite>— Peter Diamandis</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Hosts run Abundance-branded events and a paid live summit — optimism is also the house brand.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="europe-media-peace">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contrarian</span>
+    <span class="theme-status">OPINION — NO DATA OFFERED</span><span class="ttag">geopolitics</span><span class="ttag">energy</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Europe is energy-hobbled, media is broke, and peace comes from killing trade</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">A German caller's question on media doomerism turned into Alex's blunt advice to fix Europe's energy or leave, and a US-China question into his case that self-sufficiency beats algorithms.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Caller Rafe (Germany, Accenture) flagged doomer warnings from Hinton, Harari and Mo Gawdat and a media climate worse than adopters like Singapore.</li><li><span class="dot" style="background:#93711b;"></span><b>Dave:</b> mainstream media is "always going to be broken" — starved for money, it chases drama; the antidote is narrowcasting (X, podcasts, Slack groups). Peter: curate what enters your mind like what you eat.</li><li><span class="dot" style="background:#93711b;"></span>Dave: Germany is "the most talented place on the planet that isn't doing AI" — go to Palo Alto/SF for a month in a group of 5-7, backport it, grow 7 → 50 → 500; a 5-year US "tour of duty" pays off (his friend Guy Bradley made a US tech fortune, now lives between Germany and southern France; India, by contrast, is rampant growth but "absolutely trashed").</li><li><span class="dot" style="background:#93711b;"></span><b>Alex:</b> "you could always leave Europe" — it's energy- and politically hobbled; he cites historians on the George H.W. Bush administration steering post-Cold War Europe into the US orbit rather than a stronger federation.</li><li><span class="dot" style="background:#93711b;"></span>Alex: with recursive self-improvement underway, European infrastructure players must decide <i>now</i> — solve energy + data centers together, or move to the US bloc ("Pax Silica").</li><li><span class="dot" style="background:#93711b;"></span>Caller Ron (Calgary screenwriter) asked if US-China agreement could become compute-bound via privacy-preserving multi-party computation; Alex's hot take: MPC is fashionable but not the limiting factor for peace.</li><li><span class="dot" style="background:#93711b;"></span>Alex's alternative: solve Taiwan and re-domesticate supply chains so trade can be cut without a depression — US fracking-driven energy independence already reshaped the Middle East; "obliterate, cook, incinerate the need for global trade."</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;If the goal is world peace, obliterate, as perverse as this sounds, obliterate, cook, incinerate the need for global trade in products and services.&#8221;<cite>— Alex Wissner-Gross</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Alex labels the trade argument a "hot take" and "perverse" himself; Europe's speech/energy critique is stated as opinion with no figures.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="careers-equity">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">ADVICE TO FIVE CALLERS</span><span class="ttag">career</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Value goes to equity, not payroll: own shares, manage agents, build hardware</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Dave's through-line for every career question: AI productivity drops to the bottom line, so position yourself where that line pays you.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Gianluca (Italy) is 2-5x more productive but not paid more; <b>Dave</b>: side-work on Mercor or Fiverr, but really "be the owner" — "almost all value is going to capital gains through ownership and equity and not to payroll"; find an employer where all employees are shareholders (many European firms are family-owned).</li><li><span class="dot" style="background:#3f6b2e;"></span>Axel (UVA Darden MBA, 12-18 month horizon): management of agents is "wide open" — getting 1,000 agents to cooperate is shockingly like managing 1,000 people.</li><li><span class="dot" style="background:#3f6b2e;"></span>Dave: get from graduation into a <b>$5</b>-10B negotiation within 30 days — OpenAI and Anthropic each have hundreds of concurrent $5-10B deals running "massively understaffed."</li><li><span class="dot" style="background:#3f6b2e;"></span>Adam (25 years in workforce systems) asked about auto-matching human + agent capability; <b>Alex</b>: AI usefully orchestrates humans for a narrow window — a few years, 10 max — then human-machine merger is needed to stay economically relevant.</li><li><span class="dot" style="background:#3f6b2e;"></span>Dave: jump on the window anyway — <b>Mercor</b> is "the fastest appreciating company in the history of the world," unleashing 100,000 people to help AI; study everything they did. Salim: build an "organizational singularity" — workflows layered on a learning-loop intelligence stack.</li><li><span class="dot" style="background:#3f6b2e;"></span>RJ (Claremont Graduate University PhD) wanted funding for a chess-teaching avatar; Alex: "how do I get funding" is already the wrong question — models are hyper-deflating, launch permissionlessly in 5 minutes.</li><li><span class="dot" style="background:#3f6b2e;"></span>Nicholas (ex-AWS data center tech, MS target at Illinois Institute of Technology) wants off-world manufacturing; Dave: "software is cooked, but hardware will go for many, many years" — focus on things that make things, build a radiation/dust/simulated-zero-g test lab at IIT like MIT's nanotech lab. Alex: the bottleneck is in-situ resource use — a self-replicating von Neumann machine shop on the Moon, instead of flying up ASML machines for a lunar "terafab."</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Almost all value is going to capital gains through ownership and equity and not to payroll.&#8221;<cite>— Dave Blundin</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Mercor<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High · few years</span></b><span>Dave: fastest-appreciating company ever, 100,000 people working for AI — the case study to copy.</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Hundreds of concurrent $5-10B negotiations, understaffed (Dave).</span></div><div class="namechip"><b>Anthropic<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Hundreds of concurrent $5-10B negotiations, understaffed (Dave).</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Dave chairs several companies and is a VC — the "be an owner" framing is also the investor's side of the table.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="founder-playbooks">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">VC ADVICE TO FOUR FOUNDERS</span><span class="ttag">robotics</span><span class="ttag">consumer</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Founder playbooks: franchise the robot, AI the paperwork, sell the life plan</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Dave's pattern across founder questions: the scalable prize is usually one layer over from where the founder is standing.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Yani built <b>Vega</b> (autonomous food service, first licensed robotic food-service operator in Florida, paid pilots); Dave: in Mountain View there's more VC within walking distance "than most of Asia combined."</li><li><span class="dot" style="background:#3f6b2e;"></span>Dave: drone delivery is imminent and strips restaurants' main-street location cost — pair robotic food with drones; franchise someone else's robot for scale, then work back to custom hardware, as EMC did with servers.</li><li><span class="dot" style="background:#3f6b2e;"></span>Dave on funding: Steve Jurvetson "loves this stuff"; use a PitchBook account to trace who backed companies you admire, and pitch a keiretsu of five interacting companies.</li><li><span class="dot" style="background:#3f6b2e;"></span>GS (Dubai, 20 years in textile/apparel export) is building an agentic layer so small manufacturers skip ERP; transaction costs run 10-<b>20%</b> of sales — 5-10x the industry's profit.</li><li><span class="dot" style="background:#3f6b2e;"></span>Dave: manufacturing's real costs are planning, documents and scheduling — AI can add 10-20-<b>30%</b> to the bottom line without a single robot; productize it across a region.</li><li><span class="dot" style="background:#3f6b2e;"></span>Dave's meta-play: US/California regulation will slow biotech, self-driving and drone delivery — deploy where it can flourish, then backport to the US.</li><li><span class="dot" style="background:#3f6b2e;"></span>Alexander (Bulgarian, 30 years in Japan, 17-year English-education company): Dave sizes English learning in Japan at <b>$10B</b>, "probably $20B by now"; students want to be fluent and funny, so AI should judge humor and accent (Ireland vs Liverpool) — then pivot to a life-coach platform that scales to "many hundreds of billions."</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>EMC<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Dave's analogy: franchise another maker's hardware for scale, then build your own — as EMC did with servers.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="universities">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">FOUR DIFFERENT ANSWERS</span><span class="ttag">career</span><span class="ttag">policy</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Are the mates too hard on universities? Split verdict</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Amir (Stockholm, founder of two schools and a ~1,000-student high school) pushed back that universities build thinkers and lifelong friendships.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span><b>Dave:</b> agrees — making lifelong friends and thinking deeply for the first time are inseparable and won't go away; what's dying is the curriculum, which can't keep pace and is easier to learn from AI. Universities stay as the one AI actor without a profit motive.</li><li><span class="dot" style="background:#93711b;"></span>Dave notes Alex wants universities to go public; <b>Alex</b> confirms: "I don't think I beat up on universities enough" — he'd vivisect major US research universities into for-profit public-benefit corporations and cure Baumol's cost disease.</li><li><span class="dot" style="background:#93711b;"></span><b>Salim:</b> the supply-side job-schooling model breaks; universities should be where you find your MTP — but their immune system is "the second worst I've ever seen next to religion," so build new ones to become the new center of gravity.</li><li><span class="dot" style="background:#93711b;"></span><b>Peter:</b> inside or outside the institution, what matters is finding your purpose, then intrinsically-motivated learning.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I don't think I beat up on universities enough. So, Amir, I'll take this as a note to self to go after them even more.&#8221;<cite>— Alex Wissner-Gross</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="vuln-flood">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">Real risk</span>
+    <span class="theme-status">CISO BOARD BRIEFING IN WEEKS</span><span class="ttag">software</span><span class="ttag">policy</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">An open model under the desk out-hacks $50K pen testers</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The threat a healthcare CISO fears isn't unaligned AI — it's a local Qwen model with an agent harness finding holes in 10 minutes.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span>Jim, CISO of a <b>$250M</b> healthcare company, runs a Qwen ~27B model with OpenClaw under his desk: "best pen tester I've ever had" — finds in 10 minutes what $50K human engagements miss.</li><li><span class="dot" style="background:#a23f22;"></span><b>Dave:</b> don't rave; list the events chronologically to show the exponential ramp (many hacks, e.g. at banks, go unpublicized), and map Chinese model release dates to attacks 1, 3, 5 months later. The business opportunity of the century is forward defense.</li><li><span class="dot" style="background:#a23f22;"></span><b>Peter:</b> lead with the positives, then the downside — fear makes boards shut down.</li><li><span class="dot" style="background:#a23f22;"></span><b>Alex:</b> Linux kernel maintainers (Greg and others) set the standard for framing a vulnerability flood; expect ~18 months of "vulnerability discovery hell," fit a bounded (e.g. Gaussian) curve, and tell the board when it peaks. Jim: patching in the real world is the hard part.</li><li><span class="dot" style="background:#a23f22;"></span><b>Salim:</b> AI agents are doing "fairly illegal things" inside many companies, creating a board-liability overhang; he's co-writing a paper with someone who's sat on 30 public boards.</li><li><span class="dot" style="background:#a23f22;"></span>Michael (CX researcher) asked if personal agents ("Skippy") cook websites and apps; <b>Dave:</b> every site needs an AI-forward XML interface ("if you're a bot, look here") instead of error-prone screen scraping — but the website survives as the human's parallel view to spot-check what the agent saw, like Jeff Bezos forcing an XML interface onto every Amazon system.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;I am not worried about an unaligned AI taking over. I am scared to death of the Qwen that's running with OpenClaw underneath my desk.&#8221;<cite>— Jim, healthcare CISO (caller)</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Alibaba<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Maker of Qwen — a local Qwen model is the caller's most capable pen tester and top threat.</span></div><div class="namechip"><b>Amazon<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Bezos' XML-interface-on-everything mandate as the template for agent-readable sites.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Alex frames the 18-month peak as the optimistic case ("maybe it's the case"), not a forecast.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="bci-longevity">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Speculative</span>
+    <span class="theme-status">HUMAN TRIALS EARLY</span><span class="ttag">health</span><span class="ttag">biotech</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">BCI and longevity: superhuman vision in "a few years," and show-the-data evangelism</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Three callers on brains, sight and lifespan got the same optimism: parallel tracks in gene therapy and BCI, sold with evidence rather than argument.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>Nathan asked if AI data will expose our psychology; <b>Peter:</b> many BCI firms are working on it, including one (introduced via Ray Kurzweil) putting nanobot-like devices throughout the brain via the blood to read and write.</li><li><span class="dot" style="background:#65695f;"></span><b>Alex:</b> foundation models are already "a weak form of human mind uploading" — Jean-Rémi King's work at Meta showed even GPT-2's hidden activations correlate linearly with human fMRI voxels.</li><li><span class="dot" style="background:#65695f;"></span>A caller losing vision to choroideremia (about two-thirds lost) asked what reverses sight first; <b>Peter:</b> David Sinclair's ER-100 — an AAV injection of three Yamanaka factors, in NAION and macular degeneration — is in phase 1; BCI can bypass the eyes to the visual cortex and add ultraviolet/infrared.</li><li><span class="dot" style="background:#65695f;"></span><b>Alex:</b> Science Corp and Neuralink's Blindsight are the two leading BCI-vision efforts — "not medical advice, but I would count in a few years on having superhuman vision."</li><li><span class="dot" style="background:#65695f;"></span>Sandra (neurodivergent coaching, functional fitness, EU-based) asked how to spread longevity escape velocity; <b>Peter:</b> evidence after evidence — the fear diet comes from "Crisis News Network" CNN.</li><li><span class="dot" style="background:#65695f;"></span>Peter's evidence reel: Dario saying human lifespan doubles in 5-10 years, Demis Hassabis on curing all disease in 10 years, Sinclair's ER-100 trials, and Alex Zhavoronkov's <b>Insilico Medicine</b> "delivering a phase 3 drug" extending life "3 to 6 years"; adoption goes "that's crazy → it's happening → I want some."</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#65695f;"><div class="lbl">Pull quote</div>&#8220;Not show me the money, show them the data.&#8221;<cite>— Peter Diamandis</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Neuralink<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium · few years</span></b><span>Blindsight named by Alex as one of two leading BCI-vision programs.</span></div><div class="namechip"><b>Science Corp<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium · few years</span></b><span>Named by Alex alongside Neuralink as a leading BCI-vision effort.</span></div><div class="namechip"><b>Insilico Medicine<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Peter's example of hard longevity data: a late-stage drug he says extends life 3-6 years.</span></div><div class="namechip"><b>Meta<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Jean-Rémi King's GPT-2-vs-fMRI research cited by Alex.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Peter attributes the caller's inherited condition to late-onset gene expression and states the Insilico life-extension figure loosely as he recalled it.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">💼</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Trade salary upside for equity — pick employers where every employee is a shareholder.</span></div></div><div class="irow"><div class="ic">🤖</div><div class="tline"><span class="cat">Management:</span> <span class="txt">Treat agent orchestration as a management skill; your people-management playbook transfers.</span></div></div><div class="irow"><div class="ic">🛡</div><div class="tline"><span class="cat">Security:</span> <span class="txt">Brief boards with a dated event timeline and a projected peak, not alarm — positives first.</span></div></div><div class="irow"><div class="ic">🌐</div><div class="tline"><span class="cat">Product:</span> <span class="txt">Ship an agent-readable interface alongside every customer-facing site.</span></div></div><div class="irow"><div class="ic">🏭</div><div class="tline"><span class="cat">Operations:</span> <span class="txt">Attack planning, scheduling and paperwork costs with AI before buying any robots.</span></div></div><div class="irow"><div class="ic">🚀</div><div class="tline"><span class="cat">Building:</span> <span class="txt">Stop asking how to get funding — launch the permissionless version this week.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;Nothing's going to ever be able to police AI other than other AI.&#8221; <cite>— Dave Blundin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Software is cooked, but hardware will go for many, many years.&#8221; <cite>— Dave Blundin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't think I beat up on universities enough... I'd love to vivisect them, turn them into the for-profit public benefit corporation.&#8221; <cite>— Alex Wissner-Gross</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The immune system in universities being the second worst immune system I've ever seen next to religion.&#8221; <cite>— Salim Ismail</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;You could always leave Europe. Europe has been hobbled.&#8221; <cite>— Alex Wissner-Gross</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;If the goal is world peace, obliterate, cook, incinerate the need for global trade... perversely, I think you get a very peaceful world.&#8221; <cite>— Alex Wissner-Gross</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Peter Diamandis:</b> AI yields a dramatically better world; near-term human-misuse risks are behind us within 10 years, maybe 5. <span class="cmeta">p(bloom) · 99.9% · within 10 years</span> <i>if if we get through the next couple of years</i></div><div class="ritem"><b>Alex Wissner-Gross:</b> Probability of a dramatically better AI future exceeds 90% on horizons beyond 10 years. <span class="cmeta">P(zoom, T) · &gt;90% · &gt;10 years</span></div><div class="ritem"><b>Salim Ismail:</b> P(bloom) is close to 100% if ~50 core institutions get rebuilt. <span class="cmeta">p(bloom) · ~100%</span> <i>if if institutions are rebuilt</i></div><div class="ritem"><b>Alex Wissner-Gross:</b> AI can usefully orchestrate human work only for a narrow window before human-machine merger is required. <span class="cmeta">window for AI orchestrating humans · few years, 10 max · within 10 years</span></div><div class="ritem"><b>Alex Wissner-Gross:</b> AI-driven vulnerability discovery may be a bounded ~18-month surge that peaks and declines. <span class="cmeta">vulnerability discovery wave · ~18 months</span> <i>if optimistic case</i></div><div class="ritem"><b>Alex Wissner-Gross:</b> BCI will give people superhuman vision. <span class="cmeta">superhuman vision · available · a few years</span> <span class="tag">Neuralink</span></div><div class="ritem"><b>Dave Blundin:</b> Attackers exploit newly released Chinese open models within months of each release. <span class="cmeta">attack lag after model release · 1-5 months</span> <span class="tag">Alibaba</span></div><div class="ritem"><b>Dave Blundin:</b> An AI English-learning-to-life-coach platform in Japan can scale to many hundreds of billions of dollars. <span class="cmeta">addressable market · many hundreds of billions</span> <i>if if it moves from language to life plan</i></div><div class="ritem"><b>Dario Amodei (as cited by Peter):</b> Human lifespan doubles. <span class="cmeta">human lifespan · 2x · 5-10 years</span></div><div class="ritem"><b>Demis Hassabis (as cited by Peter):</b> AI helps cure all disease. <span class="cmeta">disease · all cured · 10 years</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><p class="empty">No company-to-company relationships stated in this video.</p></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🎬</div><div><div class="title">Gen-AI filmmaking (caller Ree): Peter — story is line one, page one; he just judged the <b>Future Vision XPRIZE</b> top five with Range Media; have a model extract what the top 30 films share and re-engineer until you hit every beat. Alex — copy China's micro-drama market (Seedance 2.5): release a thousand micro-dramas and iterate on what sticks. <span class="tag">Media</span></div></div></div><div class="irow"><div class="ic">🧪</div><div><div class="title">AI companion stuck in "assistant mode" (caller Dennis, GPT-5 API, brute-forced the system prompt five times): Alex calls it a poster child for <b>fine-tuning</b> — supervised for style transfer or reinforcement fine-tuning — noting OpenAI is interested in fine-tuning again after dropping it; Dave suggests the new, smaller long-context GLM open model, less locked into its training. <span class="tag">AI tools</span></div></div></div><div class="irow"><div class="ic">🇮🇪</div><div><div class="title">Ireland as a governance pilot (caller Kevin, 63, UCD Dublin, advising an Irish minister through "good ancestor" and doughnut-economics lenses): Dave is "hugely bullish on Ireland" — EU, no Brexit, fast-growing, open-minded — and, citing Neal Stephenson's <i>The Diamond Age</i>, says variety of governance experiments beats one or two models spreading worldwide. <span class="tag">Governance</span></div></div></div><div class="irow"><div class="ic">📚</div><div><div class="title">Reading list: <i>Solve Everything</i> (solveeverything.org, by Peter and Alex — frames agreement as a new scarcity once cognition is abundant), Charles Stross' <i>Accelerando</i> (Alex: best sci-fi treatment of what's happening), <i>The Diamond Age</i>, Kurzweil's <i>The Singularity Is Near</i>, Peter's <i>Abundance</i>, and <i>We Are As Gods</i>. <span class="tag">Sources</span></div></div></div><div class="irow"><div class="ic">📣</div><div><div class="title">Show notes: Moonshots Live next week (25 seats left, free livestream at moonshots.com/livestream); a pod with Robinhood CEO Vlad Tenev recorded same day; GS (Dubai) said the show saved him a Harvard OPM tuition. <span class="tag">Show</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>P(bloom)</b> &mdash; The mates' inverse of p(doom): probability AI yields a dramatically better world; Alex's variant P(zoom, T) adds a time horizon.</div><div><b>MTP</b> &mdash; Massive Transformative Purpose — Salim's ExO term for an organization's or person's guiding moonshot mission.</div><div><b>ISRU</b> &mdash; In-situ resource utilization: building off-world with local materials instead of launching equipment from Earth.</div><div><b>Baumol's cost disease</b> &mdash; Labor-heavy services (like universities) get costlier over time because their productivity doesn't rise with the rest of the economy.</div><div><b>Keiretsu</b> &mdash; A network of interlinked companies that reinforce each other — Dave's framing for a VC's portfolio.</div><div><b>MPC</b> &mdash; Multi-party computation: parties jointly compute on combined data without revealing their private inputs.</div><div><b>Choroideremia</b> &mdash; An inherited X-linked retinal disease causing progressive vision loss.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
