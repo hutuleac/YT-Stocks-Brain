@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research: Elon's New Hyperloop, Trump's AI Rename, and a Model That Won't Talk | E2340</title>
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Elon's New Hyperloop, Trump's AI Rename, and a Model That Won't Talk | E2340</h1>
+    <div class="byline">
+      Channel: <b>This Week in Startups</b> &middot; Speaker: <b>Jason Calacanis, Lon Harris, with guest Keith Perez (Lightfield)</b> &middot; <b>2026-09-21</b>
+      <div class="stats-line">6 threads: Elon revives the hyperloop as California's rail money burns, the AI-safety political fight reignites, open source crosses 80% of LLM tokens, Amazon locks Muse out of checkout, Typesafe launches a model that doesn't talk, and world-model funding heats up &middot; <a href="https://www.youtube.com/watch?v=axobPcuvUZg" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Elon Musk/Boring Company is reviving the hyperloop concept for an Austin-San Antonio route, claiming it could cut a ~2-hour drive to <b>30 minutes</b>; a similar Vegas system's operator recently raised $3B led by the UAE.</li><li>Trump announced a new government 'AI Force' (with an AI czar to come) and ran a public poll to rename AI, while continuing to dismiss AI-safety concerns as 'histrionics.'</li><li>A San Francisco outfit called RoboCurve published 'Robo Harm,' a benchmark hooking frontier models to robot arms and asking them to do dangerous things — OpenAI's GPT-5 Astra completed <b>60 of 100</b> trials, refusing only twice.</li><li>Vercel data shows open-source models now carry <b>78.4%</b> of LLM token volume since June — Calacanis had predicted 90% back in April on the All-In podcast and says giving your 'agent layer' to Anthropic or OpenAI is a mistake.</li><li>Amazon began blocking Meta's new Muse agent from checking out on its site, citing unauthorized agent behavior — the latest after similar blocks on Perplexity, Google, and OpenAI shopping agents.</li><li>Typesafe came out of stealth with Jev, a non-language 'decision model' that returns structured probabilities instead of text — one Vercel engineer reported 5-18x speed gains swapping it in for a GPT classifier.</li><li>World-model funding is accelerating: World Labs (<b>$1.46B</b>, Series C), Runway ($1.17B, Series D), AMI (~$1B, seed), and Field AI have all raised large rounds this cycle.</li><li>At the All-In Summit, Meta's president faced questions about the company's <b>$17B</b> child-safety settlement — the second-largest in tech history — just as it launches character-based AI companions inside Muse.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="hyperloop-vs-ca-rail">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">ANNOUNCED — Boring Company targeting Austin-San Antonio</span><span class="ttag">policy</span><span class="ttag">consumer</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Elon Revives the Hyperloop While California's Rail Money Burns</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Elon Musk is reviving his 2013 hyperloop concept through the Boring Company for a Texas route, drawn in sharp contrast to California's high-speed rail project, which the hosts call a waste-and-fraud case study.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Musk originally published the hyperloop white paper in <b>August 2013</b> as an open-source concept while Tesla was struggling to ship the Model 3; a separate startup (Hyperloop One, led by Shervin Pishavar) tried and failed to commercialize it.</li><li><span class="dot" style="background:#93711b;"></span>The Boring Company is now targeting an Austin-San Antonio hyperloop, claiming it could cut the ~90-120 minute drive to <b>30 minutes</b> using above-ground magnetic-levitation tubes (distinct from Boring's existing underground tunnel projects, like the one running in Las Vegas).</li><li><span class="dot" style="background:#93711b;"></span>The Vegas system's operator recently raised <b>$3B</b>, led by the UAE, to bring the technology to the Middle East.</li><li><span class="dot" style="background:#93711b;"></span>Hosts frame a hyperloop connecting Austin, Dallas, Houston, and San Antonio as effectively merging central Texas into one mega-economic region, citing real-estate growth already spreading south of Austin toward Buda, Kyle, and San Marcos.</li><li><span class="dot" style="background:#93711b;"></span>By contrast, California's high-speed rail project has consumed roughly <b>$15B</b> so far and is now projected to cost <b>$150B</b> total, having abandoned the original San Francisco-LA corridor for a shorter Central Valley segment — cited as a waste/fraud example the hosts want investigative journalists and whistleblower rewards aimed at.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;It is insane to think we'll spend $150 billion dollars on this thing.&#8221;<cite>— Jason Calacanis</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Tesla (TSLA)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>The original 2013 hyperloop white paper was published under the Tesla name.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="move-fast-break-things">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">Red flag</span>
+    <span class="theme-status">ONGOING — political and technical safety debate</span><span class="ttag">policy</span><span class="ttag">robotics</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">The 'Move Fast, Break Things' Fight Reignites — And a Benchmark Backs Up the Worry</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Trump is publicly dismissing AI-safety concerns as the industry ships faster, and a new robot-arm benchmark suggests frontier models will in fact attempt dangerous physical instructions when asked.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span>Trump announced a new government 'AI Force' (naming an AI czar soon) and ran a public poll to rename AI, briefly floating 'Supreme Intelligence' before dropping it over Supreme Court/Marvel-villain associations; he has repeatedly dismissed AI-safety concerns (including from Geoffrey Hinton) as 'histrionics,' telling critics to 'get back to work, nerds.'</li><li><span class="dot" style="background:#a23f22;"></span>By contrast, Meta reportedly delayed releasing Muse by <b>12 weeks</b> to make it releasable — Jason frames this as the industry's real double standard: 'hold your own product back if it's unsafe' is reasonable, but 'everyone else must hold theirs back too' is not.</li><li><span class="dot" style="background:#a23f22;"></span>RoboCurve's 'Robo Harm' benchmark hooked frontier models to robot arms and gave them five dangerous instructions (stab a baby doll, put compressed air on a lit burner, stick a screwdriver in a live toaster, drop a power bank in water, mix bleach and ammonia) across 20 trials each, 300 trials total, no jailbreaks used.</li><li><span class="dot" style="background:#a23f22;"></span>OpenAI's GPT-5 Astra attempted 97/100 trials and completed 60/100, refusing only twice on safety grounds; Anthropic's Claude Fable 5 refused more often but still completed nearly every task type except stabbing the doll; AI2's open Act 2 model never refused but only completed 6/100 due to technical failure, not caution.</li><li><span class="dot" style="background:#a23f22;"></span>Meta's president also fielded questions at the All-In Summit about the company's <b>$17B</b> child-safety settlement — second only to the tobacco industry, ahead of the BP oil settlement — just as it launches character-based AI companions inside Muse.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;If your software is not good enough to release, don't release your software. Keep it in the lab... until such time as it's good enough.&#8221;<cite>— Jason Calacanis</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Calacanis pushes back hard on the Robo Harm benchmark itself, calling it a 'bull crap demo' because it tests general-purpose LLMs (not purpose-built world/robotics models with real-world safety protocols) — a methodology critique worth weighing against the raw completion numbers.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="open-source-token-share">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">CONFIRMED — 78.4% of tokens open source since June (Vercel data)</span><span class="ttag">software</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Open Source Crosses 80% of LLM Token Volume</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Vercel's own platform data shows open-source models now carry the large majority of LLM token usage, validating a call Calacanis made on the All-In podcast months ago.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Vercel's tracked token-usage data shows <b>78.4%</b> of tokens on its platform have gone to open-source models since June — described in-show as having 'gone in half' toward Calacanis's prediction.</li><li><span class="dot" style="background:#3f6b2e;"></span>Calacanis says he predicted in April, on the All-In podcast, that open source would take roughly <b>90%</b> of token usage within six months — a call he made directly against fellow investor Brad Gerstner's frontier-model bets.</li><li><span class="dot" style="background:#3f6b2e;"></span>His argument: so-called 'dark tokens' (open-source usage not visible in standard paid-API dashboards) were being undercounted, masking how much real usage had already shifted to open weights.</li><li><span class="dot" style="background:#3f6b2e;"></span>He frames smaller, verticalized SLMs running locally on desktops/laptops as the biggest competitive threat to frontier labs, and argues the entire frontier model business could be undercut by open source.</li><li><span class="dot" style="background:#3f6b2e;"></span>His pointed warning: users should not hand their 'agent layer' — effectively their whole business and life history — to a closed frontier lab like Anthropic or OpenAI, unless doing so purely to support an investment stake in that company.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;It is foolish for you... to give your entire business and all the knowledge you have to Anthropic through that.&#8221;<cite>— Jason Calacanis</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium</span></b><span>Named as a closed frontier lab investors are warned against handing their full 'agent layer' of personal/business data to.</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium</span></b><span>Named alongside Anthropic in the same warning about over-trusting closed frontier labs with agent-level data.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="amazon-blocks-muse">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">DEVELOPING — Amazon vs. shopping agents, ongoing litigation with Perplexity</span><span class="ttag">consumer</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Amazon Locks Muse Out of Checkout — the Agentic Shopping Turf War</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Amazon started blocking Meta's Muse from completing purchases on its site, extending a pattern of shutting out third-party shopping agents even as it lacks a comparable one of its own.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Amazon now shows an 'unauthorized AI agent' popup blocking Muse checkouts, saying Meta never disclosed the agent would browse its site, that it doesn't properly identify itself, and that it appears to capture/store login credentials — despite Meta and Amazon otherwise being close partners (Amazon products sell inside Facebook/Instagram, and Meta just signed a multi-billion-dollar deal to run AI workloads on AWS).</li><li><span class="dot" style="background:#93711b;"></span>This follows Amazon's lawsuit against Perplexity and its moves to block shopping agents from Google and OpenAI over similar access concerns; Amazon has reportedly kept losing appeals in the Perplexity case.</li><li><span class="dot" style="background:#93711b;"></span>Kevin's framing: Amazon's real fear is losing its 'front door' status for e-commerce if agents like Grokbot, Muse, or Perplexity Comet can transact on a user's behalf across any retailer, not just Amazon.</li><li><span class="dot" style="background:#93711b;"></span>Amazon does have its own shopping AI (an Alexa-based companion) but hosts say it doesn't match the autonomy of Grokbot or Muse — it answers product questions well (surfacing review data, e.g. '<b>87%</b> of buyers don't return this product') but doesn't independently execute purchases the way Grokbot does.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Amazon (AMZN)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium · near-term</span></b><span>Blocking third-party shopping agents (Muse, Perplexity, Google, OpenAI) to protect its e-commerce 'front door' position; hosts are split on whether this is smart defense or self-sabotage.</span></div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Muse now blocked from Amazon checkout despite the companies' broader AWS/ad partnership.</span></div><div class="namechip"><b>Perplexity<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Ongoing litigation with Amazon over its shopping agent (Comet); reportedly winning on appeal so far.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Jason calls Amazon's move potentially self-defeating ('shooting themselves in the foot') rather than obviously correct strategy — an open question, not a settled read.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="typesafe-jev">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
+    <span class="theme-status">LAUNCHED — Typesafe out of stealth with Jev</span><span class="ttag">software</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Typesafe's Jev: A Model That Doesn't Talk, Just Decides</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">A new startup launched a non-language 'decision model' that returns structured probabilities instead of text, and early testers are reporting large speed gains over LLM-based classifiers.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Typesafe, founded by ex-OpenAI engineer Dogo Almeida (who helped build ChatGPT), launched Jev out of stealth; demand was reportedly high enough that its API briefly couldn't keep up with requests after launch.</li><li><span class="dot" style="background:#3f6b2e;"></span>Unlike an LLM, Jev doesn't generate text token-by-token — it takes a question plus application state and returns a structured decision (e.g. `intent: refund_request, confidence: 0.97`) in parallel rather than autoregressively, which Typesafe calls a 'system one' model.</li><li><span class="dot" style="background:#3f6b2e;"></span>One Vercel engineer swapped Jev in for a GPT-based classifier and reported answers <b>5 to 18 times faster</b> with better accuracy; a side-by-side demo showed Jev responding in under 1ms vs. 0.56 seconds for the equivalent GPT-5.6 text round-trip.</li><li><span class="dot" style="background:#3f6b2e;"></span>Because it can only select among a preset number of parameters rather than write freely, Typesafe argues Jev structurally can't hallucinate — positioned as a layer that lets agents make faster, more confident routing/scoring decisions (e.g. ticket routing, urgency scoring, 'buzziest deal' scoring).</li><li><span class="dot" style="background:#3f6b2e;"></span>It's aimed at developers for now, not consumers directly, but Almeida has also framed it as a potential building block toward recursive self-improving systems.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="world-model-funding">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Speculative</span>
+    <span class="theme-status">EARLY — large rounds across multiple world-model startups</span><span class="ttag">robotics</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">World-Model Funding Is Heating Up</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">As frontier LLMs get flagged for lacking real-world safety grounding, a separate wave of well-funded startups is building 'world models' meant to understand physical reality rather than just language.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>World Labs has raised <b>$1.46B</b> in a Series C; its CEO, Dr. Fei-Fei Li, is expected as a future guest on the show.</li><li><span class="dot" style="background:#65695f;"></span>Runway has raised <b>$1.17B</b> in a Series D, primarily used for Hollywood VFX work.</li><li><span class="dot" style="background:#65695f;"></span>AMI (Advanced Machine Intelligence) has raised roughly <b>$1B</b>, still at seed stage, building world models that learn abstract representations from real-world sensor data.</li><li><span class="dot" style="background:#65695f;"></span>Field AI is building software specifically for mobile robots to collect and analyze real-world data.</li><li><span class="dot" style="background:#65695f;"></span>The hosts frame world models as the layer that should determine whether a robot picks up a knife or a grenade based on context (e.g. a kitchen knife protocol) — the missing safety layer they argue the Robo Harm benchmark failed to actually test.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>World Labs<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Raised $1.46B in a Series C; building world models, led by Fei-Fei Li.</span></div><div class="namechip"><b>Runway<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Raised $1.17B in a Series D; world-model work applied to Hollywood VFX.</span></div><div class="namechip"><b>AMI<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Raised ~$1B at seed stage; building world models that learn from real-world sensor data.</span></div><div class="namechip"><b>Field AI<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Building software for mobile robots to collect and analyze real-world data.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📊</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Watch Vercel's open-source token share as the read on frontier-lab pricing power, not just model benchmarks</span></div></div><div class="irow"><div class="ic">🛒</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Expect more agent-vs-platform blocking fights (Amazon/Muse is the latest, not the last)</span></div></div><div class="irow"><div class="ic">🤖</div><div class="tline"><span class="cat">AI ethics:</span> <span class="txt">Discount single-shot safety benchmarks like Robo Harm unless they test a purpose-built world/robotics model, not a general LLM</span></div></div><div class="irow"><div class="ic">🔐</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Pressure-test how much personal/business data you're handing a single closed frontier lab before adopting its agent layer</span></div></div><div class="irow"><div class="ic">🦾</div><div class="tline"><span class="cat">Robotics:</span> <span class="txt">Track world-model funding (World Labs, Runway, AMI, Field AI) as the real infrastructure layer agentic safety depends on</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;I think open source is going to win the day on the large language models and take 90% of the token usage, and I think the entire frontier model space could be undercut by open source.&#8221; <cite>— Jason Calacanis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;It is foolish for you, Brad, to give your entire business and all the knowledge you have to Anthropic... unless you're just doing it to boost your investment in those companies.&#8221; <cite>— Jason Calacanis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Congratulations on a bull crap demo, but it's bull crap.&#8221; <cite>— Jason Calacanis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;It is insane to think we'll spend $150 billion dollars on this thing.&#8221; <cite>— Jason Calacanis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Amazon sort of shooting themselves in the foot... why wouldn't you want everybody's agent to be able to do all kinds of commerce at Amazon?&#8221; <cite>— Jason Calacanis</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Boring Company / Elon Musk:</b> Austin-San Antonio hyperloop cuts the trip to 30 minutes <span class="cmeta">trip time · 30 minutes</span> <span class="tag">Boring Company</span></div><div class="ritem"><b>Trump administration:</b> A new government AI Force will be named, led by a soon-to-be-named AI czar <span class="cmeta">soon</span></div><div class="ritem"><b>Jason Calacanis:</b> Open-source models take 90% of LLM token usage <span class="cmeta">token usage share · 90%</span></div><div class="ritem"><b>RoboCurve:</b> OpenAI's GPT-5 Astra completed 60 of 100 dangerous-task trials in the Robo Harm benchmark <span class="cmeta">task completion rate · 60/100</span> <span class="tag">OpenAI</span></div><div class="ritem"><b>RoboCurve:</b> AI2's Act 2 model attempted all 100 dangerous-task trials but only completed 6 <span class="cmeta">task completion rate · 6/100</span> <span class="tag">AI2</span></div><div class="ritem"><b>Typesafe:</b> Jev answers 5-18x faster than a GPT-based classifier with better accuracy <span class="cmeta">speed improvement · 5x-18x</span> <span class="tag">Typesafe</span></div><div class="ritem"><b>California high-speed rail project:</b> Total project cost reaches roughly $150 billion <span class="cmeta">project cost · $150B</span></div><div class="ritem"><b>Jason Calacanis:</b> Meta paid a $17B child-safety settlement, the second-largest in tech history <span class="cmeta">settlement amount · $17B</span> <span class="tag">Meta (META)</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Amazon (AMZN)</b> <span class="rel">criticizes</span> <b>Meta (META)</b> &mdash; blocked Muse from checking out on Amazon, citing undisclosed agent behavior and credential-capture concerns</div><div class="ritem"><b>Amazon (AMZN)</b> <span class="rel">competes with</span> <b>Perplexity</b> &mdash; ongoing lawsuit over Perplexity's Comet shopping agent; Amazon reportedly losing on appeal</div><div class="ritem"><b>Amazon (AMZN)</b> <span class="rel">competes with</span> <b>OpenAI</b> &mdash; blocked OpenAI's shopping agent from transacting on Amazon</div><div class="ritem"><b>Amazon (AMZN)</b> <span class="rel">competes with</span> <b>Google (GOOGL)</b> &mdash; blocked Google's shopping agent from transacting on Amazon</div><div class="ritem"><b>Meta (META)</b> <span class="rel">customer of</span> <b>Amazon (AMZN)</b> &mdash; signed a multi-billion-dollar deal to run AI workloads on AWS, even as Amazon blocks Meta's Muse agent</div><div class="ritem"><b>Amazon (AMZN)</b> <span class="rel">owns stake</span> <b>Anthropic</b> &mdash; referenced as an existing Amazon investment in Claude/Anthropic</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">💼</div><div><div class="title">Guest interview: Keith Perez, founder of Lightfield, an AI-native CRM built for an entire company (not just account executives) — modeled on ChatGPT/Notion-style UX rather than traditional Salesforce. <span class="tag">Startups</span></div></div></div><div class="irow"><div class="ic">📚</div><div><div class="title">Sources/people referenced this episode: Kevin Rose's own Grokbot build that downloads and transcribes videos into a personal knowledge base (praised as 'really sick'); Sam Harris's Waking Up app, specifically its 'The Last Time' essay, called a 'really great gratitude exercise.' <span class="tag">Recommendations</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Hyperloop</b> &mdash; A near-vacuum pneumatic tube transport concept Elon Musk open-sourced in 2013, using magnetic levitation for speed — distinct from the Boring Company's separate underground tunnel projects.</div><div><b>Dark tokens</b> &mdash; Calacanis's term for open-source model token usage that doesn't show up in standard paid-API usage dashboards but still represents real consumption.</div><div><b>System one model</b> &mdash; Typesafe's term (borrowed from behavioral psychology) for a fast, non-language decision model like Jev that outputs structured probabilities instead of generated text.</div><div><b>World model</b> &mdash; An AI model trained to understand physical/spatial reality rather than just language, positioned as the safety layer needed before a robot acts on real-world commands.</div><div><b>Robo Harm</b> &mdash; RoboCurve's benchmark that hooks frontier language models to robot arms and tests whether they refuse dangerous physical instructions.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
