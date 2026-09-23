@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research: WTF just Happened</title>
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>WTF just Happened</h1>
+    <div class="byline">
+      Channel: <b>Meet Kevin</b> &middot; Speaker: <b>Kevin Paffrath (with CNBC clip: Sarah Eisen, Steve Liesman)</b> &middot; <b>2026-09-23</b>
+      <div class="stats-line">5 threads · ADP labor U-turn · flash PMI boom · 4-5 hikes priced · yields through 5% · who actually wins &middot; <a href="https://www.youtube.com/watch?v=Esbopj4n75w" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Kevin's answer to CNBC's "what changed since July?": the <b>ADP weekly jobs</b> series bottomed at 8,250 on July 25 and U-turned back above 20,000.</li><li>September S&amp;P Global flash PMI: services 58.7 vs 55.3 expected, manufacturing 57 vs 53.7, business growth fastest in 5+ years.</li><li>Input-cost inflation at its highest since October 2022 plus supply-chain bottlenecks: the report reads as a "middle finger to the Fed" to hike faster.</li><li>Fed voices turned hawkish: Barr says further hikes are likely needed, Barkin says demand must be cooled.</li><li>Futures now price ~4.66 hikes by September 2027 (incl. the Sept hike); <b>48%</b> odds of five; October hike odds 62%.</li><li>10-year yield broke through <b>5%</b>, up ~8.9 bps on the day; the 2y/10y curve is flat because both legs rise together.</li><li>Stocks fall <i>because</i> the economy is booming; he flagged a short-term QQQ dip-buy window until there's an Iran deal.</li><li>Corporations win this boom and workers' share of income keeps falling. His advice: "make hay" and own assets.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="adp-uturn">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contrarian read</span>
+    <span class="theme-status">ADP WEEKLY BACK ABOVE 20K AS OF SEPT 22</span><span class="ttag">macro-rates</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">The ADP jobs U-turn is why hike odds exploded, and CNBC missed it</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Private payrolls bottomed in late July and rebounded hard. That one chart explains the repricing CNBC's anchors called a mystery.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Powell's last day as chair was <b>May 15</b>; weekly ADP private payrolls were running ~30,500 at the time.</li><li><span class="dot" style="background:#93711b;"></span>Warsh's first meeting and presser were in early June ("look to the left of the decimal" on inflation), with no rush to hike while ADP was sliding.</li><li><span class="dot" style="background:#93711b;"></span>ADP bottomed at a weekly read of 8,250 on <b>July 25</b>, amid "what if we go under zero" fears.</li><li><span class="dot" style="background:#93711b;"></span>It rebounded into the Sept 16 meeting, and the latest read beat expectations at over 20,000, a "total U-turn in the trend."</li><li><span class="dot" style="background:#93711b;"></span>The March hiring surge came from wartime pull-forward: firms rushed production ahead of Hormuz, fertilizer, helium and Red Sea supply risks.</li><li><span class="dot" style="background:#93711b;"></span>Precedent: the Fed's 50 bp pre-election cut in <b>2024</b> was driven by a labor market falling off a cliff (alongside the yen carry-trade unwind), not only politics.</li><li><span class="dot" style="background:#93711b;"></span>Kevin prefers ADP because it's private payroll data, not BLS numbers.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;It's the simplest freaking chart you could look at. It's so damn obvious and nobody pays attention to it.&#8221;<cite>— Kevin Paffrath</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="flash-pmi">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Confirmed data</span>
+    <span class="theme-status">S&amp;P GLOBAL FLASH PMI, SEPTEMBER 2026</span><span class="ttag">macro-rates</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Flash PMI: fastest business growth in 5+ years, and prices are running hot again</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Private survey data shows services and manufacturing booming together, with backlogs, hiring and input costs all accelerating.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Services 58.7 vs 55.3 expected (prior 56.5), close to 60 on a diffusion index where anything above 50 means growth.</li><li><span class="dot" style="background:#3f6b2e;"></span>Manufacturing 57 vs 53.7 expected (prior 53), the fastest pace since April 2022.</li><li><span class="dot" style="background:#3f6b2e;"></span>Activity rose for a <b>4th straight month</b>. Output growth was the fastest since July 2021; excluding the post-COVID reopening, it was the biggest improvement since early 2015.</li><li><span class="dot" style="background:#3f6b2e;"></span>Job gains were the strongest in 4+ years (highest since Feb 2021). Backlogs grew at the fastest pace since May 2022, pushing firms to hire.</li><li><span class="dot" style="background:#3f6b2e;"></span>Input-cost inflation hit its highest since <b>October 2022</b>, blamed on fuel/transport costs, wage pressure and supply shortages.</li><li><span class="dot" style="background:#3f6b2e;"></span>Atlanta Fed GDPNow, built from public government data, tracks <b>5.1%</b> real Q3 GDP.</li><li><span class="dot" style="background:#3f6b2e;"></span>Anecdote: his own startup just hired three more people.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;This canary is singing. This canary is having baby canaries. This canary is on fire.&#8221;<cite>— Kevin Paffrath, on the labor market as recession canary</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Kevin reads this private survey as confirmation of the boom; it's a flash (first) read and gets revised.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="hike-path">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">Hawkish shift</span>
+    <span class="theme-status">OCT HIKE ODDS 62% · ~4.66 HIKES PRICED BY SEPT 2027</span><span class="ttag">macro-rates</span><span class="ttag">policy</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">Fed speakers and futures now point to four or five more hikes</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Bottlenecks turn demand growth into inflation, the Fed is saying it must cool demand, and markets priced it in within a day.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span>Barr: inflation "clearly not trending towards target in a timely manner," the Fed "was out of position," and "further rate hikes are likely needed."</li><li><span class="dot" style="background:#a23f22;"></span>Barkin: the Fed needs to <b>cool demand</b>. He isn't sure corporate pricing power is fading and frames this as a mid-1990s-style cycle adjustment.</li><li><span class="dot" style="background:#a23f22;"></span>Econ 101 analogy: when supply and demand both shift right, prices hold. With bottlenecks (memory, chips, motherboards, FPGAs, ASICs, all squeezed by AI capex), demand outruns supply and prices rise.</li><li><span class="dot" style="background:#a23f22;"></span>CME: the modal outcome is now four hikes by Sept 2027 (<b>76.7%</b> odds of 4+, 48% of 5+), up from ~3.5 priced before.</li><li><span class="dot" style="background:#a23f22;"></span>World interest-rate probabilities: 3.66 more hikes by Sept 15, 2027, or 4.66 counting the September hike.</li><li><span class="dot" style="background:#a23f22;"></span>Betting-market rate-cut odds fell from <b>5%</b> to 4.5% ("should be like zero"); October hike odds are 62%, up 10 points on the day.</li><li><span class="dot" style="background:#a23f22;"></span>Kevin's prior base case was about two hikes (September and December). The PMI has him "shaking my boots."</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;When the Federal Reserve is telling you they need to cool demand, it means the economy is freaking booming.&#8221;<cite>— Kevin Paffrath</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Kevin still doubts four hikes happen. His own call sits below what futures price, and he admits the PMI shook it.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="market-read">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Short-term caution</span>
+    <span class="theme-status">10Y THROUGH 5% · IRAN DEAL PENDING</span><span class="ttag">macro-rates</span><span class="ttag">geopolitics</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Good news is bad news: yields through 5% and a dip in the Nasdaq</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Stocks are falling because the economy is too strong, and the missing Iran deal adds to the nerves.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>The 10-year yield rose 7.5 bps, then 8.9 bps intraday, breaking <b>through 5%</b>: "these yields are now very rich."</li><li><span class="dot" style="background:#93711b;"></span>The 2y/10y curve is flat and unchanged because both legs rise at the same rate, a sign of a hot economy.</li><li><span class="dot" style="background:#93711b;"></span>That morning's report called for a dip before Friday, especially without a deal. The Nasdaq 100 had hit all-time highs "earlier than expected."</li><li><span class="dot" style="background:#93711b;"></span>No Iran deal yet. The UN General Assembly ends Monday, and he'd stay extra cautious until there's a deal.</li><li><span class="dot" style="background:#93711b;"></span>Fighting for corporate profits boosts ad spending, which he sees as good for ad platforms including Meta (event today and tomorrow).</li><li><span class="dot" style="background:#93711b;"></span>Dot-com reference point: the bubble peaked between March and May 2000, so any "it's 1999" comparison reads bearish; Barkin's framing is 1995.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>QQQ<span class="stance" style="background:#93711b;">WATCHING · Medium · days, until an Iran deal</span></b><span>Fell hard on the PMI/yield spike; Kevin was bearish near term and targeted a two-day dip-buy window before Friday.</span></div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Seen as a beneficiary of more ad spending as companies fight for profits; has an event today and tomorrow.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The QQQ dip-buy strategy is from his paid course/report, so the call comes with a product attached.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="who-wins">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Opinion</span>
+    <span class="theme-status">"MAKE HAY" · 6-MONTH NO-RECESSION CALL</span><span class="ttag">career</span><span class="ttag">consumer</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">A corporate boom, not a worker boom: own assets and grind now</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Profits are booming while workers' share of income shrinks, so exposure to assets is how you take part.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>Wage studies show the worker share of corporate income plummeting. Not everyone feels the boom, even as "it's so hard to get a job."</li><li><span class="dot" style="background:#65695f;"></span>Corporations are winning, and AI is "just going to make that worse."</li><li><span class="dot" style="background:#65695f;"></span>Ways to take part: real estate, and equity through stock options, direct stock purchases, or your own company.</li><li><span class="dot" style="background:#65695f;"></span>His call: <b>no chance</b> the economy falls off a cliff in the next 6 months, so "go make hay." Reskill if needed; now is the time to grind.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#65695f;"><div class="lbl">Pull quote</div>&#8220;Put your money where your mouth is, but also put your actions where your mouth is.&#8221;<cite>— Kevin Paffrath</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">He runs a real-estate/startup business that benefits from the boom narrative he's promoting.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📈</div><div class="tline"><span class="cat">Macro:</span> <span class="txt">Watch weekly ADP private payrolls: the July-to-September U-turn is the key driver of hike pricing.</span></div></div><div class="irow"><div class="ic">🔥</div><div class="tline"><span class="cat">Rates:</span> <span class="txt">Treat hot PMI or jobs prints as bearish for stocks while the Fed is in hiking mode. Good data now means higher yields.</span></div></div><div class="irow"><div class="ic">🎲</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Discount betting-market odds on any rate cut. Kevin sees them as mispriced near zero.</span></div></div><div class="irow"><div class="ic">🕊️</div><div class="tline"><span class="cat">Geopolitics:</span> <span class="txt">Stay cautious on the Nasdaq until an Iran deal lands (the UN General Assembly ends Monday).</span></div></div><div class="irow"><div class="ic">🏠</div><div class="tline"><span class="cat">Wealth:</span> <span class="txt">Get exposure to assets (equity, options, real estate) rather than relying on wages that lag profits.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;They're wrong. It's so damn obvious and nobody's paying attention to it.&#8221; <cite>— Kevin Paffrath, on CNBC</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;There's not going to be a cut... the fact that you could get a payout betting there will be two cuts right now is insane.&#8221; <cite>— Kevin Paffrath</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;There's no chance in the next 6 months the economy falls off a cliff.&#8221; <cite>— Kevin Paffrath</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;My impression has been there's no way we are getting four rate hikes. Maybe we'll get two.&#8221; <cite>— Kevin Paffrath</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;It is corporations that are winning and AI is just going to make that worse.&#8221; <cite>— Kevin Paffrath</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Maybe, just maybe, 2026 is actually kind of like 1995 and not like 1999.&#8221; <cite>— Kevin Paffrath (echoing Barkin)</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Kevin Paffrath:</b> The Fed will not cut rates in the near term; betting odds of a cut should be near zero. <span class="cmeta">Fed rate cut probability · ~0%</span> <i>if Unless Iran and Ukraine wars resolve and the labor market collapses</i></div><div class="ritem"><b>Kevin Paffrath:</b> The economy will not fall off a cliff in the next six months. <span class="cmeta">US recession · none · 2027-03</span></div><div class="ritem"><b>Kevin Paffrath:</b> The Fed hikes fewer than four times despite futures pricing; his prior base case was two. <span class="cmeta">Fed hikes · &lt;4 · 2027-09</span></div><div class="ritem"><b>Betting markets (cited by Kevin):</b> The Fed hikes at the October meeting. <span class="cmeta">October hike probability · 62% · 2026-10</span></div><div class="ritem"><b>CME FedWatch (cited by Kevin):</b> Four or more hikes by September 2027 (76.7%); five or more at 48%. <span class="cmeta">Cumulative Fed hikes · 4+ (76.7%), 5+ (48%) · 2027-09</span></div><div class="ritem"><b>Michael Barr (cited by Kevin):</b> Further rate hikes are likely needed. <span class="cmeta">Fed policy rate · higher</span></div><div class="ritem"><b>Kevin Paffrath:</b> A Nasdaq dip-buy window before Friday, with caution until an Iran deal. <span class="cmeta">QQQ · dip-buy · 2026-09-25</span> <i>if No Iran deal</i> <span class="tag">QQQ</span></div><div class="ritem"><b>Kevin Paffrath:</b> Iran deal watch: the UN General Assembly ends Monday. <span class="cmeta">Iran deal · deal · 2026-09-28</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><p class="empty">No company-to-company relationships stated in this video.</p></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: CNBC (Sarah Eisen, Steve Liesman), ADP weekly payrolls, S&amp;P Global flash PMI, Atlanta Fed GDPNow, CME FedWatch, World Interest Rate Probabilities, and Fed speakers Barr and Barkin. <span class="tag">Sources</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Flash PMI</b> &mdash; An early survey-based read of purchasing managers' activity; above 50 means expansion.</div><div><b>Diffusion index</b> &mdash; Measures the share of respondents reporting improvement vs decline, centered at 50.</div><div><b>ADP weekly payrolls</b> &mdash; A private-sector employment tracker from ADP, independent of government BLS data.</div><div><b>GDPNow</b> &mdash; The Atlanta Fed's real-time model estimate of current-quarter real GDP growth.</div><div><b>Flat yield curve</b> &mdash; When 2-year and 10-year yields move together, their spread doesn't change; here it signals a hot economy.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>

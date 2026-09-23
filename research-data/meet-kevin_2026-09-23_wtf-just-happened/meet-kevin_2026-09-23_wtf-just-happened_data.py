@@ -1,0 +1,169 @@
+META = {
+    "title": "WTF just Happened",
+    "channel": "Meet Kevin",
+    "speakers": "Kevin Paffrath (with CNBC clip: Sarah Eisen, Steve Liesman)",
+    "date": "2026-09-23",
+    "video_url": "https://www.youtube.com/watch?v=Esbopj4n75w",
+    "thread_line": "5 threads · ADP labor U-turn · flash PMI boom · 4-5 hikes priced · yields through 5% · who actually wins",
+    "category": "market",
+}
+
+SNAPSHOT = [
+    "Kevin's answer to CNBC's \"what changed since July?\": the **ADP weekly jobs** series bottomed at 8,250 on July 25 and U-turned back above 20,000.",
+    "September S&P Global flash PMI: services 58.7 vs 55.3 expected, manufacturing 57 vs 53.7, business growth fastest in 5+ years.",
+    "Input-cost inflation at its highest since October 2022 plus supply-chain bottlenecks: the report reads as a \"middle finger to the Fed\" to hike faster.",
+    "Fed voices turned hawkish: Barr says further hikes are likely needed, Barkin says demand must be cooled.",
+    "Futures now price ~4.66 hikes by September 2027 (incl. the Sept hike); 48% odds of five; October hike odds 62%.",
+    "10-year yield broke through 5%, up ~8.9 bps on the day; the 2y/10y curve is flat because both legs rise together.",
+    "Stocks fall *because* the economy is booming; he flagged a short-term QQQ dip-buy window until there's an Iran deal.",
+    "Corporations win this boom and workers' share of income keeps falling. His advice: \"make hay\" and own assets.",
+]
+
+THEMES = [
+    {
+        "id": "adp-uturn",
+        "tags": ["macro-rates"],
+        "color": "amber",
+        "badge": "Contrarian read",
+        "status": "ADP WEEKLY BACK ABOVE 20K AS OF SEPT 22",
+        "title": "The ADP jobs U-turn is why hike odds exploded, and CNBC missed it",
+        "lead": "Private payrolls bottomed in late July and rebounded hard. That one chart explains the repricing CNBC's anchors called a mystery.",
+        "bullets": [
+            "Powell's last day as chair was **May 15**; weekly ADP private payrolls were running ~30,500 at the time.",
+            "Warsh's first meeting and presser were in early June (\"look to the left of the decimal\" on inflation), with no rush to hike while ADP was sliding.",
+            "ADP bottomed at a weekly read of 8,250 on **July 25**, amid \"what if we go under zero\" fears.",
+            "It rebounded into the Sept 16 meeting, and the latest read beat expectations at over 20,000, a \"total U-turn in the trend.\"",
+            "The March hiring surge came from wartime pull-forward: firms rushed production ahead of Hormuz, fertilizer, helium and Red Sea supply risks.",
+            "Precedent: the Fed's 50 bp pre-election cut in **2024** was driven by a labor market falling off a cliff (alongside the yen carry-trade unwind), not only politics.",
+            "Kevin prefers ADP because it's private payroll data, not BLS numbers.",
+        ],
+        "quote": {"text": "It's the simplest freaking chart you could look at. It's so damn obvious and nobody pays attention to it.", "cite": "— Kevin Paffrath"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "flash-pmi",
+        "tags": ["macro-rates"],
+        "color": "green",
+        "badge": "Confirmed data",
+        "status": "S&P GLOBAL FLASH PMI, SEPTEMBER 2026",
+        "title": "Flash PMI: fastest business growth in 5+ years, and prices are running hot again",
+        "lead": "Private survey data shows services and manufacturing booming together, with backlogs, hiring and input costs all accelerating.",
+        "bullets": [
+            "Services 58.7 vs 55.3 expected (prior 56.5), close to 60 on a diffusion index where anything above 50 means growth.",
+            "Manufacturing 57 vs 53.7 expected (prior 53), the fastest pace since April 2022.",
+            "Activity rose for a **4th straight month**. Output growth was the fastest since July 2021; excluding the post-COVID reopening, it was the biggest improvement since early 2015.",
+            "Job gains were the strongest in 4+ years (highest since Feb 2021). Backlogs grew at the fastest pace since May 2022, pushing firms to hire.",
+            "Input-cost inflation hit its highest since **October 2022**, blamed on fuel/transport costs, wage pressure and supply shortages.",
+            "Atlanta Fed GDPNow, built from public government data, tracks 5.1% real Q3 GDP.",
+            "Anecdote: his own startup just hired three more people.",
+        ],
+        "quote": {"text": "This canary is singing. This canary is having baby canaries. This canary is on fire.", "cite": "— Kevin Paffrath, on the labor market as recession canary"},
+        "watch": "Kevin reads this private survey as confirmation of the boom; it's a flash (first) read and gets revised.",
+        "names": None,
+    },
+    {
+        "id": "hike-path",
+        "tags": ["macro-rates", "policy"],
+        "color": "red",
+        "badge": "Hawkish shift",
+        "status": "OCT HIKE ODDS 62% · ~4.66 HIKES PRICED BY SEPT 2027",
+        "title": "Fed speakers and futures now point to four or five more hikes",
+        "lead": "Bottlenecks turn demand growth into inflation, the Fed is saying it must cool demand, and markets priced it in within a day.",
+        "bullets": [
+            "Barr: inflation \"clearly not trending towards target in a timely manner,\" the Fed \"was out of position,\" and \"further rate hikes are likely needed.\"",
+            "Barkin: the Fed needs to **cool demand**. He isn't sure corporate pricing power is fading and frames this as a mid-1990s-style cycle adjustment.",
+            "Econ 101 analogy: when supply and demand both shift right, prices hold. With bottlenecks (memory, chips, motherboards, FPGAs, ASICs, all squeezed by AI capex), demand outruns supply and prices rise.",
+            "CME: the modal outcome is now four hikes by Sept 2027 (76.7% odds of 4+, 48% of 5+), up from ~3.5 priced before.",
+            "World interest-rate probabilities: 3.66 more hikes by Sept 15, 2027, or 4.66 counting the September hike.",
+            "Betting-market rate-cut odds fell from 5% to 4.5% (\"should be like zero\"); October hike odds are 62%, up 10 points on the day.",
+            "Kevin's prior base case was about two hikes (September and December). The PMI has him \"shaking my boots.\"",
+        ],
+        "quote": {"text": "When the Federal Reserve is telling you they need to cool demand, it means the economy is freaking booming.", "cite": "— Kevin Paffrath"},
+        "watch": "Kevin still doubts four hikes happen. His own call sits below what futures price, and he admits the PMI shook it.",
+        "names": None,
+    },
+    {
+        "id": "market-read",
+        "tags": ["macro-rates", "geopolitics"],
+        "color": "amber",
+        "badge": "Short-term caution",
+        "status": "10Y THROUGH 5% · IRAN DEAL PENDING",
+        "title": "Good news is bad news: yields through 5% and a dip in the Nasdaq",
+        "lead": "Stocks are falling because the economy is too strong, and the missing Iran deal adds to the nerves.",
+        "bullets": [
+            "The 10-year yield rose 7.5 bps, then 8.9 bps intraday, breaking **through 5%**: \"these yields are now very rich.\"",
+            "The 2y/10y curve is flat and unchanged because both legs rise at the same rate, a sign of a hot economy.",
+            "That morning's report called for a dip before Friday, especially without a deal. The Nasdaq 100 had hit all-time highs \"earlier than expected.\"",
+            "No Iran deal yet. The UN General Assembly ends Monday, and he'd stay extra cautious until there's a deal.",
+            "Fighting for corporate profits boosts ad spending, which he sees as good for ad platforms including Meta (event today and tomorrow).",
+            "Dot-com reference point: the bubble peaked between March and May 2000, so any \"it's 1999\" comparison reads bearish; Barkin's framing is 1995.",
+        ],
+        "quote": None,
+        "watch": "The QQQ dip-buy strategy is from his paid course/report, so the call comes with a product attached.",
+        "names": [
+            {"name": "QQQ", "blurb": "Fell hard on the PMI/yield spike; Kevin was bearish near term and targeted a two-day dip-buy window before Friday.", "stance": "WATCHING", "conviction": "Medium", "horizon": "days, until an Iran deal"},
+            {"name": "Meta (META)", "blurb": "Seen as a beneficiary of more ad spending as companies fight for profits; has an event today and tomorrow.", "stance": "POSITIVE VIEW", "conviction": "Low", "horizon": None},
+        ],
+    },
+    {
+        "id": "who-wins",
+        "tags": ["career", "consumer"],
+        "color": "gray",
+        "badge": "Opinion",
+        "status": "\"MAKE HAY\" · 6-MONTH NO-RECESSION CALL",
+        "title": "A corporate boom, not a worker boom: own assets and grind now",
+        "lead": "Profits are booming while workers' share of income shrinks, so exposure to assets is how you take part.",
+        "bullets": [
+            "Wage studies show the worker share of corporate income plummeting. Not everyone feels the boom, even as \"it's so hard to get a job.\"",
+            "Corporations are winning, and AI is \"just going to make that worse.\"",
+            "Ways to take part: real estate, and equity through stock options, direct stock purchases, or your own company.",
+            "His call: **no chance** the economy falls off a cliff in the next 6 months, so \"go make hay.\" Reskill if needed; now is the time to grind.",
+        ],
+        "quote": {"text": "Put your money where your mouth is, but also put your actions where your mouth is.", "cite": "— Kevin Paffrath"},
+        "watch": "He runs a real-estate/startup business that benefits from the boom narrative he's promoting.",
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F4C8", "tag": "Macro", "title": "Watch weekly ADP private payrolls: the July-to-September U-turn is the key driver of hike pricing."},
+    {"icon": "\U0001F525", "tag": "Rates", "title": "Treat hot PMI or jobs prints as bearish for stocks while the Fed is in hiking mode. Good data now means higher yields."},
+    {"icon": "\U0001F3B2", "tag": "Markets", "title": "Discount betting-market odds on any rate cut. Kevin sees them as mispriced near zero."},
+    {"icon": "\U0001F54A️", "tag": "Geopolitics", "title": "Stay cautious on the Nasdaq until an Iran deal lands (the UN General Assembly ends Monday)."},
+    {"icon": "\U0001F3E0", "tag": "Wealth", "title": "Get exposure to assets (equity, options, real estate) rather than relying on wages that lag profits."},
+]
+
+HOT_TAKES = [
+    {"take": "They're wrong. It's so damn obvious and nobody's paying attention to it.", "cite": "— Kevin Paffrath, on CNBC", "why": "dismisses mainstream coverage; claims ADP explains it all"},
+    {"take": "There's not going to be a cut... the fact that you could get a payout betting there will be two cuts right now is insane.", "cite": "— Kevin Paffrath", "why": "calls the market odds mispriced"},
+    {"take": "There's no chance in the next 6 months the economy falls off a cliff.", "cite": "— Kevin Paffrath", "why": "dated no-recession call"},
+    {"take": "My impression has been there's no way we are getting four rate hikes. Maybe we'll get two.", "cite": "— Kevin Paffrath", "why": "below futures pricing of 4-5"},
+    {"take": "It is corporations that are winning and AI is just going to make that worse.", "cite": "— Kevin Paffrath", "why": "distribution call on AI"},
+    {"take": "Maybe, just maybe, 2026 is actually kind of like 1995 and not like 1999.", "cite": "— Kevin Paffrath (echoing Barkin)", "why": "era analogy with a bubble call attached"},
+]
+
+CLAIMS = [
+    {"who": "Kevin Paffrath", "claim": "The Fed will not cut rates in the near term; betting odds of a cut should be near zero.", "metric": "Fed rate cut probability", "target": "~0%", "by": None, "condition": "Unless Iran and Ukraine wars resolve and the labor market collapses", "entity": None},
+    {"who": "Kevin Paffrath", "claim": "The economy will not fall off a cliff in the next six months.", "metric": "US recession", "target": "none", "by": "2027-03", "condition": None, "entity": None},
+    {"who": "Kevin Paffrath", "claim": "The Fed hikes fewer than four times despite futures pricing; his prior base case was two.", "metric": "Fed hikes", "target": "<4", "by": "2027-09", "condition": None, "entity": None},
+    {"who": "Betting markets (cited by Kevin)", "claim": "The Fed hikes at the October meeting.", "metric": "October hike probability", "target": "62%", "by": "2026-10", "condition": None, "entity": None},
+    {"who": "CME FedWatch (cited by Kevin)", "claim": "Four or more hikes by September 2027 (76.7%); five or more at 48%.", "metric": "Cumulative Fed hikes", "target": "4+ (76.7%), 5+ (48%)", "by": "2027-09", "condition": None, "entity": None},
+    {"who": "Michael Barr (cited by Kevin)", "claim": "Further rate hikes are likely needed.", "metric": "Fed policy rate", "target": "higher", "by": None, "condition": None, "entity": None},
+    {"who": "Kevin Paffrath", "claim": "A Nasdaq dip-buy window before Friday, with caution until an Iran deal.", "metric": "QQQ", "target": "dip-buy", "by": "2026-09-25", "condition": "No Iran deal", "entity": "QQQ"},
+    {"who": "Kevin Paffrath", "claim": "Iran deal watch: the UN General Assembly ends Monday.", "metric": "Iran deal", "target": "deal", "by": "2026-09-28", "condition": None, "entity": None},
+]
+
+RELATIONS = []
+
+OTHER_NEWS = [
+    {"icon": "\U0001F4DA", "title": "Sources referenced: CNBC (Sarah Eisen, Steve Liesman), ADP weekly payrolls, S&P Global flash PMI, Atlanta Fed GDPNow, CME FedWatch, World Interest Rate Probabilities, and Fed speakers Barr and Barkin.", "tag": "Sources"},
+]
+
+GLOSSARY = [
+    {"term": "Flash PMI", "def": "An early survey-based read of purchasing managers' activity; above 50 means expansion."},
+    {"term": "Diffusion index", "def": "Measures the share of respondents reporting improvement vs decline, centered at 50."},
+    {"term": "ADP weekly payrolls", "def": "A private-sector employment tracker from ADP, independent of government BLS data."},
+    {"term": "GDPNow", "def": "The Atlanta Fed's real-time model estimate of current-quarter real GDP growth."},
+    {"term": "Flat yield curve", "def": "When 2-year and 10-year yields move together, their spread doesn't change; here it signals a hot economy."},
+]
