@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research: Meta's Muse Just Changed the AI Trade — Here's What We're Buying</title>
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Meta's Muse Just Changed the AI Trade — Here's What We're Buying</h1>
+    <div class="byline">
+      Channel: <b>Dumb Money Live</b> &middot; Speaker: <b>Chris Camillo, Dave Moss, Jordan Mendoza</b> &middot; <b>2026-09-23</b>
+      <div class="stats-line">5 threads · Muse as the first mass-market agent · Amazon is the real compute winner · the Amazon-blocks-Muse fight · Opus 5.5 and the efficiency-selloff fallacy · who gets squeezed by bot-to-bot negotiation &middot; <a href="https://www.youtube.com/watch?v=7Xx7nwH8338" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Meta's <b>Muse</b> agent app sent Meta up 11% in a day, adding nearly $200B; Canaccord Genuity set a $860 target and three firms raised targets this week.</li><li>Hosts frame Muse as the biggest consumer AI moment since ChatGPT's launch — <i>pioneering for normal people</i>, not for AI geeks already on Claude.</li><li>Chris's thesis: the easy Meta money is made; the second-order winner is Amazon <b>(AMZN)</b>, which supplies Graviton CPUs and Bedrock/AWS capacity under an April deal with Meta.</li><li>Chris made a seven-figure one-day Meta options trade (bought Friday, quadrupled Monday), exited, and now holds unlevered Meta stock plus more Amazon stock and options.</li><li>Amazon has blocked Muse from its store while Shopify, Expedia and PayPal signed on — hosts see it as a temporary negotiating stance, not a lasting war.</li><li>Claude Opus 5.5 landed ~16 hours before the show; an article blamed Amazon's dip on it being <b>40%</b> more efficient — Chris calls efficiency-driven infra selloffs a recurring market error.</li><li>Distribution plus data is the investing lens: Meta can push an agent to billions daily; an equally good startup agent couldn't.</li><li>Upcoming: Meta Connect keynote the night of the show; next episodes on AI-slop investing and Jordan's energy/electricity trade.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="muse-mass-market">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">LIVE — #1 IN APP STORE, OVERTOOK CHATGPT</span><span class="ttag">software</span><span class="ttag">consumer</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Muse is the first AI agent ordinary people actually use</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Hosts see Muse as the ChatGPT-launch moment for agents, driven by Meta's distribution rather than a technical breakthrough.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Use cases from the hosts: preparing a show, tracking a flight, fixing calendar and Apple TV issues, monitoring a condo group chat in Mexico, and flagging six duplicate credit-card charges from one restaurant.</li><li><span class="dot" style="background:#3f6b2e;"></span>One host has Muse triage all DMs every 15 minutes, scoring media and podcast offers by real audience and replying on their behalf.</li><li><span class="dot" style="background:#3f6b2e;"></span>A non-technical friend saved about <b>$50</b>/month on an AT&amp;T bill within minutes, cancelled subscriptions and found card issues within an hour.</li><li><span class="dot" style="background:#3f6b2e;"></span>Meta currently gives users about <b>$60</b>/day of free tokens; estimates cited put compute cost at $30-60 per user per day, using segmented VMs that spin up on demand rather than always-on.</li><li><span class="dot" style="background:#3f6b2e;"></span>Positioned against <b>Claude</b>, which hosts hear is starting to limit tokens: Claude serves a handful of AI geeks, Muse reaches everyone with no thought required.</li><li><span class="dot" style="background:#3f6b2e;"></span>Muse launched two weeks earlier but only started to matter last Thursday-Friday when podcasts and press picked it up; the Muse website looked like a wall of text, while the app, pushed via Facebook/Messenger, overtook ChatGPT in the App Store and stayed #1.</li><li><span class="dot" style="background:#3f6b2e;"></span>Word-of-mouth in group chats (tables booked, bills cut) is the marketing engine; Threads stayed top 5-10 in iOS downloads for 1.5-2 years purely on Meta promotion.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Distribution is everything... someone could release an equally good agent, and it wouldn't even matter because they wouldn't be able to show it to billions of people every day.&#8221;<cite>— Chris Camillo</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>Muse maker; +11% in a day, ~$200B added. Chris holds unlevered stock after exiting a seven-figure options win; Dave bought at Monday's open.</span></div><div class="namechip"><b>Anthropic<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Claude framed as the geek-only predecessor, reportedly rationing tokens.</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>ChatGPT overtaken by Muse in the App Store.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Hosts flag they need to confirm this is not just an initial surge — Chris would exit if interest in the news starts to fade.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="amazon-compute">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">BUYING — CHRIS ADDED AMZN STOCK AND OPTIONS TWO DAYS RUNNING</span><span class="ttag">ai-infra</span><span class="ttag">semis</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Amazon, not Meta, is the second-order Muse trade</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Chris argues Amazon's Graviton CPUs and Bedrock/AWS capacity power Muse, so every Muse conversation is a check written to Amazon.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>In April, Amazon signed a deal with Meta for the VMs and processors underpinning Muse — valued in <i>tens of millions of Graviton cores</i>, not dollars (a mid-show correction).</li><li><span class="dot" style="background:#3f6b2e;"></span>Meta is already one of AWS's top five customers; Amazon's chip divisions are <b>Trainium</b> (AI accelerator) and <b>Graviton</b> (CPU line).</li><li><span class="dot" style="background:#3f6b2e;"></span>Meta could build its own chip line eventually, but that's a multi-year project — it can't flip a switch on data centers.</li><li><span class="dot" style="background:#3f6b2e;"></span>Chris sees a repeat of early this year, when the market missed how big Amazon's chip business was; the proof point is the next earnings call discussing Muse.</li><li><span class="dot" style="background:#3f6b2e;"></span>Amazon fell this week on fears of lost ad revenue and a possible rate hike raising AI-infra debt costs — Chris calls both non-issues.</li><li><span class="dot" style="background:#3f6b2e;"></span>Chris likes that the trade is one of the world's most liquid megacaps rather than a niche Korean infra name everyone has already found.</li><li><span class="dot" style="background:#3f6b2e;"></span>Secondary CPU plays: AMD and Intel; Qualcomm cited for a possibly more efficient approach Chris read about.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Zuckerberg will go all in with Muse. He will spend too much, and the biggest beneficiary of this will be Amazon.&#8221;<cite>— Chris Camillo</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Amazon (AMZN)<span class="stance" style="background:#3f6b2e;">BUYING-ADDING · High · next earnings</span></b><span>Graviton CPUs + Bedrock/AWS power Muse under an April deal; Chris's favorite Muse beneficiary.</span></div><div class="namechip"><b>AMD (AMD)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>CPU player set to benefit from agentic AI demand.</span></div><div class="namechip"><b>Intel (INTC)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>CPU player set to benefit from agentic AI demand.</span></div><div class="namechip"><b>Qualcomm (QCOM)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Cited for a possibly more efficient approach to agent compute.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Chris is long Amazon stock and options and bought more on each of the two days before the show. Dave notes many AI firms use AWS, so Muse is not unique to Amazon.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="amazon-blocks-muse">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">AMAZON BLOCKING MUSE — SHOPIFY, EXPEDIA, PAYPAL ON BOARD</span><span class="ttag">consumer</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Amazon blocks Muse from shopping; ads for bots become the fight</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Agents that don't watch ads threaten Amazon's ~$80B ad business, but hosts expect a paid Amazon-Meta deal rather than a lasting blockade.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Amazon blocked Muse from its commerce site; Shopify, Expedia and PayPal all announced support — hosts read the rapid partnership wave as pre-arranged.</li><li><span class="dot" style="background:#93711b;"></span>Risk case: an <b>$80B</b> ad revenue line plus product-pushing power erodes if bots shop on price and ignore sponsored placements.</li><li><span class="dot" style="background:#93711b;"></span>Chris calls the block temporary: Meta must monetize expensive compute, consumer subscriptions won't work (see how few pay <b>$10</b>/month for YouTube without ads), so Meta needs Amazon's revenue share.</li><li><span class="dot" style="background:#93711b;"></span>Expect multi-year, massive deals between retailers and every major agent owner — Meta, Apple, Google.</li><li><span class="dot" style="background:#93711b;"></span>Amazon's moat per hosts: 20 years of logistics, speed, delivery photos, returns at Whole Foods, Kohl's or UPS; Shopify is a supply-chain black box by comparison, even with the improved Shop app.</li><li><span class="dot" style="background:#93711b;"></span>Worst case for Amazon is advertising, not shopping — they'll need a bot-targeted ad model; Chris thinks Amazon will pay Meta happily and fold it into its costs.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I've been saying this for some time, advertising for bots will exist.&#8221;<cite>— Dumb Money host</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Shopify (SHOP)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Embraced Muse; Chris made a successful Shopify option trade on the news and has since exited.</span></div><div class="namechip"><b>Expedia (EXPE)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Announced Muse support.</span></div><div class="namechip"><b>PayPal (PYPL)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Announced Muse support.</span></div><div class="namechip"><b>Walmart (WMT)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Named as an alternative source agents could buy from.</span></div><div class="namechip"><b>Best Buy (BBY)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Named as an alternative source agents could buy from.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Timing of any Amazon-Meta commerce deal is open; hosts expect a long negotiation.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="opus-efficiency">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">OPUS 5.5 RELEASED ~16 HOURS BEFORE SHOW</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Opus 5.5 and the recurring 'efficiency is bearish' mistake</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Chris says cheaper, better models expand use cases and compute demand, so selling infra on efficiency news is backwards.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Claude Opus 5.5 does animation, video and games and went viral in tech circles in under a day.</li><li><span class="dot" style="background:#3f6b2e;"></span>An article claimed Amazon fell because Opus 5.5 is <b>40%</b> more efficient — Chris suspects algorithms auto-sell infra names on any AI efficiency headline.</li><li><span class="dot" style="background:#3f6b2e;"></span>AI video is the next compute sink: every model will do video, and video eats huge amounts of compute.</li><li><span class="dot" style="background:#3f6b2e;"></span>Jordan's long-standing concern is AI's real cost, but falling prices are a net gain; the host rejects the 'cost converges to electricity' view because chip depreciation, R&amp;D and profit must be covered.</li><li><span class="dot" style="background:#3f6b2e;"></span>The market can't track more than one story at a time — Muse then Opus 5.5 within a week, with more coming in weeks.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;This will be one of those things that we will remember in a few months and say: everything was obvious.&#8221;<cite>— Chris Camillo</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="privacy-apple-google">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">OPEN QUESTION — TRUST VS UTILITY</span><span class="ttag">consumer</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Privacy tradeoff, and why Apple and Google are missing</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Muse asks for Gmail and API keys aggressively; hosts split on trust but agree most people will trade privacy for usefulness.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>One host's first Muse conversation was entirely about privacy: it cited a private VM and summarized the policy, then offered to skip Gmail — they connected a junk Gmail anyway.</li><li><span class="dot" style="background:#93711b;"></span>Another host gave Zuckerberg more data in 5 days than in 5 years on Facebook; others refuse to connect Gmail, and Muse accepts API keys it says it uses without seeing.</li><li><span class="dot" style="background:#93711b;"></span>Full Gmail access with no topic scoping feels aggressive; the 'mention something, get a Facebook ad 12 hours later' phenomenon fuels doubt.</li><li><span class="dot" style="background:#93711b;"></span>Counterpoint: even if <b>20%</b> refuse on privacy grounds, 80% will sign up — people always end up doing it.</li><li><span class="dot" style="background:#93711b;"></span>A host wishes Apple ran this on-device via Siri (new Siri is good but can't audit card transactions or book a noon-3pm trip to New York); another says Apple leaks show no such work.</li><li><span class="dot" style="background:#93711b;"></span>Google has 'literally zero answers' to GPT/Claude agent tooling so far, despite having the reach.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I think we'll look back on this as one of Apple's biggest mistakes if we don't see this product soon.&#8221;<cite>— Dumb Money host</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Apple (AAPL)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Low</span></b><span>Slow and cautious on AI, much of it powered by Google models; no Muse-like product in leaks.</span></div><div class="namechip"><b>Google (GOOGL)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Has reach but no answer yet to agent working tools.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🎯</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Look past the first-order winner: after a Meta-style gap-up, ask who sells the compute.</span></div></div><div class="irow"><div class="ic">📈</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Watch Amazon's next earnings call for Muse and Graviton/Bedrock commentary as the catalyst.</span></div></div><div class="irow"><div class="ic">🚦</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Set an exit trigger on Meta: fading Muse news interest, not price, is the signal hosts named.</span></div></div><div class="irow"><div class="ic">🧠</div><div class="tline"><span class="cat">AI infra:</span> <span class="txt">Treat efficiency-driven selloffs in infra names as buying windows, not warnings.</span></div></div><div class="irow"><div class="ic">🛒</div><div class="tline"><span class="cat">Commerce:</span> <span class="txt">Track the Amazon-Meta commerce negotiation and any bot-targeted ad product.</span></div></div><div class="irow"><div class="ic">🔐</div><div class="tline"><span class="cat">Privacy:</span> <span class="txt">Before connecting accounts to an agent, scope what it can read — use a junk inbox for trials.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;This is the craziest thing I've ever seen, aside from ChatGPT itself at launch.&#8221; <cite>— Dumb Money host</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Zuckerberg will go all in with Muse. He will spend too much, and the biggest beneficiary of this will be Amazon.&#8221; <cite>— Chris Camillo</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I can't imagine a world where Amazon doesn't find a way to integrate with every major agent.&#8221; <cite>— Chris Camillo</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The market simply cannot understand—it will never understand—that this is a positive, not a negative factor.&#8221; <cite>— Chris Camillo</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think we'll look back on this as one of Apple's biggest mistakes if we don't see this product soon.&#8221; <cite>— Dumb Money host</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Even if 20% of people don't want to register for privacy reasons, 80% will agree.&#8221; <cite>— Dumb Money host</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Canaccord Genuity:</b> Meta price target raised to $860. <span class="cmeta">price target · $860</span> <span class="tag">Meta (META)</span></div><div class="ritem"><b>Chris Camillo:</b> Amazon will strike a multi-year paid deal to integrate with Muse and every major agent. <span class="cmeta">Amazon-Meta commerce deal · signed</span> <span class="tag">Amazon (AMZN)</span></div><div class="ritem"><b>Chris Camillo:</b> Amazon's upcoming earnings will reveal the impact of Muse and the Meta partnership on its chip/Bedrock business. <span class="cmeta">Muse disclosure · discussed · next earnings</span> <span class="tag">Amazon (AMZN)</span></div><div class="ritem"><b>Chris Camillo:</b> Meta will hold its stock position unless Muse interest fades. <span class="cmeta">Meta holding · held</span> <i>if unless news interest fades or Meta mis-executes</i> <span class="tag">Meta (META)</span></div><div class="ritem"><b>Dumb Money hosts:</b> Meta Connect keynote could be another catalyst or a peak signal. <span class="cmeta">Meta Connect · catalyst · 2026-09-23</span> <span class="tag">Meta (META)</span></div><div class="ritem"><b>Chris Camillo:</b> Meta building its own chip line to replace AWS is a multi-year undertaking. <span class="cmeta">Meta in-house chips · replaces AWS · multi-year</span> <span class="tag">Meta (META)</span></div><div class="ritem"><b>Dumb Money host:</b> Apple is unlikely to ship a Muse-like agent soon. <span class="cmeta">Apple agent product · not soon</span> <span class="tag">Apple (AAPL)</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Amazon (AMZN)</b> <span class="rel">supplies</span> <b>Meta (META)</b> &mdash; Graviton cores + Bedrock/AWS under April deal powering Muse</div><div class="ritem"><b>Meta (META)</b> <span class="rel">customer of</span> <b>Amazon (AMZN)</b> &mdash; one of AWS's top five customers</div><div class="ritem"><b>Shopify (SHOP)</b> <span class="rel">partners with</span> <b>Meta (META)</b> &mdash; supports Muse commerce</div><div class="ritem"><b>Expedia (EXPE)</b> <span class="rel">partners with</span> <b>Meta (META)</b> &mdash; supports Muse</div><div class="ritem"><b>PayPal (PYPL)</b> <span class="rel">partners with</span> <b>Meta (META)</b> &mdash; supports Muse</div><div class="ritem"><b>Meta (META)</b> <span class="rel">competes with</span> <b>OpenAI</b> &mdash; Muse overtook ChatGPT in App Store</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">💸</div><div><div class="title">Bot-to-bot negotiation: agents could push rent-style subscriptions like <b>SiriusXM</b> to $2/month, until companies' bots just concede the lowest price upfront in machine language — hosts floated shorting AT&amp;T-type bill payers as a second-order idea. <span class="tag">Consumer</span></div></div></div><div class="irow"><div class="ic">🎙</div><div><div class="title">Giggly Squad (Hannah Berner and Paige DeSorbo) sold for about <b>$140</b>-150M in a 4-year deal despite rough production — audience beats polish. <span class="tag">Media</span></div></div></div><div class="irow"><div class="ic">📅</div><div><div class="title">Coming episodes: what happens when AI exhausts human thought and the internet fills with AI garbage (a host already placed a sizable bet), and Jordan's aggressive energy/electricity trade. <span class="tag">Show</span></div></div></div><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: Canaccord Genuity target note, unnamed cost-estimate reports on Muse compute, an article tying Amazon's dip to Opus 5.5 efficiency, and Apple leak/rumor sites. <span class="tag">Sources</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Muse</b> &mdash; Meta's consumer AI agent app with a plush mascot that runs tasks in a per-user virtual machine.</div><div><b>Graviton</b> &mdash; Amazon's in-house Arm-based server CPU line.</div><div><b>Trainium</b> &mdash; Amazon's in-house AI training chip.</div><div><b>Amazon Bedrock</b> &mdash; AWS's managed service for hosting and running AI models.</div><div><b>Agentic AI</b> &mdash; AI that takes multi-step actions on a user's behalf, not just answers questions.</div><div><b>Bot-to-bot advertising</b> &mdash; Hosts' term for ad models aimed at AI agents rather than human browsers.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
