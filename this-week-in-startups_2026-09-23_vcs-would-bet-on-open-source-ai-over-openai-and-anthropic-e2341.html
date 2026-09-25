@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research: VCs Would Bet on Open-Source AI Over OpenAI and Anthropic | E2341</title>
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>VCs Would Bet on Open-Source AI Over OpenAI and Anthropic | E2341</h1>
+    <div class="byline">
+      Channel: <b>This Week in Startups</b> &middot; Speaker: <b>Jason Calacanis (host), Jeff Clavier (Uncork Capital), Jenny Fielding (Everywhere VC), Dave McClure (Practical Venture Capital)</b> &middot; <b>2026-09-23</b>
+      <div class="stats-line">6 threads · frontier price war vs open weights · mega-IPO pricing · Instinct's $10B ask · broken seed math · liquidity beyond the top 30 · the AI liability deal &middot; <a href="https://www.youtube.com/watch?v=IRirdwG8t3U" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>OpenAI and Anthropic shipped models hours apart with big price cuts: <b>GPT-6 Sol/Luna</b> ~50% cheaper, Claude Opus 5.5 at 40% less than Opus 5.</li><li>Open-weight models now carry <b>78%</b> of routed token volume vs 21% closed; asked where to put their money, the panel leaned to open source and hardware over frontier labs.</li><li>Dave McClure expects Anthropic to IPO at <b>$2</b>-2.5T and OpenAI at ~$1.5T; Jeff Clavier says SpaceX, Anthropic and OpenAI will raise more than $5T, more than tech raised in 45 years.</li><li>Instinct AI (an iMessage assistant, ~100,000 users) is reportedly raising <b>$1B</b> at $10B five months after a $50M-post seed — the panel sees Clubhouse-style VC baiting underwriting an acquisition.</li><li>Median seed valuations went from <b>$8M</b> (2017) to $28M; Clavier says at those prices a seed fund needs a $10B outcome just to make money.</li><li>Private companies now wait for <b>$500M</b>-$1B revenue to IPO; outside the top 30 names it's a buyer's market if you know what you're buying.</li><li>Dave McClure predicts an AI sovereign-wealth-style deal within 6-12 months: labs hand the government 10-<b>20%</b> equity in exchange for a liability shield.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="open-weights">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">PRICE CUTS SHIPPED HOURS APART</span><span class="ttag">ai-infra</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Frontier labs cut prices while open weights take the token share</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">With frontier prices collapsing and open models taking most routed tokens, the panel would rather own hardware and open weights than a frontier lab.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>OpenAI's GPT-6 Sol and Luna came in ~<b>50%</b> cheaper (Sol at $2 per million tokens); Claude Opus 5.5 matches Fable 5.1 at 40% less to run than Opus 5 — neither a big capability jump.</li><li><span class="dot" style="background:#93711b;"></span>A routing company's data (source unnamed): open weights 78% vs closed 21% of token volume; Dave McClure puts it at 74% and says open took the majority around <b>Q2</b>.</li><li><span class="dot" style="background:#93711b;"></span>Jeff Clavier: a race to the bottom subsidized by VC money; startups must underwrite the <i>true</i> cost of compute, since a 2-5x rise could erase a product's margins. Most apps don't need frontier features.</li><li><span class="dot" style="background:#93711b;"></span>Jenny Fielding: cheaper tokens lift margins only briefly because the barrier to entry falls too; she'd bet on open source and infrastructure — 'they're going to get crushed.'</li><li><span class="dot" style="background:#93711b;"></span>Jason Calacanis would go <b>100%</b> hardware stack: his startups are moving to open source, and he says ElevenLabs, Lovable and Figma CEOs told him they don't trust frontier labs, which they see as future competitors.</li><li><span class="dot" style="background:#93711b;"></span>Dave McClure would split <b>50%</b> open-weight index, rest in thirds across closed labs; betting on open weights is really betting on Nvidia (NVDA), and SpaceX may become an open-weight platform.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;Consumers don't care. They just care about price and quality, and they're so close to catching up that we're going to go all open source.&#8221;<cite>— Jenny Fielding</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">UNCERTAIN · Medium</span></b><span>GPT-6 Sol/Luna ~50% price cut; debt-funded spending flagged.</span></div><div class="namechip"><b>Anthropic<span class="stance" style="background:#93711b;">UNCERTAIN · Medium</span></b><span>Opus 5.5 at 40% lower cost; panel split on frontier-lab economics.</span></div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>The single public bet on open-weight growth, per Dave McClure; Jason would go all-in on the hardware stack.</span></div><div class="namechip"><b>ElevenLabs, Lovable, Figma<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>CEOs reportedly moving to open source, not trusting frontier labs.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Dave McClure flags OpenAI's debt-funded spending as a risk even with 'Papa Jensen' backing it; the open-source share figure comes from an unnamed routing company.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="mega-ipos">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">SPACEX PUBLIC; ANTHROPIC/OPENAI IPOS EXPECTED</span><span class="ttag">finance</span><span class="ttag">space</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Anthropic at $2.5T, OpenAI at $1.5T — priced to perfection</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The panel expects trillion-dollar AI IPOs but won't tell family or family offices to buy at 20-30x revenue.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Dave McClure: both labs keep growing revenue and go public — Anthropic at least <b>$2</b>-2.5T, OpenAI ~$1.5T — though market-cap growth may slow.</li><li><span class="dot" style="background:#93711b;"></span>Jeff Clavier: SpaceX, Anthropic and OpenAI will raise more than <b>$5T</b> in public markets, more than all tech in the last 45 years; half the private market is five companies.</li><li><span class="dot" style="background:#93711b;"></span>SpaceX IPO bumped, pulled back and recovered; Elon Web Services now does <b>$20</b>-40B of compute revenue, a business that didn't exist 9 months ago (Jason compares it to Amazon adding AWS in one year). Cursor acquisition cited.</li><li><span class="dot" style="background:#93711b;"></span>Jenny Fielding would not advise family to buy at IPO: 'gotta get in early'; expects ups and downs.</li><li><span class="dot" style="background:#93711b;"></span>Jeff Clavier wants to own SpaceX but hasn't bought — too expensive, entry closer to $1T; his family office goal is preservation, with an adviser investing in <b>energy</b>.</li><li><span class="dot" style="background:#93711b;"></span>Jason: public markets now price Palantir, Tesla, SpaceX and the labs like venture investors would.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;The goal of the family office is not to make bets that are potentially money losers. The goal of the family office is to not lose whatever we've made so far.&#8221;<cite>— Jeff Clavier</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>SpaceX<span class="stance" style="background:#93711b;">WATCHING · Medium</span></b><span>Clavier wants it at ~$1T, not current price; McClure floats it as an open-weight platform.</span></div><div class="namechip"><b>Palantir (PLTR), Tesla (TSLA)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Cited as publics priced like venture bets.</span></div><div class="namechip"><b>Cursor<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Acquisition tied to SpaceX's compute pivot; went from ~$2-3B to a $60B valuation.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="instinct">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">Skeptical</span>
+    <span class="theme-status">REPORTEDLY RAISING $1B AT $10B</span><span class="ttag">consumer</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">Instinct AI's $10B ask looks like the Clubhouse playbook</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">A five-month-old iMessage assistant with ~100,000 users is priced for a desperate acquirer, and Meta's Muse just launched against it.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span>Rounds (Business Insider/Harmonic data, flagged for checking): seed Apr 2026 <b>$25M</b> at $50M post; Series A Aug 2026 $75M at $500M; Series B $250M from Benchmark and Index at $2.5B; ~$350M of a $1B round at $10B raised, Sequoia reportedly circling. 23-year-old founder.</li><li><span class="dot" style="background:#a23f22;"></span>Jason sees a VC-baiting playbook (seed it with VCs, pop the price with a top name) like Clubhouse, which went <b>$1B</b>, then $4B, then crickets after turning down a rumored $4B from Twitter.</li><li><span class="dot" style="background:#a23f22;"></span>Jeff Clavier: people he knows stopped using it over data-access worries; it's burning cash on compute despite a simple product and stage-gating users. 'I'm really worried about Muse.'</li><li><span class="dot" style="background:#a23f22;"></span>Jenny Fielding: a fast markup isn't a business signal; Meta pushed Threads to ~500M users with a derivative product — reach wins.</li><li><span class="dot" style="background:#a23f22;"></span>Exit math: a <b>$10B</b> entry needs a $20B+ sale, pushing Apple, Microsoft, Amazon or Google to build instead; the bull case is those four lack an agent product. Rumor: big Google frontier-model news coming.</li><li><span class="dot" style="background:#a23f22;"></span>Dave McClure: Cursor went from ~<b>$2</b>-3B to a $60B valuation; 'this has zero and is at 10.' Past flameouts: Fab.com (Clavier was a seed investor; a $140M stake went to zero), Friendster passing on Yahoo, Meerkat, Vente-Privée and Gilt.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;The audience shouldn't confuse a fast funding round with a real business.&#8221;<cite>— Jenny Fielding</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Instinct AI<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium</span></b><span>iMessage AI assistant raising at $10B with ~100,000 users; panel skeptical.</span></div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Muse app is Instinct's biggest threat; distribution via Threads-style push.</span></div><div class="namechip"><b>Benchmark, Index Ventures, Sequoia<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Led or circling Instinct's rounds.</span></div><div class="namechip"><b>Apple (AAPL), Microsoft (MSFT), Amazon (AMZN), Google (GOOGL)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Potential acquirers without an agent product.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Round sizes and dates were read from reports the host said needed checking. Jason argues the founder is smart to 'make hay' — a $1B war chest buys two or three pivots. On monetization, WhatsApp once charged $1 per user across ~600M users.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="seed-math">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">Structural critique</span>
+    <span class="theme-status">SEED MEDIAN $8M (2017) → $28M TODAY</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">Seed prices broke the math — and unsexy categories can't raise</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Entry price has tripled while the Series A bar moved to hype categories, so solid fintech and healthcare companies are stuck bridging.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span>Cap-table data (source unnamed, limited set): 2017 → now, seed median <b>$8M</b> → $28M, 75th percentile $12M → $54M, 95th $25M → $209M. Early deals like DataStax, Thumbtack and Uber were $4-5M; Fitbit's 2008 $2M seed was at $5M pre.</li><li><span class="dot" style="background:#a23f22;"></span>Jeff Clavier's math: Uncork's <b>$300M</b> fund needs ~$150M from one winner; $5-6M in means a 30x, so 'unless you sell something for 10 billion, you barely make money.' He loses deals only to multistage funds writing $10-15M seed checks at $100M+.</li><li><span class="dot" style="background:#a23f22;"></span>Jenny Fielding's portfolio company (fintech × healthcare): <b>$2M</b> pre-seed, now $3M ARR, got a Series A no-go and is bridging with ~$3M from insiders — '18 months ago I would have gotten a Series A done.'</li><li><span class="dot" style="background:#a23f22;"></span>Clavier: triple-triple-double-double-double no longer guarantees a round; meanwhile one portfolio company announced a <b>$100M</b> Series C from Insight.</li><li><span class="dot" style="background:#a23f22;"></span>Jason's rule for founders: good valuation + good investor + clean terms = just do it. Example: Micro1 (25-year-old founder Ali), invested at <b>$12M</b>, just raised $100M at $4B; Jason owns 6%.</li><li><span class="dot" style="background:#a23f22;"></span>Fintech is overlooked: Jason bought Robinhood <b>(HOOD)</b> publicly at $8-9, now over $100, and holds more than he did privately.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;In this environment, if someone wants to give you money, take it.&#8221;<cite>— Jeff Clavier</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Uncork Capital<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Clavier's firm; $300M fund, targets 10-12% ownership.</span></div><div class="namechip"><b>Micro1<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>Raised $100M at $4B; hundreds of millions in revenue, profitable.</span></div><div class="namechip"><b>Robinhood (HOOD)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>Jason bought publicly at $8-9, now $100+.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Jason is a Micro1 and Robinhood holder; Jenny's anecdote is her own portfolio company.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="liquidity">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Opportunity</span>
+    <span class="theme-status">EARLY M&amp;A RETURNING AFTER 5-YEAR PAUSE</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Beyond the top 30 private names, it's a buyer's market</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Dave McClure says the top 30 names are a seller's market while profitable companies 31-250 go unpriced — the arbitrage is information.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Top 30 (Stripe, Databricks, Anduril, the labs) set their own price; outside that, companies doing ~<b>$200M</b> revenue, growing 40-50% and profitable have no market because there's no disclosure.</li><li><span class="dot" style="background:#3f6b2e;"></span>IPO bar has moved: companies once listed at <b>$50</b>-100M revenue; now $500M-$1B. One CEO at $500M+ revenue plans to wait for $10B revenue (~5 years).</li><li><span class="dot" style="background:#3f6b2e;"></span>Exits: Clavier's DroneDeploy returned half a fund (13-year hold), but Bending Spoons pays ~2x revenue for <b>$400</b>-500M-revenue companies — 80-90% write-downs for their investors.</li><li><span class="dot" style="background:#3f6b2e;"></span>Uncork has sold ~<b>$1.5B</b> of companies in the last 3-4 months after a five-year pause, echoing Web 2.0-era $30-200M exits (Slideshare, Mashery, Mint.com, Delicious, Flickr).</li><li><span class="dot" style="background:#3f6b2e;"></span>McClure wishes he'd sold more secondaries at the ZIRP peak (they sold some to TPG and Tiger cubs).</li><li><span class="dot" style="background:#3f6b2e;"></span>McClure's fix for DPI: a single-asset continuation SPV priced at a Series B/C post-money within 3-6 months, letting LPs cash out or roll, typically in years 5-8 of a fund; he's presenting it at the Sidecar SPV summit in New York next Tuesday.</li><li><span class="dot" style="background:#3f6b2e;"></span>Jason is building <b>Twist 100</b>, a vibe-coded list of top private companies; Practical VC rehosts a top 40 using Augment data.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;It's a buyer market for a lot of the names that are outside the top 30 if you know what you're doing.&#8221;<cite>— Dave McClure</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Stripe, Databricks, Anduril<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Top-30 private names that set their own price.</span></div><div class="namechip"><b>Bending Spoons<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Low</span></b><span>Acquirer paying ~2x revenue; brutal for prior investors.</span></div><div class="namechip"><b>DroneDeploy<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Uncork exit that returned half the fund.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">McClure runs Practical VC, which buys secondary portfolios, so he benefits from this buyer's market — and is pitching the SPV structure at a summit.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="ai-liability">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Speculative</span>
+    <span class="theme-status">PREDICTION — NEXT 6-12 MONTHS</span><span class="ttag">policy</span><span class="ttag">geopolitics</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">Equity for immunity: the coming AI liability deal</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Dave McClure predicts labs will trade 10-20% equity to Washington for a Section 230-style shield, while the panel splits on p(doom).</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>McClure: Trump wants a piece, Democrats want oversight, Sam and Dario want a product-liability shield; Bernie wants <b>50%</b>, Sam offered 5-10%. He'd use the cigarette-company model and prefers an equity swap over a tax.</li><li><span class="dot" style="background:#65695f;"></span>Jeff Clavier: p(doom) non-zero, maybe 5-<b>10%</b>; the fix is holding CEOs accountable. He says AI already builds 26% of Anthropic's next generation, making control harder.</li><li><span class="dot" style="background:#65695f;"></span>Example cited: an AI agent misidentified a Chinese ship's cargo and the Pentagon nearly intercepted or struck it before a human stopped it.</li><li><span class="dot" style="background:#65695f;"></span>Jason: MRI studies show brain activity is lowest when AI writes an essay; people trusting AI unchecked is the atrophy risk. Frontier labs should KYC users like Pegasus spyware licensing, or ramp limits like SendGrid did.</li><li><span class="dot" style="background:#65695f;"></span>A comment from an OpenRouter investor: Stripe bought OpenRouter for trust and monitoring, not routing — 'Stripe is an anti-fraud company.'</li><li><span class="dot" style="background:#65695f;"></span>Jenny Fielding: p(doom) low — a golden age of resilience startups; Europe is obsessed with sovereignty and defense tech, and cyber will be massive.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#65695f;"><div class="lbl">Pull quote</div>&#8220;AI is not going to kill us all, but a human enabled with AI might kill us all.&#8221;<cite>— Dave McClure</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Stripe<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Acquired OpenRouter, reportedly for AI trust and fraud monitoring.</span></div><div class="namechip"><b>OpenRouter<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Model-routing company acquired by Stripe.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The 26% Anthropic figure and the Pentagon-ship incident are relayed secondhand.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🧮</div><div class="tline"><span class="cat">Startups:</span> <span class="txt">Stress-test unit economics at 2-5x today's token price before trusting subsidized margins.</span></div></div><div class="irow"><div class="ic">📈</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Wait for a pullback before buying AI mega-IPOs priced at 20-30x revenue.</span></div></div><div class="irow"><div class="ic">🔍</div><div class="tline"><span class="cat">Private markets:</span> <span class="txt">Hunt for profitable, growing private companies outside the top 30, where pricing is weak.</span></div></div><div class="irow"><div class="ic">💰</div><div class="tline"><span class="cat">Fundraising:</span> <span class="txt">Raise when the money is offered — timing beats the next milestone in this market.</span></div></div><div class="irow"><div class="ic">🧾</div><div class="tline"><span class="cat">Tax:</span> <span class="txt">Donate illiquid startup or fund stakes to a donor-advised fund before December if 2026 has a taxable event.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;I think they're going to get crushed.&#8221; <cite>— Jenny Fielding</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Anthropic at least two, two and a half trillion and probably OpenAI one and a half trillion.&#8221; <cite>— Dave McClure</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Unless you sell something for 10 billion, you barely make money.&#8221; <cite>— Jeff Clavier</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Cursor had two or three billion and they got valued at 60. This has zero and is at 10.&#8221; <cite>— Dave McClure</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;There's going to be an AI sovereign wealth fund that'll get cut in the next 6 to 12 months.&#8221; <cite>— Dave McClure</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Twitter offered 4 billion for Clubhouse... one of the biggest mistakes ever.&#8221; <cite>— Jason Calacanis</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Dave McClure:</b> Anthropic IPOs at a valuation of at least $2-2.5T. <span class="cmeta">IPO valuation · $2-2.5T</span> <span class="tag">Anthropic</span></div><div class="ritem"><b>Dave McClure:</b> OpenAI IPOs at about $1.5T. <span class="cmeta">IPO valuation · $1.5T</span> <span class="tag">OpenAI</span></div><div class="ritem"><b>Jeff Clavier:</b> SpaceX, Anthropic and OpenAI IPOs will raise more than all tech raised in the last 45 years. <span class="cmeta">capital raised in public markets · &gt;$5T</span></div><div class="ritem"><b>Dave McClure:</b> An AI sovereign-wealth-style deal with frontier labs gets cut, trading 10-20% equity for a liability shield. <span class="cmeta">government equity stake · 10-20% · 2027</span></div><div class="ritem"><b>Jeff Clavier:</b> Would buy SpaceX only near a $1T valuation. <span class="cmeta">entry valuation · ~$1T</span> <i>if only at that price</i> <span class="tag">SpaceX</span></div><div class="ritem"><b>Jason Calacanis:</b> Instinct needs a $20B+ exit to justify a $10B entry, making acquirers build instead. <span class="cmeta">required exit · &gt;$20B</span> <span class="tag">Instinct AI</span></div><div class="ritem"><b>Unnamed private-company CEO (via Dave McClure):</b> Company already at $500M+ revenue won't IPO until $10B revenue, about five years out. <span class="cmeta">IPO revenue threshold · $10B revenue · ~2031</span></div><div class="ritem"><b>Jenny Fielding:</b> Open-source models will catch up enough that usage goes all open source. <span class="cmeta">open-weight share · dominant</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Stripe</b> <span class="rel">acquires</span> <b>OpenRouter</b> &mdash; reportedly for AI trust/fraud monitoring</div><div class="ritem"><b>Benchmark</b> <span class="rel">invests in</span> <b>Instinct AI</b> &mdash; Series B at $2.5B</div><div class="ritem"><b>Index Ventures</b> <span class="rel">invests in</span> <b>Instinct AI</b> &mdash; Series B at $2.5B</div><div class="ritem"><b>Meta (META)</b> <span class="rel">competes with</span> <b>Instinct AI</b> &mdash; Muse agent app</div><div class="ritem"><b>SpaceX</b> <span class="rel">acquires</span> <b>Cursor</b></div><div class="ritem"><b>Uncork Capital</b> <span class="rel">invests in</span> <b>Loft Orbital</b> &mdash; Clavier on board ~7 years</div><div class="ritem"><b>OpenAI</b> <span class="rel">competes with</span> <b>Anthropic</b> &mdash; price cuts shipped hours apart</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🛰</div><div><div class="title"><b>Loft Orbital</b> announced a $1B investment from Abu Dhabi for what it calls the largest AI compute constellation in space; it runs shared-sensor missions and processes imagery in orbit instead of streaming raw data down. <span class="tag">Space</span></div></div></div><div class="irow"><div class="ic">🧾</div><div><div class="title">Dave McClure's donor-advised-fund pitch: donate illiquid startup equity, fund or carried interest (via a Utah charity partner that accepts them) for an immediate deduction usable for up to five years — instead of paying <b>$300</b>-500k tax on a $1M secondary sale. Allow ~30 days for a fair-market valuation; finish by December. <span class="tag">Tax</span></div></div></div><div class="irow"><div class="ic">🤖</div><div><div class="title">Jason's firm gave up on OpenClaw for <b>Claude Cowork</b> (users grew from 3-4 to 20-25 people); staff also use Grok, Perplexity Computer and Lovable for internal tools. With 20,000 funding applications in 3 weeks, AI runs 'misses' analysis — e.g. Zipline, missed 10 years ago, later backed via the syndicate at a multibillion round. <span class="tag">AI workflow</span></div></div></div><div class="irow"><div class="ic">🎤</div><div><div class="title">All-In Summit: Trump's call-in during a Sacks/Jensen Huang session was real, not staged, Jason says; Jason is done with All-In. <span class="tag">Culture</span></div></div></div><div class="irow"><div class="ic">🍷</div><div><div class="title">Jeff Clavier handed Uncork to co-managing partner Andy McLoughlin after 21 years, moved to Walla Walla, WA and opened winery <b>Clavier</b>: 'Series B' red (Grenache, Cabernet, 12% Syrah — decant an hour), a Viognier white inspired by Condrieu, with 'Carried Interest' coming. 95% of his time is still deep tech. <span class="tag">Personal</span></div></div></div><div class="irow"><div class="ic">🌱</div><div><div class="title">Pre-seed: Jenny Fielding's Everywhere VC writes $250k B2B pre-seed checks, 'one of about 10 left'; Jason's Founder University (US, Saudi Arabia twice a year, Japan; next November) produced TaxGPT, now tens of millions in revenue after Y Combinator; The Syndicate has 4,000+ members and a waitlist. <span class="tag">Venture</span></div></div></div><div class="irow"><div class="ic">📜</div><div><div class="title">Seed history: Clavier raised one of the first seed funds (<b>$15M</b>, 2007); Mike Maples coined 'seed'; Jenny ran Techstars NY for 7.5 years (one 2014/15 class produced two unicorns); SendGrid and SpotHero (recently acquired) were early wins; 500 Startups' average pre-money was under $5M in its first two funds; 80-90% of such startups return nothing. Jason's Weblogs sold to AOL for $30M at ~300x its $125,000 revenue; Mark Cuban turned $300k for 15% into $5M in 18 months. <span class="tag">History</span></div></div></div><div class="irow"><div class="ic">👔</div><div><div class="title">Jason modeled his wardrobe on Daniel Craig's Bond (Tom Ford), lost 40 pounds and gained 10 of muscle; he used Gemini to make a founder graphic that would have cost <b>$300 </b>and six weeks from an illustrator. <span class="tag">Personal</span></div></div></div><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: Business Insider and Harmonic (Instinct), an unnamed LLM routing company (token share), an unnamed cap-table company (seed valuations), an OpenRouter investor's comment, Augment data (Practical VC's top 40), MRI studies on AI essay writing, and Bill Gurley's 'priced to perfection' framing. <span class="tag">Sources</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>p(doom)</b> &mdash; Estimated probability that AI causes human extinction or catastrophe.</div><div><b>Open weights</b> &mdash; Models whose trained parameters are published so anyone can run them.</div><div><b>DPI</b> &mdash; Distributions to paid-in capital — cash actually returned to a fund's LPs.</div><div><b>Continuation SPV</b> &mdash; A vehicle that buys a fund's winning position so LPs can cash out or roll into it.</div><div><b>Donor-advised fund (DAF)</b> &mdash; A charitable account that gives an immediate tax deduction on donated assets, including illiquid ones.</div><div><b>Multistage fund</b> &mdash; A large firm investing from seed through growth, able to overpay at seed to secure later rounds.</div><div><b>ZIRP</b> &mdash; The zero-interest-rate era when private valuations peaked.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>

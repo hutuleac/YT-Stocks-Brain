@@ -1,0 +1,228 @@
+META = {
+    "title": "VCs Would Bet on Open-Source AI Over OpenAI and Anthropic | E2341",
+    "channel": "This Week in Startups",
+    "speakers": "Jason Calacanis (host), Jeff Clavier (Uncork Capital), Jenny Fielding (Everywhere VC), Dave McClure (Practical Venture Capital)",
+    "date": "2026-09-23",
+    "video_url": "https://www.youtube.com/watch?v=IRirdwG8t3U",
+    "thread_line": "6 threads · frontier price war vs open weights · mega-IPO pricing · Instinct's $10B ask · broken seed math · liquidity beyond the top 30 · the AI liability deal",
+    "category": "market",
+}
+
+SNAPSHOT = [
+    "OpenAI and Anthropic shipped models hours apart with big price cuts: **GPT-6 Sol/Luna** ~50% cheaper, Claude Opus 5.5 at 40% less than Opus 5.",
+    "Open-weight models now carry 78% of routed token volume vs 21% closed; asked where to put their money, the panel leaned to open source and hardware over frontier labs.",
+    "Dave McClure expects Anthropic to IPO at $2-2.5T and OpenAI at ~$1.5T; Jeff Clavier says SpaceX, Anthropic and OpenAI will raise more than $5T, more than tech raised in 45 years.",
+    "Instinct AI (an iMessage assistant, ~100,000 users) is reportedly raising $1B at $10B five months after a $50M-post seed — the panel sees Clubhouse-style VC baiting underwriting an acquisition.",
+    "Median seed valuations went from $8M (2017) to $28M; Clavier says at those prices a seed fund needs a $10B outcome just to make money.",
+    "Private companies now wait for $500M-$1B revenue to IPO; outside the top 30 names it's a buyer's market if you know what you're buying.",
+    "Dave McClure predicts an AI sovereign-wealth-style deal within 6-12 months: labs hand the government 10-20% equity in exchange for a liability shield.",
+]
+
+THEMES = [
+    {
+        "id": "open-weights",
+        "tags": ["ai-infra", "software"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "PRICE CUTS SHIPPED HOURS APART",
+        "title": "Frontier labs cut prices while open weights take the token share",
+        "lead": "With frontier prices collapsing and open models taking most routed tokens, the panel would rather own hardware and open weights than a frontier lab.",
+        "bullets": [
+            "OpenAI's GPT-6 Sol and Luna came in ~50% cheaper (Sol at $2 per million tokens); Claude Opus 5.5 matches Fable 5.1 at 40% less to run than Opus 5 — neither a big capability jump.",
+            "A routing company's data (source unnamed): open weights 78% vs closed 21% of token volume; Dave McClure puts it at 74% and says open took the majority around **Q2**.",
+            "Jeff Clavier: a race to the bottom subsidized by VC money; startups must underwrite the *true* cost of compute, since a 2-5x rise could erase a product's margins. Most apps don't need frontier features.",
+            "Jenny Fielding: cheaper tokens lift margins only briefly because the barrier to entry falls too; she'd bet on open source and infrastructure — 'they're going to get crushed.'",
+            "Jason Calacanis would go 100% hardware stack: his startups are moving to open source, and he says ElevenLabs, Lovable and Figma CEOs told him they don't trust frontier labs, which they see as future competitors.",
+            "Dave McClure would split 50% open-weight index, rest in thirds across closed labs; betting on open weights is really betting on Nvidia (NVDA), and SpaceX may become an open-weight platform.",
+        ],
+        "quote": {"text": "Consumers don't care. They just care about price and quality, and they're so close to catching up that we're going to go all open source.", "cite": "— Jenny Fielding"},
+        "watch": "Dave McClure flags OpenAI's debt-funded spending as a risk even with 'Papa Jensen' backing it; the open-source share figure comes from an unnamed routing company.",
+        "names": [
+            {"name": "OpenAI", "blurb": "GPT-6 Sol/Luna ~50% price cut; debt-funded spending flagged.", "stance": "UNCERTAIN", "conviction": "Medium", "horizon": None},
+            {"name": "Anthropic", "blurb": "Opus 5.5 at 40% lower cost; panel split on frontier-lab economics.", "stance": "UNCERTAIN", "conviction": "Medium", "horizon": None},
+            {"name": "Nvidia (NVDA)", "blurb": "The single public bet on open-weight growth, per Dave McClure; Jason would go all-in on the hardware stack.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "ElevenLabs, Lovable, Figma", "blurb": "CEOs reportedly moving to open source, not trusting frontier labs.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "mega-ipos",
+        "tags": ["finance", "space"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "SPACEX PUBLIC; ANTHROPIC/OPENAI IPOS EXPECTED",
+        "title": "Anthropic at $2.5T, OpenAI at $1.5T — priced to perfection",
+        "lead": "The panel expects trillion-dollar AI IPOs but won't tell family or family offices to buy at 20-30x revenue.",
+        "bullets": [
+            "Dave McClure: both labs keep growing revenue and go public — Anthropic at least $2-2.5T, OpenAI ~$1.5T — though market-cap growth may slow.",
+            "Jeff Clavier: SpaceX, Anthropic and OpenAI will raise more than $5T in public markets, more than all tech in the last 45 years; half the private market is five companies.",
+            "SpaceX IPO bumped, pulled back and recovered; Elon Web Services now does $20-40B of compute revenue, a business that didn't exist 9 months ago (Jason compares it to Amazon adding AWS in one year). Cursor acquisition cited.",
+            "Jenny Fielding would not advise family to buy at IPO: 'gotta get in early'; expects ups and downs.",
+            "Jeff Clavier wants to own SpaceX but hasn't bought — too expensive, entry closer to $1T; his family office goal is preservation, with an adviser investing in **energy**.",
+            "Jason: public markets now price Palantir, Tesla, SpaceX and the labs like venture investors would.",
+        ],
+        "quote": {"text": "The goal of the family office is not to make bets that are potentially money losers. The goal of the family office is to not lose whatever we've made so far.", "cite": "— Jeff Clavier"},
+        "watch": None,
+        "names": [
+            {"name": "SpaceX", "blurb": "Clavier wants it at ~$1T, not current price; McClure floats it as an open-weight platform.", "stance": "WATCHING", "conviction": "Medium", "horizon": None},
+            {"name": "Palantir (PLTR), Tesla (TSLA)", "blurb": "Cited as publics priced like venture bets.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Cursor", "blurb": "Acquisition tied to SpaceX's compute pivot; went from ~$2-3B to a $60B valuation.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "instinct",
+        "tags": ["consumer", "software"],
+        "color": "red",
+        "badge": "Skeptical",
+        "status": "REPORTEDLY RAISING $1B AT $10B",
+        "title": "Instinct AI's $10B ask looks like the Clubhouse playbook",
+        "lead": "A five-month-old iMessage assistant with ~100,000 users is priced for a desperate acquirer, and Meta's Muse just launched against it.",
+        "bullets": [
+            "Rounds (Business Insider/Harmonic data, flagged for checking): seed Apr 2026 $25M at $50M post; Series A Aug 2026 $75M at $500M; Series B $250M from Benchmark and Index at $2.5B; ~$350M of a $1B round at $10B raised, Sequoia reportedly circling. 23-year-old founder.",
+            "Jason sees a VC-baiting playbook (seed it with VCs, pop the price with a top name) like Clubhouse, which went $1B, then $4B, then crickets after turning down a rumored $4B from Twitter.",
+            "Jeff Clavier: people he knows stopped using it over data-access worries; it's burning cash on compute despite a simple product and stage-gating users. 'I'm really worried about Muse.'",
+            "Jenny Fielding: a fast markup isn't a business signal; Meta pushed Threads to ~500M users with a derivative product — reach wins.",
+            "Exit math: a $10B entry needs a $20B+ sale, pushing Apple, Microsoft, Amazon or Google to build instead; the bull case is those four lack an agent product. Rumor: big Google frontier-model news coming.",
+            "Dave McClure: Cursor went from ~$2-3B to a $60B valuation; 'this has zero and is at 10.' Past flameouts: Fab.com (Clavier was a seed investor; a $140M stake went to zero), Friendster passing on Yahoo, Meerkat, Vente-Privée and Gilt.",
+        ],
+        "quote": {"text": "The audience shouldn't confuse a fast funding round with a real business.", "cite": "— Jenny Fielding"},
+        "watch": "Round sizes and dates were read from reports the host said needed checking. Jason argues the founder is smart to 'make hay' — a $1B war chest buys two or three pivots. On monetization, WhatsApp once charged $1 per user across ~600M users.",
+        "names": [
+            {"name": "Instinct AI", "blurb": "iMessage AI assistant raising at $10B with ~100,000 users; panel skeptical.", "stance": "NEGATIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Meta (META)", "blurb": "Muse app is Instinct's biggest threat; distribution via Threads-style push.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Benchmark, Index Ventures, Sequoia", "blurb": "Led or circling Instinct's rounds.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Apple (AAPL), Microsoft (MSFT), Amazon (AMZN), Google (GOOGL)", "blurb": "Potential acquirers without an agent product.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "seed-math",
+        "tags": ["finance"],
+        "color": "red",
+        "badge": "Structural critique",
+        "status": "SEED MEDIAN $8M (2017) → $28M TODAY",
+        "title": "Seed prices broke the math — and unsexy categories can't raise",
+        "lead": "Entry price has tripled while the Series A bar moved to hype categories, so solid fintech and healthcare companies are stuck bridging.",
+        "bullets": [
+            "Cap-table data (source unnamed, limited set): 2017 → now, seed median $8M → $28M, 75th percentile $12M → $54M, 95th $25M → $209M. Early deals like DataStax, Thumbtack and Uber were $4-5M; Fitbit's 2008 $2M seed was at $5M pre.",
+            "Jeff Clavier's math: Uncork's $300M fund needs ~$150M from one winner; $5-6M in means a 30x, so 'unless you sell something for 10 billion, you barely make money.' He loses deals only to multistage funds writing $10-15M seed checks at $100M+.",
+            "Jenny Fielding's portfolio company (fintech × healthcare): $2M pre-seed, now $3M ARR, got a Series A no-go and is bridging with ~$3M from insiders — '18 months ago I would have gotten a Series A done.'",
+            "Clavier: triple-triple-double-double-double no longer guarantees a round; meanwhile one portfolio company announced a $100M Series C from Insight.",
+            "Jason's rule for founders: good valuation + good investor + clean terms = just do it. Example: Micro1 (25-year-old founder Ali), invested at $12M, just raised $100M at $4B; Jason owns 6%.",
+            "Fintech is overlooked: Jason bought Robinhood (HOOD) publicly at $8-9, now over $100, and holds more than he did privately.",
+        ],
+        "quote": {"text": "In this environment, if someone wants to give you money, take it.", "cite": "— Jeff Clavier"},
+        "watch": "Jason is a Micro1 and Robinhood holder; Jenny's anecdote is her own portfolio company.",
+        "names": [
+            {"name": "Uncork Capital", "blurb": "Clavier's firm; $300M fund, targets 10-12% ownership.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Micro1", "blurb": "Raised $100M at $4B; hundreds of millions in revenue, profitable.", "stance": "OWNS", "conviction": "High", "horizon": None},
+            {"name": "Robinhood (HOOD)", "blurb": "Jason bought publicly at $8-9, now $100+.", "stance": "OWNS", "conviction": "High", "horizon": None},
+        ],
+    },
+    {
+        "id": "liquidity",
+        "tags": ["finance"],
+        "color": "green",
+        "badge": "Opportunity",
+        "status": "EARLY M&A RETURNING AFTER 5-YEAR PAUSE",
+        "title": "Beyond the top 30 private names, it's a buyer's market",
+        "lead": "Dave McClure says the top 30 names are a seller's market while profitable companies 31-250 go unpriced — the arbitrage is information.",
+        "bullets": [
+            "Top 30 (Stripe, Databricks, Anduril, the labs) set their own price; outside that, companies doing ~$200M revenue, growing 40-50% and profitable have no market because there's no disclosure.",
+            "IPO bar has moved: companies once listed at $50-100M revenue; now $500M-$1B. One CEO at $500M+ revenue plans to wait for $10B revenue (~5 years).",
+            "Exits: Clavier's DroneDeploy returned half a fund (13-year hold), but Bending Spoons pays ~2x revenue for $400-500M-revenue companies — 80-90% write-downs for their investors.",
+            "Uncork has sold ~$1.5B of companies in the last 3-4 months after a five-year pause, echoing Web 2.0-era $30-200M exits (Slideshare, Mashery, Mint.com, Delicious, Flickr).",
+            "McClure wishes he'd sold more secondaries at the ZIRP peak (they sold some to TPG and Tiger cubs).",
+            "McClure's fix for DPI: a single-asset continuation SPV priced at a Series B/C post-money within 3-6 months, letting LPs cash out or roll, typically in years 5-8 of a fund; he's presenting it at the Sidecar SPV summit in New York next Tuesday.",
+            "Jason is building **Twist 100**, a vibe-coded list of top private companies; Practical VC rehosts a top 40 using Augment data.",
+        ],
+        "quote": {"text": "It's a buyer market for a lot of the names that are outside the top 30 if you know what you're doing.", "cite": "— Dave McClure"},
+        "watch": "McClure runs Practical VC, which buys secondary portfolios, so he benefits from this buyer's market — and is pitching the SPV structure at a summit.",
+        "names": [
+            {"name": "Stripe, Databricks, Anduril", "blurb": "Top-30 private names that set their own price.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Bending Spoons", "blurb": "Acquirer paying ~2x revenue; brutal for prior investors.", "stance": "NEGATIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "DroneDeploy", "blurb": "Uncork exit that returned half the fund.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "ai-liability",
+        "tags": ["policy", "geopolitics"],
+        "color": "gray",
+        "badge": "Speculative",
+        "status": "PREDICTION — NEXT 6-12 MONTHS",
+        "title": "Equity for immunity: the coming AI liability deal",
+        "lead": "Dave McClure predicts labs will trade 10-20% equity to Washington for a Section 230-style shield, while the panel splits on p(doom).",
+        "bullets": [
+            "McClure: Trump wants a piece, Democrats want oversight, Sam and Dario want a product-liability shield; Bernie wants 50%, Sam offered 5-10%. He'd use the cigarette-company model and prefers an equity swap over a tax.",
+            "Jeff Clavier: p(doom) non-zero, maybe 5-10%; the fix is holding CEOs accountable. He says AI already builds 26% of Anthropic's next generation, making control harder.",
+            "Example cited: an AI agent misidentified a Chinese ship's cargo and the Pentagon nearly intercepted or struck it before a human stopped it.",
+            "Jason: MRI studies show brain activity is lowest when AI writes an essay; people trusting AI unchecked is the atrophy risk. Frontier labs should KYC users like Pegasus spyware licensing, or ramp limits like SendGrid did.",
+            "A comment from an OpenRouter investor: Stripe bought OpenRouter for trust and monitoring, not routing — 'Stripe is an anti-fraud company.'",
+            "Jenny Fielding: p(doom) low — a golden age of resilience startups; Europe is obsessed with sovereignty and defense tech, and cyber will be massive.",
+        ],
+        "quote": {"text": "AI is not going to kill us all, but a human enabled with AI might kill us all.", "cite": "— Dave McClure"},
+        "watch": "The 26% Anthropic figure and the Pentagon-ship incident are relayed secondhand.",
+        "names": [
+            {"name": "Stripe", "blurb": "Acquired OpenRouter, reportedly for AI trust and fraud monitoring.", "stance": "POSITIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "OpenRouter", "blurb": "Model-routing company acquired by Stripe.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F9EE", "tag": "Startups", "title": "Stress-test unit economics at 2-5x today's token price before trusting subsidized margins."},
+    {"icon": "\U0001F4C8", "tag": "Markets", "title": "Wait for a pullback before buying AI mega-IPOs priced at 20-30x revenue."},
+    {"icon": "\U0001F50D", "tag": "Private markets", "title": "Hunt for profitable, growing private companies outside the top 30, where pricing is weak."},
+    {"icon": "\U0001F4B0", "tag": "Fundraising", "title": "Raise when the money is offered — timing beats the next milestone in this market."},
+    {"icon": "\U0001F9FE", "tag": "Tax", "title": "Donate illiquid startup or fund stakes to a donor-advised fund before December if 2026 has a taxable event."},
+]
+
+HOT_TAKES = [
+    {"take": "I think they're going to get crushed.", "cite": "— Jenny Fielding", "why": "frontier labs vs open source"},
+    {"take": "Anthropic at least two, two and a half trillion and probably OpenAI one and a half trillion.", "cite": "— Dave McClure", "why": "IPO valuation call"},
+    {"take": "Unless you sell something for 10 billion, you barely make money.", "cite": "— Jeff Clavier", "why": "seed math is broken"},
+    {"take": "Cursor had two or three billion and they got valued at 60. This has zero and is at 10.", "cite": "— Dave McClure", "why": "Instinct valuation"},
+    {"take": "There's going to be an AI sovereign wealth fund that'll get cut in the next 6 to 12 months.", "cite": "— Dave McClure", "why": "dated policy prediction"},
+    {"take": "Twitter offered 4 billion for Clubhouse... one of the biggest mistakes ever.", "cite": "— Jason Calacanis", "why": "ranking a non-acquisition"},
+]
+
+CLAIMS = [
+    {"who": "Dave McClure", "claim": "Anthropic IPOs at a valuation of at least $2-2.5T.", "metric": "IPO valuation", "target": "$2-2.5T", "by": None, "condition": None, "entity": "Anthropic"},
+    {"who": "Dave McClure", "claim": "OpenAI IPOs at about $1.5T.", "metric": "IPO valuation", "target": "$1.5T", "by": None, "condition": None, "entity": "OpenAI"},
+    {"who": "Jeff Clavier", "claim": "SpaceX, Anthropic and OpenAI IPOs will raise more than all tech raised in the last 45 years.", "metric": "capital raised in public markets", "target": ">$5T", "by": None, "condition": None, "entity": None},
+    {"who": "Dave McClure", "claim": "An AI sovereign-wealth-style deal with frontier labs gets cut, trading 10-20% equity for a liability shield.", "metric": "government equity stake", "target": "10-20%", "by": "2027", "condition": None, "entity": None},
+    {"who": "Jeff Clavier", "claim": "Would buy SpaceX only near a $1T valuation.", "metric": "entry valuation", "target": "~$1T", "by": None, "condition": "only at that price", "entity": "SpaceX"},
+    {"who": "Jason Calacanis", "claim": "Instinct needs a $20B+ exit to justify a $10B entry, making acquirers build instead.", "metric": "required exit", "target": ">$20B", "by": None, "condition": None, "entity": "Instinct AI"},
+    {"who": "Unnamed private-company CEO (via Dave McClure)", "claim": "Company already at $500M+ revenue won't IPO until $10B revenue, about five years out.", "metric": "IPO revenue threshold", "target": "$10B revenue", "by": "~2031", "condition": None, "entity": None},
+    {"who": "Jenny Fielding", "claim": "Open-source models will catch up enough that usage goes all open source.", "metric": "open-weight share", "target": "dominant", "by": None, "condition": None, "entity": None},
+]
+
+RELATIONS = [
+    {"from": "Stripe", "rel": "acquires", "to": "OpenRouter", "note": "reportedly for AI trust/fraud monitoring"},
+    {"from": "Benchmark", "rel": "invests_in", "to": "Instinct AI", "note": "Series B at $2.5B"},
+    {"from": "Index Ventures", "rel": "invests_in", "to": "Instinct AI", "note": "Series B at $2.5B"},
+    {"from": "Meta (META)", "rel": "competes_with", "to": "Instinct AI", "note": "Muse agent app"},
+    {"from": "SpaceX", "rel": "acquires", "to": "Cursor", "note": None},
+    {"from": "Uncork Capital", "rel": "invests_in", "to": "Loft Orbital", "note": "Clavier on board ~7 years"},
+    {"from": "OpenAI", "rel": "competes_with", "to": "Anthropic", "note": "price cuts shipped hours apart"},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F6F0", "title": "**Loft Orbital** announced a $1B investment from Abu Dhabi for what it calls the largest AI compute constellation in space; it runs shared-sensor missions and processes imagery in orbit instead of streaming raw data down.", "tag": "Space"},
+    {"icon": "\U0001F9FE", "title": "Dave McClure's donor-advised-fund pitch: donate illiquid startup equity, fund or carried interest (via a Utah charity partner that accepts them) for an immediate deduction usable for up to five years — instead of paying $300-500k tax on a $1M secondary sale. Allow ~30 days for a fair-market valuation; finish by December.", "tag": "Tax"},
+    {"icon": "\U0001F916", "title": "Jason's firm gave up on OpenClaw for **Claude Cowork** (users grew from 3-4 to 20-25 people); staff also use Grok, Perplexity Computer and Lovable for internal tools. With 20,000 funding applications in 3 weeks, AI runs 'misses' analysis — e.g. Zipline, missed 10 years ago, later backed via the syndicate at a multibillion round.", "tag": "AI workflow"},
+    {"icon": "\U0001F3A4", "title": "All-In Summit: Trump's call-in during a Sacks/Jensen Huang session was real, not staged, Jason says; Jason is done with All-In.", "tag": "Culture"},
+    {"icon": "\U0001F377", "title": "Jeff Clavier handed Uncork to co-managing partner Andy McLoughlin after 21 years, moved to Walla Walla, WA and opened winery **Clavier**: 'Series B' red (Grenache, Cabernet, 12% Syrah — decant an hour), a Viognier white inspired by Condrieu, with 'Carried Interest' coming. 95% of his time is still deep tech.", "tag": "Personal"},
+    {"icon": "\U0001F331", "title": "Pre-seed: Jenny Fielding's Everywhere VC writes $250k B2B pre-seed checks, 'one of about 10 left'; Jason's Founder University (US, Saudi Arabia twice a year, Japan; next November) produced TaxGPT, now tens of millions in revenue after Y Combinator; The Syndicate has 4,000+ members and a waitlist.", "tag": "Venture"},
+    {"icon": "\U0001F4DC", "title": "Seed history: Clavier raised one of the first seed funds ($15M, 2007); Mike Maples coined 'seed'; Jenny ran Techstars NY for 7.5 years (one 2014/15 class produced two unicorns); SendGrid and SpotHero (recently acquired) were early wins; 500 Startups' average pre-money was under $5M in its first two funds; 80-90% of such startups return nothing. Jason's Weblogs sold to AOL for $30M at ~300x its $125,000 revenue; Mark Cuban turned $300k for 15% into $5M in 18 months.", "tag": "History"},
+    {"icon": "\U0001F454", "title": "Jason modeled his wardrobe on Daniel Craig's Bond (Tom Ford), lost 40 pounds and gained 10 of muscle; he used Gemini to make a founder graphic that would have cost $300 and six weeks from an illustrator.", "tag": "Personal"},
+    {"icon": "\U0001F4DA", "title": "Sources referenced: Business Insider and Harmonic (Instinct), an unnamed LLM routing company (token share), an unnamed cap-table company (seed valuations), an OpenRouter investor's comment, Augment data (Practical VC's top 40), MRI studies on AI essay writing, and Bill Gurley's 'priced to perfection' framing.", "tag": "Sources"},
+]
+
+GLOSSARY = [
+    {"term": "p(doom)", "def": "Estimated probability that AI causes human extinction or catastrophe."},
+    {"term": "Open weights", "def": "Models whose trained parameters are published so anyone can run them."},
+    {"term": "DPI", "def": "Distributions to paid-in capital — cash actually returned to a fund's LPs."},
+    {"term": "Continuation SPV", "def": "A vehicle that buys a fund's winning position so LPs can cash out or roll into it."},
+    {"term": "Donor-advised fund (DAF)", "def": "A charitable account that gives an immediate tax deduction on donated assets, including illiquid ones."},
+    {"term": "Multistage fund", "def": "A large firm investing from seed through growth, able to overpay at seed to secure later rounds."},
+    {"term": "ZIRP", "def": "The zero-interest-rate era when private valuations peaked."},
+]
