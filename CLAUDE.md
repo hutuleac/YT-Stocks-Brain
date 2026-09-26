@@ -30,8 +30,11 @@ Key things baked into the current skill that aren't obvious from a first read:
 - **Sponsor content is always excluded.** No sponsor segment, plug, discount code, or "this video
   is sponsored by" read ever goes into a brief — not as a theme, OTHER_NEWS item, CLAIMS row, or
   glossary term. This was an explicit standing instruction, not a default of the skill template.
-- `index.html` has four tabs: All Briefs, By Channel, By Company/Ticker, and Dev & Workflows
-  (filtered to `category: "dev"`). Rebuilt automatically on every `generate.py` run, or standalone
+- `META["category"]` also accepts `"life"` (life/family/mindset/business perspectives, no primary
+  investing angle). `index.html` has tabs: All Briefs, By Channel, By Company/Ticker, Quotes & Takes,
+  Dev & Workflows (`"dev"`) and Life & Perspectives (`"life"`).
+- **yt-dlp 429 / missing:** `scripts/fetch_transcript_api.py <url|id>` writes the SRT via
+  `youtube_transcript_api`; then clean as usual. Rebuilt automatically on every `generate.py` run, or standalone
   via `python3 <skill-folder>/generate.py --reindex`.
 - **`names` is the permanent ticker index, not a general "notable things" slot.** Every entry
   becomes a row in By Company/Ticker across every brief, forever — companies/funds/orgs only.

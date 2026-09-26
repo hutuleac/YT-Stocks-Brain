@@ -92,6 +92,7 @@ OPTIONAL_LISTS = ["HOT_TAKES", "CLAIMS", "RELATIONS"]
 TAGS = {
     "ai-infra", "semis", "software", "macro-rates", "crypto", "energy", "space", "biotech",
     "robotics", "geopolitics", "policy", "consumer", "finance", "dev-workflow", "career", "health",
+    "family", "parenting", "mindset", "relationships",
 }
 REL_VERBS = {
     "acquires", "invests_in", "partners_with", "supplies", "customer_of", "competes_with",
@@ -987,6 +988,7 @@ def build_index():
     channels = sorted(set(b["channel"] for b in briefs))
     tickers = sorted(set(e["ticker"] for b in briefs for e in b["entities"] if e["ticker"]))
     dev_briefs = [b for b in briefs if b["category"] == "dev"]
+    life_briefs = [b for b in briefs if b["category"] == "life"]
     hit_count = sum(len(b["hits"]) for b in briefs)
 
     html = f"""<!DOCTYPE html>
@@ -1014,12 +1016,14 @@ def build_index():
       <button class="tab" data-view="entity">By Company / Ticker</button>
       <button class="tab" data-view="content">Quotes &amp; Takes</button>
       <button class="tab" data-view="dev">Dev &amp; Workflows</button>
+      <button class="tab" data-view="life">Life &amp; Perspectives</button>
     </div>
     <div id="view-chrono" class="view active">{_render_chrono_view(briefs)}</div>
     <div id="view-channel" class="view">{_render_channel_view(briefs)}</div>
     <div id="view-entity" class="view">{_render_entity_view(briefs)}</div>
     <div id="view-content" class="view"><div id="hits-mount"><p class="empty">Type to search quotes, recommendations, claims, and opinions across every indexed brief.</p></div></div>
     <div id="view-dev" class="view">{_render_chrono_view(dev_briefs)}</div>
+    <div id="view-life" class="view">{_render_chrono_view(life_briefs)}</div>
   </div>
 </div>
 <script id="hitdata" type="application/json">{_content_hits_payload(briefs)}</script>

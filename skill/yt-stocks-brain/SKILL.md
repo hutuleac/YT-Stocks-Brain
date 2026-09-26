@@ -35,6 +35,14 @@ If `--sub-lang en` reports no subtitles, retry the full fetch — auto-captions 
 `automatic_captions` and usually still write `VID.en.srt`. If captions truly fail, state the
 limitation prominently at the top of the brief.
 
+**Fallback — yt-dlp missing, or HTTP 429 (rate-limited, can last hours; cookies and
+`player_client` switches don't help):** don't wait or ask, use the API package instead. Metadata
+(title/channel/date) still comes from `yt-dlp --print` if it works, otherwise from the video page.
+```bash
+python3 <skill-folder>/scripts/fetch_transcript_api.py "URL_OR_VIDEO_ID" [lang]   # writes VID.<lang>.srt
+```
+Then continue with Section 2 unchanged. Needs `pip install youtube-transcript-api`.
+
 **Romanian-language videos:** if the video is in Romanian, fetch Romanian captions instead
 (`--sub-lang ro`) and write the whole brief — title, snapshot, theme bullets, quotes, everything —
 in Romanian, not translated to English. Write it **without diacritics** (ș→s, ț→t, ă→a, î/â→i/a) —
@@ -91,7 +99,12 @@ First, classify what's actually in the transcript — most videos are a mix of:
 Set `META["category"]` from this classification: `"market"` when investing/market content is
 present at all (even mixed with other types — this is the default and covers most videos), or
 `"dev"` when the video is dev/systems/knowledge/AI-workflow content with no market angle (e.g. a
-career-advice or coding-practice video like "Why Most Devs Stop Improving"). This one field decides
+career-advice or coding-practice video like "Why Most Devs Stop Improving"), or `"life"` when the
+video is knowledge-sharing and perspective content about life, family, parenting, mindset,
+relationships, creativity or business/founder wisdom with no primary investing angle (e.g. a
+founders-podcast riff on habits, systems and stories). Tie-break: `market` if there's an
+investable angle worth indexing; otherwise `dev` for tools/workflows/craft, `life` for
+perspectives and personal frameworks. This one field decides
 which `index.html` tab the brief appears under (Section 6) and which color/badge vocabulary applies
 below.
 
@@ -110,7 +123,8 @@ For each theme, capture:
   these three fields carry different meaning depending on `META["category"]`.
 - `tags` — 1-3 sector/topic tags from the fixed list in `generate.py` (`TAGS`: `ai-infra`, `semis`,
   `software`, `macro-rates`, `crypto`, `energy`, `space`, `biotech`, `robotics`, `geopolitics`,
-  `policy`, `consumer`, `finance`, `dev-workflow`, `career`, `health`). These aggregate across
+  `policy`, `consumer`, `finance`, `dev-workflow`, `career`, `health`, `family`, `parenting`,
+  `mindset`, `relationships`). These aggregate across
   briefs in the graph, so never coin a new one per video — the generator warns on unknown tags;
   if none fits, pick the nearest and move on.
 - `title` — a specific, concrete headline (not a category name)
@@ -190,8 +204,8 @@ For each theme, capture:
   bullet ("a ~10 MW micro-reactor firm building five-unit pods") and leave it out of `names`,
   `CLAIMS` and `RELATIONS` entirely.
 
-- **Any other `category`** (e.g. `"dev"` — dev/systems/knowledge/AI-workflow content, or a future
-  category): don't force stock-conviction vocabulary onto content that isn't a stance on an asset.
+- **Any other `category`** (e.g. `"dev"` — dev/systems/knowledge/AI-workflow content, `"life"` —
+  see below, or a future category): don't force stock-conviction vocabulary onto content that isn't a stance on an asset.
   `color` marks how settled/confidence-worthy the claim is, not bullish/bearish: `green`=confirmed-
   good/validated, `amber`=mixed/contested/one-eye-open, `gray`=speculative/opinion/unverified,
   `red`=flagged as a real problem or risk (not "this is a bearish stock call" — there's no stock).
@@ -199,6 +213,13 @@ For each theme, capture:
   "Structural critique" / "Skill-atrophy warning" / "Self-critique, since resolved" / "Confirmed
   event". `names` and ticker formatting are optional and often irrelevant — use plain names with no
   `(TICKER)` suffix, or omit the field, when there's nothing to cross-reference.
+
+- **`category: "life"`** uses the same non-market rules as `dev` (color = how settled, no stock
+  vocabulary; `names` optional, plain names, `(TICKER)` only for a genuinely investable company a
+  speaker discusses). `badge` describes the kind of insight: "Principle" / "Framework" /
+  "Personal story" / "Recommendation" / "Counterintuitive take" / "Cautionary tale". Prefer the
+  `family`, `parenting`, `mindset`, `relationships`, `career`, `health` tags. Keep the speaker's
+  own examples and analogies — in this category they are the content, not color.
 
 MANDATORY — capture non-investment signal too, wherever it fits best (inside a theme if it's
 central to one, otherwise in Other Notable News): strong convictions/opinions on any topic,
@@ -294,8 +315,9 @@ upload date giving chronological order within each creator):
   in, written to that same `research-data/<slug>/` folder, so the brief can be regenerated or
   hand-edited later without re-deriving it from the transcript.
 - `index.html` — rebuilt at the **working directory root** every run: a single searchable page
-  with four tabs — **All Briefs** (chronological, every category), **By Channel**, **By Company /
-  Ticker**, and **Dev & Workflows** (briefs with `META["category"] == "dev"` only). The ticker view
+  with tabs — **All Briefs** (chronological, every category), **By Channel**, **By Company /
+  Ticker**, **Quotes & Takes**, **Dev & Workflows** (`category == "dev"` only) and **Life &
+  Perspectives** (`category == "life"` only). The ticker view
   parses every theme's `names` field (current schema) or `conviction_map` topic (legacy schema)
   into a cross-reference: click a ticker's group to see every brief that mentioned it, with date,
   channel, per-entity stance/conviction/horizon, and blurb — this is what turns a growing pile of briefs into an

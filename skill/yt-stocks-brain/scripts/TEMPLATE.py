@@ -15,8 +15,8 @@ META = {
     "date": "",           # YYYY-MM-DD, video upload date — drives filename + index sort order
     "video_url": "",
     "thread_line": "",    # e.g. "5 threads · short summary of each thread"
-    "category": "market", # "market" (investing/AI-news, default) or "dev" (dev/systems/knowledge/
-                           # AI-workflow content) — drives which index.html tab the brief appears in
+    "category": "market", # "market" (investing/AI-news, default), "dev" (dev/systems/knowledge/
+                           # AI-workflow) or "life" (life/family/mindset/business perspectives) — drives which index.html tab the brief appears in
 }
 
 SNAPSHOT = [
