@@ -1,0 +1,187 @@
+META = {
+    "title": "98 days until 2027...Do this and you’ll thank yourself on Jan 1st",
+    "channel": "My First Million",
+    "speakers": "Sam Parr, Shaan Puri (hosts)",
+    "date": "2026-09-25",
+    "video_url": "https://www.youtube.com/watch?v=ymXF_yT1unQ",
+    "thread_line": "6 threads · the 99-day sprint · events under constraint · the jelly-bean lesson for investors · voices, hats and notebooks · creativity as daily reps · Advance Publications and knowing your business",
+    "category": "market",
+}
+
+SNAPSHOT = [
+    "With ~99 days left in 2026, the hosts treat it as a fourth-quarter sprint; Parkinson's law says shrink the container and the work shrinks with it.",
+    "Sam Parr's system for his weaknesses: one **45-minute** weekly slot to raise business complaints with his co-founder, written in advance, so 6 days of anger cools off.",
+    "Shaan Puri wants a second in-person event before year-end with no concept yet; he funds events out of pocket, asking what he'd pay **$150-250K** to host.",
+    "Joel Greenblatt's jelly-bean demo: a room's independent average guess was 1,771 vs 1,776 actual; guessing aloud dropped it to ~900 — his point about why investors should ignore the crowd.",
+    "Mental tools: the mind as a roommate, five voices (critic, mother, self), Six Thinking Hats, Rick/prick mode hats, Buffett's 'too hard' pile, and separate red/blue notebooks.",
+    "Creativity is daily reps, not epiphanies: the 'brown water' bathtub analogy, Eminem's 9-to-4 workdays, and the podcast as a flywheel.",
+    "Advance Publications, built by Sam Newhouse from local newspapers, now owns stakes in **Reddit, Charter and Warner Bros. Discovery**; the lesson is to know your business, and the hosts contrast Jaguar's rebrand and Nike's drift (stock $170 to $36).",
+]
+
+THEMES = [
+    {
+        "id": "99-day-sprint",
+        "tags": ["career", "dev-workflow"],
+        "color": "green",
+        "badge": "Recommendation",
+        "status": "99 DAYS LEFT IN 2026",
+        "title": "The last 99 days: treat them like a fourth quarter and design around your weaknesses",
+        "lead": "The hosts argue 99 days is an eternity if you shrink the container and build systems that make your weaknesses irrelevant.",
+        "bullets": [
+            "Framing: 99 days left is 'more important than the New Year's resolution' — treat it like an athlete's fourth quarter and ask whether you've made your mark on the year.",
+            "Shaan: quarters are 'so stupid' — make them months (M6, M7) or four-week blocks; the increments we measure in dictate how long things take. Google Calendar's 30-minute default is the example.",
+            "Parkinson's law, as a host describes it: work expands to fill the time given, like gas filling a container; a meeting moved to 22 minutes gets done in 22.",
+            "Shaan's joke: Jewish friends get a three-month head start because Rosh Hashanah is in September, so resolutions start two months early.",
+            "Sam's theory: you can't turn a weakness into a strength, only neutralize it, so build a system where it can't show — like prepaying a trainer to come to your home.",
+            "His system: mostly personal talk with co-founder Joe all week, one 45-minute weekly slot to raise business complaints, written out in advance; six days later he's 'not actually that angry.'",
+        ],
+        "quote": {"text": "You can't change your weaknesses... you just create a system where your weakness can't really show itself.", "cite": "— Sam Parr"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "events-under-constraint",
+        "tags": ["career", "consumer"],
+        "color": "green",
+        "badge": "Recommendation",
+        "status": "SECOND IN-PERSON EVENT BEFORE YEAR-END",
+        "title": "Build the IRL event fast, self-fund it, and let the constraint pick the idea",
+        "lead": "Shaan says online saturation puts a premium on in-person events, and a tight deadline and an out-of-pocket budget are what produce good ones.",
+        "bullets": [
+            "Shaan wants one more in-person event this year alongside Hoop Group, his annual basketball event that built a network 'around something I'd do for fun'; it's exclusive and basketball-limited, so the new one shouldn't be. No concept yet: 'how long does an idea take?'",
+            "Constraint as filter: they run events out of pocket and make no money, asking what event is so good they'd pay $150-250K to host it — that 'eliminates like 99 options.'",
+            "Sam's precedent: the first Hustle event (HustleCon) was planned from May 15 to July 1, roughly six weeks; about 350 people paid $300, and first-mover advantage let it be scrappy. He ran three events, one every ~9 months, before it became a newsletter.",
+            "Scrappy fit: a friend behind Summit Series (which ended up buying a mountain) said Burning Man's best move was setting the expectation of 'a piece of dirt' — you build and clean the town.",
+            "Hosting arc: excitement, then 'I'm scared, this sucks,' then you don't remember the day, then 'I can do this again and make it better' — the hosts compare it to a marathon and giving birth.",
+        ],
+        "quote": {"text": "What's an event so good that I would pay to host it?", "cite": "— Shaan Puri"},
+        "watch": "The hosts run the events and the podcast they discuss.",
+        "names": None,
+    },
+    {
+        "id": "jelly-bean-investing",
+        "tags": ["finance"],
+        "color": "amber",
+        "badge": "Structural critique",
+        "status": "GREENBLATT'S JELLY-BEAN DEMO",
+        "title": "Write your number before you hear the crowd: the jelly-bean lesson for investors",
+        "lead": "A host retells Joel Greenblatt's demo to argue that independent estimates beat consensus, and that hearing others' numbers wrecks even smart people.",
+        "bullets": [
+            "Greenblatt put a jar at the front of an auditorium; about 100 people wrote private guesses, and the average was **1,771** against 1,776 actual beans — five off.",
+            "He then had guesses called out loud; the first said 850, later guessers anchored down, and the average fell to ~900 — about 50% off, same people and same jar.",
+            "His point: the stock market works the same way. Smart people underperform because they let the news, Jim Cramer, analyst reports and the ticker influence their view of what a business is worth.",
+            "Advice: write down your own estimate of true value and ignore the noise. It's hard enough that Buffett, and the host, still tell people to buy low-cost index funds even though they don't.",
+            "Related, Buffett's 'too hard' pile: a few investments are obvious yeses, a few obvious duds, and ~90% too close to call, so he keeps a pile on his desk for them and needn't decide.",
+        ],
+        "quote": {"text": "The average of this group of a hundred people was incredibly close... the only thing that changed was hearing what other people thought.", "cite": "— Host, retelling Joel Greenblatt"},
+        "watch": "The host retells the Greenblatt story from memory and says he's 'trying to get' details right; the hosts say they don't themselves buy index funds.",
+        "names": None,
+    },
+    {
+        "id": "voices-hats-notebooks",
+        "tags": ["career", "dev-workflow"],
+        "color": "gray",
+        "badge": "Recommendation",
+        "status": "MENTAL TOOLS FROM THE HOSTS",
+        "title": "Voices, hats and notebooks: ways to stop being run by your head",
+        "lead": "The hosts trade practical frames for quieting the internal noise and separating modes of thinking, from a 'roommate' to color-coded notebooks.",
+        "bullets": [
+            "Sam, easily influenced, asks 'who am I, and why am I thinking this?' of every thought; a book he calls 'only fine' (Untethered Soul) gave him the frame of treating inner thoughts as a **roommate**, not you. Shaan's version: the voice in your head is a 'monkey throwing feces.'",
+            "Shaan's five-voices theory (like *Inside Out*): the critic (a David Goggins figure that keeps you honest), the mother (protective, slicing your grapes at 19), others, and the last one — you. Meditation, sleep and therapy quiet the rest so you can hear what you want.",
+            "Six Thinking Hats (Edward de Bono): white for facts, yellow optimistic, black devil's advocate. Sam uses it to ask a pessimist to argue as an optimist, or a creative to argue as a manager and explain the profit.",
+            "Zach Dell (Base Power), on a podcast: a red notebook for working *in* the business and a blue one for working *on* it; the hosts add a third for out-of-business ideas.",
+            "Sam's kit: a five-year journal (3 minutes a day: what he did, one thing to be grateful for), a content-ideas notebook and a to-do/brainstorm notebook.",
+        ],
+        "quote": {"text": "You are not me. You are my roommate.", "cite": "— Host, on negative self-talk"},
+        "watch": "The roommate and hats ideas are the hosts' own uses; the source of the roommate idea is attributed loosely (the host recalls a line about TM's founder and does not confirm it).",
+        "names": None,
+    },
+    {
+        "id": "creativity-daily-reps",
+        "tags": ["career"],
+        "color": "green",
+        "badge": "Recommendation",
+        "status": "CREATIVITY AS A SYSTEM",
+        "title": "Run the water until it's clear: creativity is daily reps plus two modes",
+        "lead": "Both hosts say the great creators are systematic, and that output quality comes from keeping the flywheel running, not from waiting for epiphanies.",
+        "bullets": [
+            "Jerry Seinfeld's 'two minds': a childlike mind that scribbles ('hang it on the fridge') and, hours later, a ruthless editor who trims. Shaan and Diego made two hats — **Rick mode** (play, after Rick Rubin) and **Prick mode** (judge).",
+            "Writers 'write drunk, edit sober.' Eminem's 'Hi, My Name Is' freestyle looks like an epiphany, but an Anderson Cooper story shows him writing constantly and working ~9-to-4.",
+            "Shaan's analogy: an inherited mansion's tub runs brown water first; most turn it off, a few keep it running until it clears — daily reps are why the freestyle moment works. Two hit songs in 24 hours took 'every day for their whole life.'",
+            "The podcast is a flywheel: skip three months and it would be 'way worse', not better; the more it generates, the better it generates.",
+            "Counter-example: Tupac, prolific in a short life, said he couldn't write in a nine-month prison stint — he worked best 'like a machine gun in the studio.'",
+        ],
+        "quote": {"text": "All it took was every day for their whole life, and then they had that day.", "cite": "— Shaan Puri"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "advance-know-your-business",
+        "tags": ["consumer", "finance"],
+        "color": "amber",
+        "badge": "Recommendation",
+        "status": "PRIVATE FAMILY EMPIRE",
+        "title": "Advance Publications: buy boring, own forever, and know what business you're in",
+        "lead": "A host tells the Newhouse story as proof that a simple, unglamorous model held for decades beats chasing prestige, then contrasts Jaguar's rebrand and Nike's drift.",
+        "bullets": [
+            "Sam Newhouse (b. ~1895) left school at 13-14 when his father fell ill, learned bookkeeping by mail, and at 15-17 turned around a local newspaper for a percentage and equity; about three years in he bought his first, the Staten Island Advance, with family loans — hence Advance Publications.",
+            "His model: it's about selling ads, keep costs down, value a paper on 10-year profit ($8M over ten years means paying $4M; roughly 6-8x earnings). He bought one about every three years for ~60 years at 15-20% annual revenue growth.",
+            "Style: no office, a briefcase, handshake deals, no partners or executive team even at ~$1B of revenue in 1980; he drove around visiting each publisher. Advance now does roughly $8B a year.",
+            "His sons chased prestige: The New Yorker and Condé Nast (Vanity Fair, Vogue, GQ), hiring star editors (Anna Wintour ~30 years). Advance paid $10M for Reddit, now worth $2-3B, and still holds ~30%.",
+            "Today, per the host: Steven Newhouse recently bought Ironman and a mountain-biking event; Advance owns Turnitin (bought for over $1B), ~4% of Warner Bros. Discovery and ~14% of Charter.",
+            "Lessons the hosts draw: keep each business independent rather than consolidating the back office; know what you are and stay with it; their own podcast's job-to-be-done is entertainment and inspiration, not business ideas people will execute.",
+            "Cautionary tales: Jaguar's rebrand strayed from its 'cool guy car' customer; Nike's premium came from celebrating greatness, and Shaan says it drifted to non-elite athletes. Nike stock is $36 from a $170 peak, a $53B market cap on $46B revenue — ~1x revenue.",
+        ],
+        "quote": {"text": "Nobody wants to buy the brand of non-excellent athletic performance for an athletic shoe.", "cite": "— Shaan Puri"},
+        "watch": "The Newhouse timeline, holdings percentages and Reddit outcome are told from memory and partly hedged ('I think'); Shaan says brand drift is 'one of the popular reasons' for Nike's fall, not the full one.",
+        "names": [
+            {"name": "Advance Publications", "blurb": "Newhouse family holding built from local papers; stakes in Reddit, Charter and Warner Bros. Discovery.", "stance": "POSITIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "Reddit (RDDT)", "blurb": "Advance's $10M investment, said to be worth $2-3B; Advance still holds ~30%.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Charter Communications (CHTR)", "blurb": "Advance owns ~14%.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Warner Bros. Discovery (WBD)", "blurb": "Advance owns ~4%.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Nike (NKE)", "blurb": "Stock at $36 vs $170 peak, $53B market cap, ~1x revenue; hosts blame brand drift from greatness.", "stance": "NEGATIVE VIEW", "conviction": "Low", "horizon": None},
+        ],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "⏱", "tag": "Time", "title": "Shrink the container: shorten default meetings and planning blocks so work stops expanding to fill them."},
+    {"icon": "\U0001F9F1", "tag": "Systems", "title": "Build a rule that hides your weakness, such as a written-in-advance weekly slot for complaints, instead of relying on willpower."},
+    {"icon": "\U0001F4CA", "tag": "Investing", "title": "Write down your own value estimate before reading analysts or the ticker."},
+    {"icon": "\U0001F3AF", "tag": "Business", "title": "Define your product's real job-to-be-done and avoid rebrands that drift away from it."},
+    {"icon": "\U0001F3A4", "tag": "Events", "title": "Pick the constraint first: what would be good enough to pay to host?"},
+]
+
+HOT_TAKES = [
+    {"take": "I think the idea of quarters is so stupid. Quarters should be months.", "cite": "— Shaan Puri", "why": "planning cadence"},
+    {"take": "You can't change your weaknesses... you can potentially neutralize it, but that's like the best case scenario.", "cite": "— Sam Parr", "why": "contrarian self-improvement view"},
+    {"take": "Nobody wants to buy the brand of non-excellent athletic performance for an athletic shoe.", "cite": "— Shaan Puri", "why": "Nike diagnosis"},
+    {"take": "It's not one roommate. I think there's five voices in the head.", "cite": "— Shaan Puri", "why": "personal theory"},
+]
+
+CLAIMS = [
+    {"who": "Shaan Puri", "claim": "He will host a second in-person event before the end of the year, with no concept yet.", "metric": "new IRL event", "target": "launched", "by": "end of 2026", "condition": None, "entity": None},
+    {"who": "Shaan Puri", "claim": "Nike will have a back-to-roots moment: trim product lines, overpay an athlete, and change ad agency.", "metric": "Nike turnaround playbook", "target": "back-to-roots reset", "by": None, "condition": None, "entity": "Nike (NKE)"},
+]
+
+RELATIONS = [
+    {"from": "Advance Publications", "rel": "invests_in", "to": "Reddit (RDDT)", "note": "paid ~$10M pre-IPO"},
+    {"from": "Advance Publications", "rel": "owns_stake", "to": "Reddit (RDDT)", "note": "~30%"},
+    {"from": "Advance Publications", "rel": "owns_stake", "to": "Charter Communications (CHTR)", "note": "~14%"},
+    {"from": "Advance Publications", "rel": "owns_stake", "to": "Warner Bros. Discovery (WBD)", "note": "~4%"},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F3A5", "title": "A host's sister-in-law, Sydney Glander, is 30, pregnant and being treated for breast cancer, and posts daily TikToks about it with workouts (tens of thousands of views); brands like Kettle & Fire and Chomps have sent free products. Shaan suggests relabeling her hook from 'I have cancer' to 'future cancer survivor' — the identity you publish is hard to switch later.", "tag": "Creators"},
+    {"icon": "\U0001F3E0", "title": "Tales from the house: a host's spouse panicked when a kindergarten teacher's family arrived early to pick up toys; the visiting husband, a real-estate agent, searched every room for their hiding child while the spouse made excuses in each.", "tag": "Personal"},
+    {"icon": "\U0001F4E7", "title": "The Hustle's 'zombie email' to never-openers was a hit: it confessed deep secrets (a 12-year-old open-mouth kiss with a cousin) to re-engage people who thought no one was reading.", "tag": "Marketing"},
+    {"icon": "\U0001F4DA", "title": "Sources referenced: Joel Greenblatt's talk, Untethered Soul, Six Thinking Hats (Edward de Bono), Zach Dell on a podcast (Base Power), Anderson Cooper's story on Eminem, Rick Rubin and Jerry Seinfeld's 'two minds', and an earlier guest, Joe Hudson.", "tag": "Sources"},
+]
+
+GLOSSARY = [
+    {"term": "Parkinson's law", "def": "Work expands to fill the time available for it."},
+    {"term": "Job to be done", "def": "The real reason a customer uses a product, which may differ from what the product literally offers."},
+    {"term": "Six Thinking Hats", "def": "A method assigning each participant a mode: facts, optimism, caution, creativity, feeling, process."},
+    {"term": "Too-hard pile", "def": "Buffett's desk pile for investments too close to call, so he needn't decide on them."},
+    {"term": "Rick mode / Prick mode", "def": "The hosts' names for a playful creating mindset and a ruthless editing mindset."},
+]

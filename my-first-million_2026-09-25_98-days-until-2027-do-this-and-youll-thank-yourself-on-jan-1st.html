@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research: 98 days until 2027...Do this and you’ll thank yourself on Jan 1st</title>
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>98 days until 2027...Do this and you’ll thank yourself on Jan 1st</h1>
+    <div class="byline">
+      Channel: <b>My First Million</b> &middot; Speaker: <b>Sam Parr, Shaan Puri (hosts)</b> &middot; <b>2026-09-25</b>
+      <div class="stats-line">6 threads · the 99-day sprint · events under constraint · the jelly-bean lesson for investors · voices, hats and notebooks · creativity as daily reps · Advance Publications and knowing your business &middot; <a href="https://www.youtube.com/watch?v=ymXF_yT1unQ" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>With ~99 days left in 2026, the hosts treat it as a fourth-quarter sprint; Parkinson's law says shrink the container and the work shrinks with it.</li><li>Sam Parr's system for his weaknesses: one <b>45-minute</b> weekly slot to raise business complaints with his co-founder, written in advance, so 6 days of anger cools off.</li><li>Shaan Puri wants a second in-person event before year-end with no concept yet; he funds events out of pocket, asking what he'd pay <b>$150-250K</b> to host.</li><li>Joel Greenblatt's jelly-bean demo: a room's independent average guess was 1,771 vs 1,776 actual; guessing aloud dropped it to ~900 — his point about why investors should ignore the crowd.</li><li>Mental tools: the mind as a roommate, five voices (critic, mother, self), Six Thinking Hats, Rick/prick mode hats, Buffett's 'too hard' pile, and separate red/blue notebooks.</li><li>Creativity is daily reps, not epiphanies: the 'brown water' bathtub analogy, Eminem's 9-to-4 workdays, and the podcast as a flywheel.</li><li>Advance Publications, built by Sam Newhouse from local newspapers, now owns stakes in <b>Reddit, Charter and Warner Bros. Discovery</b>; the lesson is to know your business, and the hosts contrast Jaguar's rebrand and Nike's drift (stock $170 to $36).</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="99-day-sprint">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">99 DAYS LEFT IN 2026</span><span class="ttag">career</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">The last 99 days: treat them like a fourth quarter and design around your weaknesses</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The hosts argue 99 days is an eternity if you shrink the container and build systems that make your weaknesses irrelevant.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Framing: 99 days left is 'more important than the New Year's resolution' — treat it like an athlete's fourth quarter and ask whether you've made your mark on the year.</li><li><span class="dot" style="background:#3f6b2e;"></span>Shaan: quarters are 'so stupid' — make them months (M6, M7) or four-week blocks; the increments we measure in dictate how long things take. Google Calendar's 30-minute default is the example.</li><li><span class="dot" style="background:#3f6b2e;"></span>Parkinson's law, as a host describes it: work expands to fill the time given, like gas filling a container; a meeting moved to 22 minutes gets done in 22.</li><li><span class="dot" style="background:#3f6b2e;"></span>Shaan's joke: Jewish friends get a three-month head start because Rosh Hashanah is in September, so resolutions start two months early.</li><li><span class="dot" style="background:#3f6b2e;"></span>Sam's theory: you can't turn a weakness into a strength, only neutralize it, so build a system where it can't show — like prepaying a trainer to come to your home.</li><li><span class="dot" style="background:#3f6b2e;"></span>His system: mostly personal talk with co-founder Joe all week, one 45-minute weekly slot to raise business complaints, written out in advance; six days later he's 'not actually that angry.'</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;You can't change your weaknesses... you just create a system where your weakness can't really show itself.&#8221;<cite>— Sam Parr</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="events-under-constraint">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">SECOND IN-PERSON EVENT BEFORE YEAR-END</span><span class="ttag">career</span><span class="ttag">consumer</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Build the IRL event fast, self-fund it, and let the constraint pick the idea</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Shaan says online saturation puts a premium on in-person events, and a tight deadline and an out-of-pocket budget are what produce good ones.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Shaan wants one more in-person event this year alongside Hoop Group, his annual basketball event that built a network 'around something I'd do for fun'; it's exclusive and basketball-limited, so the new one shouldn't be. No concept yet: 'how long does an idea take?'</li><li><span class="dot" style="background:#3f6b2e;"></span>Constraint as filter: they run events out of pocket and make no money, asking what event is so good they'd pay <b>$150</b>-250K to host it — that 'eliminates like 99 options.'</li><li><span class="dot" style="background:#3f6b2e;"></span>Sam's precedent: the first Hustle event (HustleCon) was planned from May 15 to July 1, roughly six weeks; about 350 people paid <b>$300, </b>and first-mover advantage let it be scrappy. He ran three events, one every ~9 months, before it became a newsletter.</li><li><span class="dot" style="background:#3f6b2e;"></span>Scrappy fit: a friend behind Summit Series (which ended up buying a mountain) said Burning Man's best move was setting the expectation of 'a piece of dirt' — you build and clean the town.</li><li><span class="dot" style="background:#3f6b2e;"></span>Hosting arc: excitement, then 'I'm scared, this sucks,' then you don't remember the day, then 'I can do this again and make it better' — the hosts compare it to a marathon and giving birth.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;What's an event so good that I would pay to host it?&#8221;<cite>— Shaan Puri</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The hosts run the events and the podcast they discuss.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="jelly-bean-investing">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Structural critique</span>
+    <span class="theme-status">GREENBLATT'S JELLY-BEAN DEMO</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Write your number before you hear the crowd: the jelly-bean lesson for investors</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">A host retells Joel Greenblatt's demo to argue that independent estimates beat consensus, and that hearing others' numbers wrecks even smart people.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Greenblatt put a jar at the front of an auditorium; about 100 people wrote private guesses, and the average was <b>1,771</b> against 1,776 actual beans — five off.</li><li><span class="dot" style="background:#93711b;"></span>He then had guesses called out loud; the first said 850, later guessers anchored down, and the average fell to ~900 — about <b>50%</b> off, same people and same jar.</li><li><span class="dot" style="background:#93711b;"></span>His point: the stock market works the same way. Smart people underperform because they let the news, Jim Cramer, analyst reports and the ticker influence their view of what a business is worth.</li><li><span class="dot" style="background:#93711b;"></span>Advice: write down your own estimate of true value and ignore the noise. It's hard enough that Buffett, and the host, still tell people to buy low-cost index funds even though they don't.</li><li><span class="dot" style="background:#93711b;"></span>Related, Buffett's 'too hard' pile: a few investments are obvious yeses, a few obvious duds, and ~<b>90%</b> too close to call, so he keeps a pile on his desk for them and needn't decide.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;The average of this group of a hundred people was incredibly close... the only thing that changed was hearing what other people thought.&#8221;<cite>— Host, retelling Joel Greenblatt</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The host retells the Greenblatt story from memory and says he's 'trying to get' details right; the hosts say they don't themselves buy index funds.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="voices-hats-notebooks">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Recommendation</span>
+    <span class="theme-status">MENTAL TOOLS FROM THE HOSTS</span><span class="ttag">career</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">Voices, hats and notebooks: ways to stop being run by your head</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The hosts trade practical frames for quieting the internal noise and separating modes of thinking, from a 'roommate' to color-coded notebooks.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>Sam, easily influenced, asks 'who am I, and why am I thinking this?' of every thought; a book he calls 'only fine' (Untethered Soul) gave him the frame of treating inner thoughts as a <b>roommate</b>, not you. Shaan's version: the voice in your head is a 'monkey throwing feces.'</li><li><span class="dot" style="background:#65695f;"></span>Shaan's five-voices theory (like <i>Inside Out</i>): the critic (a David Goggins figure that keeps you honest), the mother (protective, slicing your grapes at 19), others, and the last one — you. Meditation, sleep and therapy quiet the rest so you can hear what you want.</li><li><span class="dot" style="background:#65695f;"></span>Six Thinking Hats (Edward de Bono): white for facts, yellow optimistic, black devil's advocate. Sam uses it to ask a pessimist to argue as an optimist, or a creative to argue as a manager and explain the profit.</li><li><span class="dot" style="background:#65695f;"></span>Zach Dell (Base Power), on a podcast: a red notebook for working <i>in</i> the business and a blue one for working <i>on</i> it; the hosts add a third for out-of-business ideas.</li><li><span class="dot" style="background:#65695f;"></span>Sam's kit: a five-year journal (3 minutes a day: what he did, one thing to be grateful for), a content-ideas notebook and a to-do/brainstorm notebook.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#65695f;"><div class="lbl">Pull quote</div>&#8220;You are not me. You are my roommate.&#8221;<cite>— Host, on negative self-talk</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The roommate and hats ideas are the hosts' own uses; the source of the roommate idea is attributed loosely (the host recalls a line about TM's founder and does not confirm it).</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="creativity-daily-reps">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">CREATIVITY AS A SYSTEM</span><span class="ttag">career</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Run the water until it's clear: creativity is daily reps plus two modes</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Both hosts say the great creators are systematic, and that output quality comes from keeping the flywheel running, not from waiting for epiphanies.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Jerry Seinfeld's 'two minds': a childlike mind that scribbles ('hang it on the fridge') and, hours later, a ruthless editor who trims. Shaan and Diego made two hats — <b>Rick mode</b> (play, after Rick Rubin) and <b>Prick mode</b> (judge).</li><li><span class="dot" style="background:#3f6b2e;"></span>Writers 'write drunk, edit sober.' Eminem's 'Hi, My Name Is' freestyle looks like an epiphany, but an Anderson Cooper story shows him writing constantly and working ~9-to-4.</li><li><span class="dot" style="background:#3f6b2e;"></span>Shaan's analogy: an inherited mansion's tub runs brown water first; most turn it off, a few keep it running until it clears — daily reps are why the freestyle moment works. Two hit songs in 24 hours took 'every day for their whole life.'</li><li><span class="dot" style="background:#3f6b2e;"></span>The podcast is a flywheel: skip three months and it would be 'way worse', not better; the more it generates, the better it generates.</li><li><span class="dot" style="background:#3f6b2e;"></span>Counter-example: Tupac, prolific in a short life, said he couldn't write in a nine-month prison stint — he worked best 'like a machine gun in the studio.'</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;All it took was every day for their whole life, and then they had that day.&#8221;<cite>— Shaan Puri</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="advance-know-your-business">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Recommendation</span>
+    <span class="theme-status">PRIVATE FAMILY EMPIRE</span><span class="ttag">consumer</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Advance Publications: buy boring, own forever, and know what business you're in</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">A host tells the Newhouse story as proof that a simple, unglamorous model held for decades beats chasing prestige, then contrasts Jaguar's rebrand and Nike's drift.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Sam Newhouse (b. ~1895) left school at 13-14 when his father fell ill, learned bookkeeping by mail, and at 15-17 turned around a local newspaper for a percentage and equity; about three years in he bought his first, the Staten Island Advance, with family loans — hence Advance Publications.</li><li><span class="dot" style="background:#93711b;"></span>His model: it's about selling ads, keep costs down, value a paper on 10-year profit (<b>$8M</b> over ten years means paying $4M; roughly 6-8x earnings). He bought one about every three years for ~60 years at 15-20% annual revenue growth.</li><li><span class="dot" style="background:#93711b;"></span>Style: no office, a briefcase, handshake deals, no partners or executive team even at ~<b>$1B</b> of revenue in 1980; he drove around visiting each publisher. Advance now does roughly $8B a year.</li><li><span class="dot" style="background:#93711b;"></span>His sons chased prestige: The New Yorker and Condé Nast (Vanity Fair, Vogue, GQ), hiring star editors (Anna Wintour ~30 years). Advance paid <b>$10M</b> for Reddit, now worth $2-3B, and still holds ~30%.</li><li><span class="dot" style="background:#93711b;"></span>Today, per the host: Steven Newhouse recently bought Ironman and a mountain-biking event; Advance owns Turnitin (bought for over <b>$1B</b>), ~4% of Warner Bros. Discovery and ~14% of Charter.</li><li><span class="dot" style="background:#93711b;"></span>Lessons the hosts draw: keep each business independent rather than consolidating the back office; know what you are and stay with it; their own podcast's job-to-be-done is entertainment and inspiration, not business ideas people will execute.</li><li><span class="dot" style="background:#93711b;"></span>Cautionary tales: Jaguar's rebrand strayed from its 'cool guy car' customer; Nike's premium came from celebrating greatness, and Shaan says it drifted to non-elite athletes. Nike stock is <b>$36 </b>from a $170 peak, a $53B market cap on $46B revenue — ~1x revenue.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;Nobody wants to buy the brand of non-excellent athletic performance for an athletic shoe.&#8221;<cite>— Shaan Puri</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Advance Publications<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Newhouse family holding built from local papers; stakes in Reddit, Charter and Warner Bros. Discovery.</span></div><div class="namechip"><b>Reddit (RDDT)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Advance's $10M investment, said to be worth $2-3B; Advance still holds ~30%.</span></div><div class="namechip"><b>Charter Communications (CHTR)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Advance owns ~14%.</span></div><div class="namechip"><b>Warner Bros. Discovery (WBD)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Advance owns ~4%.</span></div><div class="namechip"><b>Nike (NKE)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Low</span></b><span>Stock at $36 vs $170 peak, $53B market cap, ~1x revenue; hosts blame brand drift from greatness.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The Newhouse timeline, holdings percentages and Reddit outcome are told from memory and partly hedged ('I think'); Shaan says brand drift is 'one of the popular reasons' for Nike's fall, not the full one.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">⏱</div><div class="tline"><span class="cat">Time:</span> <span class="txt">Shrink the container: shorten default meetings and planning blocks so work stops expanding to fill them.</span></div></div><div class="irow"><div class="ic">🧱</div><div class="tline"><span class="cat">Systems:</span> <span class="txt">Build a rule that hides your weakness, such as a written-in-advance weekly slot for complaints, instead of relying on willpower.</span></div></div><div class="irow"><div class="ic">📊</div><div class="tline"><span class="cat">Investing:</span> <span class="txt">Write down your own value estimate before reading analysts or the ticker.</span></div></div><div class="irow"><div class="ic">🎯</div><div class="tline"><span class="cat">Business:</span> <span class="txt">Define your product's real job-to-be-done and avoid rebrands that drift away from it.</span></div></div><div class="irow"><div class="ic">🎤</div><div class="tline"><span class="cat">Events:</span> <span class="txt">Pick the constraint first: what would be good enough to pay to host?</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;I think the idea of quarters is so stupid. Quarters should be months.&#8221; <cite>— Shaan Puri</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;You can't change your weaknesses... you can potentially neutralize it, but that's like the best case scenario.&#8221; <cite>— Sam Parr</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Nobody wants to buy the brand of non-excellent athletic performance for an athletic shoe.&#8221; <cite>— Shaan Puri</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;It's not one roommate. I think there's five voices in the head.&#8221; <cite>— Shaan Puri</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Shaan Puri:</b> He will host a second in-person event before the end of the year, with no concept yet. <span class="cmeta">new IRL event · launched · end of 2026</span></div><div class="ritem"><b>Shaan Puri:</b> Nike will have a back-to-roots moment: trim product lines, overpay an athlete, and change ad agency. <span class="cmeta">Nike turnaround playbook · back-to-roots reset</span> <span class="tag">Nike (NKE)</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Advance Publications</b> <span class="rel">invests in</span> <b>Reddit (RDDT)</b> &mdash; paid ~$10M pre-IPO</div><div class="ritem"><b>Advance Publications</b> <span class="rel">owns stake</span> <b>Reddit (RDDT)</b> &mdash; ~30%</div><div class="ritem"><b>Advance Publications</b> <span class="rel">owns stake</span> <b>Charter Communications (CHTR)</b> &mdash; ~14%</div><div class="ritem"><b>Advance Publications</b> <span class="rel">owns stake</span> <b>Warner Bros. Discovery (WBD)</b> &mdash; ~4%</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🎥</div><div><div class="title">A host's sister-in-law, Sydney Glander, is 30, pregnant and being treated for breast cancer, and posts daily TikToks about it with workouts (tens of thousands of views); brands like Kettle &amp; Fire and Chomps have sent free products. Shaan suggests relabeling her hook from 'I have cancer' to 'future cancer survivor' — the identity you publish is hard to switch later. <span class="tag">Creators</span></div></div></div><div class="irow"><div class="ic">🏠</div><div><div class="title">Tales from the house: a host's spouse panicked when a kindergarten teacher's family arrived early to pick up toys; the visiting husband, a real-estate agent, searched every room for their hiding child while the spouse made excuses in each. <span class="tag">Personal</span></div></div></div><div class="irow"><div class="ic">📧</div><div><div class="title">The Hustle's 'zombie email' to never-openers was a hit: it confessed deep secrets (a 12-year-old open-mouth kiss with a cousin) to re-engage people who thought no one was reading. <span class="tag">Marketing</span></div></div></div><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: Joel Greenblatt's talk, Untethered Soul, Six Thinking Hats (Edward de Bono), Zach Dell on a podcast (Base Power), Anderson Cooper's story on Eminem, Rick Rubin and Jerry Seinfeld's 'two minds', and an earlier guest, Joe Hudson. <span class="tag">Sources</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Parkinson's law</b> &mdash; Work expands to fill the time available for it.</div><div><b>Job to be done</b> &mdash; The real reason a customer uses a product, which may differ from what the product literally offers.</div><div><b>Six Thinking Hats</b> &mdash; A method assigning each participant a mode: facts, optimism, caution, creativity, feeling, process.</div><div><b>Too-hard pile</b> &mdash; Buffett's desk pile for investments too close to call, so he needn't decide on them.</div><div><b>Rick mode / Prick mode</b> &mdash; The hosts' names for a playful creating mindset and a ruthless editing mindset.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
