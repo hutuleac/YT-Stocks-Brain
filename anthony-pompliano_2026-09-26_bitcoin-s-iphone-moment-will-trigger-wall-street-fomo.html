@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research: Bitcoin's iPhone Moment Will Trigger Wall Street FOMO</title>
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Bitcoin's iPhone Moment Will Trigger Wall Street FOMO</h1>
+    <div class="byline">
+      Channel: <b>Anthony Pompliano</b> &middot; Speaker: <b>Anthony Pompliano (host), Jordi Visser</b> &middot; <b>2026-09-26</b>
+      <div class="stats-line">6 threads · Bitcoin's fundamentals-led breakout · Wall Street FOMO and tokenization · long speed, short friction · Muse and consumer agents · AI breakthroughs and jobs · rates, breadth and oil &middot; <a href="https://www.youtube.com/watch?v=WYnl2vRfwDc" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Jordi Visser says Bitcoin's break from the low $60s held through bad news (Clarity odds near 0%, Fed hike pricing, a cold-wallet incident), and it now consolidates at <b>$83-87K</b> under last half-year's ~$82K highs.</li><li>His read: this is a fundamentals trade, not debasement — 10-year yields are up ~100bp, Bitcoin is up <b>60%</b> for the quarter, and gold isn't moving.</li><li>He sees Wall Street FOMO forming (managers asking about his tokenization paper), with 2027 as the important year; Pompliano expects allocations of <b>$10</b>-30B per firm this time.</li><li>The agent thesis: 'long speed, short friction' — agents don't pay middleman fees, so Visa and Mastercard face pressure within ~5 years; the trades are compute and crypto.</li><li>Meta's Muse went from a June 'left for dead' report to a consumer agent Jordi is 'locked into'; Meta gapped up almost <b>15%</b> on Monday.</li><li>Jordi says AI models have entered a parabolic phase (Navier-Stokes, CRISPR claims) and 'work' and 'job' are bad words; the right message is that kids must use AI.</li><li>Macro stays a worry list, not a thesis-breaker: rates up, breadth breaking, oil near <b>$100</b> — but Jordi argues oil matters far less than in 2008.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="bitcoin-fundamentals-breakout">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Medium conviction</span>
+    <span class="theme-status">CONSOLIDATING $83-87K AFTER BREAKOUT</span><span class="ttag">crypto</span><span class="ttag">macro-rates</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Bitcoin broke out through bad news — and Jordi calls it a fundamentals trade, not debasement</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jordi argues that crypto shrugging off negative headlines and rising yields signals a shift from liquidity to fundamentals, with the ecosystem leading and Bitcoin following.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Technical read: before the breakout, Clarity Act odds fell to near 0%, Fed hike expectations 'went through the roof' and a cold-wallet incident hit — yet Bitcoin held <b>$60-65K</b>; when Bessent intervened in the yen and debasement talk spiked it broke out, stalling below the ~$82K highs of the prior 6 months.</li><li><span class="dot" style="background:#3f6b2e;"></span>Second gap-up came the week the Fed raised rates and 10-year yields rose; Pompliano asks if <b>$83</b>-87K consolidation precedes a dump to the $70s or another breakout.</li><li><span class="dot" style="background:#3f6b2e;"></span>Jordi: 10-year yields up almost 100bp (60-70bp this quarter) while Bitcoin is up <b>60%</b> for the quarter and gold isn't rising — 'this is not a liquidity debasement trade. This is a fundamental trade.'</li><li><span class="dot" style="background:#3f6b2e;"></span>He built an ecosystem index (46 names) to separate the ecosystem from Bitcoin, says Bitcoin doesn't fit the fundamentals argument itself, and points to developer activity (Robinhood's chain), Hyperliquid volume and RWA growth; Solana traded at 121, up <b>4%</b>.</li><li><span class="dot" style="background:#3f6b2e;"></span>Timing: institutions are 'doing the homework' now for next year; a stock rally could start in December or before the midterms and then go sideways.</li><li><span class="dot" style="background:#3f6b2e;"></span>Historical framing: last cycle's crypto peak was 'the dot-com bubble for crypto' funded by VC money; today's rails don't need VC, and the iPhone-for-Uber analogy says agents are crypto's app-store moment.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;This is not a liquidity debasement trade. This is a fundamental trade.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Bitcoin (BTC)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium · 2027</span></b><span>Broke out from the low $60s; $83-87K consolidation, +60% for the quarter; not a fundamentals-story name itself.</span></div><div class="namechip"><b>Solana (SOL)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Trading at 121 and up 4% on the day, cited as money moving into the space.</span></div><div class="namechip"><b>Hyperliquid (HYPE)<span class="stance" style="background:#93711b;">WATCHING · Low</span></b><span>Cited for rising trading volume and growth; Jordi is 'doing the homework'.</span></div><div class="namechip"><b>Robinhood (HOOD)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Its chain is cited as a driver of developer interest.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Jordi runs 22V Research, sells token research and a 46-name index, and says he built the business on AI-crypto convergence; his read is also an opinion of a paid analyst.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="wall-street-fomo-tokenization">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Medium conviction</span>
+    <span class="theme-status">2027 THE IMPORTANT YEAR</span><span class="ttag">crypto</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Wall Street FOMO, uncovered tokens and the tokenization of household wealth</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jordi says missed trades like Micron have created FOMO in managers with trillions, and that tokenization plus uncovered tokens is a Peter Lynch-style edge.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Jordi: people managing trillions are asking about his tokenization paper; 'PTSD' from missing Micron and the semiconductor trade, plus a frustrating year for alpha, means FOMO is setting in; 2027 is the important year and FOMO has to come first.</li><li><span class="dot" style="background:#3f6b2e;"></span>Pompliano: last cycle institutions dipped toes (<b>1%</b> of $100B = $1B); now the 'fat pitch' means $10-30B per firm, and more options exist — ETFs and a growing list of public companies with crypto exposure.</li><li><span class="dot" style="background:#3f6b2e;"></span>Peter Lynch logic: the way to be early is that Wall Street doesn't cover it. Morgan Stanley doesn't cover tokens, and 22V Research's token coverage went live this week with weekly vertical deep dives.</li><li><span class="dot" style="background:#3f6b2e;"></span>Jordi's scale claim: crypto valuation is ~$4T against ~$900T of assets that will be tokenized; he wrote that tokenization turns the US's <b>$195T</b> net household wealth into liquidity over ~5 years.</li><li><span class="dot" style="background:#3f6b2e;"></span>Larry Fink's willingness made Bitcoin ETFs happen. BlackRock's AI-and-crypto paper this week moves the view from contrarian to consensus, but Jordi notes BlackRock also put three funds on-chain the same week — an agenda, i.e. a business.</li><li><span class="dot" style="background:#3f6b2e;"></span>Fidelity and Franklin Templeton are in; Morgan Stanley, Bank of America and Goldman were 'forced' into it this year; Jordi: 'the whole industry is in chase mode' and BlackRock has the biggest audience.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;You want to be long compute speed. You want to be long crypto speed. You want to be short everything that has friction.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>BlackRock (BLK)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Published an AI-and-crypto paper, put three funds on-chain; has the largest audience and trust.</span></div><div class="namechip"><b>Fidelity, Franklin Templeton (BEN)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Already involved in crypto alongside BlackRock.</span></div><div class="namechip"><b>Morgan Stanley (MS), Bank of America (BAC), Goldman Sachs (GS)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Only forced into crypto this year; no token research coverage.</span></div><div class="namechip"><b>Micron (MU)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>The trade many smart people missed last year; cited as the source of FOMO.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Jordi sells token research and an index (22V Research) and says managers are reaching out about his papers; Pompliano frames institutional readiness as his own read.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="short-friction">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">Medium conviction</span>
+    <span class="theme-status">AGENTS COMPRESS MIDDLEMEN</span><span class="ttag">consumer</span><span class="ttag">software</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">Long speed, short friction: why agents threaten Visa, Mastercard and SaaS</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jordi argues agents pick on price and speed, so anything that acts as a middleman or a slow incumbent is exposed while compute and crypto rails benefit.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span>Visa and Mastercard are 'by definition middlemen': they won't go out of business, but 'in five years, will people still be paying a vig? Agents won't.' Agent behavior is about goals — find things fast and cheap.</li><li><span class="dot" style="background:#a23f22;"></span>Deflation, not inflation: AI's deflationary pressure is 'intense'; it's a question of how long it takes to filter through, and travel-booking agents strip out middlemen first.</li><li><span class="dot" style="background:#a23f22;"></span>Scoreboard: Salesforce down ~<b>10%</b> YTD vs the S&amp;P +12% (22 points behind), his thematic semiconductor portfolio +45%, Mag 7 up ~10% (underperforming); Salesforce is down ~15% over 5 years, and Jordi says the software 'SaaS apocalypse' drops (30-50%) have not fully recovered.</li><li><span class="dot" style="background:#a23f22;"></span>Speed evidence: Anthropic went from <b>$3B</b> to about $80B of revenue in the time the Clarity Act went from idea to rejection; Jordi asks why the best models aren't at companies with the biggest balance sheets, and why senior people are leaving Google.</li><li><span class="dot" style="background:#a23f22;"></span>Consumer-agent ads: agents decide with 'no preferences' (price, reviews), so ad-driven models get squeezed; agents demand compute and use crypto rails — those are the trades; next 12 months' money is on compute and agent guardrails.</li><li><span class="dot" style="background:#a23f22;"></span>Portfolio call: a Mag 7 'buzz trade' won't outperform the S&amp;P but should beat small caps as rates and oil scare people.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;Agents don't pay vigs. Agents figure out how.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Visa (V), Mastercard (MA)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium · ~5 years</span></b><span>Middlemen that agents will route around; not going out of business but losing the fee in ~5 years.</span></div><div class="namechip"><b>Salesforce (CRM)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Low</span></b><span>Down ~10% YTD vs S&amp;P +12%; used as the SaaS-underperformance example.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Jordi's semiconductor number is his own thematic portfolio; he is a public voice for the trade he describes.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="muse-consumer-agents">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Positive view</span>
+    <span class="theme-status">META +~15% ON MONDAY</span><span class="ttag">consumer</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Meta's Muse: from 'left for dead' to the consumer agent Jordi is locked into</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jordi and Pompliano say personal memory and access make consumer agents sticky, and that model releases now matter less than a product that just works.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Muse's arc: Meta was 'left for dead' in June; on July 2 a town-hall report said agent work was behind pace; a week later a breakthrough, then repeated Muse versions — Jordi suggests asking an LLM to timeline public statements of the team. Meta gapped up almost <b>15%</b> Monday.</li><li><span class="dot" style="background:#3f6b2e;"></span>Memory as the moat: Jordi uploads trip photos and receipts and asks Muse to package them for his accountant, or pulls booking details — 'the Jarvis from Iron Man exists now.' Pompliano uses Instinct the same way and says agent memory beats human memory.</li><li><span class="dot" style="background:#3f6b2e;"></span>Lock-in: Jordi says he's locked into Muse with his email and info connected and hasn't hit a mistake; he expects OpenAI to race to ship its own agent ('the eyeball battle') and personal assistants from all big tech.</li><li><span class="dot" style="background:#3f6b2e;"></span>Amazon blocking Muse: Pompliano asks if users must adopt Amazon's agent; Jordi: silos can't hold (Apple vs Android), the agent-to-agent world means 'it'll just be divvied up'; Muse also did deals with Shopify, Instacart and PayPal this week.</li><li><span class="dot" style="background:#3f6b2e;"></span>Stock implication: like semiconductors, the market jumped on 'the agent world started', and Jordi expects later disappointment on monetization — but Meta gets benefit of the doubt with a growth engine and a new Louisiana data center it's using itself, not selling; Muse had a waitlist.</li><li><span class="dot" style="background:#3f6b2e;"></span>Model fatigue: Opus 5.5 and OpenAI's new releases 'don't change anything'; Pompliano notes users can't tell 86 from 91 on benchmarks but can tell 40 from 90, so only step changes matter; Jordi says he now listens to fewer AI podcasts.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;The personal memory, the Jarvis, you know, from Iron Man, it exists now.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Muse agent, gapped up almost 15% Monday; benefit of the doubt on monetization.</span></div><div class="namechip"><b>Amazon (AMZN)<span class="stance" style="background:#93711b;">UNCERTAIN · Low</span></b><span>Reportedly blocked Muse; Jordi says silos won't hold.</span></div><div class="namechip"><b>Shopify (SHOP), Instacart (CART), PayPal (PYPL)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Named as Muse deals this week.</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Expected to rush its own consumer agent.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Jordi uses Muse daily and Pompliano uses Instinct; both are users of the products they praise. The Meta timeline is Jordi's inference from public posts.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="ai-breakthroughs-jobs">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">PARABOLIC PHASE, PER JORDI</span><span class="ttag">ai-infra</span><span class="ttag">career</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">AI breakthroughs, the 'we underestimated it' line, and the honest jobs message</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jordi says models reached the steep part of the curve, so it's no time to be bearish — and no time to lie about jobs in either direction.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Situational Awareness, page 71: intelligence goes parabolic, like a child who then outgrows you; he says 'recursive self-improvement' is here and every month brings advances.</li><li><span class="dot" style="background:#93711b;"></span>Noam Brown (OpenAI) on Dwarkesh: 'we underestimated the capabilities of AI — and we won't again,' which Jordi likens to parents underestimating a child; he sees the humans, not rogue AI, as the error in the Hugging Face incident.</li><li><span class="dot" style="background:#93711b;"></span>Breakthroughs: work on Navier-Stokes and Anthropic's CRISPR announcement; half of X biologists call it IPO hype, but Jordi weights a renowned MIT CRISPR figure (featured in The Code Breaker) who called it a breakthrough.</li><li><span class="dot" style="background:#93711b;"></span>Benchmark anecdote: on a driving simulation Jordi says one OpenAI model scored <b>100%</b> and Fable 45% (garbled names), pointing to humanoids and self-driving as the next compute sink.</li><li><span class="dot" style="background:#93711b;"></span>Jobs: 'everyone will lose their jobs' and 'nobody will lose their job' are both dishonest; older people near retirement can relax, but their kids must use AI.</li><li><span class="dot" style="background:#93711b;"></span>Work: 'work' and 'job' are bad words to Jordi; he sees an age of entrepreneurship and says the wealthiest turn money into money, so learn AI, markets and crypto.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;We underestimated the capabilities of AI.&#8221;<cite>— Noam Brown, as quoted by Jordi Visser</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Jordi describes his own AI-and-crypto business and content; the biologist split is his summary of X; the Noam Brown quote is relayed from a podcast.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="rates-breadth-oil">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">10Y UP ~100BP; OIL ~$100</span><span class="ttag">macro-rates</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Rates up, breadth breaking and oil at $100: why Jordi stays bullish</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jordi acknowledges rising rates, weak breadth and oil, but says none of it breaks the case and calls bearish framing 'people who don't need to be bullish.'</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Breadth: the Mag 7 are near all-time highs while the Russell 2000 breaks down; the QQQ-over-IWM trade has worked since the iPhone, and Google Trends for 'stock market crash' hit <b>100%</b> last week.</li><li><span class="dot" style="background:#93711b;"></span>Oil: Jordi was in China in May 2008 with oil at <b>$155</b>; now around $100 with far higher household net worth and disposable income, so 'how can oil matter in the long term?' He calls 1970s-style and Smoot-Hawley tariff analogies stale.</li><li><span class="dot" style="background:#93711b;"></span>Closing message: 'we're not going to die,' the doomers are wrong, and using AI improves your life.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;We never need to print again.&#8221;<cite>— Jordi Visser</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The household net-worth and debt figures are stated from memory (and slightly garbled in captions); Jordi frames bears as people not making money.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🪙</div><div class="tline"><span class="cat">Crypto:</span> <span class="txt">Track Bitcoin against the <b>$82K</b> prior highs and the 10-year yield to see whether the fundamentals story holds.</span></div></div><div class="irow"><div class="ic">🏦</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Treat Visa, Mastercard and slow SaaS as exposed to agent-driven fee compression over ~5 years.</span></div></div><div class="irow"><div class="ic">🧠</div><div class="tline"><span class="cat">AI:</span> <span class="txt">Stay with compute and crypto rails as the agent trades rather than chasing each model release.</span></div></div><div class="irow"><div class="ic">📱</div><div class="tline"><span class="cat">Consumer AI:</span> <span class="txt">Watch Muse's adoption and the Amazon-blocking fight for signs of agent-to-agent commerce.</span></div></div><div class="irow"><div class="ic">🎓</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Learn AI, markets and crypto now, and make sure kids use AI.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;Agents don't pay vigs.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;You want to be long speed. You want to be short friction.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Work, job are bad words in my opinion.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;We never need to print again.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;It is just as wrong for people to say everyone's going to lose their jobs as it is to say nobody's going to lose their job.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Opus 5.5 releasing doesn't change anything.&#8221; <cite>— Jordi Visser</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Jordi Visser:</b> 2027 is the important year for institutional crypto allocation. <span class="cmeta">institutional crypto FOMO · important year · 2027</span> <span class="tag">Bitcoin (BTC)</span></div><div class="ritem"><b>Jordi Visser:</b> Tokenization turns US household net wealth into liquidity over the next five years. <span class="cmeta">US household net wealth tokenized · $195T · ~2031</span></div><div class="ritem"><b>Jordi Visser:</b> In five years Visa and Mastercard will no longer collect the same vig because agents won't pay it. <span class="cmeta">card-network fee revenue · lower · ~2031</span> <i>if if agents dominate purchases</i> <span class="tag">Visa (V)</span></div><div class="ritem"><b>Jordi Visser:</b> Roughly $900T of assets will be tokenized and on chain versus a $4T crypto valuation. <span class="cmeta">assets tokenized · $900T</span></div><div class="ritem"><b>Jordi Visser:</b> The Mag 7 will not outperform the S&amp;P but will outperform small caps. <span class="cmeta">Mag 7 relative return · beats small caps, lags S&amp;P</span></div><div class="ritem"><b>Jordi Visser:</b> A stock rally could start in December or before the midterms, then go sideways. <span class="cmeta">US equity rally start · December or pre-midterms · 2026</span></div><div class="ritem"><b>Jordi Visser:</b> For the next 12 months money is made on compute and agent guardrails. <span class="cmeta">leading trades · compute, guardrails · next 12 months</span></div><div class="ritem"><b>Anthony Pompliano:</b> This cycle Wall Street's allocations to crypto are $10-30B per firm, not $1B. <span class="cmeta">per-firm crypto allocation · $10-30B</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Meta (META)</b> <span class="rel">partners with</span> <b>Shopify (SHOP)</b> &mdash; Muse deal this week</div><div class="ritem"><b>Meta (META)</b> <span class="rel">partners with</span> <b>Instacart (CART)</b> &mdash; Muse deal this week</div><div class="ritem"><b>Meta (META)</b> <span class="rel">partners with</span> <b>PayPal (PYPL)</b> &mdash; Muse deal this week</div><div class="ritem"><b>Meta (META)</b> <span class="rel">competes with</span> <b>OpenAI</b> &mdash; consumer agent race</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📋</div><div><div class="title">Jordi's Washington talk (15 minutes, a same-day train trip) argued 'long speed, short friction' to politicians; he cited the Clarity Act's idea-to-rejection timeline against Anthropic's revenue jump. <span class="tag">Policy</span></div></div></div><div class="irow"><div class="ic">📤</div><div><div class="title">Jordi's tokenization paper is on his Substack; his 22V Research launched token coverage this week (weekly vertical deep dives). Michael Saylor's line 'you don't find Bitcoin, Bitcoin finds you' is applied to AI. <span class="tag">Research</span></div></div></div><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: Situational Awareness (page 71), Dwarkesh's interview with Noam Brown, BlackRock's AI-and-crypto paper, Peter Lynch's book, The Code Breaker, Google Trends, Michael Saylor, and X posts by biologists; Jordi also cites the July 2 Meta town-hall report. <span class="tag">Sources</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Vig</b> &mdash; The fee a middleman takes on each transaction, such as card interchange.</div><div><b>RWA</b> &mdash; Real-world assets, such as funds and property, represented as tokens on a blockchain.</div><div><b>Tokenization</b> &mdash; Putting ownership of a traditional asset on a blockchain so it can move and settle like a token.</div><div><b>Breadth</b> &mdash; How many stocks participate in a rally; weak breadth means gains are concentrated in a few names.</div><div><b>Debasement trade</b> &mdash; Buying hard assets like gold or Bitcoin on expectation that money supply growth erodes currency value.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
