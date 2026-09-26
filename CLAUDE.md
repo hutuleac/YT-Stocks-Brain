@@ -32,10 +32,10 @@ Key things baked into the current skill that aren't obvious from a first read:
   glossary term. This was an explicit standing instruction, not a default of the skill template.
 - `META["category"]` also accepts `"life"` (life/family/mindset/business perspectives, no primary
   investing angle). `index.html` has tabs: All Briefs, By Channel, By Company/Ticker, Quotes & Takes,
-  Dev & Workflows (`"dev"`) and Life & Perspectives (`"life"`).
+  Dev & Workflows (`"dev"`) and Life & Perspectives (`"life"`). Rebuilt automatically on every
+  `generate.py` run, or standalone via `python3 <skill-folder>/generate.py --reindex`.
 - **yt-dlp 429 / missing:** `scripts/fetch_transcript_api.py <url|id>` writes the SRT via
-  `youtube_transcript_api`; then clean as usual. Rebuilt automatically on every `generate.py` run, or standalone
-  via `python3 <skill-folder>/generate.py --reindex`.
+  `youtube_transcript_api`; then clean as usual.
 - **`names` is the permanent ticker index, not a general "notable things" slot.** Every entry
   becomes a row in By Company/Ticker across every brief, forever — companies/funds/orgs only.
   Countries, product and model names, and concepts go in `bullets`. Comma-splitting is
