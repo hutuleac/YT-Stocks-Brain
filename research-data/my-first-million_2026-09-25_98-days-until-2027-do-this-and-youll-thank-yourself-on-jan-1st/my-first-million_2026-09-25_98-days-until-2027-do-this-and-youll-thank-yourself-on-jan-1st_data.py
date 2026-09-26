@@ -5,7 +5,7 @@ META = {
     "date": "2026-09-25",
     "video_url": "https://www.youtube.com/watch?v=ymXF_yT1unQ",
     "thread_line": "6 threads · the 99-day sprint · events under constraint · the jelly-bean lesson for investors · voices, hats and notebooks · creativity as daily reps · Advance Publications and knowing your business",
-    "category": "market",
+    "category": "dev",
 }
 
 SNAPSHOT = [
