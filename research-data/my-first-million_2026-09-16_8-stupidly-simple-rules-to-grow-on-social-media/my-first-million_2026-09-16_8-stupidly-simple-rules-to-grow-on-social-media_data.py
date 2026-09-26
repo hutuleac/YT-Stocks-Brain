@@ -5,7 +5,7 @@ META = {
     "date": "2026-09-16",
     "video_url": "https://www.youtube.com/watch?v=47jy_FxuuBg",
     "thread_line": "4 threads · who over how many · inner nerd + the five D's · content before packaging · sell a feeling, make 100",
-    "category": "dev",
+    "category": "life",
 }
 
 SNAPSHOT = [

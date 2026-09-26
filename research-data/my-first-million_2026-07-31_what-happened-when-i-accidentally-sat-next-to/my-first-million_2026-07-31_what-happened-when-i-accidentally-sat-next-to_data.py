@@ -7,7 +7,7 @@ META = {
     "date": "2026-07-31",
     "video_url": "https://www.youtube.com/watch?v=p80UFZeAAos",
     "thread_line": "5 threads · the secretive Ferrero chocolate dynasty behind Nutella and Tic Tacs, Monish Pabrai's 'golden window' theory of early obsession, a deliberate exposure-over-pressure parenting philosophy, curiosity as a universal social and emotional tool (including a chance dinner next to a reclusive billionaire), and a producer's stage-4 cancer diagnosis reframed as 'being great' versus 'achieving greatness.'",
-    "category": "dev",
+    "category": "life",
 }
 
 SNAPSHOT = [
@@ -40,9 +40,9 @@ THEMES = [
     },
     {
         "id": "golden-window-theory",
-        "tags": ["career"],
+        "tags": ["parenting", "mindset"],
         "color": "amber",
-        "badge": "Contested",
+        "badge": "Counterintuitive take",
         "status": "Framework, not empirically settled",
         "title": "The 'Golden Window' (Ages ~6-16): Early Obsession as a Predictor of World-Class Outcomes",
         "lead": "**A framework Shaan attributes to investor Monish Pabrai:** a roughly 10-year developmental window in childhood where obsessive, unstructured exposure to a passion may be uniquely predictive of who eventually becomes truly world-class at it.",
@@ -59,9 +59,9 @@ THEMES = [
     },
     {
         "id": "exposure-parenting",
-        "tags": ["career"],
+        "tags": ["parenting", "family"],
         "color": "green",
-        "badge": "Recommendation",
+        "badge": "Principle",
         "status": "Personal philosophy, not a study-backed claim",
         "title": "Exposure Over Pressure: Letting Kids 'Sample the Menu' of Possible Interests",
         "lead": "**Sam's stated parenting philosophy:** most people never discover what they'd truly love because school and career funnel them into narrow, regimented tracks before they've had a chance to sample enough of the world.",
@@ -77,9 +77,9 @@ THEMES = [
     },
     {
         "id": "curiosity-social-tool",
-        "tags": ["career"],
+        "tags": ["relationships", "mindset"],
         "color": "green",
-        "badge": "Recommendation",
+        "badge": "Principle",
         "status": "Personal technique, anecdotally supported",
         "title": "Curiosity as a Universal Tool — for Winning People Over and for Self-Regulation",
         "lead": "**Sam recounts a chance dinner seated next to a reclusive, unassuming multi-billionaire** (redacted in the episode) as the entry point into a broader case for curiosity as a near-universal problem-solving tool.",
@@ -95,9 +95,9 @@ THEMES = [
     },
     {
         "id": "being-great-vs-achieving-greatness",
-        "tags": ["health", "career"],
+        "tags": ["health", "mindset"],
         "color": "amber",
-        "badge": "Personal reflection"
+        "badge": "Personal story"
 ,
         "status": "Ongoing — Ben Wilson undergoing treatment",
         "title": "Ben Wilson's Stage-4 Cancer Diagnosis: 'Being Great' Versus 'Achieving Greatness'",

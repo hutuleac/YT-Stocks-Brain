@@ -7,7 +7,7 @@ META = {
     "date": "2026-07-16",
     "video_url": "https://youtu.be/JT7QpL4XRtw",
     "thread_line": "6 threads · grief and living intentionally after losing friends and aging parents, Tim's deepening Zen meditation practice, rock climbing as his next big physical goal, a health/supplement stack update (including a psychedelic GAD drug trial and dementia lucidity case reports), Kevin's home AI automation setup, and how both are using AI for personal retrospective analysis versus creative work.",
-    "category": "dev",
+    "category": "life",
 }
 
 SNAPSHOT = [
@@ -22,9 +22,9 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "grief-and-intentional-living",
-        "tags": ["health"],
+        "tags": ["mindset", "family"],
         "color": "amber",
-        "badge": "Personal reflection"
+        "badge": "Personal story"
 ,
         "status": "Ongoing personal practice",
         "title": "Grief, Loss, and Making the Effort While There's Still Time",
@@ -42,7 +42,7 @@ THEMES = [
     },
     {
         "id": "zen-meditation-practice",
-        "tags": ["health"],
+        "tags": ["mindset", "health"],
         "color": "green",
         "badge": "Recommendation",
         "status": "Ongoing personal practice, ~5 years",

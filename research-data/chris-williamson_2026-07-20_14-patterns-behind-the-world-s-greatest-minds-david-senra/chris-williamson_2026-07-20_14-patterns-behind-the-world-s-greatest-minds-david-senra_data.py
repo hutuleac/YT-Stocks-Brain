@@ -7,7 +7,7 @@ META = {
     "date": "2026-07-20",
     "video_url": "https://www.youtube.com/watch?v=0AfsC-9pIo4",
     "thread_line": "6 threads · turning outsider status into drive ('chips on shoulders'), creating for your own taste instead of an audience, finding one simple idea and taking it seriously, why the best listen instead of surrounding themselves with yes-men, treating wisdom as prevention rather than problem-solving, and the four specific ways success destroys people.",
-    "category": "dev",
+    "category": "life",
 }
 
 SNAPSHOT = [
@@ -22,9 +22,9 @@ SNAPSHOT = [
 THEMES = [
     {
         "id": "chips-on-shoulders",
-        "tags": ["career"],
+        "tags": ["mindset", "career"],
         "color": "green",
-        "badge": "Recurring pattern",
+        "badge": "Principle",
         "status": "Pattern observed across founders and entertainers",
         "title": "Chips on Shoulders Put Chips in Pockets",
         "lead": "**Senra's most-repeated maxim (credited to venture capitalist Josh Wolf):** a feeling of not belonging, of being 'born into the wrong spot,' recurs as fuel across the founders he's studied and interviewed.",
@@ -41,9 +41,9 @@ THEMES = [
     },
     {
         "id": "house-on-the-mountain",
-        "tags": ["career", "dev-workflow"],
+        "tags": ["mindset", "career"],
         "color": "green",
-        "badge": "Recommendation",
+        "badge": "Framework",
         "status": "Contested by the 'empty church' counterpoint later in the conversation",
         "title": "Design Your Life Like Nobody's Watching — Rick Rubin's 'House on the Mountain' Test",
         "lead": "**Rick Rubin's central creative principle, as relayed by Senra:** imagine you built a house so remote no one will ever visit it — would you still put in your best effort decorating it? That answer is your actual, revealed preference.",
@@ -59,9 +59,9 @@ THEMES = [
     },
     {
         "id": "simple-idea-taken-seriously",
-        "tags": ["career"],
+        "tags": ["mindset", "career"],
         "color": "green",
-        "badge": "Recommendation",
+        "badge": "Principle",
         "status": "Pattern observed across multiple founders",
         "title": "Find a Simple Idea and Take It Seriously",
         "lead": "**A Charlie Munger maxim Senra says explains 'extreme business success':** winning systems usually come from ridiculously maximizing or minimizing just one or two variables, not juggling many — even when the underlying execution is genuinely complex.",
@@ -78,9 +78,9 @@ THEMES = [
     },
     {
         "id": "successful-people-listen",
-        "tags": ["career"],
+        "tags": ["relationships", "mindset"],
         "color": "green",
-        "badge": "Recommendation",
+        "badge": "Principle",
         "status": "Pattern observed across founders and athletes",
         "title": "Successful People Listen — There's No Upside in Being Wrong",
         "lead": "**Senra's reframe of a widely-misread Michael Jordan quote:** the popular image of Jordan (and similar high performers) as tyrannical is backwards — the actual pattern is voracious, ego-free information-seeking.",
@@ -96,9 +96,9 @@ THEMES = [
     },
     {
         "id": "wisdom-is-prevention",
-        "tags": ["career"],
+        "tags": ["mindset"],
         "color": "amber",
-        "badge": "Structural critique",
+        "badge": "Counterintuitive take",
         "status": "Ongoing personal practice for Senra",
         "title": "Wisdom Is Prevention, Not Problem-Solving — Ruthlessly Curate Who Gets Access to You",
         "lead": "**Charlie Munger's framing, relayed from a personal dinner Senra had with him:** the smart move isn't solving problems well, it's structuring your life (and especially your relationships) so most problems never happen in the first place.",
@@ -115,9 +115,9 @@ THEMES = [
     },
     {
         "id": "four-ways-success-destroys-you",
-        "tags": ["career"],
+        "tags": ["mindset", "relationships"],
         "color": "red",
-        "badge": "Cautionary pattern"
+        "badge": "Cautionary tale"
 ,
         "status": "Flagged risk, not a resolved framework",
         "title": "Jimmy Iovine's Four Ways Success Destroys People — and Why Senra Would Rather Never Make It",
