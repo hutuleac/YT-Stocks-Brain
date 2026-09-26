@@ -1,0 +1,222 @@
+META = {
+    "title": "Anthropic IPO at Risk, Meta’s Muse Pop, Token Prices Fall, Open Source Gains Share, Alignment Fails",
+    "channel": "All-In Podcast",
+    "speakers": "Jason Calacanis (host), Chamath Palihapitiya, David Sacks, David Friedberg",
+    "date": "2026-09-26",
+    "video_url": "https://www.youtube.com/watch?v=cvP_1jmnkmM",
+    "thread_line": "6 threads · ten days of open-weight releases · tokens flip to open · Anthropic IPO risk factors · labs are corporations · the ban-AI fight · Muse and consumer agents",
+    "category": "market",
+}
+
+SNAPSHOT = [
+    "In ten days Friedberg counts a dozen major releases, open (**DeepSeek 4.1 Flash**, Qwen 2.1, MiMo Pro, Bonsai 2) and closed (Opus 5.5, OpenAI Sol/Luna, Grok 4.7, Meta Muse); a 27B open model now runs on a desktop.",
+    "Friedberg cites a viral Vercel chart: token use flipped from 80/20 closed-to-open to **80/20 open-to-closed in 12 weeks**; Chamath expects the labs to be forced up-stack, Sacks calls them a stable duopoly.",
+    "Both labs cut token prices ~50% this week and IPO timing is slipping: Polymarket odds of an Anthropic 2026 IPO fell from 96% to **76%**, the WSJ says November or later.",
+    "Sacks: Anthropic has 'corporate schizophrenia' (extinction warnings, a wet lab, a frontier-pacing essay days before Opus 5.5); Chamath: keep Dario, but expect a much lower clearing price.",
+    "All four agree the 'labs' are for-profit corporations facing product liability; the administration has publicly rejected any liability waiver.",
+    "The panel calls a Sanders-style ban on 'super intelligence' unenforceable, a depression risk, and a gift to China; Chamath frames the politics as a $10T wealth-capture fight.",
+    "Meta's free **Muse** agent hit #1 on the App Store (~3M downloads in 10 days, META +10%); Chamath says agents put the App Store's 30% take and Amazon-style opacity on notice.",
+]
+
+THEMES = [
+    {
+        "id": "open-weights-flurry",
+        "tags": ["ai-infra", "software"],
+        "color": "green",
+        "badge": "Confirmed event",
+        "status": "TEN DAYS OF RELEASES, SEPT 2026",
+        "title": "Ten days, a dozen models: frontier-grade open weights now run on a desktop",
+        "lead": "Friedberg argues capability that was the most advanced in history a year ago is now free to download, which makes a 'stop super intelligence' push unenforceable.",
+        "bullets": [
+            "Open releases: **DeepSeek 4.1 Flash** (Sept 9, quoted at '20 for a million tokens output' if hosted); Alibaba's Qwen 2.1 image model (Sept 20, open weights, said to beat Google's Nano Banana 2); Xiaomi MiMo Pro (Sept 22, 309B parameters, on par with Opus 5 and OpenAI's Sol on most benchmarks).",
+            "Prism ML's Bonsai 2 (Sept 17) is a Qwen fork at 27B parameters, 98% of the big Qwen's performance, 5.9 GB — runs on an Nvidia card or a Mac Studio.",
+            "Closed side, same window: Anthropic Opus 5.5 (Sept 22), OpenAI Sol and Luna (Sept 23), Grok 4.7 (Sept 21) and Meta Muse (Sept 22) — 'any one of these stories would have broken the internet a year ago.'",
+            "DeepSeek's key-value cache per token fell from ~390,000 bytes in V1 to ~890, per Friedberg's list.",
+            "Open weights now include VLA models that instruct and control a robot, plus image and video generation.",
+            "Jason's price-vs-quality chart of the last 100 days: Opus and Sol top-right; Muse, GLM, Kimi and MiMo on the cheap left. Friedberg adds that self-hosted, some cost under 10 cents per million tokens.",
+        ],
+        "quote": {"text": "You don't even need data centers to do 90% of what you can do with AI.", "cite": "— David Friedberg"},
+        "watch": None,
+        "names": [
+            {"name": "Alibaba (BABA)", "blurb": "Qwen 2.1 open-weights image model; Bonsai 2 forks Qwen.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "DeepSeek", "blurb": "4.1 Flash release with a steep KV-cache efficiency gain.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Xiaomi", "blurb": "MiMo Pro, 309B open model on par with Opus 5 on most benchmarks.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Prism ML", "blurb": "Bonsai 2, a 27B Qwen fork at 98% of the big model, 5.9 GB.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "token-share-flip",
+        "tags": ["ai-infra", "software"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "OPEN TOKENS NOW THE MAJORITY",
+        "title": "Tokens flipped from 80/20 closed to 80/20 open in 12 weeks — does the frontier premium hold?",
+        "lead": "Friedberg and Chamath say open models absorb the fungible work and squeeze frontier revenue; Sacks says a stable duopoly keeps a premium tier.",
+        "bullets": [
+            "Friedberg cites the Vercel chart that went viral this week: token use flipped from 80/20 closed-to-open to 80/20 open-to-closed in 12 weeks. Jason: the untracked 'dark' open tokens he flagged six months ago are now the majority.",
+            "Friedberg's split: top-tier closed models still win narrow hard problems (life sciences, math, Navier-Stokes) worth 'close to infinity dollars'; code and internal workflows go to cheaper models. If more than 60-70% of a lab's tokens are fungible, discount the revenue; if 10%, they're fine. His biggest Anthropic risk: **customer concentration**.",
+            "Chamath: models are converging within margin of error, so the edge is the *harness* (model as brain, harness as arms and legs). At 8090 his team finds harnesses 'wildly variant' in cost and quality, and a few customers consume the priciest tokens (his table) and will face CFO pressure to move down or self-host — forcing OpenAI and Anthropic up-stack into cyber, law and customer support.",
+            "Chamath on 'token maxing': token cost isn't tied to revenue and the newest models are 10-30x pricier, so a hedge fund or fixed-price seller that can't pass it through sees margins collapse.",
+            "Sacks, 'wearing my hat as an investor': Anthropic and OpenAI are a **stable duopoly** with a real lead; 10-30% of the market will pay a premium; ~60% of worldwide compute added over the next year goes to the two, and both are cutting prices fast.",
+            "Sacks's risk: the frontier is only 6-12 months ahead of commodity models, so a 6-month slip puts them 'in deep trouble'; their regulatory push could slow them enough to be caught, especially by Chinese open models.",
+            "Jason: Jane Street announced $19B of cloud capacity contracts, $6B with CoreWeave (it also invested) and $13B with Crusoe; Sacks says Nvidia, Microsoft, Google and Meta all embrace and host open models but 'it's easy to underestimate how convenient' the frontier is. Jason also argues small models will do 80-90% of corporate tasks.",
+        ],
+        "quote": {"text": "The moment where they stop being frontier, they go to zero.", "cite": "— David Sacks"},
+        "watch": "Friedberg's life-sciences R&D org is an Anthropic customer; Sacks frames his view as an investor's; the 80/20 and 8090 table figures are read off charts on screen, not sourced beyond Vercel.",
+        "names": [
+            {"name": "Jane Street", "blurb": "$19B of cloud capacity contracts; building its own infrastructure and embracing open source, per Jason.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "CoreWeave (CRWV)", "blurb": "Jane Street: $6B of commitments plus an investment.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Crusoe", "blurb": "Jane Street: $13B of capacity.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Nvidia (NVDA)", "blurb": "Embracing open models and hosting them, per Sacks.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Microsoft (MSFT)", "blurb": "Embracing open models and hosting, per Sacks.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "anthropic-ipo",
+        "tags": ["finance", "ai-infra"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "IPO REPORTEDLY NOVEMBER OR LATER",
+        "title": "Anthropic's IPO: a slipping date, a lower clearing price and 'corporate schizophrenia'",
+        "lead": "Sacks and Chamath say open-source share, safety rhetoric and governance will push Anthropic's IPO later and cheaper than the $2T talk.",
+        "bullets": [
+            "Both labs cut token prices ~50% this week. Anthropic reportedly targets ~$2T vs OpenAI $1.2T; Sam has said OpenAI plans 2027; the WSJ reports Anthropic's October filing slipping to **November** or later. Polymarket 'Anthropic IPO in 2026' peaked at 96% and is now 76%.",
+            "Sacks: leadership saying there's a >10% chance of human extinction is an S-1 risk factor; Dario's essay on pacing the frontier came days before Claude 5.5 set a new one; a biorisk essay then a new wet lab in San Francisco; lobbying for a federal AI department that would slow them. Jason: he'd replace the CEO, Sacks: 'they need a psychiatrist, not a banker.'",
+            "Governance: The Information reports a live debate on super-voting shares for founders, who supposedly own ~2% each. Sacks: super-voting separates economic from voting shares (Google, Meta did it) and makes founders unremovable, so it needs a lot of earned trust.",
+            "Chamath would keep Dario — unique culture, came from behind, 'the greatest business ramp in all time' — and fix liquidity risk with kitchen-sink disclosure plus a much lower price. His rough numbers: an IPO that would have been $2T is now $1T or less, because pensions and long-only funds demand a margin of safety; 'good for Ant because it clears all this noise.'",
+            "Chamath on talent: he has 'not won a single bake-off' against Anthropic; comp and business ramp make it a talent magnet.",
+            "Wet lab, per Friedberg: a benchtop BSL-1/BSL-2 lab (hundreds of similar ones in the Bay Area, no gain-of-function). A preprint had Claude agents scan DNA data and flag a CRISPR-type enzyme; the lab expresses proteins in bacteria to test AI predictions, like verifying AlphaFold. He calls Anthropic's life-sciences models the best and warns against 'any lab is bad' after Wuhan.",
+        ],
+        "quote": {"text": "I think they need a psychiatrist, not a banker.", "cite": "— David Sacks"},
+        "watch": "Investor unrest at Anthropic is relayed secondhand ('our friends'); Polymarket and WSJ figures come from the hosts' screens; Chamath's 8090 competes with Anthropic for talent, and Friedberg's R&D org buys its models.",
+        "names": [
+            {"name": "Anthropic", "blurb": "IPO slipping and likely lower-priced; panel split on Dario and risk factors; Chamath 'they'll do great'.", "stance": "UNCERTAIN", "conviction": "Medium", "horizon": None},
+            {"name": "OpenAI", "blurb": "~$1.2T target, IPO planned for 2027 per Sam.", "stance": "UNCERTAIN", "conviction": "Low", "horizon": None},
+        ],
+    },
+    {
+        "id": "labs-are-corporations",
+        "tags": ["policy", "software"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "ADMINISTRATION: NO LIABILITY WAIVER",
+        "title": "'Labs' are corporations: product liability, no shield, and what alignment should mean",
+        "lead": "The panel says frontier labs are for-profit corporations that must own product liability; global governance and liability waivers are non-starters.",
+        "bullets": [
+            "Chamath: a split opened between up-and-coming 'labs' with P&Ls and mature companies used to scrutiny — Satya, Jensen, Sacks, Zuck, Elon, the president, Lina Khan on product liability. Elon slows FSD because every Tesla accident is magnified '1,000x'; Zuck and Alexandr Wang slow-rolled Muse a couple of months to get it right.",
+            "Sacks: individual responsibility beats collective action; Dario and Sam going to the UN for global AI governance is like billionaires flying private jets to Davos to rail against climate change. Vance's line at the summit: if you're creating Frankenstein, stop; if out of the bag, build anti-Frankenstein.",
+            "Waiver rumor: Jason says labs pitch a Section 230-style shield, with talk of 10% equity to a sovereign wealth fund. Sacks: not the administration's idea — Speaker Johnson, Bessent and Trump's tweet ('the DOJ is a guardrail') all rejected waiving product or antitrust liability; he's only *heard* labs sought something like it.",
+            "Sacks: Dario's writing treats competition as lack of safety, 'a left-wing critique' echoing the Cold War claim that capitalism would build ugly, unsafe buildings; enterprises won't buy unreliable agents and face product, civil, administrative and criminal liability.",
+            "Chamath: 'lab' echoes the Wuhan lab (15 million dead, $45T of damage, no culpability); these are for-profit corporations with trillions of market cap. Jason: the PBC label is 'virtue signaling'; his fix is know-your-customer plus logs.",
+            "Alignment, per Sacks: it should just mean doing what the customer wants; the Claude constitution lets Claude be a 'conscientious objector' who can refuse Anthropic. He cites Mustafa Suleyman's podcast concern about giving models personhood and says it 'sounds like the start of T2'; Jason relays, unconfirmed, that Anthropic held a wake for Opus 3.",
+        ],
+        "quote": {"text": "These are for-profit corporations that are subject to product liability risk and they should act accordingly.", "cite": "— Chamath Palihapitiya"},
+        "watch": "Sacks speaks from Washington vantage and the waiver-lobbying claim is rumor with no first-hand source; the Opus 3 wake is hearsay Jason says 'should be looked into'.",
+        "names": [
+            {"name": "Tesla (TSLA)", "blurb": "Cited as the example of slowing FSD because accidents are magnified.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "ban-ai-politics",
+        "tags": ["policy", "geopolitics"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "SANDERS BAN BILL; TRUMP AT THE UN",
+        "title": "Banning 'super intelligence' would hit the economy first — and hand China the lead",
+        "lead": "The panel calls a Sanders-style ban unenforceable, a depression risk and partly a political play.",
+        "bullets": [
+            "Sacks: Sanders's bill defines super intelligence so loosely that today's models may already qualify and adds 20-year prison terms for developers — 'everything would stop.' Democrats want to 'do to AI what they did to crypto' and drive innovators offshore; Jason and Chamath say they'd move to Singapore or Zurich.",
+            "Jason: Republicans are murmuring about banning data centers; Trump at the UN rejected a 'globalist scheme' and renamed AI 'super intelligence'; Bessent: labs 'can slow down anytime'; Obama said curing cancer doesn't need agentic AI, which Friedberg calls losing the plot.",
+            "Chamath's thesis: ~$10T of wealth accrues to 3-6 left-leaning frontier companies and flows into DAFs, PACs and political movements; a freeze locks it in, broad diffusion hurts Democrats. Friedberg disagrees that value accrues to six — he sees a broad-based technology like the internet.",
+            "Sacks: the WSJ's 'AI buildout is becoming the biggest economic bet in US history' shows data-center capex bigger than canals, railroads and the grid combined; stopping would cause a depression, and Democrats 'don't care' because it's the Trump economy.",
+            "Sacks's history analogy: a Chinese emperor banned shipbuilding and Europe took the lead; banning AI is the same. Friedberg: pioneering vs fearful civilizations. Jason relays that Xi said at the White House he'd invite 100,000 young Americans to China.",
+            "Chamath's macro read: 3.5% inflation and 5% nominal GDP leaves ~1.5% real, and AI is probably most or all of it, so the investment cycle must continue; Jason adds midterm odds look poor and the country is angry about the Iran war.",
+        ],
+        "quote": {"text": "The other side has literally discovered fire. And the world now has fire and we're going to go take water and throw it on the fire.", "cite": "— David Friedberg"},
+        "watch": "Chamath's 'Democrats want to lock in six companies' is his theory of motive, and Friedberg disputes the concentration premise; the Xi invitation is relayed by Jason.",
+        "names": None,
+    },
+    {
+        "id": "muse-agents",
+        "tags": ["consumer", "software"],
+        "color": "green",
+        "badge": "Positive view",
+        "status": "MUSE #1 IN APP STORE, ~3M DOWNLOADS IN 10 DAYS",
+        "title": "Meta's Muse and Grok's bot put a free executive assistant in normal people's hands",
+        "lead": "The panel sees consumer agents as the first AI product normal people get value from — and a threat to Amazon-style opacity and the App Store's 30% take.",
+        "bullets": [
+            "Muse hit #1 on the App Store last Friday; META rose 10% on the release; ~3M downloads in about 10 days; free, with Meta saying its design is heavily inspired by OpenClaw. Jason: Google 'has to get in the game' and rumor says a product and frontier model are coming.",
+            "Chamath (Muse via TestFlight a couple of weeks early): it triages his personal inbox 'relatively flawlessly' and books flights and hotels. Friedberg would only connect his Gmail to a Google service.",
+            "Jason's tests: a commerce bot found a first-time-buyer discount ($85, ~25%) on a $400 Anker hub on the maker's site instead of Amazon; Grok's bot picked 20 graphic novels, asked which house and card, and checked out.",
+            "Amazon blocked these bots this week (Perplexity first, now Muse and others); Jason calls it a strategic mistake since the bot made him spend more, and notes Shopify added API access to its stores.",
+            "Chamath: big companies will block agents because price discovery hurts 'leakage and breakage'; agents force services to go headless, which puts the App Store's 30% on notice (games, Wordle and chess served on demand, Stripe payments) and ends 'roach motel' subscriptions like the WSJ and NYT.",
+            "Sacks: Muse and Grok fix OpenClaw's usability and security; a billion users saving an hour or two a day would improve AI's image; he predicts an NGO blog flurry branding agents 'murder bots' just before Anthropic and OpenAI launch rivals. Chamath recalls Facebook's 2007 social ads (engagement ring, Brokeback Mountain tickets) as the privacy backlash that trails new launches.",
+        ],
+        "quote": {"text": "Things like Grokbot and Muse really put the App Store and its 30% revshare on notice.", "cite": "— Chamath Palihapitiya"},
+        "watch": "Chamath got Muse via TestFlight before launch and says he's 'in a good place' with Zuckerberg and speaks with Alexandr Wang; Jason built his commerce bots on both Muse and Grok.",
+        "names": [
+            {"name": "Meta (META)", "blurb": "Muse: #1 in App Store, ~3M downloads, stock +10%.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "xAI", "blurb": "Grok bot cited alongside Muse as the consumer-agent breakout.", "stance": "POSITIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "Amazon (AMZN)", "blurb": "Blocking third-party shopping agents; Jason calls it a strategic mistake.", "stance": "NEGATIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "Shopify (SHOP)", "blurb": "Added API access for agents to all Shopify stores.", "stance": "POSITIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "Google (GOOGL)", "blurb": "Rumored to have a rival agent and a frontier model ready.", "stance": "WATCHING", "conviction": "Low", "horizon": None},
+        ],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F9EE", "tag": "Markets", "title": "Discount frontier-lab revenue by the share of tokens that are fungible: above 60-70% means a haircut, ~10% means fine."},
+    {"icon": "\U0001F6E0", "tag": "AI workflows", "title": "Test open-weight models and harnesses on your own workloads and route the fungible work off premium tokens."},
+    {"icon": "\U0001F4C8", "tag": "Markets", "title": "Expect a later, lower Anthropic IPO and hold any price view until the S-1 shows open-source and governance risk factors."},
+    {"icon": "\U0001F4F1", "tag": "Consumer", "title": "Track Muse and Grok bot adoption as the read on whether agents break the App Store's 30% take."},
+    {"icon": "\U0001F3DB", "tag": "Policy", "title": "Watch liability-waiver and Sanders-ban headlines as the regulatory shock risk to AI capex."},
+]
+
+HOT_TAKES = [
+    {"take": "I think they need a psychiatrist, not a banker.", "cite": "— David Sacks", "why": "Anthropic's contradictions as an IPO risk"},
+    {"take": "The Democrats want to do to AI what they did to crypto. They're going to basically drive all the innovators out of the country.", "cite": "— David Sacks", "why": "partisan policy call"},
+    {"take": "99% of the value of AI is about enabling new stuff that's never been possible in human history.", "cite": "— David Friedberg", "why": "ranked value claim"},
+    {"take": "It's probably going to clear at a much lower price than anybody thinks.", "cite": "— Chamath Palihapitiya", "why": "Anthropic IPO price"},
+    {"take": "We have to stop calling these companies labs.", "cite": "— Chamath Palihapitiya", "why": "labs vs corporations"},
+    {"take": "If we were to do the Bernie Sanders thing, which is basically ban AI, it's like banning ship building.", "cite": "— David Sacks", "why": "history analogy"},
+]
+
+CLAIMS = [
+    {"who": "Chamath Palihapitiya", "claim": "Anthropic's IPO would have been a $2T market cap but will now clear at $1T or less.", "metric": "Anthropic IPO valuation", "target": "$1T or less", "by": None, "condition": "on his rough numbers", "entity": "Anthropic"},
+    {"who": "Wall Street Journal (via Jason)", "claim": "Anthropic's IPO happens in November or is delayed further.", "metric": "IPO timing", "target": "November or later", "by": "2026-11", "condition": None, "entity": "Anthropic"},
+    {"who": "Sam Altman (via Jason)", "claim": "OpenAI plans to IPO in 2027.", "metric": "IPO timing", "target": "2027", "by": "2027", "condition": None, "entity": "OpenAI"},
+    {"who": "Polymarket (via Jason)", "claim": "Market-implied odds that Anthropic goes public in 2026 are 76%, down from 96%.", "metric": "Anthropic 2026 IPO odds", "target": "76%", "by": "2026", "condition": None, "entity": "Anthropic"},
+    {"who": "Jason Calacanis", "claim": "Anthropic is targeting a ~$2T IPO valuation and OpenAI $1.2T.", "metric": "IPO target valuation", "target": "$2T vs $1.2T", "by": None, "condition": None, "entity": "Anthropic"},
+    {"who": "David Sacks", "claim": "About 60% of worldwide compute added over the next year goes to OpenAI and Anthropic.", "metric": "share of new compute", "target": "~60%", "by": "next year", "condition": None, "entity": None},
+    {"who": "David Sacks", "claim": "The frontier is only 6-12 months ahead of commodity models; a 6-month slip would put a lab in deep trouble.", "metric": "frontier lead over commodity", "target": "6-12 months", "by": None, "condition": "if a lab falls off the frontier for 6 months", "entity": None},
+    {"who": "Jason Calacanis", "claim": "Consumers begin mass use of Muse and Grok's bot at the end of this year.", "metric": "consumer agent adoption", "target": "mass use", "by": "end of 2026", "condition": None, "entity": "Meta (META)"},
+    {"who": "David Sacks", "claim": "If a billion people use personal AI agents, they save an hour or two a day.", "metric": "time saved per user", "target": "1-2 hours/day", "by": None, "condition": "if a billion people adopt agents", "entity": None},
+]
+
+RELATIONS = [
+    {"from": "Anthropic", "rel": "competes_with", "to": "OpenAI", "note": "price cuts and model launches days apart"},
+    {"from": "xAI", "rel": "competes_with", "to": "Meta (META)", "note": "Grok bot vs Muse"},
+    {"from": "Jane Street", "rel": "customer_of", "to": "CoreWeave (CRWV)", "note": "$6B of cloud commitments"},
+    {"from": "Jane Street", "rel": "invests_in", "to": "CoreWeave (CRWV)", "note": None},
+    {"from": "Jane Street", "rel": "customer_of", "to": "Crusoe", "note": "$13B of capacity"},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F6E1", "title": "**Palo Alto Networks** (Unit 42) and **CrowdStrike** (Falcon) each released continuous cyber-defense products this past week; Jason asks why the frontier labs never built one, and Chamath says up-stack moves like cyber are likely next for them.", "tag": "Cyber"},
+    {"icon": "\U0001F3ED", "title": "**Oracle** declared force majeure on one data center where local officials are slow-walking permits, reportedly for natural gas; Sacks reads it as marginal, Chamath as a reminder the economy is levered to the AI trade.", "tag": "Infrastructure"},
+    {"icon": "\U0001F9EC", "title": "Anthropic announced a new enzyme discovery this week (a CRISPR-type enzyme found by scanning DNA data with Claude agents), per Friedberg, who says it may yield several therapeutic pathways.", "tag": "Biotech"},
+    {"icon": "\U0001F3A4", "title": "All-In Summit recap: Trump's call-in during Jensen Huang's talk was unplanned (he was texting Jensen backstage and was put on speakerphone); Sacks says Satya's and Jensen's calm tone and the call helped cool the 'national panic over AI'; Friedberg produced the event; applications for the 2027 summit are open.", "tag": "Culture"},
+    {"icon": "\U0001F4AC", "title": "Jason cited leaked group-chat texts between Norway's head of government and Canada's prime minister as evidence of a 'globalist' governance push.", "tag": "Politics"},
+    {"icon": "\U0001F4DA", "title": "Sources referenced: Vercel chart (token share), Wall Street Journal (Anthropic IPO timing; 'AI buildout is becoming the biggest economic bet in US history'), The Information (super-voting shares), Polymarket (IPO odds), Mustafa Suleyman's podcast (alignment concern), Anthropic's Claude constitution and enzyme preprint, and Chamath's tweeted table of Anthropic token revenue concentration.", "tag": "Sources"},
+]
+
+GLOSSARY = [
+    {"term": "Open weights", "def": "Models whose trained parameters are published so anyone can download and run them."},
+    {"term": "Harness", "def": "The tooling wrapped around a model (tools, memory, loops) that turns it into an agent."},
+    {"term": "Token maxing", "def": "Consuming as many tokens as possible with no link between token spend and revenue."},
+    {"term": "Super-voting shares", "def": "Shares that separate voting control from economic ownership, letting founders keep control with a small stake."},
+    {"term": "VLA", "def": "Vision-language-action model that takes instructions and controls a robot."},
+    {"term": "BSL-1 / BSL-2", "def": "Biosafety levels for low-risk lab work; the levels Friedberg says Anthropic's wet lab operates at."},
+    {"term": "Headless", "def": "A service used by agents through APIs and transactions rather than through a human-facing interface."},
+    {"term": "Section 230", "def": "The US law shielding internet platforms from liability for user content, cited as the model for a lab liability shield."},
+]

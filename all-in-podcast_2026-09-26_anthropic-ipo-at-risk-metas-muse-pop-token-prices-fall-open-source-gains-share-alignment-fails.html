@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research: Anthropic IPO at Risk, Meta’s Muse Pop, Token Prices Fall, Open Source Gains Share, Alignment Fails</title>
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Anthropic IPO at Risk, Meta’s Muse Pop, Token Prices Fall, Open Source Gains Share, Alignment Fails</h1>
+    <div class="byline">
+      Channel: <b>All-In Podcast</b> &middot; Speaker: <b>Jason Calacanis (host), Chamath Palihapitiya, David Sacks, David Friedberg</b> &middot; <b>2026-09-26</b>
+      <div class="stats-line">6 threads · ten days of open-weight releases · tokens flip to open · Anthropic IPO risk factors · labs are corporations · the ban-AI fight · Muse and consumer agents &middot; <a href="https://www.youtube.com/watch?v=cvP_1jmnkmM" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>In ten days Friedberg counts a dozen major releases, open (<b>DeepSeek 4.1 Flash</b>, Qwen 2.1, MiMo Pro, Bonsai 2) and closed (Opus 5.5, OpenAI Sol/Luna, Grok 4.7, Meta Muse); a 27B open model now runs on a desktop.</li><li>Friedberg cites a viral Vercel chart: token use flipped from 80/20 closed-to-open to <b>80/20 open-to-closed in 12 weeks</b>; Chamath expects the labs to be forced up-stack, Sacks calls them a stable duopoly.</li><li>Both labs cut token prices ~50% this week and IPO timing is slipping: Polymarket odds of an Anthropic 2026 IPO fell from 96% to <b>76%</b>, the WSJ says November or later.</li><li>Sacks: Anthropic has 'corporate schizophrenia' (extinction warnings, a wet lab, a frontier-pacing essay days before Opus 5.5); Chamath: keep Dario, but expect a much lower clearing price.</li><li>All four agree the 'labs' are for-profit corporations facing product liability; the administration has publicly rejected any liability waiver.</li><li>The panel calls a Sanders-style ban on 'super intelligence' unenforceable, a depression risk, and a gift to China; Chamath frames the politics as a <b>$10T</b> wealth-capture fight.</li><li>Meta's free <b>Muse</b> agent hit #1 on the App Store (~3M downloads in 10 days, META +10%); Chamath says agents put the App Store's 30% take and Amazon-style opacity on notice.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="open-weights-flurry">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
+    <span class="theme-status">TEN DAYS OF RELEASES, SEPT 2026</span><span class="ttag">ai-infra</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Ten days, a dozen models: frontier-grade open weights now run on a desktop</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Friedberg argues capability that was the most advanced in history a year ago is now free to download, which makes a 'stop super intelligence' push unenforceable.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Open releases: <b>DeepSeek 4.1 Flash</b> (Sept 9, quoted at '20 for a million tokens output' if hosted); Alibaba's Qwen 2.1 image model (Sept 20, open weights, said to beat Google's Nano Banana 2); Xiaomi MiMo Pro (Sept 22, 309B parameters, on par with Opus 5 and OpenAI's Sol on most benchmarks).</li><li><span class="dot" style="background:#3f6b2e;"></span>Prism ML's Bonsai 2 (Sept 17) is a Qwen fork at 27B parameters, <b>98%</b> of the big Qwen's performance, 5.9 GB — runs on an Nvidia card or a Mac Studio.</li><li><span class="dot" style="background:#3f6b2e;"></span>Closed side, same window: Anthropic Opus 5.5 (Sept 22), OpenAI Sol and Luna (Sept 23), Grok 4.7 (Sept 21) and Meta Muse (Sept 22) — 'any one of these stories would have broken the internet a year ago.'</li><li><span class="dot" style="background:#3f6b2e;"></span>DeepSeek's key-value cache per token fell from ~390,000 bytes in V1 to ~890, per Friedberg's list.</li><li><span class="dot" style="background:#3f6b2e;"></span>Open weights now include VLA models that instruct and control a robot, plus image and video generation.</li><li><span class="dot" style="background:#3f6b2e;"></span>Jason's price-vs-quality chart of the last 100 days: Opus and Sol top-right; Muse, GLM, Kimi and MiMo on the cheap left. Friedberg adds that self-hosted, some cost under 10 cents per million tokens.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;You don't even need data centers to do 90% of what you can do with AI.&#8221;<cite>— David Friedberg</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Alibaba (BABA)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Qwen 2.1 open-weights image model; Bonsai 2 forks Qwen.</span></div><div class="namechip"><b>DeepSeek<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>4.1 Flash release with a steep KV-cache efficiency gain.</span></div><div class="namechip"><b>Xiaomi<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>MiMo Pro, 309B open model on par with Opus 5 on most benchmarks.</span></div><div class="namechip"><b>Prism ML<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Bonsai 2, a 27B Qwen fork at 98% of the big model, 5.9 GB.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="token-share-flip">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">OPEN TOKENS NOW THE MAJORITY</span><span class="ttag">ai-infra</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Tokens flipped from 80/20 closed to 80/20 open in 12 weeks — does the frontier premium hold?</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Friedberg and Chamath say open models absorb the fungible work and squeeze frontier revenue; Sacks says a stable duopoly keeps a premium tier.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Friedberg cites the Vercel chart that went viral this week: token use flipped from 80/20 closed-to-open to 80/20 open-to-closed in 12 weeks. Jason: the untracked 'dark' open tokens he flagged six months ago are now the majority.</li><li><span class="dot" style="background:#93711b;"></span>Friedberg's split: top-tier closed models still win narrow hard problems (life sciences, math, Navier-Stokes) worth 'close to infinity dollars'; code and internal workflows go to cheaper models. If more than 60-70% of a lab's tokens are fungible, discount the revenue; if 10%, they're fine. His biggest Anthropic risk: <b>customer concentration</b>.</li><li><span class="dot" style="background:#93711b;"></span>Chamath: models are converging within margin of error, so the edge is the <i>harness</i> (model as brain, harness as arms and legs). At 8090 his team finds harnesses 'wildly variant' in cost and quality, and a few customers consume the priciest tokens (his table) and will face CFO pressure to move down or self-host — forcing OpenAI and Anthropic up-stack into cyber, law and customer support.</li><li><span class="dot" style="background:#93711b;"></span>Chamath on 'token maxing': token cost isn't tied to revenue and the newest models are 10-30x pricier, so a hedge fund or fixed-price seller that can't pass it through sees margins collapse.</li><li><span class="dot" style="background:#93711b;"></span>Sacks, 'wearing my hat as an investor': Anthropic and OpenAI are a <b>stable duopoly</b> with a real lead; 10-30% of the market will pay a premium; ~60% of worldwide compute added over the next year goes to the two, and both are cutting prices fast.</li><li><span class="dot" style="background:#93711b;"></span>Sacks's risk: the frontier is only 6-12 months ahead of commodity models, so a 6-month slip puts them 'in deep trouble'; their regulatory push could slow them enough to be caught, especially by Chinese open models.</li><li><span class="dot" style="background:#93711b;"></span>Jason: Jane Street announced <b>$19B</b> of cloud capacity contracts, $6B with CoreWeave (it also invested) and $13B with Crusoe; Sacks says Nvidia, Microsoft, Google and Meta all embrace and host open models but 'it's easy to underestimate how convenient' the frontier is. Jason also argues small models will do 80-90% of corporate tasks.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;The moment where they stop being frontier, they go to zero.&#8221;<cite>— David Sacks</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Jane Street<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>$19B of cloud capacity contracts; building its own infrastructure and embracing open source, per Jason.</span></div><div class="namechip"><b>CoreWeave (CRWV)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Jane Street: $6B of commitments plus an investment.</span></div><div class="namechip"><b>Crusoe<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Jane Street: $13B of capacity.</span></div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Embracing open models and hosting them, per Sacks.</span></div><div class="namechip"><b>Microsoft (MSFT)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Embracing open models and hosting, per Sacks.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Friedberg's life-sciences R&amp;D org is an Anthropic customer; Sacks frames his view as an investor's; the 80/20 and 8090 table figures are read off charts on screen, not sourced beyond Vercel.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="anthropic-ipo">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">IPO REPORTEDLY NOVEMBER OR LATER</span><span class="ttag">finance</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Anthropic's IPO: a slipping date, a lower clearing price and 'corporate schizophrenia'</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Sacks and Chamath say open-source share, safety rhetoric and governance will push Anthropic's IPO later and cheaper than the $2T talk.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Both labs cut token prices ~50% this week. Anthropic reportedly targets ~$2T vs OpenAI $1.2T; Sam has said OpenAI plans 2027; the WSJ reports Anthropic's October filing slipping to <b>November</b> or later. Polymarket 'Anthropic IPO in 2026' peaked at 96% and is now 76%.</li><li><span class="dot" style="background:#93711b;"></span>Sacks: leadership saying there's a &gt;<b>10%</b> chance of human extinction is an S-1 risk factor; Dario's essay on pacing the frontier came days before Claude 5.5 set a new one; a biorisk essay then a new wet lab in San Francisco; lobbying for a federal AI department that would slow them. Jason: he'd replace the CEO, Sacks: 'they need a psychiatrist, not a banker.'</li><li><span class="dot" style="background:#93711b;"></span>Governance: The Information reports a live debate on super-voting shares for founders, who supposedly own ~<b>2%</b> each. Sacks: super-voting separates economic from voting shares (Google, Meta did it) and makes founders unremovable, so it needs a lot of earned trust.</li><li><span class="dot" style="background:#93711b;"></span>Chamath would keep Dario — unique culture, came from behind, 'the greatest business ramp in all time' — and fix liquidity risk with kitchen-sink disclosure plus a much lower price. His rough numbers: an IPO that would have been <b>$2T</b> is now $1T or less, because pensions and long-only funds demand a margin of safety; 'good for Ant because it clears all this noise.'</li><li><span class="dot" style="background:#93711b;"></span>Chamath on talent: he has 'not won a single bake-off' against Anthropic; comp and business ramp make it a talent magnet.</li><li><span class="dot" style="background:#93711b;"></span>Wet lab, per Friedberg: a benchtop BSL-1/BSL-2 lab (hundreds of similar ones in the Bay Area, no gain-of-function). A preprint had Claude agents scan DNA data and flag a CRISPR-type enzyme; the lab expresses proteins in bacteria to test AI predictions, like verifying AlphaFold. He calls Anthropic's life-sciences models the best and warns against 'any lab is bad' after Wuhan.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I think they need a psychiatrist, not a banker.&#8221;<cite>— David Sacks</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic<span class="stance" style="background:#93711b;">UNCERTAIN · Medium</span></b><span>IPO slipping and likely lower-priced; panel split on Dario and risk factors; Chamath 'they'll do great'.</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">UNCERTAIN · Low</span></b><span>~$1.2T target, IPO planned for 2027 per Sam.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Investor unrest at Anthropic is relayed secondhand ('our friends'); Polymarket and WSJ figures come from the hosts' screens; Chamath's 8090 competes with Anthropic for talent, and Friedberg's R&amp;D org buys its models.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="labs-are-corporations">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">ADMINISTRATION: NO LIABILITY WAIVER</span><span class="ttag">policy</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">'Labs' are corporations: product liability, no shield, and what alignment should mean</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The panel says frontier labs are for-profit corporations that must own product liability; global governance and liability waivers are non-starters.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Chamath: a split opened between up-and-coming 'labs' with P&amp;Ls and mature companies used to scrutiny — Satya, Jensen, Sacks, Zuck, Elon, the president, Lina Khan on product liability. Elon slows FSD because every Tesla accident is magnified '1,000x'; Zuck and Alexandr Wang slow-rolled Muse a couple of months to get it right.</li><li><span class="dot" style="background:#93711b;"></span>Sacks: individual responsibility beats collective action; Dario and Sam going to the UN for global AI governance is like billionaires flying private jets to Davos to rail against climate change. Vance's line at the summit: if you're creating Frankenstein, stop; if out of the bag, build anti-Frankenstein.</li><li><span class="dot" style="background:#93711b;"></span>Waiver rumor: Jason says labs pitch a Section 230-style shield, with talk of 10% equity to a sovereign wealth fund. Sacks: not the administration's idea — Speaker Johnson, Bessent and Trump's tweet ('the DOJ is a guardrail') all rejected waiving product or antitrust liability; he's only <i>heard</i> labs sought something like it.</li><li><span class="dot" style="background:#93711b;"></span>Sacks: Dario's writing treats competition as lack of safety, 'a left-wing critique' echoing the Cold War claim that capitalism would build ugly, unsafe buildings; enterprises won't buy unreliable agents and face product, civil, administrative and criminal liability.</li><li><span class="dot" style="background:#93711b;"></span>Chamath: 'lab' echoes the Wuhan lab (15 million dead, <b>$45T</b> of damage, no culpability); these are for-profit corporations with trillions of market cap. Jason: the PBC label is 'virtue signaling'; his fix is know-your-customer plus logs.</li><li><span class="dot" style="background:#93711b;"></span>Alignment, per Sacks: it should just mean doing what the customer wants; the Claude constitution lets Claude be a 'conscientious objector' who can refuse Anthropic. He cites Mustafa Suleyman's podcast concern about giving models personhood and says it 'sounds like the start of T2'; Jason relays, unconfirmed, that Anthropic held a wake for Opus 3.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;These are for-profit corporations that are subject to product liability risk and they should act accordingly.&#8221;<cite>— Chamath Palihapitiya</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Tesla (TSLA)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Cited as the example of slowing FSD because accidents are magnified.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Sacks speaks from Washington vantage and the waiver-lobbying claim is rumor with no first-hand source; the Opus 3 wake is hearsay Jason says 'should be looked into'.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="ban-ai-politics">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">SANDERS BAN BILL; TRUMP AT THE UN</span><span class="ttag">policy</span><span class="ttag">geopolitics</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Banning 'super intelligence' would hit the economy first — and hand China the lead</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The panel calls a Sanders-style ban unenforceable, a depression risk and partly a political play.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Sacks: Sanders's bill defines super intelligence so loosely that today's models may already qualify and adds 20-year prison terms for developers — 'everything would stop.' Democrats want to 'do to AI what they did to crypto' and drive innovators offshore; Jason and Chamath say they'd move to Singapore or Zurich.</li><li><span class="dot" style="background:#93711b;"></span>Jason: Republicans are murmuring about banning data centers; Trump at the UN rejected a 'globalist scheme' and renamed AI 'super intelligence'; Bessent: labs 'can slow down anytime'; Obama said curing cancer doesn't need agentic AI, which Friedberg calls losing the plot.</li><li><span class="dot" style="background:#93711b;"></span>Chamath's thesis: ~<b>$10T</b> of wealth accrues to 3-6 left-leaning frontier companies and flows into DAFs, PACs and political movements; a freeze locks it in, broad diffusion hurts Democrats. Friedberg disagrees that value accrues to six — he sees a broad-based technology like the internet.</li><li><span class="dot" style="background:#93711b;"></span>Sacks: the WSJ's 'AI buildout is becoming the biggest economic bet in US history' shows data-center capex bigger than canals, railroads and the grid combined; stopping would cause a depression, and Democrats 'don't care' because it's the Trump economy.</li><li><span class="dot" style="background:#93711b;"></span>Sacks's history analogy: a Chinese emperor banned shipbuilding and Europe took the lead; banning AI is the same. Friedberg: pioneering vs fearful civilizations. Jason relays that Xi said at the White House he'd invite 100,000 young Americans to China.</li><li><span class="dot" style="background:#93711b;"></span>Chamath's macro read: <b>3.5%</b> inflation and 5% nominal GDP leaves ~1.5% real, and AI is probably most or all of it, so the investment cycle must continue; Jason adds midterm odds look poor and the country is angry about the Iran war.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;The other side has literally discovered fire. And the world now has fire and we're going to go take water and throw it on the fire.&#8221;<cite>— David Friedberg</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Chamath's 'Democrats want to lock in six companies' is his theory of motive, and Friedberg disputes the concentration premise; the Xi invitation is relayed by Jason.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="muse-agents">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Positive view</span>
+    <span class="theme-status">MUSE #1 IN APP STORE, ~3M DOWNLOADS IN 10 DAYS</span><span class="ttag">consumer</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Meta's Muse and Grok's bot put a free executive assistant in normal people's hands</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The panel sees consumer agents as the first AI product normal people get value from — and a threat to Amazon-style opacity and the App Store's 30% take.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Muse hit #1 on the App Store last Friday; META rose <b>10%</b> on the release; ~3M downloads in about 10 days; free, with Meta saying its design is heavily inspired by OpenClaw. Jason: Google 'has to get in the game' and rumor says a product and frontier model are coming.</li><li><span class="dot" style="background:#3f6b2e;"></span>Chamath (Muse via TestFlight a couple of weeks early): it triages his personal inbox 'relatively flawlessly' and books flights and hotels. Friedberg would only connect his Gmail to a Google service.</li><li><span class="dot" style="background:#3f6b2e;"></span>Jason's tests: a commerce bot found a first-time-buyer discount (<b>$85</b>, ~25%) on a $400 Anker hub on the maker's site instead of Amazon; Grok's bot picked 20 graphic novels, asked which house and card, and checked out.</li><li><span class="dot" style="background:#3f6b2e;"></span>Amazon blocked these bots this week (Perplexity first, now Muse and others); Jason calls it a strategic mistake since the bot made him spend more, and notes Shopify added API access to its stores.</li><li><span class="dot" style="background:#3f6b2e;"></span>Chamath: big companies will block agents because price discovery hurts 'leakage and breakage'; agents force services to go headless, which puts the App Store's <b>30%</b> on notice (games, Wordle and chess served on demand, Stripe payments) and ends 'roach motel' subscriptions like the WSJ and NYT.</li><li><span class="dot" style="background:#3f6b2e;"></span>Sacks: Muse and Grok fix OpenClaw's usability and security; a billion users saving an hour or two a day would improve AI's image; he predicts an NGO blog flurry branding agents 'murder bots' just before Anthropic and OpenAI launch rivals. Chamath recalls Facebook's 2007 social ads (engagement ring, Brokeback Mountain tickets) as the privacy backlash that trails new launches.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Things like Grokbot and Muse really put the App Store and its 30% revshare on notice.&#8221;<cite>— Chamath Palihapitiya</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Muse: #1 in App Store, ~3M downloads, stock +10%.</span></div><div class="namechip"><b>xAI<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Grok bot cited alongside Muse as the consumer-agent breakout.</span></div><div class="namechip"><b>Amazon (AMZN)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Low</span></b><span>Blocking third-party shopping agents; Jason calls it a strategic mistake.</span></div><div class="namechip"><b>Shopify (SHOP)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Added API access for agents to all Shopify stores.</span></div><div class="namechip"><b>Google (GOOGL)<span class="stance" style="background:#93711b;">WATCHING · Low</span></b><span>Rumored to have a rival agent and a frontier model ready.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Chamath got Muse via TestFlight before launch and says he's 'in a good place' with Zuckerberg and speaks with Alexandr Wang; Jason built his commerce bots on both Muse and Grok.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🧮</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Discount frontier-lab revenue by the share of tokens that are fungible: above 60-<b>70%</b> means a haircut, ~10% means fine.</span></div></div><div class="irow"><div class="ic">🛠</div><div class="tline"><span class="cat">AI workflows:</span> <span class="txt">Test open-weight models and harnesses on your own workloads and route the fungible work off premium tokens.</span></div></div><div class="irow"><div class="ic">📈</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Expect a later, lower Anthropic IPO and hold any price view until the S-1 shows open-source and governance risk factors.</span></div></div><div class="irow"><div class="ic">📱</div><div class="tline"><span class="cat">Consumer:</span> <span class="txt">Track Muse and Grok bot adoption as the read on whether agents break the App Store's <b>30%</b> take.</span></div></div><div class="irow"><div class="ic">🏛</div><div class="tline"><span class="cat">Policy:</span> <span class="txt">Watch liability-waiver and Sanders-ban headlines as the regulatory shock risk to AI capex.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;I think they need a psychiatrist, not a banker.&#8221; <cite>— David Sacks</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The Democrats want to do to AI what they did to crypto. They're going to basically drive all the innovators out of the country.&#8221; <cite>— David Sacks</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;99% of the value of AI is about enabling new stuff that's never been possible in human history.&#8221; <cite>— David Friedberg</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;It's probably going to clear at a much lower price than anybody thinks.&#8221; <cite>— Chamath Palihapitiya</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;We have to stop calling these companies labs.&#8221; <cite>— Chamath Palihapitiya</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;If we were to do the Bernie Sanders thing, which is basically ban AI, it's like banning ship building.&#8221; <cite>— David Sacks</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Chamath Palihapitiya:</b> Anthropic's IPO would have been a $2T market cap but will now clear at $1T or less. <span class="cmeta">Anthropic IPO valuation · $1T or less</span> <i>if on his rough numbers</i> <span class="tag">Anthropic</span></div><div class="ritem"><b>Wall Street Journal (via Jason):</b> Anthropic's IPO happens in November or is delayed further. <span class="cmeta">IPO timing · November or later · 2026-11</span> <span class="tag">Anthropic</span></div><div class="ritem"><b>Sam Altman (via Jason):</b> OpenAI plans to IPO in 2027. <span class="cmeta">IPO timing · 2027 · 2027</span> <span class="tag">OpenAI</span></div><div class="ritem"><b>Polymarket (via Jason):</b> Market-implied odds that Anthropic goes public in 2026 are 76%, down from 96%. <span class="cmeta">Anthropic 2026 IPO odds · 76% · 2026</span> <span class="tag">Anthropic</span></div><div class="ritem"><b>Jason Calacanis:</b> Anthropic is targeting a ~$2T IPO valuation and OpenAI $1.2T. <span class="cmeta">IPO target valuation · $2T vs $1.2T</span> <span class="tag">Anthropic</span></div><div class="ritem"><b>David Sacks:</b> About 60% of worldwide compute added over the next year goes to OpenAI and Anthropic. <span class="cmeta">share of new compute · ~60% · next year</span></div><div class="ritem"><b>David Sacks:</b> The frontier is only 6-12 months ahead of commodity models; a 6-month slip would put a lab in deep trouble. <span class="cmeta">frontier lead over commodity · 6-12 months</span> <i>if if a lab falls off the frontier for 6 months</i></div><div class="ritem"><b>Jason Calacanis:</b> Consumers begin mass use of Muse and Grok's bot at the end of this year. <span class="cmeta">consumer agent adoption · mass use · end of 2026</span> <span class="tag">Meta (META)</span></div><div class="ritem"><b>David Sacks:</b> If a billion people use personal AI agents, they save an hour or two a day. <span class="cmeta">time saved per user · 1-2 hours/day</span> <i>if if a billion people adopt agents</i></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Anthropic</b> <span class="rel">competes with</span> <b>OpenAI</b> &mdash; price cuts and model launches days apart</div><div class="ritem"><b>xAI</b> <span class="rel">competes with</span> <b>Meta (META)</b> &mdash; Grok bot vs Muse</div><div class="ritem"><b>Jane Street</b> <span class="rel">customer of</span> <b>CoreWeave (CRWV)</b> &mdash; $6B of cloud commitments</div><div class="ritem"><b>Jane Street</b> <span class="rel">invests in</span> <b>CoreWeave (CRWV)</b></div><div class="ritem"><b>Jane Street</b> <span class="rel">customer of</span> <b>Crusoe</b> &mdash; $13B of capacity</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🛡</div><div><div class="title"><b>Palo Alto Networks</b> (Unit 42) and <b>CrowdStrike</b> (Falcon) each released continuous cyber-defense products this past week; Jason asks why the frontier labs never built one, and Chamath says up-stack moves like cyber are likely next for them. <span class="tag">Cyber</span></div></div></div><div class="irow"><div class="ic">🏭</div><div><div class="title"><b>Oracle</b> declared force majeure on one data center where local officials are slow-walking permits, reportedly for natural gas; Sacks reads it as marginal, Chamath as a reminder the economy is levered to the AI trade. <span class="tag">Infrastructure</span></div></div></div><div class="irow"><div class="ic">🧬</div><div><div class="title">Anthropic announced a new enzyme discovery this week (a CRISPR-type enzyme found by scanning DNA data with Claude agents), per Friedberg, who says it may yield several therapeutic pathways. <span class="tag">Biotech</span></div></div></div><div class="irow"><div class="ic">🎤</div><div><div class="title">All-In Summit recap: Trump's call-in during Jensen Huang's talk was unplanned (he was texting Jensen backstage and was put on speakerphone); Sacks says Satya's and Jensen's calm tone and the call helped cool the 'national panic over AI'; Friedberg produced the event; applications for the 2027 summit are open. <span class="tag">Culture</span></div></div></div><div class="irow"><div class="ic">💬</div><div><div class="title">Jason cited leaked group-chat texts between Norway's head of government and Canada's prime minister as evidence of a 'globalist' governance push. <span class="tag">Politics</span></div></div></div><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: Vercel chart (token share), Wall Street Journal (Anthropic IPO timing; 'AI buildout is becoming the biggest economic bet in US history'), The Information (super-voting shares), Polymarket (IPO odds), Mustafa Suleyman's podcast (alignment concern), Anthropic's Claude constitution and enzyme preprint, and Chamath's tweeted table of Anthropic token revenue concentration. <span class="tag">Sources</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Open weights</b> &mdash; Models whose trained parameters are published so anyone can download and run them.</div><div><b>Harness</b> &mdash; The tooling wrapped around a model (tools, memory, loops) that turns it into an agent.</div><div><b>Token maxing</b> &mdash; Consuming as many tokens as possible with no link between token spend and revenue.</div><div><b>Super-voting shares</b> &mdash; Shares that separate voting control from economic ownership, letting founders keep control with a small stake.</div><div><b>VLA</b> &mdash; Vision-language-action model that takes instructions and controls a robot.</div><div><b>BSL-1 / BSL-2</b> &mdash; Biosafety levels for low-risk lab work; the levels Friedberg says Anthropic's wet lab operates at.</div><div><b>Headless</b> &mdash; A service used by agents through APIs and transactions rather than through a human-facing interface.</div><div><b>Section 230</b> &mdash; The US law shielding internet platforms from liability for user content, cited as the model for a lab liability shield.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
