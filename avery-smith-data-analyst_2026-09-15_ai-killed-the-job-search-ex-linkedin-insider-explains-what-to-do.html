@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research: AI Killed The Job Search: Ex-LinkedIn Insider Explains What To Do</title>
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>AI Killed The Job Search: Ex-LinkedIn Insider Explains What To Do</h1>
+    <div class="byline">
+      Channel: <b>Avery Smith | Data Analyst</b> &middot; Speaker: <b>Jeremy Schifeling (ex-LinkedIn executive, early OpenAI partner) interviewed by Avery Smith</b> &middot; <b>2026-09-15</b>
+      <div class="stats-line">6 threads · the AI mass-apply arms race that's failing everyone, why a referral is now worth ~20x a cold application, how to actually earn one, the two types of referral that matter, where AI genuinely helps vs. hurts a job search, and why fewer/better applications beat more &middot; <a href="https://www.youtube.com/watch?v=yBpi_wzxrDk" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Both job seekers and recruiters have weaponized AI, producing a mutual arms race — Jeremy Schifeling says the result is that purely mechanical, AI-driven mass-applying now converts at roughly <b>0%</b>, not 0.01%.</li><li>AI's real-world reliability gap matters: he cites that AI solves about <b>66%</b> of a given task well, leaving a third needing manual correction — and that programmers who felt they were saving 20-30 hours/week with AI were actually measured as 20-30 hours/week <i>slower</i> than expected.</li><li>A referral was worth <b>10x</b> a cold application in 2016; Jeremy now estimates it's worth roughly <b>20x</b> in 2026, because online applicant volume has exploded since.</li><li>Employers benefit too — referred hires are more likely to accept the offer, stay longer, and perform better — which is why some companies (Google, per Jeremy) pay bonuses up to <b>$25,000</b> for a strong referral, and some firms now only accept referred candidates.</li><li>The practical playbook: find shared affinity (alma mater, volunteer group, church, employer), get a warm introduction, then ask for <i>advice</i> rather than pitching yourself — a 'golden question' script does double duty as relationship-building and referral-generation.</li><li>AI is genuinely useful for two narrow jobs — checking your target role/fit and diagnosing resume/JD keyword gaps — but crosses a line the moment it invents accomplishments you didn't actually do.</li><li>Core recommendation: shrink your applicant list and raise your per-application acceptance rate (aim for 1-<b>10%</b>) instead of maximizing volume — quality over quantity, like a diversified portfolio instead of one big bet.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="ai-arms-race">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">Structural critique</span>
+    <span class="theme-status">ONGOING — both sides now using AI</span><span class="ttag">career</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">The AI arms race between job seekers and recruiters is a lose-lose</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Job seekers and recruiters have both armed themselves with AI, and the result is more noise, more fake data, and a mass-apply success rate of effectively zero.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span>Job seekers now use resume/cover-letter chatbots (GPT, Claude) to mass-apply; recruiters have countered with AI-driven application screening — both sides are trying to out-scale the other, and Jeremy says "I don't think anyone is winning."</li><li><span class="dot" style="background:#a23f22;"></span>Recruiters report the job has gotten worse, not better, because the volume of applications to process has exploded and a large share of it is AI-generated fake or low-signal data.</li><li><span class="dot" style="background:#a23f22;"></span>The reliability gap is real: AI solves roughly <b>66%</b> of a given task well but leaves a third needing manual correction — and in a cited early-AI-coding study, programmers who reported "saving 20-30 hours a week" were actually measured making progress 20-30 hours/week <i>slower</i> than expected.</li><li><span class="dot" style="background:#a23f22;"></span>Purely mechanical, randomized mass-applying ("apply to 1,000 jobs, don't stop until done") converts at effectively <b>0%</b>, not the 0.01% people assume — throwing more darts doesn't help when the dartboard is thousands of feet away.</li><li><span class="dot" style="background:#a23f22;"></span>Why people keep doing it anyway: mass-applying (or asking an AI agent to do it) delivers an immediate dopamine hit — "I did something today" — while real networking (sending messages that may get no reply) doesn't feel good even though it works better.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;Applying for jobs randomly in a completely mechanical way results in a success rate of not 0.01%, but 0%.&#8221;<cite>— Jeremy Schifeling</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="referral-multiplier">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Confirmed data point</span>
+    <span class="theme-status">UPDATED ESTIMATE — 2016 vs. 2026</span><span class="ttag">career</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">A referral is worth roughly 20x a cold application today, up from 10x in 2016</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The hiring-probability gap between a referred candidate and an online applicant has roughly doubled over the past decade as applicant volume exploded.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>In 2016, a referred candidate was about <b>10x</b> more likely to be hired than an online applicant for the same role (Jeremy's figure, discussed relative to Adobe as an example).</li><li><span class="dot" style="background:#3f6b2e;"></span>By 2026, Jeremy estimates that advantage has grown to roughly <b>20x</b>, because AI-assisted mass-applying has pushed online applicant volume far higher than in 2016.</li><li><span class="dot" style="background:#3f6b2e;"></span>Employers have a rational reason to favor referrals: referred hires are more likely to accept the offer, more likely to stay long-term, and tend to perform better because they were vetted by someone inside.</li><li><span class="dot" style="background:#3f6b2e;"></span>Some companies pay real money for this — the highest referral bonus Jeremy saw at Google was <b>$25,000</b>; more typical bonuses run <b>$500-$1,000</b>, and Avery cites a <b>$5,000</b> referral bonus example from his own network.</li><li><span class="dot" style="background:#3f6b2e;"></span>The value is strong enough that some hiring managers now refuse open applications entirely — one company told Avery, when he offered to post a role publicly, "No, that's fine. We are only looking for recommended candidates."</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="building-trust">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">ACTIONABLE</span><span class="ttag">career</span><span class="ttag">mindset</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">How to actually earn a referral: shared affinity, not cold outreach</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Trust is the real currency once resumes, cover letters, and LinkedIn profiles are all AI-polished and indistinguishable — and trust is built through concrete shared context, not credentials.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>AI has made every resume, cover letter, and LinkedIn profile look equally polished, which destroys their differentiating power — a warm relationship with an insider is now the stronger signal.</li><li><span class="dot" style="background:#3f6b2e;"></span>Concrete affinity groups that work: shared alma mater, shared employer alumni, volunteer organizations (searching "Google employees volunteering at Habitat for Humanity" on LinkedIn surfaces 1,000+ current Google employees), and even shared religious community — Jeremy says he replies faster to messages from his own alma mater or church.</li><li><span class="dot" style="background:#3f6b2e;"></span>The psychology behind why this works is a form of generativity — an instinct (possibly evolutionary) to want to help the next generation succeed; Jeremy frames it as "giving is just as important as receiving," and says he's more willing to help someone who frames a message as seeking his mentorship, not asking for a favor.</li><li><span class="dot" style="background:#3f6b2e;"></span>Even without shared credentials, persistence in adding value works: Jeremy hired someone based in Africa who had commented on his LinkedIn posts every day for six months before he reached out to ask who they were — though he notes that person had to repeat outreach roughly <b>89</b> times without payoff before it worked.</li><li><span class="dot" style="background:#3f6b2e;"></span>You don't need a privileged background for this to work — Avery's own example: he skipped a midterm to attend a STEM job fair and got hired, while a higher-performing classmate who studied instead did not; the intermediate goal (grades, perfect resume) isn't the actual goal (getting noticed by a person).</li><li><span class="dot" style="background:#3f6b2e;"></span>Self-doubt is the main blocker Jeremy sees in the students he works with — people assume they "don't deserve" a referral or that someone else is more qualified, when in reality most organizations badly need the value a motivated new hire can add.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;I am giving a gift to others... don't forget that giving is just as important as receiving.&#8221;<cite>— Jeremy Schifeling</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="two-types-of-referrals">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">ACTIONABLE</span><span class="ttag">career</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">There are two kinds of referrals — and the checkbox kind is the weak one</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">A referral logged into the Applicant Tracking System is a small checkbox; a referral that comes from a recruiter or hiring manager who knows you personally is what actually moves the needle.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>The basic/mechanical referral is someone entering your name into the company's ATS — recruiters and hiring managers can see it, but Jeremy calls it "just a small checkbox."</li><li><span class="dot" style="background:#3f6b2e;"></span>The stronger method is contacting the recruiter or hiring manager directly and explaining your specific strengths — this works because recruiters are the one person in the org whose own career success is tied to finding genuinely good talent, unlike a hiring manager juggling dozens of open roles.</li><li><span class="dot" style="background:#3f6b2e;"></span>Never cold-DM or cold-email a stranger — Jeremy says most people aren't active on LinkedIn and a cold message can sit unread indefinitely. Find a common connection for a warm introduction instead.</li><li><span class="dot" style="background:#3f6b2e;"></span>Once introduced, don't lead with an elevator pitch about yourself — ask about <i>their</i> journey instead ("How did you get from X to Y? What surprised you along the way?"). Jeremy's 'golden question' script: ask what they'd do differently if they were job-hunting today, and why — people who share advice often volunteer a referral unprompted.</li><li><span class="dot" style="background:#3f6b2e;"></span>Avery demonstrated a related tool built for this exact problem: his site findajob.com / Premium Data Jobs lists recruiters currently hiring (with name, title, company, LinkedIn profile) and flags job postings by how few public comments they have, so a thoughtful direct message stands out against the crowd.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;If you ask for a recommendation, you get advice, and if you receive advice, you get recommendations.&#8221;<cite>— a headhunter, quoted by Jeremy Schifeling</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="where-ai-helps-and-hurts">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Mixed verdict</span>
+    <span class="theme-status">CONTESTED — useful for two jobs, risky beyond them</span><span class="ttag">career</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Where AI genuinely helps a job search — and exactly where it crosses the line</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">AI is a legitimately good fit-checker and gap-analyzer, but the moment it starts inventing your accomplishments, it becomes a liability you'll have to answer for in the interview.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Good use #1 — career-fit check: feed AI your strengths and passions and ask it to recommend roles, similar to the Japanese concept of <i>ikigai</i>; because AI has training data on nearly every job that's ever existed, it might surface a better fit (e.g. a healthcare BI role) than the obvious path (e.g. data scientist).</li><li><span class="dot" style="background:#93711b;"></span>Good use #2 — gap analysis: paste a job description and your resume into ChatGPT/Claude/Perplexity and ask what important keywords are missing — this is exactly what an ATS is doing anyway, so it's a legitimate way to reverse-engineer it.</li><li><span class="dot" style="background:#93711b;"></span>The line gets crossed when someone says "acknowledge all the skills in my experience section and apply right away" — that produces a fabricated accomplishment story that falls apart the moment a future boss asks about it in person.</li><li><span class="dot" style="background:#93711b;"></span>On AI tutoring: tools with a Socratic/learning mode (present in Gemini, GPT, and likely Claude) can guide rather than hand over answers, but Jeremy compares using it well to Odysseus tying himself to the mast — you have to deliberately resist the pull toward instant answers to get real learning value.</li><li><span class="dot" style="background:#93711b;"></span>His mental model for over-trusting fluent AI output: AI is like a sophisticated British accent — precise, assertive, sounds 20 IQ points smarter — while still making intern-level mistakes underneath.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I think AI is similar to a British accent... despite that sophisticated accent, he makes mistakes at an intern level.&#8221;<cite>— Jeremy Schifeling</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="focus-over-volume">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">ACTIONABLE</span><span class="ttag">career</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Buy fewer, better lottery tickets: shrink your list, raise your acceptance rate</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jeremy's closing first principle is to deliberately cut the number of companies you apply to and invest that saved time into raising your odds at each one.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>His core advice: reduce the number of companies you target, and push your personal acceptance rate up toward 1-<b>10%</b> rather than accepting a 0.01% (or effectively 0%) mass-apply rate — quality over quantity is "a basic mathematical principle," not just a platitude.</li><li><span class="dot" style="background:#3f6b2e;"></span>He frames it like portfolio diversification: don't put every egg in one basket (obsessing over a single dream company), but also don't scatter effort across a thousand low-probability bets.</li><li><span class="dot" style="background:#3f6b2e;"></span>For skeptics of the 20x referral-multiplier claim, his suggested compromise is a middle path — cut mass applications from 100 to 80, and add just a couple of genuine relationship-building messages, rather than an all-or-nothing switch.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🎯</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Cut your target-company list and aim to raise your per-application acceptance rate toward 1-<b>10%</b>, instead of maximizing how many applications you send.</span></div></div><div class="irow"><div class="ic">🤝</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Find one real point of shared affinity (alma mater, employer alumni, volunteer group) before you message anyone about a job.</span></div></div><div class="irow"><div class="ic">💬</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Lead with a question about their journey, not an elevator pitch about yourself, when you get a warm introduction.</span></div></div><div class="irow"><div class="ic">🤖</div><div class="tline"><span class="cat">AI ethics:</span> <span class="txt">Use AI to check your target role and diagnose resume/JD keyword gaps — never to write accomplishments you didn't actually have.</span></div></div><div class="irow"><div class="ic">📧</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Contact the recruiter or hiring manager directly instead of relying on the ATS checkbox referral — that's the version that actually moves your odds.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;Applying for jobs randomly in a completely mechanical way results in a success rate of not 0.01%, but 0%.&#8221; <cite>— Jeremy Schifeling</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't think anyone is winning [the AI arms race between recruiters and job seekers].&#8221; <cite>— Jeremy Schifeling</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Think about what a recruiter's job entails. Their job is not to find the world's best talent, but to hire the right people as quickly as possible.&#8221; <cite>— Jeremy Schifeling</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think AI is similar to a British accent... despite that sophisticated accent, he makes mistakes at an intern level.&#8221; <cite>— Jeremy Schifeling</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;A referral increases your chances of getting a job by 20 times.&#8221; <cite>— Jeremy Schifeling</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The highest referral bonus when I worked at Google was $25,000.&#8221; <cite>— Jeremy Schifeling</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Jeremy Schifeling:</b> A referred candidate was about 10x more likely to be hired than an online applicant in 2016 <span class="cmeta">referral hiring-probability multiplier · 10x · 2016</span></div><div class="ritem"><b>Jeremy Schifeling:</b> A referred candidate is now roughly 20x more likely to be hired than an online applicant <span class="cmeta">referral hiring-probability multiplier · 20x · 2026</span></div><div class="ritem"><b>Jeremy Schifeling:</b> The highest employee-referral bonus he saw while at Google was $25,000 <span class="cmeta">referral bonus · $25,000</span></div><div class="ritem"><b>Jeremy Schifeling:</b> AI solves about two-thirds of a given task well, leaving the remainder needing manual correction <span class="cmeta">AI task-completion rate · 66%</span></div><div class="ritem"><b>Jeremy Schifeling:</b> Programmers who reported saving 20-30 hours/week using AI were measured making progress 20-30 hours/week slower than expected <span class="cmeta">measured vs. perceived AI productivity gain · 20-30 hours/week slower than perceived</span></div><div class="ritem"><b>Jeremy Schifeling:</b> Mechanical, randomized mass-applying to jobs converts at effectively 0% <span class="cmeta">application conversion rate · 0%</span></div><div class="ritem"><b>Jeremy Schifeling:</b> LinkedIn now hosts 1.3 billion profiles <span class="cmeta">platform profile count · 1.3 billion</span> <span class="tag">LinkedIn</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><p class="empty">No company-to-company relationships stated in this video.</p></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🗂️</div><div><div class="title">Avery demoed his own platform, findajob.com (Premium Data Jobs), which lists recruiters actively hiring (55 listed at time of recording, with name/title/company/LinkedIn) and 121 premium job postings, ranked partly by which have the fewest public comments so a direct message stands out. <span class="tag">Tool</span></div></div></div><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced this episode: Jeremy Schifeling's own books and podcast on the data job market; an unnamed headhunter's line about advice-and-referrals being reciprocal; a psychology concept (locus of control) and a second concept describing the instinct to help the next generation succeed, both cited without a specific named source. <span class="tag">Sources</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>ATS (Applicant Tracking System)</b> &mdash; The database companies use to log and screen applicants — a 'referral' logged only in the ATS is the weak, checkbox version Jeremy contrasts with a direct human referral.</div><div><b>Locus of control</b> &mdash; A psychology concept for whether someone attributes outcomes to forces outside themselves (external) or to their own actions (internal) — Jeremy frames focusing on the one small action you can control today as the antidote to feeling powerless in a bad job market.</div><div><b>Generativity</b> &mdash; A concept (Erikson) describing the human drive, especially later in a career, to help the next generation succeed and leave a legacy — Jeremy cites it as the psychological reason senior people are often glad to help a stranger who reaches out respectfully.</div><div><b>Ikigai</b> &mdash; A Japanese concept for the intersection of what you're good at, what you love, and what the world needs — used here as a model for using AI to sanity-check whether your target job is actually the right fit before you invest in applying.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
