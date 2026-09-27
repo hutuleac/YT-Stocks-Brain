@@ -236,6 +236,8 @@ i{font-style:italic;}
 .gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
 .gloss b{font-family:var(--serif);color:#171916;}
 .empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
 """
 
 INDEX_CSS = CSS + """
@@ -299,6 +301,20 @@ ul.mentions .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-r
 .hit-meta a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--line);}
 .hit-meta a:hover{border-bottom-color:var(--brand);}
 .hit-more{color:var(--muted);font-style:italic;padding:14px 0 4px;font-size:13px;}
+@media (max-width:640px){
+  #q{font-size:16px;}
+  .tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-right:calc(-1*clamp(18px,4vw,56px));padding-right:18px;}
+  .tabs::-webkit-scrollbar{display:none;}
+  .tab{flex:none;padding:11px 16px;}
+  table.idx,table.idx tbody{display:block;}
+  table.idx thead{display:none;}
+  table.idx tr{display:block;padding:12px 0;border-bottom:1px solid var(--line);}
+  table.idx td{display:inline;padding:0;border:none;white-space:normal;}
+  table.idx .idx-date{margin-right:10px;}
+  table.idx .idx-title{display:block;margin:4px 0 2px;font-size:15.5px;line-height:1.45;}
+  table.idx .idx-thread{display:block;}
+  table.idx tr:hover td{background:none;}
+}
 """
 
 
@@ -504,6 +520,8 @@ def build_html(data):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <title>Research: {esc(META['title'])}</title>
 <style>{CSS}</style>
 </head>
@@ -996,6 +1014,8 @@ def build_index():
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <title>YouTube Research Briefs — Index</title>
 <style>{INDEX_CSS}</style>
 </head>
