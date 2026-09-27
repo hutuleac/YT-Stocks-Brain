@@ -1,0 +1,183 @@
+"""Salim Ismail — "Why AI-Native Companies Are 100X Better - And Yours Isn't One" (ElephantScale, 2026-08-24)"""
+
+META = {
+    "title": "Why AI-Native Companies Are 100X Better - And Yours Isn't One",
+    "channel": "ElephantScale",
+    "speakers": "Salim Ismail (interviewed)",
+    "date": "2026-08-24",
+    "video_url": "https://www.youtube.com/watch?v=YP_3_E5f3SQ",
+    "thread_line": "5 threads · a dozen technologies doubling at once, the Kimi K3/AGI inflection, why Coase's "
+                    "Law of the firm just died, beating the corporate immune system, and career advice "
+                    "for the AI-native era",
+    "category": "dev",
+}
+
+SNAPSHOT = [
+    "Salim Ismail argues this is humanity's most important decade because roughly a dozen "
+    "technologies are doubling in price-performance simultaneously for the first time in history, "
+    "while advanced-tech costs have collapsed toward zero.",
+    "China's Kimi K3 (Moonshot AI, 2.8 trillion parameters, open-weights) is 'one of the biggest "
+    "inflection points' he's seen — anyone can now fine-tune a frontier-grade model cheaply; token "
+    "costs fell 280x last year.",
+    "AGI definitions vary wildly among the experts he talks to (Anthropic's chief security officer: "
+    "2-3 years out; others say it happened years ago) — he argues the term itself is broken and "
+    "prefers 'complementary intelligence' to 'replacement.'",
+    "His central thesis: Ronald Coase's 1937 logic (companies exist because coordination is cheaper "
+    "inside than outside) has flipped — execution is now often cheaper outside a legacy org, which "
+    "is why bolted-on AI projects fail.",
+    "AI-native workflow redesigns are showing roughly 100x throughput gains, and recursive "
+    "self-improvement (Claude writing 88-100% of its own next version) is compounding the trend.",
+    "His Open EXO framework targets the 'corporate immune system' that kills disruptive ideas — a "
+    "7-year study found the most exponential-org-aligned Fortune 100 firms delivered 40x the "
+    "shareholder returns of the least-aligned ones.",
+    "Career advice for CS students: get hands-on with AI now, pick a problem you actually care "
+    "about, and join or start an AI-native venture — he isn't worried about a broad AI-driven "
+    "employment collapse.",
+]
+
+THEMES = [
+    {
+        "id": "dozen-doubling-technologies",
+        "tags": ["ai-infra", "dev-workflow"],
+        "color": "green",
+        "badge": "Framework",
+        "status": "ONGOING TREND",
+        "title": "A dozen technologies are doubling at once, and costs have collapsed to near zero",
+        "lead": "For the first time in human history, roughly a dozen technologies are compounding on doubling curves simultaneously, and advanced R&D no longer requires a government or corporate lab.",
+        "bullets": [
+            "Concrete doubling rates he cites: **drones** double in price-performance every 9 months, **solar energy** every 22 months (a 40-year streak), and brain-imaging resolution in neuroscience doubles every year.",
+            "Cost collapse is the more important half of the story: spending $20/month or $1M/month on AI gets you roughly the same outcome today, and blockchains are open-source and free — disruptive R&D at near-zero cost was never possible before.",
+            "He frames this via Diamandis and Kotler's **6 Ds** (from their book *Abundance*): technology gets digitized, goes disruptive/exponential, looks deceptive (humans can't intuit exponential growth), gets demonetized, then democratized and propagates globally.",
+            "The exponential-blindness example: folding a 0.1mm sheet of paper 42 times reaches the moon — at the 38th fold you'd circle the Earth, at the 50th fold you'd reach the sun — and almost nobody guesses correctly.",
+            "Evidence the barrier-to-entry has collapsed: an 18-year-old Vitalik Buterin and a few friends built Ethereum (a $400B+ ecosystem), and the Vega — the third-fastest car ever built (900 horsepower) — was engineered in Sri Lanka with no automotive ecosystem or funding base.",
+        ],
+        "quote": None,
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "kimi-k3-agi-debate",
+        "tags": ["ai-infra", "policy"],
+        "color": "amber",
+        "badge": "Contested definitions",
+        "status": "ONGOING — Kimi K3 released ~2 weeks before this interview",
+        "title": "Open-weight frontier models (Kimi K3) and a genuinely unsettled AGI timeline",
+        "lead": "He calls Kimi K3 one of the biggest inflection points in AI history because open weights let anyone fine-tune a frontier model cheaply, but he thinks the AGI debate itself is built on a broken definition.",
+        "bullets": [
+            "Moonshot AI's **Kimi K3** (2.8 trillion parameters, open-weights) lets anyone grab the model and train smaller, specialized models from it — cost is now just compute, and token costs fell **280x** last year with a similar drop on track for this year.",
+            "He frames cyber risk as a permanent arms race (the email-spam-filter precedent), but flags a specific warning from Zscaler CEO Jay Chaudhry and Palo Alto Networks' CEO: enterprise cyber defense processes haven't fundamentally changed in 20 years, which is the real vulnerability as AI-enabled attacks scale.",
+            "On AGI timing: Anthropic's chief security officer told him he expects AGI in **2-3 years** and doesn't think it's here yet — while others in the field claim it was already achieved years ago. Salim's own view is the field has no agreed definition of intelligence, so the goalposts keep moving (like the Turing test) until it's quietly surpassed.",
+            "His preferred definition (borrowed from Reid Hoffman): AI's real value is intersecting expertise that never naturally overlaps in one human career (e.g., accounting + marine biology), producing *complementary* intelligence rather than a replacement for human cognition.",
+        ],
+        "quote": {"text": "AGI... it's not really artificial, it's not really general, it's not really intelligent. Other than that, it's fine.", "cite": "— Salim Ismail"},
+        "watch": "Estimates on both the AGI timeline and the severity of the cyber/quantum threat came from named third parties (Anthropic's chief security officer, Zscaler's and Palo Alto Networks' CEOs) relayed secondhand by Salim, not independently sourced here.",
+        "names": None,
+    },
+    {
+        "id": "coase-law-dead",
+        "tags": ["dev-workflow", "career"],
+        "color": "green",
+        "badge": "Structural critique",
+        "status": "THESIS — declared 'obsolete' as of his new book",
+        "title": "Coase's Law just died: it's now cheaper to build outside the firm than inside it",
+        "lead": "Ronald Coase's 1937 Nobel-winning explanation for why companies exist has flipped, and most enterprise AI projects fail because they're bolted onto organizations designed for the old logic.",
+        "bullets": [
+            "Coase's 1937 paper *The Nature of the Firm* argued companies exist because coordination/execution costs are cheaper inside a firm than contracting in the open market (the Ford Model T assembly line as the poster child) — this underpinned all organizational design since.",
+            "Salim and Peter Diamandis first noticed the reversal in 2014 (Uber matches driver/passenger outside the org boundary) and declared Coase's Law dead in their 2023 book edition; he now calls it fully obsolete.",
+            "A tweet he cites from Todd Saunders crystallizes it: \"today it's cheaper to build a product feature than to have the meeting about building the product feature.\"",
+            "He compares bolting AI onto legacy human-approval hierarchies to early TV shows that just filmed radio announcers reading scripts — you get acceleration of the human bottleneck, not real leverage of the medium.",
+            "Recursive self-improvement is already here at the model level: roughly **10%** of one Claude version was used to help write the next version 18 months ago, **50%** by the end of last year, and **88-100%** now (OpenAI has said the same about using large models to build smaller ones).",
+            "AI-native workflow redesign shows roughly **100x** throughput gains — an invoice-processing workflow doing 1,000/month legacy-style can hit ~100,000/month when the whole loop (sensing, analysis, decision, execution, learning) is redesigned AI-first instead of human-approval-first.",
+        ],
+        "quote": {"text": "Today it's cheaper to build a product feature than to have the meeting about building the product feature.", "cite": "— Todd Saunders, quoted by Salim Ismail"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "beating-the-immune-system",
+        "tags": ["dev-workflow", "career"],
+        "color": "green",
+        "badge": "Recommendation",
+        "status": "ACTIVE — Open EXO running a 10-CEO pilot from ~400 applicants",
+        "title": "Every org over 50 people has an 'immune system' problem — build disruption at the edge, not the core",
+        "lead": "Legacy organizations are architected purely for efficiency and predictability, so disruptive ideas get killed unless they're built outside the org boundary first.",
+        "bullets": [
+            "His rule of thumb: any organization over 50 people has an immune-system problem, because every KPI in a big or mid-size company optimizes for efficiency and predictability — there's no KPI for agility, flexibility, or adaptability.",
+            "He saw this firsthand running Yahoo's innovation incubator and later ran a 10-week pilot with Procter & Gamble in 2015 specifically to solve the immune-system problem; Open EXO's playbook (*Exponential Transformation*) has since run the same 10-week sprint with about 100 companies, including Black & Decker, HP, Visa, and Siemens Energy.",
+            "A 7-year study by Open EXO community member Chander Nagpal tracked the Fortune 100 against their exponential-org model starting in 2015: the top 10 firms by adoption delivered **40x** the shareholder returns of the bottom 10 — not 40%, 40 times.",
+            "His prescribed pattern: never run disruptive innovation inside the legacy core — build it at the edge instead. Nestlé incubated Nespresso as a separate unit for 10 years starting 1976 before it became a top-margin business; Google split into Alphabet; Meta kept WhatsApp and Instagram growing on the edge after acquiring them rather than merging them in.",
+            "Open EXO is a free, open-sourced community of ~50,000 advisors across 150 countries; its current pilot picked 10 CEOs (from ~400 applicants) across very different industries — including a small retailer, an escrow finance company, and a chemicals company — to test edge-built AI workflows live.",
+        ],
+        "quote": None,
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "agent-stack-and-career-advice",
+        "tags": ["dev-workflow", "career"],
+        "color": "green",
+        "badge": "Recommendation",
+        "status": "ACTIONABLE",
+        "title": "The agent stack to build, and what CS students/founders should actually do next",
+        "lead": "Salim lays out a concrete 6-7 layer agent architecture and gives direct advice to founders and computer-science students on how to get ahead of the shift rather than fear it.",
+        "bullets": [
+            "His agent stack: a **purpose layer** (machine-readable version of the company's mission and ethical boundaries, not a poster on the wall), a **sensing layer** (monitors the outside world — e.g., a competitor announcing same-day delivery), an **analysis layer**, a **decision layer** (still human-judgment-in-the-loop), an **execution layer**, and a **learning loop** — wrapped in a governance layer with evaluation suites, human review queues, log traceability, and rollback recovery because agents 'go rogue' like junior employees.",
+            "For a founder going agent-first: register free at openexo.com, download the free Open EXO cloud skill (a Claude skill built for the *Organizational Singularity* book, updated weekly), and follow the layer-by-layer build guide.",
+            "For a third/fourth-year CS student: get hands-on with AI immediately (download a model, beg/borrow/steal compute), pick a problem you're genuinely passionate about, and either join an AI-native startup or start one — he thinks a CS degree becomes *more* valuable because it builds the judgment to guide and evaluate AI-written code, not less.",
+            "He illustrates the shift with his own book-writing experience: his first book (*Exponential Organizations*, ~1 million copies sold) took 3 years of what he calls hell to write; his third book, written with AI handling the cognitive/research workload, took 3 months and was 'pure joy' — he argues the same transformation now applies to any software build.",
+            "He frames this as a geographic opportunity too: US/Europe/Japan have to unlearn 50 years of Harvard-MBA-style organizational thinking, while emerging markets (Brazil, India, the Global South) can leapfrog straight to AI-native models without that unlearning cost.",
+        ],
+        "quote": {"text": "There's no MBA program that can teach you how to do this... MBA programs are still teaching 20th century capabilities.", "cite": "— Salim Ismail"},
+        "watch": None,
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F3D7️", "tag": "Dev workflow", "title": "Redesign a workflow end-to-end for AI (sensing through learning), rather than bolting AI onto an existing human-approval chain — that's the radio-vs-TV mistake."},
+    {"icon": "\U0001F6E1️", "tag": "AI ethics", "title": "Treat the AI-attack-vs-AI-defense gap as the real risk metric to track, not any single model release."},
+    {"icon": "\U0001F331", "tag": "Careers", "title": "Build disruptive AI experiments at the edge of your organization, never inside the legacy core, if you want them to survive."},
+    {"icon": "\U0001F393", "tag": "Careers", "title": "CS students: get hands-on with a model this week and pick one real problem to build against, instead of waiting to see how the job market shakes out."},
+    {"icon": "\U0001F4E6", "tag": "Dev workflow", "title": "Pull Open EXO's free playbook and cloud skill before assuming an agent-first rebuild needs outside consultants."},
+]
+
+HOT_TAKES = [
+    {"take": "This is AI native organizations are going to have the biggest impact in the world over the next few years... 10 times bigger than the internet, 10 times bigger than mobile, 10 times bigger than Y2K.", "cite": "— Salim Ismail", "why": "sweeping, checkable magnitude claim"},
+    {"take": "AGI... it's not really artificial, it's not really general, it's not really intelligent. Other than that, it's fine.", "cite": "— Salim Ismail", "why": "dismissive contrarian take on the industry's central term"},
+    {"take": "If your invoice processing system was doing a thousand invoices a month, an AI-native system is doing about a hundred thousand invoices a month.", "cite": "— Salim Ismail", "why": "specific, testable 100x productivity number"},
+    {"take": "There's no MBA program that can teach you how to do this... MBA programs are still teaching 20th century capabilities.", "cite": "— Salim Ismail", "why": "direct dismissal of an entire credential category"},
+    {"take": "The way we do cyber has not changed in 20 years.", "cite": "— Jay Chaudhry (Zscaler CEO), relayed by Salim Ismail", "why": "a named industry CEO's own on-the-hook warning about his sector"},
+    {"take": "Today it's cheaper to build a product feature than to have the meeting about building the product feature.", "cite": "— Todd Saunders, quoted by Salim Ismail", "why": "sharp, quotable claim Salim endorses as 'nailing it'"},
+]
+
+CLAIMS = [
+    {"who": "Salim Ismail", "claim": "Drone price-performance doubles roughly every 9 months", "metric": "doubling period", "target": "9 months", "by": None, "condition": None, "entity": None},
+    {"who": "Salim Ismail", "claim": "Solar energy price-performance has doubled roughly every 22 months for 40 straight years", "metric": "doubling period", "target": "22 months over 40 years", "by": None, "condition": None, "entity": None},
+    {"who": "Salim Ismail", "claim": "Brain-imaging resolution in neuroscience doubles roughly every year", "metric": "doubling period", "target": "1 year", "by": None, "condition": None, "entity": None},
+    {"who": "Salim Ismail", "claim": "Moonshot AI's Kimi K3 model has 2.8 trillion parameters and open weights", "metric": "parameter count", "target": "2.8 trillion", "by": None, "condition": None, "entity": "Moonshot AI (Kimi K3)"},
+    {"who": "Salim Ismail", "claim": "AI token costs fell roughly 280x last year, with a similar drop on track this year", "metric": "token cost decrease", "target": "280x", "by": None, "condition": None, "entity": None},
+    {"who": "Anthropic chief security officer", "claim": "Expects AGI to be reached, but not yet achieved", "metric": "AGI achievement", "target": "achieved", "by": "2-3 years from mid-2026", "condition": None, "entity": "Anthropic"},
+    {"who": "Salim Ismail", "claim": "Share of a new Claude model's code written by the prior model version has risen from ~10% to 88-100%", "metric": "recursive self-improvement share", "target": "88-100%", "by": "2026", "condition": None, "entity": "Anthropic"},
+    {"who": "Salim Ismail", "claim": "AI-native invoice processing can run at roughly 100x the throughput of a legacy workflow", "metric": "throughput multiple", "target": "100x (1,000/month to 100,000/month)", "by": None, "condition": None, "entity": None},
+    {"who": "Chander Nagpal (Open EXO community, via Salim Ismail)", "claim": "The Fortune 100 firms that scored highest on the exponential-organization model delivered 40x the shareholder returns of the lowest scorers over a 7-year tracking period starting 2015", "metric": "shareholder return multiple", "target": "40x", "by": "2015-2022", "condition": None, "entity": None},
+    {"who": "Salim Ismail", "claim": "Open EXO received roughly 400 applications for its 10-CEO pilot program", "metric": "applicant count", "target": "~400 for 10 slots", "by": None, "condition": None, "entity": None},
+]
+
+RELATIONS = [
+    {"from": "Meta", "rel": "acquires", "to": "WhatsApp", "note": "kept growing independently at the organizational edge rather than merged into the core, per Salim's edge-innovation model"},
+    {"from": "Meta", "rel": "acquires", "to": "Instagram", "note": "same edge-growth pattern cited as evidence for building disruption outside the legacy core"},
+    {"from": "Google", "rel": "acquires", "to": "Salim Ismail's matching-engine startup", "note": "acquired for Google+ contact-management needs, circa 2010"},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F4BC", "title": "Salim's own exit story: a publish/subscribe matching-engine startup he built solved database 'many-to-many' matching at 3 billion matches/second (vs. ~200 events/second for standard database design) — the technology was later repurposed to disambiguate news about people in your network, and the company was acquired by Google around 2010 for its Google+ contact-management needs.", "tag": "Founder story"},
+    {"icon": "\U0001F4DA", "title": "Sources referenced this episode: Ronald Coase's 1937 paper *The Nature of the Firm*; Peter Diamandis & Steven Kotler's *Abundance* (source of the 6 Ds) and their book *Exponential Organizations*; Salim's own books *Exponential Transformation* and *Organizational Singularity* (free at openexo.com); a Todd Saunders tweet; Reid Hoffman's definition of AGI; and direct conversations with Zscaler CEO Jay Chaudhry, Palo Alto Networks' CEO, and Anthropic's chief security officer.", "tag": "Sources"},
+]
+
+GLOSSARY = [
+    {"term": "6 Ds", "def": "Peter Diamandis and Steven Kotler's framework (from *Abundance*) for how a technology matures once digitized: it goes disruptive/exponential, looks deceptive because humans can't intuit exponential growth, gets demonetized, then democratized and propagates globally."},
+    {"term": "Coase's Law / The Nature of the Firm", "def": "Ronald Coase's 1937 (Nobel-winning) explanation that firms exist because coordinating and executing work is cheaper inside a company than contracting it in the open market — Salim argues AI has now flipped this."},
+    {"term": "Organizational singularity", "def": "Salim's term for the point at which redesigning an organization around AI-native, non-human-hierarchical workflows becomes unavoidable, because legacy execution costs now exceed open-market/AI-native costs."},
+    {"term": "Recursive self-improvement", "def": "A model or workflow reaching the point where its own output measurably accelerates building the next, better version of itself."},
+    {"term": "Immune system problem", "def": "Salim's term for a large organization's structural tendency to reject disruptive ideas because it's optimized for efficiency and predictability, not adaptability — his rule of thumb is any org over 50 people has this."},
+]
