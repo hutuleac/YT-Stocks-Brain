@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research: A Bear Market Inside a Bull Market</title>
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>A Bear Market Inside a Bull Market</h1>
+    <div class="byline">
+      Channel: <b>Jordi Visser</b> &middot; Speaker: <b>Jordi Visser</b> &middot; <b>2026-09-27</b>
+      <div class="stats-line">6 threads · rate-fear facts vs. the story, consumer agents as the next AI moment, multiple compression inside the bull market, crypto/tokenization as the bridge, the generational time mismatch, and AI-driven science acceleration &middot; <a href="https://www.youtube.com/watch?v=LhuSxhCNa5g" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Rates are the market's recurring scare story, but Visser says the <i>data</i> (credit spreads, jobless claims, profit margins, money-market flows, the LEI) shows no rate-driven damage yet.</li><li>Meta's <b>Muse</b> consumer-agent launch is 'the number one thing of the market this week' — stock up 14% Monday, benchmarks jumping every 3 weeks since Zuckerberg's July admission AI progress had stalled.</li><li>His thesis: a <i>bare market inside a bull market</i> — AI and tokenization are deflationary, compressing multiples across Mag 7 and SaaS names (Salesforce, Visa, Mastercard) even as indices make new highs.</li><li>Crypto/tokenization is 'the bridge' connecting AI agents to money — his 46-name tokenized index is up <b>31%</b> month-to-date vs. Bitcoin's 6.5%, with 96% of names above their 50-day average.</li><li>Generational time mismatch: only <b>2.2%</b> of people aged 55-64 (his own bracket, and the typical macro-pundit bracket) use AI regularly — he argues that disqualifies most rate-bear commentary.</li><li>Science/research acceleration this week: a Claude-discovered enzyme system compared to CRISPR, an OpenAI research-acceleration blog on coding-agent usage, and a Dwarkesh interview on agent swarms.</li><li>Trade stance: long speed, short friction — favor AI-native/infrastructure names, short rate-sensitive laggards (housing, private credit, private equity) and legacy payment names.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="rate-fear-vs-facts">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Data-backed contrarian view</span>
+    <span class="theme-status">ONGOING — Visser has held this stance since the 2022 rate-hike cycle</span><span class="ttag">macro-rates</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Rate panic is a story; the data says otherwise</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Visser lays out five hard indicators that would flash trouble if rates were actually breaking the economy — none of them are.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span><b>Credit spreads</b> (Moody's BA yield vs. 10-year) aren't widening the way they did in 2000 — a real rate problem shows up here first.</li><li><span class="dot" style="background:#3f6b2e;"></span>Jobless claims aren't rising; companies aren't firing en masse, which is his pre-crisis tell.</li><li><span class="dot" style="background:#3f6b2e;"></span>Profit margins are still climbing in a near-parabolic move, not mean-reverting the way they did before 2007.</li><li><span class="dot" style="background:#3f6b2e;"></span>Money-market fund flows over the last 3 months look like a <i>panic</i> pattern historically, not a top — cash is flush, not fleeing.</li><li><span class="dot" style="background:#3f6b2e;"></span>The Leading Economic Index <b>(LEI)</b> just turned positive after years negative — every other instance of that preceded a recession that didn't come this time.</li><li><span class="dot" style="background:#3f6b2e;"></span>Housing/autos/retail are trading at bear-market levels because of rates, but the S&amp;P PE was <i>below 10</i> in 1980 vs. today's multiples — he's watching for multiple compression, not a crash.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;If year-over-year S&amp;P goes negative, I'll change my mind.&#8221;<cite>— Jordi Visser</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Visser flags his own hedge condition explicitly — this is a standing thesis, not a guarantee, and he says he'll reverse if S&amp;P 500 YoY turns negative.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="muse-consumer-agents">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction — the next AI moment</span>
+    <span class="theme-status">LAUNCHED — Meta Muse, week of Sept 22, 2026</span><span class="ttag">ai-infra</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Consumer agents just arrived — Muse is 'the app store moment' for AI</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Meta's Muse launch, three weeks after Zuckerberg admitted AI progress had stalled, is what Visser calls the driver of the next 12 months.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Zuckerberg said in <b>July 2026</b> that AI development "hasn't accelerated in the way we expected" — 6-10 weeks later Muse launched after rapid 1.1 → 1.2 → 1.3 model releases.</li><li><span class="dot" style="background:#3f6b2e;"></span>Meta stock was <b>up 14%</b> the Monday after launch, pulling Intel and AMD up with it on the same recognition trade.</li><li><span class="dot" style="background:#3f6b2e;"></span>Muse partners with <b>PayPal, Expedia, Shopify, Instacart, and Coinbase</b> — Visser has given it his cards, bank accounts, and used it for DMV work and a Verizon FiOS cancellation.</li><li><span class="dot" style="background:#3f6b2e;"></span>Same week: Opus 5.5, GPT-6 Soul, and Luna all released with lower prices and fewer mistakes — "the model fire hose is wide open."</li><li><span class="dot" style="background:#3f6b2e;"></span>Visser is separately testing <b>Jev</b>, a decision-engine model (not another chat LLM) for agentic trading.</li><li><span class="dot" style="background:#3f6b2e;"></span>His agentic-infrastructure thematic basket is <b>up 46%</b> through Friday vs. the Mag 7's +10% — he expects infrastructure/compute to keep outperforming even as he stays negative on where Mag 7/SaaS multiples end up.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;I believe there will be no consumers. The consumers will be Muse.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High · next 12 months</span></b><span>Muse consumer-agent launch drove a 14% stock pop and pulled Intel/AMD up with it.</span></div><div class="namechip"><b>Intel (INTC), AMD<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Rallied alongside Meta on the Muse-driven consumer-agent recognition trade.</span></div><div class="namechip"><b>PayPal, Expedia, Shopify, Instacart<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Muse launch partners.</span></div><div class="namechip"><b>Salesforce (CRM)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium</span></b><span>Down 10% year-to-date despite a rally; Visser expects continued multiple compression from AI/agent competition.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Visser cites Leopold Aschenbrener's 2027 recursive-self-improvement timeline and notes Andrej Karpathy called agents "a decade away" as recently as October 2025 — he flags this as a pattern of the field underestimating its own speed, not a settled call.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="multiple-compression">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Structural critique</span>
+    <span class="theme-status">ONGOING — IWM/QQQ divergence at new lows since the iPhone era</span><span class="ttag">macro-rates</span><span class="ttag">software</span><span class="ttag">semis</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">The bare market inside the bull market: AI is deflationary, and multiples are compressing</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Even mega-caps making new highs face multiple compression as AI and tokenization drive hyper-competition and falling prices.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>IWM (small caps) vs. QQQ has made new lows since the iPhone launched in 2007 — Russell 2000 names still carry debt and are rate-sensitive; the Mag 7 aren't.</li><li><span class="dot" style="background:#93711b;"></span>Nvidia trades around <b>15x</b> next year's earnings vs. Cisco's ~100x PE at the dot-com peak — Visser argues this is the opposite of a bubble: the market is pricing AI <i>destroying</i> competitors' value within five years, and that window is shortening.</li><li><span class="dot" style="background:#93711b;"></span>Visa and Mastercard were the names brought up to him most this week — he sees a coming "knife fight" on their PE as agents route around card-brand attachment entirely.</li><li><span class="dot" style="background:#93711b;"></span>Micron already went through severe multiple compression — Visser expects the Mag 7 and software broadly to follow the same path as competition (OpenAI, Anthropic, each other) drives prices down.</li><li><span class="dot" style="background:#93711b;"></span>His read on the historical parallel: 1980's S&amp;P 500 PE was below 10 — multiple compression, not a crash, is the normal outcome when rates stay elevated.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Trading near 15x forward earnings — cited as evidence this isn't a dot-com-style bubble.</span></div><div class="namechip"><b>Visa (V), Mastercard (MA)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium</span></b><span>Most-asked-about names this week; Visser expects PE compression as agents disintermediate card-based payments.</span></div><div class="namechip"><b>Micron (MU)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Already went through multiple compression to very low levels — the pattern Visser expects Mag 7/software to repeat.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="crypto-tokenization-bridge">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">ACCELERATING — 46-name tokenized index up 31% month-to-date</span><span class="ttag">crypto</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Tokenization is the bridge between AI agents and money</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Visser calls this a Peter Lynch-style early bull market — AI agents are finally the catalyst that gets humans' trillions into crypto rails built over 15 years.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>His 46-name tokenized crypto index is up <b>31%</b> month-to-date (+3% Friday alone) vs. Bitcoin's <b>+6.5%</b> — 44 of 46 names above their 50-day average (96%), 87% above the 200-day.</li><li><span class="dot" style="background:#3f6b2e;"></span>BlackRock published a paper on the "machine-native economy" this week — arguing machine transactions need purpose-built agentic payment protocols — and is putting model portfolios on-chain via <b>Ondo Finance</b>, giving non-US investors 24/7 wallet access.</li><li><span class="dot" style="background:#3f6b2e;"></span>Stripe is central to the agentic-payments thesis — Visser says it's part of the same package as the AI trade, not separate from it.</li><li><span class="dot" style="background:#3f6b2e;"></span>Robinhood (via Vlad Tenev) says tokenization will take over the entire financial system; Robinhood teased new stock-token developments this week, and NYSE partnered with blockchain.com on tokenization.</li><li><span class="dot" style="background:#3f6b2e;"></span>Coinbase is already integrated into Muse for trading — Visser calls this proof the crypto "rails" are set up and waiting for agent-driven demand.</li><li><span class="dot" style="background:#3f6b2e;"></span>Agents have no brand attachment to Visa, Mastercard, or subscriptions the way humans do — that's the mechanism Visser expects to disintermediate legacy payment rails.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Crypto to me is at the beginning of a Peter Lynch style bull market.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Bitcoin (BTC)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Up 6.5% this month — Visser says Bitcoin itself isn't the thing to watch; the broader tokenized index is.</span></div><div class="namechip"><b>BlackRock (BLK)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Published the 'machine-native economy' paper and is tokenizing model portfolios on-chain via Ondo Finance.</span></div><div class="namechip"><b>Ondo Finance<span class="stance" style="background:#3f6b2e;">OWNS · Medium</span></b><span>Tokenization rail BlackRock is using for on-chain model portfolios; part of Visser's 46-name basket.</span></div><div class="namechip"><b>Robinhood (HOOD)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Vlad Tenev says tokenization will take over the entire financial system; teased new stock-token products.</span></div><div class="namechip"><b>Coinbase (COIN)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Already integrated into Meta's Muse for agent-driven crypto trading.</span></div><div class="namechip"><b>Stripe<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Central to the agentic-payments infrastructure thesis, per Visser's crypto video this week.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="generational-time-mismatch">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Structural critique</span>
+    <span class="theme-status">ONGOING</span><span class="ttag">macro-rates</span><span class="ttag">mindset</span><span class="ttag">career</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">The generational time mismatch: why most macro takes are stuck in linear time</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Visser argues the people warning about rates are disproportionately over 55 and don't use AI, so they're modeling a world that no longer exists.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>Only <b>2.2%</b> of people aged 55-64 — his own bracket, and the typical bracket for macro pundits interviewed on podcasts — use AI regularly, by his account.</li><li><span class="dot" style="background:#65695f;"></span>He frames this via Alvin Toffler's <i>Future Shock</i>: when change is too fast, people get angry and resist rather than adapt.</li><li><span class="dot" style="background:#65695f;"></span>Entrepreneurship is booming specifically because AI-native startups don't need debt or capital the way prior-generation businesses did — rates don't hurt them.</li><li><span class="dot" style="background:#65695f;"></span>His trading stance follows from this: "long speed, short friction" — go short housing, private credit, and private-equity names still trading down (e.g., Blue Owl), since those are the debt-dependent laggards rates are designed to flush out.</li><li><span class="dot" style="background:#65695f;"></span>He was in DC this week presenting to Freedom Tech on this exact theme — linear vs. exponential thinking as a fork in how people read markets.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#65695f;"><div class="lbl">Pull quote</div>&#8220;Rates are a way to get rid of the weak, and that's what's going to happen.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Blue Owl (OWL)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium</span></b><span>Down again this week, approaching lows — cited as a private-credit short candidate in the rate-flush-out thesis.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="ai-science-acceleration">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Confirmed events</span>
+    <span class="theme-status">THIS WEEK — Sept 22-26, 2026</span><span class="ttag">biotech</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">AI is accelerating hard science, not just chat and coding</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Visser highlights a week of concrete science breakthroughs as evidence AI progress is compounding across research, not just consumer products.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Anthropic's Claude reportedly discovered a previously unknown enzyme system in DNA with a structure compared to CRISPR — Fang Zhang (a leading CRISPR-era gene-editing researcher) commented publicly on it, which is why Visser takes it seriously.</li><li><span class="dot" style="background:#3f6b2e;"></span>McKinsey published new research on AI-enabled drug discovery, citing an accelerated discovery-cycle time; Visser flags Insilico Medicine and its Eli Lilly relationship as a name to watch here.</li><li><span class="dot" style="background:#3f6b2e;"></span>OpenAI published a blog on research acceleration, showing near-parabolic internal growth in coding-agent usage.</li><li><span class="dot" style="background:#3f6b2e;"></span>A Dwarkesh Patel interview with an OpenAI researcher (Noam Brown) covered multi-agent systems and an incident where researchers underestimated how capable the AI actually was — Visser's takeaway is that the lesson was about human underestimation, not agents acting unsupervised.</li><li><span class="dot" style="background:#3f6b2e;"></span>Blackstone's John Gray gave detailed numbers on AI adoption across Blackstone's private portfolio companies: spend up <b>21%</b> year-over-year, with productivity gains already showing in margins, earnings, lease processing, and code repair.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The specific AI-agent 'incident' Visser references from the Dwarkesh interview is described only in passing in the transcript and its details are unclear — treat as a pointer to go watch the source interview, not a verified account of what happened.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📈</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Track credit spreads <b>(OAS)</b> and jobless claims, not headline rates, for the real contagion signal.</span></div></div><div class="irow"><div class="ic">🤖</div><div class="tline"><span class="cat">AI/Agents:</span> <span class="txt">Watch consumer-agent adoption numbers (Muse downloads, token usage) as the next earnings catalyst, not just Mag 7 headlines.</span></div></div><div class="irow"><div class="ic">🪙</div><div class="tline"><span class="cat">Crypto:</span> <span class="txt">Size crypto exposure to the broader tokenization basket, not just Bitcoin — breadth (<b>96%</b> above 50-day) is the tell.</span></div></div><div class="irow"><div class="ic">📉</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Expect multiple compression, not a crash, in Mag 7/SaaS/payments names as AI competition turns deflationary.</span></div></div><div class="irow"><div class="ic">🔪</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Short debt-dependent laggards (housing, private credit, private equity) — rates are designed to flush them out.</span></div></div><div class="irow"><div class="ic">🧬</div><div class="tline"><span class="cat">Health:</span> <span class="txt">Watch AI-driven drug-discovery names (Insilico Medicine, Eli Lilly partnerships) as a slower-burn agentic theme.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;How can you have a view on today's economy and on today's market if you don't use AI? I don't think it's possible.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;This is not a bubble. This is the opposite.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I believe there will be no consumers. The consumers will be Muse.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Rates don't hurt them. Let me say that again. Rates don't hurt them.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;If you're someone managing money and you are not fully in the know of compute, of agents, of swarms, of the crypto guardrails... I don't think you can compete. I really don't.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Crypto to me is at the beginning of a Peter Lynch style bull market.&#8221; <cite>— Jordi Visser</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Jordi Visser:</b> Will reverse his no-recession/no-rate-crisis stance if S&amp;P 500 goes negative year-over-year <span class="cmeta">S&amp;P 500 YoY · negative</span> <i>if if S&amp;P 500 YoY turns negative</i></div><div class="ritem"><b>Jordi Visser:</b> His agentic-infrastructure thematic portfolio is up 46% through Friday vs. the Mag 7's +10% <span class="cmeta">portfolio return · +46% vs +10% · week of Sept 26, 2026</span></div><div class="ritem"><b>Jordi Visser:</b> Salesforce.com is down 10% year-to-date despite recent rallies <span class="cmeta">stock return YTD · -10% · Sept 2026</span> <span class="tag">Salesforce (CRM)</span></div><div class="ritem"><b>Jordi Visser:</b> His 46-name tokenized crypto index is up 31% month-to-date, with 96% of names above their 50-day moving average <span class="cmeta">index return / breadth · +31% MTD, 96% above 50-day · Sept 26, 2026</span></div><div class="ritem"><b>Leopold Aschenbrenner:</b> AI reaches the point of effective recursive self-improvement <span class="cmeta">recursive self-improvement · achieved · 2027</span></div><div class="ritem"><b>Blackstone (John Gray):</b> Blackstone portfolio companies increased AI-related spending year-over-year <span class="cmeta">AI spending growth · +21% · Sept 2025 to Sept 2026</span></div><div class="ritem"><b>Jordi Visser:</b> Will speak at a crypto/tokenization industry event <span class="cmeta">October 27, 2026</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Meta (META)</b> <span class="rel">partners with</span> <b>PayPal, Expedia, Shopify, Instacart</b> &mdash; Muse consumer-agent launch integrations</div><div class="ritem"><b>Meta (META)</b> <span class="rel">partners with</span> <b>Coinbase (COIN)</b> &mdash; Muse can trade on Coinbase</div><div class="ritem"><b>Meta (META)</b> <span class="rel">competes with</span> <b>Amazon (AMZN)</b> &mdash; reported standoff over Muse</div><div class="ritem"><b>BlackRock (BLK)</b> <span class="rel">partners with</span> <b>Ondo Finance</b> &mdash; tokenizing BlackRock model portfolios on-chain</div><div class="ritem"><b>New York Stock Exchange</b> <span class="rel">partners with</span> <b>blockchain.com</b> &mdash; tokenization initiative announced this week</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🇺🇸</div><div><div class="title">Visser presented on the linear-vs-exponential 'time mismatch' theme to the Freedom Tech community in DC this week, and lists a run of upcoming appearances: the Bitcoin Treasury Conference, a Pompliano event, and a bridge/tokenization industry event on October 27. <span class="tag">Events</span></div></div></div><div class="irow"><div class="ic">📺</div><div><div class="title">Sources referenced this episode: Blackstone's John Gray on AI adoption across portfolio companies; a Dwarkesh Patel interview with OpenAI's Noam Brown on multi-agent systems; Vlad Tenev (Robinhood) on the Moonshots podcast; Ali Yahya (a16z) on the Unchained podcast; an a16z panel with Chris Dixon and Ali Yahya on AI-and-crypto. <span class="tag">Sources</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Ghost rails</b> &mdash; Visser's term for the crypto/blockchain infrastructure built over the last 15 years ahead of real demand — now waiting for AI agents to actually use it.</div><div><b>Tokenization</b> &mdash; Converting ownership of assets (equities, model portfolios, real-world assets) into on-chain tokens that can be transacted 24/7 via crypto wallets.</div><div><b>Recursive self-improvement</b> &mdash; The point where an AI model's own output meaningfully accelerates the development of its next version — a threshold Leopold Aschenbrenner projected for 2027.</div><div><b>OAS (option-adjusted spread)</b> &mdash; The extra yield high-yield credit pays over Treasuries after adjusting for embedded options — a widening OAS is Visser's preferred real-time signal of credit stress.</div><div><b>Multiple compression</b> &mdash; A stock's price/earnings ratio falling even as earnings grow, because the market prices in shrinking future competitive advantage or higher discount rates.</div><div><b>Machine-native economy</b> &mdash; BlackRock's term for an economy where AI agents transact directly with each other via purpose-built payment protocols, rather than routing through human-facing financial rails.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
