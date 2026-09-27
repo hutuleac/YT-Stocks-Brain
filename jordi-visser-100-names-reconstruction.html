@@ -10,86 +10,96 @@
 <meta property="og:description" content="Jordi Visser · 96 companies/tickers covered">
 <meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
 <meta name="twitter:card" content="summary_large_image">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
 <style>
+:root{--j0:#fffdf8;--j1:#fbf7ef;--j2:#f4efe4;--j3:#e6eef7;--j4:#eaf3e6;--j5:#ece9df;--j6:#e4e2d8;--j7:#2d6a4f;--j8:#e4e2d8;--j9:#c4d4e8;--j10:#c9dcc0;--j11:#2f5f96;--j12:#f8ebe6;--j13:#f8ebe0;--j14:#f8f0dd;--j15:#e6c4b8;--j16:#ebcfb6;--j17:#e6d9a8;--j18:#8a8d81;--j19:#6b6f66;--j20:#8a5a2e;--j21:#20231f;--j22:#b0561a;--j23:#a23f22;--j24:#171916;--j25:#93711b;}
+html.dark{color-scheme:dark;--j0:#0d0f14;--j1:#141820;--j2:#1a1e2a;--j3:#1a2a3a;--j4:#1a3a1a;--j5:#1e2230;--j6:#252a36;--j7:#27ae60;--j8:#2a2e3a;--j9:#2a3a5a;--j10:#2a5a2a;--j11:#3498db;--j12:#3a1a1a;--j13:#3a2510;--j14:#3a3510;--j15:#5a2a2a;--j16:#5a3a1a;--j17:#5a4a1a;--j18:#6b7280;--j19:#9aa0b0;--j20:#d4a853;--j21:#d8dce6;--j22:#e67e22;--j23:#e74c3c;--j24:#edf0f7;--j25:#f1c40f;}
+
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { font-size: 16px; scroll-behavior: smooth; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: #0d0f14;
-    color: #d8dce6;
+    background: var(--j0);
+    color: var(--j21);
     line-height: 1.65;
     padding: 2rem 1rem;
     max-width: 980px;
     margin: 0 auto;
   }
-  h1, h2, h3, h4 { font-weight: 600; letter-spacing: -0.01em; color: #edf0f7; }
+  h1, h2, h3, h4 { font-weight: 600; letter-spacing: -0.01em; color: var(--j24); }
   h1 { font-size: 2.1rem; line-height: 1.2; }
-  h2 { font-size: 1.45rem; margin: 2.5rem 0 0.75rem; border-bottom: 1px solid #2a2e3a; padding-bottom: 0.5rem; }
+  h2 { font-size: 1.45rem; margin: 2.5rem 0 0.75rem; border-bottom: 1px solid var(--j8); padding-bottom: 0.5rem; }
   h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
   p { margin-bottom: 0.8rem; }
-  a { color: #d4a853; text-decoration: none; }
+  a { color: var(--j20); text-decoration: none; }
   a:hover { text-decoration: underline; }
-  strong { color: #edf0f7; }
-  .gold { color: #d4a853; }
-  .muted { color: #9aa0b0; font-size: 0.9rem; }
-  .small { font-size: 0.8rem; color: #6b7280; }
-  .report-header { margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 2px solid #2a2e3a; }
-  .report-header .subtitle { font-size: 0.95rem; color: #9aa0b0; margin-top: 0.5rem; }
-  .report-header .meta { font-size: 0.8rem; color: #6b7280; margin-top: 0.75rem; }
+  strong { color: var(--j24); }
+  .gold { color: var(--j20); }
+  .muted { color: var(--j19); font-size: 0.9rem; }
+  .small { font-size: 0.8rem; color: var(--j18); }
+  .report-header { margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 2px solid var(--j8); }
+  .report-header .subtitle { font-size: 0.95rem; color: var(--j19); margin-top: 0.5rem; }
+  .report-header .meta { font-size: 0.8rem; color: var(--j18); margin-top: 0.75rem; }
   .stats-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1.25rem 0; }
   .stat {
-    flex: 1; min-width: 150px; background: #141820; border: 1px solid #252a36;
+    flex: 1; min-width: 150px; background: var(--j1); border: 1px solid var(--j6);
     border-radius: 10px; padding: 0.85rem 1rem;
   }
-  .stat .label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.06em; color: #6b7280; }
-  .stat .value { font-size: 1.25rem; font-weight: 700; color: #d4a853; }
+  .stat .label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--j18); }
+  .stat .value { font-size: 1.25rem; font-weight: 700; color: var(--j20); }
   .section-block {
-    background: #141820; border: 1px solid #252a36; border-radius: 10px;
+    background: var(--j1); border: 1px solid var(--j6); border-radius: 10px;
     padding: 1.25rem 1.5rem; margin-bottom: 1.25rem;
   }
   .callout {
-    background: #1a1e2a; border-left: 3px solid #d4a853; padding: 0.85rem 1rem;
+    background: var(--j2); border-left: 3px solid var(--j20); padding: 0.85rem 1rem;
     margin: 0.9rem 0; border-radius: 0 8px 8px 0; font-size: 0.92rem;
   }
-  .callout.verified { border-left-color: #27ae60; }
-  .callout.warn { border-left-color: #e74c3c; }
+  .callout.verified { border-left-color: var(--j7); }
+  .callout.warn { border-left-color: var(--j23); }
   table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin: 0.75rem 0; }
   thead th {
-    background: #1a1e2a; color: #9aa0b0; text-transform: uppercase; letter-spacing: 0.05em;
+    background: var(--j2); color: var(--j19); text-transform: uppercase; letter-spacing: 0.05em;
     font-size: 0.65rem; padding: 0.6rem 0.5rem; text-align: left;
-    border-bottom: 2px solid #2a2e3a; white-space: nowrap;
+    border-bottom: 2px solid var(--j8); white-space: nowrap;
   }
-  tbody td { padding: 0.55rem 0.5rem; border-bottom: 1px solid #1e2230; vertical-align: top; }
-  tbody tr:hover { background: #1a1e2a; }
+  tbody td { padding: 0.55rem 0.5rem; border-bottom: 1px solid var(--j5); vertical-align: top; }
+  tbody tr:hover { background: var(--j2); }
   .tag {
     display: inline-block; font-size: 0.6rem; font-weight: 600; text-transform: uppercase;
     letter-spacing: 0.05em; padding: 0.15rem 0.5rem; border-radius: 4px; margin-right: 0.3rem;
   }
-  .tag-confirmed { background: #1a3a1a; color: #27ae60; border: 1px solid #2a5a2a; }
-  .tag-high { background: #3a3510; color: #f1c40f; border: 1px solid #5a4a1a; }
-  .tag-med { background: #3a2510; color: #e67e22; border: 1px solid #5a3a1a; }
-  .tag-other { background: #1a2a3a; color: #3498db; border: 1px solid #2a3a5a; }
-  .tag-warn { background: #3a1a1a; color: #e74c3c; border: 1px solid #5a2a2a; }
+  .tag-confirmed { background: var(--j4); color: var(--j7); border: 1px solid var(--j10); }
+  .tag-high { background: var(--j14); color: var(--j25); border: 1px solid var(--j17); }
+  .tag-med { background: var(--j13); color: var(--j22); border: 1px solid var(--j16); }
+  .tag-other { background: var(--j3); color: var(--j11); border: 1px solid var(--j9); }
+  .tag-warn { background: var(--j12); color: var(--j23); border: 1px solid var(--j15); }
   .source-list { counter-reset: src; }
   .source-list li { list-style: none; margin-bottom: 0.6rem; font-size: 0.88rem; padding-left: 2.2rem; position: relative; }
   .source-list li::before {
     counter-increment: src; content: counter(src); position: absolute; left: 0; top: 0;
-    background: #2a2e3a; color: #d4a853; border-radius: 4px; width: 1.5rem; height: 1.5rem;
+    background: var(--j8); color: var(--j20); border-radius: 4px; width: 1.5rem; height: 1.5rem;
     display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700;
   }
   ul.tight li { margin-bottom: 0.4rem; }
   .theme-head td {
-    background: #1a1e2a; font-weight: 700; color: #d4a853; letter-spacing: 0.04em;
+    background: var(--j2); font-weight: 700; color: var(--j20); letter-spacing: 0.04em;
     text-transform: uppercase; font-size: 0.72rem; padding: 0.55rem 0.5rem;
   }
-  .footer { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid #2a2e3a; font-size: 0.75rem; color: #6b7280; }
+  .footer { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--j8); font-size: 0.75rem; color: var(--j18); }
   @media (max-width: 600px) { html { font-size: 14px; } }
+.theme-toggle{position:fixed;top:14px;right:14px;z-index:999;width:40px;height:40px;border-radius:50%;border:1px solid var(--j6);background:var(--j1);color:var(--j19);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--j20);border-color:var(--j20);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+@media (max-width:640px){table{display:block;overflow-x:auto;}li,p{overflow-wrap:anywhere;}body{padding-top:4.5rem;}}
 </style>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
 <body>
-<a href="index.html" style="position:fixed;top:14px;left:14px;z-index:999;font-family:sans-serif;font-size:13px;color:#d4a853;background:#141820;border:1px solid #252a36;border-radius:20px;padding:6px 14px;text-decoration:none;">&#8592; All Research Briefs</a>
+
+<button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button><a href="index.html" style="position:fixed;top:14px;left:14px;z-index:999;font-family:sans-serif;font-size:13px;color:var(--j20);background:var(--j1);border:1px solid var(--j6);border-radius:20px;padding:6px 14px;text-decoration:none;">&#8592; All Research Briefs</a>
 
 
 <div class="report-header">
