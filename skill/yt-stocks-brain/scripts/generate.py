@@ -320,6 +320,11 @@ ul.mentions .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-r
 .hit-meta a{color:var(--brand);text-decoration:none;border-bottom:1px solid var(--line);}
 .hit-meta a:hover{border-bottom-color:var(--brand);}
 .hit-more{color:var(--muted);font-style:italic;padding:14px 0 4px;font-size:13px;}
+.tcount{margin-left:7px;font-size:11.5px;font-weight:700;padding:1px 7px;border-radius:10px;background:var(--line);color:var(--ink);font-variant-numeric:tabular-nums;}
+.tab.active .tcount{background:rgba(255,255,255,.25);color:inherit;}
+.tab.zero{opacity:.55;}
+mark{background:#f3dcb0;color:inherit;border-radius:2px;padding:0 1px;}
+html.dark mark{background:#5c4422;}
 @media (max-width:640px){
   #q{font-size:16px;}
   .tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-right:calc(-1*clamp(18px,4vw,56px));padding-right:18px;}
@@ -863,12 +868,21 @@ def _date_sort_key(date_str):
 
 
 def _search_blob(*parts):
-    return esc(" ".join(p for p in parts if p).lower())
+    """Word-normalized blob: lowercase, no accents/apostrophes, punctuation -> single spaces,
+    space-padded so the index JS can prefix-match words with indexOf(' ' + token).
+    Must stay in sync with norm() in INDEX_JS."""
+    s = unicodedata.normalize("NFKD", " ".join(p for p in parts if p).lower())
+    s = re.sub(r"['’]", "", "".join(c for c in s if not unicodedata.combining(c)))
+    return " " + re.sub(r"[^a-z0-9]+", " ", s).strip() + " "
+
+
+def _entity_words(b):
+    return " ".join(f'{e["ticker"] or ""} {e["display"]}' for e in b["entities"])
 
 
 def _render_chrono_view(briefs):
     rows = "".join(
-        f'<tr class="row" data-search="{_search_blob(b["title"], b["channel"], b["thread_line"], " ".join(b["tags"]))}">'
+        f'<tr class="row" data-search="{_search_blob(b["title"], b["channel"], b["speakers"], b["thread_line"], " ".join(b["tags"]), _entity_words(b))}">'
         f'<td class="idx-date">{esc(b["date"])}</td>'
         f'<td class="idx-channel">{esc(b["channel"])}</td>'
         f'<td class="idx-title"><a href="{esc(b["html"])}">{esc(b["title"])}</a></td>'
@@ -955,7 +969,7 @@ def _render_entity_view(briefs):
                 + "</li>"
             )
         out.append(
-            f'<details class="grp" data-search="{search}">'
+            f'<details class="grp" data-search="{search}" data-key="{_search_blob(s["ticker"] or "", s["display"])}">'
             f'<summary>{tkr_badge}<b>{esc(s["display"])}</b>'
             f'<span class="cnt">{len(mentions)} mention{"s" if len(mentions) != 1 else ""}</span></summary>'
             f'<div class="grp-body"><ul class="mentions">{"".join(items)}</ul></div></details>'
@@ -964,78 +978,152 @@ def _render_entity_view(briefs):
 
 
 def _content_hits_payload(briefs):
-    """Compact JSON payload for the Quotes & Takes view — short keys since this
-    repeats ~4000+ times: d=date c=channel t=title h=html a=theme anchor (or "")
-    y=type x=text z=cite s=lowercased search blob."""
-    rows = []
-    for b in briefs:
+    """Compact JSON payload for the Quotes & Takes view. Brief fields are stored once in "b"
+    ([date, channel, title, html, search blob]) and each of the ~8000 hits in "x" points at
+    its brief by index: [brief_idx, theme anchor or "", type, text, cite, search blob]."""
+    out_b, out_x = [], []
+    for i, b in enumerate(briefs):
+        out_b.append([b["date"], esc(b["channel"]), esc(b["title"]), esc(b["html"]),
+                      _search_blob(b["title"], b["channel"], b["speakers"])])
         for h in b["hits"]:
-            rows.append({
-                "d": b["date"], "c": esc(b["channel"]), "t": esc(b["title"]), "h": esc(b["html"]),
-                "a": h["theme_id"] or "", "y": esc(h["type"]), "x": esc(h["text"]), "z": esc(h["cite"]),
-                "s": _search_blob(h["type"], h["text"], h["cite"], b["title"], b["channel"]),
-            })
-    return json.dumps(rows, separators=(",", ":"), ensure_ascii=False).replace("</", "<\\/")
+            out_x.append([i, h["theme_id"] or "", esc(h["type"]), esc(h["text"]), esc(h["cite"]),
+                          _search_blob(h["type"], h["text"], h["cite"])])
+    return json.dumps({"b": out_b, "x": out_x}, separators=(",", ":"), ensure_ascii=False).replace("</", "<\\/")
 
 
 INDEX_JS = """
 (function(){
-  var tabs = document.querySelectorAll('.tab');
-  var views = document.querySelectorAll('.view');
-  tabs.forEach(function(tab){
-    tab.addEventListener('click', function(){
-      tabs.forEach(function(t){ t.classList.remove('active'); });
-      views.forEach(function(v){ v.classList.remove('active'); });
-      tab.classList.add('active');
-      document.getElementById('view-' + tab.dataset.view).classList.add('active');
-      applyFilter();
-    });
-  });
   var q = document.getElementById('q');
-  var hitData = null;
-  function getHits(){
-    if (!hitData) hitData = JSON.parse(document.getElementById('hitdata').textContent || '[]');
-    return hitData;
+  var tabs = document.querySelectorAll('.tab');
+  var LIMIT = 300;
+  // must stay in sync with _search_blob() in generate.py
+  function norm(s){
+    return (s || '').toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g, '')
+      .replace(/['\\u2019]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
   }
-  function renderHits(term){
+  // word-prefix match; "metas"/"meta's"/"bitcoins" also match the bare word
+  function has(blob, t){
+    return blob.indexOf(' ' + t) !== -1 ||
+      (t.length > 3 && t.charAt(t.length - 1) === 's' && blob.indexOf(' ' + t.slice(0, -1) + ' ') !== -1);
+  }
+  function hasAll(blob, toks){ for (var i = 0; i < toks.length; i++) if (!has(blob, toks[i])) return false; return true; }
+  var data = null;
+  function getData(){
+    if (!data) data = JSON.parse(document.getElementById('hitdata').textContent || '{"b":[],"x":[]}');
+    return data;
+  }
+  function reEsc(s){ return s.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&'); }
+  function highlight(html, toks){
+    if (!toks.length) return html;
+    var re = new RegExp('(^|[^a-z0-9&#])(' + toks.map(reEsc).join('|') + ')', 'gi');
+    return html.split(/(<[^>]*>)/).map(function(part){
+      return part.charAt(0) === '<' ? part : part.replace(re, '$1<mark>$2</mark>');
+    }).join('');
+  }
+
+  // Quotes & Takes: every word must appear in the quote or its brief; quotes that
+  // contain all the words themselves rank first, newest first within a tier.
+  function findHits(toks){
+    var d = getData(), out = [];
+    d.x.forEach(function(h, i){
+      var b = d.b[h[0]], inText = 0;
+      for (var k = 0; k < toks.length; k++){
+        if (has(h[5], toks[k])) inText++;
+        else if (!has(b[4], toks[k])) return;
+      }
+      out.push({h: h, b: b, score: inText, i: i});
+    });
+    out.sort(function(a, z){ return (z.score - a.score) || (a.i - z.i); });
+    return out;
+  }
+  function renderHits(hits, toks){
     var mount = document.getElementById('hits-mount');
-    if (!term){
+    if (!toks.length){
       mount.innerHTML = '<p class="empty">Type to search quotes, recommendations, claims, and opinions across every indexed brief.</p>';
       return;
     }
-    var matches = getHits().filter(function(h){ return h.s.indexOf(term) !== -1; });
-    if (!matches.length){
-      mount.innerHTML = '<p class="empty">No matches.</p>';
-      return;
-    }
-    var LIMIT = 300;
-    var html = matches.slice(0, LIMIT).map(function(h){
-      var href = h.h + (h.a ? ('#' + h.a) : '');
-      return '<div class="hitrow"><span class="htype">' + h.y + '</span><div class="hit-body">'
-        + '<div class="hit-text">' + h.x + (h.z ? ' <span class="hit-cite">' + h.z + '</span>' : '') + '</div>'
-        + '<div class="hit-meta"><span class="m-date">' + h.d + '</span><span class="m-channel">' + h.c + '</span>'
-        + '<a href="' + href + '">' + h.t + '</a></div></div></div>';
+    if (!hits.length){ mount.innerHTML = '<p class="empty">No matches.</p>'; return; }
+    var html = hits.slice(0, LIMIT).map(function(m){
+      var h = m.h, b = m.b, href = b[3] + (h[1] ? '#' + h[1] : '');
+      return '<div class="hitrow"><span class="htype">' + h[2] + '</span><div class="hit-body">'
+        + '<div class="hit-text">' + highlight(h[3].replace(/\\*\\*(.+?)\\*\\*/g, '<b>$1</b>'), toks) + (h[4] ? ' <span class="hit-cite">' + highlight(h[4], toks) + '</span>' : '') + '</div>'
+        + '<div class="hit-meta"><span class="m-date">' + b[0] + '</span><span class="m-channel">' + b[1] + '</span>'
+        + '<a href="' + href + '">' + b[2] + '</a></div></div></div>';
     }).join('');
-    if (matches.length > LIMIT){
-      var more = matches.length - LIMIT;
-      html += '<p class="hit-more">' + more + ' more match' + (more === 1 ? '' : 'es') + ' \\u2014 refine your search to narrow further.</p>';
+    if (hits.length > LIMIT){
+      var more = hits.length - LIMIT;
+      html += '<p class="hit-more">' + more + ' more match' + (more === 1 ? '' : 'es') + ' \\u2014 add a word to narrow further.</p>';
     }
     mount.innerHTML = html;
   }
-  function applyFilter(){
-    var term = q.value.trim().toLowerCase();
-    var activeView = document.querySelector('.tab.active').dataset.view;
-    if (activeView === 'content'){
-      renderHits(term);
-      return;
-    }
-    document.querySelectorAll('.view.active [data-search]').forEach(function(el){
-      var hit = !term || el.dataset.search.indexOf(term) !== -1;
+
+  // Row/group views. On By Company / Ticker, groups whose name/ticker matches one of the
+  // words win: if any exist, groups that only matched via a brief title or channel are hidden.
+  function hasAny(blob, toks){ for (var i = 0; i < toks.length; i++) if (has(blob, toks[i])) return true; return false; }
+  function filterView(view, toks){
+    var els = view.querySelectorAll('[data-search]'), n = 0;
+    var isPrimary = function(el){ return hasAny(el.dataset.key, toks) && hasAll(el.dataset.search + el.dataset.key, toks); };
+    var primary = view.id === 'view-entity' && toks.length && Array.prototype.some.call(els, isPrimary);
+    els.forEach(function(el){
+      var hit = !toks.length || (primary ? isPrimary(el) : hasAll(el.dataset.search, toks));
       el.hidden = !hit;
-      if (hit && term && el.tagName === 'DETAILS') el.open = true;
+      if (hit) n++;
+      if (el.tagName === 'DETAILS') el.open = hit && toks.length > 0 && n <= 5;
     });
+    var empty = view.querySelector('.noresults');
+    if (!empty){ empty = document.createElement('p'); empty.className = 'noresults'; empty.textContent = 'No matches in this tab.'; view.appendChild(empty); }
+    empty.style.display = toks.length && !n ? 'block' : 'none';
+    return n;
   }
-  q.addEventListener('input', applyFilter);
+
+  function setCount(tab, n){
+    var c = tab.querySelector('.tcount');
+    if (!c){ c = document.createElement('span'); c.className = 'tcount'; tab.appendChild(c); }
+    c.textContent = n === null ? '' : (n > 999 ? '999+' : n);
+    c.hidden = n === null;
+    tab.classList.toggle('zero', n === 0);
+  }
+
+  function activeView(){ return document.querySelector('.tab.active').dataset.view; }
+  function apply(){
+    var toks = norm(q.value) ? norm(q.value).split(' ') : [];
+    tabs.forEach(function(tab){
+      var v = tab.dataset.view, n;
+      if (v === 'content'){
+        var hits = toks.length ? findHits(toks) : [];
+        if (activeView() === 'content') renderHits(hits, toks);
+        n = hits.length;
+      } else {
+        n = filterView(document.getElementById('view-' + v), toks);
+      }
+      setCount(tab, toks.length ? n : null);
+    });
+    var url = location.pathname + (q.value.trim() ? '?q=' + encodeURIComponent(q.value.trim()) : '') + '#' + activeView();
+    history.replaceState(null, '', url);
+  }
+  var timer;
+  q.addEventListener('input', function(){ clearTimeout(timer); timer = setTimeout(apply, 90); });
+
+  function select(v){
+    var tab = document.querySelector('.tab[data-view="' + v + '"]');
+    if (!tab) return;
+    tabs.forEach(function(t){ t.classList.toggle('active', t === tab); });
+    document.querySelectorAll('.view').forEach(function(el){ el.classList.toggle('active', el.id === 'view-' + v); });
+    var row = tab.parentElement; row.scrollLeft = tab.offsetLeft - row.offsetLeft - 18;
+  }
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){ select(tab.dataset.view); apply(); });
+  });
+
+  document.addEventListener('keydown', function(e){
+    if (e.key === '/' && document.activeElement !== q){ e.preventDefault(); q.focus(); q.select(); }
+    else if (e.key === 'Escape' && document.activeElement === q){ q.value = ''; apply(); }
+  });
+
+  var initial = new URLSearchParams(location.search).get('q');
+  if (location.hash) select(location.hash.slice(1));
+  if (initial){ q.value = initial; }
+  if (initial || location.hash) apply();
 })();
 """
 
@@ -1069,12 +1157,12 @@ def build_index():
     <div class="kicker">All Research Briefs</div>
     <h1>YouTube Research Brief Index</h1>
     <div class="byline">{len(briefs)} brief{'s' if len(briefs) != 1 else ''} &middot; {len(channels)} channel{'s' if len(channels) != 1 else ''} &middot; {len(tickers)} ticker{'s' if len(tickers) != 1 else ''} tracked &middot; {hit_count} quotes/takes/notes indexed
-      <div class="idx-stats"><span>Browse chronologically, by channel, or by company/ticker — or search Quotes &amp; Takes to find a specific quote, recommendation, stock, or opinion.</span></div>
+      <div class="idx-stats"><span>One search covers everything: tickers, companies, people, quotes and takes. The number on each tab shows where the matches are.</span></div>
     </div>
   </header>
   <div class="inner">
     <div class="controls">
-    <div class="searchwrap"><input id="q" type="search" placeholder="Search briefs, channels, companies, tickers, quotes, opinions..." autocomplete="off"></div>
+    <div class="searchwrap"><input id="q" type="search" placeholder="Search tickers, companies, people, quotes..." autocomplete="off"></div>
     <div class="tabs">
       <button class="tab active" data-view="chrono">All Briefs</button>
       <button class="tab" data-view="channel">By Channel</button>
