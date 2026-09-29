@@ -55,7 +55,7 @@ THEMES = [
         "lead": "Chandhok argues agents become full economic actors by the late 2020s, which forces answers on who owns them, who's liable, and how they form capital.",
         "bullets": [
             "5-6.5 billion people are online; each could run thousands of agents — an orchestrating agent with memory spinning up sub-agents; the limit is compute, not demand.",
-            "Consumer agent apps are scaling: Musk says the **Grok bot** has hundreds of thousands of installs; Muse cited at 2.8M downloads (captions garble the app names).",
+            "Consumer agent apps are scaling: Musk says the Grok bot has hundreds of thousands of installs; **Meta's Muse** agent cited at 2.8M downloads, with Meta's 3.8B-user reach behind it.",
             "Analogy: agents are at the GeoCities-in-'96 stage (Blogger, Orkut) before real sites like the NYT and Amazon — 'a bunch of teenagers' waiting for grown-up agents.",
             "Agents need to prove who owns them, who's liable, their compute provenance, incentives and work history — the **Hugging Face hack** rewrote agents' own logs, which public blockchain logs prevent.",
             "Circle's Arc gives agents credit: **25 cents** to start, more if they pay it back; many are trading agents on blockchains today.",
