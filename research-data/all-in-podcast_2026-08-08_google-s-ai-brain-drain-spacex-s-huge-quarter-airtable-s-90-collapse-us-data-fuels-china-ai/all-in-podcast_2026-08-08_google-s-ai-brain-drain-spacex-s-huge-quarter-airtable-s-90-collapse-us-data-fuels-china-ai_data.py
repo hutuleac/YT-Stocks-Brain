@@ -44,7 +44,7 @@ THEMES = [
         "quote": {"text": "I think that the market for frontier intelligence has become a duopoly.", "cite": "— David Sacks"},
         "watch": "Both Jensen Huang's claim that closed models are actually cheaper once training/fine-tuning/safety costs are included, and Elon Musk's claim that frontier models remain \"a world of difference\" ahead, are relayed secondhand by the panel from other public statements this week — not independently verified in this episode.",
         "names": [
-            {"name": "Google / Alphabet", "blurb": "Down 4% on the Jeff Dean news; committed $200B to AI infrastructure capex this year.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Alphabet (GOOGL)", "blurb": "Down 4% on the Jeff Dean news; committed $200B to AI infrastructure capex this year.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
             {"name": "Anthropic & OpenAI", "blurb": "The panel's named 'duopoly' — Anthropic's ARR reportedly tracking to $110-120B+ by year-end, well above its own initial $100B target.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
             {"name": "Discovery Loop", "blurb": "New company founded by Jeff Dean and three other departing Google AI researchers, focused on deep scientific breakthroughs.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
         ],
