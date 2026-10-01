@@ -1,0 +1,173 @@
+META = {
+    "title": "$95B Airbnb CEO: The Gap Between AI Builders and Everyone Else Is Growing",
+    "channel": "Silicon Valley Girl",
+    "speakers": "Brian Chesky (Airbnb co-founder & CEO), Silicon Valley Girl (host)",
+    "date": "2026-10-01",
+    "video_url": "https://www.youtube.com/watch?v=iJlyNupMOzA",
+    "thread_line": "5 threads · Airbnb's AI-native app · travel graph and services platform · AI as amplifier, 80% more features · idea volume and focus · no 'AI window'",
+    "category": "market",
+}
+
+SNAPSHOT = [
+    "Brian Chesky says Airbnb is becoming **AI-native**: AI search toggle, personalized listing highlights, a Q&A-on-the-page listing, AI comparison and neighborhood maps (rolling to 1,000 cities).",
+    "His distinction: an *agent* is an evolution of an application; a *chatbot* is just a user interface, and a poor one for travel and shopping.",
+    "Airbnb is widening from homes to a **travel community** (friends' travel graph) and a **services platform** (chefs, massage, photography, ski gear, groceries via Instacart).",
+    "Output metric: Airbnb ships **80% more features** than a year ago, mostly because of AI; new services that took a year now take weeks.",
+    "Management lesson: token-usage leaderboards were a short-lived tactic; he now tracks product velocity and quality instead.",
+    "His thesis on people: AI is an *amplifier*, so the performance gap widens; great thinking, taste and curiosity matter more than the ability to build.",
+    "Personal method: he writes ~1,000 words a day, bolds the best lines, and has AI surface patterns monthly; he also urges less doom-scrolling and more big-screen focus.",
+    "Outlook: no 'AI window'; 50-100 more Anthropic-scale companies and millions of small ones, and chat is the wrong interface for most work.",
+]
+
+THEMES = [
+    {
+        "id": "airbnb-ai-native",
+        "tags": ["software", "consumer"],
+        "color": "green",
+        "badge": "Confirmed event",
+        "status": "LAUNCHING — AI SEARCH, COMPARE, MAPS",
+        "title": "Airbnb's app becomes an agent, not a chatbot",
+        "lead": "Chesky says every touch point of the Airbnb app is being modernized with AI, but without making chat the interface.",
+        "bullets": [
+            "**AI search toggle** launches 'starting today': natural-language queries ('Paris this weekend, this view, this architecture') that also prefilter results, keeping Airbnb's filters and controls.",
+            "AI-generated listing highlights are personalized to the guest; guests can ask the listing page questions instead of the host; an AI comparison tool handles the side-by-side decision problem.",
+            "New maps show neighborhood information, starting in Paris and rolling out to **1,000 cities** eventually.",
+            "On the host side the app should act like a coach that understands goals and helps price listings.",
+            "Why not a chatbot: text is hard to compare, travel is inspiration/browse driven, and a trip is multiplayer (average party of three), so sharing, messaging and filter toggles must survive.",
+            "Agents are interoperable ('one agent can talk to another agent'); he calls agents 'definitely the future of Silicon Valley' and chatbots not.",
+        ],
+        "quote": {"text": "Agent is an evolution of an application. A chatbot is a user interface. And because most agents are chatbots, we conflate the two.", "cite": "— Brian Chesky"},
+        "watch": "Chesky is Airbnb's CEO describing his own product launch.",
+        "names": [
+            {"name": "Airbnb (ABNB)", "blurb": "CEO says app is becoming AI-native; shipping 80% more features; valued at $95B per the video's framing.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+        ],
+    },
+    {
+        "id": "travel-graph-services",
+        "tags": ["consumer", "software"],
+        "color": "green",
+        "badge": "Confirmed event",
+        "status": "EXPANDING — COMMUNITY + SERVICES PLATFORM",
+        "title": "From a marketplace of homes to a travel community and a services platform",
+        "lead": "Airbnb is adding a friends' travel graph and 'dozens, even hundreds' of plug-in services so booking a home means a full-service trip.",
+        "bullets": [
+            "**Travel graph:** add friends and family to see where they are going and where they stayed; people increasingly want recommendations from people who know them, not celebrities or writers.",
+            "His view that Instagram, X, YouTube and TikTok are 'performance platforms', not social networks, and that no place online shows where your friends travel.",
+            "Services already announced or tested: baby gear, laundry, ski rental (tested in Italy), surfing equipment, chefs, massage, photography, car rental, airport pickup, luggage storage, flowers, plus **groceries via Instacart**, ordered in the Airbnb app and stocked in the fridge by the host.",
+            "Rollout method: test in one city or market first, then expand; everything announced that day had been tested; launching ~dozens of services with 'literally hundreds' coming.",
+            "Long-tail logic: most services are too small to have a global brand or app, so Airbnb offers them a global audience of travelers, like the original host-distribution idea; services can be applied for via the become-a-host flow, and every lead is taken.",
+            "Examples: a masseuse in Tulum or a photographer at the Eiffel Tower who could not previously reach visiting travelers.",
+        ],
+        "quote": None,
+        "watch": None,
+        "names": [
+            {"name": "Instacart (CART)", "blurb": "Grocery delivery integrated into the Airbnb app with address and guest count prefilled.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "ai-amplifier-velocity",
+        "tags": ["dev-workflow", "software"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "OPERATING — 80% MORE FEATURES",
+        "title": "AI is an amplifier: Airbnb ships 80% more features, and the performance gap is widening",
+        "lead": "Chesky measures AI by product velocity and quality, not tokens used, and argues the same tools make top performers disproportionately better.",
+        "bullets": [
+            "Airbnb ships **80% more features** than a year ago; a new service that took a year now takes weeks; he credits AI replacing hand-coding, plus a cultural push to use the tools correctly.",
+            "Early-2026 'token matching': CEOs measured AI use by tokens and ran leaderboards that shamed low users; he thinks it helped for a few months but failed long-term as people asked why AI spend was so high.",
+            "Metrics now: how fast, how many features, how high quality and how successful; 'the customer doesn't care if we're using AI.'",
+            "AI is 'the ultimate democracy' (everyone has Codex and Claude Code) but not equally used: 'AI is like an amplifier... the performance gap is greater with AI.'",
+            "Great thinking, taste, data quality, collaboration and curiosity matter more because the question is now what to build and whether it matters.",
+            "He was intimidated by Claude Code and had an employee tutor him; his advice is to jump in, find someone who knows more, and use YouTube.",
+        ],
+        "quote": {"text": "AI is like an amplifier. It makes the good people better, and the people that weren't as good, it's less of a multiplier for them.", "cite": "— Brian Chesky"},
+        "watch": "Chesky concedes the token-leaderboard approach was a management fad he judged short-lived; the 80% figure is Airbnb's own metric as stated by its CEO.",
+        "names": [
+            {"name": "Anthropic", "blurb": "Claude Code is one of the shared 'same tools for everyone' he names, and one he learned from an employee.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "OpenAI", "blurb": "Codex named as one of the shared tools; also named as one of the 'giant' AI companies.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "idea-volume-focus",
+        "tags": ["mindset", "dev-workflow"],
+        "color": "gray",
+        "badge": "Opinion",
+        "status": "PERSONAL METHOD — IDEA VOLUME AND FOCUS",
+        "title": "Volume of ideas, an AI-read notebook, and blinders against doom-scrolling",
+        "lead": "Chesky says the best way to have a good idea is to have a lot of ideas, and to protect attention from what everyone else is doing.",
+        "bullets": [
+            "Citing Linus Pauling: 'the best way to have a good idea is to have a lot of ideas'; Airbnb was one of many, many of them bad. IDEO's rule: sticky-note ideas with no critique, because critique makes you edit and fear.",
+            "His notebook: ~1,000 words a day (~300,000 a year, ~100 lines a day, ~30,000 ideas a year); he bolds 5-10 lines daily, and his AI now reads the bolded ideas monthly, finds patterns and re-surfaces ideas he dismissed.",
+            "He estimates ~99% are not useful; 'good ideas don't die', they come back and haunt you like ghosts.",
+            "Repetition examples he cites: Eminem and Dylan writing constantly, Da Vinci's notebooks (about 80% writing), Van Gogh painting more than one painting a day in his last three years, Hemingway writing 6 a.m. to noon; Jay-Z reportedly works in his head instead.",
+            "Attention: too much X; 'we're all like kids chasing soccer balls'; give the news 10 minutes a day, or one 20-30 minute learning block with the phone off.",
+            "Screens: 'attention span is commensurate with screen size': use a computer, not a phone, for focus; phones train dopamine to multitask (IMAX comparison).",
+        ],
+        "quote": {"text": "Good ideas don't die... they kind of haunt you like ghosts.", "cite": "— Brian Chesky"},
+        "watch": "Chesky says he gives this advice while admitting he and most viewers do not follow it consistently.",
+        "names": None,
+    },
+    {
+        "id": "no-ai-window",
+        "tags": ["software", "career"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "OUTLOOK — NO 'AI WINDOW'",
+        "title": "No AI window: 50 more Anthropics, millions of small companies, and chat is the wrong interface",
+        "lead": "Chesky argues we are at the start of a long cycle where building a company is far easier than 20 years ago and chat is not the right interface for most work.",
+        "bullets": [
+            "He said for years he was lucky to be 26 at the iPhone/Facebook/cloud moment, then after ChatGPT said he wished he were 26 again.",
+            "What he might build: education, AI-native storytelling ('an AI Disney'), and health.",
+            "Calls Meta's Muse and another consumer agent 'the beginning of consumer AI, agentic AI', but 'the messaging interface is not the right interface to do most work'; visual or audio modalities are open (TikTok over Twitter as the example).",
+            "'Putting a jet engine on the back of a bicycle' is how he describes forcing AI into messaging.",
+            "'There's going to be 50 more Anthropics, maybe 100'; many companies bigger than Airbnb and Anthropic; tens of millions of small companies run by one to three people.",
+            "Fear outside Silicon Valley: he accepts that AI is displacing some jobs and 'I'm not defending it', but says 'everyone has the power now.'",
+        ],
+        "quote": {"text": "We're not in a cycle. We're not in a window. And if we are, it's a thousand-year window.", "cite": "— Brian Chesky"},
+        "watch": "He runs a company whose growth case benefits from AI optimism and calls the thousand-year window a framing: 'if technology doubles every year for 10 years, that's a thousandx.'",
+        "names": [
+            {"name": "Meta (META)", "blurb": "Muse cited as an early consumer agent, alongside another agent whose name the caption garbles.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F9ED", "tag": "Product", "title": "Design AI as an agent layered on existing filters and controls, not as a chat box, where the task is comparison or browsing."},
+    {"icon": "\U0001F4CA", "tag": "AI adoption", "title": "Measure AI by shipping velocity and quality, not token counts or leaderboards."},
+    {"icon": "\U0001F4DD", "tag": "Workflow", "title": "Keep a daily idea log, bold the best lines, and have AI pull patterns monthly."},
+    {"icon": "\U0001F6E0️", "tag": "Skills", "title": "Pair with someone who knows Claude Code or Codex better than you and start now."},
+    {"icon": "\U0001F9D8", "tag": "Focus", "title": "Cap news and feed time at 10 minutes a day and do deep work on a large screen with the phone off."},
+    {"icon": "\U0001F3EA", "tag": "Business", "title": "If you offer a local service, list it on a distribution platform that reaches travelers, as Airbnb's services host application allows."},
+]
+
+HOT_TAKES = [
+    {"take": "Agents are definitely the future of Silicon Valley and chatbots are not.", "cite": "— Brian Chesky", "why": "Dismisses chat as the interface"},
+    {"take": "There's going to be 50 more Anthropics, maybe 100... I know.", "cite": "— Brian Chesky", "why": "Numeric prediction stated with certainty"},
+    {"take": "There's not this AI window... if we are, it's a thousand-year window.", "cite": "— Brian Chesky", "why": "Rejects the bubble/window framing"},
+    {"take": "The messaging interface is not the right interface to do most work.", "cite": "— Brian Chesky", "why": "Contradicts the chat-first consumer AI direction"},
+    {"take": "Attention span is commensurate with screen size... Do not look at a phone if you want to focus.", "cite": "— Brian Chesky", "why": "Contrarian focus advice"},
+    {"take": "Instagram, X, YouTube, TikTok... they're really not social networks. They're performance platforms.", "cite": "— Brian Chesky", "why": "Dismissal of social-network label"},
+]
+
+CLAIMS = [
+    {"who": "Brian Chesky", "claim": "Airbnb's new neighborhood maps will roll out to a thousand cities worldwide.", "metric": "cities with maps", "target": "1,000", "by": None, "condition": None, "entity": "Airbnb (ABNB)"},
+    {"who": "Brian Chesky", "claim": "Airbnb is shipping 80% more features than a year ago, mostly because of AI.", "metric": "feature output", "target": "+80%", "by": None, "condition": None, "entity": "Airbnb (ABNB)"},
+    {"who": "Brian Chesky", "claim": "Airbnb will add dozens, even hundreds, of services that plug into a home booking.", "metric": "services on platform", "target": "dozens to hundreds", "by": None, "condition": None, "entity": "Airbnb (ABNB)"},
+    {"who": "Brian Chesky", "claim": "There will be 50 more Anthropic-scale companies, maybe 100, and many bigger than Airbnb.", "metric": "Anthropic-scale AI companies", "target": "50-100 more", "by": None, "condition": None, "entity": "Anthropic"},
+    {"who": "Brian Chesky", "claim": "Tens of millions or millions of small companies will emerge, each run by one to three people.", "metric": "new small companies", "target": "millions to tens of millions", "by": None, "condition": None, "entity": None},
+]
+
+RELATIONS = [
+    {"from": "Airbnb (ABNB)", "rel": "partners_with", "to": "Instacart (CART)", "note": "groceries ordered through the Airbnb app and delivered into the stay"},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F4DA", "title": "**Sources and references named:** Linus Pauling (quote on ideas), IDEO (no-critique sticky-note exercise), Steve Jobs (phone design intent); creators cited as examples: Eminem, Bob Dylan, Jay-Z, Da Vinci, Van Gogh, Hemingway; Codex and Claude Code as tools.", "tag": "Sources"},
+    {"icon": "\U0001F4F1", "title": "**Social network drift:** none of Chesky's friends are on Facebook anymore, which he says left no place online to see where friends travel.", "tag": "Culture"},
+]
+
+GLOSSARY = [
+    {"term": "Token matching", "def": "The early-2026 practice of measuring employees' AI adoption by tokens consumed, with leaderboards."},
+    {"term": "Travel graph", "def": "Airbnb's feature letting you connect friends and family to see where they have traveled and where they are going."},
+    {"term": "Services host", "def": "An Airbnb host category for non-lodging providers such as chefs, massage therapists and photographers."},
+]
