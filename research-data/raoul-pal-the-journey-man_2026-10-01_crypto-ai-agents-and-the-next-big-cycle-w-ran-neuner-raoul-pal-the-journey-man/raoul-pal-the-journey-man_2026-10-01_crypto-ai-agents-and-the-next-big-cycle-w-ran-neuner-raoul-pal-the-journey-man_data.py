@@ -1,0 +1,215 @@
+META = {
+    "title": "Crypto, AI Agents, And The Next Big Cycle w/ Ran Neuner | Raoul Pal The Journey Man",
+    "channel": "Raoul Pal The Journey Man",
+    "speakers": "Ran Neuner (guest), Raoul Pal (host)",
+    "date": "2026-10-01",
+    "video_url": "https://www.youtube.com/watch?v=AIQFufIFgR8",
+    "thread_line": "6 threads · altcoin-led first 'real' crypto bull market · casino-meets-social-network · AI-agent payments on chain · token valuation as 'pressure in the pipe' · portfolio construction · AI-automated research",
+    "category": "market",
+}
+
+SNAPSHOT = [
+    "Ran Neuner: crypto has just left a bear market and is entering its **first real bull market**, led by altcoins rather than Bitcoin.",
+    "Evidence he points to: ETH/BTC breaking out after 9 years, small altcoins bouncing off a trendline vs BTC, and protocols earning $1-5M a day (Pump.fun, Hyperliquid).",
+    "Two product-market fits: tokenization of everything, and a 'casino x social network' trading loop (FOMO, Pump.fun) built on dopamine and a public P&L.",
+    "The bigger prize is AI agents: ~1B transacting agents and 217B transactions a day by ~2029, which he argues need trustless, instant-settlement blockchain rails; a same-day BlackRock report is cited as confirmation.",
+    "Valuation framework: network + growth + real revenue + a fee switch; price = *pressure in the pipe* (tiny free float vs buyback-and-burn demand), not fully diluted value.",
+    "Portfolio: Bitcoin as store of wealth, ~60-70% of the non-BTC book in L1s (Solana, Sui, Near, ETH, Zcash), plus trading platforms (Hyperliquid, Lighter).",
+    "AI is his edge: AI models surfaced the Arbitrum trade on the Robinhood chain launch (~5x); agent swarms run research, clipping and wallet-tracking; an autonomous trading bot has *not* worked yet.",
+]
+
+THEMES = [
+    {
+        "id": "first-real-bull",
+        "tags": ["crypto"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "THESIS — BEAR MARKET OVER, ALTCOIN-LED BULL STARTING",
+        "title": "Crypto's first 'real' bull market is starting, and altcoins lead it",
+        "lead": "A bull market is prices up plus technology used plus revenue generated, and by that test 2017 and 2021 were not real ones.",
+        "bullets": [
+            "Calls 2021 the crypto equivalent of 1998-99 for internet stocks: a bull market on the promise of use cases, with none being used.",
+            "ETH/BTC (his proxy for every non-store-of-value use case) has broken out after 9 years; failed pushes were the 2017 ICO boom and 2020-21 DeFi summer (too slow, too expensive, unsustainable yield).",
+            "Smaller altcoins (excluding the top 10) vs BTC are bouncing off an uptrend line; past cycles gave altcoins about 9x then about 6x vs Bitcoin, and he expects a similar ~6-7x leg.",
+            "Sizing: if Bitcoin reached $4T and the altcoin leg ran ~7x, the implied total is about $32T, roughly 10x today's market cap. On Bitcoin itself: 'maybe a 2x, maybe a 3x... who actually cares.'",
+            "Bear-market scar: Bitcoin sat in a $60-70K range from February to August after the 10/10 drop, while stocks (AI, Korea's KOSPI) ran; late July was his closest moment to giving up on crypto.",
+            "Raoul Pal's view: same asymmetry, but he thinks the last cycle was a mid-cycle pause rather than a full bear market, with a longer, more dramatic move still to come. Both agree altcoins have not had their bull market yet (even ETH was stuck in a wedge for 5-6 years).",
+        ],
+        "quote": {"text": "I think calling 2021 a bull market is the same as calling 1998, 1999 a bull market for internet stocks.", "cite": "— Ran Neuner"},
+        "watch": "Neuner publicly shares his crypto trades and says his net asset value in crypto is at an all-time high; he is long the assets he discusses.",
+        "names": [
+            {"name": "Bitcoin (BTC)", "blurb": "Store of value; 'a lot of my wealth is in Bitcoin', but not where he sees the upside.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Ethereum (ETH)", "blurb": "ETH/BTC breakout after 9 years is his signal of product-market fit.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+        ],
+    },
+    {
+        "id": "casino-social-network",
+        "tags": ["crypto", "consumer"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "USE CASE — TOKENIZATION + SOCIAL TRADING",
+        "title": "The first real use case: the world's biggest casino has a baby with the world's biggest social network",
+        "lead": "Crypto lets people trade anything 24/7 with a public P&L, which stacks a casino's dopamine hit on a social network's validation loop.",
+        "bullets": [
+            "Use case one is tokenization of everything: stocks, bonds, commodities, even computing power go on chain. In 2014 crypto was 'a solution without a problem'; now 'you don't need a token for that' no longer holds.",
+            "Dopamine formula: motivation, work, result, gratification. Likes are ethereal; a live P&L is a scoreboard where your net worth is the like counter.",
+            "FOMO and Pump.fun are the 'V1': every token shows badges for who bought, leaderboards, a portfolio feed and alerts, app-first. He says he has no financial interest and does not short-term trade himself.",
+            "Predicts most human trading becomes social trading, with results published near real time instead of quarterly.",
+            "Pushback from Raoul Pal: 85% of retail traders lose money. Neuner: same is true in stocks in a bear market, and he still calls the shift 'a very good thing'. Raoul notes Real Vision has the same trade-idea and leaderboard mechanics.",
+            "Origin: on a quiet-market vacation he started learning Arabic because he was starved of dopamine; his advertising background (studying purchase decisions) made the pattern click.",
+        ],
+        "quote": {"text": "It's the world's biggest casino having a baby with the world's biggest social network.", "cite": "— Ran Neuner"},
+        "watch": "Neuner is open that this is engineered addiction ('the ultimate dopamine machine') and argues it is positive, which the host's 85%-lose-money point leaves unresolved.",
+        "names": [
+            {"name": "Pump.fun", "blurb": "Memecoin launchpad making roughly $1-5M a day in revenue, even in the bear market.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "agent-economy",
+        "tags": ["crypto", "ai-infra"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "THESIS — AGENTS NEED BLOCKCHAIN RAILS",
+        "title": "A billion AI agents transacting need trustless, instant settlement, which is what blockchains are",
+        "lead": "Neuner's core claim: the Nasdaq/AI run built infrastructure for agents, and the agents' transactions will settle on blockchain rails.",
+        "bullets": [
+            "His 24/7 tweet from the low (end of July): all asset markets 24/7/365, settled on chain, '100 billion agents trading at a frequency that you can't even imagine', with the fees captured by crypto protocols.",
+            "Sizing he cites: world workforce ~3.3B vs an estimate of **1 billion** transacting agents by 2029 making ~**217 billion** transactions a day. Both hosts would 'take the over' (Neuner: 10x to 100x).",
+            "Agent payments are microtransactions (API calls, data calls) needing trustless, immediate settlement because agents do not know each other's owners.",
+            "Counter he heard from a developer at a New York summit: agents will use limit-controlled prepaid debit cards. Neuner's rebuttal: smart contracts, a pre-loaded wallet and some proof of identity or credit score.",
+            "BlackRock report (published the day of recording): agentic AI and machine-to-machine payments 'will likely increase demand for blockchain rails'; ACH and card networks are 'less suited to always on low value transactions requiring programmable execution'. Neuner calls it confirmation of his thesis.",
+            "Chart: AIQ (AI ETF) returns vs crypto returns diverged at 10/10; read as infrastructure built first, agent transactions to follow. Meta's Muse agent was cited by Raoul as already integrating Shopify and PayPal.",
+            "Timing: both put the agentic economy in 2027-2029, not 2040. Neuner runs about 10 agents inside his own agent bot and expects them to transact; Raoul says he wrote his agent thesis about a year ago.",
+        ],
+        "quote": {"text": "Please tell me my thesis is wrong. Tell me that these AI agents aren't going to use blockchain rails.", "cite": "— Ran Neuner, to a developer in New York"},
+        "watch": "The 1B-agents and 217B-transactions figures are a number Neuner 'saw earlier today' and he says he does not know how accurate it is; the BlackRock report's blockchain-rails line is a forecast, not a deployed standard.",
+        "names": [
+            {"name": "BlackRock (BLK)", "blurb": "Report published the day of recording said agentic AI and machine payments will raise demand for blockchain rails.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "layer1-and-fees",
+        "tags": ["crypto"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "L1 WAR — BLOCK SPACE LARGELY SETTLED, TWO OPEN PRIZES",
+        "title": "The layer-1 war: ETH and Solana won block space; the agentic and TradFi L1s are still open",
+        "lead": "Neuner says the L1 block-space debate is 'pretty much finished', but L1s still cannot capture the value built on them.",
+        "bullets": [
+            "Bitcoin is the store-of-value L1; ETH (via L2s such as Robinhood chain and Base) and Solana 'have basically won'.",
+            "Two unsolved prizes: the **agentic L1** (contenders: Sui, whose object-based design suits AI transactions; Near; possibly Solana or Base) and the **TradFi L1** (where DTCC and existing clearing houses migrate).",
+            "Value-capture gap: Robinhood's chain made ~$50 million in its first two weeks; ETH captured about $50,000 of that, 'the most perfectly executed launch crypto has ever seen'.",
+            "Alternative L1 valuation: what value is destroyed if ETH is switched off (Robinhood, Base, DeFi, stablecoins, digital art), maybe $1-2 trillion. Fees are 'a red herring'; in tech, fees trend to zero.",
+            "Security funding is either token-native inflation ('a bad inflation', same as government inflation) or fees; today the L1 model works only because token inflation subsidizes it. Bitcoin's version of the problem arrives when emissions stop around 2140-2150.",
+            "Raoul Pal disagrees on fees: in an agent economy velocity explodes, so a tiny fee on a trillion transactions is still a lot. Example he gives: artist Jack Butcher sold ~123,000 pieces at ~$8 via X Money in a day (~$1-2M), with a buyback-and-burn.",
+        ],
+        "quote": None,
+        "watch": "Neuner holds Solana, Sui and Near (see portfolio theme), so his L1 verdicts come from a long position.",
+        "names": [
+            {"name": "Solana (SOL)", "blurb": "'Basically won' the L1 war; core 'savings account' holding.", "stance": "OWNS", "conviction": "High", "horizon": None},
+            {"name": "Sui (SUI)", "blurb": "Leading agentic-L1 contender because object-based design suits AI transactions.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "Near (NEAR)", "blurb": "Another agentic-L1 contender building agent tools; small position.", "stance": "OWNS", "conviction": "Low", "horizon": None},
+            {"name": "Robinhood (HOOD)", "blurb": "Launched a chain on Arbitrum tech; ~$50M revenue in two weeks, ETH captured ~$50K.", "stance": "POSITIVE VIEW", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "token-valuation",
+        "tags": ["crypto", "finance"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "FRAMEWORK — 'PRESSURE IN THE PIPE'",
+        "title": "Valuing tokens: network, growth, revenue, fee switch, then pressure in the pipe",
+        "lead": "A token is valuable with network effects plus scarcity, and its price is set by free float versus automated buying pressure, not by fully diluted valuation.",
+        "bullets": [
+            "Checklist: is it a network (every user adds value, as Hyperliquid users add liquidity)? Is it growing? Real revenue? A way to return value to holders? **No fee switch yet** is the best opportunity, because growth and revenue are priced but the payout is not.",
+            "Example: Collector Crypt (CARDS) tokenizes vaulted Pokemon cards; he says it accrues about 100x more fees than physical trading and the fee switch awaits SEC clarity.",
+            "Fully diluted valuation is the common mistake: Coinbase $52.4B market cap vs Hyperliquid $20B market cap but $89B fully diluted; ~$70B of HYPE is not emitted for ~10 years and listing a token on Hyperliquid requires locking up $50M of HYPE.",
+            "Stocks have no pipe constraint (no staking, no lock-ups, shares are not scarce, and buybacks stay on the balance sheet); crypto has locked supply, staking and buyback-and-burn, so price is a function of 'how thin the pipe is and how much buying pressure is in it'.",
+            "He spends ~80% of his days trying to crack the formula; the programmed screen is high buyback pressure, low circulating supply, rising users. Calls it 'free money' for whoever calculates it best.",
+            "Raoul Pal on the same mechanism: it also explains volatility, since in a bear market free float is too small for the demand or supply. Counter-example: SpaceX has a ~5-10% free float but gets automated demand via index inclusion; he expects crypto to get the same once real indices exist.",
+        ],
+        "quote": {"text": "I'm looking for pressure in pipes. What's the scarcest token with the highest buying pressure?", "cite": "— Ran Neuner"},
+        "watch": "Neuner says the formula is unfinished ('we haven't cracked it yet') and that he already holds the tokens he uses as examples.",
+        "names": [
+            {"name": "Hyperliquid (HYPE)", "blurb": "Network with real revenue ($3-5M/day) and buyback-and-burn; $20B market cap vs $89B FDV; a large position.", "stance": "OWNS", "conviction": "High", "horizon": None},
+            {"name": "Coinbase (COIN)", "blurb": "Used as the stock comparison: $52.4B market cap.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Collector Crypt (CARDS)", "blurb": "Tokenized Pokemon cards; fee switch pending SEC clarity.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "SpaceX", "blurb": "Raoul's free-float comparison; index inclusion supplies automated buying.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "portfolio-and-ai-edge",
+        "tags": ["crypto", "dev-workflow"],
+        "color": "green",
+        "badge": "Personal positioning",
+        "status": "PORTFOLIO — L1s AS SAVINGS, PLATFORMS AS BETS",
+        "title": "How Neuner holds it and runs it: L1s as savings accounts, trading platforms as bets, AI agents as the edge",
+        "lead": "Bitcoin and L1s are never touched; the active book is trading platforms, and AI agent swarms do the research.",
+        "bullets": [
+            "Excluding Bitcoin (his 'store of wealth'), about **60-70% is in L1s** (Solana, Sui, Near, some ETH, Zcash) because Zcash outperformed and he has not rebalanced. Rule: L1s are 'savings accounts'.",
+            "Zcash: bought at ~$100, ~17x since; reminds him of Bitcoin in 2014. Tests of the thesis were the developer exodus and a possible-hack scare; a protocol upgrade now lets them verify shielded plus unshielded supply equals 21M. Arthur told him he sold all his Zcash after the scare.",
+            "Lighter over Hyperliquid: he doubled down when Trump mentioned bringing Hyperliquid into the US, betting Hyperliquid would be threatened and capital would flow to the more regulation-friendly Lighter. Lighter ~$180 to ~$550; Hyperliquid ~$70-80 to ~$100.",
+            "Bet on trading platforms because anything created will be traded: 'the more leverage the better.' Mistake he regrets on Bitcoin: not accumulating 10,000 BTC early.",
+            "Edge from AI: ran several models on the Robinhood-chain launch to find who wins and loses; flagged Arbitrum (earns 10% of Robinhood chain revenue), translated it to a buyback and a price, ~5x return at a multiple of five; he estimates ~10% odds of finding it without AI.",
+            "Business automation: ~20 staff roles cut to 2-3 for thumbnails; clippers cut from ~10 to 1 running 40 Twitter accounts via one AI clipping tool; a 'newsroom' agent scores team-curated tweets and articles to surface trading ideas; a 30-second agent briefs him on guests.",
+            "Wallet tracking: an agent swarm watches team wallets (including multi-hop bounces); during the recording one token fell ~10% as a team moved tokens. A fully autonomous trading bot has been tried with no real success.",
+        ],
+        "quote": {"text": "If you're not using AI today in the crypto environment to do your research, then I think you're falling really far behind.", "cite": "— Ran Neuner"},
+        "watch": "Neuner discloses he owns Zcash, Lighter, Hyperliquid, Solana, Sui, Near, ETH and Bitcoin and talks about them on a public daily show; Raoul also holds some Zcash (entered around $300).",
+        "names": [
+            {"name": "Zcash (ZEC)", "blurb": "Bought ~$100, ~17x; >10% of portfolio at the time of the scare; unrebalanced.", "stance": "OWNS", "conviction": "High", "horizon": None},
+            {"name": "Lighter", "blurb": "Regulation-friendly Hyperliquid competitor; doubled down at ~$180, now ~$550.", "stance": "OWNS", "conviction": "High", "horizon": None},
+            {"name": "Arbitrum (ARB)", "blurb": "Earns 10% of Robinhood chain revenue; AI-found trade, ~5x.", "stance": "POSITIVE VIEW", "conviction": "None", "horizon": None},
+        ],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F4C8", "tag": "Crypto", "title": "Separate Bitcoin from altcoin exposure: Neuner argues the next leg is altcoin-led, so check ETH/BTC and the altcoin-vs-BTC trendline before sizing either."},
+    {"icon": "\U0001F916", "tag": "AI agents", "title": "Treat agent-payment demand as the thesis to track; follow BlackRock-style reports and agent-transaction counts against the 1B-by-2029 and 217B/day figures."},
+    {"icon": "\U0001F9EE", "tag": "Valuation", "title": "Replace fully diluted valuation with a free-float and buyback-pressure screen when comparing a token to a stock."},
+    {"icon": "\U0001F50D", "tag": "Research", "title": "Screen for networks with growing users and revenue but no fee switch yet; that gap is where he sees mispricing."},
+    {"icon": "\U00002699️", "tag": "Workflow", "title": "Automate repeatable content and research steps (clipping, thumbnails, newsroom scoring, guest briefs) before hiring for them."},
+    {"icon": "\U0001F6E1️", "tag": "Risk", "title": "Add an agent that watches team-wallet movements on any small-cap token you hold."},
+]
+
+HOT_TAKES = [
+    {"take": "I think now we are going into crypto's first real bull market.", "cite": "— Ran Neuner", "why": "Dismisses 2017 and 2021 as bull markets"},
+    {"take": "Maybe it'll do a 2x. Maybe it'll do a 3x... Who knows? And to be honest, who actually cares?", "cite": "— Ran Neuner (on Bitcoin)", "why": "Dismisses Bitcoin as the main upside"},
+    {"take": "Fees are irrelevant. They're a red herring. In technology, fees are a friction.", "cite": "— Ran Neuner", "why": "Contradicts the fee-capture L1 valuation view"},
+    {"take": "I would take the over on that number... 100 times.", "cite": "— Ran Neuner (on 1 billion agents by 2029)", "why": "Numeric prediction"},
+    {"take": "I think the agentic economy is 2027, 2028, 2029. I don't think it's 2040.", "cite": "— Ran Neuner", "why": "Dated call"},
+    {"take": "I think that the layer one war is largely won... ETH and Solana have basically won.", "cite": "— Ran Neuner", "why": "Declares a winner"},
+]
+
+CLAIMS = [
+    {"who": "Ran Neuner", "claim": "Crypto is entering its first real bull market, led by altcoins.", "metric": "altcoin performance vs BTC", "target": "~6-7x", "by": None, "condition": None, "entity": None},
+    {"who": "Ran Neuner", "claim": "If Bitcoin reaches $4T and altcoins run about 7x, total crypto market cap is about $32T, about 10x today's.", "metric": "total crypto market cap", "target": "$32 trillion", "by": None, "condition": "Bitcoin at $4T and altcoins ~7x", "entity": None},
+    {"who": "Ran Neuner", "claim": "About 1 billion transacting AI agents deployed by 2029, executing ~217 billion transactions a day; he would take the over.", "metric": "transacting agents", "target": "1 billion (over)", "by": "2029", "condition": None, "entity": None},
+    {"who": "Ran Neuner", "claim": "The agentic economy arrives in 2027-2029, not 2040.", "metric": "agentic economy", "target": "arrives", "by": "2027-2029", "condition": None, "entity": None},
+    {"who": "Ran Neuner", "claim": "Agents will transact on blockchain rails rather than existing card/ACH networks.", "metric": "agent payment rails", "target": "blockchain", "by": "2029", "condition": None, "entity": None},
+    {"who": "Ran Neuner", "claim": "Hyperliquid will buy back and burn about $3-5M a day, and its fully diluted valuation is $89B vs $20B market cap.", "metric": "HYPE daily buyback", "target": "$3-5M/day", "by": None, "condition": None, "entity": "Hyperliquid (HYPE)"},
+    {"who": "Ran Neuner", "claim": "Collector Crypt will eventually pass fees back to holders once there is SEC clarity.", "metric": "fee switch", "target": "activated", "by": None, "condition": "SEC clarity", "entity": "Collector Crypt (CARDS)"},
+    {"who": "Ran Neuner", "claim": "Bitcoin could do a 2x to 3x this cycle.", "metric": "Bitcoin price", "target": "2x-3x", "by": None, "condition": None, "entity": "Bitcoin (BTC)"},
+    {"who": "Raoul Pal", "claim": "Real crypto indices will create automated buying pressure, as index inclusion does for stocks.", "metric": "index demand", "target": "automated inflows", "by": None, "condition": "real crypto indices exist", "entity": None},
+]
+
+RELATIONS = [
+    {"from": "Arbitrum (ARB)", "rel": "supplies", "to": "Robinhood (HOOD)", "note": "Robinhood chain is built on Arbitrum technology; Arbitrum gets 10% of its revenue"},
+    {"from": "Lighter", "rel": "competes_with", "to": "Hyperliquid (HYPE)", "note": "Lighter took the more regulation-friendly US route"},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F552", "title": "**Block time as a universal clock:** Neuner says agents should reason in block numbers, not hours, and expects a dedicated chain acting as an 'oracle for time' to settle microtransactions across thousands of chains; fastest chains finalize in ~100 ms. Raoul: blockchain as an immutable log of events is underused.", "tag": "Crypto infrastructure"},
+    {"icon": "\U0001F4DA", "title": "**Sources referenced:** BlackRock's report on AI and digital assets; Raoul Pal's essay on everything becoming a token; Raoul's agent thesis; Pump.fun and FOMO apps; Jack Butcher's X Money art sale; Neuner's Crypto Banter show and Crypto Insider channel; Real Vision's trade-idea platform.", "tag": "Sources"},
+    {"icon": "\U0001F9E0", "title": "**Process habit:** Neuner works with ~10 researchers and publishes a daily show telling viewers everything he learned and every portfolio move that day; he says he learned to give opinions without apologising once they are well researched.", "tag": "Workflow"},
+]
+
+GLOSSARY = [
+    {"term": "Fee switch", "def": "A mechanism that routes a protocol's fees to token holders; tokens without one yet are what Neuner calls the best opportunities."},
+    {"term": "Fully diluted valuation (FDV)", "def": "Total token supply times price, including tokens not yet emitted or locked, which Neuner says overstates the tradable value."},
+    {"term": "Pressure in the pipe", "def": "Neuner's metaphor: price depends on how thin the tradable supply (locked, staked, unemitted) is versus the buying pressure (buybacks, burns) flowing in."},
+    {"term": "Buyback and burn", "def": "A protocol uses a share of fees to buy its own token and destroy it, reducing supply."},
+    {"term": "Agentic L1", "def": "A layer-one blockchain designed for transactions between AI agents."},
+    {"term": "Free float", "def": "The share of a security or token that is actually tradable in the market."},
+]
