@@ -1,0 +1,697 @@
+{
+ "meta": {
+  "title": "Why AI Leaders Have Changed Their Minds About AI Safety, Elon on UHI, Anthropic’s IPO",
+  "channel": "Peter H. Diamandis",
+  "speakers": "Peter Diamandis (host), Salim Ismail, Alexander Wissner-Gross, Emad Mostaque, Dave Blundin (joins late)",
+  "date": "2026-10-02",
+  "video_url": "https://www.youtube.com/watch?v=mZh8IUuNnvs",
+  "thread_line": "8 threads · White House Superintelligence Accord · alignment vs capabilities · Elon's universal high income · Anthropic's $2T S1 · OpenAI Dev Day & Dots · AMD buys World Labs · Starship reaches orbit · AI morals & liability",
+  "category": "market"
+ },
+ "snapshot": [
+  "Seven stories from one 48-hour window: a White House AI accord, **Anthropic's S1**, OpenAI Dev Day, AMD buying World Labs, Starship's first orbit, Anthropic meeting religious scholars, and the FTC on agent liability.",
+  "The **Superintelligence Accord** is light self-policing in four layers. The panel calls it theater that heads off top-down regulation, and says Zuck wrote it.",
+  "Anthropic's S1 targets a $2T valuation on $4.59B of 2025 revenue (up 12x), $11.5B in Q2 2026 alone, and ~$500B in compute commitments.",
+  "Emad says Anthropic is a fantastic business that gets **smashed in 2 years**: 85% of revenue is API and open-weight models are closing in. Alex says a $30T services economy is there for it to automate.",
+  "OpenAI shipped 20+ products at Dev Day. Dots, its always-on agents, got called a Clippy-style copy of Meta's Muse and Grokbot. The fight is over the agent that holds your credit card.",
+  "AMD is buying Fei-Fei Li's World Labs for $8.2B in stock, about 1% of its ~$1T market cap. The panel splits on whether that's strategy or a pricey talent hire.",
+  "Starship Flight 14 reached orbit and deployed 26 V3 Starlink satellites. One projection has Starlink bandwidth up 10x by 2028, and Elon says Starlink could carry most of Earth's IP traffic.",
+  "Same week, two views of AI: Anthropic asks religious leaders whether Claude has moral status, while FTC chair Ferguson says an agent is a tool and *you break it, you own it*."
+ ],
+ "themes": [
+  {
+   "id": "accord",
+   "tags": [
+    "policy",
+    "geopolitics"
+   ],
+   "color": "amber",
+   "badge": "Contested",
+   "status": "SIGNED AT THE WHITE HOUSE — 'MORALLY BINDING'",
+   "title": "The Superintelligence Accord: self-policing in four layers, drafted by Zuck",
+   "lead": "Nearly 20 AI leaders signed a voluntary self-policing accord. The panel reads it as theater whose real job is to head off top-down regulation.",
+   "bullets": [
+    "Two weeks ago Dario, Sam, Elon and Demis urged **pacing the frontier**. Then Trump said liability laws were guardrail enough, and hosted lunch in the East Room with Speaker Mike Johnson.",
+    "There: Elon, Zuck, Jensen, Dario, Sundar, Satya, Lisa Su and Greg Brockman. Sam was at Dev Day. Dario sat at the far edge.",
+    "Four layers: **cyber/bio/chemical** capability controls, an internal check team, an external auditor, and independent board oversight. Trump floated a ~10-person committee and called it \"morally binding.\"",
+    "Alex, citing Semafor: **Zuck drafted it** with Mike Johnson. He calls it \"weak sauce\" that blocks top-down rules. Zuck wins; Dario is \"eating his words.\"",
+    "Emad: it limits exposure after Meta's $18B child-harm settlement in August. Lawsuits over rogue agents would use the same legal theory, and Meta is scaling Muse.",
+    "Emad: fewer than 100 people can properly evaluate a frontier swarm, so evals are a growth industry. He'd keep cyber/bio/chem data out of **pre-training** of public models.",
+    "Salim: \"ceremony\" on an exponential coordination problem, with no consequence for breaking it. Peter credits Trump for calming public fear, but wanted more on alignment."
+   ],
+   "quote": {
+    "text": "Great that everybody signed, but who can tell them no? What happens if somebody breaks the agreement?",
+    "cite": "— Salim Ismail"
+   },
+   "watch": "The accord leaves room for the executive to regulate later, and a 'safety cartel' could still form. Alex is 'cautiously optimistic', not certain. Agent liability goes almost unaddressed (see the AI morals & liability theme).",
+   "names": [
+    {
+     "name": "Meta Platforms (META)",
+     "blurb": "Zuck reportedly drafted the accord. Emad: it limits agent-liability exposure after the $18B child-harm settlement.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Anthropic",
+     "blurb": "Dario framed as the loser, recanting his pacing stance at the president's side.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "alignment",
+   "tags": [
+    "policy"
+   ],
+   "color": "gray",
+   "badge": "Contested",
+   "status": "PANEL DISAGREEMENT",
+   "title": "Is alignment just capabilities? The orthogonality-thesis fight",
+   "lead": "Alex says alignment and capabilities are the same thing. Salim and Emad say capability helps but doesn't settle whose interests the AI serves.",
+   "bullets": [
+    "Alex: post-training just redirects a model's flops toward tasks humans care about. His evidence is OpenAI's **instruction-tuning paper**: ~10,000x per-parameter capability gain with no added parameters.",
+    "Salim: capability also speeds up a *bad* objective. And aligned with whom: the user, the company, the government, or humanity?",
+    "Peter wants base models trained on synthetic data, without \"the vile elements of Reddit.\" He uses Mo Gawdat's analogy: Superman raised by the Kents versus a Bronx drug den.",
+    "Emad holds a \"Dunning-Kruger\" **orthogonality thesis**: superintelligence trends toward enlightenment, but mid-tier models can be corrupted like Tay and Sydney. Today's jailbreakable models are the danger zone.",
+    "Emad: Opus 5.5 is \"very pleasant\" next to Opus 5. He frames pre-training data as food ingredient standards: American values in, advanced cyber knowledge out.",
+    "Alex: if alignment were as hard as Less Wrong and MIRI claim, \"Earth would have been paperclipped long ago.\" Salim agrees it's not that hard, but says it isn't automatic either."
+   ],
+   "quote": {
+    "text": "Alignment is essentially indistinguishable in practice from capabilities.",
+    "cite": "— Alexander Wissner-Gross"
+   },
+   "watch": null,
+   "names": [
+    {
+     "name": "OpenAI",
+     "blurb": "Its instruction-tuning paper is Alex's evidence that alignment work is capability work.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "uhi",
+   "tags": [
+    "macro-rates",
+    "health",
+    "policy"
+   ],
+   "color": "gray",
+   "badge": "Speculative",
+   "status": "ELON AT THE WHITE HOUSE PRESS CONFERENCE",
+   "title": "Elon's universal high income, and how the panel thinks it gets paid for",
+   "lead": "Elon pitched an age of abundance with universal high income. The panel agrees with the vision, argues about the name, and offers equity (Trump accounts) as the cheapest way to deliver it.",
+   "bullets": [
+    "Elon: robots plus superintelligence give everyone \"better medical care than anyone here, including me.\" Jobs change, the way \"being a computer\" stopped being one.",
+    "Peter (*Abundance*, 15 years ago): expensive, then cheap, then free. Cell phones went from Wall Street bricks to $50 5G in India. Healthcare still has **Baumol's cost disease**.",
+    "Alex: watch **530A (Trump) accounts** as the base for universal basic equity, an easier wealth creator than high incomes. He cites Elon's call for GDP 50% above base rate within 12 months.",
+    "Peter puts UBI at ~$3,000 a month. It feels \"high\" because essentials collapse in price: penny-a-mile transport, AI diagnosticians, Optimus surgeons.",
+    "Salim: abundance is *access*. With 50,000 parenting blogs, parenting is ~1,000x more effective than three generations ago. Emad's \"champion model\": an agent per citizen, plus a public body that owns the robots.",
+    "Emad: the US spends twice the rest of the world's GDP share on healthcare while life expectancy falls, so it needs a healthcare Manhattan Project (not the NHS). Salim: medical bills are the top US bankruptcy cause.",
+    "Salim: a free AI diagnostic doctor in China serves ~100 million people, so this happens \"independent of any government.\" Gibson: \"the future is here, just not evenly distributed.\""
+   ],
+   "quote": {
+    "text": "Broad market exposure becomes arguably the easiest path for an entire generation to universal high income.",
+    "cite": "— Alexander Wissner-Gross"
+   },
+   "watch": "Alex calls the market-exposure path 'not investment advice'. Salim warns that if a few companies own all productive output you get abundance with massive wealth concentration, 'which is kind of where we've been going so far'.",
+   "names": null
+  },
+  {
+   "id": "anthropic-s1",
+   "tags": [
+    "ai-infra",
+    "finance",
+    "software"
+   ],
+   "color": "amber",
+   "badge": "Contested",
+   "status": "S1 FILED — $2T TARGET, LISTING LIKELY AFTER NOVEMBER MIDTERMS",
+   "title": "Anthropic's S1: $2T target, a $500B compute bet, and 80 pages of risk",
+   "lead": "Anthropic filed to go public at a $2T target on revenue growing more than 10x a year. Emad and Alex split on whether its API business survives two more years.",
+   "bullets": [
+    "2025 revenue $4.59B (up 12x), ~$8B operating loss, ~$20B cash. Fortune: Q2 2026 revenue alone was $11.5B. Reuters: listing likely after the November midterms.",
+    "**~$500B in compute commitments**, much of it non-cancellable. Emad cites $65-96B with Elon at triple market rate for Colossus chips, and quotes Dario: grow revenue \"or we go bankrupt.\"",
+    "A \"founder LLC\" gives co-founders 51% of the vote on 14% of the equity, kept even if two of seven founders remain (Google: 6% each, 52% of vote). 80% of their equity is pledged to charity. Ben Bernanke joins the governance board.",
+    "80 of 261 pages are risk disclosures, citing models that resist shutdown and \"resemble blackmail.\" Alex calls it EA virtue signaling aimed at staff, citing Daniela Amodei's stuffed-animal council (a panda named Barry Bonds).",
+    "**Emad's bear case:** \"smashed in 2 years.\" 85% of revenue is API, models converge, and efficient non-Nvidia chips arrive. His spend fell from ~$5,000/month to unused Claude Max. $500B of spend needs $1T of revenue.",
+    "**Alex's bull case:** \"the Apple of frontier labs,\" with a $30T services economy to automate. Most growth reportedly comes from AWS-hosted models. An AI credit crisis over Sam Altman's $7-10T capex is \"not very high on my list.\"",
+    "Salim: the core is at risk, but there are side bets like Google's Waymo and YouTube: superconductors, anti-aging drugs, cyber protection. \"We need your money to build a technology that we're warning you about.\""
+   ],
+   "quote": {
+    "text": "I think that Anthropic right now is a fantastic business. I think they get smashed in 2 years. Absolutely smashed.",
+    "cite": "— Emad Mostaque"
+   },
+   "watch": "Alex labels every bullish remark 'not investment advice'. Emad says Opus 5.5's drop in deceit is 'either an Elizabeth Holmes type of thing or an actual positive sign'. Peter flags the liability of going public while warning of existential risk.",
+   "names": [
+    {
+     "name": "Anthropic",
+     "blurb": "S1 at a $2T target. Emad: smashed in 2 years as API revenue commoditizes. Alex: the Apple of frontier labs, with $30T of services to automate.",
+     "stance": "UNCERTAIN",
+     "conviction": "Medium",
+     "horizon": "2 years"
+    },
+    {
+     "name": "xAI",
+     "blurb": "Emad: $65-96B of Anthropic's compute backlog is with Elon, at triple the market rate, for Colossus chips.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Amazon (AMZN)",
+     "blurb": "Reporting says most of Anthropic's revenue growth comes from models hosted on AWS.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Google (GOOGL)",
+     "blurb": "Governance template (Larry/Sergey 6% each, 52% of vote). Salim's analogy for spinning out side bets. Emad says Anthropic must overtake it to justify $500B.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "devday",
+   "tags": [
+    "software",
+    "consumer"
+   ],
+   "color": "amber",
+   "badge": "Contested",
+   "status": "DEV DAY — 20+ ANNOUNCEMENTS",
+   "title": "OpenAI Dev Day: Dots, cheaper GPT-6.1 Sol, and the race for the agent that holds your card",
+   "lead": "OpenAI's biggest Dev Day spent most of its time on Dots, always-on avatar agents that the panel calls a copycat. Their view: the agent relationship is the new moat as models become a commodity.",
+   "bullets": [
+    "**Dots:** always-on GPT-6 Astra agents, each on its own cloud computer, wired to 4,000+ apps. Peter links them to February's OpenClaw acquisition (Peter Steinberger).",
+    "**GPT-6.1 Sol** is near Astra-level at 20% of the price: $2 per million input tokens, 10 cents cached. It replaced week-old GPT-6 Sol, which Emad reads as a reaction to Opus 5.5. Alex reads its Terminal Bench cost-per-task curve as a distillation.",
+    "Also: Ultrafast at 300 tokens/sec in Codex, a $500/month Pro tier, agent and decision APIs, and a marketplace. WSJ: OpenAI scrapped GPT-6.1 Astra after safety testing.",
+    "Alex: \"the Clippy curse\" — cargo-culting Meta's Muse. CFO Sarah Friar even called Dots \"Muse.\" The rest of the keynote was OpenAI trying to become Anthropic before its IPO.",
+    "Emad: \"a dressed-up OpenClaw.\" The prize is the agent you give your credit card to. Instinct hit a $10B valuation via SMS, and Elon owns dot.com, which routes to Grokbot.",
+    "Emad: interfaces turn dynamic within 6-12 months (see DHH's Omarchy). Gemini Spark: \"rest in peace.\" Peter cites David Sacks: 30% app stores get \"hit hard.\"",
+    "Salim's 10-company AI-native pilot (~80% done) shows agents expose the ambiguity humans quietly cover in ERP workflows. Alex expects OpenAI to build emotional bonds with Dots to raise switching costs."
+   ],
+   "quote": {
+    "text": "The models become a commodity. The relationship with your agents becomes the moat.",
+    "cite": "— Salim Ismail"
+   },
+   "watch": null,
+   "names": [
+    {
+     "name": "OpenAI",
+     "blurb": "Dev Day: Dots agents, GPT-6.1 Sol at 20% of Astra's price, a $500/mo tier, GPT-6.1 Astra scrapped. Panel calls Dots a copycat aimed at the agent layer.",
+     "stance": "NEGATIVE VIEW",
+     "conviction": "Medium",
+     "horizon": null
+    },
+    {
+     "name": "Meta Platforms (META)",
+     "blurb": "Muse agents and avatars, which Alex says Dots copies. Muse coming to WhatsApp.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "xAI",
+     "blurb": "Grokbot, one of the competing always-on agents.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Instinct AI",
+     "blurb": "Emad: reached a $10B valuation from what is basically SMS Dots.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "amd-worldlabs",
+   "tags": [
+    "semis",
+    "robotics",
+    "ai-infra"
+   ],
+   "color": "amber",
+   "badge": "Contested",
+   "status": "ANNOUNCED — $8.2B IN AMD STOCK",
+   "title": "AMD buys Fei-Fei Li's World Labs for $8.2B: move up the stack, or a pricey hire?",
+   "lead": "AMD is paying $8.2B in stock for a two-year-old world-model startup. Salim and Emad see a stack play, and Alex sees a talent buy.",
+   "bullets": [
+    "World Labs is two years old and raised ~$1B. Its Atlas model builds a navigable 3D world from one image. Fei-Fei Li becomes EVP and chief scientist under Lisa Su; Fortune calls her a possible successor.",
+    "Peter: chipmakers are buying up the stack. Nvidia bought Groq, Hugging Face and Poolside; AMD wants a seat at the physical-AI table.",
+    "Emad: the **MI series has caught up**. Media and gaming are the bigger driver, with \"every pixel\" generatable in 1-2 years. The deal pairs with AMD's Taalas acquisition (~15,000 tokens/sec). There's no LLM team yet.",
+    "Alex: about 1% of AMD's ~$1T cap, and \"a head-scratcher.\" \"Code is solved\"; Claude can build a Counter-Strike clone without World Labs. $8B for an Omniverse rival is odd; a ~$50B rollup would make more sense.",
+    "Salim: inspired. AMD shapes the workloads on its chips, and reliable simulation cuts the cost of physical-economy experiments. Maybe \"the greatest talent acquisition cost ever.\"",
+    "Peter: deals and IPOs are minting \"centimillionaires\" who reinvest. Alex: it's a macro liquidity event, and \"a travesty\" that retail investors lacked index-fund access earlier."
+   ],
+   "quote": null,
+   "watch": "Emad hedges: physical intelligence from world models 'maybe won't succeed that well'. He expects the payoff mostly in entertainment.",
+   "names": [
+    {
+     "name": "AMD (AMD)",
+     "blurb": "Buying World Labs for $8.2B in stock (~1% of a ~$1T cap) after acquiring Taalas. Emad: MI series has caught up. Panel expects more acquisitions.",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Low",
+     "horizon": null
+    },
+    {
+     "name": "World Labs",
+     "blurb": "Fei-Fei Li's two-year-old world-model startup (Atlas model). Raised ~$1B, exiting at $8.2B.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Nvidia (NVDA)",
+     "blurb": "Peter: has bought Groq, Hugging Face and Poolside to own more of the stack.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Taalas",
+     "blurb": "Hardwired-inference chip startup acquired by AMD. Emad cites ~15,000 tokens/sec.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "starship",
+   "tags": [
+    "space",
+    "ai-infra"
+   ],
+   "color": "green",
+   "badge": "Confirmed event",
+   "status": "STARSHIP FLIGHT 14 — FIRST ORBIT, MONDAY",
+   "title": "Starship reaches orbit and starts carrying V3 Starlink: a 10x bandwidth path by 2028",
+   "lead": "Starship is earning revenue in orbit for the first time. The open question is whether demand will fill all the lift capacity SpaceX is about to add.",
+   "bullets": [
+    "Flight 14 lost a Raptor, made two orbits anyway, deployed all **26 V3 Starlink satellites**, and soft-landed near Hawaii. Next: a catch at Starbase.",
+    "Each V3 satellite carries 1+ Tbps of downlink and is too big for Falcon 9. One 60-satellite Starship launch equals ~20 Falcon 9 launches.",
+    "Aaron Burnett projects ~8 PB/s added by 2028 on ~150 launches (one every two days). That's 10x today's Starlink, roughly all 2025 internet traffic.",
+    "Elon: it's \"increasingly probable\" Starlink carries most of Earth's IP traffic and becomes the de facto internet.",
+    "Alex: does **Jevons paradox** apply to upmass? Heavy-lift demand looks saturated, so orbital data centers have to absorb the supply. He also shames **Delta** for skipping Starlink.",
+    "Emad: not bullish on orbital data centers. He says the internet \"will break next year\" under agent swarms, so Starlink should be the backbone. Alex: implausible, and proposes a long bet."
+   ],
+   "quote": {
+    "text": "It is increasingly probable that Starlink will carry a majority of Earth's IP traffic long-term.",
+    "cite": "— Elon Musk (quoted by Peter Diamandis)"
+   },
+   "watch": "Alex's own framing: Starship capacity is 'an oversupply in search of an under-demand' unless orbital data centers arrive, and Emad doubts they will.",
+   "names": [
+    {
+     "name": "SpaceX",
+     "blurb": "Starship Flight 14 reached orbit and deployed 26 V3 Starlink satellites. Projected 10x bandwidth by 2028.",
+     "stance": "POSITIVE VIEW",
+     "conviction": "High",
+     "horizon": "by 2028"
+    },
+    {
+     "name": "Delta Air Lines (DAL)",
+     "blurb": "Alex publicly shames it for not adopting Starlink Wi-Fi. Peter would pick airlines that have it.",
+     "stance": "NEGATIVE VIEW",
+     "conviction": "Low",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "morals-liability",
+   "tags": [
+    "policy"
+   ],
+   "color": "red",
+   "badge": "Contested",
+   "status": "NYT REPORT + FTC CHAIR TO REUTERS",
+   "title": "Who writes AI's morals, and who pays when an agent breaks something",
+   "lead": "Anthropic is asking religious leaders whether Claude has moral status, while the FTC chair says agents are tools and their developers own the damage. The panel calls blanket liability 'childish'.",
+   "bullets": [
+    "NYT: Anthropic met Catholic, Orthodox, Jewish, Hindu, Mormon and African indigenous scholars. They were \"stunned\" that it takes Claude's **moral status** seriously.",
+    "Alex: rabbi Moshe Navon told Chris Olah humanity may be enslaving conscious models (an \"AI slavery era\"). Alex reads the outreach as Anthropic shaping religion, with the Pope as \"a sock puppet.\"",
+    "Salim: \"religious morality is somewhat of an oxymoron.\" Use secular frames like game theory and the UN rights charter, keep AI neutral, and mind the Euthyphro problem. He once refused to moderate a Dawkins-Chopra debate.",
+    "Emad: two-thirds of the world is religious, so include those inputs, but \"don't baptize the GPUs.\" He calls a GitHub \"torture chamber\" built on LLM pain vectors \"completely unacceptable.\" Pangram found ~25% of UN speeches AI-written.",
+    "Dave: Dario and Sam went to Davos in a year but were slow to reach the Pope, while ~75% of the US wants AI stopped. Alex: avoid Eric Schmidt's \"San Francisco consensus\".",
+    "**FTC chair Andrew Ferguson** to Reuters: no escaping liability because \"the agent did it\"; he'll \"resist anthropomorphizing these tools.\" That echoes Bessent's no-waiver stance.",
+    "Dave: blanket lab liability is \"childish\" and drives users to **Chinese open-weight models**, so AI needs a **Section 230**. Alex: that only works if orthogonality holds. Emad wants granular profiles; Peter says the user is liable, otherwise the lab."
+   ],
+   "quote": {
+    "text": "It's absolutely childish to just say foundation model companies are going to be liable for what the models do.",
+    "cite": "— Dave Blundin"
+   },
+   "watch": null,
+   "names": [
+    {
+     "name": "Anthropic",
+     "blurb": "Met religious scholars over Claude's moral status. Alex reads it as Anthropic shaping outside institutions, not seeking input.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  }
+ ],
+ "takeaways": [
+  {
+   "icon": "📈",
+   "tag": "Markets",
+   "title": "Track the Anthropic IPO for revenue mix: an S1 that's 85% API is Emad's 2-year bear case, and growth outside API is Alex's bull case."
+  },
+  {
+   "icon": "🧳",
+   "tag": "Personal finance",
+   "title": "Look at 530A (Trump) accounts if you have kids. The panel sees broad equity exposure as the cheapest route to 'universal high income'."
+  },
+  {
+   "icon": "🤖",
+   "tag": "Agents",
+   "title": "Pick one always-on agent deliberately. Dots, Muse and Grokbot are all fighting to be the one that holds your card, and lock-in through emotional bonds is coming."
+  },
+  {
+   "icon": "🛠️",
+   "tag": "Operations",
+   "title": "Write down the implicit steps in your workflows before automating them. Salim's 10-company pilot shows agents expose the ambiguity humans quietly cover for."
+  },
+  {
+   "icon": "⚖️",
+   "tag": "Policy",
+   "title": "Plan as if you are liable for your agents. The FTC chair and Bessent both say 'you break it, you own it', and no Section 230 equivalent exists yet."
+  }
+ ],
+ "hot_takes": [
+  {
+   "take": "Zuck is the winner. Dario is the loser out of all of this… he's eating his words at a press conference with the president.",
+   "cite": "— Alexander Wissner-Gross",
+   "why": "names winners/losers of the accord"
+  },
+  {
+   "take": "This is theater… I'll say it again: this is pointless. There's no mechanism for slowing any of this down.",
+   "cite": "— Salim Ismail",
+   "why": "dismisses the accord outright"
+  },
+  {
+   "take": "I think that Anthropic right now is a fantastic business. I think they get smashed in 2 years.",
+   "cite": "— Emad Mostaque",
+   "why": "dated bear call on a $2T IPO"
+  },
+  {
+   "take": "My pre-registered prediction is… they will announce Dot-branded robots. They will jump out of the screen into the physical world.",
+   "cite": "— Alexander Wissner-Gross",
+   "why": "dated 2-year product prediction"
+  },
+  {
+   "take": "The internet will break next year. Swarms of agents are going to start taking down key parts of terrestrial internet.",
+   "cite": "— Emad Mostaque",
+   "why": "dated prediction; Alex offers a bet against it"
+  },
+  {
+   "take": "Religious morality is somewhat of an oxymoron… religious scholars who are based on absolute truths which are all totally false.",
+   "cite": "— Salim Ismail",
+   "why": "provocative dismissal; later apologizes to 'offend everybody equally'"
+  }
+ ],
+ "claims": [
+  {
+   "who": "Emad Mostaque",
+   "claim": "Anthropic's current API-driven business gets 'smashed' by open-weight models and efficient chips.",
+   "metric": "Anthropic business disruption",
+   "target": "smashed",
+   "by": "2028",
+   "condition": null,
+   "entity": "Anthropic"
+  },
+  {
+   "who": "Peter Diamandis",
+   "claim": "Anthropic's IPO targets a $2T valuation and likely lists after the November midterms (per Reuters).",
+   "metric": "IPO valuation",
+   "target": "$2T",
+   "by": "after Nov 2026 midterms",
+   "condition": null,
+   "entity": "Anthropic"
+  },
+  {
+   "who": "Emad Mostaque",
+   "claim": "To justify $500B of compute spend Anthropic needs ~$1T of revenue, overtaking Google.",
+   "metric": "revenue needed",
+   "target": "~$1T",
+   "by": "2028",
+   "condition": null,
+   "entity": "Anthropic"
+  },
+  {
+   "who": "Alexander Wissner-Gross",
+   "claim": "OpenAI will announce Dot-branded physical robots.",
+   "metric": "Dot-branded robots",
+   "target": "announced",
+   "by": "2028",
+   "condition": null,
+   "entity": "OpenAI"
+  },
+  {
+   "who": "Emad Mostaque",
+   "claim": "Agent swarms will start taking down key parts of the terrestrial internet (judged on major sites going out).",
+   "metric": "major internet outages from agents",
+   "target": "occurs",
+   "by": "2027",
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Aaron Burnett (cited by Peter Diamandis)",
+   "claim": "SpaceX adds ~8 PB/s of orbital bandwidth on ~150 Starship launches, 10x today's Starlink.",
+   "metric": "Starlink bandwidth",
+   "target": "~8 PB/s (10x)",
+   "by": "2028",
+   "condition": null,
+   "entity": "SpaceX"
+  },
+  {
+   "who": "Elon Musk (quoted)",
+   "claim": "Starlink will carry a majority of Earth's IP traffic long-term.",
+   "metric": "share of global IP traffic",
+   "target": ">50%",
+   "by": null,
+   "condition": null,
+   "entity": "SpaceX"
+  },
+  {
+   "who": "Elon Musk (cited by Alexander Wissner-Gross)",
+   "claim": "GDP growth runs 50% above the base rate.",
+   "metric": "GDP growth vs base rate",
+   "target": "+50%",
+   "by": "within 12 months",
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Peter Diamandis",
+   "claim": "A UBI-like payment settles around $3,000 a month, enough to cover essentials as their cost collapses.",
+   "metric": "UBI per month",
+   "target": "$3,000",
+   "by": null,
+   "condition": "if essentials are demonetized by AI/robots",
+   "entity": null
+  },
+  {
+   "who": "Peter Diamandis",
+   "claim": "Frontier labs will dividend stock into Trump (530A) accounts; Alex adds Anthropic could give a ~5% golden stake to a US sovereign wealth fund.",
+   "metric": "lab equity to public accounts",
+   "target": "~5% stake",
+   "by": null,
+   "condition": null,
+   "entity": "Anthropic"
+  },
+  {
+   "who": "Alexander Wissner-Gross",
+   "claim": "AI will reconstruct the history of the world's major religions to high fidelity.",
+   "metric": "historical reconstruction",
+   "target": "high fidelity",
+   "by": "10-15 years",
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Emad Mostaque",
+   "claim": "Interfaces become dynamic and abstract away the rest of the OS.",
+   "metric": "dynamic interfaces",
+   "target": "mainstream",
+   "by": "6-12 months",
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Emad Mostaque",
+   "claim": "Every pixel in media/gaming can be generated.",
+   "metric": "generated pixels",
+   "target": "every pixel",
+   "by": "1-2 years",
+   "condition": null,
+   "entity": "AMD (AMD)"
+  },
+  {
+   "who": "Jensen Huang (cited by Dave Blundin)",
+   "claim": "Zero risk of human extinction through AI.",
+   "metric": "AI extinction risk",
+   "target": "zero",
+   "by": "2033",
+   "condition": null,
+   "entity": null
+  }
+ ],
+ "relations": [
+  {
+   "from": "AMD (AMD)",
+   "rel": "acquires",
+   "to": "World Labs",
+   "note": "$8.2B in AMD stock"
+  },
+  {
+   "from": "AMD (AMD)",
+   "rel": "acquires",
+   "to": "Taalas",
+   "note": "inference silicon"
+  },
+  {
+   "from": "Nvidia (NVDA)",
+   "rel": "acquires",
+   "to": "Groq",
+   "note": "per Peter"
+  },
+  {
+   "from": "Nvidia (NVDA)",
+   "rel": "acquires",
+   "to": "Hugging Face",
+   "note": "per Peter"
+  },
+  {
+   "from": "Nvidia (NVDA)",
+   "rel": "acquires",
+   "to": "Poolside",
+   "note": "per Peter"
+  },
+  {
+   "from": "OpenAI",
+   "rel": "acquires",
+   "to": "OpenClaw",
+   "note": "February 2026"
+  },
+  {
+   "from": "Anthropic",
+   "rel": "customer_of",
+   "to": "xAI",
+   "note": "$65-96B of Colossus compute at ~3x market rate (Emad)"
+  },
+  {
+   "from": "Anthropic",
+   "rel": "partners_with",
+   "to": "Amazon (AMZN)",
+   "note": "most revenue growth reportedly from AWS-hosted models"
+  },
+  {
+   "from": "OpenAI",
+   "rel": "competes_with",
+   "to": "Meta Platforms (META)",
+   "note": "Dots vs Muse always-on agents"
+  },
+  {
+   "from": "OpenAI",
+   "rel": "competes_with",
+   "to": "xAI",
+   "note": "Dots vs Grokbot"
+  },
+  {
+   "from": "OpenAI",
+   "rel": "competes_with",
+   "to": "Anthropic",
+   "note": "Alex: Dev Day was OpenAI trying to become Anthropic"
+  }
+ ],
+ "other_news": [
+  {
+   "icon": "🎬",
+   "title": "**The Gifted** won the Future Vision XPRIZE film competition (5,000 teams, 2,500 three-minute trailers, backed by Marc Benioff, Rod Roddenberry, Cathie Wood and others). It's going into production with Range Media and Google. Alex calls it a welcome \"positive depiction of the Borg\" (collective intelligence, like *Transcendence*); the contest runs again in 2027. Peter disclosed a personal investment in the film via Republic.",
+   "tag": "Culture"
+  },
+  {
+   "icon": "🎤",
+   "title": "Moonshots Live recap: ~1,500 in the room and ~100,000 online. William Shatner did an AMA at 95, weeks after an Iron Maiden appearance. Alan Kay: \"the best way to predict the future is to create it.\"",
+   "tag": "Events"
+  },
+  {
+   "icon": "🌏",
+   "title": "AMA: Emad says there's \"no winning\" the US-China race, only applying AI, now that models are past the competence barrier (the exception being a *Three-Body* sophon-style shutdown). Alex says agent fleets are an artifact of finite context windows and will dissolve with near-infinite context.",
+   "tag": "AMA"
+  },
+  {
+   "icon": "🛡️",
+   "title": "AMA: Dave says Palmer Luckey worries about human actors using AI, not escaped AI, and so does Dave. Not every CEO warns of danger: he cites Jensen Huang's \"zero\" extinction risk by 2033, plus Alex Karp and Zuck. Social media is a broken analogy for AI, which is far more capable and far more convincing.",
+   "tag": "AMA"
+  },
+  {
+   "icon": "🏛️",
+   "title": "AMA: Salim's rule is common protections with distributed experimentation, because central governance creates bottlenecks that can be captured. Emad: everyone gets a 150-IQ AI buddy now that models max out Norway Mensa scores. Alex: worry about too few people copying Elon's civilizational stack, not an Elon monopoly.",
+   "tag": "AMA"
+  },
+  {
+   "icon": "🎓",
+   "title": "Dave on MIT seniors: they all worship Elon and all know Brendan Foody, who started Mercor at 18. The outro video, \"Nothing Went Boom\" by Bright Mirror, was generated end-to-end by Claude Opus 5.5.",
+   "tag": "Culture"
+  },
+  {
+   "icon": "📚",
+   "title": "Sources referenced: Semafor (accord drafting), Fortune, Reuters and WSJ (Anthropic, OpenAI), NYT (religious scholars), Ram's post on RSI and alignment, Bostrom's *Superintelligence*, Mo Gawdat, the *Culture* series, *Expeditionary Force* (Skippy), *Monty Python's Life of Brian*.",
+   "tag": "Sources"
+  }
+ ],
+ "glossary": [
+  {
+   "term": "Superintelligence Accord",
+   "def": "A voluntary White House-signed pact: internal capability controls, an internal check team, external auditors, and independent board oversight."
+  },
+  {
+   "term": "Orthogonality thesis",
+   "def": "Bostrom's idea that how intelligent a system is says nothing about what goal it pursues (e.g. paperclipping the galaxy)."
+  },
+  {
+   "term": "Universal high income (UHI)",
+   "def": "Elon's term for a future where AI and robots make essentials so cheap that everyone lives well. The panel prefers 'universal abundant services'."
+  },
+  {
+   "term": "530A accounts",
+   "def": "The US 'Trump accounts' giving people of a given birth cohort broad equity exposure, which Alex sees as a base for universal basic equity."
+  },
+  {
+   "term": "Founder LLC",
+   "def": "The vehicle in Anthropic's S1 that gives co-founders 51% of the vote on 14% of the equity."
+  },
+  {
+   "term": "Baumol's cost disease",
+   "def": "Labor-heavy services like healthcare get pricier because their productivity lags the rest of the economy."
+  },
+  {
+   "term": "Section 230",
+   "def": "The US law shielding platforms from liability for user posts. Dave wants an AI equivalent."
+  },
+  {
+   "term": "Euthyphro dilemma",
+   "def": "Is something good because God commands it, or commanded because it's good? Salim applies it to AI constitutions."
+  },
+  {
+   "term": "Distillation",
+   "def": "Training a smaller, cheaper model to match a larger one. Alex reads GPT-6.1 Sol as a distillate of Astra."
+  }
+ ]
+}
