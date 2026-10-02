@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: The AI Boom Is Bigger Than Anyone Thinks</title>
+<meta name="description" content="Anthony Pompliano · 5 threads · Ives&#x27;s early-innings AI bull case · regulatory capture &amp; the White House meeting · Pomp&#x27;s bear case on private labs (sovereign AI) · where to allocate · IVAI fund">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="The AI Boom Is Bigger Than Anyone Thinks">
+<meta property="og:description" content="Anthony Pompliano · 5 threads · Ives&#x27;s early-innings AI bull case · regulatory capture &amp; the White House meeting · Pomp&#x27;s bear case on private labs (sovereign AI) · where to allocate · IVAI fund">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>The AI Boom Is Bigger Than Anyone Thinks</h1>
+    <div class="byline">
+      Channel: <b>Anthony Pompliano</b> &middot; Speaker: <b>Anthony Pompliano, Dan Ives</b> &middot; <b>2026-10-01</b>
+      <div class="stats-line">5 threads · Ives's early-innings AI bull case · regulatory capture &amp; the White House meeting · Pomp's bear case on private labs (sovereign AI) · where to allocate · IVAI fund &middot; <a href="https://www.youtube.com/watch?v=YdoMzkcGH1Q" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li><b>Dan Ives</b> (Yorkville Ives) says AI is <i>less than 15%</i> through a <b>$4-5T</b> multi-year spend cycle, with a <b>$5-6</b> tech-wide multiplier per capex dollar.</li><li>He reads the AI-safety calls for slowdown as <b>regulatory capture</b> ("pull the ladder up") and backs the White House all-hands: slowing down means China wins.</li><li>Host <b>Pomp</b> is the contrarian: he thinks the private labs face a plateauing-revenue, falling-token-price squeeze as firms move to <b>sovereign / applied AI</b>.</li><li>Pomp's own data point: routing queries to his own models on his own hardware cuts cost about <b>97%</b> and raises accuracy; Ives agrees sovereign AI is the bigger debate than model-lab share.</li><li>Ives's allocation: own <b>chips, hyperscalers, software/cyber, then energy and infrastructure</b>; the "SaaS apocalypse" was a fictional narrative.</li><li>Macro is bearish on paper (oil ~<b>$105</b>-110, 10-year ~5.2%) yet Ives says the market is pricing a fourth industrial revolution.</li><li>Ives pitches his new <b>Ives Ultra Fund (IVAI)</b>: a public permanent-capital vehicle holding private AI companies.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="early-innings">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">IVES: THIRD INNING, MULTI-YEAR BULL MARKET</span><span class="ttag">ai-infra</span><span class="ttag">semis</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">AI spend is less than 15% done and the trade is broadening</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Ives sees a multi-year tech bull market with equilibrium in chips not before late 2028 or early 2029.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Last quarter's hyperscaler monetization (Microsoft named) was the <i>inflection point</i>; now it's about second, third and fourth derivatives.</li><li><span class="dot" style="background:#3f6b2e;"></span>Spend trend: <b>$4-5 trillion</b> over the next 3-4 years, with <b>&lt;15%</b> done; each capex dollar carries a <b>$5-6</b> multiplier across tech.</li><li><span class="dot" style="background:#3f6b2e;"></span>His Asia checks show <b>13-to-1</b> chip demand-to-supply; he calls it the third inning, not sixth or seventh.</li><li><span class="dot" style="background:#3f6b2e;"></span>Even if <b>10-15%</b> of data centers get voted down, he expects ~<b>800,000</b> data centers built in the next 12-18 months ("the hearts and lungs of a new economy").</li><li><span class="dot" style="background:#3f6b2e;"></span>Trade is spreading from memory to Dell, Cisco, HP, then energy and infrastructure; Nvidia is "way cheaper" than 6-12 months ago.</li><li><span class="dot" style="background:#3f6b2e;"></span>Only ~<b>4-5%</b> of US companies have gone down the AI path; another 60-70% of enterprises are still to come, plus Europe, India and the Middle East.</li><li><span class="dot" style="background:#3f6b2e;"></span>Consumer side is just starting: Apple's install base (1.5B iPhones, 2.5B iOS devices) makes it a "toll collector on the consumer AI highway".</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;We're less than 15% through what the spending trend's going to be the next 3 to 4 years. It's 4 to 5 trillion dollars.&#8221;<cite>— Dan Ives</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High · 2-3 years</span></b><span>Cheaper than 6-12 months ago; leader of physical AI wave; Jensen "the adult in the room".</span></div><div class="namechip"><b>AMD<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Lisa Su is "just starting" on the chip side; you have to own chips.</span></div><div class="namechip"><b>Microsoft (MSFT), Amazon (AMZN), Alphabet (GOOGL)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Hyperscalers reinserting themselves on install base as AI adoption spreads.</span></div><div class="namechip"><b>Dell Technologies (DELL), Cisco (CSCO)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Infrastructure names where the AI trade is showing up.</span></div><div class="namechip"><b>Apple (AAPL)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Install base makes it a consumer AI toll collector; "finally actually having AI".</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Ives runs the Ives Ultra Fund (IVAI) and is a long-time public tech-bull voice; his framing is a bullish thesis, not a neutral forecast.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="regulatory-capture">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">WHITE HOUSE ALL-HANDS · MIDTERM CYCLE</span><span class="ttag">policy</span><span class="ttag">geopolitics</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Slowdown talk is regulatory capture, and slowing means China wins</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Both hosts distrust the labs' calls for regulation but disagree on who's leading and why.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Ives: leaders of the "F1 race" (Anthropic, OpenAI) want to stop others catching up, i.e. <i>throwing sand in the gears</i>; "you go to the top floor and then you pull the ladder up".</li><li><span class="dot" style="background:#93711b;"></span>Pomp's framework: money-losing, negative-cash-flow labs call for slowdown; profitable Meta and Google don't. Funding via non-dilutive capital decides which side you're on.</li><li><span class="dot" style="background:#93711b;"></span>Ives disagrees that the labs only trail: he says Anthropic and OpenAI have a clear lead in pure models and enterprise, but the gap is narrowing vs Meta and Google.</li><li><span class="dot" style="background:#93711b;"></span>Ives credits Meta's Zuckerberg with ignoring the slowdown (his image: Ferrari in the left lane vs a minivan at 55 mph) and says the essay-driven weekend sell-off was a bear peak.</li><li><span class="dot" style="background:#93711b;"></span>Midterm logic: dystopian talk gets data centers shut down locally, and "every data center that gets shut down, China wins"; Ives wants self-regulation, not Beltway grandstanding.</li><li><span class="dot" style="background:#93711b;"></span>Ives credits Jensen Huang and Palantir's Alex Karp as the two who understand it best (global/sovereign view), with Jensen "the calming force".</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;Every data center that gets shut down, China wins.&#8221;<cite>— Dan Ives</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Zuckerberg did not call for a slowdown; Ives says ~20% added to Meta's stock after the essay; Muse seen as positive for AI overall.</span></div><div class="namechip"><b>Palantir (PLTR)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Karp understands sovereign AI; Ives says Palantir could be a "category changer" as free cash flow ramps.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Ives's "Anthropic and OpenAI are leading" view differs from Pomp's, who thinks the private labs are in more trouble than people realize.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="private-lab-pressure">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">Pomp's bear case</span>
+    <span class="theme-status">THE COUNTER-THESIS</span><span class="ttag">ai-infra</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">Private labs face plateauing revenue, price war and sovereign AI</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Pomp argues the general-intelligence-for-everything premise is weakening: token price and consumption per customer are both falling.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span>Pomp's model: <b>revenue = token price x consumption</b>; frontier-quality token prices are falling while per-customer consumption drops, so lab revenue "has been plateauing" (Anthropic in particular).</li><li><span class="dot" style="background:#a23f22;"></span>His case study, Silvia: started 100% as a ChatGPT wrapper, moved to Claude (compute went from zero to <b>hundreds of thousands of dollars/month</b>), then built its own models and harness.</li><li><span class="dot" style="background:#a23f22;"></span>Routing queries to its own models on its own hardware cuts cost about <b>97%</b>, and Silvia says it's more accurate on tax, mortgage and credit cards; "six, seven, eight engineers beat a trillion dollar company" on applied tasks.</li><li><span class="dot" style="background:#a23f22;"></span>A new tool called Jev went from not on the chessboard to a reported <b>$100M run rate</b> in its first week; his engineers now route some queries to it where frontier models were cost-prohibitive. He calls it "death by 1,000 cuts".</li><li><span class="dot" style="background:#a23f22;"></span>Pomp's caution: <i>a good product does not equal a good company</i>; he cites trends in the S-1 as headwinds (his words, not specified).</li><li><span class="dot" style="background:#a23f22;"></span>Ives's counter: Anthropic and OpenAI built enterprise sales forces early and the consumer isn't where they monetize; the data layer, not the model, is the value chain.</li><li><span class="dot" style="background:#a23f22;"></span>Ives sees sovereign AI as "the golden goose", the bigger debate than model-lab share; open source is needed for token cost (the 2007 iPhone-price analogy).</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;A good product does not equal a good company.&#8221;<cite>— Anthony Pompliano</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic<span class="stance" style="background:#93711b;">UNCERTAIN · None · IPO before year-end / after midterms</span></b><span>Ives: IPO "shocked if it doesn't happen" this year, after the midterms; Pomp: revenue plateau and customers consuming fewer tokens.</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">UNCERTAIN · None</span></b><span>Part of the private-lab duopoly framing; said it won't IPO this year per Pomp.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Pomp runs Silvia, a company that benefits from sovereign/applied AI, and personally invests in data businesses; his data points are his own company's numbers.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="allocation">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">PORTFOLIO FRAMING</span><span class="ttag">software</span><span class="ttag">finance</span><span class="ttag">robotics</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">How Ives allocates: own the core, rotate into what's next</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Own chips and hyperscalers, accept software and cyber rebounded from "dead", and look ahead to energy and physical AI.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Allocation is by <b>second/third/fourth derivatives</b>; large-cap tech is "starting to flex its muscles again".</li><li><span class="dot" style="background:#3f6b2e;"></span>"The SaaS apocalypse" was a fictional narrative: he points to Salesforce, ServiceNow and Palantir as proof.</li><li><span class="dot" style="background:#3f6b2e;"></span>Cybersecurity was "done" in April (Anthropic eating its lunch); CrowdStrike, Palo Alto and Zscaler have since rebounded.</li><li><span class="dot" style="background:#3f6b2e;"></span>Tesla: the transition from EV player to robotaxis/autonomy/Optimus is what to watch; "once the transition has happened, you've already missed it".</li><li><span class="dot" style="background:#3f6b2e;"></span>Expect new stocks "we're not talking about today" in 18-24 months, especially in the consumer-agent category.</li><li><span class="dot" style="background:#3f6b2e;"></span>Personal-agent market (Pomp notes the Grok box and others skip charging consumers): Ives calls it "a whole 'nother area of investing".</li><li><span class="dot" style="background:#3f6b2e;"></span>Jobs: more jobs created than taken over the next decade in Ives's view; Pomp says his company has more agents than humans yet is hiring faster.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Salesforce (CRM), ServiceNow (NOW)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Cited as proof the SaaS-apocalypse narrative was wrong.</span></div><div class="namechip"><b>CrowdStrike (CRWD), Palo Alto Networks (PANW), Zscaler (ZS)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Cyber stocks that rebounded after the April "Anthropic is eating their lunch" fear.</span></div><div class="namechip"><b>Tesla (TSLA)<span class="stance" style="background:#93711b;">WATCHING · Low</span></b><span>Watch the EV-to-robotaxi/Optimus transition before it's priced in.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="macro-vs-ai">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">OIL ~$105-110 · 10-YR ~5.2-5.3%</span><span class="ttag">macro-rates</span><span class="ttag">energy</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">A bearish macro backdrop the market is looking through</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Pomp lists every headwind; Ives says the market is pricing a fourth industrial revolution anyway.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Pomp's bear case on paper: rates up, oil about $105-110, 10-year <b>5.2-5.3%</b>, home prices "falling", Iran still going, a K-shaped economy.</li><li><span class="dot" style="background:#93711b;"></span>Pomp's test: told that 6 months ago, you'd have guessed the S&amp;P and Nasdaq <b>15%</b> lower.</li><li><span class="dot" style="background:#93711b;"></span>Ives: the 10-year is high <i>because of</i> growth, more debt raises, the data-center build-out and capex.</li><li><span class="dot" style="background:#93711b;"></span>He argues bears "called 10 of the last 2 downturns" and scare retail; catastrophist narratives create the opportunities.</li><li><span class="dot" style="background:#93711b;"></span>Tech will "plow through and be the leader of this market" despite 10-year oil and geopolitics.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;Bears have called 10 of the last two downturns.&#8221;<cite>— Dan Ives</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="ivai-fund">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Product</span>
+    <span class="theme-status">TICKER IVAI</span><span class="ttag">finance</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">The Ives Ultra Fund: private AI exposure in a public wrapper</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Ives launched a $200M special-purpose investment fund to give retail and advisors access to private AI companies.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>Pomp describes it as SPAC-like but an investment fund: <b>$200 million</b> raised, ticker <b>IVAI</b>, permanent capital.</li><li><span class="dot" style="background:#65695f;"></span>Ives calls it the first public company to invest in private AI tech companies; a "Swiss Army knife" portfolio of large known names and potential "next Palantirs".</li><li><span class="dot" style="background:#65695f;"></span>Pitch: SPV 1, 2, 3 exist for institutions; retail has no path in, so "why can't people in the public own these"?</li><li><span class="dot" style="background:#65695f;"></span>Pomp calls it a step in the public/private blending trend (tokenization, similar funds) and says Ives is the right person to source the companies.</li><li><span class="dot" style="background:#65695f;"></span>Ives expects SpaceX, OpenAI and Anthropic going public to be "very good for the market" and a "golden age" for AI listings.</li><li><span class="dot" style="background:#65695f;"></span>Pomp notes the Oura IPO was pulled despite a claimed 4x oversubscription; Ives says Anthropic isn't comparable and the IPO window opens after the midterms.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>SpaceX<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Ives: SpaceX, OpenAI and Anthropic going public is good for the market.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Ives is the fund's principal and the product is promoted in the same conversation as his bullish private-AI thesis; the host also has private AI investments (e.g. a data company).</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📈</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Own chips and hyperscalers as the core; treat memory, Dell, Cisco and cyber as the broadening trade Ives points to.</span></div></div><div class="irow"><div class="ic">🏛️</div><div class="tline"><span class="cat">Policy:</span> <span class="txt">Read lab calls for regulation through a regulatory-capture lens before treating them as safety signals.</span></div></div><div class="irow"><div class="ic">🧮</div><div class="tline"><span class="cat">AI economics:</span> <span class="txt">Model lab revenue as token price x consumption and track per-customer token usage, not just headline run-rate.</span></div></div><div class="irow"><div class="ic">🛡️</div><div class="tline"><span class="cat">Enterprise:</span> <span class="txt">Test routing narrow workloads to your own applied models; Pomp saw ~<b>97%</b> cost savings with better accuracy.</span></div></div><div class="irow"><div class="ic">🚨</div><div class="tline"><span class="cat">IPOs:</span> <span class="txt">Don't assume good product means good company; watch Anthropic's S-1 trends after the midterms.</span></div></div><div class="irow"><div class="ic">🌍</div><div class="tline"><span class="cat">Macro:</span> <span class="txt">Weigh the macro bears against capex data; Ives expects chip equilibrium only in late 2028-early 2029.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;We're less than 15% through what the spending trend's going to be the next 3 to 4 years. It's 4 to 5 trillion dollars.&#8221; <cite>— Dan Ives</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;You don't have equilibrium till late 2028, early 2029 in terms of chips.&#8221; <cite>— Dan Ives</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;More jobs will be created by AI than taken away over the next decade.&#8221; <cite>— Dan Ives</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The SaaS apocalypse was a fictional narrative.&#8221; <cite>— Dan Ives</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think that the private large lab models are in way more trouble than people realize.&#8221; <cite>— Anthony Pompliano</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;A good product does not equal a good company.&#8221; <cite>— Anthony Pompliano</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Dan Ives:</b> AI capex over the next 3-4 years reaches $4-5 trillion, with less than 15% done. <span class="cmeta">AI capex · $4-5T · 3-4 years</span></div><div class="ritem"><b>Dan Ives:</b> Each dollar of AI capex generates a $5-6 multiplier across the rest of tech. <span class="cmeta">capex multiplier · $5-6 per $1</span></div><div class="ritem"><b>Dan Ives:</b> The chip market doesn't reach supply-demand equilibrium until late 2028 or early 2029. <span class="cmeta">chip equilibrium · equilibrium · late 2028 / early 2029</span></div><div class="ritem"><b>Dan Ives:</b> About 800,000 data centers get built in the next 12-18 months even if 10-15% are voted down. <span class="cmeta">data centers built · 800,000 · 12-18 months</span> <i>if 10-15% voted down</i></div><div class="ritem"><b>Dan Ives:</b> Anthropic IPOs before year-end or soon after the midterms. <span class="cmeta">IPO · occurs · after the midterms</span> <span class="tag">Anthropic</span></div><div class="ritem"><b>Dan Ives:</b> Asia checks show 13-to-1 chip demand-to-supply. <span class="cmeta">demand/supply · 13:1</span></div><div class="ritem"><b>Dan Ives:</b> More jobs are created by AI than taken over the next decade. <span class="cmeta">net jobs · net positive · next decade</span></div><div class="ritem"><b>Dan Ives:</b> New stocks not currently discussed emerge in the consumer-agent category. <span class="cmeta">new AI stocks · emerge · 18-24 months</span></div><div class="ritem"><b>Anthony Pompliano:</b> Sovereign AI routing cuts cost about 97% versus frontier models. <span class="cmeta">inference cost · 97% saving</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Anthropic</b> <span class="rel">competes with</span> <b>OpenAI</b> &mdash; described as the two leading private labs</div><div class="ritem"><b>Meta (META)</b> <span class="rel">competes with</span> <b>Alphabet (GOOGL)</b> &mdash; gap to the leading labs narrowing, per Ives</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: Ray Dalio / Dario Amodei essays on AI risk (names garbled in captions), the All-In podcast appearance by Jensen Huang, S-1 filings. <span class="tag">Sources</span></div></div></div><div class="irow"><div class="ic">💡</div><div><div class="title">Data licensing: Pomp says someone asked to license his podcast as training data; "data is data" and "data is the new oil and gold". <span class="tag">Data</span></div></div></div><div class="irow"><div class="ic">🛠️</div><div><div class="title">Pomp says he retrained as a software engineer over 6 months; an engineer told him "show me what you've built" is the first hiring question, so the lines are blurring. <span class="tag">Careers</span></div></div></div><div class="irow"><div class="ic">🗺️</div><div><div class="title">Europe is "building Blockbuster videos"; Middle East skewed to US tech; India still deciding US vs China. <span class="tag">Geopolitics</span></div></div></div><div class="irow"><div class="ic">📱</div><div><div class="title">iPhone-price analogy: priced double in 2007-08, you don't get 1.5B iPhones; token pricing needs open source for the same reason. <span class="tag">Analogy</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Sovereign AI</b> &mdash; Companies or nations owning their own models and data rather than renting a frontier lab's intelligence.</div><div><b>Regulatory capture</b> &mdash; Incumbents backing regulation that raises barriers for later entrants.</div><div><b>Token consumption</b> &mdash; Volume of tokens a customer sends through a model; Pomp says it leads revenue.</div><div><b>Applied AI</b> &mdash; A model trained for one specific use case rather than general intelligence.</div><div><b>IVAI</b> &mdash; Ticker of the Ives Ultra Fund, a public permanent-capital vehicle holding private AI companies.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
