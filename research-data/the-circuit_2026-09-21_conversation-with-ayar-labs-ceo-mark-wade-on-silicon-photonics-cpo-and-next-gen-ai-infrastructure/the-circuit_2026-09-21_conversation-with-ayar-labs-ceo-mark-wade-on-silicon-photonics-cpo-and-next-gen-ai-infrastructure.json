@@ -1,0 +1,426 @@
+{
+ "meta": {
+  "title": "Conversation with Ayar Labs CEO Mark Wade on Silicon Photonics, CPO, and Next-Gen AI Infrastructure",
+  "channel": "The Circuit",
+  "speakers": "Ben Bajarin, Jay Goldberg, Mark Wade (Ayar Labs CEO), Jesse Leiter (Ayar Labs)",
+  "date": "2026-09-21",
+  "video_url": "https://www.youtube.com/watch?v=s3wZI1X8FGM",
+  "thread_line": "5 threads · interconnect as the AI bottleneck · why optics is hard · TSMC COUPE bet · customers, timing 2027-2031 · funding and IPO path",
+  "category": "market"
+ },
+ "snapshot": [
+  "**Mark Wade** (Ayar Labs CEO) argues AI data-center revenue is gated by *interconnect* performance, and only optical I/O fixes the electrical bandwidth-distance trade-off.",
+  "Optics is hard because it stacks materials, devices, lasers, CMOS and advanced packaging; his optical engine uses a **3nm** EIC in the **TSMC COUPE** process.",
+  "Ayar is fabless and bets that photonics becomes a foundry-plus-OSAT feature, like HBM integration, by **2030+**.",
+  "Wade expects leading GPU vendors to ship CPO in **2028-2029** and the rest of accelerators in **2029-2031**; 2027-28 is a chaotic stopgap period.",
+  "Ayar's cap table includes **NVIDIA, AMD, Intel, TSMC** and now **Wiwynn**; total capital on the balance sheet topped **$650M**.",
+  "Market size: optics in scale-up is **tens of billions to ~$100B** per Wade; Ben cites **$30-50B by 2030**.",
+  "IPO intercept is timed to the **2028-2029** ramp; no firm IPO date is given."
+ ],
+ "themes": [
+  {
+   "id": "interconnect-wall",
+   "tags": [
+    "ai-infra",
+    "semis"
+   ],
+   "color": "green",
+   "badge": "High conviction",
+   "status": "AYAR LABS' CORE THESIS",
+   "title": "The interconnect is the wall limiting AI data-center revenue",
+   "lead": "Wade says copper's bandwidth-distance trade-off caps GPU scale-up, and optics inside the package is the only first-principles fix.",
+   "bullets": [
+    "Ben: GPUs and even memory are scaling faster than the interconnect; \"the interconnect is a wall\".",
+    "Wade's claim: data-center revenue scaling is limited by interconnect performance in the **scale-up fabric** (tokens per second per dollar per watt).",
+    "Electrical links: the faster the data, the shorter the distance; optics solves it \"from the ground up\".",
+    "Optical TAM is **10-100x** the datacom volumes the optics industry used to serve; ChatGPT's release was the wake-up call that made connectivity-gated revenue a big enough market.",
+    "Wade's spreadsheet math: **tens of billions to approaching $100B** market; Ben quotes **$30-50B by 2030**.",
+    "Founded out of MIT in 2015; first processor-to-DRAM optical interface published in *Nature* in 2015."
+   ],
+   "quote": {
+    "text": "Large-scale AI data centers are limited in their revenue scaling by the performance of the interconnect in their compute systems.",
+    "cite": "— Mark Wade"
+   },
+   "watch": "Wade is the CEO and co-founder of Ayar Labs, a private company with equity from NVIDIA, AMD, Intel and TSMC; the market-size and timing claims are his own.",
+   "names": [
+    {
+     "name": "Ayar Labs",
+     "blurb": "Private silicon-photonics optical I/O chiplet maker (2, 4, then 8 Tbps chiplets); fabless.",
+     "stance": "POSITIVE VIEW",
+     "conviction": "High",
+     "horizon": "IPO path tied to 2028-2029 ramp"
+    }
+   ]
+  },
+  {
+   "id": "why-optics-hard",
+   "tags": [
+    "semis",
+    "ai-infra"
+   ],
+   "color": "amber",
+   "badge": "Structural critique",
+   "status": "MANUFACTURING COMPLEXITY",
+   "title": "Optics is hard because every layer is hard and they must all work together",
+   "lead": "Difficult on difficult: advanced CMOS plus advanced packaging plus a new photonics process plus fiber and lasers.",
+   "bullets": [
+    "Telecom had specialized firms per domain (laser, DSP, optical device); AI scale-up needs all of it integrated into one product.",
+    "Ayar's optical engine = a leading-edge **3nm** EIC with hundreds of millions of transistors, built via TSMC's COUPE process.",
+    "Adds to already-scarce CoWoS-class, multi-reticle advanced packages; then an optical connector must attach to the package.",
+    "Foundry photonics wafer \"just isn't that hard\": silicon waveguides, silicon nitride, germanium detectors; **fiber attach** is the hardest piece.",
+    "Current crunch points: laser manufacturing, production test architecture and wafer/assembly-level testing.",
+    "Wade is building a digital-twin manufacturing model with coding agents (a DAG with lazy evaluation) to optimize test policy across **five test insertions**."
+   ],
+   "quote": {
+    "text": "If you want to build things in this area, you have to be a bit masochistic.",
+    "cite": "— Mark Wade"
+   },
+   "watch": null,
+   "names": null
+  },
+  {
+   "id": "tsmc-bet",
+   "tags": [
+    "semis"
+   ],
+   "color": "green",
+   "badge": "Contested",
+   "status": "TSMC COUPE VS OTHER FOUNDRIES",
+   "title": "Betting on TSMC COUPE and a foundry-plus-OSAT supply chain",
+   "lead": "Ayar chose the TSMC route because optical I/O only matters at volume scale inside leading-edge packages.",
+   "bullets": [
+    "Ayar has worked on TSMC COUPE for approaching **four years** and has \"lots of wafers flowing\" from the fab.",
+    "Ben relays whispers that TSMC is immature in photonics and that **Tower** and **GlobalFoundries** are further along; Wade says a photonics chip from another foundry works for pluggables and NPO modules but not for scale-up attach.",
+    "Ayar is part of the NVIDIA ecosystem, attaching to NVLink and NVSwitch.",
+    "Wade says finance people track progress weekly or monthly while tech progresses quarterly or yearly.",
+    "Ayar is **fabless**; Wade hopes for a rich foundry set in 10-20 years.",
+    "Success metric: how you build a product, supply chain and ecosystem, not the photonics chip alone."
+   ],
+   "quote": {
+    "text": "A photonics chip is nowhere near the final product form factor.",
+    "cite": "— Mark Wade"
+   },
+   "watch": "Wade is TSMC-invested (TSMC is an equity investor in Ayar) and speaks for a company whose chips are made on the process under debate.",
+   "names": [
+    {
+     "name": "TSMC (TSM)",
+     "blurb": "Number one foundry; COUPE process used for Ayar's wafers; equity investor.",
+     "stance": "POSITIVE VIEW",
+     "conviction": "High",
+     "horizon": null
+    },
+    {
+     "name": "Tower Semiconductor (TSEM), GlobalFoundries (GFS)",
+     "blurb": "Raised by Ben as alleged photonics leaders vs TSMC; Wade says their photonics chips fit pluggables/NPO.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "timeline-customers",
+   "tags": [
+    "ai-infra",
+    "semis"
+   ],
+   "color": "amber",
+   "badge": "Forward timeline",
+   "status": "2027-28 STOPGAP · 2028-2031 ADOPTION",
+   "title": "A chaotic 2027-28, then CPO rolls out 2028-2031",
+   "lead": "Leading GPU vendors adopt first; others follow once optical I/O is treated like HBM integration.",
+   "bullets": [
+    "Short term: not in high-volume production, so customers scramble for **2027 or 2028 stopgaps**; everyone optimizes for time to the first revenue-generating token.",
+    "Wade expects exciting leading-edge GPU announcements in **2028-2029**, proliferation to the rest of the accelerator community in **2029-2031**.",
+    "Beyond **2030**, optics simplifies into a foundry-delivered advanced feature, ending the pluggable vs board-integrated vs co-packaged chaos.",
+    "ASIC-service route: close ties to **MediaTek, Alchip and GUC** let hyperscaler and startup accelerators integrate Ayar's engine at near-zero risk.",
+    "Jensen laid out a CPO switch roadmap at GTC, which prompted sell-side coverage on CPO for the first time.",
+    "Ben: we are far from giant clusters functioning as one computer; everyone is making trade-offs now."
+   ],
+   "quote": null,
+   "watch": null,
+   "names": [
+    {
+     "name": "Nvidia (NVDA)",
+     "blurb": "Investor in Ayar; Jensen showed a CPO switch roadmap at GTC.",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Medium",
+     "horizon": "2028-2029"
+    },
+    {
+     "name": "AMD",
+     "blurb": "Ayar investor; among leading GPU customers.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Intel (INTC)",
+     "blurb": "Ayar investor; leading-edge GPU/foundry partner.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "MediaTek, Alchip, GUC",
+     "blurb": "ASIC service partners that bring Ayar's optical engine to hyperscaler accelerators.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "funding-ipo",
+   "tags": [
+    "finance",
+    "ai-infra"
+   ],
+   "color": "gray",
+   "badge": "Speculative",
+   "status": "$650M RAISED · NO DATE",
+   "title": "Funding stack and an IPO path timed to the 2028-2029 ramp",
+   "lead": "Strategic plus institutional investors fund the path; the IPO is framed as following volume visibility, not a date.",
+   "bullets": [
+    "Series D: strategics NVIDIA, AMD, Intel and TSMC plus two institutional leads, at a valuation Jesse calls \"sensible\".",
+    "Series E earlier this year led by **Neuberger Berman**, with sovereign wealth funds **QIA** and **GIC**, and crossover investors incl. Sequoia and Insight Partners.",
+    "Wiwynn strategic investment announced last week; capital on the balance sheet topped **$650 million**; Reuters reported a secondary.",
+    "Wade: by IPO the roadshow shifts from technology to financial metrics, with high revenue visibility from supply commitments.",
+    "At a Jefferies dinner, he was asked about test equipment vendors and probers for the first time in the US; public investors are getting into the weeds.",
+    "Silicon Valley VCs abandoned deep tech for years; funding came from deep-tech funds and public/crossover money."
+   ],
+   "quote": null,
+   "watch": "Ayar is private; valuation, revenue and the IPO timeline are management's own statements and no figures were given.",
+   "names": [
+    {
+     "name": "Wiwynn",
+     "blurb": "Rack-scale infrastructure maker; new strategic investor in Ayar.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Neuberger Berman",
+     "blurb": "Long-only fund that led Ayar's Series E.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  }
+ ],
+ "takeaways": [
+  {
+   "icon": "🔌",
+   "tag": "AI infra",
+   "title": "Track optical I/O and CPO as a gating layer; GPU and memory scaling outpace the interconnect."
+  },
+  {
+   "icon": "📅",
+   "tag": "Timeline",
+   "title": "Anchor CPO expectations to 2028-2029 for leading GPUs and 2029-2031 for the rest; treat 2027-28 as stopgap noise."
+  },
+  {
+   "icon": "🏭",
+   "tag": "Semis",
+   "title": "Judge photonics vendors by foundry-plus-OSAT volume path (TSMC COUPE), not by photonics chip demos."
+  },
+  {
+   "icon": "💰",
+   "tag": "Private markets",
+   "title": "Watch Ayar Labs' cap table and IPO signals; strategics (NVIDIA, AMD, Intel, TSMC, Wiwynn) are the tell."
+  },
+  {
+   "icon": "🧪",
+   "tag": "Supply chain",
+   "title": "Follow lasers, fiber attach and test insertion as the real crunch points; lasers are promised for a future episode."
+  }
+ ],
+ "hot_takes": [
+  {
+   "take": "We're so far away from giant clusters functioning as one computer, which shows how early we are in this process.",
+   "cite": "— Ben Bajarin",
+   "why": "view on stage of cycle"
+  },
+  {
+   "take": "From a wafer foundry process perspective, silicon photonics just isn't that hard to do.",
+   "cite": "— Mark Wade",
+   "why": "contrarian vs. everyone says it's hard"
+  },
+  {
+   "take": "You can have the greatest technology in the world, but if you can't ramp true volume production, it's not a solution.",
+   "cite": "— Mark Wade",
+   "why": "dismissal of non-volume approaches"
+  },
+  {
+   "take": "I think we're going to see a lot of exciting things from the leading-edge GPU guys in 2028 and 2029.",
+   "cite": "— Mark Wade",
+   "why": "dated forecast"
+  }
+ ],
+ "claims": [
+  {
+   "who": "Mark Wade",
+   "claim": "Leading-edge GPU vendors ship co-packaged optics in 2028-2029.",
+   "metric": "CPO adoption (GPU leaders)",
+   "target": "shipping",
+   "by": "2028-2029",
+   "condition": null,
+   "entity": "Nvidia (NVDA)"
+  },
+  {
+   "who": "Mark Wade",
+   "claim": "The rest of the accelerator community adopts optical I/O in 2029-2031.",
+   "metric": "CPO adoption (accelerators)",
+   "target": "proliferation",
+   "by": "2029-2031",
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Mark Wade",
+   "claim": "Optical scale-up connectivity is a tens-of-billions to approaching $100B market.",
+   "metric": "scale-up optics TAM",
+   "target": "tens of billions to ~$100B",
+   "by": null,
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Ben Bajarin",
+   "claim": "The scale-up optics market reaches $30-50B by 2030.",
+   "metric": "TAM",
+   "target": "$30-50B",
+   "by": "2030",
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Mark Wade",
+   "claim": "Optical connectivity becomes a simple foundry feature after 2030.",
+   "metric": "market structure",
+   "target": "foundry-plus-OSAT feature",
+   "by": "2030+",
+   "condition": null,
+   "entity": "TSMC (TSM)"
+  },
+  {
+   "who": "Mark Wade",
+   "claim": "Ayar Labs' IPO intercept timeline tracks the 2028-2029 ramp.",
+   "metric": "IPO",
+   "target": "path opens",
+   "by": "2028-2029",
+   "condition": null,
+   "entity": "Ayar Labs"
+  }
+ ],
+ "relations": [
+  {
+   "from": "Nvidia (NVDA)",
+   "rel": "invests_in",
+   "to": "Ayar Labs",
+   "note": "Series D strategic participation"
+  },
+  {
+   "from": "AMD",
+   "rel": "invests_in",
+   "to": "Ayar Labs",
+   "note": "Series D strategic participation"
+  },
+  {
+   "from": "Intel (INTC)",
+   "rel": "invests_in",
+   "to": "Ayar Labs",
+   "note": "Series D strategic participation"
+  },
+  {
+   "from": "TSMC (TSM)",
+   "rel": "invests_in",
+   "to": "Ayar Labs",
+   "note": "multiple rounds of equity"
+  },
+  {
+   "from": "Wiwynn",
+   "rel": "invests_in",
+   "to": "Ayar Labs",
+   "note": "strategic investor announced last week"
+  },
+  {
+   "from": "Neuberger Berman",
+   "rel": "invests_in",
+   "to": "Ayar Labs",
+   "note": "led the Series E"
+  },
+  {
+   "from": "TSMC (TSM)",
+   "rel": "supplies",
+   "to": "Ayar Labs",
+   "note": "COUPE wafer foundry"
+  },
+  {
+   "from": "Ayar Labs",
+   "rel": "partners_with",
+   "to": "MediaTek",
+   "note": "ASIC service go-to-market"
+  },
+  {
+   "from": "Ayar Labs",
+   "rel": "partners_with",
+   "to": "Alchip",
+   "note": "ASIC service go-to-market"
+  },
+  {
+   "from": "Ayar Labs",
+   "rel": "partners_with",
+   "to": "GUC",
+   "note": "ASIC service go-to-market"
+  }
+ ],
+ "other_news": [
+  {
+   "icon": "📚",
+   "title": "Sources referenced: Reuters (Ayar secondary transaction), Nature (2015 processor-to-DRAM optical interface paper), Jensen Huang at GTC (CPO switch roadmap).",
+   "tag": "Sources"
+  },
+  {
+   "icon": "🧰",
+   "title": "Wade's side project: a coding-agent-built digital twin of CPO manufacturing, laser supply chain, TSMC packaging and test insertions.",
+   "tag": "AI workflow"
+  },
+  {
+   "icon": "💡",
+   "title": "Ayar has not yet covered lasers; a future episode will, and Wade calls them the other big part of the story.",
+   "tag": "Next episode"
+  }
+ ],
+ "glossary": [
+  {
+   "term": "CPO",
+   "def": "Co-packaged optics: optical engines mounted inside the processor or switch package."
+  },
+  {
+   "term": "Scale-up fabric",
+   "def": "The high-bandwidth network linking GPUs and accelerators inside a rack-scale system."
+  },
+  {
+   "term": "COUPE",
+   "def": "TSMC's compact universal photonic engine process that 3D-integrates an electrical IC with a photonics chip."
+  },
+  {
+   "term": "OSAT",
+   "def": "Outsourced semiconductor assembly and test provider that packages post-foundry wafers."
+  },
+  {
+   "term": "EIC",
+   "def": "Electronic integrated circuit: the CMOS chip driving the optical devices."
+  },
+  {
+   "term": "Bandwidth-distance trade-off",
+   "def": "Electrical links lose reach as data rate rises, which optics avoids."
+  },
+  {
+   "term": "NPO",
+   "def": "Near-packaged optics: optical modules placed beside, not inside, the package."
+  }
+ ]
+}

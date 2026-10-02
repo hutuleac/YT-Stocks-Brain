@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: Conversation with Ayar Labs CEO Mark Wade on Silicon Photonics, CPO, and Next-Gen AI Infrastructure</title>
+<meta name="description" content="The Circuit · 5 threads · interconnect as the AI bottleneck · why optics is hard · TSMC COUPE bet · customers, timing 2027-2031 · funding and IPO path">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="Conversation with Ayar Labs CEO Mark Wade on Silicon Photonics, CPO, and Next-Gen AI Infrastructure">
+<meta property="og:description" content="The Circuit · 5 threads · interconnect as the AI bottleneck · why optics is hard · TSMC COUPE bet · customers, timing 2027-2031 · funding and IPO path">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Conversation with Ayar Labs CEO Mark Wade on Silicon Photonics, CPO, and Next-Gen AI Infrastructure</h1>
+    <div class="byline">
+      Channel: <b>The Circuit</b> &middot; Speaker: <b>Ben Bajarin, Jay Goldberg, Mark Wade (Ayar Labs CEO), Jesse Leiter (Ayar Labs)</b> &middot; <b>2026-09-21</b>
+      <div class="stats-line">5 threads · interconnect as the AI bottleneck · why optics is hard · TSMC COUPE bet · customers, timing 2027-2031 · funding and IPO path &middot; <a href="https://www.youtube.com/watch?v=s3wZI1X8FGM" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li><b>Mark Wade</b> (Ayar Labs CEO) argues AI data-center revenue is gated by <i>interconnect</i> performance, and only optical I/O fixes the electrical bandwidth-distance trade-off.</li><li>Optics is hard because it stacks materials, devices, lasers, CMOS and advanced packaging; his optical engine uses a <b>3nm</b> EIC in the <b>TSMC COUPE</b> process.</li><li>Ayar is fabless and bets that photonics becomes a foundry-plus-OSAT feature, like HBM integration, by <b>2030+</b>.</li><li>Wade expects leading GPU vendors to ship CPO in <b>2028-2029</b> and the rest of accelerators in <b>2029-2031</b>; 2027-28 is a chaotic stopgap period.</li><li>Ayar's cap table includes <b>NVIDIA, AMD, Intel, TSMC</b> and now <b>Wiwynn</b>; total capital on the balance sheet topped <b>$650M</b>.</li><li>Market size: optics in scale-up is <b>tens of billions to ~$100B</b> per Wade; Ben cites <b>$30-50B by 2030</b>.</li><li>IPO intercept is timed to the <b>2028-2029</b> ramp; no firm IPO date is given.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="interconnect-wall">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">AYAR LABS' CORE THESIS</span><span class="ttag">ai-infra</span><span class="ttag">semis</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">The interconnect is the wall limiting AI data-center revenue</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Wade says copper's bandwidth-distance trade-off caps GPU scale-up, and optics inside the package is the only first-principles fix.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Ben: GPUs and even memory are scaling faster than the interconnect; "the interconnect is a wall".</li><li><span class="dot" style="background:#3f6b2e;"></span>Wade's claim: data-center revenue scaling is limited by interconnect performance in the <b>scale-up fabric</b> (tokens per second per dollar per watt).</li><li><span class="dot" style="background:#3f6b2e;"></span>Electrical links: the faster the data, the shorter the distance; optics solves it "from the ground up".</li><li><span class="dot" style="background:#3f6b2e;"></span>Optical TAM is <b>10-100x</b> the datacom volumes the optics industry used to serve; ChatGPT's release was the wake-up call that made connectivity-gated revenue a big enough market.</li><li><span class="dot" style="background:#3f6b2e;"></span>Wade's spreadsheet math: <b>tens of billions to approaching $100B</b> market; Ben quotes <b>$30-50B by 2030</b>.</li><li><span class="dot" style="background:#3f6b2e;"></span>Founded out of MIT in 2015; first processor-to-DRAM optical interface published in <i>Nature</i> in 2015.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Large-scale AI data centers are limited in their revenue scaling by the performance of the interconnect in their compute systems.&#8221;<cite>— Mark Wade</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Ayar Labs<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High · IPO path tied to 2028-2029 ramp</span></b><span>Private silicon-photonics optical I/O chiplet maker (2, 4, then 8 Tbps chiplets); fabless.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Wade is the CEO and co-founder of Ayar Labs, a private company with equity from NVIDIA, AMD, Intel and TSMC; the market-size and timing claims are his own.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="why-optics-hard">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Structural critique</span>
+    <span class="theme-status">MANUFACTURING COMPLEXITY</span><span class="ttag">semis</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Optics is hard because every layer is hard and they must all work together</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Difficult on difficult: advanced CMOS plus advanced packaging plus a new photonics process plus fiber and lasers.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Telecom had specialized firms per domain (laser, DSP, optical device); AI scale-up needs all of it integrated into one product.</li><li><span class="dot" style="background:#93711b;"></span>Ayar's optical engine = a leading-edge <b>3nm</b> EIC with hundreds of millions of transistors, built via TSMC's COUPE process.</li><li><span class="dot" style="background:#93711b;"></span>Adds to already-scarce CoWoS-class, multi-reticle advanced packages; then an optical connector must attach to the package.</li><li><span class="dot" style="background:#93711b;"></span>Foundry photonics wafer "just isn't that hard": silicon waveguides, silicon nitride, germanium detectors; <b>fiber attach</b> is the hardest piece.</li><li><span class="dot" style="background:#93711b;"></span>Current crunch points: laser manufacturing, production test architecture and wafer/assembly-level testing.</li><li><span class="dot" style="background:#93711b;"></span>Wade is building a digital-twin manufacturing model with coding agents (a DAG with lazy evaluation) to optimize test policy across <b>five test insertions</b>.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;If you want to build things in this area, you have to be a bit masochistic.&#8221;<cite>— Mark Wade</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="tsmc-bet">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Contested</span>
+    <span class="theme-status">TSMC COUPE VS OTHER FOUNDRIES</span><span class="ttag">semis</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Betting on TSMC COUPE and a foundry-plus-OSAT supply chain</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Ayar chose the TSMC route because optical I/O only matters at volume scale inside leading-edge packages.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Ayar has worked on TSMC COUPE for approaching <b>four years</b> and has "lots of wafers flowing" from the fab.</li><li><span class="dot" style="background:#3f6b2e;"></span>Ben relays whispers that TSMC is immature in photonics and that <b>Tower</b> and <b>GlobalFoundries</b> are further along; Wade says a photonics chip from another foundry works for pluggables and NPO modules but not for scale-up attach.</li><li><span class="dot" style="background:#3f6b2e;"></span>Ayar is part of the NVIDIA ecosystem, attaching to NVLink and NVSwitch.</li><li><span class="dot" style="background:#3f6b2e;"></span>Wade says finance people track progress weekly or monthly while tech progresses quarterly or yearly.</li><li><span class="dot" style="background:#3f6b2e;"></span>Ayar is <b>fabless</b>; Wade hopes for a rich foundry set in 10-20 years.</li><li><span class="dot" style="background:#3f6b2e;"></span>Success metric: how you build a product, supply chain and ecosystem, not the photonics chip alone.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;A photonics chip is nowhere near the final product form factor.&#8221;<cite>— Mark Wade</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>TSMC (TSM)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Number one foundry; COUPE process used for Ayar's wafers; equity investor.</span></div><div class="namechip"><b>Tower Semiconductor (TSEM), GlobalFoundries (GFS)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Raised by Ben as alleged photonics leaders vs TSMC; Wade says their photonics chips fit pluggables/NPO.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Wade is TSMC-invested (TSMC is an equity investor in Ayar) and speaks for a company whose chips are made on the process under debate.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="timeline-customers">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Forward timeline</span>
+    <span class="theme-status">2027-28 STOPGAP · 2028-2031 ADOPTION</span><span class="ttag">ai-infra</span><span class="ttag">semis</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">A chaotic 2027-28, then CPO rolls out 2028-2031</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Leading GPU vendors adopt first; others follow once optical I/O is treated like HBM integration.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Short term: not in high-volume production, so customers scramble for <b>2027 or 2028 stopgaps</b>; everyone optimizes for time to the first revenue-generating token.</li><li><span class="dot" style="background:#93711b;"></span>Wade expects exciting leading-edge GPU announcements in <b>2028-2029</b>, proliferation to the rest of the accelerator community in <b>2029-2031</b>.</li><li><span class="dot" style="background:#93711b;"></span>Beyond <b>2030</b>, optics simplifies into a foundry-delivered advanced feature, ending the pluggable vs board-integrated vs co-packaged chaos.</li><li><span class="dot" style="background:#93711b;"></span>ASIC-service route: close ties to <b>MediaTek, Alchip and GUC</b> let hyperscaler and startup accelerators integrate Ayar's engine at near-zero risk.</li><li><span class="dot" style="background:#93711b;"></span>Jensen laid out a CPO switch roadmap at GTC, which prompted sell-side coverage on CPO for the first time.</li><li><span class="dot" style="background:#93711b;"></span>Ben: we are far from giant clusters functioning as one computer; everyone is making trade-offs now.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium · 2028-2029</span></b><span>Investor in Ayar; Jensen showed a CPO switch roadmap at GTC.</span></div><div class="namechip"><b>AMD<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Ayar investor; among leading GPU customers.</span></div><div class="namechip"><b>Intel (INTC)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Ayar investor; leading-edge GPU/foundry partner.</span></div><div class="namechip"><b>MediaTek, Alchip, GUC<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>ASIC service partners that bring Ayar's optical engine to hyperscaler accelerators.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="funding-ipo">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Speculative</span>
+    <span class="theme-status">$650M RAISED · NO DATE</span><span class="ttag">finance</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">Funding stack and an IPO path timed to the 2028-2029 ramp</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Strategic plus institutional investors fund the path; the IPO is framed as following volume visibility, not a date.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>Series D: strategics NVIDIA, AMD, Intel and TSMC plus two institutional leads, at a valuation Jesse calls "sensible".</li><li><span class="dot" style="background:#65695f;"></span>Series E earlier this year led by <b>Neuberger Berman</b>, with sovereign wealth funds <b>QIA</b> and <b>GIC</b>, and crossover investors incl. Sequoia and Insight Partners.</li><li><span class="dot" style="background:#65695f;"></span>Wiwynn strategic investment announced last week; capital on the balance sheet topped <b>$650 million</b>; Reuters reported a secondary.</li><li><span class="dot" style="background:#65695f;"></span>Wade: by IPO the roadshow shifts from technology to financial metrics, with high revenue visibility from supply commitments.</li><li><span class="dot" style="background:#65695f;"></span>At a Jefferies dinner, he was asked about test equipment vendors and probers for the first time in the US; public investors are getting into the weeds.</li><li><span class="dot" style="background:#65695f;"></span>Silicon Valley VCs abandoned deep tech for years; funding came from deep-tech funds and public/crossover money.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Wiwynn<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Rack-scale infrastructure maker; new strategic investor in Ayar.</span></div><div class="namechip"><b>Neuberger Berman<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Long-only fund that led Ayar's Series E.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Ayar is private; valuation, revenue and the IPO timeline are management's own statements and no figures were given.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🔌</div><div class="tline"><span class="cat">AI infra:</span> <span class="txt">Track optical I/O and CPO as a gating layer; GPU and memory scaling outpace the interconnect.</span></div></div><div class="irow"><div class="ic">📅</div><div class="tline"><span class="cat">Timeline:</span> <span class="txt">Anchor CPO expectations to 2028-2029 for leading GPUs and 2029-2031 for the rest; treat 2027-28 as stopgap noise.</span></div></div><div class="irow"><div class="ic">🏭</div><div class="tline"><span class="cat">Semis:</span> <span class="txt">Judge photonics vendors by foundry-plus-OSAT volume path (TSMC COUPE), not by photonics chip demos.</span></div></div><div class="irow"><div class="ic">💰</div><div class="tline"><span class="cat">Private markets:</span> <span class="txt">Watch Ayar Labs' cap table and IPO signals; strategics (NVIDIA, AMD, Intel, TSMC, Wiwynn) are the tell.</span></div></div><div class="irow"><div class="ic">🧪</div><div class="tline"><span class="cat">Supply chain:</span> <span class="txt">Follow lasers, fiber attach and test insertion as the real crunch points; lasers are promised for a future episode.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;We're so far away from giant clusters functioning as one computer, which shows how early we are in this process.&#8221; <cite>— Ben Bajarin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;From a wafer foundry process perspective, silicon photonics just isn't that hard to do.&#8221; <cite>— Mark Wade</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;You can have the greatest technology in the world, but if you can't ramp true volume production, it's not a solution.&#8221; <cite>— Mark Wade</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think we're going to see a lot of exciting things from the leading-edge GPU guys in 2028 and 2029.&#8221; <cite>— Mark Wade</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Mark Wade:</b> Leading-edge GPU vendors ship co-packaged optics in 2028-2029. <span class="cmeta">CPO adoption (GPU leaders) · shipping · 2028-2029</span> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>Mark Wade:</b> The rest of the accelerator community adopts optical I/O in 2029-2031. <span class="cmeta">CPO adoption (accelerators) · proliferation · 2029-2031</span></div><div class="ritem"><b>Mark Wade:</b> Optical scale-up connectivity is a tens-of-billions to approaching $100B market. <span class="cmeta">scale-up optics TAM · tens of billions to ~$100B</span></div><div class="ritem"><b>Ben Bajarin:</b> The scale-up optics market reaches $30-50B by 2030. <span class="cmeta">TAM · $30-50B · 2030</span></div><div class="ritem"><b>Mark Wade:</b> Optical connectivity becomes a simple foundry feature after 2030. <span class="cmeta">market structure · foundry-plus-OSAT feature · 2030+</span> <span class="tag">TSMC (TSM)</span></div><div class="ritem"><b>Mark Wade:</b> Ayar Labs' IPO intercept timeline tracks the 2028-2029 ramp. <span class="cmeta">IPO · path opens · 2028-2029</span> <span class="tag">Ayar Labs</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">invests in</span> <b>Ayar Labs</b> &mdash; Series D strategic participation</div><div class="ritem"><b>AMD</b> <span class="rel">invests in</span> <b>Ayar Labs</b> &mdash; Series D strategic participation</div><div class="ritem"><b>Intel (INTC)</b> <span class="rel">invests in</span> <b>Ayar Labs</b> &mdash; Series D strategic participation</div><div class="ritem"><b>TSMC (TSM)</b> <span class="rel">invests in</span> <b>Ayar Labs</b> &mdash; multiple rounds of equity</div><div class="ritem"><b>Wiwynn</b> <span class="rel">invests in</span> <b>Ayar Labs</b> &mdash; strategic investor announced last week</div><div class="ritem"><b>Neuberger Berman</b> <span class="rel">invests in</span> <b>Ayar Labs</b> &mdash; led the Series E</div><div class="ritem"><b>TSMC (TSM)</b> <span class="rel">supplies</span> <b>Ayar Labs</b> &mdash; COUPE wafer foundry</div><div class="ritem"><b>Ayar Labs</b> <span class="rel">partners with</span> <b>MediaTek</b> &mdash; ASIC service go-to-market</div><div class="ritem"><b>Ayar Labs</b> <span class="rel">partners with</span> <b>Alchip</b> &mdash; ASIC service go-to-market</div><div class="ritem"><b>Ayar Labs</b> <span class="rel">partners with</span> <b>GUC</b> &mdash; ASIC service go-to-market</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: Reuters (Ayar secondary transaction), Nature (2015 processor-to-DRAM optical interface paper), Jensen Huang at GTC (CPO switch roadmap). <span class="tag">Sources</span></div></div></div><div class="irow"><div class="ic">🧰</div><div><div class="title">Wade's side project: a coding-agent-built digital twin of CPO manufacturing, laser supply chain, TSMC packaging and test insertions. <span class="tag">AI workflow</span></div></div></div><div class="irow"><div class="ic">💡</div><div><div class="title">Ayar has not yet covered lasers; a future episode will, and Wade calls them the other big part of the story. <span class="tag">Next episode</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>CPO</b> &mdash; Co-packaged optics: optical engines mounted inside the processor or switch package.</div><div><b>Scale-up fabric</b> &mdash; The high-bandwidth network linking GPUs and accelerators inside a rack-scale system.</div><div><b>COUPE</b> &mdash; TSMC's compact universal photonic engine process that 3D-integrates an electrical IC with a photonics chip.</div><div><b>OSAT</b> &mdash; Outsourced semiconductor assembly and test provider that packages post-foundry wafers.</div><div><b>EIC</b> &mdash; Electronic integrated circuit: the CMOS chip driving the optical devices.</div><div><b>Bandwidth-distance trade-off</b> &mdash; Electrical links lose reach as data rate rises, which optics avoids.</div><div><b>NPO</b> &mdash; Near-packaged optics: optical modules placed beside, not inside, the package.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
