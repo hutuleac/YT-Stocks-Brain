@@ -1,0 +1,190 @@
+META = {
+    "title": "7 things Bezos, MrBeast & Thiel do that you don’t",
+    "channel": "My First Million",
+    "speakers": "Shaan Puri, Sam Parr",
+    "date": "2026-09-02",
+    "video_url": "https://www.youtube.com/watch?v=jZT04e4yBb0",
+    "thread_line": "6 threads · option drops · one-bit management · focus & culling · MrBeast cloning · being great vs achieving greatness · ambition and kids",
+    "category": "life",
+}
+
+SNAPSHOT = [
+    "Shaan tells seven \"hardcore CEO\" stories that *sound wrong or almost illegal but work* — his collection of **frame-breaking** ideas (the elephant tethered to a stake it could rip out).",
+    "Reward and communication hacks: **option drops** on the spot, a one-word \"okay/no\" CEO inbox, Bezos's bare \"?\" forwarded customer email, OpenAI's friction inbox.",
+    "Pressure hacks: Thiel's single-tasking (walk out of the room), Welch's number-1-or-2 rule plus firing the bottom 10% yearly, MrBeast's 6-month shadow \"cloning\".",
+    "Ratings: option drop one thumb up; friction inbox, Siemens and Thiel double thumbs; Ford's all-green review thumbs down.",
+    "Opposing view: Jensen Huang \"smothers you in greatness\" instead of firing — for each of these, equally successful people do the opposite.",
+    "The counterweight: Kevin Kelly gave up on *greatness* to be a gadfly; Shaan lands on **\"be great\" in the moment** rather than achieve greatness.",
+    "Closing thread: ambition dials down when kids are 3-13, and a viral post says it comes back.",
+]
+
+THEMES = [
+    {
+        "id": "option-drop",
+        "tags": ["career", "mindset"],
+        "color": "green",
+        "badge": "Recommendation",
+        "status": "STORY 1 — IMMEDIATE REWARD",
+        "title": "Option drop: pay for the behavior you want, the moment you see it",
+        "lead": "A founder hands out equity on the spot for great work, so the reward is specific, concrete and immediate.",
+        "bullets": [
+            "Origin: Shaan's breakfast with Martin Basseri (founder of Passage, formerly Applyboard) — works 8:30 a.m. to midnight; staff now stay late too.",
+            "Mechanic: anyone who does something awesome gets \"option drop, **50,000 options**\"; at 10 p.m. with ~12 people in the office, \"everyone here, 20,000 options\" — roughly once every 50 days.",
+            "It's papered by messaging an assistant; options still carry a strike price and an exercise window, so it isn't free money.",
+            "Why it works: behavioral basics — the more specific, concrete and immediate a reward, the more of that behavior; beats \"I put our company values on the wall once 6 years ago.\"",
+            "Sam's version: a **gong** in the office that everyone stares at when someone does something awesome; he gives money, not options.",
+            "Backstory: a 13-year-old scout sent Shaan Applyboard (US university applications for foreign students; schools pay a $5-10K bounty per admit, and international tuition is ~3x). He pledged $25K, got cold feet, never followed up and missed it — now a multi-billion-dollar company.",
+        ],
+        "quote": {"text": "Option drop. 50,000 options.", "cite": "— Martin Basseri, as told by Shaan"},
+        "watch": None,
+        "names": [
+            {"name": "Applyboard", "blurb": "Bridge for foreign students applying to US universities; earns a per-admit fee; the deal Shaan missed.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Passage", "blurb": "Martin Basseri's current company; Shaan has invested.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "low-friction-management",
+        "tags": ["career", "software"],
+        "color": "green",
+        "badge": "Recommendation",
+        "status": "STORIES 2-4 — REMOVE THE CEO AS BOTTLENECK",
+        "title": "One-bit communication and friction removal",
+        "lead": "Three operators cut drag by shrinking the signal: a yes/no, a question mark, an inbox.",
+        "bullets": [
+            "**OpenAI friction removal service:** email friction@openai.com about anything slowing you down; one person triages and eliminates the real sources of bureaucratic drag — \"a janitorial crew for a bureaucracy.\"",
+            "**One-bit communication:** Marc Andreessen's blog post defended Yo (an app that only said \"yo\") and a16z backed it; beepers were the precedent — one bit can carry a lot once its meaning is agreed.",
+            "**Siemens CEO:** email him anything and he replies \"okay\" or \"no\"; anything more means come talk to him right now — no recurring one-on-ones. \"I don't entertain people and they don't need to entertain me.\"",
+            "Shaan on regular meetings: often \"progress theater\" — both sides tap-dance and waste an hour; the CEO is never the bottleneck.",
+            "**Bezos escalation:** forwards a customer email with only \"?\", meaning *is this true, why is it happening, what are we going to do* — triages email without a long conversation.",
+            "Bezos's reasoning to teams citing a 98% success rate: the anecdote is a squeak in the machine; the metric is right *and* the customer is right — the metric is incomplete.",
+            "Ratings: OpenAI double thumbs up (\"less heroic, more systematic\"), Siemens double thumbs; Sam notes Bezos's \"?\" lands polite while from him it would read douchy.",
+        ],
+        "quote": {"text": "I don't entertain people and they don't need to entertain me.", "cite": "— Siemens CEO, as told by Shaan"},
+        "watch": None,
+        "names": [
+            {"name": "OpenAI", "blurb": "Internal friction@ inbox with a dedicated triager.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Siemens (SIE)", "blurb": "CEO answers email with okay/no, no recurring meetings; he has a theoretical-physics background.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Amazon (AMZN)", "blurb": "Bezos's one-question-mark customer-email escalation.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Andreessen Horowitz", "blurb": "Backed Yo; Marc Andreessen wrote the \"one bit communication\" post.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "focus-and-culling",
+        "tags": ["career", "mindset"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "STORIES 5-7 — FORCING FUNCTIONS",
+        "title": "Single-tasking, culling and honest reviews",
+        "lead": "Thiel, Welch and Ford's new CEO each forced a behavior — and the hosts note equally great leaders do the opposite.",
+        "bullets": [
+            "**Thiel at PayPal:** everyone owns one problem (fraud from Ukraine, button virality on eBay, bank processing fees); if you raised anything else he walked out of the room — per a PayPal alum.",
+            "**\"Focus is convex\":** going from 80% to 90% focus doubles impact; like swimming, the 99.99999th percentile is Michael Phelps while the 90th manages a tire company.",
+            "**Jack Welch at GE:** every division must be number one or two or you get a year to fix, sell or close it; plus fire the bottom 10% every year.",
+            "Shaan: it sounds mild until you check how much low performance *you* have tolerated; Sam supports it as logical. GE's later sprawl is cited by critics, but they don't know whose doing it was.",
+            "Counterexample: Jensen Huang \"smothers you in greatness\" and doesn't fire — he turns up intensity until you become great or quit; either way low performers weed out.",
+            "**Ford's new CEO** (after a **$17B** loss) found every project status green; the next week all green but one red, and he stood and clapped. Both hosts thumbs down — \"sounds like a Disney movie.\"",
+        ],
+        "quote": {"text": "Focus is convex.", "cite": "— Peter Thiel, as relayed by Shaan"},
+        "watch": "The hosts say each of these has successful people doing the polar opposite; the point is pushing boundaries, not a prescription.",
+        "names": [
+            {"name": "PayPal", "blurb": "Thiel's single-task culture; alumni named include Max Levchin, Elon Musk, Reid Hoffman.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "General Electric (GE)", "blurb": "Welch's number-one-or-two rule and annual bottom-10% cull.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Ford (F)", "blurb": "New CEO reset a green-washed status review after a $17B loss.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Nvidia (NVDA)", "blurb": "Jensen Huang's no-firing, raise-the-intensity approach.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "mrbeast-cloning",
+        "tags": ["career"],
+        "color": "amber",
+        "badge": "Recommendation",
+        "status": "STORY 7 — MRBEAST",
+        "title": "Cloning: train managers by making them shadow you",
+        "lead": "MrBeast trains key hires by having them follow him everywhere until they know how he decides.",
+        "bullets": [
+            "Mechanic: a key hire shadows him from wake-up (one acted as his alarm clock) to sign-off, for **6 months**, seeing every decision.",
+            "Result: a proxy who knows \"what would Jimmy do\" — he can be in two places at once; a room of multi-billion-dollar CEOs called it awesome and illegal.",
+            "Shaan heard it when MrBeast was ~24-25 and had no college or business school; he's since matured fast and has a CEO at Beast Industries.",
+            "Shaan's read: if it's your edge, don't dull it; what works survives and what doesn't gets pruned. Sam wonders if extreme founders soften with kids — Elon apparently hasn't.",
+        ],
+        "quote": None,
+        "watch": "Unknown whether he still uses cloning; Shaan says \"I don't know if he still does it.\"",
+        "names": [
+            {"name": "Beast Industries", "blurb": "MrBeast's company; now has a CEO.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "be-great",
+        "tags": ["mindset", "career"],
+        "color": "green",
+        "badge": "Framework",
+        "status": "THE COUNTERWEIGHT — GREATNESS",
+        "title": "Don't achieve greatness; be great",
+        "lead": "The cost of greatness is extremeness; Shaan lands on being great in daily moments instead of achieving greatness.",
+        "bullets": [
+            "Kevin Kelly on David Perell's podcast: \"To have this life I have, I had to give up on greatness\" — defined as being remembered by non-family more than a generation or two out; he chose being a gadfly.",
+            "Sam's version of greatness spans 120-150 years; Fort Greene in Brooklyn is named for Nathaniel Greene, a top-20 Revolution figure most people can't place.",
+            "Money doesn't get remembered: you can't name the 80th-richest person of the 1930s; remembered people are humanitarians, leaders, inventors, artists.",
+            "Hormozi's line: the queen died six months ago and you haven't thought about her since.",
+            "Shaan: achieving greatness is a fool's errand for him once the cost is known; being great is active and immediate — Ramon as friend and dad, Ben Wilson's class under hardship, his trainer.",
+            "Examples: finishing the last three reps, being kind, indulging a stranger's kid at the park about a caterpillar. \"Increasing that hit rate is the goal.\"",
+        ],
+        "quote": {"text": "Instead of building something great, be great.", "cite": "— Shaan Puri"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "ambition-and-kids",
+        "tags": ["parenting", "family"],
+        "color": "gray",
+        "badge": "Personal story",
+        "status": "CLOSING — AMBITION AFTER KIDS",
+        "title": "Ambition dips when kids are 3-13, then comes back",
+        "lead": "A viral post says ambitious men feel ambition fade during the years their kids still like them, and that it returns.",
+        "bullets": [
+            "The window is ~3 to 13: kids are out of diapers, have opinions, still want to spend time with you — past 13 that stops.",
+            "Both hosts feel it; \"life was so much simpler\" when it was climb the ladder and make money.",
+            "Hence no staying till midnight, no option drops — \"my chair has lumbar support.\"",
+        ],
+        "quote": None,
+        "watch": "Anecdotal; the post's author says it doesn't happen to everyone.",
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F3AF", "tag": "Management", "title": "Reward the behavior you want within the hour — equity, cash or a gong, but specific and immediate."},
+    {"icon": "\U0001F4E5", "tag": "Management", "title": "Set up a friction inbox with one named triager so bureaucratic drag has somewhere to go."},
+    {"icon": "\U0001F9E0", "tag": "Communication", "title": "Agree a one-bit protocol with your team (okay/no, or a bare \"?\") before escalating by long thread."},
+    {"icon": "\U0001F50D", "tag": "Metrics", "title": "Treat a customer anecdote as a sign your metric is incomplete, not as noise."},
+    {"icon": "\U0001F6A7", "tag": "Careers", "title": "Count how much low performance you have tolerated before deciding if culling is too hardcore."},
+    {"icon": "✨", "tag": "Mindset", "title": "Pick one moment today to be great, instead of defining greatness as a distant achievement."},
+]
+
+HOT_TAKES = [
+    {"take": "To have this life I have, I had to give up on greatness.", "cite": "— Kevin Kelly, via Shaan", "why": "Surrenders legacy ambition"},
+    {"take": "Instead of building something great, be great.", "cite": "— Shaan Puri", "why": "Reframes the goal"},
+    {"take": "I don't entertain people and they don't need to entertain me.", "cite": "— Siemens CEO, via Shaan", "why": "Rejects recurring one-on-ones"},
+    {"take": "If you are 80% focused on a task, that will only be half as good as if you were 90%.", "cite": "— Peter Thiel, via Shaan", "why": "Numeric claim about focus"},
+    {"take": "I tend to think those stories are more important than traditional data.", "cite": "— Sam Parr", "why": "Anecdote over dashboards"},
+]
+
+CLAIMS = []
+
+RELATIONS = [
+    {"from": "Andreessen Horowitz", "rel": "invests_in", "to": "Yo", "note": "wrote a big check; Marc Andreessen published the one-bit communication post"},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F4DA", "title": "Sources referenced: Marc Andreessen's \"one bit communication\" blog post, David Perell's podcast with Kevin Kelly, Kevin Kelly's *1,000 True Fans*, Alex Hormozi's queen line, the TV show Silicon Valley (bro app), a viral Twitter post on kids and ambition, and a PayPal alum's account of Thiel walking out.", "tag": "Sources"},
+    {"icon": "\U0001F4F1", "title": "Yo was a one-button app that only sent \"yo\"; briefly viral in San Francisco, listed with Chumbawamba as a one-hit wonder.", "tag": "Culture"},
+]
+
+GLOSSARY = [
+    {"term": "Frame breaking", "def": "A story that sits outside your mental model and forces it to expand — Shaan collects them."},
+    {"term": "Option drop", "def": "Granting stock options on the spot to reward a specific behavior."},
+    {"term": "One-bit communication", "def": "A single-bit message (yo, okay/no, \"?\") whose meaning is pre-agreed."},
+    {"term": "Friction removal service", "def": "OpenAI's inbox and triager for eliminating internal bureaucratic drag."},
+    {"term": "Focus is convex", "def": "Thiel's idea that impact rises disproportionately with the last increments of focus."},
+    {"term": "Cloning", "def": "MrBeast's practice of having a hire shadow him for months to learn how he decides."},
+]
