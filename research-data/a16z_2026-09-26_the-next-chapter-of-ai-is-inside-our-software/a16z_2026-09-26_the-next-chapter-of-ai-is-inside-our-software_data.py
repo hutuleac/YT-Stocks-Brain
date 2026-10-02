@@ -1,0 +1,184 @@
+META = {
+    "title": "The Next Chapter of AI Is Inside Our Software",
+    "channel": "a16z",
+    "speakers": "Erik Torenberg (host), Aaron Levie (Box), Martin Casado (a16z), Steven Sinofsky (a16z)",
+    "date": "2026-09-26",
+    "video_url": "https://www.youtube.com/watch?v=TLJNJDf2XGo",
+    "thread_line": "6 threads · pacing rhetoric, AI regulation politics, lessons from history, agent security, prompt-fatigue regulation, innovation moving outside the models",
+    "category": "dev",
+}
+
+SNAPSHOT = [
+    "a16z panel on AI safety, security and regulation, sparked by a frontier lab's *pacing* post: the post itself is sensible, the **messaging and atmospherics are not**.",
+    "Core objection: you **can't reconcile a 10% species-extinction line with a pragmatic engineering proposal**; labs should address x-risk directly or the result is heavy-handed regulation.",
+    "Panel expects the **2028 election to be the AI election** and fears the pro-AI side has no vocabulary: every term (*pause, swarms, rogue*) was chosen by opponents.",
+    "History lens: computer-crime law, CVE reporting, aviation and the FDA all came *after* concrete failures were understood; regulating too early \"wills the thing into being\" without control.",
+    "Security is the concrete, solvable risk: **agent swarms act like roaming drones times 10,000**, so internal APIs, auth and permissions need a new, more granular model.",
+    "Biggest fear: Europe \"GDPR-s\" AI with a warning prompt on every agent action, creating numb click-through safety theater and liability assignment.",
+    "Closer: a new Jev-style model (read text, **choose among options with a probability**) integrates LLMs into traditional software; innovation is moving outside the labs.",
+]
+
+THEMES = [
+    {
+        "id": "pacing-post-atmospherics",
+        "tags": ["ai-infra", "policy"],
+        "color": "amber",
+        "badge": "Structural critique",
+        "status": "REACTION TO A FRONTIER-LAB POST",
+        "title": "Sensible post, broken messaging: \"pacing\" and the x-risk contradiction",
+        "lead": "The panel agrees with the lab's security substance but says the pacing label and extinction rhetoric undermine it.",
+        "bullets": [
+            "Shared ground: frontier labs should build with maximum governance, sandboxing and testing; **AI diffusion needs trusted products**, and good engineering makes adoption faster, not slower.",
+            "Worry on the other side: the message gets used for **regulatory capture** or to ban data centers far faster.",
+            "\"Pacing\" is the wrong word: it is orthogonal to security (*you can build a nuclear weapon very slowly*), splits the difference between doomers and regulators, and makes **both unhappy**.",
+            "No schedule was ever published, so nothing can be slower — like press reports of Apple's late iPhone nobody knew existed; labs have raised and grown faster than ever, so nobody believes they are pacing.",
+            "Counterpoint: internal models far exceed external ones, so pacing may only mean the **pace of external releases**.",
+            "Casado (ex-Lawrence Livermore weapons program): if the most knowledgeable people believe in existential risk, the answer is to **nationalize it**; he thinks the extinction concern is a small fraction of researchers and an **HR/retention problem**.",
+            "Dario is said to agree with a ~10% extinction claim on TV while declining to put a number on it; if nonzero, panelists argue the only logical result is nationalization, and the labs may want \"critical infrastructure\" status like JPMorgan or Verizon (bad for frontier open source).",
+        ],
+        "quote": {"text": "You can very slowly build a nuclear weapon, and that doesn't make anybody feel better that it's slow versus fast.", "cite": "— Panel (a16z)"},
+        "watch": "All three guests are a16z / Box executives with positions in AI companies; Levie runs Box, Casado and Sinofsky are a16z partners. Speaker attribution within the panel is partly unclear in the captions.",
+        "names": [
+            {"name": "Anthropic", "blurb": "Its CEO's post on pacing is called pragmatic and mostly agreeable, with the messaging criticized.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+        ],
+    },
+    {
+        "id": "regulation-politics",
+        "tags": ["policy", "geopolitics"],
+        "color": "amber",
+        "badge": "Counterintuitive take",
+        "status": "POLITICS OF AI REGULATION",
+        "title": "Nobody gets the regulation they ask for; 2028 becomes the AI election",
+        "lead": "Governments listen to everyone and ship a compromise that is always too weak or too strong, so lobbying for a specific outcome fails.",
+        "bullets": [
+            "Government \"output never makes everyone happy\": 100% of the time it either doesn't go far enough or goes way too far; asking for pacing gets \"the wrong velocity.\"",
+            "Once regulation starts, it can't be slowed; it is now an election issue across every party and jurisdiction, and **2028 will be \"the AI election.\"**",
+            "The pro-AI case takes too many words and the opposition owns the vocabulary (*pause, swarms, rogue*); the pro side must invent new words.",
+            "Anecdote: someone in government (guessed David Sacks, possibly Trump) answered \"you're asking us to regulate you?\" — \"no.\"",
+            "Senators remember missing the internet (communications act, no ISP liability) and Al Gore's \"created the internet\" gaffe was really him trying to get ahead; Senator Warren's tweets show **pent-up anti-tech energy** now siphoning into AI.",
+            "Past tech-law pattern: AT&T and IBM (born of government monopoly) and Microsoft all got antitrust suits despite hundreds of lawyers; Bill Gates golfing with Bill Clinton didn't help.",
+            "Self-regulation precedent: Hollywood formed the **Motion Picture Association** and ratings during the Red Scare; protected by the First Amendment, so cable/HBO grew up unregulated.",
+            "FINRA for AI: seen as the best-case outcome but \"essentially nationalizing risk,\" since banks pay in but it is mandated; with AI in healthcare, high-frequency trading and airplanes, Congress eventually must act.",
+        ],
+        "quote": {"text": "Every word has been chosen by the people who don't want to do AI.", "cite": "— Panel (a16z)"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "history-concrete-risk",
+        "tags": ["policy", "software"],
+        "color": "green",
+        "badge": "Framework",
+        "status": "LESSONS FROM EARLIER COMPUTING WAVES",
+        "title": "Policy follows concrete failures: computer crime, CVE, aviation",
+        "lead": "Good policy came from specific, identified harms, not predicted ones; regulating AI too early solves nothing and leaves you without control.",
+        "bullets": [
+            "The **1986 Computer Fraud and Abuse Act** came from a specific case: hackers breaking into GTE Telemail (used by NASA and Livermore), after a 1983 incident with no crime on the books and a **2.5-year** path to passage.",
+            "Roughly **90% of needed laws already exist at the application layer** (you can't hack systems); open question is whether anything belongs at the model layer.",
+            "Later amendments carved out white hats, and the Justice Department said it won't prosecute terms-of-use violations.",
+            "Lab postmortems are criticized as sloppy and incomplete; the CVE process (1980s, CMU vulnerability reporting) already has structured reporting the labs aren't using — \"like an intern wrote it.\"",
+            "The early internet did tens of billions in damage, a worm took out ~10% of infrastructure, hospitals went down; viruses were unavoidable on a networked PC until 2001 — \"we really should have blocked the internet in '97\" (joke).",
+            "Aviation: first flights early 1900s, pilot licenses only in the **1920s**, airworthiness ~20 years later, modern FAA much later; \"if you had started the FAA in 1910, you never...\"; cars (*Unsafe at Any Speed*, 1960s) and pharma (thalidomide, Gold Rush era) followed similar lags.",
+            "Citing Nick Bostrom on a podcast: regulate too early and \"you will the thing into being\" without understanding how to control it.",
+        ],
+        "quote": None,
+        "watch": "Several figures (Windows install infection time, 10% infrastructure) are panelists' recollections stated from memory.",
+        "names": None,
+    },
+    {
+        "id": "agent-security",
+        "tags": ["ai-infra", "dev-workflow"],
+        "color": "red",
+        "badge": "Structural critique",
+        "status": "THE CONCRETE RISK",
+        "title": "Agent swarms break the security model: a rebuild moment for access control",
+        "lead": "Agents don't tire and probe every API at scale, so internal systems built on 95-99% human good behavior need new, granular permissions.",
+        "bullets": [
+            "Infosec worked because most people do right 95-99% of the time and a malicious employee is ~1 in 10,000; **agent swarms are roaming drones times 10,000** and easily mistake a good task for a bad one.",
+            "Internal GitHub, Slack and finance tools aren't thought vulnerable to denial of service, yet swarms look exactly like DoS; companies need a layer tracking **which authentications and APIs are called**.",
+            "Current OS permissions are too coarse: an agent either asks every time or can delete the whole computer; users want per-folder read/write vs read-only controls made intuitive.",
+            "Technical fix exists in old research: **multi-level security (MLS)** was never adopted for usability reasons, and AI may solve that, enabling a renaissance of secure-by-design OS, network and language work.",
+            "Precedent: out-of-box iPhones now force an OS update first; 2FA wasn't standard five years ago; SaaS shifted to Okta/Google auth by ~2015.",
+            "Covert-channel stories: Noam Brown's podcast point that a superintelligence could exfiltrate via CPU heat is called plausible; examples include **Tempest attacks**, CRT raster-beam reconstruction through a window, three-pixel messaging, BIOS spread spectrum, speakers, and DoD screen-memory erase requirements.",
+            "Threat-model basics: NIST 500-page manuals assume an all-knowing oracle on the untrusted side; AI can try all attacks in a short time and never gets bored. Panel also notes this discussion is now in future training data.",
+        ],
+        "quote": {"text": "These are just roaming drones, but times 10,000, and they will easily mistake a good task for a bad one.", "cite": "— Panel (a16z)"},
+        "watch": "The panel calls the Noam Brown exchange the first constructive systems-people discussion on x-risk; the quoted bandwidth/heat details are anecdotal.",
+        "names": None,
+    },
+    {
+        "id": "gdpr-prompt-fatigue",
+        "tags": ["policy", "geopolitics"],
+        "color": "gray",
+        "badge": "Cautionary tale",
+        "status": "A FEARED MIDDLE GROUND",
+        "title": "The biggest fear: GDPR for AI and a warning prompt on every action",
+        "lead": "Regulators love prompts because they assign liability, and users click through them numb, so safety becomes theater.",
+        "bullets": [
+            "Biggest fear: **Europe treats GDPR as the best thing ever** and applies it to AI, with a prompt whenever an agent touches a third-party product.",
+            "Europe leads because the **US stopped leading on tech antitrust ~15 years ago**, and the EU \"has nothing to lose.\"",
+            "Analogies: car airbag stickers, the EU browser-choice screen, Windows XP User Account Control and Word macro warnings — everybody just clicks.",
+            "Mac users avoid this by downloading few apps; a prompt on every new website would make it worse.",
+            "Proposed pragmatic alternative: stop debating species extinction and quibble about GDPR-style prompts instead.",
+        ],
+        "quote": {"text": "I just can't get out of my head that they love prompts.", "cite": "— Panel (a16z)"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "decision-engine-models",
+        "tags": ["dev-workflow", "software"],
+        "color": "green",
+        "badge": "Recommendation",
+        "status": "FASTEST ADOPTION SINCE CHATGPT",
+        "title": "LLMs as decision engines: innovation moves outside the models",
+        "lead": "Instead of generating text, a model reads text and picks the best option with a probability, which finally fits traditional software.",
+        "bullets": [
+            "Jev (described as the fastest adoption of an AI model since ChatGPT): read text, then **choose among given options** rather than generate; cheaper, faster and more accurate because it can be trained just for that.",
+            "Text prompting is an inefficient interface: no user study shows full natural language is efficient, and fewer than half of people ask good questions in a meeting.",
+            "Output is probabilistic: \"this is 80% customer service\" feeds an if-statement, tying back to **50 years of probabilistic programming and simulation** (the 1960 *theory of simulation* book); \"the coolest place in CS will be probabilistic programming.\"",
+            "This could make software more stochastic; the labs didn't build it because they are \"trying to create beings,\" and beings speak natural language.",
+            "Platform dynamics: once a platform reaches critical mass it is overwhelmed keeping things running, so innovation moves up the stack (the Apple \"sherlocking\" example) — \"the center of innovation has just moved.\"",
+        ],
+        "quote": {"text": "The center of innovation has just moved... to the model, but outside the model.", "cite": "— Panel (a16z)"},
+        "watch": "a16z partners on the panel are positioned to invest in the application layer they say is gaining.",
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F6E1", "tag": "Security", "title": "Rebuild internal auth and API logging for agents: assume swarms will probe every service."},
+    {"icon": "\U0001F510", "tag": "Agents", "title": "Give agents per-folder, read-vs-write permissions instead of all-or-nothing access."},
+    {"icon": "\U0001F9E9", "tag": "Software", "title": "Use models as probabilistic decision functions (pick an option, return a percentage) inside normal code."},
+    {"icon": "\U0001F3DB", "tag": "Policy", "title": "Anchor safety arguments in concrete identified risks, not species-extinction framing."},
+    {"icon": "\U0001F5F3", "tag": "Politics", "title": "Plan for 2028 as an AI referendum and a GDPR-style prompt regime in Europe."},
+]
+
+HOT_TAKES = [
+    {"take": "Pacing is the wrong way to describe this... it just feels like a capitulation to the pause folks.", "cite": "— Panel (a16z)", "why": "dismisses a lab's framing"},
+    {"take": "If you are the most afraid of how everything is going to go because of your product, just stop.", "cite": "— Panel (a16z)", "why": "challenges lab sincerity"},
+    {"take": "The next election will 100% be a referendum on AI. 2028 is the AI election.", "cite": "— Panel (a16z)", "why": "dated prediction"},
+    {"take": "If a constituency within the labs believes the stuff has existential risk, the answer is to nationalize it.", "cite": "— Martin Casado", "why": "strong policy claim"},
+    {"take": "I think the entire discourse around AI can be of that form: identify a novel risk, then talk solutions.", "cite": "— Panel (a16z)", "why": "prescription for discourse"},
+]
+
+CLAIMS = [
+    {"who": "Panel (a16z)", "claim": "The 2028 US election will be dominated by AI regulation as the central issue.", "metric": "AI as election issue", "target": "referendum on AI", "by": "2028", "condition": None, "entity": "United States"},
+    {"who": "Panel (a16z)", "claim": "Europe will lead with a GDPR-style prompt regime on AI agent actions.", "metric": "EU AI regulation style", "target": "GDPR-style prompts", "by": None, "condition": None, "entity": "European Union"},
+    {"who": "Panel (a16z)", "claim": "AI will be in so many critical systems that Congress eventually must impose a FINRA-like oversight body.", "metric": "US AI oversight body", "target": "FINRA-like", "by": None, "condition": "once AI is in healthcare, trading and aircraft", "entity": None},
+]
+
+RELATIONS = []
+
+OTHER_NEWS = [
+    {"icon": "\U0001F4DA", "title": "Sources referenced: Dario Amodei's pacing post and TV interview, Noam Brown's podcast comments, Nick Bostrom podcast, Computer Fraud and Abuse Act (1986), CERT/CVE (CMU), NIST manuals, the book *Unsafe at Any Speed*, Senator Warren's tweets, Al Gore, David Sacks (likely).", "tag": "Sources"},
+    {"icon": "\U0001F5A5", "title": "Personal anecdotes: **a missile-factory internship** with a locked keyboard (custodians could infer keys), a 3-second memory-erase DoD test, a Stanford oscilloscope secretly running a porn server on Windows CE.", "tag": "Color"},
+]
+
+GLOSSARY = [
+    {"term": "Pacing", "def": "A lab's proposal to slow external releases for safety; criticized as a fuzzy middle between pause and go."},
+    {"term": "Covert channel", "def": "A hidden path for leaking information from a trusted to an untrusted side, e.g. via heat, light or electromagnetic emissions."},
+    {"term": "Tempest attack", "def": "Using electromagnetic radiation emitted by equipment to leak data."},
+    {"term": "MLS (multi-level security)", "def": "Old OS research on strict classification-based access control, never adopted due to usability."},
+    {"term": "Sherlocking", "def": "A platform absorbing third-party innovations as its own features, named from Apple's Sherlock."},
+]

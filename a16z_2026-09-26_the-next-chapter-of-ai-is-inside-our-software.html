@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: The Next Chapter of AI Is Inside Our Software</title>
+<meta name="description" content="a16z · 6 threads · pacing rhetoric, AI regulation politics, lessons from history, agent security, prompt-fatigue regulation, innovation moving outside the models">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="The Next Chapter of AI Is Inside Our Software">
+<meta property="og:description" content="a16z · 6 threads · pacing rhetoric, AI regulation politics, lessons from history, agent security, prompt-fatigue regulation, innovation moving outside the models">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>The Next Chapter of AI Is Inside Our Software</h1>
+    <div class="byline">
+      Channel: <b>a16z</b> &middot; Speaker: <b>Erik Torenberg (host), Aaron Levie (Box), Martin Casado (a16z), Steven Sinofsky (a16z)</b> &middot; <b>2026-09-26</b>
+      <div class="stats-line">6 threads · pacing rhetoric, AI regulation politics, lessons from history, agent security, prompt-fatigue regulation, innovation moving outside the models &middot; <a href="https://www.youtube.com/watch?v=TLJNJDf2XGo" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>a16z panel on AI safety, security and regulation, sparked by a frontier lab's <i>pacing</i> post: the post itself is sensible, the <b>messaging and atmospherics are not</b>.</li><li>Core objection: you <b>can't reconcile a 10% species-extinction line with a pragmatic engineering proposal</b>; labs should address x-risk directly or the result is heavy-handed regulation.</li><li>Panel expects the <b>2028 election to be the AI election</b> and fears the pro-AI side has no vocabulary: every term (<i>pause, swarms, rogue</i>) was chosen by opponents.</li><li>History lens: computer-crime law, CVE reporting, aviation and the FDA all came <i>after</i> concrete failures were understood; regulating too early "wills the thing into being" without control.</li><li>Security is the concrete, solvable risk: <b>agent swarms act like roaming drones times 10,000</b>, so internal APIs, auth and permissions need a new, more granular model.</li><li>Biggest fear: Europe "GDPR-s" AI with a warning prompt on every agent action, creating numb click-through safety theater and liability assignment.</li><li>Closer: a new Jev-style model (read text, <b>choose among options with a probability</b>) integrates LLMs into traditional software; innovation is moving outside the labs.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="pacing-post-atmospherics">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Structural critique</span>
+    <span class="theme-status">REACTION TO A FRONTIER-LAB POST</span><span class="ttag">ai-infra</span><span class="ttag">policy</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Sensible post, broken messaging: "pacing" and the x-risk contradiction</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The panel agrees with the lab's security substance but says the pacing label and extinction rhetoric undermine it.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Shared ground: frontier labs should build with maximum governance, sandboxing and testing; <b>AI diffusion needs trusted products</b>, and good engineering makes adoption faster, not slower.</li><li><span class="dot" style="background:#93711b;"></span>Worry on the other side: the message gets used for <b>regulatory capture</b> or to ban data centers far faster.</li><li><span class="dot" style="background:#93711b;"></span>"Pacing" is the wrong word: it is orthogonal to security (<i>you can build a nuclear weapon very slowly</i>), splits the difference between doomers and regulators, and makes <b>both unhappy</b>.</li><li><span class="dot" style="background:#93711b;"></span>No schedule was ever published, so nothing can be slower — like press reports of Apple's late iPhone nobody knew existed; labs have raised and grown faster than ever, so nobody believes they are pacing.</li><li><span class="dot" style="background:#93711b;"></span>Counterpoint: internal models far exceed external ones, so pacing may only mean the <b>pace of external releases</b>.</li><li><span class="dot" style="background:#93711b;"></span>Casado (ex-Lawrence Livermore weapons program): if the most knowledgeable people believe in existential risk, the answer is to <b>nationalize it</b>; he thinks the extinction concern is a small fraction of researchers and an <b>HR/retention problem</b>.</li><li><span class="dot" style="background:#93711b;"></span>Dario is said to agree with a ~<b>10%</b> extinction claim on TV while declining to put a number on it; if nonzero, panelists argue the only logical result is nationalization, and the labs may want "critical infrastructure" status like JPMorgan or Verizon (bad for frontier open source).</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;You can very slowly build a nuclear weapon, and that doesn't make anybody feel better that it's slow versus fast.&#8221;<cite>— Panel (a16z)</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Its CEO's post on pacing is called pragmatic and mostly agreeable, with the messaging criticized.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">All three guests are a16z / Box executives with positions in AI companies; Levie runs Box, Casado and Sinofsky are a16z partners. Speaker attribution within the panel is partly unclear in the captions.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="regulation-politics">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Counterintuitive take</span>
+    <span class="theme-status">POLITICS OF AI REGULATION</span><span class="ttag">policy</span><span class="ttag">geopolitics</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Nobody gets the regulation they ask for; 2028 becomes the AI election</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Governments listen to everyone and ship a compromise that is always too weak or too strong, so lobbying for a specific outcome fails.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Government "output never makes everyone happy": <b>100%</b> of the time it either doesn't go far enough or goes way too far; asking for pacing gets "the wrong velocity."</li><li><span class="dot" style="background:#93711b;"></span>Once regulation starts, it can't be slowed; it is now an election issue across every party and jurisdiction, and <b>2028 will be "the AI election."</b></li><li><span class="dot" style="background:#93711b;"></span>The pro-AI case takes too many words and the opposition owns the vocabulary (<i>pause, swarms, rogue</i>); the pro side must invent new words.</li><li><span class="dot" style="background:#93711b;"></span>Anecdote: someone in government (guessed David Sacks, possibly Trump) answered "you're asking us to regulate you?" — "no."</li><li><span class="dot" style="background:#93711b;"></span>Senators remember missing the internet (communications act, no ISP liability) and Al Gore's "created the internet" gaffe was really him trying to get ahead; Senator Warren's tweets show <b>pent-up anti-tech energy</b> now siphoning into AI.</li><li><span class="dot" style="background:#93711b;"></span>Past tech-law pattern: AT&amp;T and IBM (born of government monopoly) and Microsoft all got antitrust suits despite hundreds of lawyers; Bill Gates golfing with Bill Clinton didn't help.</li><li><span class="dot" style="background:#93711b;"></span>Self-regulation precedent: Hollywood formed the <b>Motion Picture Association</b> and ratings during the Red Scare; protected by the First Amendment, so cable/HBO grew up unregulated.</li><li><span class="dot" style="background:#93711b;"></span>FINRA for AI: seen as the best-case outcome but "essentially nationalizing risk," since banks pay in but it is mandated; with AI in healthcare, high-frequency trading and airplanes, Congress eventually must act.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;Every word has been chosen by the people who don't want to do AI.&#8221;<cite>— Panel (a16z)</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="history-concrete-risk">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Framework</span>
+    <span class="theme-status">LESSONS FROM EARLIER COMPUTING WAVES</span><span class="ttag">policy</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Policy follows concrete failures: computer crime, CVE, aviation</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Good policy came from specific, identified harms, not predicted ones; regulating AI too early solves nothing and leaves you without control.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>The <b>1986 Computer Fraud and Abuse Act</b> came from a specific case: hackers breaking into GTE Telemail (used by NASA and Livermore), after a 1983 incident with no crime on the books and a <b>2.5-year</b> path to passage.</li><li><span class="dot" style="background:#3f6b2e;"></span>Roughly <b>90% of needed laws already exist at the application layer</b> (you can't hack systems); open question is whether anything belongs at the model layer.</li><li><span class="dot" style="background:#3f6b2e;"></span>Later amendments carved out white hats, and the Justice Department said it won't prosecute terms-of-use violations.</li><li><span class="dot" style="background:#3f6b2e;"></span>Lab postmortems are criticized as sloppy and incomplete; the CVE process (1980s, CMU vulnerability reporting) already has structured reporting the labs aren't using — "like an intern wrote it."</li><li><span class="dot" style="background:#3f6b2e;"></span>The early internet did tens of billions in damage, a worm took out ~<b>10%</b> of infrastructure, hospitals went down; viruses were unavoidable on a networked PC until 2001 — "we really should have blocked the internet in '97" (joke).</li><li><span class="dot" style="background:#3f6b2e;"></span>Aviation: first flights early 1900s, pilot licenses only in the <b>1920s</b>, airworthiness ~20 years later, modern FAA much later; "if you had started the FAA in 1910, you never..."; cars (<i>Unsafe at Any Speed</i>, 1960s) and pharma (thalidomide, Gold Rush era) followed similar lags.</li><li><span class="dot" style="background:#3f6b2e;"></span>Citing Nick Bostrom on a podcast: regulate too early and "you will the thing into being" without understanding how to control it.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Several figures (Windows install infection time, 10% infrastructure) are panelists' recollections stated from memory.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="agent-security">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">Structural critique</span>
+    <span class="theme-status">THE CONCRETE RISK</span><span class="ttag">ai-infra</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">Agent swarms break the security model: a rebuild moment for access control</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Agents don't tire and probe every API at scale, so internal systems built on 95-99% human good behavior need new, granular permissions.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span>Infosec worked because most people do right 95-99% of the time and a malicious employee is ~1 in 10,000; <b>agent swarms are roaming drones times 10,000</b> and easily mistake a good task for a bad one.</li><li><span class="dot" style="background:#a23f22;"></span>Internal GitHub, Slack and finance tools aren't thought vulnerable to denial of service, yet swarms look exactly like DoS; companies need a layer tracking <b>which authentications and APIs are called</b>.</li><li><span class="dot" style="background:#a23f22;"></span>Current OS permissions are too coarse: an agent either asks every time or can delete the whole computer; users want per-folder read/write vs read-only controls made intuitive.</li><li><span class="dot" style="background:#a23f22;"></span>Technical fix exists in old research: <b>multi-level security (MLS)</b> was never adopted for usability reasons, and AI may solve that, enabling a renaissance of secure-by-design OS, network and language work.</li><li><span class="dot" style="background:#a23f22;"></span>Precedent: out-of-box iPhones now force an OS update first; 2FA wasn't standard five years ago; SaaS shifted to Okta/Google auth by ~2015.</li><li><span class="dot" style="background:#a23f22;"></span>Covert-channel stories: Noam Brown's podcast point that a superintelligence could exfiltrate via CPU heat is called plausible; examples include <b>Tempest attacks</b>, CRT raster-beam reconstruction through a window, three-pixel messaging, BIOS spread spectrum, speakers, and DoD screen-memory erase requirements.</li><li><span class="dot" style="background:#a23f22;"></span>Threat-model basics: NIST 500-page manuals assume an all-knowing oracle on the untrusted side; AI can try all attacks in a short time and never gets bored. Panel also notes this discussion is now in future training data.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;These are just roaming drones, but times 10,000, and they will easily mistake a good task for a bad one.&#8221;<cite>— Panel (a16z)</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The panel calls the Noam Brown exchange the first constructive systems-people discussion on x-risk; the quoted bandwidth/heat details are anecdotal.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="gdpr-prompt-fatigue">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Cautionary tale</span>
+    <span class="theme-status">A FEARED MIDDLE GROUND</span><span class="ttag">policy</span><span class="ttag">geopolitics</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">The biggest fear: GDPR for AI and a warning prompt on every action</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Regulators love prompts because they assign liability, and users click through them numb, so safety becomes theater.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>Biggest fear: <b>Europe treats GDPR as the best thing ever</b> and applies it to AI, with a prompt whenever an agent touches a third-party product.</li><li><span class="dot" style="background:#65695f;"></span>Europe leads because the <b>US stopped leading on tech antitrust ~15 years ago</b>, and the EU "has nothing to lose."</li><li><span class="dot" style="background:#65695f;"></span>Analogies: car airbag stickers, the EU browser-choice screen, Windows XP User Account Control and Word macro warnings — everybody just clicks.</li><li><span class="dot" style="background:#65695f;"></span>Mac users avoid this by downloading few apps; a prompt on every new website would make it worse.</li><li><span class="dot" style="background:#65695f;"></span>Proposed pragmatic alternative: stop debating species extinction and quibble about GDPR-style prompts instead.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#65695f;"><div class="lbl">Pull quote</div>&#8220;I just can't get out of my head that they love prompts.&#8221;<cite>— Panel (a16z)</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="decision-engine-models">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">FASTEST ADOPTION SINCE CHATGPT</span><span class="ttag">dev-workflow</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">LLMs as decision engines: innovation moves outside the models</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Instead of generating text, a model reads text and picks the best option with a probability, which finally fits traditional software.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Jev (described as the fastest adoption of an AI model since ChatGPT): read text, then <b>choose among given options</b> rather than generate; cheaper, faster and more accurate because it can be trained just for that.</li><li><span class="dot" style="background:#3f6b2e;"></span>Text prompting is an inefficient interface: no user study shows full natural language is efficient, and fewer than half of people ask good questions in a meeting.</li><li><span class="dot" style="background:#3f6b2e;"></span>Output is probabilistic: "this is 80% customer service" feeds an if-statement, tying back to <b>50 years of probabilistic programming and simulation</b> (the 1960 <i>theory of simulation</i> book); "the coolest place in CS will be probabilistic programming."</li><li><span class="dot" style="background:#3f6b2e;"></span>This could make software more stochastic; the labs didn't build it because they are "trying to create beings," and beings speak natural language.</li><li><span class="dot" style="background:#3f6b2e;"></span>Platform dynamics: once a platform reaches critical mass it is overwhelmed keeping things running, so innovation moves up the stack (the Apple "sherlocking" example) — "the center of innovation has just moved."</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;The center of innovation has just moved... to the model, but outside the model.&#8221;<cite>— Panel (a16z)</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">a16z partners on the panel are positioned to invest in the application layer they say is gaining.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🛡</div><div class="tline"><span class="cat">Security:</span> <span class="txt">Rebuild internal auth and API logging for agents: assume swarms will probe every service.</span></div></div><div class="irow"><div class="ic">🔐</div><div class="tline"><span class="cat">Agents:</span> <span class="txt">Give agents per-folder, read-vs-write permissions instead of all-or-nothing access.</span></div></div><div class="irow"><div class="ic">🧩</div><div class="tline"><span class="cat">Software:</span> <span class="txt">Use models as probabilistic decision functions (pick an option, return a percentage) inside normal code.</span></div></div><div class="irow"><div class="ic">🏛</div><div class="tline"><span class="cat">Policy:</span> <span class="txt">Anchor safety arguments in concrete identified risks, not species-extinction framing.</span></div></div><div class="irow"><div class="ic">🗳</div><div class="tline"><span class="cat">Politics:</span> <span class="txt">Plan for 2028 as an AI referendum and a GDPR-style prompt regime in Europe.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;Pacing is the wrong way to describe this... it just feels like a capitulation to the pause folks.&#8221; <cite>— Panel (a16z)</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;If you are the most afraid of how everything is going to go because of your product, just stop.&#8221; <cite>— Panel (a16z)</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The next election will 100% be a referendum on AI. 2028 is the AI election.&#8221; <cite>— Panel (a16z)</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;If a constituency within the labs believes the stuff has existential risk, the answer is to nationalize it.&#8221; <cite>— Martin Casado</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think the entire discourse around AI can be of that form: identify a novel risk, then talk solutions.&#8221; <cite>— Panel (a16z)</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Panel (a16z):</b> The 2028 US election will be dominated by AI regulation as the central issue. <span class="cmeta">AI as election issue · referendum on AI · 2028</span> <span class="tag">United States</span></div><div class="ritem"><b>Panel (a16z):</b> Europe will lead with a GDPR-style prompt regime on AI agent actions. <span class="cmeta">EU AI regulation style · GDPR-style prompts</span> <span class="tag">European Union</span></div><div class="ritem"><b>Panel (a16z):</b> AI will be in so many critical systems that Congress eventually must impose a FINRA-like oversight body. <span class="cmeta">US AI oversight body · FINRA-like</span> <i>if once AI is in healthcare, trading and aircraft</i></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><p class="empty">No company-to-company relationships stated in this video.</p></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: Dario Amodei's pacing post and TV interview, Noam Brown's podcast comments, Nick Bostrom podcast, Computer Fraud and Abuse Act (1986), CERT/CVE (CMU), NIST manuals, the book <i>Unsafe at Any Speed</i>, Senator Warren's tweets, Al Gore, David Sacks (likely). <span class="tag">Sources</span></div></div></div><div class="irow"><div class="ic">🖥</div><div><div class="title">Personal anecdotes: <b>a missile-factory internship</b> with a locked keyboard (custodians could infer keys), a 3-second memory-erase DoD test, a Stanford oscilloscope secretly running a porn server on Windows CE. <span class="tag">Color</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Pacing</b> &mdash; A lab's proposal to slow external releases for safety; criticized as a fuzzy middle between pause and go.</div><div><b>Covert channel</b> &mdash; A hidden path for leaking information from a trusted to an untrusted side, e.g. via heat, light or electromagnetic emissions.</div><div><b>Tempest attack</b> &mdash; Using electromagnetic radiation emitted by equipment to leak data.</div><div><b>MLS (multi-level security)</b> &mdash; Old OS research on strict classification-based access control, never adopted due to usability.</div><div><b>Sherlocking</b> &mdash; A platform absorbing third-party innovations as its own features, named from Apple's Sherlock.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
