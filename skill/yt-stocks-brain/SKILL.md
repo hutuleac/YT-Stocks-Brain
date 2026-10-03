@@ -43,6 +43,8 @@ python3 <skill-folder>/scripts/fetch_transcript_api.py "URL_OR_VIDEO_ID" [lang] 
 ```
 Then continue with Section 2 unchanged. Needs `pip install youtube-transcript-api`.
 
+**No usable captions at all** (none exist, garbled, members-only/non-YouTube media): use the **local-whisper** skill (`~/.claude/skills/local-whisper/SKILL.md`) — it writes the same `VID.<lang>.srt`; continue with Section 2.
+
 **Romanian-language videos:** fetch Romanian captions (`--sub-lang ro`) but write the brief in
 **English** — snapshot, themes, claims, glossary, everything the search, Signals and graph read
 (changed Oct 2026: Romanian briefs were invisible to English search and their claims couldn't
