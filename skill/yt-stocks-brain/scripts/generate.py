@@ -291,6 +291,11 @@ ul.rows.sig-tags span{color:var(--muted);font-variant-numeric:tabular-nums;}
 table.idx{width:100%;border-collapse:collapse;}
 table.idx th{text-align:left;font-family:var(--serif);font-style:italic;font-weight:600;
   color:var(--brand);font-size:13px;padding:8px 14px 8px 0;border-bottom:2px solid var(--brand);}
+table.idx th button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;}
+table.idx th button::after{content:"↕";margin-left:5px;font-style:normal;opacity:.3;}
+table.idx th button:hover::after{opacity:.7;}
+table.idx th[aria-sort=ascending] button::after{content:"↑";opacity:1;}
+table.idx th[aria-sort=descending] button::after{content:"↓";opacity:1;}
 table.idx td{padding:12px 14px 12px 0;border-bottom:1px solid var(--line);vertical-align:top;
   font-size:clamp(13.5px,.95vw,15px);}
 table.idx tr:hover td{background:#fbf7ef;}
@@ -898,7 +903,7 @@ def _render_chrono_view(briefs):
         for b in briefs
     ) or '<tr><td colspan="4" class="empty">No briefs found yet.</td></tr>'
     return f"""<table class="idx">
-      <thead><tr><th>Date</th><th>Channel</th><th>Title</th><th>Threads</th></tr></thead>
+      <thead><tr><th aria-sort="descending"><button>Date</button></th><th><button>Channel</button></th><th><button>Title</button></th><th><button>Threads</button></th></tr></thead>
       <tbody>{rows}</tbody>
     </table>"""
 
@@ -1114,6 +1119,22 @@ INDEX_JS = """
   }
   tabs.forEach(function(tab){
     tab.addEventListener('click', function(){ select(tab.dataset.view); apply(); });
+  });
+
+  // Column sort: click a header to sort by it, click again to flip; ties fall back to newest first.
+  document.querySelectorAll('table.idx').forEach(function(table){
+    var ths = table.querySelectorAll('th');
+    ths.forEach(function(th, col){
+      th.querySelector('button').addEventListener('click', function(){
+        var dir = th.getAttribute('aria-sort') === 'ascending' ? -1 : 1;
+        ths.forEach(function(o){ o.removeAttribute('aria-sort'); });
+        th.setAttribute('aria-sort', dir === 1 ? 'ascending' : 'descending');
+        var body = table.tBodies[0], txt = function(r, c){ return r.cells[c].textContent; };
+        Array.prototype.slice.call(body.querySelectorAll('tr.row')).sort(function(a, z){
+          return dir * txt(a, col).localeCompare(txt(z, col)) || txt(z, 0).localeCompare(txt(a, 0));
+        }).forEach(function(r){ body.appendChild(r); });
+      });
+    });
   });
 
   document.addEventListener('keydown', function(e){
