@@ -423,7 +423,9 @@ precision**: what is emerging, turning, contested, connecting. Never score predi
    `watch` (3-5, prioritized, each with why it's worth a closer look). Connect dots across
    lenses: an insight that explains *why* several signals move together beats a list of movers.
    Name contrarian setups (falling attention vs a still-rising thesis), conflicts of interest,
-   and thin evidence (one channel, one brief) plainly.
+   and thin evidence (one channel, one brief) plainly. The context's `narratives` are auto-built
+   entity clusters labeled only by member names: give the ones you cite a human name in prose
+   ("private credit / alt managers", "memory + optics supply chain").
 3. `python3 <skill-folder>/scripts/memo.py render memos/<ISO-week>.json` → `memos/<week>.html`,
    index rebuilt with the link on the Signals tab. "What moved since the last memo" is computed
    from the previous memo's snapshot, not written.

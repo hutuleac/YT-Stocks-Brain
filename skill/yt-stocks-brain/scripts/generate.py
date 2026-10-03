@@ -926,10 +926,16 @@ def _render_channel_view(briefs):
     return "".join(out) or '<p class="empty">No briefs found yet.</p>'
 
 
+# "unknown" = auto-registered and not yet classified; hiding it would make new tickers vanish
+TICKER_KINDS = {"company", "fund", "crypto", "commodity", "unknown"}
+
+
 def _render_entity_view(briefs):
     entities = {}  # canonical key (see entities.py) -> {ticker, display, mentions: []}
     for b in briefs:
         for e in b["entities"]:
+            if e.get("kind") not in TICKER_KINDS:
+                continue  # people/countries/products stay findable via All Briefs search
             slot = entities.setdefault(e["key"], {"ticker": e["ticker"], "display": e["display"], "mentions": []})
             slot["mentions"].append({**e, "brief": b})
 
@@ -1138,7 +1144,7 @@ def _canonicalize_entities(briefs):
     for b in briefs:
         for e in b["entities"]:
             ent = reg.get(e["key"])
-            e["display"], e["ticker"] = ent["name"], ent.get("ticker")
+            e["display"], e["ticker"], e["kind"] = ent["name"], ent.get("ticker"), ent.get("kind")
     return reg
 
 

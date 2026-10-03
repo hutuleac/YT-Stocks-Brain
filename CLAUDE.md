@@ -72,15 +72,18 @@ Key things baked into the current skill that aren't obvious from a first read:
     attention, early signals (new + multi-channel), sentiment turning, contested now, themes
     gaining, new connections; rows expand to recent stances + forward claims. User intent: spot
     trends and themes early; don't turn this into prediction scoring.
+  - **Narratives lens** (in Signals): entities named together cluster automatically (cosine
+    co-mention over briefs, label propagation; hubs in >20% of briefs left out). Labeled by top
+    members + dominant tag; the memo writer names them in prose. Week-to-week identity = ≥50%
+    member overlap, so the memo diff reports new / faded / share moves. Upgrade path if labels
+    need to stick: a committed `kb/narratives.json` name registry (not built).
+  - **By Company / Ticker** shows registry kinds company/fund/crypto/commodity/unknown only
+    (`TICKER_KINDS` in `generate.py`); people, countries, products stay findable via All Briefs
+    search. `unknown` stays visible on purpose so new auto-registered tickers don't vanish.
   - **Weekly memo** (`scripts/memo.py`, `memos/<ISO-week>.{json,html}`, linked from Signals):
     `generate.py` prints `memo due:` once a week; the workflow is in SKILL.md "Weekly memo".
 
 ## Backlog (agreed, not built — Oct 2026)
-- **Theme clusters / narratives:** group entities that keep co-occurring into named narratives
-  (e.g. "AI cyber defense", "tokenization", "agentic commerce") and track each one's growth or
-  fade across weeks, using `co_mentions` plus the weekly memo snapshots as history.
-- **Hide people/countries in By Company / Ticker:** filter by registry `kind` (keep company,
-  fund, crypto, commodity); people and countries get their own facet or stay search-only.
 - **Scheduled memo:** the memo currently piggybacks on brief runs. If briefs pause for a week,
   a weekly cloud routine (reindex, then memo, then push) would keep it on time; needs repo push
   access, so ask first.

@@ -54,6 +54,16 @@ def diff(cur, prev):
                      if t["tag"] in pt and abs(t["recent_pct"] - pt[t["tag"]]["recent_pct"]) >= 5]
     pc = {(c["a"], c["b"]) for c in (prev or {}).get("connections", [])}
     out["connections"] = [f'{c["a_name"]} + {c["b_name"]}' for c in cur.get("connections", []) if (c["a"], c["b"]) not in pc]
+    pn, label = (prev or {}).get("narratives", []), lambda n: " · ".join(n["names"][:3])
+    out["narratives"] = []
+    for n in cur.get("narratives", []):
+        was = next((p for p in pn if signals.same_narrative(n["members"], p["members"])), None)
+        if not was:
+            out["narratives"].append(f'new: {label(n)}')
+        elif abs(n["recent_pct"] - was["recent_pct"]) >= 5:
+            out["narratives"].append(f'{label(n)} {was["recent_pct"]}% → {n["recent_pct"]}%')
+    out["narratives"] += [f'faded: {label(p)}' for p in pn
+                          if not any(signals.same_narrative(p["members"], n["members"]) for n in cur.get("narratives", []))]
     return out
 
 
@@ -107,6 +117,9 @@ def context():
     print("\n## new connections")
     for c in data["connections"]:
         print(f"- {c['a_name']} + {c['b_name']}: {c['briefs']} briefs")
+    print("\n## narratives (entity clusters; share of briefs naming >= 2 members, prior -> recent)")
+    for n in data["narratives"]:
+        print(f"- {', '.join(n['names'])} [{n['tag']}]: {n['prior_pct']}% -> {n['recent_pct']}% ({n['briefs']} recent briefs)")
     print("\n## hot takes since last memo")
     for t in db.execute("""SELECT t.take, t.cite, b.html FROM takes t JOIN briefs b ON b.id = t.brief_id
                            WHERE b.date > ? ORDER BY b.date DESC LIMIT 40""", (since,)):
@@ -141,6 +154,8 @@ def render(path):
         moved += f'<li><b>Themes:</b> {esc("; ".join(d["themes"]))}</li>'
     if d["connections"]:
         moved += f'<li><b>New connections:</b> {esc("; ".join(d["connections"]))}</li>'
+    if d["narratives"]:
+        moved += f'<li><b>Narratives:</b> {esc("; ".join(d["narratives"]))}</li>'
     w = m["signals"]["window"]
     page = f"""<!DOCTYPE html>
 <html lang="en">
@@ -207,6 +222,11 @@ def _selftest():
     d = diff(a, b)
     assert d["gaining"] == {"new": ["X"], "dropped": ["Z"]} and d["themes"] == ["energy 20% → 30%"]
     assert d["connections"] == ["X + Y"] and diff(a, None)["gaining"]["new"] == ["X"]
+    n = lambda m, pct: {"members": m, "names": [x.upper() for x in m], "recent_pct": pct}
+    a["narratives"] = [n(["p", "q", "r"], 30), n(["s", "t", "u"], 10)]
+    b["narratives"] = [n(["p", "q", "r", "v"], 20), n(["w", "x", "y"], 5)]
+    assert diff(a, b)["narratives"] == ["P · Q · R 20% → 30%", "new: S · T · U", "faded: W · X · Y"]
+    assert diff(a, {})["narratives"][0] == "new: P · Q · R"
     assert week_key(dt.date(2026, 10, 3)) == "2026-W40"
     print("memo selftest ok")
 

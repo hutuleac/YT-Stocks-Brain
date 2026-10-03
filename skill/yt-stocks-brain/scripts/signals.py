@@ -2,14 +2,16 @@
 
 compute() reads kb/brain.db and compares the most recent window of briefs with the window
 before it. Every measure is a share of briefs in its window, so a busier month doesn't look like
-a trend. Six lenses: attention gaining, early signals (new + spreading across channels),
-sentiment turning, contested now, themes gaining, new connections.
+a trend. Seven lenses: attention gaining, early signals (new + spreading across channels),
+sentiment turning, contested now, themes gaining, new connections, narratives (clusters of
+entities that keep being named together, see narratives()).
 
 render() turns that into the index.html Signals tab; snapshot() is the compact form saved weekly
 to kb/signals/<ISO-week>.json so memos can say what changed since last week (see memo.py).
 """
 import datetime as dt
 import html
+import itertools
 import math
 import sqlite3
 from collections import defaultdict
@@ -20,6 +22,8 @@ SECTIONS = ("gaining", "early", "turning", "contested")
 _POS = ("OWN", "BUY", "ADD", "POSITIVE", "LONG", "BULL")
 _NEG = ("NEGATIVE", "BEAR", "SELL", "AVOID", "SHORT")
 _CONV = {"high": 1.0, "medium": 0.67, "low": 0.33}
+NARR_KINDS = {"company", "fund", "crypto", "commodity", "product", "unknown"}
+HUB_SHARE, NARR_COSINE = 0.2, 0.4  # tuned by eye on 124 briefs; revisit as the library grows
 
 
 def direction(stance, conviction):
@@ -36,6 +40,69 @@ def _lift(n_r, tot_r, n_p, tot_p):
 def _net(ws):
     d = [w for w in ws if w]
     return round(sum(d) / len(d), 2) if d else None
+
+
+def clusters(ent_briefs, n_briefs):
+    """{entity: set(brief ids)} -> [member lists], biggest first. Hubs (named in > HUB_SHARE of all
+    briefs) co-occur with everything and would glue it into one blob, so they're left out. Edges:
+    cosine overlap >= NARR_COSINE with >= 2 shared briefs; groups by weighted label propagation."""
+    ents = sorted(k for k, s in ent_briefs.items() if 3 <= len(s) <= HUB_SHARE * n_briefs)
+    w = defaultdict(dict)
+    for a, b in itertools.combinations(ents, 2):
+        n = len(ent_briefs[a] & ent_briefs[b])
+        cos = n / math.sqrt(len(ent_briefs[a]) * len(ent_briefs[b]))
+        if n >= 2 and cos >= NARR_COSINE:
+            w[a][b] = w[b][a] = cos
+    order = sorted(w, key=lambda k: (-len(ent_briefs[k]), k))
+    lab = {k: k for k in w}
+    for _ in range(20):  # ponytail: label propagation, swap for Louvain if groups start bleeding
+        changed = False
+        for k in order:
+            score = defaultdict(float)
+            for j, x in w[k].items():
+                score[lab[j]] += x
+            best = max(score.items(), key=lambda t: (t[1], t[0]))[0]
+            changed |= best != lab[k]
+            lab[k] = best
+        if not changed:
+            break
+    groups = defaultdict(list)
+    for k in order:
+        groups[lab[k]].append(k)
+    return sorted((g for g in groups.values() if len(g) >= 3), key=len, reverse=True)
+
+
+def narratives(db, win, tot):
+    """Clusters over all time; growth = share of briefs naming >= 2 members, recent vs prior."""
+    eb, info, name = defaultdict(set), {}, {}
+    for r in db.execute("""SELECT DISTINCT m.brief_id bid, m.entity_key k, e.name, e.kind, b.date, b.channel, b.title, b.html
+                           FROM mentions m JOIN entities e ON e.key = m.entity_key JOIN briefs b ON b.id = m.brief_id"""):
+        info[r["bid"]] = (r["date"], r["channel"], r["title"], r["html"])
+        if r["kind"] in NARR_KINDS:
+            eb[r["k"]].add(r["bid"])
+            name[r["k"]] = r["name"]
+    tags = defaultdict(set)
+    for t in db.execute("SELECT DISTINCT brief_id, tag FROM theme_tags"):
+        tags[t["brief_id"]].add(t["tag"])
+    out = []
+    for g in clusters(eb, len(info)):
+        hits = [b for b in set().union(*(eb[k] for k in g)) if sum(b in eb[k] for k in g) >= 2]
+        n = {"r": [b for b in hits if win(info[b][0]) == "r"], "p": [b for b in hits if win(info[b][0]) == "p"]}
+        tag = max(sorted({t for b in hits for t in tags[b]}), key=lambda t: sum(t in tags[b] for b in hits), default=None)
+        recent = sorted(n["r"], key=lambda b: info[b][0], reverse=True)[:6]
+        out.append({"members": g, "names": [name[k] for k in g], "tag": tag, "briefs_all": len(hits),
+                    "briefs": len(n["r"]), "prior": len(n["p"]),
+                    "recent_pct": round(100 * len(n["r"]) / max(tot["r"], 1)),
+                    "prior_pct": round(100 * len(n["p"]) / max(tot["p"], 1)),
+                    "lift": round(_lift(len(n["r"]), tot["r"], len(n["p"]), tot["p"]), 2),
+                    "rows": [dict(zip(("date", "channel", "title", "html"), info[b])) for b in recent]})
+    return sorted(out, key=lambda x: (-x["briefs"], -x["briefs_all"]))
+
+
+def same_narrative(a, b):
+    """Membership drifts week to week; >= half overlap counts as the same narrative."""
+    a, b = set(a), set(b)
+    return len(a & b) / len(a | b) >= 0.5
 
 
 def compute(db_path):
@@ -130,6 +197,8 @@ def compute(db_path):
                           for (a, b), bs in sorted(pairs_r.items(), key=lambda x: -len(x[1]))
                           if len(bs) >= 2 and (a, b) not in pairs_before][:15]
 
+    out["narratives"] = narratives(db, win, tot)
+
     keys = {i["key"] for s in SECTIONS for i in out[s]} | {k for c in out["connections"] for k in (c["a"], c["b"])}
     claims = defaultdict(list)
     for c in db.execute("""SELECT ce.entity_key k, c.who, c.claim, c.target, c.by_when, b.date, b.html
@@ -143,8 +212,10 @@ def compute(db_path):
 
 
 def snapshot(data):
-    """Compact weekly record: everything but the per-entity evidence detail."""
-    return {k: v for k, v in data.items() if k != "detail"}
+    """Compact weekly record: everything but the per-entity / per-narrative evidence rows."""
+    snap = {k: v for k, v in data.items() if k != "detail"}
+    snap["narratives"] = [{k: v for k, v in n.items() if k != "rows"} for n in data.get("narratives", [])]
+    return snap
 
 
 # ---------------------------------------------------------------- rendering (Signals tab)
@@ -222,11 +293,32 @@ def render(data, memos=()):
             f'<li data-search="{esc((c["a_name"] + " " + c["b_name"]).lower())}"><b>{esc(c["a_name"])}</b> + '
             f'<b>{esc(c["b_name"])}</b><span class="m-date"> · {c["briefs"]} briefs</span></li>'
             for c in data["connections"]) + "</ul>" if data["connections"] else ""))
+    out.append(section("Narratives", "Companies and assets that keep getting named together, grouped automatically. "
+        "Share = briefs naming at least two of them. The biggest names (in over a fifth of all briefs) are left out "
+        "because they show up everywhere.", "".join(narrative_row(n) for n in data.get("narratives", []))))
     return "".join(out)
+
+
+def narrative_row(n):
+    items = "".join(f'<li><span class="m-date">{esc(r["date"])}</span><span class="m-channel">{esc(r["channel"])}</span>'
+                    f'<a href="{esc(r["html"])}">{esc(r["title"])}</a></li>' for r in n["rows"])
+    move = _arrow(n["recent_pct"] - n["prior_pct"] if abs(n["recent_pct"] - n["prior_pct"]) >= 3 else 0)
+    return (f'<details class="grp" data-search="{esc(" ".join(n["names"]).lower())}">'
+            f'<summary><b>{" · ".join(esc(x) for x in n["names"][:3])}</b>'
+            f'<span class="cnt">{move} {n["recent_pct"]}% of briefs (was {n["prior_pct"]}%) · {len(n["names"])} names'
+            + (f' · {esc(n["tag"])}' if n["tag"] else "") + '</span></summary>'
+            f'<div class="grp-body"><p class="m-blurb">{esc(", ".join(n["names"]))}</p>'
+            f'<ul class="mentions">{items}</ul></div></details>')
 
 
 if __name__ == "__main__":
     assert direction("OWNS", "High") == 1.0 and direction("NEGATIVE VIEW", "Low") == -0.33
     assert direction("CASUAL MENTION", "None") == 0 and direction("BUYING-ADDING", None) == 0.5
     assert _lift(4, 40, 2, 80) > 3
+    # two tight groups + a hub named in most briefs -> two clusters, hub excluded
+    toy = {"a1": {1, 2, 3}, "a2": {1, 2, 3}, "a3": {1, 2, 3, 4}, "b1": {5, 6, 7}, "b2": {5, 6, 7}, "b3": {5, 6, 8},
+           "hub": set(range(1, 9))}
+    got = sorted(sorted(g) for g in clusters(toy, 20))
+    assert got == [["a1", "a2", "a3"], ["b1", "b2", "b3"]], got
+    assert same_narrative(["a", "b", "c"], ["a", "b", "c", "d"]) and not same_narrative(["a", "b"], ["c", "d"])
     print("signals selftest ok")
