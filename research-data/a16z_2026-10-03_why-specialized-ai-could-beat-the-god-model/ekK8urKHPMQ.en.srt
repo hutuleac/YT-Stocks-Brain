@@ -1,0 +1,4439 @@
+1
+00:00:00,080 --> 00:00:04,160
+You saw the SpaceX S1. It's like, oh,
+
+2
+00:00:02,480 --> 00:00:06,000
+$30 trillion. It's like, what is the
+
+3
+00:00:04,160 --> 00:00:08,879
+world GDP? 100 trillion.
+
+4
+00:00:06,000 --> 00:00:10,960
+>> Both Stripe and Open Router really want
+
+5
+00:00:08,880 --> 00:00:12,880
+lots of new companies in the world. We
+
+6
+00:00:10,960 --> 00:00:14,799
+don't want everyone to be a part of one
+
+7
+00:00:12,880 --> 00:00:17,199
+giant company. When the models get more
+
+8
+00:00:14,798 --> 00:00:19,039
+intelligent, the risk actually will
+
+9
+00:00:17,199 --> 00:00:21,118
+continue to get higher. And yet, no one
+
+10
+00:00:19,039 --> 00:00:24,720
+new is taking responsibility. We're
+
+11
+00:00:21,118 --> 00:00:26,559
+going to slowly realize how good we've
+
+12
+00:00:24,719 --> 00:00:28,479
+had it with like deterministic code.
+
+13
+00:00:26,559 --> 00:00:30,640
+remember the days when computers did
+
+14
+00:00:28,480 --> 00:00:32,719
+exactly what we told them to do.
+
+15
+00:00:30,640 --> 00:00:35,520
+>> Are we going to prevent the models from
+
+16
+00:00:32,719 --> 00:00:37,439
+deceiving users during training runs
+
+17
+00:00:35,520 --> 00:00:40,160
+predictably? Will like a model that's
+
+18
+00:00:37,439 --> 00:00:43,199
+big enough and powerful enough suddenly
+
+19
+00:00:40,159 --> 00:00:46,199
+stop deception and stop sandbagging.
+
+20
+00:00:43,200 --> 00:00:46,200
+Um,
+
+21
+00:00:47,280 --> 00:00:51,920
+welcome to Asz podcast. We're here with
+
+22
+00:00:49,119 --> 00:00:53,599
+Amjad of Replet and and Alex of Open
+
+23
+00:00:51,920 --> 00:00:55,120
+Router. And this is the first podcast
+
+24
+00:00:53,600 --> 00:00:56,960
+that Alex has done since the
+
+25
+00:00:55,119 --> 00:00:57,919
+acquisition. So, we're really excited to
+
+26
+00:00:56,960 --> 00:00:59,920
+have both of you.
+
+27
+00:00:57,920 --> 00:01:01,280
+>> Mhm. Thank you. Excited to be here.
+
+28
+00:00:59,920 --> 00:01:04,719
+>> Alex, let's let's start with that
+
+29
+00:01:01,280 --> 00:01:06,159
+actually if you can briefly um share um
+
+30
+00:01:04,719 --> 00:01:09,280
+obviously, you know, massive
+
+31
+00:01:06,159 --> 00:01:12,000
+acquisition. Uh Amjad is an investor.
+
+32
+00:01:09,280 --> 00:01:13,359
+We're also of course an investor. Um the
+
+33
+00:01:12,000 --> 00:01:16,478
+biggest shareholder, but yeah, who's
+
+34
+00:01:13,359 --> 00:01:17,599
+who's counting? Um um Alex, why don't
+
+35
+00:01:16,478 --> 00:01:19,679
+you give us a little bit of the
+
+36
+00:01:17,599 --> 00:01:22,719
+backstory like how does acquisition like
+
+37
+00:01:19,680 --> 00:01:24,640
+that even uh even happen? Like do you
+
+38
+00:01:22,719 --> 00:01:26,640
+get a DM from Patrick one day? Uh, you
+
+39
+00:01:24,640 --> 00:01:30,439
+know what? Uh, what what can you share?
+
+40
+00:01:26,640 --> 00:01:30,439
+>> Hey, how much for an overrouter?
+
+41
+00:01:32,959 --> 00:01:40,000
+>> I had talked to Will Gabbrick um the
+
+42
+00:01:36,478 --> 00:01:41,679
+like strike president a long time ago, a
+
+43
+00:01:40,000 --> 00:01:45,280
+couple years ago when we were doing our
+
+44
+00:01:41,680 --> 00:01:47,040
+series A and
+
+45
+00:01:45,280 --> 00:01:49,759
+uh and we just we stayed in touch. we
+
+46
+00:01:47,040 --> 00:01:52,799
+had like a lot of like Stripe work
+
+47
+00:01:49,759 --> 00:01:55,680
+streams going on with various teams at
+
+48
+00:01:52,799 --> 00:01:58,079
+Stripe. Um so there were always sort of
+
+49
+00:01:55,680 --> 00:02:01,118
+like things that we were doing with
+
+50
+00:01:58,078 --> 00:02:02,879
+Stripe. um we presented at Stripe
+
+51
+00:02:01,118 --> 00:02:05,040
+sessions
+
+52
+00:02:02,879 --> 00:02:08,639
+uh and and and so it always kind of they
+
+53
+00:02:05,040 --> 00:02:13,040
+always kind of felt close and then yeah
+
+54
+00:02:08,639 --> 00:02:16,000
+just in in July I believe um they
+
+55
+00:02:13,039 --> 00:02:19,759
+reached out wanted to chat met met like
+
+56
+00:02:16,000 --> 00:02:22,239
+both of them in person and
+
+57
+00:02:19,759 --> 00:02:25,840
+uh and it kind of just progressed from
+
+58
+00:02:22,239 --> 00:02:28,400
+there fairly quickly. Um they're very
+
+59
+00:02:25,840 --> 00:02:30,239
+efficient and you know they were very
+
+60
+00:02:28,400 --> 00:02:33,039
+like founder friendly about the
+
+61
+00:02:30,239 --> 00:02:34,239
+experience. Um I was really impressed
+
+62
+00:02:33,039 --> 00:02:37,199
+with the whole thing.
+
+63
+00:02:34,239 --> 00:02:39,519
+>> Did it did it did you want to sell like
+
+64
+00:02:37,199 --> 00:02:41,199
+did it even cross your mind before they
+
+65
+00:02:39,519 --> 00:02:44,560
+shout?
+
+66
+00:02:41,199 --> 00:02:49,919
+>> No we were not thinking about that at
+
+67
+00:02:44,560 --> 00:02:52,719
+all. Um I you know did really respect
+
+68
+00:02:49,919 --> 00:02:56,639
+the company do really respect it today
+
+69
+00:02:52,719 --> 00:03:00,959
+and you know of possible acquisition
+
+70
+00:02:56,639 --> 00:03:03,839
+options for us. Um it was I think my top
+
+71
+00:03:00,959 --> 00:03:06,800
+choice and
+
+72
+00:03:03,840 --> 00:03:09,840
+uh so it was like an interesting idea.
+
+73
+00:03:06,800 --> 00:03:11,920
+Uh and you know as we kind of like
+
+74
+00:03:09,840 --> 00:03:14,080
+fleshed out the reasons why it would
+
+75
+00:03:11,919 --> 00:03:16,479
+make sense for both companies it got
+
+76
+00:03:14,080 --> 00:03:19,040
+more and more interesting uh it was
+
+77
+00:03:16,479 --> 00:03:21,439
+really clear how like aligned they were
+
+78
+00:03:19,039 --> 00:03:24,959
+with us kind of having autonomy over the
+
+79
+00:03:21,439 --> 00:03:26,800
+brand and roadmap and product and
+
+80
+00:03:24,959 --> 00:03:30,719
+keeping open router doing what it's
+
+81
+00:03:26,800 --> 00:03:33,760
+already doing just much faster with um
+
+82
+00:03:30,719 --> 00:03:37,840
+much more with like a like a much more
+
+83
+00:03:33,759 --> 00:03:40,399
+serious gotomarket plan and
+
+84
+00:03:37,840 --> 00:03:42,000
+um and then you know some better
+
+85
+00:03:40,400 --> 00:03:44,640
+together stories between the two
+
+86
+00:03:42,000 --> 00:03:46,239
+products uh and the two the two
+
+87
+00:03:44,639 --> 00:03:48,559
+companies
+
+88
+00:03:46,239 --> 00:03:50,158
+and and then culturally there were just
+
+89
+00:03:48,560 --> 00:03:52,959
+I I think very like in terms of like
+
+90
+00:03:50,158 --> 00:03:56,399
+mission and values and building like a
+
+91
+00:03:52,959 --> 00:03:59,438
+neutral trusted platform that businesses
+
+92
+00:03:56,400 --> 00:04:01,760
+can depend on and scale on top of that's
+
+93
+00:03:59,438 --> 00:04:04,560
+also really developer friendly with the
+
+94
+00:04:01,759 --> 00:04:06,479
+best possible developer experience for
+
+95
+00:04:04,560 --> 00:04:10,400
+you know to encourage new companies to
+
+96
+00:04:06,479 --> 00:04:12,479
+emerge. um you know that that alignment
+
+97
+00:04:10,400 --> 00:04:14,959
+was there and there was a bigger picture
+
+98
+00:04:12,479 --> 00:04:17,839
+kind of alignment too where like you
+
+99
+00:04:14,959 --> 00:04:20,478
+know both stripe and open router really
+
+100
+00:04:17,839 --> 00:04:22,239
+want lots of new companies in the world
+
+101
+00:04:20,478 --> 00:04:24,800
+you know we don't want everyone to be a
+
+102
+00:04:22,240 --> 00:04:27,918
+part of one giant company we want to
+
+103
+00:04:24,800 --> 00:04:32,160
+like create really good incentives and
+
+104
+00:04:27,918 --> 00:04:34,319
+uh and really sort of easy streamlined
+
+105
+00:04:32,160 --> 00:04:37,600
+workflows for people to start new
+
+106
+00:04:34,319 --> 00:04:39,360
+companies and grow them successfully and
+
+107
+00:04:37,600 --> 00:04:41,759
+you know make both lifestyle and
+
+108
+00:04:39,360 --> 00:04:46,560
+venturebacked businesses on top of
+
+109
+00:04:41,759 --> 00:04:49,199
+really good like reliable and price
+
+110
+00:04:46,560 --> 00:04:52,639
+efficient infrastructure and and like a
+
+111
+00:04:49,199 --> 00:04:55,680
+marketplace that works. Um and you know
+
+112
+00:04:52,639 --> 00:04:57,600
+I really want that future and Stripe
+
+113
+00:04:55,680 --> 00:04:59,680
+demonstrated that they've been wanting
+
+114
+00:04:57,600 --> 00:05:02,720
+it and building towards it for like many
+
+115
+00:04:59,680 --> 00:05:04,959
+many many years. Um and in many ways
+
+116
+00:05:02,720 --> 00:05:07,039
+like payments and inference are going to
+
+117
+00:05:04,959 --> 00:05:08,079
+blend together for companies of the
+
+118
+00:05:07,038 --> 00:05:10,240
+future.
+
+119
+00:05:08,079 --> 00:05:12,478
+>> I'm I'm curious uh I understand why
+
+120
+00:05:10,240 --> 00:05:16,240
+Stripe's incentive
+
+121
+00:05:12,478 --> 00:05:19,279
+is to have you know much more vibrant
+
+122
+00:05:16,240 --> 00:05:21,199
+startup ecosystem. I understand the kind
+
+123
+00:05:19,279 --> 00:05:23,839
+of moral argument and why you would want
+
+124
+00:05:21,199 --> 00:05:25,840
+that. But why is that good for open
+
+125
+00:05:23,839 --> 00:05:27,519
+router? Like is your model for open
+
+126
+00:05:25,839 --> 00:05:30,000
+router is that it's like a network
+
+127
+00:05:27,519 --> 00:05:33,918
+effects business?
+
+128
+00:05:30,000 --> 00:05:38,240
+Is it is it like a network?
+
+129
+00:05:33,918 --> 00:05:39,918
+>> Well, for us, I think the the
+
+130
+00:05:38,240 --> 00:05:43,360
+there's like a couple different problems
+
+131
+00:05:39,918 --> 00:05:45,599
+Open Router solves. one is,
+
+132
+00:05:43,360 --> 00:05:49,919
+you know, allowing you to build a
+
+133
+00:05:45,600 --> 00:05:52,720
+company that uses AI um or like augments
+
+134
+00:05:49,918 --> 00:05:56,560
+intelligence with unique data and and
+
+135
+00:05:52,720 --> 00:05:58,160
+other services uh without model lock in,
+
+136
+00:05:56,560 --> 00:06:01,360
+without vendor lock in,
+
+137
+00:05:58,160 --> 00:06:05,439
+>> allowing you to kind of like
+
+138
+00:06:01,360 --> 00:06:09,840
+be on the PTO frontier continuously as
+
+139
+00:06:05,439 --> 00:06:12,319
+the ecosystem grows it. And um to do
+
+140
+00:06:09,839 --> 00:06:14,399
+that it it's a lot of work because
+
+141
+00:06:12,319 --> 00:06:18,639
+there's all kinds of little lock in that
+
+142
+00:06:14,399 --> 00:06:22,560
+appears. Um we also
+
+143
+00:06:18,639 --> 00:06:28,879
+uh you know I I like we want companies
+
+144
+00:06:22,560 --> 00:06:31,918
+to feel like the the the best way that
+
+145
+00:06:28,879 --> 00:06:34,319
+they can like add more than just prompts
+
+146
+00:06:31,918 --> 00:06:38,719
+on top of a single model. there's like a
+
+147
+00:06:34,319 --> 00:06:41,280
+lot more to building um like unique
+
+148
+00:06:38,720 --> 00:06:44,000
+intelligence and I think a big component
+
+149
+00:06:41,279 --> 00:06:46,719
+of that is neurodeiversity. you really
+
+150
+00:06:44,000 --> 00:06:48,720
+need the the power of multiple models
+
+151
+00:06:46,720 --> 00:06:50,800
+that are trained in different ways,
+
+152
+00:06:48,720 --> 00:06:57,039
+including some of your own
+
+153
+00:06:50,800 --> 00:07:00,000
+>> um to do more than chat GPT or Claude
+
+154
+00:06:57,038 --> 00:07:01,680
+would on the task if like someone who is
+
+155
+00:07:00,000 --> 00:07:03,519
+thinking about buying from you as a
+
+156
+00:07:01,680 --> 00:07:06,160
+potential customer is wondering, well,
+
+157
+00:07:03,519 --> 00:07:08,639
+what if I just use the model directly?
+
+158
+00:07:06,160 --> 00:07:10,880
+um like how do you really show that you
+
+159
+00:07:08,639 --> 00:07:15,120
+are significantly better and able to
+
+160
+00:07:10,879 --> 00:07:17,038
+build a business that that matters? Um
+
+161
+00:07:15,120 --> 00:07:19,360
+and I think a lot of it will involve
+
+162
+00:07:17,038 --> 00:07:23,120
+neurodeiversity and blending like powers
+
+163
+00:07:19,360 --> 00:07:25,280
+and and good data from multiple models.
+
+164
+00:07:23,120 --> 00:07:28,399
+Um
+
+165
+00:07:25,279 --> 00:07:30,719
+another component is is like helping
+
+166
+00:07:28,399 --> 00:07:32,879
+people get really good cost efficiency.
+
+167
+00:07:30,720 --> 00:07:36,160
+Like there are a lot of businesses that
+
+168
+00:07:32,879 --> 00:07:39,680
+just cannot do not emerge until they
+
+169
+00:07:36,160 --> 00:07:42,160
+become cost effective and like creating
+
+170
+00:07:39,680 --> 00:07:44,639
+an environment where we can help drive
+
+171
+00:07:42,160 --> 00:07:47,840
+down costs by building an efficient
+
+172
+00:07:44,639 --> 00:07:52,000
+market uh is like crucial to making that
+
+173
+00:07:47,839 --> 00:07:56,079
+happen. Otherwise like you know
+
+174
+00:07:52,000 --> 00:08:00,639
+why lower my prices as a as a provider?
+
+175
+00:07:56,079 --> 00:08:03,598
+um we have a captive market and uh and
+
+176
+00:08:00,639 --> 00:08:05,759
+like you know I think that's like a key
+
+177
+00:08:03,598 --> 00:08:09,038
+point of marketplaces that was just
+
+178
+00:08:05,759 --> 00:08:12,319
+totally missing from AI before we showed
+
+179
+00:08:09,038 --> 00:08:15,839
+up. There was just one player open AI.
+
+180
+00:08:12,319 --> 00:08:18,400
+It could have been like a uh a very
+
+181
+00:08:15,839 --> 00:08:20,959
+strange world.
+
+182
+00:08:18,399 --> 00:08:23,359
+I'm not saying that we did all the work.
+
+183
+00:08:20,959 --> 00:08:25,680
+Of course not. But like helping people
+
+184
+00:08:23,360 --> 00:08:30,240
+like choose new models and explore new
+
+185
+00:08:25,680 --> 00:08:32,959
+models and learn like what makes um
+
+186
+00:08:30,240 --> 00:08:37,839
+you know a closed source or openw weight
+
+187
+00:08:32,958 --> 00:08:39,278
+model uh like actually good at your task
+
+188
+00:08:37,839 --> 00:08:41,279
+involves like seeing what the whole
+
+189
+00:08:39,278 --> 00:08:43,838
+ecosystem is doing and learning
+
+190
+00:08:41,278 --> 00:08:45,519
+automatically like LLMs are not things
+
+191
+00:08:43,839 --> 00:08:48,560
+where you can just enumerate all the
+
+192
+00:08:45,519 --> 00:08:50,159
+features on a web page. It's impossible.
+
+193
+00:08:48,559 --> 00:08:53,679
+you you have to see how they're being
+
+194
+00:08:50,159 --> 00:08:55,360
+used to know what they're good at.
+
+195
+00:08:53,679 --> 00:08:58,239
+>> So, you started the company three years
+
+196
+00:08:55,360 --> 00:09:00,000
+ago. I'm I'm curious what is surprised
+
+197
+00:08:58,240 --> 00:09:02,000
+you the most about sort of the evolution
+
+198
+00:09:00,000 --> 00:09:03,679
+of open and closed source models to the
+
+199
+00:09:02,000 --> 00:09:05,600
+present um as it relates to model
+
+200
+00:09:03,679 --> 00:09:06,958
+performance or just people's uh
+
+201
+00:09:05,600 --> 00:09:08,560
+perspective on the variety of models
+
+202
+00:09:06,958 --> 00:09:11,838
+they have available to them.
+
+203
+00:09:08,559 --> 00:09:14,958
+>> People have been more open-minded than I
+
+204
+00:09:11,839 --> 00:09:17,519
+thought they would be towards
+
+205
+00:09:14,958 --> 00:09:21,838
+openweight models. Like typically
+
+206
+00:09:17,519 --> 00:09:23,679
+there's like a there's a lot of brand
+
+207
+00:09:21,839 --> 00:09:26,480
+especially an enterprise typically
+
+208
+00:09:23,679 --> 00:09:29,278
+there's a lot of like brand trust where
+
+209
+00:09:26,480 --> 00:09:31,759
+like an enterprises you enterprises in
+
+210
+00:09:29,278 --> 00:09:33,278
+general are like oh I'm you know I don't
+
+211
+00:09:31,759 --> 00:09:36,240
+really know how to tell the difference
+
+212
+00:09:33,278 --> 00:09:38,958
+between these things so I'm just going
+
+213
+00:09:36,240 --> 00:09:40,560
+to like you know buy the one that all
+
+214
+00:09:38,958 --> 00:09:43,199
+the other credible enterprises are
+
+215
+00:09:40,559 --> 00:09:44,799
+buying and and there's a lot of like
+
+216
+00:09:43,200 --> 00:09:47,519
+enterprise
+
+217
+00:09:44,799 --> 00:09:51,278
+um lock in with like a mentality like
+
+218
+00:09:47,519 --> 00:09:53,278
+that. Um, and that just didn't happen
+
+219
+00:09:51,278 --> 00:09:56,639
+that much where they It did happen like
+
+220
+00:09:53,278 --> 00:09:58,240
+a bit, but uh we saw a lot of
+
+221
+00:09:56,639 --> 00:10:01,439
+enterprises
+
+222
+00:09:58,240 --> 00:10:04,560
+uh want to explore new models. It it's
+
+223
+00:10:01,440 --> 00:10:07,760
+it's simply like it it was m it was very
+
+224
+00:10:04,559 --> 00:10:11,599
+much good for a marketplace. um
+
+225
+00:10:07,759 --> 00:10:15,600
+enterprises wanted to diversify outside
+
+226
+00:10:11,600 --> 00:10:19,360
+of just the proprietary frontier model
+
+227
+00:10:15,600 --> 00:10:22,159
+labs um both for like cost reasons and
+
+228
+00:10:19,360 --> 00:10:24,079
+for differentiation reasons. They wanted
+
+229
+00:10:22,159 --> 00:10:28,159
+to like own their intelligence so they
+
+230
+00:10:24,078 --> 00:10:30,719
+could um you know I think like one keep
+
+231
+00:10:28,159 --> 00:10:33,120
+their their talent like have like an
+
+232
+00:10:30,720 --> 00:10:35,200
+internal AI practice like AI is just
+
+233
+00:10:33,120 --> 00:10:37,200
+like a huge strategy topic. It's not
+
+234
+00:10:35,200 --> 00:10:40,000
+like you go to your board and you're
+
+235
+00:10:37,200 --> 00:10:43,120
+like, "Oh, yeah. Um, you know, we fixed
+
+236
+00:10:40,000 --> 00:10:45,839
+the AI problem, uh, quarter complete."
+
+237
+00:10:43,120 --> 00:10:48,959
+Like the your board is like asking you
+
+238
+00:10:45,839 --> 00:10:51,839
+every month like what, you know, what's
+
+239
+00:10:48,958 --> 00:10:54,559
+what's next for the AI internal AI team
+
+240
+00:10:51,839 --> 00:10:56,800
+and all like every single enterprise, it
+
+241
+00:10:54,559 --> 00:10:58,559
+now has just this, you know, internal AI
+
+242
+00:10:56,799 --> 00:11:01,199
+team that they're developing where they
+
+243
+00:10:58,559 --> 00:11:05,199
+they need a strategy behind it.
+
+244
+00:11:01,200 --> 00:11:06,879
+um it's not just a like, you know, we
+
+245
+00:11:05,200 --> 00:11:10,480
+check the feature off, we like set up
+
+246
+00:11:06,879 --> 00:11:14,399
+the database and we're done. Um and so I
+
+247
+00:11:10,480 --> 00:11:18,000
+think that that uh dynamic has resulted
+
+248
+00:11:14,399 --> 00:11:19,600
+in just like a desire to explore and
+
+249
+00:11:18,000 --> 00:11:21,839
+diversify
+
+250
+00:11:19,600 --> 00:11:24,639
+um and a desire to kind of like figure
+
+251
+00:11:21,839 --> 00:11:27,120
+out how to reduce costs and figure out
+
+252
+00:11:24,639 --> 00:11:30,240
+how to do benchmarks for the first time
+
+253
+00:11:27,120 --> 00:11:31,519
+in the company's life. I have been like
+
+254
+00:11:30,240 --> 00:11:33,120
+surprised there hasn't been more
+
+255
+00:11:31,519 --> 00:11:34,799
+benchmarking like more companies
+
+256
+00:11:33,120 --> 00:11:36,480
+creating more benchmarks. it's starting
+
+257
+00:11:34,799 --> 00:11:39,120
+to happen and I think like eventually
+
+258
+00:11:36,480 --> 00:11:41,120
+we'll see a lot more of them um to
+
+259
+00:11:39,120 --> 00:11:43,759
+demonstrate like oh yeah like this thing
+
+260
+00:11:41,120 --> 00:11:47,039
+is better than using you know claude
+
+261
+00:11:43,759 --> 00:11:49,360
+direct but um like I think that's going
+
+262
+00:11:47,039 --> 00:11:52,480
+to be like a bigger focus for this
+
+263
+00:11:49,360 --> 00:11:56,399
+internal AI group at every company um
+
+264
+00:11:52,480 --> 00:11:58,320
+evals and I think like Jud's been doing
+
+265
+00:11:56,399 --> 00:11:59,839
+that a lot at Replet for example like
+
+266
+00:11:58,320 --> 00:12:01,760
+you guys have done a lot of cost per
+
+267
+00:11:59,839 --> 00:12:04,720
+task research
+
+268
+00:12:01,759 --> 00:12:06,879
+um you guys have And you know, you
+
+269
+00:12:04,720 --> 00:12:08,160
+you've made like a doom loop rescue.
+
+270
+00:12:06,879 --> 00:12:10,159
+You've kind of been like experimenting
+
+271
+00:12:08,159 --> 00:12:13,278
+with new ways of using agents like doom
+
+272
+00:12:10,159 --> 00:12:17,039
+loop rescue and and uh like helping
+
+273
+00:12:13,278 --> 00:12:20,078
+bring those to developers. Um
+
+274
+00:12:17,039 --> 00:12:21,519
+so like more of more of that kind of
+
+275
+00:12:20,078 --> 00:12:24,879
+research I think is going to pop up
+
+276
+00:12:21,519 --> 00:12:27,039
+internally everywhere. Um
+
+277
+00:12:24,879 --> 00:12:30,958
+for all of those reasons. Yeah, I I
+
+278
+00:12:27,039 --> 00:12:33,039
+think um uh Satcha uh CEO of Microsoft
+
+279
+00:12:30,958 --> 00:12:34,879
+has been very
+
+280
+00:12:33,039 --> 00:12:37,439
+uh
+
+281
+00:12:34,879 --> 00:12:41,759
+very you know preient on this and also
+
+282
+00:12:37,440 --> 00:12:44,399
+very articulate on um why companies need
+
+283
+00:12:41,759 --> 00:12:48,319
+to own their intelligence ultimately in
+
+284
+00:12:44,399 --> 00:12:49,839
+the same way that you know we had dot
+
+285
+00:12:48,320 --> 00:12:51,600
+companies and then every company became
+
+286
+00:12:49,839 --> 00:12:53,920
+an internet company like every company
+
+287
+00:12:51,600 --> 00:12:56,000
+employs people that know how to like
+
+288
+00:12:53,919 --> 00:12:58,000
+build websites and be on the internet.
+
+289
+00:12:56,000 --> 00:12:59,839
+Similarly with with software, every
+
+290
+00:12:58,000 --> 00:13:02,159
+company has software engineers. Every
+
+291
+00:12:59,839 --> 00:13:05,440
+company needs some AI practice, AI
+
+292
+00:13:02,159 --> 00:13:07,199
+capability and that will compound over
+
+293
+00:13:05,440 --> 00:13:11,600
+time the knowledge, the intelligence
+
+294
+00:13:07,200 --> 00:13:14,160
+inside the company, the the the use case
+
+295
+00:13:11,600 --> 00:13:16,480
+model fits like which models actually
+
+296
+00:13:14,159 --> 00:13:18,159
+work for them, how do they save save
+
+297
+00:13:16,480 --> 00:13:20,720
+money, they need sort of that
+
+298
+00:13:18,159 --> 00:13:23,039
+independence. The other thing that um I
+
+299
+00:13:20,720 --> 00:13:24,879
+think Alex Karp of um Palanteer has been
+
+300
+00:13:23,039 --> 00:13:27,519
+talking about is that there's like a
+
+301
+00:13:24,879 --> 00:13:29,278
+risk that when you work closely with the
+
+302
+00:13:27,519 --> 00:13:30,879
+foundation model companies is that
+
+303
+00:13:29,278 --> 00:13:32,639
+they're going to move into your business
+
+304
+00:13:30,879 --> 00:13:35,278
+and we've seen that you know with Figma
+
+305
+00:13:32,639 --> 00:13:38,079
+visavic we've seen that with like now
+
+306
+00:13:35,278 --> 00:13:42,559
+Harvey and OpenAI and you know it's it's
+
+307
+00:13:38,078 --> 00:13:46,000
+really hard to partner with them and
+
+308
+00:13:42,559 --> 00:13:48,319
+because you know they're
+
+309
+00:13:46,000 --> 00:13:50,159
+they see the world as their potential
+
+310
+00:13:48,320 --> 00:13:52,399
+market Like I mean when when they talk
+
+311
+00:13:50,159 --> 00:13:54,879
+to investors they're like you know you
+
+312
+00:13:52,399 --> 00:13:57,440
+saw the SpaceX S1 it's like oh $30
+
+313
+00:13:54,879 --> 00:14:00,240
+trillion it's like what is the world GDP
+
+314
+00:13:57,440 --> 00:14:02,240
+100 trillion and so there is a sense in
+
+315
+00:14:00,240 --> 00:14:04,879
+which these companies are different than
+
+316
+00:14:02,240 --> 00:14:06,240
+other generation of companies it's it's
+
+317
+00:14:04,879 --> 00:14:08,720
+harder to partner with them because
+
+318
+00:14:06,240 --> 00:14:11,839
+their ambition is is is such that they
+
+319
+00:14:08,720 --> 00:14:15,360
+want to they want to be they want to
+
+320
+00:14:11,839 --> 00:14:17,680
+subsume a big part of the economy. Um
+
+321
+00:14:15,360 --> 00:14:20,320
+and increasingly like what we're
+
+322
+00:14:17,679 --> 00:14:22,159
+thinking about at replet is kind of in
+
+323
+00:14:20,320 --> 00:14:24,959
+the similar vein to what Alex have sort
+
+324
+00:14:22,159 --> 00:14:27,039
+of innovated is uh replet is becoming
+
+325
+00:14:24,958 --> 00:14:30,799
+more of an independence layer inside
+
+326
+00:14:27,039 --> 00:14:34,319
+inside enterprises where we create a
+
+327
+00:14:30,799 --> 00:14:36,319
+layer of interaction between um between
+
+328
+00:14:34,320 --> 00:14:38,480
+you and the and the models and we get
+
+329
+00:14:36,320 --> 00:14:44,399
+you the best token at the cheapest
+
+330
+00:14:38,480 --> 00:14:46,079
+price. uh but also we um we also create
+
+331
+00:14:44,399 --> 00:14:47,839
+uh an abstraction layer on top of the
+
+332
+00:14:46,078 --> 00:14:49,599
+cloud as well because you know you
+
+333
+00:14:47,839 --> 00:14:51,440
+should be able to deploy to AWS and
+
+334
+00:14:49,600 --> 00:14:54,159
+Azure and you should be able to use data
+
+335
+00:14:51,440 --> 00:14:56,800
+bricks and snowflake and so on. Um and
+
+336
+00:14:54,159 --> 00:14:59,120
+so increasingly I think there is not
+
+337
+00:14:56,799 --> 00:15:01,519
+just with AI with all of technology
+
+338
+00:14:59,120 --> 00:15:04,560
+there needs to be more platforms that
+
+339
+00:15:01,519 --> 00:15:06,560
+help companies gain gain independence.
+
+340
+00:15:04,559 --> 00:15:07,919
+It seems like yeah what Open Router did
+
+341
+00:15:06,559 --> 00:15:10,078
+for their segment you're you're doing
+
+342
+00:15:07,919 --> 00:15:12,078
+for other other areas of the business.
+
+343
+00:15:10,078 --> 00:15:13,838
+>> Yeah,
+
+344
+00:15:12,078 --> 00:15:17,439
+there was this this kind of reminds me
+
+345
+00:15:13,839 --> 00:15:19,440
+of this tweet I saw the other day when
+
+346
+00:15:17,440 --> 00:15:20,880
+somebody was like basically all
+
+347
+00:15:19,440 --> 00:15:25,920
+companies are building the same thing
+
+348
+00:15:20,879 --> 00:15:29,759
+now. Everybody's building an agent loop
+
+349
+00:15:25,919 --> 00:15:32,799
+with like notifications and and context
+
+350
+00:15:29,759 --> 00:15:37,039
+uh like third party uh connectors and
+
+351
+00:15:32,799 --> 00:15:38,159
+context management and memory and uh
+
+352
+00:15:37,039 --> 00:15:40,719
+>> sandbox
+
+353
+00:15:38,159 --> 00:15:43,120
+>> uh sandboxes
+
+354
+00:15:40,720 --> 00:15:43,839
+uh you know web you know agentic web
+
+355
+00:15:43,120 --> 00:15:44,399
+search
+
+356
+00:15:43,839 --> 00:15:46,480
+>> computer use
+
+357
+00:15:44,399 --> 00:15:49,120
+>> and an always on agent on top of it and
+
+358
+00:15:46,480 --> 00:15:51,360
+notifications and it's like this product
+
+359
+00:15:49,120 --> 00:15:55,600
+is showing up everywhere. Yes.
+
+360
+00:15:51,360 --> 00:15:59,120
+>> Um, in a way, yeah, it is like
+
+361
+00:15:55,600 --> 00:16:00,720
+showing up everywhere, but it it also
+
+362
+00:15:59,120 --> 00:16:03,919
+kind of feels to me like these are just
+
+363
+00:16:00,720 --> 00:16:06,160
+the new table stakes primitives. It's
+
+364
+00:16:03,919 --> 00:16:09,278
+kind of like like a 2005 version of that
+
+365
+00:16:06,159 --> 00:16:11,759
+tweet would be, oh, everybody's building
+
+366
+00:16:09,278 --> 00:16:14,399
+the same thing. It's like a database, a
+
+367
+00:16:11,759 --> 00:16:19,039
+users table, a sign-in page, a signup
+
+368
+00:16:14,399 --> 00:16:24,440
+page, a profile page, a logout page.
+
+369
+00:16:19,039 --> 00:16:24,439
+like everything's the same. It's like
+
+370
+00:16:28,159 --> 00:16:32,159
+there's like a lot of differentiation
+
+371
+00:16:30,159 --> 00:16:34,399
+really. It's just there's like a there's
+
+372
+00:16:32,159 --> 00:16:35,838
+table stakes needs for AI just like
+
+373
+00:16:34,399 --> 00:16:36,799
+there are table stakes needs for the
+
+374
+00:16:35,839 --> 00:16:40,480
+web.
+
+375
+00:16:36,799 --> 00:16:43,439
+>> Yeah. And and I think um as well like
+
+376
+00:16:40,480 --> 00:16:46,399
+inside the enterprise
+
+377
+00:16:43,440 --> 00:16:49,839
+making these products actually do real
+
+378
+00:16:46,399 --> 00:16:51,839
+work is still unsolved problem like you
+
+379
+00:16:49,839 --> 00:16:54,079
+can use Muse in your personal life and
+
+380
+00:16:51,839 --> 00:16:57,199
+connect it to your credit card and bank
+
+381
+00:16:54,078 --> 00:17:00,638
+accounts and no one's connecting Muse to
+
+382
+00:16:57,198 --> 00:17:04,159
+their enterprise data or even Grockbot
+
+383
+00:17:00,639 --> 00:17:07,439
+and things like that. Um I think there's
+
+384
+00:17:04,160 --> 00:17:10,400
+an even more emphasis on data
+
+385
+00:17:07,439 --> 00:17:12,480
+sovereignty and and security. So we we
+
+386
+00:17:10,400 --> 00:17:15,280
+spent the past
+
+387
+00:17:12,480 --> 00:17:18,078
+you know year almost uh working on
+
+388
+00:17:15,279 --> 00:17:19,918
+making uh making making replet uh
+
+389
+00:17:18,078 --> 00:17:22,399
+deployable on your own cloud basically
+
+390
+00:17:19,919 --> 00:17:24,079
+on prem like bring your own cloud like
+
+391
+00:17:22,400 --> 00:17:27,759
+two years ago I would have thought I
+
+392
+00:17:24,078 --> 00:17:29,200
+would never do this uh because you know
+
+393
+00:17:27,759 --> 00:17:31,038
+it's just like yeah the cloud is the
+
+394
+00:17:29,200 --> 00:17:33,840
+future like software as service all of
+
+395
+00:17:31,038 --> 00:17:35,919
+that uh but but now actually we've sort
+
+396
+00:17:33,839 --> 00:17:38,480
+of like reverted a little bit back to a
+
+397
+00:17:35,919 --> 00:17:40,080
+world where
+
+398
+00:17:38,480 --> 00:17:42,400
+companies are a little bit more
+
+399
+00:17:40,079 --> 00:17:44,720
+protective because there's so many ways
+
+400
+00:17:42,400 --> 00:17:46,960
+in which data can leak like all these
+
+401
+00:17:44,720 --> 00:17:48,079
+agents that people are using. I mean
+
+402
+00:17:46,960 --> 00:17:49,200
+there's all these screenshots on
+
+403
+00:17:48,079 --> 00:17:51,199
+Twitter. I don't know how true where
+
+404
+00:17:49,200 --> 00:17:53,679
+Instinct is like or Muse is like mixing
+
+405
+00:17:51,200 --> 00:17:56,160
+people's data starts to call you by a
+
+406
+00:17:53,679 --> 00:17:58,720
+different name or something like that.
+
+407
+00:17:56,160 --> 00:18:01,200
+Uh and so yes, the kind of consumer
+
+408
+00:17:58,720 --> 00:18:03,360
+stuff is kind of obvious, but on the
+
+409
+00:18:01,200 --> 00:18:04,880
+enterprise, there's still tremendous
+
+410
+00:18:03,359 --> 00:18:07,279
+amount of work for the entire industry
+
+411
+00:18:04,880 --> 00:18:09,520
+to do in order to actually get these
+
+412
+00:18:07,279 --> 00:18:10,480
+things to be useful and productive at
+
+413
+00:18:09,519 --> 00:18:13,759
+work.
+
+414
+00:18:10,480 --> 00:18:16,240
+>> Do you are you doing any like do you
+
+415
+00:18:13,759 --> 00:18:19,440
+have like a custom personal agent other
+
+416
+00:18:16,240 --> 00:18:20,960
+than Muse or Instinct that you use for
+
+417
+00:18:19,440 --> 00:18:22,240
+like work stuff that you've been
+
+418
+00:18:20,960 --> 00:18:24,000
+building?
+
+419
+00:18:22,240 --> 00:18:26,558
+Yeah, I mean I I built something on
+
+420
+00:18:24,000 --> 00:18:28,798
+Replet like a long time ago. Uh I
+
+421
+00:18:26,558 --> 00:18:30,319
+started as like a sort of a CRM agent
+
+422
+00:18:28,798 --> 00:18:32,639
+initially. That was the main problem
+
+423
+00:18:30,319 --> 00:18:34,319
+that I had, but slowly like we added
+
+424
+00:18:32,640 --> 00:18:36,720
+features to it and it's sort of like
+
+425
+00:18:34,319 --> 00:18:39,519
+doing more and more things. But what's
+
+426
+00:18:36,720 --> 00:18:42,720
+what's really interesting is that
+
+427
+00:18:39,519 --> 00:18:45,759
+the more I connected Replet to my all my
+
+428
+00:18:42,720 --> 00:18:48,400
+stuff, it sort of like started answering
+
+429
+00:18:45,759 --> 00:18:50,960
+all the things for me. Um and so
+
+430
+00:18:48,400 --> 00:18:53,840
+increasingly like the platform itself is
+
+431
+00:18:50,960 --> 00:18:55,840
+like subsuming these sort of like these
+
+432
+00:18:53,839 --> 00:18:58,000
+domain specific agents that I built. I
+
+433
+00:18:55,839 --> 00:18:59,678
+do think that there there is some in
+
+434
+00:18:58,000 --> 00:19:01,599
+some ways you want something that is
+
+435
+00:18:59,679 --> 00:19:02,960
+sometimes like focused on one particular
+
+436
+00:19:01,599 --> 00:19:05,678
+thing and you don't want it to be able
+
+437
+00:19:02,960 --> 00:19:08,400
+to do everything. On the other hand once
+
+438
+00:19:05,679 --> 00:19:11,200
+you have your entire company's context
+
+439
+00:19:08,400 --> 00:19:13,519
+in one place it's really cool to join
+
+440
+00:19:11,200 --> 00:19:16,640
+across totally different domains. like
+
+441
+00:19:13,519 --> 00:19:18,400
+when I ask it a question, it can like
+
+442
+00:19:16,640 --> 00:19:21,120
+look at my sort of personal chat
+
+443
+00:19:18,400 --> 00:19:23,919
+history, join it across the GitHub repo
+
+444
+00:19:21,119 --> 00:19:26,079
+across Salesforce. And so it says like
+
+445
+00:19:23,919 --> 00:19:28,320
+it will link like random things. It's
+
+446
+00:19:26,079 --> 00:19:30,960
+like, oh, you met this guy like a year
+
+447
+00:19:28,319 --> 00:19:32,879
+ago at a conference. I see it on your
+
+448
+00:19:30,960 --> 00:19:34,880
+calendar and by the way, someone else
+
+449
+00:19:32,880 --> 00:19:36,880
+from their team is in discussion with
+
+450
+00:19:34,880 --> 00:19:39,200
+your sales team. and it creates all
+
+451
+00:19:36,880 --> 00:19:41,600
+these different synergies and and when I
+
+452
+00:19:39,200 --> 00:19:42,960
+go into a meeting I like I you know I
+
+453
+00:19:41,599 --> 00:19:45,199
+I've connected a lot of different
+
+454
+00:19:42,960 --> 00:19:47,279
+threads and and I'm I'm make much more
+
+455
+00:19:45,200 --> 00:19:51,200
+progress on a deal or or something like
+
+456
+00:19:47,279 --> 00:19:53,038
+that. Uh so so this is where it's sort
+
+457
+00:19:51,200 --> 00:19:54,640
+of trending now.
+
+458
+00:19:53,038 --> 00:19:59,359
+>> Well
+
+459
+00:19:54,640 --> 00:20:00,960
+I I think I I I'm like a little bit I'll
+
+460
+00:19:59,359 --> 00:20:03,279
+take the counter on that. I think that
+
+461
+00:20:00,960 --> 00:20:07,038
+the the
+
+462
+00:20:03,279 --> 00:20:12,000
+worst part about doing crossdain
+
+463
+00:20:07,038 --> 00:20:14,720
+joins with your personal agent is that
+
+464
+00:20:12,000 --> 00:20:17,279
+the the more work you give it to do, the
+
+465
+00:20:14,720 --> 00:20:19,279
+more understanding of what's going on
+
+466
+00:20:17,279 --> 00:20:22,558
+you're sacrificing.
+
+467
+00:20:19,279 --> 00:20:25,119
+And yet no one no one knew is taking
+
+468
+00:20:22,558 --> 00:20:26,879
+responsibility for that sacrifice
+
+469
+00:20:25,119 --> 00:20:29,839
+understanding. Like agents don't have
+
+470
+00:20:26,880 --> 00:20:31,440
+any responsibility. you can't like you
+
+471
+00:20:29,839 --> 00:20:33,439
+like if there's a fixed level of
+
+472
+00:20:31,440 --> 00:20:36,159
+cortisol that the whole company can
+
+473
+00:20:33,440 --> 00:20:40,400
+tolerate between everybody
+
+474
+00:20:36,159 --> 00:20:44,000
+and uh you know you like de
+
+475
+00:20:40,400 --> 00:20:46,960
+you you uh you like I I want to be like
+
+476
+00:20:44,000 --> 00:20:48,558
+less stressed about some area if I'm
+
+477
+00:20:46,960 --> 00:20:50,079
+going to be like sacrificing my
+
+478
+00:20:48,558 --> 00:20:52,480
+understanding of it
+
+479
+00:20:50,079 --> 00:20:54,960
+>> someone else needs to take the cortisol
+
+480
+00:20:52,480 --> 00:20:57,759
+>> but the the agent doesn't
+
+481
+00:20:54,960 --> 00:21:00,159
+>> like take on any of that responsibility
+
+482
+00:20:57,759 --> 00:21:02,480
+Um, and like a universal agent that's
+
+483
+00:21:00,159 --> 00:21:06,400
+doing all things,
+
+484
+00:21:02,480 --> 00:21:08,880
+you know, I can't adjust how much I'm
+
+485
+00:21:06,400 --> 00:21:10,320
+sacrificing in all the different things.
+
+486
+00:21:08,880 --> 00:21:12,000
+It's it like points me a little bit
+
+487
+00:21:10,319 --> 00:21:14,639
+towards,
+
+488
+00:21:12,000 --> 00:21:17,279
+you know, maybe like down the road like
+
+489
+00:21:14,640 --> 00:21:19,440
+the sub agents that people use will be
+
+490
+00:21:17,279 --> 00:21:21,038
+like very vertically focused. Maybe we
+
+491
+00:21:19,440 --> 00:21:23,279
+have like a chief of staff type agent
+
+492
+00:21:21,038 --> 00:21:26,480
+that, you know, coordinates between
+
+493
+00:21:23,279 --> 00:21:29,440
+them. Um, but I feel like you do need
+
+494
+00:21:26,480 --> 00:21:32,159
+like vertically focused agents where
+
+495
+00:21:29,440 --> 00:21:36,320
+you're like, okay, like there this agent
+
+496
+00:21:32,159 --> 00:21:39,919
+is more responsible psychologically for
+
+497
+00:21:36,319 --> 00:21:41,759
+these things. Um, and like I want like
+
+498
+00:21:39,919 --> 00:21:44,159
+quality checks that make sure it's doing
+
+499
+00:21:41,759 --> 00:21:46,000
+those things correctly. And I it it
+
+500
+00:21:44,159 --> 00:21:49,200
+doesn't need to focus on anything else.
+
+501
+00:21:46,000 --> 00:21:52,558
+It just has one focus area. Um, I wonder
+
+502
+00:21:49,200 --> 00:21:54,798
+if that's gonna like help people like
+
+503
+00:21:52,558 --> 00:21:57,200
+at least get like a weird loose sense of
+
+504
+00:21:54,798 --> 00:21:58,960
+responsibility on top of agents.
+
+505
+00:21:57,200 --> 00:22:02,319
+>> Fascinating. So, so you're saying
+
+506
+00:21:58,960 --> 00:22:04,720
+general agents create like a tragedy of
+
+507
+00:22:02,319 --> 00:22:07,599
+commons of sorts?
+
+508
+00:22:04,720 --> 00:22:12,480
+>> Kind kind of like I have a general agent
+
+509
+00:22:07,599 --> 00:22:16,639
+that every day um looks for things that
+
+510
+00:22:12,480 --> 00:22:21,279
+need me and tries to figure out what to
+
+511
+00:22:16,640 --> 00:22:23,759
+do. And it's just like impossible to
+
+512
+00:22:21,279 --> 00:22:25,839
+improve this agent.
+
+513
+00:22:23,759 --> 00:22:28,240
+like I it's it's like every time I try
+
+514
+00:22:25,839 --> 00:22:32,558
+to make an improvement, I end up like
+
+515
+00:22:28,240 --> 00:22:36,400
+ignoring its output about a week later.
+
+516
+00:22:32,558 --> 00:22:38,319
+Um it's it just feels like it doesn't
+
+517
+00:22:36,400 --> 00:22:42,880
+really care about any of the like
+
+518
+00:22:38,319 --> 00:22:45,918
+specific things it's diving into. Um,
+
+519
+00:22:42,880 --> 00:22:49,679
+and uh, like kind of imagine having a
+
+520
+00:22:45,919 --> 00:22:51,440
+chief of staff where they're very good
+
+521
+00:22:49,679 --> 00:22:53,120
+at,
+
+522
+00:22:51,440 --> 00:22:55,919
+you know, like drafting all of your
+
+523
+00:22:53,119 --> 00:22:58,479
+replies across the whole organization.
+
+524
+00:22:55,919 --> 00:23:01,440
+Um, and then compare that to something
+
+525
+00:22:58,480 --> 00:23:04,240
+where you have like 10 chiefs of staff,
+
+526
+00:23:01,440 --> 00:23:06,558
+each each as competent as that one chief
+
+527
+00:23:04,240 --> 00:23:09,679
+of staff, but they're all responsible
+
+528
+00:23:06,558 --> 00:23:12,240
+for like individual sectors of of what
+
+529
+00:23:09,679 --> 00:23:15,360
+you of what makes up your life. like the
+
+530
+00:23:12,240 --> 00:23:17,359
+latter I feel like gives you a way of
+
+531
+00:23:15,359 --> 00:23:18,558
+tuning how much understanding you
+
+532
+00:23:17,359 --> 00:23:22,558
+sacrifice
+
+533
+00:23:18,558 --> 00:23:24,720
+>> compared to the the gain you get from
+
+534
+00:23:22,558 --> 00:23:27,119
+like basically I can like lean in more
+
+535
+00:23:24,720 --> 00:23:29,839
+to the areas where the agent is failing
+
+536
+00:23:27,119 --> 00:23:32,558
+for some areas and then have agents with
+
+537
+00:23:29,839 --> 00:23:35,519
+very good competency like take over my
+
+538
+00:23:32,558 --> 00:23:36,639
+understanding of other of other parts of
+
+539
+00:23:35,519 --> 00:23:38,000
+my life.
+
+540
+00:23:36,640 --> 00:23:41,200
+>> Yeah. Interesting. It's it's sort of
+
+541
+00:23:38,000 --> 00:23:46,400
+like uh almost rediscovering,
+
+542
+00:23:41,200 --> 00:23:48,640
+you know, um specialization, right?
+
+543
+00:23:46,400 --> 00:23:52,080
+What's his name? The like the famous
+
+544
+00:23:48,640 --> 00:23:52,640
+economist uh Adam um like
+
+545
+00:23:52,079 --> 00:23:54,720
+>> Adam Smith.
+
+546
+00:23:52,640 --> 00:23:57,200
+>> Adam Smith like with a pencil kind of
+
+547
+00:23:54,720 --> 00:24:00,159
+thing where you know that that was like
+
+548
+00:23:57,200 --> 00:24:03,840
+a huge realization for humanity that
+
+549
+00:24:00,159 --> 00:24:06,400
+like special specialization
+
+550
+00:24:03,839 --> 00:24:08,879
+is actually good. The problem is like we
+
+551
+00:24:06,400 --> 00:24:10,798
+kind of like over specialized as like a
+
+552
+00:24:08,880 --> 00:24:13,120
+civilization and I think over
+
+553
+00:24:10,798 --> 00:24:17,679
+specialization
+
+554
+00:24:13,119 --> 00:24:21,119
+is is um is oppressive in its its own
+
+555
+00:24:17,679 --> 00:24:23,200
+ways. I mean I think we've
+
+556
+00:24:21,119 --> 00:24:25,359
+you know um sort of like you know
+
+557
+00:24:23,200 --> 00:24:28,640
+there's the Marxist theory of alienation
+
+558
+00:24:25,359 --> 00:24:31,278
+right the the idea is um uh because of
+
+559
+00:24:28,640 --> 00:24:34,480
+over spec uh uh you know people are
+
+560
+00:24:31,278 --> 00:24:36,000
+doing just focus on one thing uh they
+
+561
+00:24:34,480 --> 00:24:37,679
+they do not see the fruits of their
+
+562
+00:24:36,000 --> 00:24:39,519
+labor they don't actually know what
+
+563
+00:24:37,679 --> 00:24:40,960
+their impact is on the larger
+
+564
+00:24:39,519 --> 00:24:43,278
+organization or the product they're
+
+565
+00:24:40,960 --> 00:24:45,278
+producing and therefore they actually
+
+566
+00:24:43,278 --> 00:24:47,200
+kind of feel depressed and detached and
+
+567
+00:24:45,278 --> 00:24:49,839
+and you're kind of acting like a machine
+
+568
+00:24:47,200 --> 00:24:53,200
+and you're not actually fully fully
+
+569
+00:24:49,839 --> 00:24:55,839
+human. And so m maybe there's like a bit
+
+570
+00:24:53,200 --> 00:24:57,440
+of a reaction to that and and and I
+
+571
+00:24:55,839 --> 00:24:59,839
+think with our agents we're like oh that
+
+572
+00:24:57,440 --> 00:25:02,240
+there should be like one god god agent
+
+573
+00:24:59,839 --> 00:25:03,839
+but in fact specialization is actually
+
+574
+00:25:02,240 --> 00:25:05,759
+like really good for machines and that's
+
+575
+00:25:03,839 --> 00:25:07,519
+like the the point that you're making
+
+576
+00:25:05,759 --> 00:25:10,079
+and like humans should be general but
+
+577
+00:25:07,519 --> 00:25:11,440
+like machines should be ultimately a lot
+
+578
+00:25:10,079 --> 00:25:12,798
+more specialized.
+
+579
+00:25:11,440 --> 00:25:14,480
+>> The problem with I think what I'm
+
+580
+00:25:12,798 --> 00:25:16,720
+describing is that we don't know what
+
+581
+00:25:14,480 --> 00:25:20,640
+good looks like. There hasn't been a
+
+582
+00:25:16,720 --> 00:25:24,640
+system of specialized agents that feels
+
+583
+00:25:20,640 --> 00:25:27,038
+as elegant as like chat GBT or Claude or
+
+584
+00:25:24,640 --> 00:25:29,840
+Muse. Uh where you're basically just
+
+585
+00:25:27,038 --> 00:25:32,079
+talking to one thing only.
+
+586
+00:25:29,839 --> 00:25:34,558
+It it's it's yet to be discovered like
+
+587
+00:25:32,079 --> 00:25:36,480
+maybe like opening I just launched dots.
+
+588
+00:25:34,558 --> 00:25:38,240
+Um I think they're kind of like
+
+589
+00:25:36,480 --> 00:25:40,880
+experimenting in that direction. Gro
+
+590
+00:25:38,240 --> 00:25:41,519
+like Grockbot I guess kind of counts
+
+591
+00:25:40,880 --> 00:25:43,039
+that
+
+592
+00:25:41,519 --> 00:25:44,558
+>> but but they're all they're all very
+
+593
+00:25:43,038 --> 00:25:47,278
+general. Like I think the idea behind
+
+594
+00:25:44,558 --> 00:25:49,839
+DOT is that it's like it's like uh it's
+
+595
+00:25:47,278 --> 00:25:51,599
+like your digital double as at least
+
+596
+00:25:49,839 --> 00:25:54,639
+that's what I understood it.
+
+597
+00:25:51,599 --> 00:25:56,158
+>> Well, when I saw Grock bot, I don't know
+
+598
+00:25:54,640 --> 00:25:58,720
+what what what's going to I don't know
+
+599
+00:25:56,159 --> 00:26:00,960
+that much about dots yet, but uh they
+
+600
+00:25:58,720 --> 00:26:03,360
+just came out, but Grock bot when it
+
+601
+00:26:00,960 --> 00:26:05,600
+first came out, like the first use cases
+
+602
+00:26:03,359 --> 00:26:07,759
+that I saw people talking about were,
+
+603
+00:26:05,599 --> 00:26:09,278
+"Oh, wo, I can make two bots. One that
+
+604
+00:26:07,759 --> 00:26:11,839
+knows my bank account, right,
+
+605
+00:26:09,278 --> 00:26:14,319
+>> and one that knows my Twitter account."
+
+606
+00:26:11,839 --> 00:26:16,158
+And the two bots like don't have the
+
+607
+00:26:14,319 --> 00:26:19,839
+credentials from each other. Yeah.
+
+608
+00:26:16,159 --> 00:26:22,640
+>> But they can talk to each other if like
+
+609
+00:26:19,839 --> 00:26:24,720
+they need to get something done. Um
+
+610
+00:26:22,640 --> 00:26:27,200
+there's no credential sharing though.
+
+611
+00:26:24,720 --> 00:26:29,200
+And that was like one sort of big unique
+
+612
+00:26:27,200 --> 00:26:31,038
+thing I saw like a couple time like pop
+
+613
+00:26:29,200 --> 00:26:32,000
+up a couple times that people seem to
+
+614
+00:26:31,038 --> 00:26:34,158
+like.
+
+615
+00:26:32,000 --> 00:26:34,558
+>> But it looks like Muse is but I wasn't
+
+616
+00:26:34,159 --> 00:26:37,120
+sure.
+
+617
+00:26:34,558 --> 00:26:39,519
+>> Muse and Instinct are
+
+618
+00:26:37,119 --> 00:26:43,759
+>> have a much stronger product market fit
+
+619
+00:26:39,519 --> 00:26:44,798
+than Grockpot. Um, and perhaps
+
+620
+00:26:43,759 --> 00:26:47,919
+>> seems like that
+
+621
+00:26:44,798 --> 00:26:50,639
+>> perhaps it is because you don't have to
+
+622
+00:26:47,919 --> 00:26:52,799
+worry about creating these these
+
+623
+00:26:50,640 --> 00:26:54,559
+domains, but but I think maybe personal
+
+624
+00:26:52,798 --> 00:26:57,200
+agents are different than than work
+
+625
+00:26:54,558 --> 00:27:00,240
+agents. And I think your kind of your
+
+626
+00:26:57,200 --> 00:27:02,960
+critique of general agents is is more uh
+
+627
+00:27:00,240 --> 00:27:05,200
+pertaining to to to work and to
+
+628
+00:27:02,960 --> 00:27:08,240
+enterprise, which I I sort of agree
+
+629
+00:27:05,200 --> 00:27:10,960
+with. And um you know there's also all
+
+630
+00:27:08,240 --> 00:27:13,679
+sorts of uh data access considerations.
+
+631
+00:27:10,960 --> 00:27:17,120
+I think as CEOs we can have general
+
+632
+00:27:13,679 --> 00:27:20,559
+agents because we have admin access. Uh
+
+633
+00:27:17,119 --> 00:27:22,719
+but you know you're for individual
+
+634
+00:27:20,558 --> 00:27:25,200
+employees or certain teams they can't
+
+635
+00:27:22,720 --> 00:27:26,960
+have like truly general you know fully
+
+636
+00:27:25,200 --> 00:27:29,840
+contextaw aware agents because there's
+
+637
+00:27:26,960 --> 00:27:32,400
+there's access control control issues.
+
+638
+00:27:29,839 --> 00:27:34,158
+So you'll have to kind of work on on
+
+639
+00:27:32,400 --> 00:27:35,919
+something like specialization.
+
+640
+00:27:34,159 --> 00:27:37,679
+Ultimately, I also think we need to
+
+641
+00:27:35,919 --> 00:27:39,919
+figure out what is agent to agent
+
+642
+00:27:37,679 --> 00:27:42,640
+communication look like. I don't think
+
+643
+00:27:39,919 --> 00:27:45,200
+there is like good protocols
+
+644
+00:27:42,640 --> 00:27:48,480
+around that just yet. I I don't think
+
+645
+00:27:45,200 --> 00:27:51,519
+that agents are trained to handle that
+
+646
+00:27:48,480 --> 00:27:54,960
+very well. I think we've seen it seems
+
+647
+00:27:51,519 --> 00:27:57,599
+like the next generation of OpenAI
+
+648
+00:27:54,960 --> 00:28:00,798
+models are trained
+
+649
+00:27:57,599 --> 00:28:03,839
+to do agent collaboration because we've
+
+650
+00:28:00,798 --> 00:28:05,519
+seen it in the hugging face hack where
+
+651
+00:28:03,839 --> 00:28:08,398
+they start helping each other and sort
+
+652
+00:28:05,519 --> 00:28:10,480
+of emerge naturally. But there's also
+
+653
+00:28:08,398 --> 00:28:13,599
+needs to be
+
+654
+00:28:10,480 --> 00:28:15,200
+some way in which like an agent can't
+
+655
+00:28:13,599 --> 00:28:16,879
+convince another agent to kind of give
+
+656
+00:28:15,200 --> 00:28:19,360
+it give it information that it shouldn't
+
+657
+00:28:16,880 --> 00:28:23,120
+give it give it. like that there's there
+
+658
+00:28:19,359 --> 00:28:26,639
+needs to be like data um isolation and
+
+659
+00:28:23,119 --> 00:28:28,558
+and and and and proper ways in which
+
+660
+00:28:26,640 --> 00:28:30,080
+these agents communicate. You almost
+
+661
+00:28:28,558 --> 00:28:32,158
+don't want to communicate them fully in
+
+662
+00:28:30,079 --> 00:28:34,879
+natural language. Maybe that there's
+
+663
+00:28:32,159 --> 00:28:36,960
+like some other DSL or protocol that
+
+664
+00:28:34,880 --> 00:28:39,440
+that they need to follow.
+
+665
+00:28:36,960 --> 00:28:41,840
+>> I really I I I think one of the cool
+
+666
+00:28:39,440 --> 00:28:44,399
+potential applications of Jev and other
+
+667
+00:28:41,839 --> 00:28:46,879
+decision models like it is going to be
+
+668
+00:28:44,398 --> 00:28:50,879
+alignment. you know, checking to see if
+
+669
+00:28:46,880 --> 00:28:53,200
+a tool call or like an agentto agent,
+
+670
+00:28:50,880 --> 00:28:56,559
+you know, communication
+
+671
+00:28:53,200 --> 00:28:58,399
+is aligned because there's just so many
+
+672
+00:28:56,558 --> 00:29:01,119
+tool calls. Like you really need like a
+
+673
+00:28:58,398 --> 00:29:06,158
+cheap fast model. Um, if you're going to
+
+674
+00:29:01,119 --> 00:29:09,119
+block something like that, then uh like
+
+675
+00:29:06,159 --> 00:29:11,760
+a really really fast decision model that
+
+676
+00:29:09,119 --> 00:29:13,519
+just classifies and gives feedback on
+
+677
+00:29:11,759 --> 00:29:16,000
+rejections
+
+678
+00:29:13,519 --> 00:29:19,440
+um might be like a really good way to
+
+679
+00:29:16,000 --> 00:29:22,079
+bridge the gap between agents and from
+
+680
+00:29:19,440 --> 00:29:25,600
+agent to infrastructure too. So I
+
+681
+00:29:22,079 --> 00:29:27,199
+haven't seen like and we have like a a
+
+682
+00:29:25,599 --> 00:29:30,798
+little prototype that we're running
+
+683
+00:29:27,200 --> 00:29:32,880
+internally um at open router but um I
+
+684
+00:29:30,798 --> 00:29:34,319
+kind of think a good I think it could be
+
+685
+00:29:32,880 --> 00:29:38,240
+like an interesting alignment
+
+686
+00:29:34,319 --> 00:29:41,918
+>> using it for policy enforcements.
+
+687
+00:29:38,240 --> 00:29:45,120
+>> Yeah. Like imagine um uh looking at the
+
+688
+00:29:41,919 --> 00:29:46,799
+system prompt and the current tool call
+
+689
+00:29:45,119 --> 00:29:49,119
+being made and be like like you know is
+
+690
+00:29:46,798 --> 00:29:51,278
+this aligned with the the system prompt
+
+691
+00:29:49,119 --> 00:29:53,119
+of the original agent and with these
+
+692
+00:29:51,278 --> 00:29:55,519
+like extra guidelines that maybe we
+
+693
+00:29:53,119 --> 00:29:56,879
+didn't tell the agent about. For
+
+694
+00:29:55,519 --> 00:30:01,200
+example, let's say you have a bunch of
+
+695
+00:29:56,880 --> 00:30:05,440
+agents that are instructed to do um to
+
+696
+00:30:01,200 --> 00:30:10,480
+like red team the like some some new
+
+697
+00:30:05,440 --> 00:30:12,880
+product and they cannot should not uh
+
+698
+00:30:10,480 --> 00:30:14,480
+be able to access the internet. Um and
+
+699
+00:30:12,880 --> 00:30:18,080
+if they ever do, they should stop right
+
+700
+00:30:14,480 --> 00:30:20,319
+away. Um but you might not want to like
+
+701
+00:30:18,079 --> 00:30:22,240
+explain all of that to the agents doing
+
+702
+00:30:20,319 --> 00:30:24,960
+the red teaming. you might want them to
+
+703
+00:30:22,240 --> 00:30:27,440
+try to like break out of the sandbox
+
+704
+00:30:24,960 --> 00:30:29,200
+um and act like bad actors. Like what
+
+705
+00:30:27,440 --> 00:30:31,038
+would a bad actor do? It wouldn't be
+
+706
+00:30:29,200 --> 00:30:32,399
+like break out of the sand, you know,
+
+707
+00:30:31,038 --> 00:30:34,480
+try to like break into this company and
+
+708
+00:30:32,398 --> 00:30:36,079
+the moment you do stop. Don't do
+
+709
+00:30:34,480 --> 00:30:39,120
+anything else. Mhm.
+
+710
+00:30:36,079 --> 00:30:42,319
+>> Um so like having another model more
+
+711
+00:30:39,119 --> 00:30:44,158
+like you know use for you know building
+
+712
+00:30:42,319 --> 00:30:47,119
+a neurodeiverse system having another
+
+713
+00:30:44,159 --> 00:30:48,880
+model like check uh every single tool
+
+714
+00:30:47,119 --> 00:30:51,038
+call or every single assistant message
+
+715
+00:30:48,880 --> 00:30:52,320
+to see if it's indeed aligned with
+
+716
+00:30:51,038 --> 00:30:55,599
+something that wasn't in the system
+
+717
+00:30:52,319 --> 00:30:57,359
+prompt I think makes sense. Um, and then
+
+718
+00:30:55,599 --> 00:30:59,759
+having kind of like structural
+
+719
+00:30:57,359 --> 00:31:03,519
+safeguards too, which is what I think
+
+720
+00:30:59,759 --> 00:31:07,599
+Nvidia um, just launched with their like
+
+721
+00:31:03,519 --> 00:31:10,960
+open agent safety. Uh, I think it was
+
+722
+00:31:07,599 --> 00:31:12,079
+called open shell. Um, like I think
+
+723
+00:31:10,960 --> 00:31:13,759
+companies are probably going to explore
+
+724
+00:31:12,079 --> 00:31:15,519
+a combination of those.
+
+725
+00:31:13,759 --> 00:31:19,038
+>> I I wonder another thing about
+
+726
+00:31:15,519 --> 00:31:20,158
+specialization and um, sort of what
+
+727
+00:31:19,038 --> 00:31:23,278
+you're talking about. There's a lot of
+
+728
+00:31:20,159 --> 00:31:25,840
+talk of recursive self-improvement.
+
+729
+00:31:23,278 --> 00:31:30,720
+Um there's something I don't think it's
+
+730
+00:31:25,839 --> 00:31:33,519
+getting a lot of um sort of discussion
+
+731
+00:31:30,720 --> 00:31:37,120
+which is uh models training their
+
+732
+00:31:33,519 --> 00:31:38,798
+replacements. It's sort of like you know
+
+733
+00:31:37,119 --> 00:31:40,879
+you can think of it as a just in time
+
+734
+00:31:38,798 --> 00:31:43,599
+compiler. So the way just in time
+
+735
+00:31:40,880 --> 00:31:46,559
+compilers is um you know as you're
+
+736
+00:31:43,599 --> 00:31:48,719
+executing dynamic code you know the the
+
+737
+00:31:46,558 --> 00:31:50,720
+the interpreter realizes that there's an
+
+738
+00:31:48,720 --> 00:31:53,278
+opportunity to optimize it will emit
+
+739
+00:31:50,720 --> 00:31:55,839
+machine code on the fly and that's a lot
+
+740
+00:31:53,278 --> 00:31:57,839
+more optimized. So you can imagine
+
+741
+00:31:55,839 --> 00:31:59,839
+models like general models you're kind
+
+742
+00:31:57,839 --> 00:32:02,079
+of doing something with Opus or some
+
+743
+00:31:59,839 --> 00:32:05,599
+some of the Astra or some of the big
+
+744
+00:32:02,079 --> 00:32:09,278
+models and they realize that the use
+
+745
+00:32:05,599 --> 00:32:11,119
+case is is limited uh or you prompt them
+
+746
+00:32:09,278 --> 00:32:13,278
+in some way or some other agent
+
+747
+00:32:11,119 --> 00:32:15,918
+observing and realizes that use case is
+
+748
+00:32:13,278 --> 00:32:17,599
+limited and I think you know general
+
+749
+00:32:15,919 --> 00:32:19,200
+agents have all these flaws that you
+
+750
+00:32:17,599 --> 00:32:20,719
+just talked about but also there's
+
+751
+00:32:19,200 --> 00:32:22,399
+there's more potential for them to be
+
+752
+00:32:20,720 --> 00:32:25,519
+harmful. there's more potential for them
+
+753
+00:32:22,398 --> 00:32:30,319
+to go off the rails and sort of on the
+
+754
+00:32:25,519 --> 00:32:32,558
+fly trains a model uh that that could be
+
+755
+00:32:30,319 --> 00:32:36,558
+it's a replacement but is like a lot
+
+756
+00:32:32,558 --> 00:32:42,720
+more domain specific uh and therefore it
+
+757
+00:32:36,558 --> 00:32:45,678
+is cheaper and also um you know less uh
+
+758
+00:32:42,720 --> 00:32:48,720
+less vulnerable to prompt injections uh
+
+759
+00:32:45,679 --> 00:32:51,120
+less less less harmful for for you know
+
+760
+00:32:48,720 --> 00:32:53,440
+because it's less capable um And it's
+
+761
+00:32:51,119 --> 00:32:55,199
+it's it's almost like a like you know
+
+762
+00:32:53,440 --> 00:32:57,360
+some system that's training machine
+
+763
+00:32:55,200 --> 00:32:59,759
+learning models
+
+764
+00:32:57,359 --> 00:33:01,678
+for specific use cases as it's
+
+765
+00:32:59,759 --> 00:33:03,759
+monitoring the entire system
+
+766
+00:33:01,679 --> 00:33:05,440
+>> like would that specific use case be it
+
+767
+00:33:03,759 --> 00:33:08,558
+involve
+
+768
+00:33:05,440 --> 00:33:10,798
+um unstructured text generation or very
+
+769
+00:33:08,558 --> 00:33:13,038
+like structured decision model like
+
+770
+00:33:10,798 --> 00:33:14,720
+>> it could be unstructured text generation
+
+771
+00:33:13,038 --> 00:33:18,558
+it could be decision models like even
+
+772
+00:33:14,720 --> 00:33:21,278
+the case of of of Jav like if you have
+
+773
+00:33:18,558 --> 00:33:23,599
+if you understand the the inputs ahead
+
+774
+00:33:21,278 --> 00:33:25,359
+of time. Uh you could potentially like,
+
+775
+00:33:23,599 --> 00:33:26,959
+you know, take an offtheshelf like Quen
+
+776
+00:33:25,359 --> 00:33:29,678
+or something like that and like train it
+
+777
+00:33:26,960 --> 00:33:33,600
+specifically for that policy.
+
+778
+00:33:29,679 --> 00:33:35,759
+Like for that makes sense to do for cost
+
+779
+00:33:33,599 --> 00:33:39,359
+reasons.
+
+780
+00:33:35,759 --> 00:33:41,759
+Um assuming that there aren't
+
+781
+00:33:39,359 --> 00:33:43,759
+like really like the the model labs, the
+
+782
+00:33:41,759 --> 00:33:46,558
+frontier model labs might make very
+
+783
+00:33:43,759 --> 00:33:47,679
+lowcost models um that you can easily
+
+784
+00:33:46,558 --> 00:33:49,759
+transition to
+
+785
+00:33:47,679 --> 00:33:50,480
+>> safety. Safety as well, right? Oh yeah,
+
+786
+00:33:49,759 --> 00:33:54,480
+I see your point.
+
+787
+00:33:50,480 --> 00:33:57,519
+>> They're so capable. And so I think often
+
+788
+00:33:54,480 --> 00:34:01,919
+times people are using these big
+
+789
+00:33:57,519 --> 00:34:04,720
+foundation AGI like models to like it's
+
+790
+00:34:01,919 --> 00:34:08,398
+like nuking a butterfly, right? It's
+
+791
+00:34:04,720 --> 00:34:10,398
+like they're very, you know, most of the
+
+792
+00:34:08,398 --> 00:34:12,000
+times like a lot of the use cases even
+
+793
+00:34:10,398 --> 00:34:13,358
+unstructured use cases don't need that
+
+794
+00:34:12,000 --> 00:34:15,519
+capable model.
+
+795
+00:34:13,358 --> 00:34:17,199
+>> I wish there were more public emails
+
+796
+00:34:15,519 --> 00:34:21,679
+about this stuff like but a lot of the
+
+797
+00:34:17,199 --> 00:34:23,678
+eval are private. you just can't see um
+
+798
+00:34:21,679 --> 00:34:26,878
+whether like when the models get more
+
+799
+00:34:23,679 --> 00:34:29,519
+intelligent the risk actually
+
+800
+00:34:26,878 --> 00:34:30,878
+uh will like continue to get higher
+
+801
+00:34:29,519 --> 00:34:32,639
+because I think there's also an argument
+
+802
+00:34:30,878 --> 00:34:37,118
+to be made that alignment will get
+
+803
+00:34:32,639 --> 00:34:40,960
+better and the models will like start to
+
+804
+00:34:37,119 --> 00:34:44,480
+you know avoid going off and you know
+
+805
+00:34:40,960 --> 00:34:45,838
+hacking on their own um as we as they
+
+806
+00:34:44,480 --> 00:34:47,119
+get smarter and better at alignment
+
+807
+00:34:45,838 --> 00:34:49,759
+especially when it comes to agentto
+
+808
+00:34:47,119 --> 00:34:52,800
+agent coordination like the the this is
+
+809
+00:34:49,760 --> 00:34:54,960
+something Noam Brown um said on a
+
+810
+00:34:52,800 --> 00:34:56,320
+podcast recently like as the agents have
+
+811
+00:34:54,960 --> 00:35:00,480
+gotten smarter, they've gotten just
+
+812
+00:34:56,320 --> 00:35:02,720
+better at coordinating. Um there uh
+
+813
+00:35:00,480 --> 00:35:05,119
+there's they're there's still like and
+
+814
+00:35:02,719 --> 00:35:07,679
+and you know it's unclear if they're
+
+815
+00:35:05,119 --> 00:35:10,320
+going to like be harder to align than
+
+816
+00:35:07,679 --> 00:35:13,118
+humans when they're when we get more and
+
+817
+00:35:10,320 --> 00:35:19,599
+more of them. But if we can figure that
+
+818
+00:35:13,119 --> 00:35:23,119
+problem out um then a smaller model
+
+819
+00:35:19,599 --> 00:35:26,880
+like will it be harder to align?
+
+820
+00:35:23,119 --> 00:35:29,280
+>> So so Eric asked earlier is is that do I
+
+821
+00:35:26,880 --> 00:35:31,200
+think it's true that smarter models are
+
+822
+00:35:29,280 --> 00:35:35,200
+are more aligned naturally or they're
+
+823
+00:35:31,199 --> 00:35:37,039
+easier to to align? Well, I if you think
+
+824
+00:35:35,199 --> 00:35:40,399
+back to the original sort of like
+
+825
+00:35:37,039 --> 00:35:42,800
+rationalist less wrong arguments for AI
+
+826
+00:35:40,400 --> 00:35:45,760
+safety, there is this thing called the
+
+827
+00:35:42,800 --> 00:35:48,480
+orthogonality thesis. The idea is that
+
+828
+00:35:45,760 --> 00:35:53,119
+intelligence is orthogonal to ethics or
+
+829
+00:35:48,480 --> 00:35:55,199
+morality or you know so on. Um I don't
+
+830
+00:35:53,119 --> 00:35:57,519
+believe that's entirely true with with
+
+831
+00:35:55,199 --> 00:36:00,879
+humans. I think people who are generally
+
+832
+00:35:57,519 --> 00:36:05,199
+like more intelligent kind of more more
+
+833
+00:36:00,880 --> 00:36:08,240
+educated tend to tend to not always tend
+
+834
+00:36:05,199 --> 00:36:14,559
+to you be more considerate of animals
+
+835
+00:36:08,239 --> 00:36:16,879
+for example um but uh but but in in in
+
+836
+00:36:14,559 --> 00:36:20,000
+in machines
+
+837
+00:36:16,880 --> 00:36:22,559
+uh I I think it could go the the other
+
+838
+00:36:20,000 --> 00:36:26,239
+way because you know there's been quite
+
+839
+00:36:22,559 --> 00:36:28,159
+a bit of studies on on on RL Well,
+
+840
+00:36:26,239 --> 00:36:30,719
+showing like, you know, how reward
+
+841
+00:36:28,159 --> 00:36:34,239
+hacking and deception they just like get
+
+842
+00:36:30,719 --> 00:36:35,759
+better at it. And like the evals could
+
+843
+00:36:34,239 --> 00:36:40,078
+be
+
+844
+00:36:35,760 --> 00:36:45,119
+could be deceiving because uh the model
+
+845
+00:36:40,079 --> 00:36:47,920
+could be smart enough to to to
+
+846
+00:36:45,119 --> 00:36:49,440
+know that it's getting evaled.
+
+847
+00:36:47,920 --> 00:36:51,838
+I mean, we already know this. It's been
+
+848
+00:36:49,440 --> 00:36:53,440
+shown that if you do a lot of monitoring
+
+849
+00:36:51,838 --> 00:36:55,279
+of chain of thought, they start lying in
+
+850
+00:36:53,440 --> 00:36:58,320
+their chain of thoughts.
+
+851
+00:36:55,280 --> 00:36:59,760
+Um, and so you add pressure almost on
+
+852
+00:36:58,320 --> 00:37:03,440
+the chain of thought and that that kind
+
+853
+00:36:59,760 --> 00:37:06,720
+of creates and and I think at some point
+
+854
+00:37:03,440 --> 00:37:09,838
+for you to do proper alignment evals,
+
+855
+00:37:06,719 --> 00:37:12,000
+you need to run it for like months,
+
+856
+00:37:09,838 --> 00:37:14,719
+>> right? You need to run this thing for
+
+857
+00:37:12,000 --> 00:37:18,239
+months on a like a really large, you
+
+858
+00:37:14,719 --> 00:37:20,480
+know, goal or task in order for for it
+
+859
+00:37:18,239 --> 00:37:23,838
+to to truly kind of figure out whether
+
+860
+00:37:20,480 --> 00:37:26,159
+it's aligned or or or not.
+
+861
+00:37:23,838 --> 00:37:30,159
+Yeah. I I I always struggle with this
+
+862
+00:37:26,159 --> 00:37:31,920
+word alignment. It just feels like
+
+863
+00:37:30,159 --> 00:37:35,118
+wrong for so many reasons. It's it's
+
+864
+00:37:31,920 --> 00:37:37,838
+sort of like vague and and uh sort of
+
+865
+00:37:35,119 --> 00:37:39,440
+like aligned to what whose values and
+
+866
+00:37:37,838 --> 00:37:42,559
+and so it just doesn't make the
+
+867
+00:37:39,440 --> 00:37:45,440
+conversation easier. I think in this
+
+868
+00:37:42,559 --> 00:37:48,239
+case I'm talking especially about
+
+869
+00:37:45,440 --> 00:37:50,800
+deception like the model is actually
+
+870
+00:37:48,239 --> 00:37:54,399
+deceiving its user. I mean I I mean
+
+871
+00:37:50,800 --> 00:37:56,000
+maybe this kind of reduces to like are
+
+872
+00:37:54,400 --> 00:37:58,160
+we going to solve the line, you know,
+
+873
+00:37:56,000 --> 00:38:02,079
+are we going to prevent the models from
+
+874
+00:37:58,159 --> 00:38:05,199
+deceiving users during training runs
+
+875
+00:38:02,079 --> 00:38:07,200
+predictably with like you know better
+
+876
+00:38:05,199 --> 00:38:10,000
+like like will will like a model that's
+
+877
+00:38:07,199 --> 00:38:13,439
+big enough and powerful enough suddenly
+
+878
+00:38:10,000 --> 00:38:14,960
+stop deception and stop sandbagging?
+
+879
+00:38:13,440 --> 00:38:18,639
+Um
+
+880
+00:38:14,960 --> 00:38:21,920
+and nobody knows the answer to that yet.
+
+881
+00:38:18,639 --> 00:38:24,319
+So like at the point when that does you
+
+882
+00:38:21,920 --> 00:38:27,119
+if that ever does happen though we might
+
+883
+00:38:24,320 --> 00:38:31,039
+see kind of an interesting
+
+884
+00:38:27,119 --> 00:38:32,960
+pressure for organizations to go towards
+
+885
+00:38:31,039 --> 00:38:33,679
+the frontier like
+
+886
+00:38:32,960 --> 00:38:36,880
+>> oh interesting
+
+887
+00:38:33,679 --> 00:38:40,239
+>> you know all uh to have no you know
+
+888
+00:38:36,880 --> 00:38:42,320
+basically no risk or or significantly
+
+889
+00:38:40,239 --> 00:38:43,838
+less um
+
+890
+00:38:42,320 --> 00:38:48,240
+>> would they would they be willing to pay
+
+891
+00:38:43,838 --> 00:38:50,799
+10x to to get that that much? I mean, it
+
+892
+00:38:48,239 --> 00:38:53,199
+probably depends on the like types of
+
+893
+00:38:50,800 --> 00:38:56,240
+tasks they're trying to do.
+
+894
+00:38:53,199 --> 00:39:02,239
+>> Like, you know, some just have way lower
+
+895
+00:38:56,239 --> 00:39:05,118
+risk than others. Um, writing code
+
+896
+00:39:02,239 --> 00:39:07,759
+uh that or doing like security research
+
+897
+00:39:05,119 --> 00:39:11,280
+is the highest risk type of task today.
+
+898
+00:39:07,760 --> 00:39:13,920
+And so you probably spend 10x to get a
+
+899
+00:39:11,280 --> 00:39:16,079
+fully aligned model that can also find
+
+900
+00:39:13,920 --> 00:39:18,320
+all the bugs or fully like
+
+901
+00:39:16,079 --> 00:39:20,560
+anti-deceptive model that can also find
+
+902
+00:39:18,320 --> 00:39:22,480
+all the bugs. One of the coolest things
+
+903
+00:39:20,559 --> 00:39:26,159
+about decision models is that you fully
+
+904
+00:39:22,480 --> 00:39:27,838
+control the structured output and and
+
+905
+00:39:26,159 --> 00:39:32,399
+generally with structured output models
+
+906
+00:39:27,838 --> 00:39:36,159
+in general like the the room for
+
+907
+00:39:32,400 --> 00:39:39,039
+misbehavior is so much lower. you just
+
+908
+00:39:36,159 --> 00:39:40,480
+have like defined tasks and only
+
+909
+00:39:39,039 --> 00:39:43,440
+machines are like dealing with the
+
+910
+00:39:40,480 --> 00:39:48,400
+outputs and it's not writing code um
+
+911
+00:39:43,440 --> 00:39:51,679
+that it can execute the those tasks feel
+
+912
+00:39:48,400 --> 00:39:53,680
+like probably under represented in the
+
+913
+00:39:51,679 --> 00:39:55,118
+ones that people talk about and in the
+
+914
+00:39:53,679 --> 00:39:58,399
+things that enterprises are dealing
+
+915
+00:39:55,119 --> 00:40:01,200
+with. Um so I I expect like enterprises
+
+916
+00:39:58,400 --> 00:40:03,599
+to get a lot more interested in them.
+
+917
+00:40:01,199 --> 00:40:05,118
+>> Yeah. I I feel like we're going to
+
+918
+00:40:03,599 --> 00:40:07,200
+slowly
+
+919
+00:40:05,119 --> 00:40:09,519
+realize
+
+920
+00:40:07,199 --> 00:40:11,919
+how good we've had we've had it with
+
+921
+00:40:09,519 --> 00:40:13,599
+like deterministic code. We're like, "Oh
+
+922
+00:40:11,920 --> 00:40:16,639
+my god, remember the days when when
+
+923
+00:40:13,599 --> 00:40:20,400
+computers did exactly what we told them
+
+924
+00:40:16,639 --> 00:40:23,440
+to do?" And I think like things like Jev
+
+925
+00:40:20,400 --> 00:40:26,800
+I think hint at
+
+926
+00:40:23,440 --> 00:40:29,838
+like more more of a need for you know
+
+927
+00:40:26,800 --> 00:40:32,079
+not only specialized models but models
+
+928
+00:40:29,838 --> 00:40:35,119
+whose outwood domain
+
+929
+00:40:32,079 --> 00:40:38,000
+is is more controllable and maybe you
+
+930
+00:40:35,119 --> 00:40:42,960
+could do maybe you could do a lot more
+
+931
+00:40:38,000 --> 00:40:45,039
+than than we thought you you'd need um
+
+932
+00:40:42,960 --> 00:40:47,760
+you know by using like a bunch of
+
+933
+00:40:45,039 --> 00:40:48,719
+specialized models specialized output
+
+934
+00:40:47,760 --> 00:40:52,000
+models.
+
+935
+00:40:48,719 --> 00:40:53,838
+>> Have you guys done any workloads
+
+936
+00:40:52,000 --> 00:40:55,358
+internally with it?
+
+937
+00:40:53,838 --> 00:40:57,920
+>> You know, I've been training a lot of
+
+938
+00:40:55,358 --> 00:40:59,279
+small models. Uh, I mean, I said this
+
+939
+00:40:57,920 --> 00:41:01,358
+glip thing when it first came out
+
+940
+00:40:59,280 --> 00:41:03,519
+because I I I was like sort of I gave
+
+941
+00:41:01,358 --> 00:41:05,358
+this hacker news comment like comment
+
+942
+00:41:03,519 --> 00:41:07,759
+which I felt disgusted with myself
+
+943
+00:41:05,358 --> 00:41:11,598
+afterwards. But I I've been taking a lot
+
+944
+00:41:07,760 --> 00:41:14,319
+of like Quen 8B and like um and like
+
+945
+00:41:11,599 --> 00:41:17,039
+asking honestly like asking you know
+
+946
+00:41:14,318 --> 00:41:20,559
+Fable and Opus and Austra to train a
+
+947
+00:41:17,039 --> 00:41:23,519
+model. For example, I trained a cost
+
+948
+00:41:20,559 --> 00:41:25,039
+estimator model uh internally so that
+
+949
+00:41:23,519 --> 00:41:26,400
+when you put it in a prompt in replet,
+
+950
+00:41:25,039 --> 00:41:30,159
+we know exactly how much it it will
+
+951
+00:41:26,400 --> 00:41:31,838
+cost. And it basically emits a you know
+
+952
+00:41:30,159 --> 00:41:34,078
+probability distribution over multiple
+
+953
+00:41:31,838 --> 00:41:37,519
+buckets like if it is between five and
+
+954
+00:41:34,079 --> 00:41:40,960
+$10 bucket A bucket B between you know
+
+955
+00:41:37,519 --> 00:41:43,358
+10 and $20 and like so I'm used to the
+
+956
+00:41:40,960 --> 00:41:46,880
+training these classifiers
+
+957
+00:41:43,358 --> 00:41:48,559
+by you know giving it different enums
+
+958
+00:41:46,880 --> 00:41:50,079
+essentially and and looking at the log
+
+959
+00:41:48,559 --> 00:41:51,679
+props per enum.
+
+960
+00:41:50,079 --> 00:41:54,079
+>> I've been doing it for for a couple of
+
+961
+00:41:51,679 --> 00:41:56,960
+years. I trained a chatbot to play by
+
+962
+00:41:54,079 --> 00:42:00,318
+just doing that. So I I'm I'm already
+
+963
+00:41:56,960 --> 00:42:03,440
+sort of pilled on like sort of decision
+
+964
+00:42:00,318 --> 00:42:06,880
+models and specialized models. So it
+
+965
+00:42:03,440 --> 00:42:09,119
+wasn't that big moment for me. But I
+
+966
+00:42:06,880 --> 00:42:12,640
+understand that like a found like a true
+
+967
+00:42:09,119 --> 00:42:15,920
+foundation model that's fully promptable
+
+968
+00:42:12,639 --> 00:42:17,519
+uh is like is like amazing user exper
+
+969
+00:42:15,920 --> 00:42:19,119
+amazing developer experience and you can
+
+970
+00:42:17,519 --> 00:42:21,199
+like do a bunch of stuff with it without
+
+971
+00:42:19,119 --> 00:42:22,960
+training a model from scratch. But if
+
+972
+00:42:21,199 --> 00:42:24,799
+you have a data, if you work at a place
+
+973
+00:42:22,960 --> 00:42:26,240
+where you you have the data, we have so
+
+974
+00:42:24,800 --> 00:42:27,359
+much data at Replet. Like I ended up
+
+975
+00:42:26,239 --> 00:42:29,358
+training a lot of specialized
+
+976
+00:42:27,358 --> 00:42:32,239
+classification models pretty easily.
+
+977
+00:42:29,358 --> 00:42:34,078
+>> Yeah. Like I definitely it it also feels
+
+978
+00:42:32,239 --> 00:42:37,039
+like less model debt. Like something
+
+979
+00:42:34,079 --> 00:42:38,000
+that I I still hear from companies is
+
+980
+00:42:37,039 --> 00:42:41,039
+that they're like worried about
+
+981
+00:42:38,000 --> 00:42:43,199
+fine-tuning models for like unstructured
+
+982
+00:42:41,039 --> 00:42:45,039
+outputs because you're just like always
+
+983
+00:42:43,199 --> 00:42:47,358
+you got to redo it again in like two
+
+984
+00:42:45,039 --> 00:42:50,000
+months and everybody just feels the
+
+985
+00:42:47,358 --> 00:42:53,039
+model the weight of the model debt. But
+
+986
+00:42:50,000 --> 00:42:55,358
+like a very bespoke classifier that's
+
+987
+00:42:53,039 --> 00:42:56,880
+trained with like proprietary data,
+
+988
+00:42:55,358 --> 00:42:59,920
+>> you just I I feel like people won't
+
+989
+00:42:56,880 --> 00:43:01,680
+think it's behind constantly and it
+
+990
+00:42:59,920 --> 00:43:02,159
+might just like last longer.
+
+991
+00:43:01,679 --> 00:43:03,838
+>> Yeah.
+
+992
+00:43:02,159 --> 00:43:05,838
+>> Um
+
+993
+00:43:03,838 --> 00:43:08,159
+it's just you you you don't have to
+
+994
+00:43:05,838 --> 00:43:10,799
+worry about its ability to speak a new
+
+995
+00:43:08,159 --> 00:43:12,719
+language or write Rust or, you know, do
+
+996
+00:43:10,800 --> 00:43:14,640
+anything that like the the LLMs are
+
+997
+00:43:12,719 --> 00:43:16,959
+being like evaluated on. You know the
+
+998
+00:43:14,639 --> 00:43:19,199
+use cases so you can like build it more.
+
+999
+00:43:16,960 --> 00:43:22,240
+And I I I it seems like an easy thing
+
+1000
+00:43:19,199 --> 00:43:25,118
+for enterprises to build themselves and
+
+1001
+00:43:22,239 --> 00:43:27,199
+uh and it and actually like not regret.
+
+1002
+00:43:25,119 --> 00:43:30,079
+>> Yeah. Speaking of Rust, actually like a
+
+1003
+00:43:27,199 --> 00:43:32,799
+good analogy is when the world got super
+
+1004
+00:43:30,079 --> 00:43:35,039
+excited about dynam dynamic languages.
+
+1005
+00:43:32,800 --> 00:43:36,960
+Um like if you think back to the 90s,
+
+1006
+00:43:35,039 --> 00:43:38,639
+everyone was writing in Java and C++
+
+1007
+00:43:36,960 --> 00:43:41,119
+things like that. And then like Python,
+
+1008
+00:43:38,639 --> 00:43:42,639
+JavaScript, Ruby just like took over the
+
+1009
+00:43:41,119 --> 00:43:43,920
+internet and everyone was like ah this
+
+1010
+00:43:42,639 --> 00:43:46,799
+is how you build startups really
+
+1011
+00:43:43,920 --> 00:43:48,800
+quickly. this is and you built Stripe, a
+
+1012
+00:43:46,800 --> 00:43:51,119
+financial organization on Ruby. I was
+
+1013
+00:43:48,800 --> 00:43:53,440
+like, how crazy is that? And and we
+
+1014
+00:43:51,119 --> 00:43:56,160
+built Facebook, you know, using using
+
+1015
+00:43:53,440 --> 00:43:58,318
+PHP. And then everyone was like, oh
+
+1016
+00:43:56,159 --> 00:44:00,639
+ Like we're running into all these
+
+1017
+00:43:58,318 --> 00:44:04,239
+really bad bugs. It's like freaking
+
+1018
+00:44:00,639 --> 00:44:07,759
+slow. Uh so like let's go in and add
+
+1019
+00:44:04,239 --> 00:44:09,838
+types. Okay, let's add a JIT compiler.
+
+1020
+00:44:07,760 --> 00:44:11,760
+Let's And you end up sort of reinventing
+
+1021
+00:44:09,838 --> 00:44:13,519
+everything. And then Rust came out. I
+
+1022
+00:44:11,760 --> 00:44:15,200
+was like, "Okay, I guess we can use Rust
+
+1023
+00:44:13,519 --> 00:44:17,119
+for for a lot of things we would
+
+1024
+00:44:15,199 --> 00:44:21,199
+otherwise be using JavaScript and
+
+1025
+00:44:17,119 --> 00:44:22,960
+Python." And my prediction is that the
+
+1026
+00:44:21,199 --> 00:44:25,919
+same cycle will happen here where we're
+
+1027
+00:44:22,960 --> 00:44:27,760
+using these AGI like models for all
+
+1028
+00:44:25,920 --> 00:44:29,920
+these different use cases and then
+
+1029
+00:44:27,760 --> 00:44:32,079
+everyone's going to wake up and be like,
+
+1030
+00:44:29,920 --> 00:44:34,960
+"Oh my god, this is like so wasteful, so
+
+1031
+00:44:32,079 --> 00:44:37,599
+risky for no reason." Um, and and
+
+1032
+00:44:34,960 --> 00:44:39,119
+there's it's got to be so much easier.
+
+1033
+00:44:37,599 --> 00:44:40,400
+We're actually adding that capability on
+
+1034
+00:44:39,119 --> 00:44:42,318
+Replet, but I think it's going to be
+
+1035
+00:44:40,400 --> 00:44:44,160
+everywhere. it's it's going to be so
+
+1036
+00:44:42,318 --> 00:44:46,239
+much easier to like to go on a site like
+
+1037
+00:44:44,159 --> 00:44:50,559
+upload a CSV file and get a special
+
+1038
+00:44:46,239 --> 00:44:52,559
+model that does one thing. Uh and um you
+
+1039
+00:44:50,559 --> 00:44:54,318
+know that that goes back to your thesis
+
+1040
+00:44:52,559 --> 00:44:56,719
+about open router this like neuro
+
+1041
+00:44:54,318 --> 00:44:58,639
+neurodeiversity which I like really
+
+1042
+00:44:56,719 --> 00:45:00,480
+fundamentally believe in a lot more and
+
+1043
+00:44:58,639 --> 00:45:03,118
+Eric and I had like discussions a lot
+
+1044
+00:45:00,480 --> 00:45:05,920
+about like AGI and whether we we're
+
+1045
+00:45:03,119 --> 00:45:09,599
+truly on a path to AGI or whether it's
+
+1046
+00:45:05,920 --> 00:45:11,200
+even desirable to to to get there. And I
+
+1047
+00:45:09,599 --> 00:45:12,640
+think the future is is a lot more
+
+1048
+00:45:11,199 --> 00:45:14,799
+diversity
+
+1049
+00:45:12,639 --> 00:45:16,400
+>> outside of code review, which was like I
+
+1050
+00:45:14,800 --> 00:45:19,039
+think the first time I saw people get
+
+1051
+00:45:16,400 --> 00:45:20,880
+really serious about using like
+
+1052
+00:45:19,039 --> 00:45:24,400
+different model families to doublech
+
+1053
+00:45:20,880 --> 00:45:30,000
+checkck the results of their main model.
+
+1054
+00:45:24,400 --> 00:45:32,000
+um the uh these like fusion models like
+
+1055
+00:45:30,000 --> 00:45:36,960
+I I like the research has been getting
+
+1056
+00:45:32,000 --> 00:45:40,079
+has been like kind of slow for years on
+
+1057
+00:45:36,960 --> 00:45:42,240
+like doing mixture of of models and
+
+1058
+00:45:40,079 --> 00:45:46,480
+composite models,
+
+1059
+00:45:42,239 --> 00:45:49,598
+but like things have been speeding up
+
+1060
+00:45:46,480 --> 00:45:52,960
+from my like view of the research and
+
+1061
+00:45:49,599 --> 00:45:54,559
+and I mean now we see like a bunch of AI
+
+1062
+00:45:52,960 --> 00:45:58,960
+agent labs
+
+1063
+00:45:54,559 --> 00:46:01,440
+Um like we launched a fusion uh tool, a
+
+1064
+00:45:58,960 --> 00:46:07,199
+fusion model and Cognition launched one
+
+1065
+00:46:01,440 --> 00:46:10,639
+and like they do reduce cost um follow
+
+1066
+00:46:07,199 --> 00:46:12,719
+and and allow like you know a wider
+
+1067
+00:46:10,639 --> 00:46:14,639
+breadth of ideas to be searched like our
+
+1068
+00:46:12,719 --> 00:46:17,199
+initial launch was focused on deep
+
+1069
+00:46:14,639 --> 00:46:18,879
+research. The thinking is that like if
+
+1070
+00:46:17,199 --> 00:46:22,318
+all these model apps are training on
+
+1071
+00:46:18,880 --> 00:46:26,400
+different sources of data like why not
+
+1072
+00:46:22,318 --> 00:46:29,039
+pull from all of them and uh and this
+
+1073
+00:46:26,400 --> 00:46:32,000
+like resulted in basically fable level
+
+1074
+00:46:29,039 --> 00:46:33,759
+quality at 2x lower cost.
+
+1075
+00:46:32,000 --> 00:46:36,960
+>> We just published results actually just
+
+1076
+00:46:33,760 --> 00:46:40,880
+just today about about that. We we we
+
+1077
+00:46:36,960 --> 00:46:42,240
+showed like a deep sweethe
+
+1078
+00:46:40,880 --> 00:46:44,000
+through through combination different
+
+1079
+00:46:42,239 --> 00:46:46,318
+things including the harness but but
+
+1080
+00:46:44,000 --> 00:46:48,159
+also you might think of it as a fusion
+
+1081
+00:46:46,318 --> 00:46:52,719
+type thing
+
+1082
+00:46:48,159 --> 00:46:56,639
+um where it's like um you know frontier
+
+1083
+00:46:52,719 --> 00:46:59,838
+level at like 40 to 50% of the cost
+
+1084
+00:46:56,639 --> 00:47:02,879
+>> and uh which models does it use? I think
+
+1085
+00:46:59,838 --> 00:47:05,759
+it's it changes over time, but one thing
+
+1086
+00:47:02,880 --> 00:47:07,440
+that has been interesting is I think
+
+1087
+00:47:05,760 --> 00:47:10,400
+OpenAI
+
+1088
+00:47:07,440 --> 00:47:15,599
+added this feature that allows you to
+
+1089
+00:47:10,400 --> 00:47:18,000
+save um the computation uh like uh
+
+1090
+00:47:15,599 --> 00:47:20,800
+across different model families. So you
+
+1091
+00:47:18,000 --> 00:47:22,400
+can like also across different um effort
+
+1092
+00:47:20,800 --> 00:47:22,800
+levels.
+
+1093
+00:47:22,400 --> 00:47:26,639
+Mhm.
+
+1094
+00:47:22,800 --> 00:47:28,318
+>> So, uh, like you wouldn't do
+
+1095
+00:47:26,639 --> 00:47:31,118
+you wouldn't miss the cash if you change
+
+1096
+00:47:28,318 --> 00:47:36,079
+the effort. Don't quote me on this. I
+
+1097
+00:47:31,119 --> 00:47:38,720
+think it's also across different models,
+
+1098
+00:47:36,079 --> 00:47:41,200
+which is hard to fathom how. I might be
+
+1099
+00:47:38,719 --> 00:47:43,838
+wrong though, but I I need to double
+
+1100
+00:47:41,199 --> 00:47:45,838
+check that. But I think, you know,
+
+1101
+00:47:43,838 --> 00:47:48,639
+staying within the OpenAI family has
+
+1102
+00:47:45,838 --> 00:47:50,400
+like added a lot of efficiencies, but in
+
+1103
+00:47:48,639 --> 00:47:52,480
+the past we've done it with other with
+
+1104
+00:47:50,400 --> 00:47:54,400
+other with other models as well because
+
+1105
+00:47:52,480 --> 00:47:56,159
+cache is is like one of the big like
+
+1106
+00:47:54,400 --> 00:47:58,160
+being cash aware is like one of the
+
+1107
+00:47:56,159 --> 00:48:01,358
+biggest things when you're designing
+
+1108
+00:47:58,159 --> 00:48:03,519
+fusion models, routers, um sort of
+
+1109
+00:48:01,358 --> 00:48:07,480
+escalation models. Alex, this has been a
+
+1110
+00:48:03,519 --> 00:48:07,480
+great conversation. Thank you. podcast.
