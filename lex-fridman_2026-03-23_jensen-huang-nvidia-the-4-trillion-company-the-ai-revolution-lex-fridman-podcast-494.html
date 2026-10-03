@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: Jensen Huang: NVIDIA - The $4 Trillion Company &amp; the AI Revolution | Lex Fridman Podcast #494</title>
+<meta name="description" content="Lex Fridman · 8 threads · extreme co-design · CUDA moat · scaling laws and agents · supply chain, power, space · token-factory growth thesis · China and open source · jobs and AGI · leadership and gaming">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="Jensen Huang: NVIDIA - The $4 Trillion Company &amp; the AI Revolution | Lex Fridman Podcast #494">
+<meta property="og:description" content="Lex Fridman · 8 threads · extreme co-design · CUDA moat · scaling laws and agents · supply chain, power, space · token-factory growth thesis · China and open source · jobs and AGI · leadership and gaming">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Jensen Huang: NVIDIA - The $4 Trillion Company &amp; the AI Revolution | Lex Fridman Podcast #494</h1>
+    <div class="byline">
+      Channel: <b>Lex Fridman</b> &middot; Speaker: <b>Jensen Huang (Nvidia CEO), Lex Fridman (host)</b> &middot; <b>2026-03-23</b>
+      <div class="stats-line">8 threads · extreme co-design · CUDA moat · scaling laws and agents · supply chain, power, space · token-factory growth thesis · China and open source · jobs and AGI · leadership and gaming &middot; <a href="https://www.youtube.com/watch?v=vif8NQcjVf0" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Jensen Huang's pitch: Nvidia now designs the whole AI factory — GPU, CPU, memory, networking, power, cooling, rack and pod — because <b>no problem fits one computer anymore</b>.</li><li>Moat = the CUDA install base (millions of developers, every cloud) plus annual execution velocity; the CUDA-on-GeForce bet cost ~<b>50%</b> more per chip and cut market cap to ~$1.5B.</li><li>Four scaling laws (pre-training, post-training, test-time, agentic) all end in 'more compute'; he calls OpenClaw-style agents 'the iPhone of tokens'.</li><li>Supply chain is 'checked off': he briefs hundreds of CEOs, gets multi-billion-dollar capex commitments, and says a Vera Rubin rack has ~1.3M components from ~200 suppliers.</li><li>Power view: the grid idles at ~60% of peak 99% of the time — build data centers that <b>gracefully degrade</b> instead of demanding six-nines uptime.</li><li>Growth thesis: computing shifts from file retrieval to token generation, so a <b>$3T</b>-revenue Nvidia is 'not limited by physical limits'; tokens at $1,000/million are 'when, not if'.</li><li>Says 'I think we've achieved AGI' (a briefly viral billion-dollar app), yet argues jobs persist because job purpose differs from tasks — radiology as the example.</li><li>CEO speaking about his own company: every figure and forecast here is Nvidia management's view.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="extreme-codesign">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">VERA RUBIN POD AND RACK-SCALE DESIGN</span><span class="ttag">ai-infra</span><span class="ttag">semis</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Extreme co-design: from the best GPU to a whole-stack AI factory</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Distributing a problem across thousands of computers makes every component — CPU, GPU, network, switch, power — a bottleneck, so Nvidia optimizes them together.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Amdahl's-law logic: if compute is <b>50%</b> of a workload, an infinite speedup of compute gives only 2x; Moore's law has slowed as Dennard scaling slowed.</li><li><span class="dot" style="background:#3f6b2e;"></span>Co-design spans architecture, chips, systems, system software, algorithms and applications, plus power and cooling.</li><li><span class="dot" style="background:#3f6b2e;"></span>Org design: Jensen has ~60 direct reports and no one-on-ones; every problem is attacked in the open by all of them, because the company's chart should mirror its product.</li><li><span class="dot" style="background:#3f6b2e;"></span>Vera Rubin pod: 7 chip types, 5 rack types, 40 racks, <b>1.2 quadrillion transistors</b>, ~20,000 dies, 1,100+ Rubin GPUs, 60 exaflops, 10 PB/s; the NVL72 rack alone is 1.3M components, 1,300 chips, 4,000 lb; ~200 pods per week.</li><li><span class="dot" style="background:#3f6b2e;"></span>MoE drove NVLink 72 over NVLink 8, putting a 4-10 trillion-parameter model into one domain; Grace Blackwell targeted LLM inference while Vera Rubin adds storage accelerators, the Vera CPU and a Groq rack for agents.</li><li><span class="dot" style="background:#3f6b2e;"></span>'Speed of light' method: test every metric (memory, math, power, cost, cycle time) against the physical limit; strip a '74-day' process back to what a from-scratch '6-day' version would be rather than continuous improvement.</li><li><span class="dot" style="background:#3f6b2e;"></span>Design rule: as complex as necessary, as simple as possible; calls it the most complex computer ever made.</li><li><span class="dot" style="background:#3f6b2e;"></span>Architecture cadence: new model architectures about every 6 months, hardware architectures about every 3 years — so he anticipates via internal research, working with every AI company, and a flexible CUDA (now 13.2).</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;We need things to be as complex as necessary but as simple as possible.&#8221;<cite>— Jensen Huang</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Rack-scale 'AI factory' design: Vera Rubin pod, NVL72, annual cadence</span></div><div class="namechip"><b>Groq<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>A Groq rack is part of the new Vera Rubin system for running agents</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Speaker is Nvidia's CEO describing his own product roadmap and organization.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="cuda-moat">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">THE CUDA INSTALL-BASE STORY</span><span class="ttag">ai-infra</span><span class="ttag">software</span><span class="ttag">semis</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">CUDA install base: the bet that nearly broke Nvidia is now the moat</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Nvidia's single most important asset is the installed base of CUDA — not the technology, which anyone could copy.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Path to programmability: programmable pixel shader, then IEEE-compatible FP32 in shaders, then Cg, then CUDA — expanding from accelerator toward computing without losing specialization.</li><li><span class="dot" style="background:#3f6b2e;"></span>Putting CUDA on every GeForce raised GPU cost ~<b>50%</b> when the company ran ~35% gross margin; market cap fell from ~$8B to ~$1.5B and recovery took about a decade.</li><li><span class="dot" style="background:#3f6b2e;"></span>'Nvidia is the house GeForce built' — researchers and gamers found CUDA on consumer GPUs; GeForce is still the top marketing strategy because teenagers learn the brand first.</li><li><span class="dot" style="background:#3f6b2e;"></span>Install base defines an architecture: x86 survived criticism while elegant RISC designs failed; OpenCL and others lost.</li><li><span class="dot" style="background:#3f6b2e;"></span>Moat today: 43,000 employees plus several million developers; yearly cadence means 'wait six months, it gets 10x better'; reach into a few hundred million computers, every cloud, every industry.</li><li><span class="dot" style="background:#3f6b2e;"></span>Footprint he lists: Google Cloud, AWS (ramping 'like crazy'), Azure, CoreWeave, Nscale, a Lilly supercomputer, enterprise, radio base stations, cars, robots, satellites and space.</li><li><span class="dot" style="background:#3f6b2e;"></span>Strategy: vertically designed, horizontally open — 'nobody can buy anything from us'; Nvidia doesn't build clouds or computers to sell.</li><li><span class="dot" style="background:#3f6b2e;"></span>He shapes belief ahead of announcements (Mellanox, deep learning, Groq: two and a half years of GTC stepping stones) so employees say 'what took you so long?'.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>CUDA install base and annual velocity named as the core moat</span></div><div class="namechip"><b>Amazon (AMZN)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>AWS capacity with Nvidia 'ramping like crazy'</span></div><div class="namechip"><b>Alphabet (GOOGL)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Google Cloud listed among Nvidia platforms</span></div><div class="namechip"><b>Microsoft (MSFT)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Azure listed among Nvidia platforms</span></div><div class="namechip"><b>CoreWeave (CRWV)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Neocloud running Nvidia architecture</span></div><div class="namechip"><b>Nscale<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>New cloud company running Nvidia architecture</span></div><div class="namechip"><b>Eli Lilly (LLY)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Runs an Nvidia supercomputer; Nvidia wants Lilly to have the best biology AI</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Moat claims come from the CEO of the company being assessed.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="scaling-agents">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">FOUR SCALING LAWS AND OPENCLAW</span><span class="ttag">ai-infra</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Four scaling laws, thinking-is-hard inference, and OpenClaw as the iPhone of tokens</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Intelligence scales with compute at every stage — pre-training, post-training, test-time and agentic — so inference will never be 'easy'.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Pre-training is not over: data will increasingly be synthetic (as most human teaching data already is), so training becomes compute-limited, not data-limited.</li><li><span class="dot" style="background:#3f6b2e;"></span>Test-time scaling: 'inference is thinking, and thinking is way harder than reading' — he calls the 'little tiny inference chips, commoditized' view illogical.</li><li><span class="dot" style="background:#3f6b2e;"></span>Agentic scaling multiplies AI via sub-agents (like scaling Nvidia by hiring); agent experience flows back into pre-training in a loop.</li><li><span class="dot" style="background:#3f6b2e;"></span>He reasons agents must use tools and files — the humanoid-robot-uses-your-microwave thought experiment — so AI won't destroy software.</li><li><span class="dot" style="background:#3f6b2e;"></span>He claims Vera Rubin was designed before Claude Code, Codex and OpenClaw, and that his GTC agentic schematic of two years ago matches OpenClaw today; OpenClaw did for agents what ChatGPT did for generative AI.</li><li><span class="dot" style="background:#3f6b2e;"></span>OpenClaw is 'the iPhone of tokens' and the fastest-growing application in history; awareness jumped around December across Claude Code, Codex and OpenClaw.</li><li><span class="dot" style="background:#3f6b2e;"></span>Security: Nvidia built OpenShell and NemoClaw; rule of giving an agent at most two of three rights — access sensitive info, execute code, communicate externally — plus enterprise access control and policy engines.</li><li><span class="dot" style="background:#3f6b2e;"></span>Jensen programmed by voice at the airport; predicts your 'claws' will message you most.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Inference is thinking, and I think thinking is way harder than reading.&#8221;<cite>— Jensen Huang</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Claude and Claude Code named as models/agents that reached the capability OpenClaw needed</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>GPT and Codex named alongside Claude as the capability base for agents</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Jensen sells the compute that agent and inference scaling consumes.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="supply-power-space">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">BOTTLENECKS: SUPPLY CHAIN, POWER, SPACE</span><span class="ttag">semis</span><span class="ttag">energy</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Supply chain 'checked off', idle grid capacity, TSMC trust and compute in space</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jensen says he sleeps well on supply because he told partners what he needs and believes what they will build — power is the one he wants to engineer around.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Efficiency: Moore's law would have delivered ~100x in ten years; Nvidia claims ~1,000,000x via co-design; token cost falls about an order of magnitude a year even as system prices rise.</li><li><span class="dot" style="background:#93711b;"></span>He briefs hundreds of CEOs (a GTC keynote with practically the whole IT and infrastructure supply chain) and gets multi-billion-dollar capex per supplier; ~200 suppliers feed the ~1.3-1.5M-component Vera Rubin rack.</li><li><span class="dot" style="background:#93711b;"></span>About three years ago he convinced DRAM CEOs that HBM and phone-style LPDDR memory would go mainstream in data centers; all three had record years.</li><li><span class="dot" style="background:#93711b;"></span>NVLink 72 moved supercomputer integration into the supply chain: racks ship at 2-3 tons each; a 50 GW build rate would imply about 1 GW of power per week of manufacturing.</li><li><span class="dot" style="background:#93711b;"></span>Grid idea: it runs near <b>60%</b> of peak, so 99% of the time it has idle capacity; asks customers to drop six-nines uptime contracts, build gracefully degrading data centers, and have utilities sell lower-guarantee power next month instead of in 5 years.</li><li><span class="dot" style="background:#93711b;"></span>Elon's xAI Colossus in Memphis (built in ~4 months, now 200,000 GPUs): Jensen praises questioning necessity, minimalism, presence at the point of action and urgency that pulls suppliers along.</li><li><span class="dot" style="background:#93711b;"></span>TSMC: more than tech — it orchestrates volatile demand from hundreds of customers, balances technology and service, and holds trust; ~3 decades, hundreds of billions of dollars with no contract; Morris Chang offered Jensen the TSMC CEO job in 2013 and he declined.</li><li><span class="dot" style="background:#93711b;"></span>Space: Nvidia GPUs are already in space for edge imaging; he sends engineers on radiation, redundancy and cooling (radiators only) but prioritizes eliminating waste on Earth; software goal: 'the computer never breaks, it just gets slower'.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>TSMC<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Close ~30-year supplier; trust, manufacturing orchestration and technology cited as unmatched</span></div><div class="namechip"><b>ASML<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>EUV lithography named by host as a supply-chain constraint</span></div><div class="namechip"><b>SK Hynix<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>HBM named by host as a supply-chain constraint</span></div><div class="namechip"><b>xAI<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Colossus Memphis built in ~4 months, 200,000 GPUs; Jensen praises Elon's execution</span></div><div class="namechip"><b>GE Vernova (GEV), Caterpillar (CAT)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Downstream power-equipment suppliers named by host and confirmed by Jensen</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Jensen controls how much he discloses about supplier commitments; ASML EUV, TSMC CoWoS packaging and SK Hynix HBM were named by the host as bottlenecks and he said he works on them 'all the time'.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="token-factory-thesis">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">NVIDIA GROWTH AND TOKEN ECONOMICS</span><span class="ttag">ai-infra</span><span class="ttag">macro-rates</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Why Nvidia's growth is 'inevitable': computers become revenue-making token factories</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Computing is shifting from file retrieval to real-time generation, and the computer's role from warehouse to factory.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Generative computing needs far more processing than retrieval, which needed storage; the only way back is if generative computing stops being effective — five years of evidence raised his confidence.</li><li><span class="dot" style="background:#3f6b2e;"></span>Factories drive revenue, warehouses don't: tokens are segmenting like iPhones into free, premium and high-intelligence tiers; <b>$1,000 </b>per million tokens is 'just around the corner — not if, only when'.</li><li><span class="dot" style="background:#3f6b2e;"></span>He expects world GDP growth to accelerate and the <b>share of GDP spent on compute to be ~100x</b> the past.</li><li><span class="dot" style="background:#3f6b2e;"></span>A <b>$3 trillion</b>-revenue Nvidia is possible: 'not limited by any physical limits', the burden is shared by 200 suppliers; the open question is energy.</li><li><span class="dot" style="background:#3f6b2e;"></span>'Nvidia is not in the market share business' — most of the market doesn't exist yet; past naysayers said a fabless chip company couldn't pass <b>$1B</b> or $25B.</li><li><span class="dot" style="background:#3f6b2e;"></span>Unit of computing grew from GPU to computer to cluster to AI factory — a gigawatt site needing thousands of people to power up; next mental unit is 'planetary scale'.</li><li><span class="dot" style="background:#3f6b2e;"></span>He calls Nvidia's growth 'extremely likely and in my mind inevitable' and answers the host's <b>$10 trillion</b> question with the same logic.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Nvidia is not in the market share business. Almost everything that I just talked about doesn't exist.&#8221;<cite>— Jensen Huang</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High · near future</span></b><span>CEO argues $3T revenue is feasible and growth 'inevitable' on token-factory demand</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">All forecasts come from the CEO of the company; the host asked about a $10T valuation and Jensen answered in terms of revenue potential, not a price target.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="china-open-source">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">CHINA AND OPEN-SOURCE AI</span><span class="ttag">geopolitics</span><span class="ttag">ai-infra</span><span class="ttag">policy</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">China's innovation engine and why Nvidia open-sources Nemotron</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jensen calls China the fastest-innovating country, and says Nvidia must open-source models to diffuse AI beyond language.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Facts he cites: roughly <b>50%</b> of the world's AI researchers are Chinese, mostly still in China; their tech industry arrived with the mobile-cloud software era.</li><li><span class="dot" style="background:#93711b;"></span>Competing provinces and mayors produce many EV and AI companies; a family-first, schoolmates-for-life culture favors sharing, so open source is natural.</li><li><span class="dot" style="background:#93711b;"></span>Contrast: US leaders are mostly lawyers; China's are often engineers; 'a builder nation'.</li><li><span class="dot" style="background:#93711b;"></span>Nemotron 3 Super is a 120B open-weight model (transformer plus SSM) with open weights, data and training recipe.</li><li><span class="dot" style="background:#93711b;"></span>Three reasons to open-source: stay close to model-architecture evolution (Nvidia's earlier work on progressive GANs led to diffusion), diffuse AI to every industry and country, and push non-language AI (biology, physics, weather, cars).</li><li><span class="dot" style="background:#93711b;"></span>Proprietary frontier models can still be products; open source 'activates' every industry, researcher and country.</li><li><span class="dot" style="background:#93711b;"></span>DeepSeek is named among Chinese open-source leaders by the host.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>DeepSeek<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Named by host as part of China's open-source push</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Jensen has a commercial interest in open models that run on Nvidia hardware and in China market access.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="jobs-agi-intelligence">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Counterintuitive take</span>
+    <span class="theme-status">AGI, JOBS AND THE VALUE OF INTELLIGENCE</span><span class="ttag">career</span><span class="ttag">ai-infra</span><span class="ttag">policy</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">'We've achieved AGI' — but jobs are purposes, not tasks</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jensen says AGI is here under a narrow definition, yet insists jobs survive because tools change while a job's purpose doesn't.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Host's test: an AI that starts and runs a &gt;$1B technology company. Jensen: 'I think we've achieved AGI' — an agent could build a viral app used by billions for a while; odds that 100,000 agents build Nvidia: <b>0%</b>.</li><li><span class="dot" style="background:#93711b;"></span>Radiology example: computer vision was superhuman around 2019-20, yet radiologists grew and there is now a shortage — the purpose (diagnosis) expanded as scans got faster.</li><li><span class="dot" style="background:#93711b;"></span>He expects Nvidia's software engineer headcount to grow; coding is now 'specification', so coders go from ~30 million to ~1 billion and 'every carpenter will be a coder'.</li><li><span class="dot" style="background:#93711b;"></span>Advice: hire the AI-expert graduate over the novice; every college student should graduate an AI expert; if your job is the task, you're at risk.</li><li><span class="dot" style="background:#93711b;"></span>Underspecify on purpose: he gives strategies specific enough to act on but loose enough for 43,000 people to improve.</li><li><span class="dot" style="background:#93711b;"></span>'Intelligence is a commodity'; his ~60 direct reports are all 'superhuman' in their areas; the thing to elevate is humanity and character.</li><li><span class="dot" style="background:#93711b;"></span>He says chips won't feel nervousness, though AI can recognize it; open to being surprised on consciousness.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;The purpose of your job and the tasks and tools you use to do your job are related, not the same.&#8221;<cite>— Jensen Huang</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Jensen sells the compute behind AI automation, and the radiology claim is his anecdote, not a cited study.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="leadership-gaming">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Personal story</span>
+    <span class="theme-status">LEADERSHIP, GAMING, MORTALITY</span><span class="ttag">mindset</span><span class="ttag">career</span><span class="ttag">consumer</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">How Jensen handles pressure, why DLSS 5 isn't 'AI slop', and his view on mortality</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">He decomposes problems, tells someone, forgets setbacks and keeps moving toward 'the next shiny light'.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>Pressure routine: reason through what changed, decide what you can do, 'do it or get somebody to do it', share the worry with someone who can act, then sleep; 'stop crying about it'.</li><li><span class="dot" style="background:#65695f;"></span>Superpowers he names: a child's mind ('how hard can it be?'), endurance for setbacks, forgetting like an athlete's next point, and believing your reasoning while re-evaluating inputs.</li><li><span class="dot" style="background:#65695f;"></span>He reasons in front of people so they can disagree with steps, not outcomes; his first job was cleaning toilets (Denny's).</li><li><span class="dot" style="background:#65695f;"></span>Famous line: if he'd known how hard Nvidia would be (a million times harder), he wouldn't have done it.</li><li><span class="dot" style="background:#65695f;"></span>DLSS 5 backlash: he says it is 3D-conditioned and guided by artist geometry and textures, open so artists can train styles (even toon shaders), not post-processing; skin shaders add subsurface scattering.</li><li><span class="dot" style="background:#65695f;"></span>Games: Doom as most influential, Virtua Fighter for technology, Cyberpunk 2077 fully ray traced, Skyrim with Nvidia's RTX Remix modding tool.</li><li><span class="dot" style="background:#65695f;"></span>Death and succession: 'I really don't want to die'; no succession planning — pass knowledge constantly; hopes to 'die on the job'.</li><li><span class="dot" style="background:#65695f;"></span>Speculation: end of disease is reasonable; understanding biology is about 5 years away; he'd send a humanoid on a spaceship and beam his uploaded AI after it.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Personal reflections and wishes, not forecasts for the business.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🧩</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Judge Nvidia on CUDA install base and annual cadence, not on chip specs alone.</span></div></div><div class="irow"><div class="ic">⚡</div><div class="tline"><span class="cat">Energy:</span> <span class="txt">Watch deals that let data centers draw flexible, lower-guarantee grid power.</span></div></div><div class="irow"><div class="ic">🛠</div><div class="tline"><span class="cat">Supply chain:</span> <span class="txt">Track HBM, CoWoS and EUV capacity commitments among Nvidia's 200 suppliers.</span></div></div><div class="irow"><div class="ic">🤖</div><div class="tline"><span class="cat">Agents:</span> <span class="txt">Treat agent adoption (OpenClaw-style) as a compute-demand driver and note the two-of-three-rights security rule.</span></div></div><div class="irow"><div class="ic">💼</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Learn to specify and direct AI agents in your own field rather than defending a task list.</span></div></div><div class="irow"><div class="ic">📊</div><div class="tline"><span class="cat">Valuation:</span> <span class="txt">Test the <b>$3T</b>-revenue claim against token pricing, energy supply and GDP-share-of-compute assumptions.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;I think we've achieved AGI.&#8221; <cite>— Jensen Huang</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The idea that somebody's willing to pay $1,000 per million tokens is just around the corner. It's not if, it's only when.&#8221; <cite>— Jensen Huang</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I'm absolutely certain the percentage of that GDP that will be used for computation will be 100 times more than the past.&#8221; <cite>— Jensen Huang</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The odds of 100,000 of those agents building Nvidia: 0%.&#8221; <cite>— Jensen Huang</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Nvidia's growth is extremely likely and in my mind inevitable.&#8221; <cite>— Jensen Huang</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The number of software engineers at Nvidia is going to grow, not decline.&#8221; <cite>— Jensen Huang</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Jensen Huang:</b> Nvidia can reach $3 trillion in revenue in the near future, limited by energy rather than physics. <span class="cmeta">Nvidia annual revenue · $3 trillion · near future</span> <i>if if enough energy is available</i> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>Jensen Huang:</b> Customers will pay $1,000 per million tokens for the most valuable specialized tokens. <span class="cmeta">premium token price · $1,000 per million tokens</span></div><div class="ritem"><b>Jensen Huang:</b> Share of GDP spent on computation will be 100 times higher than in the past. <span class="cmeta">compute share of GDP · 100x</span></div><div class="ritem"><b>Jensen Huang:</b> Token cost falls about an order of magnitude every year through co-design. <span class="cmeta">token cost · 10x lower per year</span> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>Jensen Huang:</b> Understanding the biological machine is about five years away. <span class="cmeta">biology understood · achieved · 5 years</span></div><div class="ritem"><b>Jensen Huang:</b> The number of software engineers at Nvidia will grow, not decline. <span class="cmeta">Nvidia software engineer headcount · growth</span> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>Jensen Huang:</b> People who can specify software to a computer grow from about 30 million to about 1 billion. <span class="cmeta">people able to code via specification · 1 billion</span></div><div class="ritem"><b>Jensen Huang:</b> Nvidia turns out about 200 Vera Rubin pods a week. <span class="cmeta">Vera Rubin pods per week · ~200</span> <span class="tag">Nvidia (NVDA)</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>TSMC</b> <span class="rel">supplies</span> <b>Nvidia (NVDA)</b> &mdash; ~3 decades of business, hundreds of billions of dollars, no contract</div><div class="ritem"><b>Eli Lilly (LLY)</b> <span class="rel">customer of</span> <b>Nvidia (NVDA)</b> &mdash; runs an Nvidia supercomputer; Nvidia supplies biology AI</div><div class="ritem"><b>CoreWeave (CRWV)</b> <span class="rel">customer of</span> <b>Nvidia (NVDA)</b> &mdash; Nvidia architecture runs in CoreWeave</div><div class="ritem"><b>Amazon (AMZN)</b> <span class="rel">customer of</span> <b>Nvidia (NVDA)</b> &mdash; AWS ramping Nvidia 'like crazy'</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: Ilya Sutskever's 'we're out of data / pre-training is over' remark; the OpenClaw creator Peter's podcast with Lex; Jim Cramer (retail investors); Morris Chang's 2013 TSMC CEO offer; Alan Kay quote that closes the show ('the best way to predict the future is to invent it'). <span class="tag">Sources</span></div></div></div><div class="irow"><div class="ic">🎮</div><div><div class="title">Gaming: GeForce remains Nvidia's number one marketing strategy; Nvidia's RTX Remix lets modders inject new graphics tech into older games such as Skyrim. <span class="tag">Consumer</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Extreme co-design</b> &mdash; Jointly optimizing chips, networking, memory, power, cooling, software and the whole data center instead of one component at a time.</div><div><b>Amdahl's law</b> &mdash; Speeding up one part of a workload is capped by how much of the total workload that part is.</div><div><b>AI factory</b> &mdash; Jensen's term for a data center whose product is tokens, i.e. generated intelligence, and which drives revenue.</div><div><b>Speed of light (Jensen)</b> &mdash; His shorthand for the physical limit of any metric, used to benchmark designs before improving incrementally.</div><div><b>NVLink 72</b> &mdash; Nvidia's rack-scale interconnect joining 72 GPUs into one computing domain.</div><div><b>Graceful degradation</b> &mdash; Data-center design where compute slows or moves workloads during grid stress rather than going down.</div><div><b>OpenClaw</b> &mdash; Open-source agent project that Jensen calls the 'iPhone of tokens'.</div><div><b>DLSS 5</b> &mdash; Nvidia's AI rendering tech, described as guided by the artist's 3D geometry and textures.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
