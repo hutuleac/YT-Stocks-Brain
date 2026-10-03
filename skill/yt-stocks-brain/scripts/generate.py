@@ -81,7 +81,8 @@ import shutil
 import sys
 import unicodedata
 
-from build_kb import build as build_kb
+from build_kb import DB_PATH as KB_PATH, build as build_kb
+from signals import render as render_signals
 from entities import Registry, split_list as _split_entity_list
 
 sys.dont_write_bytecode = True  # don't litter the working directory with __pycache__
@@ -261,6 +262,15 @@ html.dark .namechip .stance{color:#fff;}
 """
 
 INDEX_CSS = CSS + """
+.sig-intro{font-size:14px;color:var(--muted);line-height:1.55;margin:4px 0 18px;max-width:760px;}
+.sig-h{font-family:var(--serif);font-size:clamp(18px,1.4vw,22px);margin:28px 0 2px;}
+.sig-note{font-size:13px;color:var(--muted);font-style:italic;margin:0 0 12px;}
+.sig-fwd{margin-top:10px;padding:10px 12px;border-radius:8px;background:var(--line);font-size:13.3px;line-height:1.5;}
+.sig-fwd span{display:block;font-weight:600;font-size:12px;color:var(--brand);margin-bottom:4px;}
+.sig-fwd ul{margin:0;padding-left:18px;}
+.sig-by{color:var(--muted);font-size:12px;white-space:nowrap;}
+ul.rows.sig-tags li{display:flex;gap:12px;justify-content:space-between;}
+ul.rows.sig-tags span{color:var(--muted);font-variant-numeric:tabular-nums;}
 .idx-stats{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:6px;}
 .idx-stats span{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);}
 .controls{position:sticky;top:0;z-index:5;background:var(--card);margin:0 calc(-1*clamp(18px,4vw,56px)) 22px;
@@ -1133,6 +1143,7 @@ def build_index():
     briefs = [b for b in (_load_brief(p) for p in sorted(glob.glob(os.path.join("research-data", "*", "*.json")))) if b]
     briefs.sort(key=lambda b: _date_sort_key(b["date"]))
     reg = _canonicalize_entities(briefs)
+    kb_warnings = build_kb(briefs, reg)
 
     channels = sorted(set(b["channel"] for b in briefs))
     tickers = sorted(set(e["ticker"] for b in briefs for e in b["entities"] if e["ticker"]))
@@ -1168,6 +1179,7 @@ def build_index():
     <div class="tabs">
       <button class="tab active" data-view="chrono">All Briefs</button>
       <button class="tab" data-view="channel">By Channel</button>
+      <button class="tab" data-view="signals">Signals</button>
       <button class="tab" data-view="entity">By Company / Ticker</button>
       <button class="tab" data-view="content">Quotes &amp; Takes</button>
       <button class="tab" data-view="dev">Dev &amp; Workflows</button>
@@ -1176,6 +1188,7 @@ def build_index():
     </div>
     <div id="view-chrono" class="view active">{_render_chrono_view(briefs)}</div>
     <div id="view-channel" class="view">{_render_channel_view(briefs)}</div>
+    <div id="view-signals" class="view">{render_signals(KB_PATH)}</div>
     <div id="view-entity" class="view">{_render_entity_view(briefs)}</div>
     <div id="view-content" class="view"><div id="hits-mount"><p class="empty">Type to search quotes, recommendations, claims, and opinions across every indexed brief.</p></div></div>
     <div id="view-dev" class="view">{_render_chrono_view(dev_briefs)}</div>
@@ -1200,7 +1213,7 @@ def build_index():
     with open("library.json", "w", encoding="utf-8") as f:
         json.dump(manifest, f, indent=1, ensure_ascii=False)
 
-    for w in reg.summary_warnings() + build_kb(briefs, reg):
+    for w in reg.summary_warnings() + kb_warnings:
         print(f"warning: {w}")
     if reg.save():
         print(f"Updated {reg.path} (new entities/aliases — commit it with the brief)")

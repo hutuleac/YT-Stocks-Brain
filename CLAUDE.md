@@ -67,6 +67,11 @@ Key things baked into the current skill that aren't obvious from a first read:
     entity_aliases, themes, theme_tags, mentions, claims (+due_date), claim_entities,
     claim_speakers, relations, takes`; views `entity_timeline`, `co_mentions`, `speaker_claims`.
   - Registry/KB checks warn, never fail a run (explicit decision).
+  - **Signals tab** (`scripts/signals.py`, rendered from `kb/brain.db` on every run): direction,
+    not precision — last 30 days vs the 60 before, normalized per brief. Lenses: gaining
+    attention, early signals (new + multi-channel), sentiment turning, contested now, themes
+    gaining, new connections; rows expand to recent stances + forward claims. User intent: spot
+    trends and themes early; don't turn this into prediction scoring.
 - **Fixing a brief after the root data file is deleted:** edit
   `research-data/<slug>/<slug>_data.py` in place and run `generate.py` against that path.
 
