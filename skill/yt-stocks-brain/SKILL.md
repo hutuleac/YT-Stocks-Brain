@@ -195,6 +195,9 @@ For each theme, capture:
   `python3 -c "import json;d=json.load(open('library.json'));print(sorted({e['display'] for b in d['briefs'] for e in b['entities'] if 'nvidia' in e['display'].lower()}))"`
   (swap the search term). This is a forward-looking hygiene habit, not a mandate to go back and
   fix older entries — existing variant rows are left as-is unless the user asks for a cleanup pass.
+  Since Oct 2026 the index merges variants automatically (`scripts/entities.py`: ticker match,
+  case, trailing qualifiers); a split row that still shows up gets one line in the repo's
+  `kb/aliases.json`, never a per-brief workaround.
 
   **Never write a name you can only reach by guessing through a garbled caption.** Auto-captions
   mangle proper nouns constantly (ERCOT→"Urkott", FERC→"FK", Cerebras→"Cerrus", Cagney→"Kagny",
