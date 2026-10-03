@@ -54,14 +54,19 @@ Key things baked into the current skill that aren't obvious from a first read:
   `python3 <skill-folder>/check_coverage.py <inventory.md> <slug> --ignore=Surname`
   Point it at the slug, never at `library.json` — that's the manifest and has no bullets, so it
   reports nearly every fact as missing. Exit 1 means something is unplaced.
-- **Entity canonicalization + knowledge base (since Oct 2026):** every `generate.py` run resolves
-  all entity strings (names, claim `entity`, relation `from`/`to`) to one stable `key` via
-  `skill/yt-stocks-brain/scripts/entities.py` (ticker if known, else lowercased name; qualifiers
-  like `(comparison)` dropped; tickers learned across mentions). Semantic merges the resolver
-  can't infer (`Meta Platforms`→`Meta`, `.KS` tickers) go in `kb/aliases.json` — the only place
-  to fix a split company row. The same run rebuilds `kb/brain.db` (SQLite, gitignored, derived):
-  tables `briefs/entities/entity_aliases/themes/theme_tags/mentions/claims/relations/takes`, views
-  `entity_timeline` and `co_mentions`. `library.json` entities now carry `key`.
+- **Knowledge base layers (since Oct 2026):**
+  - `research-data/*/*.json` — source of truth per video (`schema_version` 2; absent = 1).
+  - `kb/entities.json` — committed identity registry, one line per entity/speaker: permanent
+    slug key + editable `name`/`ticker`/`kind`/`aliases`. Every entity string (names, claim
+    `entity` and `who`, relation endpoints) resolves through it (`scripts/entities.py`). Unknown
+    strings auto-register as `kind: unknown` with a `warning:`; set the kind and commit the file
+    with the brief. A split company row is fixed by moving aliases here, nowhere else.
+  - `kb/claim_outcomes.json` — committed claim verdicts keyed by `claim_id`.
+  - `kb/brain.db` — derived SQLite, gitignored, rebuilt by every `generate.py` run. Stable ids:
+    brief = YouTube video id, claim = video id + hash(who+claim). Tables `briefs, entities,
+    entity_aliases, themes, theme_tags, mentions, claims (+due_date), claim_entities,
+    claim_speakers, relations, takes`; views `entity_timeline`, `co_mentions`, `speaker_claims`.
+  - Registry/KB checks warn, never fail a run (explicit decision).
 - **Fixing a brief after the root data file is deleted:** edit
   `research-data/<slug>/<slug>_data.py` in place and run `generate.py` against that path.
 

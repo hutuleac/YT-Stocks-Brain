@@ -82,7 +82,7 @@ import sys
 import unicodedata
 
 from build_kb import build as build_kb
-from entities import Resolver
+from entities import Registry, split_list as _split_entity_list
 
 sys.dont_write_bytecode = True  # don't litter the working directory with __pycache__
 
@@ -636,8 +636,12 @@ def build_html(data):
     return html
 
 
+SCHEMA_VERSION = 2  # 1 = pre-Oct-2026 briefs (no field); 2 = adds schema_version itself
+
+
 def build_json(data):
     return {
+        "schema_version": SCHEMA_VERSION,
         "meta": data.META,
         "snapshot": data.SNAPSHOT,
         "themes": data.THEMES,
@@ -674,22 +678,6 @@ INVESTABLE_CATEGORY_HINTS = (
 )
 
 
-def _split_entity_list(raw):
-    """Split on top-level commas only — commas inside parens (e.g. an aside like
-    "Memory semis (Samsung, SK Hynix implied)") don't count as separate entities."""
-    parts, depth, buf = [], 0, []
-    for ch in raw:
-        if ch == "(":
-            depth += 1
-        elif ch == ")":
-            depth = max(0, depth - 1)
-        if ch == "," and depth == 0:
-            parts.append("".join(buf))
-            buf = []
-        else:
-            buf.append(ch)
-    parts.append("".join(buf))
-    return [p.strip() for p in parts if p.strip()]
 
 
 def _parse_ticker(piece):
@@ -1120,28 +1108,31 @@ INDEX_JS = """
 
 
 def _canonicalize_entities(briefs):
-    """Rewrite every entity's ticker/display to its canonical form and add a stable "key".
-    Claim/relation entity strings are observed too, so tickers written there are learned."""
-    r = Resolver()
+    """Resolve every entity string (names, claim entities/speakers, relation endpoints) through
+    the kb/entities.json registry, then rewrite each mention's display/ticker from it and add
+    its permanent "key". Claims and relations go first so a ticker written there reaches the
+    index in the same run."""
+    reg = Registry()
     for b in briefs:
-        for e in b["entities"]:
-            r.observe(e["raw"])
         for c in b["_raw"].get("claims") or []:
-            r.observe(c.get("entity"))
+            reg.resolve_list(c.get("entity"))
+            reg.resolve_who(c.get("who"), b["speakers"], b["channel"])
         for x in b["_raw"].get("relations") or []:
-            r.observe(x.get("from"))
-            r.observe(x.get("to"))
+            reg.resolve_list(x.get("from"))
+            reg.resolve_list(x.get("to"))
+        for e in b["entities"]:
+            e["key"] = reg.resolve(e["raw"])
     for b in briefs:
         for e in b["entities"]:
-            c = r.resolve(e["raw"])
-            e.update(key=c["key"], display=c["name"], ticker=c["ticker"])
-    return r
+            ent = reg.get(e["key"])
+            e["display"], e["ticker"] = ent["name"], ent.get("ticker")
+    return reg
 
 
 def build_index():
     briefs = [b for b in (_load_brief(p) for p in sorted(glob.glob(os.path.join("research-data", "*", "*.json")))) if b]
     briefs.sort(key=lambda b: _date_sort_key(b["date"]))
-    resolver = _canonicalize_entities(briefs)
+    reg = _canonicalize_entities(briefs)
 
     channels = sorted(set(b["channel"] for b in briefs))
     tickers = sorted(set(e["ticker"] for b in briefs for e in b["entities"] if e["ticker"]))
@@ -1209,7 +1200,10 @@ def build_index():
     with open("library.json", "w", encoding="utf-8") as f:
         json.dump(manifest, f, indent=1, ensure_ascii=False)
 
-    build_kb(briefs, resolver)
+    for w in reg.summary_warnings() + build_kb(briefs, reg):
+        print(f"warning: {w}")
+    if reg.save():
+        print(f"Updated {reg.path} (new entities/aliases — commit it with the brief)")
 
     return "index.html"
 

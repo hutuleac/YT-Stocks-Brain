@@ -195,9 +195,11 @@ For each theme, capture:
   `python3 -c "import json;d=json.load(open('library.json'));print(sorted({e['display'] for b in d['briefs'] for e in b['entities'] if 'nvidia' in e['display'].lower()}))"`
   (swap the search term). This is a forward-looking hygiene habit, not a mandate to go back and
   fix older entries — existing variant rows are left as-is unless the user asks for a cleanup pass.
-  Since Oct 2026 the index merges variants automatically (`scripts/entities.py`: ticker match,
-  case, trailing qualifiers); a split row that still shows up gets one line in the repo's
-  `kb/aliases.json`, never a per-brief workaround.
+  Since Oct 2026 every entity string resolves through the repo's identity registry
+  `kb/entities.json` (`scripts/entities.py`): case, trailing qualifiers and known tickers merge
+  automatically. A split row that still shows up is fixed by moving the stray variant into the
+  right entity's `aliases` there — never a per-brief workaround. Keys are permanent; edit
+  `name`/`ticker`/`kind`, never the key.
 
   **Never write a name you can only reach by guessing through a garbled caption.** Auto-captions
   mangle proper nouns constantly (ERCOT→"Urkott", FERC→"FK", Cerebras→"Cerrus", Cagney→"Kagny",
@@ -266,6 +268,11 @@ sponsor material and continue capturing the surrounding content normally.
   least one of the three is filled; `condition` is the speaker's own "if" or `None`; `entity` is
   the `"Company (TICKER)"`, asset, or region the call is about, or `None`. Include upcoming
   catalysts the speaker points at (earnings dates, launches, rulings) with the date as `by`.
+  Write `who` as the speaker's full name (`"David Sacks"`, not `"Sacks"`; several speakers
+  joined with ` / `; provenance in parens: `"Polymarket (cited by Jason Calacanis)"`) and `by` as
+  an ISO date or month (`"2026-10-30"`, `"2026-12"`) whenever the speaker gave one — relative
+  spans ("12-18 months") are fine when that's all they said. Both feed per-speaker track
+  records with real due dates in `kb/brain.db`.
   A claim that already lives in a bullet or hot take still gets a row here — this section is
   structure over the same material, so the no-duplicate rule does NOT apply. Numbers stated as
   history ("we did $400B last quarter") are bullets, not claims; a claim is something the future
@@ -377,6 +384,12 @@ correction pass rather than re-deriving a fresh data file from the transcript.
   `RELATIONS` row uses a verb from the fixed set and canonical entity strings; every theme has
   `tags`. `generate.py` prints a `warning:` line for any unknown tag, stance or verb — a clean
   run has none.
+- Registry warnings are resolved before committing. `new entity '<key>' ... set its kind` →
+  open `kb/entities.json`, set that entry's `kind` (company / fund / crypto / commodity / person /
+  country / government / org / product / group / other); if it's really an existing entity under
+  a new spelling, move the alias onto that entity and delete the new line instead. A ticker
+  conflict warning means a typo in the brief (fix the data file) or a real new listing (update
+  `ticker` on the entity). Commit `kb/entities.json` together with the brief.
 - No fact appears in two theme cards (see the dedup rule in Section 4). `HOT_TAKES` is exempt —
   it deliberately re-surfaces lines that also live in a theme.
 - `HOT_TAKES` entries are verbatim/near-verbatim and each one would actually make someone
