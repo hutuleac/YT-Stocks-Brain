@@ -1,0 +1,219 @@
+META = {
+    "title": "Trump’s Super Intelligence Summit, AI Safety Accord, GDP Beats, Midterm Predictions",
+    "channel": "All-In Podcast",
+    "speakers": "Jason Calacanis (host), Chamath Palihapitiya, David Sacks, David Friedberg",
+    "date": "2026-10-02",
+    "video_url": "https://www.youtube.com/watch?v=ZJKs08oU1zg",
+    "thread_line": "6 threads · White House superintelligence accord · compute as national security · the doomer-narrative fight · hot economic data · rates, banks and diesel · midterm calls",
+    "category": "market",
+}
+
+SNAPSHOT = [
+    "Trump convened Elon, Jensen, Zuck, Dario, Sundar, Satya and Greg Brockman; six frontier labs signed the **White House Accord on Superintelligence**.",
+    "The accord: labs accept responsibility, internal controls checked by **external auditors**, an independent board committee, with FTC/SEC enforcement behind it. No new legislation needed.",
+    "Friedberg predicts a cyber-defense spending boom, and that within 12-18 months governments will **ration GPUs and data center access** instead of regulating models.",
+    "Sacks argues the economy is running hot: Q2 GDP revised to 2.2%, Q3 tracking ~3.7%, August payrolls +162K vs 55K expected, poverty at a record-low 10.2%.",
+    "Friedberg's counterweight: short-term yields up 60bp in ~30 days, and he estimates ~95 banks show >20% equity impairment when reports land October 30.",
+    "Midterms split: Polymarket has 64% odds of a Democratic sweep. Sacks expects a 'blue spritz' with the GOP keeping the Senate, Chamath agrees, Jason calls a Democratic sweep.",
+    "Closing segment: a FlyDubai hijack attempt foiled by passengers, and the panel attacks how the media framed it as an 'altercation'.",
+]
+
+THEMES = [
+    {
+        "id": "accord",
+        "tags": ["policy", "ai-infra"],
+        "color": "green",
+        "badge": "Confirmed event",
+        "status": "SIGNED BY SIX FRONTIER LABS — WHITE HOUSE, WEEK OF SEPT 29, 2026",
+        "title": "The White House Accord turns voluntary AI safety into board-level fiduciary duty",
+        "lead": "Sacks calls it the Bretton Woods of superintelligence: signing was voluntary, but the audit-to-board chain that follows from it is not.",
+        "bullets": [
+            "Four pillars: the labs **accept responsibility** themselves (no deflecting to the models or the UN), internal controls verified by an internal team, **external auditors** validating them, and an independent board committee receiving the reports.",
+            "Gavin Baker's point, cited by Sacks: a board can't ignore an external auditor's report. **D&O insurance** can get cancelled, and the FTC and SEC can enforce the companies' public commitments.",
+            "The White House pre-circulated draft only covered responsibility plus a working group to share best practices. **Zuckerberg and Jensen** proposed the controls/audit/committee layer. Speaker Mike Johnson read the text aloud, and the six labs finalized it in a Roosevelt Room breakout (the tweeted version had a typo).",
+            "Sacks says the auditors should be **professional auditors, not NGOs**, and expects an EY announcement shortly. He pitches the accord as better than a pause China would ignore or 'some DMV for models'.",
+            "Chamath: **8090** and EY have been building audit infrastructure for superintelligence (EY is the first customer). It rests on end-to-end traceability, mapping policies to risk, and auditable evidence. He pitched it to 3,400 EY partners in Orlando right after the summit.",
+            "Trump's framing per Chamath: 'whoever wins superintelligence wins'. Labs must **lead with benefits** and help local communities, and he cited Meta's teacher bonuses and hospitals (which Dina Powell McCormick described at the All-In Summit). Jensen's line in the room: alarmism without solutions is unproductive.",
+            "Palace intrigue: Trump noticed **Dario Amodei** hadn't been invited to earlier events, called him and hosted him at dinner two nights before. Sacks met Dario for the first time ('Oh, my nemesis,' Dario joked). Jason calls Anthropic '96% anti-Trump'. OpenAI was represented by Greg Brockman while Sam Altman ran a product launch.",
+        ],
+        "quote": {"text": "Although this agreement was entered into voluntarily, the governance that follows from it is not voluntary.", "cite": "— David Sacks"},
+        "watch": "Sacks is the administration's AI lead and helped convene the summit, so he is grading his own work. Chamath's 8090 sells the audit infrastructure the accord now requires, and he says it can roll out to 'everybody'. Both have a stake in how this lands.",
+        "names": [
+            {"name": "Anthropic", "blurb": "Dario attended after a personal Trump invite and signed; Sacks: 'a good sport', not adversarial.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "OpenAI", "blurb": "Signed; represented by Greg Brockman. Friedberg notes it is now declaring more precaution before releases.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Meta (META)", "blurb": "Zuckerberg co-proposed the audit/board layer; Trump praised its teacher bonuses and hospitals.", "stance": "POSITIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "Nvidia (NVDA)", "blurb": "Jensen co-proposed the controls layer; 'alarmism without solutions is unproductive'.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Ernst & Young", "blurb": "First customer of 8090's superintelligence audit stack; Sacks expects an announcement soon.", "stance": "POSITIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "8090", "blurb": "Chamath's company; long-term EY partnership building audit infrastructure for superintelligence.", "stance": "OWNS", "conviction": "High", "horizon": None},
+        ],
+    },
+    {
+        "id": "compute-security",
+        "tags": ["ai-infra", "energy", "policy"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "FRIEDBERG PREDICTION — 12-18 MONTHS",
+        "title": "Compute becomes national-security infrastructure, and the panel splits over what follows",
+        "lead": "Friedberg sees an AI cyber arms race ending in government-rationed GPUs. Sacks and Chamath read the same pressure as a reason to build more data centers.",
+        "bullets": [
+            "Friedberg: 'we failed to recognize that the software came first'. These are AI wars, not robot wars. With open-weight models, local inference and **197 sovereign countries**, centralized control is 'a fool's errand'.",
+            "Prediction 1: rising risk forces a **cyber-defense spending surge**. Fortune 50 CEOs in DC told him it is becoming a board-level priority, and defense has to be AI-powered, a classic arms race. He names Palo Alto Networks.",
+            "Prediction 2: within 12-18 months the debate moves from **regulating models** (a new one ships every ~11 days; Google just released one that looks like the new top performer) to governments allocating GPUs, e.g. X% to financial services, Y% to defense.",
+            "Jason's counter: it is a sales opportunity. Google, AWS and Crusoe sell servers to the government, and blocking a data center becomes like 'blocking tanks being built during World War II'.",
+            "Sacks: power is the precursor to compute. **China doubles its grid every decade** while the US has been flat ~25 years. The US doubled its grid every decade through the 20th century, slowed in the 1970s and flatlined in the early 2000s with deindustrialization. He calls the anti-data-center push a 'witch hunt' and wants privacy laws, not bans.",
+            "Chamath, via Phil Deutsch: oil barely moved during the Iran-war blockages because supply and generation shifted in real time. **Generating electrons** is the critical variable, so domestic energy moves from domestic policy to national security, as natural gas and domestic oil did after the Persian Gulf war and 9/11.",
+        ],
+        "quote": {"text": "I do think we're going to end up in a world where governments are going to regulate data center access and usage.", "cite": "— David Friedberg"},
+        "watch": "Friedberg's GPU-rationing call is his own prediction ('no one may like'), and Chamath openly disagrees, expecting the free-market build-out response instead. Sacks agrees with the compute-race framing but not with top-down allocation.",
+        "names": [
+            {"name": "Palo Alto Networks (PANW)", "blurb": "Friedberg's example of a beneficiary as cyber-defense budgets 'go through the roof'.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Google (GOOGL)", "blurb": "New model this week, seemingly the top performer; also a candidate to sell servers to government (Jason).", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Amazon (AMZN)", "blurb": "AWS named by Jason as a seller of government compute capacity.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Crusoe", "blurb": "Named by Jason as a neocloud that could sell capacity to government.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "JPMorgan", "blurb": "Friedberg's example of a government saying 'we're not allocating enough' compute to finance.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "doomer-narrative",
+        "tags": ["policy", "mindset"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "PANEL VIEW — AI 'DOOMERISM' AS A MIDTERM WEAPON",
+        "title": "The real AI war is narrative: doomerism is organized, the optimists aren't",
+        "lead": "Chamath and Friedberg say the doomer message is a coordinated political tool. Jason argues the public's fear is real and the summit did nothing to answer it.",
+        "bullets": [
+            "Chamath: at the EY offsite a 'very well-known Democratic person' told the partners in the room they would all lose their jobs. He took the stage and said the opposite: the room will earn **more money over the next 4-5 years**.",
+            "Chamath: doomer talking points are 'extremely designed' and tightly scripted, giving out-of-power Democrats a way to whip up fear for the **midterms and 2028**. The pro-SI economic message is 'not nearly as well trafficked'.",
+            "Jason: people still fear the bottom half of the **K-shaped recovery**. A Delta flight attendant told him she was glad to be retiring before AI took her job. He says those talking points came from Dario and from Elon ('you're not going to need a job').",
+            "Jason's ask: next time, save three seats, for Sal Khan of Khan Academy, a teacher representative and a healthcare voice. Push companies on education, housing and healthcare costs, like Meta's free tool-belt training.",
+            "Friedberg's analogy: like the fight against telcos gating access to Yahoo or AOL in the early internet, a faction wants **regulatory capture** of AI while the other side fights for open, toll-free models.",
+            "Friedberg on markets self-regulating (citing a viral **Milton Friedman** clip): Google launched **SynthID** for AI-made proteins, watermarking both the DNA sequence and the 3D protein structure, and he says it's being broadly adopted. OpenAI is also declaring more precaution before releases.",
+        ],
+        "quote": {"text": "This is why I say we're in the AI wars. I mean, this is the actual war. There won't be a robot war.", "cite": "— Chamath Palihapitiya"},
+        "watch": "Chamath won't name the Democratic speaker, and his 'more money for everyone' claim is his own read of the data. Jason's view that the public isn't reassured is the minority position on the panel.",
+        "names": [
+            {"name": "Khan Academy", "blurb": "Jason wants Sal Khan given a seat at the next summit to represent education.", "stance": "POSITIVE VIEW", "conviction": "Low", "horizon": None},
+        ],
+    },
+    {
+        "id": "economy-data",
+        "tags": ["macro-rates"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "SACKS — 'THE ECONOMY IS RUNNING HOT'",
+        "title": "Sacks' data dump: GDP, jobs, PCE and poverty all beat expectations",
+        "lead": "Sacks concedes diesel and rates are the two weak spots and says everything else points to an accelerating economy that sentiment hasn't caught up to.",
+        "bullets": [
+            "Q2 GDP revised up to 2.2% from 1.5% (economists expected no revision). Q1 revised to 2.5% from 2.1%. Atlanta Fed GDPNow tracks Q3 at ~3.7%.",
+            "August payrolls +162,000 vs 55,000 consensus, with June and July revised up a combined 55,000. Unemployment 4.1% even as participation rose 0.2 points to 61.6%.",
+            "Core PCE 3.0% vs 3.3% expected. Chicago PMI and ISM manufacturing are both in expansion and beating forecasts, which he reads as **re-industrialization**.",
+            "Median household income in 2025 was almost $90,000. After-tax income growth averages 3.1%/yr in Trump 47 vs 3.9% in Trump 45 and -1.2% under Biden. The poverty rate is 10.2%, the lowest in history.",
+            "He cites the **Wall Street Journal**: the economy is accelerating, and the AI build-out is bigger than the railroads, canals and electric grid combined. Sacks disputes the K-shaped framing outright.",
+        ],
+        "quote": {"text": "The sentiment has not caught up with the economic reality, but I think it will.", "cite": "— David Sacks"},
+        "watch": "Sacks serves in the administration whose record these numbers grade. Jason's chart counters that unemployment is flat and inflation stuck in the high 3s since Trump took office, and that voters 'don't feel' GDP.",
+        "names": None,
+    },
+    {
+        "id": "rates-banks-diesel",
+        "tags": ["macro-rates", "finance", "energy"],
+        "color": "red",
+        "badge": "Red flag",
+        "status": "CATALYST — BANK CALL REPORTS OCTOBER 30, 2026",
+        "title": "A 60bp rate spike could surface bank impairments right before the election",
+        "lead": "Friedberg flags the rate problem as the hidden risk. Sacks says it all traces back to diesel, and once that's fixed rate cuts follow.",
+        "bullets": [
+            "Short-term Treasury yields climbed **60 basis points** in ~30 days, the highest short-term yield since about 2002 per Friedberg, hitting refinancing, car loans and credit.",
+            "Friedberg ran the numbers with ChatGPT: of **4,295 banks** with positive equity reporting to the FDIC, ~95 would show impairment above 20% of equity. Reports for the Sept 30 period land **October 30**, right in election season.",
+            "Friedberg roots the problem in federal spending. Jason: unless the deficit gets to Scott Bessent's **3% of GDP** target, 'these rates are only going to get worse'.",
+            "Sacks: rates track nominal growth (inflation in the 3s plus 3.7% GDP), and diesel is the last unlock. During Obama there were **300+ days** of Brent above $100. Zelensky's strikes on Russian refineries haven't helped, and the Guardian reports record oil out of Hormuz this week.",
+            "Sacks: nobody is pricing rate cuts, only hikes. Fix diesel and inflation falls, cuts come, and GDP can hit **5%**.",
+            "Chamath: pump prices are up **50%** since the Iran war (Jason's figure), but the constraint is decades of shut **refining** capacity, not crude. The US is far less oil-dependent and the petrodollar paradigm is being rewired in America's favor. Two tricky Treasury auctions are coming, and he trusts Bessent to handle them.",
+            "Chamath's Europe read: France is cutting €50-75B from its budget, forced by long rates. UK PM **Andy Burnham** pitched an 'extremely muscular form of socialism' that would undo Brexit and double or triple the size of government. Both will signal what the US has to do.",
+        ],
+        "quote": {"text": "There's about 95 of them that are going to say, 'Hey, we've got more than 20% impairment charge on our equity.' That's going to be a massive kind of shock.", "cite": "— David Friedberg"},
+        "watch": "The 95-bank figure is Friedberg's own estimate built with ChatGPT from reported balance sheets, not a regulator's number. Chamath leans toward Sacks' growth view once the auctions pass.",
+        "names": [
+            {"name": "FDIC", "blurb": "Source of the bank balance-sheet data behind Friedberg's 95-bank impairment estimate.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "midterms",
+        "tags": ["policy"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "PREDICTIONS — MIDTERMS ~1 MONTH OUT",
+        "title": "Midterm calls: 'blue spritz' vs Democratic sweep, then a populist 2026-28",
+        "lead": "The panel splits three-to-one: Sacks and Chamath see a narrow Democratic House with the Senate holding Republican, while Jason calls a sweep.",
+        "bullets": [
+            "Jason's charts: since Trump took office unemployment is unchanged, inflation sits at 3.2-4%, and approval is net negative on immigration, trade, the economy and inflation. He says Trump lost independents and parts of the base that wanted **20 million deportations**.",
+            "**Polymarket**: 63% Democrats take the Senate, 93% the House, 64% sweep. The four besties will run a public prediction squad on Polymarket starting next week.",
+            "Sacks admits he got 2022 wrong: he expected a red wave when Biden polled in the 30s with 9% inflation, and got a 'red trickle'. Same mistake now, he says, so expect a 'blue spritz'.",
+            "Sacks: a narrow Democratic House would be a headache for **Hakeem Jeffries**, like Kevin McCarthy and the Freedom Caucus. He says Mark Halperin is hedging his blue-tsunami call and pro-blue sentiment peaked ~2 weeks ago.",
+            "Chamath: the Senate is a tossup that can stay Republican, with a slim Democratic House. The outcome hinges on whether the economic-gains message or the gas-price-plus-doomer message gets out cleaner.",
+            "Friedberg: the real question is 2026-28. Will Democrats harden left while Republicans splinter into populism (the Tucker wing; the Tea Party seeded MAGA)? Populism's first derivative is still positive, with looming crises in Social Security, rates and an **asset tax**.",
+            "Friedberg's math: taking 100% of all US billionaire wealth would fund one year of federal spending. The middle class holds **$160T of America's $183T** net worth, so the options are tax the middle class, cut spending massively or restructure entitlements, and all three are deeply unpopular.",
+        ],
+        "quote": {"text": "I don't think we're going to get a blue wave. I think we might get like a blue spritz.", "cite": "— David Sacks"},
+        "watch": "Sacks and Chamath are administration-aligned. Jason's sweep call rests on the war and inflation ('Trump promised not to start a war. He did.').",
+        "names": [
+            {"name": "Polymarket", "blurb": "Jason's first reference for midterm odds; the besties will publish their picks there.", "stance": "POSITIVE VIEW", "conviction": "Low", "horizon": None},
+        ],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F3E6", "tag": "Banks", "title": "Watch the October 30 bank call reports for >20% equity impairments, Friedberg's rate-shock tell"},
+    {"icon": "\U0001F6E1", "tag": "Cybersecurity", "title": "Track cyber-defense budgets (e.g. PANW) as the first beneficiary of the AI arms-race framing"},
+    {"icon": "\U0001F4CB", "tag": "AI governance", "title": "Expect Big Four audit products for frontier labs. EY is first, so watch who follows"},
+    {"icon": "⛽", "tag": "Macro", "title": "Treat diesel/refining as the swing variable for inflation, rate cuts and the midterms"},
+    {"icon": "⚡", "tag": "Energy", "title": "Frame data center power as national security: grid growth is the binding constraint on compute"},
+    {"icon": "\U0001F5F3", "tag": "Politics", "title": "Compare Polymarket's 64% sweep odds against the 'blue spritz' call on election night"},
+]
+
+HOT_TAKES = [
+    {"take": "Whoever wins super intelligence wins.", "cite": "— President Trump (relayed by Chamath)", "why": "zero-sum framing of SI as the decisive race"},
+    {"take": "12 to 18 months from now... governments are going to regulate data center access and usage.", "cite": "— David Friedberg", "why": "dated, unpopular prediction of GPU rationing"},
+    {"take": "The people in this room will be making more money in the next four years and 5 years than less money.", "cite": "— Chamath Palihapitiya", "why": "direct rebuttal of AI job-loss doomerism, on the record"},
+    {"take": "If we just get that last piece... the economy is going to hit, you know, 5% GDP growth.", "cite": "— David Sacks", "why": "numeric growth call conditional on diesel"},
+    {"take": "I don't think we're going to get a blue wave. I think we might get like a blue spritz.", "cite": "— David Sacks", "why": "contrarian vs Polymarket's 64% sweep"},
+    {"take": "Trump promised not to start a war. He did. He promised to solve inflation. He didn't. The end. And I think the Democrats sweep.", "cite": "— Jason Calacanis", "why": "sweep prediction against two co-hosts"},
+]
+
+CLAIMS = [
+    {"who": "David Friedberg", "claim": "Governments shift from regulating models to regulating data center access and GPU allocation.", "metric": "GPU/data center allocation regulation", "target": "in place", "by": "12-18 months", "condition": None, "entity": None},
+    {"who": "David Friedberg", "claim": "Cyber-defense budgets surge as AI risks rise.", "metric": "enterprise cyber-defense budgets", "target": "'through the roof'", "by": None, "condition": None, "entity": "Palo Alto Networks (PANW)"},
+    {"who": "David Friedberg", "claim": "About 95 FDIC-reporting banks show equity impairment above 20% in reports for the Sept 30 period.", "metric": "banks with >20% equity impairment", "target": "~95 of 4,295", "by": "2026-10-30", "condition": None, "entity": "FDIC"},
+    {"who": "David Sacks", "claim": "Solving diesel prices brings inflation down, enables rate cuts and pushes GDP growth to 5%.", "metric": "US GDP growth", "target": "5%", "by": None, "condition": "diesel prices come down", "entity": None},
+    {"who": "David Sacks", "claim": "Republicans keep the Senate; Democrats win the House narrowly.", "metric": "Senate / House control", "target": "R Senate, narrow D House", "by": "2026-11 midterms", "condition": None, "entity": None},
+    {"who": "Chamath Palihapitiya", "claim": "Senate is a tossup that can remain Republican; Democrats get a slim House majority.", "metric": "Senate / House control", "target": "R Senate (tossup), slim D House", "by": "2026-11 midterms", "condition": "Republicans stay on economic gains and dispel the doomer narrative", "entity": None},
+    {"who": "Jason Calacanis", "claim": "Democrats sweep both chambers.", "metric": "Senate / House control", "target": "D sweep", "by": "2026-11 midterms", "condition": None, "entity": None},
+    {"who": "Polymarket (cited by Jason)", "claim": "Market odds: 63% D Senate, 93% D House, 64% sweep.", "metric": "Democratic sweep probability", "target": "64%", "by": "2026-11 midterms", "condition": None, "entity": "Polymarket"},
+    {"who": "David Sacks", "claim": "EY announces an external-audit offering for frontier AI shortly.", "metric": "EY superintelligence audit announcement", "target": "announced", "by": "short order", "condition": None, "entity": "Ernst & Young"},
+    {"who": "Chamath Palihapitiya", "claim": "EY partners will earn more, not less, over the next four to five years despite AI.", "metric": "EY partner earnings", "target": "higher", "by": "4-5 years", "condition": None, "entity": "Ernst & Young"},
+    {"who": "Sacks / Chamath", "claim": "White House ballroom and new East Wing finish in about a year, under budget and on schedule.", "metric": "ballroom completion", "target": "done, under budget", "by": "~1 year", "condition": None, "entity": None},
+]
+
+RELATIONS = [
+    {"from": "8090", "rel": "partners_with", "to": "Ernst & Young", "note": "long-term partnership; audit infrastructure for superintelligence"},
+    {"from": "Ernst & Young", "rel": "customer_of", "to": "8090", "note": "first customer of the SI audit stack"},
+]
+
+OTHER_NEWS = [
+    {"icon": "✈", "title": "**FlyDubai hijack attempt**, Dubai to Tel Aviv: an Omani co-pilot stabbed the Indian captain and tried to crash the 737 with ~174 mostly Israeli passengers aboard. The captain, who had refused to leave the cockpit on suspicion, called passengers in. An Israeli plumber dragged the attacker out, off-duty pilots landed the plane in Saudi Arabia.", "tag": "Security"},
+    {"icon": "\U0001F4F0", "title": "Friedberg's media critique: early coverage called it an 'altercation' (NYT, CNN), a 'struggle' (WSJ), a 'fight between pilots' (BBC), a 'brawl' (Sky News) and 'fighting' (AFP). The next-day NYT led with jet stress, motive and Israeli politicians scoring points before this month's election. NYT comms defended not publishing 'speculation'. Chamath: 'cowardly'. Sacks: all attacks on civilians are wrong.", "tag": "Media"},
+    {"icon": "\U0001F6F0", "title": "Cold open: the Starlink constellation effectively works as a **phased-array radar** looking down on Earth that can pick up otherwise-stealth aircraft.", "tag": "Space"},
+    {"icon": "\U0001F1FA\U0001F1F8", "title": "Joe Gebbia (Airbnb co-founder) launched **America.gov**, built partly with his and others' own money. Jason spoke on a panel there with Brooke Rollins.", "tag": "Gov tech"},
+    {"icon": "\U0001F3DB", "title": "White House ballroom: seven stories (two above ground, five down, with military vaults). Sacks predicts future presidents will love it. Chamath contrasts Trump's open-door summit with Biden excluding Elon from the EV summit.", "tag": "Politics"},
+    {"icon": "\U0001F4DA", "title": "Episode 291. Sources referenced: Gavin Baker (D&O point), Phil Deutsch (oil and electrons), Wall Street Journal, the Guardian (Hormuz), Atlanta Fed GDPNow, Polymarket, Mark Halperin, and a viral Milton Friedman clip. Sacks dismisses a summit critic as an 'artificial whistleblower' who quit after 6 weeks while working with a PR firm, though even he credited the accord.", "tag": "Sources"},
+]
+
+GLOSSARY = [
+    {"term": "White House Accord on Superintelligence", "def": "Voluntary pact signed by six frontier labs: accepted responsibility, internal controls, external audits, an independent board committee."},
+    {"term": "D&O insurance", "def": "Directors-and-officers liability cover; ignoring an auditor's report can void it, which is what gives the accord teeth."},
+    {"term": "SynthID (proteins)", "def": "Google's watermark embedded in both the DNA sequence and the 3D structure of AI-designed proteins."},
+    {"term": "GDPNow", "def": "Atlanta Fed's real-time model estimate of current-quarter GDP growth (~3.7% for Q3)."},
+    {"term": "Core PCE", "def": "The Fed's preferred inflation gauge excluding food and energy; 3.0% vs 3.3% expected."},
+    {"term": "K-shaped recovery", "def": "Recovery where the top gains while the bottom stagnates; Sacks disputes it with poverty and income data."},
+    {"term": "Blue spritz", "def": "Sacks' coinage for a narrow Democratic midterm gain, as opposed to a blue wave."},
+]
