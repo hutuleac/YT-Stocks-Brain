@@ -194,7 +194,7 @@ def compute(db_path):
                 if a < b:
                     (pairs_r[(a, b)].add(bid) if bdate[bid] > r0 else pairs_before.add((a, b)))
     out["connections"] = [{"a": a, "b": b, "a_name": ent[a]["name"], "b_name": ent[b]["name"], "briefs": len(bs)}
-                          for (a, b), bs in sorted(pairs_r.items(), key=lambda x: -len(x[1]))
+                          for (a, b), bs in sorted(pairs_r.items(), key=lambda x: (-len(x[1]), x[0]))
                           if len(bs) >= 2 and (a, b) not in pairs_before][:15]
 
     out["narratives"] = narratives(db, win, tot)
