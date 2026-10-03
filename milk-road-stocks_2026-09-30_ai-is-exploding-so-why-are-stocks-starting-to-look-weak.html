@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: AI Is Exploding… So Why Are Stocks Starting to Look Weak?</title>
+<meta name="description" content="Milk Road Stocks · 6 threads · rates vs AI growth · OpenAI $70B ARR · frontier concentration risk · agents vs SaaS · SpaceX/Meta moats · Micron preview">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="AI Is Exploding… So Why Are Stocks Starting to Look Weak?">
+<meta property="og:description" content="Milk Road Stocks · 6 threads · rates vs AI growth · OpenAI $70B ARR · frontier concentration risk · agents vs SaaS · SpaceX/Meta moats · Micron preview">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>AI Is Exploding… So Why Are Stocks Starting to Look Weak?</h1>
+    <div class="byline">
+      Channel: <b>Milk Road Stocks</b> &middot; Speaker: <b>Kyle (host), Melvin, Martin, Vincent (Milk Road analysts)</b> &middot; <b>2026-09-30</b>
+      <div class="stats-line">6 threads · rates vs AI growth · OpenAI $70B ARR · frontier concentration risk · agents vs SaaS · SpaceX/Meta moats · Micron preview &middot; <a href="https://www.youtube.com/watch?v=sbuVFb63pDM" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Recorded Sept 29, 2026: the market closed red despite bullish AI news because the <b>10-year hit ~5.25%</b> (a 19-year high), oil stayed above $92 and PMI surged, raising Fed-hike fears.</li><li>OpenAI reportedly hit <b>$70B ARR</b> (from ~$45B a month earlier and $20B at end-2025), which the bulls read as proof demand is accelerating and the bears (Martin, Vincent) as a headline number without cost data.</li><li>Vincent's frontier-lab risk list: Anthropic's <b>$518B</b> infrastructure commitments, 25% of revenue from two customers, and venture-funded startups exposed to a rate-hike cycle.</li><li>Meta's enterprise platform and OpenAI's new always-on agent reopened the SaaS debate: Melvin expects a round-two selloff, Kyle and Vincent say SaaS survives and agents use existing software.</li><li>Kyle's long-term moat pick is SpaceX (infrastructure, chips, space-based compute); Meta's moat is distribution and trust; Martin says data and compute decide it.</li><li>Micron reports that night: Melvin models <b>$52.2B</b> revenue and 87.5% gross margin vs ~$51B consensus and wants more long-term agreements than last quarter's 16.</li><li>The panel splits on risk: Martin holds <b>20% cash</b> and is considering more de-risking; Melvin stays bullish despite macro; Kyle sees no drawn-out bear market.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="rates-vs-ai">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">S&amp;P / NASDAQ WITHIN ~5% OF HIGHS · SEPT 29, 2026</span><span class="ttag">macro-rates</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Good growth data is bad news: yields at 19-year highs against AI revenue growth</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The panel agrees the AI trade is strong but splits on whether yields and a narrow market force a correction.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Melvin: market closed red despite Nvidia's <b>$150B buyback</b>, Meta pushing Muse into enterprise and a SpaceX Starship milestone; the 10-year briefly hit ~5.25%, a 19-year high.</li><li><span class="dot" style="background:#93711b;"></span>Oil held above <b>$92, </b>September flash PMI hit a 5-year high, Dallas manufacturing showed higher growth and inflation, and consumer spending and the labor market held up — all raise Fed-hike risk.</li><li><span class="dot" style="background:#93711b;"></span>Fed officials said the AI buildout could cause near-term inflation (memory and laptops up ~<b>20%</b>); Melvin warns mortgage rates could approach 8% by next week.</li><li><span class="dot" style="background:#93711b;"></span>Martin is more bearish: airlines, machinery, homebuilders and the Russell 2000 keep falling, so capex alone cannot lift everything; he holds <b>20%</b> cash and may de-risk more.</li><li><span class="dot" style="background:#93711b;"></span>Kyle: sentiment indicators are fairly bearish, not euphoric, despite prices near highs; he sees a market climbing a wall of worry.</li><li><span class="dot" style="background:#93711b;"></span>Melvin argues Bessent has to bring yields down because the US must refinance almost <b>$10T</b> of debt this year and cannot do it at 7-8%; he also cites midterms as a reason policy favors a strong market.</li><li><span class="dot" style="background:#93711b;"></span>Kyle cites Elon Musk and an unnamed Fed figure expecting GDP growth to double from <b>2%</b> to 4% next year; he sees no 2022-style long bear market, only possibly a pullback.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I think there's absolutely no way we can have a drawn out bear market at this pace of growth, because it's not just growth of capex, it is growth of revenues.&#8221;<cite>— Kyle</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Announced a $150B buyback; stock hasn't moved on it.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="openai-numbers">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
+    <span class="theme-status">OPENAI ~$70B ARR · DEV DAY SEPT 30</span><span class="ttag">ai-infra</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">OpenAI's $70B ARR jump and the always-on agent launch</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">A $30B ARR add in about six weeks convinced Kyle the frontier-lab growth is real; Martin says revenue is only half the picture.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>OpenAI ARR reportedly went from $20B at end-2025 to ~$45B a month earlier to <b>$70B</b>; enterprise is its fastest-growing B2B line, up more than 700% since July.</li><li><span class="dot" style="background:#3f6b2e;"></span>ChatGPT has 1.2B weekly users and over 2.5M businesses; Anthropic is roughly <b>$75B</b> and still growing, and Grok's agent product has likely added billions.</li><li><span class="dot" style="background:#3f6b2e;"></span>Kyle credits the spike partly to the Astra model (and Codex); Martin counters that Claude Sonnet 5.5, announced the day before, is 5x cheaper and more performant.</li><li><span class="dot" style="background:#3f6b2e;"></span>On Dev Day OpenAI launched <i>Dots</i>, an always-on agent in ChatGPT with its own cloud computer, browser and thousands of app connectors — Kyle calls it Grok's bot inside ChatGPT.</li><li><span class="dot" style="background:#3f6b2e;"></span>Kyle: Anthropic showed a profit last quarter and OpenAI is rumored to show one in Q3; he says profit matters less than growth right now.</li><li><span class="dot" style="background:#3f6b2e;"></span>Martin disagrees: revenue is easy to boost, training and inference costs are unknown, and an OpenAI product manager said subscription token usage will be cut because subscriptions are heavily subsidized.</li><li><span class="dot" style="background:#3f6b2e;"></span>Kyle expects new compute commitments on Dev Day, recalling last year's 6 GW AMD deal that sent AMD up <b>24%</b>.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>AMD (AMD)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Last year's 6 GW OpenAI GPU deal lifted it 24%; Kyle expects more such deals.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Kyle is a co-owner of Milk Road, which sells portfolio access; he says he uses Grok's agent heavily, while Martin and Vincent have been the bearish voices on OpenAI.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="frontier-risk">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">CONCENTRATION RISK IN FRONTIER LABS</span><span class="ttag">ai-infra</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Vincent and Martin's frontier-lab risk list, and Kyle's diversification rebuttal</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The bear case is that compute demand rests on two heavily leveraged customers, while the bull case says new buyers diversify the demand.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Vincent: Anthropic's IPO numbers (via Reuters) show ~<b>$518B</b> of planned AI infrastructure spend, ~80% committed, which took a key risk off the table that day.</li><li><span class="dot" style="background:#93711b;"></span>He flags that <b>25%</b> of Anthropic's revenue came from two customers (end-2025 data); his guess is Microsoft and Cursor, and Cursor's integration into SpaceX could move that demand.</li><li><span class="dot" style="background:#93711b;"></span>From a podcast he heard, ~<b>25%</b> of frontier AI revenue comes from venture-funded startups, which a rate-hike cycle could hit.</li><li><span class="dot" style="background:#93711b;"></span>Vincent: with 40-<b>60%</b>+ of a portfolio in frontier-linked names, taking some chips off the table makes sense.</li><li><span class="dot" style="background:#93711b;"></span>Martin cites SemiAnalysis: OpenAI and Anthropic could buy 40-<b>50%</b> of next year's new compute, so even the expectation of trouble could trigger a selloff.</li><li><span class="dot" style="background:#93711b;"></span>Kyle's rebuttal: if SpaceX/xAI and Meta take a larger share, the buyers get bigger with other revenue (rocket launches, Starlink, a multi-hundred-billion-dollar ad business); Vincent agrees diversification is good but adoption of Meta's and xAI's agents is the unknown.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Vincent and Martin hold large AI allocations themselves; their warnings are partly portfolio-sizing advice.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="agents-vs-saas">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">SOFTWARE DROPPED 3-4% ON META ENTERPRISE LAUNCH</span><span class="ttag">software</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Agents versus SaaS: round-two selloff or buy the dip?</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Melvin expects another software selloff as labs go after enterprise; Kyle and Vincent say agents will use existing software and SaaS survives.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Meta launched its enterprise platform and Muse push earlier that week; software stocks dropped 3-<b>4%</b> the day before, echoing the earlier selloff when Anthropic went after legal and financial services.</li><li><span class="dot" style="background:#93711b;"></span>Melvin: seat-based models break when agents use Salesforce or ServiceNow on a person's behalf; he expects some names to be decimated again.</li><li><span class="dot" style="background:#93711b;"></span>Kyle: more agents means more businesses and more SaaS needed; Salesforce's Agentforce is its fastest-growing product, built on usage, and Grok's bot now runs inside Slack.</li><li><span class="dot" style="background:#93711b;"></span>Kyle adds the labs must build on the application layer rather than just resell tokens; the risk is that OpenAI or Anthropic rebuild SaaS tools in-house.</li><li><span class="dot" style="background:#93711b;"></span>Martin's near-term worry: the market will group all software together and sell it, as earlier this year, and many stocks are still down 50-<b>60%</b> even among the good ones.</li><li><span class="dot" style="background:#93711b;"></span>Vincent: agents are rational and the world is compute constrained, so they will use legacy software rather than rebuild it; he would buy the dip, and billions of agents will use existing tools.</li><li><span class="dot" style="background:#93711b;"></span>Martin and Vincent argue Salesforce and ServiceNow are embedded data companies the labs cannot easily displace; Kyle counters that Claude and OpenAI are also integrated everywhere.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;SAS is not dead by any means. I think we need more SAS as a result of using agents.&#8221;<cite>— Kyle</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Salesforce (CRM)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Agentforce is its fastest-growing product; agents run inside Slack.</span></div><div class="namechip"><b>ServiceNow (NOW)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Embedded workflow data company; exposed to the SaaS sentiment.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="moats">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">MOAT DEBATE: COMPUTE, DATA, DISTRIBUTION</span><span class="ttag">ai-infra</span><span class="ttag">space</span><span class="ttag">consumer</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Where the moat is: SpaceX's infrastructure, Meta's distribution and trust</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">As every lab converges on the full stack, Kyle backs SpaceX's physical moat, Melvin and Vincent back Meta's distribution, and Martin says data decides.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Kyle: labs can go up the stack to apps, or down to infrastructure as SpaceX and Meta are doing; SpaceX has the biggest moat via data centers, space-based compute and Terafab chip production.</li><li><span class="dot" style="background:#3f6b2e;"></span>An ARC analyst expects SpaceX to reach 66.6 GW of compute by 2031; Elon replied he would be disappointed if that were as low; SpaceX is at about 1.4 GW now.</li><li><span class="dot" style="background:#3f6b2e;"></span>Elon's end-of-year compute target rose from 2 GW to 2.6 GW, and concrete is already down for Terafab.</li><li><span class="dot" style="background:#3f6b2e;"></span>The Information reported Anthropic's SpaceX deal is worth up to <b>$84B</b>, up from an initial ~$45B, for terrestrial compute; Kyle says it was not priced in and SpaceX ran on it.</li><li><span class="dot" style="background:#3f6b2e;"></span>Martin: data is how companies differentiate (Figure, Eli Lilly, Bending Spoons, Tesla all chase data); Kyle adds you need both data and compute.</li><li><span class="dot" style="background:#3f6b2e;"></span>Meta: stock is up ~<b>45%</b> in two weeks; Vincent says the compute spend now has a clear agentic use; Melvin credits Zuckerberg for delaying Muse until it was trustworthy; both call distribution across Instagram, WhatsApp and Facebook the edge.</li><li><span class="dot" style="background:#3f6b2e;"></span>Kyle laughs off Blue Origin's raise (reportedly ~15x oversubscribed, <b>$150B</b> valuation) as having no shot against Starship; Martin says it is a decade behind.</li><li><span class="dot" style="background:#3f6b2e;"></span>Kyle's anecdote: Siri failed a simple gram-to-pound conversion, while Grok is built into his Tesla — Apple and Google could still act, and Vincent says Apple's CEO has a tech background.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>SpaceX<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High · long-term</span></b><span>Kyle's top long-term moat: infrastructure, space compute, Terafab; Anthropic deal up to $84B.</span></div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>Muse and enterprise push, distribution and trust; stock up ~45% in two weeks.</span></div><div class="namechip"><b>Tesla (TSLA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium · long-term</span></b><span>Kyle says SpaceX and Tesla are set up for the long term.</span></div><div class="namechip"><b>Apple (AAPL)<span class="stance" style="background:#93711b;">UNCERTAIN · Low</span></b><span>At all-time highs but Siri seen as weak; could still ship agents.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Melvin owns Meta; Kyle says Grok is built into his Tesla and he uses it daily, which colors his SpaceX/xAI enthusiasm.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="micron-preview">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">MICRON EARNINGS WEDNESDAY, SEPT 30</span><span class="ttag">semis</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Micron preview: long-term agreements and the 'not cyclical' narrative</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Everyone expects a blowout quarter; the debate is whether guidance, long-term agreements and 2028 supply can move the stock.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Wall Street expects ~$51B revenue and ~$30-31 EPS; Melvin's estimate is <b>$52.2B</b> with an 87.5% gross margin.</li><li><span class="dot" style="background:#3f6b2e;"></span>Melvin wants Micron to address new supply and China's memory makers, its HBM4 shipping pipeline, and more long-term agreements than last quarter's 16 to kill the cyclical narrative.</li><li><span class="dot" style="background:#3f6b2e;"></span>Kyle: earnings won't move the stock; the risks are guidance and OpenAI/Anthropic. Vincent disagrees and says the outlook matters, including the base revenue and margin inside the long-term agreements and 2028 supply.</li><li><span class="dot" style="background:#3f6b2e;"></span>A report says Samsung's customers want deals of 10+ years, to 2035-2036; Martin heard the whole Korean memory supply is locked in through 2031.</li><li><span class="dot" style="background:#3f6b2e;"></span>Vincent: locked-in pricing is tricky because it trades off a lower fixed price against flexible capacity at higher margins; Melvin says memory sells to profitable buyers, unlike neoclouds.</li><li><span class="dot" style="background:#3f6b2e;"></span>Martin wants memory companies to announce buybacks or dividends since they trade at cheap prices; Micron cannot buy back until December.</li><li><span class="dot" style="background:#3f6b2e;"></span>Melvin notes Nvidia's buyback is <b>$150B</b> of up to ~$250B over 18 months with no stock move yet; Kyle says that's slow pressure on a $5T stock; a UBS analysis said Micron could buy back ~40% of its float.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Micron (MU)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High · near-term (earnings)</span></b><span>Reports Wednesday; Melvin expects a blowout, stock reaction a coin toss.</span></div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>$150B buyback of ~$250B over 18 months used as a buyback-impact reference.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Melvin published a Micron note on the Milk Road Pro platform with his estimate, so his forecast is also a product call.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📉</div><div class="tline"><span class="cat">Macro:</span> <span class="txt">Watch the 10-year and oil, not just AI headlines — the panel treats yields near <b>5.25%</b> as the main near-term risk.</span></div></div><div class="irow"><div class="ic">🧮</div><div class="tline"><span class="cat">AI infra:</span> <span class="txt">Size frontier-lab exposure against the concentration risks (two customers, venture-funded demand, 40-<b>50%</b> of compute) before adding.</span></div></div><div class="irow"><div class="ic">💻</div><div class="tline"><span class="cat">Software:</span> <span class="txt">Separate SaaS names with usage-based agent products from seat-based ones before buying the dip.</span></div></div><div class="irow"><div class="ic">💾</div><div class="tline"><span class="cat">Semis:</span> <span class="txt">Read Micron's quarter through long-term agreement count, HBM4 and 2028 supply, not the headline beat.</span></div></div><div class="irow"><div class="ic">🚀</div><div class="tline"><span class="cat">Moats:</span> <span class="txt">Test the SpaceX and Meta moat claims against compute, data and distribution rather than model rankings.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;I think there's absolutely no way we can have a drawn out bear market at this pace of growth.&#8221; <cite>— Kyle</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Nobody cares about the number. All they need is a good UX and a good UI to run their business inside of these platforms and they'll pay the money.&#8221; <cite>— Kyle</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I would bet it's not even profitable at this point.&#8221; <cite>— Martin on OpenAI</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Software stocks are getting ready for a round two selloff... this is just going to decimate some of these software names once again.&#8221; <cite>— Melvin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The only person that's building for the biggest moat is SpaceX, Elon.&#8221; <cite>— Kyle</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;He's got no shot, dude.&#8221; <cite>— Kyle on Blue Origin</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Melvin:</b> Micron reports quarterly revenue of about $52.2B with an 87.5% gross margin, above Wall Street's ~$51B. <span class="cmeta">Micron revenue / gross margin · $52.2B / 87.5% · 2026-09-30</span> <span class="tag">Micron (MU)</span></div><div class="ritem"><b>Melvin:</b> Micron signs more long-term supply agreements than the 16 from last quarter. <span class="cmeta">Micron long-term agreements · &gt;16 · 2026-09-30</span> <span class="tag">Micron (MU)</span></div><div class="ritem"><b>Kyle:</b> OpenAI reports a profit in Q3 2026 after its ARR jump. <span class="cmeta">OpenAI profitability · profit · Q3 2026</span> <span class="tag">OpenAI</span></div><div class="ritem"><b>Melvin:</b> US mortgage rates could reach about 8% by next week. <span class="cmeta">US mortgage rate · ~8% · 2026-10</span></div><div class="ritem"><b>Elon Musk (cited by Kyle):</b> US GDP growth doubles from 2% to 4% next year. <span class="cmeta">US GDP growth · 4% · 2027</span></div><div class="ritem"><b>ARC analyst (cited by Kyle):</b> SpaceX reaches 66.6 GW of compute by 2031. <span class="cmeta">SpaceX compute capacity · 66.6 GW · 2031</span> <span class="tag">SpaceX</span></div><div class="ritem"><b>Elon Musk (cited by Kyle):</b> SpaceX reaches about 2.6 GW of compute by the end of 2026, up from a 2 GW target. <span class="cmeta">SpaceX compute capacity · 2.6 GW · 2026-12</span> <span class="tag">SpaceX</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Anthropic</b> <span class="rel">customer of</span> <b>SpaceX</b> &mdash; Compute deal worth up to $84B per The Information</div><div class="ritem"><b>AMD (AMD)</b> <span class="rel">supplies</span> <b>OpenAI</b> &mdash; 6 GW GPU deal announced last year</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: Reuters (Anthropic IPO figures), The Information (SpaceX–Anthropic deal), SemiAnalysis (OpenAI/Anthropic compute share), a UBS buyback analysis, an ARC analyst's SpaceX forecast, an unnamed podcast on frontier-revenue concentration, and Elon Musk's GDP comment. <span class="tag">Sources</span></div></div></div><div class="irow"><div class="ic">🎯</div><div><div class="title">Anthropic reportedly filed IPO information; Melvin names an Anthropic IPO and Muse's growth as the catalysts that could lift the market, while uncertain on the filing. <span class="tag">Catalysts</span></div></div></div><div class="irow"><div class="ic">📱</div><div><div class="title">SpaceX joked about the dots.com domain, pointing it to Grok's bot landing page after OpenAI's Dots launch. <span class="tag">Culture</span></div></div></div><div class="irow"><div class="ic">🚀</div><div><div class="title">SpaceX reached another major Starship milestone the previous day; Kyle expects a booster catch attempt next and a fully reusable system. <span class="tag">Space</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>ARR</b> &mdash; Annual recurring revenue — the annualized run rate of current revenue.</div><div><b>Long-term agreement (LTA)</b> &mdash; A multi-year supply contract that fixes volume and pricing, used to argue memory is less cyclical.</div><div><b>HBM4</b> &mdash; High-bandwidth memory generation used with AI accelerators.</div><div><b>Seat-based pricing</b> &mdash; SaaS pricing per human user, which agents could undermine.</div><div><b>Terafab</b> &mdash; SpaceX's planned large chip-production facility.</div><div><b>Neocloud</b> &mdash; A new AI-focused cloud provider that sells compute to labs such as OpenAI and Anthropic.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
