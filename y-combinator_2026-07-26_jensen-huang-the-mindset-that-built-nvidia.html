@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: Jensen Huang: The Mindset That Built NVIDIA</title>
+<meta name="description" content="Y Combinator · 5 threads · the wrong-technology origin · founder mindset · agents and systems thinking · jobs vs tasks · physical AI and open source">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="Jensen Huang: The Mindset That Built NVIDIA">
+<meta property="og:description" content="Y Combinator · 5 threads · the wrong-technology origin · founder mindset · agents and systems thinking · jobs vs tasks · physical AI and open source">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Jensen Huang: The Mindset That Built NVIDIA</h1>
+    <div class="byline">
+      Channel: <b>Y Combinator</b> &middot; Speaker: <b>Jensen Huang (Nvidia CEO), Y Combinator hosts</b> &middot; <b>2026-07-26</b>
+      <div class="stats-line">5 threads · the wrong-technology origin · founder mindset · agents and systems thinking · jobs vs tasks · physical AI and open source &middot; <a href="https://www.youtube.com/watch?v=I4B37S1dyQQ" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Startup School 2026 fireside with Jensen Huang: Nvidia was founded on a <b>technology that turned out to be exactly wrong</b>, and survived by learning the right one from textbooks.</li><li>His core idea: great companies come from a unique, deeply held perspective — Nvidia's was accelerating an <i>algorithm domain</i>, not building a chip.</li><li>Founder style: be curious, learn in the weeds, 'fit the car to the driver', and attack hard problems with 'how hard can it be?' while building resilience one day at a time.</li><li>Agents: the most useful future skill is systems thinking; <b>controllability</b> (changing one word in a plan and regenerating only that part) is the biggest breakthrough needed.</li><li>Jobs: 'AI eliminates tasks, not jobs' — he cites software-engineer jobs up ~<b>10%</b> and radiology jobs up ~20% a year despite automation.</li><li>Physical AI is already a ~<b>$10B</b> Nvidia business and 'our next $100 billion business', arriving in under ten years.</li><li>CEO speaking about his own company: all figures and forecasts are Nvidia management's view.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="wrong-technology-origin">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Personal story</span>
+    <span class="theme-status">FOUNDING STORY, 1993-1999</span><span class="ttag">semis</span><span class="ttag">career</span><span class="ttag">mindset</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Nvidia's founding technology was wrong — Sega's $5 million bought time to learn the right one</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Nvidia started with an algorithm that was 'exactly wrong' and learned the correct 3D-graphics approach from three textbooks.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>1993: the idea was to turn every PC into a game console by reinventing a supercomputer-class graphics algorithm to fit in a PC.</li><li><span class="dot" style="background:#93711b;"></span>By 1995 they realized it didn't work — and none of them knew the right way; about 35-40 other companies already made PC 3D graphics.</li><li><span class="dot" style="background:#93711b;"></span>Jensen spent a couple hundred dollars at Fry's on three OpenGL and graphics-pipeline textbooks for the engineers: 'we learned it from a textbook'.</li><li><span class="dot" style="background:#93711b;"></span>Sega had contracted Nvidia for a roughly $12 million console project (the one that became Dreamcast, built by others); Jensen told Sega's CEO it couldn't be delivered, advised using someone else, and still asked for the money — about <b>$5 million</b> kept the company alive.</li><li><span class="dot" style="background:#93711b;"></span>Sega's stake was sold at Nvidia's 1999 IPO, when Nvidia was valued at <b>$300 million</b>; today it is worth well over a trillion dollars.</li><li><span class="dot" style="background:#93711b;"></span>Lesson: technology changes constantly; as long as you confront reality and can learn, the starting technology doesn't matter.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;The technology that founded the company turns out to be exactly wrong.&#8221;<cite>— Jensen Huang</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Founded on a wrong algorithm; Sega contract money kept it alive</span></div><div class="namechip"><b>Sega<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Contracted a ~$12M console project and paid about $5M though Nvidia couldn't deliver</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Founding-era figures are Jensen's recollection on stage; the 'sold for 15 million' figure was a host's question, not confirmed by him.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="founder-mindset">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Principle</span>
+    <span class="theme-status">FOUNDER ADVICE</span><span class="ttag">mindset</span><span class="ttag">career</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Unique perspective, 'how hard can it be?', and fitting the car to the driver</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Great companies come from a unique perspective you deeply believe in — and Nvidia's was that the algorithm domain, not the chip, is the product.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Accelerated computing across algorithm domains: 3D graphics, molecular dynamics, image processing, inverse physics, then deep learning.</li><li><span class="dot" style="background:#3f6b2e;"></span>AlexNet insight: deep learning is a universal function approximator — a way of doing software that reshapes the whole stack (his 'five-layer cake'), which he says he saw about 15 years ago.</li><li><span class="dot" style="background:#3f6b2e;"></span>He stays curious and learns details himself so he can serve the company and share insight — 'a personality technique, not a management technique'.</li><li><span class="dot" style="background:#3f6b2e;"></span>Surfing analogy: you can't read the waves of fast-moving tech without being in the water.</li><li><span class="dot" style="background:#3f6b2e;"></span>F1 analogy: build the company like a car you can drive; when he leaves, 'they'll just have to reshape the company for the next CEO'; 34 years of founder mode.</li><li><span class="dot" style="background:#3f6b2e;"></span>Mindset for founders: believe you can learn; imagine 'how hard can it be?' — it will be much harder, so let the suffering arrive gradually and overcome 'that morning', not life in one day.</li><li><span class="dot" style="background:#3f6b2e;"></span>He was too scared to read a 500-page how-to-start-a-company book; says fundraising questions still stump him — none of it mattered.</li><li><span class="dot" style="background:#3f6b2e;"></span>He calls now the greatest time in 60 years to start a company, since the computer has been 'completely reset' by AI.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Learning is the single greatest superpower.&#8221;<cite>— Jensen Huang</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="agents-systems-thinking">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Moderate conviction</span>
+    <span class="theme-status">AGENTS, OPENCLAW AND HERMES</span><span class="ttag">ai-infra</span><span class="ttag">software</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Systems thinking and controllability: what agents need next</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Low-level work will be automated agentically, so the most useful skill is systems design — and the biggest missing breakthrough is fine-grained control of agents.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Chip designers now work as systems designers because synthesis automates gates and blocks; software will follow.</li><li><span class="dot" style="background:#3f6b2e;"></span>Systems checklist he gives: inputs, outputs, rates, constraints, and whether the bottleneck is processor, memory or networking.</li><li><span class="dot" style="background:#3f6b2e;"></span>Agents already show coarse recursive self-improvement: they update markdown files and long-term memory, compacted or turned into knowledge graphs, asynchronously.</li><li><span class="dot" style="background:#3f6b2e;"></span><b>Controllability</b>: change one word in a plan file (one pixel, triangle, CAD component or via) and only that part regenerates; agents needn't be 100% accurate — 80% or 99% with human help is enough.</li><li><span class="dot" style="background:#3f6b2e;"></span>Nvidia studies agents because 'agents are the new software': systems take ~3 years to build and 2 to ramp, so it designs 5-10 years ahead (concurrency, sandboxes, MCP, working and long-term memory).</li><li><span class="dot" style="background:#3f6b2e;"></span>Internally, Claude Code runs autonomously in sandboxes across Nvidia, and engineers choose Codex, Claude Code, Cursor or Cognition — 'a thousand flowers bloom'.</li><li><span class="dot" style="background:#3f6b2e;"></span>He views OpenClaw as the 'Linux moment' and the OS for LLMs, told its creator Peter 'all of Nvidia's engineers are your engineers', and backs the Hermes team; Nvidia built a sandboxing toolkit around the harness.</li><li><span class="dot" style="background:#3f6b2e;"></span>He urges companies to build their own domain-specific AI (Hermes, OpenClaw, LangChain deep agents) while still using ChatGPT and Claude; the host adds that markdown files are 'text is intelligence'.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Controllability is probably the single biggest breakthrough that we need for agents at every single level.&#8221;<cite>— Jensen Huang</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium · 5-10 years</span></b><span>Designs systems 5-10 years ahead for agentic workloads; supports OpenClaw and Hermes</span></div><div class="namechip"><b>Anthropic<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Claude Code used autonomously inside Nvidia; Claude recommended for everyone to use</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>ChatGPT and Codex named among tools to use</span></div><div class="namechip"><b>Cursor<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>One of the coding tools Nvidia staff choose</span></div><div class="namechip"><b>Cognition<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>One of the coding tools Nvidia staff choose</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Captions garble 'OpenClaw' as 'OpenCL' in several places; the brief reads them as OpenClaw from context. Nvidia sells the compute agents run on.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="jobs-tasks-purpose">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Counterintuitive take</span>
+    <span class="theme-status">AI AND EMPLOYMENT</span><span class="ttag">career</span><span class="ttag">policy</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">'The narrative about AI destroying jobs is exactly backwards'</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">AI eliminates tasks, not jobs, because a job has a purpose made of many tasks — and backlogs of ambition absorb the productivity gain.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Software: coding is automated, yet software-engineer jobs are up about <b>10%</b> year over year, he says.</li><li><span class="dot" style="background:#93711b;"></span>Radiology: scan reading is automated, yet radiology jobs are up roughly <b>20%</b> in recent years because patient backlogs are huge.</li><li><span class="dot" style="background:#93711b;"></span>Law: Harvey was predicted to wipe out paralegals; paralegals are 'growing like crazy' as firms take on more cases.</li><li><span class="dot" style="background:#93711b;"></span>Mechanism: productivity raises growth, growth raises employment; there is more employment today than when he left school.</li><li><span class="dot" style="background:#93711b;"></span>Chip scale as proof of ambition: his generation designed ~1,000-transistor chips; a trillion-transistor chip is now 'not a thing'.</li><li><span class="dot" style="background:#93711b;"></span>Advice to the young: simple tasks (like long division or typing code) get automated; hard sciences, systems thinking and the intersections of tech and social problems remain — 'stay in school'.</li><li><span class="dot" style="background:#93711b;"></span>Caveat he states: automation is uneven, many tasks and every job will change, and new jobs will appear.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Harvey<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Cited as the legal AI predicted to eliminate paralegals, which instead grew</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The job-growth percentages are Jensen's on-stage figures with no source named; he sells the compute behind AI automation.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="physical-ai-open-source">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">PHYSICAL AI AND OPEN SOURCE</span><span class="ttag">robotics</span><span class="ttag">ai-infra</span><span class="ttag">policy</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Physical AI as the next $100 billion business, and why open source matters</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Nvidia says robotics and autonomous vehicles are already almost a $10 billion business and will be its next $100 billion one in under ten years.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>He says robotics had its 'ChatGPT moment' a couple of years ago: generating video of a moving finger implied a robot could be made to do the same.</li><li><span class="dot" style="background:#3f6b2e;"></span>Three layers: real-to-sim environments, simulators (Isaac Sim, Cosmos world foundation models; grounded plus generative physics), and sim-to-real with reinforcement learning.</li><li><span class="dot" style="background:#3f6b2e;"></span>Self-driving: chips are in Waymo, Tesla (car, now data center) and Mercedes; Nvidia open-sourced its Alpamayo reasoning self-driving stack for agriculture, mail delivery and warehouse robots.</li><li><span class="dot" style="background:#3f6b2e;"></span>Alpamayo needs only about a million or a couple of million miles because a language model supplies prior knowledge to decompose unseen situations.</li><li><span class="dot" style="background:#3f6b2e;"></span>Physical AI will take longer than two or three years and less than ten, and will 'be our next <b>$100 billion</b> business'.</li><li><span class="dot" style="background:#3f6b2e;"></span>He made his first post on X in 2026, calling open weights and open source essential — mobile and cloud, Linux, Kubernetes, PyTorch and earlier frameworks were all open.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High · under 10 years</span></b><span>Physical AI near $10B now, 'next $100 billion business' in under ten years</span></div><div class="namechip"><b>Waymo<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Uses Nvidia chips in its self-driving cars</span></div><div class="namechip"><b>Tesla (TSLA)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Nvidia was in the car and is now in Tesla's data center</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Segment sizes and timing are Nvidia management's own estimates; the model name 'Alpamayo' is garbled in the captions and read from context.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🧭</div><div class="tline"><span class="cat">Strategy:</span> <span class="txt">Define your company by a unique perspective and an algorithm domain, not by the product you ship today.</span></div></div><div class="irow"><div class="ic">🛠</div><div class="tline"><span class="cat">Agents:</span> <span class="txt">Invest in controllability: design agent workflows where you can change one input and regenerate only that part.</span></div></div><div class="irow"><div class="ic">🧠</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Build systems-thinking skills — inputs, outputs, rates, constraints — rather than syntax alone.</span></div></div><div class="irow"><div class="ic">🤖</div><div class="tline"><span class="cat">Robotics:</span> <span class="txt">Follow Nvidia's physical-AI segment and its <b>$100B</b> target as a read on robotics demand.</span></div></div><div class="irow"><div class="ic">💼</div><div class="tline"><span class="cat">Labor:</span> <span class="txt">Separate task automation from job purpose when judging AI's effect on any profession.</span></div></div><div class="irow"><div class="ic">🎯</div><div class="tline"><span class="cat">Founders:</span> <span class="txt">Break each day into 'overcome this morning' rather than imagining the full difficulty up front.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;The narrative about AI destroying jobs is exactly backwards.&#8221; <cite>— Jensen Huang</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Controllability is probably the single biggest breakthrough that we need for agents at every single level.&#8221; <cite>— Jensen Huang</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;This will be our next $100 billion business.&#8221; <cite>— Jensen Huang (on physical AI)</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I would say the ChatGPT moment of robots happened a couple of years ago already.&#8221; <cite>— Jensen Huang</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;This is absolutely the single greatest time to start a company.&#8221; <cite>— Jensen Huang</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Jensen Huang:</b> Nvidia's physical-AI business becomes its next $100 billion business in less than ten years. <span class="cmeta">Nvidia physical AI revenue · $100 billion · within 10 years</span> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>Jensen Huang:</b> Nvidia's robotics, autonomous-vehicle and physical-AI business is already almost $10 billion. <span class="cmeta">Nvidia physical AI revenue · ~$10 billion</span> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>Jensen Huang:</b> Practical physical AI will take longer than two to three years and less than ten. <span class="cmeta">physical AI maturity · practical at scale · 3-10 years</span></div><div class="ritem"><b>Jensen Huang:</b> Software-engineer jobs are growing about 10% year over year despite coding automation. <span class="cmeta">software engineer jobs · +10% year over year</span></div><div class="ritem"><b>Jensen Huang:</b> Radiology jobs have grown about 20% in recent years despite AI reading scans. <span class="cmeta">radiology jobs · +20%</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Sega</b> <span class="rel">customer of</span> <b>Nvidia (NVDA)</b> &mdash; contracted a ~$12M console project; paid about $5M</div><div class="ritem"><b>Waymo</b> <span class="rel">customer of</span> <b>Nvidia (NVDA)</b> &mdash; Nvidia chips inside its cars</div><div class="ritem"><b>Tesla (TSLA)</b> <span class="rel">customer of</span> <b>Nvidia (NVDA)</b> &mdash; Nvidia in the car, now in the data center</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: AlexNet; early chain-of-thought work from Stanford; the OpenClaw creator Peter and the Hermes agent team; open-source projects Linux, Kubernetes, PyTorch, TensorFlow, Torch, Caffe and Theano. <span class="tag">Sources</span></div></div></div><div class="irow"><div class="ic">📱</div><div><div class="title">Jensen made his first post on X in 2026 ('probably the last human on Earth'), announcing something he called important to the industry. <span class="tag">Culture</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Accelerated computing</b> &mdash; Augmenting CPUs with accelerators to solve problems that are otherwise too hard, organized around algorithm domains.</div><div><b>Universal function approximator</b> &mdash; A neural network that can learn almost any function from examples, which is how Jensen frames deep learning.</div><div><b>Five-layer cake</b> &mdash; His shorthand for the stack reinvented by AI: processor, middleware, algorithms, applications and industry use.</div><div><b>Controllability</b> &mdash; The ability to change one small input of an agent's plan and regenerate only the affected output.</div><div><b>Physical AI</b> &mdash; AI that understands and acts in the physical world, such as robots and self-driving cars.</div><div><b>Sim-to-real</b> &mdash; Training robots in simulation, then transferring the skill to the real world with reinforcement learning.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
