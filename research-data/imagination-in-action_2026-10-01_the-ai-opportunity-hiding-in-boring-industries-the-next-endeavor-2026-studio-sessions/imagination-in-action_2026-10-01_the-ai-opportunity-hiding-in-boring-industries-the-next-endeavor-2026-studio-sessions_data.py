@@ -1,0 +1,167 @@
+META = {
+    "title": "The AI Opportunity Hiding in Boring Industries | The Next Endeavor 2026 - Studio Sessions",
+    "channel": "Imagination in Action",
+    "speakers": "Lisa Dolan (Link Ventures), Roman Nemed (host)",
+    "date": "2026-10-01",
+    "video_url": "https://www.youtube.com/watch?v=plPZrzlf_6s",
+    "thread_line": "5 threads · talent-ecosystem strategy · AI in 'dirty' industries · verification and distribution · privacy risk and Anthropic · bio and contrarian advice",
+    "category": "market",
+    "region": "",
+}
+
+SNAPSHOT = [
+    "Lisa Dolan, a partner at Link Ventures, explains her seed/Series A strategy: tap university talent ecosystems beyond MIT and Harvard that have an 'unfair understanding' of antiquated industries.",
+    "Her recent bets apply AI to **bio commercialization, mining and rock crushing, rare-earth processing, freight logistics and insurance** — she avoids crowded legal and accounting chatbots.",
+    "Her main lever for founders is distribution: getting multiple stakeholders inside a customer to back you ('unfair nepotism').",
+    "She says privacy, risk and regulation are **underpriced in AI valuations** and that risk controls around AI apps are a vertical people will invest in.",
+    "She is **very bullish on Anthropic** because mass distribution lets a company pivot its business model; she notes its 80% gross margin figure excludes partner revenue share and stock compensation.",
+    "Fund structure: more seed shots, fewer follow-ons, bigger checks only at Series B for clear winners, because the gap between winners and losers is widening.",
+    "Closing advice: think for yourself and do what others are not doing.",
+]
+
+THEMES = [
+    {
+        "id": "talent-ecosystems",
+        "tags": ["finance", "ai-infra"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "SEED / SERIES A · LINK VENTURES",
+        "title": "Invest across talent ecosystems, not just Stanford and MIT",
+        "lead": "Dolan builds a national grid of university talent pools whose students understand a specific antiquated industry better than incumbents.",
+        "bullets": [
+            "Link is anchored on MIT and Harvard, across the street in Kendall Square, and is expanding to other technical schools in the US only.",
+            "Specialty map: Carnegie Mellon and Georgia Tech for robotics; Duke, Johns Hopkins and MIT for healthcare; Alberta and Canada for mining talent.",
+            "Fund structure: more seed investments with less reserved for follow-ons, but larger checks into winners at Series B.",
+            "She says the gap between haves and have-nots is bigger today, so she skips the usual pro-rata habit of following on in every Series A.",
+            "Her adjustment mechanism for fast change is team and distribution, not a fixed forecast of what AI looks like next year.",
+        ],
+        "quote": None,
+        "watch": "Dolan is a partner at Link Ventures and discusses her own portfolio companies throughout, so the bets are positions she holds.",
+        "names": None,
+    },
+    {
+        "id": "dirty-industries",
+        "tags": ["ai-infra", "robotics", "biotech"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "FOCUS: 'DIRTY' INDUSTRIES",
+        "title": "Her portfolio: mining, rare earths, freight, insurance and bio commercialization",
+        "lead": "She backs AI in unglamorous industries where she sees a core insight and a capital-light model, and passes on crowded legal and accounting chatbots.",
+        "bullets": [
+            "Mining robotics (three MIT roboticists): computer vision optimized for mine conditions, automating rock crushing; starting with cement, selling into Heidelberg and Caterpillar.",
+            "Her company is capital-light and horizontal; a competitor is taking the vertical, vertically integrated route to become an AI cement manufacturer.",
+            "Rare-earth processing (Carnegie Mellon and Stanford founders): recovering copper and gold from electronics, aligned with onshoring of rare-earth processing.",
+            "Logistics: identifying freight fraud and errors by verifying drivers, which opens payments and better shipment warranties.",
+            "Insurance as a 'Trojan horse' for revenue: better structured and unstructured data improves risk pricing and the understanding of each consumer's credit profile.",
+            "Bio commercialization (MIT team): AI on manufacturing and commercialization, not discovery; one stealth company is led by Menlo Ventures.",
+            "One of her biggest wins was Mercor, seeded and now a $20B company; its team recruits for OpenAI, Nvidia and Meta, labels models and is moving into physical-world data labeling.",
+        ],
+        "quote": {"text": "I'm really focused on the dirty industries.", "cite": "— Lisa Dolan"},
+        "watch": None,
+        "names": [
+            {"name": "Mercor", "blurb": "Seed win, now valued at $20B; model-labeling and recruiting for the big labs.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
+            {"name": "Caterpillar (CAT)", "blurb": "Customer of her mining-robotics portfolio company.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+            {"name": "Heidelberg Materials (HEI)", "blurb": "Cement maker selling-into target for her mining-robotics company.", "stance": "CASUAL MENTION", "conviction": None, "horizon": None},
+        ],
+    },
+    {
+        "id": "distribution-verification",
+        "tags": ["software", "finance"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "DISTRIBUTION OVER MODELS",
+        "title": "Distribution is the key, and verification is the reusable insight",
+        "lead": "Her best performers win on distribution and a core insight that transfers across industries, with buyers still tied to per-seat pricing.",
+        "bullets": [
+            "She says 'distribution, distribution, distribution' is the strongest predictor among her best performers.",
+            "'Unfair nepotism': winning support from the CEO, CTO, BD lead, engineers and customer service inside one customer; she helps founders find customers, e.g. connecting the mining company to an Apollo-backed private-equity mine.",
+            "Core-insight method: verification, first applied to freight drivers, also applies to medicine such as matching surgery screen visuals with outcomes.",
+            "Startups are shifting from enterprise to mid-market because enterprises can build in-house; she says the jury is still out and one portfolio company sells AI to construction mid-market firms.",
+            "Her portfolio companies struggle to change from non-software per-seat license pricing because buyers stick to tried-and-true models.",
+            "That is why she finds payments and insurance interesting: transaction-based models that adapt organically.",
+        ],
+        "quote": None,
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "risk-anthropic",
+        "tags": ["policy", "ai-infra"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "RISK UNDERPRICED · ANTHROPIC BULLISH",
+        "title": "Privacy and regulation risk are underpriced; Anthropic's distribution is the moat",
+        "lead": "Dolan thinks data breaches and regulation are not in AI valuations, yet she stays bullish on Anthropic because mass distribution lets it pivot.",
+        "bullets": [
+            "She says privacy, risk and regulation are underpriced in AI valuations and better risk controls will be required.",
+            "The Mercor data breach was, in her words, a 'pin prick' of the breaches to come; investors can't easily price it.",
+            "Risk controls around any given AI application is a vertical people will invest in.",
+            "On Anthropic's reported 80% gross margins, she says those exclude partner-shared revenue and stock-based compensation, so the company is losing money.",
+            "She says Anthropic's business model will be different in two, three or five years; whoever has mass distribution can hire the best talent and keep pivoting.",
+            "She is very bullish on Anthropic for that reason, and says the best founders are both visionary and fast to react to real-time market changes.",
+        ],
+        "quote": {"text": "Whoever is going to have mass distribution today will be able to hire the best talent and roll the punches and pivot and pivot and pivot.", "cite": "— Lisa Dolan"},
+        "watch": "Dolan says she is bullish on Anthropic but gives no holding; she is also an early investor in Mercor, which was breached.",
+        "names": [
+            {"name": "Anthropic", "blurb": "Very bullish on distribution-led pivoting; notes 80% gross margin excludes partner revenue share and SBC.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": "2-5 years"},
+        ],
+    },
+    {
+        "id": "bio-contrarian",
+        "tags": ["biotech", "mindset"],
+        "color": "amber",
+        "badge": "Speculative",
+        "status": "AI BIO · CONTRARIAN ADVICE",
+        "title": "AI bio's money is in manufacturing; her advice is to zig while others zag",
+        "lead": "She sees bio as the most exciting application but expects the dollars to flow to production and personalized medicine, not to general chatbots.",
+        "bullets": [
+            "Bio keeps her up at night: she expects instant molecule generation and small changes enabling personalized medicine, which is where she expects dollars to flow.",
+            "She says the money will go to whoever gets a share of added production, not ChatGPT.",
+            "She flags that bio needs heavy risk controls because 'with every good you can also have bad'.",
+            "She criticizes the volume of AI social-media tools such as automating LinkedIn posting as the easy opportunities.",
+            "She notes many CEOs, especially mid-size and small, still don't grasp AI's value to their business.",
+            "Closing advice: think for yourself, do what others aren't doing, and zig when everyone else zags.",
+        ],
+        "quote": {"text": "Think for yourself and do what others are not doing. That's the hardest thing to do right now.", "cite": "— Lisa Dolan"},
+        "watch": None,
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F393", "tag": "Venture", "title": "Source deals from non-obvious university ecosystems tied to one industry, not only the famous ones."},
+    {"icon": "\U0001FA68", "tag": "AI", "title": "Look for a transferable core insight like verification before picking an industry vertical."},
+    {"icon": "\U0001F91D", "tag": "Go-to-market", "title": "Win several stakeholders inside each customer early; treat distribution as the main moat."},
+    {"icon": "\U0001F6E1", "tag": "Risk", "title": "Treat AI privacy, regulation and breach exposure as an unpriced factor when judging valuations."},
+    {"icon": "\U0001F4B0", "tag": "Pricing", "title": "Favor transaction-based models over per-seat pricing when selling AI to buyers who resist new models."},
+]
+
+HOT_TAKES = [
+    {"take": "Privacy, risk and regulation are all underpriced in the market in terms of the AI valuations.", "cite": "— Lisa Dolan", "why": "Calls out a missing risk factor in AI pricing."},
+    {"take": "The Mercor breach is a pin prick of what we're going to have in terms of data breaches.", "cite": "— Lisa Dolan", "why": "Predicts much larger breaches."},
+    {"take": "Maybe the dollars will flow to ChatGPT, but they won't. They're really going to flow to somebody who gets a part of that added production.", "cite": "— Lisa Dolan on AI bio", "why": "Rejects chatbot-centric value capture in bio."},
+    {"take": "Anthropic's 80% gross margins are actually... they're losing money.", "cite": "— Lisa Dolan", "why": "Disputes a headline margin figure."},
+    {"take": "I'm really focused on the dirty industries.", "cite": "— Lisa Dolan", "why": "Explicit anti-consensus focus."},
+]
+
+CLAIMS = [
+    {"who": "Lisa Dolan", "claim": "Anthropic's business model will look different in two, three or five years.", "metric": "Anthropic business model", "target": "changed", "by": "2-5 years", "condition": None, "entity": "Anthropic"},
+]
+
+RELATIONS = [
+    {"from": "Mercor", "rel": "supplies", "to": "OpenAI", "note": "Largest recruiter for the lab and model labeling"},
+    {"from": "Mercor", "rel": "supplies", "to": "Nvidia (NVDA)", "note": "Recruiting and model labeling"},
+    {"from": "Mercor", "rel": "supplies", "to": "Meta (META)", "note": "Recruiting and model labeling"},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F4DA", "title": "Sources referenced: a post about Anthropic's 80% gross margins, an earlier exchange between two other speakers at the event (names garbled in the captions), and the Imagination in Action event series run by John Werner.", "tag": "Sources"},
+    {"icon": "\U0001F3AF", "title": "Event context: recorded at the Googleplex at The Next Endeavor 2026 Studio Sessions; hosted by Roman Nemed, who works with John Werner on the events.", "tag": "Event"},
+]
+
+GLOSSARY = [
+    {"term": "Unfair nepotism", "def": "Dolan's term for getting several stakeholders inside a customer to support a startup."},
+    {"term": "Capital-light (horizontal) approach", "def": "Selling technology into incumbents rather than owning vertically integrated operations."},
+    {"term": "Pro-rata", "def": "An investor's right or habit of following on to keep its ownership percentage."},
+    {"term": "Core insight", "def": "The one transferable capability, like verification, behind a startup that can be applied across industries."},
+]
