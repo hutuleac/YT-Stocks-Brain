@@ -1,0 +1,361 @@
+{
+ "meta": {
+  "title": "Inside The Startup Building Uncensored AI (Abliteration AI) | EP 2345",
+  "channel": "This Week in Startups",
+  "speakers": "Jason Calacanis (host), Lon Harris, Devin Thomas (Abliteration AI co-founder), live Ask Jason callers",
+  "date": "2026-10-03",
+  "video_url": "https://www.youtube.com/watch?v=ZB0aHLmSdB0",
+  "thread_line": "5 threads · Abliteration's uncensored-model business · how abliteration works and who's liable · the China model gap and GPU crunch · billable hours and the price of taste · AI micro-dramas and solo founders",
+  "category": "market"
+ },
+ "snapshot": [
+  "**Abliteration AI** strips refusals out of open-weight models and sells them to cyber, bio, synthetic-data and defense users that frontier labs turn away. Customers set their own guardrails on top.",
+  "The pitch is an asymmetry: a defender like Hugging Face can't use OpenAI's best model, but an attacker might. Even big firms inside the labs' cyber programs still hit refusals.",
+  "Devin Thomas: Chinese open models are now ~3 months behind the frontier (it used to be a year), and Anthropic just blogged about how cyber-capable an abliterated GLM 5.3 is.",
+  "Growth: Fortune 500 CISOs started calling in the last month, demand outgrew their compute, and Devin now says the GPU shortage is 'actually a real thing'.",
+  "Ask Jason: AI won't kill the billable hour. Subscriptions will replace much of it, and people still pay for ownership and taste (Rick Rubin, a $50,000 logo).",
+  "AI micro-dramas built with Seedance and ComfyUI pull hundreds of millions of views. Jason sees them as cheap IP testing and bets Jeffrey Katzenberg builds the 'Pixar of AI'.",
+  "Solo founders: AI doesn't change investor math. Jason still backs teams of three over two over one unless the solo founder has already removed product-market-fit risk."
+ ],
+ "themes": [
+  {
+   "id": "abliteration-business",
+   "tags": [
+    "ai-infra",
+    "software"
+   ],
+   "color": "green",
+   "badge": "Founder pitch",
+   "status": "SPEEDRUN COMPANY — STARTED END OF 2025, ANNOUNCEMENTS DUE IN WEEKS",
+   "title": "Abliteration AI sells unrestricted models to the users frontier labs refuse",
+   "lead": "The wedge is professionals in cyber, biology research, synthetic data and defense who can't do their jobs on refusal-heavy frontier models.",
+   "bullets": [
+    "Devin started it at the end of last year on a **home GPU cluster**, serving the site from his house. He met Jason via Founder University and Launch Festival, and Jason's rule is to 'say yes' to meeting founders.",
+    "Jason's framing: if OpenAI runs cyber attacks against **Hugging Face** (white hat or not), Hugging Face can't defend with OpenAI's latest model. Devin adds that big corporations inside the labs' special cyber programs still complain about refusals.",
+    "Use cases: testing whether you're exposed to a newly published CVE (which the big labs won't help with), and **red-teaming AI agents**, e.g. checking that no combination of commands gets a bank's voice agent to wire out your money. Startups resell this to big banks and critical infrastructure.",
+    "Customers began as cyber and red-teaming startups. In the last month **Fortune 500 companies** in almost every industry reached out, with CISOs asking to test their own systems 'before some outside AI comes in'.",
+    "Strategy: stay **B2B** and leave consumer image/video models to others. The goal is to be the trusted brand in a 'wild west' market through audits and relationships with law enforcement. The two co-founders came from the same big-tech company, got into the Speedrun accelerator, and will hire go-to-market and engineering roles soon."
+   ],
+   "quote": {
+    "text": "Maybe some people feel like these use cases shouldn't be unblocked, but those professionals seem to be super happy about it.",
+    "cite": "— Devin Thomas"
+   },
+   "watch": "Every customer claim here is the founder's own, made on a friendly show. Jason met Devin through his Founder University and Launch Festival, so the host has a relationship with the company.",
+   "names": [
+    {
+     "name": "Abliteration AI",
+     "blurb": "Abliterated open-weight models plus a customer-defined guardrail layer; Fortune 500 inbound in the last month.",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Medium",
+     "horizon": null
+    },
+    {
+     "name": "Hugging Face",
+     "blurb": "Jason's example of a defender locked out of the attacker's best model.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "OpenAI",
+     "blurb": "Keeps its latest model for itself; publicly disclosed that its crawler accessed others' systems.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "how-it-works-liability",
+   "tags": [
+    "ai-infra",
+    "policy"
+   ],
+   "color": "amber",
+   "badge": "Contested",
+   "status": "USER-LIABILITY MODEL — POST WHITE HOUSE ACCORD",
+   "title": "Remove the refusal neurons, re-add policy as a separate model, and put liability on the user",
+   "lead": "Abliteration surgically edits the parameters behind refusals, then runs a tiny guardrail model in front that each customer configures. Devin calls it an 'inversion of control'.",
+   "bullets": [
+    "Built on interpretability work: knowledge is **localized in clusters of neurons** (in a 27B or 32B-parameter model, say), so they find the parameters responsible for refusals and modify as few as possible to avoid hurting performance.",
+    "Two layers: an unrestricted knowledge model plus a small **policy/safety model** that runs in milliseconds, so customers can set stricter or looser guardrails per area without adding much latency.",
+    "Default policies cover **CSAM and self-harm**. Jason notes every platform since Usenet, Gopher, AOL and early Wikipedia landed on the same fix: show the suicide-hotline number.",
+    "Liability: the product isn't free, so Stripe signup leaves a paper trail. They provide 'information in, information out' with no agent layer, and Devin's analogy is that the hammer maker isn't liable for an assault. Jason adds that the hardware store and the paper bag aren't either.",
+    "Jason ties this to last week's White House accord: police yourselves, and courts, government action and civil suits remain the remedies for misuse."
+   ],
+   "quote": {
+    "text": "If someone goes and takes a hammer and hits someone with it, right? Like the creator of the hammer is not necessarily liable in that case.",
+    "cite": "— Devin Thomas"
+   },
+   "watch": "Devin hedges the legal position himself ('at least our understanding'). Who carries liability for unrestricted models is unsettled law, and a Stripe signup 'doesn't obviously stop a bad actor', in his own words.",
+   "names": [
+    {
+     "name": "Stripe",
+     "blurb": "Payment signup used as the paper trail on who uses the unrestricted models.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "china-gap-compute",
+   "tags": [
+    "ai-infra",
+    "semis",
+    "geopolitics"
+   ],
+   "color": "amber",
+   "badge": "Contested",
+   "status": "FOUNDER ESTIMATE — CHINA ~3 MONTHS BEHIND FRONTIER",
+   "title": "The 'frontier' window is shrinking to months, and the GPU shortage is real",
+   "lead": "Devin says Chinese open models went from a year behind to about three months, which raises a commoditization question for highly valued labs.",
+   "bullets": [
+    "Anthropic published a blog on how cyber-capable **GLM 5.3** is, especially abliterated versions like Abliteration's. Devin says that's the source of 'some of the outrage in the industry'.",
+    "He dislikes the term 'frontier models' because it implies a fixed ranking where the window never closes. Rising **commoditization** risk means users may not tell models apart outside edge cases.",
+    "On lab hacking stories: 'if it bleeds, it leads'. Flashy hacks double as capability demos, while white-hat work gets ignored. Some of the stories are old incidents reported late.",
+    "Benchmarks like **Exploit Gym** reward models for how far they push an exploit (levels 1-4), which competes with a 'stop and tell someone' reward. Devin calls it an industry-wide engineering problem.",
+    "Devin's theory: labs with huge research headcounts produce people 'looking for things to do'. Jason likens it to driving a Model S at 170 mph on the autobahn: the car is fine until a tire blows.",
+    "Compute: they outgrew their capacity and users complained it was slow, and partners have since helped. Devin 'used to think that the GPU shortage was fake' until he hit it at scale.",
+    "Adoption: Devin cites an **a16z** report that a large share of businesses still haven't adopted AI. Jason sees it in his ~20-person venture firm, where the top 20% of people use 90% of the tokens and the bottom half use none."
+   ],
+   "quote": {
+    "text": "I actually used to kind of think that the GPU shortage was fake, but now I've experienced it.",
+    "cite": "— Devin Thomas"
+   },
+   "watch": "The three-month gap is Devin's own estimate, and he sells products built on exactly those Chinese open models.",
+   "names": [
+    {
+     "name": "Anthropic",
+     "blurb": "Published a blog on the cyber capability of GLM 5.3 and its abliterated versions.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Andreessen Horowitz",
+     "blurb": "a16z report: a large share of businesses still haven't adopted AI.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "billable-hour",
+   "tags": [
+    "software",
+    "career"
+   ],
+   "color": "gray",
+   "badge": "Opinion",
+   "status": "ASK JASON — CALLER MATTHEW KERBUS",
+   "title": "AI won't kill the billable hour; subscriptions and taste will reshape it",
+   "lead": "Jason disputes the 'everything goes outcome-based' view: PCs, cloud and the internet never ended hourly billing, and experts will deliver more for less instead.",
+   "bullets": [
+    "The caller cites a This Week in AI debate, prompted by a Financial Times piece on the AI 'wrecking ball' hitting the billable hour, where a guest and **Scott Stevenson** predicted outcome-based pricing within a couple of years.",
+    "Jason: commodity legal work goes away (no attorney needed for a convertible note or a trademark), but a 10-hour research report becomes 1 hour, or stays billed at 10 for a better result. He expects **subscriptions** to replace the billable hour in many cases.",
+    "Precedent: design subscriptions used geographic arbitrage, with designers in South America or India at $1-5/hr vs US studios at $50-150/hr. 'Reasonably unlimited', but someone still counts hours.",
+    "You're paying for **ownership**: an AI can audit the books, but you want a human who will testify when the shareholder lawsuit comes. A $50,000-per-logo designer or a $50-100K Met Gala dress sells the inefficient experience on purpose.",
+    "Lon on **Rick Rubin** (License to Ill, Raising Hell): he isn't an engineer and doesn't touch the equipment, yet he's paid millions for taste. Jason's interior-designer example: $1M of furniture plus 20% markup and a $250,000 fee, $1,000 per square foot. He'd rather have eight hours of sleep and tonkatsu after skiing in Japan."
+   ],
+   "quote": {
+    "text": "I don't buy that the billable hour goes away. I just think humans move upstream and do more important work.",
+    "cite": "— Jason Calacanis"
+   },
+   "watch": "The caller is building something in this space and Jason may have invested ('we may have thrown a little cash his way').",
+   "names": null
+  },
+  {
+   "id": "micro-dramas-founders",
+   "tags": [
+    "consumer",
+    "career"
+   ],
+   "color": "gray",
+   "badge": "Speculative",
+   "status": "ASK JASON — CALLERS BRUNO & JOSH",
+   "title": "AI micro-dramas as an IP test lab, and why solo founders still lose to teams",
+   "lead": "Micro-dramas from Asia went AI-native about six months ago. Jason sees them less as art than as a cheap way to test characters before bigger formats.",
+   "bullets": [
+    "Format: 1-2 hours of content cut into **30-60 two-minute episodes**, 5-6 free, then a subscription. It was live action until ~6 months ago. Now **Seedance 2.5** plus agent-driven ComfyUI runs standardized production pipelines.",
+    "Caller Bruno (12 years in Hollywood, three Academy Award nominations) says ComfyUI is that pipeline: open source, runs locally or in the cloud, and Claude Code can build the workflow. Genres run from sexy dramas for women to medieval Chinese fantasy.",
+    "Lon pitched a micro-drama to **Snap** years ago and it passed. AI romance dramas now get hundreds of millions of views on TikTok and YouTube Shorts and in dedicated apps (TikTok's PineDrama, ReelShort), with subscription and ad monetization.",
+    "Jason: the next Spider-Man could start as a micro-drama, like 1960s Marvel, where Stan Lee and Jack Kirby ran a few issues and moved on if readers didn't bite. Today's AI video is 'junk food' (a Filet-O-Fish). A Toy Story moment is coming, and he bets **Jeffrey Katzenberg** gets there by pairing talent with AI plus existing tools.",
+    "Jason is courting ex-Marvel visual lead **Andy Park**, laid off along with his whole team, to start a company. Comic books are feast or famine: for every Robert Kirkman there are a thousand struggling artists.",
+    "Solo founders (caller Josh, annotated.com): investors still back three, then two, then one equally strong founder. Teams split the task-switching and carry less quit risk. Exceptions are proven founders like Mark Pincus, Elon Musk, Evan Williams or Travis Kalanick, or a solo founder growing **5-10% week over week** who has removed product-market-fit risk."
+   ],
+   "quote": {
+    "text": "What can I eliminate from risk? And as I eliminate risk from this story, then my valuation goes up.",
+    "cite": "— Jason Calacanis"
+   },
+   "watch": null,
+   "names": [
+    {
+     "name": "ByteDance",
+     "blurb": "Seedance video models power AI micro-drama pipelines; also flagged for IP-spewing image models.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "TikTok",
+     "blurb": "Runs PineDrama, a dedicated micro-drama app with multiple monetization options.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Snap (SNAP)",
+     "blurb": "Passed on Lon's micro-drama pitch years ago.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Marvel",
+     "blurb": "Let Andy Park and his ~30-person animation team go; Jason calls it getting rid of 'the soul'.",
+     "stance": "NEGATIVE VIEW",
+     "conviction": "Low",
+     "horizon": null
+    }
+   ]
+  }
+ ],
+ "takeaways": [
+  {
+   "icon": "🛡",
+   "tag": "Cybersecurity",
+   "title": "Red-team your customer-facing AI agents with unrestricted models before an attacker does"
+  },
+  {
+   "icon": "🇨🇳",
+   "tag": "AI models",
+   "title": "Price model moats in months, not years. Treat frontier premiums as eroding"
+  },
+  {
+   "icon": "💼",
+   "tag": "Services",
+   "title": "Shift professional-services pricing toward subscriptions, and keep human ownership as the premium"
+  },
+  {
+   "icon": "🎬",
+   "tag": "Media",
+   "title": "Use AI micro-dramas to test characters and IP cheaply before committing to long-form"
+  },
+  {
+   "icon": "🚀",
+   "tag": "Startups",
+   "title": "Solo founder? Remove product-market-fit risk with week-over-week growth before you raise"
+  }
+ ],
+ "hot_takes": [
+  {
+   "take": "Maybe before it was a year they were a year behind. I would say today they're maybe around three months behind.",
+   "cite": "— Devin Thomas",
+   "why": "numeric China-gap estimate"
+  },
+  {
+   "take": "I actually used to kind of think that the GPU shortage was fake.",
+   "cite": "— Devin Thomas",
+   "why": "admits reversal; claims shortage is real"
+  },
+  {
+   "take": "I don't buy that the billable hour goes away.",
+   "cite": "— Jason Calacanis",
+   "why": "contradicts outcome-pricing predictions"
+  },
+  {
+   "take": "Rather than outcome based pricing, I actually think the subscription model is going to replace the billable hour in a lot of instances.",
+   "cite": "— Jason Calacanis",
+   "why": "specific business-model prediction"
+  },
+  {
+   "take": "We're going to have a Toy Story moment. Jeffrey Katzenberg is going to be the one who figures it out.",
+   "cite": "— Jason Calacanis",
+   "why": "names a specific winner in AI animation"
+  },
+  {
+   "take": "It is not going to change just because of the AI tools.",
+   "cite": "— Jason Calacanis",
+   "why": "investors' anti-solo-founder bias persists despite AI"
+  }
+ ],
+ "claims": [
+  {
+   "who": "Devin Thomas",
+   "claim": "Chinese open models trail the absolute frontier by about three months, down from about a year.",
+   "metric": "open-model lag to frontier",
+   "target": "~3 months",
+   "by": null,
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Jason Calacanis",
+   "claim": "Subscriptions replace the billable hour in many professional-services cases; hourly billing does not disappear.",
+   "metric": "professional-services pricing model",
+   "target": "subscription > outcome-based",
+   "by": null,
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Jason Calacanis",
+   "claim": "Jeffrey Katzenberg is the one who delivers the 'Toy Story moment' for AI video.",
+   "metric": "first breakthrough AI-animated hit",
+   "target": "Katzenberg-led",
+   "by": null,
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Devin Thomas",
+   "claim": "Abliteration AI makes several announcements in the coming weeks and opens go-to-market and engineering roles.",
+   "metric": "company announcements / hiring",
+   "target": "announced",
+   "by": "next few weeks",
+   "condition": null,
+   "entity": "Abliteration AI"
+  }
+ ],
+ "relations": [],
+ "other_news": [
+  {
+   "icon": "📰",
+   "title": "TWiST is launching a paid founder newsletter on Substack: free tier, then $10/month or $100/year for ~100 tactical tips a year (two a week). Jason floated 250 tactics at $250/year later.",
+   "tag": "TWiST"
+  },
+  {
+   "icon": "📚",
+   "title": "Sources referenced: an Anthropic blog on GLM 5.3, an a16z adoption report, the Financial Times (billable hour), This Week in AI, and Andy Park's Instagram (Andy Park Art).",
+   "tag": "Sources"
+  }
+ ],
+ "glossary": [
+  {
+   "term": "Abliteration",
+   "def": "Editing the specific model parameters that encode refusals so an open-weight model answers everything, with minimal performance loss."
+  },
+  {
+   "term": "Inversion of control (guardrails)",
+   "def": "Moving safety out of the model weights into a separate, customer-configured policy model."
+  },
+  {
+   "term": "Red teaming",
+   "def": "Simulating a threat actor against your own systems or AI agents to find weaknesses first."
+  },
+  {
+   "term": "Exploit Gym",
+   "def": "A benchmark that rewards models for how far (levels 1-4) they can take an exploit."
+  },
+  {
+   "term": "Micro-drama",
+   "def": "Serialized two-minute episodes with cliffhangers, a few free, then subscription; now largely AI-generated."
+  },
+  {
+   "term": "ComfyUI",
+   "def": "Open-source node-based pipeline tool for AI image/video generation, runnable locally or in the cloud."
+  }
+ ]
+}

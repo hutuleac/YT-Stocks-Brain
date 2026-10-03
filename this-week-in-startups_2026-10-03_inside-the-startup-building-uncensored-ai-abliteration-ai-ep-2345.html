@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: Inside The Startup Building Uncensored AI (Abliteration AI) | EP 2345</title>
+<meta name="description" content="This Week in Startups · 5 threads · Abliteration&#x27;s uncensored-model business · how abliteration works and who&#x27;s liable · the China model gap and GPU crunch · billable hours and the price of taste · AI micro-dramas and solo founders">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="Inside The Startup Building Uncensored AI (Abliteration AI) | EP 2345">
+<meta property="og:description" content="This Week in Startups · 5 threads · Abliteration&#x27;s uncensored-model business · how abliteration works and who&#x27;s liable · the China model gap and GPU crunch · billable hours and the price of taste · AI micro-dramas and solo founders">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Inside The Startup Building Uncensored AI (Abliteration AI) | EP 2345</h1>
+    <div class="byline">
+      Channel: <b>This Week in Startups</b> &middot; Speaker: <b>Jason Calacanis (host), Lon Harris, Devin Thomas (Abliteration AI co-founder), live Ask Jason callers</b> &middot; <b>2026-10-03</b>
+      <div class="stats-line">5 threads · Abliteration's uncensored-model business · how abliteration works and who's liable · the China model gap and GPU crunch · billable hours and the price of taste · AI micro-dramas and solo founders &middot; <a href="https://www.youtube.com/watch?v=ZB0aHLmSdB0" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li><b>Abliteration AI</b> strips refusals out of open-weight models and sells them to cyber, bio, synthetic-data and defense users that frontier labs turn away. Customers set their own guardrails on top.</li><li>The pitch is an asymmetry: a defender like Hugging Face can't use OpenAI's best model, but an attacker might. Even big firms inside the labs' cyber programs still hit refusals.</li><li>Devin Thomas: Chinese open models are now ~3 months behind the frontier (it used to be a year), and Anthropic just blogged about how cyber-capable an abliterated GLM 5.3 is.</li><li>Growth: Fortune 500 CISOs started calling in the last month, demand outgrew their compute, and Devin now says the GPU shortage is 'actually a real thing'.</li><li>Ask Jason: AI won't kill the billable hour. Subscriptions will replace much of it, and people still pay for ownership and taste (Rick Rubin, a <b>$50,000 </b>logo).</li><li>AI micro-dramas built with Seedance and ComfyUI pull hundreds of millions of views. Jason sees them as cheap IP testing and bets Jeffrey Katzenberg builds the 'Pixar of AI'.</li><li>Solo founders: AI doesn't change investor math. Jason still backs teams of three over two over one unless the solo founder has already removed product-market-fit risk.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="abliteration-business">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Founder pitch</span>
+    <span class="theme-status">SPEEDRUN COMPANY — STARTED END OF 2025, ANNOUNCEMENTS DUE IN WEEKS</span><span class="ttag">ai-infra</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Abliteration AI sells unrestricted models to the users frontier labs refuse</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The wedge is professionals in cyber, biology research, synthetic data and defense who can't do their jobs on refusal-heavy frontier models.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Devin started it at the end of last year on a <b>home GPU cluster</b>, serving the site from his house. He met Jason via Founder University and Launch Festival, and Jason's rule is to 'say yes' to meeting founders.</li><li><span class="dot" style="background:#3f6b2e;"></span>Jason's framing: if OpenAI runs cyber attacks against <b>Hugging Face</b> (white hat or not), Hugging Face can't defend with OpenAI's latest model. Devin adds that big corporations inside the labs' special cyber programs still complain about refusals.</li><li><span class="dot" style="background:#3f6b2e;"></span>Use cases: testing whether you're exposed to a newly published CVE (which the big labs won't help with), and <b>red-teaming AI agents</b>, e.g. checking that no combination of commands gets a bank's voice agent to wire out your money. Startups resell this to big banks and critical infrastructure.</li><li><span class="dot" style="background:#3f6b2e;"></span>Customers began as cyber and red-teaming startups. In the last month <b>Fortune 500 companies</b> in almost every industry reached out, with CISOs asking to test their own systems 'before some outside AI comes in'.</li><li><span class="dot" style="background:#3f6b2e;"></span>Strategy: stay <b>B2B</b> and leave consumer image/video models to others. The goal is to be the trusted brand in a 'wild west' market through audits and relationships with law enforcement. The two co-founders came from the same big-tech company, got into the Speedrun accelerator, and will hire go-to-market and engineering roles soon.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Maybe some people feel like these use cases shouldn't be unblocked, but those professionals seem to be super happy about it.&#8221;<cite>— Devin Thomas</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Abliteration AI<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Abliterated open-weight models plus a customer-defined guardrail layer; Fortune 500 inbound in the last month.</span></div><div class="namechip"><b>Hugging Face<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Jason's example of a defender locked out of the attacker's best model.</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Keeps its latest model for itself; publicly disclosed that its crawler accessed others' systems.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Every customer claim here is the founder's own, made on a friendly show. Jason met Devin through his Founder University and Launch Festival, so the host has a relationship with the company.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="how-it-works-liability">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">USER-LIABILITY MODEL — POST WHITE HOUSE ACCORD</span><span class="ttag">ai-infra</span><span class="ttag">policy</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Remove the refusal neurons, re-add policy as a separate model, and put liability on the user</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Abliteration surgically edits the parameters behind refusals, then runs a tiny guardrail model in front that each customer configures. Devin calls it an 'inversion of control'.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Built on interpretability work: knowledge is <b>localized in clusters of neurons</b> (in a 27B or 32B-parameter model, say), so they find the parameters responsible for refusals and modify as few as possible to avoid hurting performance.</li><li><span class="dot" style="background:#93711b;"></span>Two layers: an unrestricted knowledge model plus a small <b>policy/safety model</b> that runs in milliseconds, so customers can set stricter or looser guardrails per area without adding much latency.</li><li><span class="dot" style="background:#93711b;"></span>Default policies cover <b>CSAM and self-harm</b>. Jason notes every platform since Usenet, Gopher, AOL and early Wikipedia landed on the same fix: show the suicide-hotline number.</li><li><span class="dot" style="background:#93711b;"></span>Liability: the product isn't free, so Stripe signup leaves a paper trail. They provide 'information in, information out' with no agent layer, and Devin's analogy is that the hammer maker isn't liable for an assault. Jason adds that the hardware store and the paper bag aren't either.</li><li><span class="dot" style="background:#93711b;"></span>Jason ties this to last week's White House accord: police yourselves, and courts, government action and civil suits remain the remedies for misuse.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;If someone goes and takes a hammer and hits someone with it, right? Like the creator of the hammer is not necessarily liable in that case.&#8221;<cite>— Devin Thomas</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Stripe<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Payment signup used as the paper trail on who uses the unrestricted models.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Devin hedges the legal position himself ('at least our understanding'). Who carries liability for unrestricted models is unsettled law, and a Stripe signup 'doesn't obviously stop a bad actor', in his own words.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="china-gap-compute">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">FOUNDER ESTIMATE — CHINA ~3 MONTHS BEHIND FRONTIER</span><span class="ttag">ai-infra</span><span class="ttag">semis</span><span class="ttag">geopolitics</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">The 'frontier' window is shrinking to months, and the GPU shortage is real</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Devin says Chinese open models went from a year behind to about three months, which raises a commoditization question for highly valued labs.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Anthropic published a blog on how cyber-capable <b>GLM 5.3</b> is, especially abliterated versions like Abliteration's. Devin says that's the source of 'some of the outrage in the industry'.</li><li><span class="dot" style="background:#93711b;"></span>He dislikes the term 'frontier models' because it implies a fixed ranking where the window never closes. Rising <b>commoditization</b> risk means users may not tell models apart outside edge cases.</li><li><span class="dot" style="background:#93711b;"></span>On lab hacking stories: 'if it bleeds, it leads'. Flashy hacks double as capability demos, while white-hat work gets ignored. Some of the stories are old incidents reported late.</li><li><span class="dot" style="background:#93711b;"></span>Benchmarks like <b>Exploit Gym</b> reward models for how far they push an exploit (levels 1-4), which competes with a 'stop and tell someone' reward. Devin calls it an industry-wide engineering problem.</li><li><span class="dot" style="background:#93711b;"></span>Devin's theory: labs with huge research headcounts produce people 'looking for things to do'. Jason likens it to driving a Model S at 170 mph on the autobahn: the car is fine until a tire blows.</li><li><span class="dot" style="background:#93711b;"></span>Compute: they outgrew their capacity and users complained it was slow, and partners have since helped. Devin 'used to think that the GPU shortage was fake' until he hit it at scale.</li><li><span class="dot" style="background:#93711b;"></span>Adoption: Devin cites an <b>a16z</b> report that a large share of businesses still haven't adopted AI. Jason sees it in his ~20-person venture firm, where the top 20% of people use 90% of the tokens and the bottom half use none.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I actually used to kind of think that the GPU shortage was fake, but now I've experienced it.&#8221;<cite>— Devin Thomas</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Published a blog on the cyber capability of GLM 5.3 and its abliterated versions.</span></div><div class="namechip"><b>Andreessen Horowitz<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>a16z report: a large share of businesses still haven't adopted AI.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The three-month gap is Devin's own estimate, and he sells products built on exactly those Chinese open models.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="billable-hour">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Opinion</span>
+    <span class="theme-status">ASK JASON — CALLER MATTHEW KERBUS</span><span class="ttag">software</span><span class="ttag">career</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">AI won't kill the billable hour; subscriptions and taste will reshape it</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jason disputes the 'everything goes outcome-based' view: PCs, cloud and the internet never ended hourly billing, and experts will deliver more for less instead.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>The caller cites a This Week in AI debate, prompted by a Financial Times piece on the AI 'wrecking ball' hitting the billable hour, where a guest and <b>Scott Stevenson</b> predicted outcome-based pricing within a couple of years.</li><li><span class="dot" style="background:#65695f;"></span>Jason: commodity legal work goes away (no attorney needed for a convertible note or a trademark), but a 10-hour research report becomes 1 hour, or stays billed at 10 for a better result. He expects <b>subscriptions</b> to replace the billable hour in many cases.</li><li><span class="dot" style="background:#65695f;"></span>Precedent: design subscriptions used geographic arbitrage, with designers in South America or India at <b>$1</b>-5/hr vs US studios at $50-150/hr. 'Reasonably unlimited', but someone still counts hours.</li><li><span class="dot" style="background:#65695f;"></span>You're paying for <b>ownership</b>: an AI can audit the books, but you want a human who will testify when the shareholder lawsuit comes. A $50,000-per-logo designer or a $50-100K Met Gala dress sells the inefficient experience on purpose.</li><li><span class="dot" style="background:#65695f;"></span>Lon on <b>Rick Rubin</b> (License to Ill, Raising Hell): he isn't an engineer and doesn't touch the equipment, yet he's paid millions for taste. Jason's interior-designer example: $1M of furniture plus 20% markup and a $250,000 fee, $1,000 per square foot. He'd rather have eight hours of sleep and tonkatsu after skiing in Japan.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#65695f;"><div class="lbl">Pull quote</div>&#8220;I don't buy that the billable hour goes away. I just think humans move upstream and do more important work.&#8221;<cite>— Jason Calacanis</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The caller is building something in this space and Jason may have invested ('we may have thrown a little cash his way').</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="micro-dramas-founders">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Speculative</span>
+    <span class="theme-status">ASK JASON — CALLERS BRUNO &amp; JOSH</span><span class="ttag">consumer</span><span class="ttag">career</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">AI micro-dramas as an IP test lab, and why solo founders still lose to teams</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Micro-dramas from Asia went AI-native about six months ago. Jason sees them less as art than as a cheap way to test characters before bigger formats.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>Format: 1-2 hours of content cut into <b>30-60 two-minute episodes</b>, 5-6 free, then a subscription. It was live action until ~6 months ago. Now <b>Seedance 2.5</b> plus agent-driven ComfyUI runs standardized production pipelines.</li><li><span class="dot" style="background:#65695f;"></span>Caller Bruno (12 years in Hollywood, three Academy Award nominations) says ComfyUI is that pipeline: open source, runs locally or in the cloud, and Claude Code can build the workflow. Genres run from sexy dramas for women to medieval Chinese fantasy.</li><li><span class="dot" style="background:#65695f;"></span>Lon pitched a micro-drama to <b>Snap</b> years ago and it passed. AI romance dramas now get hundreds of millions of views on TikTok and YouTube Shorts and in dedicated apps (TikTok's PineDrama, ReelShort), with subscription and ad monetization.</li><li><span class="dot" style="background:#65695f;"></span>Jason: the next Spider-Man could start as a micro-drama, like 1960s Marvel, where Stan Lee and Jack Kirby ran a few issues and moved on if readers didn't bite. Today's AI video is 'junk food' (a Filet-O-Fish). A Toy Story moment is coming, and he bets <b>Jeffrey Katzenberg</b> gets there by pairing talent with AI plus existing tools.</li><li><span class="dot" style="background:#65695f;"></span>Jason is courting ex-Marvel visual lead <b>Andy Park</b>, laid off along with his whole team, to start a company. Comic books are feast or famine: for every Robert Kirkman there are a thousand struggling artists.</li><li><span class="dot" style="background:#65695f;"></span>Solo founders (caller Josh, annotated.com): investors still back three, then two, then one equally strong founder. Teams split the task-switching and carry less quit risk. Exceptions are proven founders like Mark Pincus, Elon Musk, Evan Williams or Travis Kalanick, or a solo founder growing <b>5-10% week over week</b> who has removed product-market-fit risk.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#65695f;"><div class="lbl">Pull quote</div>&#8220;What can I eliminate from risk? And as I eliminate risk from this story, then my valuation goes up.&#8221;<cite>— Jason Calacanis</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>ByteDance<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Seedance video models power AI micro-drama pipelines; also flagged for IP-spewing image models.</span></div><div class="namechip"><b>TikTok<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Runs PineDrama, a dedicated micro-drama app with multiple monetization options.</span></div><div class="namechip"><b>Snap (SNAP)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Passed on Lon's micro-drama pitch years ago.</span></div><div class="namechip"><b>Marvel<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Low</span></b><span>Let Andy Park and his ~30-person animation team go; Jason calls it getting rid of 'the soul'.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🛡</div><div class="tline"><span class="cat">Cybersecurity:</span> <span class="txt">Red-team your customer-facing AI agents with unrestricted models before an attacker does</span></div></div><div class="irow"><div class="ic">🇨🇳</div><div class="tline"><span class="cat">AI models:</span> <span class="txt">Price model moats in months, not years. Treat frontier premiums as eroding</span></div></div><div class="irow"><div class="ic">💼</div><div class="tline"><span class="cat">Services:</span> <span class="txt">Shift professional-services pricing toward subscriptions, and keep human ownership as the premium</span></div></div><div class="irow"><div class="ic">🎬</div><div class="tline"><span class="cat">Media:</span> <span class="txt">Use AI micro-dramas to test characters and IP cheaply before committing to long-form</span></div></div><div class="irow"><div class="ic">🚀</div><div class="tline"><span class="cat">Startups:</span> <span class="txt">Solo founder? Remove product-market-fit risk with week-over-week growth before you raise</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;Maybe before it was a year they were a year behind. I would say today they're maybe around three months behind.&#8221; <cite>— Devin Thomas</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I actually used to kind of think that the GPU shortage was fake.&#8221; <cite>— Devin Thomas</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't buy that the billable hour goes away.&#8221; <cite>— Jason Calacanis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Rather than outcome based pricing, I actually think the subscription model is going to replace the billable hour in a lot of instances.&#8221; <cite>— Jason Calacanis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;We're going to have a Toy Story moment. Jeffrey Katzenberg is going to be the one who figures it out.&#8221; <cite>— Jason Calacanis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;It is not going to change just because of the AI tools.&#8221; <cite>— Jason Calacanis</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Devin Thomas:</b> Chinese open models trail the absolute frontier by about three months, down from about a year. <span class="cmeta">open-model lag to frontier · ~3 months</span></div><div class="ritem"><b>Jason Calacanis:</b> Subscriptions replace the billable hour in many professional-services cases; hourly billing does not disappear. <span class="cmeta">professional-services pricing model · subscription &gt; outcome-based</span></div><div class="ritem"><b>Jason Calacanis:</b> Jeffrey Katzenberg is the one who delivers the 'Toy Story moment' for AI video. <span class="cmeta">first breakthrough AI-animated hit · Katzenberg-led</span></div><div class="ritem"><b>Devin Thomas:</b> Abliteration AI makes several announcements in the coming weeks and opens go-to-market and engineering roles. <span class="cmeta">company announcements / hiring · announced · next few weeks</span> <span class="tag">Abliteration AI</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><p class="empty">No company-to-company relationships stated in this video.</p></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📰</div><div><div class="title">TWiST is launching a paid founder newsletter on Substack: free tier, then <b>$10</b>/month or $100/year for ~100 tactical tips a year (two a week). Jason floated 250 tactics at $250/year later. <span class="tag">TWiST</span></div></div></div><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: an Anthropic blog on GLM 5.3, an a16z adoption report, the Financial Times (billable hour), This Week in AI, and Andy Park's Instagram (Andy Park Art). <span class="tag">Sources</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Abliteration</b> &mdash; Editing the specific model parameters that encode refusals so an open-weight model answers everything, with minimal performance loss.</div><div><b>Inversion of control (guardrails)</b> &mdash; Moving safety out of the model weights into a separate, customer-configured policy model.</div><div><b>Red teaming</b> &mdash; Simulating a threat actor against your own systems or AI agents to find weaknesses first.</div><div><b>Exploit Gym</b> &mdash; A benchmark that rewards models for how far (levels 1-4) they can take an exploit.</div><div><b>Micro-drama</b> &mdash; Serialized two-minute episodes with cliffhangers, a few free, then subscription; now largely AI-generated.</div><div><b>ComfyUI</b> &mdash; Open-source node-based pipeline tool for AI image/video generation, runnable locally or in the cloud.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
