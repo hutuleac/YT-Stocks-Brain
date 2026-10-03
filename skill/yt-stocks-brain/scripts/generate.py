@@ -81,6 +81,9 @@ import shutil
 import sys
 import unicodedata
 
+from build_kb import build as build_kb
+from entities import Resolver
+
 sys.dont_write_bytecode = True  # don't litter the working directory with __pycache__
 
 REQUIRED_FIELDS = ["META", "SNAPSHOT", "THEMES", "TAKEAWAYS", "OTHER_NEWS", "GLOSSARY"]
@@ -718,7 +721,7 @@ def _entities_from_theme(theme):
             ticker, display = _parse_ticker(piece)
             stance = n.get("stance")
             out.append({
-                "ticker": ticker, "display": display or piece,
+                "ticker": ticker, "display": display or piece, "raw": piece, "theme_id": theme.get("id"),
                 "stance_label": stance or theme.get("badge", ""),
                 "conviction": n.get("conviction"), "horizon": n.get("horizon"),
                 "color": _stance_color(stance) if stance else theme.get("color", "gray"),
@@ -739,7 +742,7 @@ def _entities_from_conviction(conviction_map):
                 continue
             stance = c.get("stance", "")
             out.append({
-                "ticker": ticker, "display": display or piece,
+                "ticker": ticker, "display": display or piece, "raw": piece,
                 "stance_label": stance, "conviction": c.get("conviction"),
                 "color": _stance_color(stance), "blurb": c.get("core_thesis", ""),
             })
@@ -857,6 +860,7 @@ def _load_brief(json_path):
         "tags": tags,
         "entities": entities,
         "hits": _content_hits(d),
+        "_raw": d,
     }
 
 
@@ -922,24 +926,11 @@ def _render_channel_view(briefs):
 
 
 def _render_entity_view(briefs):
-    all_mentions = [(e, b) for b in briefs for e in b["entities"]]
-
-    # A mention like "Nvidia" (no parsed ticker) must merge with "Nvidia (NVDA)" elsewhere —
-    # build display-name -> ticker aliases from every mention that DID carry a ticker first.
-    alias = {}
-    for e, _ in all_mentions:
-        if e["ticker"]:
-            alias.setdefault(e["display"].lower(), e["ticker"])
-
-    entities = {}  # key -> {ticker, display, mentions: []}
-    for e, b in all_mentions:
-        key = e["ticker"] or alias.get(e["display"].lower()) or e["display"].lower()
-        slot = entities.setdefault(key, {"ticker": e["ticker"], "display": e["display"], "mentions": []})
-        if not slot["ticker"] and (e["ticker"] or alias.get(e["display"].lower())):
-            slot["ticker"] = e["ticker"] or alias.get(e["display"].lower())
-        if e["ticker"] and len(e["display"]) > len(slot["display"]):
-            slot["display"] = e["display"]  # prefer the fuller name variant
-        slot["mentions"].append({**e, "brief": b})
+    entities = {}  # canonical key (see entities.py) -> {ticker, display, mentions: []}
+    for b in briefs:
+        for e in b["entities"]:
+            slot = entities.setdefault(e["key"], {"ticker": e["ticker"], "display": e["display"], "mentions": []})
+            slot["mentions"].append({**e, "brief": b})
 
     ordered = sorted(
         entities.values(),
@@ -1128,9 +1119,29 @@ INDEX_JS = """
 """
 
 
+def _canonicalize_entities(briefs):
+    """Rewrite every entity's ticker/display to its canonical form and add a stable "key".
+    Claim/relation entity strings are observed too, so tickers written there are learned."""
+    r = Resolver()
+    for b in briefs:
+        for e in b["entities"]:
+            r.observe(e["raw"])
+        for c in b["_raw"].get("claims") or []:
+            r.observe(c.get("entity"))
+        for x in b["_raw"].get("relations") or []:
+            r.observe(x.get("from"))
+            r.observe(x.get("to"))
+    for b in briefs:
+        for e in b["entities"]:
+            c = r.resolve(e["raw"])
+            e.update(key=c["key"], display=c["name"], ticker=c["ticker"])
+    return r
+
+
 def build_index():
     briefs = [b for b in (_load_brief(p) for p in sorted(glob.glob(os.path.join("research-data", "*", "*.json")))) if b]
     briefs.sort(key=lambda b: _date_sort_key(b["date"]))
+    resolver = _canonicalize_entities(briefs)
 
     channels = sorted(set(b["channel"] for b in briefs))
     tickers = sorted(set(e["ticker"] for b in briefs for e in b["entities"] if e["ticker"]))
@@ -1189,14 +1200,16 @@ def build_index():
 
     manifest = {
         "generated_from": "youtube-research-brief generate.py --reindex",
-        "briefs": [{k: v for k, v in b.items() if k not in ("entities", "hits")} | {
-            "entities": [{"ticker": e["ticker"], "display": e["display"], "stance": e["stance_label"],
+        "briefs": [{k: v for k, v in b.items() if k not in ("entities", "hits", "_raw")} | {
+            "entities": [{"key": e["key"], "ticker": e["ticker"], "display": e["display"], "stance": e["stance_label"],
                           "conviction": e["conviction"], "horizon": e.get("horizon"), "color": e["color"]}
                          for e in b["entities"]]
         } for b in briefs],
     }
     with open("library.json", "w", encoding="utf-8") as f:
         json.dump(manifest, f, indent=1, ensure_ascii=False)
+
+    build_kb(briefs, resolver)
 
     return "index.html"
 

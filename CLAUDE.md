@@ -54,6 +54,14 @@ Key things baked into the current skill that aren't obvious from a first read:
   `python3 <skill-folder>/check_coverage.py <inventory.md> <slug> --ignore=Surname`
   Point it at the slug, never at `library.json` — that's the manifest and has no bullets, so it
   reports nearly every fact as missing. Exit 1 means something is unplaced.
+- **Entity canonicalization + knowledge base (since Oct 2026):** every `generate.py` run resolves
+  all entity strings (names, claim `entity`, relation `from`/`to`) to one stable `key` via
+  `skill/yt-stocks-brain/scripts/entities.py` (ticker if known, else lowercased name; qualifiers
+  like `(comparison)` dropped; tickers learned across mentions). Semantic merges the resolver
+  can't infer (`Meta Platforms`→`Meta`, `.KS` tickers) go in `kb/aliases.json` — the only place
+  to fix a split company row. The same run rebuilds `kb/brain.db` (SQLite, gitignored, derived):
+  tables `briefs/entities/entity_aliases/themes/theme_tags/mentions/claims/relations/takes`, views
+  `entity_timeline` and `co_mentions`. `library.json` entities now carry `key`.
 - **Fixing a brief after the root data file is deleted:** edit
   `research-data/<slug>/<slug>_data.py` in place and run `generate.py` against that path.
 
