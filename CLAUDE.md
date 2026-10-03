@@ -32,8 +32,13 @@ Key things baked into the current skill that aren't obvious from a first read:
   glossary term. This was an explicit standing instruction, not a default of the skill template.
 - `META["category"]` also accepts `"life"` (life/family/mindset/business perspectives, no primary
   investing angle). `index.html` has tabs: All Briefs, By Channel, By Company/Ticker, Quotes & Takes,
-  Dev & Workflows (`"dev"`) and Life & Perspectives (`"life"`). Rebuilt automatically on every
+  Dev & Workflows (`"dev"`), Life & Perspectives (`"life"`) and Romania (`region: "ro"`). Rebuilt automatically on every
   `generate.py` run, or standalone via `python3 <skill-folder>/generate.py --reindex`.
+- **Romanian videos (since Oct 2026):** brief written in English so it joins search, Signals and
+  the graph; quotes and hot takes stay verbatim Romanian (no diacritics), published title unchanged.
+  `META["region"] = "ro"` puts it on the **Romania** tab; the `romania` tag goes only on themes about
+  Romania itself (leu, BVB, local airlines), never on a Romanian show's global stories. All 5
+  earlier Romanian briefs were backfilled this way — don't revert to Romanian-language briefs.
 - **yt-dlp 429 / missing:** `scripts/fetch_transcript_api.py <url|id>` writes the SRT via
   `youtube_transcript_api`; then clean as usual.
 - **`names` is the permanent ticker index, not a general "notable things" slot.** Every entry

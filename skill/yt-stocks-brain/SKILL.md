@@ -43,11 +43,14 @@ python3 <skill-folder>/scripts/fetch_transcript_api.py "URL_OR_VIDEO_ID" [lang] 
 ```
 Then continue with Section 2 unchanged. Needs `pip install youtube-transcript-api`.
 
-**Romanian-language videos:** if the video is in Romanian, fetch Romanian captions instead
-(`--sub-lang ro`) and write the whole brief — title, snapshot, theme bullets, quotes, everything —
-in Romanian, not translated to English. Write it **without diacritics** (ș→s, ț→t, ă→a, î/â→i/a) —
-plain ASCII Romanian throughout, matching how the source auto-captions are usually already
-rendered.
+**Romanian-language videos:** fetch Romanian captions (`--sub-lang ro`) but write the brief in
+**English** — snapshot, themes, claims, glossary, everything the search, Signals and graph read
+(changed Oct 2026: Romanian briefs were invisible to English search and their claims couldn't
+group with the rest). Keep the speaker's own words in Romanian: theme `quote` text and `HOT_TAKES`
+`take` stay verbatim Romanian, **without diacritics** (ș→s, ț→t, ă→a, î/â→i/a). The video `title`
+stays as published. Set `META["region"] = "ro"` so the brief lands on the **Romania** tab, and
+add the `romania` tag only to themes about Romania itself (the leu, local airlines, Cernavoda) —
+a Romanian show's Micron or Anthropic story is a global theme and gets global tags only.
 
 ### 2. Clean the transcript with the bundled script
 ```bash
@@ -124,7 +127,7 @@ For each theme, capture:
 - `tags` — 1-3 sector/topic tags from the fixed list in `generate.py` (`TAGS`: `ai-infra`, `semis`,
   `software`, `macro-rates`, `crypto`, `energy`, `space`, `biotech`, `robotics`, `geopolitics`,
   `policy`, `consumer`, `finance`, `dev-workflow`, `career`, `health`, `family`, `parenting`,
-  `mindset`, `relationships`). These aggregate across
+  `mindset`, `relationships`, `romania` — the one regional tag, see Romanian-language videos). These aggregate across
   briefs in the graph, so never coin a new one per video — the generator warns on unknown tags;
   if none fits, pick the nearest and move on.
 - `title` — a specific, concrete headline (not a category name)
@@ -326,8 +329,8 @@ upload date giving chronological order within each creator):
   hand-edited later without re-deriving it from the transcript.
 - `index.html` — rebuilt at the **working directory root** every run: a single searchable page
   with tabs — **All Briefs** (chronological, every category), **By Channel**, **By Company /
-  Ticker**, **Quotes & Takes**, **Dev & Workflows** (`category == "dev"` only) and **Life &
-  Perspectives** (`category == "life"` only). The ticker view
+  Ticker**, **Quotes & Takes**, **Dev & Workflows** (`category == "dev"` only), **Life &
+  Perspectives** (`category == "life"` only) and **Romania** (`region == "ro"`). The ticker view
   parses every theme's `names` field (current schema) or `conviction_map` topic (legacy schema)
   into a cross-reference: click a ticker's group to see every brief that mentioned it, with date,
   channel, per-entity stance/conviction/horizon, and blurb — this is what turns a growing pile of briefs into an

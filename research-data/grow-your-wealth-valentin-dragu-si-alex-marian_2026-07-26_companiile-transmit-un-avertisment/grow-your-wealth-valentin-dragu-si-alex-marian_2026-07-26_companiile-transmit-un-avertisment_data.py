@@ -8,6 +8,7 @@ META = {
     "video_url": "https://www.youtube.com/watch?v=6Xu_jAISMCc",
     "thread_line": "5 threads · ECB rate hold amid Hormuz/Red Sea shipping risk and Trump's tariff strategy, a mixed Magnificent 7 earnings check (bullish Google under $300, cautious Tesla), IBM and Oracle's diverging bad-earnings reactions, Chinese AI models pressuring US compute costs, and warning signs building in Romania's real estate market.",
     "category": "market",
+    "region": "ro",
 }
 
 SNAPSHOT = [
@@ -109,7 +110,7 @@ THEMES = [
     },
     {
         "id": "romania-real-estate-warning",
-        "tags": ["finance", "policy"],
+        "tags": ["finance", "policy", "romania"],
         "color": "red",
         "badge": "Flagged risk",
         "status": "WATCHING — technical recession, real-estate demand cooling",

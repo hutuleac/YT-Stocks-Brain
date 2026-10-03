@@ -98,7 +98,7 @@ OPTIONAL_LISTS = ["HOT_TAKES", "CLAIMS", "RELATIONS"]
 TAGS = {
     "ai-infra", "semis", "software", "macro-rates", "crypto", "energy", "space", "biotech",
     "robotics", "geopolitics", "policy", "consumer", "finance", "dev-workflow", "career", "health",
-    "family", "parenting", "mindset", "relationships",
+    "family", "parenting", "mindset", "relationships", "romania",
 }
 REL_VERBS = {
     "acquires", "invests_in", "partners_with", "supplies", "customer_of", "competes_with",
@@ -838,6 +838,7 @@ def _load_brief(json_path):
         speakers = m.get("speakers", "")
         thread_line = m.get("thread_line", "")
         category = m.get("category") or "market"
+        region = m.get("region") or ""
         entities = [e for t in d.get("themes", []) for e in _entities_from_theme(t)]
         tags = sorted({x for t in d.get("themes", []) for x in (t.get("tags") or [])})
     elif "metadata" in d:  # legacy fixed-table schema
@@ -846,6 +847,7 @@ def _load_brief(json_path):
         speakers = m.get("speaker", "")
         thread_line = _legacy_thread_line(d)
         category = "market"
+        region = ""
         entities = _entities_from_conviction(d.get("conviction_map"))
         tags = []
     else:
@@ -858,6 +860,7 @@ def _load_brief(json_path):
         "speakers": speakers,
         "thread_line": thread_line,
         "category": category,
+        "region": region,
         "tags": tags,
         "entities": entities,
         "hits": _content_hits(d),
@@ -1161,6 +1164,7 @@ def build_index():
     tickers = sorted(set(e["ticker"] for b in briefs for e in b["entities"] if e["ticker"]))
     dev_briefs = [b for b in briefs if b["category"] == "dev"]
     life_briefs = [b for b in briefs if b["category"] == "life"]
+    ro_briefs = [b for b in briefs if b["region"] == "ro"]
     hit_count = sum(len(b["hits"]) for b in briefs)
 
     html = f"""<!DOCTYPE html>
@@ -1196,6 +1200,7 @@ def build_index():
       <button class="tab" data-view="content">Quotes &amp; Takes</button>
       <button class="tab" data-view="dev">Dev &amp; Workflows</button>
       <button class="tab" data-view="life">Life &amp; Perspectives</button>
+      <button class="tab" data-view="ro">Romania</button>
     </div>
     </div>
     <div id="view-chrono" class="view active">{_render_chrono_view(briefs)}</div>
@@ -1205,6 +1210,7 @@ def build_index():
     <div id="view-content" class="view"><div id="hits-mount"><p class="empty">Type to search quotes, recommendations, claims, and opinions across every indexed brief.</p></div></div>
     <div id="view-dev" class="view">{_render_chrono_view(dev_briefs)}</div>
     <div id="view-life" class="view">{_render_chrono_view(life_briefs)}</div>
+    <div id="view-ro" class="view">{_render_chrono_view(ro_briefs)}</div>
   </div>
 </div>
 <script id="hitdata" type="application/json">{_content_hits_payload(briefs)}</script>

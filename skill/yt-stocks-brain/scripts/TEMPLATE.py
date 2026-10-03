@@ -17,6 +17,7 @@ META = {
     "thread_line": "",    # e.g. "5 threads · short summary of each thread"
     "category": "market", # "market" (investing/AI-news, default), "dev" (dev/systems/knowledge/
                            # AI-workflow) or "life" (life/family/mindset/business perspectives) — drives which index.html tab the brief appears in
+    "region": "",         # "ro" for Romanian-language videos (Romania tab); empty otherwise
 }
 
 SNAPSHOT = [
@@ -28,7 +29,8 @@ THEMES = [
         "id": "",              # short anchor slug, e.g. "elon-thesis"
         "tags": [],            # 1-3 from generate.py TAGS: ai-infra semis software macro-rates crypto
                                # energy space biotech robotics geopolitics policy consumer finance
-                               # dev-workflow career health
+                               # dev-workflow career health family parenting mindset relationships
+                               # romania (only on themes about Romania itself, never global stories)
         "color": "green",      # green | amber | gray | red
         "badge": "",           # e.g. "High conviction" / "Contested" / "Speculative" / "Recommendation"
         "status": "",          # one caps line of context, e.g. "RELEASED JULY 27, 2026"
