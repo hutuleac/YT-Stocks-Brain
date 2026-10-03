@@ -124,6 +124,9 @@ def due_date(by, brief_date):
             return dt.date(base.year, 12, 31).isoformat()
         if re.search(r"\bend of (the )?decade\b", s):
             return dt.date(base.year // 10 * 10 + 9, 12, 31).isoformat()
+    m = re.search(r"\b20\d\d\s*-\s*(20\d\d)\b", s)  # year range: deadline is the later year
+    if m:
+        return dt.date(int(m.group(1)), 12, 31).isoformat()
     m = re.search(r"\b(20\d\d)-(\d\d)-(\d\d)\b", s)
     if m:
         return dt.date(*map(int, m.groups())).isoformat()
@@ -237,7 +240,7 @@ def _selftest():
              "end of 2026": "2026-12-31", "2030": "2030-12-31", "~2046": "2046-12-31",
              "12-18 months": "2028-01-31", "next 6 months from mid-July 2026": "2027-01-31",
              "next few weeks": "2026-08-05", "September 2026": "2026-09-30", "mid-2027": "2027-06-30",
-             "2030s": "2039-12-31", "by 2026-10-30": "2026-10-30", "short order": None, None: None}
+             "2030s": "2039-12-31", "2030-2032": "2032-12-31", "by 2026-10-30": "2026-10-30", "short order": None, None: None}
     for by, want in cases.items():
         got = due_date(by, b)
         assert got == want, (by, got, want)

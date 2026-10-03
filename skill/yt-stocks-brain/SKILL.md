@@ -390,6 +390,9 @@ correction pass rather than re-deriving a fresh data file from the transcript.
   a new spelling, move the alias onto that entity and delete the new line instead. A ticker
   conflict warning means a typo in the brief (fix the data file) or a real new listing (update
   `ticker` on the entity). Commit `kb/entities.json` together with the brief.
+- A correction pass that edits a claim's `who` or `claim` text re-keys it (`claim_id` hashes
+  both); if `kb/claim_outcomes.json` already has a verdict for it, the orphan warning names the
+  old id — move the verdict to the new id.
 - No fact appears in two theme cards (see the dedup rule in Section 4). `HOT_TAKES` is exempt —
   it deliberately re-surfaces lines that also live in a theme.
 - `HOT_TAKES` entries are verbatim/near-verbatim and each one would actually make someone
