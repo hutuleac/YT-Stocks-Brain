@@ -72,6 +72,20 @@ Key things baked into the current skill that aren't obvious from a first read:
     attention, early signals (new + multi-channel), sentiment turning, contested now, themes
     gaining, new connections; rows expand to recent stances + forward claims. User intent: spot
     trends and themes early; don't turn this into prediction scoring.
+  - **Weekly memo** (`scripts/memo.py`, `memos/<ISO-week>.{json,html}`, linked from Signals):
+    `generate.py` prints `memo due:` once a week; the workflow is in SKILL.md "Weekly memo".
+
+## Backlog (agreed, not built — Oct 2026)
+- **Theme clusters / narratives:** group entities that keep co-occurring into named narratives
+  (e.g. "AI cyber defense", "tokenization", "agentic commerce") and track each one's growth or
+  fade across weeks, using `co_mentions` plus the weekly memo snapshots as history.
+- **Hide people/countries in By Company / Ticker:** filter by registry `kind` (keep company,
+  fund, crypto, commodity); people and countries get their own facet or stay search-only.
+- **Scheduled memo:** the memo currently piggybacks on brief runs. If briefs pause for a week,
+  a weekly cloud routine (reindex, then memo, then push) would keep it on time; needs repo push
+  access, so ask first.
+- **Claim outcomes:** `kb/claim_outcomes.json` exists but stays empty by design (direction over
+  precision). Only fill it if the user asks for speaker track records.
 - **Fixing a brief after the root data file is deleted:** edit
   `research-data/<slug>/<slug>_data.py` in place and run `generate.py` against that path.
 

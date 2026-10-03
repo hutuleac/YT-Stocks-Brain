@@ -82,7 +82,8 @@ import sys
 import unicodedata
 
 from build_kb import DB_PATH as KB_PATH, build as build_kb
-from signals import render as render_signals
+import memo
+import signals
 from entities import Registry, split_list as _split_entity_list
 
 sys.dont_write_bytecode = True  # don't litter the working directory with __pycache__
@@ -262,6 +263,8 @@ html.dark .namechip .stance{color:#fff;}
 """
 
 INDEX_CSS = CSS + """
+.sig-memos{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;margin:0 0 14px;font-size:13.5px;}
+.sig-memos span{font-weight:600;color:var(--brand);}
 .sig-intro{font-size:14px;color:var(--muted);line-height:1.55;margin:4px 0 18px;max-width:760px;}
 .sig-h{font-family:var(--serif);font-size:clamp(18px,1.4vw,22px);margin:28px 0 2px;}
 .sig-note{font-size:13px;color:var(--muted);font-style:italic;margin:0 0 12px;}
@@ -1144,6 +1147,9 @@ def build_index():
     briefs.sort(key=lambda b: _date_sort_key(b["date"]))
     reg = _canonicalize_entities(briefs)
     kb_warnings = build_kb(briefs, reg)
+    memos = [(f'{m["week"]} · {m.get("title") or "memo"}', p[:-5] + ".html")
+             for m, p in ((json.load(open(p, encoding="utf-8")), p) for p in memo.memo_paths())
+             if os.path.exists(p[:-5] + ".html")]
 
     channels = sorted(set(b["channel"] for b in briefs))
     tickers = sorted(set(e["ticker"] for b in briefs for e in b["entities"] if e["ticker"]))
@@ -1188,7 +1194,7 @@ def build_index():
     </div>
     <div id="view-chrono" class="view active">{_render_chrono_view(briefs)}</div>
     <div id="view-channel" class="view">{_render_channel_view(briefs)}</div>
-    <div id="view-signals" class="view">{render_signals(KB_PATH)}</div>
+    <div id="view-signals" class="view">{signals.render(signals.compute(KB_PATH), memos)}</div>
     <div id="view-entity" class="view">{_render_entity_view(briefs)}</div>
     <div id="view-content" class="view"><div id="hits-mount"><p class="empty">Type to search quotes, recommendations, claims, and opinions across every indexed brief.</p></div></div>
     <div id="view-dev" class="view">{_render_chrono_view(dev_briefs)}</div>
@@ -1215,6 +1221,8 @@ def build_index():
 
     for w in reg.summary_warnings() + kb_warnings:
         print(f"warning: {w}")
+    if memo.is_due():
+        print(f"memo due: weekly memo for {memo.week_key()} — see SKILL.md 'Weekly memo'")
     if reg.save():
         print(f"Updated {reg.path} (new entities/aliases — commit it with the brief)")
 

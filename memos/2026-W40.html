@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Weekly memo 2026-W40: Agents start spending: commerce, crypto rails and cyber defense</title>
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+
+.memo-h{font-family:var(--serif);font-size:clamp(17px,1.3vw,21px);margin:0 0 10px;}
+.memo-ev{font-size:13px;color:var(--muted);margin:10px 0 0;}
+.memo-list{margin:16px 0 0;padding-left:20px;line-height:1.6;}
+.memo-list li{margin-bottom:8px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode">&#9680;</button>
+    <div class="backlink"><a href="../index.html#signals">&#8592; Signals</a></div>
+    <div class="kicker">Weekly memo &middot; 2026-W40</div>
+    <h1>Agents start spending: commerce, crypto rails and cyber defense</h1>
+    <div class="byline">Covers briefs since <b>2026-09-03</b> &middot; signals window 2026-09-03 to 2026-10-03 (56 briefs)</div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The answer</div>
+      <h2>This week in one read</h2>
+      <div class="card" style="margin-top:16px;"><p>The conversation moved from <i>building</i> AI to <i>where AI agents spend money</i>. Meta's Muse launch made <b>agentic commerce</b> the dominant new thread: Meta flipped bullish, merchants with agent APIs (Shopify, Instacart) appeared out of nowhere, and payment middlemen drew bearish calls. Two parallel threads reinforce it: big asset managers putting money on-chain for machine payments, and cyber defense emerging as the second-order winner as open models close the gap with the frontier labs.</p></div>
+    </section>
+    <section class="sec">
+      <div class="sec-eye">Direction, not precision</div>
+      <h2>Insights</h2>
+      <div class="card" style="margin-top:16px;"><h3 class="memo-h">Agentic commerce is the new center of gravity, and it has a loser: card fees</h3><ol class="snap"><li><b>Meta</b> went from no net view to clearly bullish (+0.7): 12 positive mentions, 0 negative, across 9 channels. The catalyst is Muse, its consumer agent.</li><li>Merchants plugging into agents showed up fast. <b>Shopify</b> (agent API on every store) and <b>Instacart</b> (Muse launch partner) were both first named within the last two weeks, already on 3-4 channels each.</li><li>The consumer theme jumped from <b>23%</b> to 54% of briefs, the biggest topic shift in the library.</li><li>The flip side is consistent: Visser and Pompliano both expect <b>Visa/Mastercard</b> to lose their fees as agents route around cards (~5 years). No bull on record this window.</li><li>Brian Chesky (Airbnb): 'Agents are definitely the future of Silicon Valley and chatbots are not.'</li></ol><p class="memo-ev">Evidence: <a href="../dumb-money-live_2026-09-23_meta-s-muse-just-changed-the-ai-trade-here-s-what-we-re-buying.html">Dumb Money Live: Meta's Muse Just Changed the AI Trade — Here's What We're Buying</a> · <a href="../all-in-podcast_2026-09-26_anthropic-ipo-at-risk-metas-muse-pop-token-prices-fall-open-source-gains-share-alignment-fails.html">All-In Podcast: Anthropic IPO at Risk, Meta’s Muse Pop, Token Prices Fall, Open Source Gains Share, Alignment Fails</a> · <a href="../jordi-visser_2026-09-27_a-bear-market-inside-a-bull-market.html">Jordi Visser: A Bear Market Inside a Bull Market</a> · <a href="../anthony-pompliano_2026-09-26_bitcoin-s-iphone-moment-will-trigger-wall-street-fomo.html">Anthony Pompliano: Bitcoin's iPhone Moment Will Trigger Wall Street FOMO</a></p></div><div class="card" style="margin-top:16px;"><h3 class="memo-h">Traditional finance is building the payment rails for machines</h3><ol class="snap"><li><b>BlackRock</b> turned positive and is gaining attention (2.2×): a 'machine-native economy' paper, three funds on-chain, model portfolios tokenized via Ondo.</li><li><b>Robinhood</b> is bullish across 6 channels (+0.9). Its own chain earned ~$50M in two weeks; Tenev says tokenization takes over the financial system.</li><li><b>Circle</b> (USDC, agent credit rails) and <b>Solana</b> ('the L1 war is won', per Ran Neuner) are rising on the same thesis: agents need programmable money.</li><li><b>Zcash</b> is the early, contested edge: privacy for agent-to-agent payments (Jordi's 'tell') vs Gary Cardone calling it a 'childlike' narrative.</li><li>New links in the graph: BlackRock + Robinhood, Bitcoin + Visa, Meta + Robinhood. Crypto and commerce are now discussed as one story.</li></ol><p class="memo-ev">Evidence: <a href="../raoul-pal-the-journey-man_2026-10-01_crypto-ai-agents-and-the-next-big-cycle-w-ran-neuner-raoul-pal-the-journey-man.html">Raoul Pal The Journey Man: Crypto, AI Agents, And The Next Big Cycle w/ Ran Neuner | Raoul Pal The Journey Man</a> · <a href="../anthony-pompliano_2026-09-19_bitcoin-is-about-to-go-parabolic-because-of-ai-agents.html">Anthony Pompliano: Bitcoin Is About To Go PARABOLIC Because Of AI Agents</a> · <a href="../peter-h-diamandis_2026-09-19_robinhood-s-vlad-tenev-on-tokenizing-everything-openai-s-6-misalignment-reports-figure-s-robot.html">Peter H. Diamandis: Robinhood's Vlad Tenev on Tokenizing Everything, OpenAI's 6 Misalignment Reports, Figure's Robot</a> · <a href="../peter-h-diamandis_2026-09-29_cathie-wood-on-tesla-spacex-merger-1m-bitcoin-more-ais-than-humans-ep-296-moonshots-live.html">Peter H. Diamandis: Cathie Wood on Tesla-SpaceX Merger, $1M Bitcoin, More AIs Than Humans | EP #296 | Moonshots Live</a></p></div><div class="card" style="margin-top:16px;"><h3 class="memo-h">Open models are closing the gap, and that arms attackers: cyber defense is the derivative trade</h3><ol class="snap"><li><b>Palo Alto Networks</b> is the strongest early signal in the library: first named Sept 6, now on 4 channels with a ~10× lift, and newly linked to OpenAI, Anthropic, Nvidia and Alphabet. <b>CrowdStrike</b> follows the same path.</li><li>The cause is in the same briefs: Chinese open models are ~3 months behind the frontier (Abliteration's founder), DeepSeek is rising on cheap tokens, and attackers exploit new open models within months (Dave Blundin).</li><li>Friedberg expects cyber-defense budgets to 'go through the roof'. Emad: 'the internet will break next year' as agent swarms hit infrastructure.</li><li>The same dynamic makes the frontier labs <b>contested</b>: Anthropic sentiment fell from +0.5 to +0.2 (8 bulls, 4 bears). Emad says it 'gets smashed in 2 years', and Pompliano says private labs are in more trouble than people realize, even as $2T IPO talk continues.</li></ol><p class="memo-ev">Evidence: <a href="../all-in-podcast_2026-10-02_trumps-super-intelligence-summit-ai-safety-accord-gdp-beats-midterm-predictions.html">All-In Podcast: Trump’s Super Intelligence Summit, AI Safety Accord, GDP Beats, Midterm Predictions</a> · <a href="../this-week-in-startups_2026-10-03_inside-the-startup-building-uncensored-ai-abliteration-ai-ep-2345.html">This Week in Startups: Inside The Startup Building Uncensored AI (Abliteration AI) | EP 2345</a> · <a href="../anthony-pompliano_2026-10-01_the-ai-boom-is-bigger-than-anyone-thinks.html">Anthony Pompliano: The AI Boom Is Bigger Than Anyone Thinks</a> · <a href="../peter-h-diamandis_2026-10-02_why-ai-leaders-have-changed-their-minds-about-ai-safety-elon-on-uhi-anthropics-ipo.html">Peter H. Diamandis: Why AI Leaders Have Changed Their Minds About AI Safety, Elon on UHI, Anthropic’s IPO</a></p></div>
+    </section>
+    <section class="sec">
+      <div class="sec-eye">Where to look next</div>
+      <h2>Worth a closer look</h2>
+      <ol class="memo-list"><li><b>Visa / Mastercard:</b> the agent-disintermediation bear case is uncontested across three channels. Uncontested usually means either early or already priced; worth checking which.</li><li><b>Anthropic:</b> the most-discussed private company, with sentiment sliding while IPO expectations rise ($2T, after the midterms). The gap between narrative and valuation is the story to track.</li><li><b>Amazon:</b> cooling from strongly bullish (+0.9) to mixed (+0.4) on the Muse lock-out question. Chris Camillo flags next earnings as the test of Muse's impact on Bedrock and chips.</li><li><b>Semis and space losing share of the conversation:</b> semis fell from 47% to 36% of briefs and space from 23% to 12%, while Dan Ives says chip equilibrium isn't until late 2028. Falling attention against a still-rising thesis can be a contrarian setup.</li><li><b>Zcash and Instinct AI:</b> both new, both contested, both tied to the agent economy. Early enough that the next two weeks of mentions will show whether they spread or fade.</li></ol>
+    </section>
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Computed, not written</div>
+      <h2>What moved since the last memo</h2>
+      <ul class="memo-list"><li><b>Gaining attention:</b> new: OpenAI, Meta, Solana, Robinhood, BlackRock, AMD, DeepSeek, Dell, Walmart, Visa, Morgan Stanley</li><li><b>Early signals:</b> new: Hugging Face, Moderna, Waymo, Palo Alto Networks, Shopify, World Labs, Zcash, Unitree, ByteDance, Instinct AI, CrowdStrike, Instacart, DoorDash, Circle, Alibaba</li><li><b>Sentiment turning:</b> new: Meta, Gold, Amazon, BlackRock, Salesforce</li><li><b>Contested:</b> new: Anthropic, OpenAI, Alphabet, Amazon, Salesforce, Micron, Dell</li><li><b>New connections:</b> Amazon + Tesla; AMD + Meta; Meta + Robinhood; Anthropic + Palo Alto Networks; OpenAI + Palo Alto Networks; Bitcoin + Zcash; BlackRock + Robinhood; Bitcoin + Visa; Meta + Shopify; Nvidia + Palo Alto Networks; Alphabet + Palo Alto Networks; Nvidia + World Labs; SpaceX + World Labs; Instinct AI + Meta; Instinct AI + OpenAI</li></ul>
+      <p class="memo-ev">Signals measure what your sources talk about and how they lean, not prices. Windows are normalized per brief.</p>
+    </section>
+  </div>
+</div>
+</body>
+</html>
