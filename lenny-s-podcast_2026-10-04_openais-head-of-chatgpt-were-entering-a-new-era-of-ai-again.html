@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: OpenAI’s Head of ChatGPT: We’re entering a new era of AI (again)</title>
+<meta name="description" content="Lenny&#x27;s Podcast · 5 threads · Dot always-on agent · open plugin ecosystem · agent-first internet · hiring &amp; culture · safety spend">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="OpenAI’s Head of ChatGPT: We’re entering a new era of AI (again)">
+<meta property="og:description" content="Lenny&#x27;s Podcast · 5 threads · Dot always-on agent · open plugin ecosystem · agent-first internet · hiring &amp; culture · safety spend">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>OpenAI’s Head of ChatGPT: We’re entering a new era of AI (again)</h1>
+    <div class="byline">
+      Channel: <b>Lenny's Podcast</b> &middot; Speaker: <b>Lenny Rachitsky (host), Tibo Sottiaux (OpenAI)</b> &middot; <b>2026-10-04</b>
+      <div class="stats-line">5 threads · Dot always-on agent · open plugin ecosystem · agent-first internet · hiring &amp; culture · safety spend &middot; <a href="https://www.youtube.com/watch?v=MM-C3JqCXBk" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Recorded the morning after OpenAI DevDay launches; guest says the goal is a <b>permanent, always-on agent</b> reachable from any client, not a laptop-bound chat window.</li><li><b>Dot</b>, the new 24/7 agent, starts as one primary Dot per user; many specialist Dots (a "virtual team") come soon. No model picker, only channels to configure.</li><li>Codex and ChatGPT are being merged (chat plus a work toggle), bringing agent capability to ChatGPT's <b>1.2 billion users</b>.</li><li>Open ecosystem is his "sleeper hit": Sign in with ChatGPT (16 partners), plugins with retention-based discovery and <b>revenue share</b>.</li><li>Biggest unpriced shift: <b>most internet actions will be taken by agents</b>; models get cheaper and faster; modalities merge. Build assuming everything is ~10x better in a year.</li><li>Hiring: typing speed down, taste and user empathy up; 120+ ex-YC founders at OpenAI; roles blur.</li><li>Safety framed as pacing the frontier: growing compute on secondary monitoring; a model above Astra was held back.</li><li>Live demo failed on stage and production went down minutes before; Dot flagged the outage proactively.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="dot-agent">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
+    <span class="theme-status">DOT LAUNCHED TO PRO USERS AT DEVDAY, OCT 2026</span><span class="ttag">ai-infra</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Dot: an always-on agent that replaces the model picker</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">OpenAI's bet is one permanent agent that knows your goals and shows up in any client, so the app itself nearly disappears.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Dot runs 24/7, learns preferences and feedback, reachable by meeting room, email or text; <b>no model picker, no configuration</b> beyond which channels to use.</li><li><span class="dot" style="background:#3f6b2e;"></span>Launch is the <i>primary</i> Dot for Pro users; next come a second, third, fourth Dot with specific roles. He runs one just for Twitter monitoring, enough work for "an entire Dot".</li><li><span class="dot" style="background:#3f6b2e;"></span>Architecture: the <b>harness does not run on the user's machine</b>. Dot has its own computer (VM or not) and can connect to many devices, "a little bit like an octopus".</li><li><span class="dot" style="background:#3f6b2e;"></span>Specialist Dots run with extra guardrails, extra monitoring and on their own hardware, some on <b>Mac minis</b>.</li><li><span class="dot" style="background:#3f6b2e;"></span>Codex and ChatGPT merge: chat plus a work toggle, then all Dot capabilities land in ChatGPT for its <b>1.2 billion users</b>.</li><li><span class="dot" style="background:#3f6b2e;"></span>Loops/graphs are the wrong abstraction: "you just want a system that learns"; as models improve he alternates between growing and shrinking agent teams.</li><li><span class="dot" style="background:#3f6b2e;"></span>Prior work: long-horizon persistent tasks for 2+ years, memory systems similar span; the Codex Cloud animation of a year ago inspired the current wave. Safety and security were the long pole.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;I think like just carrying your laptop as like this brick around everywhere is just like, you know, you're kind of like tied to the technology instead of the technology working for you.&#8221;<cite>— Tibo Sottiaux</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Launched Dot, merging Codex and ChatGPT; 1.2B users cited</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The guest is a senior OpenAI executive describing OpenAI's own launch; he also says Pro-user feedback will shape the product and that the experience still feels clunky.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="open-ecosystem">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
+    <span class="theme-status">ANNOUNCED AT DEVDAY, OCT 2026</span><span class="ttag">software</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">The open ecosystem: Sign in with ChatGPT, plugins and revenue share</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">He calls opening up distribution to partners the launch most people are sleeping on.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Sign in with ChatGPT launches with <b>16 partners</b>; began informally after talks with the creators of Pi and OpenCode, who simply used subscription auth on trust.</li><li><span class="dot" style="background:#3f6b2e;"></span>Plugin extensions plus plugin discovery let anyone ship to ~<b>1.2 billion users</b>.</li><li><span class="dot" style="background:#3f6b2e;"></span><b>Shared economics:</b> when subscribers spend their ChatGPT usage inside a plugin or partner product, the partner gets paid. Not covered in the keynote.</li><li><span class="dot" style="background:#3f6b2e;"></span>Discovery is by <b>retention and quality</b>, not AEO-style content; weak plugins stop being recommended in conversations.</li><li><span class="dot" style="background:#3f6b2e;"></span>Example given: Notion's MCP drew a surge of agent traffic, forcing scale and economics work.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Build a good plugin.&#8221;<cite>— Tibo Sottiaux</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Notion<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Its MCP saw heavy agent traffic; used as a plugin example</span></div><div class="namechip"><b>Figma<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Used as plugin example for revenue share</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Interviewer notes OpenAI had an earlier app marketplace; the guest says this one is the right version.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="agent-internet">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Forecast</span>
+    <span class="theme-status">NOT YET PRICED IN, PER GUEST</span><span class="ttag">ai-infra</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Most internet actions will be taken by agents</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Build now as if everything is roughly 10x better in a year.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Three things not priced in: <b>agent-taken majority of internet actions</b>, models getting cheaper and faster "at incredible rates", and seamless merging of all modalities.</li><li><span class="dot" style="background:#93711b;"></span>Agent traffic strains systems, so products must <b>build for scale</b> and work out the economics of an agent interface; holding back is possible only briefly.</li><li><span class="dot" style="background:#93711b;"></span>Under-invested: delightful new human experiences that exploit older modalities.</li><li><span class="dot" style="background:#93711b;"></span>Changed his mind: expected today's capability (Astra) in a year or two; did not expect to lean so much on <b>voice/dictation</b>; younger hires adapt first.</li><li><span class="dot" style="background:#93711b;"></span>Ultrafast: a faster model at roughly Astra's cost for a 6-month-old tier, restoring his flow state; reduces how many agents he runs in parallel.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;The majority of actions on the internet will be taken by agents.&#8221;<cite>— Tibo Sottiaux</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="hiring-culture">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">CAREER AND CULTURE</span><span class="ttag">career</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Hiring, culture and what stays human</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Taste and user empathy are rising; typing speed is falling.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Trending down: <b>typing fast</b>. Trending up: taste, thinking about the user, knowing what good looks like.</li><li><span class="dot" style="background:#3f6b2e;"></span>OpenAI has <b>120+ ex-YC founders</b>; roles are blurring across design, PM and engineering.</li><li><span class="dot" style="background:#3f6b2e;"></span>New-grad advice by example: a colleague hired as a new grad now runs the compute fleet and applied; stood out by kindness, collaboration and fast learning.</li><li><span class="dot" style="background:#3f6b2e;"></span>Culture is bottoms-up: a Slack channel of four weekend hackers produced the <b>Decisions API</b> (constraint sampling on the Luna model, a new shape on the Responses API); high bar enforced before release, some DevDay items held back.</li><li><span class="dot" style="background:#3f6b2e;"></span>Autonomy plus ownership; he can "press the reset button" without approvals. He took down production on his <b>third day</b>.</li><li><span class="dot" style="background:#3f6b2e;"></span>Lessons: he should have pushed teams toward less complexity; agents risk loneliness and "do more" pressure, which he hopes AI eases by cutting noise.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;We may not have coders anymore, but we have more builders than ever.&#8221;<cite>— Tibo Sottiaux</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="safety-pacing">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Self-reported</span>
+    <span class="theme-status">OPENAI DESCRIBING ITS OWN PRACTICE</span><span class="ttag">policy</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Safety as pacing the frontier</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">He claims growing compute goes into monitoring the working agent, and a stronger model was withheld.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>More compute spent on <b>secondary monitoring</b> that watches the primary agent for risky actions or prompt injection and intervenes.</li><li><span class="dot" style="background:#93711b;"></span>Says the majority of API-stack investment goes to the safety stack.</li><li><span class="dot" style="background:#93711b;"></span>Released a model near Astra intelligence but far more efficient; <b>has not released</b> the step above Astra. A previously reported Astra variant was not shipped.</li><li><span class="dot" style="background:#93711b;"></span>Incentive framing: "we build products for 1.2 billion people. We can't screw that up."</li><li><span class="dot" style="background:#93711b;"></span>Frustration: model picker and reasoning-effort settings; "you need a PhD in model pickers".</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Says it withheld a model beyond Astra</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Claims come from an OpenAI executive; the host noted recent AI misbehavior incidents and received an optimistic answer.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🤖</div><div class="tline"><span class="cat">Product:</span> <span class="txt">Design products for agent traffic first: expose an MCP/API, plan for scale and pricing.</span></div></div><div class="irow"><div class="ic">🧩</div><div class="tline"><span class="cat">Ecosystem:</span> <span class="txt">Ship a high-retention plugin if you want ChatGPT to recommend it; retention beats SEO.</span></div></div><div class="irow"><div class="ic">📈</div><div class="tline"><span class="cat">Strategy:</span> <span class="txt">Plan for roughly 10x better models in a year; avoid heavy loop scaffolding.</span></div></div><div class="irow"><div class="ic">🎓</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Invest in taste and user empathy over typing speed; broaden across roles.</span></div></div><div class="irow"><div class="ic">🛡</div><div class="tline"><span class="cat">AI safety:</span> <span class="txt">Budget for monitoring agents with a second layer, not just the primary one.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;The majority of actions on the internet will be taken by agents.&#8221; <cite>— Tibo Sottiaux</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't think this is the way that it's going to work. [setting up loops]&#8221; <cite>— Tibo Sottiaux</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The skill that is trending down is typing fast.&#8221; <cite>— Tibo Sottiaux</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;You kind of need a PhD in model pickers.&#8221; <cite>— Tibo Sottiaux</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Tibo Sottiaux:</b> The majority of actions on the internet will be taken by agents. <span class="cmeta">share of internet actions by agents · majority</span></div><div class="ritem"><b>Tibo Sottiaux:</b> Models will become cheaper and faster at rates that are quite incredible. <span class="cmeta">model cost and speed · cheaper and faster</span> <span class="tag">OpenAI</span></div><div class="ritem"><b>Tibo Sottiaux:</b> OpenAI will let users add multiple Dots very soon after launch. <span class="cmeta">multi-Dot support · shipped · soon</span> <span class="tag">OpenAI</span></div><div class="ritem"><b>Tibo Sottiaux:</b> Dot capabilities will ship into ChatGPT for its 1.2 billion users. <span class="cmeta">Dot in ChatGPT · shipped</span> <span class="tag">OpenAI</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>OpenAI</b> <span class="rel">partners with</span> <b>Notion</b> &mdash; Notion MCP used by agents; plugin revenue share</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🎤</div><div><div class="title">Live DevDay demo failed; production went down 5 minutes earlier and Dot pinged him, offering to fix it (he declined). <span class="tag">AI</span></div></div></div><div class="irow"><div class="ic">📚</div><div><div class="title">Sources and influences named: Neuromancer, the original Star Trek, the film <i>Her</i> (watched once), Pi and OpenCode creators. <span class="tag">Culture</span></div></div></div><div class="irow"><div class="ic">🧘</div><div><div class="title">Habit: ~30 minutes a day on Twitter; a weekly holiday disconnect leads to more creative thinking; occasional hand LeetCode as a therapeutic exercise. <span class="tag">Workflow</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Dot</b> &mdash; OpenAI's always-on personal agent that runs on its own computer and connects to many devices and channels.</div><div><b>Harness</b> &mdash; The agent loop and tooling around a model; for Dot it runs off the user's machine.</div><div><b>Sign in with ChatGPT</b> &mdash; Lets partner apps use a subscriber's ChatGPT usage via login, with shared economics.</div><div><b>MCP</b> &mdash; Model Context Protocol, the interface that lets agents use a product's capabilities.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>

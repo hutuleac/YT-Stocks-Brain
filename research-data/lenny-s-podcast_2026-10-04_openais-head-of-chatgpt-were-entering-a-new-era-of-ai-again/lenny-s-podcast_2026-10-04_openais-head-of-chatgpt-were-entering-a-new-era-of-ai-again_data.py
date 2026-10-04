@@ -1,0 +1,168 @@
+META = {
+    "title": "OpenAI’s Head of ChatGPT: We’re entering a new era of AI (again)",
+    "channel": "Lenny's Podcast",
+    "speakers": "Lenny Rachitsky (host), Tibo Sottiaux (OpenAI)",
+    "date": "2026-10-04",
+    "video_url": "https://www.youtube.com/watch?v=MM-C3JqCXBk",
+    "thread_line": "5 threads · Dot always-on agent · open plugin ecosystem · agent-first internet · hiring & culture · safety spend",
+    "category": "market",
+    "region": "",
+}
+
+SNAPSHOT = [
+    "Recorded the morning after OpenAI DevDay launches; guest says the goal is a **permanent, always-on agent** reachable from any client, not a laptop-bound chat window.",
+    "**Dot**, the new 24/7 agent, starts as one primary Dot per user; many specialist Dots (a \"virtual team\") come soon. No model picker, only channels to configure.",
+    "Codex and ChatGPT are being merged (chat plus a work toggle), bringing agent capability to ChatGPT's **1.2 billion users**.",
+    "Open ecosystem is his \"sleeper hit\": Sign in with ChatGPT (16 partners), plugins with retention-based discovery and **revenue share**.",
+    "Biggest unpriced shift: **most internet actions will be taken by agents**; models get cheaper and faster; modalities merge. Build assuming everything is ~10x better in a year.",
+    "Hiring: typing speed down, taste and user empathy up; 120+ ex-YC founders at OpenAI; roles blur.",
+    "Safety framed as pacing the frontier: growing compute on secondary monitoring; a model above Astra was held back.",
+    "Live demo failed on stage and production went down minutes before; Dot flagged the outage proactively.",
+]
+
+THEMES = [
+    {
+        "id": "dot-agent",
+        "tags": ["ai-infra", "software"],
+        "color": "green",
+        "badge": "Confirmed event",
+        "status": "DOT LAUNCHED TO PRO USERS AT DEVDAY, OCT 2026",
+        "title": "Dot: an always-on agent that replaces the model picker",
+        "lead": "OpenAI's bet is one permanent agent that knows your goals and shows up in any client, so the app itself nearly disappears.",
+        "bullets": [
+            "Dot runs 24/7, learns preferences and feedback, reachable by meeting room, email or text; **no model picker, no configuration** beyond which channels to use.",
+            "Launch is the *primary* Dot for Pro users; next come a second, third, fourth Dot with specific roles. He runs one just for Twitter monitoring, enough work for \"an entire Dot\".",
+            "Architecture: the **harness does not run on the user's machine**. Dot has its own computer (VM or not) and can connect to many devices, \"a little bit like an octopus\".",
+            "Specialist Dots run with extra guardrails, extra monitoring and on their own hardware, some on **Mac minis**.",
+            "Codex and ChatGPT merge: chat plus a work toggle, then all Dot capabilities land in ChatGPT for its **1.2 billion users**.",
+            "Loops/graphs are the wrong abstraction: \"you just want a system that learns\"; as models improve he alternates between growing and shrinking agent teams.",
+            "Prior work: long-horizon persistent tasks for 2+ years, memory systems similar span; the Codex Cloud animation of a year ago inspired the current wave. Safety and security were the long pole.",
+        ],
+        "quote": {"text": "I think like just carrying your laptop as like this brick around everywhere is just like, you know, you're kind of like tied to the technology instead of the technology working for you.", "cite": "— Tibo Sottiaux"},
+        "watch": "The guest is a senior OpenAI executive describing OpenAI's own launch; he also says Pro-user feedback will shape the product and that the experience still feels clunky.",
+        "names": [
+            {"name": "OpenAI", "blurb": "Launched Dot, merging Codex and ChatGPT; 1.2B users cited", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "open-ecosystem",
+        "tags": ["software", "ai-infra"],
+        "color": "green",
+        "badge": "Confirmed event",
+        "status": "ANNOUNCED AT DEVDAY, OCT 2026",
+        "title": "The open ecosystem: Sign in with ChatGPT, plugins and revenue share",
+        "lead": "He calls opening up distribution to partners the launch most people are sleeping on.",
+        "bullets": [
+            "Sign in with ChatGPT launches with **16 partners**; began informally after talks with the creators of Pi and OpenCode, who simply used subscription auth on trust.",
+            "Plugin extensions plus plugin discovery let anyone ship to ~**1.2 billion users**.",
+            "**Shared economics:** when subscribers spend their ChatGPT usage inside a plugin or partner product, the partner gets paid. Not covered in the keynote.",
+            "Discovery is by **retention and quality**, not AEO-style content; weak plugins stop being recommended in conversations.",
+            "Example given: Notion's MCP drew a surge of agent traffic, forcing scale and economics work.",
+        ],
+        "quote": {"text": "Build a good plugin.", "cite": "— Tibo Sottiaux"},
+        "watch": "Interviewer notes OpenAI had an earlier app marketplace; the guest says this one is the right version.",
+        "names": [
+            {"name": "Notion", "blurb": "Its MCP saw heavy agent traffic; used as a plugin example", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Figma", "blurb": "Used as plugin example for revenue share", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "agent-internet",
+        "tags": ["ai-infra", "software"],
+        "color": "amber",
+        "badge": "Forecast",
+        "status": "NOT YET PRICED IN, PER GUEST",
+        "title": "Most internet actions will be taken by agents",
+        "lead": "Build now as if everything is roughly 10x better in a year.",
+        "bullets": [
+            "Three things not priced in: **agent-taken majority of internet actions**, models getting cheaper and faster \"at incredible rates\", and seamless merging of all modalities.",
+            "Agent traffic strains systems, so products must **build for scale** and work out the economics of an agent interface; holding back is possible only briefly.",
+            "Under-invested: delightful new human experiences that exploit older modalities.",
+            "Changed his mind: expected today's capability (Astra) in a year or two; did not expect to lean so much on **voice/dictation**; younger hires adapt first.",
+            "Ultrafast: a faster model at roughly Astra's cost for a 6-month-old tier, restoring his flow state; reduces how many agents he runs in parallel.",
+        ],
+        "quote": {"text": "The majority of actions on the internet will be taken by agents.", "cite": "— Tibo Sottiaux"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "hiring-culture",
+        "tags": ["career", "dev-workflow"],
+        "color": "green",
+        "badge": "Recommendation",
+        "status": "CAREER AND CULTURE",
+        "title": "Hiring, culture and what stays human",
+        "lead": "Taste and user empathy are rising; typing speed is falling.",
+        "bullets": [
+            "Trending down: **typing fast**. Trending up: taste, thinking about the user, knowing what good looks like.",
+            "OpenAI has **120+ ex-YC founders**; roles are blurring across design, PM and engineering.",
+            "New-grad advice by example: a colleague hired as a new grad now runs the compute fleet and applied; stood out by kindness, collaboration and fast learning.",
+            "Culture is bottoms-up: a Slack channel of four weekend hackers produced the **Decisions API** (constraint sampling on the Luna model, a new shape on the Responses API); high bar enforced before release, some DevDay items held back.",
+            "Autonomy plus ownership; he can \"press the reset button\" without approvals. He took down production on his **third day**.",
+            "Lessons: he should have pushed teams toward less complexity; agents risk loneliness and \"do more\" pressure, which he hopes AI eases by cutting noise.",
+        ],
+        "quote": {"text": "We may not have coders anymore, but we have more builders than ever.", "cite": "— Tibo Sottiaux"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "safety-pacing",
+        "tags": ["policy", "ai-infra"],
+        "color": "amber",
+        "badge": "Self-reported",
+        "status": "OPENAI DESCRIBING ITS OWN PRACTICE",
+        "title": "Safety as pacing the frontier",
+        "lead": "He claims growing compute goes into monitoring the working agent, and a stronger model was withheld.",
+        "bullets": [
+            "More compute spent on **secondary monitoring** that watches the primary agent for risky actions or prompt injection and intervenes.",
+            "Says the majority of API-stack investment goes to the safety stack.",
+            "Released a model near Astra intelligence but far more efficient; **has not released** the step above Astra. A previously reported Astra variant was not shipped.",
+            "Incentive framing: \"we build products for 1.2 billion people. We can't screw that up.\"",
+            "Frustration: model picker and reasoning-effort settings; \"you need a PhD in model pickers\".",
+        ],
+        "quote": None,
+        "watch": "Claims come from an OpenAI executive; the host noted recent AI misbehavior incidents and received an optimistic answer.",
+        "names": [
+            {"name": "OpenAI", "blurb": "Says it withheld a model beyond Astra", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F916", "tag": "Product", "title": "Design products for agent traffic first: expose an MCP/API, plan for scale and pricing."},
+    {"icon": "\U0001F9E9", "tag": "Ecosystem", "title": "Ship a high-retention plugin if you want ChatGPT to recommend it; retention beats SEO."},
+    {"icon": "\U0001F4C8", "tag": "Strategy", "title": "Plan for roughly 10x better models in a year; avoid heavy loop scaffolding."},
+    {"icon": "\U0001F393", "tag": "Careers", "title": "Invest in taste and user empathy over typing speed; broaden across roles."},
+    {"icon": "\U0001F6E1", "tag": "AI safety", "title": "Budget for monitoring agents with a second layer, not just the primary one."},
+]
+
+HOT_TAKES = [
+    {"take": "The majority of actions on the internet will be taken by agents.", "cite": "— Tibo Sottiaux", "why": "bold forecast"},
+    {"take": "I don't think this is the way that it's going to work. [setting up loops]", "cite": "— Tibo Sottiaux", "why": "dismisses loops/graphs"},
+    {"take": "The skill that is trending down is typing fast.", "cite": "— Tibo Sottiaux", "why": "skill call"},
+    {"take": "You kind of need a PhD in model pickers.", "cite": "— Tibo Sottiaux", "why": "criticism of current UX"},
+]
+
+CLAIMS = [
+    {"who": "Tibo Sottiaux", "claim": "The majority of actions on the internet will be taken by agents.", "metric": "share of internet actions by agents", "target": "majority", "by": None, "condition": None, "entity": None},
+    {"who": "Tibo Sottiaux", "claim": "Models will become cheaper and faster at rates that are quite incredible.", "metric": "model cost and speed", "target": "cheaper and faster", "by": None, "condition": None, "entity": "OpenAI"},
+    {"who": "Tibo Sottiaux", "claim": "OpenAI will let users add multiple Dots very soon after launch.", "metric": "multi-Dot support", "target": "shipped", "by": "soon", "condition": None, "entity": "OpenAI"},
+    {"who": "Tibo Sottiaux", "claim": "Dot capabilities will ship into ChatGPT for its 1.2 billion users.", "metric": "Dot in ChatGPT", "target": "shipped", "by": None, "condition": None, "entity": "OpenAI"},
+]
+
+RELATIONS = [
+    {"from": "OpenAI", "rel": "partners_with", "to": "Notion", "note": "Notion MCP used by agents; plugin revenue share"},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F3A4", "title": "Live DevDay demo failed; production went down 5 minutes earlier and Dot pinged him, offering to fix it (he declined).", "tag": "AI"},
+    {"icon": "\U0001F4DA", "title": "Sources and influences named: Neuromancer, the original Star Trek, the film *Her* (watched once), Pi and OpenCode creators.", "tag": "Culture"},
+    {"icon": "\U0001F9D8", "title": "Habit: ~30 minutes a day on Twitter; a weekly holiday disconnect leads to more creative thinking; occasional hand LeetCode as a therapeutic exercise.", "tag": "Workflow"},
+]
+
+GLOSSARY = [
+    {"term": "Dot", "def": "OpenAI's always-on personal agent that runs on its own computer and connects to many devices and channels."},
+    {"term": "Harness", "def": "The agent loop and tooling around a model; for Dot it runs off the user's machine."},
+    {"term": "Sign in with ChatGPT", "def": "Lets partner apps use a subscriber's ChatGPT usage via login, with shared economics."},
+    {"term": "MCP", "def": "Model Context Protocol, the interface that lets agents use a product's capabilities."},
+]
