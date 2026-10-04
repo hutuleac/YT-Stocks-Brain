@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: Are Rates and Breadth Warning About a Bankpocalypse Crash</title>
+<meta name="description" content="Jordi Visser · 6 threads · rates vs breadth · oversold breadth · AI infra · consumer agents · bank apocalypse · Ethereum trust thesis">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="Are Rates and Breadth Warning About a Bankpocalypse Crash">
+<meta property="og:description" content="Jordi Visser · 6 threads · rates vs breadth · oversold breadth · AI infra · consumer agents · bank apocalypse · Ethereum trust thesis">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Are Rates and Breadth Warning About a Bankpocalypse Crash</h1>
+    <div class="byline">
+      Channel: <b>Jordi Visser</b> &middot; Speaker: <b>Jordi Visser</b> &middot; <b>2026-10-04</b>
+      <div class="stats-line">6 threads · rates vs breadth · oversold breadth · AI infra · consumer agents · bank apocalypse · Ethereum trust thesis &middot; <a href="https://www.youtube.com/watch?v=hKBjZBiw62U" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Weekly speed-round: rising rates plus weak breadth is <b>not a dot-com rerun</b>; the market is now ~56% non-cyclical tech/AI, so rate shocks hit old-economy names, not the index.</li><li>Breadth washed out (14-day RSI of breadth under 25, new lows in staples and utilities, not tech): he reads that as a <b>bottoming signal</b>, with NDX and equal-weight tech at new highs.</li><li>AI trade stays intact: Micron earnings and a Rogers step-up are his proof that inference, memory and power-density demand keep rising; calling AI a bubble "has cost you dramatically".</li><li>New demand leg: <b>consumer/personal agents</b> (Instinct AI, OpenAI's Dot, Meta's Muse) with compute needs "doubling every week".</li><li>Core call: a <b>"bank apocalypse"</b> like the SaaS one, a multiple-compression story he sees as a Q1 story; Visa and Mastercard are the BlackBerry of the trade.</li><li>Crypto rails thesis: agents want instant, verifiable settlement, so Ethereum becomes the "trust commodity"; this week's institutional headlines are his evidence.</li><li>Conflicts are heavy: he owns Micron, Nvidia, Marvell, NEAR and crypto, runs a 46-token index and sells the subscription behind it.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="rates-not-dotcom">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">REBUTTING THE DOT-COM-BUBBLE FRAMING</span><span class="ttag">macro-rates</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Why higher yields do not rhyme with 2000 or 2008</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Today's index is dominated by non-cyclical tech names that do not need cheap debt, so old rate-shock comparisons do not apply.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Tech-like megacaps (Alphabet, Microsoft, Amazon, Nvidia, Meta, Tesla) were barely <b>10%</b> of the market at the financial crisis and are now <b>56%</b>; 78 companies make up that 56%.</li><li><span class="dot" style="background:#3f6b2e;"></span>Nvidia plus Micron revenue went from <b>$21B to $535B</b>; Google, Meta, Apple, Amazon, Microsoft add another $2.4T of revenue. Nvidia alone is expected to add ~$300B next year (from ~$410B toward ~$700B), roughly the combined revenue of the old-economy group.</li><li><span class="dot" style="background:#3f6b2e;"></span>GM plus the four major homebuilders: $333B (2015) to $432B, a <b>2.4% CAGR</b>; those names "deserve to go down" when rates rise and need rates lower.</li><li><span class="dot" style="background:#3f6b2e;"></span>The 14-year post-GFC era of negative-yielding bonds "should not count" on a chart; nominal GDP is ~6.5% and he would worry about bonds only if it pushes above <b>7%</b>.</li><li><span class="dot" style="background:#3f6b2e;"></span>Financial conditions no longer tighten when rates rise (1971-1999 fit vs 2010-2026); 2022's rate shock did not cause a recession and SVB "wasn't a blip on anything".</li><li><span class="dot" style="background:#3f6b2e;"></span>Curve flattened as a <i>bear flattener</i> on hike expectations; that eased after John Williams signaled no October hike, then a weaker PCE and weaker payrolls.</li><li><span class="dot" style="background:#3f6b2e;"></span>Personal credential: ran the S&amp;P options book at Morgan Stanley during the dot-com bubble.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;It is insane to me that people are sitting there saying that this is going to be like the dot-com bubble.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>General Motors (GM), Ford (F)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium</span></b><span>Named as old-economy names that should have been gone; disrupted, not saved by rate cuts</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">He says strategists who called a broadening-out trade for 2026 now "hope the market crashes so they can get bailed out"; this is his read of their motives, not stated evidence.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="breadth-bottom">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">OVERSOLD BREADTH, WEEK OF OCT 2026</span><span class="ttag">macro-rates</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Weak breadth as a bottoming signal, not a warning</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Breadth was oversold where defensives made new lows and tech did not; he expects stabilization after earnings.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>New lows are concentrated in <b>staples and utilities</b>; tech and financials show no spike in new lows.</li><li><span class="dot" style="background:#93711b;"></span>A 14-day RSI of breadth below <b>25</b> (data since 2004) has been followed by strong six-month returns except in the GFC; Tom Lee's new-highs/new-lows view cited as a bottoming sign.</li><li><span class="dot" style="background:#93711b;"></span>Breadth turning up: 20-day at <b>74</b>, 50-day at 69, both highest since the peak; average distance from 52-week high is ~20% and he expects it to keep falling.</li><li><span class="dot" style="background:#93711b;"></span>NDX over S&amp;P and equal-weight tech both at/near all-time highs; staples over S&amp;P making new lows (in the dot-com era staples held up because bonds yielded negative).</li><li><span class="dot" style="background:#93711b;"></span>Equal-weight vs cap-weight S&amp;P tracks the ISM; oil hit it first, then rates; "if rates had stayed low this trade would have continued".</li><li><span class="dot" style="background:#93711b;"></span>The 10-name concentrated portfolio is up <b>106%</b> for the year.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">He says there is "no trend" in copper, gold or the dollar, and that macro funds fading crypto/AI for gold and commodities are losing; the S&amp;P has consolidated since the June AI-trade break.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="ai-infra-demand">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">HOLDING — OWNS MICRON, NVIDIA, MARVELL</span><span class="ttag">ai-infra</span><span class="ttag">semis</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Micron and Rogers: AI demand keeps stepping up</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Memory, power density and heat are the binding constraints, and every "AI bubble" call has been wrong so far.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Micron reported a revenue jump of about <b>11-fold</b> and said it sees no line of sight to supply catching demand; he cites larger models, longer context, more concurrency, agents and edge/physical AI.</li><li><span class="dot" style="background:#3f6b2e;"></span>He started buying Micron "in the 800s" and was ready to build a sizable position near 500 that never came; position is not as big as Marvell, Nvidia or crypto.</li><li><span class="dot" style="background:#3f6b2e;"></span>A paper he wrote on May 15, 2025 ("The Inference Inflection") came when Micron was <b>$98</b>; it is now over $1,000, with a ~50% drawdown on the way.</li><li><span class="dot" style="background:#3f6b2e;"></span>Rogers (investor day, not earnings) stepped numbers up massively (~"<b>$3 </b>to 14"); he links it to heat and power density and the Rubin-era focus on efficiency and watts.</li><li><span class="dot" style="background:#3f6b2e;"></span>Chips "depreciate like a car" because a better one ships next day; the alpha is shorting the disrupted 440, not fearing it takes down the economy.</li><li><span class="dot" style="background:#3f6b2e;"></span>References: Howard Marks ("great investments begin in discomfort"), a16z State of the Markets, a Goldman Sachs token-consumption chart ("first inning").</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Every time you say AI is a bubble, you've been wrong and it's cost you dramatically.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Micron (MU)<span class="stance" style="background:#3f6b2e;">OWNS · High · next year</span></b><span>Earnings quoted; holds a position smaller than Marvell/Nvidia/crypto</span></div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>Revenue growth framing; larger position than Micron</span></div><div class="namechip"><b>Marvell (MRVL)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>Larger position than Micron; named among efficiency/watts winners</span></div><div class="namechip"><b>Rogers (ROG)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Investor-day step-up; part of the 100-name basket</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">He owns Micron, Nvidia and Marvell and sells a subscription built on his 100-name thematic infrastructure basket, which includes Rogers.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="consumer-agents">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">NEW REPORT: AGENTIC CONSUMER INFLECTION</span><span class="ttag">ai-infra</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Personal agents add a second compute-demand leg</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Consumer agents are as big a turn as the enterprise-agent shift after Opus 4.5 last November, and they hit memory and compute harder.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Instinct AI's founder (podcast he cites): trust, not intelligence, is the bottleneck; users grant permissions as confidence builds.</li><li><span class="dot" style="background:#3f6b2e;"></span>Instinct metrics shown: ~<b>$1B</b> annualized transaction volume, 50% of it travel, daily user growth 10-11%, 40% gave a personal credit card within 3 weeks, 80% retention after connecting sensitive data.</li><li><span class="dot" style="background:#3f6b2e;"></span>Founder says compute need is effectively <b>doubling every week</b> and GPU buying is hard with months-long lead times.</li><li><span class="dot" style="background:#3f6b2e;"></span>OpenAI launches Dot, Meta expands Muse to small businesses, and a bot product now connects to bank cards and investment accounts; he asks why Google fell so far behind.</li><li><span class="dot" style="background:#3f6b2e;"></span>OpenAI plus Anthropic revenue this year (~<b>$100B</b> combined, actual not ARR) will exceed the entire software sector's.</li><li><span class="dot" style="background:#3f6b2e;"></span>8 billion people using personal agents over five years; he is already consuming more tokens than any prior month on Muse and Grok.</li><li><span class="dot" style="background:#3f6b2e;"></span>He frames Mag 7 firms as moving from separate lanes to fighting over the same TAM as the attention economy becomes the agent economy.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>OpenAI<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Launched Dot; revenue with Anthropic cited</span></div><div class="namechip"><b>Anthropic<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Combined revenue with OpenAI exceeds software sector's increase</span></div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Muse expanded to small businesses; Mag 7 TAM fight</span></div><div class="namechip"><b>Qualcomm (QCOM)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Biggest rank change in his edge-AI report</span></div><div class="namechip"><b>Instinct AI<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Personal agent startup; metrics from its founder</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">His own use of these tools and his analyst prompts for subscribers sit behind the report; he also gives his 21-year-old son's AI-native internship as evidence.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="bank-apocalypse">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">High conviction</span>
+    <span class="theme-status">EARLY STAGES — HE EXPECTS A Q1 STORY</span><span class="ttag">finance</span><span class="ttag">crypto</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">Bank apocalypse: agents compress bank and card multiples</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Like software, banks will not disappear but will suffer multiple compression as agents move money and strip out yield fees.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span>BKX closed below its 200-day average; his 46-token crypto index held while rates and Fed-hike odds rose, and gold broke down, so he rejects the pure debasement/liquidity story.</li><li><span class="dot" style="background:#a23f22;"></span>Torsten Slok's post that agents will move money to take away yield fees went viral this week.</li><li><span class="dot" style="background:#a23f22;"></span><b>Visa and Mastercard</b> are "the BlackBerry": may benefit for two years but he sees "zero chance" they win long term; trust arguments are the same ones made against the iPhone.</li><li><span class="dot" style="background:#a23f22;"></span>Speed is a safety feature: Friday wires landing Monday; the GameStop episode pushed settlement from T+2 to T+1 (it took 3.5 years).</li><li><span class="dot" style="background:#a23f22;"></span>This week: Morgan Stanley digital-asset lab, Citi-Coinbase partnership, Franklin Templeton tokenized money-market funds as Bybit collateral (<b>$1.83T</b>), TD Cowen joining, Goldman going online, Robinhood AI trading bots.</li><li><span class="dot" style="background:#a23f22;"></span>Source cited: SF Fed on stablecoins; Visa survey (US adoption intent for international travelers <b>36%</b> to 56% with bank-level protection); SEC 5-year transition for tokenized stocks.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;I find 0.0 chance that Visa and Mastercard will be the winners.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Visa (V), Mastercard (MA)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · High · long term</span></b><span>Seen as the BlackBerry of payments in the agent era</span></div><div class="namechip"><b>Morgan Stanley (MS)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Building a digital-asset lab</span></div><div class="namechip"><b>Citi (C), Coinbase (COIN)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Citi expands digital assets via Coinbase partnership</span></div><div class="namechip"><b>Franklin Templeton (BEN)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Tokenized money-market funds as Bybit collateral</span></div><div class="namechip"><b>Robinhood (HOOD)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>AI trading bots at its summit</span></div><div class="namechip"><b>Goldman Sachs (GS)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Going online (agentic trading)</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">He owns crypto and wants asset managers or brokers to adopt his index; he also notes asset managers calling him are growing, which he reads as FOMO.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="ethereum-trust">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">OWNS NEAR; CRYPTO LARGEST POSITION</span><span class="ttag">crypto</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Ethereum as the trust commodity for agent-era finance</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Agents need machine-verifiable trust and instant settlement, which he argues points to Ethereum, Solana and Bitcoin rather than bank rails.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Ilia Polosukhin (Transformer co-author, NEAR founder; No Priors, May 2023) argued blockchains are an operating system for agents that can pay each other; he built an L1 because payments to people worldwide failed.</li><li><span class="dot" style="background:#3f6b2e;"></span>William Mougayar: Ethereum as four connected pieces, mispriced if valued only on apps on top; Visser is writing a foreword to his book on the trust shift.</li><li><span class="dot" style="background:#3f6b2e;"></span>Joseph Chalom (SharpLink CEO, ex-BlackRock): agents will touch a vast pool of financial-industry fees over a decade; ETH the settlement layer for almost all of finance and a "trust commodity".</li><li><span class="dot" style="background:#3f6b2e;"></span>Larry Fink framing quoted: Ethereum is the toll road to tokenization. Tom Lee and Chris Perkins (quantum could accelerate Wall Street's blockchain adoption) cited.</li><li><span class="dot" style="background:#3f6b2e;"></span>Equal-weight 46-token index split into 10 verticals; this week's two: <b>AI agents in the machine economy</b> and stablecoins/synthetic dollars; he says crypto studied now gives an advantage over the next year.</li><li><span class="dot" style="background:#3f6b2e;"></span>Tokenization takes growth from the "mag seven" to the "<b>mag billion</b>"; many firms like Ford and GM will never grow again.</li><li><span class="dot" style="background:#3f6b2e;"></span>Calls it the Peter Lynch approach: talk to founders early; a Peter Lynch Framework analyst prompt provided to subscribers.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Ethereum is effectively the internet in my opinion.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Ethereum (ETH)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Trust commodity / settlement layer thesis</span></div><div class="namechip"><b>Near (NEAR)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>Founder Ilia Polosukhin; invested personally</span></div><div class="namechip"><b>Solana (SOL)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Big money coming to ETH, Solana and Bitcoin</span></div><div class="namechip"><b>Bitcoin (BTC)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Held through the rate rise; not tracking gold</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">He holds NEAR personally and has mentioned a Pomp conversation; he is writing a foreword for a book by one of his sources, and the 46-token index is his own product.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📉</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Stop mapping 2000 or 2008 rate shocks onto today's index; check the <b>56%</b> tech/AI weight first.</span></div></div><div class="irow"><div class="ic">🧭</div><div class="tline"><span class="cat">Breadth:</span> <span class="txt">Watch staples and utilities new lows and breadth RSI for the turn; he reads oversold as a bottom.</span></div></div><div class="irow"><div class="ic">🧠</div><div class="tline"><span class="cat">AI infra:</span> <span class="txt">Track memory and power-density suppliers (Micron, Rogers, Marvell) via earnings and investor days.</span></div></div><div class="irow"><div class="ic">🏦</div><div class="tline"><span class="cat">Financials:</span> <span class="txt">Stress-test Visa, Mastercard and bank multiples against agent-driven fee compression before Q1.</span></div></div><div class="irow"><div class="ic">🪙</div><div class="tline"><span class="cat">Crypto:</span> <span class="txt">Learn the agent/stablecoin verticals before sizing; he recommends the 46-token equal-weight basket over 5-10 picks.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;I find 0.0 chance that Visa and Mastercard will be the winners.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Every time you say AI is a bubble, you've been wrong and it's cost you dramatically.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;There's going to be a bank apocalypse, just like SaaS did, and I think we're in the early stages of something that'll probably be a Q1 story.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Ethereum is effectively the internet.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;When tokenization comes, we will go from the mag seven of growth to the mag billion of growth.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;All equities are vulnerable over the next 5 years, but first we have to get rid of all the small businesses that don't supply the infrastructure for AI.&#8221; <cite>— Jordi Visser</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Jordi Visser:</b> Banks are in the early stages of a multiple-compression 'bank apocalypse', a likely Q1 story. <span class="cmeta">bank multiples vs agent disruption · compression · 2027-03</span></div><div class="ritem"><b>Jordi Visser:</b> Visa and Mastercard will not be long-term winners in the agent economy. <span class="cmeta">long-term competitive position · not winners</span> <span class="tag">Visa (V), Mastercard (MA)</span></div><div class="ritem"><b>Jordi Visser:</b> He would worry about bonds as a long-term problem if yields move above 7% in a major way (nominal GDP is ~6.5%). <span class="cmeta">bond yield · above 7%</span> <i>if if yields move above 7% in a major way</i></div><div class="ritem"><b>Jordi Visser:</b> People who study crypto over the next two months will have a huge investment advantage over the next year. <span class="cmeta">crypto education advantage · investment edge · 2027-10</span></div><div class="ritem"><b>Jordi Visser:</b> OpenAI and Anthropic combined actual revenue this year (~$100B) will exceed the entire software sector's. <span class="cmeta">OpenAI plus Anthropic revenue · ~$100B · 2026-12</span> <span class="tag">OpenAI</span></div><div class="ritem"><b>Jordi Visser:</b> Nvidia is expected to add about $300B of revenue next year, based on consensus estimates and Jensen Huang's comments. <span class="cmeta">Nvidia revenue increase · ~$300B · 2027</span> <span class="tag">Nvidia (NVDA)</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Citi (C)</b> <span class="rel">partners with</span> <b>Coinbase (COIN)</b> &mdash; Citi expands digital-assets footprint via Coinbase</div><div class="ritem"><b>Franklin Templeton (BEN)</b> <span class="rel">partners with</span> <b>Bybit</b> &mdash; Tokenized money-market funds used as crypto collateral</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: Howard Marks, Torsten Slok, Tom Lee, The Compound and Friends, ChartKidMatt, a16z, Goldman Sachs, No Priors (May 2023), Larry Fink framing, SF Fed, Chris Perkins, Pomp. <span class="tag">Sources</span></div></div></div><div class="irow"><div class="ic">🚢</div><div><div class="title">A ship hacking off the Texas coast reported today; he says everything is under attack and agent swarms will bring more hacks. <span class="tag">Cyber</span></div></div></div><div class="irow"><div class="ic">🧑‍🎓</div><div><div class="title">His 21-year-old son, a finance major, works AI-natively in an internship after a one-week Python bootcamp; he urges parents to get kids using AI. <span class="tag">Careers</span></div></div></div><div class="irow"><div class="ic">🏛</div><div><div class="title">Treasury buyback (~<b>$6B</b>) and Fed signals (Williams: no urgency) cited as part of the rates backdrop. <span class="tag">Macro</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Bear flattener</b> &mdash; Yield-curve flattening where short rates rise faster than long rates.</div><div><b>Bank apocalypse</b> &mdash; His term for multiple compression in banks from agent-driven disruption, not bankruptcy.</div><div><b>T+1</b> &mdash; Trade settlement one business day after the trade, down from T+2.</div><div><b>Mag billion</b> &mdash; His label for a tokenized economy with vastly more growth companies than the Mag 7.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
