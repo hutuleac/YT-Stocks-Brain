@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: Anthropic's CCA Exam as a Field-Guide for Agentic Engineering — Frank Coyle, UC Berkeley</title>
+<meta name="description" content="AI Engineer · 5 threads · exam structure · stop-reason loops · specialized sub-agents · context isolation · CI and batch">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="Anthropic&#x27;s CCA Exam as a Field-Guide for Agentic Engineering — Frank Coyle, UC Berkeley">
+<meta property="og:description" content="AI Engineer · 5 threads · exam structure · stop-reason loops · specialized sub-agents · context isolation · CI and batch">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Anthropic's CCA Exam as a Field-Guide for Agentic Engineering — Frank Coyle, UC Berkeley</h1>
+    <div class="byline">
+      Channel: <b>AI Engineer</b> &middot; Speaker: <b>Frank Coyle</b> &middot; <b>2026-08-08</b>
+      <div class="stats-line">5 threads · exam structure · stop-reason loops · specialized sub-agents · context isolation · CI and batch &middot; <a href="https://www.youtube.com/watch?v=Z-c11pV_uvU" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Frank Coyle (Berkeley CS, 30+ years teaching) uses Anthropic's <b>Claude Certified Architect (CCA)</b> exam as a map of what agentic engineering will demand.</li><li>The exam launched in March 2026: scenario-based, timed, proctored, <b>$99</b> for individuals, one attempt every 6 months.</li><li>Five domains: agentic architecture <b>27%</b>, Claude Code config/workflow <b>20%</b>, plus prompt engineering and structured output, tool design/MCP integration, and context management/reliability.</li><li>Exam draws <b>4 of 6</b> production scenarios; Coyle's method is to learn each scenario's <i>anti-pattern</i> first, because knowing what not to do points to the right answer.</li><li>Core pattern: loop on the model's `stop_reason`; the LLM never executes tools, your code does.</li><li>Core discipline: specialized agents with one or two tools, isolated context, compaction past ~150k tokens.</li><li>Loops are not new: Böhm-Jacopini (1966) showed sequence + conditionals + loop is Turing complete; agents add the loop to prompts.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="exam-structure">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">RELEASED MARCH 2026</span><span class="ttag">career</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">The CCA exam is a free syllabus for agentic engineering, whether or not you sit it</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Anthropic knows how people actually use its system, so the exam's blueprint shows where agent projects break.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Released March 2026; scenario-based, timed, proctored; open to companies in the Anthropic ecosystem, individuals pay <b>$99</b> and can retake every 6 months.</li><li><span class="dot" style="background:#3f6b2e;"></span>Multiple choice, but built on realistic constraints rather than trivia.</li><li><span class="dot" style="background:#3f6b2e;"></span>Domain weights: agentic architecture <b>27%</b>, Claude Code configuration/workflow 20%; the rest covers prompt engineering with structured JSON output, tool design and Model Context Protocol integration, and context management/reliability.</li><li><span class="dot" style="background:#3f6b2e;"></span>Six production scenarios are published; each exam randomly picks four and centers all questions on them.</li><li><span class="dot" style="background:#3f6b2e;"></span>Coyle's frame: design patterns arrived with 1990s object-oriented programming; agents now have patterns <i>and</i> anti-patterns, and anti-patterns are the shortcut to right answers.</li><li><span class="dot" style="background:#3f6b2e;"></span>His motivation: computer science is no longer a guaranteed pathway to a job, so he is hunting for ways to ready students for agentic AI.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Nothing is a mistake. There's no win and no fail. There's only make.&#8221;<cite>— Sister Corita Kent, quoted by Frank Coyle</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="stop-reason-loop">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Structural pattern</span>
+    <span class="theme-status">SCENARIO 1: CUSTOMER SUPPORT AGENT</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Loop on stop_reason; the LLM never runs your tools</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The anti-pattern is firing the agent once and using whatever comes back; the pattern is a while-true loop gated by the stop reason.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Loops are the hot idea (Boris Cherny: his job is writing loops; Peter Steinberger: he designs loops that prompt agents), but Coyle says they are not new.</li><li><span class="dot" style="background:#3f6b2e;"></span><b>Böhm and Jacopini, 1966:</b> sequence, if-then conditionals and a loop are all a language needs to be Turing complete; agents finally add the loop to prompts and conditionals.</li><li><span class="dot" style="background:#3f6b2e;"></span>The LLM is a probabilistic next-word predictor that can only talk back: it extracts tool parameters, your code executes the tool.</li><li><span class="dot" style="background:#3f6b2e;"></span>Loop shape: call model with messages, read `stop_reason`; if `tool_use`, run the tool, feed the result back, continue; otherwise end the loop.</li><li><span class="dot" style="background:#3f6b2e;"></span>After the loop, check confidence: keep the answer or escalate to a human (human-in-the-loop point).</li><li><span class="dot" style="background:#3f6b2e;"></span>Always check the stop reason: running out of tokens also stops the model, and the partial response needs action.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="specialized-agents">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Structural pattern</span>
+    <span class="theme-status">SCENARIO 3: MULTI-AGENT RESEARCH</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">One agent loaded with every tool is the anti-pattern; give each agent one job and only a slice of context</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Specialize, don't overload: a carpenter who also brings plumbing and electrical tools is not the pro you want.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Questions to settle: hub-and-spoke layout, who is the orchestrator, how much each agent should know.</li><li><span class="dot" style="background:#3f6b2e;"></span>Functional-programming echo: functions do one thing; agents get one job with <b>one or two tools</b>.</li><li><span class="dot" style="background:#3f6b2e;"></span>Context means tokens, tokens mean money, and more context confuses the model: a million-token window is not a reason to fill it.</li><li><span class="dot" style="background:#3f6b2e;"></span>Critic example: pass only the claim and the evidence, not the reasoning that produced the claim.</li><li><span class="dot" style="background:#3f6b2e;"></span>Reason: agents that collaborate drift into <b>groupthink</b> and converge on one idea, like a party where everyone wants pizza.</li><li><span class="dot" style="background:#3f6b2e;"></span>Each agent gets only its own slice.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="context-isolation">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Structural pattern</span>
+    <span class="theme-status">SCENARIO 4: DEVELOPER PRODUCTIVITY</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Isolate subtask output and compact long sessions</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Anti-patterns: dump every subtask's full output into the main thread, and let context grow unbounded.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Same lesson as multithreaded programming: threads sharing memory force locks and synchronization; keep threads, and agents, independent.</li><li><span class="dot" style="background:#3f6b2e;"></span>Pattern: <b>context fork</b> a log-scanning agent into a separate thread; only its summary of errors returns to the main context.</li><li><span class="dot" style="background:#3f6b2e;"></span>Check the token count and set a limit: past about <b>150,000 tokens</b>, run a compact.</li><li><span class="dot" style="background:#3f6b2e;"></span>Anthropic's compaction internals aren't known to Coyle; compaction exists but he doesn't know how it is implemented.</li><li><span class="dot" style="background:#3f6b2e;"></span>Hierarchical `CLAUDE.md` (scenario 2, code generation): Anthropic recommends rules at the project top level, in the project folder, and within directories.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="ci-and-batch">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">SCENARIO 5: CLAUDE CODE IN CI</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">No interactive mode in a pipeline; use batch for 50% cheaper tokens</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Interactive mode makes Claude stop and ask permission, which breaks a pipeline; configure it to run straight through.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Anti-pattern: always interactive modes in a CI pipeline.</li><li><span class="dot" style="background:#3f6b2e;"></span>Batch mode: submit prompts as a batch for <b>50%</b> fewer token cost, with results promised within at least 24 hours.</li><li><span class="dot" style="background:#3f6b2e;"></span>Use it for work that can wait: overnight, vacation, a day off.</li><li><span class="dot" style="background:#3f6b2e;"></span>Final scenario thread: patterns for structured data extraction.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📝</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Read the CCA exam domains as a skills checklist, even if you never sit the <b>$99 </b>exam.</span></div></div><div class="irow"><div class="ic">🔁</div><div class="tline"><span class="cat">Agents:</span> <span class="txt">Gate every agent loop on stop_reason; handle tool_use, end, and out-of-tokens separately.</span></div></div><div class="irow"><div class="ic">🧰</div><div class="tline"><span class="cat">Agents:</span> <span class="txt">Split overloaded agents into single-purpose ones with one or two tools each.</span></div></div><div class="irow"><div class="ic">🧪</div><div class="tline"><span class="cat">Context:</span> <span class="txt">Fork noisy subtasks and return only a summary; compact past ~150k tokens.</span></div></div><div class="irow"><div class="ic">⚙️</div><div class="tline"><span class="cat">CI:</span> <span class="txt">Run Claude Code non-interactively in pipelines and push delay-tolerant work to batch for half the cost.</span></div></div><div class="irow"><div class="ic">🚧</div><div class="tline"><span class="cat">Learning:</span> <span class="txt">Study anti-patterns first: what not to do narrows the right answer.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;Loops are the new big thing, right? Well, no, they're not.&#8221; <cite>— Frank Coyle</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Computer science is no longer the magic pathway to a job.&#8221; <cite>— Frank Coyle</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Even though, oh, a million token context window, I can put everything in there. No, no, don't put everything in there.&#8221; <cite>— Frank Coyle</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Frank Coyle:</b> Running prompts through batch mode costs 50% fewer tokens with results promised within 24 hours <span class="cmeta">batch token cost · -50%</span></div><div class="ritem"><b>Frank Coyle:</b> Compaction should run once context passes about 150,000 tokens <span class="cmeta">compaction threshold · 150,000 tokens</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><p class="empty">No company-to-company relationships stated in this video.</p></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: Boris Cherny and Peter Steinberger (the loops-over-code quotes), Böhm and Jacopini (1966), Thomas Edison and Sister Corita Kent (quotes), and a free conference booklet by Sam Bagwell whose company offers custom context-compression logic via an extendable base class (page 32). <span class="tag">Sources</span></div></div></div><div class="irow"><div class="ic">🎷</div><div><div class="title">Coyle's site is named for John Coltrane's "A Love Supreme"; contact via his Berkeley email. <span class="tag">Culture</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>CCA</b> &mdash; Claude Certified Architect, Anthropic's scenario-based, proctored certification exam released March 2026.</div><div><b>stop_reason</b> &mdash; The field telling why the model stopped (e.g. tool_use, out of tokens), which drives the agent loop.</div><div><b>Context fork</b> &mdash; Running a subtask in a separate thread so its tokens never pollute the main context; only a summary returns.</div><div><b>Compaction</b> &mdash; Anthropic's algorithms that condense a large context into a smaller one.</div><div><b>Hub and spoke</b> &mdash; Multi-agent layout where an orchestrator delegates to specialized worker agents.</div><div><b>CLAUDE.md</b> &mdash; Markdown rules file for Claude Code, layered at project, folder and directory levels.</div><div><b>Böhm-Jacopini theorem</b> &mdash; 1966 proof that sequence, conditionals and loops suffice for Turing completeness.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
