@@ -1,0 +1,200 @@
+META = {
+    "title": "EURO SCADE, LEUL ROMÂNESC SE PRĂBUȘEȘTE - UNDE ȚINEM BANII? - #FollowTheMoney 26",
+    "channel": "George Buhnici",
+    "speakers": "Andrei (host), George Buhnici",
+    "date": "2026-10-05",
+    "video_url": "https://www.youtube.com/watch?v=Iw3PdnBiy_0",
+    "thread_line": "6 threads · government nomination · leu and ratings · bond selloff vs record stocks · oil and diesel · BMW case study · Bitcoin bottom",
+    "category": "market",
+    "region": "ro",
+}
+
+SNAPSHOT = [
+    "Live Monday show (Follow the Money #26, 5 Oct 2026) taped while President Nicusor Dan consulted parties at Cotroceni on a new prime-minister nomination, widely expected to be **Sorin Grindeanu**.",
+    "Romania escaped a junk downgrade from S&P but kept a **negative outlook**; the leu keeps sliding while the euro also loses to the dollar (EUR/USD about **1.12**, DXY breakout above 100).",
+    "Hosts see the direction for the leu as one-way and debate only the speed; Andrei expects the leu to hold roughly **5.34-5.40** per euro to year-end.",
+    "Global bonds are selling off (France 10-year from 3.7% to 4.86%, US borrowing above 5%) while Nasdaq hits an all-time high and the S&P sits near one: \"who is lying?\"",
+    "Diesel is at an all-time high even as Hormuz crude exports recover toward **20M bpd**; the squeeze is in refined product, with the US strategic reserve at a level not seen since 1982.",
+    "BMW as a case study: operating margin of 13-16% ten years ago, guided to **2-3%** now; layoffs and falling model range.",
+    "Bitcoin rejected at **$87,000** and trades near $85,170; Andrei says the bear market is over and a bottom is in, with shorter, milder cycles since US ETFs.",
+]
+
+THEMES = [
+    {
+        "id": "government-nomination",
+        "tags": ["romania", "policy"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "LIVE, CONSULTATIONS AT COTROCENI · 5 OCT 2026",
+        "title": "A new prime-minister nomination arrives after months of an interim government",
+        "lead": "Nicusor Dan says this is the last attempt before early elections; the hosts expect Sorin Grindeanu but see any government struggling in Parliament.",
+        "bullets": [
+            "Dan's consultations were running live; Grindeanu or Nazare were the names floated, while **Victor Ponta** said he knew only of two nominations: Grindeanu and himself.",
+            "**Ilie Bolojan** reportedly yielded, agreeing to vote a government he is not part of to unblock the situation.",
+            "George's labeled speculation: US pressure explains Bolojan's move, citing Marco Rubio telling NBC that Kimberly Guilfoyle (caption garbled) is Trump's emissary; he says he would like to be proven wrong.",
+            "Breaking news during the show: a possible surprise \"skittle\", career diplomat **Luca Niculescu**, as a feint before the real nomination; UDMR said it will not govern with PSD.",
+            "AUR: Simion said he votes no government until Calin Georgescu is released; Petru Ciorpaiu said he did not know Simion would skip Cotroceni; Lulea was confirmed out of AUR.",
+            "Grindeanu said he has no more red lines, after months of red lines; hosts note Romania had a full government for 4 months of 2026, then an interim one for five months and counting.",
+            "Digi24 debate clip (Daniel Zamfir and others talking over each other) is used as a metaphor for the coalition; the hosts note the national team plays Sweden that night.",
+        ],
+        "quote": {"text": "Anticipatele nu sunt o sperietoare. Ar trebui sa fie o realitate. Doar ca nu avem curaj sa o facem.", "cite": "— George Buhnici"},
+        "watch": "George flags his own Cotroceni scene as conspiracy speculation, not confirmed; the nomination itself had not been announced when the segments were taped.",
+        "names": None,
+    },
+    {
+        "id": "leu-and-rating",
+        "tags": ["romania", "macro-rates"],
+        "color": "red",
+        "badge": "Negative direction",
+        "status": "S&P KEPT INVESTMENT GRADE, OUTLOOK NEGATIVE",
+        "title": "The leu slides on political limbo while the dollar strengthens against the euro",
+        "lead": "Hosts agree the direction for the leu is one-way; the open question is how fast, and BNR keeps buying time.",
+        "bullets": [
+            "S&P's verdict last week: no downgrade to junk, but outlook negative; the chances of avoiding junk next year are \"not the happiest\"; no further rating events expected this year.",
+            "A skeptic argues Romania already borrows like a junk country; Romania borrows at about **7.7%**, the US at 5%+.",
+            "Interim government plus lack of predictability and stability keeps lenders cautious, despite a better 2026 deficit outlook after late-2025 tax measures.",
+            "Euro/leu has risen about 10 bani recently; Andrei expects leu to hold about **5.34-5.40** per euro to year-end barring a spike if early elections are called; the \"realistic\" rate market people cite is closer to 5.5 than 5.35.",
+            "Dollar at its strongest versus the euro since May 2025 (about 1.12 per euro); DXY broke out above 100 to a higher high, first time since April 2025, after ranging between about 95 and 100.",
+            "USD/RON around **4.76**; Andrei expects it to pass 5 RON in coming months (last above 5 in 2022, peaking near 5.18-5.2) if DXY keeps gaining.",
+            "CFA Romania (president Adrian Codarlas) forecast: EUR/RON 5.4-5.5 at end-2027, inflation 4-5% versus 6.2% latest, growth 0-0.5%, which the hosts call stagflation and optimistic.",
+            "Inflation debate (viewer comments from Tadro and Claudiu): exporters gain from a weak leu, not from inflation itself; central banks target 2% so debt-based growth stays workable; Brazil, Argentina, Turkey and Iran currencies used as worse comparisons.",
+        ],
+        "quote": {"text": "Cursul realist despre care vorbesc oamenii din piata este mai aproape de 55 decat de 535.", "cite": "— Andrei"},
+        "watch": "Hosts and commenters disagree on whether Romania \"escaped\" junk; they also separate the exchange-rate story from the inflation story.",
+        "names": None,
+    },
+    {
+        "id": "bond-selloff",
+        "tags": ["macro-rates", "finance", "geopolitics"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "WHO IS THE IMPOSTOR?",
+        "title": "Bond yields spike while Nasdaq prints record highs: something has to give",
+        "lead": "Normally inversely correlated assets are all rising together; Andrei expects dominoes to fall by early 2027 at the latest.",
+        "bullets": [
+            "5 October 2026: Nasdaq at an all-time high, S&P near one, bond yields at levels not seen since the early 2000s, dollar rising, crypto strong.",
+            "France 10-year yield up almost a full point from 3.7% in early July to **4.86%**, equal to the rise from September 2022 to July 2026 over four years.",
+            "Fed raised rates; US yields climbing despite Trump's weekly assurances about Iran; Scott Bessent's \"house on fire\" with no firefighters.",
+            "Milkshake theory of the dollar: rising rates drain liquidity and the strongest currency becomes the refuge, even though Trump historically preferred a weaker dollar for exports.",
+            "George: interest rises when the lender doubts repayment; investors with skin in the game have the last word; he cites his interview with Dumitru Bortun, who says Nicusor Dan is lying.",
+            "Oligarchs make money in high-rate economies and park it in low-rate ones; with the US paying 5%+ and able to print, why take other risks? Reference: Thomas Sowell's Basic Economics.",
+            "Europe is hit hardest: Russian gas gone, Hormuz blocked in 2026, voters seeking nostalgia alternatives; France is again in protests with fires.",
+        ],
+        "quote": {"text": "Cine minte? Cine este impostorul?", "cite": "— Andrei"},
+        "watch": "Both hosts speculate on timing; Andrei says he cannot say which instrument is wrong.",
+        "names": None,
+    },
+    {
+        "id": "oil-diesel-hormuz",
+        "tags": ["energy", "geopolitics"],
+        "color": "red",
+        "badge": "Active crisis",
+        "status": "REFINED-PRODUCT SQUEEZE",
+        "title": "Crude flows through Hormuz recover, but diesel is at an all-time high",
+        "lead": "The crisis has moved from crude to refined product: attacked refineries and thin refining capacity.",
+        "bullets": [
+            "Bloomberg chart: crude exports through Hormuz near the start-of-year level, approaching **20 million barrels per day**; hosts note some tankers pass with transponders off and others are attacked.",
+            "Diesel at all-time highs while crude is below its 2022 and early-2026 peaks; refined product costs more to ship and refineries in the Gulf and Russia (Ukrainian drones) were hit.",
+            "G7 and OPEC plan to release over **100 million barrels** of diesel and crude from emergency stocks; the US strategic reserve is at a level not seen since 1982.",
+            "Talk of a US diesel export ban; US pump price near **$6** a gallon; Trump reportedly used the ban as leverage on Europe; Romania buys US diesel in dollars.",
+            "Mediators are Pakistan or Qatar; Trump said he had no interest in negotiating, then two days later said talks were close.",
+            "Security spillovers listed by George: a Fly Dubai incident with an Omani pilot, a Russian drone that hit a block in Galati, the Rahova blast, Iranian attacks on the UK prompting US bombers to leave the base.",
+        ],
+        "quote": None,
+        "watch": "Andrei notes he cannot confirm the Bloomberg-based export figures independently.",
+        "names": None,
+    },
+    {
+        "id": "bmw-case-study",
+        "tags": ["consumer", "finance"],
+        "color": "red",
+        "badge": "Structural critique",
+        "status": "GEORGE'S EUROPEAN AUTOS STUDY",
+        "title": "BMW's margin fell from 13-16% to a guided 2-3%: why would anyone not buy Treasuries?",
+        "lead": "A once-efficient automaker now earns so little that holding cash in US bonds looks rational, and keeping the business floating is the only counterargument.",
+        "bullets": [
+            "Ten years ago BMW had the best operating margin in autos, **13-16%**, helped by stamping technology and the entry-level 1 Series.",
+            "BMW's CEO guides this year to a **2-3%** operating margin, with weakness lasting to the end of the decade and recovery in the early 2030s; a BMW layoff of hundreds of managers and thousands of staff was announced.",
+            "Volkswagen has announced over **100,000** job cuts; BMW is dropping the 2 Series Active Tourer, a family car at the entrance of the middle class.",
+            "Causes: expensive post-Russian-gas energy, late EV transition, Chinese competition moving into premium, and supplier steel changing quality so robot welds fail.",
+            "Ferrari logic: always make one car fewer than demanded to hold price (controlled deflation).",
+            "Counter-argument: you must keep the business alive to return to higher margins; Andrei's reply: subscriptions like heated seats do not lift margins enough.",
+        ],
+        "quote": None,
+        "watch": "George notes friends in factories as the source for supplier-quality claims.",
+        "names": [
+            {"name": "BMW", "blurb": "Case study: operating margin guided 2-3% versus 13-16% a decade ago.", "stance": "NEGATIVE VIEW", "conviction": "Low", "horizon": "to end of decade"},
+            {"name": "Volkswagen", "blurb": "Over 100,000 job cuts announced; restructuring slow.", "stance": "NEGATIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "Ferrari (RACE)", "blurb": "Produces one car fewer than demand to keep prices up.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "bitcoin-bottom",
+        "tags": ["crypto", "finance"],
+        "color": "green",
+        "badge": "Medium conviction",
+        "status": "BITCOIN ~$85,170 AFTER REJECTION AT $87,000",
+        "title": "Andrei: the bear market is over and the bottom is in",
+        "lead": "Crypto looks too stable while bonds and equities diverge; any panic could come first, then liquidity benefits crypto.",
+        "bullets": [
+            "Bitcoin tested **$87,000** early in the week, was rejected, and trades near $85,170; Ethereum around **$2,693** with very low daily volatility.",
+            "Strategy's Michael Saylor reported buying only **334 BTC** last week, below the level that would pressure markets; STRC has not yet issued heavily.",
+            "First hint of a Coinbase premium in a long time, a sign of US institutional and ETF inflows.",
+            "Andrei is about **90%** convinced the bottom is in; the direction is up even if it ranges; panic could still come first.",
+            "2020 black swan reminder: Bitcoin went from about $10,000 to $3,600 in weeks, then rallied.",
+            "Since US ETFs the cycle changed: the drawdown was about **50%** versus 70-90% historically, suggesting shorter, milder cycles.",
+            "Crypto may be the industry that profits from a bond or liquidity crisis, after a panic; altcoins with predictable revenue look better.",
+        ],
+        "quote": None,
+        "watch": "George says crypto has become \"too stable\" and expects strong volatility soon; he warns of a self-fulfilling prophecy.",
+        "names": [
+            {"name": "Bitcoin (BTC)", "blurb": "Rejected at $87K, near $85K; Andrei says the bear market is finished.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Ethereum (ETH)", "blurb": "Around $2,693 on very low volatility.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Strategy (MSTR)", "blurb": "Michael Saylor's weekly purchase of 334 BTC.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Coinbase (COIN)", "blurb": "Coinbase premium indicator hints at US institutional inflows.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F1F7\U0001F1F4", "tag": "Romania", "title": "Plan for a leu in the 5.34-5.40 band by year-end with spike risk if early elections are called."},
+    {"icon": "\U0001F4B5", "tag": "FX", "title": "Track DXY above 100 as the signal for USD/RON heading past 5."},
+    {"icon": "\U0001F4C9", "tag": "Macro", "title": "Watch long yields (France, US) rather than equity highs for the next stress point; Andrei sees dominoes by early 2027."},
+    {"icon": "⛽", "tag": "Energy", "title": "Follow diesel and refinery capacity, not crude flows, as the inflation driver."},
+    {"icon": "\U0001F697", "tag": "Autos", "title": "Use BMW and Volkswagen margins as a gauge of European industrial stress."},
+    {"icon": "₿", "tag": "Crypto", "title": "Look for a Coinbase premium and volatility breakout before reading the Bitcoin bottom as confirmed."},
+]
+
+HOT_TAKES = [
+    {"take": "Nu, AUR nu va ajunge niciodata la guvernare cu George Simion.", "cite": "— George Buhnici", "why": "categorical call on Romanian politics"},
+    {"take": "Cursul realist despre care vorbesc oamenii din piata este mai aproape de 55 decat de 535.", "cite": "— Andrei", "why": "view on fair EUR/RON"},
+    {"take": "Cred ca be marketul a fost finalizat.", "cite": "— Andrei", "why": "calls the Bitcoin bear market over"},
+    {"take": "Nu cred ca mai dureaza mult si o sa vedem volatilitate foarte puternica pe crypto.", "cite": "— George Buhnici", "why": "volatility call"},
+]
+
+CLAIMS = [
+    {"who": "Andrei", "claim": "EUR/RON will hold roughly 5.34-5.40 through the end of 2026", "metric": "EUR/RON", "target": "5.34-5.40", "by": "2026-12", "condition": "barring a spike if early elections are called", "entity": None},
+    {"who": "Andrei", "claim": "USD/RON passes 5 RON again within months", "metric": "USD/RON", "target": ">5.00", "by": "2027", "condition": "if DXY keeps gaining on major currencies", "entity": None},
+    {"who": "Adrian Codarlas (CFA Romania)", "claim": "EUR/RON ends 2027 between 5.4 and 5.5, inflation 4-5%, growth 0-0.5%", "metric": "EUR/RON", "target": "5.4-5.5", "by": "2027-12", "condition": "if global conditions calm", "entity": None},
+    {"who": "Andrei", "claim": "Bond-market stress produces visible failures (dominoes) at the latest by early 2027", "metric": "market stress", "target": "dominoes fall", "by": "2027-03", "condition": None, "entity": None},
+    {"who": "Andrei", "claim": "Bitcoin's bear market is finished and the bottom is in, about 90% confident", "metric": "Bitcoin cycle", "target": "bottom in", "by": None, "condition": None, "entity": "Bitcoin (BTC)"},
+    {"who": "BMW CEO (cited by George Buhnici)", "claim": "BMW operating margin this year is between 2 and 3%, recovery early next decade", "metric": "BMW operating margin", "target": "2-3%", "by": "2026", "condition": None, "entity": "BMW"},
+    {"who": "Nicusor Dan (as relayed by George Buhnici)", "claim": "This is the last nomination attempt; if it fails the next step is early elections", "metric": "government formation", "target": "early elections", "by": "2026-10", "condition": "if this nomination fails", "entity": None},
+]
+
+RELATIONS = []
+
+OTHER_NEWS = [
+    {"icon": "\U0001F1E7\U0001F1F7", "title": "Brazil: first-round results (unofficial) favor the son of Jair Bolsonaro; Brazilian stocks had their best day since 2020, which George compares to the market mood after Trump's 2024 win.", "tag": "Politics"},
+    {"icon": "\U0001F916", "title": "Trump is renaming artificial intelligence to \"superintelligence\", after the Gulf of Mexico and Lake Ontario renames; the hosts promised to cover why later.", "tag": "AI"},
+    {"icon": "\U0001F4DA", "title": "Sources referenced: Bloomberg (Hormuz export chart), S&P (rating verdict), CFA Romania (2027 forecast), Digi24 (debate), NBC (Rubio comments), Dumitru Bortun interview, Thomas Sowell's Basic Economics, Michael Saylor weekly BTC update, Cryptoviner market update.", "tag": "Sources"},
+    {"icon": "⚽", "title": "George wore the national-team shirt hoping it marks a bottom for Romania and its football team.", "tag": "Culture"},
+]
+
+GLOSSARY = [
+    {"term": "DXY", "def": "The US dollar index against a basket of major currencies."},
+    {"term": "Milkshake theory", "def": "Rising rates drain global liquidity so the dollar, as the refuge, strengthens."},
+    {"term": "Coinbase premium", "def": "Bitcoin's price gap on Coinbase versus other exchanges, read as US institutional demand."},
+    {"term": "STRC", "def": "Strategy's preferred-stock product used to fund Bitcoin purchases."},
+    {"term": "BNR", "def": "National Bank of Romania, the central bank defending the leu."},
+]
