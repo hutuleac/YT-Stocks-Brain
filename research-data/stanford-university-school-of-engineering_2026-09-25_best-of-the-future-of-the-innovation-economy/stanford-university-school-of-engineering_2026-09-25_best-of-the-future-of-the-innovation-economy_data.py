@@ -1,0 +1,158 @@
+META = {
+    "title": "Best of: The future of the innovation economy",
+    "channel": "Stanford University School of Engineering",
+    "speakers": "Russ Altman (host), Fei-Fei Li, Neale Mahoney, Susan Athey",
+    "date": "2026-09-25",
+    "video_url": "https://www.youtube.com/watch?v=rK2XTIQr43c",
+    "thread_line": "5 threads · general-purpose tech bottlenecks · safety net · augment vs replace · concentration and open models · economic funk",
+    "category": "life",
+    "region": "",
+}
+
+SNAPSHOT = [
+    "Stanford panel (Fei-Fei Li, Neale Mahoney, Susan Athey) on AI and the innovation economy; a rebroadcast of a live episode taped about a year earlier, hosted by Russ Altman.",
+    "Athey: general-purpose technologies show up slowly in GDP because solving one bottleneck exposes the next; cheap software development removes one big bottleneck.",
+    "Mahoney: nobody knows *which* jobs AI disrupts, but now is a Rawlsian veil-of-ignorance moment to build the safety net, starting with health insurance decoupled from employment.",
+    "Li: AI augments tasks rather than replacing whole jobs; policy should be *science, not science fiction*, pragmatic, and fund public-sector innovation.",
+    "Athey flags competition risk: open models lower prices for everyone, and small countries buying expensive AI while automating labor could see real wages fall.",
+    "Mahoney on the US \"economic funk\": belief in the American Dream fell from **70%** to **25%** over a generation, per a Wall Street Journal piece.",
+]
+
+THEMES = [
+    {
+        "id": "gpt-bottlenecks",
+        "tags": ["software", "policy"],
+        "color": "amber",
+        "badge": "Framework",
+        "status": "SUSAN ATHEY ON GENERAL-PURPOSE TECHNOLOGIES",
+        "title": "General-purpose technologies take years to show up in GDP because each solved bottleneck reveals another",
+        "lead": "Cheap software development removes a major bottleneck, but adoption, training and restructuring still slow the payoff.",
+        "bullets": [
+            "Electricity, industrialization and the PC all had profound local effects without big GDP growth for a long time.",
+            "Full use usually requires restructuring industries and production, not just buying the tool.",
+            "Athey's less-discussed point: **software development itself is a general-purpose technology**; digitization helps small firms scale and increases span of control.",
+            "Past adoption blockers: high fixed costs, hiring trouble (e.g. a bank in Wisconsin, or in Brazil or Argentina), clunky software changed rarely, and small firms running on paper, WhatsApp or WeChat.",
+            "Example: a nursing assistant is buildable today, yet she does not predict nursing assistants everywhere next year: you must decide what to do, onboard and train nurses.",
+        ],
+        "quote": None,
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "safety-net",
+        "tags": ["policy", "career"],
+        "color": "amber",
+        "badge": "Recommendation",
+        "status": "NEALE MAHONEY ON JOBS AND SAFETY NETS",
+        "title": "Nobody knows which jobs AI disrupts, so build the safety net now",
+        "lead": "Mahoney's answer to what to do about AI job loss: invest in a social safety net while we are behind a veil of ignorance.",
+        "bullets": [
+            "Joke: he has no clue what jobs get disrupted, but knows exactly what to do about it.",
+            "**Rawls's veil of ignorance:** some of us will lose a job or see skills devalued, we don't know who, so now is the right time to build protections.",
+            "Example: in the US, losing a job likely means losing health insurance; he calls that crazy, and worse if **5-10%** of people lose their primary occupation to AI.",
+            "Economist David Autor's fact: about **70%** of today's occupations did not exist 70 years ago.",
+            "If AI diffuses geographically spread out and not too fast, we adapt; concentrated and rapid change (factory towns hollowed out by China's WTO accession and automation) was devastating and needed policy.",
+            "He doesn't know which timeline we're on, likely a mix of the two.",
+        ],
+        "quote": {"text": "I have no clue on what jobs are gonna be disrupted, but I know exactly what to do about it.", "cite": "— Neale Mahoney"},
+        "watch": "Mahoney says he is wearing his political hat on the health-insurance point.",
+        "names": None,
+    },
+    {
+        "id": "augment-not-replace",
+        "tags": ["robotics", "career", "policy"],
+        "color": "green",
+        "badge": "Principle",
+        "status": "FEI-FEI LI ON HUMAN-CENTERED AI",
+        "title": "AI augments tasks, so don't jump straight to \"replacement\"",
+        "lead": "A nurse does hundreds of daily tasks; AI helps with some and does not replace the job wholesale.",
+        "bullets": [
+            "Li sees AI as a horizontal technology that superpowers human workflow; next chapters are spatial intelligence and embodied AI models.",
+            "Creators (filmmakers, game developers, storytellers) she works with see AI as a way to supercharge creativity and productivity; she still calls it a double-edged sword.",
+            "Mahoney: innovation policy shifts from maximizing innovation under budget constraints to **shaping innovation to complement human skills**, a STEM and humanities question.",
+            "Athey: universities can absorb fixed-cost R&D on human-augmenting tech, then entrepreneurs solve last-mile adoption; language AI lets non-computer-scientists participate.",
+            "Athey's jobs answer: scale-with-population work is under-invested (childcare, nursing, doctors, elder care), and governments can procure it.",
+            "Li's education bet: AI passing standardized tests means 12+ years of memorize-and-evaluate schooling should be rethought; K12 and higher-ed investment is the government lever.",
+        ],
+        "quote": {"text": "AI really augments... a horizontal technology that can superpower humans.", "cite": "— Fei-Fei Li"},
+        "watch": "Li runs a startup in spatial intelligence while partially on leave from Stanford; she also advocates through Stanford HAI.",
+        "names": None,
+    },
+    {
+        "id": "regulation-competition",
+        "tags": ["policy", "ai-infra"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "REGULATION, MARKET POWER, OPEN MODELS",
+        "title": "Regulate with data, keep competition alive, and watch who pays for AI",
+        "lead": "Li's three-point framework for AI policy and Athey's warnings on concentration and pricing.",
+        "bullets": [
+            "Li (Stanford HAI) framework: **science, not science fiction** (data and measurement over doomsday); **pragmatic, not ideological** (use existing frameworks like FDA); **invest in the public sector** and universities.",
+            "Her analogy: teaching a six-year-old to cook an egg on the stove; technology is always a double-edged sword, so innovation and guardrails stay in tension.",
+            "Athey: concentration follows scale economies, but a little competition beats none; her toll-booth example is card-transaction fees, a few basis points on every payment.",
+            "Open-source models pull prices down for every business; the push to hold them back faded after **DeepSeek** came out.",
+            "Risk for smaller countries that buy expensive AI and automate labor: wages fall while goods prices don't.",
+            "Government functionality worries Athey: public leadership may be more essential than ever just as it looks less functional.",
+        ],
+        "quote": None,
+        "watch": "Athey spent two years at the Justice Department; Li runs a startup affected by regulation.",
+        "names": None,
+    },
+    {
+        "id": "economic-funk",
+        "tags": ["consumer", "mindset"],
+        "color": "gray",
+        "badge": "Open question",
+        "status": "NEALE MAHONEY ON THE US ECONOMIC FUNK",
+        "title": "Belief in the American Dream fell from 70% to 25%",
+        "lead": "Mahoney offers three partial explanations for American pessimism and says much is still unknown.",
+        "bullets": [
+            "Wall Street Journal piece, about nine days before taping: belief in the American Dream fell from **70%** to **25%** over a generation.",
+            "Optimism cratered after COVID and hasn't recovered.",
+            "Candidates: real risks (tariffs, uptick in unemployment); social media skewing views of a good life (\"more selfies from the Ritz than the Motel 6\"); and unknowns.",
+            "Political leaders and innovators need to help the country get its mojo back.",
+        ],
+        "quote": None,
+        "watch": None,
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F9F1", "tag": "Adoption", "title": "Hunt the next bottleneck after software: onboarding, training and restructuring decide whether AI pays off."},
+    {"icon": "\U0001F6E1️", "tag": "Policy", "title": "Decouple basic protections such as health insurance from employment before AI-driven job loss lands."},
+    {"icon": "\U0001F9E9", "tag": "Careers", "title": "Frame AI projects as task augmentation within a job, not whole-job replacement."},
+    {"icon": "\U0001F3EB", "tag": "Education", "title": "Rethink schooling around judgment and creation rather than memorization AI already passes."},
+    {"icon": "\U0001F4B0", "tag": "Competition", "title": "Favor open models and multi-vendor setups so AI prices stay low."},
+    {"icon": "\U0001F9ED", "tag": "Careers", "title": "Consider product management: Athey expects anyone with a good idea to be able to build it."},
+]
+
+HOT_TAKES = [
+    {"take": "I have no clue on what jobs are gonna be disrupted, but I know exactly what to do about it.", "cite": "— Neale Mahoney", "why": "claims policy answer without a prediction"},
+    {"take": "We live in a country where if you lose your job, you likely lose your health insurance. I think that's crazy.", "cite": "— Neale Mahoney", "why": "political stance"},
+    {"take": "A hundred years from now historians will say this era of AI launched a revolution in education.", "cite": "— Fei-Fei Li", "why": "long-range prediction"},
+    {"take": "AI will not replace the job wholesale; instead of replacing, AI really augments.", "cite": "— Fei-Fei Li", "why": "contests the replacement narrative"},
+    {"take": "I don't predict that next year there will be nursing assistants around the world.", "cite": "— Susan Athey", "why": "dated adoption prediction"},
+]
+
+CLAIMS = [
+    {"who": "Fei-Fei Li", "claim": "Historians 100 years from now will credit the AI era with launching a revolution in education", "metric": "education revolution", "target": "credited", "by": "2126", "condition": None, "entity": None},
+    {"who": "Susan Athey", "claim": "Nursing assistants will not be widely adopted around the world next year", "metric": "nursing assistant adoption", "target": "not widespread", "by": "next year", "condition": None, "entity": None},
+    {"who": "Neale Mahoney", "claim": "5-10% of people may lose their primary occupation to AI", "metric": "share losing primary occupation", "target": "5-10%", "by": None, "condition": "if AI disruption is large", "entity": None},
+]
+
+RELATIONS = []
+
+OTHER_NEWS = [
+    {"icon": "\U0001F4DA", "title": "Sources referenced: Perplexity, ChatGPT and Claude (host's definition of innovation economy), John Rawls's veil of ignorance, economist David Autor (70% of occupations didn't exist 70 years ago), a Wall Street Journal piece on the American Dream, Dr. King (arc of history), \"Condi\" (\"there's no plan B\", as quoted by Li).", "tag": "Sources"},
+    {"icon": "\U0001F52E", "title": "Future in a Minute: Li's hope is humanity (\"nothing artificial about artificial intelligence\"); Mahoney's is kids excited about STEM; Athey's is natural-language AI letting small businesses and poor countries scale. Degrees they'd pick: Li physics + CS + art; Mahoney robotics; Athey product management.", "tag": "Culture"},
+    {"icon": "\U0001F393", "title": "A Stanford sophomore told Li he would design his own major to use AI to maximize making money.", "tag": "Education"},
+]
+
+GLOSSARY = [
+    {"term": "Innovation economy", "def": "Growth driven by generating and commercializing new ideas, products and technologies rather than physical assets and manual labor (Perplexity's definition, quoted by the host)."},
+    {"term": "General-purpose technology", "def": "A broad technology such as electricity, the PC or AI whose effects are wide and slow to appear in aggregate productivity."},
+    {"term": "Veil of ignorance", "def": "Rawls's thought experiment: choose society's protections before knowing your own skills or endowments."},
+    {"term": "Span of control", "def": "How much a firm can grow without directly supervising each person; digitization raises it."},
+    {"term": "Stanford HAI", "def": "Stanford Institute for Human-Centered AI, co-founded by Li and Athey among others."},
+]
