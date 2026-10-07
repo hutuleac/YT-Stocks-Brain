@@ -1,0 +1,168 @@
+META = {
+    "title": "Nobel Economist: How to Stay Valuable as AI Changes Work | Daron Acemoglu",
+    "channel": "Silicon Valley Girl",
+    "speakers": "Daron Acemoglu (guest), Silicon Valley Girl host",
+    "date": "2026-10-06",
+    "video_url": "https://www.youtube.com/watch?v=0lsasYuzhL4",
+    "thread_line": "5 threads · why AI productivity is slow · pro-worker AI applications · automation vs new tasks · education and skills · control, media and money",
+    "category": "life",
+    "region": "",
+}
+
+SNAPSHOT = [
+    "Nobel economist Daron Acemoglu still sees only modest near-term gains: his 2024 estimate was **~1% added to US GDP over 10 years**, with 5% of tasks automatable; he'd now go a bit above 5%.",
+    "His diagnosis: the bottleneck is **applications, not models**. Silicon Valley pours talent into foundation models and too little into integrating AI into work.",
+    "Automation alone destroys jobs without shared prosperity; AI should also create new tasks, such as better tools for nurses, electricians and teachers.",
+    "Business math: automating 5% of jobs and halving their cost beats less than making all workers 5% more productive.",
+    "Advice: study math, physics, economics or engineering for foundations, stay flexible, and don't outsource thinking; AI in K-12 has been 'pretty disastrous'.",
+    "His fear is **loss of control**, not killer AI; the media failed to cultivate a middle ground between hype and doom.",
+    "On money: foundation models won't earn trillions and some frontier-lab IPOs will fail; the edge is in quality data and applications.",
+]
+
+THEMES = [
+    {
+        "id": "slow-productivity",
+        "tags": ["ai-infra", "software", "policy"],
+        "color": "amber",
+        "badge": "Structural critique",
+        "status": "2024 FORECAST: ~1% OF GDP IN 10 YEARS",
+        "title": "Why AI productivity gains are slower than the hype: it's applications, not models",
+        "lead": "Automation is hard to integrate, diffusion is slow, and the US overinvests in foundation models while underbuilding applications.",
+        "bullets": [
+            "Estimate from 2024: AI adds about **1% to GDP** over a decade with only 5% of tasks fully automatable; now he'd put the task share a little higher after agentic advances.",
+            "Coding advanced fastest because it's office-based, supervised by AI-fluent people, and has ground truth (code runs or doesn't) that suits reinforcement learning.",
+            "Customer service, expected to be first automated, is slow: requests are person-specific, language varies, gray areas abound.",
+            "US vs China: Chinese firms (Foxconn, BYD and other EV makers) put AI and robotics on the production line with huge engineering talent; the US sends its talent into foundation models.",
+            "He rejects Silicon Valley 'inevitabilism'; general purpose technologies can be developed in many non-neutral ways.",
+            "Erik Brynjolfsson told him the economic impact was 'basically zero' in May; Acemoglu agrees effects will come but slower than Erik's more optimistic view.",
+            "Social media was 'horrendous' for community and adversity; he hopes AI doesn't repeat that.",
+        ],
+        "quote": {"text": "AI is like an elephant. Everybody is feeling a different part of it.", "cite": "— Daron Acemoglu"},
+        "watch": "He says he has no inside view of lab research ('I'm not inside Anthropic or OpenAI'), so his read is outside-in economics.",
+        "names": [
+            {"name": "Foxconn", "blurb": "Manufacturer integrating AI and robotics in China, needing more engineers than planned.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "BYD", "blurb": "EV maker cited for AI-and-robotics integration on the line.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "pro-worker-ai",
+        "tags": ["career", "policy", "consumer"],
+        "color": "green",
+        "badge": "Recommendation",
+        "status": "HIS CORE PRESCRIPTION",
+        "title": "Pro-worker AI: tools for nurses, electricians and teachers, not just automation",
+        "lead": "Existing models are already good enough; the missing piece is applications that make workers more capable.",
+        "bullets": [
+            "Healthcare takes about one in five US dollars; nurses could take on more diagnosis and prescribing with AI quality control and information.",
+            "Electricians, teachers and other blue-collar tasks are low-hanging fruit; there is a shortage and AI could help with unfamiliar equipment.",
+            "CEOs say pro-worker AI is 'exactly what we need'; tech firms often reply 'we're going to create AGI'.",
+            "Healthcare and education involve government; for electricians, customer service and scientists the private sector must build it.",
+            "Business case: automate 5% of jobs and halve their cost, or make all workers 5% more productive: the latter pays more.",
+            "Great firms (Ford, GM, GE, IBM, Microsoft) created new markets and tasks; Ford: customers would have asked for 'faster horses'.",
+            "'Riches are in the niches' is fine, he'd just not call them boring.",
+        ],
+        "quote": {"text": "The bottleneck isn't the foundation models. Even last year's models would have been good enough for most of the things that we could do.", "cite": "— Daron Acemoglu"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "automation-balance",
+        "tags": ["career", "policy", "mindset"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "AGI / ASI SKEPTICISM",
+        "title": "Automation yes, but not only automation; AGI claims are internally inconsistent",
+        "lead": "He wants automation plus new tasks, and says the public debate contradicts itself on AGI and jobs.",
+        "bullets": [
+            "Not against automation: he rejects going back to carrying loads, but automation-only eliminates jobs without creating high-pay ones.",
+            "AI has a 'jagged frontier' that also means firms overestimated it; many fail to make automation work and must keep workers.",
+            "'AGI is great, it will come soon, but there will be lots for humans to do' can't both be true; serious AGI or ASI leaves few tasks, and that seems far and dystopian.",
+            "Dario Amodei's 25% chance of things going 'really badly': he welcomes the candor but fears a general loss of control by the public, workers, students and parents more than existential risk.",
+            "In the past he rated AI minus 6 on a minus-10 to plus-10 scale; dangers have increased but the good uses are clearer. Needs steering, not just a handful of decision makers.",
+            "He sees a future with fewer hours, a scary one with no meaningful work for many, or one with complementary AI; the era needs new goods for climate, aging and a rising middle class.",
+        ],
+        "quote": None,
+        "watch": "Acemoglu is quoted on Dario Amodei's risk estimate and notes his lab has to IPO soon; he doesn't attribute motive himself.",
+        "names": [
+            {"name": "Anthropic", "blurb": "CEO Dario Amodei's 25% bad-outcome estimate; Acemoglu has no insight into its research.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "OpenAI", "blurb": "Named alongside Anthropic as a lab he lacks inside knowledge of.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "education-skills",
+        "tags": ["career", "parenting", "mindset"],
+        "color": "green",
+        "badge": "Recommendation",
+        "status": "ADVICE TO STUDENTS AND WORKERS",
+        "title": "Study the foundations, stay flexible, don't outsource your thinking",
+        "lead": "Human creativity needs strong foundations, and unguarded AI in schools has been close to the worst case.",
+        "bullets": [
+            "Advice: 'go and study math', physics, economics or engineering; learn flexibility because roles will keep changing; normalize non-linear careers.",
+            "AI use in K-12 has been 'pretty disastrous'; rolling it out with no guardrails was a 'dangerous huge social experiment'.",
+            "College freshmen are increasingly unprepared and remedial courses are growing; AI has made middle- and high-school learning harder.",
+            "Doesn't think everyone should go to college; elite degrees are partly a signal that benefits the holder more than society.",
+            "He uses AI for background research and for criticism of his own writing; never for math or writing for him; tells students to use it as a corrector, not a replacement.",
+            "Calculator analogy fails: it replaced a small skill; AI can replace critical thinking.",
+            "Teach civic responsibility and community from elementary school; media coverage of AI swung between hype and 'stochastic parrots', never the middle ground.",
+        ],
+        "quote": {"text": "Human creativity without strong foundations is an oxymoron.", "cite": "— Daron Acemoglu"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "money-and-ethics",
+        "tags": ["finance", "ai-infra", "policy"],
+        "color": "gray",
+        "badge": "Principle",
+        "status": "VIEW ON MONETIZATION",
+        "title": "Where the money is: data and applications, not foundation models",
+        "lead": "He doubts foundation models will earn trillions and expects some failed IPOs, while data and applications hold the edge.",
+        "bullets": [
+            "Foundation models face bottlenecks in development or diffusion, and open-source models will be good, so monetization is limited.",
+            "Edge: high-quality data (compensate the workers generating it) and creative niche applications that open source can't copy easily.",
+            "Application builders must talk to workers; tacit knowledge sits with them.",
+            "His own savings: a balanced portfolio; beating the market takes skill, time or inside information, and he has none of them.",
+            "Compares AI ethics to gene editing: oversight bodies ruled germline editing off for now; AI lacks a shared moral compass.",
+        ],
+        "quote": None,
+        "watch": "His market view is a macro-economist's opinion, not a position or stock call.",
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F6E0", "tag": "AI strategy", "title": "Build applications that make a specific worker group more capable rather than only cutting headcount."},
+    {"icon": "\U0001F4C8", "tag": "Business", "title": "Compare cost-cutting 5% of jobs to raising all workers' productivity 5% before choosing."},
+    {"icon": "\U0001F393", "tag": "Careers", "title": "Study math, physics, economics or engineering and keep your role flexible."},
+    {"icon": "\U0001F9E0", "tag": "Learning", "title": "Do the core thinking and math yourself; use AI for criticism and correction."},
+    {"icon": "\U0001F5C4", "tag": "Data", "title": "Capture and improve proprietary data, and pay the workers who generate it."},
+    {"icon": "\U0001F91D", "tag": "Product", "title": "Visit workers in the field to find applications before building."},
+]
+
+HOT_TAKES = [
+    {"take": "I really don't see how you're going to make trillions of dollars from foundation models.", "cite": "— Daron Acemoglu", "why": "Contrarian monetization call."},
+    {"take": "We'll see some failed IPOs.", "cite": "— Daron Acemoglu", "why": "Prediction on frontier labs."},
+    {"take": "The media has been awful in cultivating a true sense of information debate about AI.", "cite": "— Daron Acemoglu", "why": "Blames a major institution."},
+    {"take": "AI use has been pretty disastrous in K through 12 education.", "cite": "— Daron Acemoglu", "why": "Strong education claim."},
+    {"take": "AGI is always in the future and it is frankly speaking not a future that we can fully imagine either.", "cite": "— Daron Acemoglu", "why": "Dismisses AGI timelines."},
+]
+
+CLAIMS = [
+    {"who": "Daron Acemoglu", "claim": "AI adds about 1% to US GDP over ten years with roughly 5% of tasks automatable (now estimated slightly higher on tasks)", "metric": "AI contribution to US GDP", "target": "~1%", "by": "2034", "condition": None, "entity": None},
+    {"who": "Daron Acemoglu", "claim": "Foundation-model companies will not earn trillions of dollars", "metric": "foundation-model revenue", "target": "not trillions", "by": None, "condition": None, "entity": None},
+    {"who": "Daron Acemoglu", "claim": "Some frontier AI lab IPOs will fail", "metric": "frontier-lab IPO outcomes", "target": "some failures", "by": None, "condition": None, "entity": None},
+]
+
+RELATIONS = []
+
+OTHER_NEWS = [
+    {"icon": "\U0001F4DA", "title": "People and works named: Erik Brynjolfsson (productivity study and quality measurement), Dario Amodei (25% bad-outcome estimate), Elon Musk, Henry Ford's 'faster horses' line; Acemoglu's new book on liberal democracy.", "tag": "Sources"},
+    {"icon": "\U0001F9EC", "title": "Gene editing used as a model for AI ethics: NIH, Surgeon General and medical association guidelines put germline editing off for now.", "tag": "Ethics"},
+]
+
+GLOSSARY = [
+    {"term": "General purpose technology", "def": "A technology like electricity or the printing press that spawns many other applications."},
+    {"term": "Inevitabilism", "def": "The view that the current way of building AI is the only way, so questioning it is foolish."},
+    {"term": "Pro-worker AI", "def": "AI designed to raise worker productivity and capability rather than replace workers."},
+    {"term": "Jagged frontier", "def": "AI being strong at some tasks and weak at others, making it uneven to deploy."},
+]
