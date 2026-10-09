@@ -80,7 +80,7 @@ THEMES = [
         "title": "A 1.58-bit model fits in 6 GB: frontier models matter less than competent ones",
         "lead": "Compression plus harnesses let small and open models reach the \"good enough\" bar, with large RAM-cycle implications.",
         "bullets": [
-            "Qwen 3.8 27B performs near Opus 4.5-4.6 level on short tasks; Prism ML cut it from 8-16 bit (30-60 GB) to **1.58 bit** at about 5% loss.",
+            "Qwen 3.8 27B performs near Opus 4.5-4.6 level on short tasks; Prism ML cut it from 8-16 bit (30-60 GB) to **1.58 bit** at about 5% loss — released as **Bonsai 2 27B** (ternary weights).",
             "Result: about 6 GB, runs at 300 tokens per second on an RTX 5090 and fits ordinary 8 GB machines, which makes self-replicating swarms easier.",
             "Mostaque: 95% of quality at one-tenth the size and RAM, weights going to 0, minus 1 and 1, with 2-3x inference gains from AI-optimized serving.",
             "Frontier open models match closed ones on short tasks but halve on long tasks; Mostaque's firm's harness lifts DeepSeek V4.1 Flash above Astra on 24-hour tasks.",
