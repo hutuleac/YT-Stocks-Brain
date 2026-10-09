@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: Can AI Keep Growing Exponentially? Let’s Ask SemiAnalysis — With Dylan Patel and Jordan Nanos</title>
+<meta name="description" content="Alex Kantrowitz · 5 threads · capex scale · payback math · Anthropic IPO · Nvidia backstops &amp; neocloud quality · labs hoarding models">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="Can AI Keep Growing Exponentially? Let’s Ask SemiAnalysis — With Dylan Patel and Jordan Nanos">
+<meta property="og:description" content="Alex Kantrowitz · 5 threads · capex scale · payback math · Anthropic IPO · Nvidia backstops &amp; neocloud quality · labs hoarding models">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Can AI Keep Growing Exponentially? Let’s Ask SemiAnalysis — With Dylan Patel and Jordan Nanos</h1>
+    <div class="byline">
+      Channel: <b>Alex Kantrowitz</b> &middot; Speaker: <b>Alex Kantrowitz (host), Dylan Patel (SemiAnalysis), Jordan Nanos (SemiAnalysis)</b> &middot; <b>2026-10-09</b>
+      <div class="stats-line">5 threads · capex scale · payback math · Anthropic IPO · Nvidia backstops &amp; neocloud quality · labs hoarding models &middot; <a href="https://www.youtube.com/watch?v=LwMtHI7BHWI" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>US AI-related capex heads for <b>~$2T next year</b> (~5-6% of GDP), above the 3.6% median the viral railroad-comparison chart shows — Patel says the chart understates it.</li><li>Growth must decelerate on a bigger base (hyperscaler capex +116% YoY in Q3 2026, consensus under 100% by Q4), but both guests say <i>demand still outstrips supply</i> — the limit is chips, power, capital.</li><li>Payback case: Patel sees OpenAI + Anthropic reaching <b>$600-700B revenue by Dec 2027</b> and $1.5T by end-2027 across the two; Anthropic is already compute-profitable.</li><li>Anthropic IPO framing: bullish up to <b>$10T</b>, but a $20T value implies an AI so capable that wealth concentration could tear at society.</li><li>Nvidia backstops <b>$588B</b> of off-balance-sheet neocloud commitments — read as pragmatic customer diversification, not a bubble prop.</li><li>ClusterMax 3.0 ranks GPU clouds on usability, not stock quality; neocloud security is poor (a cluster exposed other clients' data, including a government's).</li><li>Frontier labs are already holding back their best models internally; Google's DeepMind is losing relative compute share.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="capex-scale">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">US AI CAPEX ~$2T NEXT YEAR</span><span class="ttag">ai-infra</span><span class="ttag">macro-rates</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">The buildout is bigger than the viral railroad chart says</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Patel says the chart showing AI at 3.6% of GDP vs 2.2% for railroads is too low — the real figure is already 5-6%.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Next-year US capex ~<b>$2T</b> across data centers, chips and the wider supply chain, against GDP of ~$30T+.</li><li><span class="dot" style="background:#3f6b2e;"></span>AI capex is spent in America but serves other countries: most of Europe's Anthropic and OpenAI inference runs in US data centers, as does the training.</li><li><span class="dot" style="background:#3f6b2e;"></span>Hyperscaler capex growth hit <b>116%</b> YoY in Q3 2026; consensus has it below 100% in Q4 and ~70% in Q1 next year.</li><li><span class="dot" style="background:#3f6b2e;"></span>Nanos: triple-digit growth can't keep accelerating — marshalling another gigawatt and raising capital in the trillions gets hard even with strong returns.</li><li><span class="dot" style="background:#3f6b2e;"></span>Patel: deceleration is definitional — Anthropic went 10x from sub-<b>$10B</b> to $100B+ revenue this year; Nvidia is still ~2x a year but off a huge base.</li><li><span class="dot" style="background:#3f6b2e;"></span>AI services were <b>8.8%</b> of US spending by one chart cited (health 18%, food 9.1%); host expects AI to pass food in 2026.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;We're running out of big numbers.&#8221;<cite>— Jordan Nanos</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Revenue growth still ~2x/yr; revenue approaching $400B, about to cross $500B.</span></div><div class="namechip"><b>Anthropic<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>10x revenue growth this year to north of $100B.</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Paired with Anthropic as the revenue engine behind the capex.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Both guests sell research to the buildout's participants (SemiAnalysis subscriptions); the capex view is theirs.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="payback-math">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">REVENUE REQUIREMENTS CALLED TOO LOW</span><span class="ttag">ai-infra</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Payback: revenue requirements are lower than what the labs can deliver</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Patel argues every published break-even number (up to $6T/yr by 2031) is too low for where revenue is heading.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Cited bear estimates: ~<b>$6T</b>/yr revenue by 2031 to break even; a Columbia professor's ~$3.5T/yr (8.8% of GDP) by 2032.</li><li><span class="dot" style="background:#3f6b2e;"></span>Depreciation math: $1T of capex, GPUs on a 6-year schedule (data centers 15) means ~<b>$250B/yr</b> of revenue if straight-line.</li><li><span class="dot" style="background:#3f6b2e;"></span>Revenue trails capex — today's AI revenue comes from infrastructure bought in prior years; inference revenue grew 10x YoY while capex did not.</li><li><span class="dot" style="background:#3f6b2e;"></span>Anthropic is profitable on revenue minus compute (training + inference); OpenAI gets there in 2-3 quarters on SemiAnalysis's tokenomics model.</li><li><span class="dot" style="background:#3f6b2e;"></span>Amazon's AI infrastructure is profitable today and AI lifted its gross margin last quarter via Bedrock.</li><li><span class="dot" style="background:#3f6b2e;"></span>Meta can stop buying anytime and its cash flow covers commitments — Patel calls insolvency talk silly.</li><li><span class="dot" style="background:#3f6b2e;"></span>Money comes from R&amp;D and COGS budgets shifting to AI plus labor share falling; Patel hopes the economy grows fast enough that labor dollars stay flat or grow.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Either I could assume it's a straight line... or it's going to be something sloped where the first year is much less and the last year is much higher.&#8221;<cite>— Dylan Patel</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Solvent; can halt self-build capex while contracts with neoclouds are 5-6 year terms.</span></div><div class="namechip"><b>Amazon (AMZN)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Biggest AI infrastructure builder; AI investments profitable, gross margin up on Bedrock.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">If AI revenue is only $3T in 2031, Patel concedes 'we'll have big problems.' Nanos adds that returns will come from drug discovery, robotics and self-driving, not just coding subscriptions.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="anthropic-ipo">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">ANTHROPIC IPO ON THE WAY</span><span class="ttag">ai-infra</span><span class="ttag">software</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Anthropic at $2T, $10T or $20T: bullish, but the top end is a societal problem</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Patel is bullish enough to see a $10T Anthropic, but says a $20T one implies an AI powerful enough to destabilize society.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>His tweet: you can't invest in the IPO at <b>$2T</b> because it could be zero — or $20T, at which 'we're all' in trouble.</li><li><span class="dot" style="background:#93711b;"></span>$10T would need roughly <b>$1T of revenue</b>, possible in 2028-29; at $20T the multiple would be ~5x sales or less, so $2-4T revenue.</li><li><span class="dot" style="background:#93711b;"></span>Multiples are compressing: Anthropic once raised at ~30x revenue; the IPO is framed around ~20x on ~<b>$100B</b> revenue.</li><li><span class="dot" style="background:#93711b;"></span>Inference gross margin ~<b>75%</b>, matching Salesforce's, reached far faster; near-zero customer acquisition cost vs up to 30% for SaaS.</li><li><span class="dot" style="background:#93711b;"></span>R&amp;D spend is growing slower than revenue; Patel calls an AI lab 'arguably a better business than software.'</li><li><span class="dot" style="background:#93711b;"></span>Nanos is more optimistic: Anthropic could bring a cancer drug to market, as GLP-1s did for Lilly; the road runs through neocloud compute.</li><li><span class="dot" style="background:#93711b;"></span>Pacing the frontier: neither lab can slow down — Dario won't trust Sam, Sam won't trust Dario, and China is not far behind.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;Anthropic could even be the first company to be a 10 trillion valuation company in the world.&#8221;<cite>— Dylan Patel</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High · 2028-29 for $1T revenue</span></b><span>IPO pending; 75% inference gross margin, compute-profitable.</span></div><div class="namechip"><b>Salesforce (CRM)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Benchmark SaaS margin: ~75% gross margin, up to 30% CAC.</span></div><div class="namechip"><b>Eli Lilly (LLY)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Example of GLP-1 research driving massive returns.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Patel's own $20T scenario is framed as the pessimistic case; Nanos says he is 'not as worried.'</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="neocloud-backstops">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">CLUSTERMAX 3.0 · $588B BACKSTOPS</span><span class="ttag">ai-infra</span><span class="ttag">semis</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Nvidia's $588B backstop universe and the uneven quality of neoclouds</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">SemiAnalysis tracks $588B of off-balance-sheet Nvidia backstops and argues they diversify demand rather than prop up a bubble.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Backstops cover revenue floors, landlord guarantees and leases, and extend to construction, memory suppliers and fab builders; <b>$588B</b> is ~2.5% of US M2.</li><li><span class="dot" style="background:#93711b;"></span>Mechanism: Nvidia signs as investment-grade offtaker; if someone pays more for the GPUs it sells them on rather than using them for internal research.</li><li><span class="dot" style="background:#93711b;"></span>Internal Nvidia research compute is a very small share of its revenue; it publishes more models on Hugging Face than anyone.</li><li><span class="dot" style="background:#93711b;"></span>Neocloud contracts with Meta etc. are 5-6 year terms with fixed hourly rates — not cancellable monthly; only self-build campuses can be paused.</li><li><span class="dot" style="background:#93711b;"></span>Construction is a small share of project cost versus HBM, optics and GPUs.</li><li><span class="dot" style="background:#93711b;"></span>ClusterMax tracks 323 GPU cloud providers; more logos sit in 'unavailable' than in the top four tiers combined.</li><li><span class="dot" style="background:#93711b;"></span>Seller's market means neoclouds prioritize raising money and deploying chips over service quality; security and reliability failures are 'dead simple.'</li><li><span class="dot" style="background:#93711b;"></span>A cluster the team accidentally saw into exposed other clients' storage and Slurm jobs, including one government's security agency.</li><li><span class="dot" style="background:#93711b;"></span>Open-source Chinese models like GLM 5.3 can hack dozens of neoclouds; Ilya Sutskever tweeted a warning ~8 hours after SemiAnalysis's 'most neoclouds suck at security' post.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;Most Neoclouds suck at security.&#8221;<cite>— Dylan Patel (title of SemiAnalysis report)</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Backstops $588B; says they diversify its customer base away from 3-4 hyperscalers.</span></div><div class="namechip"><b>CoreWeave (CRWV)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Top ClusterMax tier but locked into long contracts, less able to reprice.</span></div><div class="namechip"><b>Nebius (NBIS)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Top tier; shortest average contract length, so it can reprice upward.</span></div><div class="namechip"><b>Oracle (ORCL)<span class="stance" style="background:#93711b;">UNCERTAIN · Low</span></b><span>Top-tier cluster quality but fixed-margin OpenAI deals, heavy debt and a delayed New Mexico site.</span></div><div class="namechip"><b>Google (GOOGL)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>ClusterMax second tier alongside Oracle.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">ClusterMax explicitly measures cluster usability, not stock quality or data-center delivery; Patel warns against using the rankings for debt pricing or stock picks.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="labs-hoarding">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Speculative</span>
+    <span class="theme-status">FRONTIER MODELS KEPT INTERNAL</span><span class="ttag">ai-infra</span><span class="ttag">software</span><span class="ttag">geopolitics</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">Labs are pacing the frontier and Google is falling behind on compute</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Patel says the best labs already keep months of progress internal and ship only a restricted version of their frontier model.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>Anthropic had Mythos ready in February; the public gets a restricted version (Fable) and a limited-sector program (Glasswing).</li><li><span class="dot" style="background:#65695f;"></span>OpenAI's Astra was done months before release and a new math-capable model was shown in a blog but not released.</li><li><span class="dot" style="background:#65695f;"></span>Gap between US labs and Chinese open source stays ~6 months; releasing externally invites distillation.</li><li><span class="dot" style="background:#65695f;"></span>Patel expects new Anthropic and OpenAI models within weeks — Anthropic ahead of its IPO.</li><li><span class="dot" style="background:#65695f;"></span>Google has allocated a falling share of its compute to DeepMind; DeepMind will have the least compute of the three labs by end of year.</li><li><span class="dot" style="background:#65695f;"></span>Next year OpenAI and Anthropic each add 5-10 GW while Google adds only a few GW; Google is also selling TPUs to Anthropic.</li><li><span class="dot" style="background:#65695f;"></span>Nanos: nobody wants the third or fourth best coding model; Gemini needs a niche.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#65695f;"><div class="lbl">Pull quote</div>&#8220;Thomas Kurian won and Demis lost.&#8221;<cite>— Dylan Patel (on Google Cloud vs DeepMind)</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Alphabet (GOOGL)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Low · next year</span></b><span>Sells TPUs to Anthropic; DeepMind losing relative compute.</span></div><div class="namechip"><b>Anthropic<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium · coming weeks</span></b><span>Holding back Mythos; likely new release before IPO.</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">CASUAL MENTION · None · coming weeks</span></b><span>Holding back newest model; must release given competition.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Anthropic says publicly it is pacing the frontier; others are not slowing. Nanos bets the minimum viable models get released to stay ahead of Chinese rivals.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📈</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Model capex deceleration as base effects, not demand loss — the guests see supply as the binding limit.</span></div></div><div class="irow"><div class="ic">🧮</div><div class="tline"><span class="cat">Finance:</span> <span class="txt">Use the 6-year straight-line check (<b>$1T</b> capex ≈ $250B/yr revenue) to test any bear break-even claim.</span></div></div><div class="irow"><div class="ic">🎯</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Separate neocloud service quality from stock quality; contract length decides who captures higher GPU pricing.</span></div></div><div class="irow"><div class="ic">🔒</div><div class="tline"><span class="cat">Security:</span> <span class="txt">Treat neocloud security as a real counterparty risk when GPU capacity is shared.</span></div></div><div class="irow"><div class="ic">🔭</div><div class="tline"><span class="cat">AI:</span> <span class="txt">Expect public models to lag labs' internal ones; watch Anthropic and OpenAI releases around the IPO.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;I think everyone's numbers for revenue requirements are quite low given the pace of where this buildout is going to go.&#8221; <cite>— Dylan Patel</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I'm of the opinion that you can get to 1 and a half trillion maybe even by end of 2027 with just those two companies.&#8221; <cite>— Dylan Patel</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;It's arguably a better business than software is, an AI lab.&#8221; <cite>— Dylan Patel</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Most Neoclouds suck at security.&#8221; <cite>— Dylan Patel</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Nobody wants the third or fourth or fifth best coding model.&#8221; <cite>— Jordan Nanos</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Dylan Patel:</b> US AI-related capex reaches about $2 trillion. <span class="cmeta">US capex · ~$2T · 2027</span></div><div class="ritem"><b>Dylan Patel:</b> OpenAI and Anthropic combined reach $600-700B of revenue. <span class="cmeta">combined revenue · $600-700B · 2027-12</span> <span class="tag">Anthropic</span></div><div class="ritem"><b>Dylan Patel:</b> OpenAI and Anthropic combined reach $1.5 trillion of revenue. <span class="cmeta">combined revenue · $1.5T · 2027-12</span> <span class="tag">OpenAI</span></div><div class="ritem"><b>Dylan Patel:</b> OpenAI becomes profitable on revenue minus compute within two to three quarters. <span class="cmeta">compute-adjusted profitability · positive · 2027-06</span> <span class="tag">OpenAI</span></div><div class="ritem"><b>Dylan Patel:</b> Anthropic needs about $1 trillion of revenue to justify a $10 trillion valuation, possible in 2028 or 2029. <span class="cmeta">Anthropic revenue · $1T · 2029</span> <i>if if valued at $10T</i> <span class="tag">Anthropic</span></div><div class="ritem"><b>Dylan Patel:</b> Anthropic and OpenAI release new models within weeks. <span class="cmeta">model release · new models · 2026-11</span> <span class="tag">Anthropic</span></div><div class="ritem"><b>Dylan Patel:</b> DeepMind has the least compute of Anthropic, OpenAI and DeepMind by end of year. <span class="cmeta">lab compute · lowest of three · 2026-12</span> <span class="tag">Alphabet (GOOGL)</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Oracle (ORCL)</b> <span class="rel">supplies</span> <b>OpenAI</b> &mdash; fixed-margin AI data center deals, New Mexico site delayed</div><div class="ritem"><b>Alphabet (GOOGL)</b> <span class="rel">supplies</span> <b>Anthropic</b> &mdash; selling TPUs to Anthropic</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: SemiAnalysis ClusterMax 3.0, 'Nvidia's Backstop Universe' and 'Most Neoclouds Suck at Security' reports; Ilya Sutskever's tweet on neocloud cyber risk. <span class="tag">Sources</span></div></div></div><div class="irow"><div class="ic">🏭</div><div><div class="title">Chip design: US R&amp;D headcount flat for 20 years while value at Nvidia and Broadcom exploded; AI-assisted design should improve chips across phones, robots and sensors. <span class="tag">Semis</span></div></div></div><div class="irow"><div class="ic">🌍</div><div><div class="title">Sovereign AI: countries want to be net token exporters; telecom-style infrastructure view explains why government agencies share neocloud clusters. <span class="tag">Policy</span></div></div></div><div class="irow"><div class="ic">🛢</div><div><div class="title">Oracle's New Mexico data center delayed by missing pipelines; Oracle declared force majeure after SemiAnalysis flagged it from April. <span class="tag">Energy</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Neocloud</b> &mdash; A GPU-focused cloud provider outside the big hyperscalers, renting AI compute.</div><div><b>Backstop</b> &mdash; An Nvidia commitment (revenue floor, lease guarantee) that helps neoclouds raise financing.</div><div><b>ClusterMax</b> &mdash; SemiAnalysis's rating of GPU clouds on reliability, security, storage, networking and support.</div><div><b>Offtaker</b> &mdash; A creditworthy buyer committed to take a project's capacity, which lets lenders finance it.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
