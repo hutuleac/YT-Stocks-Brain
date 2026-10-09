@@ -1,0 +1,209 @@
+"""Data file for The Wolf Of All Streets — Bitcoin Is On Sale (Matt Hougan, Bitwise)."""
+
+META = {
+    "title": "Bitcoin Is On Sale - And Wall Street Is Picking THESE Altcoins Next | Matt Hougan",
+    "channel": "The Wolf Of All Streets",
+    "speakers": "Scott Melker (host), Matt Hougan (Bitwise)",
+    "date": "2026-10-09",
+    "video_url": "https://www.youtube.com/watch?v=uklrOpiwLwA",
+    "thread_line": "5 threads · Bitcoin pullback read as a buy in a new bull market, JPMorgan's $50B institutional-flow estimate and mainstreaming, Bitwise's NEAR ETF and the AI-agent thesis, Citrini's DeFi basket and the path to multi-asset ETFs, and the weekly reckoning (Strategy, tokenized stocks, 3x ETFs, Samsung USDC, quantum FUD).",
+    "category": "market",
+}
+
+SNAPSHOT = [
+    "Both speakers call the ~$82K Bitcoin pullback a **buy-the-dip** inside a new bull market; Scott reads the chart as a break-and-retest of a multi-year level, Matt says media 'killed' the bull market after three months.",
+    "A ~$500M one-day ETF outflow is treated as noise: Matt says to watch **five-day flows**, which follow price and options; he expects inflows to resume.",
+    "JPMorgan puts 2026 institutional crypto flows at **~$50B** (about $65B annualized) across ETFs, derivatives and corporate buys; Matt says that is 2-4x last cycle.",
+    "Bitwise launched the first US spot **NEAR ETF** (Matt 'hugely bullish'): a working chain with Intents revenue plus a free option on AI agents; tens of millions of dollars in so far, top 10 of 107 September ETF launches by assets.",
+    "Citrini Research's AI x crypto/DeFi basket hit Wall Street desks; Matt sees an asset class widening 'from three tokens to 50' and basket ETFs next (single asset, then multi-asset, then active).",
+    "Matt sees **no froth** yet: valuations lower, projects have revenue; a rally in zombie coins would be his local-top signal.",
+    "Weekly reckoning: Strategy $21B Q3 gain, ICE x OKX tokenized-stock venue, SEC-approved 3x BTC/ETH ETFs (decay warning), Samsung USDC for 82M Galaxy users, Robinhood buys $25M BTC, Bitmine near its 5% ETH cap, quantum FUD.",
+]
+
+THEMES = [
+    {
+        "id": "btc-dip-bull",
+        "tags": ["crypto", "macro-rates"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "BITCOIN ~$82K — PULLBACK IN A NEW BULL MARKET",
+        "title": "Bitcoin is 'on sale': pullback after breakout, a flows cool-down and an OpenAI scare",
+        "lead": "Both speakers read the dip as a buy: price retested a broken multi-year level and flows look like a pause, not a reversal.",
+        "bullets": [
+            "Scott: Bitcoin made a higher high and is **retesting the level it broke** — the textbook bull-market confirmation; Matt, 'not even a technician', agrees it looks exceptionally good.",
+            "Wednesday saw a roughly **$500M ETF outflow** spread across funds, after historic inflows weeks earlier; Matt says day-to-day flows follow price and options, and five-day flows are the useful read.",
+            "Outflows also hit ETH and other assets; Matt calls it a cool-down after strong inflows and expects the inflow trend to return soon.",
+            "Yesterday's drop was pinned on a report that **OpenAI** would miss revenue by ~$20B; Scott says it is an accounting-basis gap (Anthropic's figure includes cloud-partner sales via AWS and Google Cloud, OpenAI's doesn't).",
+            "Matt: the AI boom carries 'existential dread' (Charles Prince 'music stops' metaphor, Ray Dalio saying the bubble end is near); AI capital draw also hurt crypto in the last bear cycle.",
+            "Scott cites Peter Schiff's point that half the stock market is in a bear market by individual names, with 5-10 names holding up indices; Matt says those names are sucking capital from the rest.",
+            "Both: a 'choose your own adventure' where every path ends with Bitcoin higher — gold breaking below key levels, debasement narrative, or stocks rising all help.",
+        ],
+        "quote": {"text": "I described it the other day as a choose your own adventure novel where every choice leads on the same page at the end, which is with Bitcoin's price higher.", "cite": "— Matt Hougan"},
+        "watch": "Matt works at Bitwise, an issuer that sells crypto ETFs and benefits from inflows. Scott discloses holding NEAR and says he is bullish on Bitcoin.",
+        "names": [
+            {"name": "Bitcoin (BTC)", "blurb": "~$82K; pullback after breakout seen as buy; media 'killed' the bull market too early.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
+            {"name": "OpenAI", "blurb": "Revenue-shortfall report (~$20B) blamed for a Bitcoin drop; Scott calls it an accounting mismatch with Anthropic.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Anthropic", "blurb": "Its reported revenue includes cloud-partner sales via AWS and Google Cloud.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Gold", "blurb": "Scott notes gold breaking below key levels while Bitcoin breaks above.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "institutional-mainstream",
+        "tags": ["crypto", "finance"],
+        "color": "green",
+        "badge": "Confirmed event",
+        "status": "JPMORGAN NOTE — OCT 2026",
+        "title": "Institutions move in via more than ETFs: JPMorgan counts ~$50B so far this year",
+        "lead": "Aggregating ETFs, derivatives and corporate buys, 2026 institutional flows are 2-4x the last cycle, and Bitcoin now sounds normal on wealth platforms.",
+        "bullets": [
+            "**JPMorgan** estimates ~$50B has flowed into crypto in 2026, ~$65B annualized; the note combines ETF flows, implied derivative flows and corporate purchases.",
+            "Matt's key chart compares 2026 to 2022: flows are below the ETF-launch 'glory days' but **2-4x cycle over cycle** — a more institutional market.",
+            "He expects the 2024 inflow number to be 'eclipsed significantly' this cycle; he's never seen Bitcoin this normalized at wealth and wirehouse conferences.",
+            "Examples he cites: **Morgan Stanley** launching ETFs, **Wells Fargo** putting Bitcoin into models, and a **BlackRock** note on AI agents using Bitcoin as a store of value.",
+            "Scott: a year ago he doubted a crypto cycle existed; the October top then bear market may have convinced him it does, and 2027-28 would follow the four-year pattern.",
+            "Scott's flash-crash aside: tomorrow is the one-year anniversary of the **$19.2B liquidation event**; Matt says three to five things hit at once (a stablecoin peg, a macro crash).",
+        ],
+        "quote": {"text": "We're only as weird as gold bugs or Tesla fanatics now.", "cite": "— Matt Hougan"},
+        "watch": None,
+        "names": [
+            {"name": "JPMorgan (JPM)", "blurb": "Research note estimating ~$50B of 2026 crypto inflows.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Morgan Stanley (MS)", "blurb": "Launching Bitcoin ETFs, cited as mainstreaming evidence.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Wells Fargo (WFC)", "blurb": "Putting Bitcoin into models.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "BlackRock (BLK)", "blurb": "Note on AI agents using Bitcoin as a store of value.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "near-etf-ai-agents",
+        "tags": ["crypto", "ai-infra"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "BITWISE NEAR ETF LAUNCHED LAST WEEK",
+        "title": "Bitwise's NEAR ETF: a working chain with a free option on AI agents",
+        "lead": "Matt's pitch: buy a blockchain that already earns revenue, and get the AI-agent economy as an almost-free upside option.",
+        "bullets": [
+            "Bitwise launched the **first US spot NEAR ETF**; tens of millions of dollars in, Matt expects hundreds of millions soon.",
+            "Of **107 US ETFs launched in September**, NEAR's launch (on the penultimate business day) ranked top 10 by assets, against State Street, BlackRock and T. Rowe launches.",
+            "Matt's thesis: standalone blockchain with fast-ramping **Intents** revenue and usage, plus the chain founded by an original author of the LLM-boom paper, aiming to be the hub for AI agents.",
+            "Criticism he acknowledges: 'blockchain for AI' but mostly used by humans today; his answer is that the agent economy isn't here yet and waiting for it means buying the top.",
+            "Netflix analogy (Scott, Matt agrees): the DVD business funded the streaming bet; Matt says he sees Bitcoin the same way (store of value plus a payments-use option).",
+            "Launch dynamics: ETFs show a **two-hump inflow** — community first, advisors and institutions later; Matt says institutions ask him for 'moonshot' picks and NEAR is his example.",
+            "Scott held NEAR through the cycle and bought more after hearing a Singapore dinner (Token2049) guest list of respected industry names; Matt: 'where the smart people are going to dinner is not a bad investment theory'.",
+            "Bitwise also has two pending AI ETF filings (an AI cyber-defense ETF and an AI bond ETF) per Scott; Matt won't discuss filings but links AI and crypto via cyber attacks.",
+        ],
+        "quote": {"text": "Anytime you can get a free moonshot, I think that's pretty cool.", "cite": "— Matt Hougan"},
+        "watch": "Matt's firm Bitwise issues the NEAR ETF and Hunter Horsley (Bitwise CEO) is cited saying AI and crypto are cut from the same cloth; Scott holds NEAR personally.",
+        "names": [
+            {"name": "Bitwise", "blurb": "Issuer of the first US spot NEAR ETF; two AI ETF filings pending.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
+            {"name": "Near (NEAR)", "blurb": "Chain with Intents revenue and AI-agent optionality; Matt 'hugely bullish', Scott holds and added.", "stance": "OWNS", "conviction": "High", "horizon": None},
+            {"name": "Netflix (NFLX)", "blurb": "Analogy for a core business funding a side bet that later becomes the main story.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "citrini-basket-defi",
+        "tags": ["crypto", "finance", "ai-infra"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "CITRINI RESEARCH REPORT — OCT 2026",
+        "title": "Citrini's AI x DeFi basket marks an asset class widening, and baskets are the next ETF stage",
+        "lead": "Matt sees Wall Street adopting ~50 tokens, not three, with differentiated winners and the multi-asset ETF coming next.",
+        "bullets": [
+            "**Citrini Research** published an AI-and-crypto piece with an investment basket of percentage weights; Scott says Wall Street friends sent it to him, and Matt says it reached real institutional distribution.",
+            "Matt: the analyst 'remembered DeFi as an NFT playground' and found a **24/7 financial system**; Bitwise's own research starts at Derive and goes through Lighter and similar projects.",
+            "Matt on size: many named protocols are **sub-$1B micro-caps** in equity terms, yet cited as the leading provider of their function.",
+            "ETF path: single asset to **multi-asset to active**; Matt guesses active crypto strategies in about 18 months. Index products (Bitwise's index and hashed products) are only now resonating.",
+            "Single-asset ETFs dominate because the first buyers are experts with asset-specific views; a basket suits a bet on a whole ecosystem.",
+            "Matt on breadth: of the top 50 tokens, **20-25 have a real shot**; a 'half on, half off' market where some zombie projects die. Scott's view may now widen beyond a few assets.",
+            "Matt: no froth yet; he would worry if zombie coins rallied hundreds of percent, as a sign of a local top.",
+        ],
+        "quote": None,
+        "watch": "Matt's firm Bitwise sells index and single-asset crypto ETFs and would issue a basket product.",
+        "names": [
+            {"name": "Citrini Research", "blurb": "Research firm whose AI x crypto basket reached Wall Street desks.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Hyperliquid (HYPE)", "blurb": "Bitwise's earlier single-asset ETF; cited as a very successful launch.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Ethereum (ETH)", "blurb": "Flows cooled alongside Bitcoin; mentioned in single-asset preference examples.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Solana (SOL)", "blurb": "Example of an asset buyers like or dislike separately.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "weekly-reckoning",
+        "tags": ["crypto", "finance", "policy"],
+        "color": "amber",
+        "badge": "Confirmed event",
+        "status": "WEEKLY RECKONING — OCT 9, 2026",
+        "title": "Weekly reckoning: Strategy's Q3 gain, tokenized stocks, 3x ETFs, Samsung USDC and quantum FUD",
+        "lead": "A week of treasury restarts and stablecoin plumbing going mainstream, with a leveraged-ETF warning attached.",
+        "bullets": [
+            "**Strategy** reported a $21B Q3 2026 digital-asset gain, bought 334 BTC this week and raised $176M via STRC, now near par; Scott notes it sold Bitcoin at the bottom, then rebought ~$20K higher.",
+            "**Strive** bought about 10x as much Bitcoin as Strategy this week, funded by its comparable preferred, which Scott says trades at par.",
+            "**ICE x OKX** 50/50 joint venture filed for 24/7 tokenized US stock trading, backed by Uniswap liquidity pools from self-custodied wallets — first major move after the SEC innovation exemption (still in comment period).",
+            "SEC approved **3x leveraged Bitcoin and Ether ETFs** (CME, options-based, daily reset); Scott warns of decay: +10% then -10% leaves you below start, 'not an investment product' unless trading daily.",
+            "**Samsung** integrates USDC for cross-border payments for **82M Galaxy users**, on Solana, hidden in the wallet; Scott links it to SoFi's Mastercard settling on blockchain rails behind the scenes.",
+            "**Robinhood** added $25M of Bitcoin to its balance sheet; **Bitmine** set a 5% ether-supply hard cap, near its accumulation target.",
+            "Macro/China: Beijing shut hundreds of banks to shore up its financial system; Scott says 30-year yields hit a 24-year high despite a brief bounce after a 10-year auction.",
+            "Quantum FUD: Ethereum Foundation's Justin Drake argued AI could crack keys before quantum; Coinbase pushed back; **Vitalik** said take it seriously but don't rush to new wallets.",
+        ],
+        "quote": None,
+        "watch": "Scott holds NEAR and is bullish on Bitcoin. OKX is named as a venue partner and as building stablecoin consumer products.",
+        "names": [
+            {"name": "MicroStrategy (MSTR)", "blurb": "Strategy: $21B Q3 gain, 334 BTC bought this week, STRC near par.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Strive", "blurb": "Bought ~10x Strategy's weekly Bitcoin amount via a preferred at par.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Intercontinental Exchange (ICE)", "blurb": "50/50 venture with OKX for tokenized-stock trading.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "OKX", "blurb": "Tokenized-stock venture with ICE; building stablecoin consumer products.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Samsung (005930.KS)", "blurb": "USDC integration for 82M Galaxy users on Solana.", "stance": "POSITIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "Robinhood (HOOD)", "blurb": "Added $25M Bitcoin to its balance sheet.", "stance": "POSITIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "Bitmine", "blurb": "Sets a 5% ether supply cap; nearing its accumulation target.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Coinbase (COIN)", "blurb": "Pushed back on the quantum-risk argument.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F4C8", "tag": "Crypto", "title": "Judge ETF flows on five-day totals, not single days; a one-day $500M outflow after record inflows is noise."},
+    {"icon": "\U0001F3E6", "tag": "Institutions", "title": "Track total institutional flows (ETFs, derivatives, corporate buys) as JPMorgan does, compared with 2022, not ETF flows alone."},
+    {"icon": "\U0001F916", "tag": "AI x crypto", "title": "Read NEAR as an operating chain with agent-economy optionality; the test is whether agent usage shows up beyond human users."},
+    {"icon": "\U0001F9FA", "tag": "ETFs", "title": "Expect multi-asset then active crypto ETFs; the Citrini basket is a preview of the list that gets packaged."},
+    {"icon": "⚠️", "tag": "Risk", "title": "Avoid holding 3x daily-reset ETFs as investments; decay punishes flat or choppy markets."},
+    {"icon": "\U0001F6A6", "tag": "Cycle", "title": "Treat a zombie-coin rally of hundreds of percent as Matt's local-top signal; none present yet."},
+]
+
+HOT_TAKES = [
+    {"take": "The media is willing to kill the Bitcoin bull market after three months and say that we're over because we pulled back a few percent.", "cite": "— Matt Hougan", "why": "Calls the bear narrative premature"},
+    {"take": "I think we are entering a new bull market and it's probably time to buy the dip.", "cite": "— Scott Melker", "why": "Direct timing call"},
+    {"take": "Eventually in a year and a half, we'll be talking about the rise of active crypto strategies.", "cite": "— Matt Hougan", "why": "Dated product-cycle prediction"},
+    {"take": "I think we're close to the point where what people want is the Citrini portfolio. The whole thing.", "cite": "— Matt Hougan", "why": "Predicts basket ETFs over single-asset"},
+    {"take": "When I look at the top 50, I think I could find 20 to 25 projects that have a real shot on goal.", "cite": "— Matt Hougan", "why": "Quantified view on altcoin survivorship"},
+    {"take": "It's not an investment product unless you are trading daily.", "cite": "— Scott Melker", "why": "Dismisses 3x leveraged ETFs"},
+]
+
+CLAIMS = [
+    {"who": "Matt Hougan", "claim": "2026 crypto inflows will eclipse the 2024 number significantly this cycle.", "metric": "annual crypto inflows vs 2024", "target": "exceeded significantly", "by": None, "condition": None, "entity": "Bitcoin (BTC)"},
+    {"who": "Matt Hougan", "claim": "NEAR ETF inflows will reach hundreds of millions of dollars soon.", "metric": "NEAR ETF inflows", "target": "hundreds of millions", "by": None, "condition": None, "entity": "Near (NEAR)"},
+    {"who": "Matt Hougan", "claim": "Active crypto strategies will rise, following single-asset then multi-asset ETFs.", "metric": "active crypto strategy products", "target": "rise", "by": "18 months", "condition": None, "entity": None},
+    {"who": "Matt Hougan", "claim": "A Citrini-style basket would do very well as an ETF.", "metric": "basket crypto ETF", "target": "launches and gathers assets", "by": None, "condition": None, "entity": "Citrini Research"},
+    {"who": "Matt Hougan", "claim": "About 20-25 of the top 50 crypto projects have a real shot.", "metric": "viable projects in top 50", "target": "20-25", "by": None, "condition": None, "entity": None},
+    {"who": "JPMorgan (cited by Matt Hougan)", "claim": "Crypto inflows reach ~$65B annualized in 2026.", "metric": "2026 crypto inflows", "target": "$65B", "by": "2026-12", "condition": None, "entity": "JPMorgan (JPM)"},
+    {"who": "Matt Hougan", "claim": "Bitcoin ends higher in every scenario from an AI-market crash to a stock rally.", "metric": "Bitcoin price direction", "target": "higher", "by": None, "condition": "whatever the AI or stock-market path", "entity": "Bitcoin (BTC)"},
+]
+
+RELATIONS = [
+    {"from": "Bitwise", "rel": "invests_in", "to": "Near (NEAR)", "note": "launched the first US spot NEAR ETF"},
+    {"from": "Intercontinental Exchange (ICE)", "rel": "partners_with", "to": "OKX", "note": "50/50 tokenized-stock trading venture"},
+    {"from": "Samsung (005930.KS)", "rel": "partners_with", "to": "Solana (SOL)", "note": "USDC cross-border payments run on Solana"},
+    {"from": "Coinbase (COIN)", "rel": "criticizes", "to": "Ethereum Foundation", "note": "pushed back on the AI-cracks-keys quantum argument"},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F3AC", "title": "Netflix limited series 'All In Every Time' on Caroline Ellison and Sam Bankman-Fried (FTX); both speakers react to the trailer. Matt says FTX made institutional pitches 'impossible' for years alongside an SEC trying to kill the industry; he's surprised how fast crypto recovered.", "tag": "Culture"},
+    {"icon": "\U0001F9F3", "title": "Scott will interview Hunter Biden later today; viewers asked to submit questions. Peter Schiff interview airs Sunday; Macro Monday follows.", "tag": "Media"},
+    {"icon": "\U0001F4DA", "title": "Sources referenced this episode: JPMorgan note; Citrini Research report; BlackRock AI-agent note; Peter Schiff; Ray Dalio; Bitwise CEO Hunter Horsley.", "tag": "Sources"},
+    {"icon": "\U0001F9E0", "title": "Everyday AI agents (OpenClaw-style setups, Grok-style bots, a consumer agent called 'Muse') compared to the moment people first typed credit cards online; Scott expects agent payments within months.", "tag": "AI"},
+    {"icon": "\U0001F3AE", "title": "2021-22 froth reminders: board apes brokered to celebrities at a ~20% fee, Ether Rocks, metaverse land, Facebook renaming to Meta — Matt says today has none of that energy.", "tag": "Crypto"},
+]
+
+GLOSSARY = [
+    {"term": "Intents (NEAR)", "def": "NEAR's cross-chain transaction layer whose revenue and usage Matt says are ramping quickly."},
+    {"term": "Two-hump ETF inflow", "def": "Early buyers are the community, then a second wave of advisors and institutions arrives after sales and media work."},
+    {"term": "3x daily-reset ETF", "def": "A leveraged product that resets exposure every day, so volatility decay erodes value over multiple days."},
+    {"term": "STRC / preferred stock", "def": "Strategy's preferred instrument used to raise cash for Bitcoin purchases; trading near par supports issuance."},
+    {"term": "Tokenized stocks", "def": "On-chain representations of equities proposed to trade 24/7 under the SEC's innovation exemption."},
+]
