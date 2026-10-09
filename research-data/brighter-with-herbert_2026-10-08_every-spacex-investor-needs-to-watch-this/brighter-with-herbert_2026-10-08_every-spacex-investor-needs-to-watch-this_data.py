@@ -1,0 +1,194 @@
+META = {
+    "title": "Every SpaceX Investor Needs To Watch This",
+    "channel": "Brighter with Herbert",
+    "speakers": "Herbert (host), Brian Wang (Next Big Future)",
+    "date": "2026-10-08",
+    "video_url": "https://www.youtube.com/watch?v=NLlWSRZ-QMw",
+    "thread_line": "5 threads · 5-month data centers · $500B run-rate scenario · valuation · demand & competitors · Rubin & power limits",
+    "category": "market",
+    "region": "",
+}
+
+SNAPSHOT = [
+    "Wang's thesis: SpaceX builds ~220,000-GPU data centers (\"Minihards\") in **about 5 months** vs 2-4 years for everyone else, and that speed is the product.",
+    "Chips are ~80% of cost, so capex lands the month before revenue starts; Wang's per-site revenue math is **~$26B/yr per GB300 Minihard**.",
+    "He models **$500B annual run-rate by end-2027**, against a ~$100B run-rate the CFO targets for end-2026.",
+    "Valuation: $600-$1,000/share (30x PE on his EPS gives **$1,119**) vs a ~$389 share price cited.",
+    "Demand check: Anthropic pays $50-60B per GW-year; Wang says over half of Anthropic's ~$80B ARR depends on SpaceX; Grokbot now routes to Claude Opus 5.5.",
+    "Wang expects 20+ Minihards buildable next year but chips for ~12 (or ~8 if they wait for Rubin); memory and chips are the remaining bottlenecks.",
+    "Host: numbers are \"too big for me to agree to right away\" — cut Wang's output in half and it is still huge.",
+]
+
+THEMES = [
+    {
+        "id": "five-month-build",
+        "tags": ["ai-infra", "space"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "SPEED AS THE PRODUCT",
+        "title": "SpaceX builds a gigawatt-class AI site in ~5 months; competitors need 2-4 years",
+        "lead": "Wang says completing 220,000-GPU sites in about 5 months changes the financing, not just the schedule.",
+        "bullets": [
+            "Colossus 2 finished (~440,000+ chips); a site announced ~3 months ago completes in November, another site is due December or January.",
+            "Colossus 1 (100,000 chips in about a year) already drew Jensen Huang's \"superhuman\" praise; the rest of the industry takes 2+ years.",
+            "Chips are ~80% of cost and go in last, so SpaceX avoids paying interest on $10-20B/GW of idle buildings and power.",
+            "Standardized 220,000-GPU \"cookie-cutter\" design (110,000 optical connections) — \"Model T\" style — swap chips, keep everything else.",
+            "Vertical integration: anything with a 6+ month lead time gets built in-house; parts reverse-engineered, some critical equipment sourced from China per SemiAnalysis.",
+            "Leaked Q&A: 4 GW of turbines held in inventory, 2 GW solar, 2 GW batteries — the 10 GW power plan at one Tennessee/Mississippi location, up to 12 GW.",
+            "Wang: competitors will \"bend the knee\" and ask SpaceX to build for them by end-2027.",
+        ],
+        "quote": {"text": "SpaceX has said anything that takes over six months we're making ourselves.", "cite": "— Brian Wang"},
+        "watch": "Site timing and Q&A details come from news reports and an unattributed Q&A; Wang's schedule assumes chips arrive on time.",
+        "names": [
+            {"name": "SpaceX", "blurb": "Minihard sites every month or two; 10 GW target next year.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": "end of 2027"},
+            {"name": "xAI", "blurb": "Colossus 1 and 2, Grok; part of the SpaceX compute plan.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+        ],
+    },
+    {
+        "id": "revenue-scenario",
+        "tags": ["ai-infra", "space", "finance"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "$500B RUN-RATE SCENARIO",
+        "title": "Revenue math: ~$26B a year per Minihard, $500B run-rate by end of 2027",
+        "lead": "Wang stacks one new Minihard a month at ~$26B/yr each, tripling when Rubin arrives, to reach a $500B run-rate.",
+        "bullets": [
+            "Leases run $50-60B per GW-year; Deutsche Bank cited two recent deals at $60-61B/GW; the CFO said monetization is near the high end of $30-50B.",
+            "Each GB300 Minihard (~half a GW) ≈ **$26B/yr**; Rubin Minihard ≈ $75B each; Wang models 8 of them ≈ $600B toward $1T.",
+            "Anthropic deal reportedly grew from ~$45B to $84B total; Wang estimates $15B → $25B per year, ~$2B/month.",
+            "Over half of Anthropic's ~$80B ARR is said to depend on SpaceX, so cancellation is implausible.",
+            "Leaked Q&A: 60% of the 10 GW kept for SpaceX, Tesla and xAI, 40% leased; self-used compute counts as direct-customer revenue.",
+            "Direct revenue lets SpaceX borrow against 5 years of earnings; Wang suggests up to $2T debt capacity; a further ~$50B borrowing was cited after the IPO's $80B raise.",
+            "Compared with Tesla's ~$100B/yr after 20+ years, Wang expects multiple hundreds of billions in one year.",
+        ],
+        "quote": {"text": "The factory is the product.", "cite": "— Herbert, citing Elon Musk"},
+        "watch": "Wang's model, not company guidance. SpaceX has said \"5 to 10\" sites, not one a month. The host asked whether Anthropic's deal may tighten given Grokbot's new reliance on Claude.",
+        "names": [
+            {"name": "SpaceX", "blurb": "Targets ~$100B run-rate end-2026; Wang models $500B by end-2027.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": "end of 2027"},
+            {"name": "Anthropic", "blurb": "Largest customer at $50-60B per GW-year.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Deutsche Bank", "blurb": "Source of $60-61B/GW lease pricing and $54B run-rate.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "valuation",
+        "tags": ["space", "finance"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "$600-$1,000 PER SHARE",
+        "title": "Valuation: $600-$1,000 a share, rerating once two Minihards land",
+        "lead": "Wang argues the 'fully valued' debate flips by Q1-Q2 next year, with a 30x PE giving ~$1,119.",
+        "bullets": [
+            "Share price cited ~$389; Wang's range $600-$1,000+, and the host adds an $850 and $1,000 reference after 5x of a $150-170 base.",
+            "Using Morgan Stanley analyst Adam Jonas's 30x 2028 PE on Wang's EPS (several times Jonas's) → **$1,119** at a 50% margin.",
+            "Milk Road stocks' bull case is ~$148 per share on compute — Wang says it is close to his view.",
+            "Morgan Stanley's Jonas reportedly asked a room of investors who owned SpaceX; none raised a hand — \"stock is cheap because they don't understand it.\"",
+            "Al Root's piece \"we were wrong about SpaceX\" cited as a sign of a shifting view.",
+            "$500B run-rate would put revenue near Nvidia's scale; Wang: price it as cash flow, not a bet on the future.",
+        ],
+        "quote": {"text": "The stock is cheap because they don't understand it.", "cite": "— Adam Jonas (as relayed by Herbert)"},
+        "watch": "The valuation is Wang's own scenario model, not company guidance or consensus.",
+        "names": [
+            {"name": "SpaceX", "blurb": "Wang targets $600-$1,000; 30x PE on 2028 EPS gives $1,119.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": "2027-2028"},
+            {"name": "Morgan Stanley", "blurb": "Adam Jonas uses 30x PE on 2028 for SpaceX.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "demand-competition",
+        "tags": ["ai-infra", "software"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "DEMAND VS COMPETITORS",
+        "title": "Demand from agents, and why neoclouds, Amazon and Microsoft can't match the pace",
+        "lead": "Wang says agent usage and 3-10x yearly price drops expand demand, while rivals are capital- and power-constrained.",
+        "bullets": [
+            "Only ~1% of people pay for coding agents (Ramp data); one SpaceX Grokbot lead reportedly ships ~2,000 PRs a week; Wang runs 20+ nightly agents, ~30 PRs a day.",
+            "Wang assumes ~10x token growth per year, ~1,000x by 2030, with token prices falling 3-10x a year.",
+            "Neoclouds (Nebius, CoreWeave, NScale) must win a 4-year contract, raise debt, then build; Wang calls their statements a \"horror show.\"",
+            "Amazon's Anthropic deal is ~$2B per GW-year because Amazon took a 15-20% stake; AWS AI run-rate $25B vs $54B for SpaceX per Deutsche Bank.",
+            "Microsoft ~$35B of ~$100B Azure from OpenAI; Google ~$35B; Meta's 7 GW plan seen as 1-2 GW by 2027.",
+            "Grokbot now routes to the best backend, including Claude Opus 5.5, Midjourney and Suno; Wang calls SpaceX \"full stack\" and indifferent to whose LLM wins.",
+            "OpenAI reportedly solved dozens of hard math problems with an unreleased model; Wang sees cancer cures within a year or two.",
+        ],
+        "quote": None,
+        "watch": "Neocloud finances are Wang's characterization, not figures he cited from filings.",
+        "names": [
+            {"name": "Amazon (AMZN)", "blurb": "Anthropic deal at ~$2B/GW-year for a 15-20% stake; AWS AI run-rate $25B.", "stance": "NEGATIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "Microsoft (MSFT)", "blurb": "Power hookup delays; ~$35B of Azure tied to OpenAI.", "stance": "NEGATIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "Nebius (NBIS)", "blurb": "Financially constrained neocloud, per Wang.", "stance": "NEGATIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "CoreWeave (CRWV)", "blurb": "Financially constrained neocloud, per Wang.", "stance": "NEGATIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "Nvidia (NVDA)", "blurb": "Estimated one-third or more of its chips go to SpaceX.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+        ],
+    },
+    {
+        "id": "rubin-limits",
+        "tags": ["semis", "ai-infra", "energy"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "RUBIN, MEMORY, POWER CEILING",
+        "title": "Rubin could triple each site's size; chips, memory and the 40 GW/year ceiling set the limit",
+        "lead": "Wang expects 20+ buildable sites next year but chips for ~12, and says Rubin makes fewer sites worth far more.",
+        "bullets": [
+            "UBS estimates 678,000 Rubin-class chips in Q3 and 1.3M in Q4; Wang expects the first Rubin Minihard in Q1, worst case Q2, and Rubin Ultra later (double).",
+            "Elon and Nvidia reportedly agreed SpaceX gets Rubin first; a Rubin site at 220,000 chips beats Colossus 2 in H100 equivalents.",
+            "Scenario: 10 Rubin + 6 GB300 Minihards ≈ **23M H100-equivalents**, >10x last week; with a haircut ~6-8x of 2026 (~2 GW) → 10+ GW next year.",
+            "Memory, CPUs and chips are the remaining bottlenecks; ~2 GPUs per CPU needed for agents (Intel or Nvidia Vera).",
+            "SemiAnalysis: terrestrial build tops out near 40 GW/yr (30+ sustainable to 2050); Brad Gerstner's 25 GW forecast would put SpaceX's 10 GW at ~40% of completed capacity.",
+            "Saudi Arabia dismissed (corruption, execution); Middle East sites need drone-proofing until Iran is \"totally defeated.\"",
+            "Wang predicts more than 20 Minihards possible next year, chips for ~12, ~8 if they wait for Rubin.",
+        ],
+        "quote": {"text": "I can see it being a complete monopoly.", "cite": "— Brian Wang"},
+        "watch": "Host: \"we'll find out in the next six months\"; halving Wang's count (5-6 Minihards) is still large.",
+        "names": [
+            {"name": "Nvidia (NVDA)", "blurb": "Rubin supply to SpaceX first, per reported announcement.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": "Q1 2027"},
+            {"name": "UBS", "blurb": "Source of Rubin chip supply estimates.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Intel (INTC)", "blurb": "Possible CPU source alongside Nvidia Vera.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F4CA", "tag": "Markets", "title": "Track whether the November and December Minihards land on time — the thesis proves or breaks there."},
+    {"icon": "\U0001F9EE", "tag": "Valuation", "title": "Re-run SpaceX at your own haircut: halve Wang's site count and compare to the ~$389 price."},
+    {"icon": "\U0001F50D", "tag": "Semis", "title": "Watch Rubin and memory supply — chips, not buildings, are the stated bottleneck."},
+    {"icon": "\U0001F4B0", "tag": "AI infra", "title": "Compare cost per GW-year across providers ($50-60B SpaceX vs ~$2B Amazon-Anthropic) before drawing conclusions; Amazon's price includes a 15-20% equity stake."},
+    {"icon": "\U0001F6A6", "tag": "Risk", "title": "Treat the leaked Q&A and Deutsche Bank figures as unconfirmed company guidance until SpaceX's earnings calls."},
+]
+
+HOT_TAKES = [
+    {"take": "SpaceX becomes the most valuable company in the world, possibly by the end of 2027.", "cite": "— Herbert (summarizing Brian Wang)", "why": "dated mega-prediction"},
+    {"take": "The minihard is the most valuable product in the world... until you get Starship and AI in space going.", "cite": "— Brian Wang", "why": "bold ranking"},
+    {"take": "I can see it being a complete monopoly.", "cite": "— Brian Wang", "why": "market-structure call"},
+    {"take": "It's game over.", "cite": "— Brian Wang", "why": "dismissal of competitors"},
+    {"take": "The whole AI bubble thing is a bunch of crap.", "cite": "— Brian Wang", "why": "rejects bubble narrative"},
+]
+
+CLAIMS = [
+    {"who": "Brian Wang", "claim": "SpaceX reaches a $500 billion annual revenue run-rate.", "metric": "annual run-rate", "target": "$500B", "by": "2027-12", "condition": "assuming one Minihard a month", "entity": "SpaceX"},
+    {"who": "Brian Wang", "claim": "SpaceX stock trades between $600 and $1,000 a share.", "metric": "share price", "target": "$600-$1,000", "by": "2027", "condition": None, "entity": "SpaceX"},
+    {"who": "Brian Wang", "claim": "SpaceX becomes the most valuable company in the world.", "metric": "market cap rank", "target": "#1", "by": "2027-12", "condition": None, "entity": "SpaceX"},
+    {"who": "Brian Wang", "claim": "SpaceX completes a Minihard roughly every month, and more than 20 are buildable next year.", "metric": "Minihards completed", "target": "20+", "by": "2027-12", "condition": None, "entity": "SpaceX"},
+    {"who": "Brian Wang", "claim": "SpaceX has chips for about 12 Minihards next year, about 8 if it waits for Rubin.", "metric": "chip-limited Minihards", "target": "8-12", "by": "2027-12", "condition": None, "entity": "SpaceX"},
+    {"who": "Brian Wang", "claim": "SpaceX's first Rubin Minihard comes online.", "metric": "Rubin Minihard", "target": "first online", "by": "2027-03", "condition": None, "entity": "SpaceX"},
+    {"who": "Brian Wang", "claim": "SpaceX reaches 2.6 GW of compute by end of this year if the December site lands.", "metric": "compute", "target": "2.6 GW", "by": "2026-12", "condition": "if December site lands", "entity": "SpaceX"},
+    {"who": "SpaceX CFO (cited by Herbert)", "claim": "SpaceX is on track for a $100 billion annual run-rate by year end.", "metric": "annual run-rate", "target": "$100B", "by": "2026-12", "condition": None, "entity": "SpaceX"},
+    {"who": "Elon Musk (cited by Brian Wang)", "claim": "SpaceX adds another 220,000 GB300s in November and again in December.", "metric": "GB300 additions", "target": "220,000 each", "by": "2026-12", "condition": None, "entity": "SpaceX"},
+]
+
+RELATIONS = [
+    {"from": "Anthropic", "rel": "customer_of", "to": "SpaceX", "note": "compute leases, reportedly $84B of deals"},
+    {"from": "Amazon (AMZN)", "rel": "owns_stake", "to": "Anthropic", "note": "15-20% for its compute deal"},
+    {"from": "Nvidia (NVDA)", "rel": "supplies", "to": "SpaceX", "note": "Rubin chips first, per reported partnership"},
+    {"from": "Microsoft (MSFT)", "rel": "owns_stake", "to": "OpenAI", "note": "about half, per Wang (unsure)"},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F4DA", "title": "Sources referenced: Al Root's \"we were wrong about SpaceX\", Morgan Stanley's Adam Jonas, Deutsche Bank lease data, SemiAnalysis, UBS Rubin estimates, Ramp agent usage data, Milk Road stocks, and a leaked SpaceX Q&A.", "tag": "Sources"},
+    {"icon": "\U0001F9EE", "title": "Wang's own agent practice: 20+ nightly coding agents, ~30 PRs a day, and two agent templates shared to a marketplace.", "tag": "AI agents"},
+    {"icon": "\U0001F52C", "title": "OpenAI reportedly solved dozens of hard math problems with an unreleased model, following a Navier-Stokes result; Wang says 80% of four years of math research could be AI-done.", "tag": "Science"},
+]
+
+GLOSSARY = [
+    {"term": "Minihard", "def": "SpaceX's standardized ~220,000-GPU data center unit (name as heard in captions)."},
+    {"term": "H100 equivalent", "def": "A normalizing unit for comparing AI compute across chip generations."},
+    {"term": "Jevons paradox", "def": "Cheaper tokens raise total usage, so falling prices expand demand."},
+]
