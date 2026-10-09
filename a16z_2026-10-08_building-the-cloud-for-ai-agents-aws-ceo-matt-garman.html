@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: Building the Cloud for AI Agents | AWS CEO Matt Garman</title>
+<meta name="description" content="a16z · 5 threads · capex and capacity allocation · custom silicon · a cloud agents can use · enterprise agent trust and evals · data-center legitimacy">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="Building the Cloud for AI Agents | AWS CEO Matt Garman">
+<meta property="og:description" content="a16z · 5 threads · capex and capacity allocation · custom silicon · a cloud agents can use · enterprise agent trust and evals · data-center legitimacy">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Building the Cloud for AI Agents | AWS CEO Matt Garman</h1>
+    <div class="byline">
+      Channel: <b>a16z</b> &middot; Speaker: <b>Matt Garman (AWS CEO), Raghu Raghuram (a16z)</b> &middot; <b>2026-10-08</b>
+      <div class="stats-line">5 threads · capex and capacity allocation · custom silicon · a cloud agents can use · enterprise agent trust and evals · data-center legitimacy &middot; <a href="https://www.youtube.com/watch?v=rn_afJaPldg" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>AWS CEO Matt Garman: revenue is about <b>$169-170B</b> growing <b>37%</b>, with 2026 capex around <b>$220B</b> and no plan to slow.</li><li>AWS said it will buy <b>2 million Nvidia GPUs</b> over the next couple of years, and Trainium capacity is sold out to roughly the end of next year.</li><li>Allocation stance: keep capacity for startups (about 30-<b>40%</b> of AWS revenue comes from companies that were once startups) rather than sell it all to the frontier labs.</li><li>Bubble view: no customer concentration beyond single-digit percentages, and enterprises report positive ROI, so spend in core compute, storage and inference is not going away.</li><li>Agents are a new user type: AWS is adding agent-specific building blocks (sandboxes, gateways, short-lived permissions, a context layer) and 30-second account signup.</li><li>Enterprise blocker is trust and evals, not models; AWS's forward-deployed engineers aim to train customers in about 45 days and leave.</li><li>Binding constraint is always the <i>latest</i> one (power, memory, HBM, connectors, construction labor), tracked across hundreds of thousands of components.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="capex-capacity">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">AWS 2026 CAPEX ~ $220B</span><span class="ttag">ai-infra</span><span class="ttag">energy</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">A $220B capex year, startup allocation, and no-bubble reasoning</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Garman says demand is large enough that AWS keeps spending, and defends the build with diversification and customer ROI.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>AWS revenue is about <b>$169</b>-170B growing 37%; 2026 capex is about $220B, bigger than any company has spent in a year, with no slowdown expected.</li><li><span class="dot" style="background:#3f6b2e;"></span>It will buy 2 million Nvidia GPUs over the next couple of years; elasticity in GPU capacity has largely gone away.</li><li><span class="dot" style="background:#3f6b2e;"></span>Allocation: it could sell every accelerator to the big labs but chooses not to; it says yes to about <b>60%</b> of startup requests, sometimes later, elsewhere or in a different configuration.</li><li><span class="dot" style="background:#3f6b2e;"></span>Startups are the lifeblood: AWS estimates 30-<b>40%</b> of revenue comes from companies that were startups in AWS's lifetime, and new ones start at a $1B valuation with $200M of funding.</li><li><span class="dot" style="background:#3f6b2e;"></span>Bubble case: neocloud concentration of 30-<b>60%</b> with one or two customers, against single-digit percentages at AWS; most usage is core compute, storage and inference inside production apps.</li><li><span class="dot" style="background:#3f6b2e;"></span>Analogies: not every billion-dollar startup makes it, as in VC; and the internet bubble left Google and Amazon standing.</li><li><span class="dot" style="background:#3f6b2e;"></span>Planning changed: it brings its own power (solar, nuclear, behind-the-meter), where 15 years ago a utility just added tens of megawatts, and plans multiple years out on chips and memory.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;It turns out there's never one constraint, there's always just the latest constraint.&#8221;<cite>— Matt Garman</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Amazon (AMZN)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High · next decade</span></b><span>AWS parent; Garman is AWS CEO, citing ~$220B 2026 capex and 37% growth</span></div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">BUYING-ADDING · High · next couple of years</span></b><span>AWS announced it is buying 2 million Nvidia GPUs over the next couple of years</span></div><div class="namechip"><b>Anthropic<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Named among large frontier-lab customers AWS invests in</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Named among large frontier-lab customers; workloads migrating to Bedrock</span></div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Named as a large AWS customer alongside the frontier labs</span></div><div class="namechip"><b>Salesforce (CRM), JPMorgan (JPM)<span class="stance" style="background:#93711b;">CASUAL MENTION · None</span></b><span>Large enterprise customers needing fewer GPUs or accelerators, sometimes Trainium, sometimes Nvidia</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Garman runs the business whose capex and demand he is describing; the 'no bubble' view comes from the seller of the capacity.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="supply-chain-datacenters">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">SUPPLY CONSTRAINTS ROTATE</span><span class="ttag">ai-infra</span><span class="ttag">energy</span><span class="ttag">policy</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Rotating supply constraints and the data-center legitimacy problem</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Every month a different input binds, and Garman says the industry has under-explained why data centers benefit communities.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>He read <i>The Goal</i> in undergrad: when one bottleneck clears, another appears. Power now, then memory, TSMC capacity, HBM, networking, connectors, disk drives, SSDs.</li><li><span class="dot" style="background:#93711b;"></span>AWS tracks tens to hundreds of thousands of components and began mapping four to five tiers down the supply chain about a decade ago, after the Thailand floods caused a disk-drive crisis.</li><li><span class="dot" style="background:#93711b;"></span>Location matters: power can exist in Indonesia but not Germany, so capacity is not fully fungible; construction labor is at a premium.</li><li><span class="dot" style="background:#93711b;"></span>Garman says data centers mostly use free-air cooling and very little water, and AWS is among the largest renewable buyers each year.</li><li><span class="dot" style="background:#93711b;"></span>He cites a county where residents pay <b>$5,000 </b>a year less in taxes because of an AWS site, and says the industry needs to say so, as it would about Netflix.</li><li><span class="dot" style="background:#93711b;"></span>A few bad operators who ignore regulations cause angst for everyone, and he wants good citizens highlighted.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The community-benefit claims come from an operator of those sites.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="custom-silicon">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
+    <span class="theme-status">TRAINIUM 3 IN MARKET, 4 ANNOUNCED</span><span class="ttag">semis</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">From Nitro offload cards to Graviton and Trainium</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">AWS says its chip path started as a virtualization-tax fix and now runs most Bedrock inference.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>About 13-14 years ago it offloaded network virtualization to a card, then storage; it acquired a startup whose ARM cores did this, giving a bare-metal server with no VM access for AWS.</li><li><span class="dot" style="background:#3f6b2e;"></span>Those ARM cores became Graviton: <b>20%</b> cheaper and 20% better performance for five to six years; over 90% of its top 100 customers use it and some halved their server count.</li><li><span class="dot" style="background:#3f6b2e;"></span>Trainium is now in its third generation and sold out until about the end of next year; startups building on it number half a dozen to a dozen.</li><li><span class="dot" style="background:#3f6b2e;"></span>The majority of Bedrock traffic runs on Trainium, and Garman says it is maybe the best inference chip on the market for cost and absolute performance, despite the name.</li><li><span class="dot" style="background:#3f6b2e;"></span>Trainium 4 is announced, not launched; Anthropic and OpenAI have deals to build on Trainium.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Performance and cost-performance claims are AWS's own about its own silicon.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="cloud-for-agents">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">NEW BUILDING BLOCKS</span><span class="ttag">ai-infra</span><span class="ttag">software</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">What a cloud needs when the user is an agent</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">AWS is tuning old services and adding new primitives, because agents care about tail latency, throwaway databases and scoped permissions.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Agents notice P999 latency on S3 that people don't; Garman says this is why agentic workflows perform better on AWS.</li><li><span class="dot" style="background:#3f6b2e;"></span>AWS Context (in beta) builds a layer so agents find data across Aurora, S3 and other stores.</li><li><span class="dot" style="background:#3f6b2e;"></span>New accounts need no VPC or IAM setup, no credit card, and work from a Gmail login in under 30 seconds, with no migration needed later.</li><li><span class="dot" style="background:#3f6b2e;"></span>Customers tell coding agents (Kiro, Claude, Codex) to deploy on AWS; databases can start in 3 seconds.</li><li><span class="dot" style="background:#3f6b2e;"></span>Agents want disposable databases, so five-nines durability is arguably over-engineered; AWS wants one resource that can be thrown away or grow into production.</li><li><span class="dot" style="background:#3f6b2e;"></span>New primitives: compute sandboxes, gateways, time-boxed, fine-grained agent permissions instead of a person's credentials; Firecracker microVMs, built about 10 years ago, underpin many sandbox startups.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="enterprise-agents-trust">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Structural critique</span>
+    <span class="theme-status">TRUST AND EVALS ARE THE GATE</span><span class="ttag">software</span><span class="ttag">dev-workflow</span><span class="ttag">career</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Enterprise agents are mostly human-in-the-loop, held back by trust and evals</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Garman says customers get value from simple agents but won't go autonomous until guardrails, permissions and evals exist.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Most enterprise agents are simple and non-autonomous; advice is to redesign work, not have an agent repeat Bob's steps 1-5, since agents can try 50 things in parallel.</li><li><span class="dot" style="background:#93711b;"></span>Nervousness about an agent deleting a production database is, he says, holding enterprises back, maybe appropriately.</li><li><span class="dot" style="background:#93711b;"></span>Evals, labeled data, production measurement and drift are problems he says nobody has solved well.</li><li><span class="dot" style="background:#93711b;"></span>AWS forward-deployed engineers run about 45 days, teach customers to build evals and label data, then leave so no one is stuck paying consultants.</li><li><span class="dot" style="background:#93711b;"></span>Data stays in the customer's VPC on Bedrock and model providers never see prompts; Garman says Bedrock growth is exploding.</li><li><span class="dot" style="background:#93711b;"></span>Customers post-train open-weights models on proprietary data mostly in SageMaker, and AWS is ramping open-weights support.</li><li><span class="dot" style="background:#93711b;"></span>A security service called Continuum (as captioned) uses powerful models to find and prioritize vulnerabilities; security will need to run at machine speed.</li><li><span class="dot" style="background:#93711b;"></span>Internally, Amazon Quick went to every employee, HR and finance teams build agents, and 'frontier teams' have agents write all code; pods shrink from 10 people to 3-4.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;We want to train our customers to be able to do this themselves... they don't want to be beholden to an external workforce for the next five years.&#8221;<cite>— Matt Garman</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">AWS sells Bedrock, SageMaker, Quick and the forward-deployed services it recommends here.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">💰</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Read Amazon's <b>$220B</b> capex and 2 million Nvidia GPU purchase as the demand signal, noting it comes from the seller.</span></div></div><div class="irow"><div class="ic">🧪</div><div class="tline"><span class="cat">Semis:</span> <span class="txt">Track Trainium sell-out dates and Graviton adoption as evidence custom silicon is taking share.</span></div></div><div class="irow"><div class="ic">🛡</div><div class="tline"><span class="cat">Enterprise AI:</span> <span class="txt">Budget for evals, labeled data and scoped agent permissions before autonomy.</span></div></div><div class="irow"><div class="ic">🚀</div><div class="tline"><span class="cat">Startups:</span> <span class="txt">Ask for GPU capacity early; AWS says yes to about <b>60%</b> of requests, often later or in another region.</span></div></div><div class="irow"><div class="ic">⚡</div><div class="tline"><span class="cat">Energy:</span> <span class="txt">Watch which input is the current bottleneck rather than assuming one: power, memory, HBM, labor.</span></div></div><div class="irow"><div class="ic">🧩</div><div class="tline"><span class="cat">Workflows:</span> <span class="txt">Redesign tasks for parallel agents instead of copying human step sequences.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;Tranium is actually maybe the best inference chip on the market right now.&#8221; <cite>— Matt Garman</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;There's no bubble in which they stop spending on that.&#8221; <cite>— Matt Garman</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Agentic workflows tend to perform better on AWS than anywhere else.&#8221; <cite>— Matt Garman</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Moving to Graviton is the single easiest way that customers lower their bill.&#8221; <cite>— Matt Garman</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I shouldn't know if anyone really is great at solving [evals, labeled data and drift] today.&#8221; <cite>— Matt Garman</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Matt Garman:</b> Amazon spends about $220 billion in capex in 2026 and does not expect to slow down soon. <span class="cmeta">Amazon 2026 capex · $220B · 2026</span> <span class="tag">Amazon (AMZN)</span></div><div class="ritem"><b>Matt Garman:</b> AWS buys 2 million Nvidia GPUs over the next couple of years. <span class="cmeta">Nvidia GPUs purchased by AWS · 2 million · 2028</span> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>Matt Garman:</b> Trainium capacity stays sold out until roughly the end of next year. <span class="cmeta">Trainium capacity availability · sold out · 2027-12</span> <span class="tag">Amazon (AMZN)</span></div><div class="ritem"><b>Matt Garman:</b> AWS pod sizes can drop from about 10 people to three or four as agents write the code. <span class="cmeta">product team size · 3-4 people</span> <span class="tag">Amazon (AMZN)</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Amazon (AMZN)</b> <span class="rel">customer of</span> <b>Nvidia (NVDA)</b> &mdash; buying 2 million GPUs over the next couple of years</div><div class="ritem"><b>Amazon (AMZN)</b> <span class="rel">supplies</span> <b>Anthropic</b> &mdash; Trainium-based build deal; capacity customer</div><div class="ritem"><b>Amazon (AMZN)</b> <span class="rel">supplies</span> <b>OpenAI</b> &mdash; Trainium-based build deal; workloads migrating to Bedrock</div><div class="ritem"><b>Amazon (AMZN)</b> <span class="rel">supplies</span> <b>Salesforce (CRM)</b> &mdash; large enterprise accelerator customer</div><div class="ritem"><b>Amazon (AMZN)</b> <span class="rel">supplies</span> <b>JPMorgan (JPM)</b> &mdash; large enterprise accelerator customer</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: <i>The Goal</i> (Goldratt, read in undergrad) for the constraint framing; the Thailand floods disk-drive crisis; Andy Jassy's public bullishness on AWS potential. <span class="tag">Sources</span></div></div></div><div class="irow"><div class="ic">🚨</div><div><div class="title">The host's question raised the Hugging Face attack and AI extinction-risk debate; Garman's answer was that CEOs ask how to trust agents (permissions, sandboxing, guardrails, human in the loop). <span class="tag">Security</span></div></div></div><div class="irow"><div class="ic">🧑‍💻</div><div><div class="title">Garman interned at AWS in 2005 and his project was to identify which customers would care; the answer was startups. <span class="tag">History</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Bedrock</b> &mdash; AWS's managed model service; Garman says prompts and data stay in the customer's VPC and are never seen by the model provider.</div><div><b>Trainium</b> &mdash; AWS's custom AI accelerator, now used heavily for inference as well as training.</div><div><b>Graviton</b> &mdash; AWS's ARM-based server CPU, pitched as 20% cheaper with 20% better performance.</div><div><b>Firecracker</b> &mdash; AWS's lightweight microVM tech, used by many agent-sandbox startups for fast spin-up and a strong security boundary.</div><div><b>Forward-deployed engineer (FDE)</b> &mdash; A vendor engineer embedded with a customer to build a first agent system and transfer the skills.</div><div><b>Neocloud</b> &mdash; A GPU-focused cloud provider outside the big three, often with high customer concentration.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
