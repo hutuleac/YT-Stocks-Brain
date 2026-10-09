@@ -1,0 +1,302 @@
+{
+ "schema_version": 2,
+ "meta": {
+  "title": "What AI Agents Need to Actually Work | The Next Endeavor 2026",
+  "channel": "Imagination in Action",
+  "speakers": "Liran Zvibel (WEKA), Satyen Sangani (Alation), Melissa Valentine (Stanford), plus an unnamed moderator",
+  "date": "2026-10-08",
+  "video_url": "https://www.youtube.com/watch?v=q2Pf55MsOSw",
+  "thread_line": "4 threads · evals as the bottom layer · catalogs and who owns meaning · storage after the warehouse · agent-first adoption and security",
+  "category": "dev",
+  "region": ""
+ },
+ "snapshot": [
+  "Panel on the unglamorous layer under enterprise agents: evals, data catalogs, storage and ownership.",
+  "Consensus: **evals** are the hardest and most under-estimated part; agents checking agents still bottom out in human-built ground truth.",
+  "Production agents drift: data schemas, business rules and tool versions all change after launch, so every fix raises a knowledge-management question.",
+  "A catalog is an inventory of what *is*; agents need what *ought to be*, defined per use case, with owners from technical, functional and content roles.",
+  "Storage view: warehouses and SQL were built for humans; two panelists expect a return to a data lake with vector plus graph on top, but nobody claims a settled answer.",
+  "Agent-first design and in-house inference are driven by access control: each user's credentials must follow every nested agent call.",
+  "A bank case study reached about 99% agentic resolution and now struggles with the 1% of edge cases and with organizational trust."
+ ],
+ "themes": [
+  {
+   "id": "evals-turtles",
+   "tags": [
+    "ai-infra",
+    "software"
+   ],
+   "color": "green",
+   "badge": "Recommendation",
+   "status": "PANEL CONSENSUS",
+   "title": "Evals are the bottom turtle, and drift keeps breaking them",
+   "lead": "Loops of agents checking agents still rest on verified, human-created eval data, and that layer is the hardest to build.",
+   "bullets": [
+    "Valentine's answer to what firms underestimate was \"hands down evals\": defining success well enough to create ground truth is tedious and people hate doing it.",
+    "She borrowed the phrase \"turtles all the way down\" from an Arize developer: loops upon loops of agents, with evals at the bottom.",
+    "Sangani: stochastic apps *drift*. Data schemas, context, business rules and tool versions change, so a failing eval forces a triage between knowledge base, data quality, access or prompt.",
+    "Each fix raises a scope question: is the corrected truth global or true only for this use case, and which container holds it.",
+    "Zvibel: a year ago the obsession was hallucination; with reasoning models and good starting context it rarely appears now.",
+    "The new failure is nested agents answering from different understandings of context; each step is logical but the end result looks ridiculous to a human, so verify what every stage feeds the next."
+   ],
+   "quote": {
+    "text": "At the bottom of all of those loops of agents checking agents checking agents is you have to have a really nice layer of verified, typically human created data of evals.",
+    "cite": "— Melissa Valentine"
+   },
+   "watch": null,
+   "names": [
+    {
+     "name": "Arize",
+     "blurb": "Startup whose developer coined the 'turtles all the way down' eval framing; named as an example by Valentine",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "catalog-context-ownership",
+   "tags": [
+    "software",
+    "career"
+   ],
+   "color": "amber",
+   "badge": "Structural critique",
+   "status": "OPEN ORG QUESTION",
+   "title": "A catalog is a map of what is, and ownership spans three roles",
+   "lead": "Agent-ready context is defined by the use case and the eval, and owned jointly by technical, functional and content people.",
+   "bullets": [
+    "Sangani: a catalog describes what *is*; a messy catalog is a map of messy data, and agents need what *ought to be*.",
+    "Building \"context\" in isolation is the wrong target; you cannot know when you are done without a defined use case and eval.",
+    "Ownership in an agentic world needs a technical individual, a functional individual and a content owner: three people or thirty.",
+    "Zvibel: no enterprise project is truly AI-first since the mess predates agents; the realistic move is to modernize the data, with flash instead of hard drives for low latency.",
+    "Valentine's 2021 course research found the data-scientist and domain-expert relationship was the top predictor of effective ML; she now sees forward-deployed engineers filling that role for GenAI.",
+    "Her bank site hit about 99% agentic resolution; the workforce lacks expertise for the gnarly 1% and the bank is stuck on building trust across legal, HR and compliance to launch new use cases faster."
+   ],
+   "quote": null,
+   "watch": "Sangani sells a data catalog and Zvibel sells storage, so both are describing the layer their own products occupy.",
+   "names": [
+    {
+     "name": "Alation",
+     "blurb": "Data catalog pioneer (founded 2012); Sangani's company",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "storage-after-warehouse",
+   "tags": [
+    "ai-infra",
+    "software"
+   ],
+   "color": "gray",
+   "badge": "Speculative",
+   "status": "NOT SETTLED",
+   "title": "Storage after the warehouse: data lake, vector and graph",
+   "lead": "SQL and warehouses were designed for humans; panelists lean toward a lake with semantic search on top but admit the end state is unclear.",
+   "bullets": [
+    "Sangani: religion about one architecture is damaging; he cited Iceberg table formats decoupling compute from storage and prefers \"different horses for different courses\".",
+    "Alation is releasing an ontology product built with agents; the promise is that users just declare intent and things happen.",
+    "Zvibel: SQL lets smart humans translate wishes into what a schema supports; he has a strong hunch that is not the AI-native way, and models hold far more context than one person.",
+    "His prediction: the industry returns toward a data lake on a vector store, with a small agent massaging the prompt and distilling results, though he has no \"silver bullet\" yet.",
+    "Q&A: a former JPMorgan data lead (now running a financial AI-workforce startup) suggested everything ends in a file system with vector search, citing LanceDB; Zvibel agreed storage ends up closer to a file system with semantic search, plus a graph.",
+    "The audience also raised temporal drift: an agent asked about yesterday at 10:00 must know that day's truth, not today's."
+   ],
+   "quote": null,
+   "watch": "Zvibel says the situation hasn't stabilized and he hasn't seen the end result; this is a hunch, not a finding.",
+   "names": [
+    {
+     "name": "WEKA",
+     "blurb": "Storage vendor; Zvibel's company, supplying dense, low-latency file storage to GPU clouds",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "agent-first-adoption",
+   "tags": [
+    "ai-infra",
+    "dev-workflow"
+   ],
+   "color": "green",
+   "badge": "Personal story",
+   "status": "OPERATOR ACCOUNTS",
+   "title": "Agent-first companies and why security pulls inference in-house",
+   "lead": "Both vendors rebuilt themselves around agents, and credential propagation is pushing large enterprises to run their own stack.",
+   "bullets": [
+    "WEKA started 13 years ago building a low-latency file system; early big customers in 2017 were GPU users, and the GPT moment turned a detour into the core business.",
+    "Zvibel: engineers used coding agents for a year-plus, then after a December-January inflection the whole company moved to AI; systems without an MCP get one built in-house.",
+    "WEKA embeds the equivalent of forward-deployed engineers; HR, finance and go-to-market now run hundreds of dashboards, agents and automated processes.",
+    "For sensitive data WEKA moved to its own GPUs, inference and internal MCPs, which controls who sees what and lets them open everything to AI.",
+    "Sangani: every data read or write will be intermediated by an agent, so Alation designed for agents first two years ago and bought Numbers Station, a Stanford-PhD team applying transformers to structured data.",
+    "Zvibel: user A's and user B's credentials must follow the whole nested agent chain, and a blanket-access API call to a cloud model doesn't work; this pushes large enterprises to bring infrastructure in-house."
+   ],
+   "quote": null,
+   "watch": "Both operator accounts come from vendors selling into this market.",
+   "names": [
+    {
+     "name": "Numbers Station",
+     "blurb": "Stanford-PhD startup applying transformer models to structured data; acquired by Alation",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Nvidia (NVDA)",
+     "blurb": "Sells GPU clouds; brings WEKA in as storage partner",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Anthropic",
+     "blurb": "Zvibel said some WEKA systems connect to Claude, with less control over data",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  }
+ ],
+ "takeaways": [
+  {
+   "icon": "🎯",
+   "tag": "Evals",
+   "title": "Budget for human-built eval data first; treat agent-checks-agent loops as a layer on top of it."
+  },
+  {
+   "icon": "🔄",
+   "tag": "Operations",
+   "title": "Plan for drift: schemas, rules and tool versions change, so every failed eval needs a triage path to the right fix."
+  },
+  {
+   "icon": "🧭",
+   "tag": "Data",
+   "title": "Define context per use case and eval, not as a standalone catalog project."
+  },
+  {
+   "icon": "👥",
+   "tag": "Org",
+   "title": "Pair a technical owner, a functional owner and a content owner on every agentic process."
+  },
+  {
+   "icon": "🔒",
+   "tag": "Security",
+   "title": "Check that each user's credentials follow every nested agent call before opening data to agents."
+  },
+  {
+   "icon": "💾",
+   "tag": "Infra",
+   "title": "Stay architecture-agnostic on warehouse, lake, vector and graph; fit storage to the use case."
+  }
+ ],
+ "hot_takes": [
+  {
+   "take": "It's actually so... hands down evals.",
+   "cite": "— Melissa Valentine",
+   "why": "names evals the most underestimated factor"
+  },
+  {
+   "take": "A warehouse or any SQL database is something that was created for humans... we have a strong hunch that this is not the AI native way to hold data for the models.",
+   "cite": "— Liran Zvibel",
+   "why": "challenges SQL/warehouse model"
+  },
+  {
+   "take": "I think the end is going to be a lot closer to going back to a data lake.",
+   "cite": "— Liran Zvibel",
+   "why": "architecture prediction"
+  },
+  {
+   "take": "Context in isolation is sort of a silly thing to go after, because how do you even know you're done?",
+   "cite": "— Satyen Sangani",
+   "why": "dismisses standalone context-building"
+  },
+  {
+   "take": "I wouldn't call any of these projects AI-first, because the mess was created for a long, long time.",
+   "cite": "— Liran Zvibel",
+   "why": "pushes back on AI-first framing"
+  }
+ ],
+ "claims": [
+  {
+   "who": "Liran Zvibel",
+   "claim": "Enterprise data storage returns toward a data lake on a vector store, with agents doing the semantic work.",
+   "metric": "enterprise data architecture",
+   "target": "data lake plus vector store (and graph)",
+   "by": null,
+   "condition": null,
+   "entity": "WEKA"
+  },
+  {
+   "who": "Satyen Sangani",
+   "claim": "Every data transaction, reading or writing, will be intermediated by an agent.",
+   "metric": "agent-intermediated data transactions",
+   "target": "all",
+   "by": null,
+   "condition": null,
+   "entity": "Alation"
+  }
+ ],
+ "relations": [
+  {
+   "from": "Alation",
+   "rel": "acquires",
+   "to": "Numbers Station",
+   "note": "Stanford-PhD team working on transformers for structured data"
+  },
+  {
+   "from": "WEKA",
+   "rel": "partners_with",
+   "to": "Nvidia (NVDA)",
+   "note": "storage partner when Nvidia sells large GPU clouds"
+  },
+  {
+   "from": "WEKA",
+   "rel": "customer_of",
+   "to": "Anthropic",
+   "note": "some systems connect to Claude; sensitive data moved to own inference"
+  }
+ ],
+ "other_news": [
+  {
+   "icon": "📚",
+   "title": "Sources referenced: an Arize YouTube video (eval 'turtles' quote), Valentine's 2021 Stanford class 'Managing Data Science Organizations', and LanceDB (audience question).",
+   "tag": "Sources"
+  },
+  {
+   "icon": "🧪",
+   "title": "Valentine runs embedded research sites with PhD students, watching how AI is implemented inside companies and with what impact.",
+   "tag": "Research"
+  }
+ ],
+ "glossary": [
+  {
+   "term": "Evals",
+   "def": "Verified, typically human-created test data that defines what a correct agent output looks like."
+  },
+  {
+   "term": "Drift",
+   "def": "Gradual change in data schemas, business rules, context or tool versions that breaks a previously working stochastic app."
+  },
+  {
+   "term": "Data catalog",
+   "def": "A company-internal 'Wikipedia for data': an inventory describing the data an organization has."
+  },
+  {
+   "term": "Forward-deployed engineer (FDE)",
+   "def": "A technical builder embedded with domain experts to gain enough business context to build a working system."
+  },
+  {
+   "term": "Iceberg table formats",
+   "def": "Open table format that separates compute from storage, giving companies flexibility and sovereignty."
+  },
+  {
+   "term": "MCP",
+   "def": "Model Context Protocol, the connector standard that lets agents reach internal systems."
+  }
+ ]
+}
