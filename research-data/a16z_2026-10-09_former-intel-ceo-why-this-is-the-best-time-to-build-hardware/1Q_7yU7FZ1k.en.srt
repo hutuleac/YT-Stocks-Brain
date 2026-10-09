@@ -1,0 +1,6255 @@
+1
+00:00:00,080 --> 00:00:05,919
+In a AI digital age, energy capacity
+
+2
+00:00:03,839 --> 00:00:08,800
+equals economic capacity. Why build a
+
+3
+00:00:05,919 --> 00:00:10,480
+new data center and buy the million GPUs
+
+4
+00:00:08,800 --> 00:00:13,120
+if I can't power them? You're going to
+
+5
+00:00:10,480 --> 00:00:15,280
+see more and more defaults happening on
+
+6
+00:00:13,119 --> 00:00:16,559
+many of those data center projects cuz
+
+7
+00:00:15,279 --> 00:00:18,640
+the energy won't be there.
+
+8
+00:00:16,559 --> 00:00:19,919
+>> Whenever you have the technology to make
+
+9
+00:00:18,640 --> 00:00:21,600
+something easy, that means the
+
+10
+00:00:19,920 --> 00:00:23,359
+bottleneck moves somewhere else.
+
+11
+00:00:21,600 --> 00:00:24,880
+>> Nothing's a chip anymore. It's a rack.
+
+12
+00:00:23,359 --> 00:00:26,800
+It took me 3 months to design it, but
+
+13
+00:00:24,879 --> 00:00:28,879
+it's 9 months until I can actually start
+
+14
+00:00:26,800 --> 00:00:30,480
+to use it. Exactly. How many major new
+
+15
+00:00:28,879 --> 00:00:31,518
+memories have we had over the last 30
+
+16
+00:00:30,480 --> 00:00:31,920
+years?
+
+17
+00:00:31,518 --> 00:00:32,558
+>> Zero.
+
+18
+00:00:31,920 --> 00:00:34,559
+>> Zero.
+
+19
+00:00:32,558 --> 00:00:37,039
+>> Memory innovation for the first time in
+
+20
+00:00:34,558 --> 00:00:39,280
+30 years is nigh upon us. I declared the
+
+21
+00:00:37,039 --> 00:00:40,960
+death of copper about 25 years ago.
+
+22
+00:00:39,280 --> 00:00:43,280
+Eventually, I'll be right for all of us
+
+23
+00:00:40,960 --> 00:00:45,679
+hardware guys. This is like renaissance
+
+24
+00:00:43,280 --> 00:00:47,200
+in front of us. AI inference accelerator
+
+25
+00:00:45,679 --> 00:00:48,960
+chips. And I'm sure I don't even know
+
+26
+00:00:47,200 --> 00:00:49,600
+them all. Why are you guys funding so
+
+27
+00:00:48,960 --> 00:00:52,079
+many of those?
+
+28
+00:00:49,600 --> 00:00:53,840
+>> You funded your fair share, too.
+
+29
+00:00:52,079 --> 00:00:55,600
+>> Historically, there have not been a 100
+
+30
+00:00:53,840 --> 00:00:57,440
+competing processor vendors in any
+
+31
+00:00:55,600 --> 00:00:59,520
+industry ever. This is a temporary
+
+32
+00:00:57,439 --> 00:01:02,718
+thing. It'll converge back to a view.
+
+33
+00:00:59,520 --> 00:01:05,760
+>> I see it as a
+
+34
+00:01:02,719 --> 00:01:08,879
+>> I'm here with uh our esteemed guest and
+
+35
+00:01:05,760 --> 00:01:12,159
+dear friend and former boss, Mr. Pat
+
+36
+00:01:08,879 --> 00:01:16,000
+Gellinger. Welcome Pat. Pat is currently
+
+37
+00:01:12,159 --> 00:01:19,920
+the general partner at uh at Playground
+
+38
+00:01:16,000 --> 00:01:22,319
+Global, but uh as uh you're very very
+
+39
+00:01:19,920 --> 00:01:25,118
+well known in the industry for leading
+
+40
+00:01:22,319 --> 00:01:26,879
+Intel, for being the CTO of Intel, of
+
+41
+00:01:25,118 --> 00:01:27,599
+course, leading VMware and many other
+
+42
+00:01:26,879 --> 00:01:28,560
+things.
+
+43
+00:01:27,599 --> 00:01:30,239
+>> So, welcome.
+
+44
+00:01:28,560 --> 00:01:32,240
+>> Hey, thank you, Rayu. Great to be with
+
+45
+00:01:30,239 --> 00:01:33,920
+you and Guido, right? And to me, this
+
+46
+00:01:32,239 --> 00:01:35,280
+feels just a little bit like old home,
+
+47
+00:01:33,920 --> 00:01:37,200
+right? You know, it's like, you know,
+
+48
+00:01:35,280 --> 00:01:39,920
+you know, it was like uh we superimposed
+
+49
+00:01:37,200 --> 00:01:42,400
+a year of change, right? But uh you both
+
+50
+00:01:39,920 --> 00:01:43,280
+look the same. I feel uh energetic. So
+
+51
+00:01:42,400 --> 00:01:44,478
+let's dive in.
+
+52
+00:01:43,280 --> 00:01:46,960
+>> There has never been a day when you
+
+53
+00:01:44,478 --> 00:01:49,759
+stopped being energetic. So there no
+
+54
+00:01:46,959 --> 00:01:53,199
+news there. Uh but yeah. No, let's start
+
+55
+00:01:49,759 --> 00:01:57,359
+actually from uh from your Intel career,
+
+56
+00:01:53,200 --> 00:01:59,600
+right? I mean recently Andre Horovitz
+
+57
+00:01:57,359 --> 00:02:00,718
+created this Horowitz and recreent
+
+58
+00:01:59,599 --> 00:02:02,399
+academy
+
+59
+00:02:00,718 --> 00:02:06,478
+>> which was to find talented people
+
+60
+00:02:02,399 --> 00:02:10,719
+between 16 and 22 and then put them into
+
+61
+00:02:06,478 --> 00:02:13,120
+a a modern educational setting so they'd
+
+62
+00:02:10,719 --> 00:02:14,878
+be well prepared for either doing things
+
+63
+00:02:13,120 --> 00:02:18,159
+on their own or joining the companies of
+
+64
+00:02:14,878 --> 00:02:19,919
+today. You had a similar experience like
+
+65
+00:02:18,159 --> 00:02:21,280
+you went to a regular trade school and
+
+66
+00:02:19,919 --> 00:02:23,519
+then jumped into Intel.
+
+67
+00:02:21,280 --> 00:02:24,318
+>> Yeah. Yeah. When we were what 18 or 19
+
+68
+00:02:23,520 --> 00:02:26,000
+is
+
+69
+00:02:24,318 --> 00:02:28,479
+>> Yeah. Uh, you know, it was really a sort
+
+70
+00:02:26,000 --> 00:02:30,239
+of magical period. You know, I'm 16
+
+71
+00:02:28,479 --> 00:02:32,878
+years old. I accidentally win a
+
+72
+00:02:30,239 --> 00:02:34,480
+scholarship. I go to tech school, right?
+
+73
+00:02:32,878 --> 00:02:36,399
+Skipped my last year and a half of high
+
+74
+00:02:34,479 --> 00:02:39,119
+school and Intel comes recruiting when
+
+75
+00:02:36,400 --> 00:02:41,280
+I'm 18 years old. And, uh, you know, I
+
+76
+00:02:39,120 --> 00:02:43,120
+never been on an airplane. Uh, had
+
+77
+00:02:41,280 --> 00:02:45,680
+already fallen in love with computers at
+
+78
+00:02:43,120 --> 00:02:47,599
+tech school. And, uh, the interviewer,
+
+79
+00:02:45,680 --> 00:02:49,840
+right, Ron Smith was his name. He writes
+
+80
+00:02:47,598 --> 00:02:51,679
+on his page. And I was number 12 that he
+
+81
+00:02:49,840 --> 00:02:53,280
+interviewed that day. And if you've
+
+82
+00:02:51,680 --> 00:02:54,959
+interviewed 12 people in a row, you
+
+83
+00:02:53,280 --> 00:02:56,560
+can't tell male from female, you know,
+
+84
+00:02:54,959 --> 00:02:58,878
+by the end of it, right? You know, I'm
+
+85
+00:02:56,560 --> 00:03:01,680
+number 12. He says, "Smart, aggressive,
+
+86
+00:02:58,878 --> 00:03:04,399
+arrogant. He'll fit right in." So, I got
+
+87
+00:03:01,680 --> 00:03:06,800
+invited to go, you know, come to uh
+
+88
+00:03:04,400 --> 00:03:09,599
+Intel and, you know, just became uh, you
+
+89
+00:03:06,800 --> 00:03:11,840
+know, really uh glorious. uh you know
+
+90
+00:03:09,598 --> 00:03:14,719
+starting as a technician moved into the
+
+91
+00:03:11,840 --> 00:03:18,080
+design team at the end of the 286 you
+
+92
+00:03:14,719 --> 00:03:21,120
+know engineer number four on the 386 you
+
+93
+00:03:18,080 --> 00:03:23,760
+know uh architect and design manager for
+
+94
+00:03:21,120 --> 00:03:27,039
+the 486 all of that while doing my
+
+95
+00:03:23,759 --> 00:03:29,679
+master my bachelor's my masters and PhD
+
+96
+00:03:27,039 --> 00:03:31,359
+work so it was like the the the best
+
+97
+00:03:29,680 --> 00:03:33,599
+career that you could possibly have
+
+98
+00:03:31,360 --> 00:03:35,200
+you're learning by you know day and
+
+99
+00:03:33,598 --> 00:03:35,518
+you're putting it to practice at night
+
+100
+00:03:35,199 --> 00:03:36,798
+and
+
+101
+00:03:35,519 --> 00:03:39,519
+>> that's right that's right you're
+
+102
+00:03:36,799 --> 00:03:43,439
+creating new completely new era of chips
+
+103
+00:03:39,519 --> 00:03:45,680
+for I bet most of what you learned
+
+104
+00:03:43,439 --> 00:03:47,359
+and what you built there was a big gap
+
+105
+00:03:45,680 --> 00:03:49,680
+because you're breaking new ground.
+
+106
+00:03:47,360 --> 00:03:51,760
+>> Yeah. In a lot of ways and uh you know
+
+107
+00:03:49,680 --> 00:03:53,920
+really was a pretty incredible time in
+
+108
+00:03:51,759 --> 00:03:56,639
+the industry and I remember you know one
+
+109
+00:03:53,919 --> 00:03:59,199
+of the professor classes uh you know he
+
+110
+00:03:56,639 --> 00:04:01,518
+uh postulated a new carry look ahead
+
+111
+00:03:59,199 --> 00:04:03,359
+adder design right in one of my classes
+
+112
+00:04:01,519 --> 00:04:05,920
+at Stanford. So I said well I'm working
+
+113
+00:04:03,360 --> 00:04:08,239
+on the 386 carry look ahead adder so let
+
+114
+00:04:05,919 --> 00:04:09,919
+me go try it. So I come back two days
+
+115
+00:04:08,239 --> 00:04:11,840
+later to the professor and I said it
+
+116
+00:04:09,919 --> 00:04:13,919
+doesn't work right and I started
+
+117
+00:04:11,840 --> 00:04:15,519
+argument with my you know professor at
+
+118
+00:04:13,919 --> 00:04:17,039
+Stanford and it was like you know it was
+
+119
+00:04:15,519 --> 00:04:18,639
+like what you know the next two class
+
+120
+00:04:17,040 --> 00:04:21,439
+periods were just me and the professor
+
+121
+00:04:18,639 --> 00:04:22,960
+arguing over why his design didn't work.
+
+122
+00:04:21,439 --> 00:04:24,800
+>> He had a book that was being published
+
+123
+00:04:22,959 --> 00:04:26,478
+what that design is. So he was he was
+
+124
+00:04:24,800 --> 00:04:27,360
+very annoying. It was very time
+
+125
+00:04:26,478 --> 00:04:29,039
+sensitive for him
+
+126
+00:04:27,360 --> 00:04:32,000
+>> and you know we started builtin self
+
+127
+00:04:29,040 --> 00:04:34,400
+test right you know and I remember Ed
+
+128
+00:04:32,000 --> 00:04:36,399
+McCcluskey at Stanford was my professor
+
+129
+00:04:34,399 --> 00:04:38,478
+and he was sort of the father of that
+
+130
+00:04:36,399 --> 00:04:40,560
+and we you know had wonderful arguments
+
+131
+00:04:38,478 --> 00:04:42,319
+around why most of his ideas were bad
+
+132
+00:04:40,560 --> 00:04:43,918
+they weren't practical for real chips
+
+133
+00:04:42,319 --> 00:04:46,639
+but I was putting you know builtin self
+
+134
+00:04:43,918 --> 00:04:48,799
+test to work on the 36 you know John
+
+135
+00:04:46,639 --> 00:04:51,840
+Hennessy uh you know was my thesis
+
+136
+00:04:48,800 --> 00:04:53,280
+advisor and obviously he did okay I say
+
+137
+00:04:51,839 --> 00:04:55,039
+you know I helped his career he became
+
+138
+00:04:53,279 --> 00:04:56,079
+president and he's done okay since then
+
+139
+00:04:55,040 --> 00:04:57,919
+Yeah. Yeah. Yeah.
+
+140
+00:04:56,079 --> 00:04:59,839
+>> Later on we'll talk about the CIS versus
+
+141
+00:04:57,918 --> 00:05:02,000
+risk debate, but I want to talk about
+
+142
+00:04:59,839 --> 00:05:03,519
+the 486. Sorry. Go ahead.
+
+143
+00:05:02,000 --> 00:05:05,120
+>> I had the same experience when I was
+
+144
+00:05:03,519 --> 00:05:06,799
+teaching at Stanford. You know, you you
+
+145
+00:05:05,120 --> 00:05:08,720
+come with something that you think is
+
+146
+00:05:06,800 --> 00:05:10,319
+the truth and then the student comes
+
+147
+00:05:08,720 --> 00:05:13,440
+that works in industry is like, well,
+
+148
+00:05:10,319 --> 00:05:14,800
+actually not quite. So, you know, the
+
+149
+00:05:13,439 --> 00:05:17,038
+next lecture you come back with like,
+
+150
+00:05:14,800 --> 00:05:18,800
+okay, uh, I looked this up. You're
+
+151
+00:05:17,038 --> 00:05:19,360
+right. You know, this is this is
+
+152
+00:05:18,800 --> 00:05:20,240
+outdated.
+
+153
+00:05:19,360 --> 00:05:21,680
+>> Yeah. And I tell you, you know, that's
+
+154
+00:05:20,240 --> 00:05:23,199
+part of the set of students. Yeah. that
+
+155
+00:05:21,680 --> 00:05:25,120
+interaction and I think that's part of
+
+156
+00:05:23,199 --> 00:05:25,439
+what makes Silicon Valley so unique.
+
+157
+00:05:25,120 --> 00:05:26,720
+Yeah.
+
+158
+00:05:25,439 --> 00:05:29,279
+>> Right. You know is you have you know
+
+159
+00:05:26,720 --> 00:05:31,280
+these so many companies and you know
+
+160
+00:05:29,279 --> 00:05:33,279
+entrepreneurship it's like in the water
+
+161
+00:05:31,279 --> 00:05:35,918
+here right you know starting things up
+
+162
+00:05:33,279 --> 00:05:37,519
+and new ideas and challenging the
+
+163
+00:05:35,918 --> 00:05:39,758
+professors and you can't be a professor
+
+164
+00:05:37,519 --> 00:05:41,599
+at a place like Stanford and not expect
+
+165
+00:05:39,759 --> 00:05:42,800
+to get challenged and enjoy it.
+
+166
+00:05:41,600 --> 00:05:44,080
+>> There's a good foot traffic in and out
+
+167
+00:05:42,800 --> 00:05:46,720
+of that ivory tower.
+
+168
+00:05:44,079 --> 00:05:50,560
+>> Yeah I think it's good.
+
+169
+00:05:46,720 --> 00:05:51,280
+>> Yeah. Now 486 was your big
+
+170
+00:05:50,560 --> 00:05:52,800
+>> Yeah.
+
+171
+00:05:51,279 --> 00:05:56,239
+>> accomplishment if you will. Obviously
+
+172
+00:05:52,800 --> 00:05:58,079
+lots of people worked on it. Um
+
+173
+00:05:56,240 --> 00:05:59,759
+and you guys broke some new ground in
+
+174
+00:05:58,079 --> 00:06:00,399
+chip design there, right?
+
+175
+00:05:59,759 --> 00:06:03,199
+>> Mhm.
+
+176
+00:06:00,399 --> 00:06:04,719
+>> And um increased what functions the chip
+
+177
+00:06:03,199 --> 00:06:05,199
+was supposed to do and so on and so
+
+178
+00:06:04,720 --> 00:06:07,759
+forth.
+
+179
+00:06:05,199 --> 00:06:09,919
+>> Yeah. It was a pretty magic period uh as
+
+180
+00:06:07,759 --> 00:06:12,560
+well because it was before what you
+
+181
+00:06:09,918 --> 00:06:14,879
+would think of as the EDA industry.
+
+182
+00:06:12,560 --> 00:06:16,959
+>> Oh wow. Yes, that's right. and uh you
+
+183
+00:06:14,879 --> 00:06:21,439
+know the the end of the a little bit of
+
+184
+00:06:16,959 --> 00:06:23,680
+the 386 but the 486 was really the first
+
+185
+00:06:21,439 --> 00:06:27,120
+chip to implement what what you would
+
+186
+00:06:23,680 --> 00:06:30,000
+think of as modern EDA techniques. Yeah,
+
+187
+00:06:27,120 --> 00:06:32,000
+we did a highle design, right? Uh
+
+188
+00:06:30,000 --> 00:06:33,918
+description and RTL description, but
+
+189
+00:06:32,000 --> 00:06:36,720
+there was no vera log.
+
+190
+00:06:33,918 --> 00:06:38,719
+>> So, we invented HDL, right? The Intel
+
+191
+00:06:36,720 --> 00:06:40,560
+hardware description language. So, you
+
+192
+00:06:38,720 --> 00:06:41,919
+know, I wrote my own language. Well, you
+
+193
+00:06:40,560 --> 00:06:43,918
+had to build a compiler for that
+
+194
+00:06:41,918 --> 00:06:45,599
+language, right? You know, so we created
+
+195
+00:06:43,918 --> 00:06:47,680
+the compiler for the language. There was
+
+196
+00:06:45,600 --> 00:06:49,360
+no automatic place in route, you know.
+
+197
+00:06:47,680 --> 00:06:52,639
+So, we had to invent that. And we worked
+
+198
+00:06:49,360 --> 00:06:54,479
+with Alberto Sanji Yavanji Vincentelli
+
+199
+00:06:52,639 --> 00:06:56,560
+at Berkeley and some of his students for
+
+200
+00:06:54,478 --> 00:06:59,360
+the first you know placement the first
+
+201
+00:06:56,560 --> 00:07:00,639
+routing the first automated timing you
+
+202
+00:06:59,360 --> 00:07:03,439
+know management and
+
+203
+00:07:00,639 --> 00:07:05,759
+>> so they created EDA to some degree. to a
+
+204
+00:07:03,439 --> 00:07:07,439
+great degree that uh you know and that
+
+205
+00:07:05,759 --> 00:07:09,360
+was really one of the hallmarks that not
+
+206
+00:07:07,439 --> 00:07:11,439
+only was the 486 you know this
+
+207
+00:07:09,360 --> 00:07:14,000
+compatible you know pipeline
+
+208
+00:07:11,439 --> 00:07:15,680
+microprocessor but we ushered in you
+
+209
+00:07:14,000 --> 00:07:18,879
+know many of the foundations of what
+
+210
+00:07:15,680 --> 00:07:20,319
+became the modern EDA uh industry and
+
+211
+00:07:18,879 --> 00:07:22,478
+you know it was really you know pretty
+
+212
+00:07:20,319 --> 00:07:25,520
+magical period of the industry.
+
+213
+00:07:22,478 --> 00:07:28,000
+>> Yeah. Yeah. So if you look at today
+
+214
+00:07:25,519 --> 00:07:29,598
+>> Yeah. Will people look back as Blackwell
+
+215
+00:07:28,000 --> 00:07:32,959
+and saying you know this was of the last
+
+216
+00:07:29,598 --> 00:07:34,879
+generation that was was done before AI
+
+217
+00:07:32,959 --> 00:07:37,120
+took over the design process for for
+
+218
+00:07:34,879 --> 00:07:37,680
+micros are we in a similar transition
+
+219
+00:07:37,120 --> 00:07:39,038
+right now
+
+220
+00:07:37,680 --> 00:07:42,478
+>> I think there are certainly aspects of
+
+221
+00:07:39,038 --> 00:07:43,839
+that and uh you know I think you know
+
+222
+00:07:42,478 --> 00:07:46,159
+when you look at you know things like
+
+223
+00:07:43,839 --> 00:07:47,439
+jalapeno today right you sort of say you
+
+224
+00:07:46,160 --> 00:07:50,960
+know that you know that's that's sort of
+
+225
+00:07:47,439 --> 00:07:52,959
+a first principles use of AI in the chip
+
+226
+00:07:50,959 --> 00:07:55,439
+design process right where you throw out
+
+227
+00:07:52,959 --> 00:07:57,359
+a lot of those things now you know un
+
+228
+00:07:55,439 --> 00:08:00,240
+You know there are pieces of design that
+
+229
+00:07:57,360 --> 00:08:02,720
+are still really hard right uh in that
+
+230
+00:08:00,240 --> 00:08:04,560
+sense and a lot of the analog right
+
+231
+00:08:02,720 --> 00:08:06,720
+aspect certis is probably the best
+
+232
+00:08:04,560 --> 00:08:09,280
+example of that you know are still not
+
+233
+00:08:06,720 --> 00:08:11,599
+aiable right you just need lots of
+
+234
+00:08:09,279 --> 00:08:13,279
+silicon data right to get those so you
+
+235
+00:08:11,598 --> 00:08:15,360
+either get so conservative in your
+
+236
+00:08:13,279 --> 00:08:19,439
+analog design you know that you're able
+
+237
+00:08:15,360 --> 00:08:22,080
+to I'll say AI it uh or right you got to
+
+238
+00:08:19,439 --> 00:08:24,399
+do those the hard way uh you know for
+
+239
+00:08:22,079 --> 00:08:27,598
+but to now many of the logic functions
+
+240
+00:08:24,399 --> 00:08:30,000
+can really be done with uh AI tools and
+
+241
+00:08:27,598 --> 00:08:31,759
+techniques in pretty incredible ways,
+
+242
+00:08:30,000 --> 00:08:33,278
+right? Your transistor budgets are big
+
+243
+00:08:31,759 --> 00:08:35,360
+enough, the design tools are getting
+
+244
+00:08:33,278 --> 00:08:37,439
+smart enough, you know, a few experts
+
+245
+00:08:35,360 --> 00:08:39,120
+guiding the tools and how to apply it.
+
+246
+00:08:37,440 --> 00:08:41,360
+And I really think it will be somewhat
+
+247
+00:08:39,120 --> 00:08:42,719
+like the 46 that way, right? Where you
+
+248
+00:08:41,360 --> 00:08:45,200
+sort of look back and say, "Yep, that
+
+249
+00:08:42,719 --> 00:08:46,160
+was the beginning of a new era of chip
+
+250
+00:08:45,200 --> 00:08:48,560
+design."
+
+251
+00:08:46,159 --> 00:08:49,838
+>> Whenever you have the technology to make
+
+252
+00:08:48,559 --> 00:08:52,000
+something easy, that means the
+
+253
+00:08:49,839 --> 00:08:54,399
+bottleneck moves somewhere else.
+
+254
+00:08:52,000 --> 00:08:56,559
+>> Yeah. Can we guess at this point where
+
+255
+00:08:54,399 --> 00:08:57,839
+the bottleneck will be in the future?
+
+256
+00:08:56,559 --> 00:08:59,679
+>> There's some things which it seems like
+
+257
+00:08:57,839 --> 00:09:01,519
+AI is incredibly good at, right? Like
+
+258
+00:08:59,679 --> 00:09:03,519
+creating the software layers, you know,
+
+259
+00:09:01,519 --> 00:09:05,679
+writing kernels, um, you know, a lot of
+
+260
+00:09:03,519 --> 00:09:07,679
+the
+
+261
+00:09:05,679 --> 00:09:10,399
+>> I think a lot of the sort of being able
+
+262
+00:09:07,679 --> 00:09:11,919
+to specify the the the objectives at a
+
+263
+00:09:10,399 --> 00:09:14,080
+higher level which then gets sort of
+
+264
+00:09:11,919 --> 00:09:15,599
+translated into very log right and so
+
+265
+00:09:14,080 --> 00:09:17,759
+what is the new frontier? What is the
+
+266
+00:09:15,600 --> 00:09:19,680
+thing that that will be difficult going
+
+267
+00:09:17,759 --> 00:09:21,278
+forward? Well, you know, when you look
+
+268
+00:09:19,679 --> 00:09:23,439
+at today, you know, so let's say, you
+
+269
+00:09:21,278 --> 00:09:25,679
+know, Guido and Pat, we're off to do a
+
+270
+00:09:23,440 --> 00:09:26,880
+great new chip together. We're building,
+
+271
+00:09:25,679 --> 00:09:28,479
+>> right? You know, right? You know, and
+
+272
+00:09:26,879 --> 00:09:32,958
+it's the one that's going to leap ahead
+
+273
+00:09:28,480 --> 00:09:34,320
+because we have understanding of 8646,
+
+274
+00:09:32,958 --> 00:09:36,319
+>> you know, we have understanding of the
+
+275
+00:09:34,320 --> 00:09:38,160
+AI workloads. We have understanding then
+
+276
+00:09:36,320 --> 00:09:40,640
+of how to compose that into the right,
+
+277
+00:09:38,159 --> 00:09:41,120
+multiply, accumulate, you know, register
+
+278
+00:09:40,639 --> 00:09:42,879
+structures,
+
+279
+00:09:41,120 --> 00:09:44,000
+>> the perfect visibility model workloads
+
+280
+00:09:42,879 --> 00:09:46,000
+of tomorrow as well,
+
+281
+00:09:44,000 --> 00:09:47,759
+>> you know, and all of that kind of stuff.
+
+282
+00:09:46,000 --> 00:09:50,559
+And you know let's say you know we turn
+
+283
+00:09:47,759 --> 00:09:53,200
+our AI you know tools loose we are great
+
+284
+00:09:50,559 --> 00:09:56,239
+within three months we have an awesome
+
+285
+00:09:53,200 --> 00:09:57,920
+design right you know you know for that
+
+286
+00:09:56,240 --> 00:10:00,240
+we've been a little bit conservative on
+
+287
+00:09:57,919 --> 00:10:02,559
+all the analog components of it
+
+288
+00:10:00,240 --> 00:10:05,200
+>> you know now we still have like a couple
+
+289
+00:10:02,559 --> 00:10:07,199
+of really major bottlenecks today you
+
+290
+00:10:05,200 --> 00:10:10,160
+know one is right we still have nine
+
+291
+00:10:07,200 --> 00:10:11,680
+months of silicon processing time
+
+292
+00:10:10,159 --> 00:10:13,278
+>> right you know someone like that right
+
+293
+00:10:11,679 --> 00:10:15,039
+so I can design the thing in three
+
+294
+00:10:13,278 --> 00:10:17,360
+months but I can't actually get it into
+
+295
+00:10:15,039 --> 00:10:19,599
+real silicon at scale for 9 months.
+
+296
+00:10:17,360 --> 00:10:21,839
+Okay, that sucks, right? So, we have to
+
+297
+00:10:19,600 --> 00:10:23,120
+really see that bottleneck improve if
+
+298
+00:10:21,839 --> 00:10:23,920
+we're going to have this innovation
+
+299
+00:10:23,120 --> 00:10:26,000
+because we know that
+
+300
+00:10:23,919 --> 00:10:27,679
+>> about the validation verification stages
+
+301
+00:10:26,000 --> 00:10:29,759
+or even beyond that. Well, you know,
+
+302
+00:10:27,679 --> 00:10:31,199
+first I can't get anything out of fab.
+
+303
+00:10:29,759 --> 00:10:32,720
+Yeah. You know, in less than three
+
+304
+00:10:31,200 --> 00:10:35,040
+months and that's if I have, you know,
+
+305
+00:10:32,720 --> 00:10:36,879
+like supercharged design flows, right?
+
+306
+00:10:35,039 --> 00:10:39,519
+So, I said, you know, you know, how do I
+
+307
+00:10:36,879 --> 00:10:41,278
+compress that, right? Uh, you know, for
+
+308
+00:10:39,519 --> 00:10:43,120
+it and then I got to get into advanced
+
+309
+00:10:41,278 --> 00:10:44,639
+packages. 3D packages are getting
+
+310
+00:10:43,120 --> 00:10:46,480
+complex. So, that's like another three
+
+311
+00:10:44,639 --> 00:10:48,399
+months, right? You know, and then I have
+
+312
+00:10:46,480 --> 00:10:50,240
+to put it into a rack scale solution
+
+313
+00:10:48,399 --> 00:10:52,480
+because nothing's a chip anymore. It's a
+
+314
+00:10:50,240 --> 00:10:53,919
+rack, you know. So we're 9 months, you
+
+315
+00:10:52,480 --> 00:10:55,278
+know, it took me 3 months to design it,
+
+316
+00:10:53,919 --> 00:10:57,439
+but it's nine months until I can
+
+317
+00:10:55,278 --> 00:10:59,759
+actually start to use it, you know. So
+
+318
+00:10:57,440 --> 00:11:01,760
+how do we start to compress, you know,
+
+319
+00:10:59,759 --> 00:11:03,838
+those aspects of design? And I think we
+
+320
+00:11:01,759 --> 00:11:06,078
+need new forms of lithography, you know,
+
+321
+00:11:03,839 --> 00:11:08,000
+to enable that. We need, you know,
+
+322
+00:11:06,078 --> 00:11:10,639
+design flows that don't require, you
+
+323
+00:11:08,000 --> 00:11:12,720
+know, $50 million of mass cost until I
+
+324
+00:11:10,639 --> 00:11:14,799
+can get things into prototyping. So you
+
+325
+00:11:12,720 --> 00:11:16,959
+know, to me, how do you compress that to
+
+326
+00:11:14,799 --> 00:11:19,199
+a month or two, right? Because I can now
+
+327
+00:11:16,958 --> 00:11:20,799
+do the design in three months. How can I
+
+328
+00:11:19,200 --> 00:11:22,879
+have that done in a month or two?
+
+329
+00:11:20,799 --> 00:11:24,879
+Because if it takes me a year and a half
+
+330
+00:11:22,879 --> 00:11:25,600
+until I actually get scale and software
+
+331
+00:11:24,879 --> 00:11:27,679
+on it,
+
+332
+00:11:25,600 --> 00:11:30,079
+>> okay, my understanding of the AI
+
+333
+00:11:27,679 --> 00:11:31,519
+workloads is no longer applicable to the
+
+334
+00:11:30,078 --> 00:11:33,199
+chip that I designed.
+
+335
+00:11:31,519 --> 00:11:33,360
+>> Right. You know, so you know, all of
+
+336
+00:11:33,200 --> 00:11:35,440
+those
+
+337
+00:11:33,360 --> 00:11:36,480
+>> you see that play out live right now
+
+338
+00:11:35,440 --> 00:11:37,760
+with AI. Yeah.
+
+339
+00:11:36,480 --> 00:11:38,800
+>> Right. You said, you know, it's almost,
+
+340
+00:11:37,759 --> 00:11:39,919
+you know, we can look at it
+
+341
+00:11:38,799 --> 00:11:41,679
+historically. It was like, you know,
+
+342
+00:11:39,919 --> 00:11:42,799
+Graph Core wasn't a bad design, but the
+
+343
+00:11:41,679 --> 00:11:46,399
+world moved on,
+
+344
+00:11:42,799 --> 00:11:48,958
+>> right? and you know uh in that. So all
+
+345
+00:11:46,399 --> 00:11:52,000
+of those aspects somewhat obviate the
+
+346
+00:11:48,958 --> 00:11:54,559
+fact that AI has made the design piece
+
+347
+00:11:52,000 --> 00:11:56,720
+easy. All of those manufacturing scale
+
+348
+00:11:54,559 --> 00:11:58,879
+issues to me become a huge bottleneck.
+
+349
+00:11:56,720 --> 00:11:59,519
+Right. Another bottleneck of course is
+
+350
+00:11:58,879 --> 00:12:00,000
+memory.
+
+351
+00:11:59,519 --> 00:12:01,600
+>> Yep.
+
+352
+00:12:00,000 --> 00:12:02,799
+>> Right. You know memory bandwidth
+
+353
+00:12:01,600 --> 00:12:04,720
+>> we noticed. Yeah.
+
+354
+00:12:02,799 --> 00:12:07,278
+>> Right. And you know for that as I've
+
+355
+00:12:04,720 --> 00:12:08,399
+described HBM is a hideous memory. It's
+
+356
+00:12:07,278 --> 00:12:09,600
+just the best one that we
+
+357
+00:12:08,399 --> 00:12:10,879
+>> ask you about that. Yes.
+
+358
+00:12:09,600 --> 00:12:12,800
+>> You know it's a terrible memory. You
+
+359
+00:12:10,879 --> 00:12:15,439
+know I get terrible bit density. I'm
+
+360
+00:12:12,799 --> 00:12:18,479
+limited to shoreline bandwidth the power
+
+361
+00:12:15,440 --> 00:12:20,079
+right uh issues thermal issues DRAM
+
+362
+00:12:18,480 --> 00:12:22,159
+doesn't like to be hot
+
+363
+00:12:20,078 --> 00:12:25,439
+>> concentrating everything in one spot
+
+364
+00:12:22,159 --> 00:12:29,679
+>> you know it's terrible to give
+
+365
+00:12:25,440 --> 00:12:32,399
+>> that AI is a memory compute workload yes
+
+366
+00:12:29,679 --> 00:12:34,159
+>> right so right you know for that so I
+
+367
+00:12:32,399 --> 00:12:37,679
+you know I need to you know compress
+
+368
+00:12:34,159 --> 00:12:40,719
+that development uh and embodiment into
+
+369
+00:12:37,679 --> 00:12:42,958
+real scale you know I need to fix memory
+
+370
+00:12:40,720 --> 00:12:44,879
+>> right uh associated with So to me that's
+
+371
+00:12:42,958 --> 00:12:48,000
+another critical bottleneck for us to
+
+372
+00:12:44,879 --> 00:12:51,120
+attack. Uh and uh power right you know
+
+373
+00:12:48,000 --> 00:12:53,278
+power in you know thermal uh and most of
+
+374
+00:12:51,120 --> 00:12:54,320
+the power simulation aspects today are
+
+375
+00:12:53,278 --> 00:12:56,240
+bad
+
+376
+00:12:54,320 --> 00:12:58,079
+>> right you know you don't have good 3D
+
+377
+00:12:56,240 --> 00:13:01,120
+modeling tools for power power
+
+378
+00:12:58,078 --> 00:13:03,120
+dissipation hotspots uh etc. you know my
+
+379
+00:13:01,120 --> 00:13:05,440
+voltage in right you know I'm
+
+380
+00:13:03,120 --> 00:13:06,959
+essentially guard banding almost my full
+
+381
+00:13:05,440 --> 00:13:09,920
+power envelope correct
+
+382
+00:13:06,958 --> 00:13:12,479
+>> right so essentially I'm losing you know
+
+383
+00:13:09,919 --> 00:13:14,639
+40% of my power and guard banding so I
+
+384
+00:13:12,480 --> 00:13:16,240
+got to get much better at power modeling
+
+385
+00:13:14,639 --> 00:13:18,879
+you know and then my power dissipation
+
+386
+00:13:16,240 --> 00:13:20,720
+techniques are bad right so you know
+
+387
+00:13:18,879 --> 00:13:22,559
+>> delivery model has to change too
+
+388
+00:13:20,720 --> 00:13:24,560
+>> yeah so all of these things you know to
+
+389
+00:13:22,559 --> 00:13:26,799
+me those are the you know the next big
+
+390
+00:13:24,559 --> 00:13:28,799
+bottlenecks right you know how do I you
+
+391
+00:13:26,799 --> 00:13:30,719
+know improve each one of those and now
+
+392
+00:13:28,799 --> 00:13:32,559
+right you know if I've done that Okay,
+
+393
+00:13:30,720 --> 00:13:34,240
+now we're on to an exciting era for
+
+394
+00:13:32,559 --> 00:13:36,000
+what's next. So, you know, thank you for
+
+395
+00:13:34,240 --> 00:13:38,480
+those great AI tools, but you know, I
+
+396
+00:13:36,000 --> 00:13:39,519
+got big challenges even when those are
+
+397
+00:13:38,480 --> 00:13:42,000
+fully deployed.
+
+398
+00:13:39,519 --> 00:13:44,639
+>> And so,
+
+399
+00:13:42,000 --> 00:13:46,480
+we've seen sort of a rebirth in the
+
+400
+00:13:44,639 --> 00:13:47,600
+number of chips and chip architectures
+
+401
+00:13:46,480 --> 00:13:48,079
+and so on and so forth.
+
+402
+00:13:47,600 --> 00:13:49,759
+>> Yeah.
+
+403
+00:13:48,078 --> 00:13:51,439
+>> Thanks to these workloads.
+
+404
+00:13:49,759 --> 00:13:53,360
+>> Yeah. It's like there's a 100 AI
+
+405
+00:13:51,440 --> 00:13:54,720
+inference accelerator chips and I'm sure
+
+406
+00:13:53,360 --> 00:13:58,480
+I don't even know them all.
+
+407
+00:13:54,720 --> 00:13:59,920
+>> Yeah, exactly. Yeah. So, so
+
+408
+00:13:58,480 --> 00:14:02,720
+>> why are you guys funding so many of
+
+409
+00:13:59,919 --> 00:14:06,078
+those anyway?
+
+410
+00:14:02,720 --> 00:14:10,000
+>> You funded your fair share too.
+
+411
+00:14:06,078 --> 00:14:11,919
+>> Yeah. So, um, so are we, you know,
+
+412
+00:14:10,000 --> 00:14:13,679
+they're all to their credit making
+
+413
+00:14:11,919 --> 00:14:15,838
+different design assumptions either in
+
+414
+00:14:13,679 --> 00:14:16,799
+the components that you talked about or
+
+415
+00:14:15,839 --> 00:14:18,399
+>> in the
+
+416
+00:14:16,799 --> 00:14:20,319
+>> in the part of the para curve that
+
+417
+00:14:18,399 --> 00:14:22,720
+they're targeting. So do you think
+
+418
+00:14:20,320 --> 00:14:25,920
+there's room for all of these or are we
+
+419
+00:14:22,720 --> 00:14:28,879
+in a world where partly because of what
+
+420
+00:14:25,919 --> 00:14:32,078
+Guido talked about AI tooling
+
+421
+00:14:28,879 --> 00:14:33,439
+um we now have the ability to build more
+
+422
+00:14:32,078 --> 00:14:34,319
+different kind of chips.
+
+423
+00:14:33,440 --> 00:14:36,000
+>> Yeah.
+
+424
+00:14:34,320 --> 00:14:38,240
+>> And the time is enormous whichever way
+
+425
+00:14:36,000 --> 00:14:40,000
+you want to even more provocatively
+
+426
+00:14:38,240 --> 00:14:41,919
+historically there have not been a 100
+
+427
+00:14:40,000 --> 00:14:44,240
+competing processor vendors in any
+
+428
+00:14:41,919 --> 00:14:45,919
+industry ever right. So
+
+429
+00:14:44,240 --> 00:14:48,240
+>> is this a more heterogeneous future?
+
+430
+00:14:45,919 --> 00:14:50,078
+Will we see is this a temporary thing?
+
+431
+00:14:48,240 --> 00:14:52,639
+It'll converge back to a view.
+
+432
+00:14:50,078 --> 00:14:54,799
+>> Yeah. And you know, I see it as a more
+
+433
+00:14:52,639 --> 00:14:56,879
+temporary thing and it will converge is
+
+434
+00:14:54,799 --> 00:14:58,639
+is what I expect. And there's probably
+
+435
+00:14:56,879 --> 00:15:01,278
+three different reasons that I see that
+
+436
+00:14:58,639 --> 00:15:04,079
+to be the case. You know, one of them
+
+437
+00:15:01,278 --> 00:15:06,480
+is, you know, this emerging
+
+438
+00:15:04,078 --> 00:15:09,599
+heterogeneity that you see in the
+
+439
+00:15:06,480 --> 00:15:12,399
+compute uh environment where okay, now I
+
+440
+00:15:09,600 --> 00:15:14,000
+have specialized prefill versus decode.
+
+441
+00:15:12,399 --> 00:15:15,278
+Well, you know, and now people are
+
+442
+00:15:14,000 --> 00:15:17,440
+saying, well, we really need a
+
+443
+00:15:15,278 --> 00:15:19,439
+specialized tier for midfill, not just
+
+444
+00:15:17,440 --> 00:15:21,279
+prefill, right? You know, so now I have
+
+445
+00:15:19,440 --> 00:15:22,800
+early prefill and now I have midfill,
+
+446
+00:15:21,278 --> 00:15:25,039
+which is, you know, differential.
+
+447
+00:15:22,799 --> 00:15:26,319
+>> Maybe speculate and verify if we listen
+
+448
+00:15:25,039 --> 00:15:28,240
+to OpenAI here, right?
+
+449
+00:15:26,320 --> 00:15:31,440
+>> Yeah. You know, and you know, all of a
+
+450
+00:15:28,240 --> 00:15:34,560
+sudden my compute fleet becomes more and
+
+451
+00:15:31,440 --> 00:15:36,240
+more granular across the workload. And I
+
+452
+00:15:34,559 --> 00:15:38,559
+think anytime that you've seen that in
+
+453
+00:15:36,240 --> 00:15:41,440
+history is not sustainable. And then all
+
+454
+00:15:38,559 --> 00:15:43,119
+of a sudden right when you know as you
+
+455
+00:15:41,440 --> 00:15:45,120
+look at that and now people are saying
+
+456
+00:15:43,120 --> 00:15:46,560
+well as I go to reasoning models I want
+
+457
+00:15:45,120 --> 00:15:49,120
+something that looks more like a CPU
+
+458
+00:15:46,559 --> 00:15:50,879
+again. So you know all of a sudden I
+
+459
+00:15:49,120 --> 00:15:52,959
+didn't want that level you know that
+
+460
+00:15:50,879 --> 00:15:55,120
+didn't become the predominant portion of
+
+461
+00:15:52,958 --> 00:15:57,758
+my compute capacity. I needed more of it
+
+462
+00:15:55,120 --> 00:16:00,959
+over here, right? and model and model
+
+463
+00:15:57,759 --> 00:16:04,079
+workflows and you know so on you know so
+
+464
+00:16:00,958 --> 00:16:06,799
+I really don't like I'll say at scale
+
+465
+00:16:04,078 --> 00:16:08,399
+specialization right because I think the
+
+466
+00:16:06,799 --> 00:16:10,799
+workloads are going to continue to
+
+467
+00:16:08,399 --> 00:16:13,519
+moderate you know and migrate so
+
+468
+00:16:10,799 --> 00:16:15,039
+significantly first you know second is I
+
+469
+00:16:13,519 --> 00:16:16,799
+think today's models are about to go
+
+470
+00:16:15,039 --> 00:16:19,439
+through some evolutionary breakthroughs
+
+471
+00:16:16,799 --> 00:16:21,679
+as well right you know I think the LLM
+
+472
+00:16:19,440 --> 00:16:23,600
+is sort of reaching the limits and now
+
+473
+00:16:21,679 --> 00:16:26,958
+as people look to how do I really model
+
+474
+00:16:23,600 --> 00:16:29,600
+3D right you know where you a flattish
+
+475
+00:16:26,958 --> 00:16:32,239
+LLM doesn't work well when you go to
+
+476
+00:16:29,600 --> 00:16:33,920
+molecules and chemicals and you know
+
+477
+00:16:32,240 --> 00:16:35,600
+imaging you know so I think we'll see
+
+478
+00:16:33,919 --> 00:16:38,479
+limits of that that'll cause different
+
+479
+00:16:35,600 --> 00:16:40,000
+shifts in the algorithmic domain I also
+
+480
+00:16:38,480 --> 00:16:41,920
+think that uh some of the most
+
+481
+00:16:40,000 --> 00:16:44,159
+interesting workloads become where you
+
+482
+00:16:41,919 --> 00:16:47,120
+start you know I'll say bringing HPC
+
+483
+00:16:44,159 --> 00:16:49,278
+like things back into AI like things
+
+484
+00:16:47,120 --> 00:16:52,078
+where all of a sudden you know 64-bit
+
+485
+00:16:49,278 --> 00:16:52,879
+provision uh precision counts again
+
+486
+00:16:52,078 --> 00:16:54,399
+right so I see
+
+487
+00:16:52,879 --> 00:16:56,720
+>> what would be an example of that
+
+488
+00:16:54,399 --> 00:16:59,759
+>> well you know imagine that my AI model
+
+489
+00:16:56,720 --> 00:17:01,440
+is now inducing the five most
+
+490
+00:16:59,759 --> 00:17:02,959
+interesting domains for a chemical
+
+491
+00:17:01,440 --> 00:17:04,880
+analysis,
+
+492
+00:17:02,958 --> 00:17:06,720
+right? Okay, those chemical algorithms
+
+493
+00:17:04,880 --> 00:17:08,319
+are going to run with high precision,
+
+494
+00:17:06,720 --> 00:17:09,679
+right? You know, when you know which is
+
+495
+00:17:08,318 --> 00:17:12,399
+going to be the dominant piece of the
+
+496
+00:17:09,679 --> 00:17:14,480
+workload, right? Getting to the five
+
+497
+00:17:12,400 --> 00:17:16,559
+algorithms I need to run or running the
+
+498
+00:17:14,480 --> 00:17:19,519
+five algorithms, right, on different
+
+499
+00:17:16,558 --> 00:17:21,759
+chemical or biological systems. So you
+
+500
+00:17:19,519 --> 00:17:23,838
+know I do think that uh you know or as
+
+501
+00:17:21,759 --> 00:17:25,199
+we optimize our AI systems they will
+
+502
+00:17:23,838 --> 00:17:27,279
+lead us back to some of the things that
+
+503
+00:17:25,199 --> 00:17:29,200
+have been more traditional high
+
+504
+00:17:27,279 --> 00:17:32,399
+performance computing. So I see that
+
+505
+00:17:29,200 --> 00:17:34,240
+aspect of workload uh as well. So you
+
+506
+00:17:32,400 --> 00:17:36,400
+know all of that said is you know this
+
+507
+00:17:34,240 --> 00:17:38,558
+extreme specialization to me in the
+
+508
+00:17:36,400 --> 00:17:40,240
+compute architect I I sort of don't like
+
+509
+00:17:38,558 --> 00:17:43,038
+it because I don't think it's going to
+
+510
+00:17:40,240 --> 00:17:45,599
+be what the workloads will look like 2 3
+
+511
+00:17:43,038 --> 00:17:47,919
+four years from now. So that's one
+
+512
+00:17:45,599 --> 00:17:49,678
+reason I don't see all of these AI chips
+
+513
+00:17:47,919 --> 00:17:52,080
+as they get more and more specialized
+
+514
+00:17:49,679 --> 00:17:54,880
+for portions of the compute workload to
+
+515
+00:17:52,079 --> 00:17:56,798
+necessarily be right you know second is
+
+516
+00:17:54,880 --> 00:17:58,480
+right there's like a hundred of them now
+
+517
+00:17:56,798 --> 00:18:00,160
+>> right you know there's multiple optical
+
+518
+00:17:58,480 --> 00:18:01,759
+ones there's probabilistic ones and so
+
+519
+00:18:00,160 --> 00:18:03,519
+on and you know they're not all going to
+
+520
+00:18:01,759 --> 00:18:05,119
+win and they're not all going to win
+
+521
+00:18:03,519 --> 00:18:06,240
+because at the end of the day you have
+
+522
+00:18:05,119 --> 00:18:08,239
+to get scale
+
+523
+00:18:06,240 --> 00:18:09,599
+>> on these things and scale requires you
+
+524
+00:18:08,240 --> 00:18:11,759
+know you have to win you have to get
+
+525
+00:18:09,599 --> 00:18:13,519
+capital you have to get workloads onto
+
+526
+00:18:11,759 --> 00:18:15,200
+it so I think it sort of defies logic
+
+527
+00:18:13,519 --> 00:18:17,440
+that you're going to have a hundred of
+
+528
+00:18:15,200 --> 00:18:20,000
+these things. So I see them you know
+
+529
+00:18:17,440 --> 00:18:22,320
+coming back uh as a results of you know
+
+530
+00:18:20,000 --> 00:18:23,839
+simple you know capital market share
+
+531
+00:18:22,319 --> 00:18:26,159
+etc. you know which are the winning
+
+532
+00:18:23,839 --> 00:18:28,480
+teams you know winning designs winning
+
+533
+00:18:26,160 --> 00:18:31,120
+architecture so I see the workload
+
+534
+00:18:28,480 --> 00:18:33,360
+driving that you know I see the natural
+
+535
+00:18:31,119 --> 00:18:35,439
+you know industry consolidations you
+
+536
+00:18:33,359 --> 00:18:37,678
+know that will occur and then I also
+
+537
+00:18:35,440 --> 00:18:39,120
+expect that the winners will pick some
+
+538
+00:18:37,679 --> 00:18:42,160
+winners
+
+539
+00:18:39,119 --> 00:18:45,839
+>> right you know where you know an open AI
+
+540
+00:18:42,160 --> 00:18:49,279
+an Nvidia anthropic will say I like this
+
+541
+00:18:45,839 --> 00:18:51,918
+one because it isn't just hardware it's
+
+542
+00:18:49,279 --> 00:18:52,960
+how do the hardware and software code
+
+543
+00:18:51,919 --> 00:18:54,799
+evolve Yeah,
+
+544
+00:18:52,960 --> 00:18:56,960
+>> right. You know, for it and I do expect
+
+545
+00:18:54,798 --> 00:18:59,440
+that there's going to be h, you know,
+
+546
+00:18:56,960 --> 00:19:01,919
+here's this 10 I could pick for this. I
+
+547
+00:18:59,440 --> 00:19:03,440
+like that one. And it does require
+
+548
+00:19:01,919 --> 00:19:05,280
+investment in the software and the
+
+549
+00:19:03,440 --> 00:19:07,120
+workload evolution to take advantage of
+
+550
+00:19:05,279 --> 00:19:09,440
+those platforms. So for those three
+
+551
+00:19:07,119 --> 00:19:11,678
+reasons, yeah, we're going to see, you
+
+552
+00:19:09,440 --> 00:19:12,160
+know, a narrowing of the field uh in
+
+553
+00:19:11,679 --> 00:19:14,000
+that sense
+
+554
+00:19:12,160 --> 00:19:14,720
+>> and the deployment complexity as well.
+
+555
+00:19:14,000 --> 00:19:16,640
+Sorry, go ahead.
+
+556
+00:19:14,720 --> 00:19:18,079
+>> I mean, makes total sense and I think I
+
+557
+00:19:16,640 --> 00:19:19,600
+agree in most point. Let me still try to
+
+558
+00:19:18,079 --> 00:19:24,399
+stir a little bit controversy here just
+
+559
+00:19:19,599 --> 00:19:26,159
+to to stirring controversy to you guys
+
+560
+00:19:24,400 --> 00:19:29,120
+have changed it right
+
+561
+00:19:26,160 --> 00:19:31,120
+>> so so obviously 100 companies won't
+
+562
+00:19:29,119 --> 00:19:33,439
+access consolidate right and and
+
+563
+00:19:31,119 --> 00:19:34,798
+completely agree with your argument that
+
+564
+00:19:33,440 --> 00:19:36,798
+at the end of the day the large
+
+565
+00:19:34,798 --> 00:19:38,319
+consumers will pick winners to some some
+
+566
+00:19:36,798 --> 00:19:40,798
+degree right today I think
+
+567
+00:19:38,319 --> 00:19:43,279
+>> to be a first tier chip startup to some
+
+568
+00:19:40,798 --> 00:19:45,200
+degree whether you you're that or not is
+
+569
+00:19:43,279 --> 00:19:47,119
+defined by how much fraction you have
+
+570
+00:19:45,200 --> 00:19:50,080
+with with the with the really big Nice.
+
+571
+00:19:47,119 --> 00:19:51,279
+That said, um, and there's of also an
+
+572
+00:19:50,079 --> 00:19:52,558
+argument to say like, look, in any kind
+
+573
+00:19:51,279 --> 00:19:53,759
+of transition period, you probably have
+
+574
+00:19:52,558 --> 00:19:55,279
+a bit more of an explosion of different
+
+575
+00:19:53,759 --> 00:19:55,839
+approaches over time that that'll shake
+
+576
+00:19:55,279 --> 00:19:58,000
+out.
+
+577
+00:19:55,839 --> 00:19:59,599
+>> Now, all that said, I think there's an
+
+578
+00:19:58,000 --> 00:20:00,960
+argument you can make that basically
+
+579
+00:19:59,599 --> 00:20:03,439
+says, look,
+
+580
+00:20:00,960 --> 00:20:05,200
+>> historically, we standardized on, you
+
+581
+00:20:03,440 --> 00:20:06,400
+know, one or two architectures because,
+
+582
+00:20:05,200 --> 00:20:07,519
+you know, different instruction sets
+
+583
+00:20:06,400 --> 00:20:09,360
+were hard. we had to build multiple
+
+584
+00:20:07,519 --> 00:20:11,759
+compilers you know like the this
+
+585
+00:20:09,359 --> 00:20:13,519
+basically um this the the software
+
+586
+00:20:11,759 --> 00:20:15,440
+complexity dictated that you can only
+
+587
+00:20:13,519 --> 00:20:16,480
+have a certain small number of hardware
+
+588
+00:20:15,440 --> 00:20:18,798
+platforms
+
+589
+00:20:16,480 --> 00:20:20,720
+>> that part seems to be changing with AI
+
+590
+00:20:18,798 --> 00:20:23,359
+right today you know writing an
+
+591
+00:20:20,720 --> 00:20:24,319
+optimized kernel for I mean I think was
+
+592
+00:20:23,359 --> 00:20:25,759
+a great example where they basically
+
+593
+00:20:24,319 --> 00:20:27,359
+said look humans can't really program
+
+594
+00:20:25,759 --> 00:20:29,440
+this thing anymore but an agent swarm
+
+595
+00:20:27,359 --> 00:20:30,879
+overnight can do it that's all we need
+
+596
+00:20:29,440 --> 00:20:32,880
+right so where basically you can say
+
+597
+00:20:30,880 --> 00:20:34,480
+like if you can build a chip that has a
+
+598
+00:20:32,880 --> 00:20:36,159
+certain capability it's now much much
+
+599
+00:20:34,480 --> 00:20:38,880
+easier to build the software layers on
+
+600
+00:20:36,159 --> 00:20:40,240
+top that fully leverages that could a
+
+601
+00:20:38,880 --> 00:20:42,080
+result of that be that we have a little
+
+602
+00:20:40,240 --> 00:20:43,200
+bit more hetrogenity just because the
+
+603
+00:20:42,079 --> 00:20:44,720
+you know it's it's easier to program
+
+604
+00:20:43,200 --> 00:20:47,200
+that hetrogenity going forward
+
+605
+00:20:44,720 --> 00:20:49,038
+>> and and I I do think it changes some of
+
+606
+00:20:47,200 --> 00:20:51,360
+you know you you know the you know where
+
+607
+00:20:49,038 --> 00:20:52,558
+the bottleneck lands right changes in
+
+608
+00:20:51,359 --> 00:20:54,158
+that regard you know the first
+
+609
+00:20:52,558 --> 00:20:56,079
+bottleneck is the one I'd point to that
+
+610
+00:20:54,159 --> 00:20:58,000
+we've already talked about still takes a
+
+611
+00:20:56,079 --> 00:20:59,439
+year and a half to build these things
+
+612
+00:20:58,000 --> 00:21:01,038
+>> right you know and then the second
+
+613
+00:20:59,440 --> 00:21:02,558
+bottleneck is not only does it take a
+
+614
+00:21:01,038 --> 00:21:04,480
+year and a half to get these things into
+
+615
+00:21:02,558 --> 00:21:07,519
+racks the scales and so on like that now
+
+616
+00:21:04,480 --> 00:21:09,599
+to make them useful full. Okay. Well,
+
+617
+00:21:07,519 --> 00:21:11,599
+could I borrow 50 billion, right? I
+
+618
+00:21:09,599 --> 00:21:13,119
+mean, you're not talking about small
+
+619
+00:21:11,599 --> 00:21:15,839
+capital expenditures. You're talking
+
+620
+00:21:13,119 --> 00:21:18,158
+about very large capital expenditures
+
+621
+00:21:15,839 --> 00:21:19,839
+and data centers, you know, power, you
+
+622
+00:21:18,159 --> 00:21:21,280
+know, commitments and so on like that.
+
+623
+00:21:19,839 --> 00:21:23,279
+Well, I got to build this thing at
+
+624
+00:21:21,279 --> 00:21:24,879
+scale, right, associated with it. So,
+
+625
+00:21:23,279 --> 00:21:27,440
+and that's going to defy a lot of
+
+626
+00:21:24,880 --> 00:21:28,960
+heterogeneity uh as a result. Now, you
+
+627
+00:21:27,440 --> 00:21:30,480
+know, clearly big players and we saw
+
+628
+00:21:28,960 --> 00:21:32,720
+this with what, you know, Nvidia did
+
+629
+00:21:30,480 --> 00:21:35,519
+with Grock, okay? you know, we're gonna
+
+630
+00:21:32,720 --> 00:21:37,600
+sort of own some of that heterogeneity,
+
+631
+00:21:35,519 --> 00:21:38,720
+right? And you know, you know, two years
+
+632
+00:21:37,599 --> 00:21:40,959
+from now, you're not going to tell what
+
+633
+00:21:38,720 --> 00:21:43,120
+Grock is inside of Nvidia, right? It's
+
+634
+00:21:40,960 --> 00:21:44,319
+just going to be like another, right?
+
+635
+00:21:43,119 --> 00:21:46,239
+You know, someone like that. So, you'll
+
+636
+00:21:44,319 --> 00:21:49,038
+see the architectures, you know, sort of
+
+637
+00:21:46,240 --> 00:21:50,960
+hide the heterogeneity, right? Uh inside
+
+638
+00:21:49,038 --> 00:21:52,158
+of it, which to me is just fine, right?
+
+639
+00:21:50,960 --> 00:21:53,840
+You know I mean that's what layering
+
+640
+00:21:52,159 --> 00:21:55,760
+that's what abstraction has always done
+
+641
+00:21:53,839 --> 00:21:58,639
+associated with it you know but I think
+
+642
+00:21:55,759 --> 00:22:00,480
+those forces are powerful ones to I'll
+
+643
+00:21:58,640 --> 00:22:03,200
+say expose
+
+644
+00:22:00,480 --> 00:22:05,360
+a lot of the heterogeneity no right I
+
+645
+00:22:03,200 --> 00:22:06,480
+think it will get abstracted underneath
+
+646
+00:22:05,359 --> 00:22:07,759
+you know some of these but at the end of
+
+647
+00:22:06,480 --> 00:22:08,720
+the day it's still hard to build these
+
+648
+00:22:07,759 --> 00:22:10,480
+things at scale
+
+649
+00:22:08,720 --> 00:22:12,640
+>> earlier you talked about HPM being
+
+650
+00:22:10,480 --> 00:22:14,480
+hideous memory
+
+651
+00:22:12,640 --> 00:22:15,840
+>> by far the best one we have today.
+
+652
+00:22:14,480 --> 00:22:17,200
+>> Exactly. It's like the thing about
+
+653
+00:22:15,839 --> 00:22:18,720
+democracy.
+
+654
+00:22:17,200 --> 00:22:20,880
+>> Um,
+
+655
+00:22:18,720 --> 00:22:22,558
+we can't recall when there was the last
+
+656
+00:22:20,880 --> 00:22:24,080
+memory innovation. It might have been
+
+657
+00:22:22,558 --> 00:22:24,798
+obtained. I think you probably had
+
+658
+00:22:24,079 --> 00:22:26,000
+something to do with it.
+
+659
+00:22:24,798 --> 00:22:27,359
+>> Yeah, that one died. So,
+
+660
+00:22:26,000 --> 00:22:28,159
+>> that one died.
+
+661
+00:22:27,359 --> 00:22:30,079
+>> We killed it.
+
+662
+00:22:28,159 --> 00:22:31,679
+>> Yeah, we killed it. We killed it.
+
+663
+00:22:30,079 --> 00:22:34,399
+>> So,
+
+664
+00:22:31,679 --> 00:22:36,480
+do you think memory innovation
+
+665
+00:22:34,400 --> 00:22:39,200
+is around the corner or what needs to
+
+666
+00:22:36,480 --> 00:22:41,279
+happen for obviously we understand the
+
+667
+00:22:39,200 --> 00:22:41,679
+scale problem because it's even more
+
+668
+00:22:41,279 --> 00:22:42,798
+>> Yeah.
+
+669
+00:22:41,679 --> 00:22:44,559
+>> larger there.
+
+670
+00:22:42,798 --> 00:22:46,319
+>> Yeah. But if you keep the scale aside
+
+671
+00:22:44,558 --> 00:22:48,558
+even from a technology point of view.
+
+672
+00:22:46,319 --> 00:22:50,960
+>> Yeah. And let's you know uh you know
+
+673
+00:22:48,558 --> 00:22:53,359
+look at that history. I've probably
+
+674
+00:22:50,960 --> 00:22:56,159
+personally been associated with at least
+
+675
+00:22:53,359 --> 00:22:58,399
+five different new memory architectures.
+
+676
+00:22:56,159 --> 00:23:00,880
+Optane just being one of them right you
+
+677
+00:22:58,400 --> 00:23:03,360
+know that did not see the light of day
+
+678
+00:23:00,880 --> 00:23:05,600
+right uh as well. Uh I'm probably
+
+679
+00:23:03,359 --> 00:23:07,839
+familiar with close to a hundred that
+
+680
+00:23:05,599 --> 00:23:10,000
+have happened in the industry over the
+
+681
+00:23:07,839 --> 00:23:11,678
+last 30 years. And exactly how many
+
+682
+00:23:10,000 --> 00:23:13,279
+major new memories have you had over the
+
+683
+00:23:11,679 --> 00:23:13,600
+last 30 years?
+
+684
+00:23:13,279 --> 00:23:14,319
+>> Zero.
+
+685
+00:23:13,599 --> 00:23:15,599
+>> Zero.
+
+686
+00:23:14,319 --> 00:23:18,399
+>> Right. You know, which you know, okay.
+
+687
+00:23:15,599 --> 00:23:20,319
+DRAM, SR, RAM, flash. Okay. What else is
+
+688
+00:23:18,400 --> 00:23:21,600
+there? D RAM, SRAM, flash. Yeah. You
+
+689
+00:23:20,319 --> 00:23:23,839
+know, so I I do think
+
+690
+00:23:21,599 --> 00:23:25,759
+>> flash stacking console a little bit.
+
+691
+00:23:23,839 --> 00:23:26,879
+>> Barely. Yeah. Right. You know, but
+
+692
+00:23:25,759 --> 00:23:29,359
+anyway. Right.
+
+693
+00:23:26,880 --> 00:23:32,080
+>> So, uh, you know, in that it it you
+
+694
+00:23:29,359 --> 00:23:33,279
+know, it has been right you know, a a
+
+695
+00:23:32,079 --> 00:23:35,519
+disappointing
+
+696
+00:23:33,279 --> 00:23:38,879
+>> that we haven't created, you know, the
+
+697
+00:23:35,519 --> 00:23:42,400
+next physics. Yeah. that enable you know
+
+698
+00:23:38,880 --> 00:23:45,039
+lowcost high performance resilient
+
+699
+00:23:42,400 --> 00:23:48,960
+manufacturable memory right you know for
+
+700
+00:23:45,038 --> 00:23:51,200
+it so I do think and and now and and
+
+701
+00:23:48,960 --> 00:23:53,519
+over the last 30 40 years you know
+
+702
+00:23:51,200 --> 00:23:55,200
+memory was a terrible industry
+
+703
+00:23:53,519 --> 00:23:56,798
+>> right because you would make money one
+
+704
+00:23:55,200 --> 00:23:59,919
+year and then you lose money for the
+
+705
+00:23:56,798 --> 00:24:01,519
+next four right so let's go do R&D in an
+
+706
+00:23:59,919 --> 00:24:03,440
+industry that makes money one out of
+
+707
+00:24:01,519 --> 00:24:05,279
+five years right you know it's just
+
+708
+00:24:03,440 --> 00:24:07,200
+always you know it's just been so
+
+709
+00:24:05,279 --> 00:24:09,678
+terribly difficult because it's been
+
+710
+00:24:07,200 --> 00:24:11,200
+such driven by such violent
+
+711
+00:24:09,679 --> 00:24:12,400
+commoditization cycles.
+
+712
+00:24:11,200 --> 00:24:12,798
+>> That has changed a little bit though
+
+713
+00:24:12,400 --> 00:24:16,559
+recently
+
+714
+00:24:12,798 --> 00:24:18,000
+>> over the last 5 years.
+
+715
+00:24:16,558 --> 00:24:20,399
+>> Happy days, man.
+
+716
+00:24:18,000 --> 00:24:22,319
+>> So So all three big memory vendors are
+
+717
+00:24:20,400 --> 00:24:23,360
+on the in the top 20 most valuable
+
+718
+00:24:22,319 --> 00:24:24,960
+companies on the planet.
+
+719
+00:24:23,359 --> 00:24:27,199
+>> Yeah, that's a crazy change, isn't it?
+
+720
+00:24:24,960 --> 00:24:29,440
+>> Oh, it's just so right. you know who who
+
+721
+00:24:27,200 --> 00:24:32,080
+would have thought right uh associated
+
+722
+00:24:29,440 --> 00:24:33,600
+with it and anybody who looks at the AI
+
+723
+00:24:32,079 --> 00:24:35,359
+workloads and it's always you know it's
+
+724
+00:24:33,599 --> 00:24:36,879
+much harder to you know you know it's
+
+725
+00:24:35,359 --> 00:24:38,558
+easy to predict the past but it's a
+
+726
+00:24:36,880 --> 00:24:40,480
+little bit harder to predict the future
+
+727
+00:24:38,558 --> 00:24:43,359
+right and you know in that you look at
+
+728
+00:24:40,480 --> 00:24:44,000
+it and say AI is a memory role
+
+729
+00:24:43,359 --> 00:24:46,079
+>> exactly
+
+730
+00:24:44,000 --> 00:24:50,558
+>> right you know inside of it so I think
+
+731
+00:24:46,079 --> 00:24:53,759
+there is the combination of capital and
+
+732
+00:24:50,558 --> 00:24:55,839
+technology needs that will justify
+
+733
+00:24:53,759 --> 00:24:58,240
+memory innovation now there's two
+
+734
+00:24:55,839 --> 00:25:00,240
+domains things that I'm excited about uh
+
+735
+00:24:58,240 --> 00:25:01,919
+you know for it you know one is you know
+
+736
+00:25:00,240 --> 00:25:04,400
+this idea you know I do think that the
+
+737
+00:25:01,919 --> 00:25:06,000
+shoreline bandwidth limitations of HBM
+
+738
+00:25:04,400 --> 00:25:08,400
+is a fundamental issue
+
+739
+00:25:06,000 --> 00:25:09,919
+>> right so with that the idea you know and
+
+740
+00:25:08,400 --> 00:25:11,759
+obviously you know we have a company
+
+741
+00:25:09,919 --> 00:25:13,520
+Dmatrix that's doing this but I think
+
+742
+00:25:11,759 --> 00:25:15,200
+others will be you know whether it's you
+
+743
+00:25:13,519 --> 00:25:15,918
+know Cabbrris you know and their
+
+744
+00:25:15,200 --> 00:25:17,440
+techniques
+
+745
+00:25:15,919 --> 00:25:19,200
+>> the future is stacked yeah
+
+746
+00:25:17,440 --> 00:25:21,360
+>> somehow you got to bring memory and
+
+747
+00:25:19,200 --> 00:25:22,720
+>> in more ways than one
+
+748
+00:25:21,359 --> 00:25:23,918
+>> you know you got to bring memory and
+
+749
+00:25:22,720 --> 00:25:26,720
+compute together
+
+750
+00:25:23,919 --> 00:25:30,240
+>> right you know in a fundamental until uh
+
+751
+00:25:26,720 --> 00:25:33,679
+new structures. Um I do think that uh
+
+752
+00:25:30,240 --> 00:25:35,919
+given the workload now has such capital
+
+753
+00:25:33,679 --> 00:25:37,840
+being deployed against it you know in
+
+754
+00:25:35,919 --> 00:25:39,200
+the AI space that I do think we'll
+
+755
+00:25:37,839 --> 00:25:41,759
+actually be able to break through some
+
+756
+00:25:39,200 --> 00:25:44,080
+of those physics challenges as well uh
+
+757
+00:25:41,759 --> 00:25:47,119
+as well. So I do believe and you know
+
+758
+00:25:44,079 --> 00:25:48,879
+I've just substited
+
+759
+00:25:47,119 --> 00:25:51,759
+a new memory company as well that's
+
+760
+00:25:48,880 --> 00:25:53,440
+still a stealth but uh you know you know
+
+761
+00:25:51,759 --> 00:25:55,839
+I'm quite excited about some of the
+
+762
+00:25:53,440 --> 00:25:57,200
+innovations that will occur in new
+
+763
+00:25:55,839 --> 00:25:59,759
+memories and you're going to see new
+
+764
+00:25:57,200 --> 00:26:00,880
+materials uh you know for memory people
+
+765
+00:25:59,759 --> 00:26:03,278
+you know a lot of people looking at
+
+766
+00:26:00,880 --> 00:26:05,840
+things like ferro electrics uh you know
+
+767
+00:26:03,278 --> 00:26:08,319
+finding non-capacitive you know uh
+
+768
+00:26:05,839 --> 00:26:10,720
+highdensity memories finding memories
+
+769
+00:26:08,319 --> 00:26:13,839
+that can you know be high performance
+
+770
+00:26:10,720 --> 00:26:15,278
+high density and stackable right but you
+
+771
+00:26:13,839 --> 00:26:18,720
+know thing you know people are looking
+
+772
+00:26:15,278 --> 00:26:20,640
+at uh lowcost uh flash you know for that
+
+773
+00:26:18,720 --> 00:26:22,960
+I'm not particularly enthusiastic about
+
+774
+00:26:20,640 --> 00:26:24,799
+that idea myself I think you know speed
+
+775
+00:26:22,960 --> 00:26:26,960
+and performance of the underlying cell
+
+776
+00:26:24,798 --> 00:26:29,200
+are somewhat problematic with a flash or
+
+777
+00:26:26,960 --> 00:26:31,600
+an MRAM structure you know but I do
+
+778
+00:26:29,200 --> 00:26:33,759
+think there's memory innovations are
+
+779
+00:26:31,599 --> 00:26:35,119
+coming for the first time in 30 years
+
+780
+00:26:33,759 --> 00:26:36,960
+and I do think that's going to be an
+
+781
+00:26:35,119 --> 00:26:39,038
+exciting space and you know we'll have a
+
+782
+00:26:36,960 --> 00:26:40,159
+couple of companies there I'm sure
+
+783
+00:26:39,038 --> 00:26:42,480
+hopefully we'll do a few of them
+
+784
+00:26:40,159 --> 00:26:43,760
+together
+
+785
+00:26:42,480 --> 00:26:45,360
+What do you think? Should we do Okay.
+
+786
+00:26:43,759 --> 00:26:47,278
+You know, but we'll we'll find some
+
+787
+00:26:45,359 --> 00:26:49,119
+things to do here. But I think memory
+
+788
+00:26:47,278 --> 00:26:51,119
+innovation for the first time in 30
+
+789
+00:26:49,119 --> 00:26:52,239
+years is nigh upon us.
+
+790
+00:26:51,119 --> 00:26:53,918
+>> Yeah. Yeah.
+
+791
+00:26:52,240 --> 00:26:56,079
+>> It's it's amazing what a couple of$10
+
+792
+00:26:53,919 --> 00:26:59,600
+billion of market cap. I don't even
+
+793
+00:26:56,079 --> 00:27:01,119
+know. You say a trillion. Okay. Sorry.
+
+794
+00:26:59,599 --> 00:27:03,199
+>> You know, I think the memory industry
+
+795
+00:27:01,119 --> 00:27:04,558
+has now increased by market cap by $2
+
+796
+00:27:03,200 --> 00:27:05,759
+and a half trillion dollars. That's
+
+797
+00:27:04,558 --> 00:27:06,639
+great. You know, over the last four
+
+798
+00:27:05,759 --> 00:27:08,720
+years,
+
+799
+00:27:06,640 --> 00:27:09,360
+>> I think that's about right.
+
+800
+00:27:08,720 --> 00:27:10,640
+That is Yeah,
+
+801
+00:27:09,359 --> 00:27:12,079
+>> we could have just invested there and
+
+802
+00:27:10,640 --> 00:27:16,640
+not done any forential stuff.
+
+803
+00:27:12,079 --> 00:27:18,558
+>> Yeah, exactly. Use your money. Um,
+
+804
+00:27:16,640 --> 00:27:19,120
+how long what's your view? Sorry, go
+
+805
+00:27:18,558 --> 00:27:21,918
+ahead.
+
+806
+00:27:19,119 --> 00:27:25,199
+>> Yes. To to expand a little bit on the
+
+807
+00:27:21,919 --> 00:27:27,440
+stacking part if you have to predict h
+
+808
+00:27:25,200 --> 00:27:29,679
+how quickly will our chips get get
+
+809
+00:27:27,440 --> 00:27:30,798
+taller? Is this going to be like, you
+
+810
+00:27:29,679 --> 00:27:32,400
+know, we're going to go to two and then
+
+811
+00:27:30,798 --> 00:27:34,480
+sit there for a while or will we have,
+
+812
+00:27:32,400 --> 00:27:37,679
+you know, the 16 layer sandwich, you
+
+813
+00:27:34,480 --> 00:27:40,079
+know, happily mixing logic, memory,
+
+814
+00:27:37,679 --> 00:27:42,640
+>> pulled down this
+
+815
+00:27:40,079 --> 00:27:44,319
+HPM is going down at Nvidia, but how how
+
+816
+00:27:42,640 --> 00:27:47,278
+do you see this evolve? Yeah, you know,
+
+817
+00:27:44,319 --> 00:27:50,639
+I think there's um um you know, the
+
+818
+00:27:47,278 --> 00:27:53,200
+problem with stacking, right, is now
+
+819
+00:27:50,640 --> 00:27:55,120
+essentially the value of the stack,
+
+820
+00:27:53,200 --> 00:27:56,960
+right, becomes greater as you go to
+
+821
+00:27:55,119 --> 00:27:59,278
+higher dimensionality of the stack,
+
+822
+00:27:56,960 --> 00:28:02,000
+which means the yield of any individual
+
+823
+00:27:59,278 --> 00:28:04,079
+layer in the stacking process has to
+
+824
+00:28:02,000 --> 00:28:06,159
+keep coming, you know, essentially it
+
+825
+00:28:04,079 --> 00:28:08,158
+can't go up linearly. Yep. Right. you
+
+826
+00:28:06,159 --> 00:28:10,480
+know, it has to go up exponentially and
+
+827
+00:28:08,159 --> 00:28:13,360
+improving the manufacturing and defect
+
+828
+00:28:10,480 --> 00:28:15,120
+characteristics in an exponential way.
+
+829
+00:28:13,359 --> 00:28:18,158
+You know, when you get to eight or 16
+
+830
+00:28:15,119 --> 00:28:20,479
+high stacks gets to be so so hard when
+
+831
+00:28:18,159 --> 00:28:22,000
+you run the math on that uh associated
+
+832
+00:28:20,480 --> 00:28:24,079
+with it. You know, your manufacturer
+
+833
+00:28:22,000 --> 00:28:26,880
+flows have to be so close to perfect.
+
+834
+00:28:24,079 --> 00:28:28,558
+>> Although you could see designs that take
+
+835
+00:28:26,880 --> 00:28:30,320
+into account a certain model cost like
+
+836
+00:28:28,558 --> 00:28:30,798
+we've seen it for like a long time for
+
+837
+00:28:30,319 --> 00:28:32,158
+two dimensions.
+
+838
+00:28:30,798 --> 00:28:33,918
+>> Yeah, of course. But remember that was
+
+839
+00:28:32,159 --> 00:28:36,240
+the nature of DRAM. they always have bad
+
+840
+00:28:33,919 --> 00:28:38,240
+block replacement and you know spare
+
+841
+00:28:36,240 --> 00:28:40,159
+lines and so on like that. So I'm not in
+
+842
+00:28:38,240 --> 00:28:42,640
+any way, right, you know, minimizing
+
+843
+00:28:40,159 --> 00:28:44,320
+that, but assuming you're doing that,
+
+844
+00:28:42,640 --> 00:28:45,840
+you still need the yields to be so good.
+
+845
+00:28:44,319 --> 00:28:47,200
+You know, if I have a cracked die, I
+
+846
+00:28:45,839 --> 00:28:49,038
+don't care how much resilience you've
+
+847
+00:28:47,200 --> 00:28:50,880
+built into it. You can't, you know, it's
+
+848
+00:28:49,038 --> 00:28:53,679
+a bad die, right? So, you know, those
+
+849
+00:28:50,880 --> 00:28:58,080
+kind, you know, uh, so as a result of
+
+850
+00:28:53,679 --> 00:28:59,919
+that, I'm not, you know, a crazy 16 32
+
+851
+00:28:58,079 --> 00:29:01,439
+stack, you know, kind of guy. I think
+
+852
+00:28:59,919 --> 00:29:03,759
+there's going to be, you know, nice
+
+853
+00:29:01,440 --> 00:29:05,278
+three, four, five stacks, you know, that
+
+854
+00:29:03,759 --> 00:29:05,679
+just end up sort of being the sweet
+
+855
+00:29:05,278 --> 00:29:08,159
+spot.
+
+856
+00:29:05,679 --> 00:29:10,080
+>> The mid-rises. Yeah. Yeah. Right. Uh you
+
+857
+00:29:08,159 --> 00:29:11,760
+know for and I and I expect for you know
+
+858
+00:29:10,079 --> 00:29:14,558
+part of its manufacturing part of its
+
+859
+00:29:11,759 --> 00:29:16,879
+complexity uh associated with it you
+
+860
+00:29:14,558 --> 00:29:18,319
+know where's those yield sweet spots
+
+861
+00:29:16,880 --> 00:29:21,520
+associated with. So that's sort of where
+
+862
+00:29:18,319 --> 00:29:23,759
+I think most things land. But even there
+
+863
+00:29:21,519 --> 00:29:27,038
+right you know so let's say I now have
+
+864
+00:29:23,759 --> 00:29:28,879
+you know I now have a great compute tile
+
+865
+00:29:27,038 --> 00:29:30,240
+right you know how big does that tile
+
+866
+00:29:28,880 --> 00:29:32,960
+need to be? I mean everything's become
+
+867
+00:29:30,240 --> 00:29:34,720
+reticle limited now right? you know hm
+
+868
+00:29:32,960 --> 00:29:36,960
+can I go to more chiplets that have
+
+869
+00:29:34,720 --> 00:29:38,798
+better yield characteristics you better
+
+870
+00:29:36,960 --> 00:29:40,640
+thermal you know and then you're going
+
+871
+00:29:38,798 --> 00:29:42,720
+to say I want a memory stack on that you
+
+872
+00:29:40,640 --> 00:29:44,640
+know is it a two stack memory a four
+
+873
+00:29:42,720 --> 00:29:46,399
+stack memory you know I don't see it
+
+874
+00:29:44,640 --> 00:29:48,720
+becoming an eight stack memory you know
+
+875
+00:29:46,398 --> 00:29:50,398
+so to me two or four sort of right you
+
+876
+00:29:48,720 --> 00:29:52,319
+know but then power delivery needs to
+
+877
+00:29:50,398 --> 00:29:54,798
+get integrated into that so that becomes
+
+878
+00:29:52,319 --> 00:29:57,439
+sort of another element and I want that
+
+879
+00:29:54,798 --> 00:29:59,200
+in the Z dimension right associated with
+
+880
+00:29:57,440 --> 00:30:01,278
+it because you know I want my power
+
+881
+00:29:59,200 --> 00:30:03,120
+rails coming into this as well
+
+882
+00:30:01,278 --> 00:30:05,759
+>> right and Then I need, you know, fairly
+
+883
+00:30:03,119 --> 00:30:08,079
+intelligent RDL layers to distribute
+
+884
+00:30:05,759 --> 00:30:10,000
+signals across that platform. So to some
+
+885
+00:30:08,079 --> 00:30:12,639
+degree, you know, my canonical thing is
+
+886
+00:30:10,000 --> 00:30:14,798
+already about eight layer thick when you
+
+887
+00:30:12,640 --> 00:30:16,559
+add up all of those pieces associated
+
+888
+00:30:14,798 --> 00:30:18,798
+with it. And I think that's about all
+
+889
+00:30:16,558 --> 00:30:21,119
+you can do, right? At least as we
+
+890
+00:30:18,798 --> 00:30:22,960
+understand manufacturing today. And then
+
+891
+00:30:21,119 --> 00:30:25,119
+of course you we expect optics to come
+
+892
+00:30:22,960 --> 00:30:26,960
+in. So you're going to have more 35
+
+893
+00:30:25,119 --> 00:30:28,479
+material structures, you know, that are
+
+894
+00:30:26,960 --> 00:30:30,880
+going to be closer to this complex
+
+895
+00:30:28,480 --> 00:30:33,360
+because I want, you know, my IO getting,
+
+896
+00:30:30,880 --> 00:30:35,760
+you know, essentially, you know, deeply
+
+897
+00:30:33,359 --> 00:30:38,158
+integrated into that construct as well,
+
+898
+00:30:35,759 --> 00:30:39,839
+you know. So my siliconentric pieces
+
+899
+00:30:38,159 --> 00:30:42,720
+need to get complemented by some of
+
+900
+00:30:39,839 --> 00:30:44,798
+these other 35 materials and how do I
+
+901
+00:30:42,720 --> 00:30:46,880
+get optical connectivity built into
+
+902
+00:30:44,798 --> 00:30:48,639
+this? How do I get power rails, you
+
+903
+00:30:46,880 --> 00:30:51,360
+know, built into that? You know, that is
+
+904
+00:30:48,640 --> 00:30:54,240
+a, you know, I'll say that is an
+
+905
+00:30:51,359 --> 00:30:56,158
+engineering feat. and a manufacturing
+
+906
+00:30:54,240 --> 00:30:57,839
+nightmare, right, to bring all of those
+
+907
+00:30:56,159 --> 00:31:00,159
+pieces. But that's where the physics is
+
+908
+00:30:57,839 --> 00:31:02,398
+taking us uh over time. So because of
+
+909
+00:31:00,159 --> 00:31:03,600
+that, you know, throwing a 16 high stack
+
+910
+00:31:02,398 --> 00:31:05,678
+and to me, you know, it's like that's
+
+911
+00:31:03,599 --> 00:31:07,038
+crazy. You know, a two or four high
+
+912
+00:31:05,679 --> 00:31:08,720
+memory stack, you know, I think that's
+
+913
+00:31:07,038 --> 00:31:09,759
+probably where the speed sweet spot will
+
+914
+00:31:08,720 --> 00:31:12,319
+be.
+
+915
+00:31:09,759 --> 00:31:13,759
+>> And you didn't talk about the thermal
+
+916
+00:31:12,319 --> 00:31:16,079
+dissipation
+
+917
+00:31:13,759 --> 00:31:17,119
+>> and new materials needed for that.
+
+918
+00:31:16,079 --> 00:31:18,639
+>> Yeah. And obviously there's going to be
+
+919
+00:31:17,119 --> 00:31:20,079
+a lot of, you know, you know, first
+
+920
+00:31:18,640 --> 00:31:21,600
+thing, right? You just can't have some
+
+921
+00:31:20,079 --> 00:31:22,879
+of the, you know, the physics hotspots
+
+922
+00:31:21,599 --> 00:31:24,719
+that you have today. So you have to be
+
+923
+00:31:22,880 --> 00:31:26,880
+more intelligent about how you use the
+
+924
+00:31:24,720 --> 00:31:28,240
+the heat and spread the heat. But you
+
+925
+00:31:26,880 --> 00:31:31,120
+know then you're going to be saying okay
+
+926
+00:31:28,240 --> 00:31:33,519
+how do I both get power in and dissipate
+
+927
+00:31:31,119 --> 00:31:35,839
+power out uh of those environments. And
+
+928
+00:31:33,519 --> 00:31:37,918
+by the way if I can you know de you know
+
+929
+00:31:35,839 --> 00:31:39,759
+get much more efficient power in at the
+
+930
+00:31:37,919 --> 00:31:41,840
+voltages I want with much better you
+
+931
+00:31:39,759 --> 00:31:44,000
+know power responsiveness and my voltage
+
+932
+00:31:41,839 --> 00:31:45,278
+regulation you know then I don't create
+
+933
+00:31:44,000 --> 00:31:47,200
+as much thermal chimneys.
+
+934
+00:31:45,278 --> 00:31:49,038
+>> Yeah. But I do have to think okay how do
+
+935
+00:31:47,200 --> 00:31:51,440
+I cool these things and you know what
+
+936
+00:31:49,038 --> 00:31:53,679
+role do new materials diamonds and other
+
+937
+00:31:51,440 --> 00:31:55,919
+things have been postulated as ways to
+
+938
+00:31:53,679 --> 00:31:58,320
+you know do a better job of the thermal
+
+939
+00:31:55,919 --> 00:32:00,000
+cooling how do I then have better you
+
+940
+00:31:58,319 --> 00:32:02,000
+know liquid cooling techniques and
+
+941
+00:32:00,000 --> 00:32:04,240
+others you know sitting right on it you
+
+942
+00:32:02,000 --> 00:32:07,200
+know with good thermal characteristics
+
+943
+00:32:04,240 --> 00:32:09,679
+so yeah you know uh you know we we
+
+944
+00:32:07,200 --> 00:32:11,519
+engineers are becoming plumbers right
+
+945
+00:32:09,679 --> 00:32:13,840
+>> exactly
+
+946
+00:32:11,519 --> 00:32:14,640
+yeah we got to worry about MEC the chip
+
+947
+00:32:13,839 --> 00:32:16,639
+scale
+
+948
+00:32:14,640 --> 00:32:18,640
+>> let me ask about an operate phenomenon
+
+949
+00:32:16,640 --> 00:32:20,960
+which is some people have said hey let's
+
+950
+00:32:18,640 --> 00:32:23,200
+get the memory off of the package and
+
+951
+00:32:20,960 --> 00:32:26,319
+just go all optical between the compute
+
+952
+00:32:23,200 --> 00:32:28,080
+and the memory and that'll give you more
+
+953
+00:32:26,319 --> 00:32:30,558
+degrees of freedom and more ways of
+
+954
+00:32:28,079 --> 00:32:32,960
+building things what's your view on that
+
+955
+00:32:30,558 --> 00:32:33,678
+as opposed to stacking that's other
+
+956
+00:32:32,960 --> 00:32:37,840
+extreme
+
+957
+00:32:33,679 --> 00:32:39,360
+>> yeah you know I think the more OEO right
+
+958
+00:32:37,839 --> 00:32:41,599
+uh interfaces that you have you know
+
+959
+00:32:39,359 --> 00:32:43,839
+it's you know you know optical to
+
+960
+00:32:41,599 --> 00:32:45,678
+electrical to optical to you know the
+
+961
+00:32:43,839 --> 00:32:48,319
+more of those that you demand in your
+
+962
+00:32:45,679 --> 00:32:50,640
+core compute complex you enmy is just
+
+963
+00:32:48,319 --> 00:32:52,319
+hard right uh in that sense and you're
+
+964
+00:32:50,640 --> 00:32:54,320
+always going to have losses associated
+
+965
+00:32:52,319 --> 00:32:56,240
+with it you know people are you know
+
+966
+00:32:54,319 --> 00:32:59,278
+working hard to come up with more clever
+
+967
+00:32:56,240 --> 00:33:01,919
+techniques to decrease you know both the
+
+968
+00:32:59,278 --> 00:33:03,919
+cost and the power right you know how
+
+969
+00:33:01,919 --> 00:33:06,880
+how much of the power am I wasting as I
+
+970
+00:33:03,919 --> 00:33:09,278
+go through my you know my DAX and uh you
+
+971
+00:33:06,880 --> 00:33:10,960
+know conversions so I'm not a fan of
+
+972
+00:33:09,278 --> 00:33:13,519
+those you know because I think it gives
+
+973
+00:33:10,960 --> 00:33:15,759
+you access to large pools of memory
+
+974
+00:33:13,519 --> 00:33:16,558
+right but I I burn a lot of power
+
+975
+00:33:15,759 --> 00:33:16,960
+getting there.
+
+976
+00:33:16,558 --> 00:33:19,119
+>> Yeah.
+
+977
+00:33:16,960 --> 00:33:22,000
+>> Right. And remember my you know the
+
+978
+00:33:19,119 --> 00:33:25,439
+essentially you know the phentojoules
+
+979
+00:33:22,000 --> 00:33:28,079
+per compute is now actually pretty
+
+980
+00:33:25,440 --> 00:33:29,679
+amazingly good. Right. The phentojlesw
+
+981
+00:33:28,079 --> 00:33:32,158
+per bit of communication is
+
+982
+00:33:29,679 --> 00:33:34,320
+comparatively a thousand times worse
+
+983
+00:33:32,159 --> 00:33:36,559
+right and if I'm spending that much to
+
+984
+00:33:34,319 --> 00:33:38,319
+go get to large pools of so I don't like
+
+985
+00:33:36,558 --> 00:33:40,398
+those approaches you know myself. I
+
+986
+00:33:38,319 --> 00:33:43,678
+think they somewhat defy the underlying
+
+987
+00:33:40,398 --> 00:33:46,000
+physics of the solution. I mean and then
+
+988
+00:33:43,679 --> 00:33:47,600
+there's sort of the other approach to
+
+989
+00:33:46,000 --> 00:33:49,919
+say like look can we actually integrate
+
+990
+00:33:47,599 --> 00:33:52,480
+compute and memory directly right shift
+
+991
+00:33:49,919 --> 00:33:53,600
+some of the compute into the memory it's
+
+992
+00:33:52,480 --> 00:33:55,919
+>> some of the pim approaches
+
+993
+00:33:53,599 --> 00:33:57,278
+>> yeah exactly right so what
+
+994
+00:33:55,919 --> 00:33:59,440
+>> what are your thoughts around that
+
+995
+00:33:57,278 --> 00:34:01,200
+>> I'm not a fan of those either right um
+
+996
+00:33:59,440 --> 00:34:02,640
+because I think workloads you know
+
+997
+00:34:01,200 --> 00:34:04,480
+because now I have to take my workload
+
+998
+00:34:02,640 --> 00:34:07,679
+and I have to like push these little
+
+999
+00:34:04,480 --> 00:34:09,599
+pieces of compute into the memory right
+
+1000
+00:34:07,679 --> 00:34:11,599
+you know so that you know I don't need
+
+1001
+00:34:09,599 --> 00:34:13,599
+as much bandwidth of memory coming into
+
+1002
+00:34:11,599 --> 00:34:15,440
+my real compute Right? And that puts
+
+1003
+00:34:13,599 --> 00:34:16,720
+constraints on workloads. And again, you
+
+1004
+00:34:15,440 --> 00:34:17,918
+know, I could be wrong on this,
+
+1005
+00:34:16,719 --> 00:34:19,838
+particularly some of the design
+
+1006
+00:34:17,918 --> 00:34:22,000
+flexibility and the intelligence that we
+
+1007
+00:34:19,838 --> 00:34:25,199
+can now bring, you know, through the the
+
+1008
+00:34:22,000 --> 00:34:27,679
+design aspects. But most PIM ideas, you
+
+1009
+00:34:25,199 --> 00:34:29,598
+know, have been around for 2530 years.
+
+1010
+00:34:27,679 --> 00:34:31,200
+And I think 2530 years from now, they'll
+
+1011
+00:34:29,599 --> 00:34:32,960
+still be hanging around, right? In that
+
+1012
+00:34:31,199 --> 00:34:34,799
+sense, you know, give me great memory
+
+1013
+00:34:32,960 --> 00:34:36,878
+bandwidth, you know, that I can have,
+
+1014
+00:34:34,800 --> 00:34:39,119
+you know, high density, uh, high
+
+1015
+00:34:36,878 --> 00:34:40,878
+performance, and get it close to the
+
+1016
+00:34:39,119 --> 00:34:42,960
+real compute engines. I expect that's
+
+1017
+00:34:40,878 --> 00:34:45,358
+going to be a more generalizable
+
+1018
+00:34:42,960 --> 00:34:46,800
+solution across many and evolving
+
+1019
+00:34:45,358 --> 00:34:49,119
+workloads over time.
+
+1020
+00:34:46,800 --> 00:34:51,039
+>> Well, so we're still stuck with denser
+
+1021
+00:34:49,119 --> 00:34:53,039
+and denser chips, more compute, more
+
+1022
+00:34:51,039 --> 00:34:54,878
+logic, more power,
+
+1023
+00:34:53,039 --> 00:34:57,838
+>> and much better IO.
+
+1024
+00:34:54,878 --> 00:35:00,239
+>> Now, I am a I am a huge fan, right, of
+
+1025
+00:34:57,838 --> 00:35:02,078
+opt, you know, moving to optics for all
+
+1026
+00:35:00,239 --> 00:35:04,078
+IO function. Yeah. Right. You know, I
+
+1027
+00:35:02,079 --> 00:35:06,000
+declared the death of copper about 25
+
+1028
+00:35:04,079 --> 00:35:09,440
+years ago. Eventually, I'll be right.
+
+1029
+00:35:06,000 --> 00:35:11,280
+>> You're still right. one day one day soon
+
+1030
+00:35:09,440 --> 00:35:13,358
+uh I'll be right but I think is that a
+
+1031
+00:35:11,280 --> 00:35:15,599
+you know to me all IO should go to
+
+1032
+00:35:13,358 --> 00:35:18,559
+optical right you know but that core
+
+1033
+00:35:15,599 --> 00:35:22,240
+compute memory complex no right
+
+1034
+00:35:18,559 --> 00:35:25,838
+>> so when do you the first step for it
+
+1035
+00:35:22,239 --> 00:35:28,000
+going um all optical is to scale up even
+
+1036
+00:35:25,838 --> 00:35:30,719
+more so than scale out
+
+1037
+00:35:28,000 --> 00:35:32,320
+>> what's your views on that
+
+1038
+00:35:30,719 --> 00:35:34,078
+>> yeah you know and I think we're now
+
+1039
+00:35:32,320 --> 00:35:36,320
+>> what would be the like the application
+
+1040
+00:35:34,079 --> 00:35:37,920
+or the workload driver if you will Well,
+
+1041
+00:35:36,320 --> 00:35:38,720
+I think the workload driver is the one
+
+1042
+00:35:37,920 --> 00:35:39,039
+in front of us.
+
+1043
+00:35:38,719 --> 00:35:40,480
+>> Okay.
+
+1044
+00:35:39,039 --> 00:35:42,000
+>> Right. I mean, you know, today, you
+
+1045
+00:35:40,480 --> 00:35:44,079
+know, our scaleup environments, we're
+
+1046
+00:35:42,000 --> 00:35:46,239
+putting tons of copper, right? You know,
+
+1047
+00:35:44,079 --> 00:35:48,240
+and essentially copper is becoming a
+
+1048
+00:35:46,239 --> 00:35:50,799
+wave guide that's getting shorter and
+
+1049
+00:35:48,239 --> 00:35:53,199
+shorter, right? And all of a sudden, you
+
+1050
+00:35:50,800 --> 00:35:56,400
+know, to make my copper work at uh, you
+
+1051
+00:35:53,199 --> 00:35:58,960
+know, 5 m is more expensive than making
+
+1052
+00:35:56,400 --> 00:36:00,559
+optical work, right, at 100 meters,
+
+1053
+00:35:58,960 --> 00:36:03,199
+right? You know, so you know, I think
+
+1054
+00:36:00,559 --> 00:36:06,000
+the physics is driving us there today,
+
+1055
+00:36:03,199 --> 00:36:07,439
+>> you know. And you know so if that's the
+
+1056
+00:36:06,000 --> 00:36:09,679
+case Pat why haven't we moved there
+
+1057
+00:36:07,440 --> 00:36:11,760
+already? Yeah it's a complex supply
+
+1058
+00:36:09,679 --> 00:36:14,480
+chain that you know has never been
+
+1059
+00:36:11,760 --> 00:36:16,560
+tested at scale and I think now you know
+
+1060
+00:36:14,480 --> 00:36:21,119
+I think everybody is looking at you know
+
+1061
+00:36:16,559 --> 00:36:24,159
+some form of NPO CPO etc you know in the
+
+1062
+00:36:21,119 --> 00:36:26,559
+28 29 time frame because you know I
+
+1063
+00:36:24,159 --> 00:36:28,719
+can't scale up to large radics you know
+
+1064
+00:36:26,559 --> 00:36:31,119
+compute uh clusters for my scale up
+
+1065
+00:36:28,719 --> 00:36:33,598
+environment without making that move.
+
+1066
+00:36:31,119 --> 00:36:35,119
+So, you know, clearly Nvidia has uh
+
+1067
+00:36:33,599 --> 00:36:36,800
+indicated that. I think everybody else
+
+1068
+00:36:35,119 --> 00:36:38,559
+in the industry expects, you know,
+
+1069
+00:36:36,800 --> 00:36:40,320
+that's the conversion point. You know,
+
+1070
+00:36:38,559 --> 00:36:43,039
+in reality, I should have never built an
+
+1071
+00:36:40,320 --> 00:36:44,800
+NVL72. You know, it's an engineering
+
+1072
+00:36:43,039 --> 00:36:46,960
+marvel and it's a manufacturing
+
+1073
+00:36:44,800 --> 00:36:48,800
+nightmare, right? You know, it took the
+
+1074
+00:36:46,960 --> 00:36:51,280
+industry, you know, one extra year and a
+
+1075
+00:36:48,800 --> 00:36:52,720
+half to digest that beast, right? And it
+
+1076
+00:36:51,280 --> 00:36:54,720
+really is amazing that, you know, we're
+
+1077
+00:36:52,719 --> 00:36:57,838
+able to get it to scale, you know, so
+
+1078
+00:36:54,719 --> 00:37:00,399
+on. But you know that really proved that
+
+1079
+00:36:57,838 --> 00:37:02,799
+had we had a more mature optical supply
+
+1080
+00:37:00,400 --> 00:37:04,639
+chain, we'd be much more advanced today.
+
+1081
+00:37:02,800 --> 00:37:06,720
+We'd be able to build better scale up
+
+1082
+00:37:04,639 --> 00:37:08,799
+environments today, you know, better,
+
+1083
+00:37:06,719 --> 00:37:11,199
+you know, power, better cost, better
+
+1084
+00:37:08,800 --> 00:37:14,240
+energy. But we didn't have the maturity
+
+1085
+00:37:11,199 --> 00:37:16,239
+of the optical supply chains to allow
+
+1086
+00:37:14,239 --> 00:37:17,759
+that and those things are not trivial to
+
+1087
+00:37:16,239 --> 00:37:20,239
+get resolved. There's a lot of work to
+
+1088
+00:37:17,760 --> 00:37:22,720
+happen, but I think 28 29 is the year
+
+1089
+00:37:20,239 --> 00:37:24,799
+>> capacity. Good. for CSS.
+
+1090
+00:37:22,719 --> 00:37:26,959
+>> We we're probably gaining a lot of
+
+1091
+00:37:24,800 --> 00:37:29,200
+experience how in package optics work in
+
+1092
+00:37:26,960 --> 00:37:31,199
+networking, right? And and I think many
+
+1093
+00:37:29,199 --> 00:37:33,519
+of that will translate nicely to to
+
+1094
+00:37:31,199 --> 00:37:35,039
+>> GPU. I do think but all of a sudden, you
+
+1095
+00:37:33,519 --> 00:37:37,199
+know, it's like, okay, these things have
+
+1096
+00:37:35,039 --> 00:37:39,519
+to work, you know, at 10 million GPU
+
+1097
+00:37:37,199 --> 00:37:41,279
+scale. Wow. Right. You know, it has to
+
+1098
+00:37:39,519 --> 00:37:43,119
+fit in packages and, you know, there's
+
+1099
+00:37:41,280 --> 00:37:45,920
+just a lot of things there, you know,
+
+1100
+00:37:43,119 --> 00:37:47,920
+and many forms of optical don't like bad
+
+1101
+00:37:45,920 --> 00:37:49,440
+thermals. Well, guess what? Bad thermals
+
+1102
+00:37:47,920 --> 00:37:50,880
+is the nature of the game for it, you
+
+1103
+00:37:49,440 --> 00:37:52,800
+know. So we have thermal problems to
+
+1104
+00:37:50,880 --> 00:37:54,480
+deal with, you know, package integration
+
+1105
+00:37:52,800 --> 00:37:57,119
+problems. We didn't have enough, you
+
+1106
+00:37:54,480 --> 00:37:58,639
+know, laser capacity in the industry. So
+
+1107
+00:37:57,119 --> 00:38:00,240
+a bunch of things, but I don't see
+
+1108
+00:37:58,639 --> 00:38:02,239
+anything there fundamentals. It's just a
+
+1109
+00:38:00,239 --> 00:38:03,759
+lot of hard work at this point to pull
+
+1110
+00:38:02,239 --> 00:38:05,519
+all of those pieces together.
+
+1111
+00:38:03,760 --> 00:38:08,079
+>> In terms of the network architecture,
+
+1112
+00:38:05,519 --> 00:38:10,079
+will this also mean a switch towards
+
+1113
+00:38:08,079 --> 00:38:12,079
+more circuit switch networks just
+
+1114
+00:38:10,079 --> 00:38:14,480
+because, you know, you you can't scale
+
+1115
+00:38:12,079 --> 00:38:16,720
+these these very fast optical networks
+
+1116
+00:38:14,480 --> 00:38:18,800
+indefinitely? Well, you know, uh, you
+
+1117
+00:38:16,719 --> 00:38:20,559
+know, I like, uh, you know, uh, Nick
+
+1118
+00:38:18,800 --> 00:38:22,400
+Mune, you know, another Stanford
+
+1119
+00:38:20,559 --> 00:38:23,920
+professor here, good friend of mine, you
+
+1120
+00:38:22,400 --> 00:38:27,200
+know, as well, you know, I mean, you
+
+1121
+00:38:23,920 --> 00:38:27,680
+know him a little bit also, uh, Guido,
+
+1122
+00:38:27,199 --> 00:38:29,118
+you know,
+
+1123
+00:38:27,679 --> 00:38:31,279
+>> was he adviser?
+
+1124
+00:38:29,119 --> 00:38:33,920
+>> He was not the advisor.
+
+1125
+00:38:31,280 --> 00:38:36,079
+>> Yeah. Yeah. So, but, you know, to me, he
+
+1126
+00:38:33,920 --> 00:38:39,039
+describes it well, you know, we built,
+
+1127
+00:38:36,079 --> 00:38:41,440
+you know, uh, networks for to be able to
+
+1128
+00:38:39,039 --> 00:38:43,599
+handle any packet going anywhere with no
+
+1129
+00:38:41,440 --> 00:38:45,599
+knowledge of where it might go. When you
+
+1130
+00:38:43,599 --> 00:38:47,440
+think about AI, you know, it's almost
+
+1131
+00:38:45,599 --> 00:38:49,599
+exactly the opposite. Yes. Right. You
+
+1132
+00:38:47,440 --> 00:38:51,039
+know, we're doing flows that are large
+
+1133
+00:38:49,599 --> 00:38:53,359
+and predictable.
+
+1134
+00:38:51,039 --> 00:38:55,679
+>> So, in that sense, just the very
+
+1135
+00:38:53,358 --> 00:38:58,078
+description says, hm, that looks more
+
+1136
+00:38:55,679 --> 00:39:00,879
+like a switch than like a packet.
+
+1137
+00:38:58,079 --> 00:39:04,160
+>> So, I do think this confluence of moving
+
+1138
+00:39:00,880 --> 00:39:07,519
+to optical, right? And, you know, having
+
+1139
+00:39:04,159 --> 00:39:10,399
+a workload that is far more predictable,
+
+1140
+00:39:07,519 --> 00:39:12,320
+manageable, you know, large and flow,
+
+1141
+00:39:10,400 --> 00:39:14,320
+you know, to me, you know, I do see
+
+1142
+00:39:12,320 --> 00:39:16,320
+that. Yeah, we will go all the way to
+
+1143
+00:39:14,320 --> 00:39:19,200
+bringing optical into the compute
+
+1144
+00:39:16,320 --> 00:39:22,320
+complex and we will go all the way to
+
+1145
+00:39:19,199 --> 00:39:24,399
+OCS or some form of optical uh switching
+
+1146
+00:39:22,320 --> 00:39:26,720
+you know with more predictable flows you
+
+1147
+00:39:24,400 --> 00:39:29,440
+know I mean that is the right you know
+
+1148
+00:39:26,719 --> 00:39:31,679
+architecture and then you sort of say is
+
+1149
+00:39:29,440 --> 00:39:32,639
+that scale up or scale out and to some
+
+1150
+00:39:31,679 --> 00:39:34,000
+degree
+
+1151
+00:39:32,639 --> 00:39:34,319
+>> say it sort of dissolves the boundary
+
+1152
+00:39:34,000 --> 00:39:36,320
+there
+
+1153
+00:39:34,320 --> 00:39:38,079
+>> yeah right if my scale up is big enough
+
+1154
+00:39:36,320 --> 00:39:39,599
+then yeah you know just saying okay
+
+1155
+00:39:38,079 --> 00:39:40,960
+what's the radics of my scale up
+
+1156
+00:39:39,599 --> 00:39:43,039
+environment and when do I want to hook
+
+1157
+00:39:40,960 --> 00:39:44,800
+it up to other clusters that are really
+
+1158
+00:39:43,039 --> 00:39:47,279
+big and to me that ends up being a
+
+1159
+00:39:44,800 --> 00:39:48,960
+pretty beautiful answer uh you know to
+
+1160
+00:39:47,280 --> 00:39:50,480
+the future but I'm looking at somebody
+
+1161
+00:39:48,960 --> 00:39:51,440
+who's way more expert on this than
+
+1162
+00:39:50,480 --> 00:39:54,240
+myself. So
+
+1163
+00:39:51,440 --> 00:39:55,599
+>> no I I I look I always found scale up
+
+1164
+00:39:54,239 --> 00:39:57,439
+versus scale up to some degree an
+
+1165
+00:39:55,599 --> 00:39:58,720
+artificial distinction. You understand
+
+1166
+00:39:57,440 --> 00:40:00,240
+where it comes from right is we're kind
+
+1167
+00:39:58,719 --> 00:40:01,759
+of using different protocols one is
+
+1168
+00:40:00,239 --> 00:40:04,078
+front end one is backend network and so
+
+1169
+00:40:01,760 --> 00:40:05,920
+on. So right now practically speaking it
+
+1170
+00:40:04,079 --> 00:40:06,240
+is a it is a big difference.
+
+1171
+00:40:05,920 --> 00:40:07,680
+>> Yeah.
+
+1172
+00:40:06,239 --> 00:40:10,078
+>> If you take a step back and look at it
+
+1173
+00:40:07,679 --> 00:40:12,319
+from a system architecture perspective
+
+1174
+00:40:10,079 --> 00:40:14,000
+it achieves the same goal you know with
+
+1175
+00:40:12,320 --> 00:40:15,359
+slightly different flavors slightly
+
+1176
+00:40:14,000 --> 00:40:16,239
+different protocols that over time I
+
+1177
+00:40:15,358 --> 00:40:16,639
+think will converge.
+
+1178
+00:40:16,239 --> 00:40:18,879
+>> Yeah.
+
+1179
+00:40:16,639 --> 00:40:21,118
+>> I mean especially for the AI training
+
+1180
+00:40:18,880 --> 00:40:22,960
+workload.
+
+1181
+00:40:21,119 --> 00:40:25,358
+>> Yeah. Although I mean training and
+
+1182
+00:40:22,960 --> 00:40:26,880
+inferences actually look fairly similar.
+
+1183
+00:40:25,358 --> 00:40:28,400
+>> The inference corp is less of
+
+1184
+00:40:26,880 --> 00:40:30,240
+>> Yeah. Now I'll go on a you know right.
+
+1185
+00:40:28,400 --> 00:40:30,800
+Does your brain stop learning?
+
+1186
+00:40:30,239 --> 00:40:32,479
+>> Yeah.
+
+1187
+00:40:30,800 --> 00:40:34,160
+>> Right. you know you know when you know
+
+1188
+00:40:32,480 --> 00:40:36,159
+by the way as another characteristic of
+
+1189
+00:40:34,159 --> 00:40:37,679
+workload evolution I do think the you
+
+1190
+00:40:36,159 --> 00:40:39,598
+know the separation of training and
+
+1191
+00:40:37,679 --> 00:40:42,159
+inferencing is going to become you know
+
+1192
+00:40:39,599 --> 00:40:43,359
+less so going forward not more so right
+
+1193
+00:40:42,159 --> 00:40:44,799
+that's a little bit of the argument
+
+1194
+00:40:43,358 --> 00:40:46,880
+against you know you know more and more
+
+1195
+00:40:44,800 --> 00:40:48,880
+heterogeneous architectures is I think
+
+1196
+00:40:46,880 --> 00:40:50,800
+continuous learning you know I think
+
+1197
+00:40:48,880 --> 00:40:53,358
+there'll be algorithmic domains that
+
+1198
+00:40:50,800 --> 00:40:55,519
+will say yes continuous learning you
+
+1199
+00:40:53,358 --> 00:40:57,838
+know becomes the nature of the algorithm
+
+1200
+00:40:55,519 --> 00:40:59,759
+where yeah I do want my inference
+
+1201
+00:40:57,838 --> 00:41:01,519
+environment to be updating my model
+
+1202
+00:40:59,760 --> 00:41:03,520
+weights because you know that's giving
+
+1203
+00:41:01,519 --> 00:41:06,239
+me more and more refinement you know
+
+1204
+00:41:03,519 --> 00:41:08,800
+evolution across you know uh workloads
+
+1205
+00:41:06,239 --> 00:41:11,199
+moving into environments that are less
+
+1206
+00:41:08,800 --> 00:41:12,640
+formalized training uh as well we'll
+
+1207
+00:41:11,199 --> 00:41:14,318
+have smaller data sets in those
+
+1208
+00:41:12,639 --> 00:41:15,358
+environments so you know I'm not sure
+
+1209
+00:41:14,318 --> 00:41:17,199
+that's a
+
+1210
+00:41:15,358 --> 00:41:20,960
+>> but the number of nodes you need in
+
+1211
+00:41:17,199 --> 00:41:22,799
+order to be useful is a smaller diameter
+
+1212
+00:41:20,960 --> 00:41:23,519
+for inference than than for training
+
+1213
+00:41:22,800 --> 00:41:24,480
+that's what remains
+
+1214
+00:41:23,519 --> 00:41:24,960
+>> today that's true
+
+1215
+00:41:24,480 --> 00:41:27,519
+>> yeah yeah
+
+1216
+00:41:24,960 --> 00:41:29,280
+>> I mean I I still think there might be a
+
+1217
+00:41:27,519 --> 00:41:32,000
+role for hetrogenity coming from a
+
+1218
+00:41:29,280 --> 00:41:35,040
+different angle which is Different types
+
+1219
+00:41:32,000 --> 00:41:36,559
+of AI workloads require very different
+
+1220
+00:41:35,039 --> 00:41:38,079
+underlying like some are more comput
+
+1221
+00:41:36,559 --> 00:41:39,440
+limited some are more more memory
+
+1222
+00:41:38,079 --> 00:41:41,200
+bandwidth if you have a small diffusion
+
+1223
+00:41:39,440 --> 00:41:43,358
+workload or so right the optimal card
+
+1224
+00:41:41,199 --> 00:41:46,318
+for that looks very different from you
+
+1225
+00:41:43,358 --> 00:41:49,279
+know a top-of-the-line you know 15
+
+1226
+00:41:46,318 --> 00:41:50,559
+trillion 15 sorry 15 trillion weight LLM
+
+1227
+00:41:49,280 --> 00:41:52,480
+right that needs to operate at massive
+
+1228
+00:41:50,559 --> 00:41:54,078
+scale right so it's I I think that that
+
+1229
+00:41:52,480 --> 00:41:56,000
+might driveity if anything
+
+1230
+00:41:54,079 --> 00:41:58,160
+>> yeah I I think there's some room for
+
+1231
+00:41:56,000 --> 00:42:00,159
+that you know but I'd also say okay now
+
+1232
+00:41:58,159 --> 00:42:02,639
+I'm talking about putting a million GPUs
+
+1233
+00:42:00,159 --> 00:42:04,239
+to work in my data center, right? And
+
+1234
+00:42:02,639 --> 00:42:06,799
+you say, well, you know, for that
+
+1235
+00:42:04,239 --> 00:42:08,479
+particular diffusion workload, you know,
+
+1236
+00:42:06,800 --> 00:42:10,560
+I should really put something optimized
+
+1237
+00:42:08,480 --> 00:42:11,760
+this way, right? So, I'm now going to
+
+1238
+00:42:10,559 --> 00:42:13,920
+start, you know, putting, you know, a
+
+1239
+00:42:11,760 --> 00:42:15,839
+thousand of those in, right? And for
+
+1240
+00:42:13,920 --> 00:42:18,000
+that workload, I need, you know, 2,000
+
+1241
+00:42:15,838 --> 00:42:19,759
+of these in and, you know, for some, you
+
+1242
+00:42:18,000 --> 00:42:21,679
+know, and all of a sudden, you know, you
+
+1243
+00:42:19,760 --> 00:42:24,079
+don't get some of the, you know, the
+
+1244
+00:42:21,679 --> 00:42:25,759
+flexibility of scale, right? that you
+
+1245
+00:42:24,079 --> 00:42:28,160
+would say and you know how much does it
+
+1246
+00:42:25,760 --> 00:42:30,720
+cost me to manage and upgrade and you
+
+1247
+00:42:28,159 --> 00:42:32,239
+know connect and you know fault domain
+
+1248
+00:42:30,719 --> 00:42:33,838
+you know all of those types of things
+
+1249
+00:42:32,239 --> 00:42:35,598
+>> the agents will do up all the upgrades
+
+1250
+00:42:33,838 --> 00:42:37,679
+so there's no longer a problem
+
+1251
+00:42:35,599 --> 00:42:38,960
+>> yeah yeah yeah thank you everything gets
+
+1252
+00:42:37,679 --> 00:42:42,960
+easy so good out there
+
+1253
+00:42:38,960 --> 00:42:45,838
+>> yeah so fleet management is done um so
+
+1254
+00:42:42,960 --> 00:42:47,679
+we talked about what compute memory
+
+1255
+00:42:45,838 --> 00:42:49,440
+networking
+
+1256
+00:42:47,679 --> 00:42:50,318
+power is the next one
+
+1257
+00:42:49,440 --> 00:42:52,079
+>> yeah yeah yeah
+
+1258
+00:42:50,318 --> 00:42:53,838
+>> and you touched upon it with vertical
+
+1259
+00:42:52,079 --> 00:42:55,599
+delivery inside the chip
+
+1260
+00:42:53,838 --> 00:42:57,199
+on the chip.
+
+1261
+00:42:55,599 --> 00:42:59,039
+>> But
+
+1262
+00:42:57,199 --> 00:43:01,679
+I mean there's 800 volt DC, there's
+
+1263
+00:42:59,039 --> 00:43:04,318
+power delivery to the data center.
+
+1264
+00:43:01,679 --> 00:43:06,719
+>> Um there's an entire ecosystem all the
+
+1265
+00:43:04,318 --> 00:43:10,559
+way to
+
+1266
+00:43:06,719 --> 00:43:12,959
+power generation and and
+
+1267
+00:43:10,559 --> 00:43:14,318
+the sociopolitical dimensions of that
+
+1268
+00:43:12,960 --> 00:43:15,039
+and so on and so forth.
+
+1269
+00:43:14,318 --> 00:43:17,199
+>> Yeah. Yeah.
+
+1270
+00:43:15,039 --> 00:43:19,599
+>> So where does innovation come in and
+
+1271
+00:43:17,199 --> 00:43:22,399
+where does like its pure execution?
+
+1272
+00:43:19,599 --> 00:43:24,800
+Well, you the you know and if we start
+
+1273
+00:43:22,400 --> 00:43:26,639
+at you know uh first principles here you
+
+1274
+00:43:24,800 --> 00:43:29,359
+know our our nation has done a terrible
+
+1275
+00:43:26,639 --> 00:43:32,480
+job with this energy capacity right you
+
+1276
+00:43:29,358 --> 00:43:34,880
+know and essentially we went for 10 to
+
+1277
+00:43:32,480 --> 00:43:37,679
+15 years where essentially I was taking
+
+1278
+00:43:34,880 --> 00:43:39,440
+coal offline at the rate I was adding
+
+1279
+00:43:37,679 --> 00:43:42,399
+renewables and essentially the nation
+
+1280
+00:43:39,440 --> 00:43:46,480
+was flatlined in terms of overall energy
+
+1281
+00:43:42,400 --> 00:43:49,519
+capacity. Not good because in a AI
+
+1282
+00:43:46,480 --> 00:43:52,480
+digital age energy capacity equals
+
+1283
+00:43:49,519 --> 00:43:55,280
+economic capacity right so essentially
+
+1284
+00:43:52,480 --> 00:43:57,760
+my economic capacity as a nation flat
+
+1285
+00:43:55,280 --> 00:44:00,160
+for 15 years if you buy that thesis
+
+1286
+00:43:57,760 --> 00:44:02,880
+right which I think is very you know
+
+1287
+00:44:00,159 --> 00:44:04,719
+provable over the last 5 years I you
+
+1288
+00:44:02,880 --> 00:44:07,200
+know we've seen this enormous influx
+
+1289
+00:44:04,719 --> 00:44:08,879
+into just give me more capacity uh but
+
+1290
+00:44:07,199 --> 00:44:12,078
+you know I think uh you know even with
+
+1291
+00:44:08,880 --> 00:44:14,559
+that we've gone to maybe increasing our
+
+1292
+00:44:12,079 --> 00:44:15,119
+national energy capac capacity 4% per
+
+1293
+00:44:14,559 --> 00:44:15,838
+year
+
+1294
+00:44:15,119 --> 00:44:18,480
+>> something like that
+
+1295
+00:44:15,838 --> 00:44:20,960
+>> going from you know essentially 0 to one
+
+1296
+00:44:18,480 --> 00:44:25,199
+right wow 4x
+
+1297
+00:44:20,960 --> 00:44:27,358
+or hm 4% right so to me you know that
+
+1298
+00:44:25,199 --> 00:44:29,519
+you know it's a bad situation so we just
+
+1299
+00:44:27,358 --> 00:44:31,598
+need more energy capacity
+
+1300
+00:44:29,519 --> 00:44:33,519
+>> uh for it so number one and obviously we
+
+1301
+00:44:31,599 --> 00:44:35,599
+have some companies in that space you
+
+1302
+00:44:33,519 --> 00:44:38,800
+know we talked about nuclear operating
+
+1303
+00:44:35,599 --> 00:44:41,039
+as one of those with Alva um and uh you
+
+1304
+00:44:38,800 --> 00:44:43,680
+know I think nuclear right you know as a
+
+1305
+00:44:41,039 --> 00:44:45,679
+base load is you know fabulous thing
+
+1306
+00:44:43,679 --> 00:44:47,118
+that we want to go build more of. You
+
+1307
+00:44:45,679 --> 00:44:48,719
+know, unfortunately, all of our
+
+1308
+00:44:47,119 --> 00:44:50,960
+renewables have, you know, deep
+
+1309
+00:44:48,719 --> 00:44:53,519
+dependencies in China, which is very
+
+1310
+00:44:50,960 --> 00:44:55,838
+unfortunate uh you know, for us. You
+
+1311
+00:44:53,519 --> 00:44:58,559
+know, we're, you know, uh, you know, gas
+
+1312
+00:44:55,838 --> 00:45:01,199
+turbine lead times are only eight years
+
+1313
+00:44:58,559 --> 00:45:03,119
+at this point, right? So, you know, you
+
+1314
+00:45:01,199 --> 00:45:05,199
+know, I mean, we really have a difficult
+
+1315
+00:45:03,119 --> 00:45:07,039
+environment to scale up rapidly, but
+
+1316
+00:45:05,199 --> 00:45:09,279
+one, we just need more capacity. Yeah.
+
+1317
+00:45:07,039 --> 00:45:11,279
+And fundamentally energy capacity
+
+1318
+00:45:09,280 --> 00:45:13,839
+somewhat dampens how euph fork we can
+
+1319
+00:45:11,280 --> 00:45:15,680
+get on AI, right? Because you know why
+
+1320
+00:45:13,838 --> 00:45:18,318
+build a new data center and buy, you
+
+1321
+00:45:15,679 --> 00:45:20,318
+know, the million GPUs if I can't power
+
+1322
+00:45:18,318 --> 00:45:23,599
+them, right? And I think you're going to
+
+1323
+00:45:20,318 --> 00:45:25,679
+see more and more defaults happening on
+
+1324
+00:45:23,599 --> 00:45:27,119
+many of those data center projects
+
+1325
+00:45:25,679 --> 00:45:28,318
+because the energy won't be there.
+
+1326
+00:45:27,119 --> 00:45:28,960
+>> So you think it'll be a significant
+
+1327
+00:45:28,318 --> 00:45:30,480
+headwind?
+
+1328
+00:45:28,960 --> 00:45:31,679
+>> I think it will be a headwind and I
+
+1329
+00:45:30,480 --> 00:45:33,440
+think you're already starting to see
+
+1330
+00:45:31,679 --> 00:45:35,838
+some of the first indicators of that.
+
+1331
+00:45:33,440 --> 00:45:37,599
+the Oracle, you know, uh, comet, you
+
+1332
+00:45:35,838 --> 00:45:38,880
+know, was just I and I think that's the
+
+1333
+00:45:37,599 --> 00:45:40,160
+first of what you're going to see many.
+
+1334
+00:45:38,880 --> 00:45:42,160
+Now, it's not like we're going to slow
+
+1335
+00:45:40,159 --> 00:45:43,759
+down as a result, but I think people
+
+1336
+00:45:42,159 --> 00:45:46,318
+will start saying, do I really have the
+
+1337
+00:45:43,760 --> 00:45:48,480
+energy, you know, to underwrite the
+
+1338
+00:45:46,318 --> 00:45:50,800
+capital commitments that I'm making, you
+
+1339
+00:45:48,480 --> 00:45:54,159
+know, for, you know, cement for data
+
+1340
+00:45:50,800 --> 00:45:57,119
+center racks and, uh, GPU purchases. So
+
+1341
+00:45:54,159 --> 00:45:58,639
+I do think it's you know going to be a
+
+1342
+00:45:57,119 --> 00:46:00,640
+you know an upper bound
+
+1343
+00:45:58,639 --> 00:46:02,159
+>> but we need more energy capacity and we
+
+1344
+00:46:00,639 --> 00:46:03,838
+need to get more innovation into that
+
+1345
+00:46:02,159 --> 00:46:06,480
+and we need more of those supply chains
+
+1346
+00:46:03,838 --> 00:46:08,000
+in the US you know nuclear one of my
+
+1347
+00:46:06,480 --> 00:46:09,920
+favorites you know when was the last
+
+1348
+00:46:08,000 --> 00:46:12,318
+nuclear reactor that came online in the
+
+1349
+00:46:09,920 --> 00:46:14,480
+US right you know it's 20 years ago
+
+1350
+00:46:12,318 --> 00:46:17,358
+>> right you know we just stopped you know
+
+1351
+00:46:14,480 --> 00:46:20,000
+a very capable uh industry so that's one
+
+1352
+00:46:17,358 --> 00:46:21,838
+we need more uh you know we need to get
+
+1353
+00:46:20,000 --> 00:46:23,519
+much more efficient at delivering you
+
+1354
+00:46:21,838 --> 00:46:26,000
+know the power networks and as you you
+
+1355
+00:46:23,519 --> 00:46:27,759
+know, moving 800 volt DC data centers.
+
+1356
+00:46:26,000 --> 00:46:29,679
+Absolutely. You know, right, you know,
+
+1357
+00:46:27,760 --> 00:46:31,680
+and being able to eliminate so many
+
+1358
+00:46:29,679 --> 00:46:36,078
+conversion steps along the way because
+
+1359
+00:46:31,679 --> 00:46:38,879
+of uh of uh uh historical uh you know,
+
+1360
+00:46:36,079 --> 00:46:40,400
+reasons and you know, standardization
+
+1361
+00:46:38,880 --> 00:46:42,559
+reasons. Okay, we got to fix this. You
+
+1362
+00:46:40,400 --> 00:46:43,760
+know, an 800 volt DC, the revenge of
+
+1363
+00:46:42,559 --> 00:46:46,078
+Edison is upon us.
+
+1364
+00:46:43,760 --> 00:46:48,800
+>> Yes, I was just going to say,
+
+1365
+00:46:46,079 --> 00:46:50,480
+>> yeah, I like to say so, you know, I do
+
+1366
+00:46:48,800 --> 00:46:52,400
+think that ends up being we need better
+
+1367
+00:46:50,480 --> 00:46:53,599
+power conversion. You know, we have a
+
+1368
+00:46:52,400 --> 00:46:55,760
+couple of companies, one of those
+
+1369
+00:46:53,599 --> 00:46:57,119
+vertical, you know, vertical GAN, you
+
+1370
+00:46:55,760 --> 00:46:59,200
+know, I think will be, you know, a
+
+1371
+00:46:57,119 --> 00:47:02,960
+killer technology, you know, to be able
+
+1372
+00:46:59,199 --> 00:47:05,439
+to do 800 to 48 or 800 to 12 or even 800
+
+1373
+00:47:02,960 --> 00:47:07,280
+to 5 in one conversion step, right?
+
+1374
+00:47:05,440 --> 00:47:08,639
+Which just gives you a lot more uh
+
+1375
+00:47:07,280 --> 00:47:10,079
+energy, you know, we touched on
+
+1376
+00:47:08,639 --> 00:47:11,679
+>> solid state transformers, you know.
+
+1377
+00:47:10,079 --> 00:47:13,039
+>> Yeah. You know, all of those are, you
+
+1378
+00:47:11,679 --> 00:47:15,118
+know, solid state transformers,
+
+1379
+00:47:13,039 --> 00:47:16,559
+switches, etc., you know, rebuilding,
+
+1380
+00:47:15,119 --> 00:47:18,160
+you know, the power delivery network.
+
+1381
+00:47:16,559 --> 00:47:20,000
+And I think that will, you know, have a
+
+1382
+00:47:18,159 --> 00:47:21,679
+lot of, you know, innovation, you know,
+
+1383
+00:47:20,000 --> 00:47:23,679
+it's sort of like, okay, power's cool
+
+1384
+00:47:21,679 --> 00:47:24,960
+again, right? You know, you know, for
+
+1385
+00:47:23,679 --> 00:47:27,838
+it. And then you're going to need all of
+
+1386
+00:47:24,960 --> 00:47:29,199
+those in the cooling systems as well,
+
+1387
+00:47:27,838 --> 00:47:31,199
+right? You know, and so there'll be a
+
+1388
+00:47:29,199 --> 00:47:33,039
+bunch of innovations and that, you know,
+
+1389
+00:47:31,199 --> 00:47:34,799
+so you know, you know, turbines and
+
+1390
+00:47:33,039 --> 00:47:36,318
+refrigerants and, you know, all of a
+
+1391
+00:47:34,800 --> 00:47:38,800
+sudden they get to be, you know,
+
+1392
+00:47:36,318 --> 00:47:40,559
+exciting new technologies again. So, you
+
+1393
+00:47:38,800 --> 00:47:42,400
+know, for all of us hardware guys, this,
+
+1394
+00:47:40,559 --> 00:47:44,000
+you know, this, you know, is like
+
+1395
+00:47:42,400 --> 00:47:44,480
+renaissance in front of us. It's just
+
+1396
+00:47:44,000 --> 00:47:46,000
+going to be
+
+1397
+00:47:44,480 --> 00:47:48,079
+>> after 25 years. I had to go back and
+
+1398
+00:47:46,000 --> 00:47:50,480
+read about car's car
+
+1399
+00:47:48,079 --> 00:47:52,079
+>> carinal efficiencies. Oh yeah. Is it
+
+1400
+00:47:50,480 --> 00:47:55,280
+like good stuff? How does that first law
+
+1401
+00:47:52,079 --> 00:47:57,680
+of thermodynamics work again?
+
+1402
+00:47:55,280 --> 00:47:59,359
+>> Something after all here,
+
+1403
+00:47:57,679 --> 00:48:02,078
+>> you know. So, so it's going to be you
+
+1404
+00:47:59,358 --> 00:48:03,838
+know exciting time that way you know but
+
+1405
+00:48:02,079 --> 00:48:05,920
+you know you know we also say you know
+
+1406
+00:48:03,838 --> 00:48:09,119
+we need to change the physics right
+
+1407
+00:48:05,920 --> 00:48:10,960
+because cos hasn't improved you know the
+
+1408
+00:48:09,119 --> 00:48:13,838
+essential power per terror you know
+
+1409
+00:48:10,960 --> 00:48:15,760
+power per teraflop for the last five uh
+
+1410
+00:48:13,838 --> 00:48:18,159
+generations of Nvidia chips you know
+
+1411
+00:48:15,760 --> 00:48:19,359
+flatline not okay right and that's where
+
+1412
+00:48:18,159 --> 00:48:22,239
+some of the things you know we have a
+
+1413
+00:48:19,358 --> 00:48:24,000
+superconducting company snowcap right
+
+1414
+00:48:22,239 --> 00:48:25,919
+which affords the opportunity to
+
+1415
+00:48:24,000 --> 00:48:27,679
+fundamentally change the physics you
+
+1416
+00:48:25,920 --> 00:48:29,039
+know a thousand times better power
+
+1417
+00:48:27,679 --> 00:48:31,118
+performance. So, I do think some of
+
+1418
+00:48:29,039 --> 00:48:31,920
+those innovations are upon us in the
+
+1419
+00:48:31,119 --> 00:48:33,680
+near future as well.
+
+1420
+00:48:31,920 --> 00:48:37,280
+>> I've been a terrible time manager here
+
+1421
+00:48:33,679 --> 00:48:39,039
+for the past hour. So, so many topics
+
+1422
+00:48:37,280 --> 00:48:40,960
+yet to cover. We didn't cover, but we
+
+1423
+00:48:39,039 --> 00:48:41,440
+got to cover at least one before we
+
+1424
+00:48:40,960 --> 00:48:42,159
+leave.
+
+1425
+00:48:41,440 --> 00:48:43,039
+>> Okay.
+
+1426
+00:48:42,159 --> 00:48:44,159
+>> Because now
+
+1427
+00:48:43,039 --> 00:48:47,358
+>> you're in charge.
+
+1428
+00:48:44,159 --> 00:48:48,879
+>> Yes. So, I thought
+
+1429
+00:48:47,358 --> 00:48:50,880
+um
+
+1430
+00:48:48,880 --> 00:48:52,800
+now VMs are back.
+
+1431
+00:48:50,880 --> 00:48:54,559
+>> How do you think about that as a former
+
+1432
+00:48:52,800 --> 00:48:57,920
+CEO of VMware?
+
+1433
+00:48:54,559 --> 00:49:00,800
+>> Well, you know, I I uh I feel excluded
+
+1434
+00:48:57,920 --> 00:49:02,000
+from this conversation obviously if we
+
+1435
+00:49:00,800 --> 00:49:03,519
+go on
+
+1436
+00:49:02,000 --> 00:49:05,440
+>> part of it was I was going to talk about
+
+1437
+00:49:03,519 --> 00:49:06,000
+networking as well so but I don't think
+
+1438
+00:49:05,440 --> 00:49:08,318
+we have the time
+
+1439
+00:49:06,000 --> 00:49:11,039
+>> you know hey you know I I think the you
+
+1440
+00:49:08,318 --> 00:49:13,119
+know every innovation has always led to
+
+1441
+00:49:11,039 --> 00:49:15,039
+the next abstraction right and I think
+
+1442
+00:49:13,119 --> 00:49:16,480
+many of these ideas and you right you
+
+1443
+00:49:15,039 --> 00:49:18,239
+know I always like to say you know you
+
+1444
+00:49:16,480 --> 00:49:19,838
+know what's what's new in our world
+
+1445
+00:49:18,239 --> 00:49:22,318
+today you know data structures
+
+1446
+00:49:19,838 --> 00:49:24,239
+algorithms you know an abstraction you
+
+1447
+00:49:22,318 --> 00:49:26,159
+know you know we bring it back to those
+
+1448
+00:49:24,239 --> 00:49:27,759
+you know foundationals and hey you know
+
+1449
+00:49:26,159 --> 00:49:29,759
+I you know the virtual machine
+
+1450
+00:49:27,760 --> 00:49:31,680
+abstraction you know whether it's done
+
+1451
+00:49:29,760 --> 00:49:33,520
+from the infrastructure level or from
+
+1452
+00:49:31,679 --> 00:49:35,519
+the application level you know I think
+
+1453
+00:49:33,519 --> 00:49:37,759
+it's still a foundational abstraction
+
+1454
+00:49:35,519 --> 00:49:40,559
+model you know that deserves to always
+
+1455
+00:49:37,760 --> 00:49:42,480
+have a place uh in the compute hierarchy
+
+1456
+00:49:40,559 --> 00:49:44,160
+so you know so what do you think one of
+
+1457
+00:49:42,480 --> 00:49:47,039
+us go back and run VMware again
+
+1458
+00:49:44,159 --> 00:49:48,719
+>> yeah that's what I tell I think I told
+
+1459
+00:49:47,039 --> 00:49:49,119
+it's time to go back and run VMware
+
+1460
+00:49:48,719 --> 00:49:51,759
+again
+
+1461
+00:49:49,119 --> 00:49:53,440
+>> yeah yeah and uh you know and I do think
+
+1462
+00:49:51,760 --> 00:49:54,880
+some of these abstractions you know but
+
+1463
+00:49:53,440 --> 00:49:57,200
+you also think about it and like one of
+
+1464
+00:49:54,880 --> 00:49:59,358
+the things we did at VMware where we you
+
+1465
+00:49:57,199 --> 00:50:01,519
+know essentially you know managed every
+
+1466
+00:49:59,358 --> 00:50:02,000
+aspect of the computing hierarchy.
+
+1467
+00:50:01,519 --> 00:50:03,358
+>> Yeah.
+
+1468
+00:50:02,000 --> 00:50:05,199
+>> Right. You know and you manage the
+
+1469
+00:50:03,358 --> 00:50:07,119
+workload, you manage the network, you
+
+1470
+00:50:05,199 --> 00:50:09,199
+manage the storage you know system and
+
+1471
+00:50:07,119 --> 00:50:12,000
+how do you abstract those? And I think
+
+1472
+00:50:09,199 --> 00:50:13,598
+in the AI context, right? We think about
+
+1473
+00:50:12,000 --> 00:50:15,599
+you know these agent swarms. Well, who's
+
+1474
+00:50:13,599 --> 00:50:18,079
+going to manage the agents? Who's going
+
+1475
+00:50:15,599 --> 00:50:19,760
+to create the security profiles around
+
+1476
+00:50:18,079 --> 00:50:21,839
+all of the agents? Who's going to be
+
+1477
+00:50:19,760 --> 00:50:24,000
+manage the performance of the agents?
+
+1478
+00:50:21,838 --> 00:50:26,719
+You know, essentially every fundamental
+
+1479
+00:50:24,000 --> 00:50:28,880
+element of virtualization and management
+
+1480
+00:50:26,719 --> 00:50:30,480
+needs to get recreated in this next
+
+1481
+00:50:28,880 --> 00:50:32,480
+computing hierarchy and there's going to
+
+1482
+00:50:30,480 --> 00:50:33,838
+be lots of wonderful companies that
+
+1483
+00:50:32,480 --> 00:50:36,000
+you'll sort of break through for how
+
+1484
+00:50:33,838 --> 00:50:38,078
+those things will be, you know, done.
+
+1485
+00:50:36,000 --> 00:50:40,480
+>> Okay. Do you want to end it on
+
+1486
+00:50:38,079 --> 00:50:42,240
+networking?
+
+1487
+00:50:40,480 --> 00:50:44,639
+>> Actually, I'd love to stay with the the
+
+1488
+00:50:42,239 --> 00:50:45,759
+VMs for a second. And the most
+
+1489
+00:50:44,639 --> 00:50:48,078
+interesting thing for me is that we're
+
+1490
+00:50:45,760 --> 00:50:49,359
+now building VMs so that they're usable
+
+1491
+00:50:48,079 --> 00:50:50,720
+for agents as opposed to usable for
+
+1492
+00:50:49,358 --> 00:50:52,960
+humans. What we've seen in sort of other
+
+1493
+00:50:50,719 --> 00:50:55,118
+companies is that that changes a lot the
+
+1494
+00:50:52,960 --> 00:50:56,559
+form factor that changes a lot how you
+
+1495
+00:50:55,119 --> 00:50:58,240
+market them, right? You want you want
+
+1496
+00:50:56,559 --> 00:50:59,440
+the agent to make the pick for for for
+
+1497
+00:50:58,239 --> 00:51:01,519
+your VM offering.
+
+1498
+00:50:59,440 --> 00:51:02,880
+>> Um it it changes a lot how much
+
+1499
+00:51:01,519 --> 00:51:04,159
+complexity you can have. It changes how
+
+1500
+00:51:02,880 --> 00:51:05,599
+how quickly the startup should be.
+
+1501
+00:51:04,159 --> 00:51:06,558
+Humans are a lot more patient than than
+
+1502
+00:51:05,599 --> 00:51:07,519
+agents.
+
+1503
+00:51:06,559 --> 00:51:09,440
+>> Um
+
+1504
+00:51:07,519 --> 00:51:12,000
+>> so it's
+
+1505
+00:51:09,440 --> 00:51:13,358
+if you have to rebuild VMware today, how
+
+1506
+00:51:12,000 --> 00:51:14,960
+would it look different?
+
+1507
+00:51:13,358 --> 00:51:17,039
+>> Yeah. And and I do think
+
+1508
+00:51:14,960 --> 00:51:19,119
+>> like the VMware for agents.
+
+1509
+00:51:17,039 --> 00:51:21,679
+>> Yeah. And I and I do think there's, you
+
+1510
+00:51:19,119 --> 00:51:24,160
+know, does there need to be a VMware for
+
+1511
+00:51:21,679 --> 00:51:25,039
+agents for humans, right? You know,
+
+1512
+00:51:24,159 --> 00:51:26,879
+>> I see what you mean. Yes.
+
+1513
+00:51:25,039 --> 00:51:27,920
+>> Right. You know, in the sense that, you
+
+1514
+00:51:26,880 --> 00:51:29,039
+know, I need humans.
+
+1515
+00:51:27,920 --> 00:51:30,639
+>> Let's stick to the agents. They're way
+
+1516
+00:51:29,039 --> 00:51:32,000
+more interesting than right now.
+
+1517
+00:51:30,639 --> 00:51:34,400
+>> Yeah. But, but, you know, I think it's
+
+1518
+00:51:32,000 --> 00:51:36,000
+an important point because I do think
+
+1519
+00:51:34,400 --> 00:51:37,838
+that there needs to be, you know, and
+
+1520
+00:51:36,000 --> 00:51:40,719
+I'll use, you know, Dario's
+
+1521
+00:51:37,838 --> 00:51:43,759
+constitution, right, or guard rails,
+
+1522
+00:51:40,719 --> 00:51:46,399
+right? Or being able to set policies.
+
+1523
+00:51:43,760 --> 00:51:48,240
+And I think then you you really say okay
+
+1524
+00:51:46,400 --> 00:51:49,599
+every aspect of the virtual machine as
+
+1525
+00:51:48,239 --> 00:51:51,358
+we know we'll love it today it is
+
+1526
+00:51:49,599 --> 00:51:53,920
+servicing agents
+
+1527
+00:51:51,358 --> 00:51:55,759
+>> right as opposed to servicing hardware
+
+1528
+00:51:53,920 --> 00:51:57,599
+and humans right so I think you know
+
+1529
+00:51:55,760 --> 00:51:59,760
+that becomes your fundamental design
+
+1530
+00:51:57,599 --> 00:52:01,838
+constraint on this side you know how do
+
+1531
+00:51:59,760 --> 00:52:03,599
+I make agents great
+
+1532
+00:52:01,838 --> 00:52:06,078
+>> right how can I make them secure how can
+
+1533
+00:52:03,599 --> 00:52:08,079
+I make them performant you know you know
+
+1534
+00:52:06,079 --> 00:52:10,480
+uh you know how do I abstract them how
+
+1535
+00:52:08,079 --> 00:52:13,839
+can I migrate them all of those things
+
+1536
+00:52:10,480 --> 00:52:16,159
+you know have the new embodiment you V
+
+1537
+00:52:13,838 --> 00:52:17,519
+motion for agents right it's like every
+
+1538
+00:52:16,159 --> 00:52:19,759
+one of these will have the new
+
+1539
+00:52:17,519 --> 00:52:21,920
+embodiment you know for them but then I
+
+1540
+00:52:19,760 --> 00:52:24,079
+also need to think about how can humans
+
+1541
+00:52:21,920 --> 00:52:26,639
+be setting the policies describing the
+
+1542
+00:52:24,079 --> 00:52:28,880
+constitutions you know getting the you
+
+1543
+00:52:26,639 --> 00:52:30,159
+know dashboards uh etc and I think
+
+1544
+00:52:28,880 --> 00:52:31,440
+that's sort of you know where the
+
+1545
+00:52:30,159 --> 00:52:33,279
+interesting thing is because you need to
+
+1546
+00:52:31,440 --> 00:52:35,200
+do both of those right not just one of
+
+1547
+00:52:33,280 --> 00:52:37,280
+those but the fundamental you know I'll
+
+1548
+00:52:35,199 --> 00:52:39,118
+say the hard design stuff like we did
+
+1549
+00:52:37,280 --> 00:52:41,280
+for you know virtual machines was
+
+1550
+00:52:39,119 --> 00:52:43,440
+associate abstracting the hardware in a
+
+1551
+00:52:41,280 --> 00:52:45,440
+performant way for applications or
+
+1552
+00:52:43,440 --> 00:52:47,039
+operating systems here. It's, you know,
+
+1553
+00:52:45,440 --> 00:52:49,039
+abstracting the hardware and the
+
+1554
+00:52:47,039 --> 00:52:50,558
+operations for agents. It's a
+
+1555
+00:52:49,039 --> 00:52:50,800
+fundamental thing that you're serving.
+
+1556
+00:52:50,559 --> 00:52:53,040
+It
+
+1557
+00:52:50,800 --> 00:52:55,200
+>> was great discussing this and thank you
+
+1558
+00:52:53,039 --> 00:52:55,679
+so much, Pat, for coming in and we'll do
+
+1559
+00:52:55,199 --> 00:52:57,118
+it again.
+
+1560
+00:52:55,679 --> 00:52:57,919
+>> Well, two of my favorite people.
+
+1561
+00:52:57,119 --> 00:52:58,480
+Anytime.
+
+1562
+00:52:57,920 --> 00:52:59,599
+>> All right. Thanks.
+
+1563
+00:52:58,480 --> 00:53:02,760
+>> That was awesome. Thank you.
+
+1564
+00:52:59,599 --> 00:53:02,760
+>> Thank you.
