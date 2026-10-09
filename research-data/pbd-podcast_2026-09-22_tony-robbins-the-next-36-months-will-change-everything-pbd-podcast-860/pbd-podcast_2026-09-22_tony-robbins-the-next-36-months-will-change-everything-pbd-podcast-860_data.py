@@ -1,0 +1,236 @@
+"""Data file for PBD Podcast — Tony Robbins: The Next 36 Months Will Change Everything."""
+
+META = {
+    "title": "Tony Robbins: The Next 36 Months Will Change Everything | PBD Podcast #860",
+    "channel": "PBD Podcast",
+    "speakers": "Tony Robbins, Christopher Zook (CAZ Investments), Patrick Bet-David (host)",
+    "date": "2026-09-22",
+    "video_url": "https://www.youtube.com/watch?v=ipoLo_2kf-c",
+    "thread_line": "7 threads · a buy/sell/hold game, the 'holy grail' of uncorrelated private assets, sports teams/GP stakes/energy/defense as examples, how to vet managers and size positions, the next 36 months of AI, quantum and robotics plus reskilling, debt and Dalio's 'brink' warning, and life, relationship and career advice.",
+    "category": "market",
+}
+
+SNAPSHOT = [
+    "Robbins and Christopher Zook (CAZ Investments) argue public markets are now **highly correlated** (the Magnificent Seven are 32% of the S&P vs a prior 17% max), so diversification needs 8-12 truly uncorrelated assets, mostly private.",
+    "Their numbers: private equity **15.7% vs S&P 9%** over 39 years, so $1M becomes ~$293M vs ~$28.6M; Zook says portfolio correlation rose from 0.16 (2005) to 0.65, and above 0.85 in stress.",
+    "Examples they like: **sports teams** (18% compounded over 10 years, media-rights driven), GP stakes in asset managers (~60% margins), energy at 3-4x cash flow, and defense/drones.",
+    "In the buy/sell/hold game: defense is a buy; one guest sells Bitcoin (a trading vehicle) and Nvidia; Palantir, Tesla and SpaceX are holds; real estate is local.",
+    "Robbins' 36-month view: **AGI** is certain, **superintelligence** in 5-6 years, quantum a threat to banks in under 36 months, and more robots than humans in 10 years; his answer is reskilling (he has a debt-free college initiative).",
+    "On macro, he says Dalio's 'brink' warning reflects a historical debt-and-conflict pattern; he is sure a **crisis is coming** and urges all-weather, uncorrelated portfolios.",
+    "Life section: relationships need shared values (80% is selection) plus polarity; owners beat consumers; skills beat degrees.",
+]
+
+THEMES = [
+    {
+        "id": "buy-sell-hold",
+        "tags": ["finance", "crypto", "semis", "space"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "BUY / SELL / HOLD GAME — NOT FINANCIAL ADVICE",
+        "title": "The buy/sell/hold game: defense is a buy, Bitcoin and Nvidia draw sells, real estate is local",
+        "lead": "The guests refuse blanket calls and answer by asset, with most answers tied to individual outcomes and asset allocation.",
+        "bullets": [
+            "**Gold:** hold (Robbins has very little; answer depends on the person's outcomes and inflation exposure).",
+            "**Bitcoin:** one guest sells, calling it only a trading vehicle (sell when up, buy when down) after a move from about $62,000 to $78,000; the other says Bitcoin holders are the same people holding tech, so a tech drop forces leveraged sells; one guest holds some.",
+            "**Nvidia:** one guest is a seller 'right now', the other holds; **Palantir:** a holder, and 'an owner for full disclosure'; **Tesla** and **SpaceX:** holds.",
+            "**Defense companies:** a definite buy; host praises an early call on Palmer Luckey's company, which he says could reach a trillion-dollar valuation depending on scale.",
+            "**S&P 500:** one guest is a seller today; Magnificent Seven are 32% of the S&P versus a prior peak of about 17%, 'a challenge waiting to happen'.",
+            "**Real estate:** commercial and single-family are local; Texas and Tennessee buys, Florida hold-or-buy, Illinois hold; **collectible cards:** hold if owned, not a buyer; **sports teams:** 'big buyers every day'; **nuclear:** depends on the newest types.",
+        ],
+        "quote": {"text": "You can't have an answer to this question if you don't know what your outcomes are and you have to know what your asset allocation is.", "cite": "— Tony Robbins"},
+        "watch": "Both guests hold stakes tied to what they discuss: Robbins is a partner and investor in CAZ Investments (since 2021) and owns a West Virginia power plant; Zook's firm holds sports-team and GP stakes.",
+        "names": [
+            {"name": "Bitcoin (BTC)", "blurb": "One guest sells (trading vehicle only after a $62K to $78K move); the other holds some.", "stance": "NEGATIVE VIEW", "conviction": "Low", "horizon": "trading only"},
+            {"name": "Nvidia (NVDA)", "blurb": "One guest is a seller right now; the other holds.", "stance": "UNCERTAIN", "conviction": "Low", "horizon": None},
+            {"name": "Palantir (PLTR)", "blurb": "A guest is a holder and owner, disclosed.", "stance": "OWNS", "conviction": "None", "horizon": None},
+            {"name": "Tesla (TSLA)", "blurb": "Hold.", "stance": "WATCHING", "conviction": "None", "horizon": None},
+            {"name": "SpaceX (SPCX)", "blurb": "Hold ('we hold together').", "stance": "WATCHING", "conviction": "None", "horizon": None},
+            {"name": "Gold", "blurb": "Hold; Robbins has very little exposure.", "stance": "WATCHING", "conviction": "None", "horizon": None},
+            {"name": "Anduril", "blurb": "Host's early call on Palmer Luckey's defense-tech firm; 'could be a trillion dollar valuation'.", "stance": "POSITIVE VIEW", "conviction": "Low", "horizon": None},
+        ],
+    },
+    {
+        "id": "uncorrelated-holy-grail",
+        "tags": ["finance", "macro-rates"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "DALIO'S 'HOLY GRAIL' — THE BOOK'S CENTRAL IDEA",
+        "title": "Eight to twelve uncorrelated assets: why public markets stopped diversifying",
+        "lead": "Robbins and Zook argue indexing has made public assets move together, so real diversification now requires private markets.",
+        "bullets": [
+            "Ray Dalio's 'holy grail': **8-12 uncorrelated investments cut risk ~80%** and raise upside; Robbins says Dalio repeated it at a JPMorgan alternative-assets conference.",
+            "A 2005 well-diversified portfolio had average cross-correlation of **0.16**; the same weights today are **0.65**, and over **85%** in stress, because index and ETF flows make everyone a buyer or seller together.",
+            "Private equity has beaten every stock market for **39 straight years**, averaging **15.7%** vs the S&P's 9%: $1M becomes ~$293M vs ~$28.6M; $100K becomes ~$2.9M vs ~$29M.",
+            "High-net-worth portfolios hold **52% in private assets** and 29% public; large family offices, endowments and foundations hold 35-60% in alternatives.",
+            "Golf-shop analogy: sunscreen and umbrellas — something zigs while another zags; stocks and bonds no longer do (both fell in 2008 and 2020).",
+            "Stocks are about **3x more volatile than bonds**, so a 60/40 portfolio isn't really balanced; Bridgewater's all-weather idea balances by risk.",
+            "Correlation by sleeve per Zook: sports negative to the S&P, GP stakes ~0.1, energy negative, space/defense/venture 30-40%, big tech 80-95%.",
+        ],
+        "quote": {"text": "You want to get off the roller coaster and onto an escalator.", "cite": "— Christopher Zook"},
+        "watch": "Zook and Robbins sell exposure to the private-market strategy they describe (their book and fund); the 39-year private-equity figure is their own cited statistic.",
+        "names": None,
+    },
+    {
+        "id": "private-market-examples",
+        "tags": ["finance", "energy", "geopolitics"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "SPORTS, GP STAKES, ENERGY, DEFENSE",
+        "title": "The uncorrelated sleeves they favor: sports teams, GP stakes, cheap energy and defense",
+        "lead": "The guests point to monopoly-like media economics, contractual fee streams and underinvested energy as the places to own.",
+        "bullets": [
+            "**Sports:** teams earned ~**18% compounded over 10 years**; live sports are 96 of the top 100 watched programs in 2025 vs 14 in 2005; the NFL gives each team ~**$450M** of national revenue before a game is played.",
+            "Valuation anecdotes: Peter Guber's Dodgers at **$2.2B** in 2012 then ~$7B of local rights sold in a week; Warriors bought at **$450M**, now ~$11B; NFL media rights run at a **37% discount** per viewer to the NBA, with a 2029 renegotiation; Amazon's Thursday Night Football drives Prime sign-ups.",
+            "**GP stakes** (owning slices of private asset managers): 2% fees on locked 5-10 year funds and 20% carry, ~**60% operating margins**; CAZ cites 100+ firms managing $2.9T with $12B of contractual fees over 10 years.",
+            "**Energy:** Robbins bought a **1.3 GW** power plant in West Virginia (8% of the state's electricity); private deals at **3-4x cash flow** vs 100-200x for Magnificent Seven stocks; ~**1,500 data centers** pending, and he says China-linked bots amplify local opposition.",
+            "**Defense:** NATO allies asked to spend 5%, taking spend from ~$3.6T to ~$6.6T; swarms of ~$30,000 drones changed war economics after Ukraine and Iran.",
+            "Access change: SEC rule in June 2025 allows some funds at a **$2,500 minimum with no accreditation**; **$14T** in 401(k)s cannot yet hold alternatives, which Robbins says is about to change.",
+        ],
+        "quote": None,
+        "watch": "Robbins holds stakes in the Dodgers, Red Sox and Warriors via CAZ, and bought the WV plant; Zook's firm owns the GP stakes cited. The fund purchase details and website are the guests' own promotion and are not captured here.",
+        "names": [
+            {"name": "CAZ Investments", "blurb": "Zook's firm; owns GP stakes, sports and energy exposure; Robbins is a partner (2021).", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
+            {"name": "Trivest", "blurb": "Miami PE firm buying founder businesses at ~7x cash flow, selling at 10-12x; one of CAZ's largest positions.", "stance": "OWNS", "conviction": "High", "horizon": None},
+            {"name": "Amazon (AMZN)", "blurb": "Thursday Night Football is the top Prime sign-up driver.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "manager-vetting-sizing",
+        "tags": ["finance", "mindset"],
+        "color": "green",
+        "badge": "Framework",
+        "status": "HOW TO VET MANAGERS AND SIZE POSITIONS",
+        "title": "Vet for persistency and survive the worst case; size by percentage, not dollars",
+        "lead": "Zook's filters and sizing rules are the most reusable part of the episode.",
+        "bullets": [
+            "CAZ reviews ~**2,000 investments a year** and makes 20-30; they ignore track record alone and look for **persistency** (e.g. every fund between 14% and 16% IRR) over a one-hit record.",
+            "Three eliminators: **no audited financials** (this is how they avoided Madoff), results from luck or timing (e.g. real estate starting 2009), or a manager 'learning on my nickel'.",
+            "Pedigree matters less now: 'some of the best schools put out the worst investors'; discipline is the edge (Robbins cites Zook's 96% profitability over 25 years).",
+            "Trivest's formula: buy founder/family businesses at ~7x cash flow, add margin and professionalism, exit at 10-12x ('path to 3X').",
+            "**Think percentages, not dollars:** a client invested the same $1M in everything whether worth $5M or $250M; Zook sizes at 20-40 basis points per position and keeps liquid assets for those who need them.",
+            "Emotion costs more than asset choice: the market averages a **14% correction every year**; best days come within two weeks of worst; owning illiquid assets (like a house) prevents panic-selling.",
+            "Skeptical of 13F copycat products: they're marketing, with filing delays; indexing, not stock picks, drives correlation.",
+        ],
+        "quote": {"text": "Don't think dollars. The only thing that matters is percentages.", "cite": "— Christopher Zook"},
+        "watch": "The vetting framework comes from the seller of private-market funds.",
+        "names": None,
+    },
+    {
+        "id": "next-36-months",
+        "tags": ["ai-infra", "robotics", "career"],
+        "color": "amber",
+        "badge": "Speculative",
+        "status": "AGI, QUANTUM, ROBOTS AND RESKILLING",
+        "title": "The next 36 months: AGI, a quantum threat to banks, robots, and a reskilling answer",
+        "lead": "Robbins says AGI is certain within 36 months and that people are replaced by those who use AI, not by AI itself.",
+        "bullets": [
+            "**AGI** within 36 months ('zero question', some say it's here); **superintelligence** in 5-6 years; 'more change in 10 years than all of human history'.",
+            "**Quantum:** per Gary Cohn (vice chairman of IBM), whoever gets quantum could control others' militaries and codes; JPMorgan has quantum-resistant defenses, Bank of America and Citi do not; an executive order could require it for government vendors; Israeli quantum founders say under 36 months.",
+            "**Robotics:** he says that within 10 years there will be more robots than humans and 'labor will be like electricity'; the host cites Musk's 10-30 million Tesla robots.",
+            "Jobs: 8 million jobs lost in 2008; self-driving could remove truck, taxi and Uber drivers in 8-12 years; a 60-year-old brother-in-law was let go with 650 colleagues after a software company's sale.",
+            "His fix: an AI-guided, **debt-free college initiative** (United Colleges of America) — over 100,000 sign-ups in four months, target 1 million in 36 months; 500,000 electricians ($85K starting) and 500,000 nurses needed.",
+            "Corporate side: his firm helps implement AI agents so staff drop boring work (40-60%); he works with the UAE on an agentic government and presents at Salesforce's Dreamforce.",
+        ],
+        "quote": {"text": "You're not going to be replaced by an AI. You're going to be replaced by somebody who knows how to use an AI.", "cite": "— Tony Robbins"},
+        "watch": "The reskilling program, agent-implementation firm and UAE/Salesforce work are Robbins' own ventures; sign-up figures are his statements.",
+        "names": [
+            {"name": "JPMorgan (JPM)", "blurb": "Has quantum-resistant security, per Gary Cohn.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Bank of America (BAC)", "blurb": "Named as lacking quantum defenses.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Citigroup (C)", "blurb": "Named as lacking quantum defenses.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Salesforce (CRM)", "blurb": "Robbins to present at Dreamforce; works with Marc Benioff.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "debt-crisis-owners",
+        "tags": ["macro-rates", "geopolitics", "policy"],
+        "color": "red",
+        "badge": "Cautionary tale",
+        "status": "DEBT, DALIO'S 'BRINK', AND OWNERSHIP",
+        "title": "A crisis is coming: $40T debt, China as challenger, and why owners beat consumers",
+        "lead": "Robbins agrees with Dalio's long-cycle pattern, says a crisis is certain and that crises create breakthroughs.",
+        "bullets": [
+            "US debt is about **$40T** with ~$1T annual interest; Robbins says Dalio's pattern (debt, internal conflict, a rising challenger — China) is why he says the US is 'on the brink' and may face something worse than a recession.",
+            "China 'plays Go while we play chess'; internal conflict is amplified by foreign-boosted social media; neither party will cut spending because it costs votes.",
+            "Possible fix: a **constitutional convention** for a balanced budget amendment (Zook); Robbins: 'I think we're going to have a crisis. There's no question about it.'",
+            "Blockbuster could have bought Netflix for ~$50M; crises force breakthroughs; AI could lift productivity but isn't producing the jump yet.",
+            "COVID-era spending was $3.5-4T more than needed and fed inflation; yet only housing, education and healthcare are more expensive than for prior generations.",
+            "**Consumer vs owner:** every iPhone bought (~$22,000) would be ~$331,000 of Apple stock; 'Trump accounts' give $1,000 per child born 2025-28, employers can add $2,500 a year, potentially ~$300,000 at 18.",
+            "Media: 'we're drowning in information, starving for wisdom'; he reads left and right via AI filters and blames bots for fake outrage.",
+        ],
+        "quote": {"text": "We're drowning in information. We're starving for wisdom.", "cite": "— Tony Robbins"},
+        "watch": "Robbins calls Dalio a dear friend and says his own summary of Dalio's view 'is not exactly what he believes'.",
+        "names": [
+            {"name": "Apple (AAPL)", "blurb": "iPhone-spend vs owning the stock example: ~$22,000 of phones vs ~$331,000 of stock.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "life-advice",
+        "tags": ["relationships", "mindset", "career"],
+        "color": "green",
+        "badge": "Principle",
+        "status": "LIFE, RELATIONSHIP AND CAREER ADVICE",
+        "title": "Choose partners on shared values, find passion plus competence, and serve something bigger",
+        "lead": "Robbins closes with relationship and career principles drawn from stories rather than data.",
+        "bullets": [
+            "**Relationships:** things in common make it work, differences make it passionate; polarity of masculine and feminine energy keeps attraction; '**80% of success is selection**'.",
+            "Story: a famous friend married a third time on a no-kids deal and was divorced when kids came; lesson is alignment on important goals, not identical dreams.",
+            "He rejects *The Secret*'s all-green-lights idea: not getting what you want is how you grow; 'you can't have a foreground without a background'.",
+            "**Career:** passion plus competence; stop searching for one purpose; shadow someone first; Steph Curry takes ~2.5M practice shots to make ~3,600 career ones.",
+            "**Influence:** a podcast has the largest reach, but 'it's not the vehicle, it's the value'.",
+            "He visited the USSR at 23 and saw lines for milk and bread; he suggests national service (like Israel's or Mormon missions) to teach young people what America offers.",
+            "He spent a month weighing a VP/candidate offer from 'RF' (captions; presumably Robert F. Kennedy Jr.) for 2028 and declined so he can serve both sides; he's 66, fed 42M people in 37 years then a billion meals in 8 years, with a '100 billion meals' challenge for the UN.",
+        ],
+        "quote": {"text": "80% of success in a relationship is selection.", "cite": "— Tony Robbins"},
+        "watch": None,
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F4C8", "tag": "Markets", "title": "Check the correlation of everything in your portfolio; if it all moves with the S&P, you are less diversified than you think."},
+    {"icon": "\U0001F9EE", "tag": "Sizing", "title": "Size positions by percentage of net worth (20-40 bps for risky ideas), not by dollar comfort."},
+    {"icon": "\U0001F50D", "tag": "Due diligence", "title": "Reject any manager without audited financials, and judge by persistency across cycles, not one hit."},
+    {"icon": "⚡", "tag": "Energy", "title": "Look for under-owned energy and power assets at low multiples as AI demand grows."},
+    {"icon": "\U0001F393", "tag": "Careers", "title": "Reskill toward jobs with open demand and learn to use AI tools before your role is automated."},
+    {"icon": "\U0001F6E1", "tag": "Risk", "title": "Hold some illiquid long-term assets so panic can't force a sale at a 14% drop."},
+]
+
+HOT_TAKES = [
+    {"take": "We're going to have AGI. There's zero question. In five to six years, we're going to have superintelligence.", "cite": "— Tony Robbins", "why": "Dated AGI/ASI predictions"},
+    {"take": "I think we're going to have a crisis. There's no question about it.", "cite": "— Tony Robbins", "why": "Flat crisis prediction"},
+    {"take": "You're not going to be replaced by an AI. You're going to be replaced by somebody who knows how to use an AI.", "cite": "— Tony Robbins", "why": "Contested labor claim"},
+    {"take": "In 10 years there'll be more robots than there probably are humans.", "cite": "— Tony Robbins", "why": "Numeric robot prediction"},
+    {"take": "For the last 39 straight years, private equity has outstripped every stock market in the world every year.", "cite": "— Tony Robbins", "why": "Strong performance claim"},
+    {"take": "Bitcoin is a trading instrument for me; after this move, I'm a seller.", "cite": "— Tony Robbins / Christopher Zook (unattributed in captions)", "why": "Explicit sell"},
+]
+
+CLAIMS = [
+    {"who": "Tony Robbins", "claim": "AGI arrives within 36 months.", "metric": "AGI", "target": "achieved", "by": "2029-09", "condition": None, "entity": None},
+    {"who": "Tony Robbins", "claim": "Superintelligence arrives within five to six years.", "metric": "superintelligence", "target": "achieved", "by": "2032", "condition": None, "entity": None},
+    {"who": "Gary Cohn (cited by Tony Robbins)", "claim": "Quantum computing becomes a threat to banks' cryptography in under 36 months.", "metric": "quantum threat to banks", "target": "emerges", "by": "2029-09", "condition": None, "entity": None},
+    {"who": "Tony Robbins", "claim": "There will be more robots than humans in 10 years.", "metric": "robot count vs humans", "target": "more robots", "by": "2036", "condition": None, "entity": None},
+    {"who": "Tony Robbins", "claim": "Truck, taxi and Uber driving jobs disappear to self-driving vehicles.", "metric": "driver jobs", "target": "none", "by": "2034", "condition": None, "entity": None},
+    {"who": "Tony Robbins", "claim": "United Colleges of America reaches 1 million sign-ups.", "metric": "program sign-ups", "target": "1 million", "by": "2029-09", "condition": None, "entity": None},
+    {"who": "Tony Robbins", "claim": "The US faces a debt-driven financial crisis.", "metric": "US crisis", "target": "occurs", "by": None, "condition": None, "entity": None},
+    {"who": "Tony Robbins", "claim": "401(k) rules change to allow alternative investments.", "metric": "401(k) alternatives access", "target": "allowed", "by": None, "condition": None, "entity": None},
+    {"who": "Christopher Zook", "claim": "NFL media rights are renegotiated at a higher price in 2029.", "metric": "NFL media rights", "target": "higher", "by": "2029", "condition": None, "entity": None},
+]
+
+RELATIONS = [
+    {"from": "CAZ Investments", "rel": "owns_stake", "to": "Trivest", "note": "one of CAZ's largest positions"},
+    {"from": "CAZ Investments", "rel": "partners_with", "to": "Tony Robbins", "note": "Robbins became a partner in 2021"},
+]
+
+OTHER_NEWS = [
+    {"icon": "⌚", "title": "Watches game: Patek Philippe hold, Rolex buy/hold, Richard Mille (Robbins owns eight, one a gift, others bought by his wife) hold, Audemars Piguet not durable enough for his use.", "tag": "Lifestyle"},
+    {"icon": "\U0001F4DA", "title": "Sources referenced: Money Master the Game, Unshakable, The Holy Grail of Investing, Ray Dalio's video series, Gary Cohn, Secretary of Labor on 401(k)s; young men's sports betting called 'best long-term investment' by 24% (cited by Robbins).", "tag": "Sources"},
+    {"icon": "\U0001F54A", "title": "Book proceeds from the new paperback go to Feeding America (host says);", "tag": "Charity"},
+]
+
+GLOSSARY = [
+    {"term": "GP stake", "def": "A minority ownership slice of a private asset manager's management company, earning from fees and carry."},
+    {"term": "Carry", "def": "The 20% share of profits a private fund manager earns above its management fee."},
+    {"term": "Correlation", "def": "How closely an asset moves with the S&P 500: 1 moves together, 0 not at all, negative moves opposite."},
+    {"term": "Two sigma", "def": "Robbins' point that one-on-one tutoring lifts a student two standard deviations, outperforming 98% of a normal class."},
+    {"term": "All-weather portfolio", "def": "Dalio's idea of balancing assets by risk so some do well in any economic environment."},
+]
