@@ -253,7 +253,8 @@ Output layout, index tabs and correction passes: `ref/outputs.md`.
   off; anything unchecked (or, without a written list, anything you notice on re-scan that isn't
   represented) gets added, not dropped for length.
   For long videos, run the checker in `ref/long-video.md`.
-- Quotes (`finish.py` runs `check_quotes.py`): a flagged quote or hot take is not in the transcript;
+- Quotes and names (`finish.py` runs `check_quotes.py`): a flagged quote or hot take is not in the transcript;
+  a flagged name is not spoken as written (caption spelling like "City" for Citi is fine; an inferred or guessed company is not);
   fix it to the speaker's words or cut it. Censored words trip it legitimately.
 - Entities (printed by `finish.py`): every row is a company, fund, organization or investable
   asset. A country, product name or concept means that `names` entry moves into `bullets`.
