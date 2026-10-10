@@ -6,7 +6,8 @@ finish.py — after generate.py: archive transcripts, set entity kinds, verify, 
 
 1. Copies the video's .srt/.txt from --src into research-data/<slug>/.
 2. Applies --kind key=kind to kb/entities.json (line edit; key is the registry key, e.g. philips=company).
-3. Regenerates from the archived data file, prints the brief's entity list for the names-pollution check.
+3. Regenerates from the archived data file, prints the entity list (names-pollution check) and
+   runs check_quotes.py (quotes/hot takes must be in the transcript; read each flag).
 4. Refuses to commit while any newly added registry entity is still kind "unknown".
 5. Commits (no Co-Authored-By trailer: repo rule) and pushes, unless --no-push. --amend for re-runs.
 
@@ -70,6 +71,9 @@ def main():
     for b in lib["briefs"]:
         if b["html"].startswith(slug):
             print("entities:", [e["display"] for e in b["entities"]])
+
+    q = sh([sys.executable, os.path.join(HERE, "check_quotes.py"), d])
+    print("quotes:", q.stdout.strip() or q.stderr.strip())
 
     added = sh(["git", "diff", "-U0", "kb/entities.json"]).stdout
     unknown = [l for l in added.splitlines() if l.startswith("+") and '"kind": "unknown"' in l]

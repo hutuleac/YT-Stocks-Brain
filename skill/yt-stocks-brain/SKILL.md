@@ -79,6 +79,18 @@ perspectives and personal frameworks. This one field decides
 which `index.html` tab the brief appears under (Section 6) and which color/badge vocabulary applies
 below.
 
+**Content type** (decide before drafting; most videos fit one row):
+
+| Type | What changes |
+|---|---|
+| 1 guest + host interview | `who` = the guest; host views only when stated as their own; hot takes are the main yield |
+| Panel (3+ speakers) | attribute every bullet; disagreement becomes one `Contested` theme, each side named in `watch` or bullets |
+| Host-vs-guest debate | one theme per question, both positions in it, no winner declared |
+| Solo market update | claims and dated catalysts dominate; list the upcoming dates |
+| Market + health/life stretch | stays `market`; give the non-market themes non-market badges and no `names` |
+| Clip or cut of a longer episode | if an existing brief covers the same conversation, cover the new material and say so in one line |
+| Short (under ~5 min / ~3k words) | route to YT-Lessons, or cap at 3 themes |
+
 Then read across the WHOLE transcript and group related facts into **3-6 self-contained themes**
 — a theme is a real topic thread the speaker returns to (e.g. "a hedge fund unwind," "the
 hyperscaler capex debate," "a new harness-design practice," "a supplement stack change"), not a
@@ -241,6 +253,8 @@ Output layout, index tabs and correction passes: `ref/outputs.md`.
   off; anything unchecked (or, without a written list, anything you notice on re-scan that isn't
   represented) gets added, not dropped for length.
   For long videos, run the checker in `ref/long-video.md`.
+- Quotes (`finish.py` runs `check_quotes.py`): a flagged quote or hot take is not in the transcript;
+  fix it to the speaker's words or cut it. Censored words trip it legitimately.
 - Entities (printed by `finish.py`): every row is a company, fund, organization or investable
   asset. A country, product name or concept means that `names` entry moves into `bullets`.
 - Graph fields are complete and vocabulary-clean: every `names` entry in a `market` brief has a
