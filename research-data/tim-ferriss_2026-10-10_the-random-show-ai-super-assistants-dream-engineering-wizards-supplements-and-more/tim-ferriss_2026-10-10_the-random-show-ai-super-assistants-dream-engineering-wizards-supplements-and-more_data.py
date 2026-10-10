@@ -83,6 +83,7 @@ THEMES = [
             "Creatine: Ferriss cramps at 10 g/day and runs 5 g; Rose found the first delayed-release creatine (beaded) that doesn't upset his stomach, brand not vouched for.",
             "A2 protein (Pioneer Pastures): 160 calories, 30 g protein, 2 g sugar, lactose-free, seven ingredients versus roughly 40 in Muscle Milk; both disclaim any affiliation.",
             "Airfit respiratory trainer: 30% lung-capacity gain after 8 weeks cited; Ferriss uses it on an incline treadmill with a weighted pack; the app paywall at $79/month annoyed both.",
+            "Archery prep: Ferriss trained 3-4 hour sessions on gas-station-available fuel (Muscle Milk, roasted almonds, zero-calorie Monster, unsweetened iced tea) because the competition in Lancaster, PA could be anywhere; he moved to climbing for a more social sport. His elbow was repaired a year ago, so he grips light.",
             "Plum Flower curing pills (about 15 herbs, ~50 cents a packet) are Rose's go-to for upset stomach or bloating.",
         ],
         "quote": None,
@@ -123,6 +124,7 @@ THEMES = [
             "Dream engineering: lucid dreamers have signaled researchers in REM with pre-agreed eye movements; Ferriss argues 'the trip matters', not just receptor binding.",
             "Mouse study: electrical contact lenses matched fluoxetine for depression-like signs; Ferriss stresses mice are not humans.",
             "DORA sleep drugs (dual orexin receptor antagonists): Ferriss uses them, citing amyloid-clearance hints in humans given his APOE 3/4 genotype; Matt Walker covered the class.",
+            "Lucid dreaming roots: Ferriss read Stephen LaBerge's *Exploring the World of Lucid Dreaming* in high school and did extra wrestling training in dreams; Rose uses the Claria hypnosis app ($150/yr) before bed; Ferriss lists trazodone as a decent sleep-architecture-friendly alternative.",
             "Anesthesia's mechanism is still unknown; Ferriss floats bioelectric or quantum-physics ideas and notes Michael Pollan's new book says it works on plants.",
         ],
         "quote": None,
@@ -191,6 +193,7 @@ OTHER_NEWS = [
     {"icon": "\U0001F9F4", "title": "Rose's skin tips: a green SPF color-corrector (Dr. Jart Cicapair) for rosacea redness, and PRP 'vampire' facials about twice a year; Ferriss monitors a small choroidal nevus behind his eye by retinal imaging every six months", "tag": "Health"},
     {"icon": "\U0001F48A", "title": "PDE5 inhibitors: both report lower-back pain and flushing; Ferriss notes possible cognitive and blood-pressure benefit at low doses (he cites Huberman)", "tag": "Health"},
     {"icon": "\U0001F4DA", "title": "Sources referenced: Rhonda Patrick (creatine cognition and cramps), Matt Walker (DORA drugs), Andrew Huberman (The Dark Wizard), Chris Williamson (A2 protein), Ed Cook (reading picks); Stanford Medicine headlines on anesthesia dreams", "tag": "Sources"},
+    {"icon": "\U0001F4D6", "title": "Reading picks came via Ed Cook (memory champion, founder of the Mindmax learning app); Ferriss notes James Clear, a big Author's Equity investor, sold 25-30 million copies; Ferriss also mentions a tiny brain aneurysm found by imaging and watched for two years, and warns against creatine, double espresso and MCT oil before flying", "tag": "Misc"},
     {"icon": "\U0001F3AF", "title": "Friendly wager: Rose says he'll do the Van Damme splits between two chairs within six months; Ferriss bets $500 to charity against", "tag": "Bet"},
 ]
 
