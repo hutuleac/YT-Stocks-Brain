@@ -24,42 +24,17 @@ the same fixed table set.
 
 ## Workflow (do this in order)
 
-### 1. Fetch metadata + transcript with yt-dlp
-Use `yt-dlp` (already installed). Auto-captions usually exist even when manual subs don't.
-
+### 1-2. Fetch, check for duplicates, clean (one call)
 ```bash
-yt-dlp --skip-download --print "%(id)s|%(title)s|%(channel)s|%(upload_date)s|%(webpage_url)s" "URL"
-yt-dlp --skip-download --write-auto-sub --sub-lang en --convert-subs srt --no-warnings "URL" -o "%(id)s.%(ext)s"
+python3 <skill-folder>/scripts/start.py "URL_OR_ID" <scratchpad-dir>
 ```
-If `--sub-lang en` reports no subtitles, retry the full fetch — auto-captions are delivered under
-`automatic_captions` and usually still write `VID.en.srt`. If captions truly fail, state the
-limitation prominently at the top of the brief.
-
-**Fallback — yt-dlp missing, or HTTP 429 (rate-limited, can last hours; cookies and
-`player_client` switches don't help):** don't wait or ask, use the API package instead. Metadata
-(title/channel/date) still comes from `yt-dlp --print` if it works, otherwise from the video page.
-```bash
-python3 <skill-folder>/scripts/fetch_transcript_api.py "URL_OR_VIDEO_ID" [lang]   # writes VID.<lang>.srt
-```
-Then continue with Section 2 unchanged. Needs `pip install youtube-transcript-api`.
-
-**No usable captions at all** (none exist, garbled, members-only/non-YouTube media): use the **local-whisper** skill (`~/.claude/skills/local-whisper/SKILL.md`) — it writes the same `VID.<lang>.srt`; continue with Section 2.
-
-**Romanian-language videos:** fetch Romanian captions (`--sub-lang ro`) but write the brief in
-**English** — snapshot, themes, claims, glossary, everything the search, Signals and graph read
-(changed Oct 2026: Romanian briefs were invisible to English search and their claims couldn't
-group with the rest). Keep the speaker's own words in Romanian: theme `quote` text and `HOT_TAKES`
-`take` stay verbatim Romanian, **without diacritics** (ș→s, ț→t, ă→a, î/â→i/a). The video `title`
-stays as published. Set `META["region"] = "ro"` so the brief lands on the **Romania** tab, and
-add the `romania` tag only to themes about Romania itself (the leu, local airlines, Cernavoda) —
-a Romanian show's Micron or Anthropic story is a global theme and gets global tags only.
-
-### 2. Clean the transcript with the bundled script
-```bash
-python3 <skill-folder>/scripts/clean_transcript.py VIDEO_ID.en.srt --stats
-```
-Writes `VIDEO_ID.txt` (timestamps/index stripped, duplicate rolling captions collapsed, wrapped to
-~900-char paragraphs). Read the full `.txt`, never the raw `.srt`.
+Exits `EXISTS: <folder>` if the video is already in `research-data/` (stop, tell the user). Otherwise
+it prints metadata, fetches captions with yt-dlp (falling back to `youtube-transcript-api` on 429
+or failure), cleans to `<id>.en.txt` (timestamps stripped, rolling duplicates collapsed) and
+prints `flag:` lines for possible sponsor paragraphs and a cut-off ending. Read the full `.txt`,
+never the raw `.srt`. If there are no usable captions, use the **local-whisper** skill
+(`~/.claude/skills/local-whisper/SKILL.md`); it writes the same `VID.<lang>.srt`. If captions truly
+fail, state the limitation at the top of the brief. **Romanian video:** read `ref/romanian.md`.
 
 ### 3. Read for coverage, not just gist — track where every fact will land
 Free-form themes have no fixed-table safety net (no guaranteed Conviction Map / Companies / Tech /
@@ -80,19 +55,10 @@ noise). Also register upcoming catalysts the speaker points at (an earnings date
 ruling, a rate decision) — those go in `CLAIMS` with the date as `by`. For a short, single-topic video a direct read-and-place pass is
 enough; past the thresholds below, write the list.
 
-Write an explicit flat inventory list before drafting themes — one line per fact, checked off
-against the drafted `bullets`/`quote`/`watch`/`names` once themes are written — whenever **any** of
-these holds: the cleaned `.txt` exceeds ~50k characters (`wc -c` it after Section 2); the video is a
-multi-hour or multi-speaker panel; it covers many distinct stories; or the user asked for
-exhaustive/"deep" coverage. Don't agonize over the call — a 59-minute single-guest interview at 63k
-chars still surfaced facts that a read-and-place pass had dropped. Put the inventory in the
-scratchpad directory, not the project.
-
-Either way, a fact that doesn't fit any theme goes to `OTHER_NEWS` or `GLOSSARY` — it must land
-somewhere, never get dropped for being "minor." If a theme's bullet cap (below) is too tight to
-hold everything that belongs there, that's a signal the thread is actually two themes, not a reason
-to cut a fact. Section 7's coverage re-scan is the actual guarantee against drops — treat it as
-mandatory even when you skip the written inventory.
+For a transcript over ~50k characters, a multi-speaker panel or many distinct stories,
+write the inventory and run the checker: read `ref/long-video.md`. Either way, a fact that doesn't
+fit any theme goes to `OTHER_NEWS` or `GLOSSARY`, never dropped for being "minor". If a theme's
+bullet cap is too tight, the thread is two themes.
 
 ### 4. Identify the video's content mix, then find THEMES (not fixed tables)
 First, classify what's actually in the transcript — most videos are a mix of:
@@ -162,49 +128,10 @@ For each theme, capture:
   bullish name can sit inside a red-flag theme. Only label what's explicitly said; a name merely
   mentioned gets `CASUAL MENTION` with `conviction: None`.
 
-**Category-conditional vocabulary** (`META["category"]`, set above):
-
-- **`category: "market"`** (investing/AI-news mix, stocks/funds/macro): `color` is a stance signal
-  — `green`=positive/bullish/confirmed-good, `amber`=mixed/contested/one-eye-open, `gray`=
-  speculative/low-confidence, `red`=negative/bearish/red-flag. `badge`/`status` use conviction
-  language: `badge` e.g. "High conviction" / "Contested" / "Speculative" / "Confirmed event";
-  `status` e.g. "HOLDING — reduced but not exited", "RELEASED July 27, 2026". Per-entity `stance`
-  and `conviction` (fields on each `names` entry, vocabulary above) are never inferred — label only
-  what's explicitly said. Conviction `High` = clear thesis + explicit action/holding + repeated
-  emphasis; `Medium` = clear view + some reasoning, no confirmed action; `Low` = passing/
-  speculative. For any publicly-tradeable entity
-  in `names`, write `"Company (TICKER)"` (e.g. `"Nvidia (NVDA)"`, `"RSP"` for a bare-ticker ETF) —
-  the index's cross-reference view parses this pattern into a per-ticker mention history across
-  every brief. Several tickers sharing one bullet get comma-separated in `name`, e.g. `"Apollo,
-  BlackRock, KKR"`, so each gets its own index entry.
-
-  **`names` is the permanent cross-reference index, not a general "notable things" slot.** Every
-  entry becomes a row in the By Company/Ticker view spanning every brief in the library, forever.
-  Companies, funds and organizations belong there — and so do investable asset classes/commodities
-  the speaker takes a position on (crypto — `"Bitcoin (BTC)"`, `"Ethereum (ETH)"` — and metals/ETFs
-  — `"Gold"`, `"Silver"`, `"GLD"` — are explicit, confirmed exceptions; this was a standing
-  instruction, not a default). Countries, regions, and non-investable product/model names or
-  technologies still do NOT belong there — put those in `bullets`. A `names` entry of `"Australia,
-  Chile, Mexico"` creates three country rows in the ticker index; `"Natrium, BWRX-300"` creates two
-  rows for reactor designs that aren't companies. Use the comma-split deliberately: only when you
-  genuinely want each side indexed separately (a bloc like `"JPMorgan (JPM), Goldman Sachs (GS)"`
-  is the intended use); otherwise join with `/` or a word, e.g. `"Natrium / BWRX-300 class"`.
-
-  **Use the plain canonical form for a company you've named before, not a decorated variant.**
-  The index groups rows by exact string match, so `"Nvidia"` and `"NVIDIA"`, or `"CoreWeave"` and
-  `"CoreWeave (comparison)"`, become two separate rows for the same company instead of one combined
-  history. Default to the bare `"Company (TICKER)"` form; only append a parenthetical qualifier
-  (`"(supply chain)"`, `"(comparison)"`) when the distinction is actually load-bearing for that
-  entry, and prefer folding that nuance into the `blurb` instead. When unsure what form a company
-  has used before in this library, a quick check keeps it consistent:
-  `python3 -c "import json;d=json.load(open('library.json'));print(sorted({e['display'] for b in d['briefs'] for e in b['entities'] if 'nvidia' in e['display'].lower()}))"`
-  (swap the search term). This is a forward-looking hygiene habit, not a mandate to go back and
-  fix older entries — existing variant rows are left as-is unless the user asks for a cleanup pass.
-  Since Oct 2026 every entity string resolves through the repo's identity registry
-  `kb/entities.json` (`scripts/entities.py`): case, trailing qualifiers and known tickers merge
-  automatically. A split row that still shows up is fixed by moving the stray variant into the
-  right entity's `aliases` there — never a per-brief workaround. Keys are permanent; edit
-  `name`/`ticker`/`kind`, never the key.
+**Category vocabulary.** `market` → read `ref/market.md` (stance colors, conviction, `names`
+hygiene, ticker format). `dev` / `life` → read `ref/non-market.md`. A market video with a large
+health/life/workflow stretch stays `market`; give those themes the non-market badge
+vocabulary and no `names`.
 
   **Never write a name you can only reach by guessing through a garbled caption.** Auto-captions
   mangle proper nouns constantly (ERCOT→"Urkott", FERC→"FK", Cerebras→"Cerrus", Cagney→"Kagny",
@@ -213,23 +140,6 @@ For each theme, capture:
   permanent damage. When you can't identify a company with confidence, describe it by spec in a
   bullet ("a ~10 MW micro-reactor firm building five-unit pods") and leave it out of `names`,
   `CLAIMS` and `RELATIONS` entirely.
-
-- **Any other `category`** (e.g. `"dev"` — dev/systems/knowledge/AI-workflow content, `"life"` —
-  see below, or a future category): don't force stock-conviction vocabulary onto content that isn't a stance on an asset.
-  `color` marks how settled/confidence-worthy the claim is, not bullish/bearish: `green`=confirmed-
-  good/validated, `amber`=mixed/contested/one-eye-open, `gray`=speculative/opinion/unverified,
-  `red`=flagged as a real problem or risk (not "this is a bearish stock call" — there's no stock).
-  `badge` describes the *character* of the claim instead of a conviction level: "Recommendation" /
-  "Structural critique" / "Skill-atrophy warning" / "Self-critique, since resolved" / "Confirmed
-  event". `names` and ticker formatting are optional and often irrelevant — use plain names with no
-  `(TICKER)` suffix, or omit the field, when there's nothing to cross-reference.
-
-- **`category: "life"`** uses the same non-market rules as `dev` (color = how settled, no stock
-  vocabulary; `names` optional, plain names, `(TICKER)` only for a genuinely investable company a
-  speaker discusses). `badge` describes the kind of insight: "Principle" / "Framework" /
-  "Personal story" / "Recommendation" / "Counterintuitive take" / "Cautionary tale". Prefer the
-  `family`, `parenting`, `mindset`, `relationships`, `career`, `health` tags. Keep the speaker's
-  own examples and analogies — in this category they are the content, not color.
 
 MANDATORY — capture non-investment signal too, wherever it fits best (inside a theme if it's
 central to one, otherwise in Other Notable News): strong convictions/opinions on any topic,
@@ -309,92 +219,37 @@ sponsor material and continue capturing the surrounding content normally.
 
 Any list left empty renders an honest "nothing found" placeholder — never fabricate content to
 fill a section.
-
-### 6. Generate outputs
-`generate.py` itself is never edited per video — it takes a per-video **data file** as an
-argument instead. Copy `<skill-folder>/scripts/TEMPLATE.py` into the working directory (any filename,
-e.g. `_data.py`), fill in `META`, `SNAPSHOT`, `THEMES`, `TAKEAWAYS`, `HOT_TAKES`, `CLAIMS`, `RELATIONS`, `OTHER_NEWS`,
-`GLOSSARY`, then:
+### 6. Generate and finish
+Copy `<skill-folder>/scripts/TEMPLATE.py` to the scratchpad, fill it in, then:
 
 ```bash
 python3 <skill-folder>/scripts/generate.py <data-file>.py
+python3 <skill-folder>/scripts/finish.py <slug-substring> --src <scratchpad-dir> [--kind key=kind ...]
 ```
+`generate.py` writes the `.html`, `research-data/<slug>/` json plus archived data file, and rebuilds
+`index.html`, `library.json` and the KB. A new entity prints `warning: new entity '<key>' ... set its
+kind`. `finish.py` copies the transcripts into the slug folder, sets kinds from `--kind key=kind`
+(company / fund / crypto / commodity / person / country / government / org / product / group /
+other), regenerates, prints the entity list, refuses to commit while a new entity is still
+`unknown`, then commits and pushes with no Co-Authored-By trailer. Add `--no-push` to hold.
+Output layout, index tabs and correction passes: `ref/outputs.md`.
 
-Outputs (channel-first naming so same-creator videos group together in Finder/`ls`, with the
-upload date giving chronological order within each creator):
-- `<slug-channel>_<date>_<slug-title>.html` — standalone, responsive brief, written to the
-  **current working directory**.
-- `<slug-channel>_<date>_<slug-title>.json` — same structured data, written to
-  **`research-data/<slug-channel>_<date>_<slug-title>/`** (created automatically).
-- `<slug-channel>_<date>_<slug-title>_data.py` — an archived copy of the data file you passed
-  in, written to that same `research-data/<slug>/` folder, so the brief can be regenerated or
-  hand-edited later without re-deriving it from the transcript.
-- `index.html` — rebuilt at the **working directory root** every run: a single searchable page
-  with tabs — **All Briefs** (chronological, every category), **By Channel**, **By Company /
-  Ticker**, **Quotes & Takes**, **Dev & Workflows** (`category == "dev"` only), **Life &
-  Perspectives** (`category == "life"` only) and **Romania** (`region == "ro"`). The ticker view
-  parses every theme's `names` field (current schema) or `conviction_map` topic (legacy schema)
-  into a cross-reference: click a ticker's group to see every brief that mentioned it, with date,
-  channel, per-entity stance/conviction/horizon, and blurb — this is what turns a growing pile of briefs into an
-  investing-thesis tool instead of just a list of pages. Run `python3 <skill-folder>/scripts/generate.py
-  --reindex` to rebuild it standalone (e.g. after manually deleting or renaming a brief).
-- `library.json` — rebuilt alongside `index.html` at the **working directory root**: a flat
-  machine-readable manifest of every brief plus its tags and extracted ticker/company entities
-  (with stance/conviction/horizon), meant to be fed directly into an external AI/knowledge-graph
-  tool. `CLAIMS` and `RELATIONS` live in each per-brief `.json` under `research-data/`.
-
-Filename convention: lowercase, non-alphanumerics → single hyphen, diacritics stripped, date as
-`YYYY-MM-DD` (from `META["date"]`). Example: `jordi-visser_2026-08-09_the-ai-crash-is-over.html`.
-After generating, move the raw transcript and cleaned `.txt` into that same `research-data/<slug>/`
-folder, and delete the data-file copy from the working directory root (the archived copy in
-`research-data/` is the one that persists) — the working folder root should only ever gain the
-finished `.html` plus the refreshed `index.html`.
-
-**Fixing a brief after the root data file is gone:** edit the archived
-`research-data/<slug>/<slug>_data.py` in place and run `generate.py` against that path. It
-regenerates the `.html`, rewrites the `.json`, re-archives the data file over itself, and rebuilds
-`index.html` + `library.json` — no need to copy anything back to the root. Use this for every
-correction pass rather than re-deriving a fresh data file from the transcript.
-
-### 7. Quality check before saving
+### 7. Quality check before finishing
 - Re-scan the full cleaned transcript against the drafted data lists: every named number, company/
   product, analogy, standalone quote, and forward-looking claim you noted in Section 3 is placed in
   a theme, `OTHER_NEWS`, or `GLOSSARY`. If you wrote an explicit inventory list, check every line
   off; anything unchecked (or, without a written list, anything you notice on re-scan that isn't
   represented) gets added, not dropped for length.
-  **Do this against the inventory file itself, line by line — not against your memory of the
-  themes.** Recalling what you wrote and believing it complete is how facts get dropped. When you
-  wrote an inventory, run the bundled checker instead of eyeballing it:
-  ```bash
-  python3 <skill-folder>/scripts/check_coverage.py <inventory.md> <slug-substring> --ignore=SpeakerSurname
-  ```
-  It pulls distinctive tokens (numbers-with-units, proper nouns) out of every `- [ ]` line and
-  reports any fact with no trace in the generated brief JSON; exit code 1 means something is
-  unplaced. Point it at the slug, never at `library.json` — that file is only the manifest and
-  contains no bullets, so checking against it reports nearly every fact as missing. Each flag is a
-  candidate, not a verdict: a paraphrase can land fine and still trip it, and a clean run doesn't
-  prove nothing was watered down. Read every flag before editing. **A fact is never
-  dropped for being "minor."** If a theme's bullet cap won't hold everything that belongs there,
-  the thread is two themes — that is not a licence to cut. Anything that fits no theme goes to
-  `OTHER_NEWS` or `GLOSSARY`, or gets appended to the most closely related existing bullet.
-- Verify the extracted entities before committing — this catches `names` pollution (Section 4)
-  in one command instead of relying on memory:
-  ```bash
-  python3 -c "import json;d=json.load(open('library.json'));b=d['briefs'][0];print(b['html']);print([e['display'] for e in b['entities']])"
-  ```
-  Every row must be a company/fund/organization. A country, product name or concept in that list
-  means a `names` entry needs to move into `bullets`.
+  For long videos, run the checker in `ref/long-video.md`.
+- Entities (printed by `finish.py`): every row is a company, fund, organization or investable
+  asset. A country, product name or concept means that `names` entry moves into `bullets`.
 - Graph fields are complete and vocabulary-clean: every `names` entry in a `market` brief has a
   `stance`; every `CLAIMS` row has `who` plus at least one of `metric`/`target`/`by`; every
   `RELATIONS` row uses a verb from the fixed set and canonical entity strings; every theme has
   `tags`. `generate.py` prints a `warning:` line for any unknown tag, stance or verb — a clean
   run has none.
-- Registry warnings are resolved before committing. `new entity '<key>' ... set its kind` →
-  open `kb/entities.json`, set that entry's `kind` (company / fund / crypto / commodity / person /
-  country / government / org / product / group / other); if it's really an existing entity under
-  a new spelling, move the alias onto that entity and delete the new line instead. A ticker
-  conflict warning means a typo in the brief (fix the data file) or a real new listing (update
-  `ticker` on the entity). Commit `kb/entities.json` together with the brief.
+  Ticker conflict warning = a typo in the brief or a real new listing (update `ticker` on the
+  entity). A split row is fixed by moving the alias onto the right entity in `kb/entities.json`.
 - A correction pass that edits a claim's `who` or `claim` text re-keys it (`claim_id` hashes
   both); if `kb/claim_outcomes.json` already has a verdict for it, the orphan warning names the
   old id — move the verdict to the new id.
@@ -408,31 +263,6 @@ correction pass rather than re-deriving a fresh data file from the transcript.
 - HTML well-formed, closes `</html>`.
 - Working folder root only gained the `.html`; transcript/JSON live in `research-data/<slug>/`.
 
-## HTML/CSS design
-Already implemented in `generate.py` (see the "HTML/CSS DESIGN" comment block near the top of the
-file) — cream editorial page, color-coded theme cards with sidecards, mobile-first CSS with no
-media queries. `generate.py` itself is never edited per video (Section 6), so this doesn't need to
-be reasoned about while writing a data file — only open that comment block if you're actually
-changing the template/CSS.
-
 ## Weekly memo
-When `generate.py` prints `memo due:` (no memo yet this ISO week and the last is 6+ days old),
-write it in the same session, after the brief is committed. The user wants **direction, not
-precision**: what is emerging, turning, contested, connecting. Never score predictions here.
-
-1. `python3 <skill-folder>/scripts/memo.py context > <scratchpad>/memo_ctx.md` and read all of
-   it. This creates `memos/<ISO-week>.json` with the signals snapshot embedded (don't edit
-   `signals`).
-2. Fill `title`, `summary` (2-3 sentences, the answer), `insights` (3: each a headline claim,
-   3-5 evidence bullets with the numbers from the context, `evidence` = brief `.html` files) and
-   `watch` (3-5, prioritized, each with why it's worth a closer look). Connect dots across
-   lenses: an insight that explains *why* several signals move together beats a list of movers.
-   Name contrarian setups (falling attention vs a still-rising thesis), conflicts of interest,
-   and thin evidence (one channel, one brief) plainly. The context's `narratives` are auto-built
-   entity clusters labeled only by member names: give the ones you cite a human name in prose
-   ("private credit / alt managers", "memory + optics supply chain").
-3. `python3 <skill-folder>/scripts/memo.py render memos/<ISO-week>.json` → `memos/<week>.html`,
-   index rebuilt with the link on the Signals tab. "What moved since the last memo" is computed
-   from the previous memo's snapshot, not written.
-4. Commit `memos/` with the message `Add weekly memo <ISO-week>: <title>` and push.
-
+When `generate.py` prints `memo due:`, write it after the brief is committed: `ref/weekly-memo.md`.
+`generate.py` itself is never edited per video; the page design lives in its HTML/CSS comment block.

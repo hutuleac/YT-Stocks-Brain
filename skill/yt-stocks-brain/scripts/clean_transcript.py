@@ -75,6 +75,23 @@ def wrap_to_paragraphs(lines, wrap_width=900):
     return out
 
 
+SPONSOR_CUES = re.compile(
+    r"promo code|discount code|sponsored by|our sponsor|link in the description|use my link|"
+    r"brought to you by|tell them .{0,12}sent you|go check (?:it|them) out|access it for free|\d+% off|thank you to our partners|big thanks to|shout.?out to|"
+    r"subscribe button",
+    re.I,
+)
+
+
+def flags(paragraphs):
+    """Report-only checks: likely sponsor reads (skip them in the brief) and a cut-off transcript."""
+    hits = [i + 1 for i, p in enumerate(paragraphs) if SPONSOR_CUES.search(p)]
+    if hits:
+        print(f"flag: possible sponsor reads in paragraphs {hits} (exclude from the brief)")
+    if paragraphs and not re.search(r"[.?!]['\")\]]*\s*$", paragraphs[-1]):
+        print("flag: transcript ends mid-sentence (note the cut-off in the brief)")
+
+
 def main():
     ap = argparse.ArgumentParser(description="Clean a yt-dlp .srt/.vtt transcript into wrapped plain text.")
     ap.add_argument("input", help="Path to the .srt or .vtt transcript file")
@@ -103,6 +120,7 @@ def main():
         print(f"raw:  {len(raw.splitlines())} lines, {raw_chars} chars")
         print(f"clean: {len(paragraphs)} paragraphs, {out_chars} chars ({pct}% smaller)")
 
+    flags(paragraphs)
     print(f"Wrote: {out_path}")
 
 
