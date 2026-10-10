@@ -1,0 +1,229 @@
+# -*- coding: utf-8 -*-
+"""Grow your WEALTH - morning post, published 2026-10-09 (Thu Oct 8 session).
+Romanian text source (members post, no video transcript): brief in English, quotes verbatim Romanian (no diacritics)."""
+
+META = {
+    "title": "Zilele de corectie sunt bune si sanatoase",
+    "channel": "Grow your WEALTH - Valentin Dragu si Alex Marian",
+    "speakers": "Valentin Dragu",
+    "date": "2026-10-09",
+    "video_url": "https://www.growyourwealth.ro/products/grow-your-wealth/categories/2160165880",
+    "thread_line": "6 threads: a rotation out of semis (not a selloff) and his two small buys, the OpenAI revenue report, a strong 30Y auction against Fed duration risk and oil, AI infrastructure names under scrutiny, SpaceX's lockup plus RKLB and ASTS, and the rest of the book with Friday's scenarios",
+    "category": "market",
+    "region": "ro",
+}
+
+SNAPSHOT = [
+    "Thursday was a rotation, not a selloff: S&P 500 -0.47%, Nasdaq -1.25%, yet about two-thirds of S&P names rose; semis -3.4%, tech -1.8%, money moved into energy.",
+    "Portfolio hits: AMD -3.9%, AVGO -4.35%, NBIS -7.35%, IREN -7.70%. VIX only edged to ~15.4: single growth stocks can drop 5-8% without the index showing stress.",
+    "He added **100 ASTS and 100 RKLB** on the drop, small and unhurried; next focus is SPCX and AVGO, but only after price stabilizes. Nothing else sold.",
+    "Trigger: an FT report (via Reuters) put OpenAI's annualized revenue near $50B at end-September vs ~$70B suggested earlier. His read: a revenue-quality and financing question, not collapsing AI demand.",
+    "Good news Nasdaq ignored: a strong 30Y auction (2.54 bid-to-cover) pulled the 10Y to 5.23%. Lower yields can't help if earnings estimates get cut.",
+    "Fed risk is about duration: claims 197k, Waller open to more hikes, December hike odds still high. Brent $104.28, BTC slid to $81-82k.",
+    "SPCX -4.19% to $160.57 into today's lockup expiry of up to 328.4M shares (~7% of the locked stake). AMD tax note: no rebalancing out of 300%+ gains because of member tax regimes.",
+    "Lesson: an industry can have extraordinary prospects while its stocks correct hard; 14 positions on the same macro factors are one exposure repeated 14 times.",
+]
+
+THEMES = [
+    {
+        "id": "rotation-and-buys",
+        "tags": ["semis", "macro-rates"],
+        "color": "green",
+        "badge": "Adding small",
+        "status": "THURSDAY OCT 8 SESSION",
+        "title": "A rotation out of semis, not a selloff, and two 100-share buys",
+        "lead": "Index red hid a broad green tape: money moved from AI infrastructure into energy and lower-valuation names.",
+        "bullets": [
+            "S&P 500 7,765.36 (-0.47%), Nasdaq 27,193.34 (-1.25%), Dow 51,231.64 (+0.10%), Russell 2000 2,794.13 flat: the second straight down day for S&P and Nasdaq after Tuesday's records.",
+            "About two-thirds of S&P 500 names closed green; tech -1.8%, semis index ~-3.4%. Nvidia and AMD nearly -3%, Broadcom over -4%, **Oracle** about -5.5%. Volume 18.81B shares, above the recent average: deliberate de-risking, not noise.",
+            "VIX closed ~15.4 vs ~15.1 Wednesday. Index concentration and sector rotation let single growth names fall 5-8% with no sign of panic.",
+            "His moves: +100 ASTS and +100 RKLB on the drop, 'no hurry, no big sums, not trying to catch the low'. Next focus SPCX and AVGO, after stabilization. Everything else held.",
+            "He cites 20+ years in the business and says nobody, himself included, enjoys red screens; a concentrated growth book swings far more than the S&P 500 even when the market is calm.",
+        ],
+        "quote": {"text": "Piata digera o intrebare noua, nu se prabuseste.", "cite": "— Valentin Dragu"},
+        "watch": "Valentin runs the paid GYW community. The ASTS add came the day before he sold his entire personal IBKR ASTS stake (see the Oct 10 brief).",
+        "names": [
+            {"name": "AST SpaceMobile (ASTS)", "blurb": "Added 100 shares on Thursday's drop.", "stance": "BUYING-ADDING", "conviction": "Medium", "horizon": "5-15 years"},
+            {"name": "Rocket Lab (RKLB)", "blurb": "Added 100 shares on Thursday's drop.", "stance": "BUYING-ADDING", "conviction": "Medium", "horizon": "5-15 years"},
+            {"name": "Oracle (ORCL)", "blurb": "About -5.5% in the semis/AI rotation.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Nvidia (NVDA)", "blurb": "Nearly -3%; also IREN's $3.4B AI-cloud customer.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "openai-revenue",
+        "tags": ["ai-infra", "software"],
+        "color": "amber",
+        "badge": "Question, not collapse",
+        "status": "FT REPORT VIA REUTERS",
+        "title": "OpenAI's ~$50B run rate moved the question from growth speed to who pays",
+        "lead": "No evidence AI demand collapsed; the warning is about revenue quality, capex sustainability and customer profitability.",
+        "bullets": [
+            "Per the Financial Times, cited by Reuters, **OpenAI's** annualized revenue was nearing $50B at end-September vs ~$70B suggested earlier.",
+            "Part of the gap comes from different calculation methods and how revenue through cloud partners is counted.",
+            "The market's question shifted from 'how fast does AI grow?' to 'who finances this growth and how much do they actually earn from it?'.",
+            "He calls that healthy: a market that differentiates between companies beats one that buys anything with three letters and 'AI' in the deck, even if it costs a few percent now.",
+            "Confusing the two (revenue quality vs demand) is how investors sell good stocks for the wrong reasons.",
+        ],
+        "quote": {"text": "investitorul care le confunda vinde astazi actiuni bune din motive gresite.", "cite": "— Valentin Dragu"},
+        "watch": None,
+        "names": [
+            {"name": "OpenAI", "blurb": "Annualized revenue near $50B vs ~$70B suggested earlier (FT).", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "treasury-fed-oil",
+        "tags": ["macro-rates", "energy", "crypto"],
+        "color": "amber",
+        "badge": "Mixed macro",
+        "status": "30Y AUCTION, CLAIMS, OIL",
+        "title": "A strong 30Y auction pulled the 10Y to 5.23%, but Fed duration and oil still bite",
+        "lead": "A cost-of-capital correction and a profitability re-rating ran at the same time, and the second cancelled the first.",
+        "bullets": [
+            "Close: 2Y 4.75%, 10Y 5.23%, 30Y 5.60%. The 30Y auction drew a **2.54** bid-to-cover vs a 2.41 six-auction average, indirect bidders took ~72.3%, stop-out 5.618%: real demand at these yields.",
+            "Why Nasdaq still fell: lower yields help valuations, but cut revenue and profit estimates cancel that effect.",
+            "10Y zones: below 5.20-5.25% better for growth stabilization; 5.25-5.35% volatility and selection; above 5.35-5.40% risk of further valuation cuts. Reference points, not magic levels.",
+            "Initial claims 197k (from 199k), 4-week average ~198k: firms hire less but don't fire. That lowers recession risk and lets the Fed stay restrictive longer.",
+            "Fed governor Christopher Waller suggested more hikes may be needed to bring inflation to 2%; markets lean to an October pause, but December hike odds stay high. If rates stay high another 12-18 months, capital-hungry builders pay more and cash generators gain.",
+            "Brent $104.28, WTI $91.49 on Middle East shipping risk and Gulf of Mexico outages as Hurricane Isaias approached; Asia morning ~$103.8/$91.1. DXY ~102.14 then 102.0. Bitcoin slid to $81-82k from above $85k earlier in the week.",
+        ],
+        "quote": {"text": "Problema investitorului in companii de crestere nu este dobanda de azi. Este durata.", "cite": "— Valentin Dragu"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "ai-infra-names",
+        "tags": ["ai-infra", "semis"],
+        "color": "amber",
+        "badge": "Holding, wait for stabilization",
+        "status": "AVGO, AMD, NBIS, IREN",
+        "title": "Broadcom, AMD, Nebius and IREN: who carries the financing risk",
+        "lead": "A dollar of revenue from a supplier-financed customer is not the same quality as one from a self-funded customer.",
+        "bullets": [
+            "**AVGO** $360.14 (-4.35%) from $376.51, low $357.41, on 27.1M shares vs 17M Wednesday: heavier selling than a normal pullback. Tied to the ~$60B Anthropic package ($42B senior, $18B junior, partly backed by Broadcom's credit).",
+            "He's not calling AVGO's revenue artificial, only asking who bears the risk. Support $357-360, $350-352, $343-345; must reclaim $369-373 then $376-381. He waits for stabilization and the 10Y before adding.",
+            "**AMD** $620.68 (-3.90%), low $613.34 after Tuesday's $658.52. Lisa Su confirmed plans to expand chip supply substantially in 2027 and discussed a possible deeper Samsung tie-up in memory and manufacturing. Support $613-615, $600-605; resistance $630-635, $645-650.",
+            "AMD sizing: members were told to trim and rebalance, but for tax residents of Denmark, Germany, the Netherlands and the US the capital-gains bill on 300%+ profits is huge, so the group decided not to rebalance out of AMD.",
+            "**NBIS** $219.71 (-7.35%), second heavy drop, from Tuesday's $255.10 to a $217.73 low. The OpenAI report doesn't show Nebius contracts deteriorating; he wants stabilization, not 'cheaper than Tuesday'. Support $217-220, $205-210; resistance $230-235, $245-250.",
+            "**IREN** $35.71 (-7.70%), low $35.24, ~-13.5% in two sessions from $41.28. The five-year ~$3.4B AI-cloud contract with Nvidia (announced May) still backs the AI-infra thesis. Support $35-35.50, $32-33; resistance $38-39, $40-41.",
+        ],
+        "quote": {"text": "Nu spun ca veniturile Broadcom sunt artificiale. Spun ca trebuie sa stim cine suporta riscul.", "cite": "— Valentin Dragu"},
+        "watch": "Valentin owns all four and says AVGO is where his next buy goes once it stabilizes.",
+        "names": [
+            {"name": "Broadcom (AVGO)", "blurb": "Held; next add after stabilization; vendor-financing risk on Anthropic.", "stance": "OWNS", "conviction": "High", "horizon": None},
+            {"name": "AMD", "blurb": "Held; 300%+ gains, not rebalanced for tax reasons.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "Nebius (NBIS)", "blurb": "Held; wants stabilization and thesis check.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "IREN", "blurb": "Held; $3.4B Nvidia contract supports the thesis.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "Anthropic", "blurb": "Customer behind the ~$60B Broadcom-linked financing.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Samsung", "blurb": "Possible deeper AMD collaboration in memory and manufacturing.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "space-names",
+        "tags": ["space"],
+        "color": "amber",
+        "badge": "Holding / adding",
+        "status": "SPCX, RKLB, ASTS",
+        "title": "SpaceX into its lockup, Rocket Lab's Iridium deal, ASTS under Starlink pressure",
+        "lead": "Supply mechanics drive SPCX today; for RKLB and ASTS the fundamentals matter more than the daily move.",
+        "bullets": [
+            "**SPCX** $160.57 (-4.19%), low $160, ~71.8M shares; ~+3% after hours. Today up to 328.4M pre-IPO shares (~7% of the locked stake) become sellable per the IPO prospectus calendar; eligible doesn't mean sold. Support $158-160, $150-153; resistance $165-168, $172-176.",
+            "SpaceX plans to expand Starlink Mobile by buying additional spectrum rights, pending approvals; if completed it strengthens its direct-to-phone position.",
+            "**RKLB** $68.40 (-4.89%), low $67.71. The ~$8B **Iridium** acquisition could turn it into an integrated satellite infrastructure and comms operator. A September equity raise of ~$1.94B replaced a $3.6B bridge facility: less financing risk, more dilution to watch. Support $67-68, $64-65; resistance $71-72, $75-76.",
+            "**ASTS** lost $58-59, low $55.96, closed $56.93 (-6.13%). SpaceX's spectrum push adds competitive pressure on valuation and share estimates, though ASTS keeps its own tech, partners and orbital infrastructure. Support $55-56, $52-53; resistance $59-60, $63-65. Watching BlueBird expansion and service activation.",
+        ],
+        "quote": None,
+        "watch": "Valentin holds SPCX at 1,000 shares; his SpaceX and ASTS views pull in opposite directions on the same spectrum news.",
+        "names": [
+            {"name": "SpaceX (SPCX)", "blurb": "Held; focus for next buy after stabilization; lockup expiry today.", "stance": "OWNS", "conviction": "High", "horizon": None},
+            {"name": "Iridium (IRDM)", "blurb": "Being acquired by Rocket Lab for ~$8B.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "rest-and-scenarios",
+        "tags": ["finance", "software", "energy"],
+        "color": "amber",
+        "badge": "Holding",
+        "status": "TSLA, META, PLTR, SOFI, HOOD, ONDS, LEU",
+        "title": "Palantir the bright spot; Friday hinges on UMich, the 10Y and oil",
+        "lead": "An extraordinary company can still be overvalued, and a stock can fall 20% and stay expensive.",
+        "bullets": [
+            "**TSLA** $375.00 (-0.74%), low $368.03: much better relative strength than semis; Oct 21 earnings on auto margins, cash flow, autonomy spend. **META** $720.89 (-0.06%): funds AI from cash flow, not permanent borrowing.",
+            "**PLTR** $198.78 (+2.40%), high $204.44 on 41.7M shares after Goldman Sachs upgraded to buy, $230 target (flagged on Discord the day before). Analyst Gabriela Borges sees custom AI apps and data-sovereign governments expanding the addressable market. Support $195-196; resistance $200, $204-205.",
+            "**SOFI** $15.61 (-0.32%): SoFi Tech Solutions (ex-Galileo) partnered with Orbi and Mastercard on a Mexican card that spends crypto balances; Oct 27 earnings are the real test. **HOOD** $107.01 (-2.28%), low $105.11 on falling Bitcoin.",
+            "**ONDS** $6.85 (-4.73%) below $7 on ~60.8M shares; back above $7 is only a first stabilization sign. **LEU** $142.09 (-3.43%), range $138.78-146.78; HALEU and data-center power demand support the thesis, revenue timing doesn't follow automatically.",
+            "Today: UMich preliminary sentiment at 17:00 Romania time, consensus ~47.5-47.6 vs 48.1; inflation expectations matter more than the headline. CPI on Oct 14 and early earnings next week.",
+            "Scenarios: technical rebound (10Y under 5.25%, oil steady, no UMich inflation surprise); consolidation with Nasdaq 27,000-27,300; continued AI correction if big developers' estimates get cut; energy-inflation squeeze with Brent above $106-108 and the 10Y back over 5.35%, where protecting liquidity comes first.",
+            "Cash is flexibility, not pessimism, and not a religion either: waiting forever for the perfect correction misses years of growth.",
+        ],
+        "quote": {"text": "nu avem 14 expuneri diferite, ci una singura repetata de 14 ori", "cite": "— Valentin Dragu"},
+        "watch": "Valentin owns every name in this card.",
+        "names": [
+            {"name": "Tesla (TSLA)", "blurb": "Held; relative strength; Oct 21 earnings.", "stance": "OWNS", "conviction": "Medium", "horizon": "5 years"},
+            {"name": "Meta (META)", "blurb": "Held; self-funded AI capex.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "Palantir (PLTR)", "blurb": "Held; Goldman upgrade; valuation is the risk.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "SoFi (SOFI)", "blurb": "Held; Mexico crypto card with Orbi and Mastercard.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "Robinhood (HOOD)", "blurb": "Held; pressured by Bitcoin.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "Ondas (ONDS)", "blurb": "Held; strict risk management, dilution watch.", "stance": "OWNS", "conviction": "Low", "horizon": None},
+            {"name": "Centrus Energy (LEU)", "blurb": "Held; HALEU thesis.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "Goldman Sachs (GS)", "blurb": "Upgraded PLTR to buy, $230.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Mastercard (MA)", "blurb": "Partner on SoFi's Mexico crypto-linked card.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Orbi", "blurb": "Partner on SoFi's Mexico crypto-linked card.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F50D", "tag": "AI infra", "title": "Separate revenue-quality warnings from demand collapse before selling an AI name."},
+    {"icon": "\U0001F9FE", "tag": "AI infra", "title": "Ask who carries the credit risk when a supplier helps finance its customer's purchases."},
+    {"icon": "\U0001F4C9", "tag": "Macro", "title": "Use 5.25% and 5.35% on the 10Y to frame the growth-stock outlook through CPI on Oct 14."},
+    {"icon": "\U0001F4B6", "tag": "Taxes", "title": "Check your capital-gains regime before trimming a big winner to rebalance."},
+    {"icon": "\U0001F6F0", "tag": "Space", "title": "Watch volume, not price, to see if the market absorbs SpaceX lockup supply."},
+]
+
+HOT_TAKES = [
+    {"take": "o piata care incepe sa diferentieze intre companii este, pe termen lung, mult mai buna pentru noi decat o piata care cumpara orice are trei litere si sintagma „inteligenta artificiala” in prezentare.", "cite": "— Valentin Dragu", "why": "welcomes the AI shakeout"},
+    {"take": "O companie poate fi extraordinara si totusi supraevaluata. O actiune poate scadea 20% si poate ramane scumpa.", "cite": "— Valentin Dragu", "why": "valuation over narrative"},
+    {"take": "nici numerarul nu se transforma in religie, pentru ca investitorul care asteapta permanent corectia perfecta rateaza ani intregi de crestere.", "cite": "— Valentin Dragu", "why": "against cash-heavy waiting"},
+    {"take": "daca apar cumparatori pe AVGO si AMD dupa corectia de joi. Eu as spune ca DA.", "cite": "— Valentin Dragu", "why": "near-term call on dip buyers"},
+]
+
+CLAIMS = [
+    {"who": "Valentin Dragu", "claim": "Buyers will step into AVGO and AMD after Thursday's correction.", "metric": "AVGO/AMD price action", "target": "dip buying", "by": "2026-10-09", "condition": None, "entity": "Broadcom (AVGO), AMD"},
+    {"who": "Valentin Dragu", "claim": "A 10Y below 5.20-5.25% gives growth stocks better conditions to stabilize.", "metric": "US 10Y yield", "target": "<5.20-5.25%", "by": None, "condition": None, "entity": None},
+    {"who": "Valentin Dragu", "claim": "Above 5.35-5.40% on the 10Y, growth valuations risk new cuts.", "metric": "US 10Y yield", "target": ">5.35-5.40%", "by": None, "condition": None, "entity": None},
+    {"who": "Valentin Dragu", "claim": "Brent above $106-108 with the 10Y back over 5.35% is the worst mix; liquidity protection comes first.", "metric": "Brent / US 10Y", "target": ">$106-108 / >5.35%", "by": None, "condition": "energy and inflation pressure", "entity": "Oil"},
+    {"who": "Valentin Dragu", "claim": "If rates stay high another 12-18 months, capital-intensive builders pay more for capital and cash generators gain an edge.", "metric": "cost of capital", "target": "higher", "by": "12-18 months", "condition": "rates stay elevated", "entity": None},
+    {"who": "Christopher Waller (cited by Valentin Dragu)", "claim": "More rate hikes may be needed to bring inflation back to the 2% target.", "metric": "inflation", "target": "2%", "by": None, "condition": "pace adjusted to data", "entity": None},
+    {"who": "Valentin Dragu", "claim": "Markets lean to an October Fed pause, with a high probability of a hike by December.", "metric": "Fed funds rate", "target": "hike", "by": "2026-12", "condition": None, "entity": None},
+    {"who": "Lisa Su (cited by Valentin Dragu)", "claim": "AMD plans to substantially expand chip supply in 2027.", "metric": "chip supply", "target": "substantial expansion", "by": "2027", "condition": None, "entity": "AMD"},
+    {"who": "Goldman Sachs (cited by Valentin Dragu)", "claim": "Palantir upgraded from neutral to buy, $230 target.", "metric": "PLTR price target", "target": "$230", "by": None, "condition": None, "entity": "Palantir (PLTR)"},
+    {"who": "Valentin Dragu", "claim": "Up to 328.4M pre-IPO SpaceX shares (~7% of the locked stake) become eligible to trade.", "metric": "lockup expiry", "target": "328.4M shares", "by": "2026-10-09", "condition": None, "entity": "SpaceX (SPCX)"},
+    {"who": "Valentin Dragu", "claim": "UMich preliminary October sentiment, consensus ~47.5-47.6 vs 48.1.", "metric": "UMich sentiment", "target": "47.5-47.6", "by": "2026-10-09", "condition": None, "entity": None},
+    {"who": "Valentin Dragu", "claim": "September CPI release.", "metric": "CPI", "target": None, "by": "2026-10-14", "condition": None, "entity": None},
+    {"who": "Valentin Dragu", "claim": "Tesla Q3 earnings: auto margins, cash flow, autonomy investment.", "metric": "earnings", "target": None, "by": "2026-10-21", "condition": None, "entity": "Tesla (TSLA)"},
+    {"who": "Valentin Dragu", "claim": "SoFi's earnings are the next serious test.", "metric": "earnings", "target": None, "by": "2026-10-27", "condition": None, "entity": "SoFi (SOFI)"},
+]
+
+RELATIONS = [
+    {"from": "Rocket Lab (RKLB)", "rel": "acquires", "to": "Iridium (IRDM)", "note": "~$8B; funded partly by a ~$1.94B equity raise"},
+    {"from": "IREN", "rel": "supplies", "to": "Nvidia (NVDA)", "note": "five-year ~$3.4B AI cloud services contract, announced May"},
+    {"from": "Broadcom (AVGO)", "rel": "supplies", "to": "Anthropic", "note": "~$60B financing package partly backed by Broadcom's credit"},
+    {"from": "AMD", "rel": "partners_with", "to": "Samsung", "note": "possible deeper collaboration in memory and manufacturing"},
+    {"from": "SoFi (SOFI)", "rel": "partners_with", "to": "Mastercard (MA)", "note": "Mexico crypto-linked card via SoFi Tech Solutions"},
+    {"from": "SoFi (SOFI)", "rel": "partners_with", "to": "Orbi", "note": "Mexico crypto-linked card"},
+    {"from": "Goldman Sachs (GS)", "rel": "endorses", "to": "Palantir (PLTR)", "note": "upgrade to buy, $230"},
+    {"from": "SpaceX (SPCX)", "rel": "competes_with", "to": "AST SpaceMobile (ASTS)", "note": "additional spectrum for Starlink Mobile direct-to-phone"},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F4DA", "tag": "Sources", "title": "Sources referenced: the Financial Times (via Reuters) on OpenAI revenue, the SpaceX IPO prospectus lockup calendar, Goldman Sachs analyst Gabriela Borges, and his own Discord flag on the PLTR upgrade."},
+]
+
+GLOSSARY = [
+    {"term": "Bid-to-cover", "def": "Bids received divided by bonds sold at a Treasury auction; higher means stronger demand."},
+    {"term": "Indirect bidders", "def": "Auction buyers bidding through primary dealers, often foreign central banks and funds."},
+    {"term": "Stop-out yield", "def": "The highest yield accepted at an auction, which all winning bidders receive."},
+    {"term": "Sector rotation", "def": "Money moving from one group of stocks to another, so indices can fall while most stocks rise."},
+    {"term": "Vendor financing", "def": "A supplier helping fund its customer's purchases, adding credit risk to its own revenue."},
+    {"term": "HALEU", "def": "High-assay low-enriched uranium, fuel for advanced reactors."},
+]
