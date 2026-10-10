@@ -11,7 +11,7 @@ transcript, organized by theme rather than fixed category tables.
 - `research-data/` — archived transcripts, JSON, and data files behind each brief
 - `library.json` — machine-readable manifest of every brief and its extracted entities
 
-Briefs are generated with the `yt-stocks-brain` skill.
+Briefs are generated with the `yt-stocks-brain` skill (`skill/yt-stocks-brain/`: `start.py` to fetch and clean, `generate.py` to build, `finish.py` to archive, check and commit). See `CLAUDE.md` for the layout.
 
 ## On your phone
 

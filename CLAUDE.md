@@ -16,10 +16,26 @@ graph/brain over stocks, investing, and industry trends. Static HTML, no build s
   stay archived in `research-data/<slug>/` as the citation/ground-truth layer only.
 
 ## Generating a brief
-Use the **yt-stocks-brain** skill (`~/.claude/skills/yt-stocks-brain/SKILL.md`) for
-every new video. It fetches the transcript via `yt-dlp`, cleans it, and drives `generate.py` off a
-per-video Python data file (never edit `generate.py` itself per video). Read the skill file fresh
-each time — it gets tuned periodically and this doc is not a substitute for it.
+Use the **yt-stocks-brain** skill (`skill/yt-stocks-brain/`, symlinked from
+`~/.claude/skills/yt-stocks-brain`) for every new video. Read `SKILL.md` fresh each time — it gets
+tuned periodically and this doc is not a substitute for it. `generate.py` is never edited per video;
+each video gets a per-video Python data file.
+
+Skill layout (progressive disclosure — the core file stays short, detail loads only when relevant):
+- `SKILL.md` — workflow, theme/field rules, content-type routing table, quality checks.
+- `ref/` — `market.md`, `non-market.md` (dev/life), `romanian.md`, `long-video.md` (inventory +
+  coverage check, >~50k chars), `outputs.md`, `weekly-memo.md`.
+- `scripts/start.py <url|id> <scratchpad>` — duplicate check (exits `EXISTS:`), metadata, captions
+  (yt-dlp, auto-fallback to the transcript API on 429), clean, `flag:` lines for likely sponsor
+  paragraphs and a cut-off ending.
+- `scripts/generate.py <data-file>` — builds html/json/index/library/KB.
+- `scripts/finish.py <slug-substring> --src <scratchpad> [--kind key=kind ...] [--no-push|--amend]` —
+  archives transcripts, sets registry kinds, regenerates, runs `check_quotes.py`, refuses to commit
+  while a new entity is `unknown`, commits (no Co-Authored-By) and pushes. `--amend` only works when
+  HEAD is an `Add brief:` commit.
+- `scripts/check_quotes.py <research-data/slug>` — quotes/hot takes must be in the transcript;
+  `names` must be ticker-index kinds and spoken. Report-only; read every flag.
+- `scripts/check_coverage.py` — inventory-vs-brief fact check for long videos.
 
 Key things baked into the current skill that aren't obvious from a first read:
 - **`META["category"]`** is `"market"` (default — investing/AI-news mix) or `"dev"` (dev/systems/
@@ -39,8 +55,8 @@ Key things baked into the current skill that aren't obvious from a first read:
   `META["region"] = "ro"` puts it on the **Romania** tab; the `romania` tag goes only on themes about
   Romania itself (leu, BVB, local airlines), never on a Romanian show's global stories. All 5
   earlier Romanian briefs were backfilled this way — don't revert to Romanian-language briefs.
-- **yt-dlp 429 / missing:** `scripts/fetch_transcript_api.py <url|id>` writes the SRT via
-  `youtube_transcript_api`; then clean as usual.
+- **yt-dlp 429 / missing:** `start.py` falls back to `scripts/fetch_transcript_api.py` itself
+  (`youtube_transcript_api`); no manual step.
 - **`names` is the permanent ticker index, not a general "notable things" slot.** Every entry
   becomes a row in By Company/Ticker across every brief, forever — companies/funds/orgs only.
   Countries, product and model names, and concepts go in `bullets`. Comma-splitting is

@@ -1,6 +1,6 @@
 ---
 name: yt-stocks-brain
-version: 1.1.0
+version: 1.2.0
 metadata:
   author: Peter <peter@example.com>
   tags: [youtube, research, transcript, brief, investing, knowledge-graph]
