@@ -1154,17 +1154,20 @@ def _canonicalize_entities(briefs):
     """Resolve every entity string (names, claim entities/speakers, relation endpoints) through
     the kb/entities.json registry, then rewrite each mention's display/ticker from it and add
     its permanent "key". Claims and relations go first so a ticker written there reaches the
-    index in the same run."""
+    index in the same run. Speakers go last: a one-word `who` like "Stifel" that the brief also
+    names resolves to that firm instead of being scoped to the channel as an unknown first name."""
     reg = Registry()
     for b in briefs:
-        for c in b["_raw"].get("claims") or []:
+        claims = b["_raw"].get("claims") or []
+        for c in claims:
             reg.resolve_list(c.get("entity"))
-            reg.resolve_who(c.get("who"), b["speakers"], b["channel"])
         for x in b["_raw"].get("relations") or []:
             reg.resolve_list(x.get("from"))
             reg.resolve_list(x.get("to"))
         for e in b["entities"]:
             e["key"] = reg.resolve(e["raw"])
+        for c in claims:
+            reg.resolve_who(c.get("who"), b["speakers"], b["channel"])
     for b in briefs:
         for e in b["entities"]:
             ent = reg.get(e["key"])
