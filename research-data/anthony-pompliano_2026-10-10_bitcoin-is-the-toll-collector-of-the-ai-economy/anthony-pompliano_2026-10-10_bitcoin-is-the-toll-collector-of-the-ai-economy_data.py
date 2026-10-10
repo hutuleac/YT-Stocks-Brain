@@ -1,0 +1,186 @@
+META = {
+    "title": "Bitcoin Is the Toll Collector of the AI Economy",
+    "channel": "Anthony Pompliano",
+    "speakers": "Anthony Pompliano (host), Jordi Visser (guest, 22V Research)",
+    "date": "2026-10-10",
+    "video_url": "https://www.youtube.com/watch?v=rAVx9MiSbjc",
+    "thread_line": "5 threads · bank multiple compression from AI agents · are models commoditized · Meta's Muse and Instinct · Bitcoin and the toll-collector thesis · bubble talk and Dalio",
+    "category": "market",
+    "region": "",
+}
+
+SNAPSHOT = [
+    "Jordi Visser's 'bank apocalypse': banks face **multiple compression within a year** as consumer AI agents hunt the cheapest yield and same-day settlement (stablecoins, tokenization) removes float.",
+    "Stripe is his example of the nimble rival: ~10,000 people and ~$160B valuation versus Citigroup's ~$200B market cap and ~200,000 staff; Stripe revenue up 41% year over year (per Stripe).",
+    "Host and guest disagree on AI: Pompliano says models are commoditizing and value moves to applications; Visser says compute decides who has the best model and Anthropic and OpenAI will own most of it.",
+    "Visser expects Meta's Muse and Instinct agents to 'print cash' through transaction fees and better ads; Pompliano is doubtful about the moat.",
+    "His investing filter: the **toll collectors**, meaning agentic compute and digital-money guardrails (crypto), not the attention economy or any single agent.",
+    "On Bitcoin: consolidating but in a bull market above a rising 200-day average; he expects the biggest crypto moves next year as traditional finance arrives via tokenization and stablecoins.",
+    "On bubble talk: Ray Dalio's 'bond yields may prick the AI bubble' is one more scare; Visser lists the shocks the market already absorbed and says the alpha is compute build-out plus crypto.",
+]
+
+THEMES = [
+    {
+        "id": "bank-apocalypse",
+        "tags": ["finance", "crypto", "ai-infra"],
+        "color": "red",
+        "badge": "Structural critique",
+        "status": "BANKS: MULTIPLE COMPRESSION OVER THE NEXT YEAR",
+        "title": "Consumer AI agents and instant settlement squeeze bank spreads and multiples",
+        "lead": "Visser says AI agents will move deposits to the highest yield and stablecoin settlement removes float, so banks lose their zero-yield deposit spread and their valuation multiples.",
+        "bullets": [
+            "Mechanism one: lazy deposits earning zero let banks buy short Treasuries at ~4% and keep the spread; agents 'don't make mistakes' and search for the cheapest option, which ends that.",
+            "Mechanism two: same-day settlement (stablecoins, tokenization) removes the float banks, Visa and Mastercard earn on 1-3 days of delay.",
+            "He frames it as a rerating, not a run on banks, borrowing the 'SaaS apocalypse' pattern: software kept printing record earnings while AI disruption crushed multiples. He cites Torsten Slok's 'agentic bank run' article as a related angle.",
+            "Stripe vs Citigroup: Citi is ~$200B market cap with ~200,000 people; Stripe ~$160B with ~10,000, revenue +41% year over year, and is already built for crypto and agentic commerce. Big-bank bureaucracy (bonus cycles, 360 reviews, budgets) moves slower than AI.",
+            "Consumer wins: lower fees and the middleman is hurt. Paul Graham called Amazon's block on agents such as Muse the first real wedge against Amazon in decades; Apple's iOS changes are read as the same turf defense; an 'agent-friendly Amazon or bank' could be very valuable.",
+        ],
+        "quote": None,
+        "watch": "Visser built the framing from a Bloomberg-covered X post and says he 'played with' the SaaS apocalypse idea for the bank headline; he previously worked at a large bank and is invested in crypto.",
+        "names": [
+            {"name": "Citigroup (C)", "blurb": "Example of a slow incumbent: ~$200B market cap, ~200,000 employees.", "stance": "NEGATIVE VIEW", "conviction": "Medium", "horizon": "next year"},
+            {"name": "Stripe", "blurb": "~$160B valuation, ~10,000 staff, revenue +41%; built for crypto and agent commerce.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Visa (V), Mastercard (MA)", "blurb": "Benefit from settlement delay; same-day settlement erodes the float.", "stance": "NEGATIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "Amazon (AMZN)", "blurb": "Blocked agents such as Muse; Paul Graham sees a rare wedge to disrupt it.", "stance": "NEGATIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "Apple (AAPL)", "blurb": "iOS changes read as keeping agents out.", "stance": "NEGATIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "Shopify (SHOP)", "blurb": "Leaning into agents buying things.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Salesforce (CRM)", "blurb": "Cited as down despite good earnings, showing positioning beats fundamentals.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "model-commoditization",
+        "tags": ["ai-infra", "software", "semis"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "HOST VS GUEST: COMMODITIZED OR COMPUTE-GATED",
+        "title": "Are AI models commoditizing, or will compute-rich labs keep the best ones?",
+        "lead": "Pompliano argues general-purpose models are a race to zero and value shifts to applications; Visser argues compute decides who owns superintelligence and the best models won't be public.",
+        "bullets": [
+            "Trigger: Elon Musk said Grok will open its backend and route queries to whichever model is best; Pompliano reads that as a signal models are commoditized and others may be forced to follow. Musk also posted about commoditization of intelligence.",
+            "Visser's view: Opus 5.5 is the best model 'for the stuff that I do' (images, video, general work), Gemini makes mistakes, and time to answer matters (2 minutes on Opus vs 12 on a cheaper model) because token cost adds up.",
+            "Visser: open source will cover ~90% of tasks at near-zero cost, but the remaining 10% grows with adoption (Jevons); Rubin hardware arrives next year and smart groups, including Musk, are buying as much as they can.",
+            "Pompliano's data point: processing 500M tokens costs ~$5,000 on Claude and ~97% less on their own model and hardware. He cites the fat-protocol-thesis analogy, where crypto value moved to infrastructure and applications.",
+            "Pompliano's 'hot take': the big labs trail in personal agents (Muse and Instinct lead) and in vertical apps. He sees Anthropic going into bio and OpenAI into consumer assistants.",
+            "Visser's counter: best models go to businesses, not the public, so they can't be distilled; open-source models can't match labs' compute; a Wall Street Journal piece says AI spending is nearly impossible to budget.",
+            "Where they converge: law firms will use cheaper customized open models, but a one-person law firm times a billion changes the picture, so you can't pick winners as a VC.",
+        ],
+        "quote": {"text": "if you have the compute you get the best model.", "cite": "— Jordi Visser"},
+        "watch": "Pompliano says his own firm bet on building a model router, which puts him on the commoditization side; Visser discloses heavy daily use of frontier models. They state outright that their disagreement is the story: 'nobody really knows'.",
+        "names": [
+            {"name": "Anthropic", "blurb": "Visser: will own most compute and best models; going into bio per Pompliano.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "OpenAI", "blurb": "Compute-rich; Dots personal assistant; consumer orientation.", "stance": "POSITIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "xAI", "blurb": "Grok opening its backend to any model; Musk buying Rubin capacity.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Google (GOOGL)", "blurb": "Visser says Gemini makes mistakes in his use.", "stance": "NEGATIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "Nvidia (NVDA)", "blurb": "Vera Rubin arrives next year; more output per gigawatt.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": "next year"},
+        ],
+    },
+    {
+        "id": "meta-agents",
+        "tags": ["software", "consumer", "ai-infra"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "HOW DO MUSE AND INSTINCT MAKE MONEY?",
+        "title": "Meta's personal agents: transaction fees and ads versus the end of the attention economy",
+        "lead": "Visser says Meta's Muse and Instinct will print cash through transaction take rates and better ad targeting; Pompliano isn't sure they have a moat.",
+        "bullets": [
+            "Visser: Meta wants as much transaction volume as possible through the agent and can take a cut, pressuring card networks, processors and merchants; he says Zuckerberg wants it free forever and monetize via transactions.",
+            "He worked inside Meta's ads business: more user data makes ad targeting better, so it's 'Facebook makes money as much as Muse does'; Instagram already shows a 'download Muse' interstitial.",
+            "An interview (guest name garbled in captions) is cited as calling ads 'the attention economy' and predicting it collapses; Visser answers 'maybe'. The pair agree a phone is a clumsy home for a personal agent, display ads in an agent feed are not very valuable, and companies are chasing a new gadget.",
+            "Agreed point: agents transacting expands the market for merchants, Meta and consumers.",
+            "Visser would not invest in one agent when seven more launch (plus Europe and Asia); he prefers the toll collectors.",
+        ],
+        "quote": None,
+        "watch": "Visser worked at the company he is analyzing and says he understands its ad business. Neither speaker discloses a position in Meta.",
+        "names": [
+            {"name": "Meta (META)", "blurb": "Muse and Instinct monetized via transactions and ads; 'they're going to print cash'.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+        ],
+    },
+    {
+        "id": "toll-collectors",
+        "tags": ["crypto", "ai-infra", "macro-rates"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "THE TWO TRADES: AGENTIC COMPUTE AND FINANCIAL GUARDRAILS",
+        "title": "Bitcoin and crypto as the toll collectors of the agent economy",
+        "lead": "Visser says the alpha over the next year is in agentic compute and digital-money guardrails, and that crypto's biggest moves come next year as traditional finance arrives.",
+        "bullets": [
+            "Thesis: demand will exceed supply for compute and for agent payment rails; the toll collectors beat betting on any single agent. 'This is 100% for me about agents.'",
+            "Bitcoin: consolidating, in a bull market above a rising 200-day average, even with rates up and gold down; be patient, as with Micron (retraced to its 200-day after $100 to ~$1,400).",
+            "Catalyst: tokenization and stablecoin volumes rising; he says traditional investors keep asking him how to make money on tokenization. Biggest crypto moves expected next year.",
+            "Contrarian to consensus: Bloomberg, BlackRock and Citrini now publish his intersection of crypto and Wall Street (Citrini's DeFi-on-Wall-Street piece); he sees that as a positive sign and plans to attend conferences next year.",
+            "Rates: he expects 10-year yields about where they are a year from now, since AI is the only thing driving growth, with nominal GDP running hot; weaker jobs would revive the debasement story.",
+            "Next year's chaos: 'worse than this year', citing the chart on page 71 of *Situational Awareness*; the advice is signal vs noise.",
+        ],
+        "quote": {"text": "I want the digital money guardrails, the toll collectors.", "cite": "— Jordi Visser"},
+        "watch": "Visser runs a crypto-focused video series and is positive on Bitcoin; Pompliano is a Bitcoin investor and the episode carries crypto sponsors (excluded here). Neither discloses current position sizes.",
+        "names": [
+            {"name": "Bitcoin (BTC)", "blurb": "Consolidating in a bull market; agent payments and tokenization as catalysts.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": "next year"},
+            {"name": "Ethereum (ETH)", "blurb": "Mentioned alongside Bitcoin in the 200-day average analogy.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Micron (MU)", "blurb": "Analogy: AI-driven rally from $100 to ~$1,400 that retraced to its 200-day average.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "BlackRock (BLK)", "blurb": "Published research on crypto and Wall Street, taken as validation.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "bubble-talk",
+        "tags": ["macro-rates", "finance", "career"],
+        "color": "amber",
+        "badge": "Counterintuitive take",
+        "status": "AI BUBBLE TALK",
+        "title": "Why Visser dismisses Ray Dalio's 'bond yields may prick the AI bubble'",
+        "lead": "Visser says bubble warnings are a recurring headline and lists six shocks the market has already absorbed; the alpha, he says, is concentrated in a few themes.",
+        "bullets": [
+            "On Dalio: the 'may' headline matters only because of his name; an LLM query shows Dalio has called a bubble many times, and he now writes history books, so he has a thesis he must stick to.",
+            "Shocks absorbed: a pandemic, the fastest rate hikes in US history, ~10% inflation, Silicon Valley Bank and a bank run, broad tariffs (a ~20% fall, then new highs), and the Strait of Hormuz closure this year.",
+            "He allows for another 20-30% correction next year, possibly from rate-driven stress in indebted European firms, but expects governments to pump money in again because they have 'financialized everything'.",
+            "Concentration: only about 24-25% of 1,500 companies beat the index; highest-probability bets are compute build-out and crypto.",
+            "Practical advice to young people: ignore bubble talk, learn to use AI, build and ship apps on GitHub; ten apps each making $10,000 can match a $115,000 salary, enabled by Stripe.",
+        ],
+        "quote": None,
+        "watch": "Dalio's quote is relayed secondhand. The 24-25% statistic is cited without a source and attributed loosely to a 1,500-company universe.",
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F3E6", "tag": "Finance", "title": "Stress-test bank exposure for deposit-spread and settlement-float risk as agents and stablecoins scale."},
+    {"icon": "\U0001F4B3", "tag": "Payments", "title": "Track Stripe volumes, stablecoin and tokenization size as the lead indicators Visser names."},
+    {"icon": "⚖️", "tag": "AI strategy", "title": "Decide your own side of the commoditization debate and run a token-cost test on a cheaper model."},
+    {"icon": "\U0001FA99", "tag": "Crypto", "title": "Watch Bitcoin against its 200-day average and rising tokenization volume rather than headlines."},
+    {"icon": "\U0001F6E0", "tag": "Careers", "title": "Build and ship an AI-powered app this quarter; that is Visser's edge over macro commentators."},
+    {"icon": "\U0001F50D", "tag": "Macro", "title": "When a bubble warning lands, check how often the source has said it before."},
+]
+
+HOT_TAKES = [
+    {"take": "I believe the banks now are going to go through a problem which is they're going to come under multiple compression over the course of the next year.", "cite": "— Jordi Visser", "why": "dated call"},
+    {"take": "If you have the compute you get the best model.", "cite": "— Jordi Visser", "why": "contested thesis"},
+    {"take": "They're going to print cash.", "cite": "— Jordi Visser, on Muse and Instinct", "why": "bold call"},
+    {"take": "I think next year is going to be the year that we see the biggest moves in crypto because of agents.", "cite": "— Jordi Visser", "why": "dated call"},
+    {"take": "I just think that is like a cutthroat business. It's like kind of a race to zero.", "cite": "— Anthony Pompliano, on general-purpose models", "why": "contrarian"},
+    {"take": "The chaos is going to be worse next year than it is this year.", "cite": "— Jordi Visser", "why": "dated prediction"},
+]
+
+CLAIMS = [
+    {"who": "Jordi Visser", "claim": "Banks come under valuation multiple compression over the next year because of consumer AI agents and instant settlement.", "metric": "bank valuation multiples", "target": "compress", "by": "2027-10", "condition": None, "entity": "Citigroup (C)"},
+    {"who": "Jordi Visser", "claim": "The 10-year Treasury yield is about the same level a year from now.", "metric": "10-year yield", "target": "roughly unchanged", "by": "2027-10", "condition": "unless the jobs market weakens noticeably", "entity": None},
+    {"who": "Jordi Visser", "claim": "Next year brings the biggest moves in crypto, driven by agents and traditional-finance tokenization.", "metric": "crypto price moves", "target": "biggest of the cycle", "by": "2027", "condition": None, "entity": "Bitcoin (BTC)"},
+    {"who": "Jordi Visser", "claim": "Demand for compute exceeds supply over the next few years, so the build-out continues.", "metric": "compute demand vs supply", "target": "demand greater", "by": "2029", "condition": None, "entity": None},
+    {"who": "Jordi Visser", "claim": "The market chaos and daily bubble talk is worse next year than this year.", "metric": "market volatility and bubble talk", "target": "worse than 2026", "by": "2027", "condition": None, "entity": None},
+    {"who": "Jordi Visser", "claim": "There may be another 20-30% market correction next year.", "metric": "equity correction", "target": "20-30%", "by": "2027", "condition": None, "entity": None},
+    {"who": "Jordi Visser", "claim": "Meta's Muse and Instinct agents earn substantial revenue from transaction fees and ads.", "metric": "agent revenue", "target": "large cash flow", "by": None, "condition": None, "entity": "Meta (META)"},
+    {"who": "Anthony Pompliano", "claim": "Frontier models commoditize and value accrues to infrastructure and applications.", "metric": "model pricing power", "target": "commoditized", "by": None, "condition": None, "entity": None},
+]
+
+RELATIONS = [
+    {"from": "Stripe", "rel": "competes_with", "to": "Citigroup (C)", "note": "competes with banks on payments and services"},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F4DA", "title": "Sources referenced: Bloomberg piece on Visser's bank call; Torsten Slok's agentic bank run article; Paul Graham on Amazon and agents; Elon Musk on Grok routing; a Wall Street Journal piece on AI budgeting; Citrini, BlackRock and Bloomberg crypto-and-Wall-Street research; Ray Dalio's bond-yield comment; Situational Awareness (page 71 chart); Pompliano's new book of letters.", "tag": "References"},
+]
+
+GLOSSARY = [
+    {"term": "Toll collector", "def": "Visser's term for assets that earn on every unit of agent compute or digital-money flow, such as compute and crypto."},
+    {"term": "Multiple compression", "def": "A falling valuation ratio even as earnings hold."},
+    {"term": "Fat protocol thesis", "def": "2017 crypto idea that most value accrues to the base protocol layer; used here as the analog for model labs."},
+    {"term": "Token maxing", "def": "Companies throwing unconstrained spend at AI tokens, now giving way to efficiency."},
+]
