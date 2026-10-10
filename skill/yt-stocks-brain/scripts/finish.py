@@ -82,6 +82,11 @@ def main():
         print("\n".join(unknown))
         sys.exit(1)
 
+    if a.amend:
+        top = sh(["git", "log", "-1", "--format=%s"]).stdout.strip()
+        if not top.startswith("Add brief:"):
+            sys.exit(f"--amend refused: HEAD is not a brief commit ({top!r})")
+
     msg = f"Add brief: {meta['channel']} — {meta['title']} ({meta['date']})"
     paths = [p for p in ("index.html", "library.json", "kb", "research-data", "memos") if os.path.exists(p)]
     sh(["git", "add", "-A", "--", *paths, *glob.glob(slug + ".html")])
