@@ -44,10 +44,11 @@ def main():
     d = dirs[0]
     slug = os.path.basename(d)
     meta = json.load(open(os.path.join(d, slug + ".json"), encoding="utf-8"))["meta"]
-    vid = re.search(r"([\w-]{11})$", meta["video_url"]).group(1)
+    m = re.search(r"([\w-]{11})$", meta["video_url"])  # no match for non-YouTube text sources
+    vid = m.group(1) if m else None
 
     copied = 0
-    for f in glob.glob(os.path.join(a.src, vid + ".*")):
+    for f in glob.glob(os.path.join(a.src, vid + ".*")) if vid else []:
         if f.endswith((".srt", ".txt")):
             shutil.copy(f, d)
             copied += 1
