@@ -7,7 +7,7 @@ META = {
     "channel": "Grow your WEALTH - Valentin Dragu si Alex Marian",
     "speakers": "Valentin Dragu",
     "date": "2026-10-10",
-    "video_url": "https://www.growyourwealth.ro/products/grow-your-wealth",
+    "video_url": "https://www.growyourwealth.ro/products/grow-your-wealth/categories/2160165880",
     "thread_line": "6 threads: the ASTS exit after Starlink's spectrum deal, Trump's SpaceX bonds and the space policy, a narrow rally under 5%+ yields, the CPI/PPI/earnings week, AI compute names, space/EV/fintech/nuclear and position sizing",
     "category": "market",
     "region": "ro",

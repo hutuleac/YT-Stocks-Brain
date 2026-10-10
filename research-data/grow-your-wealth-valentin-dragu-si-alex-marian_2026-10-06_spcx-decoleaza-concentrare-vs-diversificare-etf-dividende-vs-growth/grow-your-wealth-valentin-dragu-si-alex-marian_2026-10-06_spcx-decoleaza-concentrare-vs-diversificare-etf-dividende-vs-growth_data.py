@@ -7,7 +7,7 @@ META = {
     "channel": "Grow your WEALTH - Valentin Dragu si Alex Marian",
     "speakers": "Valentin Dragu",
     "date": "2026-10-06",
-    "video_url": "https://www.growyourwealth.ro/products/grow-your-wealth",
+    "video_url": "https://www.growyourwealth.ro/products/grow-your-wealth/categories/2160165880",
     "thread_line": "6 threads: why concentration beats diversification early, growth over dividends in the first 5-10 years, a Nasdaq record against a 5.31% 10Y, Broadcom-Anthropic financing plus AMD and Tesla, SpaceX +7.6% into a lockup, and the rest of the book",
     "category": "market",
     "region": "ro",
