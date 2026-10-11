@@ -460,10 +460,10 @@ def render_theme(t):
     if names:
         chips = []
         for n in names:
-            bits = [x for x in (n.get("stance"), n.get("conviction"), n.get("horizon")) if x]
+            bits = [x for x in (n.get("stance"), n.get("conviction"), n.get("horizon")) if x and x != "None"]
             chip = (f'<span class="stance" style="background:{STANCE_COLORS[_stance_color(n.get("stance"))]};">'
                     f'{esc(" · ".join(bits))}</span>') if bits else ""
-            chips.append(f'<div class="namechip"><b>{esc(n["name"])}{chip}</b><span>{esc(n["blurb"])}</span></div>')
+            chips.append(f'<div class="namechip"><b>{esc(n["name"])}{chip}</b><span>{emph(n["blurb"], auto=False)}</span></div>')
         chips = "".join(chips)
         names_html = (
             f'<div class="sidecard" style="--sc-accent:{NAMES_ACCENT};">'
@@ -474,7 +474,7 @@ def render_theme(t):
         watch_html = (
             f'<div class="sidecard" style="--sc-accent:{WATCH_ACCENT};">'
             f'<div class="lbl">Worth noting</div>'
-            f'<div class="txt">{esc(t["watch"])}</div></div>'
+            f'<div class="txt">{emph(t["watch"], auto=False)}</div></div>'
         )
 
     tags_html = "".join(f'<span class="ttag">{esc(x)}</span>' for x in t.get("tags") or [])
@@ -578,7 +578,7 @@ def render_glossary(items):
     if not items:
         return '<p class="empty">No glossary terms extracted for this video.</p>'
     return '<div class="gloss">' + "".join(
-        f'<div><b>{esc(g["term"])}</b> &mdash; {esc(g["def"])}</div>' for g in items
+        f'<div><b>{esc(g["term"])}</b> &mdash; {emph(g["def"], auto=False)}</div>' for g in items
     ) + "</div>"
 
 
@@ -971,14 +971,14 @@ def _render_entity_view(briefs):
         for m in mentions:
             color = STANCE_COLORS.get(m["color"], STANCE_COLORS["gray"])
             b = m["brief"]
-            stance_bits = " · ".join(x for x in [m["stance_label"], m["conviction"]] if x)
+            stance_bits = " · ".join(x for x in [m["stance_label"], m["conviction"]] if x and x != "None")
             items.append(
                 f'<li><span class="dot" style="background:{color};"></span>'
                 f'<span class="m-date">{esc(b["date"])}</span>'
                 f'<span class="m-channel">{esc(b["channel"])}</span>'
                 f'<a href="{esc(b["html"])}">{esc(b["title"])}</a>'
                 + (f'<span class="m-stance">{esc(stance_bits)}</span>' if stance_bits else "")
-                + (f'<div class="m-blurb">{esc(m["blurb"])}</div>' if m["blurb"] else "")
+                + (f'<div class="m-blurb">{emph(m["blurb"], auto=False)}</div>' if m["blurb"] else "")
                 + "</li>"
             )
         out.append(
