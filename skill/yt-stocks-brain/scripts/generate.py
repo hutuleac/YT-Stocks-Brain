@@ -404,6 +404,7 @@ def esc(s):
     )
 
 
+_MD_BOLDITAL = re.compile(r"\*\*\*(.+?)\*\*\*")
 _MD_BOLD = re.compile(r"\*\*(.+?)\*\*")
 _MD_ITAL = re.compile(r"(?<!\*)\*([^*]+?)\*(?!\*)")
 _AUTO_ANCHOR = re.compile(
@@ -421,6 +422,7 @@ def emph(s, auto=True):
         return ""
     t = esc(s)
     had_markup = "**" in t or _MD_ITAL.search(t)
+    t = _MD_BOLDITAL.sub(r"<b><i>\1</i></b>", t)
     t = _MD_BOLD.sub(r"<b>\1</b>", t)
     t = _MD_ITAL.sub(r"<i>\1</i>", t)
     if auto and not had_markup:
