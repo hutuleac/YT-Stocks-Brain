@@ -118,9 +118,7 @@ THEMES = [
         ],
         "quote": {"text": "what a mentor does for you is they lend you confidence that you don't have", "cite": "— Cathy Lanier"},
         "watch": None,
-        "names": [
-            {"name": "Metropolitan Police Department", "blurb": "DC police; Lanier served 27 years, rising from foot patrol to chief.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
-        ],
+        "names": None,
     },
     {
         "id": "community-policing",
@@ -162,9 +160,7 @@ THEMES = [
         ],
         "quote": {"text": "Admit you're wrong. Change course. Go another direction. That's where people get tripped up.", "cite": "— Cathy Lanier"},
         "watch": None,
-        "names": [
-            {"name": "NFL", "blurb": "Lanier runs league security: stadium standards, investigations, Super Bowl, international games.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
-        ],
+        "names": None,
     },
 ]
 
