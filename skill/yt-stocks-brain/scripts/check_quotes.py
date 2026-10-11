@@ -19,10 +19,13 @@ import json
 import os
 import re
 import sys
+import unicodedata
 
 
 def words(s):
-    return re.findall(r"[a-z0-9']+", s.lower().replace("’", "'"))
+    # fold diacritics so Romanian quotes written without them (per ref/romanian.md) still match
+    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
+    return re.findall(r"[a-z0-9']+", s.lower())
 
 
 def grams(w, n=3):
