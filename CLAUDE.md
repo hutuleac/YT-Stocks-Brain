@@ -88,16 +88,20 @@ Key things baked into the current skill that aren't obvious from a first read:
     entity_aliases, themes, theme_tags, mentions, claims (+due_date), claim_entities,
     claim_speakers, relations, takes`; views `entity_timeline`, `co_mentions`, `speaker_claims`.
   - Registry/KB checks warn, never fail a run (explicit decision).
-  - **Signals tab** (`scripts/signals.py`, rendered from `kb/brain.db` on every run): direction,
-    not precision — last 30 days vs the 60 before, normalized per brief. Lenses: gaining
-    attention, early signals (new + multi-channel), sentiment turning, contested now, themes
-    gaining, new connections; rows expand to recent stances + forward claims. User intent: spot
-    trends and themes early; don't turn this into prediction scoring.
-  - **Narratives lens** (in Signals): entities named together cluster automatically (cosine
-    co-mention over briefs, label propagation; hubs in >20% of briefs left out). Labeled by top
-    members + dominant tag; the memo writer names them in prose. Week-to-week identity = ≥50%
-    member overlap, so the memo diff reports new / faded / share moves. Upgrade path if labels
-    need to stick: a committed `kb/narratives.json` name registry (not built).
+  - **Signals tab** (`scripts/signals.py`, rendered from `kb/brain.db` on every run): spot ideas
+    before they go mainstream. Redesigned Oct 2026 after the user rejected calendar windows
+    (uneven input makes month-over-month comparisons measure curation, not attention):
+    **market briefs only**, windows counted in briefs (latest 30 vs the 90 before), no channel
+    counts, no contested/gaining/turning lenses (user doesn't want them). The unit is the
+    **narrative**: entities named together cluster automatically (cosine co-mention, label
+    propagation; hubs in >20% of briefs left out). Each gets a vector (convergence = briefs naming
+    >=2 members, growth = recent vs prior share, direction = net stance) and rows show the
+    converging information itself (theme titles + leads, forward claims). Emerging = growing
+    (>=1.25x) and under 30% of recent briefs; the rest sit collapsed under Established. **New
+    names** = entities first seen in the recent window, in >=2 briefs, not yet in any narrative.
+    Week-to-week narrative identity = >=50% member overlap (memo diff: new / faded / share moves /
+    now emerging). Upgrade path if labels need to stick: a committed `kb/narratives.json` name
+    registry (not built). Don't turn this into prediction scoring.
   - **By Company / Ticker** shows registry kinds company/fund/crypto/commodity/unknown only
     (`TICKER_KINDS` in `generate.py`); people, countries, products stay findable via All Briefs
     search. `unknown` stays visible on purpose so new auto-registered tickers don't vanish.

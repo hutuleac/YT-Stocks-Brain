@@ -272,8 +272,13 @@ INDEX_CSS = CSS + """
 .sig-fwd span{display:block;font-weight:600;font-size:12px;color:var(--brand);margin-bottom:4px;}
 .sig-fwd ul{margin:0;padding-left:18px;}
 .sig-by{color:var(--muted);font-size:12px;white-space:nowrap;}
-ul.rows.sig-tags li{display:flex;gap:12px;justify-content:space-between;}
-ul.rows.sig-tags span{color:var(--muted);font-variant-numeric:tabular-nums;}
+.sig-theme{font-size:13.3px;line-height:1.5;margin-top:5px;}
+.sig-theme b{font-weight:600;}
+.sig-more{margin-top:8px;}
+.sig-more>summary{cursor:pointer;list-style:none;}
+.sig-more>summary::-webkit-details-marker{display:none;}
+.sig-more>summary h3::after{content:" \\25B8";color:var(--brand);font-size:14px;}
+.sig-more[open]>summary h3::after{content:" \\25BE";}
 .idx-stats{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:6px;}
 .idx-stats span{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);}
 .controls{position:sticky;top:0;z-index:5;background:var(--card);margin:0 calc(-1*clamp(18px,4vw,56px)) 22px;

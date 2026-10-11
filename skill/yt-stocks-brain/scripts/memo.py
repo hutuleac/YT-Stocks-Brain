@@ -42,18 +42,11 @@ def is_due(today=None):
 
 
 def diff(cur, prev):
-    """Signals snapshot vs previous one -> {section: {"new": [names], "dropped": [names]}, ...}."""
-    out = {}
-    for s in signals.SECTIONS:
-        now = {i["key"]: i["name"] for i in cur.get(s, [])}
-        before = {i["key"]: i["name"] for i in (prev or {}).get(s, [])}
-        out[s] = {"new": [now[k] for k in now if k not in before],
-                  "dropped": [before[k] for k in before if k not in now]}
-    pt = {t["tag"]: t for t in (prev or {}).get("themes", [])}
-    out["themes"] = [f'{t["tag"]} {pt[t["tag"]]["recent_pct"]}% → {t["recent_pct"]}%' for t in cur.get("themes", [])
-                     if t["tag"] in pt and abs(t["recent_pct"] - pt[t["tag"]]["recent_pct"]) >= 5]
-    pc = {(c["a"], c["b"]) for c in (prev or {}).get("connections", [])}
-    out["connections"] = [f'{c["a_name"]} + {c["b_name"]}' for c in cur.get("connections", []) if (c["a"], c["b"]) not in pc]
+    """Signals snapshot vs previous one -> {"new_names": {"new", "dropped"}, "narratives": [lines]}."""
+    now = {i["key"]: i["name"] for i in cur.get("new_names", [])}
+    before = {i["key"]: i["name"] for i in (prev or {}).get("new_names", [])}
+    out = {"new_names": {"new": [now[k] for k in now if k not in before],
+                         "dropped": [before[k] for k in before if k not in now]}}
     pn, label = (prev or {}).get("narratives", []), lambda n: " · ".join(n["names"][:3])
     out["narratives"] = []
     for n in cur.get("narratives", []):
@@ -62,6 +55,8 @@ def diff(cur, prev):
             out["narratives"].append(f'new: {label(n)}')
         elif abs(n["recent_pct"] - was["recent_pct"]) >= 5:
             out["narratives"].append(f'{label(n)} {was["recent_pct"]}% → {n["recent_pct"]}%')
+        elif n.get("emerging") and not was.get("emerging"):
+            out["narratives"].append(f'now emerging: {label(n)}')
     out["narratives"] += [f'faded: {label(p)}' for p in pn
                           if not any(signals.same_narrative(p["members"], n["members"]) for n in cur.get("narratives", []))]
     return out
@@ -101,25 +96,21 @@ def context():
     print("\n## What moved since the last memo" + ("" if prev else " (first memo: everything is new)"))
     for k, v in d.items():
         print(f"- {k}: {v}")
-    for s in signals.SECTIONS:
-        print(f"\n## {s}")
-        for i in data[s]:
-            print(f"- {i['name']} ({i['ticker'] or '-'}): briefs {i['briefs']}, channels {i['channels']}, lift {i['lift']}, "
-                  f"sentiment {i['sent_prior']} -> {i['sent_recent']}, +{i['pos']}/-{i['neg']}, first {i['first_seen']}")
-            det = data["detail"].get(i["key"], {})
-            for r in det.get("rows", [])[:3]:
-                print(f"    · {r['date']} {r['channel']} [{r['stance']}] {r['blurb']} ({r['html']})")
-            for c in det.get("claims", [])[:2]:
-                print(f"    → {c['who']}: {c['claim']} ({c['by_when'] or 'no date'})")
-    print("\n## themes (share of tagged briefs, recent vs prior)")
-    for t in data["themes"]:
-        print(f"- {t['tag']}: {t['prior_pct']}% -> {t['recent_pct']}%")
-    print("\n## new connections")
-    for c in data["connections"]:
-        print(f"- {c['a_name']} + {c['b_name']}: {c['briefs']} briefs")
-    print("\n## narratives (entity clusters; share of briefs naming >= 2 members, prior -> recent)")
+    print("\n## narratives (entity clusters; share of briefs naming >= 2 members, prior -> recent; E = emerging)")
     for n in data["narratives"]:
-        print(f"- {', '.join(n['names'])} [{n['tag']}]: {n['prior_pct']}% -> {n['recent_pct']}% ({n['briefs']} recent briefs)")
+        print(f"- {'E ' if n['emerging'] else ''}{', '.join(n['names'])} [{n['tag']}]: {n['prior_pct']}% -> {n['recent_pct']}% "
+              f"({n['briefs']} recent / {n['briefs_all']} total briefs), sentiment {n['sent_prior']} -> {n['sent_recent']}")
+        for r in n["rows"][:4]:
+            print(f"    · {r['date']} {r['channel']}: " + " | ".join(t for t, _ in r["themes"]) + f" ({r['html']})")
+        for c in n["claims"][:2]:
+            print(f"    → {c['who']}: {c['claim']} ({c['by_when'] or 'no date'})")
+    print("\n## new names (first named in the recent window, >= 2 briefs, not in any narrative yet)")
+    for i in data["new_names"]:
+        print(f"- {i['name']} ({i['ticker'] or '-'}): {i['briefs']} briefs, first {i['first_seen']}, sentiment {i['sent']}")
+        for r in i["rows"][:3]:
+            print(f"    · {r['date']} {r['channel']}: {' / '.join(r['notes'])} ({r['html']})")
+        for c in i["claims"][:2]:
+            print(f"    → {c['who']}: {c['claim']} ({c['by_when'] or 'no date'})")
     print("\n## hot takes since last memo")
     for t in db.execute("""SELECT t.take, t.cite, b.html FROM takes t JOIN briefs b ON b.id = t.brief_id
                            WHERE b.date > ? ORDER BY b.date DESC LIMIT 40""", (since,)):
@@ -144,16 +135,11 @@ def render(path):
         + "</div>" for i in m["insights"] if i.get("title"))
     watch = "".join(f'<li><b>{g.emph(w["title"], auto=False)}</b> {g.emph(w.get("why", ""), auto=False)}</li>'
                     for w in m["watch"] if w.get("title"))
-    labels = {"gaining": "Gaining attention", "early": "Early signals", "turning": "Sentiment turning",
-              "contested": "Contested"}
-    moved = "".join(f'<li><b>{labels[s]}:</b> ' + "; ".join(
-        x for x in (f'new: {", ".join(map(esc, d[s]["new"]))}' if d[s]["new"] else "",
-                    f'dropped off: {", ".join(map(esc, d[s]["dropped"]))}' if d[s]["dropped"] else "") if x)
-        + "</li>" for s in signals.SECTIONS if d[s]["new"] or d[s]["dropped"])
-    if d["themes"]:
-        moved += f'<li><b>Themes:</b> {esc("; ".join(d["themes"]))}</li>'
-    if d["connections"]:
-        moved += f'<li><b>New connections:</b> {esc("; ".join(d["connections"]))}</li>'
+    nn = d["new_names"]
+    moved = (f'<li><b>New names:</b> ' + "; ".join(x for x in (
+        f'new: {", ".join(map(esc, nn["new"]))}' if nn["new"] else "",
+        f'dropped off: {", ".join(map(esc, nn["dropped"]))}' if nn["dropped"] else "") if x) + "</li>"
+        if nn["new"] or nn["dropped"] else "")
     if d["narratives"]:
         moved += f'<li><b>Narratives:</b> {esc("; ".join(d["narratives"]))}</li>'
     w = m["signals"]["window"]
@@ -201,7 +187,7 @@ def render(path):
       <div class="sec-eye">Computed, not written</div>
       <h2>What moved since the last memo</h2>
       <ul class="memo-list">{moved or "<li>First memo, or nothing new crossed a signal threshold.</li>"}</ul>
-      <p class="memo-ev">Signals measure what your sources talk about and how they lean, not prices. Windows are normalized per brief.</p>
+      <p class="memo-ev">Signals measure what your sources talk about and how they lean, not prices. Market briefs only; windows are counted in briefs.</p>
     </section>
   </div>
 </div>
@@ -215,17 +201,15 @@ def render(path):
 
 
 def _selftest():
-    a = {"gaining": [{"key": "x", "name": "X"}], "early": [], "turning": [], "contested": [],
-         "themes": [{"tag": "energy", "recent_pct": 30}], "connections": [{"a": "x", "b": "y", "a_name": "X", "b_name": "Y"}]}
-    b = {"gaining": [{"key": "z", "name": "Z"}], "early": [], "turning": [], "contested": [],
-         "themes": [{"tag": "energy", "recent_pct": 20}], "connections": []}
+    a = {"new_names": [{"key": "x", "name": "X"}]}
+    b = {"new_names": [{"key": "z", "name": "Z"}]}
     d = diff(a, b)
-    assert d["gaining"] == {"new": ["X"], "dropped": ["Z"]} and d["themes"] == ["energy 20% → 30%"]
-    assert d["connections"] == ["X + Y"] and diff(a, None)["gaining"]["new"] == ["X"]
-    n = lambda m, pct: {"members": m, "names": [x.upper() for x in m], "recent_pct": pct}
-    a["narratives"] = [n(["p", "q", "r"], 30), n(["s", "t", "u"], 10)]
-    b["narratives"] = [n(["p", "q", "r", "v"], 20), n(["w", "x", "y"], 5)]
-    assert diff(a, b)["narratives"] == ["P · Q · R 20% → 30%", "new: S · T · U", "faded: W · X · Y"]
+    assert d["new_names"] == {"new": ["X"], "dropped": ["Z"]} and diff(a, None)["new_names"]["new"] == ["X"]
+    n = lambda m, pct, em=False: {"members": m, "names": [x.upper() for x in m], "recent_pct": pct, "emerging": em}
+    a["narratives"] = [n(["p", "q", "r"], 30), n(["s", "t", "u"], 10), n(["g", "h", "i"], 8, True)]
+    b["narratives"] = [n(["p", "q", "r", "v"], 20), n(["w", "x", "y"], 5), n(["g", "h", "i"], 7)]
+    assert diff(a, b)["narratives"] == ["P · Q · R 20% → 30%", "new: S · T · U", "now emerging: G · H · I",
+                                        "faded: W · X · Y"], diff(a, b)["narratives"]
     assert diff(a, {})["narratives"][0] == "new: P · Q · R"
     assert week_key(dt.date(2026, 10, 3)) == "2026-W40"
     print("memo selftest ok")
