@@ -3,7 +3,7 @@ META = {
     "channel": "Anthony Pompliano",
     "speakers": "Anthony Pompliano (newsletter)",
     "date": "2026-10-12",
-    "video_url": "https://pomp.substack.com/",
+    "video_url": "https://pomp.substack.com/p/momentum-is-a-hell-of-a-drug",
     "thread_line": "3 threads · why crash calls keep missing, momentum backtests, and the optimist's stance (newsletter, not a video)",
     "category": "market",
     "region": "",
