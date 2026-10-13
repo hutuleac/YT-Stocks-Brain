@@ -1,0 +1,459 @@
+{
+ "schema_version": 2,
+ "meta": {
+  "title": "Muse Wonder: Zuckerberg and Wang's $100B AI",
+  "channel": "Cheeky Pint",
+  "speakers": "Mark Zuckerberg (Meta CEO), Alexandr Wang (Meta Superintelligence Labs), John Collison (host, Stripe)",
+  "date": "2026-10-12",
+  "video_url": "https://www.youtube.com/watch?v=XfdIhd1g6EI",
+  "thread_line": "6 threads · Muse Wonder lands at the frontier · how a frontier model is made · the $100B compute bet · agentic commerce and monetization · personal superintelligence as product · rebooting the lab",
+  "category": "market",
+  "region": ""
+ },
+ "snapshot": [
+  "Meta launches **Muse Wonder** (code name Watermelon), a much bigger pre-train than Muse Spark; Meta says it is state-of-the-art on personal/professional agent, finance and legal evals.",
+  "Wonder starts in paid Muse subscriptions, the Meta model API, OpenRouter and Muse Code; the free tier stays on Spark.",
+  "The bet: a ~$15B/year cost to run a 1 GW cluster, $50-60B capex per GW, 'tens of billions' per frontier model — CFO Susan Li warned Zuckerberg it 'has to work'.",
+  "Zuckerberg's backstop: if AI works, others will rent the compute; for Meta to lose, 'AI overall has to fail'.",
+  "Muse is pitched as the first product where people fully delegate purchases; Zuckerberg opened an Instacart account just for his agent and now orders once or twice a week.",
+  "MSL is a little over a year old: a full reboot after Llama 4, a research team of ~100-200, a flat culture, and Wang as a first-time frontier-model trainer.",
+  "Both reject winner-take-all: uneven execution, distillation and talent choices keep several labs at the frontier."
+ ],
+ "themes": [
+  {
+   "id": "muse-wonder",
+   "tags": [
+    "ai-infra",
+    "software"
+   ],
+   "color": "green",
+   "badge": "Confirmed event",
+   "status": "LAUNCHED OCT 2026",
+   "title": "Muse Wonder puts Meta at the frontier — tuned for personal agents, not leaderboards",
+   "lead": "Meta's new model class is significantly bigger than Muse Spark and built around memory, persistence and domain expertise.",
+   "bullets": [
+    "Two versions: Muse Wonder and the higher-end **Muse Wonder Full** (for Muse Code subscribers); Spark came from a pre-train at the end of 2025.",
+    "Active memory: the model itself, not a harness, manages long-term memory and compaction; measured on an internal 'Memory Bench'.",
+    "Active focus: persistence on long, ambiguous tasks and finding aligned workarounds when blocked.",
+    "Claimed state-of-the-art on finance and legal evals and on two long-horizon coding benchmarks; strong on Terminal Bench 4 and SWE-bench.",
+    "Wang says it sits at the frontier alongside Astra and Fable 'by the benchmarks', and is 'the best model in the world' for personal/professional agents.",
+    "Against Goodhart's-law benchmaxing worries, 'big model smell': Meta measures the gap between in-distribution and out-of-distribution performance, and says Wonder shows a large step up over Spark.",
+    "Too costly to serve free for now; the goal is a Spark-sized model as good as Wonder for hundreds of millions of users."
+   ],
+   "quote": {
+    "text": "We think it really is the best model in the world for the use case of personal professional agents.",
+    "cite": "— Alexandr Wang"
+   },
+   "watch": "All benchmark claims are Meta's own measurement ('state-of-the-art based on our measurement'); Wang notes 'plenty of room to improve' on memory.",
+   "names": [
+    {
+     "name": "Meta (META)",
+     "blurb": "Muse Wonder launch; frontier-class lab",
+     "stance": "POSITIVE VIEW",
+     "conviction": "High",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "model-making",
+   "tags": [
+    "ai-infra"
+   ],
+   "color": "gray",
+   "badge": "Explainer",
+   "status": "PLANNED SINCE AUGUST 2025",
+   "title": "How a frontier model gets made: ladders, troughs of sadness and protractors",
+   "lead": "Wang and Zuckerberg describe a year-plus process where most bets are placed before any proof exists.",
+   "bullets": [
+    "Pre-training climbs a ladder of models each ~4-5x bigger; data is the public internet, books, Meta's proprietary data and heavy image/audio/video for perception.",
+    "Domain data (shopping, personal legal, health, tax advice) goes in at pre-training, not just RL; with the internet not growing fast, data is a key scaling constraint.",
+    "Post-training: SFT seeds behaviors (maybe 10% of the time), RL drives them up; in RL 'less is more' on data. Spark 1.0 to 1.3 was RL-only yet felt 'night and day'.",
+    "Alignment is curating RL environments so the only path to success is aligned behavior; Meta aligns to **the user's instructions and values** — no 'moralizing lecture'.",
+    "Discretion matters for personal agents: booking a table without revealing an allergy or pregnancy.",
+    "Internal evals now outweigh public ones — chasing viral benchmarks means 'outsourcing all of your product thinking to that PhD student'.",
+    "Signals of success: perplexity evals in pre-training; Wonder beat Spark almost immediately in RL. Researchers literally hold protractors to loss curves.",
+    "Code names: Avocado (Spark), Watermelon (Wonder) — 'we're out of fruits'."
+   ],
+   "quote": {
+    "text": "you're kind of outsourcing all of your product thinking to that PhD student who happened to make a viral benchmark",
+    "cite": "— Alexandr Wang"
+   },
+   "watch": null,
+   "names": null
+  },
+  {
+   "id": "compute-bet",
+   "tags": [
+    "ai-infra",
+    "finance",
+    "energy"
+   ],
+   "color": "amber",
+   "badge": "High conviction",
+   "status": "HYPERION 5 GW COMING ONLINE OVER A COUPLE OF YEARS",
+   "title": "The $100-200B bet placed before the cards were dealt",
+   "lead": "Meta committed to clusters and serving capacity years ahead of knowing whether the model or product would work.",
+   "bullets": [
+    "Rough math: ~$15B a year to operate a gigawatt; $50-60B capex up front per GW; 'tens of billions' to train a frontier model.",
+    "Prometheus (Ohio) scales past 1 GW; Hyperion (Louisiana) to 5 GW — both planned in 2023-24 under the Llama program, predating MSL.",
+    "Hawaii exec offsite, end of 2025: a '$100 billion or $200 billion' check with no model to show; CFO **Susan Li** repeatedly warned it would be 'very very bad' if it failed.",
+    "Zuckerberg's backstop: others would pay more than $15B per GW if AI works, and Meta has other internal uses for compute.",
+    "Accounting edge: owned data centers are depreciated over years, while rivals renting cloud pay annual rates; an H100 is worth more today than last year as compute stays constrained.",
+    "Wang: R&D overlaps several model generations at once (a point Dario Amodei has made), so spend looks front-loaded."
+   ],
+   "quote": {
+    "text": "in order for it not to work out it's not just that we have to fail AI overall has to fail",
+    "cite": "— Mark Zuckerberg"
+   },
+   "watch": "Collison notes Google went free-cash-flow negative; Meta isn't yet, but capex keeps rising. Zuckerberg admits the effort strains 'the financial model of the company'.",
+   "names": [
+    {
+     "name": "Alphabet (GOOGL)",
+     "blurb": "Went free-cash-flow negative on AI capex",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Nvidia (NVDA)",
+     "blurb": "Zuckerberg likes its recent open-source support",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Low",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "agentic-commerce",
+   "tags": [
+    "consumer",
+    "finance",
+    "software"
+   ],
+   "color": "green",
+   "badge": "Positive view",
+   "status": "STRIPE AGENT COMMERCE WENT VERTICAL IN SEPTEMBER",
+   "title": "Agents as shoppers: Muse turns delegation into a business model",
+   "lead": "Meta plans to fund the buildout through subscriptions, a cut of commerce, business agents, an API and an enterprise unit.",
+   "bullets": [
+    "Muse uses trained-in browser use so no business has to integrate; partners get direct APIs, and eventually 'every business is going to have agents'.",
+    "Far more businesses ask to integrate than try to block; Collison: thin-moat sites that profit from time-on-site or overcharging may rationally block — and get disrupted.",
+    "Zuckerberg opened an **Instacart** account for his Muse (weekend baking with his daughter) and now uses it 1-2x a week — agents may expand commerce's total market by holding accounts.",
+    "Collison: Stripe's agent-commerce volume, announced at Sessions in May, went vertical in September; Zuckerberg told Patrick Collison in 2023 he was 'behind the eight-ball'.",
+    "Revenue paths: subscriptions, a small cut of money Muse saves or makes users, a 'business in a box' for small businesses, the API, and a new Meta Enterprise platform.",
+    "The core ads business — 'hundreds of billions' and growing — funds the rest if models lift it a few percent.",
+    "Stripe agreed to acquire OpenRouter (not yet closed); Wang sees it helping developers grasp subtle model differences, a 'wine sommelier' view of models."
+   ],
+   "quote": {
+    "text": "anyone who sits this out, I think is going to end up feeling sad over time",
+    "cite": "— Mark Zuckerberg"
+   },
+   "watch": "The host's company Stripe powers Muse payments, is acquiring OpenRouter (where Wonder is sold) and is a 'big investor' in Scale AI.",
+   "names": [
+    {
+     "name": "Instacart (CART)",
+     "blurb": "Zuckerberg became a regular user through his Muse",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Low",
+     "horizon": null
+    },
+    {
+     "name": "Stripe",
+     "blurb": "Muse payments integration; agent commerce volume rising",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Medium",
+     "horizon": null
+    },
+    {
+     "name": "OpenRouter",
+     "blurb": "Being acquired by Stripe; distributes Muse Wonder",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Low",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "personal-superintelligence",
+   "tags": [
+    "consumer",
+    "software"
+   ],
+   "color": "green",
+   "badge": "High conviction",
+   "status": "FASTEST-GROWING AGENT APP, PER THIRD-PARTY REPORTS",
+   "title": "Personal superintelligence: multimodal, model-is-the-product, no model picker",
+   "lead": "Meta chose the consumer agent lane others left open, betting on multimodality while the industry obsessed over coding.",
+   "bullets": [
+    "Use cases: Wang's Muse ('Oiler') buys obscure teas from Taiwan and Japan weekly; Zuckerberg's watches gym cameras and gives MMA feedback in 60-second breaks, writing its own video pipeline (first prototyped on OpenClaw, now an internal eval).",
+    "'Everyone is actually going to be writing tons of code. They're just not going to know' — Zuckerberg.",
+    "Lineage: ChatGPT did the text assistant, Anthropic got coding agents to work; nobody built the personal consumer version. Meta AI remains the informational assistant.",
+    "'The model is the product': complex product work is the privacy/security model and a dedicated VM per agent; personality and proactivity are trained in.",
+    "No model or effort selector — Wang mocks industry naming where 'the numbers go backwards'.",
+    "Voice (Siri-era promise still unmet): turn-taking is hard; input is exploding (students 'word vomit' 10-15 minutes), but listening is slow vs visual; Muse voice mode separates speakers, not fully rolled out.",
+    "Hardware: camera-and-audio glasses already useful; small-display glasses shipping; Muse Gadgets (e.g. a USB Home Link controlling Sonos and lights) with phone makers integrating."
+   ],
+   "quote": {
+    "text": "the highest use of super intelligence is invention and creation not automation",
+    "cite": "— Mark Zuckerberg"
+   },
+   "watch": "The launch was a 'home run', but Zuckerberg says growth tooling wasn't ready because the median expectation was several iterations.",
+   "names": [
+    {
+     "name": "Anthropic",
+     "blurb": "Got coding agents to work",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "ByteDance",
+     "blurb": "Only peer at Meta's recommendation-system scale",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "msl-reboot",
+   "tags": [
+    "ai-infra",
+    "career"
+   ],
+   "color": "green",
+   "badge": "Personal story",
+   "status": "MSL ~1 YEAR OLD",
+   "title": "Rebooting the lab: talent density, a flat org and a CEO who clears his calendar",
+   "lead": "After Llama 4, Zuckerberg rebuilt Meta's AI effort around a small elite team led by an outsider who had never trained a frontier model.",
+   "bullets": [
+    "Llama 4 shipped April 4, 2025; ~2 weeks later Zuckerberg started calling for advice. After a 44-minute call, Wang sent a plan whose first point was **talent density**.",
+    "Research team under 200, 'closer to 100' plus infra; tens of people per stage vs hundreds elsewhere; compute concentrated per researcher, not 'peanut buttered'.",
+    "Collison's four unusual moves: calling the prior effort not good enough, paying 'ungodly amounts' (incl. 49% of Scale AI), betting on Wang, and clearing the CEO calendar for 1-2 months.",
+    "The full reboot was decided while recruiting; people came from Llama and FAIR too. One former lead had argued consumers didn't need a reasoning model.",
+    "Culture: ~200 direct reports to Wang, no non-technical managers, everyone uses agents and writes code; no deadlines. Wang records his 'insecure overachievers'' pessimistic forecasts and replays them.",
+    "Meta leadership got 'AI-pilled' — Instagram's Adam Mosseri runs an advanced personal vibe-code setup; Kunal Shah (founder of CRED) now runs WhatsApp to push commerce in India.",
+    "Not winner-take-all: execution varies across labs, distillation is an 'anti-hegemonic force', and many researchers chose labs that serve billions; Zuckerberg sees diversity of models as safer."
+   ],
+   "quote": {
+    "text": "sometimes you have to reboot a team",
+    "cite": "— Mark Zuckerberg"
+   },
+   "watch": "Zuckerberg calls it 'a level 10 out of 10 difficulty thing' that is not finished.",
+   "names": [
+    {
+     "name": "Scale AI",
+     "blurb": "Meta took 49%; Wang came over as lab lead",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  }
+ ],
+ "takeaways": [
+  {
+   "icon": "🧪",
+   "tag": "AI models",
+   "title": "Test Muse Wonder on your own long-horizon tasks — its benchmarks are Meta's own"
+  },
+  {
+   "icon": "🛒",
+   "tag": "Commerce",
+   "title": "Expose an API or agent for AI shoppers before blocking them becomes a liability"
+  },
+  {
+   "icon": "💸",
+   "tag": "Markets",
+   "title": "Model Meta's AI capex at ~$50-60B per GW built and ~$15B per GW-year operated"
+  },
+  {
+   "icon": "👥",
+   "tag": "Leadership",
+   "title": "Keep AI teams small and technical — remove non-technical management layers"
+  },
+  {
+   "icon": "📏",
+   "tag": "Evals",
+   "title": "Build internal evals around your users instead of chasing public leaderboards"
+  }
+ ],
+ "hot_takes": [
+  {
+   "take": "in order for it not to work out it's not just that we have to fail AI overall has to fail",
+   "cite": "— Mark Zuckerberg",
+   "why": "frames $100B+ bet as low risk"
+  },
+  {
+   "take": "We think it really is the best model in the world for the use case of personal professional agents.",
+   "cite": "— Alexandr Wang",
+   "why": "superlative claim"
+  },
+  {
+   "take": "everyone else seems to just be obsessed so much with just automating knowledge work which I mean isn't even that charismatic version of the future",
+   "cite": "— Mark Zuckerberg",
+   "why": "dig at rival labs"
+  },
+  {
+   "take": "my guess is that the ones that try to block it will end up not being the right strategic thing for them",
+   "cite": "— Mark Zuckerberg",
+   "why": "warning to businesses blocking agents"
+  },
+  {
+   "take": "the naming of some of the models is like so egregious the numbers go backwards",
+   "cite": "— Alexandr Wang",
+   "why": "jab at rivals' product design"
+  }
+ ],
+ "claims": [
+  {
+   "who": "Mark Zuckerberg",
+   "claim": "Meta ships a Spark-sized model as good as Muse Wonder for hundreds of millions of users",
+   "metric": "small-model capability",
+   "target": "Wonder-level in Spark form factor",
+   "by": "not too far from now",
+   "condition": null,
+   "entity": "Meta (META)"
+  },
+  {
+   "who": "Mark Zuckerberg",
+   "claim": "Hyperion cluster in Louisiana scales to 5 GW",
+   "metric": "cluster power",
+   "target": "5 GW",
+   "by": "over a couple of years",
+   "condition": null,
+   "entity": "Meta (META)"
+  },
+  {
+   "who": "Alexandr Wang",
+   "claim": "Time between successively bigger model classes at Meta will compress",
+   "metric": "gap between model classes",
+   "target": "shorter",
+   "by": null,
+   "condition": null,
+   "entity": "Meta (META)"
+  },
+  {
+   "who": "Mark Zuckerberg",
+   "claim": "Only a small handful of companies will be able to build frontier superintelligence and drive the agenda",
+   "metric": "frontier labs",
+   "target": "small handful",
+   "by": null,
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Mark Zuckerberg",
+   "claim": "Businesses that block AI agents will find it was the wrong strategy",
+   "metric": "agent blocking outcome",
+   "target": "losing strategy",
+   "by": null,
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Alexandr Wang",
+   "claim": "Agentic commerce grows as a share of all commerce, as e-commerce did",
+   "metric": "agentic share of commerce",
+   "target": "rising",
+   "by": null,
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "John Collison",
+   "claim": "Stripe's acquisition of OpenRouter closes",
+   "metric": "deal close",
+   "target": "closed",
+   "by": null,
+   "condition": null,
+   "entity": "Stripe"
+  }
+ ],
+ "relations": [
+  {
+   "from": "Stripe",
+   "rel": "acquires",
+   "to": "OpenRouter",
+   "note": "agreed, not yet closed"
+  },
+  {
+   "from": "Meta (META)",
+   "rel": "owns_stake",
+   "to": "Scale AI",
+   "note": "49%"
+  },
+  {
+   "from": "Stripe",
+   "rel": "owns_stake",
+   "to": "Scale AI",
+   "note": "Collison: 'we're big investors'"
+  },
+  {
+   "from": "Stripe",
+   "rel": "partners_with",
+   "to": "Meta (META)",
+   "note": "payments integration in Muse"
+  },
+  {
+   "from": "Meta (META)",
+   "rel": "competes_with",
+   "to": "ByteDance",
+   "note": "recommendation systems at scale"
+  },
+  {
+   "from": "OpenRouter",
+   "rel": "partners_with",
+   "to": "Meta (META)",
+   "note": "distributes Muse Wonder"
+  }
+ ],
+ "other_news": [
+  {
+   "icon": "📚",
+   "title": "Sources referenced: Patrick Collison's long X post on agentic commerce, a Roon tweet on pre-training ('chew glass'), Dario Amodei on overlapping R&D, third-party reports on Muse growth.",
+   "tag": "Sources"
+  },
+  {
+   "icon": "🍉",
+   "title": "On air, Collison had Muse order a watermelon to Stripe's South San Francisco office; Zuckerberg's Muse had earlier added a watermelon to his baking order on launch weekend.",
+   "tag": "Culture"
+  },
+  {
+   "icon": "📱",
+   "title": "Zuckerberg on posting: authenticity beats scripting; he cross-posts on Threads, while Wang's prolific X posting is meme-driven. Episode closes over a keg of Guinness from Dublin.",
+   "tag": "Culture"
+  }
+ ],
+ "glossary": [
+  {
+   "term": "Pre-training",
+   "def": "Training a base model on huge volumes of mixed data; the most compute-heavy, highest-stakes stage."
+  },
+  {
+   "term": "SFT",
+   "def": "Supervised fine-tuning: showing the model example inputs and desired outputs to seed behaviors."
+  },
+  {
+   "term": "RL",
+   "def": "Reinforcement learning on graded tasks to make desired behaviors reliable."
+  },
+  {
+   "term": "Big model smell",
+   "def": "Meta's metric for real capability: small gap between in-distribution and out-of-distribution performance."
+  },
+  {
+   "term": "Distillation",
+   "def": "Training a smaller model to mimic a bigger one, packing strong capability into cheaper models."
+  },
+  {
+   "term": "Talent density",
+   "def": "Few people, each as strong as possible, with lots of compute per researcher."
+  },
+  {
+   "term": "Active memory",
+   "def": "Meta's term for the model itself managing long-term memory and context compaction."
+  }
+ ]
+}
