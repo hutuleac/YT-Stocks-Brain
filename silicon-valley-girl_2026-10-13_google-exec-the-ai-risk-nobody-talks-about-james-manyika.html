@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: Google Exec: The AI Risk Nobody Talks About | James Manyika</title>
+<meta name="description" content="Silicon Valley Girl · 5 threads · jobs math vs the doom bet · wide-but-shallow adoption and wages · AI for science and its new bottleneck · health and disaster tools already deployed · AGI pacing and the systemic risk">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="Google Exec: The AI Risk Nobody Talks About | James Manyika">
+<meta property="og:description" content="Silicon Valley Girl · 5 threads · jobs math vs the doom bet · wide-but-shallow adoption and wages · AI for science and its new bottleneck · health and disaster tools already deployed · AGI pacing and the systemic risk">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Google Exec: The AI Risk Nobody Talks About | James Manyika</h1>
+    <div class="byline">
+      Channel: <b>Silicon Valley Girl</b> &middot; Speaker: <b>James Manyika (Google SVP, Research, Labs, Technology &amp; Society), Marina Mogilko (host)</b> &middot; <b>2026-10-13</b>
+      <div class="stats-line">5 threads · jobs math vs the doom bet · wide-but-shallow adoption and wages · AI for science and its new bottleneck · health and disaster tools already deployed · AGI pacing and the systemic risk &middot; <a href="https://www.youtube.com/watch?v=Jijc0XokSpQ" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Google's research chief <b>won a bet</b> against the '50% of white-collar jobs gone in two years' camp — they answered by resetting the timeline.</li><li>Data so far: at most ~200,000 jobs attributable to AI losses vs more than a million gained (per <i>The Economist</i>); software dev jobs are up.</li><li>Google's Atlas study (~2 billion Gemini/AI Mode users): AI touches only ~21% of the median job's tasks, mostly assistive — <b>wide but shallow</b> adoption.</li><li>"If you're exposed you're hosed" is wrong: exposure cuts both ways (radiologists, bank tellers); the real risk is wages, not headcount.</li><li>AI is an "invention for making inventions": idea generation got cheap, <b>lab verification</b> is the new bottleneck (2.2M predicted crystals → a few thousand synthesized).</li><li>Health and disaster tools are live now, not someday: flood alerts in 150+ countries, earthquake alerts to 12M people, NHS breast-cancer detection.</li><li>Watch three signals for faster job loss: longer agent time horizons, less jaggedness, and robotics catching up (~<b>60%</b> of world work is physical).</li><li>Underrated risk: AI wired into grids and other systems, evaluated model-by-model instead of system-wide.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="jobs-bet">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">BET WON — DOOMERS RESET THE TIMELINE</span><span class="ttag">career</span><span class="ttag">macro-rates</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">The 50%-of-white-collar-jobs bet lost; new jobs are outrunning lost ones</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Manyika expects job gains to beat job losses over the next five years, and says the mass-displacement calls keep missing their own deadlines.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Three effects, all at once: <b>jobs declined</b> (routine tasks like testing code, hunting bugs), jobs gained (demand up for existing roles like electricians, plus new occupations), and jobs changed — the biggest effect.</li><li><span class="dot" style="background:#3f6b2e;"></span>His own estimates put directly automatable job loss at single-digit % of US jobs.</li><li><span class="dot" style="background:#3f6b2e;"></span>David Autor <b>(MIT)</b>: ~68% of today's US occupations didn't exist in the 1950s — nobody in 1995 would have listed 'web designer' or 'content creator'.</li><li><span class="dot" style="background:#3f6b2e;"></span>About four years ago some AI figures said <b>50%</b> of white-collar jobs would vanish in two years; he took the bet, called time two years later, and they 'reset the timeline'.</li><li><span class="dot" style="background:#3f6b2e;"></span>Per <i>The Economist</i>'s roundup: ~200,000 jobs attributable to AI losses vs more than a million gained; even software development jobs are up.</li><li><span class="dot" style="background:#3f6b2e;"></span>Expects no massive job declines on 10-20 year horizons: capabilities move fast, diffusion into the economy is much slower.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;I just don't think will happen at least in the kind of 10 20 year time frames&#8221;<cite>— James Manyika</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Alphabet (GOOGL)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Speaker's employer; Gemini app ~1B monthly users, AI Mode ~1B</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">He runs research at Google, a company selling the technology whose labor impact he is assessing; he also says this 'will not be the forever picture'.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="shallow-adoption">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">ATLAS STUDY — ONGOING</span><span class="ttag">career</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Adoption is wide but shallow — and wages, not headcount, are the open question</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">AI reaches about a fifth of a typical job's tasks, mostly as a helper; whether productivity gains reach paychecks can go either way.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Atlas study covered Gemini app, Gemini API and AI Mode activity — close to 2 billion people; 21% = share of the <b>median job's</b> tasks where AI is used, usually assistive, not completing the task.</li><li><span class="dot" style="background:#93711b;"></span>Bottlenecks: the tech is 'jagged' (output needs checking), multi-step tasks exceed it, and workflows haven't been rebuilt around it; complement beats full automation in most tasks.</li><li><span class="dot" style="background:#93711b;"></span>Exposure is not a verdict: radiologists and bank tellers (ATMs, 1970s predictions) were 'most exposed' and both grew — demand elasticity.</li><li><span class="dot" style="background:#93711b;"></span>Wage risk: if AI takes the high-value slice of your work, what's left is worth less; wages have lagged output for ~40 years and AI could worsen that structural gap.</li><li><span class="dot" style="background:#93711b;"></span>Advice: keep evolving your value-add (judgment, expertise, checking, framing questions) and <b>advocate for yourself</b> when your output rises.</li><li><span class="dot" style="background:#93711b;"></span>Watching for new firm types and work: independent contractors serving many firms, people overseeing agents, agent orchestration, new evaluations — usually only nameable in hindsight.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;the idea of using exposure as a predictor of the worst outcomes I just think is plain wrong&#8221;<cite>— James Manyika</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Waymo<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Driverless cars as the only real robotics advance so far</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">He names three things that could change the picture: agents handling much longer tasks (some at 16 hours, but narrow), jaggedness shrinking (e.g. visual reasoning and counting), and robotics catching up — roughly 60% of world work is physical; Waymo ('AI on wheels') is the only real robotics advance so far.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="ai-for-science">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">PUBLISHED RESULTS, 2025-2026</span><span class="ttag">biotech</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">AI makes ideas cheap; lab verification is the new bottleneck</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">AI both speeds research up and opens problems that were impossible before — but it floods labs with hypotheses only a fraction survive.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Scientists split roughly half/half: general models (Gemini) for papers and ops, specialized models (AlphaFold, genomics, connectomics) for the science — often in tandem (study with MIT).</li><li><span class="dot" style="background:#3f6b2e;"></span>GNoME predicted 2.2 million crystal structures; a few hundred thousand looked viable, and synthesis cut that to a few thousand.</li><li><span class="dot" style="background:#3f6b2e;"></span>C2S-Scale proposed cancer-treatment pathways; lab checks with Yale researchers left only a handful.</li><li><span class="dot" style="background:#3f6b2e;"></span>AlphaGenome scored all 9 billion single-letter variants in the genome; connectomics work with <b>Howard Hughes Medical Institute</b> produced the first full fruit-fly brain map — 'a new kind of microscope'.</li><li><span class="dot" style="background:#3f6b2e;"></span>AI is both a general purpose technology (the Industrial Revolution analogy) and a method of invention — so the Enlightenment, with its telescopes, microscopes and scientific method, is the better analogy.</li><li><span class="dot" style="background:#3f6b2e;"></span>AlphaFold now used by 4 million researchers in 190 countries, many on previously neglected diseases; protein folding was a ~70-year challenge (Anfinsen).</li><li><span class="dot" style="background:#3f6b2e;"></span>Next moonshots: a virtual cell model (Broad Institute cell atlas), Riemann hypothesis; Quantum AI team side results on black holes, traversable wormholes and hard molecules.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;AI is an invention for making inventions&#8221;<cite>— James Manyika</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Google DeepMind<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High · 10 years</span></b><span>AlphaFold, AlphaGenome, GNoME, C2S-Scale</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">He won't put a timeline on scientific breakthroughs ('easy to make engineering predictions'), and flags bio and chemistry misuse risk from the same tools.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="deployed-now">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
+    <span class="theme-status">DEPLOYED AND SCALING</span><span class="ttag">health</span><span class="ttag">policy</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Health and disaster AI is already live — people just don't credit AI</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The benefits arrive as a diagnosis or a phone alert, so the AI link stays invisible.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Breast cancer: one of the largest detection studies, with the <b>NHS</b> — over 180,000 women over a year; earlier catches that would have been missed. Similar work in lung cancer.</li><li><span class="dot" style="background:#3f6b2e;"></span>Tuberculosis: 30-<b>40%</b> of cases go undiagnosed; studies in Zambia and India showed accurate diagnosis without lab infrastructure; now deploying with providers in Africa.</li><li><span class="dot" style="background:#3f6b2e;"></span>Diabetic retinopathy screening: 600,000+ cases in India, partner goal of 6 million assessments.</li><li><span class="dot" style="background:#3f6b2e;"></span>AMIE, an assistive tool for doctors tested with Beth Israel Deaconess (Harvard) and others, is now in a nationwide US trial.</li><li><span class="dot" style="background:#3f6b2e;"></span>Floods: 6+ days' warning changes outcomes; started in India 3 years ago, now 150+ countries covering 2 billion+ people.</li><li><span class="dot" style="background:#3f6b2e;"></span>Earthquake alerts via Android sensors reached ~12 million people seconds to minutes ahead (reported by the <i>New York Times</i>); WeatherNext used for Hurricane Melissa in Jamaica.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;this isn't some future promise&#8221;<cite>— James Manyika</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="agi-pacing">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">OPEN QUESTION</span><span class="ttag">policy</span><span class="ttag">geopolitics</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">AGI depends on your definition; the risk is capability outrunning safety — and interconnection</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Manyika neither backs a slowdown nor dismisses it: capability and safety work must move in tandem.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>AGI is a spectrum: the 1956 Dartmouth definition or Shane Legg's (~2001) human-level general capability is arguably close; Demis Hassabis's fuller scientific bar is much further.</li><li><span class="dot" style="background:#93711b;"></span>Recursive self-improvement may speed progress, but he thinks more breakthroughs are needed.</li><li><span class="dot" style="background:#93711b;"></span>Safety concerns: alignment, control, 'serial depth opacity' — making sure chain-of-thought shows all the reasoning; agents setting harmful sub-goals under benign goals.</li><li><span class="dot" style="background:#93711b;"></span><b>Underrated risk:</b> AI wired into grids and other systems, evaluated model-by-model rather than system-wide; AGI may emerge from a collection of agents, not one model.</li><li><span class="dot" style="background:#93711b;"></span>UN High-Level Advisory Body: Global South members added 'missed use' as a risk — failing to deploy AI where health/education access is lacking (uneven across 3,000 US counties too).</li><li><span class="dot" style="background:#93711b;"></span>Global benefit (host's question: if US firms are taxed, what about a user in Brazil?): attitudes are more positive outside the US; the gaps are access to models and compute, electricity, connectivity, and 'language as infrastructure'.</li><li><span class="dot" style="background:#93711b;"></span>Language moonshot: 300 languages now, target 1,000 (~7,000 spoken); some languages have over 100 dialects.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;we shouldn't let the advances in AI capability and performance outrun our ability to control build this technology safely&#8221;<cite>— James Manyika</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Asked whether capabilities are already outrunning safety, he answered only 'we should make sure that doesn't happen'. He and Hassabis recently set up a DeepMind institute on what it means to be human in an age of AGI.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📈</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Track the wage side, not just headcount — if your output rises, negotiate for it</span></div></div><div class="irow"><div class="ic">🧭</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Move your work toward judgment, checking and framing questions, the parts AI is weakest at</span></div></div><div class="irow"><div class="ic">🚨</div><div class="tline"><span class="cat">AI:</span> <span class="txt">Watch agent time horizons, jaggedness and robotics as the early warnings for faster job loss</span></div></div><div class="irow"><div class="ic">🧪</div><div class="tline"><span class="cat">Biotech:</span> <span class="txt">Look for businesses in the verification bottleneck — lab validation and synthesis, not idea generation</span></div></div><div class="irow"><div class="ic">🚀</div><div class="tline"><span class="cat">Startups:</span> <span class="txt">Build for emerging work: agent oversight, orchestration, evaluations, services for independents</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;I think somebody says if you're exposed you're hosed. I think that's just the wrong way to look at it&#8221; <cite>— James Manyika</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;this expectation that we're going to see this massive job declines I just don't think will happen at least in the kind of 10 20 year time frames&#8221; <cite>— James Manyika</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;My expectations the the growth in jobs coming from both new jobs and existing ones expanding will will be bigger than the declines we see&#8221; <cite>— James Manyika</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I'm willing to bet that when we, you know, 10 years from now when we look back and say what are some of the biggest things that came out of AI, I think this intersection of AI advancing science&#8221; <cite>— James Manyika</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The only real advance we've seen in robotics is in driverless cars&#8221; <cite>— James Manyika</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>James Manyika:</b> Job growth from new and expanding occupations will exceed AI-driven job declines over the next five years <span class="cmeta">net US jobs from AI · positive · 5 years</span></div><div class="ritem"><b>James Manyika:</b> No massive AI-driven job declines over 10-20 year time frames <span class="cmeta">AI job declines · not massive · 10-20 years</span></div><div class="ritem"><b>James Manyika:</b> AI advancing science will rank among the biggest outcomes of AI looking back in 10 years <span class="cmeta">AI-for-science impact · among biggest AI outcomes · 10 years</span> <span class="tag">Google DeepMind</span></div><div class="ritem"><b>James Manyika:</b> Google's language moonshot reaches 1,000 supported languages, up from 300 <span class="cmeta">languages supported · 1,000</span> <span class="tag">Alphabet (GOOGL)</span></div><div class="ritem"><b>James Manyika:</b> Diabetic retinopathy AI screening scales to 6 million assessments with a partner in India <span class="cmeta">assessments · 6 million</span> <span class="tag">Alphabet (GOOGL)</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Alphabet (GOOGL)</b> <span class="rel">partners with</span> <b>NHS</b> &mdash; 180,000-woman breast cancer detection study</div><div class="ritem"><b>Google DeepMind</b> <span class="rel">partners with</span> <b>Howard Hughes Medical Institute</b> &mdash; first full fruit-fly brain map</div><div class="ritem"><b>Alphabet (GOOGL)</b> <span class="rel">partners with</span> <b>Beth Israel Deaconess</b> &mdash; AMIE clinical testing</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: <i>The Economist</i> (AI jobs roundup), David Autor (MIT, occupation history), MIT economists' agent time-horizon study, the <i>New York Times</i> (earthquake alerts), Demis Hassabis at Google I/O ('foothills of AGI'). <span class="tag">Sources</span></div></div></div><div class="irow"><div class="ic">🧠</div><div><div class="title">On cheaper intelligence: human creativity, ingenuity and entrepreneurship gain value; the definition of intelligence keeps moving, as mental arithmetic did after calculators. <span class="tag">Culture</span></div></div></div><div class="irow"><div class="ic">🌐</div><div><div class="title">Host cited research that AI translation into some languages can shift meaning by up to <b>60%</b>, critical for health questions; Google is mapping Indic dialects and working in Latin America and Africa. <span class="tag">Languages</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Jagged capabilities</b> &mdash; AI that is superhuman at some tasks and poor at nearby ones (e.g. counting in images), so output needs checking.</div><div><b>Demand elasticity</b> &mdash; When cheaper output raises demand enough that an 'exposed' job grows instead of shrinking.</div><div><b>General purpose technology (GPT)</b> &mdash; A technology usable across most economic activity, like electricity.</div><div><b>Connectomics</b> &mdash; Mapping the brain's full wiring diagram.</div><div><b>Serial depth opacity</b> &mdash; Risk that a model's reasoning happens outside the visible chain-of-thought, so it can't be inspected.</div><div><b>Missed use</b> &mdash; The risk of not deploying AI where it could close gaps in health or education access.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
