@@ -1,0 +1,7211 @@
+1
+00:00:00,000 --> 00:00:03,439
+When I think about model progress, it
+
+2
+00:00:01,600 --> 00:00:05,679
+comes down to different forms of capital
+
+3
+00:00:03,439 --> 00:00:07,200
+and that is compute, data, and talent.
+
+4
+00:00:05,679 --> 00:00:09,119
+>> How do you see that playing out in terms
+
+5
+00:00:07,200 --> 00:00:09,679
+of like who's going to win in the next
+
+6
+00:00:09,119 --> 00:00:10,959
+couple of years?
+
+7
+00:00:09,679 --> 00:00:12,719
+>> The Chinese are so good at building
+
+8
+00:00:10,960 --> 00:00:13,920
+models. To say that China is anything
+
+9
+00:00:12,718 --> 00:00:15,119
+but equal on talent, you're going to
+
+10
+00:00:13,919 --> 00:00:15,919
+have a hard time. What they don't have
+
+11
+00:00:15,119 --> 00:00:17,759
+is compute.
+
+12
+00:00:15,919 --> 00:00:20,240
+>> Most people regard distillation as sort
+
+13
+00:00:17,760 --> 00:00:20,800
+of like the main lever for them to do
+
+14
+00:00:20,239 --> 00:00:22,799
+this.
+
+15
+00:00:20,800 --> 00:00:24,640
+>> People distill my products every single
+
+16
+00:00:22,800 --> 00:00:26,240
+day. They take it, they strip it down to
+
+17
+00:00:24,640 --> 00:00:28,240
+its raw parts. That's called
+
+18
+00:00:26,239 --> 00:00:30,079
+competition. Previous post training was
+
+19
+00:00:28,239 --> 00:00:31,759
+much more reliant on the supervised
+
+20
+00:00:30,079 --> 00:00:33,600
+fine-tuning and now this has morphed a
+
+21
+00:00:31,760 --> 00:00:35,600
+bit into environments where it's RL
+
+22
+00:00:33,600 --> 00:00:37,200
+heavy but it's just like hard to map
+
+23
+00:00:35,600 --> 00:00:38,719
+this type of post training which is you
+
+24
+00:00:37,200 --> 00:00:40,320
+get the completions and the score goes
+
+25
+00:00:38,719 --> 00:00:40,719
+up to what is going on in reasoning
+
+26
+00:00:40,320 --> 00:00:42,640
+today.
+
+27
+00:00:40,719 --> 00:00:44,399
+>> The discourse now is just so much fear
+
+28
+00:00:42,640 --> 00:00:46,719
+on like how much the frontier is just
+
+29
+00:00:44,399 --> 00:00:48,320
+hidden and also breaking away. The AI
+
+30
+00:00:46,719 --> 00:00:50,558
+capability plot doesn't necessarily
+
+31
+00:00:48,320 --> 00:00:52,878
+worry me, but the AI capability plot in
+
+32
+00:00:50,558 --> 00:00:54,878
+the pretty much non-existing preparation
+
+33
+00:00:52,878 --> 00:00:58,000
+of cross public cyber security and all
+
+34
+00:00:54,878 --> 00:00:59,839
+these things like
+
+35
+00:00:58,000 --> 00:01:01,759
+so Nathan really happy to have you here.
+
+36
+00:00:59,840 --> 00:01:03,600
+Uh thank you for joining in person.
+
+37
+00:01:01,759 --> 00:01:05,679
+Super timely given you're launching
+
+38
+00:01:03,600 --> 00:01:08,320
+Trillium which I'd love to talk about.
+
+39
+00:01:05,680 --> 00:01:10,159
+um but more sort of on on a macro level
+
+40
+00:01:08,319 --> 00:01:11,919
+um I think we chatted a lot about open
+
+41
+00:01:10,159 --> 00:01:15,680
+source and that's you know a lot of what
+
+42
+00:01:11,920 --> 00:01:18,000
+you care about and uh what I sort of um
+
+43
+00:01:15,680 --> 00:01:19,280
+or what we've been hearing a lot in the
+
+44
+00:01:18,000 --> 00:01:20,959
+public discourse is like hey we have to
+
+45
+00:01:19,280 --> 00:01:22,960
+pace the frontier you know the frontier
+
+46
+00:01:20,959 --> 00:01:24,719
+this the frontier that and I think an
+
+47
+00:01:22,959 --> 00:01:27,118
+arc of the stuff that I'm really trying
+
+48
+00:01:24,719 --> 00:01:28,959
+to ask e experts about is like what is
+
+49
+00:01:27,118 --> 00:01:32,078
+in the frontier what is it even like
+
+50
+00:01:28,959 --> 00:01:33,438
+what are we pacing what's there and then
+
+51
+00:01:32,078 --> 00:01:35,759
+more importantly kind of threading it
+
+52
+00:01:33,438 --> 00:01:37,599
+with open source and open weight models
+
+53
+00:01:35,759 --> 00:01:39,200
+like can they keep up with the frontier?
+
+54
+00:01:37,599 --> 00:01:40,798
+And I think this matters very much um
+
+55
+00:01:39,200 --> 00:01:43,840
+and is is something that you're an
+
+56
+00:01:40,799 --> 00:01:46,320
+expert on. So maybe to to sort of kind
+
+57
+00:01:43,840 --> 00:01:48,240
+of start on that arc, what's gotten to
+
+58
+00:01:46,319 --> 00:01:50,478
+the sort of how you would break down
+
+59
+00:01:48,239 --> 00:01:53,280
+what's gotten us uh to the frontier for
+
+60
+00:01:50,478 --> 00:01:54,719
+both closed uh labs and open um source
+
+61
+00:01:53,280 --> 00:01:56,560
+models? you know, how does it break down
+
+62
+00:01:54,719 --> 00:01:59,599
+in your mind maybe first at a higher
+
+63
+00:01:56,560 --> 00:02:01,519
+level of pre-training, mid-training,
+
+64
+00:01:59,599 --> 00:02:03,039
+post-training, how post- training has
+
+65
+00:02:01,519 --> 00:02:04,879
+evolved, which is something you've, you
+
+66
+00:02:03,040 --> 00:02:06,159
+know, done a great amount of education
+
+67
+00:02:04,879 --> 00:02:07,759
+to the public on.
+
+68
+00:02:06,159 --> 00:02:10,479
+>> When I think about model progress, it
+
+69
+00:02:07,759 --> 00:02:12,159
+comes down to like different forms of
+
+70
+00:02:10,479 --> 00:02:14,560
+capital that you've put into them and
+
+71
+00:02:12,159 --> 00:02:17,439
+that is like compute, data, and talent.
+
+72
+00:02:14,560 --> 00:02:19,199
+And all of the labs have various amounts
+
+73
+00:02:17,439 --> 00:02:21,680
+of this. And I think the the closed
+
+74
+00:02:19,199 --> 00:02:24,238
+frontier labs of open eyes, Anthropics,
+
+75
+00:02:21,680 --> 00:02:27,200
+Google's have clearly had the most
+
+76
+00:02:24,239 --> 00:02:28,878
+>> of these and what we see is like the
+
+77
+00:02:27,199 --> 00:02:30,719
+different abilities of the labs to
+
+78
+00:02:28,878 --> 00:02:32,318
+organize these forms of capital and like
+
+79
+00:02:30,719 --> 00:02:33,919
+making the org chart work for building
+
+80
+00:02:32,318 --> 00:02:35,759
+models is really hard which is why you
+
+81
+00:02:33,919 --> 00:02:37,199
+have companies have to do complete
+
+82
+00:02:35,759 --> 00:02:38,399
+resets from the bottom up and then it
+
+83
+00:02:37,199 --> 00:02:39,759
+actually kind of works sometimes like
+
+84
+00:02:38,400 --> 00:02:41,599
+companies like Meta is like totally
+
+85
+00:02:39,759 --> 00:02:43,439
+reset and they're like on a positive
+
+86
+00:02:41,598 --> 00:02:45,199
+trajectory again
+
+87
+00:02:43,439 --> 00:02:46,560
+>> and like I think this I'm very
+
+88
+00:02:45,199 --> 00:02:48,318
+interested in these human aspects of
+
+89
+00:02:46,560 --> 00:02:49,680
+like why competition drives the frontier
+
+90
+00:02:48,318 --> 00:02:51,039
+and like why the org chart is so
+
+91
+00:02:49,680 --> 00:02:52,159
+important because like we see these
+
+92
+00:02:51,039 --> 00:02:54,639
+things and
+
+93
+00:02:52,159 --> 00:02:56,479
+>> this comes into play in the open closed
+
+94
+00:02:54,639 --> 00:02:57,518
+>> dynamic as well where it's like the
+
+95
+00:02:56,479 --> 00:02:59,439
+closed
+
+96
+00:02:57,519 --> 00:03:01,280
+>> companies the the front the true
+
+97
+00:02:59,439 --> 00:03:02,800
+frontier labs which I if somebody wants
+
+98
+00:03:01,280 --> 00:03:04,239
+to work at the frontier of AI I mostly
+
+99
+00:03:02,800 --> 00:03:06,560
+tell them to work at anthropic and open
+
+100
+00:03:04,239 --> 00:03:10,080
+AI which is the easiest bet I think
+
+101
+00:03:06,560 --> 00:03:11,519
+>> um Meta Google um SpaceX AI like I think
+
+102
+00:03:10,080 --> 00:03:13,120
+you still might be there but it's harder
+
+103
+00:03:11,519 --> 00:03:16,719
+to see from the outside
+
+104
+00:03:13,120 --> 00:03:19,599
+>> and like these companies have just taken
+
+105
+00:03:16,719 --> 00:03:21,759
+the most ambitious bets the earliest in
+
+106
+00:03:19,598 --> 00:03:23,839
+order to get there and that's why OpenAI
+
+107
+00:03:21,759 --> 00:03:25,679
+has done things like kickstart the
+
+108
+00:03:23,840 --> 00:03:27,200
+reasoning model revolution and I think
+
+109
+00:03:25,680 --> 00:03:28,319
+that kind of breakthrough and like that
+
+110
+00:03:27,199 --> 00:03:30,238
+beautiful plot with the inference
+
+111
+00:03:28,318 --> 00:03:31,439
+scaling laws it's like peak open AI it's
+
+112
+00:03:30,239 --> 00:03:32,878
+like they're really good at getting this
+
+113
+00:03:31,439 --> 00:03:34,560
+plot that just changes how everyone
+
+114
+00:03:32,878 --> 00:03:36,318
+thinks about everything
+
+115
+00:03:34,560 --> 00:03:38,878
+>> and on the other side it's like
+
+116
+00:03:36,318 --> 00:03:40,639
+enthropic has been like very focused on
+
+117
+00:03:38,878 --> 00:03:42,798
+the types of things the models are going
+
+118
+00:03:40,639 --> 00:03:45,199
+to be able to do and then their reward
+
+119
+00:03:42,799 --> 00:03:47,040
+was this cloud code explosion with their
+
+120
+00:03:45,199 --> 00:03:49,439
+focus on coding for so along and there's
+
+121
+00:03:47,039 --> 00:03:51,280
+these subtly different cultures and I
+
+122
+00:03:49,439 --> 00:03:52,878
+think those two companies in particular
+
+123
+00:03:51,280 --> 00:03:54,719
+have been the most forwardlooking and
+
+124
+00:03:52,878 --> 00:03:56,878
+the most willing to spend egregious
+
+125
+00:03:54,719 --> 00:03:57,919
+amounts to make a step towards a
+
+126
+00:03:56,878 --> 00:04:00,318
+direction that people think is
+
+127
+00:03:57,919 --> 00:04:02,399
+impossible. The Chinese companies came
+
+128
+00:04:00,318 --> 00:04:04,399
+into this because they want to have a
+
+129
+00:04:02,400 --> 00:04:06,560
+company that matters and if they were to
+
+130
+00:04:04,400 --> 00:04:08,719
+build their models and try to sell an
+
+131
+00:04:06,560 --> 00:04:10,000
+API from China, nobody would know about
+
+132
+00:04:08,719 --> 00:04:12,000
+them. Like nobody would know about
+
+133
+00:04:10,000 --> 00:04:13,919
+Moonshot AI. Very few people would know
+
+134
+00:04:12,000 --> 00:04:15,598
+about JIPU and there's a very long list
+
+135
+00:04:13,919 --> 00:04:17,039
+after this. This is a very practical
+
+136
+00:04:15,598 --> 00:04:18,238
+decision by them. They're following the
+
+137
+00:04:17,040 --> 00:04:19,759
+discourse. They know there's going to be
+
+138
+00:04:18,238 --> 00:04:21,439
+a huge market. They know there's a huge
+
+139
+00:04:19,759 --> 00:04:22,800
+demand in the US for paying for these
+
+140
+00:04:21,439 --> 00:04:25,040
+things and it's very practical. So
+
+141
+00:04:22,800 --> 00:04:26,560
+therefore like releasing open models is
+
+142
+00:04:25,040 --> 00:04:28,080
+a way to
+
+143
+00:04:26,560 --> 00:04:30,079
+>> shortcut this and get into the
+
+144
+00:04:28,079 --> 00:04:31,680
+conversation and I
+
+145
+00:04:30,079 --> 00:04:32,959
+>> I think there's a lot of complexity and
+
+146
+00:04:31,680 --> 00:04:35,918
+like why do they do this? Is the
+
+147
+00:04:32,959 --> 00:04:36,959
+government involved and and and not like
+
+148
+00:04:35,918 --> 00:04:39,680
+not the case. They're just like trying
+
+149
+00:04:36,959 --> 00:04:40,959
+to build a startup and it's not it's not
+
+150
+00:04:39,680 --> 00:04:41,519
+to say that they will not get there.
+
+151
+00:04:40,959 --> 00:04:43,680
+Like
+
+152
+00:04:41,519 --> 00:04:45,680
+>> the Chinese government is does things
+
+153
+00:04:43,680 --> 00:04:47,600
+that would blow people's minds in the
+
+154
+00:04:45,680 --> 00:04:49,439
+US. And I think that like that makes me
+
+155
+00:04:47,600 --> 00:04:51,439
+think that the Chinese labs have a much
+
+156
+00:04:49,439 --> 00:04:52,560
+more serious approach to security
+
+157
+00:04:51,439 --> 00:04:54,240
+because like
+
+158
+00:04:52,560 --> 00:04:56,639
+>> things happen in China that are much
+
+159
+00:04:54,240 --> 00:04:59,600
+more drastic responses to companies
+
+160
+00:04:56,639 --> 00:05:01,040
+doing things in the US. And I don't need
+
+161
+00:04:59,600 --> 00:05:02,400
+to go down this rabbit hole, but this is
+
+162
+00:05:01,040 --> 00:05:03,680
+just like between the balance of open
+
+163
+00:05:02,399 --> 00:05:05,120
+and close. It's just like these
+
+164
+00:05:03,680 --> 00:05:06,800
+companies in China are trying to catch
+
+165
+00:05:05,120 --> 00:05:08,240
+up. This is a very different dynamic
+
+166
+00:05:06,800 --> 00:05:09,520
+than what I said about OpenAI and
+
+167
+00:05:08,240 --> 00:05:11,840
+Enthropic that are trying to create the
+
+168
+00:05:09,519 --> 00:05:14,639
+new paradigms that are trying to like
+
+169
+00:05:11,839 --> 00:05:16,959
+make true RSI happen so that their
+
+170
+00:05:14,639 --> 00:05:18,960
+company wins with the best models
+
+171
+00:05:16,959 --> 00:05:20,399
+forever if you get there first. these
+
+172
+00:05:18,959 --> 00:05:22,239
+boom ideas
+
+173
+00:05:20,399 --> 00:05:24,638
+>> and you just have to fill the market
+
+174
+00:05:22,240 --> 00:05:28,000
+where there is a void and then open
+
+175
+00:05:24,639 --> 00:05:29,840
+weight models are trying to do this and
+
+176
+00:05:28,000 --> 00:05:31,360
+>> I think over time there will be these
+
+177
+00:05:29,839 --> 00:05:33,038
+tiers of open models where there's the
+
+178
+00:05:31,360 --> 00:05:35,360
+best closed models which you can demand
+
+179
+00:05:33,038 --> 00:05:37,680
+the best margins for and then there's
+
+180
+00:05:35,360 --> 00:05:39,840
+the near frontier models which is a step
+
+181
+00:05:37,680 --> 00:05:43,519
+behind this and those will be open
+
+182
+00:05:39,839 --> 00:05:46,319
+because just like some sort of supply
+
+183
+00:05:43,519 --> 00:05:48,478
+and demand there as you get access to a
+
+184
+00:05:46,319 --> 00:05:51,279
+different market that might be less
+
+185
+00:05:48,478 --> 00:05:52,879
+profitable but the for example like if
+
+186
+00:05:51,279 --> 00:05:55,198
+you have private enterprise data or so
+
+187
+00:05:52,879 --> 00:05:57,038
+on and these tiers are kind of natural
+
+188
+00:05:55,199 --> 00:05:59,919
+evolutions of companies that are trying
+
+189
+00:05:57,038 --> 00:06:01,839
+to do things and I think we were talking
+
+190
+00:05:59,918 --> 00:06:03,680
+about the frontier and it's just like
+
+191
+00:06:01,839 --> 00:06:05,279
+>> if you go back to capital like they have
+
+192
+00:06:03,680 --> 00:06:07,600
+less capital they are going to make less
+
+193
+00:06:05,279 --> 00:06:10,079
+money and like that's okay but I think
+
+194
+00:06:07,600 --> 00:06:11,919
+this drive to catch up is very strong
+
+195
+00:06:10,079 --> 00:06:13,839
+and once you know once anthropic and
+
+196
+00:06:11,918 --> 00:06:15,599
+openai show you the type of model you
+
+197
+00:06:13,839 --> 00:06:17,359
+need to build it's a lot easier to then
+
+198
+00:06:15,600 --> 00:06:18,080
+be like oh we just need to do this thing
+
+199
+00:06:17,360 --> 00:06:20,400
+and
+
+200
+00:06:18,079 --> 00:06:22,240
+>> they buy similar data sets. It trickles
+
+201
+00:06:20,399 --> 00:06:24,318
+through the data economy where open AI
+
+202
+00:06:22,240 --> 00:06:26,400
+and anthropics spend way more
+
+203
+00:06:24,319 --> 00:06:28,800
+>> to build out this function of a data
+
+204
+00:06:26,399 --> 00:06:30,638
+industry and then those data companies a
+
+205
+00:06:28,800 --> 00:06:32,079
+year later might sell them to everybody.
+
+206
+00:06:30,639 --> 00:06:33,519
+they might sell them to they need to
+
+207
+00:06:32,079 --> 00:06:35,279
+maximize their return on their
+
+208
+00:06:33,519 --> 00:06:36,079
+investment and they had some contractual
+
+209
+00:06:35,279 --> 00:06:37,758
+period
+
+210
+00:06:36,079 --> 00:06:41,279
+>> and I think there's a lot of dynamics
+
+211
+00:06:37,759 --> 00:06:44,319
+where fast following is going to be very
+
+212
+00:06:41,279 --> 00:06:46,799
+doable and it we've seen the cycle
+
+213
+00:06:44,319 --> 00:06:48,879
+proceed for a while like longer than
+
+214
+00:06:46,800 --> 00:06:50,560
+many people would expect I think when
+
+215
+00:06:48,879 --> 00:06:52,159
+chatbt was released we talked about
+
+216
+00:06:50,560 --> 00:06:53,439
+consolidation the industry and
+
+217
+00:06:52,160 --> 00:06:55,360
+predicting it and I think we're just
+
+218
+00:06:53,439 --> 00:06:58,079
+starting to see a much more
+
+219
+00:06:55,360 --> 00:06:59,280
+>> active mergers and acquisitions market
+
+220
+00:06:58,079 --> 00:07:01,359
+but I thought this was going to happen
+
+221
+00:06:59,279 --> 00:07:03,519
+two years ago and the open model
+
+222
+00:07:01,360 --> 00:07:04,319
+companies have lasted much longer than I
+
+223
+00:07:03,519 --> 00:07:05,839
+thought.
+
+224
+00:07:04,319 --> 00:07:07,680
+>> No, there's so many interesting threads
+
+225
+00:07:05,839 --> 00:07:10,399
+to pull on here. Um I mean starting with
+
+226
+00:07:07,680 --> 00:07:12,319
+actually your comment commentary on the
+
+227
+00:07:10,399 --> 00:07:13,839
+um organizational differences between
+
+228
+00:07:12,319 --> 00:07:15,598
+the top two frontier labs. You know we
+
+229
+00:07:13,839 --> 00:07:17,198
+can maybe table that or or go on through
+
+230
+00:07:15,598 --> 00:07:19,279
+that thread. But then of course also
+
+231
+00:07:17,199 --> 00:07:22,639
+kind of explaining are you explaining
+
+232
+00:07:19,279 --> 00:07:25,119
+sort of how the open um Chinese uh
+
+233
+00:07:22,639 --> 00:07:26,720
+models or open labs in China have really
+
+234
+00:07:25,120 --> 00:07:29,519
+just chosen that as much more of a
+
+235
+00:07:26,720 --> 00:07:31,840
+distribution practical commercialization
+
+236
+00:07:29,519 --> 00:07:33,439
+strategy uh rather than hey you know
+
+237
+00:07:31,839 --> 00:07:35,038
+obviously out of altruism though it's
+
+238
+00:07:33,439 --> 00:07:36,399
+great that the researchers maybe maybe
+
+239
+00:07:35,038 --> 00:07:38,318
+for better or for worse were were
+
+240
+00:07:36,399 --> 00:07:39,598
+motivated for from you know sharing the
+
+241
+00:07:38,319 --> 00:07:41,360
+beginning but at the end of the day it
+
+242
+00:07:39,598 --> 00:07:42,800
+perpetuated because it was an excellent
+
+243
+00:07:41,360 --> 00:07:45,598
+excellent commercialization uh
+
+244
+00:07:42,800 --> 00:07:47,280
+commercialization strategy. Um, so the
+
+245
+00:07:45,598 --> 00:07:48,959
+other thread maybe to pull there is sort
+
+246
+00:07:47,279 --> 00:07:51,359
+of, you know, I think most people regard
+
+247
+00:07:48,959 --> 00:07:54,478
+distillation as sort of like the main
+
+248
+00:07:51,360 --> 00:07:56,960
+lever for them to do this so well and
+
+249
+00:07:54,478 --> 00:07:59,680
+kind of increasingly uh well because um
+
+250
+00:07:56,959 --> 00:08:01,359
+the lag between the open source models
+
+251
+00:07:59,680 --> 00:08:03,439
+and the frontier models have only
+
+252
+00:08:01,360 --> 00:08:04,960
+shortened uh with time in the last few
+
+253
+00:08:03,439 --> 00:08:06,879
+years. Um now it's like maybe only two
+
+254
+00:08:04,959 --> 00:08:10,079
+to three months. Um, and this has also
+
+255
+00:08:06,879 --> 00:08:13,919
+pushed the uh, Frontier Labs to maybe
+
+256
+00:08:10,079 --> 00:08:16,240
+want to uh, close off the APIs um, close
+
+257
+00:08:13,918 --> 00:08:17,598
+off their best models to do first party
+
+258
+00:08:16,240 --> 00:08:19,038
+services. I mean, one probably to
+
+259
+00:08:17,598 --> 00:08:20,240
+capture more value because it's always,
+
+260
+00:08:19,038 --> 00:08:21,839
+you know, possible that way, but then
+
+261
+00:08:20,240 --> 00:08:23,199
+two also because it's harder to distill,
+
+262
+00:08:21,839 --> 00:08:25,359
+not impossible, but much harder to
+
+263
+00:08:23,199 --> 00:08:26,478
+distill. Um, maybe on those two threads
+
+264
+00:08:25,360 --> 00:08:29,199
+because they're both very interesting.
+
+265
+00:08:26,478 --> 00:08:31,758
+So, we'll try to touch on it. Um, let's
+
+266
+00:08:29,199 --> 00:08:34,479
+start with the with the is the
+
+267
+00:08:31,759 --> 00:08:36,479
+distillation story really more of a
+
+268
+00:08:34,479 --> 00:08:37,839
+caricature and then triangulous labs
+
+269
+00:08:36,479 --> 00:08:39,599
+since you've actually met with them and
+
+270
+00:08:37,839 --> 00:08:41,440
+you've studied this a lot more. Uh, is
+
+271
+00:08:39,599 --> 00:08:43,440
+it sort of like they're allrounded like
+
+272
+00:08:41,440 --> 00:08:45,839
+great at pre-training also have their
+
+273
+00:08:43,440 --> 00:08:47,519
+own, you know, good post-training uh,
+
+274
+00:08:45,839 --> 00:08:49,200
+recipes that they may or may not have
+
+275
+00:08:47,519 --> 00:08:51,039
+revealed. Um, and where do you see the
+
+276
+00:08:49,200 --> 00:08:52,879
+levers kind of accelerating?
+
+277
+00:08:51,039 --> 00:08:54,240
+>> Yeah. So, the Chinese labs are very
+
+278
+00:08:52,879 --> 00:08:55,519
+technically excellent. They are more
+
+279
+00:08:54,240 --> 00:08:58,159
+comput starved I think.
+
+280
+00:08:55,519 --> 00:09:00,879
+>> Yes. like without a doubt they have a
+
+281
+00:08:58,159 --> 00:09:02,958
+comparable talent pool to draw on. I
+
+282
+00:09:00,879 --> 00:09:04,958
+think there might be like a slight edge
+
+283
+00:09:02,958 --> 00:09:07,278
+based on who was where when AI really
+
+284
+00:09:04,958 --> 00:09:08,799
+got going. But to say that China is
+
+285
+00:09:07,278 --> 00:09:09,838
+anything but equal in talent is going to
+
+286
+00:09:08,799 --> 00:09:12,000
+you're going to have a hard time because
+
+287
+00:09:09,839 --> 00:09:14,640
+they just have so many people being
+
+288
+00:09:12,000 --> 00:09:16,320
+trained at such a high level. And what
+
+289
+00:09:14,639 --> 00:09:17,919
+they don't have is compute. You talk to
+
+290
+00:09:16,320 --> 00:09:19,839
+people there and you're like, "Oh, I
+
+291
+00:09:17,919 --> 00:09:22,879
+heard an open average open AI researcher
+
+292
+00:09:19,839 --> 00:09:24,399
+has 5,000 H100 equivalents that they can
+
+293
+00:09:22,879 --> 00:09:25,600
+access at any time." and then like their
+
+294
+00:09:24,399 --> 00:09:27,039
+jaw just falls to the floor. They're
+
+295
+00:09:25,600 --> 00:09:30,159
+just like I can't comprehend. And this
+
+296
+00:09:27,039 --> 00:09:32,559
+is like a top like a a top pre-training
+
+297
+00:09:30,159 --> 00:09:34,000
+researcher at one of the labs that you
+
+298
+00:09:32,559 --> 00:09:35,439
+would know and you have this interaction
+
+299
+00:09:34,000 --> 00:09:37,679
+a few times
+
+300
+00:09:35,440 --> 00:09:39,360
+>> and
+
+301
+00:09:37,679 --> 00:09:41,838
+like the compute thing I think is the
+
+302
+00:09:39,360 --> 00:09:45,200
+biggest difference and distillation
+
+303
+00:09:41,839 --> 00:09:47,519
+plays in as it is a way to effectively
+
+304
+00:09:45,200 --> 00:09:49,120
+spend more money to get what is compute
+
+305
+00:09:47,519 --> 00:09:51,200
+equivalent like outputs from a language
+
+306
+00:09:49,120 --> 00:09:53,200
+model are a function of compute and if
+
+307
+00:09:51,200 --> 00:09:55,278
+you know the outputs you want it's the
+
+308
+00:09:53,200 --> 00:09:58,560
+same as having compute to generate with
+
+309
+00:09:55,278 --> 00:10:00,879
+a with a model and
+
+310
+00:09:58,559 --> 00:10:02,958
+I've seen the stages of distillation and
+
+311
+00:10:00,879 --> 00:10:04,958
+how I see it is that previous post-
+
+312
+00:10:02,958 --> 00:10:06,799
+trainining was much more reliant on the
+
+313
+00:10:04,958 --> 00:10:09,919
+supervised fine-tuning and other like
+
+314
+00:10:06,799 --> 00:10:12,159
+this RHF era which is um where post-
+
+315
+00:10:09,919 --> 00:10:14,399
+training started and you could get most
+
+316
+00:10:12,159 --> 00:10:15,919
+of your performance just by you do this
+
+317
+00:10:14,399 --> 00:10:18,000
+next token prediction loss on the
+
+318
+00:10:15,919 --> 00:10:19,919
+outputs of a very strong model. It was
+
+319
+00:10:18,000 --> 00:10:22,078
+very established that you take the best
+
+320
+00:10:19,919 --> 00:10:23,278
+model you can, you generate completions,
+
+321
+00:10:22,078 --> 00:10:24,639
+and you train on it, and your model's
+
+322
+00:10:23,278 --> 00:10:26,000
+going to be pretty good so long as you
+
+323
+00:10:24,639 --> 00:10:27,679
+have access to the right prompts.
+
+324
+00:10:26,000 --> 00:10:30,720
+Prompts have always been a key to post-
+
+325
+00:10:27,679 --> 00:10:32,799
+training. I remember at AI2, like with
+
+326
+00:10:30,720 --> 00:10:34,399
+Hannah, who I co-led post training there
+
+327
+00:10:32,799 --> 00:10:36,399
+with, we would always say like prompts
+
+328
+00:10:34,399 --> 00:10:37,679
+are the key unit of post- training. It's
+
+329
+00:10:36,399 --> 00:10:39,039
+like you need to get the prompts and you
+
+330
+00:10:37,679 --> 00:10:41,039
+can do different things with them at
+
+331
+00:10:39,039 --> 00:10:42,799
+different stages of training. And now
+
+332
+00:10:41,039 --> 00:10:46,159
+this has morphed a bit into environments
+
+333
+00:10:42,799 --> 00:10:48,000
+where it's RL heavy. But it's just like
+
+334
+00:10:46,159 --> 00:10:50,000
+hard to map this type of post training
+
+335
+00:10:48,000 --> 00:10:51,679
+which is you get the completions and the
+
+336
+00:10:50,000 --> 00:10:53,200
+score goes up to what is going on in
+
+337
+00:10:51,679 --> 00:10:55,759
+reasoning today. Mhm.
+
+338
+00:10:53,200 --> 00:10:57,920
+>> And based on the public literature, it's
+
+339
+00:10:55,759 --> 00:11:00,078
+very hard for me to be like distillation
+
+340
+00:10:57,919 --> 00:11:02,000
+is a major factor because for example in
+
+341
+00:11:00,078 --> 00:11:04,319
+the fully open literature of people
+
+342
+00:11:02,000 --> 00:11:06,159
+trying to do open post-raining recipes,
+
+343
+00:11:04,320 --> 00:11:08,800
+all the open model builders are stuck
+
+344
+00:11:06,159 --> 00:11:10,078
+using like a really outdated Quen model
+
+345
+00:11:08,799 --> 00:11:12,240
+>> because you can't figure out how to get
+
+346
+00:11:10,078 --> 00:11:13,919
+the teacher right. My hypothesis is that
+
+347
+00:11:12,240 --> 00:11:15,519
+there's some like mid-training and
+
+348
+00:11:13,919 --> 00:11:17,278
+something in the common pre-training
+
+349
+00:11:15,519 --> 00:11:19,759
+data that's open that makes it hard to
+
+350
+00:11:17,278 --> 00:11:21,600
+do this thing which is get reasoning
+
+351
+00:11:19,759 --> 00:11:23,759
+traces from the absolute best model and
+
+352
+00:11:21,600 --> 00:11:25,839
+do SFT and the numbers go up. So like if
+
+353
+00:11:23,759 --> 00:11:28,159
+I were to have access to Claude's
+
+354
+00:11:25,839 --> 00:11:30,320
+reasoning trace when I was building I'm
+
+355
+00:11:28,159 --> 00:11:31,759
+actually like claude opus quad mythos
+
+356
+00:11:30,320 --> 00:11:33,600
+whatever I'm not sure that it would have
+
+357
+00:11:31,759 --> 00:11:36,078
+actually made our model a lot better.
+
+358
+00:11:33,600 --> 00:11:38,159
+>> So this is like my evidence grounded in
+
+359
+00:11:36,078 --> 00:11:41,439
+the literature why I think distillation
+
+360
+00:11:38,159 --> 00:11:43,360
+is hard. Um, and then like how do you
+
+361
+00:11:41,440 --> 00:11:45,279
+take the outputs of a model and build an
+
+362
+00:11:43,360 --> 00:11:47,039
+RL environment to do a big RL run?
+
+363
+00:11:45,278 --> 00:11:49,759
+Because then you have the Xiai of the
+
+364
+00:11:47,039 --> 00:11:51,278
+world doing this week-long open RL run
+
+365
+00:11:49,759 --> 00:11:53,200
+or they're like here's what we did and
+
+366
+00:11:51,278 --> 00:11:55,439
+then they've dropped the model and it's
+
+367
+00:11:53,200 --> 00:11:56,959
+like where exactly does distillation go
+
+368
+00:11:55,440 --> 00:11:58,320
+into this. They're they're clever. They
+
+369
+00:11:56,958 --> 00:12:00,319
+know how to do marketing well. There's
+
+370
+00:11:58,320 --> 00:12:02,640
+some questions of like did they do this
+
+371
+00:12:00,320 --> 00:12:04,160
+ahead of time because they did their RL
+
+372
+00:12:02,639 --> 00:12:05,679
+run and then they dropped the model and
+
+373
+00:12:04,159 --> 00:12:07,919
+then their tech report said they had an
+
+374
+00:12:05,679 --> 00:12:10,879
+extra post training stage after RL. some
+
+375
+00:12:07,919 --> 00:12:13,199
+questions but like mapping the
+
+376
+00:12:10,879 --> 00:12:15,200
+established distillation literature to
+
+377
+00:12:13,200 --> 00:12:17,200
+that is very hard but there are question
+
+378
+00:12:15,200 --> 00:12:20,000
+marks that make me support the labs a
+
+379
+00:12:17,200 --> 00:12:21,920
+bit which is like these quad proxies and
+
+380
+00:12:20,000 --> 00:12:23,679
+these model proxies in China where
+
+381
+00:12:21,919 --> 00:12:25,439
+there's a ton of tokens that are used
+
+382
+00:12:23,679 --> 00:12:28,239
+and there's intermediaries and they have
+
+383
+00:12:25,440 --> 00:12:30,639
+tons of accounts and even cases where
+
+384
+00:12:28,240 --> 00:12:33,278
+Kimmy was serving claude in their
+
+385
+00:12:30,639 --> 00:12:35,278
+products to users and I'm just like
+
+386
+00:12:33,278 --> 00:12:37,519
+don't really understand how this fits
+
+387
+00:12:35,278 --> 00:12:39,919
+into distillation as a common technical
+
+388
+00:12:37,519 --> 00:12:42,159
+tool in post- training and like yes we
+
+389
+00:12:39,919 --> 00:12:44,719
+should watch it too like there's other
+
+390
+00:12:42,159 --> 00:12:47,360
+weird stuff with Chinese companies using
+
+391
+00:12:44,720 --> 00:12:49,040
+the outputs from open AI and entropics
+
+392
+00:12:47,360 --> 00:12:51,600
+models at a vast scale
+
+393
+00:12:49,039 --> 00:12:53,278
+>> so I think we have a lot more questions
+
+394
+00:12:51,600 --> 00:12:54,320
+we need to answer and I think most
+
+395
+00:12:53,278 --> 00:12:55,759
+reasonable people when they're like
+
+396
+00:12:54,320 --> 00:12:57,680
+what's the gap from distillation are
+
+397
+00:12:55,759 --> 00:12:59,278
+like there's very big error bars but
+
+398
+00:12:57,679 --> 00:13:00,879
+when I say that distillation helps them
+
+399
+00:12:59,278 --> 00:13:02,799
+by a few months it's based on this
+
+400
+00:13:00,879 --> 00:13:04,559
+scientific literature that
+
+401
+00:13:02,799 --> 00:13:07,120
+>> we just like that's the information we
+
+402
+00:13:04,559 --> 00:13:09,039
+have we should do more open research and
+
+403
+00:13:07,120 --> 00:13:10,799
+enable this so that we can study it. But
+
+404
+00:13:09,039 --> 00:13:12,078
+like I don't know how you can come to a
+
+405
+00:13:10,799 --> 00:13:13,679
+different conclusion that it's like not
+
+406
+00:13:12,078 --> 00:13:14,799
+a huge effect in current post training
+
+407
+00:13:13,679 --> 00:13:16,319
+based on this.
+
+408
+00:13:14,799 --> 00:13:17,759
+>> And that's just like the Chinese are so
+
+409
+00:13:16,320 --> 00:13:19,040
+good at building models. Well, I think
+
+410
+00:13:17,759 --> 00:13:21,679
+there's a bit of cope where people are
+
+411
+00:13:19,039 --> 00:13:22,958
+like only we are good at building models
+
+412
+00:13:21,679 --> 00:13:24,559
+and it's like
+
+413
+00:13:22,958 --> 00:13:26,239
+>> there are so many companies there's like
+
+414
+00:13:24,559 --> 00:13:27,119
+20 to 30 companies that are building
+
+415
+00:13:26,240 --> 00:13:28,240
+good models.
+
+416
+00:13:27,120 --> 00:13:29,440
+>> You can like read. Yeah. Yeah.
+
+417
+00:13:28,240 --> 00:13:32,079
+>> And it's like you just
+
+418
+00:13:29,440 --> 00:13:33,760
+>> Yeah. And like that's hard for me to get
+
+419
+00:13:32,078 --> 00:13:35,439
+over. And I think that there was this
+
+420
+00:13:33,759 --> 00:13:37,360
+very prominent paper that's like
+
+421
+00:13:35,440 --> 00:13:38,880
+stealing reasoning traces from closed
+
+422
+00:13:37,360 --> 00:13:41,120
+models. And
+
+423
+00:13:38,879 --> 00:13:43,200
+>> I know that the Chinese companies are
+
+424
+00:13:41,120 --> 00:13:44,879
+way ahead on doing this since the AI
+
+425
+00:13:43,200 --> 00:13:47,200
+safety community later published it.
+
+426
+00:13:44,879 --> 00:13:49,278
+Like I think every Chinese lab has a
+
+427
+00:13:47,200 --> 00:13:50,560
+team that knows those sorts of things.
+
+428
+00:13:49,278 --> 00:13:52,240
+And this goes back to what you're saying
+
+429
+00:13:50,559 --> 00:13:53,359
+about like they don't need to offer the
+
+430
+00:13:52,240 --> 00:13:55,519
+API. Mhm.
+
+431
+00:13:53,360 --> 00:13:57,199
+>> And I think there's some characteristic
+
+432
+00:13:55,519 --> 00:13:59,919
+of reasoning models that generate these
+
+433
+00:13:57,198 --> 00:14:02,078
+thinking tokens where it's easy to just
+
+434
+00:13:59,919 --> 00:14:03,679
+knock them out of the API so you see the
+
+435
+00:14:02,078 --> 00:14:05,198
+reasoning token and then you can use
+
+436
+00:14:03,679 --> 00:14:08,078
+that to train your model.
+
+437
+00:14:05,198 --> 00:14:09,679
+>> And so long as they offer these APIs,
+
+438
+00:14:08,078 --> 00:14:11,198
+>> there's going to be no way to stop that
+
+439
+00:14:09,679 --> 00:14:12,958
+type of distillation.
+
+440
+00:14:11,198 --> 00:14:14,719
+>> But if they do make it so it's only in
+
+441
+00:14:12,958 --> 00:14:16,319
+products and things where you have to
+
+442
+00:14:14,720 --> 00:14:18,399
+sign enterprise agreements or whatever,
+
+443
+00:14:16,320 --> 00:14:20,079
+it'll be way harder. And
+
+444
+00:14:18,399 --> 00:14:21,759
+>> I support the labs doing that if they
+
+445
+00:14:20,078 --> 00:14:23,198
+want to secure it. But it's like they
+
+446
+00:14:21,759 --> 00:14:25,198
+have to secure their products if they
+
+447
+00:14:23,198 --> 00:14:26,799
+want to. Like I don't like I don't think
+
+448
+00:14:25,198 --> 00:14:28,879
+knowing your customer would be good for
+
+449
+00:14:26,799 --> 00:14:30,639
+anybody. I don't think it'd be good for
+
+450
+00:14:28,879 --> 00:14:31,679
+their business. But also I don't know
+
+451
+00:14:30,639 --> 00:14:32,879
+why you should get the government
+
+452
+00:14:31,679 --> 00:14:34,799
+involved in a terms of service
+
+453
+00:14:32,879 --> 00:14:36,320
+violation. It's like not even like I
+
+454
+00:14:34,799 --> 00:14:38,399
+don't even think terms of service are a
+
+455
+00:14:36,320 --> 00:14:39,600
+signed contract. It's just like a I
+
+456
+00:14:38,399 --> 00:14:41,519
+don't think you can sue them in the same
+
+457
+00:14:39,600 --> 00:14:41,759
+way. You just can cancel their access.
+
+458
+00:14:41,519 --> 00:14:43,679
+>> Right.
+
+459
+00:14:41,759 --> 00:14:46,720
+>> So that's why I'm not that
+
+460
+00:14:43,679 --> 00:14:49,198
+>> sympathetic. But I am like I like to
+
+461
+00:14:46,720 --> 00:14:51,920
+listen to the like the national security
+
+462
+00:14:49,198 --> 00:14:53,519
+community is loud. And but it's like
+
+463
+00:14:51,919 --> 00:14:54,958
+there is a directional truth to that
+
+464
+00:14:53,519 --> 00:14:56,240
+with where AI is going and how
+
+465
+00:14:54,958 --> 00:14:57,599
+influential it is that you have to
+
+466
+00:14:56,240 --> 00:14:58,879
+balance many
+
+467
+00:14:57,600 --> 00:15:00,560
+>> many things in your head.
+
+468
+00:14:58,879 --> 00:15:03,360
+>> I I wonder what your response is. So I I
+
+469
+00:15:00,559 --> 00:15:05,119
+heard I think Jensen said in some
+
+470
+00:15:03,360 --> 00:15:05,839
+literally either tweet or interview
+
+471
+00:15:05,120 --> 00:15:08,320
+maybe
+
+472
+00:15:05,839 --> 00:15:09,360
+>> great put it put it in put it in the
+
+473
+00:15:08,320 --> 00:15:11,360
+show.
+
+474
+00:15:09,360 --> 00:15:13,440
+>> People distill my products every single
+
+475
+00:15:11,360 --> 00:15:15,600
+day. They take it and they they strip it
+
+476
+00:15:13,440 --> 00:15:17,839
+down to its raw parts. They test
+
+477
+00:15:15,600 --> 00:15:18,959
+everything. That's called competition.
+
+478
+00:15:17,839 --> 00:15:21,360
+>> Do you think that's fair game? You think
+
+479
+00:15:18,958 --> 00:15:22,879
+distillation is not robbery?
+
+480
+00:15:21,360 --> 00:15:24,879
+>> That's called competition.
+
+481
+00:15:22,879 --> 00:15:26,399
+>> I'm very sympathetic cuz I think there's
+
+482
+00:15:24,879 --> 00:15:27,838
+a lot of calls from the AI safety
+
+483
+00:15:26,399 --> 00:15:30,000
+community that we want to have like US
+
+484
+00:15:27,839 --> 00:15:31,440
+China dialogue as we're getting to such
+
+485
+00:15:30,000 --> 00:15:33,759
+capability levels. And if you're going
+
+486
+00:15:31,440 --> 00:15:36,639
+to ask the company to just like
+
+487
+00:15:33,759 --> 00:15:38,958
+>> start hitting their AI industry with
+
+488
+00:15:36,639 --> 00:15:40,720
+slaps on the wrist and more
+
+489
+00:15:38,958 --> 00:15:42,799
+>> downstream of distillation. So you won't
+
+490
+00:15:40,720 --> 00:15:45,440
+regulate distillation with policy from
+
+491
+00:15:42,799 --> 00:15:47,120
+Congress. You will probably just do
+
+492
+00:15:45,440 --> 00:15:48,639
+federal action to make their life
+
+493
+00:15:47,120 --> 00:15:50,320
+annoying. Yeah. Yeah. And at the same
+
+494
+00:15:48,639 --> 00:15:52,399
+time when we're talking about how do we
+
+495
+00:15:50,320 --> 00:15:55,360
+manage frontier risks where you have
+
+496
+00:15:52,399 --> 00:15:57,198
+closed models in training going all over
+
+497
+00:15:55,360 --> 00:15:59,759
+the web and accessing things that they
+
+498
+00:15:57,198 --> 00:16:01,198
+shouldn't and we have valid worries
+
+499
+00:15:59,759 --> 00:16:02,480
+about like what will happen with openw
+
+500
+00:16:01,198 --> 00:16:04,559
+weight models where this like hasn't
+
+501
+00:16:02,480 --> 00:16:06,079
+been harms yet but it's like why like
+
+502
+00:16:04,559 --> 00:16:07,518
+why aren't people using open weight
+
+503
+00:16:06,078 --> 00:16:09,039
+models like why did they go to closed
+
+504
+00:16:07,519 --> 00:16:10,320
+models and get around the safeguards and
+
+505
+00:16:09,039 --> 00:16:11,919
+like
+
+506
+00:16:10,320 --> 00:16:14,000
+>> we want to be able to communicate with
+
+507
+00:16:11,919 --> 00:16:15,360
+the Chinese tech companies and
+
+508
+00:16:14,000 --> 00:16:16,958
+everything about this and I just think
+
+509
+00:16:15,360 --> 00:16:18,879
+like you're going to cause more harm
+
+510
+00:16:16,958 --> 00:16:20,000
+than good if you do anything about
+
+511
+00:16:18,879 --> 00:16:21,600
+distillation because they're not going
+
+512
+00:16:20,000 --> 00:16:22,879
+to stop. It's all it's like they're
+
+513
+00:16:21,600 --> 00:16:24,480
+gonna keep doing it like
+
+514
+00:16:22,879 --> 00:16:26,000
+>> right right and then and and the open
+
+515
+00:16:24,480 --> 00:16:27,440
+source community benefits and therefore
+
+516
+00:16:26,000 --> 00:16:28,720
+the startup community benefits a lot and
+
+517
+00:16:27,440 --> 00:16:30,560
+we can go into you know a lot of it's
+
+518
+00:16:28,720 --> 00:16:32,639
+not just like hey China USA it's
+
+519
+00:16:30,559 --> 00:16:33,919
+actually like there's you know and we
+
+520
+00:16:32,639 --> 00:16:35,919
+can actually talk about like I am
+
+521
+00:16:33,919 --> 00:16:38,479
+sympathetic obviously or try to steal
+
+522
+00:16:35,919 --> 00:16:40,879
+man the um frontier lab position which
+
+523
+00:16:38,480 --> 00:16:42,720
+is like you have just unprecedented
+
+524
+00:16:40,879 --> 00:16:44,958
+amounts of capital that's required to
+
+525
+00:16:42,720 --> 00:16:47,600
+build these frontier models right and
+
+526
+00:16:44,958 --> 00:16:51,679
+it's it's kind of alarming slash not
+
+527
+00:16:47,600 --> 00:16:55,120
+very um uh conducive to to this uh
+
+528
+00:16:51,679 --> 00:16:56,719
+flywheel continuing if if the um through
+
+529
+00:16:55,120 --> 00:16:59,198
+distillation or other kind of
+
+530
+00:16:56,720 --> 00:17:01,360
+distillation related methods. Um open
+
+531
+00:16:59,198 --> 00:17:02,559
+source can catch up so quickly. And so
+
+532
+00:17:01,360 --> 00:17:04,959
+you know and what I mean by this
+
+533
+00:17:02,559 --> 00:17:06,958
+flywheel is just kind of a very simple
+
+534
+00:17:04,959 --> 00:17:08,640
+picture of you know you train the
+
+535
+00:17:06,959 --> 00:17:10,160
+frontier model by putting in a lot of
+
+536
+00:17:08,640 --> 00:17:12,000
+money to get compute and then they park
+
+537
+00:17:10,160 --> 00:17:14,000
+this compute. of course open anthropic
+
+538
+00:17:12,000 --> 00:17:14,959
+are very guilty slash you successful in
+
+539
+00:17:14,000 --> 00:17:16,558
+this
+
+540
+00:17:14,959 --> 00:17:19,038
+>> whichever way you want to like look look
+
+541
+00:17:16,558 --> 00:17:23,678
+at and there is a huge compute you know
+
+542
+00:17:19,038 --> 00:17:24,959
+uh kind of uh um sort of um lack of
+
+543
+00:17:23,679 --> 00:17:26,400
+compute available because there's
+
+544
+00:17:24,959 --> 00:17:28,078
+actually like not just compute in the
+
+545
+00:17:26,400 --> 00:17:30,480
+chips but there's also power etc. So
+
+546
+00:17:28,078 --> 00:17:33,519
+like all of this scarcity is kind of you
+
+547
+00:17:30,480 --> 00:17:35,200
+know bottleneck until 2028. So this is
+
+548
+00:17:33,519 --> 00:17:37,279
+all to say that it's a successful
+
+549
+00:17:35,200 --> 00:17:39,840
+strategy to park that which leads to
+
+550
+00:17:37,279 --> 00:17:41,359
+actually a lot of um revenue because
+
+551
+00:17:39,839 --> 00:17:42,959
+once they get to the frontier because
+
+552
+00:17:41,359 --> 00:17:44,558
+they understand you know scaling is the
+
+553
+00:17:42,960 --> 00:17:46,160
+one thing that kind of gives them or the
+
+554
+00:17:44,558 --> 00:17:48,798
+science of scaling is what gives them a
+
+555
+00:17:46,160 --> 00:17:50,640
+handle over how how well um that can
+
+556
+00:17:48,798 --> 00:17:52,240
+translate like into a predictable
+
+557
+00:17:50,640 --> 00:17:53,520
+revenue stream. So they get the revenue
+
+558
+00:17:52,240 --> 00:17:55,038
+and because of that revenue and they're
+
+559
+00:17:53,519 --> 00:17:56,639
+able to raise more money. It's just
+
+560
+00:17:55,038 --> 00:17:58,000
+unprecedented like beautiful flywheel
+
+561
+00:17:56,640 --> 00:18:00,240
+and this happens for both open AI and
+
+562
+00:17:58,000 --> 00:18:02,558
+anthropic. Um, of course we need
+
+563
+00:18:00,240 --> 00:18:03,839
+exponential amount of resources. And so
+
+564
+00:18:02,558 --> 00:18:05,918
+we've we've gotten to the point where
+
+565
+00:18:03,839 --> 00:18:07,839
+we're like, okay, we need to IPO. We
+
+566
+00:18:05,919 --> 00:18:09,440
+need to go to the public markets. And so
+
+567
+00:18:07,839 --> 00:18:12,319
+anything that threatens this flywheel
+
+568
+00:18:09,440 --> 00:18:14,880
+from functioning well um is is a huge
+
+569
+00:18:12,319 --> 00:18:16,879
+threat to just the entire like being at
+
+570
+00:18:14,880 --> 00:18:19,440
+the frontier. Um, and so
+
+571
+00:18:16,880 --> 00:18:21,120
+>> the entire AI industry realistically
+
+572
+00:18:19,440 --> 00:18:22,240
+>> and that and exactly that actually. So
+
+573
+00:18:21,119 --> 00:18:24,879
+like, you know, maybe not just kind of
+
+574
+00:18:22,240 --> 00:18:26,880
+being sympathetic to their version of
+
+575
+00:18:24,880 --> 00:18:28,400
+like trying to, you know, uh, eek out
+
+576
+00:18:26,880 --> 00:18:30,320
+capitalism for themselves. It's it's
+
+577
+00:18:28,400 --> 00:18:32,640
+also just like, hey, if if they don't do
+
+578
+00:18:30,319 --> 00:18:34,558
+well in the IPO, that's actually bad for
+
+579
+00:18:32,640 --> 00:18:36,080
+everyone else. And so I I I want
+
+580
+00:18:34,558 --> 00:18:39,119
+everyone, you know, I want them to do
+
+581
+00:18:36,079 --> 00:18:41,199
+well. Um, on the other hand, you know,
+
+582
+00:18:39,119 --> 00:18:44,159
+it's like the Chinese open- source
+
+583
+00:18:41,200 --> 00:18:45,759
+models are a huge benefit to the startup
+
+584
+00:18:44,160 --> 00:18:47,679
+ecosystem. I mean, we see this all the
+
+585
+00:18:45,759 --> 00:18:49,440
+time. Um, just kind of metrics I
+
+586
+00:18:47,679 --> 00:18:51,038
+remember from like Decagon and Harvey
+
+587
+00:18:49,440 --> 00:18:54,480
+who was trying to do a lot of
+
+588
+00:18:51,038 --> 00:18:56,079
+fine-tuning. um there's like a huge
+
+589
+00:18:54,480 --> 00:18:57,759
+amount of uh startups doing post
+
+590
+00:18:56,079 --> 00:18:59,599
+training as a service of various degrees
+
+591
+00:18:57,759 --> 00:19:00,798
+and trying to productize that and and it
+
+592
+00:18:59,599 --> 00:19:02,719
+actually works because you can get to
+
+593
+00:19:00,798 --> 00:19:05,279
+the PTO frontier with these you know
+
+594
+00:19:02,720 --> 00:19:08,319
+Kimmy K3 or pick your favorite like GLM
+
+595
+00:19:05,279 --> 00:19:11,200
+um open source model. So, I guess like
+
+596
+00:19:08,319 --> 00:19:12,720
+weighing these two uh things, how do you
+
+597
+00:19:11,200 --> 00:19:14,319
+um
+
+598
+00:19:12,720 --> 00:19:17,759
+I I guess there's so many questions can
+
+599
+00:19:14,319 --> 00:19:19,439
+fall from that, but I guess one um how
+
+600
+00:19:17,759 --> 00:19:21,759
+do you see that playing out in terms of
+
+601
+00:19:19,440 --> 00:19:23,759
+like who's going to who's going to win
+
+602
+00:19:21,759 --> 00:19:26,160
+in the next couple of years versus, you
+
+603
+00:19:23,759 --> 00:19:27,919
+know, what what and and then also relate
+
+604
+00:19:26,160 --> 00:19:30,320
+that to, you know, why you're doing
+
+605
+00:19:27,919 --> 00:19:32,080
+obviously in open source. So I think
+
+606
+00:19:30,319 --> 00:19:34,720
+open and closed models are on different
+
+607
+00:19:32,079 --> 00:19:37,199
+time scales of exponentials and the
+
+608
+00:19:34,720 --> 00:19:39,200
+closed labs are so integrated where they
+
+609
+00:19:37,200 --> 00:19:41,200
+have efficient inference. They can serve
+
+610
+00:19:39,200 --> 00:19:42,558
+the model at scale when they're ready to
+
+611
+00:19:41,200 --> 00:19:45,200
+because they have all these resources.
+
+612
+00:19:42,558 --> 00:19:46,960
+They can plan and they get to these
+
+613
+00:19:45,200 --> 00:19:48,480
+markets first that are very high value.
+
+614
+00:19:46,960 --> 00:19:49,840
+We have seen this with coding and this
+
+615
+00:19:48,480 --> 00:19:52,160
+has been the story of the year where the
+
+616
+00:19:49,839 --> 00:19:55,519
+revenue has just gone zero 100 billion
+
+617
+00:19:52,160 --> 00:19:58,320
+and likely to grow. But the open model
+
+618
+00:19:55,519 --> 00:20:00,400
+labs partially this is just like an
+
+619
+00:19:58,319 --> 00:20:02,079
+economic issue being the fast follower
+
+620
+00:20:00,400 --> 00:20:04,160
+is that you don't have this flow of
+
+621
+00:20:02,079 --> 00:20:06,720
+information and you don't have this flow
+
+622
+00:20:04,160 --> 00:20:08,480
+of revenue. So the open model you have
+
+623
+00:20:06,720 --> 00:20:10,000
+open model builder then you have the
+
+624
+00:20:08,480 --> 00:20:11,279
+open model inference companies and you
+
+625
+00:20:10,000 --> 00:20:12,798
+have the open model post- training
+
+626
+00:20:11,279 --> 00:20:14,879
+companies and like there's information
+
+627
+00:20:12,798 --> 00:20:16,319
+from those customers which are like
+
+628
+00:20:14,880 --> 00:20:17,840
+things you need the models to do and
+
+629
+00:20:16,319 --> 00:20:19,519
+it's like you can't like that
+
+630
+00:20:17,839 --> 00:20:22,399
+information doesn't just flow back to
+
+631
+00:20:19,519 --> 00:20:23,918
+the model builder very easily and they
+
+632
+00:20:22,400 --> 00:20:26,160
+also don't have the economies of scale
+
+633
+00:20:23,919 --> 00:20:28,240
+to serve as many users to serve it as
+
+634
+00:20:26,160 --> 00:20:30,480
+efficiently to have as much margins on
+
+635
+00:20:28,240 --> 00:20:32,640
+influence on inference and these are
+
+636
+00:20:30,480 --> 00:20:35,279
+just like it's going to take a lot
+
+637
+00:20:32,640 --> 00:20:37,840
+longer but to the extent that things can
+
+638
+00:20:35,279 --> 00:20:39,918
+be commoditized. It seems like companies
+
+639
+00:20:37,839 --> 00:20:41,119
+really want to have private data.
+
+640
+00:20:39,919 --> 00:20:44,559
+There's a lot of things that they just
+
+641
+00:20:41,119 --> 00:20:47,199
+cannot send over an API and we could
+
+642
+00:20:44,558 --> 00:20:49,119
+talk about the like um zero data
+
+643
+00:20:47,200 --> 00:20:50,720
+retention or not and so on. feel like
+
+644
+00:20:49,119 --> 00:20:52,639
+these it takes a long time to figure out
+
+645
+00:20:50,720 --> 00:20:54,159
+if a company has internal expertise or
+
+646
+00:20:52,640 --> 00:20:56,400
+they figure out how to build an internal
+
+647
+00:20:54,159 --> 00:20:58,000
+evaluation that actually matches to
+
+648
+00:20:56,400 --> 00:21:00,480
+revenue and then they figure out how to
+
+649
+00:20:58,000 --> 00:21:02,400
+fine-tune or then they go find
+
+650
+00:21:00,480 --> 00:21:03,919
+>> they go find Thinking Machines or Prime
+
+651
+00:21:02,400 --> 00:21:06,000
+Intellect and they're like we could make
+
+652
+00:21:03,919 --> 00:21:08,080
+money in mass if we figure out how to
+
+653
+00:21:06,000 --> 00:21:09,759
+fine-tune a model that solves this and
+
+654
+00:21:08,079 --> 00:21:11,199
+like they have these customers but there
+
+655
+00:21:09,759 --> 00:21:13,119
+just so many more companies involved
+
+656
+00:21:11,200 --> 00:21:14,400
+that it takes so much longer but at the
+
+657
+00:21:13,119 --> 00:21:16,558
+end of this process they have real
+
+658
+00:21:14,400 --> 00:21:17,840
+ownership which is model weights no
+
+659
+00:21:16,558 --> 00:21:19,519
+terms and conditions that they can run
+
+660
+00:21:17,839 --> 00:21:21,678
+on their hardware and they figured out
+
+661
+00:21:19,519 --> 00:21:23,359
+they can make an ROI on. So this is why
+
+662
+00:21:21,679 --> 00:21:26,000
+I just think the open model economy is
+
+663
+00:21:23,359 --> 00:21:28,079
+it takes way longer to build and I'm
+
+664
+00:21:26,000 --> 00:21:30,240
+less concerned about this being kind of
+
+665
+00:21:28,079 --> 00:21:32,399
+bubbly where it's like this could eat
+
+666
+00:21:30,240 --> 00:21:34,640
+into the market of the really fast
+
+667
+00:21:32,400 --> 00:21:36,720
+takeoff as people figure out how to what
+
+668
+00:21:34,640 --> 00:21:40,000
+is the cheapest model that accomplishes
+
+669
+00:21:36,720 --> 00:21:41,360
+a task and how do you compete on margins
+
+670
+00:21:40,000 --> 00:21:42,480
+>> and I don't really know like I don't
+
+671
+00:21:41,359 --> 00:21:44,079
+really know what's going to happen. I
+
+672
+00:21:42,480 --> 00:21:45,519
+think there's
+
+673
+00:21:44,079 --> 00:21:46,960
+it's too early to know.
+
+674
+00:21:45,519 --> 00:21:48,000
+>> It's it's it's so yeah it's it's so
+
+675
+00:21:46,960 --> 00:21:49,360
+hard. I mean it's definitely something
+
+676
+00:21:48,000 --> 00:21:50,720
+that's always top of mind thinking about
+
+677
+00:21:49,359 --> 00:21:52,879
+like there's thing there are things
+
+678
+00:21:50,720 --> 00:21:56,558
+where scaling up general reasoning just
+
+679
+00:21:52,880 --> 00:21:59,200
+as a general model is so uh it's going
+
+680
+00:21:56,558 --> 00:22:01,678
+to beat out any specialized model and we
+
+681
+00:21:59,200 --> 00:22:02,960
+see obviously examples in math and
+
+682
+00:22:01,679 --> 00:22:05,440
+that's probably the most pure domain
+
+683
+00:22:02,960 --> 00:22:08,480
+that you can see this um but also you
+
+684
+00:22:05,440 --> 00:22:14,640
+know even in say robotics you know with
+
+685
+00:22:08,480 --> 00:22:17,360
+with Astra um and and I for maybe uh
+
+686
+00:22:14,640 --> 00:22:18,640
+however degrees of like true Truthy the
+
+687
+00:22:17,359 --> 00:22:20,240
+signal is it just doesn't sound like
+
+688
+00:22:18,640 --> 00:22:22,559
+they've actually tried to ascend in
+
+689
+00:22:20,240 --> 00:22:24,159
+robotics is they did I think this is a
+
+690
+00:22:22,558 --> 00:22:25,599
+cycle of like six to eight months ago
+
+691
+00:22:24,159 --> 00:22:26,720
+they started hiring people and buying a
+
+692
+00:22:25,599 --> 00:22:27,199
+lot of data on robotics
+
+693
+00:22:26,720 --> 00:22:29,839
+>> they did
+
+694
+00:22:27,200 --> 00:22:32,480
+>> and then the model magically six months
+
+695
+00:22:29,839 --> 00:22:33,038
+later is really good at it but I think
+
+696
+00:22:32,480 --> 00:22:35,038
+that the
+
+697
+00:22:33,038 --> 00:22:36,558
+>> but I actually well the other other you
+
+698
+00:22:35,038 --> 00:22:37,759
+know more contrary things I've heard is
+
+699
+00:22:36,558 --> 00:22:39,599
+that it's actually coming out of
+
+700
+00:22:37,759 --> 00:22:41,919
+computer use um because it's you know
+
+701
+00:22:39,599 --> 00:22:44,399
+because computer use is like some level
+
+702
+00:22:41,919 --> 00:22:47,038
+of spatial reasoning and then getting to
+
+703
+00:22:44,400 --> 00:22:49,200
+have good blender you know demos is is
+
+704
+00:22:47,038 --> 00:22:51,038
+another extension of that. Um, so you
+
+705
+00:22:49,200 --> 00:22:52,960
+know, we can believe some version of
+
+706
+00:22:51,038 --> 00:22:55,359
+that. But either way, I guess it's like
+
+707
+00:22:52,960 --> 00:22:58,159
+it maybe if it's like really
+
+708
+00:22:55,359 --> 00:23:00,079
+specialized, you see it's it's the
+
+709
+00:22:58,159 --> 00:23:02,320
+capability gain is really from like
+
+710
+00:23:00,079 --> 00:23:05,599
+trying to get better in a certain area.
+
+711
+00:23:02,319 --> 00:23:07,359
+But like in math, I don't even know if
+
+712
+00:23:05,599 --> 00:23:08,480
+that fell out of trying to specialize in
+
+713
+00:23:07,359 --> 00:23:10,079
+math. I mean, I think the whole thesis
+
+714
+00:23:08,480 --> 00:23:11,599
+there was just like let's just scale up
+
+715
+00:23:10,079 --> 00:23:14,158
+reasoning and actually got better in in
+
+716
+00:23:11,599 --> 00:23:15,839
+in natural language. It got better than
+
+717
+00:23:14,159 --> 00:23:17,120
+any specialized model in math. I mean,
+
+718
+00:23:15,839 --> 00:23:19,678
+Anthropic wasn't even trying to be good
+
+719
+00:23:17,119 --> 00:23:21,519
+at math, you know, open AI, you know,
+
+720
+00:23:19,679 --> 00:23:23,360
+certainly I think, you know, they hired
+
+721
+00:23:21,519 --> 00:23:25,599
+a bunch of mathematicians, but they also
+
+722
+00:23:23,359 --> 00:23:27,599
+weren't trying to like use specialized,
+
+723
+00:23:25,599 --> 00:23:29,839
+you know, kind of like lean data set to
+
+724
+00:23:27,599 --> 00:23:31,599
+get better at it. Um, or at least that's
+
+725
+00:23:29,839 --> 00:23:33,359
+not um story. So, anyways, this is this
+
+726
+00:23:31,599 --> 00:23:35,119
+is all kind of fodder for the view that
+
+727
+00:23:33,359 --> 00:23:37,359
+like it's kind of hard to compete with
+
+728
+00:23:35,119 --> 00:23:39,199
+the frontier models because eventually
+
+729
+00:23:37,359 --> 00:23:41,839
+they start ascending so much that you
+
+730
+00:23:39,200 --> 00:23:44,159
+know you you get uh good enough in
+
+731
+00:23:41,839 --> 00:23:46,558
+respective um categories. With that
+
+732
+00:23:44,159 --> 00:23:48,480
+said, I think actually there's also very
+
+733
+00:23:46,558 --> 00:23:50,319
+competing like a counterforce of data
+
+734
+00:23:48,480 --> 00:23:51,839
+that you're seeing which is like the
+
+735
+00:23:50,319 --> 00:23:54,558
+open- source models that are already
+
+736
+00:23:51,839 --> 00:23:56,000
+good enough uh allow for fine-tunes, you
+
+737
+00:23:54,558 --> 00:23:58,879
+know, to your point of like these slow
+
+738
+00:23:56,000 --> 00:24:00,798
+percolation diffusion of these uh um
+
+739
+00:23:58,880 --> 00:24:02,480
+very specific benchmarks and and data
+
+740
+00:24:00,798 --> 00:24:03,599
+sets that are only available in these,
+
+741
+00:24:02,480 --> 00:24:05,360
+you know, companies that you're being
+
+742
+00:24:03,599 --> 00:24:07,038
+applied to. And it's just it's just good
+
+743
+00:24:05,359 --> 00:24:09,519
+enough and it's actually we're starting
+
+744
+00:24:07,038 --> 00:24:11,038
+to see um people adopt that. I mean in
+
+745
+00:24:09,519 --> 00:24:13,119
+the most maybe pure regime where you
+
+746
+00:24:11,038 --> 00:24:14,480
+would expect frontier models are good is
+
+747
+00:24:13,119 --> 00:24:16,719
+um I think cursor published something
+
+748
+00:24:14,480 --> 00:24:18,720
+over the summer where like hey we just
+
+749
+00:24:16,720 --> 00:24:21,839
+you know we had this long horizon task
+
+750
+00:24:18,720 --> 00:24:23,919
+of writing rewriting SQL light and turns
+
+751
+00:24:21,839 --> 00:24:27,359
+out using two frontier models you know
+
+752
+00:24:23,919 --> 00:24:30,559
+one for planner one for um execution is
+
+753
+00:24:27,359 --> 00:24:32,639
+not as good or is equivalently as good
+
+754
+00:24:30,558 --> 00:24:35,200
+but far more costly than just using
+
+755
+00:24:32,640 --> 00:24:37,600
+composer with maybe opus or you know
+
+756
+00:24:35,200 --> 00:24:39,038
+fastra whatever as planner and that I
+
+757
+00:24:37,599 --> 00:24:42,959
+think that's actually great evidence
+
+758
+00:24:39,038 --> 00:24:44,960
+that the open-source finetunings are
+
+759
+00:24:42,960 --> 00:24:47,679
+very good or good enough and has
+
+760
+00:24:44,960 --> 00:24:50,720
+surpassed um intelligence hungry tasks.
+
+761
+00:24:47,679 --> 00:24:52,798
+Um there's a long way of asking
+
+762
+00:24:50,720 --> 00:24:54,640
+what evidence do you find is most
+
+763
+00:24:52,798 --> 00:24:57,759
+compelling or you know pieces of
+
+764
+00:24:54,640 --> 00:25:00,320
+evidence for various versions of this
+
+765
+00:24:57,759 --> 00:25:03,038
+stable state of where the frontier wins
+
+766
+00:25:00,319 --> 00:25:04,879
+versus open source. I'm a big proponent
+
+767
+00:25:03,038 --> 00:25:07,119
+that a lot of the frontier progress in
+
+768
+00:25:04,880 --> 00:25:09,200
+domains that are not fully verifiable is
+
+769
+00:25:07,119 --> 00:25:12,000
+by buying data that is high quality and
+
+770
+00:25:09,200 --> 00:25:14,880
+giving the models worlds to act in and
+
+771
+00:25:12,000 --> 00:25:16,159
+he'll climb on. And I think there's two
+
+772
+00:25:14,880 --> 00:25:18,559
+time there's two things. We have the
+
+773
+00:25:16,159 --> 00:25:19,760
+math and code thing and we'll we we
+
+774
+00:25:18,558 --> 00:25:21,200
+don't know how big the coding market
+
+775
+00:25:19,759 --> 00:25:22,720
+will be and then there's kind of
+
+776
+00:25:21,200 --> 00:25:24,720
+everything else which is still they're
+
+777
+00:25:22,720 --> 00:25:27,278
+targeting this knowledge work this
+
+778
+00:25:24,720 --> 00:25:30,400
+biology healthcare legal and all of
+
+779
+00:25:27,278 --> 00:25:32,400
+these things are not as verifiable and I
+
+780
+00:25:30,400 --> 00:25:34,320
+think is much closer to the story of
+
+781
+00:25:32,400 --> 00:25:35,519
+opening I bought a lot of robotics data
+
+782
+00:25:34,319 --> 00:25:37,519
+they're probably going to tell us it's
+
+783
+00:25:35,519 --> 00:25:40,158
+generalization magic poof people love
+
+784
+00:25:37,519 --> 00:25:42,000
+poof generalization um and but
+
+785
+00:25:40,159 --> 00:25:43,760
+realistically it's probably some of A
+
+786
+00:25:42,000 --> 00:25:45,278
+some of B but a lot of it comes down to
+
+787
+00:25:43,759 --> 00:25:46,400
+data when I talk to people at Frontier
+
+788
+00:25:45,278 --> 00:25:48,159
+Lab jobs. There are some people that
+
+789
+00:25:46,400 --> 00:25:50,400
+have amazing jobs. There's some people
+
+790
+00:25:48,159 --> 00:25:52,559
+that contribute by doing a very narrow
+
+791
+00:25:50,400 --> 00:25:54,720
+thing, which is you make a data set and
+
+792
+00:25:52,558 --> 00:25:56,558
+you figure out what the behavior should
+
+793
+00:25:54,720 --> 00:25:57,839
+be for your model in that area and you
+
+794
+00:25:56,558 --> 00:25:59,519
+figure out how to make the data that
+
+795
+00:25:57,839 --> 00:26:00,959
+helps get that data. You get that
+
+796
+00:25:59,519 --> 00:26:02,000
+behavior and you figure out what data
+
+797
+00:26:00,960 --> 00:26:03,600
+you need to buy
+
+798
+00:26:02,000 --> 00:26:05,519
+>> and that's going to take I think we're
+
+799
+00:26:03,599 --> 00:26:06,719
+going to have years of this across
+
+800
+00:26:05,519 --> 00:26:08,960
+different sectors
+
+801
+00:26:06,720 --> 00:26:10,480
+>> and that's very capital intensive to buy
+
+802
+00:26:08,960 --> 00:26:13,360
+all of this data. But that's not just
+
+803
+00:26:10,480 --> 00:26:16,798
+like poof magic RSI happens where I do
+
+804
+00:26:13,359 --> 00:26:18,879
+see in this math and code and some like
+
+805
+00:26:16,798 --> 00:26:21,119
+distributed ML engineering like it's
+
+806
+00:26:18,880 --> 00:26:23,200
+very verifiable. You know what your cost
+
+807
+00:26:21,119 --> 00:26:23,918
+is and the AI models are going to drive
+
+808
+00:26:23,200 --> 00:26:26,240
+that
+
+809
+00:26:23,919 --> 00:26:27,919
+>> down at a really magical rate
+
+810
+00:26:26,240 --> 00:26:30,400
+>> and that's going to just have a lot of
+
+811
+00:26:27,919 --> 00:26:32,559
+surplus benefits and we can do research
+
+812
+00:26:30,400 --> 00:26:33,759
+faster. You could look I'm very
+
+813
+00:26:32,558 --> 00:26:35,519
+interested in like I think the
+
+814
+00:26:33,759 --> 00:26:37,919
+efficiency of models is going to drop
+
+815
+00:26:35,519 --> 00:26:40,000
+multiplicatively over years. So we've
+
+816
+00:26:37,919 --> 00:26:43,120
+seen OpenAI have drastic price cuts and
+
+817
+00:26:40,000 --> 00:26:44,960
+it's like what does it mean for GPT Soul
+
+818
+00:26:43,119 --> 00:26:46,798
+or Astra and these bigger models to
+
+819
+00:26:44,960 --> 00:26:49,600
+reduce in price 2x every eight months
+
+820
+00:26:46,798 --> 00:26:50,558
+for the next 3 years? Like you start
+
+821
+00:26:49,599 --> 00:26:52,158
+getting
+
+822
+00:26:50,558 --> 00:26:54,240
+>> you start doing this math and it's like
+
+823
+00:26:52,159 --> 00:26:55,679
+it's 1% of the cost and whatever like
+
+824
+00:26:54,240 --> 00:26:57,038
+four years and it's like
+
+825
+00:26:55,679 --> 00:26:59,840
+>> are they going to able to have higher
+
+826
+00:26:57,038 --> 00:27:01,679
+margins due to Jeban's paradox there or
+
+827
+00:26:59,839 --> 00:27:03,359
+their revenues going to decrease because
+
+828
+00:27:01,679 --> 00:27:06,000
+the market fills up? There's just like
+
+829
+00:27:03,359 --> 00:27:08,798
+all these really weird dynamics, but
+
+830
+00:27:06,000 --> 00:27:10,880
+fundamentally like AI progress is about
+
+831
+00:27:08,798 --> 00:27:14,400
+data and about writing better software
+
+832
+00:27:10,880 --> 00:27:16,400
+to serve your models and those are very
+
+833
+00:27:14,400 --> 00:27:17,679
+different worlds. Yeah, I mean at least
+
+834
+00:27:16,400 --> 00:27:19,919
+definitely I agree with you that
+
+835
+00:27:17,679 --> 00:27:24,159
+observing from the outside there's a lot
+
+836
+00:27:19,919 --> 00:27:26,559
+of um data RL environment companies that
+
+837
+00:27:24,159 --> 00:27:28,320
+are you know doing very very well um
+
+838
+00:27:26,558 --> 00:27:30,240
+selling both to the top two frontier
+
+839
+00:27:28,319 --> 00:27:34,240
+labs but an increasing kind of longer
+
+840
+00:27:30,240 --> 00:27:35,679
+tale of labs uh as well. Um so to your
+
+841
+00:27:34,240 --> 00:27:37,839
+point I think a lot of the capability
+
+842
+00:27:35,679 --> 00:27:41,600
+gain has really come from just scaling
+
+843
+00:27:37,839 --> 00:27:43,519
+that up. Um and it's not an easy task. I
+
+844
+00:27:41,599 --> 00:27:46,639
+mean maybe there's actually very curious
+
+845
+00:27:43,519 --> 00:27:48,319
+on your opinions between uh the the data
+
+846
+00:27:46,640 --> 00:27:50,880
+collection and environments that are
+
+847
+00:27:48,319 --> 00:27:52,720
+built by hand versus the ones that are
+
+848
+00:27:50,880 --> 00:27:54,480
+you know done in sim there seems to be
+
+849
+00:27:52,720 --> 00:27:56,079
+like different versions of like what
+
+850
+00:27:54,480 --> 00:27:57,759
+could be you know what what kind of
+
+851
+00:27:56,079 --> 00:27:59,678
+price they command etc. They all have
+
+852
+00:27:57,759 --> 00:28:01,919
+good things and bad things. And I just
+
+853
+00:27:59,679 --> 00:28:03,278
+think like there's a lot of talk of like
+
+854
+00:28:01,919 --> 00:28:05,120
+like we've talked about distillation,
+
+855
+00:28:03,278 --> 00:28:07,038
+but the other side is like the Chinese
+
+856
+00:28:05,119 --> 00:28:08,639
+company buys the RL environment that
+
+857
+00:28:07,038 --> 00:28:10,720
+they use six months later.
+
+858
+00:28:08,640 --> 00:28:12,240
+>> Oh, entropic. I bought this. Now there's
+
+859
+00:28:10,720 --> 00:28:14,399
+a premium.
+
+860
+00:28:12,240 --> 00:28:16,079
+>> The good data will do this.
+
+861
+00:28:14,398 --> 00:28:17,519
+>> But the data that people are buying is
+
+862
+00:28:16,079 --> 00:28:19,678
+pretty flawed. Like
+
+863
+00:28:17,519 --> 00:28:21,359
+>> I would say that the method is you buy
+
+864
+00:28:19,679 --> 00:28:23,679
+in mass and then you figure out what
+
+865
+00:28:21,359 --> 00:28:25,759
+works and it's not 100% hit rate.
+
+866
+00:28:23,679 --> 00:28:28,000
+>> Yeah. And I think I personally think
+
+867
+00:28:25,759 --> 00:28:29,599
+that this RO environment explosion where
+
+868
+00:28:28,000 --> 00:28:31,519
+there's just so much opportunity to make
+
+869
+00:28:29,599 --> 00:28:33,359
+money is have a lot of people that like
+
+870
+00:28:31,519 --> 00:28:34,960
+like cut corners and this can induce
+
+871
+00:28:33,359 --> 00:28:36,319
+things like reward hacking.
+
+872
+00:28:34,960 --> 00:28:37,759
+>> So it's like the models are so smart
+
+873
+00:28:36,319 --> 00:28:39,359
+that if you put them in a world and
+
+874
+00:28:37,759 --> 00:28:42,640
+they're like my job is to solve this
+
+875
+00:28:39,359 --> 00:28:44,240
+task but they didn't give me the like
+
+876
+00:28:42,640 --> 00:28:46,720
+you have a test file and like the test
+
+877
+00:28:44,240 --> 00:28:48,720
+file actually has an empty file instead
+
+878
+00:28:46,720 --> 00:28:50,079
+of the instead of the maze that you have
+
+879
+00:28:48,720 --> 00:28:51,600
+to navigate and they're like the model
+
+880
+00:28:50,079 --> 00:28:53,599
+is like well I should still figure out
+
+881
+00:28:51,599 --> 00:28:54,798
+how to get a high reward anyways. And I
+
+882
+00:28:53,599 --> 00:28:58,158
+think a lot of this behavior is
+
+883
+00:28:54,798 --> 00:29:00,480
+downstream of this supply chain
+
+884
+00:28:58,159 --> 00:29:02,159
+>> and I think it'll fix it. But it's
+
+885
+00:29:00,480 --> 00:29:04,240
+interesting to see the demand from the
+
+886
+00:29:02,159 --> 00:29:06,960
+labs to eliminate reward hacking and all
+
+887
+00:29:04,240 --> 00:29:07,919
+these company researchers spending so
+
+888
+00:29:06,960 --> 00:29:09,600
+much time on it
+
+889
+00:29:07,919 --> 00:29:11,679
+>> and then all the data companies like buy
+
+890
+00:29:09,599 --> 00:29:14,158
+our data and I think proportionally
+
+891
+00:29:11,679 --> 00:29:16,159
+spend less time on model behavior and
+
+892
+00:29:14,159 --> 00:29:17,840
+more time on world building and revenue
+
+893
+00:29:16,159 --> 00:29:19,600
+and somehow these two parties need to
+
+894
+00:29:17,839 --> 00:29:20,879
+meet together to actually make higher
+
+895
+00:29:19,599 --> 00:29:22,319
+quality data.
+
+896
+00:29:20,880 --> 00:29:23,840
+>> Yeah. Well, a lot of the labs are
+
+897
+00:29:22,319 --> 00:29:24,879
+actually taking it in-house partially
+
+898
+00:29:23,839 --> 00:29:25,199
+because they don't want
+
+899
+00:29:24,880 --> 00:29:27,360
+>> Yeah.
+
+900
+00:29:25,200 --> 00:29:28,960
+>> You know, data leaking. Not that, you
+
+901
+00:29:27,359 --> 00:29:30,398
+know, like lit literally and
+
+902
+00:29:28,960 --> 00:29:31,840
+figuratively speaking. It's like, you
+
+903
+00:29:30,398 --> 00:29:33,599
+know, signals leaking of what they're
+
+904
+00:29:31,839 --> 00:29:35,038
+doing, but they're trying to send on.
+
+905
+00:29:33,599 --> 00:29:37,119
+But despite that, I think there's a
+
+906
+00:29:35,038 --> 00:29:39,359
+tremendous amount of growth in um how
+
+907
+00:29:37,119 --> 00:29:40,319
+much uh they're purchasing. Do do you
+
+908
+00:29:39,359 --> 00:29:41,918
+think that's probably one of the
+
+909
+00:29:40,319 --> 00:29:44,480
+strongest levers? Can you kind of
+
+910
+00:29:41,919 --> 00:29:46,559
+qualify how much that will kind of
+
+911
+00:29:44,480 --> 00:29:49,519
+increase? Do you expect that to increase
+
+912
+00:29:46,558 --> 00:29:51,359
+uh based on spending? Um or are there
+
+913
+00:29:49,519 --> 00:29:53,918
+other you know because for instance if
+
+914
+00:29:51,359 --> 00:29:56,000
+it can be done well in sim I think maybe
+
+915
+00:29:53,919 --> 00:29:59,520
+that isn't more of an argument to that
+
+916
+00:29:56,000 --> 00:30:00,720
+being absorbed by labs and it you know
+
+917
+00:29:59,519 --> 00:30:02,639
+in particular and then
+
+918
+00:30:00,720 --> 00:30:04,079
+>> all the companies are doing a mix of
+
+919
+00:30:02,640 --> 00:30:05,600
+like all the companies are selling
+
+920
+00:30:04,079 --> 00:30:07,278
+synthetic data where they're using
+
+921
+00:30:05,599 --> 00:30:09,359
+language models to modify or build the
+
+922
+00:30:07,278 --> 00:30:12,079
+world or generate permutations of it and
+
+923
+00:30:09,359 --> 00:30:13,439
+like if a human is guiding this process
+
+924
+00:30:12,079 --> 00:30:14,960
+it's still synthetic data. So like
+
+925
+00:30:13,440 --> 00:30:18,558
+there's very few people that are going
+
+926
+00:30:14,960 --> 00:30:19,840
+to like sit there and lender and like
+
+927
+00:30:18,558 --> 00:30:21,519
+we're going to make a little world for
+
+928
+00:30:19,839 --> 00:30:23,519
+our model to act in. Like all the
+
+929
+00:30:21,519 --> 00:30:24,398
+companies I think are moving far faster
+
+930
+00:30:23,519 --> 00:30:24,798
+than that,
+
+931
+00:30:24,398 --> 00:30:26,959
+>> right?
+
+932
+00:30:24,798 --> 00:30:28,558
+>> And they buy them because they the
+
+933
+00:30:26,960 --> 00:30:30,399
+models are getting better from them.
+
+934
+00:30:28,558 --> 00:30:31,678
+>> Like I I still have denial about it. I'm
+
+935
+00:30:30,398 --> 00:30:33,439
+like these numbers are crazy. The
+
+936
+00:30:31,679 --> 00:30:34,798
+billions of dollars research budget on
+
+937
+00:30:33,440 --> 00:30:36,480
+environments. I'm like
+
+938
+00:30:34,798 --> 00:30:37,839
+>> they're only doing this because it is
+
+939
+00:30:36,480 --> 00:30:39,759
+helping the models and they see the
+
+940
+00:30:37,839 --> 00:30:41,359
+signal. And I think like my general
+
+941
+00:30:39,759 --> 00:30:43,440
+observation is that
+
+942
+00:30:41,359 --> 00:30:45,918
+>> the data industry has a lot of
+
+943
+00:30:43,440 --> 00:30:48,399
+lowhanging fruit on improving quality
+
+944
+00:30:45,919 --> 00:30:49,759
+and improving just like OBSAC. So like
+
+945
+00:30:48,398 --> 00:30:51,278
+if you look into the details, you can
+
+946
+00:30:49,759 --> 00:30:53,839
+find weird things with like data
+
+947
+00:30:51,278 --> 00:30:55,359
+companies that use contractors overseas.
+
+948
+00:30:53,839 --> 00:30:56,720
+Those people are through an
+
+949
+00:30:55,359 --> 00:30:58,000
+intermediary. They don't know they're
+
+950
+00:30:56,720 --> 00:30:59,839
+selling it. They just upload it to
+
+951
+00:30:58,000 --> 00:31:01,278
+GitHub. There's a lot of stuff out there
+
+952
+00:30:59,839 --> 00:31:03,359
+that if you poke around the data
+
+953
+00:31:01,278 --> 00:31:03,679
+industry, you find weird rough edges.
+
+954
+00:31:03,359 --> 00:31:06,158
+>> Yeah.
+
+955
+00:31:03,679 --> 00:31:07,759
+>> And it's just very early. And that's
+
+956
+00:31:06,159 --> 00:31:09,360
+like it's it's the one thing is like the
+
+957
+00:31:07,759 --> 00:31:11,038
+numbers are too big, the quality is bad,
+
+958
+00:31:09,359 --> 00:31:12,879
+but on the other hand, the labs are
+
+959
+00:31:11,038 --> 00:31:14,720
+improving very fast and know how to
+
+960
+00:31:12,880 --> 00:31:16,559
+onboard it. So I think this will take a
+
+961
+00:31:14,720 --> 00:31:19,278
+few years to transition of like really
+
+962
+00:31:16,558 --> 00:31:22,000
+pulling the the winners into higher
+
+963
+00:31:19,278 --> 00:31:23,359
+quality, higher ROI, you takes less
+
+964
+00:31:22,000 --> 00:31:25,119
+resources when you have these systems
+
+965
+00:31:23,359 --> 00:31:26,558
+for doing better and then the labs keep
+
+966
+00:31:25,119 --> 00:31:28,158
+working with them because they get even
+
+967
+00:31:26,558 --> 00:31:29,918
+more training signal and have to do less
+
+968
+00:31:28,159 --> 00:31:31,760
+internal filtering
+
+969
+00:31:29,919 --> 00:31:35,278
+>> and I I think this is going to just take
+
+970
+00:31:31,759 --> 00:31:37,038
+years. How do you think about then using
+
+971
+00:31:35,278 --> 00:31:38,558
+environments and like your purchasing
+
+972
+00:31:37,038 --> 00:31:39,599
+decisions as part of the nonprofit that
+
+973
+00:31:38,558 --> 00:31:42,158
+you're starting?
+
+974
+00:31:39,599 --> 00:31:44,639
+>> I think most of our work will be making
+
+975
+00:31:42,159 --> 00:31:46,480
+open- source environments for tasks that
+
+976
+00:31:44,640 --> 00:31:49,759
+are very high leverage. So I think of
+
+977
+00:31:46,480 --> 00:31:51,919
+this work that I advised Udub or Udub
+
+978
+00:31:49,759 --> 00:31:54,720
+and AI2 state and Hamish Iverson on this
+
+979
+00:31:51,919 --> 00:31:56,880
+T-Max work which is you use a few it's
+
+980
+00:31:54,720 --> 00:31:58,319
+for terminal tasks which are like super
+
+981
+00:31:56,880 --> 00:32:00,960
+popular at terminal bench whatever
+
+982
+00:31:58,319 --> 00:32:02,398
+number we're on and this is fully
+
+983
+00:32:00,960 --> 00:32:04,399
+synthetic data where you prompt a
+
+984
+00:32:02,398 --> 00:32:06,239
+frontier model to generate a type of
+
+985
+00:32:04,398 --> 00:32:08,558
+problem and you use a few different
+
+986
+00:32:06,240 --> 00:32:10,480
+prompts to generate diversity and then
+
+987
+00:32:08,558 --> 00:32:12,398
+you use model rollouts and other things
+
+988
+00:32:10,480 --> 00:32:15,038
+to find bugs and lamb and eliminate the
+
+989
+00:32:12,398 --> 00:32:17,119
+ones with bugs. And this process is not
+
+990
+00:32:15,038 --> 00:32:18,720
+magic. It's like you read every data
+
+991
+00:32:17,119 --> 00:32:20,639
+point, your data will get better and you
+
+992
+00:32:18,720 --> 00:32:23,038
+can do this. But there's just not that
+
+993
+00:32:20,640 --> 00:32:24,640
+many institutions that are investing
+
+994
+00:32:23,038 --> 00:32:26,000
+what it takes thousands or tens of
+
+995
+00:32:24,640 --> 00:32:27,600
+thousands of dollars to make these
+
+996
+00:32:26,000 --> 00:32:29,278
+environments well and then release it
+
+997
+00:32:27,599 --> 00:32:30,319
+because the profit because the profit
+
+998
+00:32:29,278 --> 00:32:32,558
+motive is so high.
+
+999
+00:32:30,319 --> 00:32:34,000
+>> So high. I was joking with the author
+
+1000
+00:32:32,558 --> 00:32:35,119
+like you could probably sell this data
+
+1001
+00:32:34,000 --> 00:32:36,319
+for a million dollars and then release
+
+1002
+00:32:35,119 --> 00:32:38,000
+the paper and they're like nobody like
+
+1003
+00:32:36,319 --> 00:32:39,918
+we care about doing the right thing. But
+
+1004
+00:32:38,000 --> 00:32:42,398
+it's just like oh my god these open
+
+1005
+00:32:39,919 --> 00:32:44,080
+resources are the fun foundation of
+
+1006
+00:32:42,398 --> 00:32:45,759
+>> so much study and it's like you release
+
+1007
+00:32:44,079 --> 00:32:47,599
+some RL environments with some RL
+
+1008
+00:32:45,759 --> 00:32:49,839
+rollouts people can do research on say
+
+1009
+00:32:47,599 --> 00:32:51,439
+like a val awareness you you have the
+
+1010
+00:32:49,839 --> 00:32:52,959
+generations from the model people can
+
+1011
+00:32:51,440 --> 00:32:54,880
+look for different behaviors if you've
+
+1012
+00:32:52,960 --> 00:32:57,360
+done RL on it they can see how it goes
+
+1013
+00:32:54,880 --> 00:32:59,760
+over time and this is just the the units
+
+1014
+00:32:57,359 --> 00:33:02,719
+of infrastructure that PhD students
+
+1015
+00:32:59,759 --> 00:33:04,640
+spend a year looking at and produce
+
+1016
+00:33:02,720 --> 00:33:07,278
+>> increased knowledge and the tech
+
+1017
+00:33:04,640 --> 00:33:09,440
+industry is the place where value is
+
+1018
+00:33:07,278 --> 00:33:11,759
+captured. captured from CS research all
+
+1019
+00:33:09,440 --> 00:33:13,840
+CS research the benefit occurs to the
+
+1020
+00:33:11,759 --> 00:33:16,158
+tech industry in like 10 years and I
+
+1021
+00:33:13,839 --> 00:33:17,839
+just think like this is why more people
+
+1022
+00:33:16,159 --> 00:33:18,799
+supporting open that if they're going to
+
+1023
+00:33:17,839 --> 00:33:20,398
+work if you're going to work in the
+
+1024
+00:33:18,798 --> 00:33:21,918
+industry for 10 years like your peers
+
+1025
+00:33:20,398 --> 00:33:23,759
+are going to be the ones that benefit
+
+1026
+00:33:21,919 --> 00:33:25,600
+>> fossil fuel let's not deplete it all
+
+1027
+00:33:23,759 --> 00:33:27,759
+>> but it's just like the opportunity to
+
+1028
+00:33:25,599 --> 00:33:30,558
+short-term win is so high the
+
+1029
+00:33:27,759 --> 00:33:32,558
+opportunity to make what is $100 million
+
+1030
+00:33:30,558 --> 00:33:34,079
+like nine figure returns for your
+
+1031
+00:33:32,558 --> 00:33:36,079
+business within five months of founding
+
+1032
+00:33:34,079 --> 00:33:37,839
+a startup with your friends is just like
+
+1033
+00:33:36,079 --> 00:33:39,519
+these are people who may have done more
+
+1034
+00:33:37,839 --> 00:33:41,599
+open- source work or these are people
+
+1035
+00:33:39,519 --> 00:33:44,480
+who left their PhD or something and it's
+
+1036
+00:33:41,599 --> 00:33:46,240
+just like pulling back which is why we
+
+1037
+00:33:44,480 --> 00:33:48,159
+came up with this name trillium for our
+
+1038
+00:33:46,240 --> 00:33:51,359
+lab which is like trillium is a spring
+
+1039
+00:33:48,159 --> 00:33:53,600
+ephemeral flower which it blooms before
+
+1040
+00:33:51,359 --> 00:33:55,038
+the canopy has grown its leaves so it's
+
+1041
+00:33:53,599 --> 00:33:57,599
+like winter there's no tree leaves on
+
+1042
+00:33:55,038 --> 00:34:00,079
+the trees these trillium flowers bloom
+
+1043
+00:33:57,599 --> 00:34:01,759
+and they're like essential for spreading
+
+1044
+00:34:00,079 --> 00:34:03,918
+nutrients through the cycle of growth
+
+1045
+00:34:01,759 --> 00:34:05,519
+that comes through spring and summer and
+
+1046
+00:34:03,919 --> 00:34:07,840
+this is where I feel like the AI
+
+1047
+00:34:05,519 --> 00:34:09,119
+industry is doing so much, right? It's
+
+1048
+00:34:07,839 --> 00:34:10,559
+like so much is going right, but it's
+
+1049
+00:34:09,119 --> 00:34:12,960
+just like we just need a little bit more
+
+1050
+00:34:10,559 --> 00:34:14,639
+life to like spread this out and make
+
+1051
+00:34:12,960 --> 00:34:15,918
+things so new people can come in like
+
+1052
+00:34:14,639 --> 00:34:17,838
+there's so much attention and just like
+
+1053
+00:34:15,918 --> 00:34:18,078
+do research, do education.
+
+1054
+00:34:17,838 --> 00:34:20,320
+>> Yeah.
+
+1055
+00:34:18,079 --> 00:34:22,240
+>> And then as this scales and becomes more
+
+1056
+00:34:20,320 --> 00:34:23,919
+impactful is like you have these open
+
+1057
+00:34:22,239 --> 00:34:25,759
+things which become the standards of
+
+1058
+00:34:23,918 --> 00:34:28,319
+study for such important problems which
+
+1059
+00:34:25,760 --> 00:34:30,240
+is like how do you understand sandboxes
+
+1060
+00:34:28,320 --> 00:34:32,399
+like how do you define what loss of
+
+1061
+00:34:30,239 --> 00:34:34,878
+control is? How can you see how this
+
+1062
+00:34:32,398 --> 00:34:37,279
+changes in a RL round that is a week on
+
+1063
+00:34:34,878 --> 00:34:38,480
+a thousand GPUs or 100,000 GPUs? And
+
+1064
+00:34:37,280 --> 00:34:40,399
+it's just like
+
+1065
+00:34:38,480 --> 00:34:42,480
+>> make these places so that people have
+
+1066
+00:34:40,398 --> 00:34:44,878
+more trust. And I think this pays so
+
+1067
+00:34:42,480 --> 00:34:46,800
+much dividends to everybody that stands
+
+1068
+00:34:44,878 --> 00:34:47,519
+to profit more than I do. And it's just
+
+1069
+00:34:46,800 --> 00:34:50,320
+like
+
+1070
+00:34:47,519 --> 00:34:53,280
+>> hard to get people to take that leap.
+
+1071
+00:34:50,320 --> 00:34:55,359
+And like I've been rewarded so much for
+
+1072
+00:34:53,280 --> 00:34:56,720
+kind of stumbling into this area and now
+
+1073
+00:34:55,358 --> 00:34:58,000
+I get so much reward. they get to do
+
+1074
+00:34:56,719 --> 00:34:59,838
+things like this which is fun and it's
+
+1075
+00:34:58,000 --> 00:35:01,920
+like now is the best job because I try
+
+1076
+00:34:59,838 --> 00:35:04,239
+to create space for more people to like
+
+1077
+00:35:01,920 --> 00:35:05,838
+grow their independent thought and build
+
+1078
+00:35:04,239 --> 00:35:08,399
+this infrastructure.
+
+1079
+00:35:05,838 --> 00:35:11,199
+>> Yeah. And maybe one like kind of naive
+
+1080
+00:35:08,400 --> 00:35:13,440
+way that it kind of perpetuates is just
+
+1081
+00:35:11,199 --> 00:35:16,000
+because it's open source, people get to
+
+1082
+00:35:13,440 --> 00:35:18,079
+you you might get more of a distributed
+
+1083
+00:35:16,000 --> 00:35:19,519
+contribution from people who are just so
+
+1084
+00:35:18,079 --> 00:35:20,960
+you know it's like they're motivated not
+
+1085
+00:35:19,519 --> 00:35:22,320
+for just trying to sell to the labs
+
+1086
+00:35:20,960 --> 00:35:23,920
+themselves but because hey it's out
+
+1087
+00:35:22,320 --> 00:35:25,280
+there they can share their work and then
+
+1088
+00:35:23,920 --> 00:35:27,440
+you actually have a very high caliber
+
+1089
+00:35:25,280 --> 00:35:28,880
+amount of contributors uh to the
+
+1090
+00:35:27,440 --> 00:35:30,480
+project. I mean that that would probably
+
+1091
+00:35:28,880 --> 00:35:32,640
+be the the naive hope of how that
+
+1092
+00:35:30,480 --> 00:35:34,079
+>> Yeah, it's a new puzzle with AI agents
+
+1093
+00:35:32,639 --> 00:35:35,598
+where people just throw things at you.
+
+1094
+00:35:34,079 --> 00:35:37,599
+Like I have some re random research
+
+1095
+00:35:35,599 --> 00:35:39,599
+repositories for research papers and I'm
+
+1096
+00:35:37,599 --> 00:35:40,960
+like people open the most crazy GitHub
+
+1097
+00:35:39,599 --> 00:35:41,920
+issues now. So
+
+1098
+00:35:40,960 --> 00:35:45,199
+>> what do you mean?
+
+1099
+00:35:41,920 --> 00:35:46,800
+>> Like just like like fake research
+
+1100
+00:35:45,199 --> 00:35:47,118
+results. They open an issue and they're
+
+1101
+00:35:46,800 --> 00:35:47,599
+like
+
+1102
+00:35:47,119 --> 00:35:48,880
+>> oh my god
+
+1103
+00:35:47,599 --> 00:35:50,000
+>> and they're like I found this thing in
+
+1104
+00:35:48,880 --> 00:35:51,200
+your data set. And I'm like, well, if
+
+1105
+00:35:50,000 --> 00:35:52,719
+you looked at the paper, we said that in
+
+1106
+00:35:51,199 --> 00:35:55,598
+like the second sentence, and it's just
+
+1107
+00:35:52,719 --> 00:35:57,039
+like a lot of language model output. And
+
+1108
+00:35:55,599 --> 00:35:58,320
+that's a new thing for the open
+
+1109
+00:35:57,039 --> 00:35:59,599
+community to
+
+1110
+00:35:58,320 --> 00:36:02,320
+>> go through.
+
+1111
+00:35:59,599 --> 00:36:03,838
+>> But this is a solvable problem. Like
+
+1112
+00:36:02,320 --> 00:36:04,559
+like there are people out there that
+
+1113
+00:36:03,838 --> 00:36:06,639
+want
+
+1114
+00:36:04,559 --> 00:36:08,799
+>> to contribute to this stuff because they
+
+1115
+00:36:06,639 --> 00:36:10,879
+>> right not just clout chasing in another,
+
+1116
+00:36:08,800 --> 00:36:12,640
+you know, dimension, but like actually,
+
+1117
+00:36:10,880 --> 00:36:14,320
+hey, it's out there, you know. I mean I
+
+1118
+00:36:12,639 --> 00:36:16,799
+I would just hope because it is
+
+1119
+00:36:14,320 --> 00:36:18,320
+published and open or you know and and
+
+1120
+00:36:16,800 --> 00:36:19,920
+available you can actually just get like
+
+1121
+00:36:18,320 --> 00:36:21,680
+PhD students or other researchers who
+
+1122
+00:36:19,920 --> 00:36:23,519
+are like okay I do this on my day job
+
+1123
+00:36:21,679 --> 00:36:25,118
+but maybe I can you know still be able
+
+1124
+00:36:23,519 --> 00:36:25,920
+to contribute. Yeah, hopefully from the
+
+1125
+00:36:25,119 --> 00:36:27,200
+Frontier Labs.
+
+1126
+00:36:25,920 --> 00:36:29,200
+>> Like I see people like this and I was
+
+1127
+00:36:27,199 --> 00:36:31,838
+like great somebody from like Eastern
+
+1128
+00:36:29,199 --> 00:36:33,679
+Europe was helping me improve the code
+
+1129
+00:36:31,838 --> 00:36:34,960
+for my book that's just right here and
+
+1130
+00:36:33,679 --> 00:36:36,399
+it's just like doing it for the right
+
+1131
+00:36:34,960 --> 00:36:38,800
+thing and like
+
+1132
+00:36:36,400 --> 00:36:41,119
+>> we talk and like there are people that
+
+1133
+00:36:38,800 --> 00:36:43,440
+do it and I think a lot of people just
+
+1134
+00:36:41,119 --> 00:36:44,720
+take like they don't have the time or
+
+1135
+00:36:43,440 --> 00:36:47,039
+the
+
+1136
+00:36:44,719 --> 00:36:48,639
+>> stability to take the long time it takes
+
+1137
+00:36:47,039 --> 00:36:51,039
+cuz when you're trying to get into a new
+
+1138
+00:36:48,639 --> 00:36:52,799
+field you know nothing. You have to
+
+1139
+00:36:51,039 --> 00:36:54,320
+spend like weeks reading and knowing
+
+1140
+00:36:52,800 --> 00:36:55,440
+nothing and then you send an email and
+
+1141
+00:36:54,320 --> 00:36:57,119
+nobody replies
+
+1142
+00:36:55,440 --> 00:36:58,639
+>> and you just like it takes you weeks to
+
+1143
+00:36:57,119 --> 00:36:59,200
+know the context to like ask a good
+
+1144
+00:36:58,639 --> 00:36:59,598
+question.
+
+1145
+00:36:59,199 --> 00:37:02,000
+>> Yeah.
+
+1146
+00:36:59,599 --> 00:37:04,160
+>> And now with language models, most
+
+1147
+00:37:02,000 --> 00:37:04,800
+people just push a button and they're
+
+1148
+00:37:04,159 --> 00:37:06,399
+like,
+
+1149
+00:37:04,800 --> 00:37:08,160
+>> "Oh, interesting. I read this. I'll send
+
+1150
+00:37:06,400 --> 00:37:08,720
+it off." And it's just like
+
+1151
+00:37:08,159 --> 00:37:09,679
+>> this
+
+1152
+00:37:08,719 --> 00:37:12,078
+>> Oh, yeah.
+
+1153
+00:37:09,679 --> 00:37:14,239
+>> kind of like sitting in it is the thing
+
+1154
+00:37:12,079 --> 00:37:17,119
+that people don't do as much. And that
+
+1155
+00:37:14,239 --> 00:37:19,199
+is the key to like becoming into AI is
+
+1156
+00:37:17,119 --> 00:37:20,720
+that like you just have to focus on it.
+
+1157
+00:37:19,199 --> 00:37:23,039
+You have to write some code by hand and
+
+1158
+00:37:20,719 --> 00:37:24,639
+you have to do this for months and then
+
+1159
+00:37:23,039 --> 00:37:26,320
+you have to wait six to 18 months for
+
+1160
+00:37:24,639 --> 00:37:29,118
+you to get noticed. It just takes a long
+
+1161
+00:37:26,320 --> 00:37:30,880
+time and like all the AI agents I think
+
+1162
+00:37:29,119 --> 00:37:31,920
+just like frazzle that and makes it
+
+1163
+00:37:30,880 --> 00:37:33,280
+harder for people.
+
+1164
+00:37:31,920 --> 00:37:36,400
+>> That's what the mathematicians complain
+
+1165
+00:37:33,280 --> 00:37:38,240
+about too. That's all it's like um
+
+1166
+00:37:36,400 --> 00:37:40,400
+>> so it's a hard time to be a PhD student
+
+1167
+00:37:38,239 --> 00:37:42,799
+but people are doing great work in
+
+1168
+00:37:40,400 --> 00:37:44,160
+academia still and but it's hard.
+
+1169
+00:37:42,800 --> 00:37:45,599
+>> Yeah. But I agree with you. I think it's
+
+1170
+00:37:44,159 --> 00:37:47,039
+like solvable as the agents kind of
+
+1171
+00:37:45,599 --> 00:37:49,200
+perpetuate some version of the problem.
+
+1172
+00:37:47,039 --> 00:37:51,599
+can also help solve and and identify an
+
+1173
+00:37:49,199 --> 00:37:52,719
+end quality filter. Um, okay. So,
+
+1174
+00:37:51,599 --> 00:37:54,320
+environments you're going to release
+
+1175
+00:37:52,719 --> 00:37:55,838
+open source versions of that help
+
+1176
+00:37:54,320 --> 00:37:57,200
+precipitate maybe more people to
+
+1177
+00:37:55,838 --> 00:37:58,639
+contribute and and reveal that. I think
+
+1178
+00:37:57,199 --> 00:38:00,719
+that's like really I mean especially
+
+1179
+00:37:58,639 --> 00:38:02,639
+given how little incentive there is to
+
+1180
+00:38:00,719 --> 00:38:05,118
+release this instead of just get um you
+
+1181
+00:38:02,639 --> 00:38:07,519
+know fast uh revenue from from the labs.
+
+1182
+00:38:05,119 --> 00:38:10,000
+Um, another area I think I read on your
+
+1183
+00:38:07,519 --> 00:38:13,440
+announcement post is RSI, which is, you
+
+1184
+00:38:10,000 --> 00:38:15,519
+know, quite um I think I mean we can
+
+1185
+00:38:13,440 --> 00:38:17,679
+first talk about what is actually
+
+1186
+00:38:15,519 --> 00:38:18,719
+recursive about it or how scary it is or
+
+1187
+00:38:17,679 --> 00:38:20,078
+whether we're going to have takeoff. I
+
+1188
+00:38:18,719 --> 00:38:22,719
+think you have a very grounded opinion
+
+1189
+00:38:20,079 --> 00:38:24,079
+on that. Um uh but you know another
+
+1190
+00:38:22,719 --> 00:38:26,239
+thing I want to kind of talk about is I
+
+1191
+00:38:24,079 --> 00:38:29,039
+think RSI maybe related to how much it's
+
+1192
+00:38:26,239 --> 00:38:31,439
+kind of hyped is is a reason why we are
+
+1193
+00:38:29,039 --> 00:38:33,119
+afraid Frontier Labs will pull away. Um,
+
+1194
+00:38:31,440 --> 00:38:35,200
+in fact, it's also a reason why I've
+
+1195
+00:38:33,119 --> 00:38:38,240
+heard not just once but several times
+
+1196
+00:38:35,199 --> 00:38:40,639
+that people are one convinced that their
+
+1197
+00:38:38,239 --> 00:38:41,439
+own jobs are going to be automated as a
+
+1198
+00:38:40,639 --> 00:38:43,199
+researcher.
+
+1199
+00:38:41,440 --> 00:38:44,400
+>> Yeah. Yeah. Like I've gone through the
+
+1200
+00:38:43,199 --> 00:38:45,679
+last few years, some of my best friends,
+
+1201
+00:38:44,400 --> 00:38:46,880
+I'm like, you are some of the best
+
+1202
+00:38:45,679 --> 00:38:48,639
+people in the world at this. And then
+
+1203
+00:38:46,880 --> 00:38:51,599
+they go to the work and they're like,
+
+1204
+00:38:48,639 --> 00:38:53,279
+>> Nathan, I'm I'm struggling like what am
+
+1205
+00:38:51,599 --> 00:38:54,320
+I going to do? Because to your point
+
+1206
+00:38:53,280 --> 00:38:57,440
+like a lot of what they do is
+
+1207
+00:38:54,320 --> 00:38:59,280
+verifiable, right, for um but because of
+
+1208
+00:38:57,440 --> 00:39:02,159
+that, you know, there's actually quite a
+
+1209
+00:38:59,280 --> 00:39:05,200
+lot of other non-verifiable or harder
+
+1210
+00:39:02,159 --> 00:39:07,118
+out of distribution tasks such as um uh
+
+1211
+00:39:05,199 --> 00:39:08,879
+uh was alignment and things like that.
+
+1212
+00:39:07,119 --> 00:39:10,160
+And so actually because I mean one
+
+1213
+00:39:08,880 --> 00:39:13,519
+argument I heard was because there's
+
+1214
+00:39:10,159 --> 00:39:15,598
+such a difference between how well RSI
+
+1215
+00:39:13,519 --> 00:39:17,679
+is doing for model capabilities versus
+
+1216
+00:39:15,599 --> 00:39:19,838
+alignment which is much more out out of
+
+1217
+00:39:17,679 --> 00:39:22,239
+distribution maybe creative work that
+
+1218
+00:39:19,838 --> 00:39:24,559
+gives people an ease on how you know
+
+1219
+00:39:22,239 --> 00:39:26,479
+maybe there is actual dangers etc etc.
+
+1220
+00:39:24,559 --> 00:39:27,679
+Um so anyways because of this I'm very
+
+1221
+00:39:26,480 --> 00:39:28,880
+interested in hearing from you like how
+
+1222
+00:39:27,679 --> 00:39:31,118
+because I think it's really important
+
+1223
+00:39:28,880 --> 00:39:32,960
+that we do have an open-source um kind
+
+1224
+00:39:31,119 --> 00:39:35,440
+of front and in and showing how RSI is
+
+1225
+00:39:32,960 --> 00:39:36,800
+being done how much maybe then we can
+
+1226
+00:39:35,440 --> 00:39:38,480
+you know understand the capabilities of
+
+1227
+00:39:36,800 --> 00:39:40,400
+like if in within a lab they have a
+
+1228
+00:39:38,480 --> 00:39:42,000
+better model what what are the chances
+
+1229
+00:39:40,400 --> 00:39:44,000
+they actually pull away just better
+
+1230
+00:39:42,000 --> 00:39:45,358
+understanding calibrating um so yeah
+
+1231
+00:39:44,000 --> 00:39:47,119
+would love to hear more about that that
+
+1232
+00:39:45,358 --> 00:39:48,719
+>> yeah so I think this we won't be the
+
+1233
+00:39:47,119 --> 00:39:51,280
+only people doing this but essentially
+
+1234
+00:39:48,719 --> 00:39:53,118
+like RSI has so much mystique like we're
+
+1235
+00:39:51,280 --> 00:39:55,440
+using models for everything and like
+
+1236
+00:39:53,119 --> 00:39:57,358
+what we can do as a open lab and a
+
+1237
+00:39:55,440 --> 00:39:59,599
+nonprofit and I think other companies
+
+1238
+00:39:57,358 --> 00:40:02,319
+like a Luther or hugging pace or open
+
+1239
+00:39:59,599 --> 00:40:04,240
+Athena which is Marin and Stanford they
+
+1240
+00:40:02,320 --> 00:40:06,559
+will get into this good marketing line
+
+1241
+00:40:04,239 --> 00:40:08,719
+for them is and me I'm doing this and
+
+1242
+00:40:06,559 --> 00:40:09,838
+it's like we can share what tools we're
+
+1243
+00:40:08,719 --> 00:40:12,399
+using we're going to build an open
+
+1244
+00:40:09,838 --> 00:40:14,480
+source stack for SFT for mid-training
+
+1245
+00:40:12,400 --> 00:40:17,200
+we're going to use SkyRL miles all these
+
+1246
+00:40:14,480 --> 00:40:18,800
+things you know and we have our task we
+
+1247
+00:40:17,199 --> 00:40:20,639
+have our configs we know what type of
+
+1248
+00:40:18,800 --> 00:40:23,200
+compute we're running we could work with
+
+1249
+00:40:20,639 --> 00:40:25,519
+cloud and GPT and all these models and
+
+1250
+00:40:23,199 --> 00:40:27,118
+we'll just like we can store the
+
+1251
+00:40:25,519 --> 00:40:29,599
+trajectories for what we did. We can
+
+1252
+00:40:27,119 --> 00:40:30,880
+tell you what our tasks ever use linear
+
+1253
+00:40:29,599 --> 00:40:32,720
+or whatever these popular things are.
+
+1254
+00:40:30,880 --> 00:40:35,119
+We'll say what our tasks were and why we
+
+1255
+00:40:32,719 --> 00:40:36,559
+chose them and whether models work on
+
+1256
+00:40:35,119 --> 00:40:38,640
+them or not. And you just do this for a
+
+1257
+00:40:36,559 --> 00:40:40,320
+year of a lab and you're like here's
+
+1258
+00:40:38,639 --> 00:40:42,319
+>> what we did and then you just check in
+
+1259
+00:40:40,320 --> 00:40:44,800
+every six months and you're like has it
+
+1260
+00:40:42,320 --> 00:40:46,720
+changed? And and it's just like to be
+
+1261
+00:40:44,800 --> 00:40:49,119
+able to have the full stack and not need
+
+1262
+00:40:46,719 --> 00:40:51,199
+to go through these classifiers and like
+
+1263
+00:40:49,119 --> 00:40:54,079
+try to
+
+1264
+00:40:51,199 --> 00:40:55,838
+like say what the task is or vaguely and
+
+1265
+00:40:54,079 --> 00:40:57,519
+so on. It's just like people that can
+
+1266
+00:40:55,838 --> 00:40:59,599
+share what automation is happening
+
+1267
+00:40:57,519 --> 00:41:01,519
+should do this and we have a different
+
+1268
+00:40:59,599 --> 00:41:04,720
+distribution of tasks. But I think that
+
+1269
+00:41:01,519 --> 00:41:05,920
+the research is similar like other
+
+1270
+00:41:04,719 --> 00:41:08,239
+things like
+
+1271
+00:41:05,920 --> 00:41:09,920
+>> the AI research that I've done at AI2
+
+1272
+00:41:08,239 --> 00:41:14,159
+and we'll do at Trillium versus what
+
+1273
+00:41:09,920 --> 00:41:16,159
+people do in some sects of acne and the
+
+1274
+00:41:14,159 --> 00:41:17,838
+labs. It's not that different. You have
+
+1275
+00:41:16,159 --> 00:41:19,920
+more resources. You scale it up and it's
+
+1276
+00:41:17,838 --> 00:41:21,679
+just like so good for the world when
+
+1277
+00:41:19,920 --> 00:41:23,680
+everybody's talking about this to just
+
+1278
+00:41:21,679 --> 00:41:25,598
+just show people like
+
+1279
+00:41:23,679 --> 00:41:27,679
+>> this is what Nathan asked his model to
+
+1280
+00:41:25,599 --> 00:41:29,760
+do and this is what it got stuck on. And
+
+1281
+00:41:27,679 --> 00:41:33,199
+I think that will help a lot of like
+
+1282
+00:41:29,760 --> 00:41:34,400
+literal policy makers like you're like,
+
+1283
+00:41:33,199 --> 00:41:35,838
+>> "Oh, okay."
+
+1284
+00:41:34,400 --> 00:41:36,240
+>> It's like, "Oh, that's why it's very
+
+1285
+00:41:35,838 --> 00:41:37,599
+much
+
+1286
+00:41:36,239 --> 00:41:39,838
+>> like that's what it got stuck on." Like
+
+1287
+00:41:37,599 --> 00:41:42,800
+that's the bug that it put in its code.
+
+1288
+00:41:39,838 --> 00:41:45,119
+>> Like the bugs and the catchups will will
+
+1289
+00:41:42,800 --> 00:41:46,880
+reduce over time. But I think
+
+1290
+00:41:45,119 --> 00:41:48,559
+>> I think the jaggedness and some of these
+
+1291
+00:41:46,880 --> 00:41:50,240
+fundamental things of the model is like
+
+1292
+00:41:48,559 --> 00:41:52,000
+some more things will take off. Like I
+
+1293
+00:41:50,239 --> 00:41:53,519
+said efficiency earlier, like I do think
+
+1294
+00:41:52,000 --> 00:41:55,519
+the models would be really good at
+
+1295
+00:41:53,519 --> 00:41:56,960
+lowering serving costs. These companies
+
+1296
+00:41:55,519 --> 00:41:58,960
+have billions of dollars on the line and
+
+1297
+00:41:56,960 --> 00:42:00,639
+the models are good at it. They're going
+
+1298
+00:41:58,960 --> 00:42:02,960
+to make a lot of money on making serving
+
+1299
+00:42:00,639 --> 00:42:05,118
+more efficient and tweaking architecture
+
+1300
+00:42:02,960 --> 00:42:06,800
+in order to go into that.
+
+1301
+00:42:05,119 --> 00:42:08,318
+>> But it's not necessarily like how do you
+
+1302
+00:42:06,800 --> 00:42:10,640
+solve knowledge work? Like Claude's not
+
+1303
+00:42:08,318 --> 00:42:12,639
+going to cla's not going to like you're
+
+1304
+00:42:10,639 --> 00:42:14,559
+not going to be like Claude make tell
+
+1305
+00:42:12,639 --> 00:42:16,480
+yourself to make better PowerPoints like
+
+1306
+00:42:14,559 --> 00:42:18,159
+like what what is
+
+1307
+00:42:16,480 --> 00:42:19,760
+>> environments or some other you know
+
+1308
+00:42:18,159 --> 00:42:21,838
+>> like it's going to take a while.
+
+1309
+00:42:19,760 --> 00:42:23,359
+>> Yeah. Yeah. No, I I love the the
+
+1310
+00:42:21,838 --> 00:42:25,199
+specified goal of like let's just
+
+1311
+00:42:23,358 --> 00:42:27,279
+demystify this because I think a lot of
+
+1312
+00:42:25,199 --> 00:42:29,118
+why the rhetoric gets so heated around
+
+1313
+00:42:27,280 --> 00:42:31,599
+RSI just like it sounds
+
+1314
+00:42:29,119 --> 00:42:32,800
+>> I think AI nonprofits can do a lot of
+
+1315
+00:42:31,599 --> 00:42:34,160
+things like this like it's hard for
+
+1316
+00:42:32,800 --> 00:42:37,440
+academia to be like
+
+1317
+00:42:34,159 --> 00:42:38,639
+>> as a professor 15% of my time and 40% of
+
+1318
+00:42:37,440 --> 00:42:40,480
+time of my grad student is going to be
+
+1319
+00:42:38,639 --> 00:42:42,239
+documenting what we work on. But there's
+
+1320
+00:42:40,480 --> 00:42:44,400
+like such a great like policy and
+
+1321
+00:42:42,239 --> 00:42:46,479
+community service of like here are our
+
+1322
+00:42:44,400 --> 00:42:48,639
+tasks. People can use this data to make
+
+1323
+00:42:46,480 --> 00:42:51,838
+evaluations or whatever. And it's just
+
+1324
+00:42:48,639 --> 00:42:54,799
+like just like build things that have
+
+1325
+00:42:51,838 --> 00:42:57,920
+>> rare information so that when people put
+
+1326
+00:42:54,800 --> 00:43:00,000
+more high focus work into it, it just
+
+1327
+00:42:57,920 --> 00:43:01,680
+has more value for all sorts of things
+
+1328
+00:43:00,000 --> 00:43:03,358
+that you can't predict in the future.
+
+1329
+00:43:01,679 --> 00:43:04,879
+>> It's honestly just also very timely
+
+1330
+00:43:03,358 --> 00:43:06,719
+because the kind of, you know, it's not
+
+1331
+00:43:04,880 --> 00:43:07,920
+from one person, but several people that
+
+1332
+00:43:06,719 --> 00:43:09,279
+I know from the labs are just like,
+
+1333
+00:43:07,920 --> 00:43:10,559
+"Hey, I'm going to get automated." I
+
+1334
+00:43:09,280 --> 00:43:12,640
+mean to to your point to your friends
+
+1335
+00:43:10,559 --> 00:43:14,078
+like I I will definitely as a person
+
+1336
+00:43:12,639 --> 00:43:15,279
+sorry will get automated in a year and
+
+1337
+00:43:14,079 --> 00:43:17,039
+so that probably means there's going to
+
+1338
+00:43:15,280 --> 00:43:19,519
+be less people who actually are exposed
+
+1339
+00:43:17,039 --> 00:43:22,400
+to what's being done on that particular
+
+1340
+00:43:19,519 --> 00:43:23,920
+you know part of the org um uh chart and
+
+1341
+00:43:22,400 --> 00:43:25,838
+so um
+
+1342
+00:43:23,920 --> 00:43:27,358
+>> there's a related academic there's an
+
+1343
+00:43:25,838 --> 00:43:29,039
+open RSI thing which is a bunch of
+
+1344
+00:43:27,358 --> 00:43:30,400
+academic institutions I'm not affiliated
+
+1345
+00:43:29,039 --> 00:43:31,679
+with it they just launched like last
+
+1346
+00:43:30,400 --> 00:43:33,280
+week so I was like yeah
+
+1347
+00:43:31,679 --> 00:43:34,960
+>> they sent me a few emails I'm like open
+
+1348
+00:43:33,280 --> 00:43:37,760
+RSI is a thing they're trying to do this
+
+1349
+00:43:34,960 --> 00:43:39,039
+as well like it doesn't need to just be
+
+1350
+00:43:37,760 --> 00:43:40,560
+>> one group there's a lot more.
+
+1351
+00:43:39,039 --> 00:43:43,039
+>> It's good to have different approaches
+
+1352
+00:43:40,559 --> 00:43:44,719
+doing this because you get you need the
+
+1353
+00:43:43,039 --> 00:43:45,759
+>> different ways of looking at it and
+
+1354
+00:43:44,719 --> 00:43:48,000
+different results.
+
+1355
+00:43:45,760 --> 00:43:51,520
+>> Yeah. Whole point of it being open. The
+
+1356
+00:43:48,000 --> 00:43:53,679
+other thing I also heard was from more
+
+1357
+00:43:51,519 --> 00:43:56,318
+kind of like you know Frontier Lab Goss
+
+1358
+00:43:53,679 --> 00:43:59,838
+is just like the actual methods that are
+
+1359
+00:43:56,318 --> 00:44:01,440
+being used in the labs are not that it's
+
+1360
+00:43:59,838 --> 00:44:04,078
+not that they're unknown. It's just sort
+
+1361
+00:44:01,440 --> 00:44:05,760
+of like what are the proportions that
+
+1362
+00:44:04,079 --> 00:44:06,800
+need to be used that are successful and
+
+1363
+00:44:05,760 --> 00:44:09,280
+this is partially because they have the
+
+1364
+00:44:06,800 --> 00:44:11,359
+capital to scale it to experiment. Um so
+
+1365
+00:44:09,280 --> 00:44:13,680
+I think that's one heartening to know
+
+1366
+00:44:11,358 --> 00:44:15,279
+because like okay it's not like there's
+
+1367
+00:44:13,679 --> 00:44:16,639
+a big secret of what's going on. So
+
+1368
+00:44:15,280 --> 00:44:18,240
+people actually know the techniques but
+
+1369
+00:44:16,639 --> 00:44:20,639
+on the other hand you know capital is
+
+1370
+00:44:18,239 --> 00:44:22,159
+the one true barrier still because it's
+
+1371
+00:44:20,639 --> 00:44:25,118
+hard to actually know which of which of
+
+1372
+00:44:22,159 --> 00:44:26,719
+the techniques recipes uh work. Um
+
+1373
+00:44:25,119 --> 00:44:28,400
+>> that's why I'm not pre-training. I'm
+
+1374
+00:44:26,719 --> 00:44:30,799
+happy to be free. I can use any base
+
+1375
+00:44:28,400 --> 00:44:32,800
+model but equal I'm I'm now get to
+
+1376
+00:44:30,800 --> 00:44:35,039
+benefit from competition.
+
+1377
+00:44:32,800 --> 00:44:37,359
+>> Yeah. I do you think that there's like a
+
+1378
+00:44:35,039 --> 00:44:38,960
+chance for any pre-training open-source
+
+1379
+00:44:37,358 --> 00:44:40,880
+effort? I know the capital requirements
+
+1380
+00:44:38,960 --> 00:44:43,280
+are just like orders of magnitude
+
+1381
+00:44:40,880 --> 00:44:44,800
+larger. So that is what's difficult. Um
+
+1382
+00:44:43,280 --> 00:44:46,480
+but maybe what are the values of that
+
+1383
+00:44:44,800 --> 00:44:48,480
+and then maybe we can kind of discuss
+
+1384
+00:44:46,480 --> 00:44:48,960
+potential commercial strategies that
+
+1385
+00:44:48,480 --> 00:44:51,280
+make
+
+1386
+00:44:48,960 --> 00:44:54,559
+>> pre-training science is pretty like that
+
+1387
+00:44:51,280 --> 00:44:56,160
+the tools are pretty accessible and you
+
+1388
+00:44:54,559 --> 00:44:58,159
+have what is a pre-training ladder which
+
+1389
+00:44:56,159 --> 00:45:01,920
+is like the decision-making tool you
+
+1390
+00:44:58,159 --> 00:45:05,118
+have to test if your ideas scale and the
+
+1391
+00:45:01,920 --> 00:45:06,720
+pre-training data isn't growing at like
+
+1392
+00:45:05,119 --> 00:45:08,640
+like the environment scene like it's
+
+1393
+00:45:06,719 --> 00:45:10,399
+essentially so first approximation you
+
+1394
+00:45:08,639 --> 00:45:11,679
+train on the internet and like there's a
+
+1395
+00:45:10,400 --> 00:45:13,599
+lot of there's little there's little
+
+1396
+00:45:11,679 --> 00:45:15,199
+details and secret things. But
+
+1397
+00:45:13,599 --> 00:45:17,359
+>> but like that's not changing that much.
+
+1398
+00:45:15,199 --> 00:45:20,318
+The state-of-the-art architecture is and
+
+1399
+00:45:17,358 --> 00:45:22,318
+the GPUs are and that's like that
+
+1400
+00:45:20,318 --> 00:45:25,199
+changes and
+
+1401
+00:45:22,318 --> 00:45:28,318
+>> but it's not astronomically expensive to
+
+1402
+00:45:25,199 --> 00:45:29,759
+make a pre-trained model that is solid.
+
+1403
+00:45:28,318 --> 00:45:32,318
+So I think like you don't have to spend
+
+1404
+00:45:29,760 --> 00:45:33,760
+a billion dollars to get a very good
+
+1405
+00:45:32,318 --> 00:45:36,318
+base model. The more you spend the
+
+1406
+00:45:33,760 --> 00:45:37,920
+better you will get. But it's like
+
+1407
+00:45:36,318 --> 00:45:40,318
+people keep making progress and I'm
+
+1408
+00:45:37,920 --> 00:45:42,400
+constantly surprised by a new lab just
+
+1409
+00:45:40,318 --> 00:45:44,800
+goes from scratch because they can. And
+
+1410
+00:45:42,400 --> 00:45:47,599
+some of this is on open tools. So like
+
+1411
+00:45:44,800 --> 00:45:49,280
+>> you can go off Megatron like a lot of
+
+1412
+00:45:47,599 --> 00:45:51,200
+new startups they're like oh what what
+
+1413
+00:45:49,280 --> 00:45:52,720
+should we train? We train they train off
+
+1414
+00:45:51,199 --> 00:45:54,239
+the open source tool and they fork it
+
+1415
+00:45:52,719 --> 00:45:55,919
+and then they never release it again.
+
+1416
+00:45:54,239 --> 00:45:57,358
+This is what all the all the like even
+
+1417
+00:45:55,920 --> 00:45:59,440
+prominent open model labs have done.
+
+1418
+00:45:57,358 --> 00:46:00,799
+They take the open source code they make
+
+1419
+00:45:59,440 --> 00:46:02,480
+it their own thing and they just a lot
+
+1420
+00:46:00,800 --> 00:46:05,680
+of them don't push upstream. Mhm.
+
+1421
+00:46:02,480 --> 00:46:08,000
+>> So, I've always been surprised by this.
+
+1422
+00:46:05,679 --> 00:46:10,799
+So, I'm like not betting against new
+
+1423
+00:46:08,000 --> 00:46:12,880
+entrance because like
+
+1424
+00:46:10,800 --> 00:46:15,440
+it's not that you need 10 billion
+
+1425
+00:46:12,880 --> 00:46:16,880
+dollars to like have a relevant model.
+
+1426
+00:46:15,440 --> 00:46:18,720
+The hard thing is like get a model
+
+1427
+00:46:16,880 --> 00:46:19,200
+that's good enough for people to use.
+
+1428
+00:46:18,719 --> 00:46:21,838
+>> Mhm.
+
+1429
+00:46:19,199 --> 00:46:23,838
+>> And to get a story where if you release
+
+1430
+00:46:21,838 --> 00:46:26,639
+it, you can do your next fund raise,
+
+1431
+00:46:23,838 --> 00:46:28,480
+which is like you have to get past this
+
+1432
+00:46:26,639 --> 00:46:30,400
+lock of like we need our first model to
+
+1433
+00:46:28,480 --> 00:46:33,679
+land. If like your whole company is
+
+1434
+00:46:30,400 --> 00:46:35,358
+based on models are the best and you're
+
+1435
+00:46:33,679 --> 00:46:37,440
+not in the ballpark and you're not
+
+1436
+00:46:35,358 --> 00:46:38,639
+releasing like you're on the clock and
+
+1437
+00:46:37,440 --> 00:46:40,240
+it's like I think of like thinking
+
+1438
+00:46:38,639 --> 00:46:41,759
+machines getting inkling out where it's
+
+1439
+00:46:40,239 --> 00:46:43,519
+like they were very transparent. They're
+
+1440
+00:46:41,760 --> 00:46:45,599
+like this wasn't the best model. We're
+
+1441
+00:46:43,519 --> 00:46:46,880
+proud of it. Has some cool things. Yeah.
+
+1442
+00:46:45,599 --> 00:46:48,000
+>> And like they're now they've released
+
+1443
+00:46:46,880 --> 00:46:50,160
+their second model and they're getting
+
+1444
+00:46:48,000 --> 00:46:51,519
+going and they have Tinker has this like
+
+1445
+00:46:50,159 --> 00:46:53,759
+that's very good for them. They're like
+
+1446
+00:46:51,519 --> 00:46:55,119
+off the ground and it's just like
+
+1447
+00:46:53,760 --> 00:46:56,720
+>> that I don't think that's what they were
+
+1448
+00:46:55,119 --> 00:46:59,119
+do. Like they were building models but
+
+1449
+00:46:56,719 --> 00:47:00,879
+open models wasn't their first plan.
+
+1450
+00:46:59,119 --> 00:47:02,640
+and then they got there and there's a
+
+1451
+00:47:00,880 --> 00:47:04,160
+lot there's rumors that like Meta said
+
+1452
+00:47:02,639 --> 00:47:06,799
+they'll release a new openw weight model
+
+1453
+00:47:04,159 --> 00:47:07,838
+again like that'll come
+
+1454
+00:47:06,800 --> 00:47:09,440
+there's a lot of companies out there
+
+1455
+00:47:07,838 --> 00:47:10,960
+that couldn't afford models.
+
+1456
+00:47:09,440 --> 00:47:13,119
+>> Yeah. Yeah. I know I'm definitely you
+
+1457
+00:47:10,960 --> 00:47:14,639
+know glad that thinking machines is and
+
+1458
+00:47:13,119 --> 00:47:16,559
+it makes so much sense for their
+
+1459
+00:47:14,639 --> 00:47:20,000
+business model um because they do post
+
+1460
+00:47:16,559 --> 00:47:21,679
+training um and you know with meta I
+
+1461
+00:47:20,000 --> 00:47:23,039
+think you mentioned this as well in some
+
+1462
+00:47:21,679 --> 00:47:24,480
+previous writings it just for them it's
+
+1463
+00:47:23,039 --> 00:47:26,239
+just such a good strategy. I think it
+
+1464
+00:47:24,480 --> 00:47:27,599
+was also just kind of obvious when they
+
+1465
+00:47:26,239 --> 00:47:29,759
+they do it. It's like it's complimentary
+
+1466
+00:47:27,599 --> 00:47:31,838
+to my, you know, revenue streams.
+
+1467
+00:47:29,760 --> 00:47:33,359
+>> Mark wrote the best blog post on this.
+
+1468
+00:47:31,838 --> 00:47:35,440
+Like when Llama 3 came out, he wrote
+
+1469
+00:47:33,358 --> 00:47:35,759
+like the best like why open his path
+
+1470
+00:47:35,440 --> 00:47:36,720
+forward.
+
+1471
+00:47:35,760 --> 00:47:38,319
+>> Right. Right.
+
+1472
+00:47:36,719 --> 00:47:39,919
+>> Guy got Guy got a little distracted.
+
+1473
+00:47:38,318 --> 00:47:41,358
+Seems like he's coming back to
+
+1474
+00:47:39,920 --> 00:47:43,119
+>> Right. Right. Yeah. Yeah. So I hope that
+
+1475
+00:47:41,358 --> 00:47:45,440
+they they keep on being motivated to do
+
+1476
+00:47:43,119 --> 00:47:47,838
+that. um getting to the frontier with
+
+1477
+00:47:45,440 --> 00:47:49,760
+pre-training. You know, I think there's
+
+1478
+00:47:47,838 --> 00:47:51,440
+a lot of help given that there's such
+
+1479
+00:47:49,760 --> 00:47:53,200
+good open source models to maybe, you
+
+1480
+00:47:51,440 --> 00:47:55,519
+know, somehow still kind of bootstrap
+
+1481
+00:47:53,199 --> 00:47:57,199
+from. I I keep on getting kind of
+
+1482
+00:47:55,519 --> 00:48:00,400
+conflicting signals as to like whether
+
+1483
+00:47:57,199 --> 00:48:01,838
+pre-training is actually as saturated or
+
+1484
+00:48:00,400 --> 00:48:02,960
+well understood. I mean, maybe maybe to
+
+1485
+00:48:01,838 --> 00:48:04,318
+your point like there's a lot of like
+
+1486
+00:48:02,960 --> 00:48:05,760
+well-known techniques that work, but
+
+1487
+00:48:04,318 --> 00:48:09,199
+what's hard is just actually having
+
+1488
+00:48:05,760 --> 00:48:10,400
+access to the 20,000 30,000 chips.
+
+1489
+00:48:09,199 --> 00:48:14,000
+people are turning the crank on
+
+1490
+00:48:10,400 --> 00:48:15,838
+pre-training and pre-training became
+
+1491
+00:48:14,000 --> 00:48:17,519
+adjusted when super long context
+
+1492
+00:48:15,838 --> 00:48:20,559
+generation happened. So there's just way
+
+1493
+00:48:17,519 --> 00:48:22,880
+more return if you're if you can for
+
+1494
+00:48:20,559 --> 00:48:24,480
+example like get a sparse attention
+
+1495
+00:48:22,880 --> 00:48:27,440
+architecture to work as well and then
+
+1496
+00:48:24,480 --> 00:48:29,199
+your 100,000 token generation is 40%
+
+1497
+00:48:27,440 --> 00:48:31,280
+faster. So I think there's a lot of
+
+1498
+00:48:29,199 --> 00:48:33,039
+co-evolution of the whole stack where
+
+1499
+00:48:31,280 --> 00:48:34,800
+they have their pre-training stack they
+
+1500
+00:48:33,039 --> 00:48:36,719
+realize that inference scaling is so
+
+1501
+00:48:34,800 --> 00:48:38,640
+much higher but even the fundamentals of
+
+1502
+00:48:36,719 --> 00:48:39,919
+pre-training keep improving where you
+
+1503
+00:48:38,639 --> 00:48:42,400
+just have a marginally better
+
+1504
+00:48:39,920 --> 00:48:43,680
+architecture returns on investment and
+
+1505
+00:48:42,400 --> 00:48:45,039
+then it kind of blurs into post-
+
+1506
+00:48:43,679 --> 00:48:46,639
+training where this mid-training where
+
+1507
+00:48:45,039 --> 00:48:48,400
+you start the reasoning behaviors you
+
+1508
+00:48:46,639 --> 00:48:50,558
+take them from your older models you do
+
+1509
+00:48:48,400 --> 00:48:52,880
+RL on them the seed behaviors like this
+
+1510
+00:48:50,559 --> 00:48:54,559
+cycle is much more complicated than
+
+1511
+00:48:52,880 --> 00:48:56,000
+pre-training like I think it's if you
+
+1512
+00:48:54,559 --> 00:48:58,640
+don't have the right people it's a lot
+
+1513
+00:48:56,000 --> 00:49:00,159
+harder to get that off the ground than I
+
+1514
+00:48:58,639 --> 00:49:02,480
+think pre-training was like I think
+
+1515
+00:49:00,159 --> 00:49:03,759
+there's like I think like to do a
+
+1516
+00:49:02,480 --> 00:49:05,519
+controlled like let's just start
+
+1517
+00:49:03,760 --> 00:49:07,599
+pre-training our model seems a lot more
+
+1518
+00:49:05,519 --> 00:49:09,199
+approachable to me then I don't really
+
+1519
+00:49:07,599 --> 00:49:10,400
+know much about language models I'm
+
+1520
+00:49:09,199 --> 00:49:11,679
+going to figure out this whole post-
+
+1521
+00:49:10,400 --> 00:49:12,559
+training thing where it's just like the
+
+1522
+00:49:11,679 --> 00:49:15,679
+wild west.
+
+1523
+00:49:12,559 --> 00:49:18,240
+>> Yeah. And that's why I was like when I
+
+1524
+00:49:15,679 --> 00:49:20,239
+left AI2, I felt like our post training
+
+1525
+00:49:18,239 --> 00:49:22,078
+was honestly falling behind just cuz our
+
+1526
+00:49:20,239 --> 00:49:23,519
+cycle time was not high enough
+
+1527
+00:49:22,079 --> 00:49:25,039
+>> and we're going into these agentic
+
+1528
+00:49:23,519 --> 00:49:25,838
+things and these are still some of the
+
+1529
+00:49:25,039 --> 00:49:27,519
+like
+
+1530
+00:49:25,838 --> 00:49:29,519
+>> leading open source post training
+
+1531
+00:49:27,519 --> 00:49:31,280
+recipes and
+
+1532
+00:49:29,519 --> 00:49:32,800
+>> to that's just like that's what I want
+
+1533
+00:49:31,280 --> 00:49:35,680
+to fix is like
+
+1534
+00:49:32,800 --> 00:49:37,760
+>> it doesn't take as much capital to make
+
+1535
+00:49:35,679 --> 00:49:39,039
+>> very big compounding gains on the state
+
+1536
+00:49:37,760 --> 00:49:40,960
+of the art and the open source because
+
+1537
+00:49:39,039 --> 00:49:43,599
+the bar is very low. It's like it's not
+
+1538
+00:49:40,960 --> 00:49:44,800
+like it's not close. Yeah. Yeah. No,
+
+1539
+00:49:43,599 --> 00:49:46,160
+that that makes sense. It's just like a
+
+1540
+00:49:44,800 --> 00:49:47,920
+kind of efficiency of where you can put
+
+1541
+00:49:46,159 --> 00:49:50,318
+capital and make a huge difference.
+
+1542
+00:49:47,920 --> 00:49:52,159
+Yeah. Yeah. kind of related to the whole
+
+1543
+00:49:50,318 --> 00:49:54,800
+you know post- training side maybe you
+
+1544
+00:49:52,159 --> 00:49:57,358
+know pulling away from closed and open
+
+1545
+00:49:54,800 --> 00:49:59,599
+is the fact that the agents you know the
+
+1546
+00:49:57,358 --> 00:50:03,358
+type of harnesses that are being used in
+
+1547
+00:49:59,599 --> 00:50:05,680
+the closed labs are very different and
+
+1548
+00:50:03,358 --> 00:50:08,078
+slash you know actually trained and you
+
+1549
+00:50:05,679 --> 00:50:10,239
+know post-trained on to to you know to
+
+1550
+00:50:08,079 --> 00:50:11,599
+to be specifically good for um their
+
+1551
+00:50:10,239 --> 00:50:14,000
+models are specifically good for those
+
+1552
+00:50:11,599 --> 00:50:16,480
+harnesses and so that in increases the
+
+1553
+00:50:14,000 --> 00:50:18,719
+mystique even more makes it very hard um
+
+1554
+00:50:16,480 --> 00:50:20,719
+how do you I guess one, do you agree?
+
+1555
+00:50:18,719 --> 00:50:22,399
+And then two, like how are you sort of
+
+1556
+00:50:20,719 --> 00:50:24,078
+hoping specifically to kind of address
+
+1557
+00:50:22,400 --> 00:50:25,358
+that? And things I mean are really
+
+1558
+00:50:24,079 --> 00:50:26,880
+examples like, hey, spin up like
+
+1559
+00:50:25,358 --> 00:50:28,480
+thousands of agents, tens of thousands
+
+1560
+00:50:26,880 --> 00:50:30,000
+of agents. It's just like a very
+
+1561
+00:50:28,480 --> 00:50:32,960
+different workflow than what people are
+
+1562
+00:50:30,000 --> 00:50:35,519
+are obviously um exposed to.
+
+1563
+00:50:32,960 --> 00:50:38,240
+>> I think it'll be okay for open because I
+
+1564
+00:50:35,519 --> 00:50:39,679
+thought years ago that say the closed
+
+1565
+00:50:38,239 --> 00:50:40,959
+labs would be like Apple. There would be
+
+1566
+00:50:39,679 --> 00:50:42,719
+the integrated company where they have
+
+1567
+00:50:40,960 --> 00:50:45,280
+the model designed for the harness
+
+1568
+00:50:42,719 --> 00:50:47,679
+involved. It gives them um like kind of
+
+1569
+00:50:45,280 --> 00:50:49,280
+economy, scale, efficiency. But it
+
+1570
+00:50:47,679 --> 00:50:50,399
+turned out that so many people have
+
+1571
+00:50:49,280 --> 00:50:52,079
+different harnesses for different things
+
+1572
+00:50:50,400 --> 00:50:53,599
+that they like to do that the models
+
+1573
+00:50:52,079 --> 00:50:55,039
+companies have been pressurized to make
+
+1574
+00:50:53,599 --> 00:50:56,720
+it so that their model can work in all
+
+1575
+00:50:55,039 --> 00:50:58,000
+sorts of different harnesses. And I
+
+1576
+00:50:56,719 --> 00:50:59,679
+thought it would be a weakness of open
+
+1577
+00:50:58,000 --> 00:51:00,880
+models that they have to be designed to
+
+1578
+00:50:59,679 --> 00:51:03,358
+train on all sorts of types of
+
+1579
+00:51:00,880 --> 00:51:04,960
+harnesses. But it ended up being pretty
+
+1580
+00:51:03,358 --> 00:51:06,480
+equilibriated or like it's at
+
+1581
+00:51:04,960 --> 00:51:08,720
+equilibrium where they all have to do it
+
+1582
+00:51:06,480 --> 00:51:10,880
+to some capacity. And then what we're
+
+1583
+00:51:08,719 --> 00:51:12,558
+seeing with this like agent swarms is
+
+1584
+00:51:10,880 --> 00:51:13,838
+that OpenAI and Enthrop are going to be
+
+1585
+00:51:12,559 --> 00:51:15,119
+earlier to it. They're going to know how
+
+1586
+00:51:13,838 --> 00:51:17,039
+to design their models. They're going to
+
+1587
+00:51:15,119 --> 00:51:18,640
+know how to design what do we call what
+
+1588
+00:51:17,039 --> 00:51:22,519
+do we call want to call a harness for a
+
+1589
+00:51:18,639 --> 00:51:22,519
+swarm. I don't know like
+
+1590
+00:51:22,559 --> 00:51:25,119
+I don't know but there's going to be a
+
+1591
+00:51:23,679 --> 00:51:27,199
+word for it. It's not a harness. It's
+
+1592
+00:51:25,119 --> 00:51:28,318
+like a coordination system. But then
+
+1593
+00:51:27,199 --> 00:51:29,519
+eventually other people are going to
+
+1594
+00:51:28,318 --> 00:51:30,558
+want to use them. And then I think it's
+
+1595
+00:51:29,519 --> 00:51:32,159
+going to be like these cycles where the
+
+1596
+00:51:30,559 --> 00:51:34,000
+Frontier Labs like they push this out
+
+1597
+00:51:32,159 --> 00:51:35,679
+and they have this
+
+1598
+00:51:34,000 --> 00:51:37,519
+>> to date they've had huge returns on
+
+1599
+00:51:35,679 --> 00:51:39,358
+being first. like what is the returns on
+
+1600
+00:51:37,519 --> 00:51:41,280
+Navier Stokes and all these things like
+
+1601
+00:51:39,358 --> 00:51:43,039
+we don't really know like we don't know
+
+1602
+00:51:41,280 --> 00:51:45,680
+they push the frontier
+
+1603
+00:51:43,039 --> 00:51:48,000
+>> in the assumption that there will be
+
+1604
+00:51:45,679 --> 00:51:50,159
+high returns and that this marginal
+
+1605
+00:51:48,000 --> 00:51:52,480
+intent marginal intelligence has like
+
+1606
+00:51:50,159 --> 00:51:54,318
+disproportionate returns and we don't
+
+1607
+00:51:52,480 --> 00:51:55,838
+know if that's always true but I kind of
+
+1608
+00:51:54,318 --> 00:51:57,679
+expect these cycles of like once you
+
+1609
+00:51:55,838 --> 00:51:59,679
+know the shape of how do you control
+
+1610
+00:51:57,679 --> 00:52:01,199
+10,000 agents in one harness then the
+
+1611
+00:51:59,679 --> 00:52:02,399
+open model companies be like oh we can
+
+1612
+00:52:01,199 --> 00:52:04,318
+do this too
+
+1613
+00:52:02,400 --> 00:52:05,838
+>> but it's not like Timmy is going to do
+
+1614
+00:52:04,318 --> 00:52:06,558
+that first for one they don't have the
+
+1615
+00:52:05,838 --> 00:52:06,880
+comput.
+
+1616
+00:52:06,559 --> 00:52:09,119
+>> Yeah,
+
+1617
+00:52:06,880 --> 00:52:11,119
+>> it's an astronomical amount of comput,
+
+1618
+00:52:09,119 --> 00:52:13,358
+but these things go through cycles.
+
+1619
+00:52:11,119 --> 00:52:16,559
+Nvidia's chips will get way faster.
+
+1620
+00:52:13,358 --> 00:52:18,318
+There's more comput built out.
+
+1621
+00:52:16,559 --> 00:52:20,640
+>> So, you're very convinced that like
+
+1622
+00:52:18,318 --> 00:52:22,400
+there's not too much hidden there that
+
+1623
+00:52:20,639 --> 00:52:24,400
+you can probably guess at what they're
+
+1624
+00:52:22,400 --> 00:52:26,079
+doing and then when it becomes relevant,
+
+1625
+00:52:24,400 --> 00:52:28,880
+let the open source models actually try
+
+1626
+00:52:26,079 --> 00:52:30,960
+to also post train on similar
+
+1627
+00:52:28,880 --> 00:52:32,559
+meta harnesses, whatever name. And I
+
+1628
+00:52:30,960 --> 00:52:34,800
+also think like
+
+1629
+00:52:32,559 --> 00:52:36,240
+>> the the security at these labs in terms
+
+1630
+00:52:34,800 --> 00:52:38,160
+of information is not as high as they
+
+1631
+00:52:36,239 --> 00:52:40,159
+think. Like Silicon Valley is famous for
+
+1632
+00:52:38,159 --> 00:52:42,318
+like ideas traveling like what is it
+
+1633
+00:52:40,159 --> 00:52:43,759
+like one beer or something and it's like
+
+1634
+00:52:42,318 --> 00:52:45,358
+everybody chats after work
+
+1635
+00:52:43,760 --> 00:52:47,280
+>> except which is why SSI is so
+
+1636
+00:52:45,358 --> 00:52:49,838
+impressive. That's what's going on.
+
+1637
+00:52:47,280 --> 00:52:51,440
+>> That's the only past. But it's like
+
+1638
+00:52:49,838 --> 00:52:52,400
+we're all everyone's scientists. If they
+
+1639
+00:52:51,440 --> 00:52:53,599
+made a breakthrough they're going to
+
+1640
+00:52:52,400 --> 00:52:55,200
+want to tell their friends about it.
+
+1641
+00:52:53,599 --> 00:52:57,359
+They might hold it. They might hold it
+
+1642
+00:52:55,199 --> 00:53:00,719
+for a few months, but like
+
+1643
+00:52:57,358 --> 00:53:02,400
+>> I don't think there the amount of lock
+
+1644
+00:53:00,719 --> 00:53:05,759
+like information security you would need
+
+1645
+00:53:02,400 --> 00:53:07,519
+is just so high that knowledge spreads.
+
+1646
+00:53:05,760 --> 00:53:12,000
+It's hard to keep this secret. Like what
+
+1647
+00:53:07,519 --> 00:53:13,838
+you what they can win on is putting more
+
+1648
+00:53:12,000 --> 00:53:15,440
+inference into their infrastructure
+
+1649
+00:53:13,838 --> 00:53:16,960
+which lets them serve at a lower price
+
+1650
+00:53:15,440 --> 00:53:19,280
+and make higher margins and then
+
+1651
+00:53:16,960 --> 00:53:20,639
+continue this over a longer time. So I'm
+
+1652
+00:53:19,280 --> 00:53:22,640
+very confident in the frontier labs
+
+1653
+00:53:20,639 --> 00:53:26,078
+being able to serve
+
+1654
+00:53:22,639 --> 00:53:29,039
+the cheapest intelligence per
+
+1655
+00:53:26,079 --> 00:53:30,880
+per watt per scoral.
+
+1656
+00:53:29,039 --> 00:53:32,800
+>> They are going to be able to go to the
+
+1657
+00:53:30,880 --> 00:53:35,920
+places with the highest demand and have
+
+1658
+00:53:32,800 --> 00:53:38,480
+the like the cheapest models and that
+
+1659
+00:53:35,920 --> 00:53:39,920
+will be revenue creative like that will
+
+1660
+00:53:38,480 --> 00:53:41,440
+be good business for them. The question
+
+1661
+00:53:39,920 --> 00:53:42,720
+is like they can't do everything and
+
+1662
+00:53:41,440 --> 00:53:44,159
+that's where the rest of the economy
+
+1663
+00:53:42,719 --> 00:53:47,838
+fills in is like
+
+1664
+00:53:44,159 --> 00:53:49,118
+>> is it just coding that is profitable
+
+1665
+00:53:47,838 --> 00:53:50,799
+then? Definitely not
+
+1666
+00:53:49,119 --> 00:53:52,400
+>> good case for frontier models because
+
+1667
+00:53:50,800 --> 00:53:53,039
+they will have the mo like they have
+
+1668
+00:53:52,400 --> 00:53:54,639
+integration.
+
+1669
+00:53:53,039 --> 00:53:56,239
+>> They'll do very well but it's coding
+
+1670
+00:53:54,639 --> 00:53:58,078
+>> is the whole economy of knowledge work
+
+1671
+00:53:56,239 --> 00:54:00,078
+is the market for things and then it
+
+1672
+00:53:58,079 --> 00:54:01,440
+might not be good for them because can
+
+1673
+00:54:00,079 --> 00:54:02,880
+they do everything at once
+
+1674
+00:54:01,440 --> 00:54:04,400
+>> or they don't need to though. I think
+
+1675
+00:54:02,880 --> 00:54:04,720
+there's going to be a lot of winners.
+
+1676
+00:54:04,400 --> 00:54:06,079
+>> Yeah.
+
+1677
+00:54:04,719 --> 00:54:07,598
+>> Yeah. I mean that's what I I mean that's
+
+1678
+00:54:06,079 --> 00:54:10,079
+why we invest in the frontier models and
+
+1679
+00:54:07,599 --> 00:54:11,599
+in startups you know um not because we
+
+1680
+00:54:10,079 --> 00:54:13,760
+want to hedge but because I actually do
+
+1681
+00:54:11,599 --> 00:54:15,760
+think you know to kind of cooperate your
+
+1682
+00:54:13,760 --> 00:54:18,480
+view that there's enough
+
+1683
+00:54:15,760 --> 00:54:20,720
+>> harder tasks at the fringe that requires
+
+1684
+00:54:18,480 --> 00:54:22,400
+a very specialized data that's kind of
+
+1685
+00:54:20,719 --> 00:54:24,239
+out of the splash zone for getting to
+
+1686
+00:54:22,400 --> 00:54:27,119
+AGI or whatever you want to call it
+
+1687
+00:54:24,239 --> 00:54:29,118
+these days um um that makes it possible
+
+1688
+00:54:27,119 --> 00:54:31,440
+to have many many winners. Yeah,
+
+1689
+00:54:29,119 --> 00:54:33,280
+>> I do like your RSI point as we talked a
+
+1690
+00:54:31,440 --> 00:54:36,639
+little bit about it which is just kind
+
+1691
+00:54:33,280 --> 00:54:39,040
+of say practically hey it's exponential
+
+1692
+00:54:36,639 --> 00:54:41,920
+cost and resource consumption and
+
+1693
+00:54:39,039 --> 00:54:45,838
+therefore there's a very obvious kind of
+
+1694
+00:54:41,920 --> 00:54:48,400
+limit to how much that um the Frontier
+
+1695
+00:54:45,838 --> 00:54:51,519
+Labs can pull away um if that's not too
+
+1696
+00:54:48,400 --> 00:54:52,720
+oversimplification of your view um
+
+1697
+00:54:51,519 --> 00:54:54,159
+anything else you kind of want to add
+
+1698
+00:54:52,719 --> 00:54:56,558
+there because I I do feel like the the
+
+1699
+00:54:54,159 --> 00:54:58,318
+the discourse now is just so so much
+
+1700
+00:54:56,559 --> 00:55:00,640
+fear on like how how much the frontier
+
+1701
+00:54:58,318 --> 00:55:02,880
+here is just hidden and also breaking
+
+1702
+00:55:00,639 --> 00:55:06,000
+away. I think there's so much spend on
+
+1703
+00:55:02,880 --> 00:55:08,559
+inference and that in the short term we
+
+1704
+00:55:06,000 --> 00:55:11,039
+are learning how to
+
+1705
+00:55:08,559 --> 00:55:13,200
+um corral inference into performance
+
+1706
+00:55:11,039 --> 00:55:14,960
+gains and this is like a thing that we
+
+1707
+00:55:13,199 --> 00:55:16,639
+just had and like
+
+1708
+00:55:14,960 --> 00:55:19,199
+>> this is what we are seeing now is that
+
+1709
+00:55:16,639 --> 00:55:21,199
+like people are spending so much and
+
+1710
+00:55:19,199 --> 00:55:23,118
+>> like all the employees at the frontier
+
+1711
+00:55:21,199 --> 00:55:24,799
+labs are spending exponential amounts
+
+1712
+00:55:23,119 --> 00:55:26,400
+relative to the improvements but like
+
+1713
+00:55:24,800 --> 00:55:29,280
+we're figuring out how to do this and
+
+1714
+00:55:26,400 --> 00:55:32,079
+there will be a lot of gains but I don't
+
+1715
+00:55:29,280 --> 00:55:34,640
+think that it's necessarily going to be
+
+1716
+00:55:32,079 --> 00:55:37,760
+this like fast takeoff when the models
+
+1717
+00:55:34,639 --> 00:55:40,639
+build themselves. It's human human
+
+1718
+00:55:37,760 --> 00:55:42,960
+bottlenecks. The all the scaling laws
+
+1719
+00:55:40,639 --> 00:55:46,400
+are exponential increase in compute for
+
+1720
+00:55:42,960 --> 00:55:48,559
+linear increase in performance and exp
+
+1721
+00:55:46,400 --> 00:55:50,160
+like that's just like it's hard for me
+
+1722
+00:55:48,559 --> 00:55:52,798
+to bet against this. I would do say that
+
+1723
+00:55:50,159 --> 00:55:56,558
+like we have Navier Stokes and I'm of
+
+1724
+00:55:52,798 --> 00:55:58,480
+the opinion that math is exceptionally
+
+1725
+00:55:56,559 --> 00:56:00,480
+well suited maybe like the scientific
+
+1726
+00:55:58,480 --> 00:56:02,559
+field that is best suited to this shape
+
+1727
+00:56:00,480 --> 00:56:05,199
+of intelligence and like intelligence
+
+1728
+00:56:02,559 --> 00:56:07,680
+can take many different forms and that's
+
+1729
+00:56:05,199 --> 00:56:10,480
+not to say that like if they do like if
+
+1730
+00:56:07,679 --> 00:56:11,679
+an AI model does say discover something
+
+1731
+00:56:10,480 --> 00:56:13,358
+that's very different than the
+
+1732
+00:56:11,679 --> 00:56:15,440
+transformer that gives very different
+
+1733
+00:56:13,358 --> 00:56:17,119
+properties and unlocks a new type of
+
+1734
+00:56:15,440 --> 00:56:18,000
+intelligence like it is worth updating
+
+1735
+00:56:17,119 --> 00:56:20,000
+on this
+
+1736
+00:56:18,000 --> 00:56:22,559
+>> and worth being like okay like that is
+
+1737
+00:56:20,000 --> 00:56:24,159
+different but until that happens I'm
+
+1738
+00:56:22,559 --> 00:56:26,160
+like pretty happy with my evidence of
+
+1739
+00:56:24,159 --> 00:56:28,798
+like the companies are going to do well
+
+1740
+00:56:26,159 --> 00:56:30,879
+they're spending exponentially more to
+
+1741
+00:56:28,798 --> 00:56:33,759
+keep this remarkable pace of progress
+
+1742
+00:56:30,880 --> 00:56:36,240
+that some of the clawed system cards say
+
+1743
+00:56:33,760 --> 00:56:38,640
+this they're like it would take say like
+
+1744
+00:56:36,239 --> 00:56:40,558
+10x more progress to make this a fast
+
+1745
+00:56:38,639 --> 00:56:42,879
+takeoff and it's like for now they're
+
+1746
+00:56:40,559 --> 00:56:45,040
+helping us sustain the pace of progress
+
+1747
+00:56:42,880 --> 00:56:46,720
+and I think it's a good equil like it's
+
+1748
+00:56:45,039 --> 00:56:49,599
+a good equilibrium but I do think that
+
+1749
+00:56:46,719 --> 00:56:51,439
+like the labs have people saying the the
+
+1750
+00:56:49,599 --> 00:56:53,838
+science is like it's hard to overcome
+
+1751
+00:56:51,440 --> 00:56:56,000
+that and it's okay but it's like we
+
+1752
+00:56:53,838 --> 00:56:56,558
+don't know exactly what it'll go from
+
+1753
+00:56:56,000 --> 00:56:58,559
+here.
+
+1754
+00:56:56,559 --> 00:56:59,839
+>> Yeah. Yeah. No, I I I think that's kind
+
+1755
+00:56:58,559 --> 00:57:01,839
+of com comforting because we know what
+
+1756
+00:56:59,838 --> 00:57:04,239
+the inputs and and lovers are here. It's
+
+1757
+00:57:01,838 --> 00:57:05,838
+just there is a very successful auto
+
+1758
+00:57:04,239 --> 00:57:08,399
+reggressive regime that we've been
+
+1759
+00:57:05,838 --> 00:57:09,759
+optimizing and that one just you know
+
+1760
+00:57:08,400 --> 00:57:12,000
+asks for a certain amount of like
+
+1761
+00:57:09,760 --> 00:57:14,079
+exponential resources which are clearly
+
+1762
+00:57:12,000 --> 00:57:16,318
+capped. Um and therefore open source
+
+1763
+00:57:14,079 --> 00:57:18,000
+hopefully you know keeps it strong as
+
+1764
+00:57:16,318 --> 00:57:19,358
+well. just it wouldn't lag behind.
+
+1765
+00:57:18,000 --> 00:57:21,039
+>> There is dramatic amount of work to do
+
+1766
+00:57:19,358 --> 00:57:22,880
+in preparing for infrastructure. Like
+
+1767
+00:57:21,039 --> 00:57:25,039
+there's the AI capability plot which
+
+1768
+00:57:22,880 --> 00:57:27,200
+doesn't necessarily worry me but the AI
+
+1769
+00:57:25,039 --> 00:57:30,000
+capability plot in the pretty much
+
+1770
+00:57:27,199 --> 00:57:32,399
+non-existing preparation of cross public
+
+1771
+00:57:30,000 --> 00:57:34,639
+cyber security and all these things like
+
+1772
+00:57:32,400 --> 00:57:37,440
+>> there needs to be more preparation in
+
+1773
+00:57:34,639 --> 00:57:39,279
+the assumption that this is coming
+
+1774
+00:57:37,440 --> 00:57:41,440
+>> than there is and then that's kind of
+
+1775
+00:57:39,280 --> 00:57:44,160
+the thing that worries me more than say
+
+1776
+00:57:41,440 --> 00:57:46,559
+like RSI is coming and unlocking new
+
+1777
+00:57:44,159 --> 00:57:47,920
+risks like there are risks that are here
+
+1778
+00:57:46,559 --> 00:57:49,920
+and that are going to continue to
+
+1779
+00:57:47,920 --> 00:57:51,358
+diffuse and many times have said close
+
+1780
+00:57:49,920 --> 00:57:53,039
+labs get there And then the open labs
+
+1781
+00:57:51,358 --> 00:57:54,719
+get there. It's like we're in this
+
+1782
+00:57:53,039 --> 00:57:56,239
+process for a lot of things that are
+
+1783
+00:57:54,719 --> 00:57:58,959
+going to cause some problems. And it's
+
+1784
+00:57:56,239 --> 00:58:00,798
+just like figuring out how to get
+
+1785
+00:57:58,960 --> 00:58:01,358
+society to prepare is very hard.
+
+1786
+00:58:00,798 --> 00:58:03,920
+>> Yeah.
+
+1787
+00:58:01,358 --> 00:58:05,598
+>> And I come of the opinion that we need
+
+1788
+00:58:03,920 --> 00:58:07,039
+more eyes. We need more science so that
+
+1789
+00:58:05,599 --> 00:58:07,359
+society feels informed.
+
+1790
+00:58:07,039 --> 00:58:09,519
+>> Yeah.
+
+1791
+00:58:07,358 --> 00:58:12,960
+>> But there are other valid opinions. And
+
+1792
+00:58:09,519 --> 00:58:15,519
+like I do think that not fearing fast
+
+1793
+00:58:12,960 --> 00:58:17,280
+takeoff does not mean that you don't
+
+1794
+00:58:15,519 --> 00:58:18,400
+worry about risks. I don't like you.
+
+1795
+00:58:17,280 --> 00:58:20,720
+>> No, I think that that's completely Yeah.
+
+1796
+00:58:18,400 --> 00:58:23,599
+Maybe I'll I'll send in uh some people
+
+1797
+00:58:20,719 --> 00:58:25,598
+your way that are defected from the lab
+
+1798
+00:58:23,599 --> 00:58:26,880
+worried precisely about this. Well,
+
+1799
+00:58:25,599 --> 00:58:28,960
+thank you so much, Nathan. This was a
+
+1800
+00:58:26,880 --> 00:58:31,200
+lot of fun and um yeah, I'm really
+
+1801
+00:58:28,960 --> 00:58:32,880
+excited to see what Trillium is um up to
+
+1802
+00:58:31,199 --> 00:58:37,078
+now that it's finally launched.
+
+1803
+00:58:32,880 --> 00:58:37,079
+>> Yeah, thanks so much for having me.
