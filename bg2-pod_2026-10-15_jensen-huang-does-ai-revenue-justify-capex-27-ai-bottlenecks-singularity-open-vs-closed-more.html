@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: Jensen Huang | Does AI Revenue Justify Capex, '27 AI Bottlenecks, Singularity, Open vs Closed &amp; more</title>
+<meta name="description" content="Bg2 Pod · 8 threads · why compute demand compounds · physical AI already $10B a half · safety as engineering · 2027 bottleneck is land/power/shell · capex isn&#x27;t two labs · the sight-unseen moat · new revenue lines + buybacks · Elon, xAI and compute in space">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="Jensen Huang | Does AI Revenue Justify Capex, &#x27;27 AI Bottlenecks, Singularity, Open vs Closed &amp; more">
+<meta property="og:description" content="Bg2 Pod · 8 threads · why compute demand compounds · physical AI already $10B a half · safety as engineering · 2027 bottleneck is land/power/shell · capex isn&#x27;t two labs · the sight-unseen moat · new revenue lines + buybacks · Elon, xAI and compute in space">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Jensen Huang | Does AI Revenue Justify Capex, '27 AI Bottlenecks, Singularity, Open vs Closed &amp; more</h1>
+    <div class="byline">
+      Channel: <b>Bg2 Pod</b> &middot; Speaker: <b>Jensen Huang (guest), Brad Gerstner, Clark Tang</b> &middot; <b>2026-10-15</b>
+      <div class="stats-line">8 threads · why compute demand compounds · physical AI already $10B a half · safety as engineering · 2027 bottleneck is land/power/shell · capex isn't two labs · the sight-unseen moat · new revenue lines + buybacks · Elon, xAI and compute in space &middot; <a href="https://www.youtube.com/watch?v=eS7qQ3WJSrw" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Jensen's core answer to the bubble question: <b>don't extrapolate two labs.</b> Frontier labs are ~25-30% of Nvidia compute; a third is classical computing, a third is startups/neoclouds renting it.</li><li>Demand isn't the 2027 constraint. <b>Land, power and shell</b> are: SemiAnalysis sees 43 GW of new AI compute next year, but only ~35-40 GW of sites against ~50 GW of announced chips.</li><li>Scarce power pushes buyers to the highest tokens-per-watt, so Nvidia says its <b>share is rising</b>: ~40% of CSP capex, ~80% outside the CSPs, and $40B+ of content per gigawatt (up from ~$18B).</li><li>Physical AI did $10B in the first half of 2026 ($5B to $10B to maybe $20B a year); Jensen now calls his $100B physical-AI target <i>understated</i>.</li><li>Safety is framed as engineering, not a brake: zero-trust containment plus out-of-band monitoring (OpenShell, 100+ companies). Perfect alignment is "a forever problem".</li><li>Two new revenue lines on the installed base: <b>software licensing</b> (~a couple thousand dollars per GPU per year) and <b>revenue share</b> with the neoclouds it backs.</li><li>Capital return: <b>60%</b>+ of last quarter's free cash flow went to buybacks; the hosts model ~10% of the company bought back in two years at 13-14x earnings.</li><li>Long-run frame: <b>$3</b>-4T a year of AI infrastructure by 2030, and $10T a year of combined build and refresh 'wouldn't surprise' him.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="compute-demand">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">JENSEN'S CORE THESIS</span><span class="ttag">ai-infra</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Reasoning, harnesses and falling cost multiply compute demand</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Thinking takes far more inference than recall, and an AI that works gets more work. Jensen says those two effects compound into his billion-fold compute call.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Reasoning means planning, rolling out options, reflecting and pruning, which is 'strategic optionality' for AIs. Every one of those steps costs inference.</li><li><span class="dot" style="background:#3f6b2e;"></span>The 2025-26 unlock was the <b>harness</b>, the 'exoskeleton' around the model: working memory, offline 'compaction' into a knowledge graph (like sleep), and tool use.</li><li><span class="dot" style="background:#3f6b2e;"></span>Agents will use humans' existing tools (SPICE, Verilog, simulators, Photoshop, AutoCAD, Siemens tools) instead of rebuilding them. Coding was the easiest first on-ramp.</li><li><span class="dot" style="background:#3f6b2e;"></span>Next comes design and creative work. Nvidia uses OpenAI's <b>Astra</b> to turn a photo into an editable CAD model.</li><li><span class="dot" style="background:#3f6b2e;"></span>Navier-Stokes was solved with ~10,000 agents and ~<b>$4M</b> of compute (the hosts' estimate). Jensen notes it built on decades of human work: many fields sit on a 'precipice' that exhaustive AI search can push over.</li><li><span class="dot" style="background:#3f6b2e;"></span>Cost of intelligence: GPT-1 cost ~<b>$10</b>-20M to train and is ~$100 now, while models grew to 3T, 10T and 30T parameters and usage rose ~1,000,000x. He wants intelligence cost to fall '2x or 20x' a year, like Moore's law.</li><li><span class="dot" style="background:#3f6b2e;"></span>This was all done with OpenAI and Anthropic on ~2-3 GW each. The hosts expect them to 3-5x their compute next year.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;the attachment of a harness, basically the exoskeleton of the large language model&#8221;<cite>— Jensen Huang</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>OpenAI<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Astra agent used inside Nvidia for photo-to-CAD; ~2-3 GW of compute; its model solved Navier-Stokes.</span></div><div class="namechip"><b>Anthropic<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>~2-3 GW of compute; Claude Code / Opus 4.6 cited as the agent unlock.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The hosts list Jensen's earlier calls (≥$2T cumulative buildout, 1-billion-x inference, the 'age of agents') as track record. They are Nvidia investors grading their own guest.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="physical-ai">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">$10B IN H1 2026, FIRST $10B YEAR</span><span class="ttag">robotics</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Physical AI is already Nvidia's next $100B line, and he calls that 'understated'</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Nvidia calls itself the world's largest physical-AI company: $5B, then $10B, now on a ~$20B annual pace.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span><b>$10B</b> in the first six months of 2026, after $10B last year (its first $10B year) and $5B the year before.</li><li><span class="dot" style="background:#3f6b2e;"></span>Scope covers the whole electromagnetic spectrum: photon-counting CT, ultrasound, imaging radar, 5G/6G sensing networks, geospatial satellites and 3D world reconstruction.</li><li><span class="dot" style="background:#3f6b2e;"></span>The actuation layer covers self-driving, warehouse pick-and-place robots that learn instead of being programmed, home robots, and 24/7 hospital and surgical robotics.</li><li><span class="dot" style="background:#3f6b2e;"></span><b>Three computers</b> per platform: one to train the brain, Omniverse as the digital twin where the robot learns, and the computer inside the robot or car. Nvidia builds all three stacks and sells any one of them.</li><li><span class="dot" style="background:#3f6b2e;"></span>The same logic applies to frontier labs: they need a <b>digital twin of the internet</b> so agents learn tools without touching the live web.</li><li><span class="dot" style="background:#3f6b2e;"></span>Every industry becomes a tech company: carmakers (as Elon did with Tesla), logistics (FedEx), retail (Walmart), and telcos (AT&amp;T, Verizon) going 'back to technology'. The plan is to repeat the Alpamayo automotive playbook in each vertical.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;I understated the hundred billion dollars&#8221;<cite>— Jensen Huang</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Physical AI $5B → $10B → ~$20B/yr pace; full stack across training, digital twin and edge.</span></div><div class="namechip"><b>FedEx (FDX)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>'Obviously going to be an AI company.'</span></div><div class="namechip"><b>Walmart (WMT)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Named as a future technology/AI company.</span></div><div class="namechip"><b>AT&amp;T (T), Verizon (VZ)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Telcos being reinvented as technology companies with Nvidia.</span></div><div class="namechip"><b>Tesla (TSLA)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Elon turned autos into a computing industry; FSD now part of daily life (host).</span></div><div class="namechip"><b>Waymo<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Cited alongside Tesla FSD as self-driving being 'here'.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="safety-engineering">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">WHITE HOUSE ACCORD SIGNED; OPENSHELL 100+ COMPANIES</span><span class="ttag">policy</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Safety as engineering: zero-trust containment, out-of-band monitoring, a three-legged stool</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jensen rejects 'pace it' framings. Safety is part of the product, like airbags and ABS are part of the car, so accelerating AI means accelerating safety first.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span><b>Alignment is a forever problem</b>: 'be successful in life' has infinite valid readings across cultures. If safety depends on perfect alignment, 'we're never going to get there'.</li><li><span class="dot" style="background:#93711b;"></span>Treat a new AI like a toddler or a new hire: zero trust, minimum rights, a playpen. Widen the boundary only as testing earns confidence.</li><li><span class="dot" style="background:#93711b;"></span>Monitoring must be <b>out of band</b>, because a system that knows it is watched behaves differently. It needs the power to escalate or shut down. Nvidia's OpenShell does this and has 100+ companies on board.</li><li><span class="dot" style="background:#93711b;"></span>Nvidia also sells security now: OpenShell plus Sentry are part of its per-gigawatt content.</li><li><span class="dot" style="background:#93711b;"></span>Gerstner's 'three-legged stool': CAISI/Commerce review of every frontier model (it already pulled <b>Mythos</b> using export-control authority), the White House Accord on Superintelligence (audits, board oversight, liability), and the SI Force led by Jay Clayton. Gates says it is not enough.</li><li><span class="dot" style="background:#93711b;"></span>At the cabinet-room signing (with Dario Amodei and Greg Brockman) nobody needed 'a headlock'. Dario opened with 'whoever wins AI wins'.</li><li><span class="dot" style="background:#93711b;"></span>Winning is redefined as <b>every industry</b> winning (Eli Lilly, Walmart, FedEx, Boeing, the US military, schools), not the tech sector. Unsafe AI is 'an existential issue for us' first.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;alignment is going to be a forever problem&#8221;<cite>— Jensen Huang</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Eli Lilly (LLY), Boeing (BA)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Named in Jensen's 'America winning = every industry winning' list.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Jensen and Gerstner both sell or invest in the compute that faster deployment needs. The 'safety is part of acceleration' frame is theirs. Gates and some senators argue for new laws instead.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="bottleneck-2027">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">DEMAND &gt; SUPPLY 'FOR A FEW YEARS'</span><span class="ttag">ai-infra</span><span class="ttag">energy</span><span class="ttag">semis</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">2027's binding constraint is land, power and shell, and it pushes share toward Nvidia</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Demand is 'definitely there and more'. The physical buildout is what slows things down. Jensen argues scarce watts go to the chip with the most tokens per watt.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>SemiAnalysis (Dylan Patel) puts new AI compute at <b>43 GW in 2027</b>, more than all AI compute in the world today, and another ~40 GW in 2028.</li><li><span class="dot" style="background:#93711b;"></span>The street view: ~50 GW of chips announced versus ~35-40 GW of land/power/shell actually coming online.</li><li><span class="dot" style="background:#93711b;"></span>Physical obstacles: permitting, power generation, local moratoriums, and skilled trades. Building these '<b>$50 billion</b> data centers' creates about a million jobs, and the skills 'are not fungible'.</li><li><span class="dot" style="background:#93711b;"></span>Upstream constraints: <b>substrates</b>, where bigger packages with more chips worsen thermal-coefficient warpage and defects, and <b>silicon photonics</b>. 'Everything is supply constrained.'</li><li><span class="dot" style="background:#93711b;"></span>Nvidia's hedge is global reach: every CSP, every NCP, Dell/HP/Lenovo, and new builds in Africa, Central Asia, Southeast Asia, Latin America and the Middle East. 'I don't love that the United States can't keep up.' A recent <b>2 GW deal in Australia</b> is worth ~$80B to Nvidia, and Jensen hopes to announce more land/power/shell partnerships on his Europe trip.</li><li><span class="dot" style="background:#93711b;"></span>Content per gigawatt rose from ~<b>$18B</b> to ~$20B+ and now $40B+, because Nvidia added networking (now the largest networking company), CPUs ('surely the fastest growing'), storage, knowledge infrastructure and security.</li><li><span class="dot" style="background:#93711b;"></span>Share of world capex: single digits six years ago, ~<b>40%</b> at the CSPs today, ~80% outside them (on-prem and neoclouds). Both halves are 'doubling every year'.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;our market share is actually increasing for these reasons&#8221;<cite>— Jensen Huang</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High · 2027</span></b><span>Says share is rising because power scarcity rewards tokens per watt; content/GW now $40B+.</span></div><div class="namechip"><b>SemiAnalysis<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Source of the 43 GW (2027) / +40 GW (2028) compute forecast.</span></div><div class="namechip"><b>Dell (DELL)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>One of Nvidia's enterprise channels (with HP and Lenovo).</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The claim that share is increasing comes from Nvidia's CEO. The 43 GW and 35-40 GW figures are third-party estimates cited by the hosts.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="capex-not-two-labs">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">RESPONSE TO THE CAPEX-PAYBACK BEAR CASE</span><span class="ttag">ai-infra</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Does lab revenue justify capex? 'We're putting way too much pressure on two labs'</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The bear math needs lab revenue to grow from ~$200B to $400B to $800B. Jensen says that misreads who actually buys the compute.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>The bear framing (Clark Tang): ~$200B of lab revenue this year has to double twice. A naive 40 GW × $40B/GW implies $1.6T of revenue the demand curve can't absorb. Claude Code drove a <b>10x jump</b> in Anthropic revenue this year.</li><li><span class="dot" style="background:#3f6b2e;"></span>Jensen's thirds: ~1/3 is classical computing (data processing, simulation, XGBoost fraud detection at Visa/Mastercard, recommenders), growing 30-<b>40%</b> a year with no AI at all. 'Take that to the bank.'</li><li><span class="dot" style="background:#3f6b2e;"></span>~25-<b>30%</b> is frontier labs, and 'five, six' of them, not two: Meta's Muse (zero last year), Grok, Gemini (newly on Nvidia) and Anthropic (new this year).</li><li><span class="dot" style="background:#3f6b2e;"></span>~1/3 is 'AWS for the future': thousands of startups renting Nvidia compute, including Bezos's Prometheus, Noah, and physical, bio and materials AI. <b>80% use open models</b> such as Nemotron to build domain superintelligence.</li><li><span class="dot" style="background:#3f6b2e;"></span>Moore's law is over: twice the transistors now costs twice as much. Pre-AI compute ran ~<b>$0.5T</b> a year, heading to ~$1.5T of compute within $3-4T of annual infrastructure by 2030 ('closer to four').</li><li><span class="dot" style="background:#3f6b2e;"></span>General-purpose compute cost ~<b>$5B</b> per gigawatt versus ~$50B for Vera Rubin. The test is whether it delivers 10x the value.</li><li><span class="dot" style="background:#3f6b2e;"></span>Market chatter that OpenAI's revenue was <b>$50B</b> rather than $70B hit infrastructure stocks. Jensen says the labs will be 'magnificently successful' without needing anywhere near $1T of revenue.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;we're putting way too pressure on Two Labs&#8221;<cite>— Jensen Huang</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Muse 'killing it', 'vastly Nvidia'; zero frontier-lab compute a year earlier.</span></div><div class="namechip"><b>Alphabet (GOOGL)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Nvidia now runs Gemini; Google also builds, uses and rents compute like xAI.</span></div><div class="namechip"><b>Thinking Machines<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>One of the 'many labs' beyond OpenAI/Anthropic (hosts).</span></div><div class="namechip"><b>Prometheus<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Jeff Bezos's new company, 'doing fantastic' as an Nvidia compute renter.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Nvidia has large equity stakes in OpenAI and Anthropic and is their supplier. The 'labs are only a quarter' split is Nvidia's own segmentation.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="sight-unseen-moat">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">CONSENSUS UP 100-200% IN A YEAR; STOCK UP ~20%</span><span class="ttag">semis</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">The sight-unseen moat: who else gets a $100B PO for an untested system?</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">You can't benchmark a $50B data center before you buy it, so buyers pay for track record and fungibility. Jensen says that makes the moat wider as the company gets bigger.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Vera Rubin Ultra is 'close to placing order time', bought sight unseen. Buyers trust it because Vera Rubin is 'awesome', and Vera Rubin was trusted because Grace Blackwell was.</li><li><span class="dot" style="background:#3f6b2e;"></span>A <b>$100M</b> purchase could be benchmarked. A $50-100B system needs 'a giant data center and a couple years to retrofit' just to evaluate. 'Just building it is a miracle.'</li><li><span class="dot" style="background:#3f6b2e;"></span>The analogy is TSMC: Nvidia gives it <b>100%</b> of its business because it is the only foundry it can plan five years out with, and the only one big and agile enough to absorb Nvidia's swings.</li><li><span class="dot" style="background:#3f6b2e;"></span><b>Specialization is the enemy of fungibility and durability.</b> CUDA runs every architecture shift (flash attention, NVLink 72 sharding, hybrid SSM/transformer and diffusion models), so capacity can be subleased or redeployed anywhere.</li><li><span class="dot" style="background:#3f6b2e;"></span>The chain: fungibility + durability → rentability → productivity → <b>financeability</b> → lowest TCO.</li><li><span class="dot" style="background:#3f6b2e;"></span>Altimeter's chart: consensus moved up 100-<b>200%</b> in a year (a year ago it saw flat or shrinking 2027; now +74%), yet the stock is up only ~20% at 13-14x earnings.</li><li><span class="dot" style="background:#3f6b2e;"></span>Guide was <b>70%</b> revenue growth on demand 'well over 100%'. Jensen published it to manage allocation, because every CSP, NCP and OEM was getting less than it ordered. Orders arrive 'weekly and daily'.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Specialization is the enemy of fungibility.&#8221;<cite>— Jensen Huang</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High · 2027-2029</span></b><span>Moat 'increasing at scale'; 13-14x earnings on a consensus that doubled.</span></div><div class="namechip"><b>TSMC (TSM)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Gets 100% of Nvidia's wafer business; the only partner it can plan 5 years out with.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Altimeter is a long-time Nvidia shareholder. The 'consensus was wrong' chart is the hosts' own forecast set against the street's.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="new-revenue-capital-return">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">NEW GROWTH VECTORS + RECORD BUYBACK</span><span class="ttag">software</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Monetizing the installed base: software licensing, revenue share and a 'growth value' buyback</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jensen describes two new revenue lines tied to the installed base rather than hardware sales, while Nvidia returns most of its free cash flow.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span><b>Software licensing</b>: CSPs take Nvidia's stack open-source, but enterprises without IT depth need Nvidia on the SLA to run AI factories. 'A couple thousand dollars per GPU per year' × ~20M GPUs a year, half going to enterprise, 'adds up'.</li><li><span class="dot" style="background:#3f6b2e;"></span><b>Revenue share</b>: neoclouds that have land/power/shell lean on Nvidia for full stack, offtake and financing. Nvidia invests, books the sale up front and takes revenue share for '4, 5, 10 years'.</li><li><span class="dot" style="background:#3f6b2e;"></span>Buybacks: guided to <b>50%</b> of free cash flow, did '60 some odd' percent last quarter. Gerstner's math is upwards of 10% of the company repurchased within two years.</li><li><span class="dot" style="background:#3f6b2e;"></span>Gerstner frames it as Apple's playbook (the stock went from ~<b>$30 </b>to $300+ after it started returning capital), answering Buffett's complaint that tech firms spend their cash windfall on worse bets.</li><li><span class="dot" style="background:#3f6b2e;"></span>Strategic investments: 'whoever Jensen invests in, you invest in'. Nvidia is 'in the flow of information'. These will shrink as a share of cash because the OpenAI/Anthropic opportunity 'isn't going to come around again'.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;notice I just described two new growth vectors independent of the hardware sale of our company&#8221;<cite>— Jensen Huang</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High · next 2 years</span></b><span>Software licensing + revenue share as installed-base growth vectors; 60%+ of FCF to buybacks.</span></div><div class="namechip"><b>CoreWeave (CRWV)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Example neocloud Nvidia supports end to end as it scales out.</span></div><div class="namechip"><b>Apple (AAPL)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Capital-return precedent: ~$30 to $300+ (Gerstner).</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">No pricing or timing was given for licensing. 'A couple thousand dollars per GPU' is Jensen's 'simple math' illustration, not guidance.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="elon-space">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Speculative</span>
+    <span class="theme-status">JOINT ENGINEERING UNDERWAY</span><span class="ttag">space</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">Elon moves 'from the K's to the M': xAI as a CSP, and Nvidia compute in orbit</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">xAI moved from Nvidia's Enterprise segment into its CSP segment, and the two engineering teams are co-designing a server for data centers in space.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>Colossus started with ~200,000 Hoppers in Memphis. xAI is now raising ~$40B for maybe 1M+ Vera Rubins, targeting <b>10 GW by end-2027</b> ('hundreds of billions').</li><li><span class="dot" style="background:#65695f;"></span>Like Google, Elon trains his own models, serves them (Grok consumption 'skyrocketing') and rents capacity out. Jensen says 'nobody knows more about energy'.</li><li><span class="dot" style="background:#65695f;"></span>Starship made its first orbital rendezvous last week and launched V3 satellites.</li><li><span class="dot" style="background:#65695f;"></span>Jensen's case for space: launch cost is 'not inconsequential', so only the highest-ROI, fungible and durable compute is worth flying, and CUDA keeps 8-year-old hardware updated. 'Only Nvidia compute.'</li><li><span class="dot" style="background:#65695f;"></span>On 500 MW of compute in space by 2029, Jensen deferred: 'I'll let him tell you.'</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#65695f;"><div class="lbl">Pull quote</div>&#8220;only Nvidia compute&#8221;<cite>— Jensen Huang</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>xAI<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium · end-2027</span></b><span>Now in Nvidia's CSP segment; raising ~$40B for 1M+ Vera Rubin; 10 GW target by end-2027.</span></div><div class="namechip"><b>SpaceX (SPCX)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low · 2028-2029</span></b><span>Co-engineering a space data-center server with Nvidia; Starship V3 sat launches.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">No timeline or capacity was committed by Nvidia. The 2028-29 orbital-compute numbers are the hosts' and Elon's, not Jensen's.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🔌</div><div class="tline"><span class="cat">AI infra:</span> <span class="txt">Track land/power/shell delivery, not chip demand, as the 2027 swing factor: the ~35-40 GW of sites caps the ~50 GW of announced chips.</span></div></div><div class="irow"><div class="ic">🧮</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Model AI capex as three buyers (classical compute, frontier labs, startups/neoclouds) before reacting to any single lab's revenue headline.</span></div></div><div class="irow"><div class="ic">📈</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Watch Nvidia content per gigawatt (<b>$40B</b>+ and rising) and its software-licensing disclosures as the next leg beyond GPU units.</span></div></div><div class="irow"><div class="ic">🤖</div><div class="tline"><span class="cat">Robotics:</span> <span class="txt">Size physical AI off a ~<b>$20B</b>/yr Nvidia run-rate across medical imaging, telco sensing, warehouses and autos, not humanoids alone.</span></div></div><div class="irow"><div class="ic">🛡️</div><div class="tline"><span class="cat">AI policy:</span> <span class="txt">Build agent deployments on zero-trust containment plus out-of-band monitoring rather than waiting for 'aligned' models.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;I understated the hundred billion dollars&#8221; <cite>— Jensen Huang</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;alignment is going to be a forever problem&#8221; <cite>— Jensen Huang</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;we're putting way too pressure on Two Labs&#8221; <cite>— Jensen Huang</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;the semiconductor industry was on its path to become the largest industry in the world&#8221; <cite>— Jensen Huang</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;who can you place a $50 billion order on? We're literally the only one.&#8221; <cite>— Jensen Huang</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I'm 99.99% 99% confident&#8221; <cite>— Jensen Huang</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Jensen Huang:</b> Nvidia's physical-AI revenue reaches about $20B this year, after $5B and $10B <span class="cmeta">physical AI revenue · $20B · 2026</span> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>Jensen Huang:</b> Annual AI infrastructure buildout reaches $3-4T a year, closer to $4T, by the end of the decade <span class="cmeta">annual infrastructure buildout · $3-4T/yr · 2030</span></div><div class="ritem"><b>Jensen Huang:</b> About $1.5T a year of that buildout is compute alone <span class="cmeta">annual compute spend · $1.5T · 2030</span></div><div class="ritem"><b>Jensen Huang:</b> Combined new-build and refresh infrastructure spend of ~$10T a year would not surprise him <span class="cmeta">annual infrastructure build + refresh · $10T/yr</span></div><div class="ritem"><b>Jensen Huang:</b> Nvidia's content per gigawatt keeps rising beyond $40B+ <span class="cmeta">Nvidia revenue per GW · &gt;$40B</span> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>Jensen Huang:</b> Demand will exceed Nvidia supply and the gap will be hard to close for a few years <span class="cmeta">supply-demand gap · demand &gt; supply · a few years</span> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>Jensen Huang:</b> Land, power and shell will be one of the most important obstacles to the 2027 compute buildout <span class="cmeta">binding constraint · land/power/shell · 2027</span></div><div class="ritem"><b>Jensen Huang:</b> Nvidia's percentage of world capex keeps growing as both CSP (~40%) and non-CSP (~80%) halves double yearly <span class="cmeta">share of world AI capex · rising</span> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>Jensen Huang:</b> Software licensing at roughly a couple thousand dollars per GPU per year becomes a very big part of Nvidia's business <span class="cmeta">software licensing revenue · ~$2K per GPU per year</span> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>Jensen Huang:</b> Strategic investments shrink rapidly as a percentage of Nvidia's cash generation <span class="cmeta">investments as % of cash · declining</span> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>Jensen Huang:</b> Cost of intelligence should fall 2x to 20x every year <span class="cmeta">cost of intelligence · -2x to -20x per year</span></div><div class="ritem"><b>Dylan Patel (cited by Brad Gerstner):</b> 43 GW of new AI compute comes online in 2027 and another ~40 GW in 2028 <span class="cmeta">new AI compute · 43 GW / +40 GW · 2027</span></div><div class="ritem"><b>Clark Tang:</b> Street view: ~50 GW of announced chips vs ~35-40 GW of land/power/shell coming online <span class="cmeta">powered shell capacity · 35-40 GW · 2027</span></div><div class="ritem"><b>Clark Tang:</b> Lab revenue must double from ~$200B to $400B next year and $800B the year after to pay back the capex <span class="cmeta">AI lab revenue · $400B / $800B · 2028</span> <i>if if labs alone must pay back the buildout</i></div><div class="ritem"><b>Clark Tang:</b> Cost to repeat the ~$4M Navier-Stokes compute run drops 5-10x over the next few years <span class="cmeta">compute cost · -5x to -10x · next few years</span></div><div class="ritem"><b>Brad Gerstner:</b> Nvidia could buy back upwards of 10% of the company within two years <span class="cmeta">share count reduction · ~10% · 2028</span> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>Brad Gerstner:</b> Consensus now expects Nvidia to grow 74% in 2027 <span class="cmeta">2027 revenue growth (consensus) · 74% · 2027</span> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>Brad Gerstner:</b> xAI targets 10 GW of compute by end of 2027, on 1M+ Vera Rubin <span class="cmeta">compute capacity · 10 GW · 2027-12</span> <span class="tag">xAI</span></div><div class="ritem"><b>Brad Gerstner:</b> A 20% productivity gain on $50T of knowledge-work GDP yields $10T of incremental activity by 2029-2030 <span class="cmeta">incremental economic activity · $10T · 2030</span> <i>if if 20% productivity gain over 5 years</i></div><div class="ritem"><b>Brad Gerstner:</b> Material inference compute in space via Starship, e.g. 500 MW, by 2029 <span class="cmeta">orbital compute · 500 MW · 2029</span> <span class="tag">SpaceX (SPCX)</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>TSMC (TSM)</b> <span class="rel">supplies</span> <b>Nvidia (NVDA)</b> &mdash; 100% of Nvidia's business; planned five years out</div><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">supplies</span> <b>xAI</b> &mdash; Colossus Hoppers; 1M+ Vera Rubin planned; now in the CSP segment</div><div class="ritem"><b>SpaceX (SPCX)</b> <span class="rel">partners with</span> <b>Nvidia (NVDA)</b> &mdash; joint engineering on a data-center server for space</div><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">supplies</span> <b>Meta (META)</b> &mdash; Muse is 'vastly Nvidia'</div><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">supplies</span> <b>Alphabet (GOOGL)</b> &mdash; Nvidia now runs Gemini</div><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">supplies</span> <b>Anthropic</b> &mdash; started working with Anthropic this year</div><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">invests in</span> <b>OpenAI</b> &mdash; opportunity 'isn't going to come around again'</div><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">invests in</span> <b>Anthropic</b></div><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">partners with</span> <b>AT&amp;T (T)</b> &mdash; telco reinvention as technology industry</div><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">partners with</span> <b>Verizon (VZ)</b> &mdash; telco reinvention as technology industry</div><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">partners with</span> <b>Dell (DELL)</b> &mdash; enterprise go-to-market channel</div><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">supplies</span> <b>CoreWeave (CRWV)</b> &mdash; full-stack support as neoclouds scale out</div><div class="ritem"><b>Prometheus</b> <span class="rel">customer of</span> <b>Nvidia (NVDA)</b> &mdash; renter of Nvidia compute</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🎖️</div><div><div class="title">Jensen received the <b>National Medal of Science</b> at the White House with his parents (24 hours' notice; his dad bought a suit; Trump walked his mother off stage). Five of the six honorees were born outside the US. <span class="tag">Culture</span></div></div></div><div class="irow"><div class="ic">✈️</div><div><div class="title">Origin story: his father trained in New York for <b>Carrier</b>, came home to Taiwan with chocolate and tube cheese saying 'we should go there someday', and sent Jensen and his older brother ahead. Jensen calls immigration 'America's superpower', done 'lawfully'. <span class="tag">Immigration</span></div></div></div><div class="irow"><div class="ic">🎮</div><div><div class="title">Nvidia has shipped <b>1.67 billion</b> GPUs since it began as a graphics-chip company for gamers. <span class="tag">Nvidia</span></div></div></div><div class="irow"><div class="ic">⏳</div><div><div class="title">On free time: Keynes (1930) predicted 8x growth and a 15-hour week. He got the growth right and the week wrong because 'work is purpose'. Jensen: AI will bring 'more opportunities', not more leisure. <span class="tag">Work</span></div></div></div><div class="irow"><div class="ic">👁️</div><div><div class="title">Why AI benefits feel invisible: it is 'soft matter' already inside search, shopping, Netflix, Walmart and FedEx. 'If we shut off the data centers... for a weekend, everybody would notice.' <span class="tag">AI adoption</span></div></div></div><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: SemiAnalysis/Dylan Patel (GW forecasts), Altimeter's Nvidia forecast chart, Dario Amodei's <i>pacing the frontier</i>, Bill Gates on new laws, Jensen's Goldman 'first growth value company' remark, and an earlier interview where Ezra asked about a 2-3 year bubble window. <span class="tag">Sources</span></div></div></div><div class="irow"><div class="ic">🔮</div><div><div class="title">Altimeter's investor day 'in a couple weeks' is themed <i>entering the singularity</i>. Elon, Sam Altman and Demis Hassabis are cited as saying we are 'in the foothills'. <span class="tag">Events</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Harness / exoskeleton</b> &mdash; The scaffolding around an LLM (memory, knowledge graph, tool use) that turns a model into a working agent.</div><div><b>Land, power, shell</b> &mdash; Sited land, energized power and a built data-center building: the physical prerequisites before chips can be installed.</div><div><b>Out-of-band monitoring</b> &mdash; Oversight running outside the AI system's own channel, so it can't detect being watched and can be escalated or shut down.</div><div><b>Three computers</b> &mdash; Nvidia's physical-AI model: a training system, an Omniverse digital twin for simulation, and the onboard computer in the robot or car.</div><div><b>NCP</b> &mdash; Nvidia Cloud Partner: neoclouds and regional clouds outside the hyperscaler CSPs.</div><div><b>Fungibility (compute)</b> &mdash; Ability to redeploy the same infrastructure across workloads, models, customers and regions, which lowers financing risk and TCO.</div><div><b>Revenue share (Nvidia)</b> &mdash; Nvidia invests in a neocloud, books the hardware sale, and takes a share of its revenue for years in return for offtake and software support.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
