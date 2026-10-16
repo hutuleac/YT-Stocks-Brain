@@ -1,0 +1,172 @@
+META = {
+    "title": "De ce costă atât un apartament? Un dezvoltator pune cifrele pe masă | Adrian Stoichină | Podcast TC",
+    "channel": "Daniel TUDOR",
+    "speakers": "Daniel Tudor (host), Adrian Stoichina (co-CEO, Prima Development)",
+    "date": "2026-10-15",
+    "video_url": "https://www.youtube.com/watch?v=4bJOhRgcLtg",
+    "thread_line": "5 threads · trust and regulation, where €242k goes, the state's 35%, land and permits, buy-vs-rent and price-drop risk",
+    "category": "market",
+    "region": "ro",
+}
+
+SNAPSHOT = [
+    "A Bucharest developer breaks down a **€242,000** three-room apartment with poker chips: 21% VAT, 61% land and construction, 9% soft costs, 30% gross developer profit.",
+    "The Romanian state collects about **35%** of a residential project's value once VAT, profit, dividend, supply-chain and payroll taxes are counted — €30-35M per 500 apartments.",
+    "Distrust of developers is earned, he says: the worst actors took advances and never finished; the Nordis law fixed double-selling but not completion risk.",
+    "His fix: certified contractors and a certified financial-capacity check before the first pre-sale contract, copied from older European markets.",
+    "Prices are 'affordable' on paper but the entry ticket is brutal: ~€70k cash (€40k down + €30k furnishing) on a €170k apartment.",
+    "His case for buying early: a 2016-2017 €70k flat is worth ~€150k now and its loan payment is half the rent.",
+    "Only an economic disaster cuts prices, he argues — materials are already sold at near-survival discounts and transaction volume is half of 2018-2022 levels.",
+]
+
+THEMES = [
+    {
+        "id": "trust-regulation",
+        "tags": ["romania", "policy"],
+        "color": "amber",
+        "badge": "Policy proposal",
+        "status": "NORDIS LAW IN FORCE; COMPLETION RISK STILL OPEN",
+        "title": "Developers earned the distrust — regulate completion, not just ownership",
+        "lead": "Adrian Stoichina says the industry's image is set by its worst actors, and only rules that guarantee completion and warranty will fix it.",
+        "bullets": [
+            "If developers as a guild can take advances and not finish, or finish to low quality, **client distrust is justified** — the uncertainty is what clients really feel.",
+            "Banking is the model: regulation, audits and a state deposit guarantee mean no Romanian depositor has lost money in ~20 years since 2008.",
+            "The **Nordis law** settled one risk — an apartment can't be sold twice after a pre-sale contract — but not whether the project gets finished.",
+            "Warranty remedies are still weak: developers carry 3 years and contractors 10 years for hidden defects under the law, with little incentive to honour them.",
+            "Proposal 1: extend the Urbanism Code rule (public authorities may only hire **certified contractors**) to residential developers, since retail buyers face a financial imbalance professional office/retail buyers don't.",
+            "Proposal 2: certify financial capacity before the first pre-sale contract — a bank-style project monitor confirms market-rate budget plus equity and financing covering total cost; only finished, received apartments count as assets.",
+            "Copy what older European markets already do, and review the rules every year as risks show up.",
+        ],
+        "quote": {"text": "Daca noi ca dezvoltatori, ca breasla, putem sa luam niste avansuri si sa nu finalizam un proiect, atunci e justificat ca clientii sa nu aiba neaparat incredere ca noi vom finaliza proiectele.", "cite": "— Adrian Stoichina"},
+        "watch": "Prima Development is a client of the host's agency (The Concept), stated on air; the speaker is a developer arguing his own industry's case.",
+        "names": [
+            {"name": "Nordis", "blurb": "Developer whose collapse led to the law banning double-selling of apartments", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "where-242k-goes",
+        "tags": ["romania", "consumer"],
+        "color": "green",
+        "badge": "Disclosed figures",
+        "status": "PRIMA ASTERA / PRIMA SOLIS, BUCHAREST",
+        "title": "Where €242,000 goes: 21% VAT, 61% land and build, 30% gross margin",
+        "lead": "Prima's own cost stack shows a 30% gross margin over three years, possible only because it builds and designs in-house.",
+        "bullets": [
+            "121 chips of €2,000 each = a **€242,000** three-room apartment in Prima Astera or Prima Solis.",
+            "VAT: **€42,000** (21%) for an individual buyer; companies buying to rent or for Airbnb use reverse charge and pay tax on rental later.",
+            "Land + construction ≈ 61% and fairly constant: 53% build + 8% land at Astera/Solis, versus 46% build + 15% land at the better-located Prima Vista.",
+            "Soft costs ~9%: ~4% marketing and sales, ~3% financing, ~1% developer overhead, ~1% design.",
+            "Gross profit ~30% over a ~3-year cycle (~10% a year), because the general contractor and design firms sit inside the group.",
+            "With an outside contractor that 10 points splits ~8% contractor margin + ~2% supervision, leaving the developer ~20%, or **7-8% a year**.",
+            "In-house edge: lock steel prices by paying suppliers upfront (contractors lack the capital), and faster technical processes cut site overhead — not cheaper materials.",
+        ],
+        "quote": None,
+        "watch": "Figures are Prima's own project economics, not an industry average; he says averages vary.",
+        "names": [
+            {"name": "Prima Development", "blurb": "Bucharest developer-builder; Astera, Solis and Vista projects; co-CEO is the guest", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "state-take",
+        "tags": ["romania", "policy", "macro-rates"],
+        "color": "gray",
+        "badge": "Speaker estimate",
+        "status": "STATE TAKE ~35% OF PROJECT VALUE",
+        "title": "The state collects ~35% of every residential project",
+        "lead": "Counting the whole chain, taxes take more of an apartment's price than the developer does — so housing should be encouraged like infrastructure.",
+        "bullets": [
+            "Breakdown: 21% VAT + ~5% profit tax (16% of the 30% margin) + ~9% along the chain (~6 from construction, ~1 each from land sale, financing, services) = ~31% before dividends; dividend tax brings it to ~35%.",
+            "Payroll rule of thumb: each apartment pays one worker's wage taxes for 2 years — a 242-unit project has only ~100 workers on site at peak, but suppliers (aggregates, cement, concrete, steel, brick, BCA) carry the rest.",
+            "A **500-apartment** project sends €30-35M to the state budget.",
+            "About 25% stays with the developer after 3-3.5 years of work; equity of 25-35% plus bank debt turns that into a 75-100% return on equity.",
+            "Under the post-Nordis rules, client advances can fund structure and installation works but not finishing works (as described on air).",
+            "Margin erosion risks: overpaying for land, permit stalls, utility connections, delays, not finishing, warranty rework.",
+            "He backs the higher dividend tax because it keeps money reinvested — if one tax must fall, cut profit tax instead.",
+        ],
+        "quote": {"text": "Cea mai importanta infrastructura pentru locuitori unui oras sunt casele in care ei stau.", "cite": "— Adrian Stoichina"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "land-permits",
+        "tags": ["romania", "policy"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "PERMITS 1.5-4 YEARS IN BUCHAREST",
+        "title": "Scarce permits, not greedy developers, keep Bucharest land expensive",
+        "lead": "Making a building permit routine would even out land prices and shrink the developer's time-cost margin.",
+        "bullets": [
+            "Permits should take ~1 year legally; with a PUD it's 2-4 years — Prima's fastest was 1.5 years, its slowest 3.5-4 years, with capital locked in the land.",
+            "Building 2.5 years instead of 3 cuts the margin needed, since part of the margin is the cost of money and land-purchase risk.",
+            "Daniel Tudor pushes a land value-capture tax, citing Denmark and the UK (reversed by landowning legislators in the 1950s-60s) and a book on avoiding free-riding.",
+            "Adrian: no firm view, not a public-policy expert; today individuals pay ~2-3% on sale value, not on the gain.",
+            "His preferred lever: higher taxes on land left undeveloped in zones the city wants built, or tax breaks for owners who cede land for public use.",
+            "Bucharest still has many vacant lots and former industrial platforms in the middle of the city.",
+        ],
+        "quote": None,
+        "watch": "Host and guest disagree on taxing land gains; Adrian declines to take a position.",
+        "names": None,
+    },
+    {
+        "id": "buy-vs-rent",
+        "tags": ["romania", "consumer", "finance"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "BUY EARLY; ABSOLUTE PRICE DROP UNLIKELY",
+        "title": "Buy as early as you can — only a disaster cuts prices",
+        "lead": "Adrian argues ownership beats rent whenever interest is below rent, and that a real price fall needs an economic collapse.",
+        "bullets": [
+            "A two-room flat now €140k + VAT (~€170k) cost **€70k** in 2016-2017; that buyer pays ~2,000 lei a month versus €800-900 rent.",
+            "The real barrier: ~€40k down plus ~€30k furnishing on a €170k flat — €70k cash at the start of a career. Ideal age to buy: 25-27; upgrade later — a €25k step-up today is ~€50k in 10 years, but so are your flat and salary.",
+            "**Prima Casa** (5% down, state-guaranteed) worked: Adrian bought for €70k at end-2017, now worth ~€150k (new flats nearby ~€160k); Daniel bought via Prima Casa in 2011. He says defaults were tiny and it didn't inflate prices; the state should act as the 'parent' helping with the down payment.",
+            "Romania is cheap versus Poland, Germany, Austria, France and Spain because local developers dominate — foreign ones left after 2008 and Romanians rebuilt from 2012-2013.",
+            "Headwinds: wages lagging inflation, young people spending more on holidays and marrying later.",
+            "Price floors: materials sell at near-survival discounts, raw materials rose after the Iran war, new rules (fire safety, installations, nZEB, rainwater tanks doubled) raised build cost; transactions run at half 2018-2022 volumes.",
+            "After the Ukraine war prices fell in relative, not absolute, terms; a developer selling at cost (~22% left after the contractor) would need near-bankruptcy conditions.",
+        ],
+        "quote": {"text": "Noi nu suntem aproape de un nou 2009 astazi, cel putin nu din punct de vedere al industriei asteia.", "cite": "— Adrian Stoichina"},
+        "watch": "A developer arguing prices won't fall is talking his own book.",
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F3D7️", "tag": "Real estate", "title": "Ask a developer for proof of full project financing before signing a pre-sale contract."},
+    {"icon": "\U0001F9EE", "tag": "Housing", "title": "Budget the true entry ticket — down payment plus ~€30k furnishing — not just the monthly payment."},
+    {"icon": "\U0001F3E0", "tag": "Personal finance", "title": "Compare loan interest plus bank costs to rent; if lower, owning wins on his math."},
+    {"icon": "\U0001F6E1️", "tag": "Risk", "title": "Keep a cash cushion for job loss; renting the flat out and moving in with family is a fallback."},
+    {"icon": "\U0001F4DC", "tag": "Policy", "title": "Watch for contractor certification and financial-capacity checks reaching residential law."},
+]
+
+HOT_TAKES = [
+    {"take": "Riscul ca cineva sa cumpere astazi o locuinta si sa-i para rau ca n-a cumparat-o peste un an dar sa-si poata permite in continuare sa-si plateasca rata la ea, eu cred ca e zero.", "cite": "— Adrian Stoichina", "why": "Zero-risk claim on buying now"},
+    {"take": "Noi nu suntem aproape de un nou 2009 astazi", "cite": "— Adrian Stoichina", "why": "Macro call against crash fears"},
+    {"take": "injumatateasca, e efectiv imposibil", "cite": "— Daniel Tudor", "why": "Rejects online calls for prices halving"},
+    {"take": "Deci pe termen lung intotdeauna merita sa fii proprietar.", "cite": "— Adrian Stoichina", "why": "Absolute buy-over-rent stance"},
+    {"take": "Mi se pare ca zona de imobiliar e o zona de tezaurizare", "cite": "— Adrian Stoichina", "why": "Real estate as store of value vs stocks 'supported by the AI bubble'"},
+]
+
+CLAIMS = [
+    {"who": "Adrian Stoichina", "claim": "Bucharest home prices won't fall in absolute terms unless there is an economic disaster", "metric": "Bucharest home prices", "target": "no absolute decline", "by": None, "condition": "barring a severe economic crisis", "entity": None},
+    {"who": "Daniel Tudor", "claim": "Romanian home prices halving is effectively impossible", "metric": "Romanian home prices", "target": "no 50% drop", "by": None, "condition": None, "entity": None},
+    {"who": "Adrian Stoichina", "claim": "Long-term interest rates will not be higher than today's on average", "metric": "Romanian mortgage rates", "target": "not above current", "by": "long term", "condition": None, "entity": None},
+    {"who": "Adrian Stoichina", "claim": "Cutting development time from 3 to 2.5 years would lower the margin developers need", "metric": "developer margin", "target": "lower", "by": None, "condition": "if permits become predictable", "entity": None},
+    {"who": "Daniel Tudor", "claim": "Last A0 Bucharest ring motorway nodes between A2 and A3 open next week", "metric": "A0 A2-A3 section", "target": "open", "by": "2026-10", "condition": None, "entity": None},
+]
+
+RELATIONS = []
+
+OTHER_NEWS = [
+    {"icon": "\U0001F6E3️", "title": "Daniel Tudor: Romania has beaten Poland on infrastructure growth (a comparison made at **Expo Real** in Munich), nearing ~2,500 km of motorway; the A0 opening links Constanta, Craiova and Bacau by motorway or expressway.", "tag": "Infrastructure"},
+    {"icon": "\U0001F570️", "title": "2007 flashback: Daniel entered the market ~20 years ago, when Swiss-franc loans needed only an ID card and NATO/EU entry flooded Romania with liquidity; the unfinished **Planorama** tower on Doamna Ghica remains the cautionary tale of pre-selling too cheap.", "tag": "History"},
+    {"icon": "\U0001F1F5\U0001F1F1", "title": "Poland has general contractors specialised in residential for 15-20 years; Romania's big builders do infrastructure, offices, hotels and malls, and state inspections (ISU, State Construction Inspectorate) cover structure and fire safety but not finishes.", "tag": "Construction"},
+    {"icon": "\U0001F4C8", "title": "Adrian: stock markets have outperformed apartments in recent years, 'supported by the AI bubble'; professional real-estate investors aren't slowing, just checking completion risk harder.", "tag": "Markets"},
+]
+
+GLOSSARY = [
+    {"term": "Antecontract", "def": "Pre-sale contract under which a buyer pays advances on an apartment before it is finished."},
+    {"term": "PUD", "def": "Detailed urban plan; a zoning step that can stretch Bucharest permits to 2-4 years."},
+    {"term": "Prima Casa", "def": "Romanian state-guaranteed mortgage program that allowed a 5% down payment."},
+    {"term": "nZEB", "def": "Nearly zero-energy building standard now required for new residential buildings."},
+    {"term": "Project monitor", "def": "Bank-appointed firm that audits spending and progress before releasing each loan tranche."},
+]
