@@ -1,0 +1,155 @@
+META = {
+    "title": "Holy Sh*t Elon Musk's Roadster Reveal [Tesla SpaceX Stock]",
+    "channel": "Meet Kevin",
+    "speakers": "Kevin Paffrath",
+    "date": "2026-10-16",
+    "video_url": "https://www.youtube.com/watch?v=9c6v-yLww5w",
+    "thread_line": "5 threads · Roadster demo, merger-marketing read, Kalshi merger odds, H100s appreciating on open weights, Elon Inc catalysts",
+    "category": "market",
+    "region": "",
+}
+
+SNAPSHOT = [
+    "Tesla's Roadster reveal: a remote-controlled, unmanned car that **suctioned itself upside down** onto a ramp and jumped; production slated for 2028.",
+    "Kevin's read: the event is **marketing for a Tesla–SpaceX merger**, not a product launch — a call he made on August 14 and says the stage pitch confirmed.",
+    "He expects deliveries no earlier than 2029 after ~8 schedule slips, and doubts the jets can be made quiet enough for the road.",
+    "Kalshi odds of a Tesla–SpaceX merger before May 1, 2027 jumped from ~40% to ~55% just before the event; Kevin still thinks stable share prices mean no deal.",
+    "His bigger thesis: open-weight models get ~90% of frontier quality at ~1% of the cost, so **four-year-old H100s are appreciating** — and SpaceX holds hundreds of thousands of them.",
+    "That clicked around September 11, and he bought more SpaceX at ~$132-135 instead of waiting for his earlier $68 target.",
+    "Next Tesla catalyst he's watching: how fast Cybercab validation goes from start to completion in Florida, Seattle and Houston.",
+]
+
+THEMES = [
+    {
+        "id": "roadster-demo",
+        "tags": ["consumer", "robotics"],
+        "color": "gray",
+        "badge": "Speculative",
+        "status": "DEMOED OCT 15, 2026 — PRODUCTION TARGET 2028",
+        "title": "The Roadster sucks itself upside down — but nobody could stand near it",
+        "lead": "Remarkable demo, but Kevin doubts a car this loud ships to customers on the 2028 timeline.",
+        "bullets": [
+            "Held **4,700 kg of downforce** pitched 170° on its head, 69 ft in the air; 10 jet/suction nozzles, ~2 G, 650 kg of high-pressure air tanks in place of rear seats.",
+            "Modes: high-downforce \"suck\" mode at low speed, low-drag high-speed mode, plus a jet/spin mode; engineers cite ~230 mph top speed, Elon wants Mach 0.5 (~382 mph).",
+            "Demo car was remote-controlled, unmanned, with the audience kept far back because it is **loud enough to damage hearing**; the landing looked hard.",
+            "0-60 claimed at around a second or less (the timing figures are garbled in the captions); next stunt teased: jumping **Snake River Canyon** (Evel Knievel reference).",
+            "Positioned as the only Tesla designed to be manually driven in the future; yoke, full-width light bar, Cybertruck/Cybercab styling.",
+            "Delay history: promised for 2020, then 2023, 2024, 2025, an April 2026 demo, an October 1 show scrubbed two weeks for weather — ~8 slips; Kevin expects deliveries **2029 at the earliest**.",
+            "Road legality unclear — jets would blast cars behind it; he suggests rear vision AI to block launches, but Tesla implied safety wasn't the top priority.",
+        ],
+        "quote": {"text": "I don't see how they're going to get the sound capable of not destroying your eardrums.", "cite": "— Kevin Paffrath"},
+        "watch": "Production date is Tesla's own target; Kevin himself expects it to slip.",
+        "names": [
+            {"name": "Tesla (TSLA)", "blurb": "Roadster reveal; Kevin calls it fantastic tech but likely a test-track product for the foreseeable future", "stance": "UNCERTAIN", "conviction": "Medium", "horizon": "2028-2029"},
+        ],
+    },
+    {
+        "id": "merger-marketing",
+        "tags": ["finance", "space"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "MERGER ODDS UP; KEVIN STILL SKEPTICAL ON TIMING",
+        "title": "The Roadster is a pitch for a Tesla–SpaceX merger",
+        "lead": "Kevin reads the event as branding for combining Tesla and SpaceX, but thinks a deal only happens if one stock breaks away from the other.",
+        "bullets": [
+            "On **August 14** he called it a marketing pitch for how SpaceX and Tesla combine technologies; the event opened with \"what we could do with a collaboration between Tesla and SpaceX.\"",
+            "Sells a vision of small vehicles landing on Mars or the Moon — hence the Back to the Future theme throughout.",
+            "Kalshi odds of a merger before May 1, 2027 rose from ~40% to ~55% just before the event, on ~$1.5M traded; he suspects someone with inside information.",
+            "Scenario 1 — prices stable: merger delayed (too expensive, too much dilution).",
+            "Scenario 2 — Tesla spikes (e.g. to $600) and SpaceX pays a premium (e.g. $800): Elon's stock comp unlocks at the **acquisition price**, not the trading price.",
+            "Scenario 3 — Tesla tanks while SpaceX holds: SpaceX buys Tesla cheaply. Either way it ends up inside SpaceX, where Elon holds ~77% of voting shares.",
+        ],
+        "quote": {"text": "Whether you're buying Tesla or you're buying SpaceX, ultimately I think you should know you're really just buying Elon Inc.", "cite": "— Kevin Paffrath"},
+        "watch": "Kevin discloses that his company is sponsored by Kalshi, the betting market whose odds he cites here.",
+        "names": [
+            {"name": "Kalshi", "blurb": "Prediction market whose merger odds moved before the event; sponsor of Kevin's company", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "h100-appreciation",
+        "tags": ["ai-infra", "semis"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "HOLDING — ADDED ~SEPT 11 AT ~$132-135",
+        "title": "Open-weight models are making old H100s appreciate — so he bought SpaceX",
+        "lead": "Cheap open-weight models extend the useful life of older GPUs, which turns SpaceX's H100 fleet into an appreciating asset.",
+        "bullets": [
+            "Open-weight models get ~90% of the way to frontier models (he names Fable 1, Opus 5.5, Astra) at roughly **100x lower cost** per output token.",
+            "They run on older chips with enough headroom — no need for Blackwell, GB300 or Vera Rubin; Elon has **hundreds of thousands of H100s**.",
+            "Michael Burry's chips-should-depreciate argument \"should be correct\" — yet four-year-old H100s are rising in value.",
+            "Analogy: he sold his Embraer Phenom 300E jet after ~800 hours for more than its $12.9M purchase price, because NetJets is buying every one and Embraer can't build enough.",
+            "Losers: Anthropic and OpenAI valuations could come down as open weights improve; he cites a report that Anthropic's valuation **might be cut 25%** from $2T to $1.5T.",
+            "Position history: owned SpaceX at a $350B valuation; said he'd buy more at $68 after expecting a ~30% post-IPO drop (it fell ~31-35% to ~$104); re-underwrote in early September and bought at ~$132-135 support.",
+            "His own shop runs open-weight models on dozens of machines (Blackwell, RTX 6000, 5090) at a fraction of paid-API cost.",
+        ],
+        "quote": {"text": "So, an H100 right now is going up in value. It's four-year-old technology.", "cite": "— Kevin Paffrath"},
+        "watch": "Kevin owns SpaceX and added recently, so he's talking his own position.",
+        "names": [
+            {"name": "SpaceX (SPCX)", "blurb": "Owns; added ~Sept 11 at ~$132-135 on the H100-appreciation thesis", "stance": "OWNS", "conviction": "High", "horizon": None},
+            {"name": "Anthropic", "blurb": "Valuation could fall as open-weight models close the gap", "stance": "NEGATIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "Embraer (ERJ)", "blurb": "Phenom 300E jets in a supply crunch, values rising", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "elon-inc-catalysts",
+        "tags": ["robotics", "ai-infra", "finance"],
+        "color": "amber",
+        "badge": "Mixed",
+        "status": "NEXT CATALYST: CYBERCAB VALIDATION SPEED",
+        "title": "Elon Inc needs money for the AI buildout — and Cybercab speed is the next Tesla tell",
+        "lead": "The merger's real payoff is easier financing for the AI buildout, while Tesla's stock hinges on how fast Cybercab clears new cities.",
+        "bullets": [
+            "SpaceX needs to raise about **$400B** for AI; a $40B raise with Broadcom plus Oracle raising ~$100B the same week already sank the market.",
+            "A combined Tesla–SpaceX likely makes liquidity for the AI buildout easier — Grok, agentic services on X, Macrohard and **Terafab**, which he calls a joint SpaceX–Tesla project.",
+            "Cybercab validation in Florida, Seattle and Houston: the faster each goes from start to completion, the better for Tesla stock.",
+            "Elon's wins, per Kevin: self-driving and Starlink are best in the world, reusable boosters everyone copies, 800 MHz spectrum bought for direct-to-cell service.",
+            "X is paying creators **$5,000** to post 15 videos in 30 days — Kevin reads it as X coming for YouTube (a community note says the program is selective).",
+        ],
+        "quote": None,
+        "watch": None,
+        "names": [
+            {"name": "Oracle (ORCL)", "blurb": "~$100B raise cited as a market drag", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Broadcom (AVGO)", "blurb": "Party to SpaceX's $40B raise", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F697", "tag": "Tesla", "title": "Treat the Roadster as branding, not revenue — don't model deliveries before 2029."},
+    {"icon": "\U0001F91D", "tag": "M&A", "title": "Watch the Tesla/SpaceX price gap: a big move in either stock is Kevin's merger trigger."},
+    {"icon": "\U0001F4BE", "tag": "AI infra", "title": "Track used-H100 pricing and open-weight model quality as a read on GPU depreciation."},
+    {"icon": "\U0001F3D9️", "tag": "Autonomy", "title": "Time each Cybercab city from validation start to completion — speed is the Tesla catalyst."},
+    {"icon": "\U0001F4B8", "tag": "Markets", "title": "Expect mega AI capital raises to weigh on the market when several land in one week."},
+]
+
+HOT_TAKES = [
+    {"take": "You're not going to get any kind of jet rocket boosted car for $250,000.", "cite": "— Kevin Paffrath", "why": "Price call against Tesla's pitch, repeated from Aug 14"},
+    {"take": "I actually think that this is really just branding for the merger of Tesla and SpaceX.", "cite": "— Kevin Paffrath", "why": "Reframes a product event as M&A marketing"},
+    {"take": "Nobody's going to be able to actually get a delivery on this, my guess, until 2029.", "cite": "— Kevin Paffrath", "why": "Dated call against company's 2028 target"},
+    {"take": "So, an H100 right now is going up in value. It's four-year-old technology.", "cite": "— Kevin Paffrath", "why": "Contrarian on GPU depreciation"},
+    {"take": "Self-driving, fantastic. It's the best technology in the world. Starlink, best technology in the world.", "cite": "— Kevin Paffrath", "why": "Ranking claim"},
+]
+
+CLAIMS = [
+    {"who": "Kevin Paffrath", "claim": "Tesla Roadster deliveries won't happen before 2029 despite a 2028 production target", "metric": "Roadster first deliveries", "target": "not before", "by": "2029", "condition": None, "entity": "Tesla (TSLA)"},
+    {"who": "Kevin Paffrath", "claim": "No jet/rocket-boosted Roadster will be sold for $250,000", "metric": "Roadster price", "target": "> $250,000", "by": None, "condition": None, "entity": "Tesla (TSLA)"},
+    {"who": "Tesla (cited by Kevin Paffrath)", "claim": "Roadster enters production in 2028", "metric": "Roadster production start", "target": "start", "by": "2028", "condition": None, "entity": "Tesla (TSLA)"},
+    {"who": "Kalshi (cited by Kevin Paffrath)", "claim": "Market prices ~55% odds of a Tesla–SpaceX merger before May 1, 2027", "metric": "merger probability", "target": "55%", "by": "2027-05-01", "condition": None, "entity": "Tesla (TSLA)"},
+    {"who": "Kevin Paffrath", "claim": "Tesla and SpaceX won't merge while both stock prices stay stable", "metric": "Tesla–SpaceX merger", "target": "no deal", "by": None, "condition": "if both stock prices stay stable", "entity": "SpaceX (SPCX)"},
+    {"who": "Kevin Paffrath", "claim": "Anthropic's valuation may be cut 25% from $2T to $1.5T", "metric": "Anthropic valuation", "target": "$1.5T", "by": None, "condition": None, "entity": "Anthropic"},
+    {"who": "Kevin Paffrath", "claim": "SpaceX needs to raise about $400B for its AI initiatives", "metric": "SpaceX AI capital raise", "target": "$400B", "by": None, "condition": None, "entity": "SpaceX (SPCX)"},
+]
+
+RELATIONS = []
+
+OTHER_NEWS = [
+    {"icon": "\U0001F4C8", "title": "Kevin bought the Nasdaq 100 dip for six figures after it bounced within 43 seconds of his 715 line.", "tag": "Markets"},
+    {"icon": "\U0001F4DA", "title": "Sources referenced: Kalshi merger odds, a report on Anthropic's valuation cut, Michael Burry's depreciation argument, an X community note.", "tag": "Sources"},
+]
+
+GLOSSARY = [
+    {"term": "Downforce", "def": "Aerodynamic or suction force pressing a car onto the surface; the Roadster's fans generate 4,700 kg of it."},
+    {"term": "Open-weight model", "def": "An AI model whose weights are published so anyone can run it on their own hardware."},
+    {"term": "H100", "def": "Nvidia's 2022-era data-center GPU, now older than Blackwell, GB300 and Vera Rubin."},
+    {"term": "Direct-to-cell", "def": "Satellite service that connects straight to ordinary phones; Starlink bought 800 MHz spectrum for it."},
+]
