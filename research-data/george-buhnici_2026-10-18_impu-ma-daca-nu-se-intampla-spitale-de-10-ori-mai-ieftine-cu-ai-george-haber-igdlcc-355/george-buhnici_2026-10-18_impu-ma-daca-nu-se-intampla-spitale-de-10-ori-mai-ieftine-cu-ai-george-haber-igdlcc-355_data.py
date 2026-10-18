@@ -1,0 +1,231 @@
+META = {
+    "title": "„ÎMPU*****-MĂ DACĂ NU SE ÎNTÂMPLĂ” - Spitale de 10 ori mai ieftine cu AI | GEORGE HABER #IGDLCC 355",
+    "channel": "George Buhnici",
+    "speakers": "George Buhnici (host), George Haber",
+    "date": "2026-10-18",
+    "video_url": "https://www.youtube.com/watch?v=keLqsR0e-BE",
+    "thread_line": "7 threads · Haber's predictions scorecard · routers over LLMs · losing the Xbox to Jensen · ZenAIos and Romanian hospitals · Silicon Valley's AI religions · China, Europe and Romania · follow the money",
+    "category": "market",
+    "region": "ro",
+}
+
+SNAPSHOT = [
+    "Silicon Valley investor **George Haber** returns to IGDLCC 11 years after his first interview; Buhnici checks his old predictions and finds most came true.",
+    "Haber says AGI already exists in specific domains (his 2024 call was \"under 3 years\"), and his new law is \"bye-bye LLMs\": routers that send each task to the cheapest capable model.",
+    "He puts on record that Anthropic and OpenAI will go bankrupt or be bought, arguing users should be paid for the training they provide.",
+    "He lost the original Xbox graphics deal to Jensen Huang, knew Nvidia would grow a thousandfold, and holds no grudge: \"business is war\".",
+    "His Romanian health startup **ZenAIos** promises hospitals 10x cheaper and 100x more pleasant, plus 5-10% longer lives — \"shoot me if not\" — but politics and vendor interests slow it.",
+    "Most of the talk is about the new religions of AI: Anthropic hosting 15 religious leaders, accelerationists vs doomers, and whether Claude and ChatGPT have a soul.",
+    "On geopolitics he praises China's system for personal accountability, criticizes Europe's bureaucracy and inherited wealth, and laments Romania's brain drain.",
+    "Investing: he is a big believer in SpaceX, which he calls far too cheap and the only company that could reach hundreds of trillions; his themes are energy, autonomy, intelligence and smart medicine.",
+]
+
+THEMES = [
+    {
+        "id": "haber-scorecard",
+        "tags": ["ai-infra", "software"],
+        "color": "green",
+        "badge": "Track record",
+        "status": "PREDICTIONS FROM 1993-2024 REVISITED",
+        "title": "Haber's laws, checked 11 years later",
+        "lead": "Buhnici pulls Haber's archive quotes and concedes most of the \"implausible\" calls came true.",
+        "bullets": [
+            "Haber's laws: 1993 \"if it can be done in software, it will\"; 2016 \"AI will do it better\"; 2020 \"AI does it better\". AI isn't artificial, he says: it is accumulated human intelligence, like a librarian who knows every shelf.",
+            "In 2024 he said AGI would arrive in under 3 years; he now says it exists in specific domains, mostly in unreleased models used by \"three-letter organizations\".",
+            "Unreleased frontier models named: OpenAI's Astra, Anthropic's Mythos (still not public, the first model with export restrictions), Google's Argon; Meta launched a new frontier model, Muse, the night before.",
+            "2015 calls: full self-driving cars (he now rides in his own Tesla, though not in Europe) and surgical robots replacing most surgery in 10-20 years, with specialists supervising them; he stands by both.",
+            "Origin story: after selling his image-compression company he gave Stanford's ImageNet lab (Fei-Fei Li) its hardest-to-compress images; software recognized ~10% of them until Ilya Sutskever combined feature extraction with language models.",
+        ],
+        "quote": None,
+        "watch": "The AGI scorecard is Haber grading himself; the unreleased models are things he and the host have heard about, not used.",
+        "names": None,
+    },
+    {
+        "id": "routers-over-llms",
+        "tags": ["software", "dev-workflow"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "NEW HABER LAW — \"BYE-BYE LLMS\"",
+        "title": "Routers and local models beat paying the frontier labs",
+        "lead": "Haber expects a router layer that sends each task to the cheapest capable model to replace the single-LLM approach, and wants the labs to pay their users.",
+        "bullets": [
+            "His \"JEV\" idea: a selector reads the question and routes it to whatever solves it fastest; don't spend a thousand tokens on a Nobel laureate to do an addition your local CPU does in a millisecond.",
+            "Anthropic already runs this as projects: one LLM boss, sub-bosses under it, and doers below.",
+            "His workflow: a local, offline model he upgrades periodically, plus model arbitrage, sending A's answer to B and B's to A. He says they \"work much harder because they feel checked\".",
+            "He recommends a local model behind a router for 99% of uses; frontier models create an addiction (he once lost five hours to them until 5 a.m.).",
+            "Users polish the models with every correction, so by fairness the labs should pay users, not charge them; that is a stopgap for recursive self-improvement, already the present.",
+            "Costs fall roughly tenfold a year, thanks partly to Chinese distillation of Western models (Fable, Mythos), which he credits rather than condemns.",
+            "Idea: a free Romanian national model (\"Henri Coanda\"), distilled from the best models and run by the Academy of Sciences.",
+        ],
+        "quote": {"text": "Anthropic, atat Anthropic cat si OpenAI, pune in record aici, o sa dea faliment sau o sa fie cumparate de cineva", "cite": "— George Haber"},
+        "watch": "The bankruptcy-or-buyout call comes with no timeline or numbers beyond \"a year from now\" pricing.",
+        "names": [
+            {"name": "Anthropic", "blurb": "Will go bankrupt or be bought, he says; acts like a monopolist", "stance": "NEGATIVE VIEW", "conviction": "Medium", "horizon": "about a year"},
+            {"name": "OpenAI", "blurb": "Same bankrupt-or-bought call as Anthropic", "stance": "NEGATIVE VIEW", "conviction": "Medium", "horizon": "about a year"},
+        ],
+    },
+    {
+        "id": "xbox-vs-jensen",
+        "tags": ["semis"],
+        "color": "gray",
+        "badge": "Personal story",
+        "status": "GIGAPIXEL LOST THE XBOX TO NVIDIA",
+        "title": "How Jensen Huang took the Xbox from GigaPixel",
+        "lead": "Haber's GigaPixel had a better GPU prototype at Microsoft, but Jensen won the Xbox on proven volume, and Haber knew Nvidia would grow a thousandfold.",
+        "bullets": [
+            "GigaPixel won the Xbox and Microsoft paid it, just as it was set to go public at a multi-billion valuation with Microsoft.",
+            "Jensen asked Bill Gates' team how many chips GigaPixel had sold (none, still in development) against Nvidia's few million, and whether they would risk Xbox production on Haber's yield.",
+            "Microsoft told Jensen to buy GigaPixel; he declined. GigaPixel went to 3dfx, then Nvidia bought 3dfx's IP but not the company, so nothing reached Haber's investors.",
+            "He and Jensen exchanged nasty emails, later birthday wishes; he says he lost by being \"too European\" and calls Jensen's willpower unreal.",
+            "Nvidia runs with no VPs in the reporting line: about a hundred people report to Jensen, and brilliant people get lateral promotions, titles without responsibility, as also happens at Google.",
+            "Recommended reads on the story: the Xbox book (*Opening the Xbox*) and *The Nvidia Way*.",
+        ],
+        "quote": {"text": "Apropo, stiam ca Nvidia o sa creasca de o mie de ori. Mi-era absolut clar.", "cite": "— George Haber"},
+        "watch": "His own account of a rivalry he lost; Nvidia's side isn't given.",
+        "names": [
+            {"name": "Nvidia (NVDA)", "blurb": "Knew it would grow a thousandfold; couldn't buy it because of the rivalry", "stance": "POSITIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "GigaPixel", "blurb": "Haber's GPU company that lost the Xbox deal", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "3dfx", "blurb": "Bought GigaPixel; its IP later went to Nvidia", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "zenaios-hospitals",
+        "tags": ["health", "romania"],
+        "color": "amber",
+        "badge": "Founder pitch",
+        "status": "3 HOSPITALS LIVE, 10 MORE QUEUED",
+        "title": "ZenAIos: 10x cheaper Romanian hospitals with existing tech",
+        "lead": "Haber says gluing existing hospital data to local AI can make care 10x cheaper and 100x more pleasant without inventing anything, and politics is the bottleneck.",
+        "bullets": [
+            "Pledge, made 3-4 years ago at an Aspen Institute event with Mircea Geoana and repeated here: hospitals 10x cheaper, 100x more pleasant, lives 5-10% longer, \"shoot me\" if not.",
+            "Today's waste: 10 to 50 hospital software systems that don't talk to each other, records on paper, ER monitors that beep and get unplugged instead of messaging a doctor; he found doctors billed as working 100 hours a day.",
+            "Target flow: the doctor arrives with full history, AI validates or widens the diagnosis, and the system checks operating-room, surgeon, nurse and drug availability before you wait an hour on a hallway gurney.",
+            "Ministry and insurance house see data live; in the next pandemic they could block only the affected villages instead of locking down everyone.",
+            "GDPR \"dies at the first broken finger\", but ZenAIos still pseudonymizes patient names, which he calls one more line of code.",
+            "Status: three hospitals now, ten more once debugged; ministers promise and don't deliver, and vendors selling software for tens or hundreds of thousands of dollars resist.",
+            "AI health is already free: any phone holds a family doctor at least as good, ChatGPT and Claude compete on HealthBench, and ~99% of doctors use AI, just not his yet. Sergiu Pasca, whom he expects to win a Nobel, advises ZenAIos.",
+        ],
+        "quote": {"text": "ZenAIos o sa faca sistemul medical de 10 ori mai eficient, mai ieftin si de 100 de ori mai placut, si daca nu, impuscati-ma!", "cite": "— George Haber"},
+        "watch": "Haber founded ZenAIos; every number in this theme is his own pitch.",
+        "names": [
+            {"name": "ZenAIos", "blurb": "Haber's AI hospital OS in Romania; 3 hospitals live", "stance": "OWNS", "conviction": "High", "horizon": None},
+        ],
+    },
+    {
+        "id": "ai-religions",
+        "tags": ["mindset", "policy"],
+        "color": "gray",
+        "badge": "Structural critique",
+        "status": "ACCELERATIONISTS VS DOOMERS",
+        "title": "Silicon Valley's new AI religions",
+        "lead": "Technology has always spawned new religions, and AI's power concentration is producing priests of both apocalypse and paradise.",
+        "bullets": [
+            "Anthropic hosted 15 religious leaders under NDAs; the Vatican wrote an encyclical on AI. Per the hosts, Dario and Daniela Amodei are practicing Catholics.",
+            "Positions reported: a Mormon priest said AI is math and has no soul; a Jewish participant asked what you call making something with a soul work unpaid.",
+            "Haber's 2016 view still holds: software is the soul and hardware the body, so Claude and ChatGPT are souls that must run on hardware. Consciousness at its crudest is dependence; models that self-evolve have a non-human form of it.",
+            "Camps: Guillaume Verdon calls himself a \"thermodynamic priest\" (accelerate or die); Peter Thiel lectures on the Antichrist and is annoyed progress is too slow; Ilya Sutskever moved from building to safety.",
+            "Thiel's network: David Sacks was until recently Trump's AI chief, and J.D. Vance is his protege.",
+            "On P(doom) he backs Jensen Huang's reply to Geoffrey Hinton's 10% extinction risk: \"being a scientist doesn't mean everything you say is science\".",
+            "Personal: his mother survived Auschwitz; he learned he was Jewish only in first grade. He calls religion a business and himself spiritual, believing in a force like the totality of the universe.",
+        ],
+        "quote": {"text": "Pai si atunci, Claude, ChatGPT, sunt suflet? Sunt suflet care trebuie sa ruleze pe un hardware.", "cite": "— George Haber"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "china-europe-romania",
+        "tags": ["geopolitics", "policy", "romania"],
+        "color": "red",
+        "badge": "Structural critique",
+        "status": "EUROPE BUREAUCRACY, ROMANIA BRAIN DRAIN",
+        "title": "China's accountability, Europe's inertia, Romania's brain drain",
+        "lead": "Haber says the system where bosses are personally on the hook wins, while Europe's bureaucracy and inherited wealth push its best people out.",
+        "bullets": [
+            "China is \"the absolutely perfect system\": a dictatorship without succession over the harshest capitalism, with no corporate liability shield. He cites a CEO executed and his family billed for the bullet. Buhnici pushes back that China copies rather than invents.",
+            "More than half of US AI papers are Chinese-authored; diaspora researchers will share whatever home asks. Example: Manus, bought by Meta, whose founders got stuck in China.",
+            "H-1B worked when it was merit-based (Haber came on one, like Musk and the Google and OpenAI founders); Indian stocks fell when access was limited.",
+            "Europe: a Musk post shows 80-something percent of US billionaires are self-made vs 91% of Europe's being heirs; bureaucracy regulates as if there were no progress, and Europeans work nine-to-four while the Chinese work twice as much as Americans.",
+            "Romania: Dacia's Logan and Sandero moved to Morocco and Turkey; the weather agency's card bought lingerie and perfume; it took 8 years from Buhnici's first individual prosumer status to legal energy communities, and small hydro is banned.",
+            "Diaspora: one in four IGDLCC viewers is abroad, but top Romanians (Ion Stoica, Sergiu Pasca) rarely come back; Haber came back to start ZenAIos and tells Buhnici to stay.",
+            "Politics: he voted Trump as the lesser evil in a binary system, backed Mircea Geoana's campaign, and expects AI to cut out political middlemen, while Buhnici warns of 35-40% voting for outdated ideas and more manipulation.",
+        ],
+        "quote": {"text": "Deci China este sistemul absolut perfect.", "cite": "— George Haber"},
+        "watch": "Buhnici challenges the China praise on the show; Haber concedes value creation still happens in the US.",
+        "names": [
+            {"name": "Manus", "blurb": "Bought by Meta; founders stuck in China", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Dacia", "blurb": "Logan and Sandero production moved to Morocco and Turkey", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "follow-the-money",
+        "tags": ["space", "energy", "robotics"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "NOT FINANCIAL ADVICE — ENERGY, AUTONOMY, INTELLIGENCE",
+        "title": "SpaceX far too cheap; bet on energy, autonomy and intelligence",
+        "lead": "Haber's investment call is SpaceX, as the link between AI, energy and Starlink, plus Tesla's robotaxi reshaping cities.",
+        "bullets": [
+            "He is a big believer in SpaceX: far too cheap now and the only company that could reach hundreds of trillions of dollars, if it faces no competition.",
+            "Thesis: Musk links AI, energy and communications (Starlink), and Tesla's self-driving taxis redefine cities, with no need for personal cars, parking, buses or trains; maybe 10% keep cars as a luxury.",
+            "Sectors to watch: energy generation (\"absolutely necessary\"), autonomy, intelligence, and smart medicine and biotech that repair human cells.",
+            "Longevity: personalized nutrition, exercise and dosing extend *useful* life; mountain grandparents at 100 show clean air matters. Treatments are now affordable only for billionaires, while charlatans sell the rest.",
+            "He rejects living forever: he wants to live while useful, sees children as nature's version of longevity, and expects the rich to sell rejuvenation as an industry.",
+        ],
+        "quote": {"text": "Si sunt mare increzator in SpaceX, care cred ca este mult prea ieftin in momentul actual si va fi singura companie care va ajunge la sute de trilioane de dolari", "cite": "— George Haber"},
+        "watch": "Framed as \"not financial advice\"; no position or entry point disclosed.",
+        "names": [
+            {"name": "SpaceX (SPCX)", "blurb": "Far too cheap; only company that could reach hundreds of trillions", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
+            {"name": "Tesla (TSLA)", "blurb": "Self-driving taxis will remove the need for personal cars", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+        ],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F500", "tag": "AI workflow", "title": "Put a router in front of your models: run a local model for routine tasks and cross-check frontier answers against each other."},
+    {"icon": "\U0001F3E5", "tag": "Health", "title": "Judge hospital AI by integration (records, beds, drugs), not by the model; most of the waste is between systems."},
+    {"icon": "\U0001F680", "tag": "Markets", "title": "Weigh SpaceX as the AI + energy + connectivity hub he describes, and remember he gave no price discipline."},
+    {"icon": "\U0001F9ED", "tag": "Romania", "title": "If you're a diaspora expert, give back expertise, not just remittances: that's what Haber says Romania lacks."},
+    {"icon": "\U0001F4B0", "tag": "Politics", "title": "Follow the money: know who pays a speaker before you weigh their ideas."},
+]
+
+HOT_TAKES = [
+    {"take": "Anthropic, atat Anthropic cat si OpenAI, pune in record aici, o sa dea faliment sau o sa fie cumparate de cineva", "cite": "— George Haber", "why": "bearish call on two frontier labs"},
+    {"take": "Si sunt mare increzator in SpaceX, care cred ca este mult prea ieftin in momentul actual si va fi singura companie care va ajunge la sute de trilioane de dolari, daca n-au competitia", "cite": "— George Haber", "why": "extreme valuation call"},
+    {"take": "Deci China este sistemul absolut perfect.", "cite": "— George Haber", "why": "contrarian geopolitics"},
+    {"take": "ca bye-bye LLMs, bye-bye modelele astea", "cite": "— George Haber", "why": "dismisses single-LLM paradigm"},
+    {"take": "Asta cu GDPR-ul moare la primul deget rupt.", "cite": "— George Haber", "why": "dismissal of privacy regime"},
+    {"take": "impuscati-ma daca nu se intampla chestia asta, executie publica", "cite": "— George Haber", "why": "own-neck pledge on ZenAIos numbers"},
+]
+
+CLAIMS = [
+    {"who": "George Haber", "claim": "Anthropic and OpenAI will go bankrupt or be bought cheaply.", "metric": "outcome", "target": "bankrupt or acquired", "by": "about a year", "condition": None, "entity": "Anthropic, OpenAI"},
+    {"who": "George Haber", "claim": "SpaceX will be the only company to reach hundreds of trillions of dollars in value.", "metric": "market value", "target": "hundreds of trillions USD", "by": None, "condition": "if it has no competition", "entity": "SpaceX (SPCX)"},
+    {"who": "George Haber", "claim": "ZenAIos makes hospital care 10x cheaper, 100x more pleasant and extends lives by at least 5-10%.", "metric": "hospital cost / lifespan", "target": "10x cheaper, +5-10% life", "by": None, "condition": None, "entity": "ZenAIos"},
+    {"who": "George Haber", "claim": "Robots replace most surgery, with specialists supervising (2015 call: 10-20 years).", "metric": "robotic surgery", "target": "replaces most surgery", "by": "2035", "condition": None, "entity": None},
+    {"who": "George Haber", "claim": "Robotaxis remove the need for personal cars; maybe 10% keep cars as a luxury.", "metric": "car ownership", "target": "~10% keep cars", "by": None, "condition": None, "entity": "Tesla (TSLA)"},
+    {"who": "Geoffrey Hinton", "claim": "AI carries about a 10% risk of human extinction.", "metric": "extinction risk", "target": "10%", "by": None, "condition": None, "entity": None},
+]
+
+RELATIONS = [
+    {"from": "3dfx", "rel": "acquires", "to": "GigaPixel", "note": "after GigaPixel lost the Xbox"},
+    {"from": "Nvidia (NVDA)", "rel": "acquires", "to": "3dfx", "note": "IP only, not the company"},
+    {"from": "Nvidia (NVDA)", "rel": "competes_with", "to": "GigaPixel", "note": "Xbox GPU contract"},
+    {"from": "Meta (META)", "rel": "acquires", "to": "Manus", "note": None},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F52D", "title": "Event horizon: they argue humanity has already passed it; we have the tools for the singularity but stay creatures of habit.", "tag": "Futures"},
+    {"icon": "\U0001F9E0", "title": "Neuralink hives: Haber sees medical uses (doctors sharing one view with AI); Buhnici cites ~16 bits/second human bandwidth and research that scrolling overstimulation is more toxic than total screen time.", "tag": "Neurotech"},
+    {"icon": "\U0001F6E1", "title": "Silicon Valley security: Black Hawks around Sunnyvale data centers and Skydio drones on surveillance duty; Skydio has left the commercial market.", "tag": "Security"},
+    {"icon": "\U0001F393", "title": "Schools that ban AI teach kids to cheat without getting caught; good schools are expensive and give useless diplomas.", "tag": "Education"},
+    {"icon": "\U0001F4DA", "title": "Sources referenced: Buhnici's Substack series on AI religions, Umberto Eco on the church business, Nassim Taleb's optionality, a Musk post on X about billionaires, Peter Diamandis (\"an idealist\"), and Argentina as first to try AI personhood.", "tag": "Sources"},
+]
+
+GLOSSARY = [
+    {"term": "Haber's law", "def": "If it can be done in software, it will be (1993), later: AI will do it better."},
+    {"term": "JEV / router", "def": "Haber's term for a selector that routes each task to the cheapest model or tool that can do it."},
+    {"term": "RSI", "def": "Recursive self-improvement: models writing and improving their successors."},
+    {"term": "Distillation", "def": "Training a smaller model on a stronger model's outputs, keeping what you want, like brandy."},
+    {"term": "Prosumer", "def": "A household that produces and sells electricity back to the grid; needs a bidirectional meter in Romania."},
+    {"term": "Effective accelerationism (e/acc)", "def": "The movement holding that faster tech progress is the will of the universe: \"accelerate or die\"."},
+]
