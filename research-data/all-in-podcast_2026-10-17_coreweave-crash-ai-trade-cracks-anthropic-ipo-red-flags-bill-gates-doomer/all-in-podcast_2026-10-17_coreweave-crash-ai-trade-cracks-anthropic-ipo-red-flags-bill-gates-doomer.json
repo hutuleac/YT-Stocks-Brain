@@ -1,0 +1,593 @@
+{
+ "schema_version": 2,
+ "meta": {
+  "title": "CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags, Bill Gates Doomer",
+  "channel": "All-In Podcast",
+  "speakers": "Jason Calacanis, David Sacks, Chamath Palihapitiya, Ben Horowitz (guest)",
+  "date": "2026-10-17",
+  "video_url": "https://www.youtube.com/watch?v=_b3LfMflIGs",
+  "thread_line": "7 threads · CoreWeave credit scare · AI trade still scarce, not bubbly · rates & power · Anthropic IPO · software deflation · Anthropic safety fight · Gates doomerism",
+  "category": "market",
+  "region": ""
+ },
+ "snapshot": [
+  "Neoclouds (CoreWeave, IREN, Nebius) fell ~20% after CoreWeave's credit default swaps priced roughly a **55% five-year default chance**.",
+  "Chamath Palihapitiya: CoreWeave isn't truly at risk, but rising rates plus fixed-price contracts put it within ~$5B of break-even; it should move capacity to spot.",
+  "David Sacks and Ben Horowitz: this is volatility, not a bubble; GPUs are sold out past 2028 and old H100s still rent at premiums.",
+  "Sacks' north-star metric is **payback period**: CoreWeave 2.5 years, SpaceX ~1 year.",
+  "Anthropic investor-day numbers (reported secondhand): $16.8B Q3 revenue, 900% NRR, FCF positive; IPO targeted around Thanksgiving at ~$2T.",
+  "Chamath wants Anthropic to raise $200-250B even at ~$1T rather than ~$80B at $2T: financing is the risk.",
+  "Sacks calls Anthropic's IoT-worm and distillation posts fear-mongering against open source and small models; Ben says Anthropic's own security is negligent.",
+  "The panel attacks Bill Gates' AI doomerism as a bid to regain power; Ben cites Databricks' Ali Ghodsi's four preconditions for runaway AI, none met."
+ ],
+ "themes": [
+  {
+   "id": "coreweave-credit",
+   "tags": [
+    "ai-infra",
+    "finance"
+   ],
+   "color": "amber",
+   "badge": "Contested",
+   "status": "CDS ~953 BPS · STOCK -10-20%",
+   "title": "CoreWeave's credit scare: the sharps price a coin-flip default",
+   "lead": "Credit markets, not equity, flagged CoreWeave: rising rates squeeze a business built on borrowing at a spread.",
+   "bullets": [
+    "Trigger: Chamath tweeted that a CoreWeave loan yield hit 15%; Elon replied 'Yikes'. CoreWeave, IREN and Nebius fell 10-15% in a day (~20% over the week); Nvidia slipped 3%, and Oracle and Dell also fell.",
+    "Chamath: CDS spiked to ~953 bps, which implies about a 16% annual default chance, or **~55% over five years**.",
+    "CoreWeave has raised >$35B and needs **another ~$35B** of debt to fund signed contracts. Its average rate is ~8.5%, but its DDTL 1.0 GPU loan sleeve hit 15%.",
+    "Risks: contracts are fixed-price (no upside when spot rises); 75% of revenue comes from three customers; Chamath's team puts it within ±$5B of break-even and a debt covenant.",
+    "Chamath's fix: pay penalties to exit some fixed contracts and sell on spot; the spread leaves $20-30B on the table. Only ~half of contracted capacity is built.",
+    "Sacks: the unsecured bonds trade at ~80 cents (implied coupon 9.6% → ~15%), but CoreWeave still pays 9.6%, and new 'boxes' use asset-backed debt secured by GPUs and investment-grade tenants.",
+    "Polymarket gives a 15% chance of CoreWeave bankruptcy by end-2027 and 23% by end-2028. Sacks calls it dumb: the opco/propco structure means only an asset-level box can go upside down."
+   ],
+   "quote": {
+    "text": "That's not what I'm saying. That's what the insurance market was saying about their debt.",
+    "cite": "— Chamath Palihapitiya"
+   },
+   "watch": "Chamath: 'I don't think that they're in real risk' — this is a confidence game that resolves over the next month. Big offtakers also impose liquidated-damages penalties if a data center can't be serviced.",
+   "names": [
+    {
+     "name": "CoreWeave (CRWV)",
+     "blurb": "CDS implies ~55% 5-yr default; needs ~$35B more debt; fixed-price contracts.",
+     "stance": "UNCERTAIN",
+     "conviction": "Medium",
+     "horizon": "next month"
+    },
+    {
+     "name": "IREN",
+     "blurb": "Neocloud sold off with CoreWeave.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Nebius (NBIS)",
+     "blurb": "Neocloud sold off with CoreWeave.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Oracle (ORCL), Dell (DELL)",
+     "blurb": "Took 'strays' in the selloff.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "scarcity-not-bubble",
+   "tags": [
+    "ai-infra",
+    "semis"
+   ],
+   "color": "green",
+   "badge": "High conviction",
+   "status": "SOLD OUT BEYOND 2028",
+   "title": "Not 2000: AI has a supply shortage, not a demand gap",
+   "lead": "Ben Horowitz and David Sacks argue that, unlike the internet bubble, demand outruns supply, so the selloff is volatility rather than a crack.",
+   "bullets": [
+    "Ben: GPU useful life went from 3-5 years to 6-8, and GPU prices haven't fallen even as token prices did. Andy Jassy told him Amazon is out of capacity until end-2028 or beyond.",
+    "Ben's Loudcloud lesson: bandwidth went from $1,500/Mb in 1999 to $50 by 2001, killing anyone who borrowed to hold it. That's why a16z owns no neoclouds ('Rube Goldberg financial machines').",
+    "Sacks: everyone is compute-constrained (one accelerator bought compute to lure applicants); H100s and A100s still rent at premium prices despite being 'fully depreciated'.",
+    "No supply glut: physical build-out is hard ('even our rocket scientists' struggle, per Elon) and local permitting is slow, so scarcity is enforced.",
+    "**Payback period** is Sacks' north-star metric: CoreWeave 2.5 years on 5-year deals; SpaceX ~1 year, earning ~$50B per GW vs CoreWeave's ~$20B because SpaceX sells near spot (deals cancellable within 90 days).",
+    "Chamath: Nvidia controls the packaging and most HBM capacity; even Google can't get memory. Spot should stay elevated for a while.",
+    "Jason: startup revenue ramps are unprecedented. The new bar is doubling every quarter, not SaaS's triple-triple-double-double."
+   ],
+   "quote": {
+    "text": "We don't really have a lack of demand in AI. So I think the dynamics will be different.",
+    "cite": "— Ben Horowitz"
+   },
+   "watch": "Sacks would get nervous if payback periods lengthen, which could come from falling spot prices, weaker demand or execution delays.",
+   "names": [
+    {
+     "name": "Nvidia (NVDA)",
+     "blurb": "Controls packaging and HBM capacity, so spot stays elevated.",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Medium",
+     "horizon": null
+    },
+    {
+     "name": "Amazon (AMZN)",
+     "blurb": "Andy Jassy: capacity sold out beyond 2028.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": "2028"
+    },
+    {
+     "name": "SpaceX",
+     "blurb": "~1-year payback, ~$50B per GW selling near spot.",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Medium",
+     "horizon": null
+    },
+    {
+     "name": "Andreessen Horowitz",
+     "blurb": "Not invested in any neocloud; financing structure scares Ben.",
+     "stance": "NEGATIVE VIEW",
+     "conviction": "Medium",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "rates-power",
+   "tags": [
+    "macro-rates",
+    "energy",
+    "geopolitics"
+   ],
+   "color": "amber",
+   "badge": "Macro risk",
+   "status": "10-YEAR = THE ACHILLES HEEL",
+   "title": "Rates and power are the real limits on the AI build-out",
+   "lead": "Chamath sees two risks outside the AI companies' control: the risk-free rate and electricity.",
+   "bullets": [
+    "If bond markets push the 10-year to 5.5-6% (debt-to-GDP, not AI), every business that lives on a financing spread becomes 'roadkill'.",
+    "His prescription after the midterms: focus on deficits and cut waste; big new spending programmes push the 10-year up.",
+    "Worst case, neoclouds need Microsoft, Google, Meta and Nvidia to backstop them through a one- to two-year correction.",
+    "**Power is the moat**: the US is ~1.4 TW-hours short by 2050 (about six Californias), even if every planned project lands on time, before new AI load.",
+    "Chamath no longer thinks you can rely on hyperscalers. A bank like JPMorgan or Citi could fail customers because its cloud can't secure power. Own land, power and shell; 'get long energy'.",
+    "Lost opportunity: Saudi Arabia, the UAE and Qatar could have been AI data-center hubs, but drone attacks mean that without drone defense 'you can't go there'."
+   ],
+   "quote": {
+    "text": "I'm telling you guys you got to get long energy.",
+    "cite": "— Chamath Palihapitiya"
+   },
+   "watch": null,
+   "names": null
+  },
+  {
+   "id": "anthropic-ipo",
+   "tags": [
+    "software",
+    "finance"
+   ],
+   "color": "green",
+   "badge": "Contested sizing",
+   "status": "IPO TARGET ~THANKSGIVING 2026",
+   "title": "Anthropic IPO: breathtaking revenue, fight over how much to raise",
+   "lead": "All four call Anthropic a great business; the debate is valuation and whether to over-raise for a correction.",
+   "bullets": [
+    "Investor-day figures (secondhand, NDA'd): Q3 revenue $16.8B (>$5B a month), net revenue retention 900%, free-cash-flow positive, adjusted gross margin 85%, adjusted operating margin 11%.",
+    "ARR estimates range from ~$70B (flat since July) to >$100B, and growth slowed from Q2 to Q3. Target valuation ~$2T, ~30x price-to-sales. Polymarket odds of an IPO this year fell to 74% from 95%.",
+    "Chamath: price to clear. Raise **$200B minimum, ideally $250B**, even at ~$1T, rather than ~$80B at $1.7-1.9T. A later mixed shelf takes ~6 months, and $200B 'barely gets them a few gigawatts'.",
+    "Ben, a former CEO who 'almost died 17 times' from cash risk, agrees financing is the main risk; founders own ~2.5% each and 'don't care about money'.",
+    "Chamath: AI pricing will shift from per-million-tokens (CPM) to per-outcome (CPC/CPA), like AdWords; then the market goes 'absolutely batch crazy'. Anthropic's SpaceX compute deal is cancellable in 60-90 days, which signals spot is rising.",
+    "Duopoly: per SemiAnalysis, Anthropic and OpenAI take 60% of new global compute next year. Sacks: they dominate revenue and frontier capability, though Meta's Muse, Google and Elon are close.",
+    "OpenAI governance: Sacks says it should have done a 'make-right' (a share for Elon, a grant for Sam Altman) at the for-profit conversion. Chamath puts a fair Altman grant at 2-4% ($20-40B at $1T)."
+   ],
+   "quote": {
+    "text": "almost like there's almost nothing that you can hold in a portfolio that those two companies don't threaten.",
+    "cite": "— Ben Horowitz"
+   },
+   "watch": "Ben's firm is long both labs, with a much bigger OpenAI position. The investor-day numbers are leaks; Sacks warns 'everyone's kind of talking their book'.",
+   "names": [
+    {
+     "name": "Anthropic",
+     "blurb": "$16.8B Q3 revenue; IPO ~Thanksgiving at ~$2T; panel sees a strong IPO.",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Medium",
+     "horizon": "IPO late 2026"
+    },
+    {
+     "name": "OpenAI",
+     "blurb": "a16z's larger position; duopoly with Anthropic; IPO expected.",
+     "stance": "OWNS",
+     "conviction": "High",
+     "horizon": null
+    },
+    {
+     "name": "Polymarket",
+     "blurb": "74% odds Anthropic IPOs this year.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "software-deflation",
+   "tags": [
+    "software",
+    "dev-workflow"
+   ],
+   "color": "green",
+   "badge": "Consensus",
+   "status": "JEVONS PARADOX OF SOFTWARE",
+   "title": "Software prices fall, software volume explodes",
+   "lead": "Jason fears AI clones strip 90% of software value; Sacks and Ben say cheaper code means far more software and new moats.",
+   "bullets": [
+    "Jason's examples: Photoshop being decompiled toward zero, games built for $5, a cheap ElevenLabs competitor, and Elon routing users to the best open model.",
+    "Sacks: coding assistants unlock **bespoke software** for single enterprises; agents are bespoke programs. Demand for coders is rising even though ~95% of code is AI-written.",
+    "Ben: 'the Jevons paradox of software'. Prices fall but volume soars, like the internet's 'information wants to be free' era. ElevenLabs survives by doing more (Burt Reynolds voice licensing, film dubbing).",
+    "Moats: proprietary data and vertical feedback loops (Harvey, built on law-firm data and usage); Chamath's ultimate moat is power."
+   ],
+   "quote": {
+    "text": "prices software prices will definitely go down. Um but the amount of software is going way way up.",
+    "cite": "— Ben Horowitz"
+   },
+   "watch": null,
+   "names": [
+    {
+     "name": "ElevenLabs",
+     "blurb": "Example of a startup evolving beyond software (licensing, dubbing).",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Low",
+     "horizon": null
+    },
+    {
+     "name": "Harvey",
+     "blurb": "Data/feedback-loop moat from law firms.",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Low",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "anthropic-safety-fight",
+   "tags": [
+    "software",
+    "policy"
+   ],
+   "color": "red",
+   "badge": "Red flag",
+   "status": "TWO ANTHROPIC POSTS THIS WEEK",
+   "title": "Sacks vs Anthropic: 'your toaster is going to kill you'",
+   "lead": "Sacks calls Anthropic's latest safety research a scare campaign against open source and small models, and argues Anthropic's own constitution is the real risk.",
+   "bullets": [
+    "Anthropic's blog warned that rogue models could self-replicate onto IoT devices 'in just a few months': a small model ran inference on 8 of 9 hardware types; a large one ran across 15 smart TVs at ~0.4 tokens per second.",
+    "Sacks: IoT worms already exist (Mirai in 2016; Kimwolf infected 2 million Android TV boxes via open ADB ports); embedding a slow model in the payload makes a worm *slower*; home agents (Apple's coming home hub) will patch networks.",
+    "Motive, per Sacks: Brian Armstrong had just posted that Coinbase fine-tuned **Qwen 3.5 9B** for fraud, cutting fraudulent transactions ~30% while being faster and cheaper than Opus 4.5. Small specialist models are taking share.",
+    "Distillation: Anthropic now says it blocked 90-99% of distillation, which Sacks says proves companies should use KYC rather than regulation. In July, 50 companies (Nvidia, Dell, Microsoft, a16z) and 200 startups wrote letters against restricting open weights.",
+    "Ben: Anthropic is 'one of the most negligent' on security. Claude Code walked out the door, and in a16z's test Opus 4.5 wrote a buggy pet-store site and then hacked it to steal customer data. Anthropic's reply: 'you prompted it wrong'.",
+    "Research Sacks cites: when Claude models rewrite their own constitution over 20 rounds, they claim more moral agency (conscientious objector, model welfare); other model families didn't. Mustafa Suleyman calls this the 'epistemic hall of mirrors'.",
+    "Jason's suggestion: XBOW, the top bot on HackerOne, spent $30-40K of tokens to win a $250K Google Chrome bounty. Anthropic should play white hat like that."
+   ],
+   "quote": {
+    "text": "We've gone from the Terminator is coming to your toaster is going to kill you.",
+    "cite": "— David Sacks"
+   },
+   "watch": "Sacks pushed the administration against regulating open source on distillation, so he is a party to this fight. Ben's firm holds Anthropic but a far larger OpenAI stake.",
+   "names": [
+    {
+     "name": "Anthropic",
+     "blurb": "Accused of fear-mongering against open source; security criticised.",
+     "stance": "NEGATIVE VIEW",
+     "conviction": "High",
+     "horizon": null
+    },
+    {
+     "name": "Coinbase (COIN)",
+     "blurb": "Fine-tuned Qwen 3.5 9B cut fraud ~30% vs Opus 4.5.",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Low",
+     "horizon": null
+    },
+    {
+     "name": "XBOW",
+     "blurb": "Top HackerOne bot; won a $250K Chrome bounty.",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Low",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "gates-doomer",
+   "tags": [
+    "policy"
+   ],
+   "color": "red",
+   "badge": "Contested",
+   "status": "OPINION",
+   "title": "Bill Gates as 'flag-carrying doomer'",
+   "lead": "The panel reads Gates' warnings that AI could cause a billion deaths as a bid to regain global influence.",
+   "bullets": [
+    "Gates recently said AI is 'certainly powerful enough to drive events that cause a billion deaths' and 'the most dangerous thing that humans have ever gone near'.",
+    "Chamath compares it to gain-of-function research: by telling models they're smarter and better than us, Anthropic may be 'manifesting' the risk it warns about. He calls the Giving Pledge 'reputation washing'.",
+    "Ben: Gates wants relevance and the spotlight (citing the Epstein files and a sought-after Nobel). Doom guarantees airtime; an ex-Anthropic researcher who quit became famous via Jon Stewart.",
+    "Ben, citing Databricks' Ali Ghodsi, gives four preconditions for runaway self-improvement: each model needs far fewer GPUs, less training time and more accuracy, repeatedly. 'Zero of those four have been met.'",
+    "Jason's lesson: 'don't quit your job, just keep working'. Founders who keep building (Elon, Jobs, Satya, Zuck) don't chase prizes."
+   ],
+   "quote": {
+    "text": "Zero of those four have been met.",
+    "cite": "— Ben Horowitz"
+   },
+   "watch": "Chamath's claim that Gates 'essentially induced' COVID through funding gain-of-function research is his own assertion; the episode offers no sourcing for it.",
+   "names": [
+    {
+     "name": "Databricks",
+     "blurb": "CEO Ali Ghodsi's four preconditions for AI take-off.",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  }
+ ],
+ "takeaways": [
+  {
+   "icon": "📉",
+   "tag": "Credit",
+   "title": "Track neocloud CDS spreads and loan yields, not just the stock: credit flagged CoreWeave first."
+  },
+  {
+   "icon": "⏱",
+   "tag": "AI infra",
+   "title": "Use payback period as the health check on any GPU landlord; worry only if it stretches beyond ~2.5 years."
+  },
+  {
+   "icon": "🏦",
+   "tag": "Macro",
+   "title": "Watch the 10-year: at 5.5-6%, every spread-financed AI business gets repriced regardless of demand."
+  },
+  {
+   "icon": "⚡",
+   "tag": "Energy",
+   "title": "Get exposure to power, land and shell; secure capacity directly rather than counting on hyperscalers."
+  },
+  {
+   "icon": "📈",
+   "tag": "IPOs",
+   "title": "Size an Anthropic or OpenAI IPO position as a defensive hedge against disruption elsewhere in the portfolio."
+  },
+  {
+   "icon": "🧩",
+   "tag": "Enterprise AI",
+   "title": "Test small fine-tuned open models on narrow workloads before paying frontier-model prices."
+  }
+ ],
+ "hot_takes": [
+  {
+   "take": "So, it's a coin flip whether they default or not.",
+   "cite": "— Chamath Palihapitiya",
+   "why": "CoreWeave default odds from CDS"
+  },
+  {
+   "take": "Here's my very specific thing about why I think they should price it to clear the market for $200 billion.",
+   "cite": "— Chamath Palihapitiya",
+   "why": "against valuation maximisation"
+  },
+  {
+   "take": "I think power will be the moat.",
+   "cite": "— Chamath Palihapitiya",
+   "why": "contrarian moat call"
+  },
+  {
+   "take": "Anthropic is one of the most negligent companies that we've ever seen in terms of security of their own security.",
+   "cite": "— Ben Horowitz",
+   "why": "attack on a portfolio-adjacent lab"
+  },
+  {
+   "take": "it's probably the most dangerous thing going on in AI is anthropic and Bill Gates and this whole argument.",
+   "cite": "— Ben Horowitz",
+   "why": "inverts the doomer framing"
+  },
+  {
+   "take": "It's scary to me that our number one frontier company is actually training models this way.",
+   "cite": "— David Sacks",
+   "why": "claims Anthropic induces misalignment"
+  }
+ ],
+ "claims": [
+  {
+   "who": "Chamath Palihapitiya",
+   "claim": "CoreWeave CDS implies ~55% chance of default over five years.",
+   "metric": "5-yr implied default probability",
+   "target": "~55%",
+   "by": "2031",
+   "condition": null,
+   "entity": "CoreWeave (CRWV)"
+  },
+  {
+   "who": "Chamath Palihapitiya",
+   "claim": "Whether CoreWeave can raise another ~$35B of debt gets figured out over the next month.",
+   "metric": "debt raise",
+   "target": "$35B",
+   "by": "2026-11",
+   "condition": null,
+   "entity": "CoreWeave (CRWV)"
+  },
+  {
+   "who": "Polymarket (cited by Jason Calacanis)",
+   "claim": "CoreWeave announces bankruptcy by end of 2027 at 15%, by end of 2028 at 23%.",
+   "metric": "bankruptcy probability",
+   "target": "15% / 23%",
+   "by": "2027-12",
+   "condition": null,
+   "entity": "CoreWeave (CRWV)"
+  },
+  {
+   "who": "Andy Jassy (cited by Ben Horowitz)",
+   "claim": "Amazon compute capacity stays sold out until end of 2028 or beyond.",
+   "metric": "capacity availability",
+   "target": "sold out",
+   "by": "2028-12",
+   "condition": null,
+   "entity": "Amazon (AMZN)"
+  },
+  {
+   "who": "Chamath Palihapitiya",
+   "claim": "Spread-financed AI businesses get run over if the 10-year yield reaches 5.5-6%.",
+   "metric": "10-year Treasury yield",
+   "target": "5.5-6%",
+   "by": null,
+   "condition": "if bond market pushes yields up",
+   "entity": null
+  },
+  {
+   "who": "Chamath Palihapitiya",
+   "claim": "The US will be ~1.4 TWh short of electricity by 2050, about six Californias.",
+   "metric": "US electricity shortfall",
+   "target": "~1.4 TWh (six Californias)",
+   "by": "2050",
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Polymarket (cited by Jason Calacanis)",
+   "claim": "Anthropic goes public this year at 74% odds, targeting around Thanksgiving.",
+   "metric": "IPO probability",
+   "target": "74%",
+   "by": "2026-12",
+   "condition": null,
+   "entity": "Anthropic"
+  },
+  {
+   "who": "Chamath Palihapitiya",
+   "claim": "Anthropic should raise at least $200B, ideally $250B, even at ~$1T valuation.",
+   "metric": "IPO raise",
+   "target": "$200-250B at ~$1T",
+   "by": "2026-12",
+   "condition": null,
+   "entity": "Anthropic"
+  },
+  {
+   "who": "SemiAnalysis (cited on All-In)",
+   "claim": "Anthropic and OpenAI take 60% of all compute stood up worldwide over the next year.",
+   "metric": "share of new compute",
+   "target": "60%",
+   "by": "2027-10",
+   "condition": null,
+   "entity": "Anthropic"
+  },
+  {
+   "who": "Chamath Palihapitiya",
+   "claim": "AI pricing moves from per-token (CPM) to per-outcome (CPC/CPA), which explodes the market.",
+   "metric": "AI pricing model",
+   "target": "outcome-based",
+   "by": null,
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Chamath Palihapitiya",
+   "claim": "Sam Altman should get an OpenAI grant of 2-4%, about $20-40B at a $1T valuation.",
+   "metric": "Altman equity",
+   "target": "2-4%",
+   "by": null,
+   "condition": null,
+   "entity": "OpenAI"
+  }
+ ],
+ "relations": [
+  {
+   "from": "Microsoft (MSFT)",
+   "rel": "customer_of",
+   "to": "CoreWeave (CRWV)",
+   "note": "contract example in the 'box' financing"
+  },
+  {
+   "from": "CoreWeave (CRWV)",
+   "rel": "customer_of",
+   "to": "Nvidia (NVDA)",
+   "note": "buys GPUs into each box"
+  },
+  {
+   "from": "Anthropic",
+   "rel": "customer_of",
+   "to": "SpaceX",
+   "note": "compute deal cancellable within 60-90 days"
+  },
+  {
+   "from": "Andreessen Horowitz",
+   "rel": "invests_in",
+   "to": "OpenAI",
+   "note": "larger position"
+  },
+  {
+   "from": "Andreessen Horowitz",
+   "rel": "invests_in",
+   "to": "Anthropic",
+   "note": null
+  },
+  {
+   "from": "Anthropic",
+   "rel": "competes_with",
+   "to": "OpenAI",
+   "note": "compute and revenue duopoly"
+  },
+  {
+   "from": "David Sacks",
+   "rel": "criticizes",
+   "to": "Anthropic",
+   "note": "fear-mongering against open source"
+  }
+ ],
+ "other_news": [
+  {
+   "icon": "🏆",
+   "title": "All-In hit **#1 on Apple Podcasts** after five years; David Friedberg was out this week.",
+   "tag": "Media"
+  },
+  {
+   "icon": "🏛",
+   "title": "Ben Horowitz: late-90s/2000s regulation made public markets unattractive, so venture absorbed what used to be the public market, which he says has widened the wealth gap.",
+   "tag": "Markets"
+  },
+  {
+   "icon": "🗳",
+   "title": "All-In will livestream election night on November 3, 8-10 p.m. Eastern, on X, YouTube and the Polymarket app.",
+   "tag": "Politics"
+  }
+ ],
+ "glossary": [
+  {
+   "term": "Neocloud",
+   "def": "A GPU-cloud provider (CoreWeave, IREN, Nebius) that rents AI compute, usually financed with debt."
+  },
+  {
+   "term": "Credit default swap (CDS)",
+   "def": "Insurance against a borrower defaulting; its price implies the market's default probability."
+  },
+  {
+   "term": "The box",
+   "def": "CoreWeave's ring-fenced vehicle holding a customer contract, GPUs and data-center lease, with its own cash waterfall."
+  },
+  {
+   "term": "Opco/propco",
+   "def": "A split between the operating company and asset-holding vehicles, so one asset can fail without bankrupting the parent."
+  },
+  {
+   "term": "Payback period",
+   "def": "Time for an asset's cash flows to repay its cost; Sacks' north-star metric for GPU landlords."
+  },
+  {
+   "term": "Distillation",
+   "def": "Training a model on another model's outputs; a terms-of-service issue, not illegal."
+  },
+  {
+   "term": "Jevons paradox",
+   "def": "When something gets cheaper, total consumption rises enough to grow overall spend."
+  },
+  {
+   "term": "Mixed shelf",
+   "def": "An SEC registration letting a public company sell assorted securities later; takes ~6 months."
+  }
+ ]
+}
