@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: The AI Bubble Didn’t Pop. Hedge Fund Leverage Did.</title>
+<meta name="description" content="Jordi Visser · 6 threads · hedge fund leverage unwind · contagion map · 2030 forecasts vs sold-out contracts · AI revenue and agents · portfolio and tokenization · jobs and consumer confidence">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="The AI Bubble Didn’t Pop. Hedge Fund Leverage Did.">
+<meta property="og:description" content="Jordi Visser · 6 threads · hedge fund leverage unwind · contagion map · 2030 forecasts vs sold-out contracts · AI revenue and agents · portfolio and tokenization · jobs and consumer confidence">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>The AI Bubble Didn’t Pop. Hedge Fund Leverage Did.</h1>
+    <div class="byline">
+      Channel: <b>Jordi Visser</b> &middot; Speaker: <b>Jordi Visser</b> &middot; <b>2026-10-18</b>
+      <div class="stats-line">6 threads · hedge fund leverage unwind · contagion map · 2030 forecasts vs sold-out contracts · AI revenue and agents · portfolio and tokenization · jobs and consumer confidence &middot; <a href="https://www.youtube.com/watch?v=TB_-4pN1dsA" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Visser's call: <b>this is a hedge fund deleveraging event, not an AI bubble popping</b> — the S&amp;P 500 closed the week only 2.7% off all-time highs.</li><li>Hedge fund leverage more than doubled since 2023 to record highs; he says it will never again reach that level, and the selling may run into hyperscaler earnings or even the midterms.</li><li>The damage sits in the crowded AI pair trade: Qs down <b>5.5%</b> for the week while 350 S&amp;P stocks rose and Europe, Mexico, Brazil and Canada were all up.</li><li>Contagion is now spreading from equities into credit (HYG vs IEF) and converts, which is when multi-strat pods really get hurt.</li><li>He dismisses 2030 forecasts from Gartner, Bain and a Barclays desk — Micron, ASML, Lumentum and Amazon report capacity sold out or contracted into 2028-2030.</li><li>Anthropic is on pace for 90-100B revenue this year vs 9B last year; agent workflows are used by only ~<b>2%</b> of companies, so he sees demand at a step-up.</li><li>The majority of his portfolio is now crypto; he still holds Marvell, Micron, Nvidia and Eli Lilly, and would rather own CoreWeave bonds than its equity.</li><li>Macro flag: consumer confidence at its lowest since 2013 and shrinking financials/tech payrolls point to a margin and politics problem, not a recession.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="leverage-unwind">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">High conviction</span>
+    <span class="theme-status">DELEVERAGING UNDER WAY — HE SEES NO RETURN TO PEAK LEVERAGE</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">Hedge fund leverage is the bubble that popped</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Record hedge fund leverage, now being forced down by losses on the crowded AI trade, explains the selling, not AI fundamentals.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span>Fed/OFR data: hedge fund leverage was flat to 2023, then <b>more than doubled</b> to all-time highs through Q1; long-short equity runs close to two to one, and prime-broker leverage is also at record highs.</li><li><span class="dot" style="background:#a23f22;"></span>Leverage growth of <b>15%</b> in hedge funds plus fast growth at broker-dealers; he puts hedge fund positioning at $14 trillion, vs 40-60B of CoreWeave debt spread over six years.</li><li><span class="dot" style="background:#a23f22;"></span>WSJ's illustrative numbers: <b>$11B</b> of equity running $45B of positions, about 33B borrowed — fine only while it's making money.</li><li><span class="dot" style="background:#a23f22;"></span>A $20B flagship AI fund fell 44% in a month in August; <b>Lone Pine</b> (Steve Mandel), which he calls one of the best non-multi-strat funds of the century, erased a 44% gain — over 55% gross after fees, a GFC-sized drawdown he calls "LTCM-ish".</li><li><span class="dot" style="background:#a23f22;"></span>Situational Awareness fell an estimated 60-<b>70%</b> before being bailed out; Goldman Sachs crowded hedge fund longs fell 10% vs the S&amp;P in July and 15% over four months, unlevered.</li><li><span class="dot" style="background:#a23f22;"></span>His own thematic portfolio fell <b>11%</b> last week, worse than any week in July, which "felt a lot like capitulation".</li><li><span class="dot" style="background:#a23f22;"></span>Why it won't come back: terminal value past three years is unknowable, so Sharpe ratios get harder, short-lockup funds can't survive drawdowns, and retail with AI tools now matches hedge funds' speed to ideas.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;CoreWeave, not a problem. Hedge funds, big problem.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Lone Pine Capital<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Erased a 44% gain in a quarter; he stresses the fund itself is not in trouble</span></div><div class="namechip"><b>Situational Awareness<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Fund that fell sharply and was bailed out; one of several July losers</span></div><div class="namechip"><b>Goldman Sachs (GS)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Source of the crowded hedge fund longs and AI winners-vs-losers baskets</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">He sells subscriber research on the same names and market-structure tools he says are taking hedge funds' edge.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="contagion-map">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">PAIN TRADE MAY RUN INTO HYPERSCALER EARNINGS / MIDTERMS</span><span class="ttag">finance</span><span class="ttag">macro-rates</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Contagion is spreading from the AI pair trade into credit and converts</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The equity hit is narrow, but credit and convertibles joining in is what makes this phase dangerous for multi-strat pods.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Week: Qs down <b>5.5%</b>, S&amp;P down 1.95%, IWM down ~3% (six straight down weeks for small caps), yet 350 S&amp;P stocks rose; two 1% S&amp;P moves after ~100 days without one; VIX jumped 25 points in a week but still closed below 20.</li><li><span class="dot" style="background:#93711b;"></span>S&amp;P up <b>12%</b> and Nasdaq up 13% YTD; semis (SMH) still up ~50% YTD; the AI trade is ~25% of the market and the crowded long everyone shares.</li><li><span class="dot" style="background:#93711b;"></span>Correlation break: the <b>Mexican Bolsa</b> went from near 52-week lows straight up while the Qs fell; fertilizer/crop-input and short-SaaS trades also unwound.</li><li><span class="dot" style="background:#93711b;"></span>Credit: a long HYG / short IEF synthetic credit trade gave back all its summer gains in one week; he heard biotech was a major pod problem in September.</li><li><span class="dot" style="background:#93711b;"></span>Converts (CoreWeave, MicroStrategy) were hit in a "waterfall", as giant AI capital raises — Broadcom and Google each over <b>$100B</b> this year, plus SpaceX, Anthropic and OpenAI — force holders to sell other assets.</li><li><span class="dot" style="background:#93711b;"></span>Volatility: single-name vol exploded while index vol barely moved, so there is no S&amp;P put that hedges a cross-sector AI book; the MOVE index stayed calm, keeping this an equity event.</li><li><span class="dot" style="background:#93711b;"></span>Timeline: deleveraging could take another month; the pain trade runs into hyperscaler earnings, possibly the midterms, then a year-end snapback if he's right.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>MicroStrategy (MSTR)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Big presence in a concentrated convertible-bond market now under pressure</span></div><div class="namechip"><b>Broadcom (AVGO)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Over $100B of capital raised this year; CEO's 'casino gamblers' comments called a mistranslation</span></div><div class="namechip"><b>Alphabet (GOOGL)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Over $100B raised across equity and bonds</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">He says outright that knowing when hedge fund pain is done is very difficult; the timing is a guess.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="forecasts-vs-contracts">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">NOT A BUBBLE — SUPPLY SOLD OUT INTO 2028-2030</span><span class="ttag">ai-infra</span><span class="ttag">semis</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">2030 doom forecasts versus contracts already signed through 2030</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Bears forecast impairment five years out while suppliers report capacity sold out or contracted for the same period.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Gartner: over <b>$3.5 trillion</b> of AI infrastructure could face impairment by 2030; Bain: AI needs 6 trillion and comes up 800B short by 2031 — he has never seen a market care about forecasts that far out.</li><li><span class="dot" style="background:#3f6b2e;"></span>Contracts: Micron's signed agreements cover more than <b>35%</b> of revenue through 2030; ASML expects supply shortages through 2028; Lumentum sold out of AI parts to 2029; Andy Jassy says Amazon's AI compute is sold out beyond 2028.</li><li><span class="dot" style="background:#3f6b2e;"></span>Nvidia guided to ~<b>70%</b> revenue growth vs ~40% expected; its 2029 street estimate went from ~305B to about a trillion, yet the stock is flat for a year and P/E on next year's earnings is ~15 (closer to 10 on high estimates).</li><li><span class="dot" style="background:#3f6b2e;"></span>CoreWeave is at this price for the fifth time; clients are Microsoft, OpenAI, Meta, Anthropic, Mistral and Jane Street — 'not strippers in Florida' getting subprime loans.</li><li><span class="dot" style="background:#3f6b2e;"></span>GPU rental for old chips holds up: per Zuckerberg on Cheeky Pint, even an H100 is worth more than a year ago; DRAM prices made new highs.</li><li><span class="dot" style="background:#3f6b2e;"></span>Dot-com was built for real future demand but had no money coming in; fiber took 7 years to build, and here we're in year two calling a bubble.</li><li><span class="dot" style="background:#3f6b2e;"></span>Hyperscaler stocks (Amazon, Meta, Google, Microsoft) made new all-time highs as a group, which he says argues against capital being the breaking point yet.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;If GPU prices are going higher, it's very hard to be bearish on CoreWeave&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>CoreWeave (CRWV)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium · next couple years</span></b><span>Fundamentals intact; prefers its bonds over the equity at current levels</span></div><div class="namechip"><b>ASML (ASML)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low · through 2028</span></b><span>Expects AI chip supply shortages through 2028</span></div><div class="namechip"><b>Lumentum (LITE)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low · through 2029</span></b><span>Sold out of AI parts until 2029</span></div><div class="namechip"><b>Amazon (AMZN)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>AI compute sold out beyond 2028; hyperscalers at new highs</span></div><div class="namechip"><b>Barclays (BCS)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium</span></b><span>Desk's AI revenue framework dismissed as linear guesswork</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">He grants capital is the biggest risk and CoreWeave's equity can keep building a higher risk premium; Jim Chanos' view that it may not be a good equity business stands.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="revenue-agents">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">DEMAND STEP-UP FROM AGENTS AND SWARMS</span><span class="ttag">ai-infra</span><span class="ttag">software</span><span class="ttag">robotics</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Lab revenue and agents say demand is still at a step-up</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Exponential revenue growth and barely-started agent adoption make linear 2030 revenue forecasts unknowable, not bearish.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Anthropic is on pace for 90-100B revenue this year vs 9B last year; OpenAI + Anthropic finish ~170B combined, and a 600-700B forecast for them implies sharp deceleration already priced — in line with what David Sacks, Gavin Baker and Chamath said about six weeks ago.</li><li><span class="dot" style="background:#3f6b2e;"></span>AI capex could be close to <b>$2 trillion</b>, or 5-6% of GDP, next year; a16z says the labs added more revenue in 2026 than all of public software combined.</li><li><span class="dot" style="background:#3f6b2e;"></span>Adoption is early: per Andrej Karpathy few people are frontier users; an AI-engineer interview put agent workflows at ~<b>2%</b> of companies, and over 50% of agents in use are coding agents.</li><li><span class="dot" style="background:#3f6b2e;"></span>Aaron Levie: future tokens get consumed by agent swarms, which only started in the last two months; Patrick Collison expects personal agents to change how consumers deal with companies.</li><li><span class="dot" style="background:#3f6b2e;"></span>SemiAnalysis (Dylan Patel): 90 employees in 11 countries, from <b>$20M</b> revenue in 2025 to 100M now, while its own AI spend went from 100K a year ago to 10-11M by August.</li><li><span class="dot" style="background:#3f6b2e;"></span>Robotics: Unitree sold only ~11,000 robots this year (per Emad Mostaque) but says OpenAI's progress brings a GPT moment for embodied intelligence; he thinks distillation may be ending, widening the US-China model gap.</li><li><span class="dot" style="background:#3f6b2e;"></span>Brad Gerstner pressed Jensen Huang on when the build-out ends; Huang's one-word answer was "forever" — frontier labs are about a third of demand, with 500B a year for classical compute.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;If they just stay at the same level, they've won.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>On pace for 90-100B revenue this year, up ~10x</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Its progress pulls robotics forward; valuation success story</span></div><div class="namechip"><b>SemiAnalysis<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Best AI research shop on the street; example of AI-native growth</span></div><div class="namechip"><b>Unitree<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Chinese humanoid maker; ~11,000 robots sold this year</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Revenue upside rests on markets (robotics, drug discovery, agents) he concedes haven't started yet.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="portfolio-tokenization">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">MAJORITY OF PORTFOLIO NOW IN CRYPTO</span><span class="ttag">crypto</span><span class="ttag">semis</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Most of his money is in crypto, with a small AI book</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">He's moved most of his portfolio into crypto and believes the tokenized economy will dwarf public equity returns.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Still holds Marvell, a little Micron, Nvidia and Eli Lilly; the AI book is much smaller and "will never be as big as crypto again", though he may trade AI.</li><li><span class="dot" style="background:#3f6b2e;"></span>Bitcoin fell only <b>2.3%</b> on the week while AI blew up; crypto index down 7% month to date; he expects no Bitcoin rally until hedge funds stabilize, and could see it meander toward the 75 area.</li><li><span class="dot" style="background:#3f6b2e;"></span>Thesis: dot-com built rails without demand; crypto is in the same spot, with demand coming from AI agents.</li><li><span class="dot" style="background:#3f6b2e;"></span>Tokenization will change covariance matrices and how margin is provided — he calls it the final stage of hedge fund deleveraging and plans to list something with his crypto.</li><li><span class="dot" style="background:#3f6b2e;"></span>Equities still earn returns for ~3 years, but private equity, private credit, VC, bonds and public stocks lose out to the tokenized digital economy (his Stripe-vs-Citi framing).</li><li><span class="dot" style="background:#3f6b2e;"></span>For the next 12 months he'd invest in AI agents and <b>Vera Rubin</b> agentic compute: a 15-name list cut down from 100, mostly optical.</li><li><span class="dot" style="background:#3f6b2e;"></span>Flags a crypto-related number: net interest income that could reach <b>$107B</b> next year, money he says is about to leave traditional markets.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;The majority of my portfolio moved into crypto. I'm very, very happy about that.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Bitcoin (BTC)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>Core of his portfolio; held up during the AI selloff</span></div><div class="namechip"><b>Marvell (MRVL)<span class="stance" style="background:#3f6b2e;">OWNS · Medium</span></b><span>Still held in the reduced AI book</span></div><div class="namechip"><b>Micron (MU)<span class="stance" style="background:#3f6b2e;">OWNS · Low</span></b><span>Small remaining position; 35% of revenue contracted through 2030</span></div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">OWNS · Medium</span></b><span>Still held; P/E compressed despite beats</span></div><div class="namechip"><b>Eli Lilly (LLY)<span class="stance" style="background:#3f6b2e;">OWNS · Medium</span></b><span>Still held</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">He is about to list a tokenized product with his own crypto, so the tokenization thesis is also his business.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="jobs-confidence">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Watch item</span>
+    <span class="theme-status">MARGIN AND POLITICS RISK INTO THE MIDTERMS</span><span class="ttag">macro-rates</span><span class="ttag">policy</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Consumer confidence at a 2013 low as agent workflows hit jobs</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The jobs market is weaker than headline unemployment shows, and agent adoption makes it a profit-margin and political story.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Consumer confidence fell to its lowest level since 2013, below the pandemic.</li><li><span class="dot" style="background:#93711b;"></span>Jobs plentiful vs hard to get implies unemployment closer to <b>6%</b>, like 2013.</li><li><span class="dot" style="background:#93711b;"></span>Warren Pies: financials and tech payrolls are shrinking; excluding health care, jobs growth has been negative for about 18 months.</li><li><span class="dot" style="background:#93711b;"></span>S&amp;P earnings growth is running at <b>29%</b> even as job creation slows, which he frames as a margin story, not a recession, though it could drive politics and the Fed.</li><li><span class="dot" style="background:#93711b;"></span>Normal distribution of outcomes is breaking: losers (retail malls) lose growth to AI, winners (Amazon) compound, and middle names like banks drift toward losers.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📉</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Read this selloff as forced deleveraging: watch HYG vs IEF and convert spreads for when it ends, not AI headlines.</span></div></div><div class="irow"><div class="ic">📅</div><div class="tline"><span class="cat">Catalysts:</span> <span class="txt">Mark hyperscaler earnings and the midterms as possible ends of the pain trade.</span></div></div><div class="irow"><div class="ic">📝</div><div class="tline"><span class="cat">AI infra:</span> <span class="txt">Weigh supplier contracts (Micron, ASML, Lumentum) more than 2030 impairment forecasts.</span></div></div><div class="irow"><div class="ic">🏦</div><div class="tline"><span class="cat">Credit:</span> <span class="txt">If you want CoreWeave exposure at these levels, look at the bonds before the equity.</span></div></div><div class="irow"><div class="ic">🧮</div><div class="tline"><span class="cat">Investing:</span> <span class="txt">Keep compounding: <b>$10 </b>a month in the S&amp;P for 50 years grew to about $478,000.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;Hedge fund leverage has popped. It will never ever ever ever ever, in my opinion, exceed.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;You will never go through what you went through in the first quarter again, ever again in public stocks, ever.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;As far as I'm concerned, we have destroyed terminal value.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;They are doing basic human linear garbage work. End of story.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;the size of my AI portfolio is still significantly down and as I've said, it will never be as big as crypto again&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;this is the end of leverage in hedge funds uh as a rising situation&#8221; <cite>— Jordi Visser</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Jordi Visser:</b> Hedge fund leverage will never again exceed its current peak. <span class="cmeta">hedge fund leverage · never above peak</span></div><div class="ritem"><b>Jordi Visser:</b> The deleveraging pain trade continues into hyperscaler earnings, possibly the midterms, then snaps back at year end. <span class="cmeta">AI trade · year-end snapback · 2026-12</span> <i>if no AI bubble, just a positioning shakeout</i></div><div class="ritem"><b>Jordi Visser:</b> Hedge fund liquidation could take another month. <span class="cmeta">deleveraging duration · about a month · 2026-11</span></div><div class="ritem"><b>Jordi Visser:</b> Bitcoin won't move higher until hedge funds stabilize and could drift toward the 75 area. <span class="cmeta">BTC price · 75 area</span> <i>if hedge fund instability persists</i> <span class="tag">Bitcoin (BTC)</span></div><div class="ritem"><b>Gartner Research:</b> Over $3.5 trillion of AI infrastructure spending could be exposed to impairment. <span class="cmeta">AI infra impairment · $3.5T · 2030</span></div><div class="ritem"><b>Jordi Visser:</b> Bain forecasts AI needs $6 trillion and will be about $800B short. <span class="cmeta">AI funding gap · $800B short · 2031</span></div><div class="ritem"><b>Jordi Visser:</b> Anthropic finishes the year with 90-100B of revenue. <span class="cmeta">Anthropic revenue · 90-100B · 2026-12</span> <span class="tag">Anthropic</span></div><div class="ritem"><b>Jordi Visser:</b> A podcast guest he cites expects OpenAI and Anthropic combined to reach 600-700B of revenue. <span class="cmeta">combined lab revenue · 600-700B</span> <span class="tag">Anthropic &amp; OpenAI</span></div><div class="ritem"><b>Jordi Visser:</b> A podcast guest he cites puts AI capex close to $2 trillion, 5-6% of GDP, next year. <span class="cmeta">AI capex · $2T / 5-6% of GDP · 2027</span></div><div class="ritem"><b>Jensen Huang:</b> Nvidia guided to about 70% revenue growth for next year. <span class="cmeta">Nvidia revenue growth · 70% · 2027</span> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>ASML:</b> AI chip supply shortages last through 2028. <span class="cmeta">supply shortage · persists · 2028</span> <span class="tag">ASML (ASML)</span></div><div class="ritem"><b>Jordi Visser:</b> Equities still deliver returns for about three years but are dwarfed by the tokenized digital economy. <span class="cmeta">relative returns · tokenized &gt; public equities · 3 years</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>CoreWeave (CRWV)</b> <span class="rel">supplies</span> <b>Microsoft (MSFT)</b> &mdash; major compute client</div><div class="ritem"><b>CoreWeave (CRWV)</b> <span class="rel">supplies</span> <b>Meta (META)</b> &mdash; major compute client</div><div class="ritem"><b>CoreWeave (CRWV)</b> <span class="rel">supplies</span> <b>OpenAI</b></div><div class="ritem"><b>CoreWeave (CRWV)</b> <span class="rel">supplies</span> <b>Anthropic</b></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📚</div><div><div class="title">Sources he recommends this week: Dylan Patel and Thibault (OpenAI) on Alex Kantrowitz; Zuckerberg and Alexander Wang on Cheeky Pint; Brad Gerstner, Jensen Huang and Clark Tang; Gavin Baker; Jared Kubin on quant flows and the Anthropic revenue math; <i>When Genius Failed</i> on LTCM. <span class="tag">Sources</span></div></div></div><div class="irow"><div class="ic">🗞</div><div><div class="title">Bears he names: Kuppy's oil/shale comparison (token price falls don't cut revenue the way oil prices do), Carl Quintanilla's bearish posts, and the media's misreading of Hock Tan's comments, which he says referred to guessing OpenAI's numbers, not AI investors gambling. <span class="tag">Media</span></div></div></div><div class="irow"><div class="ic">🧠</div><div><div class="title">Misread news flow he lists: DeepSeek day, Liberation Day, Kimi, and CXMT's memory news hitting memory names until Elon Musk said the real problem is RAM supply. <span class="tag">AI news</span></div></div></div><div class="irow"><div class="ic">📈</div><div><div class="title">Compounding: S&amp;P returned <b>17%</b> annualized over 10 years, 13% over 20, 12% over 30, 13% over 40; a penny doubled daily reaches $10.7 million by day 31; the S&amp;P rose 16% over the last year. <span class="tag">Investing</span></div></div></div><div class="irow"><div class="ic">💼</div><div><div class="title">Track record: worked through the 1994 Mexico devaluation at Morgan Stanley, LTCM's collapse, dot-com and the GFC, when he moved money out of banks into gold weekly; past drawdowns were ~<b>60%</b> (GFC), 50% (dot-com) and ~40% (COVID). Earlier analogies: AIG and Ciena charts, subprime mortgages. <span class="tag">Context</span></div></div></div><div class="irow"><div class="ic">🚀</div><div><div class="title">Valuations: OpenAI and Anthropic went from under <b>$100B</b> two years ago to roughly $1.5-2T; he says they have won even if they stay there; SpaceX, Cursor and OpenRouter cited as private winners; Micron went from $10 to $80 and street desks missed it; new launches Grokbot and Meta's Muse. <span class="tag">Private markets</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Multi-strat / pods</b> &mdash; Hedge funds running many independent trading teams under one risk budget, relying on low correlation across strategies.</div><div><b>Gross vs net exposure</b> &mdash; Gross is total longs plus shorts; net is longs minus shorts. Multi-strats run high gross and low net.</div><div><b>HYG vs IEF</b> &mdash; Long high-yield bonds, short Treasuries: a synthetic trade that isolates credit spread exposure.</div><div><b>Terminal value</b> &mdash; The value of a company's earnings beyond the explicit forecast window; he argues AI makes anything past three years unknowable.</div><div><b>Lessons from leverage</b> &mdash; His LTCM checklist: a correct thesis still fails on timing, volatility, financing, crowding, correlation breaks, liquidity or position sizing.</div><div><b>Telebras spread trade</b> &mdash; LTCM's bet that Brazilian Telebras preferred and ordinary shares would converge at privatization, a correct thesis wrecked by leverage and timing.</div><div><b>Vera Rubin</b> &mdash; Nvidia's next GPU platform, the hub of the agentic compute names on his 15-name list.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>

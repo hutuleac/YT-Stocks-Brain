@@ -1,0 +1,8671 @@
+1
+00:00:00,400 --> 00:00:05,320
+We got a lot to cover.
+
+2
+00:00:02,640 --> 00:00:06,960
+A lot of slides, a lot of
+
+3
+00:00:05,320 --> 00:00:09,800
+market internals. Hopefully, I'm going
+
+4
+00:00:06,960 --> 00:00:11,679
+to be able to shed some uh
+
+5
+00:00:09,800 --> 00:00:14,359
+uh
+
+6
+00:00:11,679 --> 00:00:16,320
+some experience on
+
+7
+00:00:14,359 --> 00:00:17,960
+what have you. See, I'm I'm hoodies up
+
+8
+00:00:16,320 --> 00:00:20,160
+this week because I don't know if you
+
+9
+00:00:17,960 --> 00:00:21,640
+guys read the news, but the air bubble
+
+10
+00:00:20,160 --> 00:00:23,240
+has popped.
+
+11
+00:00:21,640 --> 00:00:25,560
+That is the news that is coming out at
+
+12
+00:00:23,239 --> 00:00:28,119
+the end of last week. And I have never
+
+13
+00:00:25,559 --> 00:00:31,159
+received more panic emails from people
+
+14
+00:00:28,120 --> 00:00:32,920
+I've known over the years in terms of
+
+15
+00:00:31,160 --> 00:00:35,320
+does this remind you of '08? Does this
+
+16
+00:00:32,920 --> 00:00:36,800
+remind you of '01? Is this the same type
+
+17
+00:00:35,320 --> 00:00:38,399
+of situation? And the answer for
+
+18
+00:00:36,799 --> 00:00:41,239
+everyone is
+
+19
+00:00:38,399 --> 00:00:42,799
+uh my career began in 1994 with Mexico.
+
+20
+00:00:41,240 --> 00:00:45,039
+I trade started trading a book 2 months
+
+21
+00:00:42,799 --> 00:00:47,799
+before the devaluation. I was at Morgan
+
+22
+00:00:45,039 --> 00:00:49,920
+Stanley. I was a young person involved
+
+23
+00:00:47,799 --> 00:00:51,559
+in a market going through things I've
+
+24
+00:00:49,920 --> 00:00:54,000
+never seen before. Then I was part of
+
+25
+00:00:51,560 --> 00:00:56,440
+'97 and '99 in emerging markets trading
+
+26
+00:00:54,000 --> 00:00:58,880
+everything through the EM crisis,
+
+27
+00:00:56,439 --> 00:01:01,000
+including the closure of LTCM was on
+
+28
+00:00:58,880 --> 00:01:02,200
+both sides of their business, meaning on
+
+29
+00:01:01,000 --> 00:01:03,799
+the
+
+30
+00:01:02,200 --> 00:01:05,640
+other side of their trades as they were
+
+31
+00:01:03,799 --> 00:01:07,480
+doing things in Brazil, and then part of
+
+32
+00:01:05,640 --> 00:01:09,120
+the shutdown, and then a bunch of them
+
+33
+00:01:07,480 --> 00:01:10,640
+worked at Morgan Stanley, and it was
+
+34
+00:01:09,120 --> 00:01:12,280
+like working with the greatest people
+
+35
+00:01:10,640 --> 00:01:14,799
+I've ever been with because I got to ask
+
+36
+00:01:12,280 --> 00:01:18,280
+them, "How could you how could what
+
+37
+00:01:14,799 --> 00:01:20,159
+happened happened occur?" And you notice
+
+38
+00:01:18,280 --> 00:01:21,760
+LTCM leverage lessons. I'll be going
+
+39
+00:01:20,159 --> 00:01:23,640
+through those.
+
+40
+00:01:21,760 --> 00:01:25,920
+I came back to the US. I took over the
+
+41
+00:01:23,640 --> 00:01:27,960
+S&P. Then I was there for the dot-com
+
+42
+00:01:25,920 --> 00:01:29,480
+bubble, managing ETF business, index
+
+43
+00:01:27,959 --> 00:01:31,119
+businesses. I was a part of all of that
+
+44
+00:01:29,480 --> 00:01:33,560
+on the other side of billion-dollar
+
+45
+00:01:31,120 --> 00:01:35,240
+transactions every day.
+
+46
+00:01:33,560 --> 00:01:36,439
+Then I traded a billion-dollar macro
+
+47
+00:01:35,239 --> 00:01:38,039
+book throughout the great financial
+
+48
+00:01:36,439 --> 00:01:40,039
+crisis, took money out of the banks
+
+49
+00:01:38,040 --> 00:01:42,400
+weekly and put it into gold. I have
+
+50
+00:01:40,040 --> 00:01:46,560
+traded all kinds of things and been
+
+51
+00:01:42,400 --> 00:01:48,400
+involved as a CIO during COVID. I bring
+
+52
+00:01:46,560 --> 00:01:50,799
+this up because
+
+53
+00:01:48,400 --> 00:01:53,280
+this is not a bubble popping. It might
+
+54
+00:01:50,799 --> 00:01:54,959
+be in the future. It's not now. So, with
+
+55
+00:01:53,280 --> 00:01:57,120
+hoodies up,
+
+56
+00:01:54,959 --> 00:01:59,319
+I'm going to give you guys a lot of
+
+57
+00:01:57,120 --> 00:02:01,120
+different things to go through. Again,
+
+58
+00:01:59,319 --> 00:02:03,839
+I'm doing this for your information,
+
+59
+00:02:01,120 --> 00:02:05,280
+your education, and hopefully not this
+
+60
+00:02:03,840 --> 00:02:07,560
+week. We didn't make money this week,
+
+61
+00:02:05,280 --> 00:02:09,719
+but over the long term, the goal of this
+
+62
+00:02:07,560 --> 00:02:11,039
+is to make sure that in weeks like this,
+
+63
+00:02:09,719 --> 00:02:12,759
+you're paying attention to the stuff
+
+64
+00:02:11,039 --> 00:02:15,039
+that's actually happening
+
+65
+00:02:12,759 --> 00:02:18,039
+and not to the noise that's going on.
+
+66
+00:02:15,039 --> 00:02:20,719
+There is a bubble being popped.
+
+67
+00:02:18,039 --> 00:02:22,840
+It is not in the equity market, and it
+
+68
+00:02:20,719 --> 00:02:25,039
+is not in the economy.
+
+69
+00:02:22,840 --> 00:02:27,560
+This is a true number. This is the
+
+70
+00:02:25,039 --> 00:02:30,519
+rolling drawdowns of the S&P 500 over
+
+71
+00:02:27,560 --> 00:02:33,159
+time. Here is the Great Financial
+
+72
+00:02:30,520 --> 00:02:35,840
+Crisis. Look at that, almost 60% peak to
+
+73
+00:02:33,159 --> 00:02:37,759
+trough. Here's the dot-com bubble.
+
+74
+00:02:35,840 --> 00:02:41,599
+Eventually got to 50.
+
+75
+00:02:37,759 --> 00:02:43,719
+Here is COVID, got close to 40. Here is
+
+76
+00:02:41,599 --> 00:02:45,359
+when the Fed's raising rates. Here is
+
+77
+00:02:43,719 --> 00:02:48,159
+the tariff tantrum.
+
+78
+00:02:45,360 --> 00:02:50,720
+Here we are now. We are 2.7%
+
+79
+00:02:48,159 --> 00:02:52,560
+off the all-time highs in the S&P 500 as
+
+80
+00:02:50,719 --> 00:02:54,159
+of the close of Friday.
+
+81
+00:02:52,560 --> 00:02:56,080
+Guys,
+
+82
+00:02:54,159 --> 00:02:57,879
+please.
+
+83
+00:02:56,080 --> 00:02:59,320
+Here's the bubble that has popped. I
+
+84
+00:02:57,879 --> 00:03:01,400
+will go through this. Hedge fund
+
+85
+00:02:59,319 --> 00:03:03,759
+leverage has popped. It will never ever
+
+86
+00:03:01,400 --> 00:03:05,760
+ever ever ever, in my opinion, exceed.
+
+87
+00:03:03,759 --> 00:03:08,039
+And what we are going through is a
+
+88
+00:03:05,759 --> 00:03:11,039
+constant deleveraging that needs to
+
+89
+00:03:08,039 --> 00:03:13,400
+happen. CoreWeave, not a problem.
+
+90
+00:03:11,039 --> 00:03:15,120
+Hedge funds, big problem. I'll go
+
+91
+00:03:13,400 --> 00:03:17,319
+through the reasons why. This is
+
+92
+00:03:15,120 --> 00:03:18,879
+multi-strat leverage, which peaked, and
+
+93
+00:03:17,319 --> 00:03:20,759
+this is from
+
+94
+00:03:18,879 --> 00:03:23,159
+the Treasury.
+
+95
+00:03:20,759 --> 00:03:24,919
+Peaked, started to decline.
+
+96
+00:03:23,159 --> 00:03:26,560
+You're going to see more of this. I'm
+
+97
+00:03:24,919 --> 00:03:30,879
+going to go through why.
+
+98
+00:03:26,560 --> 00:03:33,599
+Hedge funds leverage is in a complete
+
+99
+00:03:30,879 --> 00:03:35,199
+and utter dismantling.
+
+100
+00:03:33,599 --> 00:03:37,479
+There will never be a time where you
+
+101
+00:03:35,199 --> 00:03:38,839
+will see it go up, in my opinion, based
+
+102
+00:03:37,479 --> 00:03:39,759
+on the things that I'm going to show
+
+103
+00:03:38,840 --> 00:03:41,479
+you,
+
+104
+00:03:39,759 --> 00:03:43,679
+because at the end of the day, you have
+
+105
+00:03:41,479 --> 00:03:45,799
+to provide a sharp ratio that makes
+
+106
+00:03:43,680 --> 00:03:48,120
+sense. And we are seeing extraordinary
+
+107
+00:03:45,800 --> 00:03:49,360
+moves. And remember, as I go through the
+
+108
+00:03:48,120 --> 00:03:50,360
+leverage, the leverage in the hedge
+
+109
+00:03:49,360 --> 00:03:52,519
+funds
+
+110
+00:03:50,360 --> 00:03:56,160
+dramatically bigger than anything going
+
+111
+00:03:52,519 --> 00:03:57,680
+on in AI right now, not even close.
+
+112
+00:03:56,159 --> 00:03:59,879
+Here's the Coreweave chart. This is
+
+113
+00:03:57,680 --> 00:04:02,040
+where we closed the week. I just want to
+
+114
+00:03:59,879 --> 00:04:04,840
+show this because this is the fifth time
+
+115
+00:04:02,039 --> 00:04:07,479
+the equity price has been here. Every
+
+116
+00:04:04,840 --> 00:04:11,319
+single bubble I have ever traded when it
+
+117
+00:04:07,479 --> 00:04:14,919
+has popped, the equity is down massively
+
+118
+00:04:11,319 --> 00:04:16,920
+in the bubble popping situation way way
+
+119
+00:04:14,919 --> 00:04:18,560
+way way further than this. By the time
+
+120
+00:04:16,920 --> 00:04:20,519
+we get to the bubble popping, when you
+
+121
+00:04:18,560 --> 00:04:22,639
+see the bubble popping. And again, maybe
+
+122
+00:04:20,519 --> 00:04:25,079
+there will be an AI bubble in a year, in
+
+123
+00:04:22,639 --> 00:04:27,120
+2 years. We definitely are constrained
+
+124
+00:04:25,079 --> 00:04:29,199
+like I said last week, capital is the
+
+125
+00:04:27,120 --> 00:04:31,439
+biggest risk. We continue to tap the
+
+126
+00:04:29,199 --> 00:04:33,199
+markets for more capital. This is not
+
+127
+00:04:31,439 --> 00:04:34,879
+about non-payments, this is not about
+
+128
+00:04:33,199 --> 00:04:36,879
+not earnings, this is not about GPU
+
+129
+00:04:34,879 --> 00:04:38,719
+prices falling. So, we're ahead of the
+
+130
+00:04:36,879 --> 00:04:40,120
+game on the fundamentals, which means
+
+131
+00:04:38,720 --> 00:04:41,600
+like there's been in Coreweave where
+
+132
+00:04:40,120 --> 00:04:43,480
+we've had these panics, we get a bounce
+
+133
+00:04:41,600 --> 00:04:45,520
+and we get a bounce. Now, the bounces
+
+134
+00:04:43,480 --> 00:04:46,800
+seem to be getting shorter
+
+135
+00:04:45,519 --> 00:04:49,279
+and I don't have a problem like I said
+
+136
+00:04:46,800 --> 00:04:51,199
+on the weekly video for subscribers with
+
+137
+00:04:49,279 --> 00:04:53,439
+the equity price of of Coreweave
+
+138
+00:04:51,199 --> 00:04:55,439
+building in a higher risk premium.
+
+139
+00:04:53,439 --> 00:04:57,519
+But, look at what started this whole
+
+140
+00:04:55,439 --> 00:05:00,519
+thing. And again, hedge funds were
+
+141
+00:04:57,519 --> 00:05:01,839
+losing money from July in a historic
+
+142
+00:05:00,519 --> 00:05:04,240
+fashion.
+
+143
+00:05:01,839 --> 00:05:05,519
+They got a bounce somewhat in September,
+
+144
+00:05:04,240 --> 00:05:07,439
+but as I'm going to show you, some news
+
+145
+00:05:05,519 --> 00:05:09,560
+came out after I did the video last week
+
+146
+00:05:07,439 --> 00:05:11,959
+that shocked me. I can't believe it
+
+147
+00:05:09,560 --> 00:05:13,240
+wasn't more of a story. Gartner says
+
+148
+00:05:11,959 --> 00:05:14,918
+over 3 and 1/2 trillion of AI
+
+149
+00:05:13,240 --> 00:05:16,720
+infrastructure spending could be exposed
+
+150
+00:05:14,918 --> 00:05:18,599
+to impairment by the end of 2030. First
+
+151
+00:05:16,720 --> 00:05:20,800
+of all,
+
+152
+00:05:18,600 --> 00:05:22,040
+we don't have this number yet.
+
+153
+00:05:20,800 --> 00:05:23,800
+So, I I just want to make sure you
+
+154
+00:05:22,040 --> 00:05:26,400
+realize what this is saying. I've never
+
+155
+00:05:23,800 --> 00:05:28,520
+in my history of trading markets seen a
+
+156
+00:05:26,399 --> 00:05:29,479
+forecast out to 2030 that anyone cared
+
+157
+00:05:28,519 --> 00:05:31,879
+about.
+
+158
+00:05:29,480 --> 00:05:33,080
+We're talking about 4 and change years
+
+159
+00:05:31,879 --> 00:05:35,959
+from now
+
+160
+00:05:33,079 --> 00:05:37,479
+could be exposed. And yet, people sent
+
+161
+00:05:35,959 --> 00:05:39,479
+this to me going up, this is a problem
+
+162
+00:05:37,480 --> 00:05:41,800
+for Coreweave. Coreweave might be in
+
+163
+00:05:39,480 --> 00:05:43,120
+trouble then, but we have no idea what's
+
+164
+00:05:41,800 --> 00:05:45,360
+going to happen. If interest rates go
+
+165
+00:05:43,120 --> 00:05:46,959
+down, it's not a problem for them. If
+
+166
+00:05:45,360 --> 00:05:48,520
+the cost of memory and everything goes
+
+167
+00:05:46,959 --> 00:05:50,599
+down to building a data center, but the
+
+168
+00:05:48,519 --> 00:05:52,839
+compute demand stays high, you can have
+
+169
+00:05:50,600 --> 00:05:55,200
+massive endless compute demand. And as
+
+170
+00:05:52,839 --> 00:05:57,000
+Jim Chanos has showed, it may not be a
+
+171
+00:05:55,199 --> 00:05:58,439
+good equity business. It doesn't mean
+
+172
+00:05:57,000 --> 00:06:00,279
+it's going to zero. It doesn't mean
+
+173
+00:05:58,439 --> 00:06:02,519
+we're going to have an unwind. Here's a
+
+174
+00:06:00,279 --> 00:06:05,199
+chart of the S&P, again, sitting near
+
+175
+00:06:02,519 --> 00:06:06,560
+the all-time highs.
+
+176
+00:06:05,199 --> 00:06:09,360
+Here
+
+177
+00:06:06,560 --> 00:06:13,199
+this one's also astonishing. So, here
+
+178
+00:06:09,360 --> 00:06:16,680
+are Friday's returns around the globe.
+
+179
+00:06:13,199 --> 00:06:19,000
+So, the S&P's down 1%. Big deal. The VIX
+
+180
+00:06:16,680 --> 00:06:20,480
+has been trading 16. So, we're barely
+
+181
+00:06:19,000 --> 00:06:22,279
+getting one standard deviation falls. It
+
+182
+00:06:20,480 --> 00:06:24,480
+had been like 100 days that we had gone
+
+183
+00:06:22,279 --> 00:06:26,879
+without getting a 1% move. We had two of
+
+184
+00:06:24,480 --> 00:06:29,240
+them last week. The Nasdaq's down two.
+
+185
+00:06:26,879 --> 00:06:30,800
+On the same day that that's happening,
+
+186
+00:06:29,240 --> 00:06:34,040
+look at these.
+
+187
+00:06:30,800 --> 00:06:36,520
+I mean, again, Brazil's up, Mexico's up,
+
+188
+00:06:34,040 --> 00:06:38,720
+Canada's up, Europe's up. Every single
+
+189
+00:06:36,519 --> 00:06:42,560
+one of them is up.
+
+190
+00:06:38,720 --> 00:06:45,240
+If you go look at the last 5 days, S&P
+
+191
+00:06:42,560 --> 00:06:47,000
+down, so this is for the week, down 2%,
+
+192
+00:06:45,240 --> 00:06:49,918
+down 4 and 1/2. Again, Europe's up
+
+193
+00:06:47,000 --> 00:06:50,480
+across the board. Look at Mexico.
+
+194
+00:06:49,918 --> 00:06:53,000
+Uh
+
+195
+00:06:50,480 --> 00:06:56,160
+Nikkei's down. The AI trade is what's
+
+196
+00:06:53,000 --> 00:06:57,639
+down. Again, the AI trade is down. So,
+
+197
+00:06:56,160 --> 00:07:01,680
+year-to-date, here's where we they are.
+
+198
+00:06:57,639 --> 00:07:04,120
+The S&P's up 12, Nasdaq's up 13. Again,
+
+199
+00:07:01,680 --> 00:07:06,240
+bubbles popping. If people are right on
+
+200
+00:07:04,120 --> 00:07:08,800
+this, they are the best forecasters I've
+
+201
+00:07:06,240 --> 00:07:12,040
+ever seen. So,
+
+202
+00:07:08,800 --> 00:07:13,520
+in January of 2007, just to give you one
+
+203
+00:07:12,040 --> 00:07:15,160
+example, you can do this throughout the
+
+204
+00:07:13,519 --> 00:07:16,439
+dot-com bubble. It did not become
+
+205
+00:07:15,160 --> 00:07:18,560
+obvious what the problems were in the
+
+206
+00:07:16,439 --> 00:07:20,480
+dot-com bubble until well after the
+
+207
+00:07:18,560 --> 00:07:23,879
+equity market had started to fall, well
+
+208
+00:07:20,480 --> 00:07:26,680
+after. In the case of here, we were
+
+209
+00:07:23,879 --> 00:07:29,360
+getting defaults already. Like, the
+
+210
+00:07:26,680 --> 00:07:33,519
+housing bubble was unwinding in 2006,
+
+211
+00:07:29,360 --> 00:07:35,439
+2007, way before. Probably 2007 is the
+
+212
+00:07:33,519 --> 00:07:38,479
+better one. I think March of 2007 is
+
+213
+00:07:35,439 --> 00:07:40,680
+when I associate as when at the fund we
+
+214
+00:07:38,480 --> 00:07:42,879
+were at, we were short, we had the big
+
+215
+00:07:40,680 --> 00:07:45,360
+short trade on as well. We started
+
+216
+00:07:42,879 --> 00:07:47,079
+seeing these things which we knew were
+
+217
+00:07:45,360 --> 00:07:49,319
+horrible mortgages that were being
+
+218
+00:07:47,079 --> 00:07:50,879
+written. As I said in my subscriber
+
+219
+00:07:49,319 --> 00:07:52,360
+thing this week,
+
+220
+00:07:50,879 --> 00:07:54,120
+when I go through the core weave
+
+221
+00:07:52,360 --> 00:07:56,720
+clients, remember the clients of the
+
+222
+00:07:54,120 --> 00:07:59,079
+subprime mortgages? The story and thing
+
+223
+00:07:56,720 --> 00:08:01,800
+strippers in Florida were getting
+
+224
+00:07:59,079 --> 00:08:05,120
+mortgages. So, again, this is not the
+
+225
+00:08:01,800 --> 00:08:07,439
+same scam that was done. There's demand
+
+226
+00:08:05,120 --> 00:08:09,280
+for all of this. Here's AIG. You can go
+
+227
+00:08:07,439 --> 00:08:10,959
+back and look at AIG stock price. I
+
+228
+00:08:09,279 --> 00:08:13,839
+advise you to go look at Sienna stock
+
+229
+00:08:10,959 --> 00:08:16,279
+price, which is another AI chart right
+
+230
+00:08:13,839 --> 00:08:18,279
+now. But, when this thing finally fell,
+
+231
+00:08:16,279 --> 00:08:19,918
+again, before we got to Lehman Brothers,
+
+232
+00:08:18,279 --> 00:08:22,918
+which was in here,
+
+233
+00:08:19,918 --> 00:08:23,680
+all of financials were down massively.
+
+234
+00:08:22,918 --> 00:08:25,599
+The
+
+235
+00:08:23,680 --> 00:08:27,480
+credit spreads were widening. Here's
+
+236
+00:08:25,600 --> 00:08:29,720
+where we finish when people said, "How
+
+237
+00:08:27,480 --> 00:08:33,080
+do I watch credit? How bad is credit?"
+
+238
+00:08:29,720 --> 00:08:35,240
+Here is the high yield side
+
+239
+00:08:33,080 --> 00:08:38,440
+of option adjusted spreads within side
+
+240
+00:08:35,240 --> 00:08:40,759
+the cash bonds. So, again, are we doing
+
+241
+00:08:38,440 --> 00:08:42,560
+anything other than what we did across
+
+242
+00:08:40,759 --> 00:08:44,919
+so many different times here? Of course
+
+243
+00:08:42,559 --> 00:08:47,000
+not. Is this COVID?
+
+244
+00:08:44,919 --> 00:08:49,259
+No. Is this
+
+245
+00:08:47,000 --> 00:08:50,720
+the fracking situation in by the
+
+246
+00:08:49,259 --> 00:08:53,000
+[clears throat] time we got again to a
+
+247
+00:08:50,720 --> 00:08:54,879
+serious problem in oil? No. And again,
+
+248
+00:08:53,000 --> 00:08:57,120
+it's not to say that we can't get up to
+
+249
+00:08:54,879 --> 00:08:58,480
+those levels. We can. We're not there
+
+250
+00:08:57,120 --> 00:09:00,039
+yet. And now I'm going to take you
+
+251
+00:08:58,480 --> 00:09:01,639
+through what this is from my
+
+252
+00:09:00,039 --> 00:09:03,319
+perspective.
+
+253
+00:09:01,639 --> 00:09:05,399
+I was heavily involved with Long-Term
+
+254
+00:09:03,320 --> 00:09:07,520
+Capital Management. For those of you who
+
+255
+00:09:05,399 --> 00:09:09,519
+haven't read this book, it's probably a
+
+256
+00:09:07,519 --> 00:09:11,759
+good time to pull it out
+
+257
+00:09:09,519 --> 00:09:13,919
+and go understand it.
+
+258
+00:09:11,759 --> 00:09:17,559
+Hedge funds at the end of the day are
+
+259
+00:09:13,919 --> 00:09:19,559
+leverage vehicles. They are making bets
+
+260
+00:09:17,559 --> 00:09:22,119
+to some degree on volatility and
+
+261
+00:09:19,559 --> 00:09:24,279
+correlation amongst a diversification of
+
+262
+00:09:22,120 --> 00:09:25,720
+assets. For the most part, a multi-strat
+
+263
+00:09:24,279 --> 00:09:28,399
+in particular, it's across different
+
+264
+00:09:25,720 --> 00:09:29,879
+types of strategies. Hundreds of them in
+
+265
+00:09:28,399 --> 00:09:32,039
+some of the largest places with
+
+266
+00:09:29,879 --> 00:09:33,080
+thousands of investment professionals
+
+267
+00:09:32,039 --> 00:09:36,360
+hoping that there'd be a low
+
+268
+00:09:33,080 --> 00:09:39,160
+correlation. The problem is,
+
+269
+00:09:36,360 --> 00:09:41,000
+since I've been involved with markets,
+
+270
+00:09:39,159 --> 00:09:42,639
+hedge funds have focused their attention
+
+271
+00:09:41,000 --> 00:09:45,600
+for the most part, the way that you
+
+272
+00:09:42,639 --> 00:09:49,919
+really get diversified is by having high
+
+273
+00:09:45,600 --> 00:09:52,240
+trading activity, which means you depend
+
+274
+00:09:49,919 --> 00:09:53,719
+on stocks to move
+
+275
+00:09:52,240 --> 00:09:56,000
+based on information.
+
+276
+00:09:53,720 --> 00:09:57,840
+So, if you get really good information
+
+277
+00:09:56,000 --> 00:09:59,120
+and you think companies are going to
+
+278
+00:09:57,840 --> 00:10:00,560
+beat the quarter cuz you've worked
+
+279
+00:09:59,120 --> 00:10:01,720
+really hard, you've done all the channel
+
+280
+00:10:00,559 --> 00:10:05,439
+checks, and you've done things that a
+
+281
+00:10:01,720 --> 00:10:07,360
+retail investor can't do historically,
+
+282
+00:10:05,440 --> 00:10:08,760
+and they beat the the quarter, you
+
+283
+00:10:07,360 --> 00:10:11,320
+should make money.
+
+284
+00:10:08,759 --> 00:10:13,600
+Well, again, I show this all the time.
+
+285
+00:10:11,320 --> 00:10:16,480
+Here's Nvidia. The stock price is
+
+286
+00:10:13,600 --> 00:10:18,879
+effectively unchanged since October of
+
+287
+00:10:16,480 --> 00:10:20,519
+last year. 1 year, it's effectively
+
+288
+00:10:18,879 --> 00:10:22,559
+unchanged.
+
+289
+00:10:20,519 --> 00:10:23,960
+Their earnings have blown away consensus
+
+290
+00:10:22,559 --> 00:10:25,879
+in a way that nobody could have
+
+291
+00:10:23,960 --> 00:10:28,120
+expected, and what we've had is a
+
+292
+00:10:25,879 --> 00:10:31,200
+complete crash
+
+293
+00:10:28,120 --> 00:10:33,159
+in their PE, which is now down off next
+
+294
+00:10:31,200 --> 00:10:34,520
+year's earnings to 15, and depending on
+
+295
+00:10:33,159 --> 00:10:38,559
+where you go, if you take the higher
+
+296
+00:10:34,519 --> 00:10:40,799
+area, it's probably closer to 10.
+
+297
+00:10:38,559 --> 00:10:42,799
+That's what's happened is as they beat
+
+298
+00:10:40,799 --> 00:10:44,799
+numbers, the stock's not reacting that
+
+299
+00:10:42,799 --> 00:10:47,079
+way. And it was fine when it was just
+
+300
+00:10:44,799 --> 00:10:49,079
+Nvidia for most of this year, but it has
+
+301
+00:10:47,080 --> 00:10:51,879
+spread to the entire AI trade, and this
+
+302
+00:10:49,080 --> 00:10:54,120
+is why when I said back the fireworks
+
+303
+00:10:51,879 --> 00:10:55,879
+show is over, this is directly what it
+
+304
+00:10:54,120 --> 00:10:57,720
+was referenced to.
+
+305
+00:10:55,879 --> 00:10:59,320
+You will never go through what you went
+
+306
+00:10:57,720 --> 00:11:01,920
+through in the first quarter again, ever
+
+307
+00:10:59,320 --> 00:11:03,480
+again in public stocks, ever. As far as
+
+308
+00:11:01,919 --> 00:11:05,039
+I'm concerned, we have destroyed
+
+309
+00:11:03,480 --> 00:11:06,839
+terminal value.
+
+310
+00:11:05,039 --> 00:11:09,599
+That terminal value means that any
+
+311
+00:11:06,839 --> 00:11:10,960
+company's earnings past 3 years, we have
+
+312
+00:11:09,600 --> 00:11:12,080
+no idea whether they're going to survive
+
+313
+00:11:10,960 --> 00:11:14,120
+or not.
+
+314
+00:11:12,080 --> 00:11:15,560
+The hedge fund industry is at all-time
+
+315
+00:11:14,120 --> 00:11:16,919
+record leverage.
+
+316
+00:11:15,559 --> 00:11:20,000
+I'm going to move this over so you can
+
+317
+00:11:16,919 --> 00:11:23,159
+see it. This is from the fret the the
+
+318
+00:11:20,000 --> 00:11:24,440
+the Fed, and this is through Q1
+
+319
+00:11:23,159 --> 00:11:27,240
+of this year.
+
+320
+00:11:24,440 --> 00:11:29,000
+Okay? All time, but more importantly,
+
+321
+00:11:27,240 --> 00:11:31,080
+look at the leverage effectively from
+
+322
+00:11:29,000 --> 00:11:34,919
+2018
+
+323
+00:11:31,080 --> 00:11:37,400
+to 2023, it was unchanged. We've now
+
+324
+00:11:34,919 --> 00:11:39,719
+gone up dramatically and more than
+
+325
+00:11:37,399 --> 00:11:41,480
+doubled. The leverage provided by the
+
+326
+00:11:39,720 --> 00:11:43,240
+prime brokers of the banks, another
+
+327
+00:11:41,480 --> 00:11:44,920
+place where crypto is going to have an
+
+328
+00:11:43,240 --> 00:11:48,240
+impact,
+
+329
+00:11:44,919 --> 00:11:50,799
+is at all-time highs. Here it is from
+
+330
+00:11:48,240 --> 00:11:53,960
+the OFR report.
+
+331
+00:11:50,799 --> 00:11:55,879
+Breaks it out by category, multis.
+
+332
+00:11:53,960 --> 00:11:57,080
+These are big numbers. Here's long-short
+
+333
+00:11:55,879 --> 00:11:58,960
+equity.
+
+334
+00:11:57,080 --> 00:12:00,800
+Close to two to one.
+
+335
+00:11:58,960 --> 00:12:02,840
+You're borrowing money. So, hedge funds
+
+336
+00:12:00,799 --> 00:12:04,759
+make money on leverage.
+
+337
+00:12:02,840 --> 00:12:06,519
+And there are multiple ways that you can
+
+338
+00:12:04,759 --> 00:12:08,240
+use when you use leverage. When you're
+
+339
+00:12:06,519 --> 00:12:09,960
+not taking directional bets in the
+
+340
+00:12:08,240 --> 00:12:12,279
+market. And again, the net exposure
+
+341
+00:12:09,960 --> 00:12:14,120
+across the board for multis is very low.
+
+342
+00:12:12,279 --> 00:12:15,919
+For long-short equity, it's been on the
+
+343
+00:12:14,120 --> 00:12:18,919
+decline for most of this year, but the
+
+344
+00:12:15,919 --> 00:12:22,479
+gross has remained high. Now, this is
+
+345
+00:12:18,919 --> 00:12:23,959
+all through Q2. We know that July must
+
+346
+00:12:22,480 --> 00:12:26,600
+have had an impact and these numbers
+
+347
+00:12:23,960 --> 00:12:29,040
+must have come down because the vol has
+
+348
+00:12:26,600 --> 00:12:31,000
+gone up so significantly as I showed on
+
+349
+00:12:29,039 --> 00:12:33,599
+the factor side. It just means the
+
+350
+00:12:31,000 --> 00:12:35,839
+instability within side all parts of the
+
+351
+00:12:33,600 --> 00:12:38,120
+market and most importantly,
+
+352
+00:12:35,839 --> 00:12:40,480
+there are very limited hedges for the AI
+
+353
+00:12:38,120 --> 00:12:43,839
+trade because it is a cross sectors.
+
+354
+00:12:40,480 --> 00:12:45,759
+There is no S&P put, as I will show you.
+
+355
+00:12:43,839 --> 00:12:48,320
+Here's the leverage growth as I'm
+
+356
+00:12:45,759 --> 00:12:50,960
+showing, 15% in hedge funds and then the
+
+357
+00:12:48,320 --> 00:12:54,320
+BDs, which again, the broker-dealers,
+
+358
+00:12:50,960 --> 00:12:54,320
+heavily involved with
+
+359
+00:12:55,080 --> 00:12:59,600
+the prime brokerage, massive growth.
+
+360
+00:12:58,080 --> 00:13:02,240
+When you're looking for leverage, like I
+
+361
+00:12:59,600 --> 00:13:04,600
+said, we're talking about 40 to 60
+
+362
+00:13:02,240 --> 00:13:06,399
+billion in core wave debt over the
+
+363
+00:13:04,600 --> 00:13:08,360
+course of 6 years.
+
+364
+00:13:06,399 --> 00:13:10,399
+Hedge funds have money, as we learned
+
+365
+00:13:08,360 --> 00:13:14,800
+with situational awareness, that can
+
+366
+00:13:10,399 --> 00:13:14,799
+become an issue in a matter of weeks.
+
+367
+00:13:14,919 --> 00:13:18,838
+On that point,
+
+368
+00:13:16,879 --> 00:13:22,039
+we all forget and everyone started
+
+369
+00:13:18,839 --> 00:13:23,680
+bringing out X jokes, like this was the
+
+370
+00:13:22,039 --> 00:13:26,399
+issue.
+
+371
+00:13:23,679 --> 00:13:28,399
+This was just one of the issues in July.
+
+372
+00:13:26,399 --> 00:13:30,079
+So, yes.
+
+373
+00:13:28,399 --> 00:13:32,799
+To get a number here, again, we're
+
+374
+00:13:30,080 --> 00:13:35,440
+caring about CoreWeave whose debt is
+
+375
+00:13:32,799 --> 00:13:38,039
+spread out over the next seven years,
+
+376
+00:13:35,440 --> 00:13:40,160
+six years. And at the same time, the
+
+377
+00:13:38,039 --> 00:13:42,919
+clients they have are the biggest
+
+378
+00:13:40,159 --> 00:13:44,959
+clients in the world with some of the
+
+379
+00:13:42,919 --> 00:13:47,079
+best balance sheets in the world.
+
+380
+00:13:44,960 --> 00:13:49,320
+Companies like Microsoft and Meta
+
+381
+00:13:47,080 --> 00:13:51,240
+dominating their stuff. Are they not
+
+382
+00:13:49,320 --> 00:13:53,120
+going to get paid by them? Is that
+
+383
+00:13:51,240 --> 00:13:55,039
+really going to be an issue? Are they
+
+384
+00:13:53,120 --> 00:13:57,080
+stripper-related?
+
+385
+00:13:55,039 --> 00:13:59,000
+Here is what happens.
+
+386
+00:13:57,080 --> 00:14:00,440
+These are the numbers that were reported
+
+387
+00:13:59,000 --> 00:14:02,320
+by the Wall Street Journal that everyone
+
+388
+00:14:00,440 --> 00:14:04,080
+kind of backed into. I don't really care
+
+389
+00:14:02,320 --> 00:14:06,480
+whether or not this is for illustrations
+
+390
+00:14:04,080 --> 00:14:07,960
+purposes. I do know one thing. They're
+
+391
+00:14:06,480 --> 00:14:11,480
+not far off.
+
+392
+00:14:07,960 --> 00:14:15,160
+So, if there's $11 billion of equity
+
+393
+00:14:11,480 --> 00:14:17,480
+and $45 billion of positions,
+
+394
+00:14:15,159 --> 00:14:20,079
+the borrowed capital
+
+395
+00:14:17,480 --> 00:14:22,480
+is 33 billion.
+
+396
+00:14:20,080 --> 00:14:24,480
+And as long as you're making money,
+
+397
+00:14:22,480 --> 00:14:27,800
+there is not an issue.
+
+398
+00:14:24,480 --> 00:14:30,240
+So, hedge funds are the problem, guys.
+
+399
+00:14:27,799 --> 00:14:32,279
+Mark my words. They are the problems. In
+
+400
+00:14:30,240 --> 00:14:34,240
+my world of terminal value being
+
+401
+00:14:32,279 --> 00:14:36,319
+eradicated in the bank apocalypse and
+
+402
+00:14:34,240 --> 00:14:38,799
+the pushback that I get, the pushback I
+
+403
+00:14:36,320 --> 00:14:41,480
+got with Micron last year, this is a
+
+404
+00:14:38,799 --> 00:14:43,519
+scenario that hedge funds are not being
+
+405
+00:14:41,480 --> 00:14:46,120
+honest with themselves about how much
+
+406
+00:14:43,519 --> 00:14:47,480
+the market structure has changed. And
+
+407
+00:14:46,120 --> 00:14:48,839
+it's not just hedge funds that are
+
+408
+00:14:47,480 --> 00:14:51,240
+feeling the pain. Mutual funds are
+
+409
+00:14:48,839 --> 00:14:53,360
+feeling it, too. That's why I did the
+
+410
+00:14:51,240 --> 00:14:55,360
+demo that I did last week to show the
+
+411
+00:14:53,360 --> 00:14:57,600
+types of
+
+412
+00:14:55,360 --> 00:14:59,600
+market structure changes that I'm trying
+
+413
+00:14:57,600 --> 00:15:01,200
+to help people with on how bad this is
+
+414
+00:14:59,600 --> 00:15:02,600
+going to be. You don't need as much
+
+415
+00:15:01,200 --> 00:15:04,280
+leverage to make the same amount of
+
+416
+00:15:02,600 --> 00:15:05,600
+money as we're going to see. So, the
+
+417
+00:15:04,279 --> 00:15:06,838
+leverage is going to come down. That
+
+418
+00:15:05,600 --> 00:15:08,800
+doesn't mean the hedge fund industry
+
+419
+00:15:06,839 --> 00:15:10,480
+won't be producing the same types of
+
+420
+00:15:08,799 --> 00:15:12,439
+returns.
+
+421
+00:15:10,480 --> 00:15:13,960
+I think it's possible they can generate
+
+422
+00:15:12,440 --> 00:15:15,920
+similar returns. The money might
+
+423
+00:15:13,960 --> 00:15:17,400
+aggregate even more into the the bigger
+
+424
+00:15:15,919 --> 00:15:19,439
+places that have an advantage on the
+
+425
+00:15:17,399 --> 00:15:20,879
+risk management side, but I definitely
+
+426
+00:15:19,440 --> 00:15:22,440
+think the market structure has changed
+
+427
+00:15:20,879 --> 00:15:24,279
+making it more challenging to have a
+
+428
+00:15:22,440 --> 00:15:26,400
+good sharp ratio.
+
+429
+00:15:24,279 --> 00:15:28,919
+So, Vara, another
+
+430
+00:15:26,399 --> 00:15:31,480
+multi-billion dollar hedge fund,
+
+431
+00:15:28,919 --> 00:15:33,439
+$20 billion dollar flagship AI fund, the
+
+432
+00:15:31,480 --> 00:15:36,360
+losses paired the year-to-date returns
+
+433
+00:15:33,440 --> 00:15:37,720
+from to 65% through July.
+
+434
+00:15:36,360 --> 00:15:39,720
+So, again,
+
+435
+00:15:37,720 --> 00:15:42,279
+they fell 44%
+
+436
+00:15:39,720 --> 00:15:45,200
+in a month. This was in August. So, this
+
+437
+00:15:42,279 --> 00:15:46,720
+is not now, but these types of drops, I
+
+438
+00:15:45,200 --> 00:15:49,160
+don't think people It wasn't just
+
+439
+00:15:46,720 --> 00:15:51,440
+situational awareness.
+
+440
+00:15:49,159 --> 00:15:54,240
+This one happened and came out after the
+
+441
+00:15:51,440 --> 00:15:56,960
+bell last Friday. So, I didn't include
+
+442
+00:15:54,240 --> 00:15:58,080
+this in my video. So, if you asked me to
+
+443
+00:15:56,960 --> 00:16:01,200
+name
+
+444
+00:15:58,080 --> 00:16:03,160
+the 10 best non-multi-strat hedge funds
+
+445
+00:16:01,200 --> 00:16:04,720
+of this century, Lone Pine would
+
+446
+00:16:03,159 --> 00:16:07,079
+absolutely be in there based on my
+
+447
+00:16:04,720 --> 00:16:10,040
+experience with them, based on the way
+
+448
+00:16:07,080 --> 00:16:11,160
+people talk about Steve Mandel.
+
+449
+00:16:10,039 --> 00:16:13,480
+Just
+
+450
+00:16:11,159 --> 00:16:15,000
+an incredible hedge fund.
+
+451
+00:16:13,480 --> 00:16:17,440
+So, this is not even saying anything
+
+452
+00:16:15,000 --> 00:16:19,279
+negative about them. They were up 44%
+
+453
+00:16:17,440 --> 00:16:21,960
+and it erased the gains.
+
+454
+00:16:19,279 --> 00:16:23,240
+It is the staggering drawdown that
+
+455
+00:16:21,960 --> 00:16:25,080
+happened
+
+456
+00:16:23,240 --> 00:16:28,919
+in a quarter.
+
+457
+00:16:25,080 --> 00:16:31,280
+So, to be down, to give up 44% gains,
+
+458
+00:16:28,919 --> 00:16:32,759
+assuming they're charging 20% on their
+
+459
+00:16:31,279 --> 00:16:37,480
+AUM,
+
+460
+00:16:32,759 --> 00:16:39,919
+that means that they lost over 55%
+
+461
+00:16:37,480 --> 00:16:42,039
+in gross returns.
+
+462
+00:16:39,919 --> 00:16:45,199
+That's That's a drawdown that again, I
+
+463
+00:16:42,039 --> 00:16:46,679
+showed you in the S&P 500,
+
+464
+00:16:45,200 --> 00:16:49,839
+that's equivalent to the great financial
+
+465
+00:16:46,679 --> 00:16:51,879
+crisis drawdown by a hedge fund.
+
+466
+00:16:49,839 --> 00:16:54,440
+One of the greatest hedge funds of all
+
+467
+00:16:51,879 --> 00:16:54,439
+time.
+
+468
+00:16:54,960 --> 00:17:00,160
+Here is their returns that I have
+
+469
+00:16:57,559 --> 00:17:02,359
+basically on public data through Q2
+
+470
+00:17:00,159 --> 00:17:03,360
+relative to the S&P.
+
+471
+00:17:02,360 --> 00:17:06,160
+So,
+
+472
+00:17:03,360 --> 00:17:07,519
+basically, they move a lot with the S&P.
+
+473
+00:17:06,160 --> 00:17:09,240
+Based on what you're seeing over the
+
+474
+00:17:07,519 --> 00:17:12,799
+course of the last 3 years, there is a
+
+475
+00:17:09,240 --> 00:17:14,519
+high correlation to the S&P returns.
+
+476
+00:17:12,799 --> 00:17:17,759
+This is what happened during the quarter
+
+477
+00:17:14,519 --> 00:17:19,400
+that they lost 55%.
+
+478
+00:17:17,759 --> 00:17:21,879
+This kind of stuff has never happened
+
+479
+00:17:19,400 --> 00:17:25,240
+before in my career. I've never seen
+
+480
+00:17:21,880 --> 00:17:27,720
+anything like this. This is LTCM-ish.
+
+481
+00:17:25,240 --> 00:17:31,000
+That's what it is. Now,
+
+482
+00:17:27,720 --> 00:17:33,519
+uh again, that was through September.
+
+483
+00:17:31,000 --> 00:17:35,200
+Yes, this month has been a disaster. The
+
+484
+00:17:33,519 --> 00:17:37,200
+reason I'm bringing this up is not
+
+485
+00:17:35,200 --> 00:17:39,559
+because Lone Pine is in any way, shape,
+
+486
+00:17:37,200 --> 00:17:41,000
+or form in trouble. That has nothing to
+
+487
+00:17:39,559 --> 00:17:42,679
+do with this.
+
+488
+00:17:41,000 --> 00:17:44,279
+This has to do with when you're
+
+489
+00:17:42,680 --> 00:17:46,279
+short-stacked and you have that kind of
+
+490
+00:17:44,279 --> 00:17:47,839
+a drawdown, you're already figuring out
+
+491
+00:17:46,279 --> 00:17:49,200
+what's going to happen, what your people
+
+492
+00:17:47,839 --> 00:17:50,759
+are going through, what the investors
+
+493
+00:17:49,200 --> 00:17:53,360
+are going to say. There's a lot of work
+
+494
+00:17:50,759 --> 00:17:54,720
+that goes on. And so, to put on risk at
+
+495
+00:17:53,359 --> 00:17:57,119
+that point,
+
+496
+00:17:54,720 --> 00:17:59,160
+it is is just very unlikely. And more
+
+497
+00:17:57,119 --> 00:18:01,159
+importantly, to deal with any more
+
+498
+00:17:59,160 --> 00:18:02,880
+losses come up, and that's what I would
+
+499
+00:18:01,160 --> 00:18:05,160
+say is going on right now with inside
+
+500
+00:18:02,880 --> 00:18:07,240
+the marketplace. You're seeing things.
+
+501
+00:18:05,160 --> 00:18:09,080
+Jared Kubin is is someone who's great to
+
+502
+00:18:07,240 --> 00:18:11,160
+watch on the quant side and just to
+
+503
+00:18:09,079 --> 00:18:13,519
+highlight. But,
+
+504
+00:18:11,160 --> 00:18:15,200
+he bloody last 21 days, this is through
+
+505
+00:18:13,519 --> 00:18:17,839
+the middle of last week, and it's just
+
+506
+00:18:15,200 --> 00:18:20,360
+showing how many names are up violently
+
+507
+00:18:17,839 --> 00:18:22,759
+in terms of sectors. Here it is here.
+
+508
+00:18:20,359 --> 00:18:26,159
+Again, what's down?
+
+509
+00:18:22,759 --> 00:18:29,200
+It's not just the semiconductors.
+
+510
+00:18:26,160 --> 00:18:31,800
+It is fertilizer and crop inputs. How
+
+511
+00:18:29,200 --> 00:18:33,920
+often did we hear how easy it would be
+
+512
+00:18:31,799 --> 00:18:34,639
+that we'd have food shortages and that
+
+513
+00:18:33,920 --> 00:18:36,840
+uh
+
+514
+00:18:34,640 --> 00:18:38,560
+these are all hedge fund trades that
+
+515
+00:18:36,839 --> 00:18:40,919
+people had gotten into. You obviously
+
+516
+00:18:38,559 --> 00:18:42,639
+have short SAS up here. You have short
+
+517
+00:18:40,920 --> 00:18:44,120
+software up here.
+
+518
+00:18:42,640 --> 00:18:46,920
+You just have a lot of different
+
+519
+00:18:44,119 --> 00:18:48,719
+components that are not just related to
+
+520
+00:18:46,920 --> 00:18:50,400
+that one thing. And the reason I know
+
+521
+00:18:48,720 --> 00:18:52,600
+that's the case is this kind of stuff
+
+522
+00:18:50,400 --> 00:18:55,000
+also doesn't happen. This is the Mexican
+
+523
+00:18:52,599 --> 00:18:58,279
+stock market.
+
+524
+00:18:55,000 --> 00:19:00,759
+Trading at 52, well, close to 52-week
+
+525
+00:18:58,279 --> 00:19:03,639
+lows at the end of the quarter. It has
+
+526
+00:19:00,759 --> 00:19:06,279
+gone straight up. Here is the monthly or
+
+527
+00:19:03,640 --> 00:19:08,520
+the weekly return of the Mex Bolsa
+
+528
+00:19:06,279 --> 00:19:11,680
+relative to the Qs going back over the
+
+529
+00:19:08,519 --> 00:19:11,680
+last 3 years.
+
+530
+00:19:11,799 --> 00:19:16,039
+Here is the chart of the Goldman Sachs
+
+531
+00:19:13,640 --> 00:19:17,640
+crowded hedge fund longs relative to the
+
+532
+00:19:16,039 --> 00:19:21,119
+S&P.
+
+533
+00:19:17,640 --> 00:19:23,920
+So, again, this month here
+
+534
+00:19:21,119 --> 00:19:25,479
+Vara down 44%. Situational awareness
+
+535
+00:19:23,920 --> 00:19:28,000
+down I don't remember how much they were
+
+536
+00:19:25,480 --> 00:19:30,039
+down, 60, 70, whatever to get to the to
+
+537
+00:19:28,000 --> 00:19:32,400
+get bailed out by Ken.
+
+538
+00:19:30,039 --> 00:19:34,200
+We barely got a bounce here. And this is
+
+539
+00:19:32,400 --> 00:19:36,000
+the most important thing is the hedge
+
+540
+00:19:34,200 --> 00:19:37,440
+funds, these are crowded long, so this
+
+541
+00:19:36,000 --> 00:19:38,400
+includes the fertilizers, includes
+
+542
+00:19:37,440 --> 00:19:40,600
+everything.
+
+543
+00:19:38,400 --> 00:19:42,240
+It just never got a movement on it, very
+
+544
+00:19:40,599 --> 00:19:44,439
+similar to momentum, which I'm not going
+
+545
+00:19:42,240 --> 00:19:45,880
+to bring up.
+
+546
+00:19:44,440 --> 00:19:47,720
+Here's what's happened so far this
+
+547
+00:19:45,880 --> 00:19:49,920
+month, and it's been a straight line
+
+548
+00:19:47,720 --> 00:19:52,960
+down. So, again, these are the equity
+
+549
+00:19:49,920 --> 00:19:55,080
+positions that hedge funds are holding
+
+550
+00:19:52,960 --> 00:19:56,440
+that are dominated by the AI trade
+
+551
+00:19:55,079 --> 00:19:57,639
+because that's the only thing that
+
+552
+00:19:56,440 --> 00:20:00,480
+works.
+
+553
+00:19:57,640 --> 00:20:02,360
+That is about 25% of the market, which
+
+554
+00:20:00,480 --> 00:20:03,799
+I've talked about. Everyone's in the
+
+555
+00:20:02,359 --> 00:20:06,919
+same names.
+
+556
+00:20:03,799 --> 00:20:08,319
+So, it's still up big for the year, and
+
+557
+00:20:06,920 --> 00:20:12,039
+as I'm going to show you, semis are
+
+558
+00:20:08,319 --> 00:20:14,200
+still up about 50% year-to-date despite
+
+559
+00:20:12,039 --> 00:20:17,279
+all of this going on.
+
+560
+00:20:14,200 --> 00:20:19,400
+Nvidia's PE has collapsed.
+
+561
+00:20:17,279 --> 00:20:22,399
+This is deleveraging, guys, and this
+
+562
+00:20:19,400 --> 00:20:24,640
+started in here, and then as I show you
+
+563
+00:20:22,400 --> 00:20:26,640
+all these hedge funds that had losses,
+
+564
+00:20:24,640 --> 00:20:29,480
+and then you get these bounces as we
+
+565
+00:20:26,640 --> 00:20:31,840
+head into hyperscaler earnings and the
+
+566
+00:20:29,480 --> 00:20:33,480
+midterm elections. So, if you ask me
+
+567
+00:20:31,839 --> 00:20:35,559
+what the pain trade is, the pain trade
+
+568
+00:20:33,480 --> 00:20:37,360
+for this is to continue into the
+
+569
+00:20:35,559 --> 00:20:39,119
+hyperscaler earnings and maybe all the
+
+570
+00:20:37,359 --> 00:20:41,079
+way into the midterms.
+
+571
+00:20:39,119 --> 00:20:42,839
+Take everyone out, they will not take
+
+572
+00:20:41,079 --> 00:20:43,879
+risk on, and then in the end of the
+
+573
+00:20:42,839 --> 00:20:45,799
+year,
+
+574
+00:20:43,880 --> 00:20:47,560
+assuming I'm right and there's no AI
+
+575
+00:20:45,799 --> 00:20:50,599
+bubble and this is just a positioning
+
+576
+00:20:47,559 --> 00:20:52,039
+shakeout, you get a snapback. Here is
+
+577
+00:20:50,599 --> 00:20:54,480
+the hedge fund
+
+578
+00:20:52,039 --> 00:20:55,839
+that that chart now with monthly
+
+579
+00:20:54,480 --> 00:20:57,400
+numbers.
+
+580
+00:20:55,839 --> 00:20:59,359
+So, in July,
+
+581
+00:20:57,400 --> 00:21:02,800
+it was down 10%. So, the crowded hedge
+
+582
+00:20:59,359 --> 00:21:02,799
+fund names relative
+
+583
+00:21:03,039 --> 00:21:07,639
+to the S&P.
+
+584
+00:21:05,200 --> 00:21:10,120
+Hedge fund leverage was down already
+
+585
+00:21:07,640 --> 00:21:11,880
+when this occurred in 2008. That's the
+
+586
+00:21:10,119 --> 00:21:13,439
+thing I want to make sure you know. This
+
+587
+00:21:11,880 --> 00:21:15,960
+does not include leverage. This is an
+
+588
+00:21:13,440 --> 00:21:18,279
+unlevered number. This is just market
+
+589
+00:21:15,960 --> 00:21:19,960
+neutral the stocks that are the most
+
+590
+00:21:18,279 --> 00:21:22,000
+crowded according to Goldman Sachs
+
+591
+00:21:19,960 --> 00:21:24,880
+relative to the S&P 500. So, these are
+
+592
+00:21:22,000 --> 00:21:26,799
+market neutral, dollar neutral
+
+593
+00:21:24,880 --> 00:21:28,920
+scenarios.
+
+594
+00:21:26,799 --> 00:21:31,720
+There's beta in this to some degree, but
+
+595
+00:21:28,920 --> 00:21:33,720
+as you can see like over time there's
+
+596
+00:21:31,720 --> 00:21:35,720
+the movements this is an outsized move
+
+597
+00:21:33,720 --> 00:21:37,839
+and again this is the Lehman post-Lehman
+
+598
+00:21:35,720 --> 00:21:39,519
+Brothers move. So, hedge funds were
+
+599
+00:21:37,839 --> 00:21:41,039
+already delevered at this scenario.
+
+600
+00:21:39,519 --> 00:21:42,639
+Right here
+
+601
+00:21:41,039 --> 00:21:44,000
+not delevered as much as they should
+
+602
+00:21:42,640 --> 00:21:45,680
+have been based on all the metrics that
+
+603
+00:21:44,000 --> 00:21:48,079
+I got. Deleveraging
+
+604
+00:21:45,680 --> 00:21:51,519
+has come down. Here are
+
+605
+00:21:48,079 --> 00:21:54,720
+the rolling four months.
+
+606
+00:21:51,519 --> 00:21:57,960
+Again you're talking 15% over the last
+
+607
+00:21:54,720 --> 00:22:00,039
+four months of that chart.
+
+608
+00:21:57,960 --> 00:22:01,680
+Again, unlevered. So, if you add in the
+
+609
+00:22:00,039 --> 00:22:03,920
+leverage that we've said, that would
+
+610
+00:22:01,680 --> 00:22:05,200
+mean I mean a significant amount of
+
+611
+00:22:03,920 --> 00:22:07,600
+losses.
+
+612
+00:22:05,200 --> 00:22:09,920
+Here's here, but that really is all
+
+613
+00:22:07,599 --> 00:22:10,879
+equities. So, I just want to make sure
+
+614
+00:22:09,920 --> 00:22:12,560
+you know everything I'm showing you
+
+615
+00:22:10,880 --> 00:22:14,400
+right now is equities. The real problem
+
+616
+00:22:12,559 --> 00:22:17,000
+came in when it started to spread this
+
+617
+00:22:14,400 --> 00:22:19,519
+month. That didn't happen in July. Here
+
+618
+00:22:17,000 --> 00:22:21,680
+is the AI, the Goldman Sachs AI winners
+
+619
+00:22:19,519 --> 00:22:23,400
+versus losers, which is the orange the
+
+620
+00:22:21,680 --> 00:22:24,920
+white line and then the other line is
+
+621
+00:22:23,400 --> 00:22:27,360
+that Goldman Sachs hedge fund. So, you
+
+622
+00:22:24,920 --> 00:22:29,200
+can see this trade is basically at the
+
+623
+00:22:27,359 --> 00:22:31,679
+end of the day it's the AI trade that
+
+624
+00:22:29,200 --> 00:22:33,799
+every hedge fund has on.
+
+625
+00:22:31,680 --> 00:22:35,360
+Everybody that it's it's the pair trade
+
+626
+00:22:33,799 --> 00:22:37,440
+that everyone has on the winners versus
+
+627
+00:22:35,359 --> 00:22:39,959
+losers and because they have a
+
+628
+00:22:37,440 --> 00:22:42,480
+month-to-month bogey, because they have
+
+629
+00:22:39,960 --> 00:22:43,840
+a drawdown level, because the majority
+
+630
+00:22:42,480 --> 00:22:45,880
+of hedge funds don't have five-year
+
+631
+00:22:43,839 --> 00:22:47,519
+locked up money, they've got short-term
+
+632
+00:22:45,880 --> 00:22:49,000
+locked up money, they can't have
+
+633
+00:22:47,519 --> 00:22:51,599
+drawdowns without their business
+
+634
+00:22:49,000 --> 00:22:54,240
+becoming a risk. And I think this is the
+
+635
+00:22:51,599 --> 00:22:56,399
+puking of a lot of businesses that had
+
+636
+00:22:54,240 --> 00:22:58,279
+significant drawdowns that can't handle
+
+637
+00:22:56,400 --> 00:23:00,680
+it anymore. Here is my thematic
+
+638
+00:22:58,279 --> 00:23:03,879
+portfolio for the week.
+
+639
+00:23:00,680 --> 00:23:06,920
+Last week was down 11%.
+
+640
+00:23:03,880 --> 00:23:08,760
+This is worse than any week during July.
+
+641
+00:23:06,920 --> 00:23:11,320
+The month isn't as bad as July, but the
+
+642
+00:23:08,759 --> 00:23:13,279
+week is. That felt a lot like
+
+643
+00:23:11,319 --> 00:23:16,079
+capitulation, but here's the place that
+
+644
+00:23:13,279 --> 00:23:17,720
+it started to really become an issue.
+
+645
+00:23:16,079 --> 00:23:20,519
+So, this is where you really start
+
+646
+00:23:17,720 --> 00:23:22,160
+getting into the pods. The pods, the big
+
+647
+00:23:20,519 --> 00:23:24,599
+multi-strats, they're going to be losing
+
+648
+00:23:22,160 --> 00:23:27,000
+on the equity long short like everyone,
+
+649
+00:23:24,599 --> 00:23:28,759
+but when credit starts to become an
+
+650
+00:23:27,000 --> 00:23:31,079
+issue, that's when it really gets bad
+
+651
+00:23:28,759 --> 00:23:33,240
+because credit starts to impact a lot of
+
+652
+00:23:31,079 --> 00:23:36,240
+other strategies. I heard biotech was a
+
+653
+00:23:33,240 --> 00:23:38,680
+major, major problem in September.
+
+654
+00:23:36,240 --> 00:23:41,640
+Again, the weakening kind of spreading
+
+655
+00:23:38,680 --> 00:23:43,600
+the contagion within side pods is always
+
+656
+00:23:41,640 --> 00:23:46,600
+a big story, but when credit has this
+
+657
+00:23:43,599 --> 00:23:49,199
+kind of week, this is HYG relative to
+
+658
+00:23:46,599 --> 00:23:51,039
+IEF, which was sitting near all-time
+
+659
+00:23:49,200 --> 00:23:52,319
+highs at the end of the quarter, which
+
+660
+00:23:51,039 --> 00:23:54,680
+meant if you were running a credit
+
+661
+00:23:52,319 --> 00:23:57,000
+strategy, everything was great. And this
+
+662
+00:23:54,680 --> 00:23:59,200
+is a synthetic credit strategy. If
+
+663
+00:23:57,000 --> 00:24:03,400
+you're just long HYG, and then you're
+
+664
+00:23:59,200 --> 00:24:05,240
+short IEF, which is a treasury,
+
+665
+00:24:03,400 --> 00:24:06,640
+that's theoretically taking out your
+
+666
+00:24:05,240 --> 00:24:08,559
+rate exposure, and the only thing left
+
+667
+00:24:06,640 --> 00:24:10,080
+is the credit credit side. And so, if
+
+668
+00:24:08,559 --> 00:24:12,599
+spreads stay unchanged, you're just
+
+669
+00:24:10,079 --> 00:24:15,159
+collecting the differential. So, it
+
+670
+00:24:12,599 --> 00:24:17,159
+basically, since February, went up in
+
+671
+00:24:15,160 --> 00:24:20,440
+kind of a straight line. Well, this gave
+
+672
+00:24:17,160 --> 00:24:22,880
+back effectively all of the returns from
+
+673
+00:24:20,440 --> 00:24:24,759
+the summer. So, in the same way that we
+
+674
+00:24:22,880 --> 00:24:26,960
+had the July numbers, look what happened
+
+675
+00:24:24,759 --> 00:24:28,879
+in July? Nothing.
+
+676
+00:24:26,960 --> 00:24:32,519
+Nothing happened to credit.
+
+677
+00:24:28,880 --> 00:24:34,800
+Here it is on a a weekly basis. Not
+
+678
+00:24:32,519 --> 00:24:38,920
+anything like what happened with the
+
+679
+00:24:34,799 --> 00:24:42,680
+tariff situation, but still, a big week.
+
+680
+00:24:38,920 --> 00:24:44,240
+Here is the convert index. So, converts
+
+681
+00:24:42,680 --> 00:24:47,680
+have joined the party. Why? Well,
+
+682
+00:24:44,240 --> 00:24:49,079
+converts ex- extend from CoreWeave,
+
+683
+00:24:47,680 --> 00:24:51,880
+uh MicroStrategy. It's a very
+
+684
+00:24:49,079 --> 00:24:54,159
+concentrated world as well in in in
+
+685
+00:24:51,880 --> 00:24:56,560
+in converts, but again, if the only
+
+686
+00:24:54,160 --> 00:24:58,720
+place raising capital
+
+687
+00:24:56,559 --> 00:25:01,720
+is AI, which is what's been happening.
+
+688
+00:24:58,720 --> 00:25:04,640
+The size of the capital raises for AI,
+
+689
+00:25:01,720 --> 00:25:07,240
+and not just SpaceX, not just Anthropic,
+
+690
+00:25:04,640 --> 00:25:08,440
+not just OpenAI, but Broadcom coming to
+
+691
+00:25:07,240 --> 00:25:10,000
+the market with over a hundred billion
+
+692
+00:25:08,440 --> 00:25:11,440
+dollars this year. Google coming to the
+
+693
+00:25:10,000 --> 00:25:12,559
+market between equities and bonds for
+
+694
+00:25:11,440 --> 00:25:15,600
+over a hundred billion. We're talking
+
+695
+00:25:12,559 --> 00:25:17,679
+about massive massive capital raises,
+
+696
+00:25:15,599 --> 00:25:20,039
+which again the market has,
+
+697
+00:25:17,680 --> 00:25:22,039
+but if you come to the market, the cash
+
+698
+00:25:20,039 --> 00:25:24,519
+that people have might be from maturing
+
+699
+00:25:22,039 --> 00:25:27,159
+bonds. They have to sell something to go
+
+700
+00:25:24,519 --> 00:25:28,879
+buy things. People don't just have cash
+
+701
+00:25:27,160 --> 00:25:31,320
+in most cases just sitting around
+
+702
+00:25:28,880 --> 00:25:32,760
+endlessly. They got to sell something.
+
+703
+00:25:31,319 --> 00:25:34,079
+Part of that was treasuries. Part of
+
+704
+00:25:32,759 --> 00:25:36,039
+that ends up being some equities,
+
+705
+00:25:34,079 --> 00:25:38,759
+whatever the case is, but converts have
+
+706
+00:25:36,039 --> 00:25:40,039
+now started to get hit. And again, they
+
+707
+00:25:38,759 --> 00:25:41,559
+were getting hit in July. They do have
+
+708
+00:25:40,039 --> 00:25:43,519
+an equity one, but this is a very
+
+709
+00:25:41,559 --> 00:25:46,559
+different fall. This is more of a
+
+710
+00:25:43,519 --> 00:25:48,639
+waterfall. This was more of a reluctant
+
+711
+00:25:46,559 --> 00:25:51,159
+fall that immediately bounced back and
+
+712
+00:25:48,640 --> 00:25:53,759
+and made back most of the fall. Um the
+
+713
+00:25:51,160 --> 00:25:56,080
+VIX did have a big move higher. Again,
+
+714
+00:25:53,759 --> 00:25:59,279
+we're still at at at fairly reasonable
+
+715
+00:25:56,079 --> 00:26:02,480
+levels, but the VIX was up 25 points in
+
+716
+00:25:59,279 --> 00:26:04,079
+a week. VIX is the vol of the VIX. So
+
+717
+00:26:02,480 --> 00:26:06,880
+people are buying call options. The VIX
+
+718
+00:26:04,079 --> 00:26:08,439
+itself closed just below 20, which again
+
+719
+00:26:06,880 --> 00:26:10,440
+is shocking that we could still be below
+
+720
+00:26:08,440 --> 00:26:12,720
+20, but that's like I showed you, the
+
+721
+00:26:10,440 --> 00:26:15,640
+S&P is not moving that much.
+
+722
+00:26:12,720 --> 00:26:19,360
+Uh the Qs were down 5 and 1/2% for the
+
+723
+00:26:15,640 --> 00:26:22,640
+week. The S&P, like I said, down 1.95,
+
+724
+00:26:19,359 --> 00:26:25,959
+and over the last year that's one of
+
+725
+00:26:22,640 --> 00:26:29,840
+one, two, three, four, five, six
+
+726
+00:26:25,960 --> 00:26:32,120
+seven moves of a similar move. Um during
+
+727
+00:26:29,839 --> 00:26:34,399
+the week, 350
+
+728
+00:26:32,119 --> 00:26:37,719
+of the S&P 500 stocks were up on the
+
+729
+00:26:34,400 --> 00:26:40,040
+week. So just like in the first chart,
+
+730
+00:26:37,720 --> 00:26:42,360
+this was a unwind where we had been
+
+731
+00:26:40,039 --> 00:26:43,920
+watching as equal weight and breadth had
+
+732
+00:26:42,359 --> 00:26:46,319
+been getting hit
+
+733
+00:26:43,920 --> 00:26:48,400
+while cap weight had been doing well.
+
+734
+00:26:46,319 --> 00:26:52,439
+Well, that unwound in a vicious way so
+
+735
+00:26:48,400 --> 00:26:54,680
+far last week. IWM M about 3%. Again, a
+
+736
+00:26:52,440 --> 00:26:57,000
+big week but not uh one thing I will
+
+737
+00:26:54,680 --> 00:26:58,840
+mention, it's been 6 weeks in a row for
+
+738
+00:26:57,000 --> 00:27:01,720
+small cap and
+
+739
+00:26:58,839 --> 00:27:04,959
+eight of the last nine with one little
+
+740
+00:27:01,720 --> 00:27:09,480
+blurb, one little minor move higher.
+
+741
+00:27:04,960 --> 00:27:09,480
+Uh Bitcoin for the crypto people
+
+742
+00:27:09,880 --> 00:27:16,760
+didn't budge. Down 2.3%. So again,
+
+743
+00:27:13,160 --> 00:27:18,840
+everyone who's continuing to say that
+
+744
+00:27:16,759 --> 00:27:21,240
+or in the past has said Bitcoin's too
+
+745
+00:27:18,839 --> 00:27:22,679
+volatile an asset to own. For everyone
+
+746
+00:27:21,240 --> 00:27:24,440
+watching this that's deciding how much
+
+747
+00:27:22,680 --> 00:27:25,560
+should be in their portfolio
+
+748
+00:27:24,440 --> 00:27:27,960
+I'm going to say this over and over
+
+749
+00:27:25,559 --> 00:27:30,159
+again. The majority of my portfolio
+
+750
+00:27:27,960 --> 00:27:31,920
+moved into crypto. I'm very, very happy
+
+751
+00:27:30,160 --> 00:27:33,400
+about that. I still have Marvell. I
+
+752
+00:27:31,920 --> 00:27:35,840
+still have a little bit of Micron. I
+
+753
+00:27:33,400 --> 00:27:38,920
+still have Nvidia. I still have Eli
+
+754
+00:27:35,839 --> 00:27:41,039
+Lilly. I still have names like that, but
+
+755
+00:27:38,920 --> 00:27:42,800
+the size of my AI portfolio is still
+
+756
+00:27:41,039 --> 00:27:45,359
+significantly down and as I've said, it
+
+757
+00:27:42,799 --> 00:27:47,960
+will never be as big as crypto again.
+
+758
+00:27:45,359 --> 00:27:49,399
+Almost certainly
+
+759
+00:27:47,960 --> 00:27:51,000
+based on my views and what's going to
+
+760
+00:27:49,400 --> 00:27:53,600
+happen. There may be times where I add
+
+761
+00:27:51,000 --> 00:27:55,160
+to AI for trading purposes.
+
+762
+00:27:53,599 --> 00:27:56,799
+But the way Bitcoin is trading and
+
+763
+00:27:55,160 --> 00:27:59,279
+hanging in there when everything else is
+
+764
+00:27:56,799 --> 00:28:02,279
+blowing up this is a different kind of
+
+765
+00:27:59,279 --> 00:28:04,559
+story as an asset class. The move index
+
+766
+00:28:02,279 --> 00:28:06,759
+rates, you didn't get a big move in
+
+767
+00:28:04,559 --> 00:28:08,519
+there. So this was really isolated to
+
+768
+00:28:06,759 --> 00:28:10,440
+the equity market. So now let's go
+
+769
+00:28:08,519 --> 00:28:13,920
+through
+
+770
+00:28:10,440 --> 00:28:17,519
+the AI bear talk.
+
+771
+00:28:13,920 --> 00:28:19,560
+So again, this is something that A16Z
+
+772
+00:28:17,519 --> 00:28:21,759
+put out and I'm going to keep saying it.
+
+773
+00:28:19,559 --> 00:28:23,919
+This index people have no idea how to
+
+774
+00:28:21,759 --> 00:28:25,720
+read it. They just continue to say
+
+775
+00:28:23,920 --> 00:28:28,279
+things about it. Then they mock out
+
+776
+00:28:25,720 --> 00:28:30,759
+Jevons paradox. No matter who you talk
+
+777
+00:28:28,279 --> 00:28:32,839
+to, no matter where it is, if you lis-
+
+778
+00:28:30,759 --> 00:28:34,839
+listen to Jensen Huang
+
+779
+00:28:32,839 --> 00:28:36,439
+and I guess people have this viewpoint
+
+780
+00:28:34,839 --> 00:28:38,240
+that you can't listen to any of the
+
+781
+00:28:36,440 --> 00:28:41,320
+people involved in it because they're
+
+782
+00:28:38,240 --> 00:28:44,079
+going to lie to you. This is not 2007
+
+783
+00:28:41,319 --> 00:28:45,480
+guys and this is not 2000. You actually
+
+784
+00:28:44,079 --> 00:28:47,279
+need to listen to this cuz here's the
+
+785
+00:28:45,480 --> 00:28:49,360
+one thing I will tell you with absolute
+
+786
+00:28:47,279 --> 00:28:52,039
+certainty that occurred through the dot
+
+787
+00:28:49,359 --> 00:28:54,519
+com bubble. The dot com bubble was built
+
+788
+00:28:52,039 --> 00:28:56,240
+to have things like your smartphone, to
+
+789
+00:28:54,519 --> 00:28:57,839
+have your app store, to have all of
+
+790
+00:28:56,240 --> 00:28:59,759
+those things. That's what it was being
+
+791
+00:28:57,839 --> 00:29:01,559
+built for. It ended up being right. The
+
+792
+00:28:59,759 --> 00:29:04,200
+problem was we didn't have any money
+
+793
+00:29:01,559 --> 00:29:06,079
+coming in to offset it. So, everyone's
+
+794
+00:29:04,200 --> 00:29:08,480
+trying to find a way to create an image
+
+795
+00:29:06,079 --> 00:29:11,319
+that the money's not coming in and yet
+
+796
+00:29:08,480 --> 00:29:13,799
+GPU rental for the old ones, not the new
+
+797
+00:29:11,319 --> 00:29:16,399
+ones, it just continues to sit there.
+
+798
+00:29:13,799 --> 00:29:18,399
+And I'll as I'll show you
+
+799
+00:29:16,400 --> 00:29:20,000
+This is This is a completely different
+
+800
+00:29:18,400 --> 00:29:22,400
+world. So,
+
+801
+00:29:20,000 --> 00:29:25,680
+Kuppy, who wrote a piece last year that
+
+802
+00:29:22,400 --> 00:29:28,000
+I highlighted in terms of the ROIC risk,
+
+803
+00:29:25,680 --> 00:29:29,880
+and I I bring this up I don't know the
+
+804
+00:29:28,000 --> 00:29:31,440
+dude and I really don't care. This is
+
+805
+00:29:29,880 --> 00:29:33,880
+not to pick on people. This is just
+
+806
+00:29:31,440 --> 00:29:37,960
+basically to say
+
+807
+00:29:33,880 --> 00:29:39,080
+people believe to compare this 100%
+
+808
+00:29:37,960 --> 00:29:41,000
+to
+
+809
+00:29:39,079 --> 00:29:44,039
+in this case
+
+810
+00:29:41,000 --> 00:29:45,480
+the shell situation.
+
+811
+00:29:44,039 --> 00:29:48,000
+Shell
+
+812
+00:29:45,480 --> 00:29:48,000
+and
+
+813
+00:29:48,079 --> 00:29:51,639
+open anything re- regarding
+
+814
+00:29:50,000 --> 00:29:54,279
+intelligence.
+
+815
+00:29:51,640 --> 00:29:56,440
+There is a similarity, which is the
+
+816
+00:29:54,279 --> 00:29:58,799
+price goes down and the build out
+
+817
+00:29:56,440 --> 00:30:01,480
+depends to some degree on the prices
+
+818
+00:29:58,799 --> 00:30:04,159
+being up. The token prices are not the
+
+819
+00:30:01,480 --> 00:30:06,200
+way to do this. The revenue is
+
+820
+00:30:04,160 --> 00:30:07,840
+because in the case of oil, guess what?
+
+821
+00:30:06,200 --> 00:30:10,559
+If oil goes down, well then revenues
+
+822
+00:30:07,839 --> 00:30:12,720
+have to go down. In the case of AI, that
+
+823
+00:30:10,559 --> 00:30:15,359
+is not the case. And so far, that has
+
+824
+00:30:12,720 --> 00:30:17,160
+not been the case as this has gone down.
+
+825
+00:30:15,359 --> 00:30:19,079
+The revenues can come, as I'll show you,
+
+826
+00:30:17,160 --> 00:30:20,880
+from so many different places that this
+
+827
+00:30:19,079 --> 00:30:23,159
+is not a one commodity thing. So, to
+
+828
+00:30:20,880 --> 00:30:24,080
+compare it to oil
+
+829
+00:30:23,160 --> 00:30:27,720
+is
+
+830
+00:30:24,079 --> 00:30:30,399
+honestly, aside from the hey, this price
+
+831
+00:30:27,720 --> 00:30:32,000
+is going down, I don't really use this
+
+832
+00:30:30,400 --> 00:30:33,519
+thing that much and I'm not saying he
+
+833
+00:30:32,000 --> 00:30:35,160
+doesn't. I'm just saying the majority of
+
+834
+00:30:33,519 --> 00:30:36,720
+people, based on the data that I have,
+
+835
+00:30:35,160 --> 00:30:38,279
+don't use it.
+
+836
+00:30:36,720 --> 00:30:39,839
+They don't see any benefit for it. They
+
+837
+00:30:38,279 --> 00:30:40,960
+don't think solving cancer matters.
+
+838
+00:30:39,839 --> 00:30:42,959
+There's There's money with that. They
+
+839
+00:30:40,960 --> 00:30:44,559
+don't think that solving math problems
+
+840
+00:30:42,960 --> 00:30:45,960
+that go to physics that allow us to do
+
+841
+00:30:44,559 --> 00:30:47,519
+things to make more efficient that no
+
+842
+00:30:45,960 --> 00:30:49,200
+one would want to pay for that. They
+
+843
+00:30:47,519 --> 00:30:52,160
+would like to pay for open source and
+
+844
+00:30:49,200 --> 00:30:53,360
+cheaper models. It's just not true.
+
+845
+00:30:52,160 --> 00:30:55,240
+I don't know what's happened to Carl
+
+846
+00:30:53,359 --> 00:30:57,519
+Quintanilla, but it seems like he's just
+
+847
+00:30:55,240 --> 00:30:59,319
+having a fun time putting out um
+
+848
+00:30:57,519 --> 00:31:01,279
+bearish stuff. I mean, almost every It's
+
+849
+00:30:59,319 --> 00:31:03,159
+almost like he's become a a
+
+850
+00:31:01,279 --> 00:31:04,680
+bear. Must be some kind of way to get
+
+851
+00:31:03,160 --> 00:31:06,560
+more people to pay attention. I have no
+
+852
+00:31:04,680 --> 00:31:08,160
+idea, but
+
+853
+00:31:06,559 --> 00:31:09,559
+I've been yet presented a credible
+
+854
+00:31:08,160 --> 00:31:10,759
+framework as to where this money is
+
+855
+00:31:09,559 --> 00:31:11,960
+going to come from. The reason I'm
+
+856
+00:31:10,759 --> 00:31:13,359
+bringing this up, and this is not from
+
+857
+00:31:11,960 --> 00:31:15,480
+Carl, this is from Barclays desk. The
+
+858
+00:31:13,359 --> 00:31:18,240
+reason I'm bringing this up is
+
+859
+00:31:15,480 --> 00:31:21,000
+nobody in 2009, so this is after the dot
+
+860
+00:31:18,240 --> 00:31:23,920
+com bubble, nobody knew
+
+861
+00:31:21,000 --> 00:31:26,880
+this was coming. Nobody did.
+
+862
+00:31:23,920 --> 00:31:28,920
+When the iPhone came out, nobody knew
+
+863
+00:31:26,880 --> 00:31:30,320
+where the revenues were coming from. And
+
+864
+00:31:28,920 --> 00:31:34,519
+right now, the one thing I know with
+
+865
+00:31:30,319 --> 00:31:36,559
+certainty is Barclays desk has no clue
+
+866
+00:31:34,519 --> 00:31:37,680
+as to where the revenues are coming
+
+867
+00:31:36,559 --> 00:31:40,440
+from.
+
+868
+00:31:37,680 --> 00:31:41,799
+Where the revenues are coming from has a
+
+869
+00:31:40,440 --> 00:31:43,039
+huge impact. Do they know where
+
+870
+00:31:41,799 --> 00:31:44,720
+humanoids are going to be? Do they know
+
+871
+00:31:43,039 --> 00:31:47,920
+how big consumer agents are going to be?
+
+872
+00:31:44,720 --> 00:31:50,400
+I added everything here. We don't know.
+
+873
+00:31:47,920 --> 00:31:51,640
+So, to say in 2030, which again is what
+
+874
+00:31:50,400 --> 00:31:53,400
+we're getting to, that the revenues
+
+875
+00:31:51,640 --> 00:31:56,080
+won't be here
+
+876
+00:31:53,400 --> 00:31:58,280
+is just impossible for them to be right
+
+877
+00:31:56,079 --> 00:31:59,720
+on or for the market to trade on. So,
+
+878
+00:31:58,279 --> 00:32:01,279
+you follow the data and the
+
+879
+00:31:59,720 --> 00:32:02,839
+extrapolation of the most recent
+
+880
+00:32:01,279 --> 00:32:04,000
+numbers. Everyone else is jumping
+
+881
+00:32:02,839 --> 00:32:05,559
+forward and saying, "I've been through
+
+882
+00:32:04,000 --> 00:32:07,640
+this before. This is what it'll look
+
+883
+00:32:05,559 --> 00:32:09,960
+like. This is too much being built."
+
+884
+00:32:07,640 --> 00:32:12,160
+It's just not the case. So, here's
+
+885
+00:32:09,960 --> 00:32:14,559
+Andrej Karpathy this week
+
+886
+00:32:12,160 --> 00:32:16,720
+saying what I completely know, and the
+
+887
+00:32:14,559 --> 00:32:18,559
+reason why I don't listen to macro
+
+888
+00:32:16,720 --> 00:32:20,720
+podcasts anymore because I'm listening
+
+889
+00:32:18,559 --> 00:32:22,480
+to people speak about something they
+
+890
+00:32:20,720 --> 00:32:23,839
+know nothing about because they don't
+
+891
+00:32:22,480 --> 00:32:26,120
+use it.
+
+892
+00:32:23,839 --> 00:32:28,480
+So, he's talking about the fact that
+
+893
+00:32:26,119 --> 00:32:30,159
+there's two groups of people.
+
+894
+00:32:28,480 --> 00:32:31,880
+Most people on the planet have little or
+
+895
+00:32:30,160 --> 00:32:32,519
+no exposure.
+
+896
+00:32:31,880 --> 00:32:34,640
+The
+
+897
+00:32:32,519 --> 00:32:36,519
+remaining of them, and not a high
+
+898
+00:32:34,640 --> 00:32:38,600
+percent, the remaining people are casual
+
+899
+00:32:36,519 --> 00:32:41,440
+users using it for chatbots.
+
+900
+00:32:38,599 --> 00:32:44,679
+There are very few frontier professional
+
+901
+00:32:41,440 --> 00:32:47,160
+users. So, how could anyone
+
+902
+00:32:44,680 --> 00:32:48,920
+be able to say with certainty
+
+903
+00:32:47,160 --> 00:32:50,640
+what's going to go on? This is far more
+
+904
+00:32:48,920 --> 00:32:53,600
+complex than oil.
+
+905
+00:32:50,640 --> 00:32:55,840
+This is more demand right now than the
+
+906
+00:32:53,599 --> 00:32:58,119
+dot-com bubble ever saw on the
+
+907
+00:32:55,839 --> 00:33:00,480
+build-out. So, again, I can keep showing
+
+908
+00:32:58,119 --> 00:33:02,879
+you guys this, but this is coming from
+
+909
+00:33:00,480 --> 00:33:04,599
+Andrej Karpathy.
+
+910
+00:33:02,880 --> 00:33:06,200
+He's been honest throughout the process.
+
+911
+00:33:04,599 --> 00:33:07,480
+He's the one who got it wrong. Agents
+
+912
+00:33:06,200 --> 00:33:09,400
+weren't going to be here a year ago.
+
+913
+00:33:07,480 --> 00:33:12,120
+They They're not only here, it's gone
+
+914
+00:33:09,400 --> 00:33:13,800
+through. So, the AI debate
+
+915
+00:33:12,119 --> 00:33:15,519
+the people on X that are bearish is
+
+916
+00:33:13,799 --> 00:33:16,720
+being conducted by billions of people
+
+917
+00:33:15,519 --> 00:33:18,279
+who have barely experienced the
+
+918
+00:33:16,720 --> 00:33:21,079
+technology, millions who are beginning
+
+919
+00:33:18,279 --> 00:33:23,200
+to understand its economic power, and a
+
+920
+00:33:21,079 --> 00:33:25,039
+few thousand who are already living in a
+
+921
+00:33:23,200 --> 00:33:27,799
+future the rest of the world cannot yet
+
+922
+00:33:25,039 --> 00:33:29,480
+see. That is what exponential innovation
+
+923
+00:33:27,799 --> 00:33:31,079
+is. Aaron Levie, if you want to know
+
+924
+00:33:29,480 --> 00:33:33,559
+where all the tokens will get consumed
+
+925
+00:33:31,079 --> 00:33:36,159
+in the future, it's agent swarms. We
+
+926
+00:33:33,559 --> 00:33:38,399
+only started having agent swarms in the
+
+927
+00:33:36,160 --> 00:33:39,960
+last 2 months. That's why we've had
+
+928
+00:33:38,400 --> 00:33:41,880
+consumer agents, and that's why I keep
+
+929
+00:33:39,960 --> 00:33:44,120
+highlighting. We are at a step-up
+
+930
+00:33:41,880 --> 00:33:46,880
+function in demand right now, which is
+
+931
+00:33:44,119 --> 00:33:50,000
+why you're seeing more and more interest
+
+932
+00:33:46,880 --> 00:33:51,880
+in GPUs at this current time. DRAM
+
+933
+00:33:50,000 --> 00:33:55,480
+prices made new highs after
+
+934
+00:33:51,880 --> 00:33:57,440
+consolidating for weeks.
+
+935
+00:33:55,480 --> 00:33:59,480
+All we're seeing with prices on demand
+
+936
+00:33:57,440 --> 00:34:02,200
+is going higher. And that's coming
+
+937
+00:33:59,480 --> 00:34:04,200
+because there's more money showing up in
+
+938
+00:34:02,200 --> 00:34:05,920
+terms of demand. They're booked out as
+
+939
+00:34:04,200 --> 00:34:08,079
+I'm going to show.
+
+940
+00:34:05,920 --> 00:34:09,440
+Uh Patrick Collison talked about agents.
+
+941
+00:34:08,079 --> 00:34:12,039
+I'm not going to spend all this time on
+
+942
+00:34:09,440 --> 00:34:13,599
+it, but thanks to personal agents, we
+
+943
+00:34:12,039 --> 00:34:15,759
+will probably get somewhat more rational
+
+944
+00:34:13,599 --> 00:34:17,599
+in how we engage with companies.
+
+945
+00:34:15,760 --> 00:34:21,000
+Basically, you're getting to the point
+
+946
+00:34:17,599 --> 00:34:23,559
+where companies are starting to see the
+
+947
+00:34:21,000 --> 00:34:26,079
+ability to use AI agents, and that's
+
+948
+00:34:23,559 --> 00:34:26,759
+coming across. I just listened to a pod
+
+949
+00:34:26,079 --> 00:34:28,679
+uh
+
+950
+00:34:26,760 --> 00:34:30,840
+an interview with AI engineers this
+
+951
+00:34:28,679 --> 00:34:33,280
+week, where they estimate at this point
+
+952
+00:34:30,840 --> 00:34:35,519
+that agent workflows at companies, agent
+
+953
+00:34:33,280 --> 00:34:38,560
+workflows, are only being used by about
+
+954
+00:34:35,519 --> 00:34:41,800
+2.2 or 2% of the companies.
+
+955
+00:34:38,559 --> 00:34:43,000
+2% of the companies. Now, over 50% are
+
+956
+00:34:41,800 --> 00:34:45,800
+using
+
+957
+00:34:43,000 --> 00:34:47,760
+coding agents. But, using agents for
+
+958
+00:34:45,800 --> 00:34:49,919
+your workflows, which is when the job
+
+959
+00:34:47,760 --> 00:34:51,960
+situation starts to deteriorate, which
+
+960
+00:34:49,918 --> 00:34:54,000
+I'll talk about later,
+
+961
+00:34:51,960 --> 00:34:55,800
+that is a different story. So, when
+
+962
+00:34:54,000 --> 00:34:57,639
+you're thinking in bets again, and you
+
+963
+00:34:55,800 --> 00:34:59,480
+listen to people,
+
+964
+00:34:57,639 --> 00:35:01,199
+the prospect of a bet makes us examine
+
+965
+00:34:59,480 --> 00:35:02,119
+our beliefs. The the whole point of this
+
+966
+00:35:01,199 --> 00:35:04,719
+is
+
+967
+00:35:02,119 --> 00:35:06,319
+in almost every case with people saying
+
+968
+00:35:04,719 --> 00:35:08,480
+they're bearish, and especially people
+
+969
+00:35:06,320 --> 00:35:10,440
+that have been bearish for over a year,
+
+970
+00:35:08,480 --> 00:35:12,199
+which is almost everyone. I challenge
+
+971
+00:35:10,440 --> 00:35:14,599
+you to go into X, find someone who's
+
+972
+00:35:12,199 --> 00:35:16,519
+bearish right now, who wasn't bearish a
+
+973
+00:35:14,599 --> 00:35:18,440
+year ago, 2 years ago, 3 years ago on
+
+974
+00:35:16,519 --> 00:35:20,400
+the bubble trade. And not people that
+
+975
+00:35:18,440 --> 00:35:22,480
+aren't taking a short-term, I think the
+
+976
+00:35:20,400 --> 00:35:23,880
+market is overdone here and going down.
+
+977
+00:35:22,480 --> 00:35:25,480
+That is the reason why I wrote the
+
+978
+00:35:23,880 --> 00:35:27,000
+mid-cycle slowdown in May. That is the
+
+979
+00:35:25,480 --> 00:35:28,679
+reason why I sold that of my the
+
+980
+00:35:27,000 --> 00:35:30,039
+majority of my positions. That is the
+
+981
+00:35:28,679 --> 00:35:31,279
+reason why I wrote the fireworks show
+
+982
+00:35:30,039 --> 00:35:33,119
+was over, and we will never see that
+
+983
+00:35:31,280 --> 00:35:34,840
+again. We will never see what we saw in
+
+984
+00:35:33,119 --> 00:35:36,639
+the first quarter again. So, I'm being
+
+985
+00:35:34,840 --> 00:35:38,680
+rational with the fact that to make
+
+986
+00:35:36,639 --> 00:35:41,000
+alpha, you need a gen to compute.
+
+987
+00:35:38,679 --> 00:35:43,480
+Everything else to me is up for risk.
+
+988
+00:35:41,000 --> 00:35:44,840
+So, unfortunately, when you're listening
+
+989
+00:35:43,480 --> 00:35:46,599
+to people say there's a bubble, by
+
+990
+00:35:44,840 --> 00:35:48,800
+definition, they can't be Alexander
+
+991
+00:35:46,599 --> 00:35:50,799
+Wang. He hasn't been through one.
+
+992
+00:35:48,800 --> 00:35:52,519
+You can't listen to him talk about it.
+
+993
+00:35:50,800 --> 00:35:53,960
+You can't listen to most people in AI
+
+994
+00:35:52,519 --> 00:35:54,960
+talk about it
+
+995
+00:35:53,960 --> 00:35:57,960
+because they haven't been through it.
+
+996
+00:35:54,960 --> 00:36:00,760
+Now, Gavin Baker has, and Brad Gerstner
+
+997
+00:35:57,960 --> 00:36:02,639
+has, but people choose to ignore them.
+
+998
+00:36:00,760 --> 00:36:06,080
+The reason I bring this up with what's
+
+999
+00:36:02,639 --> 00:36:07,879
+going on is this people should listen to
+
+1000
+00:36:06,079 --> 00:36:09,840
+this week.
+
+1001
+00:36:07,880 --> 00:36:11,680
+This people should listen to this week.
+
+1002
+00:36:09,840 --> 00:36:13,360
+This is Tibo
+
+1003
+00:36:11,679 --> 00:36:15,159
+from OpenAI. These are all ones I
+
+1004
+00:36:13,360 --> 00:36:17,640
+listened to this week. This one
+
+1005
+00:36:15,159 --> 00:36:18,920
+absolutely you should listen to. Dylan
+
+1006
+00:36:17,639 --> 00:36:21,119
+Patel
+
+1007
+00:36:18,920 --> 00:36:23,200
+absolutely has the most and best
+
+1008
+00:36:21,119 --> 00:36:24,880
+information of any research place on the
+
+1009
+00:36:23,199 --> 00:36:26,759
+street, because he has set up his
+
+1010
+00:36:24,880 --> 00:36:30,680
+business to be vertically integrated,
+
+1011
+00:36:26,760 --> 00:36:32,440
+meaning he covers only the AI situation.
+
+1012
+00:36:30,679 --> 00:36:34,839
+He covers the data centers. He covers
+
+1013
+00:36:32,440 --> 00:36:36,559
+the semiconductors. He covers Anthropic
+
+1014
+00:36:34,840 --> 00:36:37,559
+and OpenAI and models all this stuff
+
+1015
+00:36:36,559 --> 00:36:39,840
+out.
+
+1016
+00:36:37,559 --> 00:36:42,639
+They spoke this week. Go listen to them.
+
+1017
+00:36:39,840 --> 00:36:44,760
+Go hear how things are. This was on Alex
+
+1018
+00:36:42,639 --> 00:36:47,119
+Kantrowitz, who's great.
+
+1019
+00:36:44,760 --> 00:36:50,160
+The problem is for people, Alexander is
+
+1020
+00:36:47,119 --> 00:36:51,319
+29 years old. Tibo is in the early 30s.
+
+1021
+00:36:50,159 --> 00:36:53,199
+It's always good when you can find
+
+1022
+00:36:51,320 --> 00:36:55,000
+someone who's so mysterious that you
+
+1023
+00:36:53,199 --> 00:36:56,719
+can't even find his proper age. Dylan
+
+1024
+00:36:55,000 --> 00:36:58,159
+Patel is 30.
+
+1025
+00:36:56,719 --> 00:36:59,799
+When you're listening to people say the
+
+1026
+00:36:58,159 --> 00:37:01,399
+AI bubble has broken, they're not
+
+1027
+00:36:59,800 --> 00:37:02,680
+wearing a hoodie like me. They're
+
+1028
+00:37:01,400 --> 00:37:04,400
+telling you I've been through this. You
+
+1029
+00:37:02,679 --> 00:37:05,879
+don't know what you're missing.
+
+1030
+00:37:04,400 --> 00:37:08,599
+These kids don't matter. They've never
+
+1031
+00:37:05,880 --> 00:37:10,400
+seen this. The reality is
+
+1032
+00:37:08,599 --> 00:37:13,000
+these guys have built good businesses
+
+1033
+00:37:10,400 --> 00:37:14,840
+and their research has been dead on.
+
+1034
+00:37:13,000 --> 00:37:16,320
+Dylan Patel founded the company,
+
+1035
+00:37:14,840 --> 00:37:17,559
+SemiAnalysis, if you don't know this
+
+1036
+00:37:16,320 --> 00:37:19,360
+about it.
+
+1037
+00:37:17,559 --> 00:37:21,880
+Has 90 employees. It's in 11 different
+
+1038
+00:37:19,360 --> 00:37:23,760
+countries. In 2025, they had $20 million
+
+1039
+00:37:21,880 --> 00:37:26,880
+of revenue. Now they have $100 million
+
+1040
+00:37:23,760 --> 00:37:29,680
+in revenue. 90 employees, guys.
+
+1041
+00:37:26,880 --> 00:37:32,920
+This is the way AI is changing the world
+
+1042
+00:37:29,679 --> 00:37:35,960
+for real. So he not only knows this from
+
+1043
+00:37:32,920 --> 00:37:37,840
+his business being uncovering it, unlike
+
+1044
+00:37:35,960 --> 00:37:40,960
+the public banks,
+
+1045
+00:37:37,840 --> 00:37:42,720
+he's spending millions of dollars on AI
+
+1046
+00:37:40,960 --> 00:37:44,440
+and he's openly talking about it. So
+
+1047
+00:37:42,719 --> 00:37:46,959
+it's vertically integrated versus Wall
+
+1048
+00:37:44,440 --> 00:37:46,960
+Street.
+
+1049
+00:37:48,360 --> 00:37:54,039
+Exponential AI needs a new system. Why
+
+1050
+00:37:50,840 --> 00:37:56,440
+this wins. This is what my belief is is
+
+1051
+00:37:54,039 --> 00:37:57,920
+that all public companies are at risk.
+
+1052
+00:37:56,440 --> 00:37:59,840
+That's why I did the Stripe versus
+
+1053
+00:37:57,920 --> 00:38:01,760
+Citibank thing during
+
+1054
+00:37:59,840 --> 00:38:03,280
+the video last week.
+
+1055
+00:38:01,760 --> 00:38:05,560
+You're going to see this over and over
+
+1056
+00:38:03,280 --> 00:38:07,280
+again for me because we went from the
+
+1057
+00:38:05,559 --> 00:38:08,559
+industrial economy to the digital
+
+1058
+00:38:07,280 --> 00:38:10,080
+economy.
+
+1059
+00:38:08,559 --> 00:38:11,719
+From an investment standpoint, you only
+
+1060
+00:38:10,079 --> 00:38:14,000
+wanted to invest in the digital economy
+
+1061
+00:38:11,719 --> 00:38:15,759
+equity. Well, now no more private
+
+1062
+00:38:14,000 --> 00:38:17,840
+equity, no more private credit, no more
+
+1063
+00:38:15,760 --> 00:38:19,000
+VC, no more bonds, and no more public
+
+1064
+00:38:17,840 --> 00:38:20,519
+stocks.
+
+1065
+00:38:19,000 --> 00:38:22,480
+No more.
+
+1066
+00:38:20,519 --> 00:38:24,199
+You'll get some returns in equities for
+
+1067
+00:38:22,480 --> 00:38:26,360
+the next whatever 3 years, but the
+
+1068
+00:38:24,199 --> 00:38:29,039
+returns will be dwarfed in terms of the
+
+1069
+00:38:26,360 --> 00:38:30,240
+tokenized digital economy. That's what
+
+1070
+00:38:29,039 --> 00:38:32,519
+we're going through. The tokenized
+
+1071
+00:38:30,239 --> 00:38:33,879
+digital economy, places like this
+
+1072
+00:38:32,519 --> 00:38:37,079
+business.
+
+1073
+00:38:33,880 --> 00:38:39,280
+He has a hundred million in revenue.
+
+1074
+00:38:37,079 --> 00:38:41,400
+It's a big business, guys. That means
+
+1075
+00:38:39,280 --> 00:38:43,040
+his business I I I don't know where they
+
+1076
+00:38:41,400 --> 00:38:44,760
+would put it right now, but I do know
+
+1077
+00:38:43,039 --> 00:38:46,480
+this. You're probably talking about a
+
+1078
+00:38:44,760 --> 00:38:48,920
+market cap, I don't know if he went to
+
+1079
+00:38:46,480 --> 00:38:50,519
+market, billions of dollars.
+
+1080
+00:38:48,920 --> 00:38:52,800
+That's how fast these businesses are
+
+1081
+00:38:50,519 --> 00:38:54,440
+growing. And what he talked about was a
+
+1082
+00:38:52,800 --> 00:38:57,280
+year ago he was spending a hundred
+
+1083
+00:38:54,440 --> 00:39:00,400
+thousand dollars on AI. As of August it
+
+1084
+00:38:57,280 --> 00:39:03,120
+was up to 10 to 11 million.
+
+1085
+00:39:00,400 --> 00:39:05,000
+So, again, you're really talking about
+
+1086
+00:39:03,119 --> 00:39:08,039
+someone who's doing the work on it, but
+
+1087
+00:39:05,000 --> 00:39:10,679
+is also using it against his revenue
+
+1088
+00:39:08,039 --> 00:39:12,920
+that's come in. So, the question is
+
+1089
+00:39:10,679 --> 00:39:15,039
+how should you think about it? So, I
+
+1090
+00:39:12,920 --> 00:39:16,720
+wrote this. I went through it. People
+
+1091
+00:39:15,039 --> 00:39:18,440
+are not looking to make money right now.
+
+1092
+00:39:16,719 --> 00:39:20,319
+I'm just telling you the thing that I
+
+1093
+00:39:18,440 --> 00:39:21,840
+put out last week or earlier this week
+
+1094
+00:39:20,320 --> 00:39:24,559
+when the cost of intelligence collides
+
+1095
+00:39:21,840 --> 00:39:26,519
+with the demand for intelligence.
+
+1096
+00:39:24,559 --> 00:39:28,000
+AI agents and Vera Rubin are the place
+
+1097
+00:39:26,519 --> 00:39:29,679
+you want to be investing in for the next
+
+1098
+00:39:28,000 --> 00:39:31,760
+12 months within side the agentic
+
+1099
+00:39:29,679 --> 00:39:33,359
+compute. And I put together those 15
+
+1100
+00:39:31,760 --> 00:39:35,840
+names. Most of them are in the optical
+
+1101
+00:39:33,360 --> 00:39:38,200
+side as to who benefits.
+
+1102
+00:39:35,840 --> 00:39:39,640
+This week has been a blood fest, so you
+
+1103
+00:39:38,199 --> 00:39:41,719
+can go in and you're getting things at
+
+1104
+00:39:39,639 --> 00:39:43,239
+much lower levels. If you want to wait
+
+1105
+00:39:41,719 --> 00:39:45,759
+and wait for stability and wait for the
+
+1106
+00:39:43,239 --> 00:39:49,000
+hedge funds to be done liquidating, that
+
+1107
+00:39:45,760 --> 00:39:50,840
+might take another month. Um I don't
+
+1108
+00:39:49,000 --> 00:39:53,159
+know. It could end quicker than that,
+
+1109
+00:39:50,840 --> 00:39:55,440
+but based on how bad the numbers have
+
+1110
+00:39:53,159 --> 00:39:57,079
+been, would not surprise me to see more
+
+1111
+00:39:55,440 --> 00:39:59,119
+of this until we get into the hyper
+
+1112
+00:39:57,079 --> 00:40:00,639
+scalar numbers. Uh I did want to make
+
+1113
+00:39:59,119 --> 00:40:02,079
+sure that if you guys are interested in
+
+1114
+00:40:00,639 --> 00:40:03,839
+Jev, I had a lot of people that reached
+
+1115
+00:40:02,079 --> 00:40:06,400
+out. What is Jev? This video was
+
+1116
+00:40:03,840 --> 00:40:08,840
+fantastic, had over a million views uh
+
+1117
+00:40:06,400 --> 00:40:10,639
+as of last week. Very simple. It'll be
+
+1118
+00:40:08,840 --> 00:40:12,360
+in the uh
+
+1119
+00:40:10,639 --> 00:40:13,839
+all of these podcasts because there's so
+
+1120
+00:40:12,360 --> 00:40:15,519
+many of them. I still have I think two
+
+1121
+00:40:13,840 --> 00:40:17,880
+more to show you guys. I listened to at
+
+1122
+00:40:15,519 --> 00:40:21,759
+least seven or eight this week.
+
+1123
+00:40:17,880 --> 00:40:22,960
+All on the AI chip trade.
+
+1124
+00:40:21,760 --> 00:40:24,240
+Again,
+
+1125
+00:40:22,960 --> 00:40:25,960
+there's no way to forecast the
+
+1126
+00:40:24,239 --> 00:40:27,159
+exponential. So, you have to deal with
+
+1127
+00:40:25,960 --> 00:40:28,760
+the fact that you're going to have these
+
+1128
+00:40:27,159 --> 00:40:31,039
+ups and downs within side something
+
+1129
+00:40:28,760 --> 00:40:33,080
+that's going to go on. That's why in
+
+1130
+00:40:31,039 --> 00:40:35,159
+this week's AI video of what I did, I
+
+1131
+00:40:33,079 --> 00:40:36,840
+went through this to kind of give people
+
+1132
+00:40:35,159 --> 00:40:39,119
+the ability to dip jab. I know I did a
+
+1133
+00:40:36,840 --> 00:40:41,320
+lot of over the last 2 weeks, a lot of
+
+1134
+00:40:39,119 --> 00:40:43,440
+videos, a lot of stuff came out. The
+
+1135
+00:40:41,320 --> 00:40:45,160
+Vera Rubin report, remember you can go
+
+1136
+00:40:43,440 --> 00:40:46,800
+get this off the website. You can do
+
+1137
+00:40:45,159 --> 00:40:48,639
+this yourself. I did the Agentech
+
+1138
+00:40:46,800 --> 00:40:50,720
+consumer inflection. You guys can go do
+
+1139
+00:40:48,639 --> 00:40:52,960
+this on your own. This is the time to be
+
+1140
+00:40:50,719 --> 00:40:54,279
+doing your homework on these names if
+
+1141
+00:40:52,960 --> 00:40:55,720
+you're not in the position the hedge
+
+1142
+00:40:54,280 --> 00:40:57,920
+funds are. So, if you're sitting at
+
+1143
+00:40:55,719 --> 00:40:59,439
+home, even if you've had a drawdown in
+
+1144
+00:40:57,920 --> 00:41:01,440
+terms of things going, your entry point
+
+1145
+00:40:59,440 --> 00:41:03,280
+is getting better
+
+1146
+00:41:01,440 --> 00:41:04,760
+assuming there's not a bubble. And
+
+1147
+00:41:03,280 --> 00:41:06,400
+that's my job here is to basically go
+
+1148
+00:41:04,760 --> 00:41:07,960
+through and say we're not in a bubble
+
+1149
+00:41:06,400 --> 00:41:10,760
+phase, but we are in a deleveraging
+
+1150
+00:41:07,960 --> 00:41:12,559
+phase. It is a very, very difficult game
+
+1151
+00:41:10,760 --> 00:41:13,960
+to know when the hedge fund pain is gone
+
+1152
+00:41:12,559 --> 00:41:15,480
+because when you're dealing with $14
+
+1153
+00:41:13,960 --> 00:41:17,639
+trillion of
+
+1154
+00:41:15,480 --> 00:41:20,079
+of
+
+1155
+00:41:17,639 --> 00:41:23,119
+positioning there and the growth has
+
+1156
+00:41:20,079 --> 00:41:25,639
+been enormous, it could take a while
+
+1157
+00:41:23,119 --> 00:41:26,960
+even if the the fundamentals are still
+
+1158
+00:41:25,639 --> 00:41:27,839
+strong and that's part of the leverage
+
+1159
+00:41:26,960 --> 00:41:29,519
+thing.
+
+1160
+00:41:27,840 --> 00:41:31,600
+I also included the technical side.
+
+1161
+00:41:29,519 --> 00:41:32,880
+Again, you guys that are new to it, I'm
+
+1162
+00:41:31,599 --> 00:41:35,119
+showing you this if you didn't go
+
+1163
+00:41:32,880 --> 00:41:37,160
+through it because there's a lot to use
+
+1164
+00:41:35,119 --> 00:41:38,799
+each week on this stuff. All of the
+
+1165
+00:41:37,159 --> 00:41:41,199
+technical sheets, all of fundamental
+
+1166
+00:41:38,800 --> 00:41:43,480
+sheets, all of the stuff in AI you want
+
+1167
+00:41:41,199 --> 00:41:46,279
+to be on top of. And again, I go through
+
+1168
+00:41:43,480 --> 00:41:48,079
+the different ways the resources and the
+
+1169
+00:41:46,280 --> 00:41:50,240
+stuff that are there. I give you the
+
+1170
+00:41:48,079 --> 00:41:51,840
+prompt on it so you can go through it.
+
+1171
+00:41:50,239 --> 00:41:53,559
+And that's basically what it does. It's
+
+1172
+00:41:51,840 --> 00:41:55,600
+taking 100 names, it's going through,
+
+1173
+00:41:53,559 --> 00:41:57,719
+you're going through the Jeff process
+
+1174
+00:41:55,599 --> 00:41:59,319
+which again, go look at the video I put
+
+1175
+00:41:57,719 --> 00:42:01,399
+on the subscriber site. It will show you
+
+1176
+00:41:59,320 --> 00:42:03,519
+how you can do this. And effectively,
+
+1177
+00:42:01,400 --> 00:42:04,559
+you are doing what hedge funds are doing
+
+1178
+00:42:03,519 --> 00:42:05,960
+and that's the other reason why the
+
+1179
+00:42:04,559 --> 00:42:07,799
+market structure is changing. The
+
+1180
+00:42:05,960 --> 00:42:10,280
+competition for hedge funds in terms of
+
+1181
+00:42:07,800 --> 00:42:12,800
+the speed to ideas is gone.
+
+1182
+00:42:10,280 --> 00:42:15,840
+I am about to list something and put
+
+1183
+00:42:12,800 --> 00:42:17,840
+money into something with my crypto. So,
+
+1184
+00:42:15,840 --> 00:42:19,240
+the tokenized world is beginning, guys.
+
+1185
+00:42:17,840 --> 00:42:21,519
+The market structure has forever
+
+1186
+00:42:19,239 --> 00:42:23,039
+changed. It is a deleveraging event.
+
+1187
+00:42:21,519 --> 00:42:25,880
+You're going to hear me talk about this
+
+1188
+00:42:23,039 --> 00:42:27,599
+more and more. Tokenization is the final
+
+1189
+00:42:25,880 --> 00:42:30,360
+part of the deleveraging stage for hedge
+
+1190
+00:42:27,599 --> 00:42:31,519
+funds. So, hedge fund risk managers
+
+1191
+00:42:30,360 --> 00:42:33,320
+I actually don't want to talk to the
+
+1192
+00:42:31,519 --> 00:42:34,759
+risk managers. Hedge fund senior people
+
+1193
+00:42:33,320 --> 00:42:36,400
+that want to reach out and talk, I'm
+
+1194
+00:42:34,760 --> 00:42:37,880
+happy to go through at least my thoughts
+
+1195
+00:42:36,400 --> 00:42:39,639
+on it so you guys can go through it.
+
+1196
+00:42:37,880 --> 00:42:42,280
+But, tokenization is going to change the
+
+1197
+00:42:39,639 --> 00:42:44,799
+way covariance matrices work and the way
+
+1198
+00:42:42,280 --> 00:42:47,160
+that margin is going to be provided. So,
+
+1199
+00:42:44,800 --> 00:42:49,080
+again, I go from 100 names down to 15
+
+1200
+00:42:47,159 --> 00:42:50,639
+using this process. You guys can set it
+
+1201
+00:42:49,079 --> 00:42:52,559
+up yourself.
+
+1202
+00:42:50,639 --> 00:42:54,759
+And that way you are effectively doing
+
+1203
+00:42:52,559 --> 00:42:56,960
+what hedge funds do, taking thematic
+
+1204
+00:42:54,760 --> 00:42:58,640
+research, whittling it down, combining
+
+1205
+00:42:56,960 --> 00:43:00,840
+it with fundamentals and technicals and
+
+1206
+00:42:58,639 --> 00:43:03,239
+earnings progression, getting an answer
+
+1207
+00:43:00,840 --> 00:43:05,120
+within seconds.
+
+1208
+00:43:03,239 --> 00:43:07,639
+Watch that video. This is the one that
+
+1209
+00:43:05,119 --> 00:43:08,559
+you need to watch this week aside from
+
+1210
+00:43:07,639 --> 00:43:10,759
+the other two that I'm going to go
+
+1211
+00:43:08,559 --> 00:43:12,799
+through. But, to get back to it of his
+
+1212
+00:43:10,760 --> 00:43:14,760
+side in there, AI capex is already
+
+1213
+00:43:12,800 --> 00:43:16,920
+bigger than most people think. He says
+
+1214
+00:43:14,760 --> 00:43:19,640
+this could be close to $2 trillion or 5
+
+1215
+00:43:16,920 --> 00:43:21,280
+to 6% of GDP next year.
+
+1216
+00:43:19,639 --> 00:43:23,519
+The big debate in whether revenue can
+
+1217
+00:43:21,280 --> 00:43:25,120
+catch up the infrastructure. He says
+
+1218
+00:43:23,519 --> 00:43:27,320
+OpenAI and Anthropic alone could
+
+1219
+00:43:25,119 --> 00:43:28,400
+potentially reach 600 to 700 billion.
+
+1220
+00:43:27,320 --> 00:43:29,680
+The reason I wanted to show this,
+
+1221
+00:43:28,400 --> 00:43:32,800
+they're going to finish combined this
+
+1222
+00:43:29,679 --> 00:43:34,879
+year somewhere around 170 billion.
+
+1223
+00:43:32,800 --> 00:43:36,840
+All he's saying
+
+1224
+00:43:34,880 --> 00:43:37,880
+and again, this is the the thing to me
+
+1225
+00:43:36,840 --> 00:43:39,200
+that I just don't think people
+
+1226
+00:43:37,880 --> 00:43:40,559
+understand.
+
+1227
+00:43:39,199 --> 00:43:42,519
+So, everyone was going through the
+
+1228
+00:43:40,559 --> 00:43:44,360
+Anthropic thing this week. So, Anthropic
+
+1229
+00:43:42,519 --> 00:43:45,759
+is on pace for 90 to 100 billion for
+
+1230
+00:43:44,360 --> 00:43:47,920
+this year. Last year they finished the
+
+1231
+00:43:45,760 --> 00:43:49,560
+year at nine.
+
+1232
+00:43:47,920 --> 00:43:52,360
+At nine.
+
+1233
+00:43:49,559 --> 00:43:53,840
+So, they're 10 times again and 10 times
+
+1234
+00:43:52,360 --> 00:43:55,960
+the year before that and 10 times the
+
+1235
+00:43:53,840 --> 00:43:58,880
+year before that. And right now he's
+
+1236
+00:43:55,960 --> 00:44:00,880
+saying combined for OpenAI and Anthropic
+
+1237
+00:43:58,880 --> 00:44:02,800
+maybe 600 700. So, let's take the bottom
+
+1238
+00:44:00,880 --> 00:44:04,440
+end, 600.
+
+1239
+00:44:02,800 --> 00:44:06,160
+Well, that would mean between the two of
+
+1240
+00:44:04,440 --> 00:44:07,639
+them they're doing about three times.
+
+1241
+00:44:06,159 --> 00:44:09,319
+So, he's talking about a rapid
+
+1242
+00:44:07,639 --> 00:44:11,119
+deceleration.
+
+1243
+00:44:09,320 --> 00:44:12,840
+This is already built in
+
+1244
+00:44:11,119 --> 00:44:15,679
+he's saying 600, 700, and that's
+
+1245
+00:44:12,840 --> 00:44:18,360
+basically what David Sacks and Gavin
+
+1246
+00:44:15,679 --> 00:44:19,599
+Baker and Chamath gave as their answers
+
+1247
+00:44:18,360 --> 00:44:21,720
+about
+
+1248
+00:44:19,599 --> 00:44:24,400
+a month and a half ago. Sorry to the
+
+1249
+00:44:21,719 --> 00:44:26,079
+guys who are focused on the way oil
+
+1250
+00:44:24,400 --> 00:44:28,039
+trades in the dot-com bubble they went
+
+1251
+00:44:26,079 --> 00:44:29,519
+through. If you're not in Silicon Valley
+
+1252
+00:44:28,039 --> 00:44:31,199
+and you're not actually talking to the
+
+1253
+00:44:29,519 --> 00:44:34,280
+people heavily involved. Brad Gerstner's
+
+1254
+00:44:31,199 --> 00:44:36,279
+an investor. He was at an investment
+
+1255
+00:44:34,280 --> 00:44:37,720
+at the investment day with Anthropic
+
+1256
+00:44:36,280 --> 00:44:39,160
+this week. He saw everything. He spoke
+
+1257
+00:44:37,719 --> 00:44:40,199
+on TV.
+
+1258
+00:44:39,159 --> 00:44:42,279
+I
+
+1259
+00:44:40,199 --> 00:44:44,039
+I I just don't even know. Um the biggest
+
+1260
+00:44:42,280 --> 00:44:45,960
+revenue opportunity may not be today's
+
+1261
+00:44:44,039 --> 00:44:47,840
+token pricing. Jordan says people are
+
+1262
+00:44:45,960 --> 00:44:50,440
+too narrowly focused on cloud cloud
+
+1263
+00:44:47,840 --> 00:44:52,880
+subscriptions. This is a critical thing.
+
+1264
+00:44:50,440 --> 00:44:54,760
+And per token API revenue. If frontier
+
+1265
+00:44:52,880 --> 00:44:56,480
+AI systems can perform knowledge work
+
+1266
+00:44:54,760 --> 00:44:58,160
+across coding, robotics, self-driving,
+
+1267
+00:44:56,480 --> 00:45:00,079
+and drug discovery, health care, chip
+
+1268
+00:44:58,159 --> 00:45:01,719
+design, and other industries,
+
+1269
+00:45:00,079 --> 00:45:04,000
+the revenue pool could be much larger
+
+1270
+00:45:01,719 --> 00:45:06,039
+than today's software-like products.
+
+1271
+00:45:04,000 --> 00:45:07,199
+Again, this is the part of what I said
+
+1272
+00:45:06,039 --> 00:45:09,800
+at the beginning. When you have
+
+1273
+00:45:07,199 --> 00:45:12,559
+exponential growth, nobody has any idea.
+
+1274
+00:45:09,800 --> 00:45:14,280
+The Barclays desk is not including any
+
+1275
+00:45:12,559 --> 00:45:15,279
+of this in where the revenue's coming
+
+1276
+00:45:14,280 --> 00:45:17,640
+from.
+
+1277
+00:45:15,280 --> 00:45:20,640
+They are doing basic human linear
+
+1278
+00:45:17,639 --> 00:45:22,359
+garbage work. End of story.
+
+1279
+00:45:20,639 --> 00:45:25,400
+You didn't predict
+
+1280
+00:45:22,360 --> 00:45:26,680
+the dot-com the the post-iPhone era. And
+
+1281
+00:45:25,400 --> 00:45:27,920
+trust me, if you did, you would have
+
+1282
+00:45:26,679 --> 00:45:29,319
+made a fortune and not be working
+
+1283
+00:45:27,920 --> 00:45:31,280
+anymore cuz you just would have gone out
+
+1284
+00:45:29,320 --> 00:45:33,039
+and bought the Mag 7. The Mag 7
+
+1285
+00:45:31,280 --> 00:45:35,519
+dominated the world. We are going to see
+
+1286
+00:45:33,039 --> 00:45:38,199
+a similar thing in AI
+
+1287
+00:45:35,519 --> 00:45:39,759
+companies. I don't think it'll be OpenAI
+
+1288
+00:45:38,199 --> 00:45:41,519
+and Anthropic. I have no problem if
+
+1289
+00:45:39,760 --> 00:45:42,840
+people say to me that I don't think
+
+1290
+00:45:41,519 --> 00:45:44,960
+they'll ever be worth 10 trillion.
+
+1291
+00:45:42,840 --> 00:45:47,600
+Great. So, if they're worth one and a
+
+1292
+00:45:44,960 --> 00:45:48,960
+half right now to two, and next year
+
+1293
+00:45:47,599 --> 00:45:50,119
+they're still worth one and a half to
+
+1294
+00:45:48,960 --> 00:45:51,559
+two,
+
+1295
+00:45:50,119 --> 00:45:52,920
+they've won.
+
+1296
+00:45:51,559 --> 00:45:54,400
+That's the part I don't understand that
+
+1297
+00:45:52,920 --> 00:45:55,920
+people don't get. If they just stay at
+
+1298
+00:45:54,400 --> 00:45:57,000
+the same level,
+
+1299
+00:45:55,920 --> 00:45:58,519
+they've won.
+
+1300
+00:45:57,000 --> 00:46:00,840
+These companies are up so much from
+
+1301
+00:45:58,519 --> 00:46:02,320
+where they where they were before. AI
+
+1302
+00:46:00,840 --> 00:46:05,200
+could supercharge productivity in
+
+1303
+00:46:02,320 --> 00:46:06,600
+industries and flat head count and
+
+1304
+00:46:05,199 --> 00:46:08,000
+with flat head count and I think that's
+
+1305
+00:46:06,599 --> 00:46:10,199
+what we're going to see. So again, I
+
+1306
+00:46:08,000 --> 00:46:12,519
+bring this Barclays desk up cuz I just I
+
+1307
+00:46:10,199 --> 00:46:15,000
+think it's so stupid for people not only
+
+1308
+00:46:12,519 --> 00:46:16,719
+to write it, but then for a reporter to
+
+1309
+00:46:15,000 --> 00:46:18,159
+put it out there. It's only one reason
+
+1310
+00:46:16,719 --> 00:46:20,119
+to put it out there.
+
+1311
+00:46:18,159 --> 00:46:22,519
+To be bearish. That's it. Like what's
+
+1312
+00:46:20,119 --> 00:46:25,079
+the purpose for you guys reading that?
+
+1313
+00:46:22,519 --> 00:46:26,559
+It means nothing. They can't predict
+
+1314
+00:46:25,079 --> 00:46:28,000
+what this is going to be. Go look at
+
+1315
+00:46:26,559 --> 00:46:31,119
+their trading desk and see if they got
+
+1316
+00:46:28,000 --> 00:46:33,639
+Micron going from $10 a share to $80 a
+
+1317
+00:46:31,119 --> 00:46:35,440
+share. The answer is no. I guarantee you
+
+1318
+00:46:33,639 --> 00:46:37,879
+they were off by a factor of five at
+
+1319
+00:46:35,440 --> 00:46:39,400
+least. So
+
+1320
+00:46:37,880 --> 00:46:41,280
+you can't predict this stuff. No one
+
+1321
+00:46:39,400 --> 00:46:43,800
+can. And I'm not saying I can. I'm just
+
+1322
+00:46:41,280 --> 00:46:45,920
+saying that the path continues to move
+
+1323
+00:46:43,800 --> 00:46:47,480
+at this pace and unless we see a change
+
+1324
+00:46:45,920 --> 00:46:49,639
+in the revenue growth, unless we see a
+
+1325
+00:46:47,480 --> 00:46:52,480
+change in and I don't mean the revenue
+
+1326
+00:46:49,639 --> 00:46:54,119
+growth of a oh my gosh, in August it was
+
+1327
+00:46:52,480 --> 00:46:55,840
+slightly lower than July. That means
+
+1328
+00:46:54,119 --> 00:46:57,759
+they've lost it. That is complete
+
+1329
+00:46:55,840 --> 00:46:59,880
+garbage in terms of the Anthropic and
+
+1330
+00:46:57,760 --> 00:47:01,400
+Open AI stuff. Looking at a quarter
+
+1331
+00:46:59,880 --> 00:47:03,559
+return for a company and saying that
+
+1332
+00:47:01,400 --> 00:47:04,960
+that's the end of it is just ridiculous.
+
+1333
+00:47:03,559 --> 00:47:07,480
+Especially when we just launched
+
+1334
+00:47:04,960 --> 00:47:08,679
+Grokbot, we just launched Muse, Meta.
+
+1335
+00:47:07,480 --> 00:47:11,039
+You're going to have more and more
+
+1336
+00:47:08,679 --> 00:47:12,960
+people using other parts of AI where
+
+1337
+00:47:11,039 --> 00:47:14,199
+revenues are going to be coming through.
+
+1338
+00:47:12,960 --> 00:47:17,519
+Here's the other problem I have and
+
+1339
+00:47:14,199 --> 00:47:20,399
+again, we look at this buildout. Canals.
+
+1340
+00:47:17,519 --> 00:47:22,000
+We're comparing this stuff 5 years, 20
+
+1341
+00:47:20,400 --> 00:47:23,360
+years.
+
+1342
+00:47:22,000 --> 00:47:25,920
+20 years.
+
+1343
+00:47:23,360 --> 00:47:27,800
+17 years.
+
+1344
+00:47:25,920 --> 00:47:29,920
+7 years.
+
+1345
+00:47:27,800 --> 00:47:31,760
+We're near two of this and yet we're
+
+1346
+00:47:29,920 --> 00:47:33,320
+saying the bubble is here. We're saying
+
+1347
+00:47:31,760 --> 00:47:36,960
+there's been 10 trillion, this is a
+
+1348
+00:47:33,320 --> 00:47:41,519
+bubble. We haven't even started the bulk
+
+1349
+00:47:36,960 --> 00:47:43,039
+of the CapEx. It's just starting.
+
+1350
+00:47:41,519 --> 00:47:45,480
+If there's a bubble,
+
+1351
+00:47:43,039 --> 00:47:47,559
+I'm guessing.
+
+1352
+00:47:45,480 --> 00:47:49,760
+In fiber it took 7 years of buildout. In
+
+1353
+00:47:47,559 --> 00:47:52,119
+this case we're saying in year two while
+
+1354
+00:47:49,760 --> 00:47:54,040
+everything still looks positive.
+
+1355
+00:47:52,119 --> 00:47:55,400
+It's just insane.
+
+1356
+00:47:54,039 --> 00:47:57,360
+And again, we're doing everything out to
+
+1357
+00:47:55,400 --> 00:48:00,240
+2030. I've never seen forecast in my
+
+1358
+00:47:57,360 --> 00:48:01,680
+career to reiterate out to 2030. We
+
+1359
+00:48:00,239 --> 00:48:03,639
+we've been dealing with what's the
+
+1360
+00:48:01,679 --> 00:48:04,960
+economy going to be in a quarter? Is
+
+1361
+00:48:03,639 --> 00:48:07,239
+there going to be a recession next year?
+
+1362
+00:48:04,960 --> 00:48:08,400
+Now we're talking about 2030? How many
+
+1363
+00:48:07,239 --> 00:48:10,639
+things can be different than what's
+
+1364
+00:48:08,400 --> 00:48:12,440
+expected in 5 years with exponential
+
+1365
+00:48:10,639 --> 00:48:14,639
+innovation? That's why I'm bringing this
+
+1366
+00:48:12,440 --> 00:48:16,320
+up all this 2030 stuff. This got brought
+
+1367
+00:48:14,639 --> 00:48:18,719
+out again. Bains has AI needs 6
+
+1368
+00:48:16,320 --> 00:48:22,039
+trillion. They're going to be short by
+
+1369
+00:48:18,719 --> 00:48:24,319
+800 billion. I mean, this is insanity.
+
+1370
+00:48:22,039 --> 00:48:26,519
+Out to 2031 you're giving me a forecast
+
+1371
+00:48:24,320 --> 00:48:29,000
+on how short you're going to be?
+
+1372
+00:48:26,519 --> 00:48:31,039
+So again, here's here's CoreWeave.
+
+1373
+00:48:29,000 --> 00:48:32,719
+Uh trading this is before Friday. This
+
+1374
+00:48:31,039 --> 00:48:33,480
+is after Thursday.
+
+1375
+00:48:32,719 --> 00:48:35,439
+Um
+
+1376
+00:48:33,480 --> 00:48:37,000
+again, trading in this range they've
+
+1377
+00:48:35,440 --> 00:48:39,480
+been in. Here are their clients
+
+1378
+00:48:37,000 --> 00:48:40,679
+Microsoft, OpenAI, Meta, Anthropic,
+
+1379
+00:48:39,480 --> 00:48:42,559
+Mistral
+
+1380
+00:48:40,679 --> 00:48:44,719
+Jane Street. Like
+
+1381
+00:48:42,559 --> 00:48:46,920
+are they going to default? I I mean,
+
+1382
+00:48:44,719 --> 00:48:48,959
+maybe down the road, not in the next
+
+1383
+00:48:46,920 --> 00:48:52,320
+couple years.
+
+1384
+00:48:48,960 --> 00:48:54,400
+Uh we cared about this last week. We got
+
+1385
+00:48:52,320 --> 00:48:57,559
+this. It's only two trill the two
+
+1386
+00:48:54,400 --> 00:48:59,160
+trillion could be 1.9 uh blah blah blah.
+
+1387
+00:48:57,559 --> 00:49:00,759
+Again, Jared Cuban came out and
+
+1388
+00:48:59,159 --> 00:49:02,199
+basically did the math after everyone
+
+1389
+00:49:00,760 --> 00:49:03,640
+was going through it saying, "Oh,
+
+1390
+00:49:02,199 --> 00:49:05,480
+they're coming in light." And he just
+
+1391
+00:49:03,639 --> 00:49:06,960
+went through it and I love what he said,
+
+1392
+00:49:05,480 --> 00:49:08,280
+"You have to do the work and run the
+
+1393
+00:49:06,960 --> 00:49:10,280
+math."
+
+1394
+00:49:08,280 --> 00:49:11,800
+Let me clear some things up.
+
+1395
+00:49:10,280 --> 00:49:14,040
+100 billion end of year seems pretty
+
+1396
+00:49:11,800 --> 00:49:15,720
+straightforward. I I there's no way to
+
+1397
+00:49:14,039 --> 00:49:18,759
+look at it and not be able to come up
+
+1398
+00:49:15,719 --> 00:49:20,639
+with at least 90.
+
+1399
+00:49:18,760 --> 00:49:23,480
+More importantly, we're talking about
+
+1400
+00:49:20,639 --> 00:49:26,639
+whether they come in at 90 or 100 when
+
+1401
+00:49:23,480 --> 00:49:28,840
+as open as a 16Z put out
+
+1402
+00:49:26,639 --> 00:49:30,960
+the labs have added more revenue in 2026
+
+1403
+00:49:28,840 --> 00:49:32,920
+than all of public software combined and
+
+1404
+00:49:30,960 --> 00:49:34,679
+we're calling them a failure or slowing
+
+1405
+00:49:32,920 --> 00:49:36,599
+down.
+
+1406
+00:49:34,679 --> 00:49:39,079
+Um Broadcom, this was a headline by the
+
+1407
+00:49:36,599 --> 00:49:40,559
+media likens many AI investors to casino
+
+1408
+00:49:39,079 --> 00:49:42,840
+gamblers.
+
+1409
+00:49:40,559 --> 00:49:45,639
+It's not what he said.
+
+1410
+00:49:42,840 --> 00:49:47,120
+Gavin Baker volatility on misunderstood
+
+1411
+00:49:45,639 --> 00:49:50,759
+news flow. Everything I've shown you
+
+1412
+00:49:47,119 --> 00:49:53,519
+today is misunderstood news flow plus
+
+1413
+00:49:50,760 --> 00:49:54,960
+the the the chest beating of the bears
+
+1414
+00:49:53,519 --> 00:49:56,679
+coming out seeing the bubbles pop then
+
+1415
+00:49:54,960 --> 00:49:59,119
+weak at the S&P is two two and a half
+
+1416
+00:49:56,679 --> 00:50:00,639
+percent off the all-time highs. We had
+
+1417
+00:49:59,119 --> 00:50:02,159
+deep seek day. We had liberation day. We
+
+1418
+00:50:00,639 --> 00:50:04,159
+had Kimmy. We had blah blah blah
+
+1419
+00:50:02,159 --> 00:50:07,279
+everything out and then a mistranslation
+
+1420
+00:50:04,159 --> 00:50:09,839
+of Hak Tan's comments yesterday because
+
+1421
+00:50:07,280 --> 00:50:11,800
+he basically did not say what
+
+1422
+00:50:09,840 --> 00:50:14,519
+they said he did. He did not say people
+
+1423
+00:50:11,800 --> 00:50:17,440
+were gambling on AI. He actually said
+
+1424
+00:50:14,519 --> 00:50:20,320
+that OpenAI and guessing whether they
+
+1425
+00:50:17,440 --> 00:50:22,039
+had a it was 70 billion or 50 billion
+
+1426
+00:50:20,320 --> 00:50:24,519
+and jumping to the gun and making
+
+1427
+00:50:22,039 --> 00:50:26,440
+decisions off that. That's gambling.
+
+1428
+00:50:24,519 --> 00:50:28,920
+That is hedge funds.
+
+1429
+00:50:26,440 --> 00:50:29,920
+That is AI agents trading. Make sense to
+
+1430
+00:50:28,920 --> 00:50:31,599
+me.
+
+1431
+00:50:29,920 --> 00:50:34,440
+Um you get all these jumps and all these
+
+1432
+00:50:31,599 --> 00:50:35,920
+moves. You also had CXMT this week and
+
+1433
+00:50:34,440 --> 00:50:37,480
+the fact that they were coming out with
+
+1434
+00:50:35,920 --> 00:50:39,159
+stuff. So all memory names were going to
+
+1435
+00:50:37,480 --> 00:50:41,960
+get hit. So you had all of this stuff
+
+1436
+00:50:39,159 --> 00:50:43,679
+happening and again I I feel bad for the
+
+1437
+00:50:41,960 --> 00:50:45,079
+people who do all this research and then
+
+1438
+00:50:43,679 --> 00:50:47,199
+something comes out and everyone
+
+1439
+00:50:45,079 --> 00:50:49,000
+immediately sells the stocks and then
+
+1440
+00:50:47,199 --> 00:50:50,000
+they get called up. I go through this as
+
+1441
+00:50:49,000 --> 00:50:52,039
+well.
+
+1442
+00:50:50,000 --> 00:50:54,480
+And Elon Musk basically came in. He got
+
+1443
+00:50:52,039 --> 00:50:56,320
+involved and he said, "Yeah, problem is
+
+1444
+00:50:54,480 --> 00:50:58,360
+RAM supply." So
+
+1445
+00:50:56,320 --> 00:51:00,480
+you know, whatever. And remember, here
+
+1446
+00:50:58,360 --> 00:51:02,200
+are the facts.
+
+1447
+00:51:00,480 --> 00:51:04,039
+Four weeks ago, Micron estimates signed
+
+1448
+00:51:02,199 --> 00:51:05,879
+agreements represent more than 35% of
+
+1449
+00:51:04,039 --> 00:51:08,840
+its revenue through 2030. So remember
+
+1450
+00:51:05,880 --> 00:51:10,160
+the 2030 forecast for what CapEx will be
+
+1451
+00:51:08,840 --> 00:51:11,320
+and how this will be the biggest bubble
+
+1452
+00:51:10,159 --> 00:51:15,119
+in history
+
+1453
+00:51:11,320 --> 00:51:16,360
+in five years. How we have a situation
+
+1454
+00:51:15,119 --> 00:51:19,880
+where Bain says we're not going to get
+
+1455
+00:51:16,360 --> 00:51:22,640
+the revenues in five years. How Gartner
+
+1456
+00:51:19,880 --> 00:51:24,079
+says the neoclass could blow up in five
+
+1457
+00:51:22,639 --> 00:51:25,719
+years.
+
+1458
+00:51:24,079 --> 00:51:28,400
+Here are the
+
+1459
+00:51:25,719 --> 00:51:30,759
+contracts. So the these are not forecast
+
+1460
+00:51:28,400 --> 00:51:33,720
+by those guys that have no no facts to
+
+1461
+00:51:30,760 --> 00:51:35,960
+them. That's just their guess, okay? And
+
+1462
+00:51:33,719 --> 00:51:37,919
+that's a fact. That is just their guess.
+
+1463
+00:51:35,960 --> 00:51:40,000
+Micron has signed agreements of its
+
+1464
+00:51:37,920 --> 00:51:41,360
+revenue through 2030.
+
+1465
+00:51:40,000 --> 00:51:43,320
+ASML
+
+1466
+00:51:41,360 --> 00:51:44,720
+AI chip demand is stretching into 2030.
+
+1467
+00:51:43,320 --> 00:51:47,760
+It already expects supply shortages
+
+1468
+00:51:44,719 --> 00:51:50,599
+through 2028. Nvidia-backed Lumentum
+
+1469
+00:51:47,760 --> 00:51:54,360
+sold out of AI parts till 2029.
+
+1470
+00:51:50,599 --> 00:51:57,279
+You have to literally go through and
+
+1471
+00:51:54,360 --> 00:52:00,240
+just realize what I'm showing you.
+
+1472
+00:51:57,280 --> 00:52:03,000
+Pe- papers writing how in 5 years there
+
+1473
+00:52:00,239 --> 00:52:05,559
+could be problems at the same time that
+
+1474
+00:52:03,000 --> 00:52:08,719
+real business is being constructed that
+
+1475
+00:52:05,559 --> 00:52:10,559
+is sold out until then.
+
+1476
+00:52:08,719 --> 00:52:14,799
+Amazon CEO Andy Jassy told him AI
+
+1477
+00:52:10,559 --> 00:52:14,799
+computer sold out beyond 2028.
+
+1478
+00:52:16,679 --> 00:52:22,480
+Nvidia just guided for 70%
+
+1479
+00:52:19,719 --> 00:52:25,199
+revenue growth. This is from a month ago
+
+1480
+00:52:22,480 --> 00:52:27,519
+or a month and a half ago.
+
+1481
+00:52:25,199 --> 00:52:30,480
+70% revenue growth.
+
+1482
+00:52:27,519 --> 00:52:34,039
+It was expected to be I think 40.
+
+1483
+00:52:30,480 --> 00:52:37,599
+It It came in at 70 for next year.
+
+1484
+00:52:34,039 --> 00:52:39,719
+Jensen Huang guided to 70%, which is
+
+1485
+00:52:37,599 --> 00:52:42,679
+going to be higher than that just based
+
+1486
+00:52:39,719 --> 00:52:43,030
+on his track record.
+
+1487
+00:52:42,679 --> 00:52:43,399
+Uh
+
+1488
+00:52:43,030 --> 00:52:45,799
+>> [sighs]
+
+1489
+00:52:43,400 --> 00:52:47,240
+>> Meta Muse just came out.
+
+1490
+00:52:45,800 --> 00:52:48,920
+So again, as people are saying there's
+
+1491
+00:52:47,239 --> 00:52:50,239
+not They're forecasting where revenues
+
+1492
+00:52:48,920 --> 00:52:52,400
+are going to be
+
+1493
+00:52:50,239 --> 00:52:54,919
+and we're getting new progress. As
+
+1494
+00:52:52,400 --> 00:52:57,320
+progress comes out, as we break cancer
+
+1495
+00:52:54,920 --> 00:52:58,440
+research, as we do robotics, and as I'm
+
+1496
+00:52:57,320 --> 00:53:00,760
+going to show you everything is
+
+1497
+00:52:58,440 --> 00:53:02,400
+accelerating, revenues will accelerate,
+
+1498
+00:53:00,760 --> 00:53:04,200
+too. As the progress gets better, it
+
+1499
+00:53:02,400 --> 00:53:06,240
+gets easier for people to pay them to
+
+1500
+00:53:04,199 --> 00:53:07,559
+use it. Plain and simple.
+
+1501
+00:53:06,239 --> 00:53:10,279
+I don't know why this is hard to
+
+1502
+00:53:07,559 --> 00:53:10,279
+understand.
+
+1503
+00:53:11,039 --> 00:53:15,119
+This is the video I did uh on Thursday
+
+1504
+00:53:13,719 --> 00:53:17,679
+putting the If you haven't seen it, go
+
+1505
+00:53:15,119 --> 00:53:19,759
+watch it. Um again, it's a lot of it is
+
+1506
+00:53:17,679 --> 00:53:21,679
+is in this or some of it is. This is
+
+1507
+00:53:19,760 --> 00:53:23,480
+where we closed on Friday. This is the
+
+1508
+00:53:21,679 --> 00:53:25,239
+most bizarre thing to me. I'm listening
+
+1509
+00:53:23,480 --> 00:53:27,079
+to bubble talk and how this is ending
+
+1510
+00:53:25,239 --> 00:53:28,839
+and this is like I said,
+
+1511
+00:53:27,079 --> 00:53:31,079
+do you know how many AI bubble
+
+1512
+00:53:28,840 --> 00:53:33,880
+prickings we've had in this period? Like
+
+1513
+00:53:31,079 --> 00:53:35,880
+it's non-stop. Here's where semis are
+
+1514
+00:53:33,880 --> 00:53:38,320
+after all of the panic of July and all
+
+1515
+00:53:35,880 --> 00:53:41,320
+of the panic of this month.
+
+1516
+00:53:38,320 --> 00:53:43,440
+The SMH is up 50% year-to-date, slightly
+
+1517
+00:53:41,320 --> 00:53:46,680
+more than last year. I think the most
+
+1518
+00:53:43,440 --> 00:53:48,840
+important thing is the we've
+
+1519
+00:53:46,679 --> 00:53:50,919
+If you've ignored semis, you're ignoring
+
+1520
+00:53:48,840 --> 00:53:52,720
+basically the mag seven now. Let's
+
+1521
+00:53:50,920 --> 00:53:54,200
+assume that it started in 2019 when
+
+1522
+00:53:52,719 --> 00:53:56,119
+machine learning and the cloud and
+
+1523
+00:53:54,199 --> 00:53:58,719
+everything really started to to to
+
+1524
+00:53:56,119 --> 00:54:01,319
+become more of a a thing. The
+
+1525
+00:53:58,719 --> 00:54:02,359
+transformer papers, everything.
+
+1526
+00:54:01,320 --> 00:54:04,240
+All you had to do is invest in
+
+1527
+00:54:02,360 --> 00:54:06,559
+semiconductors. You've had seven of the
+
+1528
+00:54:04,239 --> 00:54:08,000
+last eight years effectively be 40% or
+
+1529
+00:54:06,559 --> 00:54:09,519
+greater.
+
+1530
+00:54:08,000 --> 00:54:10,639
+And yet people are saying the bubble has
+
+1531
+00:54:09,519 --> 00:54:12,119
+popped. You're just missing the
+
+1532
+00:54:10,639 --> 00:54:14,239
+opportunity. Regardless of what the
+
+1533
+00:54:12,119 --> 00:54:15,960
+charts look like of how fast things went
+
+1534
+00:54:14,239 --> 00:54:18,199
+up this year,
+
+1535
+00:54:15,960 --> 00:54:20,199
+Oh God. And here's the same thing in the
+
+1536
+00:54:18,199 --> 00:54:23,119
+S&P. And I just wanted to show this for
+
+1537
+00:54:20,199 --> 00:54:25,359
+people who have joined here to
+
+1538
+00:54:23,119 --> 00:54:26,759
+avoid the news, send this to your family
+
+1539
+00:54:25,360 --> 00:54:28,760
+members, send it to everyone.
+
+1540
+00:54:26,760 --> 00:54:31,000
+Compounding is why I got involved in the
+
+1541
+00:54:28,760 --> 00:54:32,960
+markets. My father was a construction
+
+1542
+00:54:31,000 --> 00:54:35,199
+worker, didn't get didn't finish high
+
+1543
+00:54:32,960 --> 00:54:37,119
+school, left school in the ninth grade,
+
+1544
+00:54:35,199 --> 00:54:38,599
+taught me handicapping, taught me math,
+
+1545
+00:54:37,119 --> 00:54:40,799
+taught me everything to go through. But
+
+1546
+00:54:38,599 --> 00:54:42,679
+what he really taught me was, I don't
+
+1547
+00:54:40,800 --> 00:54:44,640
+want to be a construction worker based
+
+1548
+00:54:42,679 --> 00:54:47,199
+on your hearing, based on your back,
+
+1549
+00:54:44,639 --> 00:54:48,839
+based on the electrocution times, based
+
+1550
+00:54:47,199 --> 00:54:50,079
+on me needing to siphon gas. I didn't
+
+1551
+00:54:48,840 --> 00:54:53,160
+want to do that. My mother handed me a
+
+1552
+00:54:50,079 --> 00:54:55,599
+book and it was on compounding. This is
+
+1553
+00:54:53,159 --> 00:54:57,839
+what the S&P 500 has done. If you were
+
+1554
+00:54:55,599 --> 00:54:59,440
+in the last 10 years, you got 17%
+
+1555
+00:54:57,840 --> 00:55:01,720
+annualized. If you were in the last 20,
+
+1556
+00:54:59,440 --> 00:55:03,840
+you got 13. The last 30, 12. The last
+
+1557
+00:55:01,719 --> 00:55:05,159
+40, 13. This is not cherry-picking
+
+1558
+00:55:03,840 --> 00:55:08,360
+numbers. This is just using the last
+
+1559
+00:55:05,159 --> 00:55:11,039
+decade, 20 years, 30 years, 40 years, 50
+
+1560
+00:55:08,360 --> 00:55:14,559
+double digits in every case. Back to 90
+
+1561
+00:55:11,039 --> 00:55:16,960
+years. This is what's happened, guys.
+
+1562
+00:55:14,559 --> 00:55:19,000
+It's been getting better recently. But
+
+1563
+00:55:16,960 --> 00:55:20,760
+this is what happened. Let's just take
+
+1564
+00:55:19,000 --> 00:55:23,920
+the last 50.
+
+1565
+00:55:20,760 --> 00:55:26,840
+So if you put $6,000 in 50 years ago,
+
+1566
+00:55:23,920 --> 00:55:30,800
+I'm sorry, if you put $10 in
+
+1567
+00:55:26,840 --> 00:55:33,240
+every month, just $10 for 50 years and
+
+1568
+00:55:30,800 --> 00:55:35,760
+ignored everything in the papers, the
+
+1569
+00:55:33,239 --> 00:55:39,559
+value of that $10 each month for 50
+
+1570
+00:55:35,760 --> 00:55:41,480
+years, $10 is now $478,000.
+
+1571
+00:55:39,559 --> 00:55:44,360
+And this has got in a 2 and 1/2%
+
+1572
+00:55:41,480 --> 00:55:46,639
+dividend to just use it in there.
+
+1573
+00:55:44,360 --> 00:55:49,400
+Guys, compounding is your friend. And
+
+1574
+00:55:46,639 --> 00:55:52,159
+the S&P 500 and all investments,
+
+1575
+00:55:49,400 --> 00:55:54,360
+effectively equities represent
+
+1576
+00:55:52,159 --> 00:55:55,960
+innovation. So, if you believe AI is
+
+1577
+00:55:54,360 --> 00:55:57,720
+going to continue to have an impact on
+
+1578
+00:55:55,960 --> 00:55:59,320
+the world for now, you want public
+
+1579
+00:55:57,719 --> 00:56:01,919
+stocks, but you also want to involve in
+
+1580
+00:55:59,320 --> 00:56:03,640
+tokenized things as soon as you can. I
+
+1581
+00:56:01,920 --> 00:56:05,360
+don't think VC and any of that stuff is
+
+1582
+00:56:03,639 --> 00:56:06,759
+going to be able to monetize because
+
+1583
+00:56:05,360 --> 00:56:08,360
+they're cherry-picking out of the
+
+1584
+00:56:06,760 --> 00:56:10,480
+billion of winners, and I don't think
+
+1585
+00:56:08,360 --> 00:56:12,920
+you can do that anymore. Here's the log
+
+1586
+00:56:10,480 --> 00:56:14,719
+chart of the S&P 500. Are there periods
+
+1587
+00:56:12,920 --> 00:56:16,119
+of time where it goes sideways? That's
+
+1588
+00:56:14,719 --> 00:56:17,759
+why I just showed you what the returns
+
+1589
+00:56:16,119 --> 00:56:19,839
+are. But the reality is when you're at
+
+1590
+00:56:17,760 --> 00:56:22,080
+all-time highs, you're at all-time highs
+
+1591
+00:56:19,840 --> 00:56:25,160
+for the last 90 years. Could there be a
+
+1592
+00:56:22,079 --> 00:56:28,519
+correction that takes us back 20%? Yes,
+
+1593
+00:56:25,159 --> 00:56:29,839
+we've seen a bunch of those since 2019.
+
+1594
+00:56:28,519 --> 00:56:31,519
+It shouldn't be part of it. This is the
+
+1595
+00:56:29,840 --> 00:56:33,920
+thing that got me going. When I read
+
+1596
+00:56:31,519 --> 00:56:36,519
+this in a book my mother gave me, a
+
+1597
+00:56:33,920 --> 00:56:38,200
+penny doubled every day from day one to
+
+1598
+00:56:36,519 --> 00:56:41,280
+the end of the month, by the time you
+
+1599
+00:56:38,199 --> 00:56:43,919
+get to day 31, there's $10.7 million.
+
+1600
+00:56:41,280 --> 00:56:46,680
+That's why I got interested in not being
+
+1601
+00:56:43,920 --> 00:56:48,559
+electrocuted.
+
+1602
+00:56:46,679 --> 00:56:50,039
+This is the chart of where we are. I
+
+1603
+00:56:48,559 --> 00:56:52,000
+show this time and time again. And the
+
+1604
+00:56:50,039 --> 00:56:54,119
+one thing I know is that this is
+
+1605
+00:56:52,000 --> 00:56:55,559
+incredibly disruptive to hedge funds and
+
+1606
+00:56:54,119 --> 00:56:58,599
+leverage
+
+1607
+00:56:55,559 --> 00:57:01,480
+because it makes certainty gone.
+
+1608
+00:56:58,599 --> 00:57:03,079
+Hedge funds invest in certainty, end of
+
+1609
+00:57:01,480 --> 00:57:05,159
+story. They
+
+1610
+00:57:03,079 --> 00:57:07,840
+trade their book. They get out of it. I
+
+1611
+00:57:05,159 --> 00:57:10,519
+was in one, had my own
+
+1612
+00:57:07,840 --> 00:57:13,120
+for 20 years.
+
+1613
+00:57:10,519 --> 00:57:15,360
+It's about short-term arbitrage. It's
+
+1614
+00:57:13,119 --> 00:57:17,519
+about arbitraging something in the
+
+1615
+00:57:15,360 --> 00:57:19,519
+future, but not carrying
+
+1616
+00:57:17,519 --> 00:57:21,639
+long positions for long periods of time.
+
+1617
+00:57:19,519 --> 00:57:23,800
+We are entering a period right now of
+
+1618
+00:57:21,639 --> 00:57:25,039
+complete uncertainty, so leverage has to
+
+1619
+00:57:23,800 --> 00:57:26,640
+come down.
+
+1620
+00:57:25,039 --> 00:57:28,840
+For all the negative things you've heard
+
+1621
+00:57:26,639 --> 00:57:30,679
+on OpenAI and Anthropic, here's where
+
+1622
+00:57:28,840 --> 00:57:33,240
+they were 2 years ago
+
+1623
+00:57:30,679 --> 00:57:35,719
+valuation-wise versus today. And I'm
+
+1624
+00:57:33,239 --> 00:57:37,799
+this easy. Anthropic is more like a bit
+
+1625
+00:57:35,719 --> 00:57:39,559
+a peer. We're talking about companies
+
+1626
+00:57:37,800 --> 00:57:41,000
+that have gone from less than a hundred
+
+1627
+00:57:39,559 --> 00:57:42,079
+billion dollars in Anthropic's case,
+
+1628
+00:57:41,000 --> 00:57:44,360
+less than
+
+1629
+00:57:42,079 --> 00:57:45,679
+five billion dollars
+
+1630
+00:57:44,360 --> 00:57:46,920
+to two trillion, and we're saying
+
+1631
+00:57:45,679 --> 00:57:48,839
+they're not successful, and you're
+
+1632
+00:57:46,920 --> 00:57:50,599
+trying to pick the top of this. It's
+
+1633
+00:57:48,840 --> 00:57:53,559
+just moronic.
+
+1634
+00:57:50,599 --> 00:57:55,360
+It really is. SpaceX, how many people
+
+1635
+00:57:53,559 --> 00:57:56,880
+continue to say that SpaceX blah blah
+
+1636
+00:57:55,360 --> 00:57:58,320
+blah blah blah.
+
+1637
+00:57:56,880 --> 00:58:00,480
+Here's the valuation. These are just the
+
+1638
+00:57:58,320 --> 00:58:02,880
+facts. If you invested in them, you're
+
+1639
+00:58:00,480 --> 00:58:05,800
+doing great. Here's what the S&P did
+
+1640
+00:58:02,880 --> 00:58:08,559
+over the last year, 16%.
+
+1641
+00:58:05,800 --> 00:58:10,240
+Boring. Public equities are in trouble
+
+1642
+00:58:08,559 --> 00:58:13,279
+on a comparable basis to things that are
+
+1643
+00:58:10,239 --> 00:58:15,199
+moving on the hyper the the exponential.
+
+1644
+00:58:13,280 --> 00:58:16,880
+The exponential are AI trades. I gave
+
+1645
+00:58:15,199 --> 00:58:18,719
+you Anthropic and OpenAI, but this could
+
+1646
+00:58:16,880 --> 00:58:20,960
+have been Cursor. This could have been
+
+1647
+00:58:18,719 --> 00:58:23,639
+so many different companies, OpenRouter,
+
+1648
+00:58:20,960 --> 00:58:25,519
+that have been purchased. SemiAnalysis
+
+1649
+00:58:23,639 --> 00:58:27,000
+goes from a zero-based company or 200
+
+1650
+00:58:25,519 --> 00:58:28,360
+million to 2 billion, whatever you want
+
+1651
+00:58:27,000 --> 00:58:30,119
+to say. If you do 20 times their
+
+1652
+00:58:28,360 --> 00:58:31,760
+revenue.
+
+1653
+00:58:30,119 --> 00:58:32,880
+Somewhere within here at this point
+
+1654
+00:58:31,760 --> 00:58:34,520
+because of the growth, you have to
+
+1655
+00:58:32,880 --> 00:58:37,039
+understand that public companies just
+
+1656
+00:58:34,519 --> 00:58:38,400
+can't grow this fast with AI. And you
+
+1657
+00:58:37,039 --> 00:58:39,559
+don't know where the revenues are going
+
+1658
+00:58:38,400 --> 00:58:41,280
+to be coming from because you're only
+
+1659
+00:58:39,559 --> 00:58:42,599
+focused on a few companies. That's not
+
+1660
+00:58:41,280 --> 00:58:43,960
+the case.
+
+1661
+00:58:42,599 --> 00:58:46,039
+Very important interview, listen to
+
+1662
+00:58:43,960 --> 00:58:47,400
+Zuckerberg and Alexander Wang. First of
+
+1663
+00:58:46,039 --> 00:58:49,880
+all, we had heard a lot about the
+
+1664
+00:58:47,400 --> 00:58:52,440
+relationship. Um this was a great
+
+1665
+00:58:49,880 --> 00:58:54,720
+interview on on Cheeky Pawn.
+
+1666
+00:58:52,440 --> 00:58:56,400
+I highly recommend um listening to the
+
+1667
+00:58:54,719 --> 00:58:58,679
+entire thing. It's about
+
+1668
+00:58:56,400 --> 00:59:01,559
+two hours. Um
+
+1669
+00:58:58,679 --> 00:59:04,159
+he talks about the compute and the spin
+
+1670
+00:59:01,559 --> 00:59:06,440
+not working out. He talks about the neo
+
+1671
+00:59:04,159 --> 00:59:09,519
+clouds and why they don't have as it is
+
+1672
+00:59:06,440 --> 00:59:12,519
+easy as they do. He talks about the fact
+
+1673
+00:59:09,519 --> 00:59:14,800
+that GPUs are basically higher than they
+
+1674
+00:59:12,519 --> 00:59:17,119
+were a year ago. The value of even an
+
+1675
+00:59:14,800 --> 00:59:18,800
+H100, the old ones, at this point is
+
+1676
+00:59:17,119 --> 00:59:21,639
+higher than it was last year. This is
+
+1677
+00:59:18,800 --> 00:59:24,080
+him saying this when talking about
+
+1678
+00:59:21,639 --> 00:59:26,239
+all of this. So, again,
+
+1679
+00:59:24,079 --> 00:59:27,880
+if GPUs remain productive longer than
+
+1680
+00:59:26,239 --> 00:59:29,399
+expected, then they can generate more
+
+1681
+00:59:27,880 --> 00:59:31,079
+revenue from the same hardware with an
+
+1682
+00:59:29,400 --> 00:59:33,639
+AI. This is just someone who's giving
+
+1683
+00:59:31,079 --> 00:59:35,279
+you the positive readout. If GPU prices
+
+1684
+00:59:33,639 --> 00:59:37,839
+are going higher, it's very hard to be
+
+1685
+00:59:35,280 --> 00:59:39,600
+bearish on CoreWeave and not bearish.
+
+1686
+00:59:37,840 --> 00:59:41,519
+You can be bearish on the equity. You
+
+1687
+00:59:39,599 --> 00:59:43,839
+can be bearish on the bonds.
+
+1688
+00:59:41,519 --> 00:59:45,880
+To say it's an AI bubble bursting is
+
+1689
+00:59:43,840 --> 00:59:49,200
+just very hard when the GPU prices are
+
+1690
+00:59:45,880 --> 00:59:50,880
+going up. OpenAI's GPT-6 may lead to
+
+1691
+00:59:49,199 --> 00:59:53,599
+robotics breakthrough as soon as next
+
+1692
+00:59:50,880 --> 00:59:56,720
+year. So, Unitree uh
+
+1693
+00:59:53,599 --> 00:59:59,559
+which as I was told by Emad Mostaque,
+
+1694
+00:59:56,719 --> 01:00:01,799
+who I I was at dinner at this week and
+
+1695
+00:59:59,559 --> 01:00:03,599
+shocked me. I didn't realize Unitree had
+
+1696
+01:00:01,800 --> 01:00:05,760
+only sold uh
+
+1697
+01:00:03,599 --> 01:00:08,079
+about 11,000
+
+1698
+01:00:05,760 --> 01:00:10,960
+robots this year.
+
+1699
+01:00:08,079 --> 01:00:13,000
+Humanoids, robots. Um
+
+1700
+01:00:10,960 --> 01:00:15,039
+So, when the
+
+1701
+01:00:13,000 --> 01:00:16,840
+I This is really a big deal because it's
+
+1702
+01:00:15,039 --> 01:00:18,199
+a Chinese company, very important to the
+
+1703
+01:00:16,840 --> 01:00:21,360
+government,
+
+1704
+01:00:18,199 --> 01:00:23,960
+saying OpenAI's latest advances have
+
+1705
+01:00:21,360 --> 01:00:26,440
+accelerated prospects for a GPT moment
+
+1706
+01:00:23,960 --> 01:00:27,800
+in embodied intelligence. Think about
+
+1707
+01:00:26,440 --> 01:00:29,800
+what that means. It's two things. For
+
+1708
+01:00:27,800 --> 01:00:32,280
+all of you who say the Chinese are at
+
+1709
+01:00:29,800 --> 01:00:34,200
+the same level, which they're not, this
+
+1710
+01:00:32,280 --> 01:00:35,200
+is about Astra.
+
+1711
+01:00:34,199 --> 01:00:37,319
+Okay?
+
+1712
+01:00:35,199 --> 01:00:39,279
+We are two models ahead of Astra right
+
+1713
+01:00:37,320 --> 01:00:41,160
+now, which they haven't released, and my
+
+1714
+01:00:39,280 --> 01:00:43,480
+guess is, especially since we're not
+
+1715
+01:00:41,159 --> 01:00:45,239
+seeing as many Chinese
+
+1716
+01:00:43,480 --> 01:00:47,440
+new models come out,
+
+1717
+01:00:45,239 --> 01:00:50,119
+distillation may be over and the
+
+1718
+01:00:47,440 --> 01:00:51,920
+benefits of OpenAI and Anthropic, which
+
+1719
+01:00:50,119 --> 01:00:54,239
+was talked about by Dylan Patel, if you
+
+1720
+01:00:51,920 --> 01:00:56,159
+listen to the podcast,
+
+1721
+01:00:54,239 --> 01:00:58,039
+may not be released. This was also
+
+1722
+01:00:56,159 --> 01:01:00,000
+talked about on the Zuckerberg one. We
+
+1723
+01:00:58,039 --> 01:01:02,840
+might be reaching a point where we never
+
+1724
+01:01:00,000 --> 01:01:04,599
+see, or at least for a long time,
+
+1725
+01:01:02,840 --> 01:01:07,680
+the models better than Astra and Opus
+
+1726
+01:01:04,599 --> 01:01:10,360
+5.5. That may be it for us. Because
+
+1727
+01:01:07,679 --> 01:01:12,319
+there may be a reason now to not have
+
+1728
+01:01:10,360 --> 01:01:14,920
+them come out to avoid distillation, and
+
+1729
+01:01:12,320 --> 01:01:17,039
+that would create a really big gap
+
+1730
+01:01:14,920 --> 01:01:18,720
+between the Chinese and the US, and this
+
+1731
+01:01:17,039 --> 01:01:20,480
+whole open-source thing would be in
+
+1732
+01:01:18,719 --> 01:01:22,839
+trouble because one of the major reasons
+
+1733
+01:01:20,480 --> 01:01:25,079
+for open-source is catch staying close
+
+1734
+01:01:22,840 --> 01:01:26,760
+is you release the model and then
+
+1735
+01:01:25,079 --> 01:01:28,759
+there's distillation. Well, if we're not
+
+1736
+01:01:26,760 --> 01:01:31,000
+doing that and if we're leading to
+
+1737
+01:01:28,760 --> 01:01:33,000
+robotics, why wouldn't they keep the
+
+1738
+01:01:31,000 --> 01:01:34,960
+models for robotics to themselves at
+
+1739
+01:01:33,000 --> 01:01:38,239
+this point? So, Frontier Model
+
+1740
+01:01:34,960 --> 01:01:40,639
+Intelligence, as was said by the
+
+1741
+01:01:38,239 --> 01:01:43,039
+Semianalysis guys, reaches a point where
+
+1742
+01:01:40,639 --> 01:01:45,599
+their revenues are not going to be about
+
+1743
+01:01:43,039 --> 01:01:47,279
+consumers paying for it or even honestly
+
+1744
+01:01:45,599 --> 01:01:48,679
+some enterprises paying for it. The
+
+1745
+01:01:47,280 --> 01:01:51,120
+majority of the big enterprises are
+
+1746
+01:01:48,679 --> 01:01:52,159
+going to continue to pay for Frontier
+
+1747
+01:01:51,119 --> 01:01:53,679
+models.
+
+1748
+01:01:52,159 --> 01:01:55,159
+But, the reality is most of their
+
+1749
+01:01:53,679 --> 01:01:57,440
+business going forward may be from
+
+1750
+01:01:55,159 --> 01:01:58,679
+biotech. It may be from
+
+1751
+01:01:57,440 --> 01:02:00,920
+from nano
+
+1752
+01:01:58,679 --> 01:02:03,119
+technology and materials. It may be from
+
+1753
+01:02:00,920 --> 01:02:05,159
+robotics. It may be from
+
+1754
+01:02:03,119 --> 01:02:07,079
+That's probably where it's going to be
+
+1755
+01:02:05,159 --> 01:02:08,440
+and that revenue hasn't even started
+
+1756
+01:02:07,079 --> 01:02:09,960
+yet.
+
+1757
+01:02:08,440 --> 01:02:11,559
+Astro makes a robotics breakthrough
+
+1758
+01:02:09,960 --> 01:02:12,920
+closer because it potentially solves the
+
+1759
+01:02:11,559 --> 01:02:14,840
+hardest remaining problem in humanoid
+
+1760
+01:02:12,920 --> 01:02:16,559
+robots, moving from a robot that can
+
+1761
+01:02:14,840 --> 01:02:18,039
+perform a program task to one that can
+
+1762
+01:02:16,559 --> 01:02:20,920
+understand a goal, reason through
+
+1763
+01:02:18,039 --> 01:02:22,679
+unfamiliar situations, and adapt actions
+
+1764
+01:02:20,920 --> 01:02:25,000
+to the physical world. This is how
+
+1765
+01:02:22,679 --> 01:02:28,079
+important it is for the humanoid
+
+1766
+01:02:25,000 --> 01:02:30,400
+explosion. So, again, personal agents,
+
+1767
+01:02:28,079 --> 01:02:32,440
+agent swarms, solving math problems, and
+
+1768
+01:02:30,400 --> 01:02:34,200
+robotics are all together. Do not get
+
+1769
+01:02:32,440 --> 01:02:35,760
+bearish AI compute with all of this
+
+1770
+01:02:34,199 --> 01:02:37,559
+hitting right now, guys, as I have my
+
+1771
+01:02:35,760 --> 01:02:40,080
+hoodie on.
+
+1772
+01:02:37,559 --> 01:02:43,000
+Brad Gerstner, Jensen Huang, Clark Tang,
+
+1773
+01:02:40,079 --> 01:02:46,480
+great thing to listen to if you want to
+
+1774
+01:02:43,000 --> 01:02:48,079
+feel better about AI.
+
+1775
+01:02:46,480 --> 01:02:50,360
+From the guy who's been right the entire
+
+1776
+01:02:48,079 --> 01:02:52,880
+time.
+
+1777
+01:02:50,360 --> 01:02:54,760
+Uh Frontier Labs are roughly a third of
+
+1778
+01:02:52,880 --> 01:02:57,240
+the business, not the whole story. He's
+
+1779
+01:02:54,760 --> 01:02:59,280
+basically saying, "Why is so much
+
+1780
+01:02:57,239 --> 01:03:01,439
+pressure Why is everyone focused so much
+
+1781
+01:02:59,280 --> 01:03:04,080
+on Open AI and Anthropic?" And he goes
+
+1782
+01:03:01,440 --> 01:03:06,960
+through the math of where
+
+1783
+01:03:04,079 --> 01:03:08,039
+the 10 trillion
+
+1784
+01:03:06,960 --> 01:03:09,679
+What it includes, like where the
+
+1785
+01:03:08,039 --> 01:03:10,800
+revenues are going to come from. And one
+
+1786
+01:03:09,679 --> 01:03:13,039
+of the things he says right off the bat
+
+1787
+01:03:10,800 --> 01:03:15,320
+is you have to understand it's 500
+
+1788
+01:03:13,039 --> 01:03:17,000
+billion a year just for new compute the
+
+1789
+01:03:15,320 --> 01:03:19,559
+way it's always been.
+
+1790
+01:03:17,000 --> 01:03:21,800
+So, again, to listen to him go through
+
+1791
+01:03:19,559 --> 01:03:23,759
+this and to break down
+
+1792
+01:03:21,800 --> 01:03:25,440
+from someone who's been right
+
+1793
+01:03:23,760 --> 01:03:27,800
+consistently, and he talks and makes
+
+1794
+01:03:25,440 --> 01:03:29,599
+jokes about it, whose business is
+
+1795
+01:03:27,800 --> 01:03:31,480
+booming and he's involved with every
+
+1796
+01:03:29,599 --> 01:03:33,039
+company in there, to listen to him
+
+1797
+01:03:31,480 --> 01:03:35,000
+answer all the questions. He doesn't
+
+1798
+01:03:33,039 --> 01:03:36,559
+care about where CoreWeave's debt is.
+
+1799
+01:03:35,000 --> 01:03:38,159
+That's why he came out and said,
+
+1800
+01:03:36,559 --> 01:03:39,679
+"They're fine. Their cost of capital is
+
+1801
+01:03:38,159 --> 01:03:41,480
+actually lower." Which again, then
+
+1802
+01:03:39,679 --> 01:03:45,239
+people laugh at. They don't even go do
+
+1803
+01:03:41,480 --> 01:03:47,119
+the work, which arguably is true.
+
+1804
+01:03:45,239 --> 01:03:49,079
+So, again, as you go through this and
+
+1805
+01:03:47,119 --> 01:03:51,159
+you don't figure it out and you don't
+
+1806
+01:03:49,079 --> 01:03:53,480
+think about it, you're just responding
+
+1807
+01:03:51,159 --> 01:03:55,719
+to things. And I get it when prices are
+
+1808
+01:03:53,480 --> 01:03:57,360
+going down, your mind runs to places
+
+1809
+01:03:55,719 --> 01:03:59,319
+that don't make sense. I'm just telling
+
+1810
+01:03:57,360 --> 01:04:01,519
+you hedge funds are doing this.
+
+1811
+01:03:59,320 --> 01:04:04,039
+This is a hedge fund deleveraging event.
+
+1812
+01:04:01,519 --> 01:04:05,519
+Now, the Korean market was involved in
+
+1813
+01:04:04,039 --> 01:04:07,400
+the first part of the year. Retail got
+
+1814
+01:04:05,519 --> 01:04:09,159
+in. It led to hedge funds going down.
+
+1815
+01:04:07,400 --> 01:04:11,240
+This is another leg of hedge funds, but
+
+1816
+01:04:09,159 --> 01:04:13,679
+remember, hedge funds that are near
+
+1817
+01:04:11,239 --> 01:04:15,359
+closure don't have a stack anymore.
+
+1818
+01:04:13,679 --> 01:04:17,279
+Hedge funds that have been beaten down,
+
+1819
+01:04:15,360 --> 01:04:19,320
+like the ones I showed, that are flat
+
+1820
+01:04:17,280 --> 01:04:21,000
+for the year and now could be down 10 or
+
+1821
+01:04:19,320 --> 01:04:23,120
+15% if they didn't get out of their
+
+1822
+01:04:21,000 --> 01:04:24,599
+positions, they're going to take things
+
+1823
+01:04:23,119 --> 01:04:27,239
+off because they don't want to be down
+
+1824
+01:04:24,599 --> 01:04:29,480
+40 and they've already seen a down 50.
+
+1825
+01:04:27,239 --> 01:04:31,239
+So, you start running into issues and
+
+1826
+01:04:29,480 --> 01:04:33,079
+primes start getting worried and people
+
+1827
+01:04:31,239 --> 01:04:34,239
+start coming in and investors are going
+
+1828
+01:04:33,079 --> 01:04:36,920
+through it.
+
+1829
+01:04:34,239 --> 01:04:39,079
+It's not a fun story, especially when
+
+1830
+01:04:36,920 --> 01:04:41,800
+it's happening across the board because
+
+1831
+01:04:39,079 --> 01:04:43,480
+that makes the primes even more worried.
+
+1832
+01:04:41,800 --> 01:04:44,960
+So, again, the frontier labs are a
+
+1833
+01:04:43,480 --> 01:04:46,599
+slice, they're not the engine. Bucket
+
+1834
+01:04:44,960 --> 01:04:48,800
+one, classical compute. I'm just giving
+
+1835
+01:04:46,599 --> 01:04:51,039
+you the three that he mentions here. You
+
+1836
+01:04:48,800 --> 01:04:52,240
+should really go through it on your own.
+
+1837
+01:04:51,039 --> 01:04:53,599
+I'm going to try to start to speed this
+
+1838
+01:04:52,239 --> 01:04:55,199
+up a little bit cuz this is a long
+
+1839
+01:04:53,599 --> 01:04:56,400
+video, but there's a lot of important
+
+1840
+01:04:55,199 --> 01:04:57,919
+things in there and hopefully you guys
+
+1841
+01:04:56,400 --> 01:04:59,400
+are getting it from it. Uh this is
+
+1842
+01:04:57,920 --> 01:05:00,960
+talking about his track record where
+
+1843
+01:04:59,400 --> 01:05:03,400
+he's basically been right throughout the
+
+1844
+01:05:00,960 --> 01:05:04,679
+entire time of doing the interviews in
+
+1845
+01:05:03,400 --> 01:05:06,920
+terms of how much compute would be
+
+1846
+01:05:04,679 --> 01:05:09,639
+spent, how things would do, what would
+
+1847
+01:05:06,920 --> 01:05:11,200
+happen to GPU prices. All of that's been
+
+1848
+01:05:09,639 --> 01:05:13,039
+there. And then Brad on the
+
+1849
+01:05:11,199 --> 01:05:15,319
+inevitability of AI. this is the most
+
+1850
+01:05:13,039 --> 01:05:17,159
+important exchange in the conversation.
+
+1851
+01:05:15,320 --> 01:05:18,680
+Brad is pushing back on Jensen's own
+
+1852
+01:05:17,159 --> 01:05:20,000
+answer to Ezra Klein, where he gave
+
+1853
+01:05:18,679 --> 01:05:21,599
+something like there's two or three
+
+1854
+01:05:20,000 --> 01:05:25,000
+years of visibility before the bubble
+
+1855
+01:05:21,599 --> 01:05:27,199
+question becomes live. Brad reframes it.
+
+1856
+01:05:25,000 --> 01:05:29,559
+This is not a CapEx cycle with a visible
+
+1857
+01:05:27,199 --> 01:05:32,480
+end. It's a fundamental re-architecture
+
+1858
+01:05:29,559 --> 01:05:36,440
+of global compute permanently.
+
+1859
+01:05:32,480 --> 01:05:38,280
+Huang's one-word answer was forever. So,
+
+1860
+01:05:36,440 --> 01:05:40,200
+I completely agree with this and this is
+
+1861
+01:05:38,280 --> 01:05:43,519
+the reason why
+
+1862
+01:05:40,199 --> 01:05:46,399
+the dot-com bubble was a mismatch
+
+1863
+01:05:43,519 --> 01:05:49,079
+between the demand not being there while
+
+1864
+01:05:46,400 --> 01:05:52,160
+the supply was being built on leverage
+
+1865
+01:05:49,079 --> 01:05:53,799
+by the companies that had nothing to do
+
+1866
+01:05:52,159 --> 01:05:55,799
+with the demand.
+
+1867
+01:05:53,800 --> 01:05:57,720
+This was about the fiber companies
+
+1868
+01:05:55,800 --> 01:06:00,000
+putting up the rails. This is very
+
+1869
+01:05:57,719 --> 01:06:01,639
+similar to crypto. Crypto didn't have
+
+1870
+01:06:00,000 --> 01:06:03,079
+the users, they didn't have the demand.
+
+1871
+01:06:01,639 --> 01:06:05,319
+Now, they're going to have the demand
+
+1872
+01:06:03,079 --> 01:06:07,360
+from the AI agents, which is why I say
+
+1873
+01:06:05,320 --> 01:06:09,160
+it's the same thing to me as the end of
+
+1874
+01:06:07,360 --> 01:06:11,519
+the dot-com bubble for crypto and why my
+
+1875
+01:06:09,159 --> 01:06:13,359
+positions are in crypto.
+
+1876
+01:06:11,519 --> 01:06:16,320
+His point, which I completely agree
+
+1877
+01:06:13,360 --> 01:06:17,920
+with, there is no end to this build-out.
+
+1878
+01:06:16,320 --> 01:06:19,680
+There is no end. And because the
+
+1879
+01:06:17,920 --> 01:06:21,480
+progress is driving the demand and the
+
+1880
+01:06:19,679 --> 01:06:24,719
+progress keeps accelerating, as I've
+
+1881
+01:06:21,480 --> 01:06:27,240
+shown you, I cannot make it any clearer.
+
+1882
+01:06:24,719 --> 01:06:29,759
+Token use has gone higher as progress
+
+1883
+01:06:27,239 --> 01:06:31,359
+moves forward. As the models get better,
+
+1884
+01:06:29,760 --> 01:06:33,080
+they're able to do more things that
+
+1885
+01:06:31,360 --> 01:06:35,280
+generate revenues.
+
+1886
+01:06:33,079 --> 01:06:37,480
+That is not a guess, so you guys know.
+
+1887
+01:06:35,280 --> 01:06:39,160
+That has been a fact. That's why
+
+1888
+01:06:37,480 --> 01:06:40,519
+listening to people saying they know
+
+1889
+01:06:39,159 --> 01:06:42,519
+what the revenues are going to look like
+
+1890
+01:06:40,519 --> 01:06:44,360
+in 2030 when they didn't even get
+
+1891
+01:06:42,519 --> 01:06:46,840
+Micron's revenue is
+
+1892
+01:06:44,360 --> 01:06:49,280
+literally ridiculous to listen to these
+
+1893
+01:06:46,840 --> 01:06:51,360
+people, including Gartner Group. It is a
+
+1894
+01:06:49,280 --> 01:06:53,120
+joke.
+
+1895
+01:06:51,360 --> 01:06:55,559
+Here have been the revenues
+
+1896
+01:06:53,119 --> 01:06:57,599
+for Nvidia relative to the consensus.
+
+1897
+01:06:55,559 --> 01:07:00,159
+And what Brad Gerstner was showing on
+
+1898
+01:06:57,599 --> 01:07:04,000
+here is where it was just a year ago.
+
+1899
+01:07:00,159 --> 01:07:06,319
+This was the consensus, again.
+
+1900
+01:07:04,000 --> 01:07:09,480
+This is what the consensus was for Look
+
+1901
+01:07:06,320 --> 01:07:11,400
+how far off the street was.
+
+1902
+01:07:09,480 --> 01:07:12,599
+And yet the stock price is unchanged as
+
+1903
+01:07:11,400 --> 01:07:15,119
+I said.
+
+1904
+01:07:12,599 --> 01:07:17,839
+Think about it. If you're a hedge fund
+
+1905
+01:07:15,119 --> 01:07:20,839
+and you thought the street thought that
+
+1906
+01:07:17,840 --> 01:07:22,760
+for 2029 it would be 305 and now it's at
+
+1907
+01:07:20,840 --> 01:07:25,200
+982
+
+1908
+01:07:22,760 --> 01:07:27,920
+a trillion dollars and you
+
+1909
+01:07:25,199 --> 01:07:30,199
+watch this happen and made no money.
+
+1910
+01:07:27,920 --> 01:07:31,960
+Of course you have to get out of things.
+
+1911
+01:07:30,199 --> 01:07:34,319
+Of course you do.
+
+1912
+01:07:31,960 --> 01:07:37,119
+This is the only thing right now and
+
+1913
+01:07:34,320 --> 01:07:39,240
+this is more of a slowing thing.
+
+1914
+01:07:37,119 --> 01:07:41,279
+I think what the market is going through
+
+1915
+01:07:39,239 --> 01:07:43,279
+is that the capital coming to the market
+
+1916
+01:07:41,280 --> 01:07:46,360
+is just causing the market to have
+
+1917
+01:07:43,280 --> 01:07:48,360
+trouble dealing with this stuff.
+
+1918
+01:07:46,360 --> 01:07:50,039
+As more money needs to be raised and
+
+1919
+01:07:48,360 --> 01:07:51,920
+people go I'd rather I got to make sure
+
+1920
+01:07:50,039 --> 01:07:53,400
+I have money for open AI. I have to make
+
+1921
+01:07:51,920 --> 01:07:55,920
+sure I have money for Anthropic. And
+
+1922
+01:07:53,400 --> 01:07:58,360
+whether it's mutual funds or this
+
+1923
+01:07:55,920 --> 01:07:59,920
+they have to raise cash.
+
+1924
+01:07:58,360 --> 01:08:01,720
+And I think all of this stuff that's
+
+1925
+01:07:59,920 --> 01:08:03,280
+been going on
+
+1926
+01:08:01,719 --> 01:08:04,879
+for SpaceX, for the bonds, for
+
+1927
+01:08:03,280 --> 01:08:07,360
+everything, the way that rates have
+
+1928
+01:08:04,880 --> 01:08:08,880
+moved, it's all been related.
+
+1929
+01:08:07,360 --> 01:08:10,800
+There's plenty of capital in the world
+
+1930
+01:08:08,880 --> 01:08:13,240
+for the AI build out. If it ends up
+
+1931
+01:08:10,800 --> 01:08:14,760
+being 20 trillion and not 10 trillion,
+
+1932
+01:08:13,239 --> 01:08:16,719
+there's plenty of capital but it will
+
+1933
+01:08:14,760 --> 01:08:18,159
+have to come from somewhere. If the
+
+1934
+01:08:16,720 --> 01:08:21,240
+revenues are coming in, people would
+
+1935
+01:08:18,159 --> 01:08:23,599
+rather own bonds at some point in
+
+1936
+01:08:21,239 --> 01:08:25,278
+CoreWeave than they would the Treasury.
+
+1937
+01:08:23,600 --> 01:08:26,798
+Absolutely. Someone this week said would
+
+1938
+01:08:25,279 --> 01:08:29,120
+you rather buy the equity or the bonds
+
+1939
+01:08:26,798 --> 01:08:31,039
+and I said I'd rather buy the bonds.
+
+1940
+01:08:29,119 --> 01:08:32,920
+That's where my mentality is at this
+
+1941
+01:08:31,039 --> 01:08:34,199
+point. I just think at this point with
+
+1942
+01:08:32,920 --> 01:08:35,880
+the panic that's going on and what
+
+1943
+01:08:34,199 --> 01:08:37,479
+people are doing if I had to have a
+
+1944
+01:08:35,880 --> 01:08:39,480
+choice, I'd rather have the debt at this
+
+1945
+01:08:37,479 --> 01:08:40,519
+point at these levels. When Genius
+
+1946
+01:08:39,479 --> 01:08:43,000
+Failed.
+
+1947
+01:08:40,520 --> 01:08:46,040
+So again, we're going out to 2030, we've
+
+1948
+01:08:43,000 --> 01:08:49,960
+lost all certainty. I watched as LTCM
+
+1949
+01:08:46,039 --> 01:08:51,759
+had trades on like Brazilian Telebras
+
+1950
+01:08:49,960 --> 01:08:53,399
+preferreds versus ordinaries that traded
+
+1951
+01:08:51,759 --> 01:08:54,798
+at a spread. The preferreds traded at a
+
+1952
+01:08:53,399 --> 01:08:56,519
+higher price
+
+1953
+01:08:54,798 --> 01:08:57,680
+but every day the privatization was
+
+1954
+01:08:56,520 --> 01:09:00,240
+going to happen, that was all going to
+
+1955
+01:08:57,680 --> 01:09:04,359
+converge to zero, the spread. So if
+
+1956
+01:09:00,239 --> 01:09:05,920
+you're trading at a 5 to 10% spread
+
+1957
+01:09:04,359 --> 01:09:08,039
+and 6 months from now you're going to
+
+1958
+01:09:05,920 --> 01:09:10,079
+have a privatization event, that should
+
+1959
+01:09:08,039 --> 01:09:11,560
+collapse to zero. So, if you put that
+
+1960
+01:09:10,079 --> 01:09:13,359
+trade on along with a bunch of other
+
+1961
+01:09:11,560 --> 01:09:14,720
+spread trades on, which is what LTCM
+
+1962
+01:09:13,359 --> 01:09:16,279
+did,
+
+1963
+01:09:14,720 --> 01:09:17,880
+you think you're going to make money.
+
+1964
+01:09:16,279 --> 01:09:19,880
+But, here's the problem. This is the
+
+1965
+01:09:17,880 --> 01:09:21,640
+lessons from leverage. And I want to
+
+1966
+01:09:19,880 --> 01:09:23,039
+make sure that for those of you this is
+
+1967
+01:09:21,640 --> 01:09:24,798
+even for people managing money at a
+
+1968
+01:09:23,039 --> 01:09:26,399
+freaking hedge fund who've never thought
+
+1969
+01:09:24,798 --> 01:09:28,399
+about this stuff.
+
+1970
+01:09:26,399 --> 01:09:32,599
+Lessons from leverage.
+
+1971
+01:09:28,399 --> 01:09:34,239
+Your fundamental thesis can be correct.
+
+1972
+01:09:32,600 --> 01:09:37,240
+But, the timing.
+
+1973
+01:09:34,239 --> 01:09:38,719
+If the AI trade, if all of Nvidia, if
+
+1974
+01:09:37,239 --> 01:09:40,838
+all of a sudden next year Nvidia is up
+
+1975
+01:09:38,720 --> 01:09:43,079
+300% and goes back to where it was
+
+1976
+01:09:40,838 --> 01:09:44,960
+before, nothing changed. It's just the
+
+1977
+01:09:43,079 --> 01:09:46,559
+timing you got wrong. You were in it,
+
+1978
+01:09:44,960 --> 01:09:48,000
+you couldn't wait because you've got
+
+1979
+01:09:46,560 --> 01:09:50,798
+investors who are measuring you on a
+
+1980
+01:09:48,000 --> 01:09:53,880
+12-month basis. The volatility. We've
+
+1981
+01:09:50,798 --> 01:09:56,239
+had a dramatic shift in the Vixy Q.
+
+1982
+01:09:53,880 --> 01:09:59,039
+Single name vol has exploded. Index vol
+
+1983
+01:09:56,239 --> 01:10:01,039
+has barely budged. You have no hedges.
+
+1984
+01:09:59,039 --> 01:10:02,840
+So, you can be wrong on volatility of
+
+1985
+01:10:01,039 --> 01:10:05,239
+the markets and the relationship of
+
+1986
+01:10:02,840 --> 01:10:06,920
+volatility to the index. The financing.
+
+1987
+01:10:05,239 --> 01:10:08,760
+You can have rates move higher. That can
+
+1988
+01:10:06,920 --> 01:10:10,640
+cause a problem on things. You've got to
+
+1989
+01:10:08,760 --> 01:10:12,400
+borrow more money. Maybe the banks can't
+
+1990
+01:10:10,640 --> 01:10:14,000
+lend as much or maybe your cost of
+
+1991
+01:10:12,399 --> 01:10:15,839
+capital is going up and your investors
+
+1992
+01:10:14,000 --> 01:10:18,119
+are like, "Hey, I can now invest in
+
+1993
+01:10:15,840 --> 01:10:19,360
+Libor plus 400. I don't need you guys
+
+1994
+01:10:18,119 --> 01:10:21,439
+anymore."
+
+1995
+01:10:19,359 --> 01:10:22,920
+Crowding. There can be too many people
+
+1996
+01:10:21,439 --> 01:10:25,319
+in the trade, which I think is one of
+
+1997
+01:10:22,920 --> 01:10:27,440
+the major problems, while
+
+1998
+01:10:25,319 --> 01:10:29,559
+liquidity is dropping off, which again,
+
+1999
+01:10:27,439 --> 01:10:31,199
+we've seen. Correlation. You can have
+
+2000
+01:10:29,560 --> 01:10:32,480
+breaks in correlation for periods of
+
+2001
+01:10:31,199 --> 01:10:34,039
+time. Well, we're definitely seeing that
+
+2002
+01:10:32,479 --> 01:10:36,399
+right now where the Mex Bolsa is going
+
+2003
+01:10:34,039 --> 01:10:38,000
+higher at the same time that the Qs are
+
+2004
+01:10:36,399 --> 01:10:39,719
+going down. So, if you've been sitting
+
+2005
+01:10:38,000 --> 01:10:41,760
+there riding a winner of Okay, I'm going
+
+2006
+01:10:39,720 --> 01:10:43,880
+to be long Qs. I need some shorts on it.
+
+2007
+01:10:41,760 --> 01:10:45,079
+Oh, the Mex Bolsa is trading at 52-week
+
+2008
+01:10:43,880 --> 01:10:47,319
+lows. That's a good short. Blah blah
+
+2009
+01:10:45,079 --> 01:10:49,680
+blah. Liquidity. Obviously, this was a
+
+2010
+01:10:47,319 --> 01:10:51,359
+major one with LTCM. Once it went
+
+2011
+01:10:49,680 --> 01:10:54,200
+through, they couldn't get out of it.
+
+2012
+01:10:51,359 --> 01:10:55,839
+And then the position sizing and I think
+
+2013
+01:10:54,199 --> 01:10:57,559
+situational awareness. Gone through it.
+
+2014
+01:10:55,840 --> 01:10:59,239
+That's why I did this stack on moral
+
+2015
+01:10:57,560 --> 01:11:01,240
+philosophy. I've done presentations
+
+2016
+01:10:59,239 --> 01:11:02,960
+mainly for mutual funds at this point.
+
+2017
+01:11:01,239 --> 01:11:04,760
+This is the way I see this going. We
+
+2018
+01:11:02,960 --> 01:11:07,079
+went from a normal distribution curve
+
+2019
+01:11:04,760 --> 01:11:09,000
+where we knew that 5 years from now Ford
+
+2020
+01:11:07,079 --> 01:11:10,800
+would still be in business. Again,
+
+2021
+01:11:09,000 --> 01:11:13,279
+unless there's some serious recession,
+
+2022
+01:11:10,800 --> 01:11:15,199
+but in this case with growth going, we
+
+2023
+01:11:13,279 --> 01:11:17,880
+are getting a weird world where we've
+
+2024
+01:11:15,199 --> 01:11:19,760
+got losers, think retail mall names,
+
+2025
+01:11:17,880 --> 01:11:21,800
+winner, think Amazon, and then we have a
+
+2026
+01:11:19,760 --> 01:11:23,840
+bunch of names right now like bank
+
+2027
+01:11:21,800 --> 01:11:25,760
+stocks that are sitting in the middle
+
+2028
+01:11:23,840 --> 01:11:28,880
+here that I think will gradually go into
+
+2029
+01:11:25,760 --> 01:11:30,960
+here leaving very few AI winners, and I
+
+2030
+01:11:28,880 --> 01:11:32,600
+think over time more of these will come
+
+2031
+01:11:30,960 --> 01:11:35,159
+over here.
+
+2032
+01:11:32,600 --> 01:11:37,039
+The losers will be have no growth. They
+
+2033
+01:11:35,159 --> 01:11:40,119
+will have their growth eradicated from
+
+2034
+01:11:37,039 --> 01:11:42,920
+AI. And that's just the fact. Here are
+
+2035
+01:11:40,119 --> 01:11:45,720
+the hyperscalers. Remember,
+
+2036
+01:11:42,920 --> 01:11:48,000
+arguably the most important space aside
+
+2037
+01:11:45,720 --> 01:11:50,199
+from Nvidia and their GPUs is what the
+
+2038
+01:11:48,000 --> 01:11:52,319
+hyperscalers stock price is doing. If
+
+2039
+01:11:50,199 --> 01:11:54,159
+capital's the issue,
+
+2040
+01:11:52,319 --> 01:11:56,000
+their stocks made new all-time highs as
+
+2041
+01:11:54,159 --> 01:11:58,000
+a group. And again, this is Amazon. This
+
+2042
+01:11:56,000 --> 01:11:59,600
+is Meta. This is Google. This is
+
+2043
+01:11:58,000 --> 01:12:02,279
+Microsoft. This is
+
+2044
+01:11:59,600 --> 01:12:04,720
+those four names.
+
+2045
+01:12:02,279 --> 01:12:07,279
+I did want to bring this up. Uh one one
+
+2046
+01:12:04,720 --> 01:12:08,800
+data point um which I think is important
+
+2047
+01:12:07,279 --> 01:12:10,439
+and becoming more important. Consumer
+
+2048
+01:12:08,800 --> 01:12:12,360
+confidence made the lowest level since
+
+2049
+01:12:10,439 --> 01:12:15,079
+2013.
+
+2050
+01:12:12,359 --> 01:12:16,960
+Yes, the lowest level. We are below when
+
+2051
+01:12:15,079 --> 01:12:18,239
+there was a pandemic and millions of
+
+2052
+01:12:16,960 --> 01:12:20,880
+people were dying.
+
+2053
+01:12:18,239 --> 01:12:22,760
+We're lower than that. That's how bad
+
+2054
+01:12:20,880 --> 01:12:26,400
+things are in the way people view it as
+
+2055
+01:12:22,760 --> 01:12:28,280
+we go into the midterms. Since 2014,
+
+2056
+01:12:26,399 --> 01:12:30,519
+the unemployment rate here was 200 basis
+
+2057
+01:12:28,279 --> 01:12:32,239
+points higher than it is today.
+
+2058
+01:12:30,520 --> 01:12:34,920
+To show the importance of this from the
+
+2059
+01:12:32,239 --> 01:12:37,239
+jobless situation, jobs is what drives
+
+2060
+01:12:34,920 --> 01:12:39,199
+this historically. This is the
+
+2061
+01:12:37,239 --> 01:12:41,159
+unemployment rate, and this is now that
+
+2062
+01:12:39,199 --> 01:12:43,439
+consumer confidence number inverted, and
+
+2063
+01:12:41,159 --> 01:12:46,199
+this is back to 1970.
+
+2064
+01:12:43,439 --> 01:12:49,239
+It is the jobs market that drives this
+
+2065
+01:12:46,199 --> 01:12:50,960
+historically. Now, we've seen the jobs
+
+2066
+01:12:49,239 --> 01:12:53,519
+market slightly weaken, but this year
+
+2067
+01:12:50,960 --> 01:12:55,640
+has been fine. But like I've said
+
+2068
+01:12:53,520 --> 01:12:57,600
+before, the jobs market is far weaker
+
+2069
+01:12:55,640 --> 01:13:00,039
+than economists will tell you.
+
+2070
+01:12:57,600 --> 01:13:01,840
+This is inside the number of that
+
+2071
+01:13:00,039 --> 01:13:04,800
+consumer confidence. This is the jobs
+
+2072
+01:13:01,840 --> 01:13:06,920
+plentiful versus hard to get inverted
+
+2073
+01:13:04,800 --> 01:13:09,400
+again. So, hard
+
+2074
+01:13:06,920 --> 01:13:10,960
+hard to get jobs
+
+2075
+01:13:09,399 --> 01:13:13,439
+versus plentiful,
+
+2076
+01:13:10,960 --> 01:13:15,000
+you've got, again,
+
+2077
+01:13:13,439 --> 01:13:16,960
+the It says the unemployment rate should
+
+2078
+01:13:15,000 --> 01:13:18,720
+be closer to six, just like it was back
+
+2079
+01:13:16,960 --> 01:13:21,760
+in 2013.
+
+2080
+01:13:18,720 --> 01:13:23,880
+Uh Warren Pies put this out uh last
+
+2081
+01:13:21,760 --> 01:13:26,079
+week. And again, financials and tech
+
+2082
+01:13:23,880 --> 01:13:27,640
+payrolls are shrinking. Aside from
+
+2083
+01:13:26,079 --> 01:13:29,519
+nursing jobs,
+
+2084
+01:13:27,640 --> 01:13:32,400
+health care jobs, we are negative now
+
+2085
+01:13:29,520 --> 01:13:34,360
+for whatever it's been, 18 months.
+
+2086
+01:13:32,399 --> 01:13:36,960
+And he's just highlighting that this is
+
+2087
+01:13:34,359 --> 01:13:39,639
+a dramatic change in terms of what has
+
+2088
+01:13:36,960 --> 01:13:41,319
+gone on in the past. And we're entering
+
+2089
+01:13:39,640 --> 01:13:43,720
+a new period where the agent workflows
+
+2090
+01:13:41,319 --> 01:13:45,639
+are about to be adopted. So, I do think
+
+2091
+01:13:43,720 --> 01:13:47,680
+you're going to have a labor kind of
+
+2092
+01:13:45,640 --> 01:13:49,440
+situation. You can view how that
+
+2093
+01:13:47,680 --> 01:13:51,119
+matters. It's not a recession type
+
+2094
+01:13:49,439 --> 01:13:52,839
+thing. It's a
+
+2095
+01:13:51,119 --> 01:13:54,840
+profit margin type thing, but it's also
+
+2096
+01:13:52,840 --> 01:13:55,880
+a politics thing. It could be a Fed
+
+2097
+01:13:54,840 --> 01:13:58,360
+thing.
+
+2098
+01:13:55,880 --> 01:14:00,159
+Uh we'll just have to see. And remember,
+
+2099
+01:13:58,359 --> 01:14:02,359
+another way that we've seen this is
+
+2100
+01:14:00,159 --> 01:14:06,559
+we're right now looking at uh earnings
+
+2101
+01:14:02,359 --> 01:14:10,000
+growth in the S&P at 29%. So, up here.
+
+2102
+01:14:06,560 --> 01:14:12,800
+And this is the year-over-year jobs
+
+2103
+01:14:10,000 --> 01:14:15,560
+creation relative to it. So, to finish
+
+2104
+01:14:12,800 --> 01:14:16,920
+up, very short week in crypto. I did
+
+2105
+01:14:15,560 --> 01:14:18,360
+this video. I continue to go through
+
+2106
+01:14:16,920 --> 01:14:19,600
+learn the stack. For those people who
+
+2107
+01:14:18,359 --> 01:14:21,599
+have joined, remember to watch the
+
+2108
+01:14:19,600 --> 01:14:23,320
+videos. I'll have another one come out
+
+2109
+01:14:21,600 --> 01:14:24,640
+this week on It's been a busy week,
+
+2110
+01:14:23,319 --> 01:14:26,920
+obviously, with the video I did on the
+
+2111
+01:14:24,640 --> 01:14:29,440
+AI side. I will continue to go through
+
+2112
+01:14:26,920 --> 01:14:31,440
+it. Um last week, we went through the
+
+2113
+01:14:29,439 --> 01:14:33,159
+Oracle data and interop middleware and
+
+2114
+01:14:31,439 --> 01:14:35,279
+the settlement and smart contract rails.
+
+2115
+01:14:33,159 --> 01:14:38,199
+For those of you interested, especially
+
+2116
+01:14:35,279 --> 01:14:40,279
+in tokenization, I think you should
+
+2117
+01:14:38,199 --> 01:14:41,439
+sign up if you haven't already uh
+
+2118
+01:14:40,279 --> 01:14:43,279
+particularly on the hedge fund and
+
+2119
+01:14:41,439 --> 01:14:45,759
+mutual fund side and really start to get
+
+2120
+01:14:43,279 --> 01:14:48,239
+these. Uh I think you should be doing
+
+2121
+01:14:45,760 --> 01:14:50,560
+your homework now. As you're getting
+
+2122
+01:14:48,239 --> 01:14:52,559
+as you're watching the horrible trade in
+
+2123
+01:14:50,560 --> 01:14:55,000
+the AI thing, crypto is going to be a
+
+2124
+01:14:52,560 --> 01:14:57,000
+very different thing next year. Um
+
+2125
+01:14:55,000 --> 01:14:59,079
+privacy is the theme that I covered last
+
+2126
+01:14:57,000 --> 01:15:02,319
+week, very important. Here is the
+
+2127
+01:14:59,079 --> 01:15:05,039
+month-to-date. So, the index is down 7%
+
+2128
+01:15:02,319 --> 01:15:08,599
+Bitcoin's down 2 and 1/2 since August
+
+2129
+01:15:05,039 --> 01:15:11,239
+again, still crushing it since June.
+
+2130
+01:15:08,600 --> 01:15:12,840
+Same thing as AI has worsened, they have
+
+2131
+01:15:11,239 --> 01:15:16,039
+done well.
+
+2132
+01:15:12,840 --> 01:15:17,960
+Uh still bull market here. Did see some
+
+2133
+01:15:16,039 --> 01:15:20,000
+weakness in the names on the 50-day.
+
+2134
+01:15:17,960 --> 01:15:21,960
+Only 20 names above the 50-day, but in
+
+2135
+01:15:20,000 --> 01:15:24,399
+terms of the 200-day and what's rising
+
+2136
+01:15:21,960 --> 01:15:26,039
+in the slopes, good. And again, a
+
+2137
+01:15:24,399 --> 01:15:28,960
+correction within side a very large
+
+2138
+01:15:26,039 --> 01:15:30,399
+market. Bitcoin is hanging in here. I
+
+2139
+01:15:28,960 --> 01:15:32,359
+don't think we're going to see a move
+
+2140
+01:15:30,399 --> 01:15:35,159
+higher in Bitcoin until we see some
+
+2141
+01:15:32,359 --> 01:15:37,559
+stabilization in the hedge fund
+
+2142
+01:15:35,159 --> 01:15:39,639
+scenario. Uh but hopefully it'll be able
+
+2143
+01:15:37,560 --> 01:15:42,560
+in here. It would not surprise me if it
+
+2144
+01:15:39,640 --> 01:15:43,640
+kept meandering back down towards the 75
+
+2145
+01:15:42,560 --> 01:15:46,039
+area.
+
+2146
+01:15:43,640 --> 01:15:47,440
+Uh just in there. And the final piece of
+
+2147
+01:15:46,039 --> 01:15:51,319
+information, which I will cover in a
+
+2148
+01:15:47,439 --> 01:15:53,399
+paper this week, related to crypto.
+
+2149
+01:15:51,319 --> 01:15:55,239
+I think it is shocking
+
+2150
+01:15:53,399 --> 01:15:58,119
+this number that their net interest
+
+2151
+01:15:55,239 --> 01:16:00,760
+income could reach $107
+
+2152
+01:15:58,119 --> 01:16:02,640
+billion according to them next year.
+
+2153
+01:16:00,760 --> 01:16:04,000
+This money, as I showed last week with
+
+2154
+01:16:02,640 --> 01:16:06,200
+Stripe, is about to come out of the
+
+2155
+01:16:04,000 --> 01:16:08,279
+market. All right. Long one, an
+
+2156
+01:16:06,199 --> 01:16:11,840
+important one. Um I need to keep you
+
+2157
+01:16:08,279 --> 01:16:13,079
+guys happy. I gave you a hoodies up
+
+2158
+01:16:11,840 --> 01:16:15,039
+uh week.
+
+2159
+01:16:13,079 --> 01:16:16,840
+I'll see you next week. And if big
+
+2160
+01:16:15,039 --> 01:16:19,399
+things are happening during the week, uh
+
+2161
+01:16:16,840 --> 01:16:21,079
+I will keep you up with one, two, three,
+
+2162
+01:16:19,399 --> 01:16:22,960
+who knows how many videos I might have
+
+2163
+01:16:21,079 --> 01:16:26,359
+to do this week because of all the news
+
+2164
+01:16:22,960 --> 01:16:27,840
+going on. Stay calm.
+
+2165
+01:16:26,359 --> 01:16:29,479
+Don't worry about the bubble, but for
+
+2166
+01:16:27,840 --> 01:16:31,840
+hedge funds,
+
+2167
+01:16:29,479 --> 01:16:37,759
+this is the end of leverage in hedge
+
+2168
+01:16:31,840 --> 01:16:37,760
+funds uh as a rising situation. See you.
