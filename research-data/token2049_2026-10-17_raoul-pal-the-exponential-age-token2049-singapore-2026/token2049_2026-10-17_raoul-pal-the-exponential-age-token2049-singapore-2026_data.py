@@ -1,0 +1,147 @@
+META = {
+    "title": "Raoul Pal - The Exponential Age - TOKEN2049 Singapore 2026",
+    "channel": "TOKEN2049",
+    "speakers": "Raoul Pal",
+    "date": "2026-10-17",
+    "video_url": "https://www.youtube.com/watch?v=O_wxhggQZp4",
+    "thread_line": "4 threads · liquidity explains the crypto bear · intelligence doubling every 5 months drives a capex super cycle · blockchain as the agent-economy settlement layer · $100T crypto by 2035",
+    "category": "market",
+    "region": "",
+}
+
+SNAPSHOT = [
+    "Raoul Pal calls this 'one of the most skewed risk-reward opportunities' in crypto in a while, though 'not a straightforward opportunity'.",
+    "Crypto's bear came from thin liquidity: **excess liquidity** (above GDP growth) is still below zero, so AI capex and crypto can't both rally at once.",
+    "He reads the year as a two-standard-deviation, mid-cycle correction and has been accumulating Bitcoin into sell-offs (June-July, Jan-Feb).",
+    "What he needs next: a weaker dollar, lower rates and oil, plus bank lending (Bessent, Warsh). He presumes an Iran resolution before the midterms.",
+    "Super-cycle thesis: intelligence per unit of energy doubles **every 5 months** (Reed's law), feeding the second-largest capex boom in history.",
+    "Blockchain is the settlement layer for AI agents; with possibly 25B agents next year, crypto's addressable market 'goes to infinity'.",
+    "Targets: total crypto market cap ~$10T in the next couple of years and ~$100T by about 2035, up from ~$2.5T.",
+]
+
+THEMES = [
+    {
+        "id": "liquidity-bear",
+        "tags": ["macro-rates", "crypto"],
+        "color": "amber",
+        "badge": "Wait and see",
+        "status": "EXCESS LIQUIDITY STILL BELOW ZERO",
+        "title": "Why crypto bled while the Nasdaq didn't: no excess liquidity",
+        "lead": "Liquidity never ran a full cycle, and the excess left over went to AI, so crypto took the hit.",
+        "bullets": [
+            "The **Everything Code** formula: GDP growth = population growth + productivity growth + debt growth. Aging populations cut the first two, and debt fills the gap.",
+            "Narrow US liquidity (Fed balance sheet, TGA, banks' Treasuries) leads Bitcoin by about 90 days and is still not great. 'I'm not kind of expecting fireworks yet'.",
+            "Excess liquidity above GDP growth is still below zero, so money rotates. As the AI trade slowed, Bitcoin rose: 'We don't have enough liquidity to drive two things'.",
+            "Shocks this year: a government shutdown last October, the '10/10' crypto crash, another shutdown in January, war with Iran, and a rising dollar, rates and oil.",
+            "Debt growth is now interest compounding ('paying your credit card with a credit card'). Bessent and Warsh want the banking system to lend more, and the debt refi cycle has stretched from 4 to 5.7 years.",
+            "Triggers he waits for: a weaker dollar, lower rates and oil. He presumes Trump pushes an Iran resolution before the midterms to get oil down.",
+        ],
+        "quote": {"text": "We don't have enough liquidity to drive two things.", "cite": "— Raoul Pal"},
+        "watch": "Raoul concedes Bitcoin can decouple from liquidity, and that the market is in 'wait and see mode'.",
+        "names": [
+            {"name": "Bitcoin (BTC)", "blurb": "Accumulated into the June-July and Jan-Feb sell-offs; ~1.5 SD oversold.", "stance": "OWNS", "conviction": "High", "horizon": "super cycle into 2030s"},
+        ],
+    },
+    {
+        "id": "intelligence-capex",
+        "tags": ["ai-infra", "energy"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "DOUBLING EVERY 5 MONTHS",
+        "title": "Intelligence per unit of energy is the super-cycle engine",
+        "lead": "Raoul argues the real cycle is intelligence, and capex follows it for decades.",
+        "bullets": [
+            "After Moore's law, he measures **intelligence per unit of energy**, now doubling every 5 months: the first observed case of Reed's law (Metcalfe squared). Intelligence 'jumped substrate' from carbon to silicon.",
+            "The chain: semiconductors lead intelligence, which leads capex, which leads productivity. The aim is to lift trend GDP so debt-to-GDP falls.",
+            "Early productivity: corporate profits per employee 'ripped' after a decade-long plateau as hyperscalers stopped hiring.",
+            "Amazon is the template. It began automating in 2017-18, stopped hiring 6 years ago, and **robots will outnumber its human workforce next year**.",
+            "Hyperscalers carry debt of only ~3.5% of market cap. This is the second-largest capex event ever, after the railroads' 35-year build.",
+            "Only ~30% of data centers due this year got built because of bottlenecks; the build runs into the 2030s, maybe the 2040s, including compute and energy from space.",
+            "Adoption is the fastest ever: ChatGPT reached 100M users in 1.5 months and is now ~1.1B. Solar costs are collapsing; power bottlenecks will just mean more spending on solar, gas and nuclear.",
+        ],
+        "quote": {"text": "We birthed apex intelligence. It's not humans any longer. It's AI.", "cite": "— Raoul Pal"},
+        "watch": None,
+        "names": [
+            {"name": "Amazon (AMZN)", "blurb": "Working model of a fully automating economy; robots overtake staff next year.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": "2027"},
+        ],
+    },
+    {
+        "id": "blockchain-agents",
+        "tags": ["crypto", "software"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "AGENTS = NEW USERS",
+        "title": "Blockchain as the settlement layer for an agent economy",
+        "lead": "Crypto overbuilt block space like 1990s fiber; Raoul says stablecoins, tokenization and agents are the demand arriving now.",
+        "bullets": [
+            "Blockchain is the coordination layer where money, ownership, identity and contracts settle, including agents paying agents.",
+            "Stablecoins on trend reach ~$1T by 2030, which also absorbs the Treasuries Bessent needs to sell.",
+            "Real-world assets: he first wrote in 2013-14 that the whole financial system would move on-chain; equity, bond and derivative markets 'all of it is going to come on chain', which drives demand for layer ones.",
+            "Agents: OpenClaw only arrived in November, yet agents may already outnumber humans; most internet traffic is agentic, and agents use more tokens than humans do.",
+            "At Reed's-law speed, perhaps 25B agents next year; if 1% hold wallets, that's 250M new crypto users, a ~25% jump in wallets. The TAM 'has gone to infinity'.",
+        ],
+        "quote": {"text": "There are infinite economic actors coming. So, if there are infinite economic actors, then the TAM has gone to infinity.", "cite": "— Raoul Pal"},
+        "watch": "Raoul says himself that the agent numbers are guesses: 'I don't even know the numbers and I can't guess them because I don't understand Reed's law either.'",
+        "names": None,
+    },
+    {
+        "id": "100t-target",
+        "tags": ["crypto", "macro-rates", "geopolitics"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "$2.5T → $10T → $100T",
+        "title": "The $100 trillion path: adoption plus debasement",
+        "lead": "Raoul stacks three waves (financial system on-chain, agent adoption, ongoing currency debasement) on top of the biggest capex boom ever.",
+        "bullets": [
+            "The crypto market cap's Metcalfe log-regression channel points to ~$10T in the next couple of years (if the bull market comes), then **~$100T by about 2035**, creating $97.5T of wealth.",
+            "Debasement continues because productivity takes time to cut debt-to-GDP; governments still have to pay the interest.",
+            "US-China: neither can let the other win, so capital spending is effectively unlimited, including money printing and changes to banking laws.",
+            "Japan is steepening its yield curve and weakening the yen to restart lending; the private sector, after two decades of deleveraging, is about to re-lever.",
+            "His playbook: accumulate into sell-offs and hold. Bitcoin hit ~1.5 SD oversold, not the full 2 SD.",
+        ],
+        "quote": {"text": "It's so [ __ ] obvious.", "cite": "— Raoul Pal"},
+        "watch": "The talk closes with a plug for his book *The Everything Code* (out November 3), which this framework comes from.",
+        "names": [
+            {"name": "Bitcoin (BTC)", "blurb": "Buy-and-hold core of the $100T thesis.", "stance": "OWNS", "conviction": "High", "horizon": "2035"},
+        ],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F4A7", "tag": "Macro", "title": "Track excess liquidity (liquidity above GDP growth) as the gate for crypto, not headline liquidity alone."},
+    {"icon": "\U0001F4B5", "tag": "Markets", "title": "Watch the dollar, rates and oil together; all three easing is Raoul's 'risk-on' trigger."},
+    {"icon": "\U0001F4C9", "tag": "Crypto", "title": "Scale into crypto on 1.5-2 standard-deviation sell-offs instead of chasing rallies."},
+    {"icon": "\U0001F916", "tag": "Agents", "title": "Follow agent wallet adoption as the new-user metric for layer ones."},
+    {"icon": "⚡", "tag": "Energy", "title": "Treat power bottlenecks as a capex accelerant (solar, gas, nuclear), not a ceiling."},
+]
+
+HOT_TAKES = [
+    {"take": "I think this is one of the most skewed risk-reward opportunities we've had in crypto for a while.", "cite": "— Raoul Pal", "why": "bullish call in a bear"},
+    {"take": "The pace of intelligence per unit of energy is doubling every 5 months.", "cite": "— Raoul Pal", "why": "quantified exponential claim"},
+    {"take": "the number of robots um will overtake people at Amazon's workforce by next year.", "cite": "— Raoul Pal", "why": "dated call"},
+    {"take": "it tells you we get to 100 trillion dollars by about 2035", "cite": "— Raoul Pal", "why": "40x crypto market cap target"},
+    {"take": "maybe it's 25 billion agents by next year.", "cite": "— Raoul Pal", "why": "agent count forecast"},
+    {"take": "We birthed apex intelligence. It's not humans any longer. It's AI.", "cite": "— Raoul Pal", "why": "provocative framing"},
+]
+
+CLAIMS = [
+    {"who": "Raoul Pal", "claim": "Total crypto market cap reaches ~$10T in the next couple of years.", "metric": "crypto market cap", "target": "$10T", "by": "2028", "condition": "if the bull market arrives", "entity": None},
+    {"who": "Raoul Pal", "claim": "Total crypto market cap reaches ~$100T by about 2035.", "metric": "crypto market cap", "target": "$100T", "by": "2035", "condition": None, "entity": None},
+    {"who": "Raoul Pal", "claim": "Stablecoins reach about $1T by 2030 on current trend.", "metric": "stablecoin supply", "target": "$1T", "by": "2030", "condition": None, "entity": None},
+    {"who": "Raoul Pal", "claim": "Robots will outnumber people in Amazon's workforce by next year.", "metric": "robots vs human workers", "target": "robots > humans", "by": "2027", "condition": None, "entity": "Amazon (AMZN)"},
+    {"who": "Raoul Pal", "claim": "Perhaps 25 billion AI agents next year; at 1% wallet use, 250M new crypto users.", "metric": "AI agents", "target": "25B", "by": "2027", "condition": None, "entity": None},
+    {"who": "Raoul Pal", "claim": "The AI capex boom continues into the 2030s, maybe the 2040s.", "metric": "capex cycle duration", "target": "into 2030s-2040s", "by": "2040", "condition": None, "entity": None},
+    {"who": "Raoul Pal", "claim": "An Iran resolution comes before the midterms as Trump pushes oil lower.", "metric": "Iran resolution", "target": "resolved", "by": "2026-11", "condition": None, "entity": None},
+]
+
+RELATIONS = []
+
+OTHER_NEWS = []
+
+GLOSSARY = [
+    {"term": "Excess liquidity", "def": "Liquidity growth above GDP growth: the spare money that can flow to speculative assets."},
+    {"term": "Reed's law", "def": "Network value scaling with the number of possible subgroups, faster than Metcalfe's n²; Raoul's shorthand for 'Metcalfe squared'."},
+    {"term": "Debt refi cycle", "def": "The cadence at which governments and corporates roll their debt; Raoul says it stretched from 4 to 5.7 years."},
+    {"term": "Debasement", "def": "Currency losing purchasing power as money supply grows to service debt."},
+    {"term": "Layer one", "def": "A base blockchain (e.g. Bitcoin, Ethereum) where transactions finally settle."},
+]
