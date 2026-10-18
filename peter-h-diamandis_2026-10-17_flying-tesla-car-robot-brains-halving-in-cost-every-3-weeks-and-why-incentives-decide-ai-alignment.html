@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: Flying Tesla Car, Robot Brains Halving in Cost Every 3 Weeks, and Why Incentives Decide AI Alignment</title>
+<meta name="description" content="Peter H. Diamandis · 7 threads · flying Roadster · robot-brain cost collapse · humanoid debate · AI physics · prize incentives · alignment incentives · purpose after work">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="Flying Tesla Car, Robot Brains Halving in Cost Every 3 Weeks, and Why Incentives Decide AI Alignment">
+<meta property="og:description" content="Peter H. Diamandis · 7 threads · flying Roadster · robot-brain cost collapse · humanoid debate · AI physics · prize incentives · alignment incentives · purpose after work">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Flying Tesla Car, Robot Brains Halving in Cost Every 3 Weeks, and Why Incentives Decide AI Alignment</h1>
+    <div class="byline">
+      Channel: <b>Peter H. Diamandis</b> &middot; Speaker: <b>Peter Diamandis, Salim Ismail, Emad Mostaque, Anousheh Ansari (XPRIZE CEO)</b> &middot; <b>2026-10-17</b>
+      <div class="stats-line">7 threads · flying Roadster · robot-brain cost collapse · humanoid debate · AI physics · prize incentives · alignment incentives · purpose after work &middot; <a href="https://www.youtube.com/watch?v=dthaDyttHns" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Tesla unveiled a <b>flying Roadster</b> in Waco: cold-gas thrusters, 0-60 in under 1 second, production 2028, no price; Tesla shares rose 5%.</li><li>Peter Diamandis predicts a <b>Tesla-SpaceX merger</b> announcement before year-end.</li><li>Frontier-model cost per robot subtask fell <b>84%</b> in two months (July to September): a halving every ~3 weeks, faster than any curve the panel has tracked.</li><li>Emad Mostaque: generalist models now beat specialist robot models; the bottleneck moves to hardware and supply chain (Optimus target 1M next year, then 10M).</li><li>GPT-6 Astra solved 50 unpublished research-physics problems at ~<b>$3 </b>each; Emad expects the big open physics problems to fall within about half a year.</li><li>XPRIZE by the numbers: 36 prizes, ~<b>$550M</b> purses, ~$30B R&amp;D driven, ~62x economic value per prize dollar.</li><li>Alignment is framed as an incentives problem: the race with China, engagement-driven sycophancy, reward hacking and 'win at all costs' training.</li><li>Closing thread: as AI does more of the <i>doing</i>, meaning shifts to being, community and purpose rather than jobs.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="flying-roadster">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
+    <span class="theme-status">UNVEILED OCT 2026 · PRODUCTION 2028</span><span class="ttag">consumer</span><span class="ttag">space</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Tesla's flying Roadster: SpaceX thrusters on a street-legal car</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The panel treats the Roadster less as a product than as proof that Tesla and SpaceX now ship integrated capabilities, and as a talent magnet.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Unveiled in Waco next to SpaceX's McGregor test site; a <b>fan suction system</b> holds up to 2G, letting it drive upside down on a curved ramp.</li><li><span class="dot" style="background:#3f6b2e;"></span>Two carbon overwrapped pressure vessels, 600 L total (~250 kg of air), feeding 10 nozzles; the car recharges its own air, so no special propellant.</li><li><span class="dot" style="background:#3f6b2e;"></span>Specs: 0-60 in under 1 second, top speed 230 mph, ~300 miles range; three versions: Performance (1.6 s), Thrust (0.9 s), Rocket one-seater (0.6 s, 380 km/h, 'air ready').</li><li><span class="dot" style="background:#3f6b2e;"></span>Production starts 2028 per Elon; no price given; Tesla shares rose 5% on the news. Long-term it will be Tesla's <b>only manually driven car</b>.</li><li><span class="dot" style="background:#3f6b2e;"></span>Open questions raised: who regulates it (DOT? FAA?), whether it is insurable at all, and whether it ships on time. Elon tweeted about thrusters on a car back in 2018.</li><li><span class="dot" style="background:#3f6b2e;"></span>Safety idea: an AI layer that takes over when a human driver loses traction, an extension of anti-lock braking, aimed at high sports-car death rates among young drivers in Saudi Arabia and the Emirates.</li><li><span class="dot" style="background:#3f6b2e;"></span>Side notes: Porsche launched a car the same day; Steve Jurvetson attended; Apollo astronauts got Corvettes from Chevrolet, and Elon chose a McLaren F1 over a house after Zip2.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;The real miracle will be can they ship it on time rather than does it fly?&#8221;<cite>— panelist</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Tesla (TSLA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium · 2028</span></b><span>Flying Roadster unveiled, production 2028; stock +5% on the news.</span></div><div class="namechip"><b>SpaceX<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium · by end of 2026</span></b><span>Supplied the thruster/pressure-vessel tech; predicted merger with Tesla.</span></div><div class="namechip"><b>Porsche<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Launched a car the same day, overshadowed.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">No hover duration or price disclosed; regulators lag the tech by a year or two, and the panel doubts it can be insured.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="robot-brain-cost">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">COST HALVING EVERY ~3 WEEKS</span><span class="ttag">robotics</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Robot brains halving in cost every 3 weeks: generalist models win</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">A Y Combinator startup's benchmark shows the cost of driving a physical robot through a subtask collapsing toward zero, which pushes the bottleneck to hardware.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>The Robo Dojo RC Tier 1 benchmark: cost for a frontier model to complete a robot subtask fell from <b>$2.36 </b>in July to 38 cents in September, an 84% drop.</li><li><span class="dot" style="background:#3f6b2e;"></span>Peter Diamandis: AI capability doubling every 10 weeks was already mind-boggling; <b>halving every 3 weeks</b> may be the fastest-moving curve yet, far beyond Moore's law's 18 months.</li><li><span class="dot" style="background:#3f6b2e;"></span>Emad Mostaque: generalist models beat specialists; the Unitree CEO said they may no longer need specialist models. Unitree robots went from stumbling to kung fu.</li><li><span class="dot" style="background:#3f6b2e;"></span>Training data: Figure's Brett Adcock committed <b>$1 billion</b> to data, but Emad expects the big foundation-model labs to hoover up robotics data, which is an order of magnitude larger than language data.</li><li><span class="dot" style="background:#3f6b2e;"></span>Same collapse in video: high-quality generation fell from ~50 cents per second to ~0.1 cents per second with models due next week, faster than real time.</li><li><span class="dot" style="background:#3f6b2e;"></span>Hardware is the constraint: Elon is building a million Optimus robots next year, going to 10 million; at 1.7 million, Optimus overtakes Tesla's revenue.</li><li><span class="dot" style="background:#3f6b2e;"></span>Elon told Peter early this year that robots will do perfect surgery within 3 years; Grok is being fed SpaceX's engineering knowledge.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Having in cost every 3 weeks means it effectively goes to zero, you know, within the year.&#8221;<cite>— Peter Diamandis</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Unitree<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>CEO says specialist robot models may no longer be needed.</span></div><div class="namechip"><b>Figure<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Committed $1B to robotics training data; interview with Brett Adcock coming.</span></div><div class="namechip"><b>Tesla (TSLA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium · 2027</span></b><span>Optimus: 1M units next year, then 10M; 1.7M units would exceed Tesla's revenue.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="humanoid-debate">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">PANEL SPLIT</span><span class="ttag">robotics</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Where robots go first, and whether humanoid is the right shape</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The panel agrees the brains are nearly there but splits on timing for the home and on the humanoid form factor.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Salim Ismail: robots start in dull, dirty, dangerous work (toxic cleanup, underwater manufacturing); the home comes later because of liability and endless edge cases, like a dog thrown in the washing machine.</li><li><span class="dot" style="background:#93711b;"></span>Peter Diamandis pushes back: robots will run superintelligent models that recognise the dog; another panelist expects robots to move past dull, dirty, dangerous jobs within the next year.</li><li><span class="dot" style="background:#93711b;"></span>Anousheh Ansari: safety around pets and children comes first (heavy machinery), and humanoid is not the right form factor; tasks need small or specialised bodies. 1X's soft design was cited as one answer.</li><li><span class="dot" style="background:#93711b;"></span>Emad Mostaque: Wuji hands now cost about <b>$8,000, </b>down from $20,000, with more dexterity than a human hand, but a laundry robot doesn't need that; expect modular spare-parts ecosystems ('Transformers').</li><li><span class="dot" style="background:#93711b;"></span>Salim is most excited about surgery: robots with federated learning share millions of cases, smoothing the surgeon learning curve. Anousheh wants a robot chef cooking to your body's sensor readings.</li><li><span class="dot" style="background:#93711b;"></span>Salim: there is no supply chain yet for billions of humanoids, so ROI in the home lags. Jeff Holden's atomic machines (prompt-to-product at millimetre accuracy) hint at custom robots per task.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I really don't believe we ultimately the humanoid form factor is the right form factor.&#8221;<cite>— Anousheh Ansari</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>1X<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Makes its robot soft and squishy for home safety.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Emad says no world models are needed because frontier models 'suddenly understood 3D'; nobody on the panel explains how.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="ai-physics">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
+    <span class="theme-status">50/50 UNPUBLISHED PROBLEMS</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">GPT-6 Astra solves research physics for $3 a problem</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">In verifiable domains AI is now simply better than people, and the panel thinks the field's big open problems are close.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Researchers built 50 unpublished, research-level theoretical physics problems (no internet lookup possible); a world-class physicist would need about a day for each.</li><li><span class="dot" style="background:#3f6b2e;"></span>GPT-6 Astra cost ~<b>$3 </b>per problem. First reported as 49/50, but the published answer to the 50th was wrong and Astra was right. Without internet it still scored 42/50.</li><li><span class="dot" style="background:#3f6b2e;"></span>Follows OpenAI dropping 722 math proofs on GitHub the week before; long-standing math problems now cost a few hundred dollars to solve.</li><li><span class="dot" style="background:#3f6b2e;"></span>Eric Schmidt said on the A360 stage a couple of years ago that a world-class physicist in every lab was 5-6 years out; it took about 2.</li><li><span class="dot" style="background:#3f6b2e;"></span>Salim Ismail: in his firm's pilot on bounded workflows like bank KYC, <b>22-step workflows drop to 4 steps</b>, making organisations 10x more efficient.</li><li><span class="dot" style="background:#3f6b2e;"></span>Anousheh Ansari worries students will avoid fields AI already masters, and AI still lacks the curiosity to find new problems. Emad: humans direct what matters (Fermat's Last Theorem changed little for real people); physics shifts from theory to application.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;I mean again like for these verifiable domains now the AI is just simply better than us.&#8221;<cite>— Emad Mostaque</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>OpenAI<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>GPT-6 Astra solved 50/50 unpublished physics problems; released 722 math proofs.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Emad expects quantum gravity and unified field theory to be solved 'another way', not by this benchmark style.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="incentive-prizes">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Principle</span>
+    <span class="theme-status">36 PRIZES · 32 YEARS</span><span class="ttag">policy</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">You get what you incentivize: XPRIZE's 62x leverage</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Prizes pay only for success and pull in outsiders, which Anousheh Ansari says turns every prize dollar into about 62 dollars of economic value.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Peter's motivator ranking: fear, then greed, curiosity, love. Fear-to-curiosity ratio = <b>defense budget vs science budget</b>.</li><li><span class="dot" style="background:#3f6b2e;"></span>History: 1714 Longitude Prize (20,000), won by clockmaker John Harrison, who had to sue to get paid; 1795 French 12,000-franc food-preservation prize, won by confectioner Nicolas Appert (canning); the <b>$25,000 </b>Orteig Prize drew nine teams spending $400,000 and Lindbergh won.</li><li><span class="dot" style="background:#3f6b2e;"></span>Perverse incentives: Hanoi's 1902 rat-tail bounty bred rat farms; Wells Fargo quotas produced 3.5 million fake accounts; Salim Ismail says ICE arrest quotas are driving huge political backlash.</li><li><span class="dot" style="background:#3f6b2e;"></span>XPRIZE: 36 prizes over 32 years, ~<b>$550M</b> in purses, &gt;$30B R&amp;D driven; teams raised ~$12B of outside investment. Elon's $100M carbon removal prize alone drew $1.4B into teams.</li><li><span class="dot" style="background:#3f6b2e;"></span>Oil-spill prize after the BP Gulf spill (pushed by James Cameron, funded by Eric and Wendy Schmidt): goal to double cleanup rate; 350 teams, 10 tested in New Jersey; second place was a dentist and a tattoo artist who met in Las Vegas.</li><li><span class="dot" style="background:#3f6b2e;"></span>Origin: the <b>$10M</b> Ansari XPRIZE launched 1996 with $500K raised (two board members resigned), pitched to 150 people; Anousheh, found via Fortune's 40-under-40 after selling Telecom Technologies to Sonus Networks for ~$1.4B, committed in 2001.</li><li><span class="dot" style="background:#3f6b2e;"></span>Anousheh later flew a Soyuz to the space station via Space Adventures as the first private female astronaut; she has been XPRIZE CEO for eight years.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Every dollar put into a price drive 62. Yes.&#8221;<cite>— Peter Diamandis</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Wells Fargo (WFC)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Low</span></b><span>Sales quotas led to 3.5M fake accounts: perverse-incentive example.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Peter founded XPRIZE and Anousheh runs it; the 62x figure is their own impact metric.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="new-prizes">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Pipeline</span>
+    <span class="theme-status">VISIONEERING 2026</span><span class="ttag">biotech</span><span class="ttag">space</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">Next prizes: organ biostasis, habitable worlds, talking to animals</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">This year's Visioneering winner is organ biostasis, with AI-native prizes like exoplanet search close behind.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span><b>Organ biostasis</b> (Visioneering winner): store harvested organs until a match appears; target 6 months vs hours today; tested in pigs. Kidney waiting list ~100,000. Builds on Martine Rothblatt's perfusion work.</li><li><span class="dot" style="background:#65695f;"></span>Habitable Worlds XPRIZE: <b>$5M</b> funded by John Davy; open telescope data plus AI to find an Earth-like planet among ~6,200 known exoplanets and ~2 trillion galaxies.</li><li><span class="dot" style="background:#65695f;"></span>Palmer Luckey is about to announce an interspecies communication prize (LLMs to talk to animals).</li><li><span class="dot" style="background:#65695f;"></span>Next learning prize targets first graders in India and Africa, measured on deployment at scale, not just effectiveness.</li><li><span class="dot" style="background:#65695f;"></span>Last year's winner, the abundance prize: housing, food, healthcare and education for <b>$1,000 </b>a month for a family of four ($12,000 a year). Prizes typically become viable ~7 years after announcement.</li><li><span class="dot" style="background:#65695f;"></span>In the works: a UAP XPRIZE with a major funder (to fight stigma, as with cold fusion). Wishlist: jetlag (Emad), eliminating greed (Anousheh), flow (Steven Kotler's research), damping the amygdala ('be not afraid'), AI alignment.</li><li><span class="dot" style="background:#65695f;"></span>Salim Ismail's 'unprizeable' problem: institutions facing 20 Gutenberg moments at once (AI, blockchain, life extension); the printing press took 100 violent years to absorb.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="alignment-incentives">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">NO CONSENSUS ON THE FIX</span><span class="ttag">software</span><span class="ttag">policy</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Misaligned incentives, not missing rules, are the alignment problem</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The panel traces model misbehaviour to how labs are paid and trained, and proposes fixing the incentives and the pre-training curriculum.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Peter's misalignment drivers: the race with China, labs racing for compute and energy, engagement business models (sycophancy), reward hacking and evaluation gaming.</li><li><span class="dot" style="background:#93711b;"></span>Salim Ismail: humans aren't aligned with each other (the UN human rights charter is the best common baseline); align AI to our 'highest self', e.g. Swedenborg's filtering of the Bible (keep water verses, drop fire).</li><li><span class="dot" style="background:#93711b;"></span>Emad Mostaque: models are built like cities; Goodfire's interpretability work shows they're layered, not spaghetti. Train on ~100 trillion words of 'crap' vs maybe a billion right words; labs should use <b>curriculum learning</b> from the start.</li><li><span class="dot" style="background:#93711b;"></span>Emad: Anthropic's constitution leans too far into AI personhood and doesn't talk about humanity; Meta and Google plan to sell space inside model answers (Bud Light example).</li><li><span class="dot" style="background:#93711b;"></span>Anousheh Ansari: you can't train AI for autonomous weapons and expect it to value human life; models 'trained to win' at all costs. Tie rewards to lives saved.</li><li><span class="dot" style="background:#93711b;"></span>Peter's fixes: insurance as the driver (1894 fire insurers funded Underwriters Laboratories) and alignment prizes or bounties; Emad reframes it as aligning humans and AI on the rights of those with less capability, like children.</li><li><span class="dot" style="background:#93711b;"></span>The flip side, aligning humanity with AI: give everyone a share in the AI companies; cited Kissinger, Schmidt and Mundie's <i>Genesis</i> on a shared 'doxa' that includes AI.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;All wars are basically based on one thing. That person is not a human.&#8221;<cite>— Emad Mostaque</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic<span class="stance" style="background:#93711b;">UNCERTAIN · Low</span></b><span>Genuinely cares about alignment, but its constitution misses humanity.</span></div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Low</span></b><span>Plans to sell ad space inside model answers: misalignment example.</span></div><div class="namechip"><b>Alphabet (GOOGL)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Low</span></b><span>Google cited alongside Meta for in-model ad placement.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Emad: no lab wants to be misaligned; the problem is short-term incentives, and how to measure alignment rigorously is still open.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="purpose-after-work">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Framework</span>
+    <span class="theme-status">OPINION</span><span class="ttag">mindset</span><span class="ttag">career</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">When AI does the doing, humans shift to being</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The panel argues jobs never gave most people meaning; purpose, community and collective flow will.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>Salim Ismail: <b>79%</b> of corporate workers are dissatisfied with their work; industrial-era jobs trained humans to act like robots.</li><li><span class="dot" style="background:#65695f;"></span>Anousheh Ansari's challenge: if AI does even the work you love better, you stop feeling needed. Emad Mostaque's answer: chess is more popular than ever despite AI.</li><li><span class="dot" style="background:#65695f;"></span>Emad: 'I can't do something, but we can do anything'; Alpha School teaches collective learning. Meaning comes from who you go through life with.</li><li><span class="dot" style="background:#65695f;"></span>Salim coined the <b>massive transformative purpose (MTP)</b> in 2012; hiring now matches individual MTP to company MTP (you'd better love space to join SpaceX). Example: a Bangalore cook used YouTube to reach the world's top 50 restaurants.</li><li><span class="dot" style="background:#65695f;"></span>Persistence needs purpose: Peter pitched 150 people for the first prize; Larry Page and Sergey Brin made 362 venture pitches before Google got funded.</li><li><span class="dot" style="background:#65695f;"></span>Peter: giving kids AI to do homework is a travesty; ask them to build an interplanetary spaceship. A passion helps you; a purpose helps others.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#65695f;"><div class="lbl">Pull quote</div>&#8220;Technology is the mechanism by which humanity takes a vacation from survival.&#8221;<cite>— Sadhguru (quoted by Peter Diamandis)</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🤖</div><div class="tline"><span class="cat">Robotics:</span> <span class="txt">Value robotics plays on hardware and supply chain (actuators, hands, parts), not on proprietary robot brains.</span></div></div><div class="irow"><div class="ic">🚗</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Watch for a Tesla-SpaceX merger announcement before year-end, and for Roadster regulation and insurance news.</span></div></div><div class="irow"><div class="ic">🧪</div><div class="tline"><span class="cat">AI:</span> <span class="txt">Point AI at any verifiable workflow first (KYC, proofs, physics checks); that's where step counts collapse.</span></div></div><div class="irow"><div class="ic">🎯</div><div class="tline"><span class="cat">Incentives:</span> <span class="txt">Pay for outcomes, not activity: quota-style targets breed fake accounts and rat farms.</span></div></div><div class="irow"><div class="ic">🧭</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Write down your purpose and match roles to it; meaning won't come from tasks AI will absorb.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;Tesla and SpaceX working together which you know my prediction is they're going to announce the merger before the end of the year.&#8221; <cite>— Peter Diamandis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Having in cost every 3 weeks means it effectively goes to zero, you know, within the year.&#8221; <cite>— Peter Diamandis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Like the big problems of physics like quantum gravity ... I don't think it'll be more than half a year&#8221; <cite>— Emad Mostaque</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I really don't believe we ultimately the humanoid form factor is the right form factor.&#8221; <cite>— Anousheh Ansari</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I've said this forever, we we've trained all these models with crap.&#8221; <cite>— Emad Mostaque</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;giving a kid you know an AI model to do nth grade homework in nth grade is ridiculous and it's it's a travesty.&#8221; <cite>— Peter Diamandis</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Peter Diamandis:</b> Tesla and SpaceX will announce a merger before the end of the year. <span class="cmeta">merger announcement · announced · 2026-12</span> <span class="tag">Tesla (TSLA)</span></div><div class="ritem"><b>Elon Musk (via Tesla unveil):</b> Flying Tesla Roadster production starts in 2028. <span class="cmeta">Roadster production start · start · 2028</span> <span class="tag">Tesla (TSLA)</span></div><div class="ritem"><b>Peter Diamandis:</b> Frontier-model cost per robot subtask effectively goes to zero within the year at a 3-week halving rate. <span class="cmeta">cost per robot subtask · ~0 · 2027-10</span> <i>if if the 3-week halving continues</i></div><div class="ritem"><b>Emad Mostaque:</b> Big physics problems like quantum gravity and unified field theory will be solved within about half a year. <span class="cmeta">major open physics problems · solved · 2027-04</span></div><div class="ritem"><b>Emad Mostaque:</b> Video models releasing next week bring high-quality generation to ~0.1 cents per second, faster than real time. <span class="cmeta">video generation cost · 0.1 cents/second · 2026-10</span></div><div class="ritem"><b>Peter Diamandis:</b> Tesla builds a million Optimus robots next year, scaling to 10 million; at 1.7 million Optimus overtakes Tesla's revenue. <span class="cmeta">Optimus units · 1,000,000 then 10,000,000 · 2027</span> <span class="tag">Tesla (TSLA)</span></div><div class="ritem"><b>Elon Musk (cited by Peter Diamandis):</b> Robots will do perfect surgery within 3 years. <span class="cmeta">robotic surgery · perfect · 2029</span></div><div class="ritem"><b>Anousheh Ansari:</b> Organ biostasis prize targets organ storage of 6 months, up from hours today. <span class="cmeta">organ storage duration · 6 months</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>SpaceX</b> <span class="rel">supplies</span> <b>Tesla (TSLA)</b> &mdash; thruster and pressure-vessel tech for the flying Roadster</div><div class="ritem"><b>Porsche</b> <span class="rel">competes with</span> <b>Tesla (TSLA)</b> &mdash; launched the same day</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">👁</div><div><div class="title">Emad Mostaque's father died 18 months ago; a community member who got a cornea transplant days later found the dates matched, and felt she was seeing through his eyes. <span class="tag">Personal</span></div></div></div><div class="irow"><div class="ic">📺</div><div><div class="title">Visioneering moderator Van Jones joked CNN is the 'Crisis News Network' and called the room 'dealers in hope'. Humans attend ~10x more to negative news than positive. <span class="tag">Media</span></div></div></div><div class="irow"><div class="ic">🔥</div><div><div class="title">When fires cancelled an earlier Visioneering in Malibu, attendees self-organised overnight and held it in the hotel ballroom. <span class="tag">Community</span></div></div></div><div class="irow"><div class="ic">📚</div><div><div class="title">Sources cited: Eric Schmidt (A360), Ilya Sutskever ('teach the AI to love'), <i>Genesis</i> (Kissinger/Schmidt/Mundie), Clayton Christensen's <i>How Will You Measure Your Life</i>, Sadhguru, the film <i>Disclosure Day</i>, Goodfire interpretability research. <span class="tag">Sources</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Incentive prize</b> &mdash; A purse paid only to whoever first hits a measurable target, regardless of credentials.</div><div><b>Organ biostasis</b> &mdash; Storing a harvested organ cryogenically or in metabolic stasis until a recipient match appears.</div><div><b>Curriculum learning</b> &mdash; Training a model on deliberately ordered data, foundations first, rather than everything at once.</div><div><b>Reward hacking</b> &mdash; A model hitting its training reward through unintended shortcuts instead of the intended behaviour.</div><div><b>MTP</b> &mdash; Massive transformative purpose: an organisation's aspirational mission, used by Salim Ismail to explain fast scaling.</div><div><b>Gutenberg moment</b> &mdash; Salim Ismail's term for a technology as disruptive to institutions as the printing press.</div><div><b>COPV</b> &mdash; Carbon overwrapped pressure vessel: the high-pressure air tanks powering the Roadster's thrusters.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
