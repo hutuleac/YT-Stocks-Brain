@@ -1,0 +1,83 @@
+META = {
+    "title": "Why AI Adoption Stalls at the Engineers | Jonathan Lusk, BirdDog",
+    "channel": "The Deal Table",
+    "speakers": "Jonathan Lusk (BirdDog); host of The Deal Table",
+    "date": "2026-10-18",
+    "video_url": "https://www.youtube.com/watch?v=81rmvDnYSJA",
+    "thread_line": "2 threads · engineers are the AI speed bump · AI buys speed, not savings — short clip (~3 min)",
+    "category": "dev",
+    "region": "",
+}
+
+SNAPSHOT = [
+    "Short clip (~3 minutes); captured in full.",
+    "Host's rule, borrowed from Blockchain.com's Lane Castleman: every employee is **AI first**, but 100% responsible for what ships.",
+    "Jonathan Lusk: the adoption bottleneck is engineers, because AI 'completely displaces their identity' — sales people can now build what used to need designers and front-end engineers.",
+    "The scarce skill moves to quality control and getting AI-built products into production.",
+    "Host: a headline says companies that cut staff for AI now spend more on AI than they saved on labor — the real payoff is speed to market.",
+    "Lusk's joke: 'before AI I had three unfinished projects, now I've got 12' — more problems get attempted, which keeps jobs.",
+]
+
+THEMES = [
+    {
+        "id": "engineers-speed-bump",
+        "tags": ["dev-workflow", "career"],
+        "color": "amber",
+        "badge": "Counterintuitive take",
+        "status": "JONATHAN LUSK · BIRDDOG",
+        "title": "The AI adoption speed bump is the engineers, not the tools",
+        "lead": "Lusk says engineers resist AI because it erases their identity, while non-engineers can now build — leaving production and QA as the hard part.",
+        "bullets": [
+            "Sales people — 'very low brow' builders — can now make what used to require **design and front-end engineers**.",
+            "The new need: people who quality-control those builds and get them into production, where they behave differently than in the environment they were built in.",
+            "Shipping to the public is 'the hardest part right now'; adoption would go much faster if everyone jumped on board.",
+            "Lusk sees the lag as BirdDog's advantage; builders on **X** openly share code and step-by-step recipes, making it more accessible.",
+            "Host's practice, from Lane Castleman of Blockchain.com: AI first on everything (emails, product, sales), repeated on every weekly team call — with full personal responsibility for the output.",
+            "Host: a big conglomerate was surprised a product took BirdDog 30 minutes; bureaucracy blocks large companies from that speed.",
+        ],
+        "quote": {"text": "The speed bump is actually the engineers, you know, that aren't adopting it because it completely displaces their identity as an engineer.", "cite": "— Jonathan Lusk"},
+        "watch": "Lusk runs a startup that benefits from incumbents' slow adoption.",
+        "names": None,
+    },
+    {
+        "id": "speed-not-savings",
+        "tags": ["dev-workflow", "career"],
+        "color": "gray",
+        "badge": "Principle",
+        "status": "HOST + JONATHAN LUSK",
+        "title": "AI pays back in speed to market, not labor savings",
+        "lead": "Companies that cut staff to save money are reportedly spending more on AI than they saved — the win is speed and the number of problems you can take on.",
+        "bullets": [
+            "Host cites a headline this week: after **AI-driven layoffs**, AI costs now exceed the labor savings.",
+            "Both agree the keywords are speed to market and productivity, not cost.",
+            "Lusk's joke: before AI, three unfinished projects; now 12 — people take on many more problems, which is what preserves jobs.",
+        ],
+        "quote": {"text": "Before AI I had three unfinished product projects and I've got 12.", "cite": "— Jonathan Lusk"},
+        "watch": "The layoff-cost headline is cited from memory, with no source named.",
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F916", "tag": "AI adoption", "title": "Make 'AI first, but you own the output' an explicit team rule."},
+    {"icon": "\U0001F9EA", "tag": "Engineering", "title": "Reposition engineers as the QA-and-production layer for AI-built tools rather than the builders of everything."},
+    {"icon": "⏱", "tag": "Strategy", "title": "Measure AI ROI in time to market and projects shipped, not headcount saved."},
+]
+
+HOT_TAKES = [
+    {"take": "The speed bump is actually the engineers, you know, that aren't adopting it because it completely displaces their identity as an engineer.", "cite": "— Jonathan Lusk", "why": "blames engineers for slow adoption"},
+    {"take": "The cost of AI was actually more than the cost of the labor.", "cite": "— Host, The Deal Table", "why": "challenges the layoff-savings narrative"},
+]
+
+CLAIMS = []
+
+RELATIONS = []
+
+OTHER_NEWS = [
+    {"icon": "\U0001F4DA", "title": "Sources referenced: Lane Castleman (Blockchain.com, a previous guest), builders sharing code on X, and an unnamed headline on AI layoffs costing more than they saved.", "tag": "Sources"},
+]
+
+GLOSSARY = [
+    {"term": "AI first", "def": "Attempting every task with AI before doing it manually, while staying responsible for the result."},
+    {"term": "Speed to market", "def": "How quickly a product goes from idea to customers."},
+]
