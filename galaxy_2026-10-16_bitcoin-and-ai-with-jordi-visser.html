@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: Bitcoin and AI with Jordi Visser</title>
+<meta name="description" content="Galaxy · 6 threads · Bitcoin near a cycle bottom · hot CPI and an equity-supply problem · Jordi&#x27;s odds-board method · agents and &#x27;short friction&#x27; · AI is concentration, not a bubble · Bitcoin&#x27;s belief moat and wealth becoming money">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="Bitcoin and AI with Jordi Visser">
+<meta property="og:description" content="Galaxy · 6 threads · Bitcoin near a cycle bottom · hot CPI and an equity-supply problem · Jordi&#x27;s odds-board method · agents and &#x27;short friction&#x27; · AI is concentration, not a bubble · Bitcoin&#x27;s belief moat and wealth becoming money">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Bitcoin and AI with Jordi Visser</h1>
+    <div class="byline">
+      Channel: <b>Galaxy</b> &middot; Speaker: <b>Alex Thorn (host), Bimnet (Galaxy Trading), Jordi Visser (Visser Labs)</b> &middot; <b>2026-10-16</b>
+      <div class="stats-line">6 threads · Bitcoin near a cycle bottom · hot CPI and an equity-supply problem · Jordi's odds-board method · agents and 'short friction' · AI is concentration, not a bubble · Bitcoin's belief moat and wealth becoming money &middot; <a href="https://www.youtube.com/watch?v=G-HqvP7pjVk" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Market desk (Bimnet, Galaxy Trading): Bitcoin ~<b>$81.5K</b>, 12 months past the prior high and 'within spitting distance' of a four-year-cycle bottom; the line in the sand is the falling 50-week average near $77K.</li><li>Macro is stressed: September CPI hot in almost every category (~3.8-<b>3.9%</b> annualized core), refined-fuel prices climbing, credit spreads widening; Nasdaq -2.14% on recording day.</li><li>Paul Tudor Jones (cited): Big Tech has gone from buybacks to issuing equity for data centers — 2027 equity flows the worst since 2004.</li><li>Jordi Visser's bull case for Bitcoin is <b>AI agents</b>: crypto rails were built for humans who don't care; agents will chase every spread ('crypto is margin compression').</li><li>AI is not a bubble to Jordi — no valuation bubble (Nvidia ~15x earnings vs Cisco's 100x), no fraudulent credit, demand exceeds supply — but higher rates create a <b>concentration</b> of few winners and many zombie losers.</li><li>Bitcoin's moat is belief, like gold and religion; he sees Mag 7 multiples compressing while Bitcoin outperforms them next — then 'greed kicks in'.</li><li>Endgame: tokenization turns illiquid wealth into spendable money, reducing new money creation; with humanoids doing the work, corporations get taxed.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="btc-cycle-bottom">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">BTC ~$81.5K · 50-WEEK MA ~$77.2K</span><span class="ttag">crypto</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Bitcoin is near its four-year-cycle bottom — buy-the-range, not the tick</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Bimnet sees a new cycle to fresh all-time highs ahead, whether the fill is $82K or $75K.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Weak since failing near <b>$86.7K</b>; dipped to almost $80K, rallied to $83.5K, now ~$81.5K. Bimnet: 'squarely in the stack sats time period'.</li><li><span class="dot" style="background:#93711b;"></span>Four-year-cycle thesis: 12 months after the prior all-time high, the low is close — the gap between <b>$82K</b>, $75K or $70K is 'a little meaningless' long term.</li><li><span class="dot" style="background:#93711b;"></span>Tactically: open interest is <b>low</b> and alts have had a healthy flush; lower prices remain possible and $80K may be tested again.</li><li><span class="dot" style="background:#93711b;"></span>Bull/bear line: the 50-week moving average at <b>$77,195</b>, still falling as last October-November's high weeks roll off.</li><li><span class="dot" style="background:#93711b;"></span>Long-dormant (5+ year) holders have been distributing; Bimnet thinks a low-basis OG whale wanted to sell in 2026 and, if not yet, should wait for 2027-28.</li><li><span class="dot" style="background:#93711b;"></span>Rails headlines: a BNY-Citadel transaction, <b>Citi</b> partnering with Coinbase on stablecoins across 70 countries, a NYSE tokenized-stock settlement — 'the crypto rails are here to stay'.</li><li><span class="dot" style="background:#93711b;"></span>Alex Thorn: Bitcoin holds up better than alts because 'it just had its bear market'; the S&amp;P is still well ahead of it this year.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I feel more confident than ever that, you know, we're entering a new cycle where you will hit um, you know, fresh all-time highs uh, in the coming years.&#8221;<cite>— Bimnet, Galaxy Trading</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Bitcoin (BTC)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium · coming years</span></b><span>Near cycle bottom; fresh highs in coming years per Bimnet</span></div><div class="namechip"><b>Citi (C), Coinbase (COIN)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Stablecoin partnership across 70 countries</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Galaxy is a crypto trading firm and facilitated the 80,000 BTC OG sale it tracks; the four-year cycle is Bimnet's own framework, not a consensus.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="hot-cpi-equity-supply">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">Risk flag</span>
+    <span class="theme-status">SEPTEMBER CPI · RECORDED WEDNESDAY 3:15 PM ET</span><span class="ttag">macro-rates</span><span class="ttag">energy</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">Hot CPI, a refining squeeze and Big Tech issuing equity: caution warranted</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Bimnet sees inflation, rising debt costs and worsening equity supply converging with the S&amp;P only ~3% off its highs — time to think about hedging.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span>CPI hot in almost every category — cookies the rare decline. Core ~0.36 unrounded, <b>3.8-3.9%</b> annualized, above nearly all Bloomberg estimates despite dovish 'no October hike' Fed talk.</li><li><span class="dot" style="background:#a23f22;"></span>Diesel, heating oil and gasoline climbing; no global refining capacity, so even an Iran resolution leaves inventories to rebuild. The Russia diesel waiver is ~14 hours of supply; truckers had threatened to strike.</li><li><span class="dot" style="background:#a23f22;"></span>Rising nominal yields plus <b>widening credit spreads</b> with heavy sovereign, corporate and municipal issuance ahead.</li><li><span class="dot" style="background:#a23f22;"></span>Paul Tudor Jones (cited): tech went from buybacks to funding data centers with free cash flow to issuing equity — the 2027 flows picture is the worst since 2004.</li><li><span class="dot" style="background:#a23f22;"></span>Recording day: Nasdaq -<b>2.14%</b>, S&amp;P -1.5%, VIX and the dollar up, long bonds bid — a flight to quality. The KOSPI took a hit on memory headlines and Chinese competition.</li><li><span class="dot" style="background:#a23f22;"></span>Positive catalysts still ahead: Q3 tech earnings, the <b>midterm election</b>, a possible Iran resolution. Broadcom's CEO said capital may be the bottleneck, not energy demand.</li><li><span class="dot" style="background:#a23f22;"></span>Endgame per Bimnet: government bailouts and QE, '6 months or 18 months' out.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;I don't think this Fed wants to be hiking uh but they're not going to be credible if they don't.&#8221;<cite>— Bimnet, Galaxy Trading</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Broadcom (AVGO)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>CEO flagged capital as the AI bottleneck</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Recorded on a single down day; Bimnet himself lists catalysts that could take markets higher.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="odds-board">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Framework</span>
+    <span class="theme-status">JORDI VISSER · 30+ YEARS IN MARKETS</span><span class="ttag">finance</span><span class="ttag">mindset</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Markets as a horse-racing odds board: bet the gap between your odds and the screen's</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Liquidity is finite; when everyone piles into one horse it pays less — Jordi's edge is spotting where the room prices near-zero odds.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Son of a core driller who taught him horse handicapping, billiards, backgammon and chess; a book on compounding (<b>10%</b> a year for 50 years) pulled him into markets.</li><li><span class="dot" style="background:#3f6b2e;"></span><b>Morgan Stanley</b> from 1992 at a $30,000 salary; opened the São Paulo office in his late 20s; left in 2003 after managing hundreds, tired of bonus entitlement — his best man died on 9/11.</li><li><span class="dot" style="background:#3f6b2e;"></span>At George Weiss' firm from 2005: 2007-2009 produced <b>90%</b> of his lifetime earnings. The multistrat raised $3 billion, then lost two-thirds of assets as Swiss fund-of-funds were hit by leverage and Madoff.</li><li><span class="dot" style="background:#3f6b2e;"></span>May 2008 in China: closed a <b>$1B</b>+ book, took 80% of chips off the table and bought coal puts — long China commodities/EM, short US banks, after asking 'what if trade financing dries up?'</li><li><span class="dot" style="background:#3f6b2e;"></span>He reads conviction, not polls: at dinners he tallies the room's billions; when everyone with capital says 'never' on Bitcoin, the odds priced in are close to zero.</li><li><span class="dot" style="background:#3f6b2e;"></span>Bitcoin is 'the most asymmetric bet I've ever made' — a bet on fiat assets vs something with no fundamentals; Bayesian updating, no preconceived notions.</li><li><span class="dot" style="background:#3f6b2e;"></span>Traded against LTCM in Brazilian preferred vs ordinary shares in 1998 as the spread kept widening.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;I have an asymmetric bet in my head that is based not on the next two years, the next three years, but it's based on what I think will be happening to all fiat assets relative to something that has no fundamentals.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Bitcoin (BTC)<span class="stance" style="background:#3f6b2e;">OWNS · High · 5 years</span></b><span>Jordi's 'most asymmetric bet'; large personal position</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Jordi says he has 'a lot of money on that bet' — a large personal Bitcoin position behind his bull case.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="ghost-rails-agents">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">PAPERS: GHOST RAILS · SILENT IPO</span><span class="ttag">crypto</span><span class="ttag">finance</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Ghost rails: crypto was built for humans who don't care — agents will use it</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jordi's bull case is '100% AI agents': software users will chase every spread banks live on, making crypto a margin-compression trade.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>'Bitcoin's silent IPO' (last year): OG whales selling (e.g. Galaxy's 80,000 BTC sale in July) mirror internet holders in 2000-03 and Google after 2004; government acceptance plus the ETF was the <b>sell-the-news</b> event, with altcoins and the SBR hype signalling it.</li><li><span class="dot" style="background:#3f6b2e;"></span>Ghost rails, after China's ghost cities (his 2006-12 trips, Macau cash flows): rails get built before the users arrive — and the users are agents, since wealthy people don't want faster wires.</li><li><span class="dot" style="background:#3f6b2e;"></span>Short friction: JPMorgan's net interest income of $107B since 2022 'shouldn't exist'; bank deposits up under 10% vs <b>money market funds up 70%+</b>. Stripe and Canton offer yield; Clarity failed, so no stablecoin-yield ban.</li><li><span class="dot" style="background:#3f6b2e;"></span>Crypto means cryptography: agent swarms and soaring hacking (Meta's Muse, OpenAI solving math problems) make provable ownership — even code IP on-chain — essential. Crypto is <b>$3</b>-4T against $900T of hackable, friction-laden assets.</li><li><span class="dot" style="background:#3f6b2e;"></span>Banks launching stablecoins = retailers launching websites against Amazon: a sign they feel the threat. Tech went from 13% of the S&amp;P in 2007 to <b>56%</b>; VC and private equity have cost money since 2017.</li><li><span class="dot" style="background:#3f6b2e;"></span>24/7 markets: Korea aims for full tokenization by 2027, Japan too; Druckenmiller buying into Hyperliquid (oil traded there over the Iran weekend). Prime brokers will remark books on weekends — 'the destruction of hedge funds'.</li><li><span class="dot" style="background:#3f6b2e;"></span>Trust: crypto 'leads with a hoodie', but SVB's run and Bank of America's <b>$1B</b>+ fraud fine (stock -8%) show TradFi is no different.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;I don't meet wealthy people who go, I wish I could settle a wire in seconds. They don't care.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>JPMorgan (JPM)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium</span></b><span>$107B net interest income since 2022 — the spread crypto compresses</span></div><div class="namechip"><b>Hyperliquid (HYPE)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>24/7 venue; Druckenmiller bought in</span></div><div class="namechip"><b>Stripe<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Offers businesses yield on cash</span></div><div class="namechip"><b>Bank of America (BAC)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Fraud-related Treasury fine; stock -8%</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Galaxy, the host, runs a crypto trading and tokenization business that benefits from this thesis.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="ai-concentration">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contrarian</span>
+    <span class="theme-status">JORDI VISSER · NOT A BUBBLE</span><span class="ttag">ai-infra</span><span class="ttag">macro-rates</span><span class="ttag">semis</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">AI isn't a bubble — it's a concentration that rates are making brutal</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">No valuation, credit or supply bubble exists, but higher yields crush the zombie companies and the debt-dependent parts of the buildout.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Three bubble types: valuation (dot-com), credit/fraud (housing), oversupply. Nvidia at <b>15x earnings</b> vs Cisco's 100x; no fraudulent lending; compute demand still exceeds supply.</li><li><span class="dot" style="background:#93711b;"></span>Adoption gap: ~<b>5%</b> of office workers use agents vs ~50% in coding and engineering — demand for compute keeps growing as Muse and others spread.</li><li><span class="dot" style="background:#93711b;"></span>Losers outnumber winners: homebuilders 'get screwed' as AI buildout crowds out borrowers; ZIRP-era zombies that issued 30-50 year debt suffer as rates rise.</li><li><span class="dot" style="background:#93711b;"></span>First stress: the <b>Neoclouds</b>, since data centers are a financing, memory and chip-cost business; Google, Meta, Anthropic and OpenAI 'don't care'. Broadcom and Intel said capital is now the bottleneck.</li><li><span class="dot" style="background:#93711b;"></span>AI debt is ~5-<b>6%</b> of the buildout; hyperscaler debt is tiny next to equity, and there's an asset side (compute, long-term contracts).</li><li><span class="dot" style="background:#93711b;"></span>A <b>20%</b> S&amp;P correction is possible — there were ones in 2018, COVID, 2022 and 2025's tariffs, plus a 10% dip in February — but that isn't a bubble.</li><li><span class="dot" style="background:#93711b;"></span>Memory stocks 'are going to be very important'; Korea is the overnight AI trade — US AI names gap on KOSPI moves and then barely move.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;The impact that rates are having is not creating a bubble. It's creating a concentration where there are so many losers and so few winners.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>~15x earnings — no valuation bubble</span></div><div class="namechip"><b>Cisco (CSCO)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Dot-com comparison at 100x</span></div><div class="namechip"><b>Meta (META), Google<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Balance sheets strong; rates don't matter to them</span></div><div class="namechip"><b>Intel (INTC)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Said capital, not chips, is the bottleneck</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Host Alex Thorn notes Galaxy is itself in the data center business — the financing side Jordi flags as the weak link.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="belief-moat-endgame">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">JORDI VISSER · 10-YEAR VIEW</span><span class="ttag">crypto</span><span class="ttag">macro-rates</span><span class="ttag">policy</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">When AI kills every moat, Bitcoin's belief is the one left — and wealth becomes money</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jordi rejects 'debasement hedge': Bitcoin wins because competition compresses every company's multiple while belief, like gold's, endures.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Schumpeter (creative destruction ending in socialism), Milton Friedman and Ray Kurzweil's singularity: AI speeds disruption until no moat survives — hence UBI talk and presidents mailing checks.</li><li><span class="dot" style="background:#3f6b2e;"></span>Zombie incumbents: <b>McDonald's</b> asking franchisees to spend $1M remodelling while out-innovated and hit by Ozempic-style drugs.</li><li><span class="dot" style="background:#3f6b2e;"></span>Three lasting beliefs: gold (shells and tulips failed), religion, Santa Claus. First fiat — Marco Polo saw China's mulberry-bark money around 1200. Hundreds of millions chose Bitcoin as the store of value.</li><li><span class="dot" style="background:#3f6b2e;"></span>S&amp;P up ~<b>13%</b> YTD while earnings grew ~33%, Anthropic ARR surprised, capex revised up — multiple compression means nobody trusts moats beyond 3 years. Bitcoin 'doesn't have to deal with that'.</li><li><span class="dot" style="background:#3f6b2e;"></span>Not a liquidity trade: Bitcoin has tracked, not beaten, the Mag 7 for eight years. Next phase: Mag 7 multiples compress while Bitcoin outperforms — equities are only <b>$150T</b> of the $900T in assets.</li><li><span class="dot" style="background:#3f6b2e;"></span>'When wealth becomes money': tokenized property (a swap on your house's economics, Miami vs Maine) turns illiquid wealth into M2/M3, reducing the need to print — Lyn Alden's 'nothing stops this train' is the opposing view.</li><li><span class="dot" style="background:#3f6b2e;"></span>Second fix: tax corporations, since humanoids will be owned by the powerful, first adopters are quant funds and the Mag 7 (UnitedHealth is slow), and individuals move states.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Once it goes greed will kick in.&#8221;<cite>— Jordi Visser</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>McDonald's (MCD)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium</span></b><span>Out-innovated, hit by GLP-1s; asks franchisees for $1M</span></div><div class="namechip"><b>Anthropic<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>ARR shocked to the upside</span></div><div class="namechip"><b>UnitedHealth (UNH)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Slow-moving AI adopter</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">A 10-year structural view; Jordi still calls Bitcoin 'the best digital store of value' while rejecting the digital-gold correlation story.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📏</div><div class="tline"><span class="cat">Crypto:</span> <span class="txt">Use the falling 50-week average (~<b>$77K</b>) as the Bitcoin bull/bear line instead of chasing the exact low.</span></div></div><div class="irow"><div class="ic">🛡</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Consider hedging equities while the S&amp;P sits ~<b>3%</b> off highs into hot CPI and heavy debt issuance.</span></div></div><div class="irow"><div class="ic">🏇</div><div class="tline"><span class="cat">Investing:</span> <span class="txt">Gauge consensus by the questions sharp money asks, not their bullish/bearish answers.</span></div></div><div class="irow"><div class="ic">💰</div><div class="tline"><span class="cat">Treasury:</span> <span class="txt">Move idle business cash out of zero-yield deposits — the spread is exactly what agents will arbitrage.</span></div></div><div class="irow"><div class="ic">⚖</div><div class="tline"><span class="cat">AI trade:</span> <span class="txt">Separate AI winners with fortress balance sheets from rate-dependent builders like Neoclouds and ZIRP zombies.</span></div></div><div class="irow"><div class="ic">🌏</div><div class="tline"><span class="cat">Macro:</span> <span class="txt">Watch the KOSPI and memory names overnight — they set the US AI open.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;Crypto is actually about margin compression.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Nvidia is trading at 15 times earnings. So we don't have a valuation bubble.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;All old industrial businesses that are still left in the S&amp;P 500 are dead zombie companies for the most part.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;It's a bad marketing thing to lead with a hoodie.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Hundreds of millions of people around the globe have chosen Bitcoin as the accepted store of value.&#8221; <cite>— Jordi Visser</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;You know my thesis for this year has been you know four year cycle is going to play out.&#8221; <cite>— Bimnet, Galaxy Trading</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Bimnet (Galaxy Trading):</b> Bitcoin is near its four-year-cycle bottom and will make fresh all-time highs in the coming years. <span class="cmeta">BTC all-time high · new high · coming years</span> <span class="tag">Bitcoin (BTC)</span></div><div class="ritem"><b>Bimnet (Galaxy Trading):</b> The 50-week moving average is the Bitcoin bull/bear line. <span class="cmeta">BTC 50-week MA · ~$77,195</span> <span class="tag">Bitcoin (BTC)</span></div><div class="ritem"><b>Bimnet (Galaxy Trading):</b> Government bailouts and QE arrive within six to 18 months. <span class="cmeta">QE restart · bailouts and QE · 6-18 months</span></div><div class="ritem"><b>Bimnet (Galaxy Trading):</b> Q3 tech earnings, the midterm election and a possible Iran resolution are upcoming positive catalysts. <span class="cmeta">catalysts · 2026-11</span></div><div class="ritem"><b>Paul Tudor Jones (cited by Bimnet):</b> The equity flows picture for 2027 is as bad as it has been since 2004 as tech issues equity for data centers. <span class="cmeta">net equity supply · worst since 2004 · 2027</span></div><div class="ritem"><b>Jordi Visser:</b> Korea moves to full tokenization of its market, making 24/7 trading of AI-linked stocks the global reference. <span class="cmeta">Korea tokenization · full · 2027</span> <span class="tag">South Korea</span></div><div class="ritem"><b>Jordi Visser:</b> Bitcoin outperforms the Mag 7 in the next phase as their multiples compress. <span class="cmeta">BTC vs Mag 7 · outperform</span> <i>if if AI removes corporate moats</i> <span class="tag">Bitcoin (BTC)</span></div><div class="ritem"><b>Jordi Visser:</b> Governments shift to taxing corporations as humanoids replace jobs. <span class="cmeta">corporate taxation · higher · 10 years</span></div><div class="ritem"><b>Jordi Visser:</b> The economy with humanoids will be unrecognizable, with speed and cryptographic safety the key factors. <span class="cmeta">humanoid economy · 5-10 years</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Citi (C)</b> <span class="rel">partners with</span> <b>Coinbase (COIN)</b> &mdash; stablecoins in ~70 countries</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: Paul Tudor Jones, Lyn Alden, Charlie Munger, Jeff Bezos ('your margin is my opportunity'), Schumpeter, Milton Friedman, Ray Kurzweil, Singularity University, <i>The Big Short</i>, What Bitcoin Did with Danny Knowles, and Jordi's Visser Labs papers. <span class="tag">Sources</span></div></div></div><div class="irow"><div class="ic">🏫</div><div><div class="title">Jordi's 2013 pivot: China's ghost cities and Draghi's 2012 'line in the sand' ended the industrial era for him; he moved his focus to Silicon Valley and exponential tech, while Amazon kept rising with 'no valuation' — like Bitcoin. <span class="tag">Background</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Four-year cycle</b> &mdash; Bitcoin's historical pattern of a peak roughly every four years followed by a ~12-month bear market.</div><div><b>OG distribution</b> &mdash; Selling by long-dormant early Bitcoin holders.</div><div><b>Net interest income</b> &mdash; What a bank earns on loans and securities minus what it pays depositors.</div><div><b>Short friction</b> &mdash; Jordi's thesis of betting against intermediaries' spreads, which agents and crypto rails compress.</div><div><b>Neoclouds</b> &mdash; Newer GPU-cloud providers that finance data centers with debt, unlike cash-rich hyperscalers.</div><div><b>ZIRP</b> &mdash; Zero interest-rate policy.</div><div><b>M2 / M3</b> &mdash; Broad money supply measures; M3 adds less liquid holdings.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
