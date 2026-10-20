@@ -1,0 +1,136 @@
+META = {
+    "title": "A grandmaster’s guide to the AI world | Garry Kasparov",
+    "channel": "Endra",
+    "speakers": "Garry Kasparov (chess grandmaster, Kasparov Chess Foundation), Endra host",
+    "date": "2026-10-16",
+    "video_url": "https://www.youtube.com/watch?v=o_k6ABDQQDY",
+    "thread_line": "4 threads · Deep Blue and doomsaying · the free world's AI edge and missing strategy · progress means pain · human creativity, LLM limits and exploration",
+    "category": "life",
+    "region": "",
+}
+
+SNAPSHOT = [
+    "Kasparov, 30 years after losing to **Deep Blue**, says it was 'as intelligent as your alarm clock' and calls the match the mythologized start of AI.",
+    "He argues **doomsaying is profitable**: behind most AI doom warnings, even from top experts and managers, he sees a profit or control interest.",
+    "AGI and superintelligence are, to him, undefined terms that 'paralyze our minds'; AI is dangerous in bad hands like every breakthrough, but can't be stopped.",
+    "The free world still leads in AI research, production and chips (Taiwan), because innovation needs room for failure, but **the West has no society-level strategy** while China and Putin do.",
+    "Progress means pain: he cites the Luddites and Lord Byron, accepts white-collar job losses, and says to judge AI from humanity's viewpoint.",
+    "Human creativity includes the risk of failure, which machines lack; he sympathizes with LeCun's view that LLMs will hit a wall without understanding the physical world.",
+    "He closes on exploration (ocean, space) as the engine of progress, with side effects larger than the goal.",
+]
+
+THEMES = [
+    {
+        "id": "deep-blue-doomsaying",
+        "tags": ["mindset", "policy"],
+        "color": "amber",
+        "badge": "Counterintuitive take",
+        "status": "DEEP BLUE, 30 YEARS ON",
+        "title": "Deep Blue was no intelligence, and doom is a business model",
+        "lead": "Kasparov treats both the 'brain's last stand' story and the end-of-the-world story as mythology with a payoff for the teller.",
+        "bullets": [
+            "He won the first match in Philadelphia (1996) and lost the 1997 rematch; IBM turned down his demand for a rubber match, which he first saw as a curse and now calls a blessing.",
+            "Deep Blue was about IBM's parallel processors, with chess as a model; its play quality is far below a chess engine on a phone today.",
+            "Technology didn't kill chess: hundreds of millions now play, and anyone can follow top games with an engine saying good move or blunder, though the mystery is gone.",
+            "Behind any doomsaying, even from the best experts and top managers, he sees a profit interest or an attempt to keep the situation under control.",
+            "Trying to stop AI is like a genie left out of the bottle ages ago; he calls attempts to play on natural fear of the unknown unfair.",
+            "AGI and superintelligence: he doesn't know what AGI is, and thinks the terms exist to paralyze minds.",
+        ],
+        "quote": {"text": "Deep Blue and I keep saying that it was not intelligent, it was as intelligent as your alarm clock.", "cite": "— Garry Kasparov"},
+        "watch": "His public role since the match is the humans-working-with-computers view, which he says the loss gave him credibility to argue.",
+        "names": None,
+    },
+    {
+        "id": "free-world-strategy",
+        "tags": ["geopolitics", "policy", "semis"],
+        "color": "amber",
+        "badge": "Structural critique",
+        "status": "STRATEGY GAP",
+        "title": "The free world leads AI but has no strategy; regulation hands rivals an edge",
+        "lead": "He says dangerous and uncontrollable is a fact to respond to, not a reason to slow down.",
+        "bullets": [
+            "AI misuse by bad actors is 'a big risk' we should discuss, and unlike nukes (reactors, billions, scientists) it only needs data to be transferred.",
+            "China is good at copying and offers free tools to the global south; controlling AI in Europe or the US gives enemies an unfair advantage.",
+            "His analogy: if it's raining you can complain about climate change or buy an umbrella.",
+            "Edge still stands: America has the most potent research and production, and chips come from Taiwan, a small democratic Chinese nation, not mainland China.",
+            "Why free societies win: getting one Google may need 1,000 failures, and centralized systems narrow the field instead of tolerating mistakes.",
+            "He suggests a nuclear-deterrence-style approach where aggressors know the damage they'd face; the gap is strategy at society level, not just big-corporation level.",
+        ],
+        "quote": {"text": "while China has a strategy, while Putin has a strategy, we don't.", "cite": "— Garry Kasparov"},
+        "watch": "He is a prominent Putin opponent and says so; his framing is explicitly ideological (free vs unfree world).",
+        "names": None,
+    },
+    {
+        "id": "progress-means-pain",
+        "tags": ["career", "policy", "mindset"],
+        "color": "amber",
+        "badge": "Principle",
+        "status": "AUTOMATION AND JOBS",
+        "title": "Progress means pain: automation, Luddites and the humanity-level view",
+        "lead": "Every technological revolution leaves people behind, and the job is to bring them in, not pretend there is a win-win.",
+        "bullets": [
+            "The Luddite debate in early 19th-century Britain: Lord Byron's maiden speech in the House of Lords in March 1812 was the most powerful speech against the machines.",
+            "He calls 'we can move forward without the pain' a leftist fantasy, yet says he doesn't dismiss lost jobs.",
+            "Society moved from agriculture to cities to offshored manufacturing; now white-collar jobs in places like America or Sweden are threatened.",
+            "Judge from humanity's view: cheap AI diagnostics could help millions in Africa and Asia who would otherwise be denied care.",
+            "He doesn't name who should lead the AI debate, saying it is happening elsewhere and should be centralized.",
+        ],
+        "quote": {"text": "Progress means pain.", "cite": "— Garry Kasparov"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "human-qualities-exploration",
+        "tags": ["mindset", "dev-workflow"],
+        "color": "gray",
+        "badge": "Framework",
+        "status": "WHAT MACHINES LACK",
+        "title": "Creativity needs failure; LLMs may hit a wall; exploration is the answer",
+        "lead": "Work with machines by finding the exclusively human qualities, and keep exploring beyond what we know.",
+        "bullets": [
+            "Creativity means accepting you may fail, and failure doesn't exist for machines whose goal is a superior outcome to the previous one.",
+            "He sympathizes with LeCun's new company: AI can't progress without understanding the physical world, and LLMs will eventually hit a wall.",
+            "Related old debate: Descartes and whether the intellect is the brain alone or brain plus body movement.",
+            "In 5 years, the test is whether connecting AI models to physical reality works; that is the right step even if it isn't called AGI.",
+            "Exploration is society's most important function, and it is risky: Columbus had no map, and we know only **4%** of the deep ocean.",
+            "The side effects are the greatest effect, as with crossing the Atlantic for spices; he expects asteroids to yield metals or elements that solve earthly problems.",
+            "He spends 10-15% of his time on chess (Kasparov Chess Foundation, kids) and most of his events now on humanity and computers.",
+        ],
+        "quote": None,
+        "watch": "Asteroid-resource payoff is his belief from reading history, not a sourced forecast.",
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F9E0", "tag": "AI", "title": "Ask who profits before accepting an AI doom or hype claim, including from top experts"},
+    {"icon": "\U0001F4DD", "tag": "Careers", "title": "Look for exclusively human strengths such as creativity and risk-taking, then pair them with machines"},
+    {"icon": "\U0001F30D", "tag": "Geopolitics", "title": "Weigh the cost of regulating AI against giving rivals an advantage before backing a restriction"},
+    {"icon": "\U0001F52C", "tag": "Research", "title": "Watch whether AI models connected to physical reality outperform text-only LLMs over the next five years"},
+    {"icon": "\U0001F4A1", "tag": "Mindset", "title": "Judge disruptive technology from the humanity-wide view as well as the local jobs view"},
+]
+
+HOT_TAKES = [
+    {"take": "it was as intelligent as your alarm clock.", "cite": "— Garry Kasparov", "why": "Dismisses Deep Blue as intelligence"},
+    {"take": "doomsaying is very profitable", "cite": "— Garry Kasparov", "why": "Attributes AI doom to profit motive"},
+    {"take": "you can complain about climate change or buy an umbrella.", "cite": "— Garry Kasparov", "why": "Reject controlling AI"},
+    {"take": "while China has a strategy, while Putin has a strategy, we don't.", "cite": "— Garry Kasparov", "why": "Claim the West lacks strategy"},
+    {"take": "Progress means pain.", "cite": "— Garry Kasparov", "why": "Rejects win-win framing"},
+    {"take": "Failure doesn't exist in the world of machines", "cite": "— Garry Kasparov", "why": "Claims machines can't be creative in the human sense"},
+]
+
+CLAIMS = [
+    {"who": "Garry Kasparov", "claim": "Space and asteroid exploration will almost certainly yield materials or elements that solve problems unsolvable on Earth today.", "metric": "side-effect discoveries from space exploration", "target": "almost guaranteed", "by": None, "condition": None, "entity": None},
+    {"who": "Garry Kasparov", "claim": "Whether connecting AI models to physical reality works will be clear in about five years.", "metric": "AI grounded in the physical world", "target": None, "by": "5 years", "condition": None, "entity": None},
+]
+
+RELATIONS = []
+
+OTHER_NEWS = [
+    {"icon": "\U0001F4DA", "title": "Sources referenced: IBM and the Carnegie Mellon team behind Deep Blue, Yann LeCun's new company, Lord Byron's 1812 speech, Descartes. Recorded in the Nevada desert.", "tag": "Sources"},
+]
+
+GLOSSARY = [
+    {"term": "Deep Blue", "def": "IBM's 1997 chess machine that beat Kasparov, built to showcase parallel processing."},
+    {"term": "Luddites", "def": "Early 19th-century British opponents of mechanization who feared losing the traditional countryside way of life."},
+]
