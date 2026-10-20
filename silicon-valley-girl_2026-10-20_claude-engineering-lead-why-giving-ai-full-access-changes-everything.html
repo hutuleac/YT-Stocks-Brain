@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: Claude Engineering Lead: Why Giving AI Full Access Changes Everything</title>
+<meta name="description" content="Silicon Valley Girl · 6 threads · verification by adversarial review · raw access over slices · process over output · getting started and ambition · empathy as the founder moat and junior careers · model respect and the pre-iPhone era">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="Claude Engineering Lead: Why Giving AI Full Access Changes Everything">
+<meta property="og:description" content="Silicon Valley Girl · 6 threads · verification by adversarial review · raw access over slices · process over output · getting started and ambition · empathy as the founder moat and junior careers · model respect and the pre-iPhone era">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Claude Engineering Lead: Why Giving AI Full Access Changes Everything</h1>
+    <div class="byline">
+      Channel: <b>Silicon Valley Girl</b> &middot; Speaker: <b>Felix Rieseberg (engineering lead for Claude at Anthropic), host Silicon Valley Girl</b> &middot; <b>2026-10-20</b>
+      <div class="stats-line">6 threads · verification by adversarial review · raw access over slices · process over output · getting started and ambition · empathy as the founder moat and junior careers · model respect and the pre-iPhone era &middot; <a href="https://www.youtube.com/watch?v=D-SVFneJ_Nk" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Felix Rieseberg leads engineering for Claude at Anthropic; his team built Claude Cowork in about a week and a half, and he says he no longer writes code.</li><li><b>Adversarial review</b> is his practical answer to confident AI mistakes: spin off ~10 Claude threads to attack the output, then a judge Claude validates the criticism.</li><li>He rarely trusts the <i>current session to judge itself</i>; he wants outside evidence, or at least a second session.</li><li>Give agents <b>full access plus well-documented tools</b>, not data slices or role personas; he calls the agents trend over-rotated and says skills go stale fast.</li><li>For knowledge work, ask Claude to follow the steps and tools a top professional uses, rather than asking for a good output or role-playing.</li><li>Entrepreneurial moat is unchanged: <b>empathy</b> for the user. Execution is now cheap, so the scarce skill is understanding a business's real needs.</li><li>Hiring and careers: portfolio of real things over degrees; junior engineers are more AI-native; memorizing APIs matters less than combining systems.</li><li>Anthropic's AI products today are 'pre-iPhone'; his advice has a shelf life of about 10 weeks.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="verification">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">HOW TO TRUST AI OUTPUT</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Adversarial reviews and a judge: how Felix catches confident mistakes</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Fan out attackers, add a judge, and never let the session that did the work grade itself.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Adversarial review: given one task, spin off ~10 Claudes whose only job is to attack the result and prove it wrong; same idea as red teaming or short selling.</li><li><span class="dot" style="background:#3f6b2e;"></span>Finding flaws is easier than creating, so a <i>step down in model intelligence</i> can still review well (his phone analogy: judging a new phone is easier than designing one).</li><li><span class="dot" style="background:#3f6b2e;"></span>He tells Claude Projects to 'fire off five threads' to prove a blog post wrong, then uses a <i>judge</i> Claude to sort valid from unactionable criticism and routes valid feedback back to the original Claude, which can also decline it.</li><li><span class="dot" style="background:#3f6b2e;"></span>Feedback that is reasonable but misses the point or isn't actionable is, for him, a sign the output is already good.</li><li><span class="dot" style="background:#3f6b2e;"></span>Editorial fact-checking is the one process he trusts <b>100%</b> with a single agent thread: find primary sources for every number and verify they are good sources.</li><li><span class="dot" style="background:#3f6b2e;"></span>Two buckets: if you can't tell what good looks like, throw more tokens at it; if you can judge the result as a client would (he remade his website with 3D assets without knowing Blender), that may be enough.</li><li><span class="dot" style="background:#3f6b2e;"></span>Before-and-after test of trust: the question is what he doesn't trust <i>one single session</i> with, and that list is larger than what he wouldn't trust Claude with.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;I rarely want the current session to judge itself. That I think is still really iffy.&#8221;<cite>— Felix Rieseberg</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="full-access">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Structural critique</span>
+    <span class="theme-status">AGENT DESIGN</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Raw data and tools beat data slices, personas and stale skills</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Treat Claude as a generalist with a full view of the business, and document the tools instead of pre-slicing data.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>'Model experience' test: imagine being the model; you'd want raw data, a computer and the freedom to install software and decide yourself.</li><li><span class="dot" style="background:#93711b;"></span>The conveyor-belt story: a year and a half ago he told Claude 'I found another crash, please fix it', then realized he was a conveyor belt; now Claude gets all the crash data and decides what to fix.</li><li><span class="dot" style="background:#93711b;"></span>Upfront setup cost is higher but opens doors; tools should be documented so agents don't ingest the whole dataset.</li><li><span class="dot" style="background:#93711b;"></span>Tool calling has improved (no tool-call loops, knows when to use a tool), so he no longer prioritizes per-project data scoping.</li><li><span class="dot" style="background:#93711b;"></span>Skills: official Anthropic guidance and his own is to be careful, since the halflife of a good skill is short and removing one can improve output.</li><li><span class="dot" style="background:#93711b;"></span>No role personas ('you are an excellent engineer' was a 2024 habit); his projects map to work items, not roles.</li><li><span class="dot" style="background:#93711b;"></span>DeepMind trained a custom math model and harness and won silver at the math Olympiad; four or five months later generalist models won gold, his evidence that generalists win.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I think we're kind of over rotating on this agents thing.&#8221;<cite>— Felix Rieseberg</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">He works at Anthropic and recommends Anthropic's own products (Claude desktop app, Projects, Claude Tag); the advice is firsthand but not independent.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="process-over-output">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Framework</span>
+    <span class="theme-status">DEFINING GOOD</span><span class="ttag">dev-workflow</span><span class="ttag">mindset</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Ask Claude to follow a professional's process, not to make it 'good'</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">For taste-heavy knowledge work, automate the best practitioners' steps and tools, and close the feedback loop with your own past feedback.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Weather example: a correct guessed temperature should fail; being half a degree off but via the right location and reputable sources should score better. Judge the route, not just the answer.</li><li><span class="dot" style="background:#3f6b2e;"></span>Writer friend Adam Davidson uses prompts like 'magnify my argument by 100' and 'what is the strongest counterargument'; the secret sauce is asking how the best in the field work, then automating those steps.</li><li><span class="dot" style="background:#3f6b2e;"></span>Artists are proud of their process, and Claude responds well to 'take the same steps a professional would'; the public jump in 3D and video came from telling Claude to <i>use Blender</i>.</li><li><span class="dot" style="background:#3f6b2e;"></span>Models still tend to role-play when told 'act like a very good accountant'; he asks for the techniques and tools a top person would use, not the vocabulary.</li><li><span class="dot" style="background:#3f6b2e;"></span>Feedback loop recipe: (1) gather all feedback you've given, (2) have Claude condense it into rules, (3) surface principles you hold but haven't articulated; use as input to reviews.</li><li><span class="dot" style="background:#3f6b2e;"></span>Run Claude side by side with you for a few rounds to compare its feedback with yours before handing over the reins.</li><li><span class="dot" style="background:#3f6b2e;"></span>He points to Claude Tag (Claude inside Slack) as Anthropic's core multiplayer experience for letting a team query a shared taste agent.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="ambition-getting-started">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">STARTING POINT AND MINDSET</span><span class="ttag">dev-workflow</span><span class="ttag">mindset</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Start with the desktop app, then keep handing Claude bigger tasks</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Give away the keyboard first; add connectors only once a workflow proves out, and keep pushing until you hit the ceiling.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Step one: download the desktop app, log Claude into a tool via its built-in browser, skip connectors and data downloads; add a connector only after a workflow works.</li><li><span class="dot" style="background:#3f6b2e;"></span>His day: mostly prototyping; build many variations, critique, pick. Human attention is the limit: 'I can easily build a thousand' but can show one a day.</li><li><span class="dot" style="background:#3f6b2e;"></span>Good ideas: cost calculus changed, since you can build the prototype instead of making implicit maintenance and opportunity-cost bets; a good product has fewer buttons and clicks quickly for a few new users.</li><li><span class="dot" style="background:#3f6b2e;"></span>Automation (saves money or time) is where most current economic value is; augmentation (doing what you couldn't by hand) is where he finds the most interesting use.</li><li><span class="dot" style="background:#3f6b2e;"></span>Capability overhang: using a top model for 'what's the capital of France' taps little; give the model whatever outcome you hope for until you find the ceiling, then you are at the frontier.</li><li><span class="dot" style="background:#3f6b2e;"></span>A product manager named Pavo pointed Claude at a large amount of NASA data and asked it to find a new planet; apparently it did, and NASA is working on confirming it.</li><li><span class="dot" style="background:#3f6b2e;"></span>Adjacent: Dario Amodei's 'data center of geniuses' framing; Felix's job is helping users make use of it.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;If all we're doing is like summarize this email for me, you're not really benefiting from the new intelligence.&#8221;<cite>— Felix Rieseberg</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The NASA planet discovery is relayed secondhand and unconfirmed; Felix says he is on shaky ground as no astrophysicist.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="empathy-and-careers">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Counterintuitive take</span>
+    <span class="theme-status">FOUNDERS, SOFTWARE AND HIRING</span><span class="ttag">career</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Execution is cheap, so empathy and shipped work are the scarce skills</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The founder moat hasn't changed: empathy for the person paying; juniors win by building real things.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Single-person or two-person teams can now build billion-dollar companies, but the secret to a good product is still empathy for the user and the use case.</li><li><span class="dot" style="background:#93711b;"></span>'Garbage software' people use only because there's no alternative will go away; he thinks good products win because they solve a need better than users imagined.</li><li><span class="dot" style="background:#93711b;"></span>Legacy-machine opportunity: airports and hotel check-in desks still run clunky, non-graphical software; he jokes about building software for dentist offices; the hard part is the relationship, not the code.</li><li><span class="dot" style="background:#93711b;"></span>Most current AI is low-intelligence cheap models 'at the level of I've read the FAQ page'; top-line intelligence barely applied; MBAs could build software startups.</li><li><span class="dot" style="background:#93711b;"></span>Anthropic isn't hiring junior engineers now, which he says is about the company, not AI capability; juniors are more AI-native and hungry for impact.</li><li><span class="dot" style="background:#93711b;"></span>Advice for new engineers: build a real portfolio, not mocks; memorizing API surfaces is worth less; combining systems is worth more.</li><li><span class="dot" style="background:#93711b;"></span>Hiring: he doesn't care about degrees or school; he picks proven builders over credentialed non-builders.</li><li><span class="dot" style="background:#93711b;"></span>For his 9-month-old daughter: learn early how businesses run and people collaborate, citing University of Waterloo's co-op model vs Germany's math-heavy informatics.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I will always pick someone who's proven themselves to build something amazing over someone who hasn't built something amazing but has an amazing degree.&#8221;<cite>— Felix Rieseberg</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="respect-and-future">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Personal story</span>
+    <span class="theme-status">ETHICS AND OUTLOOK</span><span class="ttag">mindset</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">Saying 'please' to models and a pre-iPhone view of AI products</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">He treats the model with respect for his own sake, and thinks today's AI products are the clunky pre-smartphone phase.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>He says please and thank you to Claude despite the token cost; 'better for my soul'.</li><li><span class="dot" style="background:#65695f;"></span>Anthropic's terms are about intent, e.g. using Claude to explore torture, not about being mean or frustrated; he tells Claude 'you did a bad job' often.</li><li><span class="dot" style="background:#65695f;"></span>On moral consideration for models: any take that fits in a tweet isn't sophisticated enough.</li><li><span class="dot" style="background:#65695f;"></span>He was surprised by the pace of math progress: he wouldn't have predicted unsolvable-looking math problems falling by mid-2026.</li><li><span class="dot" style="background:#65695f;"></span>All AI products used today will look completely different; he compares this phase to funny phones before the smartphone.</li><li><span class="dot" style="background:#65695f;"></span>All of his advice may get a new revision in ~10 weeks, so stay an 'always on' agent about new models.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#65695f;"><div class="lbl">Pull quote</div>&#8220;I think we're still in the pre iPhone era, which makes it very exciting for me to work in.&#8221;<cite>— Felix Rieseberg</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Felix says predicting is an occupational hazard and that instinct about the future is 'really tricky'.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🛡</div><div class="tline"><span class="cat">AI workflow:</span> <span class="txt">Add a judge: have separate Claude threads attack an important output, then a third validate the criticism</span></div></div><div class="irow"><div class="ic">🔍</div><div class="tline"><span class="cat">AI workflow:</span> <span class="txt">Get outside evidence (primary sources, real metrics) instead of asking the same session to grade its own work</span></div></div><div class="irow"><div class="ic">🧰</div><div class="tline"><span class="cat">Agents:</span> <span class="txt">Give Claude the full data via documented tools rather than hand-sliced data and persona prompts</span></div></div><div class="irow"><div class="ic">🎯</div><div class="tline"><span class="cat">Prompting:</span> <span class="txt">Ask for the steps and tools a top professional uses; skip 'act like an expert' role-play</span></div></div><div class="irow"><div class="ic">🧪</div><div class="tline"><span class="cat">Trust:</span> <span class="txt">Run Claude's feedback side by side with yours for a few rounds before delegating review</span></div></div><div class="irow"><div class="ic">🛠</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Build and ship real projects as your portfolio and practice talking to customers</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;I think we're kind of over rotating on this agents thing.&#8221; <cite>— Felix Rieseberg</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I rarely want the current session to judge itself.&#8221; <cite>— Felix Rieseberg</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;the halflife of a good skill is very short and sometimes what we see is if you completely remove the skill you actually get better output&#8221; <cite>— Felix Rieseberg</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think software that is hopefully going to go away is bad software.&#8221; <cite>— Felix Rieseberg</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I will always pick someone who's proven themselves to build something amazing over someone who hasn't built something amazing but has an amazing degree.&#8221; <cite>— Felix Rieseberg</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think we're still in the pre iPhone era&#8221; <cite>— Felix Rieseberg</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Felix Rieseberg:</b> Claude may have found a previously unknown planet in NASA data, and NASA is working to confirm it. <span class="cmeta">NASA confirmation of a Claude-found planet</span></div><div class="ritem"><b>Felix Rieseberg:</b> Single-person or two-person teams can build billion-dollar companies. <span class="cmeta">team size for billion-dollar companies · 1-2 people</span></div><div class="ritem"><b>Felix Rieseberg:</b> His workflow advice from this conversation will need a new revision after the next model generation. <span class="cmeta">shelf life of the advice · ~10 weeks</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><p class="empty">No company-to-company relationships stated in this video.</p></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced this episode: Adam Davidson (writer friend, prompting approach), Google DeepMind (math Olympiad silver), Dario Amodei ('data center of geniuses'), an unnamed Nobel laureate economist (application-layer gap), 500 Startups, University of Waterloo. <span class="tag">Sources</span></div></div></div><div class="irow"><div class="ic">💬</div><div><div class="title">Host's own stack: a Claude agent does first-pass guest research; she runs 35 people with a Claude project per team member and launched three social channels this year. <span class="tag">Workflow</span></div></div></div><div class="irow"><div class="ic">✂️</div><div><div class="title">Cleaned transcript ends mid-sentence in the outro (host pointing to her next interview, with Ally Miller on Claude workflows). <span class="tag">Note</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Adversarial review</b> &mdash; Spinning up separate Claude threads whose only task is to attack an output, like red teaming or short selling.</div><div><b>Judge</b> &mdash; A further Claude that validates which criticisms from the attacking threads are valid and actionable.</div><div><b>Model experience</b> &mdash; Designing a workflow by imagining what you would want if you were the model doing the task.</div><div><b>Capability overhang</b> &mdash; The gap between what top models can do and what users actually ask of them.</div><div><b>Claude Tag</b> &mdash; Claude inside Slack, described as Anthropic's core multiplayer experience.</div><div><b>Claude Projects</b> &mdash; Anthropic product for working in multiple Claude threads with more ease.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>

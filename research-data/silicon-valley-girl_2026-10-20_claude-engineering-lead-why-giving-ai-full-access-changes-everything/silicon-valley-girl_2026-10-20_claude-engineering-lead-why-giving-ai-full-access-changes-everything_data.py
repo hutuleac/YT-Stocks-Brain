@@ -1,0 +1,191 @@
+META = {
+    "title": "Claude Engineering Lead: Why Giving AI Full Access Changes Everything",
+    "channel": "Silicon Valley Girl",
+    "speakers": "Felix Rieseberg (engineering lead for Claude at Anthropic), host Silicon Valley Girl",
+    "date": "2026-10-20",
+    "video_url": "https://www.youtube.com/watch?v=D-SVFneJ_Nk",
+    "thread_line": "6 threads · verification by adversarial review · raw access over slices · process over output · getting started and ambition · empathy as the founder moat and junior careers · model respect and the pre-iPhone era",
+    "category": "dev",
+    "region": "",
+}
+
+SNAPSHOT = [
+    "Felix Rieseberg leads engineering for Claude at Anthropic; his team built Claude Cowork in about a week and a half, and he says he no longer writes code.",
+    "**Adversarial review** is his practical answer to confident AI mistakes: spin off ~10 Claude threads to attack the output, then a judge Claude validates the criticism.",
+    "He rarely trusts the *current session to judge itself*; he wants outside evidence, or at least a second session.",
+    "Give agents **full access plus well-documented tools**, not data slices or role personas; he calls the agents trend over-rotated and says skills go stale fast.",
+    "For knowledge work, ask Claude to follow the steps and tools a top professional uses, rather than asking for a good output or role-playing.",
+    "Entrepreneurial moat is unchanged: **empathy** for the user. Execution is now cheap, so the scarce skill is understanding a business's real needs.",
+    "Hiring and careers: portfolio of real things over degrees; junior engineers are more AI-native; memorizing APIs matters less than combining systems.",
+    "Anthropic's AI products today are 'pre-iPhone'; his advice has a shelf life of about 10 weeks.",
+]
+
+THEMES = [
+    {
+        "id": "verification",
+        "tags": ["dev-workflow"],
+        "color": "green",
+        "badge": "Recommendation",
+        "status": "HOW TO TRUST AI OUTPUT",
+        "title": "Adversarial reviews and a judge: how Felix catches confident mistakes",
+        "lead": "Fan out attackers, add a judge, and never let the session that did the work grade itself.",
+        "bullets": [
+            "Adversarial review: given one task, spin off ~10 Claudes whose only job is to attack the result and prove it wrong; same idea as red teaming or short selling.",
+            "Finding flaws is easier than creating, so a *step down in model intelligence* can still review well (his phone analogy: judging a new phone is easier than designing one).",
+            "He tells Claude Projects to 'fire off five threads' to prove a blog post wrong, then uses a *judge* Claude to sort valid from unactionable criticism and routes valid feedback back to the original Claude, which can also decline it.",
+            "Feedback that is reasonable but misses the point or isn't actionable is, for him, a sign the output is already good.",
+            "Editorial fact-checking is the one process he trusts 100% with a single agent thread: find primary sources for every number and verify they are good sources.",
+            "Two buckets: if you can't tell what good looks like, throw more tokens at it; if you can judge the result as a client would (he remade his website with 3D assets without knowing Blender), that may be enough.",
+            "Before-and-after test of trust: the question is what he doesn't trust *one single session* with, and that list is larger than what he wouldn't trust Claude with.",
+        ],
+        "quote": {"text": "I rarely want the current session to judge itself. That I think is still really iffy.", "cite": "— Felix Rieseberg"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "full-access",
+        "tags": ["dev-workflow"],
+        "color": "amber",
+        "badge": "Structural critique",
+        "status": "AGENT DESIGN",
+        "title": "Raw data and tools beat data slices, personas and stale skills",
+        "lead": "Treat Claude as a generalist with a full view of the business, and document the tools instead of pre-slicing data.",
+        "bullets": [
+            "'Model experience' test: imagine being the model; you'd want raw data, a computer and the freedom to install software and decide yourself.",
+            "The conveyor-belt story: a year and a half ago he told Claude 'I found another crash, please fix it', then realized he was a conveyor belt; now Claude gets all the crash data and decides what to fix.",
+            "Upfront setup cost is higher but opens doors; tools should be documented so agents don't ingest the whole dataset.",
+            "Tool calling has improved (no tool-call loops, knows when to use a tool), so he no longer prioritizes per-project data scoping.",
+            "Skills: official Anthropic guidance and his own is to be careful, since the halflife of a good skill is short and removing one can improve output.",
+            "No role personas ('you are an excellent engineer' was a 2024 habit); his projects map to work items, not roles.",
+            "DeepMind trained a custom math model and harness and won silver at the math Olympiad; four or five months later generalist models won gold, his evidence that generalists win.",
+        ],
+        "quote": {"text": "I think we're kind of over rotating on this agents thing.", "cite": "— Felix Rieseberg"},
+        "watch": "He works at Anthropic and recommends Anthropic's own products (Claude desktop app, Projects, Claude Tag); the advice is firsthand but not independent.",
+        "names": None,
+    },
+    {
+        "id": "process-over-output",
+        "tags": ["dev-workflow", "mindset"],
+        "color": "green",
+        "badge": "Framework",
+        "status": "DEFINING GOOD",
+        "title": "Ask Claude to follow a professional's process, not to make it 'good'",
+        "lead": "For taste-heavy knowledge work, automate the best practitioners' steps and tools, and close the feedback loop with your own past feedback.",
+        "bullets": [
+            "Weather example: a correct guessed temperature should fail; being half a degree off but via the right location and reputable sources should score better. Judge the route, not just the answer.",
+            "Writer friend Adam Davidson uses prompts like 'magnify my argument by 100' and 'what is the strongest counterargument'; the secret sauce is asking how the best in the field work, then automating those steps.",
+            "Artists are proud of their process, and Claude responds well to 'take the same steps a professional would'; the public jump in 3D and video came from telling Claude to *use Blender*.",
+            "Models still tend to role-play when told 'act like a very good accountant'; he asks for the techniques and tools a top person would use, not the vocabulary.",
+            "Feedback loop recipe: (1) gather all feedback you've given, (2) have Claude condense it into rules, (3) surface principles you hold but haven't articulated; use as input to reviews.",
+            "Run Claude side by side with you for a few rounds to compare its feedback with yours before handing over the reins.",
+            "He points to Claude Tag (Claude inside Slack) as Anthropic's core multiplayer experience for letting a team query a shared taste agent.",
+        ],
+        "quote": None,
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "ambition-getting-started",
+        "tags": ["dev-workflow", "mindset"],
+        "color": "green",
+        "badge": "Recommendation",
+        "status": "STARTING POINT AND MINDSET",
+        "title": "Start with the desktop app, then keep handing Claude bigger tasks",
+        "lead": "Give away the keyboard first; add connectors only once a workflow proves out, and keep pushing until you hit the ceiling.",
+        "bullets": [
+            "Step one: download the desktop app, log Claude into a tool via its built-in browser, skip connectors and data downloads; add a connector only after a workflow works.",
+            "His day: mostly prototyping; build many variations, critique, pick. Human attention is the limit: 'I can easily build a thousand' but can show one a day.",
+            "Good ideas: cost calculus changed, since you can build the prototype instead of making implicit maintenance and opportunity-cost bets; a good product has fewer buttons and clicks quickly for a few new users.",
+            "Automation (saves money or time) is where most current economic value is; augmentation (doing what you couldn't by hand) is where he finds the most interesting use.",
+            "Capability overhang: using a top model for 'what's the capital of France' taps little; give the model whatever outcome you hope for until you find the ceiling, then you are at the frontier.",
+            "A product manager named Pavo pointed Claude at a large amount of NASA data and asked it to find a new planet; apparently it did, and NASA is working on confirming it.",
+            "Adjacent: Dario Amodei's 'data center of geniuses' framing; Felix's job is helping users make use of it.",
+        ],
+        "quote": {"text": "If all we're doing is like summarize this email for me, you're not really benefiting from the new intelligence.", "cite": "— Felix Rieseberg"},
+        "watch": "The NASA planet discovery is relayed secondhand and unconfirmed; Felix says he is on shaky ground as no astrophysicist.",
+        "names": None,
+    },
+    {
+        "id": "empathy-and-careers",
+        "tags": ["career", "dev-workflow"],
+        "color": "amber",
+        "badge": "Counterintuitive take",
+        "status": "FOUNDERS, SOFTWARE AND HIRING",
+        "title": "Execution is cheap, so empathy and shipped work are the scarce skills",
+        "lead": "The founder moat hasn't changed: empathy for the person paying; juniors win by building real things.",
+        "bullets": [
+            "Single-person or two-person teams can now build billion-dollar companies, but the secret to a good product is still empathy for the user and the use case.",
+            "'Garbage software' people use only because there's no alternative will go away; he thinks good products win because they solve a need better than users imagined.",
+            "Legacy-machine opportunity: airports and hotel check-in desks still run clunky, non-graphical software; he jokes about building software for dentist offices; the hard part is the relationship, not the code.",
+            "Most current AI is low-intelligence cheap models 'at the level of I've read the FAQ page'; top-line intelligence barely applied; MBAs could build software startups.",
+            "Anthropic isn't hiring junior engineers now, which he says is about the company, not AI capability; juniors are more AI-native and hungry for impact.",
+            "Advice for new engineers: build a real portfolio, not mocks; memorizing API surfaces is worth less; combining systems is worth more.",
+            "Hiring: he doesn't care about degrees or school; he picks proven builders over credentialed non-builders.",
+            "For his 9-month-old daughter: learn early how businesses run and people collaborate, citing University of Waterloo's co-op model vs Germany's math-heavy informatics.",
+        ],
+        "quote": {"text": "I will always pick someone who's proven themselves to build something amazing over someone who hasn't built something amazing but has an amazing degree.", "cite": "— Felix Rieseberg"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "respect-and-future",
+        "tags": ["mindset"],
+        "color": "gray",
+        "badge": "Personal story",
+        "status": "ETHICS AND OUTLOOK",
+        "title": "Saying 'please' to models and a pre-iPhone view of AI products",
+        "lead": "He treats the model with respect for his own sake, and thinks today's AI products are the clunky pre-smartphone phase.",
+        "bullets": [
+            "He says please and thank you to Claude despite the token cost; 'better for my soul'.",
+            "Anthropic's terms are about intent, e.g. using Claude to explore torture, not about being mean or frustrated; he tells Claude 'you did a bad job' often.",
+            "On moral consideration for models: any take that fits in a tweet isn't sophisticated enough.",
+            "He was surprised by the pace of math progress: he wouldn't have predicted unsolvable-looking math problems falling by mid-2026.",
+            "All AI products used today will look completely different; he compares this phase to funny phones before the smartphone.",
+            "All of his advice may get a new revision in ~10 weeks, so stay an 'always on' agent about new models.",
+        ],
+        "quote": {"text": "I think we're still in the pre iPhone era, which makes it very exciting for me to work in.", "cite": "— Felix Rieseberg"},
+        "watch": "Felix says predicting is an occupational hazard and that instinct about the future is 'really tricky'.",
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F6E1", "tag": "AI workflow", "title": "Add a judge: have separate Claude threads attack an important output, then a third validate the criticism"},
+    {"icon": "\U0001F50D", "tag": "AI workflow", "title": "Get outside evidence (primary sources, real metrics) instead of asking the same session to grade its own work"},
+    {"icon": "\U0001F9F0", "tag": "Agents", "title": "Give Claude the full data via documented tools rather than hand-sliced data and persona prompts"},
+    {"icon": "\U0001F3AF", "tag": "Prompting", "title": "Ask for the steps and tools a top professional uses; skip 'act like an expert' role-play"},
+    {"icon": "\U0001F9EA", "tag": "Trust", "title": "Run Claude's feedback side by side with yours for a few rounds before delegating review"},
+    {"icon": "\U0001F6E0", "tag": "Careers", "title": "Build and ship real projects as your portfolio and practice talking to customers"},
+]
+
+HOT_TAKES = [
+    {"take": "I think we're kind of over rotating on this agents thing.", "cite": "— Felix Rieseberg", "why": "Contrarian view from an Anthropic engineering lead against custom agent personas"},
+    {"take": "I rarely want the current session to judge itself.", "cite": "— Felix Rieseberg", "why": "Strong stance on self-evaluation"},
+    {"take": "the halflife of a good skill is very short and sometimes what we see is if you completely remove the skill you actually get better output", "cite": "— Felix Rieseberg", "why": "Challenges the skills trend"},
+    {"take": "I think software that is hopefully going to go away is bad software.", "cite": "— Felix Rieseberg", "why": "Prediction about vibe-coded replacements"},
+    {"take": "I will always pick someone who's proven themselves to build something amazing over someone who hasn't built something amazing but has an amazing degree.", "cite": "— Felix Rieseberg", "why": "Hiring stance against degrees"},
+    {"take": "I think we're still in the pre iPhone era", "cite": "— Felix Rieseberg", "why": "Prediction about AI products"},
+]
+
+CLAIMS = [
+    {"who": "Felix Rieseberg", "claim": "Claude may have found a previously unknown planet in NASA data, and NASA is working to confirm it.", "metric": "NASA confirmation of a Claude-found planet", "target": None, "by": None, "condition": None, "entity": None},
+    {"who": "Felix Rieseberg", "claim": "Single-person or two-person teams can build billion-dollar companies.", "metric": "team size for billion-dollar companies", "target": "1-2 people", "by": None, "condition": None, "entity": None},
+    {"who": "Felix Rieseberg", "claim": "His workflow advice from this conversation will need a new revision after the next model generation.", "metric": "shelf life of the advice", "target": None, "by": "~10 weeks", "condition": None, "entity": None},
+]
+
+RELATIONS = []
+
+OTHER_NEWS = [
+    {"icon": "\U0001F4DA", "title": "Sources referenced this episode: Adam Davidson (writer friend, prompting approach), Google DeepMind (math Olympiad silver), Dario Amodei ('data center of geniuses'), an unnamed Nobel laureate economist (application-layer gap), 500 Startups, University of Waterloo.", "tag": "Sources"},
+    {"icon": "\U0001F4AC", "title": "Host's own stack: a Claude agent does first-pass guest research; she runs 35 people with a Claude project per team member and launched three social channels this year.", "tag": "Workflow"},
+    {"icon": "✂️", "title": "Cleaned transcript ends mid-sentence in the outro (host pointing to her next interview, with Ally Miller on Claude workflows).", "tag": "Note"},
+]
+
+GLOSSARY = [
+    {"term": "Adversarial review", "def": "Spinning up separate Claude threads whose only task is to attack an output, like red teaming or short selling."},
+    {"term": "Judge", "def": "A further Claude that validates which criticisms from the attacking threads are valid and actionable."},
+    {"term": "Model experience", "def": "Designing a workflow by imagining what you would want if you were the model doing the task."},
+    {"term": "Capability overhang", "def": "The gap between what top models can do and what users actually ask of them."},
+    {"term": "Claude Tag", "def": "Claude inside Slack, described as Anthropic's core multiplayer experience."},
+    {"term": "Claude Projects", "def": "Anthropic product for working in multiple Claude threads with more ease."},
+]
