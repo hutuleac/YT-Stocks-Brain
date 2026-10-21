@@ -1,0 +1,2419 @@
+1
+00:00:07,639 --> 00:00:14,160
+So, going to talk today about uh
+
+2
+00:00:11,199 --> 00:00:16,439
+the open-source network state, how we
+
+3
+00:00:14,160 --> 00:00:17,440
+print out the internet.
+
+4
+00:00:16,440 --> 00:00:18,960
+And so, I want to talk a little bit
+
+5
+00:00:17,440 --> 00:00:21,120
+about first theory and then practice of
+
+6
+00:00:18,960 --> 00:00:23,160
+network states, where we are, and why I
+
+7
+00:00:21,120 --> 00:00:25,400
+think this is
+
+8
+00:00:23,160 --> 00:00:26,800
+a big part of the next thing for crypto,
+
+9
+00:00:25,399 --> 00:00:28,759
+not just cryptocurrencies, but crypto
+
+10
+00:00:26,800 --> 00:00:31,039
+communities. The ultimate real-world
+
+11
+00:00:28,760 --> 00:00:32,439
+asset is a community, a city, even a
+
+12
+00:00:31,039 --> 00:00:35,320
+country.
+
+13
+00:00:32,439 --> 00:00:36,480
+So, theory. In 2022, I wrote this book
+
+14
+00:00:35,320 --> 00:00:38,280
+called The Network State, which is
+
+15
+00:00:36,479 --> 00:00:39,599
+basically, you know, we have these
+
+16
+00:00:38,280 --> 00:00:41,439
+gigantic social networks and
+
+17
+00:00:39,600 --> 00:00:42,880
+cryptocurrencies. Is that the end of the
+
+18
+00:00:41,439 --> 00:00:44,679
+road? Are we just going to sling coins
+
+19
+00:00:42,880 --> 00:00:46,120
+and tokens all day? Or can we
+
+20
+00:00:44,679 --> 00:00:48,479
+print them out in the physical world?
+
+21
+00:00:46,119 --> 00:00:52,119
+And that's what Network State was about.
+
+22
+00:00:48,479 --> 00:00:53,719
+And you know, the idea was to have a
+
+23
+00:00:52,119 --> 00:00:55,799
+physical social network, but not just
+
+24
+00:00:53,719 --> 00:00:58,479
+one of them, many of them. So, at the
+
+25
+00:00:55,799 --> 00:00:59,479
+top right is like Network School, which
+
+26
+00:00:58,479 --> 00:01:01,479
+I'm going to get to in a second. And
+
+27
+00:00:59,479 --> 00:01:04,198
+then in the bottom right, you can see
+
+28
+00:01:01,479 --> 00:01:06,039
+Vitalik's Zuzalu, Bryan Johnson's Don't
+
+29
+00:01:04,198 --> 00:01:07,840
+Die community, and other kinds of things
+
+30
+00:01:06,040 --> 00:01:09,440
+like this, like essentially networks of
+
+31
+00:01:07,840 --> 00:01:10,840
+pop-ups that become permanent and so on
+
+32
+00:01:09,439 --> 00:01:13,159
+over time.
+
+33
+00:01:10,840 --> 00:01:14,680
+And that was the theory. And then in
+
+34
+00:01:13,159 --> 00:01:16,239
+practice,
+
+35
+00:01:14,680 --> 00:01:18,760
+we built something called Network School
+
+36
+00:01:16,239 --> 00:01:20,719
+in 2024. That's the opening day over
+
+37
+00:01:18,760 --> 00:01:22,600
+there, and we brought thousands of
+
+38
+00:01:20,719 --> 00:01:25,679
+people from all around the world, and we
+
+39
+00:01:22,599 --> 00:01:27,640
+built this community on a
+
+40
+00:01:25,680 --> 00:01:29,320
+island, a Malaysian island off the coast
+
+41
+00:01:27,640 --> 00:01:32,719
+of Singapore, in this sort of ghost
+
+42
+00:01:29,319 --> 00:01:35,479
+city. Um and uh we showed that we could
+
+43
+00:01:32,719 --> 00:01:37,840
+actually print out the internet.
+
+44
+00:01:35,480 --> 00:01:38,880
+And then as you guys may have seen on X,
+
+45
+00:01:37,840 --> 00:01:42,040
+some of you guys might have seen it, we
+
+46
+00:01:38,879 --> 00:01:43,640
+moved to Kazakhstan. And why did we do
+
+47
+00:01:42,040 --> 00:01:46,080
+that? Well, basically, we got a much
+
+48
+00:01:43,640 --> 00:01:48,400
+better offer from Kazakhstan. And also,
+
+49
+00:01:46,079 --> 00:01:49,560
+you know, Malaysia didn't want us there
+
+50
+00:01:48,400 --> 00:01:51,880
+anymore.
+
+51
+00:01:49,560 --> 00:01:55,120
+Um and Kazakhstan gave us an amazing
+
+52
+00:01:51,879 --> 00:01:57,599
+deal, as you can see over here. And Uh,
+
+53
+00:01:55,120 --> 00:01:59,560
+we have just started smashing attendance
+
+54
+00:01:57,599 --> 00:02:01,239
+records and so on. We have lots of
+
+55
+00:01:59,560 --> 00:02:03,719
+people signing up there because now we
+
+56
+00:02:01,239 --> 00:02:06,199
+have full state support. And so this is
+
+57
+00:02:03,719 --> 00:02:08,439
+really crypto in the physical world.
+
+58
+00:02:06,200 --> 00:02:10,719
+Like when China shut down Bitcoin
+
+59
+00:02:08,439 --> 00:02:12,639
+mining, Bitcoin just redistributed to
+
+60
+00:02:10,719 --> 00:02:14,560
+other nodes and we already know that
+
+61
+00:02:12,639 --> 00:02:16,559
+crypto has that robustness in the
+
+62
+00:02:14,560 --> 00:02:18,280
+physical world and or in the digital
+
+63
+00:02:16,560 --> 00:02:21,120
+world and this is what crypto looks like
+
+64
+00:02:18,280 --> 00:02:24,759
+in the physical world. Okay.
+
+65
+00:02:21,120 --> 00:02:26,599
+And so uh, at this point I'm satisfied
+
+66
+00:02:24,759 --> 00:02:29,639
+that with the theory of 2022 and the
+
+67
+00:02:26,599 --> 00:02:31,280
+practice of 2024, in 2026
+
+68
+00:02:29,639 --> 00:02:33,719
+we've at least proven to my satisfaction
+
+69
+00:02:31,280 --> 00:02:35,199
+that we can A, print out the internet.
+
+70
+00:02:33,719 --> 00:02:37,719
+We can bring thousands of people. This
+
+71
+00:02:35,199 --> 00:02:39,599
+is uh, a visualization of the people who
+
+72
+00:02:37,719 --> 00:02:41,159
+came to Network School from all around
+
+73
+00:02:39,599 --> 00:02:42,400
+the world, more than 80 countries. We
+
+74
+00:02:41,159 --> 00:02:45,199
+can print out the internet, bring it to
+
+75
+00:02:42,400 --> 00:02:47,680
+one location and then B, we can move
+
+76
+00:02:45,199 --> 00:02:49,599
+that community to another location, in
+
+77
+00:02:47,680 --> 00:02:52,120
+this case Próspera because we can
+
+78
+00:02:49,599 --> 00:02:53,599
+rebalance and we can be as liquid in the
+
+79
+00:02:52,120 --> 00:02:56,159
+physical world as we are in the digital
+
+80
+00:02:53,599 --> 00:02:59,719
+world, albeit with some friction.
+
+81
+00:02:56,159 --> 00:03:01,159
+And so given this, what's the next step?
+
+82
+00:02:59,719 --> 00:03:04,159
+So we want to scale
+
+83
+00:03:01,159 --> 00:03:05,479
+but we also want to decentralize and
+
+84
+00:03:04,159 --> 00:03:07,519
+because I I do think that this is a
+
+85
+00:03:05,479 --> 00:03:10,199
+roadmap for the next thing after
+
+86
+00:03:07,519 --> 00:03:11,959
+cryptocurrency, namely crypto community.
+
+87
+00:03:10,199 --> 00:03:13,119
+And so we're open-sourcing everything
+
+88
+00:03:11,959 --> 00:03:15,280
+we've learned and I'm beginning that
+
+89
+00:03:13,120 --> 00:03:17,319
+process today. So here's 12 of the key
+
+90
+00:03:15,280 --> 00:03:19,199
+ideas for building startup societies,
+
+91
+00:03:17,319 --> 00:03:20,599
+things we've learned from practice over
+
+92
+00:03:19,199 --> 00:03:23,119
+the last few years of trying to put
+
+93
+00:03:20,599 --> 00:03:25,919
+theory into practice.
+
+94
+00:03:23,120 --> 00:03:28,640
+So the first major concept is we can now
+
+95
+00:03:25,919 --> 00:03:30,479
+compete with cities, not just companies
+
+96
+00:03:28,639 --> 00:03:32,039
+and currencies. So you know that there's
+
+97
+00:03:30,479 --> 00:03:33,119
+trillion-dollar companies like, you
+
+98
+00:03:32,039 --> 00:03:35,039
+know, Google and trillion-dollar
+
+99
+00:03:33,120 --> 00:03:37,039
+currencies like Bitcoin. But this table
+
+100
+00:03:35,039 --> 00:03:39,239
+over here says that if you try to put a
+
+101
+00:03:37,039 --> 00:03:40,879
+valuation on a city, okay, let's take
+
+102
+00:03:39,239 --> 00:03:42,080
+the population of New York, 8 million
+
+103
+00:03:40,879 --> 00:03:44,120
+people, 8 and 1/2 million people
+
+104
+00:03:42,080 --> 00:03:45,719
+thereabouts. And you estimate, this is a
+
+105
+00:03:44,120 --> 00:03:48,159
+rough estimate, you can argue with it.
+
+106
+00:03:45,719 --> 00:03:50,599
+You estimate the value of real estate is
+
+107
+00:03:48,159 --> 00:03:52,520
+300 or 400,000 dollars per person in New
+
+108
+00:03:50,599 --> 00:03:54,799
+York City. Why per person? Well, every
+
+109
+00:03:52,520 --> 00:03:56,200
+man, woman, and child, right? So, you
+
+110
+00:03:54,800 --> 00:03:58,400
+got a couple, you have couples housing,
+
+111
+00:03:56,199 --> 00:03:59,479
+and so on. So, let's say 300,000, you
+
+112
+00:03:58,400 --> 00:04:02,039
+can argue with that. Maybe you say it's
+
+113
+00:03:59,479 --> 00:04:04,000
+a million, fine. Point is, you can get a
+
+114
+00:04:02,039 --> 00:04:06,159
+valuation on New York under that
+
+115
+00:04:04,000 --> 00:04:08,159
+assumption. You get a valuation about 2
+
+116
+00:04:06,159 --> 00:04:10,199
+to 3 trillion dollars. And you can do
+
+117
+00:04:08,159 --> 00:04:11,319
+something similar for every city, and
+
+118
+00:04:10,199 --> 00:04:14,199
+you get something very interesting,
+
+119
+00:04:11,319 --> 00:04:16,040
+which is the giant companies that we've
+
+120
+00:04:14,199 --> 00:04:18,159
+built that are spread out all over the
+
+121
+00:04:16,040 --> 00:04:21,120
+earth. If you printed them in one
+
+122
+00:04:18,160 --> 00:04:22,280
+location, um and you sort of liquidated
+
+123
+00:04:21,120 --> 00:04:24,079
+and then reconstructed, you get
+
+124
+00:04:22,279 --> 00:04:26,519
+something about the valuation of a New
+
+125
+00:04:24,079 --> 00:04:27,800
+York City or an LA or a San Francisco.
+
+126
+00:04:26,519 --> 00:04:29,680
+And this actually really interesting
+
+127
+00:04:27,800 --> 00:04:31,680
+because we haven't normally thought of
+
+128
+00:04:29,680 --> 00:04:33,519
+cities in that way in terms of
+
+129
+00:04:31,680 --> 00:04:35,639
+quantifying how much capital it would
+
+130
+00:04:33,519 --> 00:04:37,279
+take to build them out. But it's about
+
+131
+00:04:35,639 --> 00:04:38,759
+on par with the most successful
+
+132
+00:04:37,279 --> 00:04:40,719
+companies. And you know what? That kind
+
+133
+00:04:38,759 --> 00:04:43,000
+of makes sense. There's about as many of
+
+134
+00:04:40,720 --> 00:04:45,600
+these kinds of cities as there are
+
+135
+00:04:43,000 --> 00:04:47,399
+companies, right? Okay. So, we can
+
+136
+00:04:45,600 --> 00:04:48,720
+compete with cities, not just companies
+
+137
+00:04:47,399 --> 00:04:50,319
+and currencies.
+
+138
+00:04:48,720 --> 00:04:52,200
+And that immediately starts to lead to
+
+139
+00:04:50,319 --> 00:04:56,040
+new ideas. For example, maybe you have a
+
+140
+00:04:52,199 --> 00:04:57,639
+city asset. Could you have an NYC or SF?
+
+141
+00:04:56,040 --> 00:04:59,680
+Maybe eventually, but you start with an
+
+142
+00:04:57,639 --> 00:05:01,079
+asset that might build out a city. And
+
+143
+00:04:59,680 --> 00:05:02,400
+number two is you can start thinking of,
+
+144
+00:05:01,079 --> 00:05:03,319
+let's say, China's performance or
+
+145
+00:05:02,399 --> 00:05:05,199
+something like that in a totally
+
+146
+00:05:03,319 --> 00:05:07,120
+different way in terms of not just its
+
+147
+00:05:05,199 --> 00:05:08,918
+tech companies, but Shanghai and
+
+148
+00:05:07,120 --> 00:05:09,879
+Shenzhen as cities have a valuation,
+
+149
+00:05:08,918 --> 00:05:11,039
+too.
+
+150
+00:05:09,879 --> 00:05:12,759
+And third, you can also think about
+
+151
+00:05:11,040 --> 00:05:15,120
+building cities. So, for example, this
+
+152
+00:05:12,759 --> 00:05:17,159
+is Astana, Kazakhstan, this incredibly
+
+153
+00:05:15,120 --> 00:05:19,519
+sophisticated high-tech city. It
+
+154
+00:05:17,160 --> 00:05:21,600
+actually flipped San Francisco 10 years
+
+155
+00:05:19,519 --> 00:05:24,519
+ago. Okay, that's the hyper growth rate
+
+156
+00:05:21,600 --> 00:05:26,280
+of Astana. It builds 100x the housing of
+
+157
+00:05:24,519 --> 00:05:28,479
+San Francisco. If those were two
+
+158
+00:05:26,279 --> 00:05:30,839
+startups, obviously, the blue line would
+
+159
+00:05:28,480 --> 00:05:32,759
+be crushing the red line there, right?
+
+160
+00:05:30,839 --> 00:05:34,039
+And that's because it is possible to
+
+161
+00:05:32,759 --> 00:05:35,439
+build new cities, and it's possible to
+
+162
+00:05:34,040 --> 00:05:38,120
+do them within our lifetime. Astana was
+
+163
+00:05:35,439 --> 00:05:39,680
+sort of a 300,000 person thing in the
+
+164
+00:05:38,120 --> 00:05:41,160
+late '90s, and they became turned into
+
+165
+00:05:39,680 --> 00:05:43,519
+the capital city. It's like the Dubai of
+
+166
+00:05:41,160 --> 00:05:44,600
+the north. And it's not just Astana,
+
+167
+00:05:43,519 --> 00:05:47,159
+Kazakhstan is also building something
+
+168
+00:05:44,600 --> 00:05:48,320
+called Alau Town, the first crypto city.
+
+169
+00:05:47,160 --> 00:05:50,600
+And so, this is going to take a lot of
+
+170
+00:05:48,319 --> 00:05:51,639
+digestion of Astana and take crypto and
+
+171
+00:05:50,600 --> 00:05:53,000
+put it all together. So you're going to
+
+172
+00:05:51,639 --> 00:05:55,159
+hear a lot more about this at Network
+
+173
+00:05:53,000 --> 00:05:57,480
+State conference on on Friday this week
+
+174
+00:05:55,160 --> 00:05:58,640
+right here actually, October 9th.
+
+175
+00:05:57,480 --> 00:06:00,400
+So you can compute with cities, not just
+
+176
+00:05:58,639 --> 00:06:01,560
+companies and currencies. And an
+
+177
+00:06:00,399 --> 00:06:03,759
+important part is you don't necessarily
+
+178
+00:06:01,560 --> 00:06:05,600
+have to have that city all in one place.
+
+179
+00:06:03,759 --> 00:06:08,079
+You can have it be a network city. And
+
+180
+00:06:05,600 --> 00:06:11,240
+how do I explain that? Well, Hilton
+
+181
+00:06:08,079 --> 00:06:13,039
+actually has a million beds globally,
+
+182
+00:06:11,240 --> 00:06:14,800
+which is like a million person city
+
+183
+00:06:13,040 --> 00:06:17,760
+except just distributed. And it doesn't
+
+184
+00:06:14,800 --> 00:06:19,720
+have just beds, it has offices, it has
+
+185
+00:06:17,759 --> 00:06:21,120
+restaurants and stuff. So Hilton is like
+
+186
+00:06:19,720 --> 00:06:22,840
+what a network city would look like. It
+
+187
+00:06:21,120 --> 00:06:24,680
+doesn't have to all be in one place,
+
+188
+00:06:22,839 --> 00:06:26,519
+okay?
+
+189
+00:06:24,680 --> 00:06:28,160
+Second key concept. So first concept,
+
+190
+00:06:26,519 --> 00:06:30,000
+compute with cities. Second concept,
+
+191
+00:06:28,160 --> 00:06:32,080
+cloud-first, land-last, but not
+
+192
+00:06:30,000 --> 00:06:34,720
+land-never. The internet is simply the
+
+193
+00:06:32,079 --> 00:06:36,599
+most popular thing ever in human history
+
+194
+00:06:34,720 --> 00:06:39,240
+and is the force on the world that we
+
+195
+00:06:36,600 --> 00:06:41,000
+all sort of know about but ignore in the
+
+196
+00:06:39,240 --> 00:06:42,800
+sense of its upstream of AI and crypto
+
+197
+00:06:41,000 --> 00:06:44,959
+and drones and everything else.
+
+198
+00:06:42,800 --> 00:06:46,520
+And if you know, if you want to build a
+
+199
+00:06:44,959 --> 00:06:48,159
+new crypto community, the first thing to
+
+200
+00:06:46,519 --> 00:06:49,279
+think about is cloud-first, land-last.
+
+201
+00:06:48,160 --> 00:06:50,560
+You have to start with your online
+
+202
+00:06:49,279 --> 00:06:51,799
+community, which could be a Substack, it
+
+203
+00:06:50,560 --> 00:06:53,639
+could be
+
+204
+00:06:51,800 --> 00:06:55,160
+it could be a a Telegram chat, whatever,
+
+205
+00:06:53,639 --> 00:06:57,680
+but it has to be motivated by something
+
+206
+00:06:55,160 --> 00:06:59,560
+a little more than money.
+
+207
+00:06:57,680 --> 00:07:01,918
+Next concept, pop-ups are the new
+
+208
+00:06:59,560 --> 00:07:04,480
+startups. What's a pop-up? So it could
+
+209
+00:07:01,918 --> 00:07:07,039
+be like the Cursed Cafe, it could be
+
+210
+00:07:04,480 --> 00:07:09,319
+like AngelList set up a cafe, it could
+
+211
+00:07:07,040 --> 00:07:11,560
+be like Coinbase took over a small town.
+
+212
+00:07:09,319 --> 00:07:13,439
+A pop-up is taking the cloud and
+
+213
+00:07:11,560 --> 00:07:15,600
+printing it out in the physical world
+
+214
+00:07:13,439 --> 00:07:17,839
+for a limited period of time. Hence a
+
+215
+00:07:15,600 --> 00:07:19,400
+pop-up and then it shuts down, okay?
+
+216
+00:07:17,839 --> 00:07:21,679
+And the first thing to do if you're
+
+217
+00:07:19,399 --> 00:07:23,759
+interested in this broad space is to
+
+218
+00:07:21,680 --> 00:07:25,480
+hold a pop-up. And it's much harder than
+
+219
+00:07:23,759 --> 00:07:27,439
+it sounds. You have to get people to fly
+
+220
+00:07:25,480 --> 00:07:28,520
+out, you have to take care of food and
+
+221
+00:07:27,439 --> 00:07:29,800
+you know, bedding, all this kind of
+
+222
+00:07:28,519 --> 00:07:31,039
+stuff. It's actually much more
+
+223
+00:07:29,800 --> 00:07:33,199
+logistically complicated than you might
+
+224
+00:07:31,040 --> 00:07:35,400
+think. But if you've done that, then you
+
+225
+00:07:33,199 --> 00:07:37,120
+can maybe take the next step.
+
+226
+00:07:35,399 --> 00:07:38,839
+So pop-ups are the new startups. And if
+
+227
+00:07:37,120 --> 00:07:41,399
+that goes well, then you can start
+
+228
+00:07:38,839 --> 00:07:43,239
+building a waitlist for permanent, which
+
+229
+00:07:41,399 --> 00:07:45,439
+is a permanent location, and then you
+
+230
+00:07:43,240 --> 00:07:47,000
+start actually leasing real estate and
+
+231
+00:07:45,439 --> 00:07:48,680
+moving people in and leasing more real
+
+232
+00:07:47,000 --> 00:07:51,079
+estate and moving more people in. Very
+
+233
+00:07:48,680 --> 00:07:52,519
+similar to how Elon de-risked the Tesla
+
+234
+00:07:51,079 --> 00:07:54,399
+build-out with his online waitlist. He
+
+235
+00:07:52,519 --> 00:07:56,879
+got the capital online, then he built
+
+236
+00:07:54,399 --> 00:07:59,359
+offline. Capital online, built offline.
+
+237
+00:07:56,879 --> 00:08:01,000
+Use the cloud and land together.
+
+238
+00:07:59,360 --> 00:08:03,439
+So, you can crypto crowd-fund your
+
+239
+00:08:01,000 --> 00:08:04,920
+crypto community.
+
+240
+00:08:03,439 --> 00:08:06,560
+Next concept. The network state is
+
+241
+00:08:04,920 --> 00:08:07,640
+actually about distressed real estate,
+
+242
+00:08:06,560 --> 00:08:09,560
+okay?
+
+243
+00:08:07,639 --> 00:08:10,879
+So, you know, many people who come to
+
+244
+00:08:09,560 --> 00:08:12,439
+this broad area and they're thinking
+
+245
+00:08:10,879 --> 00:08:14,240
+about printing out the internet, they
+
+246
+00:08:12,439 --> 00:08:15,719
+think, "Oh, let me get a private island
+
+247
+00:08:14,240 --> 00:08:18,319
+or something like that." Or or some
+
+248
+00:08:15,720 --> 00:08:20,320
+abandoned piece of land and so on. And
+
+249
+00:08:18,319 --> 00:08:22,079
+that's kind of how you do tech, right?
+
+250
+00:08:20,319 --> 00:08:24,159
+You take a domain name that has nothing
+
+251
+00:08:22,079 --> 00:08:25,759
+on it, or you take a empty blockchain
+
+252
+00:08:24,160 --> 00:08:26,919
+and you boot it up. But that's not how
+
+253
+00:08:25,759 --> 00:08:28,680
+you should do real estate because real
+
+254
+00:08:26,918 --> 00:08:30,039
+estate is very expensive. What you want
+
+255
+00:08:28,680 --> 00:08:31,959
+to do is instead take some real estate
+
+256
+00:08:30,040 --> 00:08:34,918
+that's already built out, but that's
+
+257
+00:08:31,959 --> 00:08:36,360
+abandoned or that's under-occupied, and
+
+258
+00:08:34,918 --> 00:08:37,840
+then put a new coat of paint on it. So,
+
+259
+00:08:36,360 --> 00:08:40,000
+you can There's entire villages and
+
+260
+00:08:37,840 --> 00:08:42,599
+towns for sale that you can buy, okay?
+
+261
+00:08:40,000 --> 00:08:44,320
+You know, de-industrialized towns. And,
+
+262
+00:08:42,599 --> 00:08:45,920
+you know, this is true in Japan as well.
+
+263
+00:08:44,320 --> 00:08:48,440
+Unfortunately, due to Japan's declining
+
+264
+00:08:45,919 --> 00:08:50,319
+fertility, there's like 9 million empty
+
+265
+00:08:48,440 --> 00:08:51,960
+homes there. The thing is, these empty
+
+266
+00:08:50,320 --> 00:08:53,480
+homes, of course, they need a coat of
+
+267
+00:08:51,960 --> 00:08:55,600
+paint. If you take a look at them,
+
+268
+00:08:53,480 --> 00:08:57,600
+they're in various, you know, conditions
+
+269
+00:08:55,600 --> 00:08:59,759
+of disrepair. And so, you need to be
+
+270
+00:08:57,600 --> 00:09:01,440
+willing to do what a startup is in the
+
+271
+00:08:59,759 --> 00:09:02,720
+physical world. In the digital world,
+
+272
+00:09:01,440 --> 00:09:04,440
+you're accustomed to the idea that a
+
+273
+00:09:02,720 --> 00:09:05,920
+startup company, everything isn't going
+
+274
+00:09:04,440 --> 00:09:08,040
+to work perfectly, there's going to be
+
+275
+00:09:05,919 --> 00:09:09,199
+bugs. In the physical world, you also
+
+276
+00:09:08,039 --> 00:09:10,079
+have to be accustomed to the idea that
+
+277
+00:09:09,200 --> 00:09:11,720
+everything isn't going to work
+
+278
+00:09:10,080 --> 00:09:13,280
+perfectly. There might be literal
+
+279
+00:09:11,720 --> 00:09:15,279
+physical bugs, pests, and so on. There
+
+280
+00:09:13,279 --> 00:09:16,919
+might be frozen pipes. There might be
+
+281
+00:09:15,279 --> 00:09:19,959
+all kinds of things, and you need a
+
+282
+00:09:16,919 --> 00:09:21,679
+hardy and determined people who think in
+
+283
+00:09:19,960 --> 00:09:23,879
+terms of frontier, not fancy. They're
+
+284
+00:09:21,679 --> 00:09:26,359
+not looking for a luxury resort in the
+
+285
+00:09:23,879 --> 00:09:28,159
+same way that a startup person is not
+
+286
+00:09:26,360 --> 00:09:29,680
+looking for the perks of a Google.
+
+287
+00:09:28,159 --> 00:09:31,639
+Someone who wants to build one of these
+
+288
+00:09:29,679 --> 00:09:33,199
+frontier communities is wants to be
+
+289
+00:09:31,639 --> 00:09:34,759
+there for the building experience. Like
+
+290
+00:09:33,200 --> 00:09:36,200
+Habitat for Humanity. You're not coming
+
+291
+00:09:34,759 --> 00:09:37,559
+to live in a luxury resort, you're
+
+292
+00:09:36,200 --> 00:09:40,120
+coming to build.
+
+293
+00:09:37,559 --> 00:09:41,359
+And the thing about this is like if you
+
+294
+00:09:40,120 --> 00:09:42,879
+if you look at this in America for
+
+295
+00:09:41,360 --> 00:09:44,200
+example, all of these colleges are
+
+296
+00:09:42,879 --> 00:09:46,639
+closing down, they're running out of
+
+297
+00:09:44,200 --> 00:09:48,440
+money. Magdalene College, 129 acres,
+
+298
+00:09:46,639 --> 00:09:50,559
+it's for sale. If you think about what
+
+299
+00:09:48,440 --> 00:09:51,880
+this campus involves, obviously it's
+
+300
+00:09:50,559 --> 00:09:53,159
+going to be somewhat in disrepair.
+
+301
+00:09:51,879 --> 00:09:55,200
+There's going to be, you know,
+
+302
+00:09:53,159 --> 00:09:57,000
+everything from shrubbery that needs to
+
+303
+00:09:55,200 --> 00:09:58,800
+get weeded, all you know, all kinds of
+
+304
+00:09:57,000 --> 00:10:00,600
+stuff like that is is going to be there.
+
+305
+00:09:58,799 --> 00:10:02,279
+And so you need a population of people
+
+306
+00:10:00,600 --> 00:10:04,279
+in your community that takes this over
+
+307
+00:10:02,279 --> 00:10:07,000
+that thinks in terms of frontier, not
+
+308
+00:10:04,279 --> 00:10:09,600
+fancy, okay? And you know, this is
+
+309
+00:10:07,000 --> 00:10:12,159
+something that more common in the East
+
+310
+00:10:09,600 --> 00:10:13,680
+because people in China, India, the UAE,
+
+311
+00:10:12,159 --> 00:10:16,000
+they've all seen cities built from
+
+312
+00:10:13,679 --> 00:10:17,759
+nothing. People in the West, you know,
+
+313
+00:10:16,000 --> 00:10:20,039
+are are less, you know, familiar with
+
+314
+00:10:17,759 --> 00:10:21,319
+this, but this is for example, you know,
+
+315
+00:10:20,039 --> 00:10:22,519
+I believe it's a Is it Shenzhen or
+
+316
+00:10:21,320 --> 00:10:24,960
+Shanghai? I actually should remember.
+
+317
+00:10:22,519 --> 00:10:27,079
+But this is a Chinese city in 1984 and
+
+318
+00:10:24,960 --> 00:10:28,280
+then 2023, this is the before and after.
+
+319
+00:10:27,080 --> 00:10:30,160
+And you want to be like the people on
+
+320
+00:10:28,279 --> 00:10:31,959
+the top, not the people on the bottom.
+
+321
+00:10:30,159 --> 00:10:33,600
+The people on the top built that city.
+
+322
+00:10:31,960 --> 00:10:35,440
+The people on the bottom are great, but
+
+323
+00:10:33,600 --> 00:10:37,360
+they're living in it, right? The kind of
+
+324
+00:10:35,440 --> 00:10:39,240
+people who are building a startup
+
+325
+00:10:37,360 --> 00:10:41,120
+society are like the people at the top
+
+326
+00:10:39,240 --> 00:10:43,039
+who can look at something that's bare or
+
+327
+00:10:41,120 --> 00:10:45,560
+barren or underdeveloped and see the
+
+328
+00:10:43,039 --> 00:10:47,519
+potential in it. In the Western world
+
+329
+00:10:45,559 --> 00:10:49,559
+that did exist, but that existed in the
+
+330
+00:10:47,519 --> 00:10:52,559
+past in the frontier era, in the Wild
+
+331
+00:10:49,559 --> 00:10:54,039
+West era, okay? So today Westerners are
+
+332
+00:10:52,559 --> 00:10:55,639
+more accustomed to having their whole
+
+333
+00:10:54,039 --> 00:10:57,599
+city built out and they're less
+
+334
+00:10:55,639 --> 00:10:59,480
+accustomed to maintenance and plumbing
+
+335
+00:10:57,600 --> 00:11:01,639
+and electrical work and so on, but there
+
+336
+00:10:59,480 --> 00:11:03,360
+is a valor, there's a there's a there's
+
+337
+00:11:01,639 --> 00:11:05,000
+a goodness in having to do those
+
+338
+00:11:03,360 --> 00:11:06,120
+physical things from scratch if you move
+
+339
+00:11:05,000 --> 00:11:08,279
+community and then you start fixing
+
+340
+00:11:06,120 --> 00:11:11,639
+things up.
+
+341
+00:11:08,279 --> 00:11:13,480
+So next concept, concentric circles. So
+
+342
+00:11:11,639 --> 00:11:14,838
+organically, if you go and start a
+
+343
+00:11:13,480 --> 00:11:17,039
+startup society, you'll find that
+
+344
+00:11:14,839 --> 00:11:18,720
+there's a core team that's analogous to
+
+345
+00:11:17,039 --> 00:11:20,360
+the core developers. You have your
+
+346
+00:11:18,720 --> 00:11:22,560
+long-termers who are similar to your
+
+347
+00:11:20,360 --> 00:11:24,480
+maximalists or your long-term holders.
+
+348
+00:11:22,559 --> 00:11:26,279
+Your members who are like your holders.
+
+349
+00:11:24,480 --> 00:11:28,480
+Then you've got visitors and and so on
+
+350
+00:11:26,279 --> 00:11:30,240
+and so forth, okay? And you're going to
+
+351
+00:11:28,480 --> 00:11:32,000
+find that you've got different levels of
+
+352
+00:11:30,240 --> 00:11:33,000
+commitment among these groups and you're
+
+353
+00:11:32,000 --> 00:11:34,840
+going to have different levels of
+
+354
+00:11:33,000 --> 00:11:36,440
+interaction there. And so, it's not
+
+355
+00:11:34,840 --> 00:11:38,280
+going to be that everybody's going to be
+
+356
+00:11:36,440 --> 00:11:39,760
+building the society together any more
+
+357
+00:11:38,279 --> 00:11:41,799
+that everybody's going to be building
+
+358
+00:11:39,759 --> 00:11:43,480
+Solana or Ethereum or Bitcoin with the
+
+359
+00:11:41,799 --> 00:11:45,079
+same level of energy. Some people will
+
+360
+00:11:43,480 --> 00:11:46,200
+be holders, some people will be
+
+361
+00:11:45,080 --> 00:11:47,879
+maximalists where they'll be like
+
+362
+00:11:46,200 --> 00:11:49,440
+holders, but they'll be posting a lot,
+
+363
+00:11:47,879 --> 00:11:51,360
+and others will be core developers, and
+
+364
+00:11:49,440 --> 00:11:53,000
+so there's will be like very active. So,
+
+365
+00:11:51,360 --> 00:11:54,560
+you're going to have a continuum of
+
+366
+00:11:53,000 --> 00:11:56,440
+engagement with the with the project.
+
+367
+00:11:54,559 --> 00:11:57,959
+Many people will have day jobs, but
+
+368
+00:11:56,440 --> 00:12:01,520
+they'll also be, you know, holding. So,
+
+369
+00:11:57,960 --> 00:12:03,720
+they still wish you well, right? Okay.
+
+370
+00:12:01,519 --> 00:12:06,159
+Next concept, direction selection
+
+371
+00:12:03,720 --> 00:12:09,080
+assimilation. So, when you're starting a
+
+372
+00:12:06,159 --> 00:12:10,919
+startup society, it can't just be when
+
+373
+00:12:09,080 --> 00:12:13,360
+airdrop, okay? It has to be more than
+
+374
+00:12:10,919 --> 00:12:15,319
+money. It could be a vegan community. It
+
+375
+00:12:13,360 --> 00:12:16,840
+could be like language immersion. There
+
+376
+00:12:15,320 --> 00:12:18,520
+should be something for it to exist,
+
+377
+00:12:16,840 --> 00:12:20,440
+some reason for it to exist. I'm not
+
+378
+00:12:18,519 --> 00:12:21,840
+saying you need a new 10 Commandments,
+
+379
+00:12:20,440 --> 00:12:23,360
+but as I point out in the Network State
+
+380
+00:12:21,840 --> 00:12:25,600
+book, you do need a one commandment. You
+
+381
+00:12:23,360 --> 00:12:27,519
+need some aspect of the world that you
+
+382
+00:12:25,600 --> 00:12:29,360
+think is broken. Maybe people are online
+
+383
+00:12:27,519 --> 00:12:31,039
+too much, and so you've got an offline
+
+384
+00:12:29,360 --> 00:12:32,960
+village that, you know, the internet
+
+385
+00:12:31,039 --> 00:12:34,159
+goes off at like 9:00 p.m. each day.
+
+386
+00:12:32,960 --> 00:12:35,680
+They actually do this in Chinese
+
+387
+00:12:34,159 --> 00:12:37,319
+colleges. They turn off the internet in
+
+388
+00:12:35,679 --> 00:12:38,879
+the evening to make sure people don't
+
+389
+00:12:37,320 --> 00:12:40,040
+surf the internet too much, right?
+
+390
+00:12:38,879 --> 00:12:41,799
+There's other kinds of things. You could
+
+391
+00:12:40,039 --> 00:12:43,279
+have the carb-free society. Many kinds
+
+392
+00:12:41,799 --> 00:12:44,759
+of different twists on what your startup
+
+393
+00:12:43,279 --> 00:12:46,120
+society might be, but this is the
+
+394
+00:12:44,759 --> 00:12:47,120
+concept of like a one commandment. You
+
+395
+00:12:46,120 --> 00:12:48,960
+want to select for people who are
+
+396
+00:12:47,120 --> 00:12:50,600
+actually excited about that and want to
+
+397
+00:12:48,960 --> 00:12:51,920
+build that in the physical world. Like a
+
+398
+00:12:50,600 --> 00:12:54,159
+longevity community would be another
+
+399
+00:12:51,919 --> 00:12:55,439
+good example.
+
+400
+00:12:54,159 --> 00:12:57,759
+And this is similar to how colleges
+
+401
+00:12:55,440 --> 00:12:59,640
+work. Colleges have admissions essays.
+
+402
+00:12:57,759 --> 00:13:00,759
+Colleges already select people. It's
+
+403
+00:12:59,639 --> 00:13:03,199
+like a private club that you're
+
+404
+00:13:00,759 --> 00:13:04,759
+selecting people in. And if colleges are
+
+405
+00:13:03,200 --> 00:13:06,400
+legitimate because they're private clubs
+
+406
+00:13:04,759 --> 00:13:08,720
+that have selective admissions, then
+
+407
+00:13:06,399 --> 00:13:11,079
+certainly your startup society is also
+
+408
+00:13:08,720 --> 00:13:13,519
+legitimate.
+
+409
+00:13:11,080 --> 00:13:14,639
+Next concept, society as a service. So,
+
+410
+00:13:13,519 --> 00:13:16,039
+what's the business model of these
+
+411
+00:13:14,639 --> 00:13:18,000
+things, even if they're not primarily
+
+412
+00:13:16,039 --> 00:13:20,000
+monetary? What is the business model?
+
+413
+00:13:18,000 --> 00:13:21,440
+And it's what I call society as a
+
+414
+00:13:20,000 --> 00:13:24,559
+service. You can try other things, of
+
+415
+00:13:21,440 --> 00:13:27,120
+course, but the idea is you just provide
+
+416
+00:13:24,559 --> 00:13:30,799
+basically the Google campus as a
+
+417
+00:13:27,120 --> 00:13:33,879
+subscription, okay? So, food and
+
+418
+00:13:30,799 --> 00:13:34,679
+you know, room and gym and events and
+
+419
+00:13:33,879 --> 00:13:36,559
+all this kind of stuff. So, that's what
+
+420
+00:13:34,679 --> 00:13:37,919
+we do in our school. And it when you do
+
+421
+00:13:36,559 --> 00:13:40,039
+this, you sort of vertically integrate
+
+422
+00:13:37,919 --> 00:13:41,240
+something and you can bring down costs
+
+423
+00:13:40,039 --> 00:13:43,480
+cuz you're bulk buying. You're bulk
+
+424
+00:13:41,240 --> 00:13:45,919
+buying food. You're like Costco, but
+
+425
+00:13:43,480 --> 00:13:48,120
+crypto Costco, right? This is a DAO, but
+
+426
+00:13:45,919 --> 00:13:50,079
+in the physical world, okay? Society as
+
+427
+00:13:48,120 --> 00:13:52,519
+a service, that's like the business
+
+428
+00:13:50,080 --> 00:13:54,280
+model these start societies, okay?
+
+429
+00:13:52,519 --> 00:13:56,960
+And
+
+430
+00:13:54,279 --> 00:13:59,039
+next concept is identity is community is
+
+431
+00:13:56,960 --> 00:14:01,320
+security is territory. So, when you
+
+432
+00:13:59,039 --> 00:14:03,360
+start a start society, you want to unify
+
+433
+00:14:01,320 --> 00:14:05,600
+the digital and physical borders. For
+
+434
+00:14:03,360 --> 00:14:09,120
+example, you have some identity, some
+
+435
+00:14:05,600 --> 00:14:10,920
+NFT or some coin that your members hold
+
+436
+00:14:09,120 --> 00:14:13,279
+and then they need that to actually
+
+437
+00:14:10,919 --> 00:14:14,959
+enter your digital community like, you
+
+438
+00:14:13,279 --> 00:14:17,000
+know, log in with Ethereum or log in
+
+439
+00:14:14,960 --> 00:14:18,639
+with a into a token gated community
+
+440
+00:14:17,000 --> 00:14:20,159
+online. And you can apply that in the
+
+441
+00:14:18,639 --> 00:14:21,879
+physical world as well, where they need
+
+442
+00:14:20,159 --> 00:14:23,879
+that token or they need that coin or
+
+443
+00:14:21,879 --> 00:14:26,639
+they need that staking in order to get
+
+444
+00:14:23,879 --> 00:14:29,120
+past your you know, face ID or your, you
+
+445
+00:14:26,639 --> 00:14:30,720
+know, digital identification, right? And
+
+446
+00:14:29,120 --> 00:14:32,519
+this is exactly again the same as how
+
+447
+00:14:30,720 --> 00:14:34,720
+college campuses work, how countries
+
+448
+00:14:32,519 --> 00:14:36,720
+work. But basically, you have a club
+
+449
+00:14:34,720 --> 00:14:38,360
+where the digital ID, the digital border
+
+450
+00:14:36,720 --> 00:14:39,560
+and the physical border coincide with
+
+451
+00:14:38,360 --> 00:14:40,720
+each other, okay? So, you've got a
+
+452
+00:14:39,559 --> 00:14:42,959
+unification of the digital and the
+
+453
+00:14:40,720 --> 00:14:45,399
+physical. And the reason you need that
+
+454
+00:14:42,960 --> 00:14:48,400
+is identity is community is security is
+
+455
+00:14:45,399 --> 00:14:49,600
+territory. Who they are is determines
+
+456
+00:14:48,399 --> 00:14:51,079
+what community they belong to. If they
+
+457
+00:14:49,600 --> 00:14:52,759
+belong to your, let's say your NFT
+
+458
+00:14:51,080 --> 00:14:53,920
+community or something. And then
+
+459
+00:14:52,759 --> 00:14:55,879
+security, do they get past the
+
+460
+00:14:53,919 --> 00:14:57,399
+checkpoint? And then are they allowed to
+
+461
+00:14:55,879 --> 00:14:58,838
+be in your territory? And one way of
+
+462
+00:14:57,399 --> 00:15:02,079
+thinking about this, imagine if your
+
+463
+00:14:58,839 --> 00:15:03,880
+home like was your home 99% of the time,
+
+464
+00:15:02,080 --> 00:15:05,280
+but 1% of the time random people could
+
+465
+00:15:03,879 --> 00:15:07,480
+walk through, then it wouldn't be your
+
+466
+00:15:05,279 --> 00:15:09,480
+home, right? So, you need to actually
+
+467
+00:15:07,480 --> 00:15:10,960
+have at least some locations which are
+
+468
+00:15:09,480 --> 00:15:12,759
+only occupied by members of your
+
+469
+00:15:10,960 --> 00:15:14,839
+community, otherwise your community
+
+470
+00:15:12,759 --> 00:15:17,240
+isn't actually a community, okay? Need
+
+471
+00:15:14,839 --> 00:15:20,680
+some physical space.
+
+472
+00:15:17,240 --> 00:15:22,680
+Next concept, upside offsets utility.
+
+473
+00:15:20,679 --> 00:15:25,000
+When you've got a small social network,
+
+474
+00:15:22,679 --> 00:15:27,719
+when you've got a small cryptocurrency,
+
+475
+00:15:25,000 --> 00:15:30,000
+the utility is very low. The thing that
+
+476
+00:15:27,720 --> 00:15:32,840
+has offset that, for example, early
+
+477
+00:15:30,000 --> 00:15:35,600
+WhatsApp or early Bitcoin, is the
+
+478
+00:15:32,840 --> 00:15:37,440
+upside. At 1 cent, you could dream about
+
+479
+00:15:35,600 --> 00:15:39,320
+how big Bitcoin could get. If you look
+
+480
+00:15:37,440 --> 00:15:41,880
+at Satoshi's very first post or Hal
+
+481
+00:15:39,320 --> 00:15:43,760
+Finney's early posts, uh you know, they
+
+482
+00:15:41,879 --> 00:15:45,159
+they talk about, "Hey, maybe if this
+
+483
+00:15:43,759 --> 00:15:48,120
+became a big deal, it could be worth a
+
+484
+00:15:45,159 --> 00:15:51,159
+lot." That is the lever that you can use
+
+485
+00:15:48,120 --> 00:15:53,759
+to teleport some potential value from
+
+486
+00:15:51,159 --> 00:15:56,039
+the future into the present to make the
+
+487
+00:15:53,759 --> 00:15:58,120
+future real. It is like Terminator in
+
+488
+00:15:56,039 --> 00:16:00,000
+reverse. You're teleporting back, you
+
+489
+00:15:58,120 --> 00:16:02,320
+know, value in order to create You have
+
+490
+00:16:00,000 --> 00:16:03,919
+a You have a 0.001% chance of a
+
+491
+00:16:02,320 --> 00:16:05,840
+trillion-dollar outcome, and so it's
+
+492
+00:16:03,919 --> 00:16:07,360
+worth a million dollars today. And so
+
+493
+00:16:05,840 --> 00:16:08,519
+you have that million dollars used to
+
+494
+00:16:07,360 --> 00:16:10,480
+create the trillion dollars, right?
+
+495
+00:16:08,519 --> 00:16:13,079
+That's what equity is. So you can do
+
+496
+00:16:10,480 --> 00:16:15,920
+that for crypto, for for for internet
+
+497
+00:16:13,080 --> 00:16:17,360
+companies, and for cryptocurrencies. I
+
+498
+00:16:15,919 --> 00:16:19,479
+think you can also do that for crypto
+
+499
+00:16:17,360 --> 00:16:21,639
+communities, where we would issue a
+
+500
+00:16:19,480 --> 00:16:24,200
+crypto equity, and then we use that to
+
+501
+00:16:21,639 --> 00:16:25,639
+materialize the future into the present.
+
+502
+00:16:24,200 --> 00:16:27,759
+So stay tuned for that, you know, come
+
+503
+00:16:25,639 --> 00:16:29,759
+on October 9th here, and I might say
+
+504
+00:16:27,759 --> 00:16:32,439
+more about that. Okay, come this exact
+
+505
+00:16:29,759 --> 00:16:34,301
+room, I think, in about 48 hours.
+
+506
+00:16:32,440 --> 00:16:34,839
+Um next concept. What's the metric
+
+507
+00:16:34,301 --> 00:16:37,200
+[clears throat]
+
+508
+00:16:34,839 --> 00:16:39,440
+for these physical societies? So in the
+
+509
+00:16:37,200 --> 00:16:41,680
+digital world, we have CoinMarketCap.
+
+510
+00:16:39,440 --> 00:16:43,640
+CoinMarketCap is the number of coins
+
+511
+00:16:41,679 --> 00:16:45,759
+times the price per coin. What is the
+
+512
+00:16:43,639 --> 00:16:48,600
+equivalent metric in the physical world?
+
+513
+00:16:45,759 --> 00:16:50,399
+I argue it's the number of man-months.
+
+514
+00:16:48,600 --> 00:16:52,240
+The number of people in your society
+
+515
+00:16:50,399 --> 00:16:54,480
+times the number of months they've
+
+516
+00:16:52,240 --> 00:16:57,120
+stayed in your society. So it's scale
+
+517
+00:16:54,480 --> 00:16:58,879
+times duration. Okay? Duration is
+
+518
+00:16:57,120 --> 00:17:01,159
+another way of saying investment. It's
+
+519
+00:16:58,879 --> 00:17:02,720
+similar to like number of coins times
+
+520
+00:17:01,159 --> 00:17:05,439
+price per coin. Price per coin is like
+
+521
+00:17:02,720 --> 00:17:07,600
+amount invested per coin. So number of
+
+522
+00:17:05,439 --> 00:17:10,319
+people times the amount of time per
+
+523
+00:17:07,599 --> 00:17:11,719
+person is the man-month metric. And the
+
+524
+00:17:10,318 --> 00:17:13,838
+utility of this is it sort of
+
+525
+00:17:11,720 --> 00:17:15,400
+generalized the concept of a census. You
+
+526
+00:17:13,838 --> 00:17:17,720
+know, the census was actually in the US
+
+527
+00:17:15,400 --> 00:17:19,480
+Constitution, but a census presumes that
+
+528
+00:17:17,720 --> 00:17:21,360
+somebody is sessile. That's to say
+
+529
+00:17:19,480 --> 00:17:22,959
+they're stationary and they're locked
+
+530
+00:17:21,359 --> 00:17:24,679
+within a nation-state, you know, for
+
+531
+00:17:22,959 --> 00:17:27,039
+their whole life, you know? And and the
+
+532
+00:17:24,680 --> 00:17:29,320
+population only goes up within that land
+
+533
+00:17:27,039 --> 00:17:30,879
+border. Today, we have digital nomads.
+
+534
+00:17:29,319 --> 00:17:33,399
+They move between things. So, if they're
+
+535
+00:17:30,880 --> 00:17:35,760
+spending three man-months or five
+
+536
+00:17:33,400 --> 00:17:38,440
+man-months a year out of seven or out of
+
+537
+00:17:35,759 --> 00:17:40,759
+12, rather, at your startup society,
+
+538
+00:17:38,440 --> 00:17:42,680
+that's a lot. That's like 25% of their
+
+539
+00:17:40,759 --> 00:17:44,640
+life if it's if it's three man-months.
+
+540
+00:17:42,680 --> 00:17:46,920
+So, adding up the number of man-months
+
+541
+00:17:44,640 --> 00:17:48,280
+is a useful metric. It's hard to fake if
+
+542
+00:17:46,920 --> 00:17:50,160
+you have proof of human and proof of
+
+543
+00:17:48,279 --> 00:17:54,759
+location, and that's how I think we can
+
+544
+00:17:50,160 --> 00:17:56,720
+start ranking these startup societies.
+
+545
+00:17:54,759 --> 00:17:58,319
+Last concept. You know, many people
+
+546
+00:17:56,720 --> 00:18:00,160
+would tell me, "Oh, Balaji, you're so
+
+547
+00:17:58,319 --> 00:18:02,000
+naive. You know, these network states
+
+548
+00:18:00,160 --> 00:18:03,320
+don't have a military. The nation-states
+
+549
+00:18:02,000 --> 00:18:06,519
+are all going to kill you, blah blah
+
+550
+00:18:03,319 --> 00:18:08,119
+blah." And you know, the thing is I I I
+
+551
+00:18:06,519 --> 00:18:09,960
+obviously I knew that like, you know,
+
+552
+00:18:08,119 --> 00:18:11,639
+nation-states have militaries, but
+
+553
+00:18:09,960 --> 00:18:13,480
+clearly Google got to trillions of
+
+554
+00:18:11,640 --> 00:18:14,520
+dollars without firing a shot. Bitcoin
+
+555
+00:18:13,480 --> 00:18:16,480
+got to trillions of dollars without
+
+556
+00:18:14,519 --> 00:18:19,200
+firing a shot. And now I've got it in a
+
+557
+00:18:16,480 --> 00:18:21,880
+sentence, which is the non-violent
+
+558
+00:18:19,200 --> 00:18:24,360
+alternative to mobility to to a military
+
+559
+00:18:21,880 --> 00:18:25,640
+is mobility. Okay? That's to say, if
+
+560
+00:18:24,359 --> 00:18:28,079
+you've heard the term, you know, fight
+
+561
+00:18:25,640 --> 00:18:31,600
+or flight, rather than a pointless
+
+562
+00:18:28,079 --> 00:18:34,039
+fight, you can do organized premeditated
+
+563
+00:18:31,599 --> 00:18:36,719
+flight. Okay? If you have a community of
+
+564
+00:18:34,039 --> 00:18:39,879
+digital nomads, that's a digital nomadic
+
+565
+00:18:36,720 --> 00:18:42,240
+tribe. And if that tribe can move
+
+566
+00:18:39,880 --> 00:18:43,760
+collectively, collective exit is
+
+567
+00:18:42,240 --> 00:18:45,319
+actually what built the US. That's the
+
+568
+00:18:43,759 --> 00:18:46,720
+Puritans coming to the new world.
+
+569
+00:18:45,319 --> 00:18:48,679
+Collective exit is actually a very
+
+570
+00:18:46,720 --> 00:18:49,920
+powerful thing for essentially saying,
+
+571
+00:18:48,680 --> 00:18:51,840
+"Okay, if you don't give us the terms we
+
+572
+00:18:49,920 --> 00:18:53,120
+want, we'll sign with somebody else."
+
+573
+00:18:51,839 --> 00:18:54,919
+Which we did. We actually had offers
+
+574
+00:18:53,119 --> 00:18:56,159
+from 10 countries, and we took the best
+
+575
+00:18:54,920 --> 00:18:57,920
+one. We moved to Costa Rica. We did that
+
+576
+00:18:56,160 --> 00:19:00,519
+very very quickly. So, you can just
+
+577
+00:18:57,920 --> 00:19:02,480
+boom, instantly relocate a group of tech
+
+578
+00:19:00,519 --> 00:19:05,160
+people to a new country, and we've
+
+579
+00:19:02,480 --> 00:19:07,200
+proven that that leverage exists. Okay?
+
+580
+00:19:05,160 --> 00:19:09,400
+That was theoretical maybe a year ago.
+
+581
+00:19:07,200 --> 00:19:10,880
+It is now true. Many countries are out
+
+582
+00:19:09,400 --> 00:19:13,200
+there. They're bidding for exactly a
+
+583
+00:19:10,880 --> 00:19:14,760
+population like you. You have a lot of
+
+584
+00:19:13,200 --> 00:19:17,240
+leverage not just as a sovereign
+
+585
+00:19:14,759 --> 00:19:19,279
+individual, but even more as a sovereign
+
+586
+00:19:17,240 --> 00:19:20,720
+collective, okay?
+
+587
+00:19:19,279 --> 00:19:22,240
+And that's like the unbundling of
+
+588
+00:19:20,720 --> 00:19:24,720
+sovereign individual and the rebundling
+
+589
+00:19:22,240 --> 00:19:26,359
+of a sovereign collective.
+
+590
+00:19:24,720 --> 00:19:28,480
+And so now we're, you know, working with
+
+591
+00:19:26,359 --> 00:19:30,719
+the Republic of Costa on where we didn't
+
+592
+00:19:28,480 --> 00:19:32,079
+fight, we just moved, and now we've got
+
+593
+00:19:30,720 --> 00:19:34,120
+a much better offer and we're working
+
+594
+00:19:32,079 --> 00:19:36,720
+with a much much
+
+595
+00:19:34,119 --> 00:19:38,439
+a group that really wants us there.
+
+596
+00:19:36,720 --> 00:19:40,759
+So, for more on this, come to Never
+
+597
+00:19:38,440 --> 00:19:42,519
+State 2026, our full conference on
+
+598
+00:19:40,759 --> 00:19:44,000
+October 9th at Marina Bay Sands, right
+
+599
+00:19:42,519 --> 00:19:45,319
+here in fact, and go to
+
+600
+00:19:44,000 --> 00:19:47,640
+nsrconference.com
+
+601
+00:19:45,319 --> 00:19:49,079
+and if you're with Token 2049, we can
+
+602
+00:19:47,640 --> 00:19:51,080
+you can get a
+
+603
+00:19:49,079 --> 00:19:52,439
+a code for a discount. Okay, thanks very
+
+604
+00:19:51,079 --> 00:19:55,279
+much and we'll do a fireside in a
+
+605
+00:19:52,440 --> 00:19:55,279
+second. Thanks.
