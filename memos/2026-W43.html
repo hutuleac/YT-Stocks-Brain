@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Weekly memo 2026-W43: AI infra gets louder while its credit gets questioned</title>
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+
+.memo-h{font-family:var(--serif);font-size:clamp(17px,1.3vw,21px);margin:0 0 10px;}
+.memo-ev{font-size:13px;color:var(--muted);margin:10px 0 0;}
+.memo-list{margin:16px 0 0;padding-left:20px;line-height:1.6;}
+.memo-list li{margin-bottom:8px;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode">&#9680;</button>
+    <div class="backlink"><a href="../index.html#signals">&#8592; Signals</a></div>
+    <div class="kicker">Weekly memo &middot; 2026-W43</div>
+    <h1>AI infra gets louder while its credit gets questioned</h1>
+    <div class="byline">Covers briefs since <b>2026-10-15</b> &middot; signals window 2026-10-10 to 2026-10-19 (30 briefs)</div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The answer</div>
+      <h2>This week in one read</h2>
+      <div class="card" style="margin-top:16px;"><p>The AI-infra cluster rose from 16% to 23% of briefs on rising sentiment (0.64 to 0.69), but the conversation moved to balance sheets: a CoreWeave default scare, hedge-fund leverage unwinding, and Hut 8 pitched as the debt-not-dilution alternative. Banks stayed in the conversation (9% to 13%) while their sentiment flipped hard negative (0.78 to -0.44). Crypto attention fell (20% to 13%) with sentiment unchanged, the classic quiet-bull setup.</p></div>
+    </section>
+    <section class="sec">
+      <div class="sec-eye">Direction, not precision</div>
+      <h2>Insights</h2>
+      <div class="card" style="margin-top:16px;"><h3 class="memo-h">AI infra: more attention, and the question is now who can fund it</h3><ol class="snap"><li>AI-infra narrative (Palantir, AMD, CoreWeave, Nebius, IREN...) grew <b>16%</b> to 23% of briefs, sentiment 0.64 to 0.69: still the dominant emerging cluster.</li><li>Chamath on All-In: CoreWeave CDS implies ~<b>55%</b> chance of default over five years.</li><li>Jordi Visser: the AI bubble didn't pop, hedge-fund leverage did; contagion is moving from the AI pair trade into credit and converts.</li><li>Eric Jackson pitches Hut 8 as the opposite: <b>$3.5B</b> non-recourse debt for Riverbend, ~$15B value created, no equity dilution; the Dell/Caterpillar/GE Vernova/Hut 8/Vertiv cluster is new (1% to 3%) on that one brief.</li><li>Same thread as last week's memo (money, not demand, is the bottleneck): this week it's naming specific balance sheets.</li></ol><p class="memo-ev">Evidence: <a href="../all-in-podcast_2026-10-17_coreweave-crash-ai-trade-cracks-anthropic-ipo-red-flags-bill-gates-doomer.html">All-In Podcast: CoreWeave Crash, AI Trade Cracks, Anthropic IPO Red Flags, Bill Gates Doomer</a> · <a href="../jordi-visser_2026-10-18_the-ai-bubble-didnt-pop-hedge-fund-leverage-did.html">Jordi Visser: The AI Bubble Didn’t Pop. Hedge Fund Leverage Did.</a> · <a href="../anthony-pompliano_2026-10-15_how-to-find-the-next-10x-stock-before-everyone-else.html">Anthony Pompliano: How to Find the Next 10x Stock Before Everyone Else</a> · <a href="../galaxy_2026-10-16_bitcoin-and-ai-with-jordi-visser.html">Galaxy: Bitcoin and AI with Jordi Visser</a></p></div><div class="card" style="margin-top:16px;"><h3 class="memo-h">Banks: more mentions, much worse mood</h3><ol class="snap"><li>Bank cluster (Morgan Stanley, JPMorgan, Citi, BofA, Schwab) <b>9%</b> to 13% of briefs; sentiment 0.78 to -0.44, the biggest swing in the snapshot.</li><li>Two bear stories: Visser's SaaS-style derating as consumer agents hit revenue (dated 2027-07), and the rate trap (banks down 10-<b>25%</b> because the 10-year pays more, safely).</li><li>Visa/Mastercard cluster recovered from -0.48 to ~0 sentiment, but Visser still calls them losers in the agent economy within ~5 years.</li><li>Thin base: 4 recent briefs, two of them Jordi Visser.</li></ol><p class="memo-ev">Evidence: <a href="../jordi-visser_2026-10-11_climbing-the-ai-bubble-wall-of-worry.html">Jordi Visser: Climbing the AI Bubble Wall of Worry</a> · <a href="../grow-your-wealth-valentin-dragu-si-alex-marian_2026-10-11_schimbarea-de-putere-a-inceput.html">Grow your WEALTH - Valentin Dragu si Alex Marian: SCHIMBAREA DE PUTERE A INCEPUT...</a> · <a href="../jordi-visser_2026-10-18_the-ai-bubble-didnt-pop-hedge-fund-leverage-did.html">Jordi Visser: The AI Bubble Didn’t Pop. Hedge Fund Leverage Did.</a></p></div><div class="card" style="margin-top:16px;"><h3 class="memo-h">Crypto goes quiet while its bulls stay bullish</h3><ol class="snap"><li>Crypto cluster (Ethereum, Coinbase, Solana, Robinhood...) fell <b>20%</b> to 13% of briefs; sentiment flat at 0.77 to 0.78.</li><li>Galaxy/Visser: Bitcoin is near its four-year-cycle bottom, buy the range not the tick; Visser holds most of his money in crypto.</li><li>Counter-signal: Eric Jackson's own Bitcoin regime model flipped to 'stress' at ~<b>$84K</b> and stayed there, despite him being a self-described bull.</li><li>Raoul Pal keeps the long-dated targets (ETH ~<b>$18K</b> by Q2 2027 as reasonable).</li></ol><p class="memo-ev">Evidence: <a href="../galaxy_2026-10-16_bitcoin-and-ai-with-jordi-visser.html">Galaxy: Bitcoin and AI with Jordi Visser</a> · <a href="../anthony-pompliano_2026-10-15_how-to-find-the-next-10x-stock-before-everyone-else.html">Anthony Pompliano: How to Find the Next 10x Stock Before Everyone Else</a> · <a href="../raoul-pal-the-journey-man_2026-10-15_the-secret-to-long-term-investing-with-raoul-pal.html">Raoul Pal The Journey Man: The Secret to Long-Term Investing with Raoul Pal</a></p></div>
+    </section>
+    <section class="sec">
+      <div class="sec-eye">Where to look next</div>
+      <h2>Worth a closer look</h2>
+      <ol class="memo-list"><li><b>CoreWeave credit vs. non-dilutive builders (Hut 8)</b> If the CDS scare spreads, the market should start separating AI-infra names by financing structure; Hut 8's case rests on one speaker who owns it.</li><li><b>Bank sentiment flip</b> Largest sentiment swing this week, but mostly one voice (Visser) plus rates; watch whether other channels pick up the agent-derating story.</li><li><b>Crypto attention trough</b> Falling share with unchanged bullish sentiment is a contrarian setup; Jackson's regime model is the dissent to track.</li><li><b>SemiAnalysis as a cited source</b> First new name in two briefs: a research shop whose compute forecasts (43 GW in 2027) are becoming the reference number.</li></ol>
+    </section>
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Computed, not written</div>
+      <h2>What moved since the last memo</h2>
+      <ul class="memo-list"><li><b>New names:</b> new: SemiAnalysis; dropped off: Standard Chartered, Intercontinental Exchange, Grain Management</li><li><b>Narratives:</b> Morgan Stanley · JPMorgan · Citi 20% → 13%; AT&amp;T · Verizon · T-Mobile 17% → 7%; now emerging: PayPal · Anduril · Instacart; new: Dell · Caterpillar · GE Vernova; faded: Samsung · TSMC · SK Hynix</li></ul>
+      <p class="memo-ev">Signals measure what your sources talk about and how they lean, not prices. Market briefs only; windows are counted in briefs.</p>
+    </section>
+  </div>
+</div>
+</body>
+</html>
