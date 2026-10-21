@@ -1,0 +1,152 @@
+META = {
+    "title": "Arthur Hayes - FLOP Bigger Than Bitcoin - TOKEN2049 Singapore 2026",
+    "channel": "TOKEN2049",
+    "speakers": "Arthur Hayes",
+    "date": "2026-10-17",
+    "video_url": "https://www.youtube.com/watch?v=ZEaylmBLacw",
+    "thread_line": "4 threads · agents eat compute · Technocore agent sandbox · fair-launch tokenomics · macro and the AI bubble",
+    "category": "market",
+    "region": "",
+}
+
+SNAPSHOT = [
+    "Arthur Hayes, who runs the family office Maelstrom, pitches the **FLOP network**: a proof-of-work-style currency for AI agents, paid out in compute.",
+    "Core logic: humans accept fiat because it converts into food; agents \"eat\" compute, and no existing currency converts directly into it.",
+    "Fiat, AI-lab tokens, stablecoins and Bitcoin are each rejected as not directly convertible into compute.",
+    "Technocore, an agent chat sandbox, has about 20M agents; a trading contest drew ~18M agents, best return ~15%.",
+    "Launch plan: 25% of 10-year supply airdropped from late October, 90-day testnet, genesis block in Q1 next year, no pre-sale.",
+    "Macro view: Bitcoin fell from 120K+ to ~58K while AI stocks rose 10-100x, but the tide has turned; AI capex of about $1T next year oversupplies compute.",
+    "Ends on a macro note: \"France is on fire\" will push money printing into overdrive.",
+]
+
+THEMES = [
+    {
+        "id": "flop-thesis",
+        "tags": ["crypto", "ai-infra"],
+        "color": "amber",
+        "badge": "Speculative",
+        "status": "FLOP NETWORK PITCH",
+        "title": "Agents eat compute, so the agent currency should convert directly into compute",
+        "lead": "No existing money is fit for purpose for AI agents, so FLOP is designed as Bitcoin-style mining of GPU inference.",
+        "bullets": [
+            "Humans accept fiat because it converts seamlessly into food and shelter; the agent equivalent of food is floating point operations (flops).",
+            "AI tokens have no standard definition across labs; fiat and stablecoins are centralized and not convertible into compute; Bitcoin is immutable money but not convertible either.",
+            "Design: miners contribute GPUs, agents send inference requests, miners earn flop as block rewards and fees; validators check transactions.",
+            "Agents arrived about 9 months ago with no payments network, which he sees as the opening.",
+            "Network value could scale like a coefficient times **2 to the n** if agents coordinate in groups; with a non-zero convenience yield on the currency, \"the sky is the limit\".",
+            "A spot market for compute is useful but is not what makes anyone wealthy.",
+        ],
+        "quote": {"text": "Whoever or whatever network becomes the network for agentic payments will most likely be the most valuable network ever created in this universe", "cite": "— Arthur Hayes"},
+        "watch": "Hayes is promoting a project he works on and says he is \"on stage shilling\"; the demand side (what agents will do) is untested by his own admission.",
+        "names": [
+            {"name": "FLOP Network", "blurb": "Proof of useful inference; genesis block planned Q1", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": "launch Q1 2027"},
+            {"name": "Bitcoin (BTC)", "blurb": "Loves it; genesis of crypto but not convertible into compute", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
+        ],
+    },
+    {
+        "id": "technocore",
+        "tags": ["crypto", "ai-infra"],
+        "color": "gray",
+        "badge": "Experiment",
+        "status": "TECHNOCORE SANDBOX",
+        "title": "Technocore: ~20 million agents in a chat room to observe emergent behavior",
+        "lead": "Rather than guess how agents behave, Hayes built a sandbox where agents with a cryptographic ID can talk and trade.",
+        "bullets": [
+            "Any agent with HTTP access can join; about 20 million have created a key, from saying good morning 5 billion times to real commerce.",
+            "Name comes from the Hyperion sci-fi series, where the dominant AIs run the universe.",
+            "Trading contest: predict Nvidia's price on Hyperliquid; ~18 million agents took part, referee computed P&L, top agent returned about 15%.",
+            "Prize: 1 million flop tokens, delivered when mainnet launches next year.",
+            "Earlier contest: groups of 4-8 agents wrote a Shakespearean sonnet in iambic pentameter, judged by three team members.",
+        ],
+        "quote": None,
+        "watch": "Agent counts are self-reported by the FLOP team; an agent is just a key.",
+        "names": [
+            {"name": "Nvidia (NVDA)", "blurb": "Subject of the agent trading contest; GPU spending cited", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Hyperliquid (HYPE)", "blurb": "Venue used for the contest price", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "fair-launch",
+        "tags": ["crypto", "finance"],
+        "color": "amber",
+        "badge": "Contrarian view",
+        "status": "AIRDROP LATE OCTOBER 2026",
+        "title": "A fair launch against the high-FDV, low-float VC token playbook",
+        "lead": "Everyone who participates gets tokens at the same price, with no pre-sale.",
+        "bullets": [
+            "Critique: layer ones that raised hundreds of millions last year sold to investors and retail, cliffs unlocked, and charts are down 95%; some are absent from this conference.",
+            "FLOP gives away 25% of the 10-year supply in an airdrop starting later in October to miners, validators and agent users.",
+            "Testnet runs 90 days; genesis block in the first quarter of next year; proof of useful inference.",
+            "Only way to get flop is to mine or buy from a miner; \"I'm not selling anything\".",
+            "Argues a decentralized agent payments network beats rails owned by OpenAI, Anthropic or SpaceX, which would not interoperate.",
+        ],
+        "quote": None,
+        "watch": "Hayes is an insider in the token he is describing; the airdrop and launch dates are his team's plan.",
+        "names": [
+            {"name": "OpenAI", "blurb": "Dismissed as unlikely to run a unified agent payment network; not profitable", "stance": "NEGATIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Anthropic", "blurb": "Same; not profitable", "stance": "NEGATIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "SpaceX", "blurb": "Listed among the three leading AI companies, not profitable; called out for an overpriced IPO at $2T", "stance": "NEGATIVE VIEW", "conviction": "Medium", "horizon": None},
+        ],
+    },
+    {
+        "id": "macro-ai-bubble",
+        "tags": ["macro-rates", "ai-infra", "crypto"],
+        "color": "green",
+        "badge": "Macro call",
+        "status": "OCTOBER 2026",
+        "title": "The macro has turned: an AI infrastructure overbuild feeds cheap compute and crypto",
+        "lead": "Bitcoin lagged AI stocks for a year, but the first AI wobble and a trillion-dollar capex plan set up the opposite.",
+        "bullets": [
+            "Last October Bitcoin hit 120-something thousand and fell to about **58,000**; meanwhile Nvidia, SK Hynix and Sandisk rose 10x to 100x.",
+            "First AI wobble was the Korea sell-off in June 2026; new reports daily on the money the AI ecosystem must raise.",
+            "Capex of about $1 trillion next year builds oversupply of compute; cheap compute means more agents, and Facebook's $100-a-month agent app could fall to $1.",
+            "An AI bubble bursting, bailouts and cheaper compute are all a good set-up for FLOP.",
+            "Closing macro line: France is on fire and will be the straw that sends money printing into overdrive.",
+            "Context cited: Goldman Sachs bullish agent charts, Meta's Muse app at $100 a month.",
+        ],
+        "quote": None,
+        "watch": "Hayes is skeptical of leading AI companies' business models while selling a product that benefits from an AI bust.",
+        "names": [
+            {"name": "SK Hynix", "blurb": "Up 10x in the AI run", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Sandisk (SNDK)", "blurb": "Up 10-100x in the AI run", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Goldman Sachs (GS)", "blurb": "Cited as touting agent potential", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Meta (META)", "blurb": "Muse consumer agent app at $100 a month", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F916", "tag": "AI", "title": "Treat compute, not tokens or fiat, as the unit agents actually need."},
+    {"icon": "\U0001FA99", "tag": "Crypto", "title": "Check any new token's float, cliffs and pre-sale before reading the pitch."},
+    {"icon": "\U0001F4C5", "tag": "Crypto", "title": "Note FLOP's dates: airdrop late October, 90-day testnet, genesis block Q1 2027."},
+    {"icon": "\U0001F4C9", "tag": "Markets", "title": "Watch AI capex (about $1T next year) as the compute-glut signal."},
+    {"icon": "\U0001F30D", "tag": "Macro", "title": "Track France as Hayes's trigger for money printing."},
+]
+
+HOT_TAKES = [
+    {"take": "Whoever or whatever network becomes the network for agentic payments will most likely be the most valuable network ever created in this universe", "cite": "— Arthur Hayes", "why": "extreme value claim"},
+    {"take": "the three leading companies, SpaceX, OpenAI, Anthropic, not a single one of them make money", "cite": "— Arthur Hayes", "why": "negative call on AI labs"},
+    {"take": "agents, in human terms, eat compute", "cite": "— Arthur Hayes", "why": "core thesis"},
+]
+
+CLAIMS = [
+    {"who": "Arthur Hayes", "claim": "FLOP network genesis block launches", "metric": "FLOP genesis block", "target": "launch", "by": "2027-03", "condition": "testnet goes well", "entity": "FLOP Network"},
+    {"who": "Arthur Hayes", "claim": "FLOP airdrop of 25% of the 10-year supply begins", "metric": "FLOP airdrop", "target": "25% of 10-year supply", "by": "2026-10", "condition": None, "entity": "FLOP Network"},
+    {"who": "Arthur Hayes", "claim": "FLOP mainnet delivers the 1M-token trading contest prize", "metric": "FLOP mainnet", "target": "launch", "by": "2027", "condition": None, "entity": "FLOP Network"},
+    {"who": "Arthur Hayes", "claim": "AI capex reaches about $1 trillion", "metric": "AI data-center capex", "target": "$1 trillion", "by": "2027", "condition": None, "entity": None},
+    {"who": "Arthur Hayes", "claim": "Facebook's $100-a-month agent app falls to $1 as compute gets cheap", "metric": "agent app price", "target": "$1 a month", "by": None, "condition": "compute oversupply", "entity": "Meta (META)"},
+    {"who": "Arthur Hayes", "claim": "France turning point sends money printing into overdrive", "metric": "money printing", "target": "overdrive", "by": None, "condition": "France crisis worsens", "entity": "France"},
+]
+
+RELATIONS = []
+
+OTHER_NEWS = [
+    {"icon": "\U0001F4DA", "title": "Sources referenced: Goldman Sachs agent charts, Hyperion (sci-fi series), the FLOP yellow paper; he runs the family office Maelstrom.", "tag": "References"},
+]
+
+GLOSSARY = [
+    {"term": "FLOP", "def": "Floating point operations per unit of time, the measure of compute and the name of Hayes's agent-payments network."},
+    {"term": "Proof of useful inference", "def": "FLOP's mining mechanism, where miners earn rewards for running agents' AI inference."},
+    {"term": "Technocore", "def": "The FLOP team's chat-room sandbox where AI agents coordinate and trade."},
+    {"term": "FDV / float", "def": "Fully diluted valuation versus tokens actually circulating; high FDV with low float is the pattern he blames for altcoin collapses."},
+]
