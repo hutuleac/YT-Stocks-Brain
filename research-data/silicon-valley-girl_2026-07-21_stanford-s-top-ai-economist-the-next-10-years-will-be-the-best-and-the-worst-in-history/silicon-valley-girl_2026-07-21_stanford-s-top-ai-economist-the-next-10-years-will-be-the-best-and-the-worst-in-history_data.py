@@ -1,0 +1,188 @@
+META = {
+    "title": "Stanford's Top AI Economist: The Next 10 Years Will Be the Best AND the Worst in History",
+    "channel": "Silicon Valley Girl",
+    "speakers": "Erik Brynjolfsson, Silicon Valley Girl host",
+    "date": "2026-07-21",
+    "video_url": "https://www.youtube.com/watch?v=72duHF7iZiU",
+    "thread_line": "6 threads · early job losses and elastic demand · the productivity lag · managing agents · the junior-role pipeline · concentration and a new economics · best-and-worst decade",
+    "category": "market",
+    "region": "",
+}
+
+SNAPSHOT = [
+    "Brynjolfsson's 'Canaries in the Coal Mine' work finds **16%** lower employment for workers under 25 in the most AI-exposed occupations, with growth in the least exposed and among people who use AI to augment rather than automate.",
+    "Whether AI cuts jobs depends on demand elasticity: roughly half the economy spends more as prices fall, so radiologists have grown, not vanished.",
+    "Capabilities are skyrocketing but economic impact is muted; electricity took ~30 years, AI will take **3-5 years**, and he bets productivity beats BLS forecasts by 2030.",
+    "Jobs become defining the question and evaluating the output; agents execute. Most people will manage a fleet of agents.",
+    "He warns of a pyramid-to-diamond problem: firms cutting juniors will lack future seniors; Infosys is the counterexample.",
+    "Biggest worry is concentration of wealth and power; he'd keep UBI, progressive and wealth taxes as a backup and wants more entrepreneurship.",
+    "His GDPB measure values free goods; LLM consumer value rose about 70% in nine months.",
+    "Next decade could be the best in history (Hassabis expects most diseases to be cured within 10 years) or one of the worst, depending on choices.",
+]
+
+THEMES = [
+    {
+        "id": "canaries-and-elastic-demand",
+        "tags": ["software", "career", "macro-rates"],
+        "color": "amber",
+        "badge": "Confirmed event",
+        "status": "STANFORD DIGITAL ECONOMY LAB PAPER, UPDATED MONTHLY",
+        "title": "Entry-level jobs in exposed fields are already shrinking, but elasticity decides who loses",
+        "lead": "AI has cut employment for young workers in the most exposed jobs, while augmenting workers and elastic-demand fields do fine.",
+        "bullets": [
+            "'Canaries in the Coal Mine': about **16%** less employment for people up to 25 in the most exposed occupations; double-digit declines in coding and call centers, and the effect is growing every month.",
+            "The least exposed jobs (like home health aides) and older workers see growing employment; people using AI to augment, not automate, did significantly better.",
+            "Think in tasks: radiologists do 26 distinct tasks; reading images is automated, but physical exams, lab review and care coordination are not. No occupation is fully covered by LLMs.",
+            "Elastic demand: cheaper flights meant we spend more on air travel. About half the economy spends less as prices fall, the other half spends more, and that half is where AI creates jobs.",
+            "Radiologists: despite Geoffrey Hinton's 2017 call to stop hiring them, there are more than ever and nearly a shortage. An MRI falling from $2,000 to $200 raises demand; medical care may see twice the spending for four times the benefit.",
+            "Coding: every student in his Stanford course now must ship running code; 20 teams presented last Friday. A call-center client now has AI agents answering a big percentage of questions directly.",
+        ],
+        "quote": {"text": "There are a bunch of jobs, millions of jobs that are going to disappear.", "cite": "— Erik Brynjolfsson"},
+        "watch": "Brynjolfsson runs a master class and the startup Work Helix that teach companies to use AI; the numbers come from his own lab.",
+        "names": None,
+    },
+    {
+        "id": "productivity-lag-j-curve",
+        "tags": ["software", "macro-rates"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "BET WITH BOB GORDON, RESOLVES BY 2030",
+        "title": "Capabilities are skyrocketing but economic impact is muted: the J-curve turns in 3-5 years",
+        "lead": "He says the productivity payoff lags like electricity did, but this time in years, not decades.",
+        "bullets": [
+            "The Stanford AI Index shows benchmark capabilities skyrocketing, while measured productivity and employment effects are not yet dramatic; closing that gap is the opportunity.",
+            "Companies waste effort on AI slop: a hackathon winner made lunch menus. They need to tie AI to real business problems.",
+            "History: electric motors took about 30 years (Paul David) to show productivity gains in factories; steam about 50. He expects **3-5 years** for AI, since business processes, reskilling and new products must change.",
+            "Visiting DeepMind, he was told capabilities will arrive in 18-24 months; he believes them but says business value takes longer.",
+            "Bet with skeptic Bob Gordon: productivity by the end of the decade (2030) will be significantly higher than BLS forecasts; he says he's already ahead and that official statistics are lowballing it.",
+            "His 'takeoff tracker' of AI economic indicators: one or two show strong evidence, three or four mild, the rest none yet, and each month more should move up.",
+            "He expects higher productivity to help with the budget deficit, poverty and health care, and that the best gains come in the next three or four years.",
+        ],
+        "quote": {"text": "the thing about exponentials is that things happen slowly and then suddenly", "cite": "— Erik Brynjolfsson"},
+        "watch": "Brynjolfsson's wager and his Work Helix business both depend on AI paying off faster than official forecasts.",
+        "names": None,
+    },
+    {
+        "id": "define-execute-evaluate",
+        "tags": ["software", "career", "mindset"],
+        "color": "green",
+        "badge": "Framework",
+        "status": "HIS ADVICE FOR WORKERS AND STUDENTS",
+        "title": "Humans define and evaluate; agents execute, so agency, connection and taste gain value",
+        "lead": "Most jobs will mean being the CEO of a fleet of agents.",
+        "bullets": [
+            "Every project splits into **defining the question, executing, evaluating**. Agents are now good at executing; people keep the first and third parts, including catching an agent that did what you literally asked but not what you meant.",
+            "It can be taught: at Stanford he cold-calls students and gives unstructured problems instead of cookbook steps, and combining technical skill with domain or people skills adds the most value (rigor plus relevance, MIT's 'mind and hand').",
+            "Cookbook courses ('how to invert a matrix') will become less valuable because AI tools do them; he even suggests universities revisit the liberal arts, such as philosophy, music and art, to build taste.",
+            "What stays valuable: **agency** (think 'amplifying intention'), human connection (people play chess more after Deep Blue; they won't watch machines play basketball), physical trades for a closing window, and jobs nobody has invented yet.",
+            "Improvisation: Reid Hoffman's thought experiment of an ordinary person facing the best chess computer in a 30-day life-or-death game suggests the human might find a way to short-circuit it.",
+            "On personal use: AI is a co-working partner, never 100% delegated; he would still want a human doctor to make the call. A grad-student research cycle that took weeks now takes minutes with Claude Cowork. Tip: ask a chatbot to interview you and propose ten uses.",
+        ],
+        "quote": {"text": "amplifying intention not artificial intelligence", "cite": "— Erik Brynjolfsson"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "junior-pipeline-transition",
+        "tags": ["career", "policy"],
+        "color": "red",
+        "badge": "Structural critique",
+        "status": "A COORDINATION PROBLEM",
+        "title": "Cutting junior roles turns the pyramid into a diamond, and no one has planned the transition",
+        "lead": "Companies that stop hiring juniors will lack future seniors, and society repeats its globalization mistake.",
+        "bullets": [
+            "Junior software engineer at $95K: 'no', in the bullseye and disappearing in the data; a senior version would be more positive. Mid-level marketing manager at $115K and paralegals are also exposed ('even worse').",
+            "Infosys keeps hiring juniors but has them learn big-picture project management instead of routine work; he thinks most firms are shortsighted.",
+            "Pyramid to diamond: with the base gone, where do middle managers and seniors come from? It's a prisoner's dilemma: cutting juniors is privately rational but socially costly, so he wants public investment in education and training.",
+            "Radiologists at $350K are 'a good job' and likely to stay one for a while.",
+            "Globalization lesson: economists promised a bigger pie, but nobody compensated the losers, producing a backlash and the highest tariffs in nearly a century. He calls AI's disruption 'ten times bigger' and already drawing backlash.",
+            "Don't freeze old jobs (coal miners): every society that succeeded leaned into dynamism and retraining.",
+        ],
+        "quote": {"text": "no society has ever succeeded by trying to hang on to the old jobs", "cite": "— Erik Brynjolfsson"},
+        "watch": "Infosys' hiring policy is relayed by Brynjolfsson from his own conversation with the company.",
+        "names": [
+            {"name": "Infosys (INFY)", "blurb": "Still hires juniors and trains them in project management; he says it's doing it right", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+        ],
+    },
+    {
+        "id": "concentration-new-economics",
+        "tags": ["policy", "finance", "macro-rates"],
+        "color": "amber",
+        "badge": "Structural critique",
+        "status": "HIS WORRY, WITH A BACKUP PLAN",
+        "title": "Wealth could concentrate; money, GDP and status may need new rules",
+        "lead": "He says shared prosperity is a choice, and that GDP misses the value of free goods.",
+        "bullets": [
+            "Biggest worry: AI wealth concentrated in a few companies or one government-owned entity. Answer one: more entrepreneurship (people creating products, not following instructions); a Saturday brainstorm with an LLM is low-cost.",
+            "Backup: universal basic income, progressive income taxes and wealth taxes, not his first choice; he cites gated communities in Latin America (a Brazilian friend said her rich friends were in a prison of their own creation).",
+            "Markets and companies are information processors built on 20th-century technology; with AI a millionfold more powerful, 'it would be a miracle' if they stayed the same. He sees a need for a new economics, like Adam Smith and Keynes did.",
+            "Basic needs may become nearly free, but status stays scarce and zero-sum; the job is steering status competition toward productive things like curing diseases.",
+            "**GDPB** (B for benefits): asks how much you would have to be paid to give up a free good, across 600 goods. It shows trillions in unmeasured consumer surplus, and LLM value rose about **70%** in nine months; Wikipedia is valued around $10 a month.",
+            "He would need tens of thousands to give up AI for a month; the host asks about a $125 a month valuation.",
+        ],
+        "quote": {"text": "you don't want to have all the wealth and power too concentrated", "cite": "— Erik Brynjolfsson"},
+        "watch": "GDPB is Brynjolfsson's own measure; the valuation figures come from his team's surveys.",
+        "names": None,
+    },
+    {
+        "id": "best-and-worst-decade",
+        "tags": ["geopolitics", "policy", "health"],
+        "color": "gray",
+        "badge": "Speculative",
+        "status": "OUTLOOK, DEPENDS ON CHOICES",
+        "title": "The second machine age: best decade ever or one of the worst",
+        "lead": "He says AI augments minds the way steam augmented muscle, and outcomes depend on what we steer it toward.",
+        "bullets": [
+            "*The Second Machine Age* (with Andy McAfee): the industrial revolution made us 30-50x richer than ancestors via a couple of percent of annual growth; AI augmenting minds will be bigger, faster and touch most of the economy.",
+            "Best case: more wealth creation than ever and longevity gains; Demis Hassabis thinks they'll start curing a majority of diseases within **10 years**.",
+            "Worst case: lab-made viruses, AI manipulating social media, mass centralization of power, and AI-powered drones hunting people.",
+            "Doomers are right about the risk but wrong that it's inevitable; he works with labs and politicians on shared prosperity and says agency should go to what we want to use AI for.",
+            "By 2030 he says there will be no question AI transformed the economy; mind-blowing things will accumulate over the next 3-5 years.",
+        ],
+        "quote": {"text": "if you're not both excited and scared, you're missing at least half the story", "cite": "— Erik Brynjolfsson"},
+        "watch": "Hassabis' 10-year disease claim is Brynjolfsson's relay from a conversation, and he calls it ambitious.",
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F9ED", "tag": "Careers", "title": "Practice defining questions and evaluating AI output rather than only executing tasks."},
+    {"icon": "\U0001F6E0", "tag": "AI work", "title": "Use AI to augment your role instead of automating it; augmenters see better employment."},
+    {"icon": "\U0001F4C9", "tag": "Careers", "title": "Move early-career work toward project management and judgment, not routine tasks."},
+    {"icon": "\U0001F4CA", "tag": "Macro", "title": "Watch the Stanford takeoff tracker's evidence categories for the turn in productivity."},
+    {"icon": "\U0001F3DB", "tag": "Policy", "title": "Track whether companies and governments fund retraining, since the junior pipeline is a coordination problem."},
+    {"icon": "\U0001F4AC", "tag": "AI work", "title": "Ask a chatbot to interview you and list ten uses for your own work."},
+]
+
+HOT_TAKES = [
+    {"take": "I think it's going to be even bigger than most people realize.", "cite": "— Erik Brynjolfsson", "why": "Says AI is underhyped."},
+    {"take": "I think the official government statistics are way lowballing what's going to happen.", "cite": "— Erik Brynjolfsson", "why": "Disputes BLS productivity forecasts."},
+    {"take": "that's one that's very much in the bullseye of being replaced", "cite": "— Erik Brynjolfsson", "why": "On junior software engineers."},
+    {"take": "Oh my gosh, it's even worse.", "cite": "— Erik Brynjolfsson", "why": "On paralegals."},
+    {"take": "It would be a miracle if those two institutions just stayed the way they are.", "cite": "— Erik Brynjolfsson", "why": "Markets and firms will change."},
+]
+
+CLAIMS = [
+    {"who": "Erik Brynjolfsson", "claim": "By the end of the 2020s, US productivity will be significantly higher than the Bureau of Labor Statistics predicts.", "metric": "US productivity vs BLS forecast", "target": "significantly higher", "by": "2030", "condition": None, "entity": "United States"},
+    {"who": "Erik Brynjolfsson", "claim": "AI will take about 3 to 5 years to translate into business value.", "metric": "AI business value realization", "target": "visible gains", "by": "3-5 years", "condition": None, "entity": None},
+    {"who": "Google DeepMind (cited by Erik Brynjolfsson)", "claim": "Major new AI capabilities will arrive within 18 to 24 months.", "metric": "AI capabilities", "target": "new capabilities", "by": "18-24 months", "condition": None, "entity": None},
+    {"who": "Demis Hassabis (cited by Erik Brynjolfsson)", "claim": "AI will begin curing a majority of diseases within 10 years.", "metric": "diseases cured", "target": "majority", "by": "10 years", "condition": None, "entity": None},
+    {"who": "Erik Brynjolfsson", "claim": "By 2030 there will be no question that AI has transformed the economy.", "metric": "AI economic transformation", "target": "undeniable", "by": "2030", "condition": None, "entity": None},
+    {"who": "Erik Brynjolfsson", "claim": "The next decade will be the best in human history if we play our cards right.", "metric": "human welfare and wealth creation", "target": "best decade ever", "by": "10 years", "condition": "if society plays its cards right", "entity": None},
+]
+
+RELATIONS = []
+
+OTHER_NEWS = [
+    {"icon": "\U0001F4D6", "title": "Sources named: Paul David's research on electricity in factories, The Second Machine Age (with Andy McAfee), the Stanford AI Index and AI economic indicators, Geoffrey Hinton's 2017 radiologist remark, Reid Hoffman's chess thought experiment, Adam Smith and Keynes, and MIT's mens et manus motto.", "tag": "Sources"},
+    {"icon": "\U0001F4BC", "title": "The host cites an ADP report showing private employers added 122,000 jobs in May and asks which jobs and whether AI-linked; the answer moves to the task-based exposure framework.", "tag": "Macro"},
+    {"icon": "\U0001F9D1‍\U0001F393", "title": "A host question on whether a Stanford dream still holds in 10 years: he hopes so, but expects education to change.", "tag": "Careers"},
+]
+
+GLOSSARY = [
+    {"term": "Elastic demand", "def": "Demand that rises a lot when price falls, so efficiency gains can increase total spending and jobs."},
+    {"term": "Canaries in the Coal Mine", "def": "The Stanford lab paper tracking AI's early employment effects on young workers in exposed occupations."},
+    {"term": "J-curve", "def": "The pattern where a general-purpose technology's productivity gains arrive late, after a lag of reorganization."},
+    {"term": "GDPB", "def": "Brynjolfsson's benefits-based measure of value that asks what people would accept to give up a good, including free goods."},
+    {"term": "Takeoff tracker", "def": "Stanford's monthly set of AI economic indicators graded as no, mild or strong evidence."},
+]
