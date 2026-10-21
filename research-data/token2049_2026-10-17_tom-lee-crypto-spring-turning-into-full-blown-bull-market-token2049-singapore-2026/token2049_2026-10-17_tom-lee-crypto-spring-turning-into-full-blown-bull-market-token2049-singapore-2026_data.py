@@ -109,7 +109,6 @@ THEMES = [
         "watch": "Lee is BitMine's chairman; all figures are his company's self-reported results. Captions render the name as \"Bitmain\".",
         "names": [
             {"name": "BitMine Immersion (BMNR)", "blurb": "6M ETH, 4.9% of supply, 5% hard cap", "stance": "OWNS", "conviction": "High", "horizon": "this cycle"},
-            {"name": "BMNP", "blurb": "Perpetual preferred, 9.5% yield", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
             {"name": "Eightco", "blurb": "Holds an OpenAI stake and Worldcoin; called undervalued", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
         ],
     },
@@ -125,7 +124,7 @@ TAKEAWAYS = [
 
 HOT_TAKES = [
     {"take": "We are at the start of a crypto bull market. And if I had to give it a date, I'm going to say it was August.", "cite": "— Tom Lee", "why": "dated call"},
-    {"take": "I think it's a 25x minimum.", "cite": "— Tom Lee", "why": "numeric ETH call"},
+    {"take": "it's a 25x minimum.", "cite": "— Tom Lee", "why": "numeric ETH call"},
     {"take": "We are even the best-performing bond in the world.", "cite": "— Tom Lee", "why": "boast about BMNP"},
     {"take": "I don't think you're bullish enough.", "cite": "— Tom Lee", "why": "contrarian to sceptics"},
 ]
