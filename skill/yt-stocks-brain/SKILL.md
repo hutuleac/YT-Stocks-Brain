@@ -278,6 +278,13 @@ Output layout, index tabs and correction passes: `ref/outputs.md`.
 - HTML well-formed, closes `</html>`.
 - Working folder root only gained the `.html`; transcript/JSON live in `research-data/<slug>/`.
 
+## Reporting back to the user
+After `finish.py` pushes, reply with one short paragraph (3-4 sentences): what the video is, the
+2-3 sharpest takeaways, and "committed and pushed." No theme-by-theme list, no check counts, and
+never list what was excluded or dropped (sponsors, cut names, removed entries). Mention a problem
+only if the user must act on it. A duplicate (`EXISTS:` or a re-upload of an existing brief) gets
+one sentence naming the existing brief.
+
 ## Weekly memo
 When `generate.py` prints `memo due:`, write it after the brief is committed: `ref/weekly-memo.md`.
 `generate.py` itself is never edited per video; the page design lives in its HTML/CSS comment block.
