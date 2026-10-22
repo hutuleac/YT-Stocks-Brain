@@ -1,0 +1,5123 @@
+1
+00:00:00,000 --> 00:00:04,160
+I know that you guys have been using the
+
+2
+00:00:01,840 --> 00:00:06,559
+T-word a lot the last day or two in your
+
+3
+00:00:04,160 --> 00:00:08,160
+conversations, the tokens. But maybe we
+
+4
+00:00:06,559 --> 00:00:10,279
+could kind of pivot a little bit away
+
+5
+00:00:08,160 --> 00:00:12,519
+from AI. I guess it's a little bit
+
+6
+00:00:10,279 --> 00:00:14,359
+rooted in AI, but there's been this big
+
+7
+00:00:12,519 --> 00:00:16,160
+conversation set in the last couple days
+
+8
+00:00:14,359 --> 00:00:19,519
+about cryptography
+
+9
+00:00:16,160 --> 00:00:21,640
+and some of the risks to cryptography.
+
+10
+00:00:19,519 --> 00:00:23,559
+I think it it took root after the OpenAI
+
+11
+00:00:21,640 --> 00:00:25,839
+math drop, but there's more
+
+12
+00:00:23,559 --> 00:00:28,000
+conversations now about this big quantum
+
+13
+00:00:25,839 --> 00:00:30,120
+initiative and how that might kind of
+
+14
+00:00:28,000 --> 00:00:31,800
+take us into an era where we need to
+
+15
+00:00:30,120 --> 00:00:33,880
+kind of start to think about adopting
+
+16
+00:00:31,800 --> 00:00:34,960
+quantum cryptography, but Arvin, maybe
+
+17
+00:00:33,880 --> 00:00:36,520
+we could start and talk a little bit
+
+18
+00:00:34,960 --> 00:00:37,240
+about where things stand today from your
+
+19
+00:00:36,520 --> 00:00:39,280
+view.
+
+20
+00:00:37,240 --> 00:00:40,560
+>> Sure. So, um
+
+21
+00:00:39,280 --> 00:00:42,399
+a little bit of what David just touched
+
+22
+00:00:40,560 --> 00:00:44,560
+on is uh DARPA's been running a
+
+23
+00:00:42,399 --> 00:00:46,439
+competition called QBI or Quantum
+
+24
+00:00:44,560 --> 00:00:48,320
+Benchmarking Initiative.
+
+25
+00:00:46,439 --> 00:00:49,960
+Um a couple of hundred companies joined
+
+26
+00:00:48,320 --> 00:00:52,880
+it a couple of years ago. I think it's
+
+27
+00:00:49,960 --> 00:00:55,280
+down to maybe 13 are left, so that tells
+
+28
+00:00:52,880 --> 00:00:57,679
+you kind of what's maybe real. I'm
+
+29
+00:00:55,280 --> 00:01:00,439
+calling it maybe not quite real. Some of
+
+30
+00:00:57,679 --> 00:01:03,039
+it is real. And so their goal is who can
+
+31
+00:01:00,439 --> 00:01:05,039
+build a quantum computer that works?
+
+32
+00:01:03,039 --> 00:01:07,400
+Let's sort of put the technology side
+
+33
+00:01:05,040 --> 00:01:10,680
+out of it. And the debates are is it
+
+34
+00:01:07,400 --> 00:01:11,920
+2028, 2029, 2033?
+
+35
+00:01:10,680 --> 00:01:14,120
+And sort of if you pick the middle
+
+36
+00:01:11,920 --> 00:01:16,000
+point, let's call it 2030,
+
+37
+00:01:14,120 --> 00:01:18,439
+well, it will break today's
+
+38
+00:01:16,000 --> 00:01:20,840
+cryptography. That's not a supposition,
+
+39
+00:01:18,439 --> 00:01:22,480
+that's just a reality. And if that's
+
+40
+00:01:20,840 --> 00:01:25,920
+going to happen, then what's the
+
+41
+00:01:22,480 --> 00:01:28,480
+cryptography that you got to use to uh
+
+42
+00:01:25,920 --> 00:01:30,719
+protect yourself against that?
+
+43
+00:01:28,480 --> 00:01:32,760
+Unfortunately for some of you, what's
+
+44
+00:01:30,719 --> 00:01:34,280
+even worse, if you have an encrypted
+
+45
+00:01:32,760 --> 00:01:35,960
+hard disk today that gets stolen,
+
+46
+00:01:34,280 --> 00:01:37,920
+somebody could keep it for 5 years and
+
+47
+00:01:35,959 --> 00:01:39,640
+break it at that point.
+
+48
+00:01:37,920 --> 00:01:42,200
+The good news is post-quantum
+
+49
+00:01:39,640 --> 00:01:44,799
+cryptography is understood, it's
+
+50
+00:01:42,200 --> 00:01:48,079
+well-known, the code is written,
+
+51
+00:01:44,799 --> 00:01:49,959
+but people have been too lazy to get to
+
+52
+00:01:48,079 --> 00:01:50,439
+it. But I think the wake-up moment is
+
+53
+00:01:49,959 --> 00:01:52,319
+now.
+
+54
+00:01:50,439 --> 00:01:55,519
+>> Are the solutions that we understand
+
+55
+00:01:52,319 --> 00:01:57,319
+quantum-proof or quantum-resistant?
+
+56
+00:01:55,519 --> 00:01:58,959
+Because it's sort of based on our basic
+
+57
+00:01:57,319 --> 00:02:00,239
+understanding today of what quantum
+
+58
+00:01:58,959 --> 00:02:02,759
+probably looks like.
+
+59
+00:02:00,239 --> 00:02:05,759
+>> Yeah. Um, no. It is based on
+
+60
+00:02:02,760 --> 00:02:07,960
+understanding at a theoretical level of
+
+61
+00:02:05,760 --> 00:02:09,920
+what quantum could do. So, they are
+
+62
+00:02:07,959 --> 00:02:13,759
+quantum proof
+
+63
+00:02:09,919 --> 00:02:15,919
+in the same level of rigor that today's
+
+64
+00:02:13,759 --> 00:02:17,959
+cryptography cannot be broken by today's
+
+65
+00:02:15,919 --> 00:02:21,479
+classical computers. That's actually not
+
+66
+00:02:17,959 --> 00:02:23,599
+a theorem proof level answer. It's more
+
+67
+00:02:21,479 --> 00:02:26,039
+based on complexity theory in computer
+
+68
+00:02:23,599 --> 00:02:29,120
+science, which is grounded at the end on
+
+69
+00:02:26,039 --> 00:02:31,039
+some assumptions, not on
+
+70
+00:02:29,120 --> 00:02:33,200
+>> So, if you look at where we are today,
+
+71
+00:02:31,039 --> 00:02:34,919
+and that 2030 midpoint,
+
+72
+00:02:33,199 --> 00:02:36,759
+can you just walk us through the
+
+73
+00:02:34,919 --> 00:02:39,239
+evolutionary moments that you need to
+
+74
+00:02:36,759 --> 00:02:41,079
+see, where we all have to start paying
+
+75
+00:02:39,240 --> 00:02:41,640
+attention and say, "Okay, how do we
+
+76
+00:02:41,080 --> 00:02:44,920
+move?"
+
+77
+00:02:41,639 --> 00:02:46,839
+>> Yes. So, today you got toy quantum
+
+78
+00:02:44,919 --> 00:02:48,639
+computers. I'll call I'll call them toys
+
+79
+00:02:46,840 --> 00:02:50,959
+because they can do certain problems,
+
+80
+00:02:48,639 --> 00:02:54,759
+but they're rife with errors. They have
+
+81
+00:02:50,959 --> 00:02:57,080
+no way to scale fully yet. So, question
+
+82
+00:02:54,759 --> 00:02:59,519
+one will be, who's the first one who can
+
+83
+00:02:57,080 --> 00:03:02,320
+demonstrate, not a simulation, not on
+
+84
+00:02:59,519 --> 00:03:04,920
+the side, but some level of error
+
+85
+00:03:02,319 --> 00:03:07,359
+correction or mitigation on a running
+
+86
+00:03:04,919 --> 00:03:11,319
+quantum computer. Step one.
+
+87
+00:03:07,360 --> 00:03:14,480
+And so, I'll predict you'll see somebody
+
+88
+00:03:11,319 --> 00:03:16,639
+make claims by next year. Then, you
+
+89
+00:03:14,479 --> 00:03:18,560
+should get third parties to evaluate are
+
+90
+00:03:16,639 --> 00:03:21,159
+those claims real. You'll find one or
+
+91
+00:03:18,560 --> 00:03:23,560
+two will make progress by 2027. Error
+
+92
+00:03:21,159 --> 00:03:24,359
+correction. Not at scale, but error
+
+93
+00:03:23,560 --> 00:03:25,319
+correction.
+
+94
+00:03:24,360 --> 00:03:28,160
+>> Yeah.
+
+95
+00:03:25,319 --> 00:03:30,079
+>> Question two will be,
+
+96
+00:03:28,159 --> 00:03:33,840
+can you run these things at some level
+
+97
+00:03:30,080 --> 00:03:35,800
+of scale? Not yet complete scale. I call
+
+98
+00:03:33,840 --> 00:03:38,080
+it gate computations for the lack of a
+
+99
+00:03:35,800 --> 00:03:40,640
+better word. Today, most people are
+
+100
+00:03:38,080 --> 00:03:41,719
+somewhere around 10,000.
+
+101
+00:03:40,639 --> 00:03:44,479
+Which if you think of a normal computer
+
+102
+00:03:41,719 --> 00:03:46,120
+is not very much. When your iPhone does
+
+103
+00:03:44,479 --> 00:03:47,399
+a couple of
+
+104
+00:03:46,120 --> 00:03:48,319
+billion
+
+105
+00:03:47,400 --> 00:03:48,879
+uh, per minute.
+
+106
+00:03:48,319 --> 00:03:51,159
+>> Yeah.
+
+107
+00:03:48,879 --> 00:03:53,120
+>> So, gate computations, is somebody
+
+108
+00:03:51,159 --> 00:03:55,079
+scaling from 10,000? Are they adding a
+
+109
+00:03:53,120 --> 00:03:56,920
+zero each year?
+
+110
+00:03:55,080 --> 00:03:59,719
+That's the second milestone I would put.
+
+111
+00:03:56,919 --> 00:04:02,439
+You put those two steps together
+
+112
+00:03:59,719 --> 00:04:03,960
+and now if you put a zero per year, that
+
+113
+00:04:02,439 --> 00:04:05,759
+means you could be at 10 million by
+
+114
+00:04:03,960 --> 00:04:07,640
+2029.
+
+115
+00:04:05,759 --> 00:04:10,399
+That's remarkable. That can do some
+
+116
+00:04:07,639 --> 00:04:11,599
+things that will surprise the hell out
+
+117
+00:04:10,400 --> 00:04:13,560
+of everybody.
+
+118
+00:04:11,599 --> 00:04:15,519
+>> Does this reference kind of this notion
+
+119
+00:04:13,560 --> 00:04:17,798
+of a logical qubit being kind of an
+
+120
+00:04:15,520 --> 00:04:20,040
+error corrected operating qubit? Is that
+
+121
+00:04:17,798 --> 00:04:22,399
+>> It's a Is Is that a Is that a a term
+
+122
+00:04:20,040 --> 00:04:23,680
+>> you've adopted qubits and
+
+123
+00:04:22,399 --> 00:04:25,319
+that everyone kind of has the same
+
+124
+00:04:23,680 --> 00:04:27,120
+milestone, the same metric?
+
+125
+00:04:25,319 --> 00:04:29,199
+>> I don't love the term, but I think it's
+
+126
+00:04:27,120 --> 00:04:30,720
+a fair term to just explain to people to
+
+127
+00:04:29,199 --> 00:04:32,120
+say, "Hey,
+
+128
+00:04:30,720 --> 00:04:34,200
+if I say I'm building a computer that's
+
+129
+00:04:32,120 --> 00:04:35,918
+got 10,000 qubits and they say, "Yeah,
+
+130
+00:04:34,199 --> 00:04:38,319
+but they're all noisy." You're right.
+
+131
+00:04:35,918 --> 00:04:40,319
+So, if I begin to error correct, it in
+
+132
+00:04:38,319 --> 00:04:42,240
+some sense decreases the effective
+
+133
+00:04:40,319 --> 00:04:44,680
+capacity of the machine.
+
+134
+00:04:42,240 --> 00:04:47,079
+So, a logical then says, "Okay, what's
+
+135
+00:04:44,680 --> 00:04:48,759
+the effective capacity of this machine?"
+
+136
+00:04:47,079 --> 00:04:51,240
+is I think a reasonable way to look at
+
+137
+00:04:48,759 --> 00:04:53,079
+it. So, that's uh that's a
+
+138
+00:04:51,240 --> 00:04:54,400
+term that I while I don't love because
+
+139
+00:04:53,079 --> 00:04:56,159
+it's not like I've taken these four
+
+140
+00:04:54,399 --> 00:04:58,359
+things and it's like a DRAM cell and
+
+141
+00:04:56,160 --> 00:05:00,760
+that's it. It's actually the whole
+
+142
+00:04:58,360 --> 00:05:03,480
+machine is error corrected, but it's got
+
+143
+00:05:00,759 --> 00:05:04,680
+some divide. So, 10,000 physical, maybe
+
+144
+00:05:03,480 --> 00:05:06,240
+200 logical.
+
+145
+00:05:04,680 --> 00:05:07,400
+>> Nikesh, you have red teams that think
+
+146
+00:05:06,240 --> 00:05:09,360
+about
+
+147
+00:05:07,399 --> 00:05:11,120
+what is at the frontier and pushing it.
+
+148
+00:05:09,360 --> 00:05:12,919
+Let's say that you start to see these
+
+149
+00:05:11,120 --> 00:05:15,160
+ooms, these orders of magnitude start to
+
+150
+00:05:12,918 --> 00:05:17,199
+compound.
+
+151
+00:05:15,160 --> 00:05:19,600
+If you had to guess, where would your
+
+152
+00:05:17,199 --> 00:05:22,039
+red team say are the obvious honey pots?
+
+153
+00:05:19,600 --> 00:05:23,280
+Where do you point that if you were a
+
+154
+00:05:22,040 --> 00:05:25,080
+bad actor?
+
+155
+00:05:23,279 --> 00:05:27,439
+>> If you think from the perspective of
+
+156
+00:05:25,079 --> 00:05:29,199
+everybody here has
+
+157
+00:05:27,439 --> 00:05:30,879
+pretty much
+
+158
+00:05:29,199 --> 00:05:32,599
+crypto keys running across the entire IT
+
+159
+00:05:30,879 --> 00:05:34,759
+infrastructure. It's not one thing.
+
+160
+00:05:32,600 --> 00:05:36,680
+Everything is running with crypto keys
+
+161
+00:05:34,759 --> 00:05:39,519
+which are encrypted. Every vendor in our
+
+162
+00:05:36,680 --> 00:05:40,319
+space has keys at each end.
+
+163
+00:05:39,519 --> 00:05:44,079
+So, the first thing that's going to
+
+164
+00:05:40,319 --> 00:05:46,199
+happen is whatever's not quantum proof
+
+165
+00:05:44,079 --> 00:05:47,519
+is going to be breakable.
+
+166
+00:05:46,199 --> 00:05:50,000
+So,
+
+167
+00:05:47,519 --> 00:05:51,759
+our view is you can't wait for 2029 or
+
+168
+00:05:50,000 --> 00:05:52,720
+2030 because it's not like one day all
+
+169
+00:05:51,759 --> 00:05:56,000
+of us are going to go out and say, "Oh,
+
+170
+00:05:52,720 --> 00:05:57,520
+ Let's go burn $5 of IT
+
+171
+00:05:56,000 --> 00:05:59,199
+infrastructure and let's go build it
+
+172
+00:05:57,519 --> 00:06:01,319
+again in 1 year because now we need
+
+173
+00:05:59,199 --> 00:06:03,360
+quantum-safe infrastructure." So, you
+
+174
+00:06:01,319 --> 00:06:06,879
+should be built you should be replacing
+
+175
+00:06:03,360 --> 00:06:09,319
+your IT stack today with quantum-safe or
+
+176
+00:06:06,879 --> 00:06:10,439
+quantum-proof infrastructure right now.
+
+177
+00:06:09,319 --> 00:06:12,279
+Now, there are technologies there are
+
+178
+00:06:10,439 --> 00:06:14,360
+capabilities which are already out in
+
+179
+00:06:12,279 --> 00:06:15,719
+the market where you can start, you
+
+180
+00:06:14,360 --> 00:06:16,639
+know, wrapping
+
+181
+00:06:15,720 --> 00:06:19,800
+uh
+
+182
+00:06:16,639 --> 00:06:22,120
+post-quantum ready through keys around
+
+183
+00:06:19,800 --> 00:06:24,079
+traffic as a stopgap. So, you can do
+
+184
+00:06:22,120 --> 00:06:26,759
+that, but the time to if he says it's
+
+185
+00:06:24,079 --> 00:06:28,079
+2029-30, we're already late.
+
+186
+00:06:26,759 --> 00:06:29,360
+>> We're 3 years away.
+
+187
+00:06:28,079 --> 00:06:30,959
+>> We're 3 years away and I'm pretty sure
+
+188
+00:06:29,360 --> 00:06:32,919
+everybody in this room has got a few
+
+189
+00:06:30,959 --> 00:06:35,079
+hundred million dollars of IT spend that
+
+190
+00:06:32,918 --> 00:06:37,918
+is earmarked for this year and I'm
+
+191
+00:06:35,079 --> 00:06:40,240
+guessing 50% of your spend is on
+
+192
+00:06:37,918 --> 00:06:43,359
+infrastructure that is not quantum-safe.
+
+193
+00:06:40,240 --> 00:06:45,040
+>> There was a pretty senior AI researcher
+
+194
+00:06:43,360 --> 00:06:45,400
+that said we don't need to pay
+
+195
+00:06:45,040 --> 00:06:45,919
+>> Hm?
+
+196
+00:06:45,399 --> 00:06:47,479
+>> 2029?
+
+197
+00:06:45,918 --> 00:06:50,519
+>> Well, I mean, his view was actually
+
+198
+00:06:47,480 --> 00:06:52,080
+models AI models today
+
+199
+00:06:50,519 --> 00:06:53,799
+can get us there before quantum
+
+200
+00:06:52,079 --> 00:06:55,879
+computers get us there.
+
+201
+00:06:53,800 --> 00:06:57,319
+Do you have a view on this? And I guess,
+
+202
+00:06:55,879 --> 00:06:58,918
+you know, and and I guess it's rooted in
+
+203
+00:06:57,319 --> 00:07:02,120
+this idea
+
+204
+00:06:58,918 --> 00:07:05,159
+that on the frontiers of number theory,
+
+205
+00:07:02,120 --> 00:07:07,319
+you can see AI start to develop models
+
+206
+00:07:05,160 --> 00:07:09,640
+and proofs that are not apparent to
+
+207
+00:07:07,319 --> 00:07:12,360
+humans today that allow us to rethink
+
+208
+00:07:09,639 --> 00:07:15,000
+how we can effectively do code-breaking.
+
+209
+00:07:12,360 --> 00:07:16,000
+And perhaps the OpenAI math dump this
+
+210
+00:07:15,000 --> 00:07:18,519
+week
+
+211
+00:07:16,000 --> 00:07:20,079
+is an early indication that this might
+
+212
+00:07:18,519 --> 00:07:21,000
+actually be a good prediction that he
+
+213
+00:07:20,079 --> 00:07:22,719
+made.
+
+214
+00:07:21,000 --> 00:07:24,959
+>> Since you geeked a little bit by going
+
+215
+00:07:22,720 --> 00:07:27,080
+down that direction, you'll excuse me if
+
+216
+00:07:24,959 --> 00:07:30,079
+I just geek a little bit. It's not going
+
+217
+00:07:27,079 --> 00:07:32,240
+to be possible. At the end of the day,
+
+218
+00:07:30,079 --> 00:07:36,079
+this goes back to stuff that people like
+
+219
+00:07:32,240 --> 00:07:37,639
+Richard Feynman did. You cannot simulate
+
+220
+00:07:36,079 --> 00:07:39,959
+something on a different architecture
+
+221
+00:07:37,639 --> 00:07:42,399
+and expect a more efficient result.
+
+222
+00:07:39,959 --> 00:07:45,039
+Right. So, if you take that as a thesis,
+
+223
+00:07:42,399 --> 00:07:47,159
+quantum computers do not operate in
+
+224
+00:07:45,040 --> 00:07:50,560
+arithmetic, right, which is what all of
+
+225
+00:07:47,160 --> 00:07:53,640
+classical computers, including GPUs, do.
+
+226
+00:07:50,560 --> 00:07:57,000
+Could you have an AI algorithm discover
+
+227
+00:07:53,639 --> 00:07:59,199
+a new quantum algorithm? Absolutely.
+
+228
+00:07:57,000 --> 00:08:01,399
+Could it run it effectively and
+
+229
+00:07:59,199 --> 00:08:03,920
+efficiently on today's hardware? Yes,
+
+230
+00:08:01,399 --> 00:08:06,560
+it's not possible. So, you need quantum
+
+231
+00:08:03,920 --> 00:08:09,240
+hardware to run these things to get the
+
+232
+00:08:06,560 --> 00:08:12,160
+positive advantage that the quantum
+
+233
+00:08:09,240 --> 00:08:13,560
+algorithm has. Otherwise, it'll be
+
+234
+00:08:12,160 --> 00:08:15,480
+slower
+
+235
+00:08:13,560 --> 00:08:18,280
+or by an order of a thousand or ten
+
+236
+00:08:15,480 --> 00:08:20,480
+thousand. So, could you prove that it's
+
+237
+00:08:18,279 --> 00:08:22,119
+a workable algorithm? Yes. Could you get
+
+238
+00:08:20,480 --> 00:08:23,919
+that benefit? Unlikely.
+
+239
+00:08:22,120 --> 00:08:25,120
+>> I think the argument is using, and I
+
+240
+00:08:23,918 --> 00:08:27,519
+know we're geeking for a minute, but
+
+241
+00:08:25,120 --> 00:08:29,319
+just using classical computing, you can
+
+242
+00:08:27,519 --> 00:08:30,879
+actually have a different path,
+
+243
+00:08:29,319 --> 00:08:33,599
+arithmetic path. For example, if you had
+
+244
+00:08:30,879 --> 00:08:36,158
+a better predictor of the distribution
+
+245
+00:08:33,599 --> 00:08:37,800
+of prime numbers, you know, like at the
+
+246
+00:08:36,158 --> 00:08:39,879
+frontiers of number theory that we've
+
+247
+00:08:37,799 --> 00:08:42,359
+not really resolved, we can start to
+
+248
+00:08:39,879 --> 00:08:44,519
+have classical models that can start to
+
+249
+00:08:42,360 --> 00:08:46,560
+break cryptography.
+
+250
+00:08:44,519 --> 00:08:47,919
+>> It is possible. The question is how long
+
+251
+00:08:46,559 --> 00:08:49,838
+will it take because that's always the
+
+252
+00:08:47,919 --> 00:08:51,838
+question. Yeah. So, I think it it is
+
+253
+00:08:49,839 --> 00:08:53,680
+going to be possible, but if it takes 10
+
+254
+00:08:51,839 --> 00:08:54,839
+years to break one key,
+
+255
+00:08:53,679 --> 00:08:56,879
+most people are going to rest in peace.
+
+256
+00:08:54,839 --> 00:08:58,960
+That's not a practical answer. That's
+
+257
+00:08:56,879 --> 00:09:01,720
+the That's I think where the debate is
+
+258
+00:08:58,960 --> 00:09:02,560
+going to lie, but it won't prove out
+
+259
+00:09:01,720 --> 00:09:05,160
+until it's done.
+
+260
+00:09:02,559 --> 00:09:07,599
+>> Let me move the conversation to
+
+261
+00:09:05,159 --> 00:09:09,519
+something that's happening currently.
+
+262
+00:09:07,600 --> 00:09:12,320
+I would love to get both of your takes
+
+263
+00:09:09,519 --> 00:09:13,799
+on the following concept.
+
+264
+00:09:12,320 --> 00:09:15,320
+There's open source,
+
+265
+00:09:13,799 --> 00:09:17,399
+there's closed source,
+
+266
+00:09:15,320 --> 00:09:20,520
+there's frontier, there's pacing the
+
+267
+00:09:17,399 --> 00:09:22,679
+frontier, there's now effectively very
+
+268
+00:09:20,519 --> 00:09:26,240
+reasonable alternatives
+
+269
+00:09:22,679 --> 00:09:28,319
+that are open weight at a minimum.
+
+270
+00:09:26,240 --> 00:09:29,600
+Your philosophy around the entire
+
+271
+00:09:28,320 --> 00:09:31,720
+spectrum,
+
+272
+00:09:29,600 --> 00:09:33,240
+and just give us a sense of how we
+
+273
+00:09:31,720 --> 00:09:34,639
+should think about models and
+
+274
+00:09:33,240 --> 00:09:35,960
+capabilities over the next couple of
+
+275
+00:09:34,639 --> 00:09:37,399
+years. Nikesh, do to start?
+
+276
+00:09:35,960 --> 00:09:38,759
+>> Sure. Look,
+
+277
+00:09:37,399 --> 00:09:41,639
+I think earlier in the day somebody
+
+278
+00:09:38,759 --> 00:09:43,039
+said, "Don't restrict your teams in
+
+279
+00:09:41,639 --> 00:09:45,159
+terms of capability in the
+
+280
+00:09:43,039 --> 00:09:47,159
+experimentation phase. Don't start
+
+281
+00:09:45,159 --> 00:09:49,519
+trying to cost optimize. Don't start
+
+282
+00:09:47,159 --> 00:09:51,360
+trying to stitch your own in that phase
+
+283
+00:09:49,519 --> 00:09:53,360
+because
+
+284
+00:09:51,360 --> 00:09:55,360
+the teams who work for us, 20,000 to
+
+285
+00:09:53,360 --> 00:09:56,919
+20,000 people, have just discovered AI
+
+286
+00:09:55,360 --> 00:09:58,639
+in the last 12 to 18 months, and it's
+
+287
+00:09:56,919 --> 00:10:00,639
+not fully diffused across the
+
+288
+00:09:58,639 --> 00:10:02,159
+organization. So, if you make it harder
+
+289
+00:10:00,639 --> 00:10:03,559
+for them to adopt, if you make it harder
+
+290
+00:10:02,159 --> 00:10:05,199
+for them to understand, it's going to
+
+291
+00:10:03,559 --> 00:10:07,119
+take longer for us to be ready. So,
+
+292
+00:10:05,200 --> 00:10:09,280
+right now, we're saying, "Go use the
+
+293
+00:10:07,120 --> 00:10:11,159
+best model you can find, the easiest way
+
+294
+00:10:09,279 --> 00:10:12,919
+to use it, so you can understand and can
+
+295
+00:10:11,159 --> 00:10:14,839
+be validate the things that these things
+
+296
+00:10:12,919 --> 00:10:16,360
+can do, whether it's from an efficiency
+
+297
+00:10:14,840 --> 00:10:17,840
+perspective, a revenue perspective, or
+
+298
+00:10:16,360 --> 00:10:20,200
+product development perspective." That's
+
+299
+00:10:17,840 --> 00:10:22,240
+kind of I'll call it phase one.
+
+300
+00:10:20,200 --> 00:10:24,280
+But, in phase one, what we've discovered
+
+301
+00:10:22,240 --> 00:10:26,639
+is there's different horses for
+
+302
+00:10:24,279 --> 00:10:27,600
+different courses, right?
+
+303
+00:10:26,639 --> 00:10:28,519
+What people don't understand, you know,
+
+304
+00:10:27,600 --> 00:10:29,759
+there was a moment when everybody
+
+305
+00:10:28,519 --> 00:10:32,480
+thought the cybersecurity was going to
+
+306
+00:10:29,759 --> 00:10:33,879
+get consumed by AI models and, you know,
+
+307
+00:10:32,480 --> 00:10:35,320
+our lives are over because mythos is
+
+308
+00:10:33,879 --> 00:10:36,720
+going to solve every problem. Well,
+
+309
+00:10:35,320 --> 00:10:40,360
+guess what?
+
+310
+00:10:36,720 --> 00:10:43,560
+We inspect all traffic at an endpoint
+
+311
+00:10:40,360 --> 00:10:45,360
+with the cost of $20 a year.
+
+312
+00:10:43,559 --> 00:10:46,719
+Right?
+
+313
+00:10:45,360 --> 00:10:48,519
+Hundreds of megabytes of traffic per
+
+314
+00:10:46,720 --> 00:10:50,680
+endpoint at the cost of $20 to $30 a
+
+315
+00:10:48,519 --> 00:10:53,000
+year because machine learning is running
+
+316
+00:10:50,679 --> 00:10:56,079
+on your endpoint, your compute, and we
+
+317
+00:10:53,000 --> 00:10:57,600
+run it on a 20, 30, 40-MB
+
+318
+00:10:56,080 --> 00:10:58,680
+payload.
+
+319
+00:10:57,600 --> 00:11:00,120
+Now, if you want to take all that
+
+320
+00:10:58,679 --> 00:11:01,399
+traffic, run that through OpenAI using
+
+321
+00:11:00,120 --> 00:11:02,560
+tokens for every employee in your
+
+322
+00:11:01,399 --> 00:11:04,159
+company,
+
+323
+00:11:02,559 --> 00:11:05,319
+sounds like the sound of revenue. Like,
+
+324
+00:11:04,159 --> 00:11:07,199
+OpenAI would probably generate all their
+
+325
+00:11:05,320 --> 00:11:07,520
+revenue in 1 year from one company.
+
+326
+00:11:07,200 --> 00:11:09,480
+>> Right.
+
+327
+00:11:07,519 --> 00:11:10,679
+>> So, that's not a practical example of
+
+328
+00:11:09,480 --> 00:11:13,560
+how models are used. So, what you do is
+
+329
+00:11:10,679 --> 00:11:16,079
+you take a small language model, you
+
+330
+00:11:13,559 --> 00:11:18,159
+compress it, you make it task specific,
+
+331
+00:11:16,080 --> 00:11:21,080
+you keep keep training it until it gets
+
+332
+00:11:18,159 --> 00:11:22,439
+to 99.9% accuracy and say, "Instead of
+
+333
+00:11:21,080 --> 00:11:23,400
+using it using machine learning
+
+334
+00:11:22,440 --> 00:11:25,280
+algorithms, we're going to use
+
+335
+00:11:23,399 --> 00:11:26,360
+generative AI small language models, and
+
+336
+00:11:25,279 --> 00:11:27,399
+they're going to do that via So, the
+
+337
+00:11:26,360 --> 00:11:28,720
+point is
+
+338
+00:11:27,399 --> 00:11:30,759
+what we're doing is we're trying to
+
+339
+00:11:28,720 --> 00:11:32,040
+figure out what task requires what level
+
+340
+00:11:30,759 --> 00:11:34,000
+of intelligence,
+
+341
+00:11:32,039 --> 00:11:35,480
+and what is the cost of that
+
+342
+00:11:34,000 --> 00:11:37,200
+intelligence for that particular task
+
+343
+00:11:35,480 --> 00:11:40,200
+and you'll suddenly discover you don't
+
+344
+00:11:37,200 --> 00:11:41,280
+need a Ferrari for every task.
+
+345
+00:11:40,200 --> 00:11:42,560
+And by the way, the customers don't want
+
+346
+00:11:41,279 --> 00:11:43,959
+to pay for a Ferrari for every task.
+
+347
+00:11:42,559 --> 00:11:45,639
+I'll give you the flip side. Flip side
+
+348
+00:11:43,960 --> 00:11:46,920
+is let's assume you're undergoing a
+
+349
+00:11:45,639 --> 00:11:48,199
+breach.
+
+350
+00:11:46,919 --> 00:11:49,959
+You're being attacked, you know you're
+
+351
+00:11:48,200 --> 00:11:51,720
+being attacked. At that point in time
+
+352
+00:11:49,960 --> 00:11:53,360
+every customer in the room says, "Don't
+
+353
+00:11:51,720 --> 00:11:54,600
+worry. Use whichever model you need to
+
+354
+00:11:53,360 --> 00:11:56,480
+to stop the breach." Because they know
+
+355
+00:11:54,600 --> 00:11:57,920
+the business impact of that breach is in
+
+356
+00:11:56,480 --> 00:12:00,240
+the billions of dollars. At that point
+
+357
+00:11:57,919 --> 00:12:01,479
+in time I can run agent swarms, I can do
+
+358
+00:12:00,240 --> 00:12:03,320
+all kinds of stuff that you want from a
+
+359
+00:12:01,480 --> 00:12:05,480
+defensive perspective. So there I may
+
+360
+00:12:03,320 --> 00:12:07,520
+want to use the most up-to-date frontier
+
+361
+00:12:05,480 --> 00:12:08,960
+LLM and say, "Go think about it, reason
+
+362
+00:12:07,519 --> 00:12:10,079
+the hell out of it and figure out how to
+
+363
+00:12:08,960 --> 00:12:13,000
+stop this breach, how to make this
+
+364
+00:12:10,080 --> 00:12:14,280
+happen." So what we're discovering is
+
+365
+00:12:13,000 --> 00:12:16,399
+you're going to end up using frontier
+
+366
+00:12:14,279 --> 00:12:17,519
+LLMs in unique cases where the business
+
+367
+00:12:16,399 --> 00:12:19,559
+value
+
+368
+00:12:17,519 --> 00:12:20,720
+that is going to get disrupted justifies
+
+369
+00:12:19,559 --> 00:12:23,239
+it. You can do drug discovery if you
+
+370
+00:12:20,720 --> 00:12:24,720
+want. I think for most practical use
+
+371
+00:12:23,240 --> 00:12:26,159
+cases in enterprises we're going to end
+
+372
+00:12:24,720 --> 00:12:29,720
+up training some version of an open
+
+373
+00:12:26,159 --> 00:12:31,600
+source model and I think when it comes
+
+374
+00:12:29,720 --> 00:12:34,000
+to even in peacetime for us, for
+
+375
+00:12:31,600 --> 00:12:35,560
+example, running a defender model, we're
+
+376
+00:12:34,000 --> 00:12:36,639
+most more than likely going to take an
+
+377
+00:12:35,559 --> 00:12:38,759
+open weight model, use our own
+
+378
+00:12:36,639 --> 00:12:40,120
+proprietary data, train it, manage the
+
+379
+00:12:38,759 --> 00:12:43,120
+weights because that's what gives us the
+
+380
+00:12:40,120 --> 00:12:44,320
+auditability, the explainability, and
+
+381
+00:12:43,120 --> 00:12:46,399
+the the open system where we can
+
+382
+00:12:44,320 --> 00:12:47,720
+actually explain how that happened.
+
+383
+00:12:46,399 --> 00:12:49,519
+>> I completely agree, but I'm going to
+
+384
+00:12:47,720 --> 00:12:52,120
+take a slightly different lens to get to
+
+385
+00:12:49,519 --> 00:12:53,600
+the same exact end conclusions. Let's
+
+386
+00:12:52,120 --> 00:12:54,720
+take economics.
+
+387
+00:12:53,600 --> 00:12:58,080
+So
+
+388
+00:12:54,720 --> 00:13:01,040
+today $20 for a million tokens for
+
+389
+00:12:58,080 --> 00:13:02,960
+probably generation minus one, 50 if you
+
+390
+00:13:01,039 --> 00:13:04,679
+want to go to the most extreme.
+
+391
+00:13:02,960 --> 00:13:06,120
+Uh we could take
+
+392
+00:13:04,679 --> 00:13:08,559
+uh one of the Chinese open weight
+
+393
+00:13:06,120 --> 00:13:10,480
+models, take a Kimikay3, something 800
+
+394
+00:13:08,559 --> 00:13:12,079
+billion parameters, and if you run your
+
+395
+00:13:10,480 --> 00:13:13,399
+own GPUs with a little bit of
+
+396
+00:13:12,080 --> 00:13:15,320
+optimization, but I'm talking like a
+
+397
+00:13:13,399 --> 00:13:16,639
+week of engineering work, you could drop
+
+398
+00:13:15,320 --> 00:13:19,240
+the cost to about a dollar to two
+
+399
+00:13:16,639 --> 00:13:20,639
+dollars for a million tokens.
+
+400
+00:13:19,240 --> 00:13:22,919
+Which enterprise in the world will not
+
+401
+00:13:20,639 --> 00:13:24,679
+accept a 10 times or in this case a 40
+
+402
+00:13:22,919 --> 00:13:27,839
+times cheaper answer
+
+403
+00:13:24,679 --> 00:13:29,559
+for effectively what can do 95% of the
+
+404
+00:13:27,840 --> 00:13:32,160
+work. So, I think economics is
+
+405
+00:13:29,559 --> 00:13:33,759
+important. The second is going to be at
+
+406
+00:13:32,159 --> 00:13:34,519
+the end of the day
+
+407
+00:13:33,759 --> 00:13:36,399
+um
+
+408
+00:13:34,519 --> 00:13:39,439
+you just talked previously about chain
+
+409
+00:13:36,399 --> 00:13:41,279
+of thought, not just the end tokens.
+
+410
+00:13:39,440 --> 00:13:43,240
+Well, effectively then you're giving
+
+411
+00:13:41,279 --> 00:13:45,159
+away your IP if that chain of thought
+
+412
+00:13:43,240 --> 00:13:49,039
+can be captured and logged and audited
+
+413
+00:13:45,159 --> 00:13:50,799
+by somebody else. So, so brand and IP is
+
+414
+00:13:49,039 --> 00:13:52,439
+going to drive people to say, "I need to
+
+415
+00:13:50,799 --> 00:13:53,879
+run the models on my own." Well, you
+
+416
+00:13:52,440 --> 00:13:54,800
+can't run a frontier model on your own
+
+417
+00:13:53,879 --> 00:13:56,279
+because none of them will give it to
+
+418
+00:13:54,799 --> 00:13:58,879
+you. So, then you're back to open
+
+419
+00:13:56,279 --> 00:14:00,399
+weight. And the third is geopolitics.
+
+420
+00:13:58,879 --> 00:14:02,120
+The best open weight models today are
+
+421
+00:14:00,399 --> 00:14:03,360
+Chinese. By the way, I think there's
+
+422
+00:14:02,120 --> 00:14:04,759
+very little danger if you're putting
+
+423
+00:14:03,360 --> 00:14:05,919
+them in a sandbox and running them by
+
+424
+00:14:04,759 --> 00:14:07,480
+yourself.
+
+425
+00:14:05,919 --> 00:14:09,519
+Sure, if you use them from a cloud,
+
+426
+00:14:07,480 --> 00:14:12,840
+that's different. But I think that over
+
+427
+00:14:09,519 --> 00:14:14,799
+the next year or two, I'm very doubtful
+
+428
+00:14:12,840 --> 00:14:16,320
+that there will not be great models that
+
+429
+00:14:14,799 --> 00:14:18,599
+come up in the west that are also open
+
+430
+00:14:16,320 --> 00:14:20,480
+weight and that are as capable as the
+
+431
+00:14:18,600 --> 00:14:22,960
+Chinese. The gap in these things is 6 to
+
+432
+00:14:20,480 --> 00:14:25,200
+12 months at the most. And so, all those
+
+433
+00:14:22,960 --> 00:14:28,120
+three drive me to conclude
+
+434
+00:14:25,200 --> 00:14:29,720
+I don't know whether it'll be 75%
+
+435
+00:14:28,120 --> 00:14:31,440
+to 90%, but that's the range I would put
+
+436
+00:14:29,720 --> 00:14:33,040
+of all token usage will go to open
+
+437
+00:14:31,440 --> 00:14:34,839
+weight models for the reasons I
+
+438
+00:14:33,039 --> 00:14:35,838
+mentioned added to the reasons that
+
+439
+00:14:34,839 --> 00:14:37,920
+Nikesh mentioned.
+
+440
+00:14:35,839 --> 00:14:38,960
+>> And the token consumption that's left
+
+441
+00:14:37,919 --> 00:14:40,240
+over,
+
+442
+00:14:38,960 --> 00:14:41,960
+is that
+
+443
+00:14:40,240 --> 00:14:43,320
+because you actually need it or is that
+
+444
+00:14:41,960 --> 00:14:45,320
+because it's a default behavior and
+
+445
+00:14:43,320 --> 00:14:46,720
+people are too lazy to change?
+
+446
+00:14:45,320 --> 00:14:48,680
+>> Okay. So, I'm going to talk about
+
+447
+00:14:46,720 --> 00:14:50,720
+developer behavior and since I was one,
+
+448
+00:14:48,679 --> 00:14:51,639
+I'm making fun of myself in a younger
+
+449
+00:14:50,720 --> 00:14:52,960
+age.
+
+450
+00:14:51,639 --> 00:14:54,919
+Developers are lazy. They're going to
+
+451
+00:14:52,960 --> 00:14:56,160
+use the most expensive the most
+
+452
+00:14:54,919 --> 00:14:57,039
+expensive answer unless you put a
+
+453
+00:14:56,159 --> 00:14:57,439
+control on it.
+
+454
+00:14:57,039 --> 00:14:59,240
+>> Right.
+
+455
+00:14:57,440 --> 00:14:59,560
+>> Because it it's easy.
+
+456
+00:14:59,240 --> 00:15:01,440
+>> Yeah.
+
+457
+00:14:59,559 --> 00:15:02,919
+>> And so, that is going to do take it
+
+458
+00:15:01,440 --> 00:15:05,520
+there. So, I would say if
+
+459
+00:15:02,919 --> 00:15:07,679
+experimentation phase you allow that to
+
+460
+00:15:05,519 --> 00:15:09,879
+prove it works and now I got to put it
+
+461
+00:15:07,679 --> 00:15:12,559
+on a cheaper answer, it's probably fine
+
+462
+00:15:09,879 --> 00:15:15,360
+if it gets me there a lot faster. But
+
+463
+00:15:12,559 --> 00:15:17,919
+doing it for production usage is where I
+
+464
+00:15:15,360 --> 00:15:18,680
+am skeptical that it's of value except
+
+465
+00:15:17,919 --> 00:15:20,639
+for a
+
+466
+00:15:18,679 --> 00:15:22,439
+tiny number of use cases.
+
+467
+00:15:20,639 --> 00:15:25,639
+>> Nikesh, so were brought in as one of the
+
+468
+00:15:22,440 --> 00:15:27,520
+small circle of people for mythos
+
+469
+00:15:25,639 --> 00:15:28,679
+kind of preview it, be it their partner.
+
+470
+00:15:27,519 --> 00:15:30,759
+I'm sure you're now doing that with
+
+471
+00:15:28,679 --> 00:15:32,599
+OpenAI as well. When you're sitting with
+
+472
+00:15:30,759 --> 00:15:34,120
+these guys,
+
+473
+00:15:32,600 --> 00:15:36,000
+is part of you thinking they're looking
+
+474
+00:15:34,120 --> 00:15:37,320
+at my business and they're like, "Wow,
+
+475
+00:15:36,000 --> 00:15:38,039
+this is a great business." I [laughter]
+
+476
+00:15:37,320 --> 00:15:39,720
+do
+
+477
+00:15:38,039 --> 00:15:42,199
+Do you think that they're
+
+478
+00:15:39,720 --> 00:15:44,120
+Like And and and what is the What is the
+
+479
+00:15:42,200 --> 00:15:46,480
+actual technical
+
+480
+00:15:44,120 --> 00:15:48,519
+boundaries that you expect to be
+
+481
+00:15:46,480 --> 00:15:50,519
+respected? And the reason I ask this is
+
+482
+00:15:48,519 --> 00:15:52,079
+we've talked to a couple of other CEOs.
+
+483
+00:15:50,519 --> 00:15:53,360
+I think Marc Benioff does the best
+
+484
+00:15:52,080 --> 00:15:54,639
+example of this where, you know, we've
+
+485
+00:15:53,360 --> 00:15:56,720
+talked about ZVR and he's been
+
+486
+00:15:54,639 --> 00:15:58,120
+incredibly aggressive about making sure
+
+487
+00:15:56,720 --> 00:16:00,680
+there's zero data retention and doing
+
+488
+00:15:58,120 --> 00:16:02,360
+that on behalf of his customers.
+
+489
+00:16:00,679 --> 00:16:03,599
+What's so interesting about the ZVR and
+
+490
+00:16:02,360 --> 00:16:04,680
+all of this stuff is like none of the
+
+491
+00:16:03,600 --> 00:16:06,159
+models
+
+492
+00:16:04,679 --> 00:16:08,279
+say that they won't generate synthetic
+
+493
+00:16:06,159 --> 00:16:09,759
+data. It's literally not in there. You
+
+494
+00:16:08,279 --> 00:16:11,120
+guys should look. There's all these
+
+495
+00:16:09,759 --> 00:16:12,480
+outs. There's all these trapdoors. So,
+
+496
+00:16:11,120 --> 00:16:16,320
+I'm just wondering like when you're in
+
+497
+00:16:12,480 --> 00:16:17,920
+the room, what are you thinking?
+
+498
+00:16:16,320 --> 00:16:19,600
+>> When you're in the room,
+
+499
+00:16:17,919 --> 00:16:21,479
+you come out and say this These guys are
+
+500
+00:16:19,600 --> 00:16:22,040
+not going to get into my business.
+
+501
+00:16:21,480 --> 00:16:23,120
+>> They're not going to
+
+502
+00:16:22,039 --> 00:16:23,759
+>> They're not going to be able to get into
+
+503
+00:16:23,120 --> 00:16:24,159
+my business.
+
+504
+00:16:23,759 --> 00:16:25,159
+>> Okay.
+
+505
+00:16:24,159 --> 00:16:26,639
+>> Because
+
+506
+00:16:25,159 --> 00:16:28,639
+if you think about what when mythos came
+
+507
+00:16:26,639 --> 00:16:32,319
+out, right? The
+
+508
+00:16:28,639 --> 00:16:33,879
+We We've been paying billions of dollars
+
+509
+00:16:32,320 --> 00:16:35,200
+in coding agents. Well, guess what?
+
+510
+00:16:33,879 --> 00:16:37,360
+We're fundamentally every Not
+
+511
+00:16:35,200 --> 00:16:38,640
+everybody's got ZVR in coding. There's
+
+512
+00:16:37,360 --> 00:16:41,279
+tons of people out there using cloud
+
+513
+00:16:38,639 --> 00:16:42,559
+code who have no issue about that data
+
+514
+00:16:41,279 --> 00:16:45,079
+training the models. So, we are training
+
+515
+00:16:42,559 --> 00:16:46,759
+these models with end users doing
+
+516
+00:16:45,080 --> 00:16:48,200
+coding. These models are getting better
+
+517
+00:16:46,759 --> 00:16:50,039
+and better doing coding. Well, guess
+
+518
+00:16:48,200 --> 00:16:51,800
+what? If you teach a model what model
+
+519
+00:16:50,039 --> 00:16:54,159
+good looks like, it also can figure out
+
+520
+00:16:51,799 --> 00:16:55,439
+what bad code looks like. So, the first
+
+521
+00:16:54,159 --> 00:16:57,000
+thing that mythos did, it figured out
+
+522
+00:16:55,440 --> 00:16:58,640
+what bad code looks like. And then if
+
+523
+00:16:57,000 --> 00:17:00,519
+you let it loose against your code,
+
+524
+00:16:58,639 --> 00:17:02,600
+it'll tell you what is bad. What was
+
+525
+00:17:00,519 --> 00:17:03,838
+fascinating is when it did that, even
+
+526
+00:17:02,600 --> 00:17:06,039
+then
+
+527
+00:17:03,839 --> 00:17:07,240
+it was fine It was hallucinating 30% of
+
+528
+00:17:06,039 --> 00:17:08,639
+the time.
+
+529
+00:17:07,240 --> 00:17:10,439
+Right, but the problem is the reason
+
+530
+00:17:08,640 --> 00:17:12,400
+it's perfect for attackers is they just
+
+531
+00:17:10,439 --> 00:17:13,839
+need one vulnerability. They don't need
+
+532
+00:17:12,400 --> 00:17:15,280
+10 vulnerabilities. If you're a
+
+533
+00:17:13,838 --> 00:17:17,519
+defender, you need to find every
+
+534
+00:17:15,279 --> 00:17:18,680
+vulnerability and patch it. So, all the
+
+535
+00:17:17,519 --> 00:17:20,078
+people in this room, I think, have been
+
+536
+00:17:18,680 --> 00:17:21,439
+through this journey in the last 12
+
+537
+00:17:20,078 --> 00:17:23,639
+months is that
+
+538
+00:17:21,439 --> 00:17:25,720
+everybody here has gone, tested them,
+
+539
+00:17:23,640 --> 00:17:27,400
+whether with Methos or with some cousin
+
+540
+00:17:25,720 --> 00:17:28,839
+of Methos or some open source malware
+
+541
+00:17:27,400 --> 00:17:30,160
+they discovered.
+
+542
+00:17:28,839 --> 00:17:32,879
+Every one of them has to be has to then
+
+543
+00:17:30,160 --> 00:17:33,759
+be tested, understood,
+
+544
+00:17:32,880 --> 00:17:35,840
+you know,
+
+545
+00:17:33,759 --> 00:17:37,559
+figured out. And I would guess in this
+
+546
+00:17:35,839 --> 00:17:40,240
+room, if I show of hands, people say
+
+547
+00:17:37,559 --> 00:17:42,639
+that number is roughly 60 to 80% have
+
+548
+00:17:40,240 --> 00:17:43,599
+been been have been real and 20% have
+
+549
+00:17:42,640 --> 00:17:45,360
+been
+
+550
+00:17:43,599 --> 00:17:46,919
+hallucinations. So, from that
+
+551
+00:17:45,359 --> 00:17:48,439
+perspective, the models are great to be
+
+552
+00:17:46,920 --> 00:17:50,440
+able to tell you
+
+553
+00:17:48,440 --> 00:17:52,240
+what the vulnerabilities but
+
+554
+00:17:50,440 --> 00:17:53,039
+I don't even think anybody in this room,
+
+555
+00:17:52,240 --> 00:17:54,160
+if you ask them to raise their hand,
+
+556
+00:17:53,039 --> 00:17:55,399
+will tell you that they're not going to
+
+557
+00:17:54,160 --> 00:17:56,519
+even use Cloud Code to patch the
+
+558
+00:17:55,400 --> 00:17:56,960
+vulnerability without having to test it
+
+559
+00:17:56,519 --> 00:17:58,440
+again.
+
+560
+00:17:56,960 --> 00:17:59,960
+>> I have a very random question, but it
+
+561
+00:17:58,440 --> 00:18:03,160
+makes me think.
+
+562
+00:17:59,960 --> 00:18:04,799
+So, you're engaged to defend companies,
+
+563
+00:18:03,160 --> 00:18:06,680
+but it now looks
+
+564
+00:18:04,799 --> 00:18:08,519
+basically like warfare. Like both of you
+
+565
+00:18:06,680 --> 00:18:09,519
+guys, you know, it's like warfare. And
+
+566
+00:18:08,519 --> 00:18:11,240
+so,
+
+567
+00:18:09,519 --> 00:18:13,400
+is there something that you can learn
+
+568
+00:18:11,240 --> 00:18:15,400
+from how war has been fought or how war
+
+569
+00:18:13,400 --> 00:18:17,680
+is being fought? And do you do that to
+
+570
+00:18:15,400 --> 00:18:18,920
+actually inform how the technology
+
+571
+00:18:17,680 --> 00:18:20,640
+should behave? I don't know if this
+
+572
+00:18:18,920 --> 00:18:24,320
+question makes sense, but
+
+573
+00:18:20,640 --> 00:18:26,920
+>> I think to the extent that
+
+574
+00:18:24,319 --> 00:18:28,960
+you can be better together,
+
+575
+00:18:26,920 --> 00:18:30,279
+you can collaborate. Like Arvind runs a
+
+576
+00:18:28,960 --> 00:18:31,799
+program, we're now saying we're all
+
+577
+00:18:30,279 --> 00:18:33,759
+finding vulnerabilities, why don't we
+
+578
+00:18:31,799 --> 00:18:35,960
+pool our vulnerabilities and find the
+
+579
+00:18:33,759 --> 00:18:37,960
+defense ones as opposed to every company
+
+580
+00:18:35,960 --> 00:18:39,559
+in the room trying to go, test all the
+
+581
+00:18:37,960 --> 00:18:41,200
+open source vulnerabilities they have,
+
+582
+00:18:39,559 --> 00:18:43,079
+figure out how to patch them, go patch
+
+583
+00:18:41,200 --> 00:18:44,720
+them individually. So, then you take
+
+584
+00:18:43,079 --> 00:18:46,480
+some trusted parties, give us your
+
+585
+00:18:44,720 --> 00:18:48,160
+vulnerabilities, we'll patch them, we'll
+
+586
+00:18:46,480 --> 00:18:49,120
+distribute the patches so you can all be
+
+587
+00:18:48,160 --> 00:18:50,680
+safe at the same time. It's kind of like
+
+588
+00:18:49,119 --> 00:18:53,399
+how cybersecurity works today. If you
+
+589
+00:18:50,680 --> 00:18:54,640
+find an attack technique in a different
+
+590
+00:18:53,400 --> 00:18:56,240
+part of the world, we can take that
+
+591
+00:18:54,640 --> 00:18:58,600
+attack technique,
+
+592
+00:18:56,240 --> 00:19:00,000
+write machine learning code, ingest that
+
+593
+00:18:58,599 --> 00:19:00,959
+into our product and make sure it gets
+
+594
+00:19:00,000 --> 00:19:02,440
+available to every customer.
+
+595
+00:19:00,960 --> 00:19:03,480
+>> Is a genetically written code
+
+596
+00:19:02,440 --> 00:19:04,559
+error-free?
+
+597
+00:19:03,480 --> 00:19:06,120
+>> No.
+
+598
+00:19:04,559 --> 00:19:07,679
+>> No. Okay, explain that.
+
+599
+00:19:06,119 --> 00:19:08,159
+>> So, look, but first on your war
+
+600
+00:19:07,680 --> 00:19:08,600
+question.
+
+601
+00:19:08,160 --> 00:19:10,720
+>> Yeah.
+
+602
+00:19:08,599 --> 00:19:12,719
+>> So, what Nikesh talked about is you can
+
+603
+00:19:10,720 --> 00:19:14,440
+have powerful alliances where the
+
+604
+00:19:12,720 --> 00:19:15,960
+alliance effectively can become more
+
+605
+00:19:14,440 --> 00:19:18,320
+powerful than the attacker. That's
+
+606
+00:19:15,960 --> 00:19:19,840
+technique one. Technique two in warfare
+
+607
+00:19:18,319 --> 00:19:22,519
+what has been the most effective is
+
+608
+00:19:19,839 --> 00:19:24,039
+asymmetry. And so often an attacker is
+
+609
+00:19:22,519 --> 00:19:25,480
+cheaper than the defender, so the
+
+610
+00:19:24,039 --> 00:19:27,519
+defender runs out of money and at some
+
+611
+00:19:25,480 --> 00:19:30,039
+point then concedes. Or can you make
+
+612
+00:19:27,519 --> 00:19:32,400
+defense equally cheap? In which case you
+
+613
+00:19:30,039 --> 00:19:34,319
+can basically have symmetric warfare and
+
+614
+00:19:32,400 --> 00:19:35,440
+then you have a much better chance of
+
+615
+00:19:34,319 --> 00:19:37,519
+success.
+
+616
+00:19:35,440 --> 00:19:39,160
+And the third which has been the way all
+
+617
+00:19:37,519 --> 00:19:41,599
+wars have been won is when you get
+
+618
+00:19:39,160 --> 00:19:43,160
+technological superiority on one side.
+
+619
+00:19:41,599 --> 00:19:45,039
+So go back to World War II, go back to
+
+620
+00:19:43,160 --> 00:19:47,360
+Korea, go back to Iraq, go back to
+
+621
+00:19:45,039 --> 00:19:49,359
+anyone. If you get technological
+
+622
+00:19:47,359 --> 00:19:50,199
+superiority on one side, you tend to
+
+623
+00:19:49,359 --> 00:19:51,599
+win.
+
+624
+00:19:50,200 --> 00:19:53,880
+And so our goal is can we get
+
+625
+00:19:51,599 --> 00:19:55,919
+technological superiority and that's
+
+626
+00:19:53,880 --> 00:19:57,880
+what Nick is referring to. Can we find
+
+627
+00:19:55,920 --> 00:19:59,920
+vulnerabilities, can we patch them, can
+
+628
+00:19:57,880 --> 00:20:02,000
+we put boundaries around them that makes
+
+629
+00:19:59,920 --> 00:20:04,640
+it really expensive for the other side
+
+630
+00:20:02,000 --> 00:20:07,279
+to now try to find a way through? So
+
+631
+00:20:04,640 --> 00:20:10,000
+that's what I would answer there. Look,
+
+632
+00:20:07,279 --> 00:20:11,720
+at the end will agentic code be superior
+
+633
+00:20:10,000 --> 00:20:13,799
+to human written code? Absolutely. We
+
+634
+00:20:11,720 --> 00:20:15,559
+can find that. We use
+
+635
+00:20:13,799 --> 00:20:17,639
+agents and coding agents now for
+
+636
+00:20:15,559 --> 00:20:20,879
+probably half the code that is written
+
+637
+00:20:17,640 --> 00:20:22,720
+inside our place and it is superior to
+
+638
+00:20:20,880 --> 00:20:24,200
+what was being written before. But the
+
+639
+00:20:22,720 --> 00:20:26,279
+reason it's superior is the agents can
+
+640
+00:20:24,200 --> 00:20:27,640
+also do evals and basically make sure
+
+641
+00:20:26,279 --> 00:20:30,639
+that everything they can find is
+
+642
+00:20:27,640 --> 00:20:32,920
+actually fixed before it ever goes out.
+
+643
+00:20:30,640 --> 00:20:35,640
+All that said, we're only finding all
+
+644
+00:20:32,920 --> 00:20:38,120
+the flaws that we know how to find.
+
+645
+00:20:35,640 --> 00:20:39,759
+And so we get into this weird loop in
+
+646
+00:20:38,119 --> 00:20:41,000
+computer science. Okay, do I
+
+647
+00:20:39,759 --> 00:20:43,000
+>> fully properly verifiable?
+
+648
+00:20:41,000 --> 00:20:45,759
+>> It's not fully verifiable because that
+
+649
+00:20:43,000 --> 00:20:49,119
+is a task that is going to be almost
+
+650
+00:20:45,759 --> 00:20:50,720
+computationally infeasible right now.
+
+651
+00:20:49,119 --> 00:20:52,679
+Now, I'm not going to hold out hope that
+
+652
+00:20:50,720 --> 00:20:53,960
+it's doesn't become what you were
+
+653
+00:20:52,680 --> 00:20:56,160
+talking about in number theory and all
+
+654
+00:20:53,960 --> 00:20:59,039
+that. This is a task in which maybe
+
+655
+00:20:56,160 --> 00:21:02,080
+we'll find a way to actually get to be
+
+656
+00:20:59,039 --> 00:21:04,279
+able to verify the correctness of these
+
+657
+00:21:02,079 --> 00:21:06,559
+things. At least in
+
+658
+00:21:04,279 --> 00:21:08,160
+where the inputs are limited. If the
+
+659
+00:21:06,559 --> 00:21:09,039
+input can be anything then I think it's
+
+660
+00:21:08,160 --> 00:21:09,240
+really hard.
+
+661
+00:21:09,039 --> 00:21:10,079
+>> Right.
+
+662
+00:21:09,240 --> 00:21:10,599
+>> Does that make sense?
+
+663
+00:21:10,079 --> 00:21:12,159
+>> Yeah.
+
+664
+00:21:10,599 --> 00:21:14,559
+>> Let me ask the implications of the
+
+665
+00:21:12,160 --> 00:21:17,640
+points that you just made. It seems
+
+666
+00:21:14,559 --> 00:21:19,119
+obvious to me that there isn't a world
+
+667
+00:21:17,640 --> 00:21:20,920
+where China
+
+668
+00:21:19,119 --> 00:21:22,839
+and the United States or the West or
+
+669
+00:21:20,920 --> 00:21:24,560
+whomever, a bunch of international
+
+670
+00:21:22,839 --> 00:21:26,359
+countries all hold hands and say let's
+
+671
+00:21:24,559 --> 00:21:30,480
+all stop
+
+672
+00:21:26,359 --> 00:21:32,799
+AI development. That being the case, it
+
+673
+00:21:30,480 --> 00:21:35,039
+becomes a necessity that there's an arms
+
+674
+00:21:32,799 --> 00:21:37,759
+race, that there's a defensive or
+
+675
+00:21:35,039 --> 00:21:40,159
+offensive superiority requisite, that
+
+676
+00:21:37,759 --> 00:21:42,079
+there's a compute capacity requisite,
+
+677
+00:21:40,160 --> 00:21:44,519
+that there are all of these needs that
+
+678
+00:21:42,079 --> 00:21:47,199
+arise to protect industry, to protect
+
+679
+00:21:44,519 --> 00:21:49,879
+our economy, to protect our jobs.
+
+680
+00:21:47,200 --> 00:21:52,120
+Does that argument win the day
+
+681
+00:21:49,880 --> 00:21:53,200
+with everyone that's trying to stop AI
+
+682
+00:21:52,119 --> 00:21:55,679
+in the
+
+683
+00:21:53,200 --> 00:21:57,680
+political conversations and the social
+
+684
+00:21:55,680 --> 00:21:59,600
+stuff about AI needs to stop and we need
+
+685
+00:21:57,680 --> 00:22:01,720
+to stop doing this. Does this point
+
+686
+00:21:59,599 --> 00:22:03,039
+about the inevitability of one side
+
+687
+00:22:01,720 --> 00:22:06,120
+having it
+
+688
+00:22:03,039 --> 00:22:07,879
+requiring the other side to defend it
+
+689
+00:22:06,119 --> 00:22:09,679
+change the the the conversation? I'd
+
+690
+00:22:07,880 --> 00:22:10,760
+love for you guys to share any anecdotes
+
+691
+00:22:09,680 --> 00:22:12,960
+you've had
+
+692
+00:22:10,759 --> 00:22:15,160
+with senior
+
+693
+00:22:12,960 --> 00:22:16,640
+party officials who might not be in
+
+694
+00:22:15,160 --> 00:22:18,320
+power today but might be coming into
+
+695
+00:22:16,640 --> 00:22:19,840
+power and whether they're going to
+
+696
+00:22:18,319 --> 00:22:20,960
+kind of have a view change around this
+
+697
+00:22:19,839 --> 00:22:24,159
+because of that point.
+
+698
+00:22:20,960 --> 00:22:26,279
+>> I think it's abundantly clear that
+
+699
+00:22:24,160 --> 00:22:28,200
+nobody's stopping.
+
+700
+00:22:26,279 --> 00:22:30,480
+Everybody seems to be working at a
+
+701
+00:22:28,200 --> 00:22:32,519
+frenetic pace to try and make sure that
+
+702
+00:22:30,480 --> 00:22:33,920
+they get a better, smarter, faster
+
+703
+00:22:32,519 --> 00:22:36,480
+model.
+
+704
+00:22:33,920 --> 00:22:38,080
+Um it's
+
+705
+00:22:36,480 --> 00:22:39,920
+kind of interesting. You can take the
+
+706
+00:22:38,079 --> 00:22:42,879
+charitable side and say there's no
+
+707
+00:22:39,920 --> 00:22:44,200
+technology in the world that was built
+
+708
+00:22:42,880 --> 00:22:45,360
+where people were building security and
+
+709
+00:22:44,200 --> 00:22:46,960
+power.
+
+710
+00:22:45,359 --> 00:22:48,279
+I don't think TSA existed when they
+
+711
+00:22:46,960 --> 00:22:49,400
+built planes.
+
+712
+00:22:48,279 --> 00:22:51,399
+It's just like Wright brothers say,
+
+713
+00:22:49,400 --> 00:22:51,800
+"Great, we have planes. Let's figure out
+
+714
+00:22:51,400 --> 00:22:52,640
+how we're going to
+
+715
+00:22:51,799 --> 00:22:54,200
+>> Take your shoes off.
+
+716
+00:22:52,640 --> 00:22:55,400
+>> Let's frisk everybody before they get on
+
+717
+00:22:54,200 --> 00:22:56,825
+the plane." That was not what they were
+
+718
+00:22:55,400 --> 00:22:57,200
+thinking about.
+
+719
+00:22:56,825 --> 00:22:58,240
+>> [laughter]
+
+720
+00:22:57,200 --> 00:22:59,680
+>> Keep explosives
+
+721
+00:22:58,240 --> 00:23:01,120
+>> keeping explosives out of the shoes.
+
+722
+00:22:59,680 --> 00:23:03,480
+>> Yes, that's right. That's not what they
+
+723
+00:23:01,119 --> 00:23:05,399
+were thinking about. So, unfortunately,
+
+724
+00:23:03,480 --> 00:23:07,480
+we've been shown the dark side of these
+
+725
+00:23:05,400 --> 00:23:09,480
+models and we've over-rotated on the
+
+726
+00:23:07,480 --> 00:23:11,200
+dark side of the model, where now the
+
+727
+00:23:09,480 --> 00:23:14,360
+entire conversation is about the dark
+
+728
+00:23:11,200 --> 00:23:15,840
+side and the perils of AI and not on the
+
+729
+00:23:14,359 --> 00:23:18,039
+benefits of AI. I think there's a
+
+730
+00:23:15,839 --> 00:23:19,919
+narrative problem. That notwithstanding,
+
+731
+00:23:18,039 --> 00:23:22,920
+I don't think anybody's slowing down. I
+
+732
+00:23:19,920 --> 00:23:24,400
+think the most likely
+
+733
+00:23:22,920 --> 00:23:27,120
+outcome, which I think hopefully is the
+
+734
+00:23:24,400 --> 00:23:29,640
+right outcome, is that in the world uh
+
+735
+00:23:27,119 --> 00:23:31,159
+you said it and Arvin said it earlier,
+
+736
+00:23:29,640 --> 00:23:32,960
+if you build something, you're
+
+737
+00:23:31,160 --> 00:23:34,840
+accountable for it.
+
+738
+00:23:32,960 --> 00:23:36,759
+If you build something and unleash it,
+
+739
+00:23:34,839 --> 00:23:38,519
+you can't unleash and say, "Oops, I
+
+740
+00:23:36,759 --> 00:23:39,879
+don't know how to control it." That
+
+741
+00:23:38,519 --> 00:23:41,599
+argument doesn't work.
+
+742
+00:23:39,880 --> 00:23:41,920
+>> Yeah. Cuz you wrote the software.
+
+743
+00:23:41,599 --> 00:23:43,079
+>> Yeah.
+
+744
+00:23:41,920 --> 00:23:44,560
+>> Yeah, and this whole argument that you
+
+745
+00:23:43,079 --> 00:23:45,919
+didn't write the software, that the
+
+746
+00:23:44,559 --> 00:23:47,079
+software was wrote itself.
+
+747
+00:23:45,920 --> 00:23:50,039
+>> because the engineer is going to say,
+
+748
+00:23:47,079 --> 00:23:51,919
+"Well, agent 74565 from my harness wrote
+
+749
+00:23:50,039 --> 00:23:53,240
+it." And it's like, "No, you wrote it."
+
+750
+00:23:51,920 --> 00:23:54,440
+>> Well, but the company still wrote it, so
+
+751
+00:23:53,240 --> 00:23:54,960
+there's product liability with the
+
+752
+00:23:54,440 --> 00:23:56,120
+company.
+
+753
+00:23:54,960 --> 00:23:56,600
+>> you're a commercial enterprise,
+
+754
+00:23:56,119 --> 00:23:59,479
+>> Exactly.
+
+755
+00:23:56,599 --> 00:24:01,679
+>> you're taking economic value in return
+
+756
+00:23:59,480 --> 00:24:03,720
+for giving me something, you're required
+
+757
+00:24:01,680 --> 00:24:05,279
+to abide by the responsibility the
+
+758
+00:24:03,720 --> 00:24:07,400
+responsibility that you signed up for.
+
+759
+00:24:05,279 --> 00:24:08,920
+So, I think that's In my mind, it's as
+
+760
+00:24:07,400 --> 00:24:10,400
+simple as that. And there's enough
+
+761
+00:24:08,920 --> 00:24:12,240
+regulation in the world, perhaps too
+
+762
+00:24:10,400 --> 00:24:13,400
+much, to hold people accountable for
+
+763
+00:24:12,240 --> 00:24:15,640
+stuff that they put out in the open
+
+764
+00:24:13,400 --> 00:24:16,360
+market, where they don't take
+
+765
+00:24:15,640 --> 00:24:17,280
+responsibility they don't take
+
+766
+00:24:16,359 --> 00:24:18,279
+responsibility.
+
+767
+00:24:17,279 --> 00:24:19,839
+>> Well, but David, it's actually
+
+768
+00:24:18,279 --> 00:24:21,200
+impossible to control it, unless we
+
+769
+00:24:19,839 --> 00:24:22,759
+think the entire world is going to sing
+
+770
+00:24:21,200 --> 00:24:24,920
+Kumbaya and say let's slow down, which
+
+771
+00:24:22,759 --> 00:24:27,119
+Archi said is unlikely. So, if that's
+
+772
+00:24:24,920 --> 00:24:28,480
+the case, fine. You put a slow down
+
+773
+00:24:27,119 --> 00:24:29,959
+here, maybe.
+
+774
+00:24:28,480 --> 00:24:31,200
+Well, okay, does it mean Japan slows
+
+775
+00:24:29,960 --> 00:24:32,240
+down? Does that mean China slows down?
+
+776
+00:24:31,200 --> 00:24:33,240
+Does that mean India slows down? No
+
+777
+00:24:32,240 --> 00:24:34,960
+chance. They'll say, "Great, you're
+
+778
+00:24:33,240 --> 00:24:37,000
+slowing down. Gives me a chance to catch
+
+779
+00:24:34,960 --> 00:24:40,200
+up and get ahead." So, a digital
+
+780
+00:24:37,000 --> 00:24:42,200
+technology is impossible to actually
+
+781
+00:24:40,200 --> 00:24:43,559
+slow down, and the European example
+
+782
+00:24:42,200 --> 00:24:45,319
+tells us
+
+783
+00:24:43,559 --> 00:24:47,279
+So, there you get afraid of all the
+
+784
+00:24:45,319 --> 00:24:48,839
+possibilities. Yeah, I'm not saying the
+
+785
+00:24:47,279 --> 00:24:51,399
+real dangers. You get afraid of all of
+
+786
+00:24:48,839 --> 00:24:53,359
+them and you impose regulations first
+
+787
+00:24:51,400 --> 00:24:54,040
+against such a vibrant tech economy
+
+788
+00:24:53,359 --> 00:24:54,879
+there, right?
+
+789
+00:24:54,039 --> 00:24:56,359
+>> Yeah.
+
+790
+00:24:54,880 --> 00:24:58,040
+>> Well, I mean, neither of you actually
+
+791
+00:24:56,359 --> 00:24:59,719
+answered my question about conversations
+
+792
+00:24:58,039 --> 00:25:01,399
+you've had which uh
+
+793
+00:24:59,720 --> 00:25:03,519
+cuz I'll tell you a conversation I had
+
+794
+00:25:01,400 --> 00:25:06,320
+last week in DC. I had
+
+795
+00:25:03,519 --> 00:25:09,079
+drinks with a member of Congress, pretty
+
+796
+00:25:06,319 --> 00:25:12,559
+senior ranking guy, and the conversation
+
+797
+00:25:09,079 --> 00:25:14,359
+had two parts to it. One is I think one
+
+798
+00:25:12,559 --> 00:25:15,879
+of the CEOs of the biggest companies in
+
+799
+00:25:14,359 --> 00:25:17,839
+the world is completely freaked out
+
+800
+00:25:15,880 --> 00:25:18,960
+about cyber and he's losing his mind and
+
+801
+00:25:17,839 --> 00:25:20,079
+he doesn't know what to do and I just
+
+802
+00:25:18,960 --> 00:25:23,039
+had dinner with him and here's all the
+
+803
+00:25:20,079 --> 00:25:26,319
+stuff he said. And then, I also think
+
+804
+00:25:23,039 --> 00:25:28,920
+that by Q4, we might see a 50-state ban
+
+805
+00:25:26,319 --> 00:25:30,639
+on data centers. Which isn't likely, but
+
+806
+00:25:28,920 --> 00:25:32,480
+he says
+
+807
+00:25:30,640 --> 00:25:34,520
+>> 50's a big number. Big number.
+
+808
+00:25:32,480 --> 00:25:35,120
+>> Have 50 states ever agreed on anything
+
+809
+00:25:34,519 --> 00:25:36,039
+in this country?
+
+810
+00:25:35,119 --> 00:25:37,319
+>> No.
+
+811
+00:25:36,039 --> 00:25:38,611
+Well, a few things about six
+
+812
+00:25:37,319 --> 00:25:38,639
+>> be amazing.
+
+813
+00:25:38,612 --> 00:25:40,840
+>> [laughter]
+
+814
+00:25:38,640 --> 00:25:42,040
+>> Okay, get everyone together. Well,
+
+815
+00:25:40,839 --> 00:25:44,559
+whenever anyone agrees on something, you
+
+816
+00:25:42,039 --> 00:25:45,440
+know it's not true. But, I think um
+
+817
+00:25:44,559 --> 00:25:47,079
+>> It'd be like a miracle.
+
+818
+00:25:45,440 --> 00:25:49,000
+>> And and it's that it's it's the fact
+
+819
+00:25:47,079 --> 00:25:50,799
+that both of those statements are being
+
+820
+00:25:49,000 --> 00:25:52,240
+being said by someone. So, where do you
+
+821
+00:25:50,799 --> 00:25:53,919
+think this resolves? Like, how do we
+
+822
+00:25:52,240 --> 00:25:54,440
+resolve this path forward?
+
+823
+00:25:53,920 --> 00:25:55,000
+>> He's good at this.
+
+824
+00:25:54,440 --> 00:25:57,240
+>> Try to answer the
+
+825
+00:25:55,000 --> 00:25:58,920
+>> say a direct question. So, look, amongst
+
+826
+00:25:57,240 --> 00:26:00,400
+us, we have all and all the members of
+
+827
+00:25:58,920 --> 00:26:02,039
+your group have we all had different
+
+828
+00:26:00,400 --> 00:26:03,360
+conversations with different members of
+
+829
+00:26:02,039 --> 00:26:05,639
+this administration, the previous
+
+830
+00:26:03,359 --> 00:26:07,479
+administration, the Senate runs longer
+
+831
+00:26:05,640 --> 00:26:09,840
+than just one admin.
+
+832
+00:26:07,480 --> 00:26:11,440
+Congress tends to change a lot faster.
+
+833
+00:26:09,839 --> 00:26:14,039
+This question has been in there since
+
+834
+00:26:11,440 --> 00:26:16,559
+2022. The Senate had closed hearings in
+
+835
+00:26:14,039 --> 00:26:18,720
+'22, they had open hearings in '23,
+
+836
+00:26:16,559 --> 00:26:20,599
+Congress had them, the White House had
+
+837
+00:26:18,720 --> 00:26:22,839
+them in both admins, and they go round
+
+838
+00:26:20,599 --> 00:26:24,480
+and round this question. The regulation
+
+839
+00:26:22,839 --> 00:26:26,439
+question on AI and data centers is
+
+840
+00:26:24,480 --> 00:26:28,759
+driven I'm going to be sorry and cynical
+
+841
+00:26:26,440 --> 00:26:31,320
+is driven by populism, not by any
+
+842
+00:26:28,759 --> 00:26:32,839
+reality. If I can get more votes, should
+
+843
+00:26:31,319 --> 00:26:33,960
+I look like I'm trying to do those
+
+844
+00:26:32,839 --> 00:26:35,359
+things.
+
+845
+00:26:33,960 --> 00:26:37,600
+Politics is politics. I'm not going to
+
+846
+00:26:35,359 --> 00:26:39,799
+say that's not real. It is real.
+
+847
+00:26:37,599 --> 00:26:41,599
+That said, enough people also care
+
+848
+00:26:39,799 --> 00:26:43,839
+deeply about the long-term economic
+
+849
+00:26:41,599 --> 00:26:46,079
+advantage, and so that's the balancing
+
+850
+00:26:43,839 --> 00:26:48,559
+act that is happening. I do think we're
+
+851
+00:26:46,079 --> 00:26:51,439
+on the correct balance right now, but
+
+852
+00:26:48,559 --> 00:26:53,720
+I'll acknowledge an election can change
+
+853
+00:26:51,440 --> 00:26:55,400
+where we fall on that balancing act. On
+
+854
+00:26:53,720 --> 00:26:57,680
+data centers, I think there's no chance
+
+855
+00:26:55,400 --> 00:26:59,480
+all 50 will ban. Is it possible 30 will
+
+856
+00:26:57,680 --> 00:27:00,960
+ban? Yes. The remaining 20 will rub
+
+857
+00:26:59,480 --> 00:27:02,880
+their hands in glee at that point.
+
+858
+00:27:00,960 --> 00:27:04,519
+>> If you look geopolitically for a second,
+
+859
+00:27:02,880 --> 00:27:05,880
+it seems like we're trending to a place
+
+860
+00:27:04,519 --> 00:27:08,440
+of haves and have-nots. So, I can
+
+861
+00:27:05,880 --> 00:27:10,560
+everybody in this room is a have. You
+
+862
+00:27:08,440 --> 00:27:12,680
+know, you're a Western
+
+863
+00:27:10,559 --> 00:27:14,000
+market company.
+
+864
+00:27:12,680 --> 00:27:16,080
+You have the benefit of being able to
+
+865
+00:27:14,000 --> 00:27:17,559
+work with guys like you.
+
+866
+00:27:16,079 --> 00:27:19,639
+But there's a certain price of entry
+
+867
+00:27:17,559 --> 00:27:21,480
+that may not make sense for the random
+
+868
+00:27:19,640 --> 00:27:23,440
+pick your company anywhere else around
+
+869
+00:27:21,480 --> 00:27:25,000
+the world.
+
+870
+00:27:23,440 --> 00:27:27,000
+What happens then when these models are
+
+871
+00:27:25,000 --> 00:27:28,440
+so capable and effectively free? What is
+
+872
+00:27:27,000 --> 00:27:29,839
+the actual manifestation? I'm sure
+
+873
+00:27:28,440 --> 00:27:31,120
+you've had to think about this in terms
+
+874
+00:27:29,839 --> 00:27:32,959
+of how you want to respond. So, how do
+
+875
+00:27:31,119 --> 00:27:33,799
+you how do you think about that problem?
+
+876
+00:27:32,960 --> 00:27:36,160
+This
+
+877
+00:27:33,799 --> 00:27:38,240
+separation of haves and have-nots.
+
+878
+00:27:36,160 --> 00:27:40,080
+>> Look, I think Arvind said that you have
+
+879
+00:27:38,240 --> 00:27:42,079
+to make technology so cheap that it can
+
+880
+00:27:40,079 --> 00:27:44,159
+be easily accessible by everyone.
+
+881
+00:27:42,079 --> 00:27:45,799
+And I think we have the opportunity of
+
+882
+00:27:44,160 --> 00:27:47,000
+making that happen.
+
+883
+00:27:45,799 --> 00:27:48,279
+I don't think that it's going to be so
+
+884
+00:27:47,000 --> 00:27:49,839
+expensive that if you can run an
+
+885
+00:27:48,279 --> 00:27:51,639
+economic enterprise, it should be
+
+886
+00:27:49,839 --> 00:27:52,888
+possible in the envelope to be able to
+
+887
+00:27:51,640 --> 00:27:53,440
+find a way to protect yourself.
+
+888
+00:27:52,888 --> 00:27:54,240
+[clears throat]
+
+889
+00:27:53,440 --> 00:27:56,200
+So, I don't think we're going to end up
+
+890
+00:27:54,240 --> 00:27:58,160
+in a have have-not scenario. I think the
+
+891
+00:27:56,200 --> 00:27:59,960
+bigger challenge which
+
+892
+00:27:58,160 --> 00:28:04,040
+is more pertinent to people in the room
+
+893
+00:27:59,960 --> 00:28:05,279
+is I fear that we will see fast advances
+
+894
+00:28:04,039 --> 00:28:07,839
+in
+
+895
+00:28:05,279 --> 00:28:09,720
+compute development in two large
+
+896
+00:28:07,839 --> 00:28:11,359
+countries in the world. We may not see
+
+897
+00:28:09,720 --> 00:28:13,559
+that as
+
+898
+00:28:11,359 --> 00:28:15,279
+evenly distributed across the rest of
+
+899
+00:28:13,559 --> 00:28:17,279
+the world. And compute is very dear
+
+900
+00:28:15,279 --> 00:28:20,359
+right now. It's very hard to get compute
+
+901
+00:28:17,279 --> 00:28:22,039
+to run anything at scale. at the current
+
+902
+00:28:20,359 --> 00:28:23,439
+moment. And the challenge is going to be
+
+903
+00:28:22,039 --> 00:28:25,519
+that the further way you are from the
+
+904
+00:28:23,440 --> 00:28:26,840
+epicenter, the less likely you will have
+
+905
+00:28:25,519 --> 00:28:28,720
+access to this computer. It's not
+
+906
+00:28:26,839 --> 00:28:30,279
+because of economic reasons, it's purely
+
+907
+00:28:28,720 --> 00:28:31,720
+because of supply constraints. I think
+
+908
+00:28:30,279 --> 00:28:33,960
+that's the bigger challenge, right? You
+
+909
+00:28:31,720 --> 00:28:35,120
+could be a company in Europe and you
+
+910
+00:28:33,960 --> 00:28:36,920
+have the right intentions and
+
+911
+00:28:35,119 --> 00:28:39,679
+motivations to go and
+
+912
+00:28:36,920 --> 00:28:41,200
+sort of innovate, optimize, and run with
+
+913
+00:28:39,680 --> 00:28:42,880
+it. And you may just suddenly discover
+
+914
+00:28:41,200 --> 00:28:45,080
+that because you're far away from the
+
+915
+00:28:42,880 --> 00:28:46,640
+epicenter, you don't get access as much
+
+916
+00:28:45,079 --> 00:28:48,879
+as companies in the Western world and in
+
+917
+00:28:46,640 --> 00:28:51,080
+the US or perhaps in China going to get.
+
+918
+00:28:48,880 --> 00:28:53,200
+>> I think look, I I to look at history
+
+919
+00:28:51,079 --> 00:28:55,279
+because it gives us some information on
+
+920
+00:28:53,200 --> 00:28:57,600
+how these things roll out. I think this
+
+921
+00:28:55,279 --> 00:28:59,359
+is the classic labor versus capital
+
+922
+00:28:57,599 --> 00:29:01,319
+trade-off that is happening.
+
+923
+00:28:59,359 --> 00:29:02,839
+It happened in the 1700s, it happened
+
+924
+00:29:01,319 --> 00:29:05,519
+again in the 1800s, it happened again in
+
+925
+00:29:02,839 --> 00:29:07,679
+the 1900s. People who spend more on
+
+926
+00:29:05,519 --> 00:29:10,400
+capital than worried about labor tended
+
+927
+00:29:07,680 --> 00:29:12,519
+to win every previous one of the seven
+
+928
+00:29:10,400 --> 00:29:14,200
+or eight cycles like this. So, this is
+
+929
+00:29:12,519 --> 00:29:15,559
+what is going to happen this time.
+
+930
+00:29:14,200 --> 00:29:17,720
+What Nikesh pointed out is the two
+
+931
+00:29:15,559 --> 00:29:19,079
+nations here are also quite willing to
+
+932
+00:29:17,720 --> 00:29:19,600
+be capital intensive.
+
+933
+00:29:19,079 --> 00:29:21,599
+>> Yeah.
+
+934
+00:29:19,599 --> 00:29:23,919
+>> It's not as simple as this, and they're
+
+935
+00:29:21,599 --> 00:29:25,519
+willing at the end of the day to concede
+
+936
+00:29:23,920 --> 00:29:26,759
+that labor is going to be less
+
+937
+00:29:25,519 --> 00:29:27,879
+important.
+
+938
+00:29:26,759 --> 00:29:30,640
+That's the way it goes it's going to
+
+939
+00:29:27,880 --> 00:29:33,440
+play out. Nations that get very hung up
+
+940
+00:29:30,640 --> 00:29:35,000
+on social and left-leaning philosophies
+
+941
+00:29:33,440 --> 00:29:36,559
+that labor has to be protected at all
+
+942
+00:29:35,000 --> 00:29:39,160
+costs. Not that there has to be
+
+943
+00:29:36,559 --> 00:29:41,399
+opportunity for labor, but every
+
+944
+00:29:39,160 --> 00:29:43,200
+existing job has to be protected, or the
+
+945
+00:29:41,400 --> 00:29:44,680
+ones are going to lose. Because I think
+
+946
+00:29:43,200 --> 00:29:46,440
+the ones there, to Nikesh's point, it's
+
+947
+00:29:44,680 --> 00:29:48,759
+cheap enough. Somebody in one country
+
+948
+00:29:46,440 --> 00:29:50,160
+can use the capability,
+
+949
+00:29:48,759 --> 00:29:51,960
+but what's going to be in their head is,
+
+950
+00:29:50,160 --> 00:29:54,240
+"Hey, but does it mean there's a job
+
+951
+00:29:51,960 --> 00:29:55,559
+loss or a job displacement?" Job
+
+952
+00:29:54,240 --> 00:29:57,799
+displacement you should take because it
+
+953
+00:29:55,559 --> 00:30:00,119
+may result in a better job. I think
+
+954
+00:29:57,799 --> 00:30:01,720
+that's the social philosophy that's
+
+955
+00:30:00,119 --> 00:30:01,799
+going to determine winners and losers
+
+956
+00:30:01,720 --> 00:30:03,920
+here.
+
+957
+00:30:01,799 --> 00:30:05,159
+>> I have a final question before I give it
+
+958
+00:30:03,920 --> 00:30:06,880
+to you for the final question, but the
+
+959
+00:30:05,160 --> 00:30:08,560
+my final question to both of you, you
+
+960
+00:30:06,880 --> 00:30:10,800
+mentioned this here, which was great.
+
+961
+00:30:08,559 --> 00:30:12,359
+Can you tell the story about
+
+962
+00:30:10,799 --> 00:30:14,039
+I'm a huge fan of vertical integration,
+
+963
+00:30:12,359 --> 00:30:16,159
+huge fan. I I think like, you know,
+
+964
+00:30:14,039 --> 00:30:17,639
+markets swing in pendulums.
+
+965
+00:30:16,160 --> 00:30:20,080
+You know, there was a world, like even
+
+966
+00:30:17,640 --> 00:30:22,680
+in the '60s, '70s, and '80s where there
+
+967
+00:30:20,079 --> 00:30:25,079
+was the conglomerate, and it was a an
+
+968
+00:30:22,680 --> 00:30:28,000
+incredibly valuable enterprise, and it
+
+969
+00:30:25,079 --> 00:30:29,679
+was in a time of turbulence, it was a
+
+970
+00:30:28,000 --> 00:30:30,799
+safe harbor for capital.
+
+971
+00:30:29,680 --> 00:30:32,920
+Because the conglomerate was the
+
+972
+00:30:30,799 --> 00:30:34,159
+mechanism by which you organized.
+
+973
+00:30:32,920 --> 00:30:36,960
+And then when you had peace and
+
+974
+00:30:34,160 --> 00:30:38,640
+prosperity, then people disaggregated.
+
+975
+00:30:36,960 --> 00:30:40,000
+And I think we're moving back to the
+
+976
+00:30:38,640 --> 00:30:42,080
+world of the conglomerate, and you told
+
+977
+00:30:40,000 --> 00:30:43,960
+me that you just back there about
+
+978
+00:30:42,079 --> 00:30:45,399
+vertical integration of IBM at its peak.
+
+979
+00:30:43,960 --> 00:30:46,319
+I just wanted you to and then Nick asked
+
+980
+00:30:45,400 --> 00:30:47,000
+what your thoughts on vertical
+
+981
+00:30:46,319 --> 00:30:47,839
+integration over here.
+
+982
+00:30:47,000 --> 00:30:49,480
+>> So,
+
+983
+00:30:47,839 --> 00:30:51,639
+what Jim and I have often talked about
+
+984
+00:30:49,480 --> 00:30:53,519
+is the IBM mainframe. Which, by the way,
+
+985
+00:30:51,640 --> 00:30:56,320
+there's a few people in the room who do
+
+986
+00:30:53,519 --> 00:30:58,839
+use it quite well and at scale.
+
+987
+00:30:56,319 --> 00:30:59,879
+The IBM mainframe has lasted 65 years.
+
+988
+00:30:58,839 --> 00:31:02,199
+Why?
+
+989
+00:30:59,880 --> 00:31:04,560
+It was vertically integrated. We're a
+
+990
+00:31:02,200 --> 00:31:06,880
+little less right now in the sense we
+
+991
+00:31:04,559 --> 00:31:08,480
+don't go all the way to dirt.
+
+992
+00:31:06,880 --> 00:31:11,440
+In the '60s, we went all the way to
+
+993
+00:31:08,480 --> 00:31:13,279
+dirt. Meaning, we found sand, we made
+
+994
+00:31:11,440 --> 00:31:15,200
+our own wafers, we built our own fabs,
+
+995
+00:31:13,279 --> 00:31:17,399
+we built our own chips, every single
+
+996
+00:31:15,200 --> 00:31:20,039
+thing out to the metal that surrounded
+
+997
+00:31:17,400 --> 00:31:22,280
+the machine. What that avoided was any
+
+998
+00:31:20,039 --> 00:31:25,000
+IP leakage, but it allowed us to keep
+
+999
+00:31:22,279 --> 00:31:27,519
+the profit of the complete stack in the
+
+1000
+00:31:25,000 --> 00:31:30,440
+company. Today, the only piece we don't
+
+1001
+00:31:27,519 --> 00:31:31,879
+do is the actual fab. Still, the design
+
+1002
+00:31:30,440 --> 00:31:34,279
+of the chips, the design of the
+
+1003
+00:31:31,880 --> 00:31:37,160
+engineering, the resilience, the bulk of
+
+1004
+00:31:34,279 --> 00:31:39,359
+the software is inside. And that
+
+1005
+00:31:37,160 --> 00:31:40,040
+vertical integration, you got to decide.
+
+1006
+00:31:39,359 --> 00:31:41,519
+>> Yeah, of course.
+
+1007
+00:31:40,039 --> 00:31:42,759
+>> I'm not going to make our own metal. You
+
+1008
+00:31:41,519 --> 00:31:43,200
+buy metal.
+
+1009
+00:31:42,759 --> 00:31:45,720
+>> And right.
+
+1010
+00:31:43,200 --> 00:31:47,840
+>> Fabs is because of scale. But I think
+
+1011
+00:31:45,720 --> 00:31:49,799
+that vertical integration in areas which
+
+1012
+00:31:47,839 --> 00:31:51,039
+are of incredible important advantage,
+
+1013
+00:31:49,799 --> 00:31:53,440
+which goes back to the infrastructure
+
+1014
+00:31:51,039 --> 00:31:55,200
+point the two of you were making before,
+
+1015
+00:31:53,440 --> 00:31:56,799
+is incredibly important to understand
+
+1016
+00:31:55,200 --> 00:31:58,440
+where do you want to be
+
+1017
+00:31:56,799 --> 00:31:59,240
+and where, if it's a commodity, then you
+
+1018
+00:31:58,440 --> 00:31:59,799
+should not be.
+
+1019
+00:31:59,240 --> 00:32:01,279
+>> Yeah.
+
+1020
+00:31:59,799 --> 00:32:03,200
+>> But you can see that the modern-day
+
+1021
+00:32:01,279 --> 00:32:03,480
+version of that is Nvidia.
+
+1022
+00:32:03,200 --> 00:32:04,920
+>> Yeah.
+
+1023
+00:32:03,480 --> 00:32:06,319
+>> If you look at what Jensen is doing,
+
+1024
+00:32:04,920 --> 00:32:08,480
+he's a modern-day version of the
+
+1025
+00:32:06,319 --> 00:32:08,919
+vertically integrated stack. And he went
+
+1026
+00:32:08,480 --> 00:32:10,039
+and bought
+
+1027
+00:32:08,920 --> 00:32:10,759
+>> Jensen is at the dirt.
+
+1028
+00:32:10,039 --> 00:32:12,399
+>> And he's at the dirt.
+
+1029
+00:32:10,759 --> 00:32:13,519
+>> hugging face. He wants to He understands
+
+1030
+00:32:12,400 --> 00:32:15,480
+that there's going to be balance between
+
+1031
+00:32:13,519 --> 00:32:16,599
+frontier models and other models. He's
+
+1032
+00:32:15,480 --> 00:32:18,799
+trying to fund everybody in the
+
+1033
+00:32:16,599 --> 00:32:20,480
+ecosystem to ensure that they don't
+
+1034
+00:32:18,799 --> 00:32:22,839
+stray from the vertically integrated
+
+1035
+00:32:20,480 --> 00:32:24,400
+stack that he's producing. And the good
+
+1036
+00:32:22,839 --> 00:32:26,319
+news is if you control the vertical
+
+1037
+00:32:24,400 --> 00:32:27,920
+stack, you can decide which part of the
+
+1038
+00:32:26,319 --> 00:32:29,200
+stack to commoditize.
+
+1039
+00:32:27,920 --> 00:32:30,800
+So, you can decide to move profit
+
+1040
+00:32:29,200 --> 00:32:32,000
+between layers. And if you see that
+
+1041
+00:32:30,799 --> 00:32:32,519
+there are other people attacking a
+
+1042
+00:32:32,000 --> 00:32:32,839
+certain
+
+1043
+00:32:32,519 --> 00:32:34,440
+>> Exactly.
+
+1044
+00:32:32,839 --> 00:32:35,839
+>> part of the stack, you you they destroy
+
+1045
+00:32:34,440 --> 00:32:36,840
+the profit pool on that stack, you move
+
+1046
+00:32:35,839 --> 00:32:38,240
+the profit to the other part of the
+
+1047
+00:32:36,839 --> 00:32:39,720
+stack. And you can see that happening.
+
+1048
+00:32:38,240 --> 00:32:41,200
+Very powerful market leverage.
+
+1049
+00:32:39,720 --> 00:32:42,600
+>> So, to put you on the spot. So, if you
+
+1050
+00:32:41,200 --> 00:32:44,799
+look at
+
+1051
+00:32:42,599 --> 00:32:46,319
+the application layer today,
+
+1052
+00:32:44,799 --> 00:32:48,399
+what's the obvious vertical integration
+
+1053
+00:32:46,319 --> 00:32:50,240
+strategy that OpenAI or Anthropic should
+
+1054
+00:32:48,400 --> 00:32:52,240
+be taking? And then what's the defensive
+
+1055
+00:32:50,240 --> 00:32:54,120
+mechanism for the companies that are
+
+1056
+00:32:52,240 --> 00:32:56,599
+maybe on the receiving end of that?
+
+1057
+00:32:54,119 --> 00:32:58,319
+>> I think you're already seeing that. And
+
+1058
+00:32:56,599 --> 00:33:00,039
+I think we're we're we trivialize this
+
+1059
+00:32:58,319 --> 00:33:02,319
+conversation. We start saying open
+
+1060
+00:33:00,039 --> 00:33:05,599
+models, open weight. It's literally it's
+
+1061
+00:33:02,319 --> 00:33:07,480
+an open stack versus a closed stack.
+
+1062
+00:33:05,599 --> 00:33:09,119
+Because I don't think I I think at some
+
+1063
+00:33:07,480 --> 00:33:10,920
+point in time this notion of running
+
+1064
+00:33:09,119 --> 00:33:12,159
+something like an open router become
+
+1065
+00:33:10,920 --> 00:33:14,039
+impossible.
+
+1066
+00:33:12,160 --> 00:33:15,720
+Because models are getting more and more
+
+1067
+00:33:14,039 --> 00:33:18,119
+each model is
+
+1068
+00:33:15,720 --> 00:33:19,600
+requiring more memory, more context,
+
+1069
+00:33:18,119 --> 00:33:21,959
+more understanding. You can't separate
+
+1070
+00:33:19,599 --> 00:33:23,240
+context and memory from the reasoning.
+
+1071
+00:33:21,960 --> 00:33:25,039
+Now, if you want to separate reasoning
+
+1072
+00:33:23,240 --> 00:33:26,359
+from the context and memory, then open
+
+1073
+00:33:25,039 --> 00:33:29,000
+router is only responsible for moving
+
+1074
+00:33:26,359 --> 00:33:30,240
+the reasoning tokens back and forth.
+
+1075
+00:33:29,000 --> 00:33:32,079
+So, I think over time you start seeing
+
+1076
+00:33:30,240 --> 00:33:34,279
+it doesn't make sense that you have a
+
+1077
+00:33:32,079 --> 00:33:35,759
+effectively end-to-end stack. It'll be
+
+1078
+00:33:34,279 --> 00:33:37,160
+It's like a CPA you talked about earlier
+
+1079
+00:33:35,759 --> 00:33:38,400
+when we were chatting. So, it's a cost
+
+1080
+00:33:37,160 --> 00:33:40,720
+per action. The action will require you
+
+1081
+00:33:38,400 --> 00:33:43,400
+to go and traverse the entire logic from
+
+1082
+00:33:40,720 --> 00:33:45,799
+prompt till outcome. And then memory
+
+1083
+00:33:43,400 --> 00:33:47,000
+will require and make it easier. And
+
+1084
+00:33:45,799 --> 00:33:49,039
+there'll be too high a friction for you
+
+1085
+00:33:47,000 --> 00:33:50,200
+to move your task from one stack to the
+
+1086
+00:33:49,039 --> 00:33:51,920
+other stack because it has all your
+
+1087
+00:33:50,200 --> 00:33:53,200
+context and memory. And you're going to
+
+1088
+00:33:51,920 --> 00:33:54,960
+see that. Look Look at what's happening
+
+1089
+00:33:53,200 --> 00:33:56,759
+in the personal agent space, right? If
+
+1090
+00:33:54,960 --> 00:33:58,480
+you start training a personal agent with
+
+1091
+00:33:56,759 --> 00:34:00,400
+all your context, all your APIs, all
+
+1092
+00:33:58,480 --> 00:34:02,240
+your connectivity, now you built a moat.
+
+1093
+00:34:00,400 --> 00:34:03,720
+Cuz now I can't take that every day and
+
+1094
+00:34:02,240 --> 00:34:06,599
+move it to a next stack and the next
+
+1095
+00:34:03,720 --> 00:34:08,599
+stack. So, I think you will find
+
+1096
+00:34:06,599 --> 00:34:10,719
+in the application layer they're going
+
+1097
+00:34:08,599 --> 00:34:12,480
+to have a vertical stack as well.
+
+1098
+00:34:10,719 --> 00:34:14,918
+Which will go to the entire process of
+
+1099
+00:34:12,480 --> 00:34:16,360
+software, reasoning, memory, context.
+
+1100
+00:34:14,918 --> 00:34:18,158
+>> To your logical conclusion, everybody
+
+1101
+00:34:16,360 --> 00:34:19,320
+will have their own then. Yes, because
+
+1102
+00:34:18,159 --> 00:34:21,280
+it's just the right thing to do.
+
+1103
+00:34:19,320 --> 00:34:23,360
+>> And then brute force distribution wins
+
+1104
+00:34:21,280 --> 00:34:24,720
+again in the enterprise space, right?
+
+1105
+00:34:23,360 --> 00:34:26,000
+You're seeing that in the consumer space
+
+1106
+00:34:24,719 --> 00:34:27,119
+brute force distribution is going to
+
+1107
+00:34:26,000 --> 00:34:29,719
+compete.
+
+1108
+00:34:27,119 --> 00:34:32,679
+In the next 3 months every frontier lab
+
+1109
+00:34:29,719 --> 00:34:34,799
+is going want a full-on full court press
+
+1110
+00:34:32,679 --> 00:34:37,480
+on the Muse concept, right? They tried
+
+1111
+00:34:34,800 --> 00:34:39,399
+that 6 to 9 months ago. It didn't work.
+
+1112
+00:34:37,480 --> 00:34:41,119
+They Now, with Facebook showing us how
+
+1113
+00:34:39,398 --> 00:34:43,159
+it can work, I think pretty much
+
+1114
+00:34:41,119 --> 00:34:45,839
+everybody has it. There will be APIs. It
+
+1115
+00:34:43,159 --> 00:34:48,079
+will be the largest battle of consumer
+
+1116
+00:34:45,840 --> 00:34:50,519
+control. Every app that exists in the
+
+1117
+00:34:48,079 --> 00:34:53,079
+iPhone is has to become headless.
+
+1118
+00:34:50,519 --> 00:34:55,360
+>> Maybe we can wrap by going from vertical
+
+1119
+00:34:53,079 --> 00:34:56,480
+integration to horizontal expansion.
+
+1120
+00:34:55,360 --> 00:34:58,720
+It's been a
+
+1121
+00:34:56,480 --> 00:35:00,559
+common business strategy in enterprise
+
+1122
+00:34:58,719 --> 00:35:02,719
+technology companies to expand
+
+1123
+00:35:00,559 --> 00:35:04,960
+horizontally through M&A,
+
+1124
+00:35:02,719 --> 00:35:06,119
+drive synergies, cross-sells, and so on.
+
+1125
+00:35:04,960 --> 00:35:08,800
+And you've obviously both done it
+
+1126
+00:35:06,119 --> 00:35:09,839
+exceptionally well uh and executed it
+
+1127
+00:35:08,800 --> 00:35:11,920
+well.
+
+1128
+00:35:09,840 --> 00:35:14,519
+How has your view been affected in the
+
+1129
+00:35:11,920 --> 00:35:17,360
+last year, this year, let's say, in
+
+1130
+00:35:14,519 --> 00:35:18,159
+terms of valuations and multiples, cost
+
+1131
+00:35:17,360 --> 00:35:20,240
+of capital?
+
+1132
+00:35:18,159 --> 00:35:22,159
+>> Let's talk about M&A in the context of
+
+1133
+00:35:20,239 --> 00:35:24,079
+cyber. Then we can talk about M&A in the
+
+1134
+00:35:22,159 --> 00:35:26,920
+context outside of cyber.
+
+1135
+00:35:24,079 --> 00:35:28,679
+In the context of cyber, I have always
+
+1136
+00:35:26,920 --> 00:35:31,720
+maintained over the last 8 years that
+
+1137
+00:35:28,679 --> 00:35:34,279
+it's silly that our customers have to
+
+1138
+00:35:31,719 --> 00:35:35,919
+buy 40 different solutions and stitch
+
+1139
+00:35:34,280 --> 00:35:39,000
+them together.
+
+1140
+00:35:35,920 --> 00:35:40,920
+We barely understand our
+
+1141
+00:35:39,000 --> 00:35:42,559
+You think you understand our
+
+1142
+00:35:40,920 --> 00:35:44,880
+10 other vendors with that? You can
+
+1143
+00:35:42,559 --> 00:35:47,079
+stitch it. God bless your soul.
+
+1144
+00:35:44,880 --> 00:35:49,280
+Right? So, we're working as fast as we
+
+1145
+00:35:47,079 --> 00:35:51,199
+can to take disparate parts of our
+
+1146
+00:35:49,280 --> 00:35:53,000
+industry and find the way to stitch them
+
+1147
+00:35:51,199 --> 00:35:54,599
+together to have the data work together.
+
+1148
+00:35:53,000 --> 00:35:56,320
+I think that's a journey. And if you
+
+1149
+00:35:54,599 --> 00:35:57,199
+want parallels, when I started [snorts]
+
+1150
+00:35:56,320 --> 00:35:59,480
+my
+
+1151
+00:35:57,199 --> 00:36:00,759
+first job was at Fidelity Investments
+
+1152
+00:35:59,480 --> 00:36:03,320
+many years ago.
+
+1153
+00:36:00,760 --> 00:36:05,640
+We had 23 systems which collectively
+
+1154
+00:36:03,320 --> 00:36:07,200
+would be called CRM today.
+
+1155
+00:36:05,639 --> 00:36:08,440
+We had master tables. We had tables that
+
+1156
+00:36:07,199 --> 00:36:09,719
+concatenated with them. We had 23
+
+1157
+00:36:08,440 --> 00:36:11,519
+different applications that did trading
+
+1158
+00:36:09,719 --> 00:36:13,799
+and things. Today, you go buy it off the
+
+1159
+00:36:11,519 --> 00:36:15,639
+shelf and you cringe at the cost of
+
+1160
+00:36:13,800 --> 00:36:16,880
+Salesforce or the cost of Microsoft
+
+1161
+00:36:15,639 --> 00:36:19,359
+Dynamics, Oracle, whatever you choose to
+
+1162
+00:36:16,880 --> 00:36:20,680
+do. So, in 30 years, what's happened is
+
+1163
+00:36:19,360 --> 00:36:22,280
+that's consolidated to a singular
+
+1164
+00:36:20,679 --> 00:36:23,639
+platform. The customers don't stitch the
+
+1165
+00:36:22,280 --> 00:36:25,280
+solutions anymore.
+
+1166
+00:36:23,639 --> 00:36:27,359
+Because what happens is these software
+
+1167
+00:36:25,280 --> 00:36:28,920
+solutions become consistent. They all
+
+1168
+00:36:27,360 --> 00:36:30,840
+become like each other. They all
+
+1169
+00:36:28,920 --> 00:36:32,599
+probably do the same thing and there's
+
+1170
+00:36:30,840 --> 00:36:33,880
+no differentiation. So, I think same
+
+1171
+00:36:32,599 --> 00:36:35,639
+thing's going to happen to cyber. That's
+
+1172
+00:36:33,880 --> 00:36:37,559
+what we try to do. We've tried to find
+
+1173
+00:36:35,639 --> 00:36:38,960
+things that are best in their category,
+
+1174
+00:36:37,559 --> 00:36:39,920
+stitch and make them work so our
+
+1175
+00:36:38,960 --> 00:36:41,199
+customers don't have to do the
+
+1176
+00:36:39,920 --> 00:36:43,720
+stitching. So, I think that's kind of
+
+1177
+00:36:41,199 --> 00:36:45,239
+the answer on cyber. For some reason,
+
+1178
+00:36:43,719 --> 00:36:47,799
+you know, cyber is enjoying much better
+
+1179
+00:36:45,239 --> 00:36:49,959
+valuations lately because of the the AI
+
+1180
+00:36:47,800 --> 00:36:51,560
+mythos event, which is fine, which will
+
+1181
+00:36:49,960 --> 00:36:52,679
+rationalize over time
+
+1182
+00:36:51,559 --> 00:36:55,119
+because all these guys are going to go
+
+1183
+00:36:52,679 --> 00:36:56,199
+spend unlimited amounts of money on
+
+1184
+00:36:55,119 --> 00:36:59,079
+cyber.
+
+1185
+00:36:56,199 --> 00:37:01,279
+Outside of cyber, I think it goes back
+
+1186
+00:36:59,079 --> 00:37:03,880
+to the conversation Chamath and we were
+
+1187
+00:37:01,280 --> 00:37:05,240
+having earlier about it's very hard to
+
+1188
+00:37:03,880 --> 00:37:07,039
+understand the terminal value of
+
+1189
+00:37:05,239 --> 00:37:08,599
+software.
+
+1190
+00:37:07,039 --> 00:37:10,759
+It's not clear
+
+1191
+00:37:08,599 --> 00:37:13,239
+what software is going to survive the
+
+1192
+00:37:10,760 --> 00:37:15,440
+next 5 to 8 years with where we are from
+
+1193
+00:37:13,239 --> 00:37:17,719
+an AI perspective and the notion that
+
+1194
+00:37:15,440 --> 00:37:20,599
+product market fit is getting disrupted
+
+1195
+00:37:17,719 --> 00:37:23,919
+from any of these companies. We all know
+
+1196
+00:37:20,599 --> 00:37:25,960
+with if AI was applied well,
+
+1197
+00:37:23,920 --> 00:37:28,159
+how our current software should behave
+
+1198
+00:37:25,960 --> 00:37:29,400
+in an ideal scenario. I know what I want
+
+1199
+00:37:28,159 --> 00:37:31,799
+from how to package the software that I
+
+1200
+00:37:29,400 --> 00:37:33,280
+buy. I know if if I could have my magic
+
+1201
+00:37:31,800 --> 00:37:36,200
+wand and make it do things, I know
+
+1202
+00:37:33,280 --> 00:37:38,040
+exactly how it should work in an AI
+
+1203
+00:37:36,199 --> 00:37:39,399
+first world, which means somebody's
+
+1204
+00:37:38,039 --> 00:37:40,400
+going to do it.
+
+1205
+00:37:39,400 --> 00:37:43,000
+So, I think there's going to be huge
+
+1206
+00:37:40,400 --> 00:37:43,599
+disruption in the SaaS space over the
+
+1207
+00:37:43,000 --> 00:37:44,719
+next few years.
+
+1208
+00:37:43,599 --> 00:37:47,239
+>> Arvind, are you looking at anything
+
+1209
+00:37:44,719 --> 00:37:49,239
+thinking, "Hmm, juicy multiples."
+
+1210
+00:37:47,239 --> 00:37:50,039
+>> So,
+
+1211
+00:37:49,239 --> 00:37:52,079
+So,
+
+1212
+00:37:50,039 --> 00:37:54,480
+over the year, it was very attractive at
+
+1213
+00:37:52,079 --> 00:37:56,239
+the beginning, not so attractive a month
+
+1214
+00:37:54,480 --> 00:37:57,800
+ago. We'll wait and see how it goes over
+
+1215
+00:37:56,239 --> 00:37:58,799
+the next few.
+
+1216
+00:37:57,800 --> 00:38:00,160
+But actually, I want to build on
+
+1217
+00:37:58,800 --> 00:38:01,560
+Aneesh's thought. This is not just
+
+1218
+00:38:00,159 --> 00:38:03,359
+unique to cyber.
+
+1219
+00:38:01,559 --> 00:38:06,000
+The average enterprise uses anywhere
+
+1220
+00:38:03,360 --> 00:38:07,120
+from 500 to 5,000 distinct software
+
+1221
+00:38:06,000 --> 00:38:08,679
+vendors.
+
+1222
+00:38:07,119 --> 00:38:10,960
+In a world when you have to protect
+
+1223
+00:38:08,679 --> 00:38:13,879
+against it all, it's not just the cyber
+
+1224
+00:38:10,960 --> 00:38:15,639
+threat, that's a massive attack surface.
+
+1225
+00:38:13,880 --> 00:38:20,039
+So, you have to ask yourself, could I
+
+1226
+00:38:15,639 --> 00:38:22,879
+replace 490 of them with minor AI
+
+1227
+00:38:20,039 --> 00:38:24,840
+capabilities and do I need to
+
+1228
+00:38:22,880 --> 00:38:26,920
+go back and leverage five to 10 main
+
+1229
+00:38:24,840 --> 00:38:29,079
+platforms? That implies massive
+
+1230
+00:38:26,920 --> 00:38:31,159
+consolidation, because that's where the
+
+1231
+00:38:29,079 --> 00:38:33,039
+spend goes. That's what I believe is
+
+1232
+00:38:31,159 --> 00:38:35,359
+going to play out. So, there's going to
+
+1233
+00:38:33,039 --> 00:38:37,519
+be consolidation, because if you want to
+
+1234
+00:38:35,360 --> 00:38:39,720
+keep your cost of distribution low, then
+
+1235
+00:38:37,519 --> 00:38:41,239
+they can distribute all of it.
+
+1236
+00:38:39,719 --> 00:38:42,759
+And if the value of that software is
+
+1237
+00:38:41,239 --> 00:38:44,559
+falling, then you cannot afford
+
+1238
+00:38:42,760 --> 00:38:46,400
+independent uh distribution for each of
+
+1239
+00:38:44,559 --> 00:38:48,039
+those. I believe that's going to play
+
+1240
+00:38:46,400 --> 00:38:50,440
+out, whether it takes 6 months or 6
+
+1241
+00:38:48,039 --> 00:38:52,840
+years. It's somewhere inside that
+
+1242
+00:38:50,440 --> 00:38:54,400
+equation. Uh I do think also software
+
+1243
+00:38:52,840 --> 00:38:55,760
+should be distinguished. There is
+
+1244
+00:38:54,400 --> 00:38:57,960
+software where there is a lot of
+
+1245
+00:38:55,760 --> 00:38:59,480
+interaction value, which as we've seen
+
+1246
+00:38:57,960 --> 00:39:02,320
+clearly can be replaced with a lot of
+
+1247
+00:38:59,480 --> 00:39:03,760
+AI. Both examples you used were things
+
+1248
+00:39:02,320 --> 00:39:04,360
+which were interaction-rich.
+
+1249
+00:39:03,760 --> 00:39:06,440
+>> Right.
+
+1250
+00:39:04,360 --> 00:39:08,880
+>> But if in the end you go down to I need
+
+1251
+00:39:06,440 --> 00:39:09,639
+you to be reliable at 10 to the minus
+
+1252
+00:39:08,880 --> 00:39:10,559
+15,
+
+1253
+00:39:09,639 --> 00:39:13,440
+>> Right.
+
+1254
+00:39:10,559 --> 00:39:15,199
+>> which is a database lookup for somebody
+
+1255
+00:39:13,440 --> 00:39:16,599
+doing retail banking or closing the
+
+1256
+00:39:15,199 --> 00:39:17,879
+books,
+
+1257
+00:39:16,599 --> 00:39:19,239
+I think that's going to be hard to
+
+1258
+00:39:17,880 --> 00:39:19,599
+replace that easily
+
+1259
+00:39:19,239 --> 00:39:20,439
+>> Right.
+
+1260
+00:39:19,599 --> 00:39:22,480
+>> with
+
+1261
+00:39:20,440 --> 00:39:24,159
+uh AI-generated software. So, I think
+
+1262
+00:39:22,480 --> 00:39:26,159
+there is going to be a distinction on
+
+1263
+00:39:24,159 --> 00:39:27,799
+how easy it is going to be to do that.
+
+1264
+00:39:26,159 --> 00:39:27,960
+>> digital twin for years before you cut
+
+1265
+00:39:27,800 --> 00:39:28,519
+over.
+
+1266
+00:39:27,960 --> 00:39:28,599
+>> Correct.
+
+1267
+00:39:28,519 --> 00:39:30,079
+>> Yeah.
+
+1268
+00:39:28,599 --> 00:39:30,639
+>> And then is there's no cost advantage to
+
+1269
+00:39:30,079 --> 00:39:31,559
+do that.
+
+1270
+00:39:30,639 --> 00:39:32,960
+>> Yeah.
+
+1271
+00:39:31,559 --> 00:39:34,440
+Guys,
+
+1272
+00:39:32,960 --> 00:39:36,199
+thank you very much.
+
+1273
+00:39:34,440 --> 00:39:36,880
+Arvind Krishna, Nikesh Arora, thank you.
+
+1274
+00:39:36,199 --> 00:39:38,986
+>> Thank you.
+
+1275
+00:39:36,880 --> 00:39:39,440
+>> Thanks, everybody, all of you.
+
+1276
+00:39:38,987 --> 00:39:41,606
+>> [applause]
+
+1277
+00:39:39,440 --> 00:39:43,626
+>> I'M GOING ALL IN.
+
+1278
+00:39:41,606 --> 00:39:43,626
+>> [music]
+
+1279
+00:39:48,811 --> 00:39:50,831
+[music]
+
+1280
+00:39:55,362 --> 00:39:58,720
+[music]
+
+1281
+00:39:55,440 --> 00:39:58,720
+>> I'm going all in.
