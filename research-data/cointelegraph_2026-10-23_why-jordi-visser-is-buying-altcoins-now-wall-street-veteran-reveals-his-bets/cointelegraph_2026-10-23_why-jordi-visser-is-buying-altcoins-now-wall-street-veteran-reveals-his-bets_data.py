@@ -1,0 +1,204 @@
+META = {
+    "title": "Why Jordi Visser Is Buying Altcoins NOW | Wall Street Veteran Reveals His Bets",
+    "channel": "Cointelegraph",
+    "speakers": "Jordi Visser (macro investor), Kieran (host)",
+    "date": "2026-10-23",
+    "video_url": "https://www.youtube.com/watch?v=twVHbjDBTnY",
+    "thread_line": "6 threads · bull market start and Nov 4 refunding · AI fireworks over · agents and crypto rails · altcoin index and positions · privacy · risks and the $1M math",
+    "category": "market",
+    "region": "",
+}
+
+SNAPSHOT = [
+    "Visser says the crypto bull market has started, with Bitcoin around **$80,000**, and calls this the most important phase of crypto's maturation.",
+    "Near-term catalyst: a rally back in crypto as AI stocks fall a second time, plus a possible Treasury surprise at the **November 4** quarterly refunding that pushes rates lower.",
+    "His June 4 article 'The fireworks show is over' argued the risk-free AI trade (Micron 200 to 1,400) is done; he rotated out of Micron in mid-May but still backs AI long term.",
+    "Core thesis: crypto guardrails were built for AI agents, so agentic commerce and tokenization drive the next phase, with Stripe as proof of demand.",
+    "Positioning: mostly Bitcoin, then Ethereum, then Solana; since August he has added altcoins and expects to hold every name in his 46-name index.",
+    "Privacy (Zcash, Monero, NEAR) is his conviction theme: AI fraud makes identity and privacy matter more.",
+    "Risks he sees: an AI-bubble bust, an inflation spike like 2022, or an AI-enabled hack of Bitcoin or Ethereum; he puts over 50% odds on a major hack at a traditional bank or exchange next year.",
+    "On $1M Bitcoin: with $900T of real-world assets and a crypto market cap that could reach $100T, the math works, but he has given up predicting it.",
+]
+
+THEMES = [
+    {
+        "id": "bull-market-catalysts",
+        "tags": ["crypto", "macro-rates"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "EARLY-STAGE BULL MARKET",
+        "title": "The bull market has started, and November 4 may be the next catalyst",
+        "lead": "Visser reads Bitcoin holding up through bad news as the sign that the bull market is already under way.",
+        "bullets": [
+            "The spark: Treasury Secretary Scott Bessent intervened in the yen and used the quarterly refunding to change buyback language, which set off the debasement trade.",
+            "Before that, Bitcoin held lows near **$60,000** despite a cold-wallet hack, the Clarity Act falling under 25%, and MicroStrategy selling some Bitcoin; it now hovers around $80,000.",
+            "Gold and silver rallied on the Fed news then returned to their lows, while Bitcoin stayed above its moving average.",
+            "Rates are higher; Bessent's first try to lower them failed, and advisor David Zervos spoke on September 30 about canceling buybacks and hitting the supply side.",
+            "Catalyst: the next quarterly refunding on **November 4** may bring a surprise like August's; if rates fall on a supply change, that is another crypto catalyst.",
+            "The Clarity Act failing to pass is treated as already out of the way; structural drivers are tokenization and agentic commerce regardless.",
+        ],
+        "quote": None,
+        "watch": "Visser runs a research website and a token index aimed at retail, so he benefits from attention to the thesis.",
+        "names": [
+            {"name": "Bitcoin (BTC)", "blurb": "Largest holding; held $60K lows, now ~ $80K", "stance": "OWNS", "conviction": "High", "horizon": "multi-year"},
+            {"name": "Ethereum (ETH)", "blurb": "Second-largest holding; rallied before the run", "stance": "OWNS", "conviction": "High", "horizon": None},
+        ],
+    },
+    {
+        "id": "ai-fireworks-over",
+        "tags": ["ai-infra", "semis", "finance"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "AI TRADE RE-RATING",
+        "title": "The AI fireworks show is over, but AI is not",
+        "lead": "Visser says the easy, parabolic phase of the AI trade ended and soaked energy out of crypto, leaving higher volatility and higher return potential in crypto.",
+        "bullets": [
+            "His June 4 article 'The fireworks show is over' said AI was too crowded, with hedge funds, Korean retail and global money in; he began rotating out in mid-May, specifically Micron, on which he made a lot.",
+            "His 100-name AI thematic portfolio is up about **40%** year to date, but its volatility is near 40 versus Bitcoin's 31 on a rolling 126-day measure.",
+            "He still sees the agentic compute trade in early innings, with three to five more years, but says buying Micron at 200 and watching it go to 1,400 was a risk-free feeling that is gone.",
+            "Nvidia alone is $5T, bigger than crypto's market cap; builders now need a risk premium for an uncertain five years.",
+            "Tokenized equities: over a weekend AI names fell 5-7% and Micron went from 880 to seven-something while markets were closed, which he calls the start of the hedge-fund-leverage nightmare in 24/7 trading.",
+            "He argues there is nothing in public equities that isn't tied to AI anymore, so Sharpe-ratio-driven allocators will look elsewhere.",
+        ],
+        "quote": {"text": "there's nothing you can buy in basically public equities that isn't related to AI anymore", "cite": "— Jordi Visser"},
+        "watch": "Visser was long Micron and says he made a lot of money before rotating out in mid-May.",
+        "names": [
+            {"name": "Micron (MU)", "blurb": "Rotated out mid-May; fell from 880 to seven-something on a tokenized weekend crash", "stance": "UNCERTAIN", "conviction": "Low", "horizon": None},
+            {"name": "Nvidia (NVDA)", "blurb": "$5T market cap, larger than crypto", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "agents-crypto-rails",
+        "tags": ["crypto", "ai-infra", "finance"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "AGENTIC COMMERCE",
+        "title": "Crypto's guardrails were built for AI agents, not humans",
+        "lead": "Visser ties the bull market directly to AI progress: agents need programmable money, so tokenization and agentic commerce volumes should surge.",
+        "bullets": [
+            "Evidence: John Collison told Mark Zuckerberg and Alexander Wang that agentic commerce on Stripe's rails has gone **vertical**; Stripe is also involved through Bridge, Privy and ownership of OpenRouter.",
+            "Agents are to crypto what the smartphone was to Uber: humans will direct trading but execution will be by agents.",
+            "Retail benefit: agents let anyone invest in places once gated, like VC, private credit, PE and hedge funds, including Anthropic or OpenAI shares.",
+            "Maturation analogy: Netscape's 1994 IPO to the iPhone took about 13 years and the App Store about 15; Bitcoin needed Ethereum's programmable money to get to this point.",
+            "This summer an AI hacked into Hugging Face, which he reads as positive for crypto; Muse, Grokbot and Instinct AI show the consumer-agent phase.",
+            "He expects retail to become consumed with crypto over the next year as tokenization and agentic commerce volumes rise.",
+        ],
+        "quote": {"text": "The crypto guardrails were built not for humans. They were built for AI agents.", "cite": "— Jordi Visser"},
+        "watch": None,
+        "names": [
+            {"name": "Stripe", "blurb": "Collison says agentic commerce on its rails went vertical; owns OpenRouter", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "altcoin-index",
+        "tags": ["crypto", "finance"],
+        "color": "green",
+        "badge": "Positioning",
+        "status": "HIS OWN BOOK",
+        "title": "Why he is now buying altcoins: retail leads and fundamentals drive",
+        "lead": "Visser held only Bitcoin, Ethereum and Solana until August, then began buying a 46-name token index he plans to hold in full.",
+        "bullets": [
+            "Holdings: majority in Bitcoin, then Ethereum, then Solana; he calls himself a layer-one guy but wants beta in this early stage.",
+            "Index: 46 names (42 tokens, 4 public stocks), equal weighted, his S&P 500 of crypto; it has outperformed Bitcoin significantly since June, led by NEAR, Zcash and tokenization names.",
+            "He started buying in August after a seven-standard-deviation move and expects to own every index name by month end.",
+            "Dogecoin was his tell: he wouldn't be bullish until Dogecoin broke out, because retail must lead; retail has led since June and will front-run institutions.",
+            "VCs and institutions have not come in because they were obsessed with AI; he sees no institutional sponsorship yet.",
+            "Fundamentals: Uniswap posted record monthly revenue, helped by Robinhood Chain.",
+            "Selection: verticals first, then projects and founders who survived the post-2022 winter (like dot-com survivors), and tokenomics with burns and scarcity.",
+            "Visser says AI agents will allocate by Sharpe ratio, which favors crypto when AI stocks swing.",
+        ],
+        "quote": None,
+        "watch": "He is building a website and index to bring this research to retail, so followers can invest alongside him.",
+        "names": [
+            {"name": "Solana (SOL)", "blurb": "Third-largest holding", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "NEAR Protocol (NEAR)", "blurb": "Invested after getting to know co-founder Ilya Polosukhin", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "Dogecoin (DOGE)", "blurb": "Retail-breakout signal he wants to see before turning fully bullish", "stance": "WATCHING", "conviction": "None", "horizon": None},
+            {"name": "Uniswap (UNI)", "blurb": "Record monthly revenue", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "privacy-theme",
+        "tags": ["crypto", "ai-infra"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "THEMATIC BASKET",
+        "title": "Privacy is the obvious idea nobody has connected to AI yet",
+        "lead": "Visser's one thematic crypto basket is privacy, on the logic that AI fraud makes identity and privacy far bigger issues.",
+        "bullets": [
+            "He holds privacy as a basket, not one bet: Zcash, Monero and NEAR fit; Zcash doubled over 30 days in the summer.",
+            "Vitalik spoke on the importance of privacy at Token49 in Singapore; he also cites Grayscale saying the market underestimates privacy.",
+            "Connection: ChatGPT started after FTX and the crypto winter began before it, so the links between AI agents and crypto haven't been drawn; it may take 6-12 months.",
+            "30 years of investing taught him to find ideas people haven't connected that look 'pretty damn obvious'.",
+        ],
+        "quote": None,
+        "watch": "He says he is a macro person who doesn't usually pick names and isn't sure NEAR is the best way to play privacy.",
+        "names": [
+            {"name": "Zcash (ZEC)", "blurb": "Part of his privacy basket", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+        ],
+    },
+    {
+        "id": "risks-million-math",
+        "tags": ["crypto", "macro-rates", "geopolitics"],
+        "color": "amber",
+        "badge": "Speculative",
+        "status": "2027 SCENARIOS · $1M BITCOIN",
+        "title": "What could break it, and the math for $1 million Bitcoin",
+        "lead": "Visser names three risks he finds unlikely, then shows how $900T of real-world assets coming on-chain could put Bitcoin near $1M.",
+        "bullets": [
+            "Risk 1: an AI bubble that bursts hard and drags equities; he says it would retest the recent lows but not end the bull market.",
+            "Risk 2: an inflation spike like 2022 forcing hikes; this year rates rose on growth, and headline inflation rose because of Iran, not core.",
+            "Risk 3: an AI-enabled hack of Bitcoin or Ethereum; he rates all three as low probability.",
+            "Upside view: 2027 could be a deflation year for AI via agents, lowering rates, while AI investment is a smaller tailwind than this year.",
+            "He puts over **50%** odds on a significant hack at a traditional bank or exchange in the next year, which speeds up tokenization.",
+            "The math: $900T of real-world assets, crypto at $4T; convert to a $100T crypto cap, Bitcoin at 33% is about $33T versus $2T today, near **$1M**.",
+            "He has given up predicting it ('I learned with Micron that anything is possible with AI') and says world money supply will rise as assets come online.",
+        ],
+        "quote": {"text": "you will be able to pay for a coffee with your house", "cite": "— Jordi Visser"},
+        "watch": "The $1M scenario is a framework, not a forecast; Visser says he doesn't predict it.",
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F4C5", "tag": "Macro", "title": "Watch the November 4 Treasury refunding for a buyback or supply surprise that pushes rates lower."},
+    {"icon": "\U0001F4CA", "tag": "Crypto", "title": "Track retail breadth signals like Dogecoin and altcoin-index outperformance versus Bitcoin."},
+    {"icon": "\U0001F916", "tag": "AI agents", "title": "Follow agentic-commerce volume at Stripe and tokenization data as the structural demand case."},
+    {"icon": "⚡", "tag": "Markets", "title": "Prepare for 24/7 tokenized-equity gaps by sizing leverage for weekend moves."},
+    {"icon": "\U0001F512", "tag": "Privacy", "title": "Treat privacy coins as a basket, not a single name, as Visser does."},
+    {"icon": "⚠", "tag": "Risk", "title": "Pre-define your response to the three risks: an AI bust, an inflation spike, and a hack."},
+]
+
+HOT_TAKES = [
+    {"take": "I do think crypto could easily get to 100 trillion market cap", "cite": "— Jordi Visser", "why": "Roughly 25x from $4T"},
+    {"take": "The crypto guardrails were built not for humans. They were built for AI agents.", "cite": "— Jordi Visser", "why": "Reframes crypto's purpose"},
+    {"take": "It is absolutely crypto at this point", "cite": "— Jordi Visser", "why": "Crypto has higher return potential than AI stocks"},
+    {"take": "there's nothing you can buy in basically public equities that isn't related to AI anymore", "cite": "— Jordi Visser", "why": "Sweeping market claim"},
+    {"take": "you will be able to pay for a coffee with your house", "cite": "— Jordi Visser", "why": "Tokenization prediction"},
+]
+
+CLAIMS = [
+    {"who": "Jordi Visser", "claim": "Crypto market cap could reach $100 trillion.", "metric": "crypto market cap", "target": "$100T", "by": None, "condition": "Real-world assets ($900T) come on chain", "entity": "Bitcoin (BTC)"},
+    {"who": "Jordi Visser", "claim": "Bitcoin could reach $1 million if crypto hits $100T and Bitcoin is about 33% of it.", "metric": "Bitcoin price", "target": "$1,000,000", "by": None, "condition": "Crypto market cap reaches $100T", "entity": "Bitcoin (BTC)"},
+    {"who": "Jordi Visser", "claim": "The next quarterly refunding on November 4 may bring a Treasury surprise, similar to August's, aimed at lowering rates.", "metric": "Treasury quarterly refunding", "target": "buyback/supply surprise", "by": "2026-11-04", "condition": None, "entity": None},
+    {"who": "Jordi Visser", "claim": "A significant hack of a traditional bank or exchange has a greater than 50% chance in the next year.", "metric": "major tradfi hack probability", "target": ">50%", "by": "2027-10", "condition": None, "entity": None},
+    {"who": "Jordi Visser", "claim": "Retail will become completely consumed with crypto over the next year.", "metric": "retail attention to crypto", "target": "surge", "by": "2027-10", "condition": None, "entity": None},
+    {"who": "Jordi Visser", "claim": "Next year will be more of a deflation year for AI than an inflation year as agents pick up.", "metric": "AI-related inflation", "target": "deflation", "by": "2027", "condition": None, "entity": None},
+    {"who": "Jordi Visser", "claim": "He will own every name in his 46-name token index by the end of the month.", "metric": "index names owned", "target": "all 46", "by": "2026-10", "condition": None, "entity": None},
+]
+
+RELATIONS = [
+    {"from": "Stripe", "rel": "owns_stake", "to": "OpenRouter", "note": "Stated as 'they own OpenRouter'"},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F4DA", "title": "Sources referenced: Jordi Visser's June 4 article 'The fireworks show is over', John Collison's interview with Mark Zuckerberg and Alexander Wang, Grayscale on privacy, Vitalik Buterin at Token49", "tag": "Sources"},
+    {"icon": "\U0001F9D2", "title": "Origin story: his 13-year-old son knew crypto tokens via Reddit and Twitter in 2020, which led Visser to look into crypto and Michael Saylor", "tag": "Personal"},
+    {"icon": "\U0001F4B0", "title": "Guest on the show says no humans will be involved in crypto trading within five years; Visser agrees on execution but says humans will still direct agents", "tag": "Crypto"},
+]
+
+GLOSSARY = [
+    {"term": "Quarterly refunding", "def": "The Treasury's scheduled announcement of its borrowing and debt-issuance plan, including buybacks."},
+    {"term": "Tokenized equities", "def": "On-chain versions of stocks that can trade 24/7, outside regular market hours."},
+    {"term": "RWA", "def": "Real-world assets such as property or securities represented on a blockchain."},
+    {"term": "Sharpe ratio", "def": "Return per unit of volatility, used to judge risk-adjusted performance."},
+]
