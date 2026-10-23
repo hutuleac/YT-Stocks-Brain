@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: Amazon CEO Andy Jassy on the $220 Billion AI Buildout</title>
+<meta name="description" content="a16z · 6 threads · $220B capex and sold-out capacity · barbell demand and custom chips · Anthropic/OpenAI stakes · data-center politics · agent-era orgs and security · reinventing every product">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="Amazon CEO Andy Jassy on the $220 Billion AI Buildout">
+<meta property="og:description" content="a16z · 6 threads · $220B capex and sold-out capacity · barbell demand and custom chips · Anthropic/OpenAI stakes · data-center politics · agent-era orgs and security · reinventing every product">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Amazon CEO Andy Jassy on the $220 Billion AI Buildout</h1>
+    <div class="byline">
+      Channel: <b>a16z</b> &middot; Speaker: <b>Andy Jassy (Amazon CEO) with a16z hosts</b> &middot; <b>2026-10-23</b>
+      <div class="stats-line">6 threads · $220B capex and sold-out capacity · barbell demand and custom chips · Anthropic/OpenAI stakes · data-center politics · agent-era orgs and security · reinventing every product &middot; <a href="https://www.youtube.com/watch?v=-YMMRQ1qscI" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Amazon expects about <b>$220B</b> of 2026 capex and Jassy says it is still leaving demand on the table: 2026 capacity is sold out, 2027 largely sold out, a good chunk of 2028 too.</li><li>AWS grew <b>36.7%</b> last quarter on a $169B run rate; its AI business alone is over $25B run rate, several hundred times faster than early AWS.</li><li>AI demand is a barbell: labs and a few runaway apps on one end, enterprise cost-avoidance on the other, and the largest future segment (production workloads) barely started.</li><li>Custom silicon (Graviton, Trainium) is the lever on inference cost, which Jassy calls still an order of magnitude too expensive for pervasive use.</li><li>Stakes in Anthropic and OpenAI are framed as partnership investments with customers; Anthropic made a multi-year, multi-gigawatt Trainium commitment.</li><li>Data-center backlash is called myths and mistruths: water, backup-generator pollution and power prices are all rebutted with numbers.</li><li>Jassy predicts fewer humans doing today's work, smaller cross-functional teams, and company code rewritten so agents can patch security holes in minutes.</li><li>Every Amazon consumer product (Alexa, Prime Video, Fire TV, retail) has a team building a reimagined version; breadth is defended via decentralized, single-threaded teams.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="capex-sold-out">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">2026 CAPEX ~$220B</span><span class="ttag">ai-infra</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">$220B of capex and capacity still sold out through 2028</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jassy says Amazon could spend far more than $220B without it being a bad use of capital, because demand visibility is high and capacity is already booked.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>2026 capacity is sold out, 2027 largely sold out, a good chunk of 2028 sold out; Amazon always holds some back for on-demand and its inference service Bedrock.</li><li><span class="dot" style="background:#3f6b2e;"></span>Host framing: $220B is about <b>$600M a day</b>; Jassy recalls being stunned 15 years ago that a telco spent $50B in capex.</li><li><span class="dot" style="background:#3f6b2e;"></span>Cash cycle: data centers are bought about two years before servers go in and have roughly 30-year lives; servers and networking are bought only months ahead, break even in about three years, last 5-6 years, and most deals are about five years.</li><li><span class="dot" style="background:#3f6b2e;"></span>Because server spend follows visible demand, Amazon can skip the gear if data centers do not fill; free cash flow still takes headwinds in the early build years.</li><li><span class="dot" style="background:#3f6b2e;"></span>Memory is a trade-off: a fixed supply must be split between HBM for AI accelerators and DRAM for the core non-AI business, both growing fast.</li><li><span class="dot" style="background:#3f6b2e;"></span>Supply constraints will last beyond 2027 and show up in different components for several years; Jassy thinks Amazon is adding more capacity than anyone else.</li><li><span class="dot" style="background:#3f6b2e;"></span>Operating record: topline about <b>80%</b> above 2021, AWS almost 3x, ads about 2.5x; AWS grew 36.7% last quarter on a $169B run rate.</li><li><span class="dot" style="background:#3f6b2e;"></span>AWS origin: product teams spent 70-80% of time on undifferentiated infrastructure; AWS was a ~$60M run rate after three years versus Amazon's AI business at over <b>$25B</b> run rate after three years of this wave.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;even spending $220 billion in capex this year, we're leaving a meaningful amount of demand on the table&#8221;<cite>— Andy Jassy</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Amazon (AMZN)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High · 2026-2028</span></b><span>$220B 2026 capex, AWS 36.7% growth, capacity booked into 2028</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Jassy runs the business selling the capacity, so the sold-out and could-spend-more claims come from the seller. He also says no equation tells you how much is too much.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="barbell-chips">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Strategy</span>
+    <span class="theme-status">CUSTOM SILICON · INFERENCE COST</span><span class="ttag">ai-infra</span><span class="ttag">semis</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">A barbell of AI demand, and why Trainium and Graviton exist</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Inference is still about an order of magnitude too expensive for enterprises to rewrite apps around it, so Amazon's own chips are aimed at driving that cost down.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Barbell: one end is AI labs consuming huge compute plus a few runaway apps (ChatGPT, Claude Code); the other is enterprises using AI for cost avoidance (customer service, fraud, process automation).</li><li><span class="dot" style="background:#3f6b2e;"></span>The middle, current enterprise production workloads, is mostly not on inference yet but will be the largest absolute segment; within 5-7 years most enterprise apps will use inference pervasively.</li><li><span class="dot" style="background:#3f6b2e;"></span>Annapurna Labs was bought for a server offload chip (moving virtualization, networking, security and storage off the CPU so nearly <b>100%</b> of the server serves customers), not for AI chips, and is in every EC2 server.</li><li><span class="dot" style="background:#3f6b2e;"></span>Graviton CPU: used by 99% of the top 1,000 EC2 customers, about <b>40%</b> more price performant than x86.</li><li><span class="dot" style="background:#3f6b2e;"></span>Trainium AI accelerator: about 30-<b>40%</b> more price performant than comparable processors; Jassy keeps a deep partnership with the dominant AI-chip provider, left unnamed.</li><li><span class="dot" style="background:#3f6b2e;"></span>Intel had virtually all CPU share, and a partner with all the share is not driving price performance, a classic innovator's dilemma; Amazon still has a deep partnership with them.</li><li><span class="dot" style="background:#3f6b2e;"></span>Barriers to pervasive inference are talent for post-training and fine-tuning, and above all cost; lower cost lowers the bar to rewrite CPU apps for accelerators.</li><li><span class="dot" style="background:#3f6b2e;"></span>Host anecdote: one a16z employee ran up about <b>$2M</b> of inference spend.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;it's still an order of magnitude too expensive in my opinion for it to be used as pervasively as possible&#8221;<cite>— Andy Jassy</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Amazon (AMZN)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Graviton and Trainium via Annapurna Labs</span></div><div class="namechip"><b>Intel (INTC)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Held virtually all CPU share; deep partnership continues</span></div><div class="namechip"><b>Annapurna Labs<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Amazon's chip team, 'one of the very best acquisitions' it has made</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The price-performance figures are Amazon's own for its own chips.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="anthropic-openai">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Partnership investments</span>
+    <span class="theme-status">ANTHROPIC · OPENAI</span><span class="ttag">ai-infra</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Why Amazon invests in two of its biggest AI customers</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jassy frames the Anthropic and OpenAI stakes as extensions of deep partnerships, not circular financing, and expects both to be long-term winners.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Host cites roughly <b>$18B</b> in Anthropic and $50B in OpenAI ("or something like that") and notes Wall Street's dot-com comparisons; Jassy does not state amounts.</li><li><span class="dot" style="background:#3f6b2e;"></span>Reasons given: team quality, the models and apps, unprecedented top-line growth, belief in AI, and the expectation that not everyone wins but these two will be among the successful ones.</li><li><span class="dot" style="background:#3f6b2e;"></span>Anthropic: customers do best running it in Bedrock; long chip partnership on Trainium; it made a <b>multi-year, multi-gigawatt</b> Trainium commitment.</li><li><span class="dot" style="background:#3f6b2e;"></span>OpenAI: many customers wanted OpenAI on AWS but prior arrangements blocked it; OpenAI models now run in Bedrock, and the two built a stateful runtime environment, which Jassy thinks is how all agents will be built.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High · long term</span></b><span>Amazon investee; Trainium multi-gigawatt commitment</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium · long term</span></b><span>Amazon investee; models in Bedrock, stateful runtime built together</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Both companies are also AWS customers, so the investments and the compute revenue are intertwined; Jassy answers the circularity concern by pointing to partnership depth.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="datacenter-politics">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">DATA-CENTER BACKLASH</span><span class="ttag">policy</span><span class="ttag">energy</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">The anti-data-center case: Jassy's myths-and-mistruths rebuttal</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jassy argues the US cannot afford not to build data centers and that the water, pollution and power-price complaints are exaggerated.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Scale analogy: the build-out is like the 1950s highways and bridges; if the US does not build, China sets the leadership and norms.</li><li><span class="dot" style="background:#93711b;"></span>Water: golf courses and almond farming consume far more than data centers; Jassy says golf courses use about <b>200x</b> what all Amazon data centers do, in two days more than Amazon does in a year.</li><li><span class="dot" style="background:#93711b;"></span>Pollution: sites register backup generators at full-time capacity, but they actually run about <b>0.1%</b> of the year, roughly 10 hours for maintenance.</li><li><span class="dot" style="background:#93711b;"></span>Power prices: some rates rose, some fell, because the US under-invested in grids; AI was the push, and once capacity lands rates flatline or fall, as in Indiana, Georgia and Mississippi.</li><li><span class="dot" style="background:#93711b;"></span>Local benefit: about <b>$3B</b> of tax paid in St. Joseph County, Indiana; the Built Together program commits another $1B over five years.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;the US specifically cannot afford not to build data centers&#8221;<cite>— Andy Jassy</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The rebuttals come from the largest operator with a direct stake in the build-out; Jassy concedes the industry can do it better.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="agent-era-orgs-security">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Prediction</span>
+    <span class="theme-status">ORG DESIGN · SECURITY</span><span class="ttag">software</span><span class="ttag">dev-workflow</span><span class="ttag">career</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Smaller teams, fewer humans, and code rewritten for agents</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jassy expects AI to shrink teams, widen roles and force a rewrite of company code so agents can patch vulnerabilities in minutes.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Host says the Bedrock team rebuilt its inference engine with six engineers in 76 days, work that would have taken 40 people a year.</li><li><span class="dot" style="background:#93711b;"></span>Jassy's own example: an agents idea agreed on a Thursday had a real prototype, about <b>80%</b> shippable, by Sunday from four or five people.</li><li><span class="dot" style="background:#93711b;"></span>Specialization (a product manager owning one slice) is the legacy of scale; he began 29 years ago as an assistant product manager covering about five products, and expects cross-functional generalists again.</li><li><span class="dot" style="background:#93711b;"></span>Models get teams <b>80%</b> of the way on many functions, so every team starts further along; startups are agent-native, large incumbents who move slowly are more vulnerable.</li><li><span class="dot" style="background:#93711b;"></span>Security: the near-term risk is cyber, because models find many more vulnerabilities than humans did; patches will have to deploy in <b>minutes</b>, not the current classify, patch, long-deploy cycle.</li><li><span class="dot" style="background:#93711b;"></span>Amazon has a professional-services practice and a service that identifies vulnerabilities and builds patches; models plus automation also let companies pen-test their whole surface.</li><li><span class="dot" style="background:#93711b;"></span>Jassy sees the doomer scenarios (evil botnets, malicious robots) as possible but something the industry will work out together.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;we're going to have fewer humans doing what they've done today&#8221;<cite>— Andy Jassy</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="reinvent-everything">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Strategy</span>
+    <span class="theme-status">REINVENTION · BREADTH</span><span class="ttag">consumer</span><span class="ttag">robotics</span><span class="ttag">space</span><span class="ttag">career</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Reinventing Alexa, Prime Video and retail, and why breadth is not spreading thin</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jassy says incremental AI upgrades will lose to rewritten experiences, and that Amazon can chase AI, robotics and space at once because each bet has its own team.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Alexa's brains were rewired for generative AI; the harder case is non-obvious ones, and teams are building reimagined versions of retail, Prime Video, Fire TV and Prime Music.</li><li><span class="dot" style="background:#3f6b2e;"></span>Open question: a new app-like experience versus new features bolted into the existing product, changing it bit by bit over a few years; teams resist because of hard-earned scars and pride.</li><li><span class="dot" style="background:#3f6b2e;"></span>Parallel: on-premises to cloud was the same change-management fight; the host adds a quip that everything is up for discussion until the first line of code is written.</li><li><span class="dot" style="background:#3f6b2e;"></span>Three transformations in a lifetime: AI, robotics, and space; Amazon Leo targets the 500 million households without broadband, plus grocery, autonomous ride-hailing (with Zoox), and healthcare.</li><li><span class="dot" style="background:#3f6b2e;"></span>Decentralized, single-threaded structure means the same people do not manage multiple businesses; the limit is how much Amazon will invest, and sticking to the core is a valid but different strategy.</li><li><span class="dot" style="background:#3f6b2e;"></span>Early pandemic build-out: regionalizing the national fulfillment network cut cost to serve and sped delivery; the network was doubled in about 18 months and a UPS-size last mile built in about 20 months.</li><li><span class="dot" style="background:#3f6b2e;"></span>Advice for an 18-year-old: do not run from AI, use it a lot, build outside your comfort zone (his 25- and 22-year-old kids built apps without being developers), and keep critical reasoning, since AI-written work is detectable and AI will not put the dots together for most people.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;every one of these experiences has to be different in the next few years&#8221;<cite>— Andy Jassy</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📈</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Treat 2026-2028 AWS capacity as pre-sold when sizing Amazon's AI revenue visibility; the open variable is memory and power supply, not demand.</span></div></div><div class="irow"><div class="ic">🧮</div><div class="tline"><span class="cat">Capex:</span> <span class="txt">Model Amazon's free cash flow with headwinds in the build years: data centers lead revenue by about two years while servers pay back in about three.</span></div></div><div class="irow"><div class="ic">🔍</div><div class="tline"><span class="cat">Semis:</span> <span class="txt">Watch the cost of inference and the Trainium and Graviton price-performance claims as the gate to the middle of the barbell.</span></div></div><div class="irow"><div class="ic">🛡</div><div class="tline"><span class="cat">Security:</span> <span class="txt">Plan for agent-driven patching measured in minutes; applications not rewritten for agents will not keep up.</span></div></div><div class="irow"><div class="ic">👥</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Build generalist, cross-functional skills and use AI daily, while protecting critical-reasoning work.</span></div></div><div class="irow"><div class="ic">🏛</div><div class="tline"><span class="cat">Policy:</span> <span class="txt">Expect data-center fights to turn on power-grid investment and local tax benefits more than water or pollution.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;we're going to have fewer humans doing what they've done today&#8221; <cite>— Andy Jassy</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I predict that companies will have to rewrite almost all of their code to be agentically capable&#8221; <cite>— Andy Jassy</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;it's still an order of magnitude too expensive in my opinion for it to be used as pervasively as possible&#8221; <cite>— Andy Jassy</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't think that shortage ends in 2027&#8221; <cite>— Andy Jassy</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;the US specifically cannot afford not to build data centers&#8221; <cite>— Andy Jassy</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;every one of these experiences has to be different in the next few years&#8221; <cite>— Andy Jassy</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Andy Jassy:</b> Amazon will spend about $220 billion of capex in 2026. <span class="cmeta">Amazon 2026 capex · ~$220B · 2026-12</span> <span class="tag">Amazon (AMZN)</span></div><div class="ritem"><b>Andy Jassy:</b> AWS capacity is sold out for 2026, largely sold out for 2027 and a good chunk is sold out for 2028. <span class="cmeta">AWS capacity sold · 2027 largely, 2028 a good chunk · 2028</span> <span class="tag">Amazon (AMZN)</span></div><div class="ritem"><b>Andy Jassy:</b> The supply shortage (memory, power, data center) will not end in 2027 and will appear in different components for several years. <span class="cmeta">AI supply constraints · persist beyond 2027 · 2028</span></div><div class="ritem"><b>Andy Jassy:</b> Most enterprise applications will use inference pervasively within five to seven years. <span class="cmeta">enterprise apps using inference · quite a few if not most · 5-7 years</span></div><div class="ritem"><b>Andy Jassy:</b> Companies will have fewer humans doing today's work, with smaller teams. <span class="cmeta">headcount per function · fewer than today</span></div><div class="ritem"><b>Andy Jassy:</b> Companies will have to rewrite almost all of their code to be agentically capable. <span class="cmeta">code rewritten for agents · almost all</span></div><div class="ritem"><b>Andy Jassy:</b> Applications will have to deploy security patches in minutes in response to imminent threats. <span class="cmeta">patch deployment time · minutes</span> <i>if Models keep finding more vulnerabilities</i></div><div class="ritem"><b>Andy Jassy:</b> Electricity rates flatline or fall once new data-center capacity is in place. <span class="cmeta">local power rates · flat or down</span> <i>if Capacity gets built</i></div><div class="ritem"><b>Andy Jassy:</b> Every Amazon consumer experience has to be meaningfully different in the next few years to stay the leader. <span class="cmeta">reinvented consumer experiences · meaningfully different · next few years</span> <span class="tag">Amazon (AMZN)</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Amazon (AMZN)</b> <span class="rel">invests in</span> <b>Anthropic</b> &mdash; Investment inside a deep partnership</div><div class="ritem"><b>Amazon (AMZN)</b> <span class="rel">invests in</span> <b>OpenAI</b> &mdash; Investment alongside OpenAI models in Bedrock</div><div class="ritem"><b>Anthropic</b> <span class="rel">customer of</span> <b>Amazon (AMZN)</b> &mdash; Multi-year multi-gigawatt Trainium commitment</div><div class="ritem"><b>OpenAI</b> <span class="rel">partners with</span> <b>Amazon (AMZN)</b> &mdash; Stateful runtime environment built together in Bedrock</div><div class="ritem"><b>Amazon (AMZN)</b> <span class="rel">acquires</span> <b>Annapurna Labs</b> &mdash; Source of Graviton and Trainium</div><div class="ritem"><b>Amazon (AMZN)</b> <span class="rel">partners with</span> <b>Intel (INTC)</b> &mdash; Deep partnership; Graviton built as a price-performance alternative</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced this episode: none named; Jassy cites only Amazon's own figures and a business-school case-method comparison <span class="tag">Sources</span></div></div></div><div class="irow"><div class="ic">💡</div><div><div class="title">Three AI-use buckets (host framing): cut costs at old companies, build things never seen before, or rethink an existing product from scratch as Alexa did <span class="tag">AI strategy</span></div></div></div><div class="irow"><div class="ic">🎯</div><div><div class="title">Amazon's 16 leadership principles are deliberately in tension, and the truth-telling culture puts issues on the table so rearchitecting is driven by metrics <span class="tag">Culture</span></div></div></div><div class="irow"><div class="ic">🤝</div><div><div class="title">During the pandemic AWS proactively helped customers cost-optimize despite hurting short-term revenue, and says it will not squeeze core customers for AI buyers <span class="tag">Customers</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>HBM</b> &mdash; High-bandwidth memory used on AI accelerators, competing with DRAM for limited memory supply.</div><div><b>Trainium</b> &mdash; Amazon's AI accelerator chip, claimed 30-40% more price performant than comparable processors.</div><div><b>Graviton</b> &mdash; Amazon's CPU chip, about 40% more price performant than x86 and used by 99% of top-1,000 EC2 customers.</div><div><b>Bedrock</b> &mdash; AWS's inference service for running models such as Anthropic's and OpenAI's.</div><div><b>Barbell (AI demand)</b> &mdash; Demand concentrated in AI labs and cost-avoidance enterprise uses, with a large still-undeveloped middle of production workloads.</div><div><b>Stateful runtime environment</b> &mdash; An agent runtime that keeps state across steps, which Jassy says all agents will need.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
