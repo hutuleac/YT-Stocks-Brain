@@ -1,0 +1,192 @@
+META = {
+    "title": "Will Bitcoin Survive Quantum Computing? | Jordi Visser",
+    "channel": "Anthony Pompliano",
+    "speakers": "Anthony Pompliano (host), Jordi Visser",
+    "date": "2026-10-24",
+    "video_url": "https://www.youtube.com/watch?v=huUoyFrZW08",
+    "thread_line": "5 threads · quantum-vs-Bitcoin rebuttal · hedge fund deleveraging and the AI low · AI is smarter than you · AI as life coach and shared memory · Eli Lilly over Nvidia",
+    "category": "market",
+    "region": "",
+}
+
+SNAPSHOT = [
+    "Visser calls Chamath's **Bitcoin-to-zero-on-quantum** take \"completely just a joke\": quantum is a hardware problem, and Adam Back puts it 20-40 years out.",
+    "The real security crisis is now: AI agent swarms are cracking reused passwords and banks are being hacked at a record pace, which forces faster crypto-grade defenses.",
+    "Bitcoin held $80-85K through oil at ~$115, AI sell-offs and the quantum scare; Pompliano reads that as a signal for a strong year-end.",
+    "October is a historic hedge fund month, worse than July: a French-German bond carry unwind spread into multistrats, and Goldman counts a fourth all-strategy down day of this year.",
+    "Visser expects the AI-stock low **within two weeks**, with hyperscaler earnings, the midterms and the quarterly refunding as catalysts.",
+    "Pompliano's new line: \"AI is smarter than you\". Both argue the edge is how deeply you put AI into your life and work, not owning the hyperscalers.",
+    "Practical AI habits: weekly life-coach check-ins, daily gratitude journaling, and a memory backup shared across several AI tools.",
+    "Visser's biggest long is Eli Lilly, then Nvidia, then Marvell; he says Lilly becomes the largest US company within 5 years.",
+]
+
+THEMES = [
+    {
+        "id": "quantum-bitcoin",
+        "tags": ["crypto"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "REBUTTAL TO CHAMATH'S BITCOIN-TO-ZERO CALL",
+        "title": "Quantum won't kill Bitcoin; today's AI-agent hacking will speed up the fix",
+        "lead": "Visser treats quantum as a slow hardware problem the industry has years to answer, while the current AI-driven hacking wave pushes banks and crypto toward stronger cryptography right now.",
+        "bullets": [
+            "Chamath Palihapitiya said Bitcoin goes to zero because of quantum and \"old technology\"; Visser says he lacks the credentials and is chasing a viral headline.",
+            "**Adam Back** (cryptographer, Bitcoin white paper contributor) is Visser's source: quantum is a hardware issue, 20-40 years out vs the 5-7 others claim, so there's time to respond.",
+            "Visser studied this in 2020 before making Bitcoin an important part of his net worth; he also cites William Mougayar as an expert he follows.",
+            "Today's crisis is software: agent swarms crack reused passwords \"in 2 seconds\", banks are hacked at a record pace (Axios), and Madison Mills reported unvetted AI agents accessing US bank accounts; he also mentions a Cloudflare/PHP website incident.",
+            "\"A crisis speeds up crisis management\": banks moving onto crypto rails now have a daily stake in a Bitcoin fix, and JPMorgan is \"involved in the endgame\".",
+            "Pompliano agrees on the outcome but defends speaking without credentials; his view is the classic cat-and-mouse game: good guys have more money, bad guys more time.",
+            "Price check from Pompliano: Bitcoin held **$80-85K** with oil at ~$115, an AI sell-off and the quantum scare. \"Bitcoin just doesn't care.\"",
+        ],
+        "quote": {"text": "So I find the statement as completely just a joke.", "cite": "— Jordi Visser"},
+        "watch": "Visser concedes Chamath is right that the community must come together on a quantum fix; the 5-7 year camp would leave far less time than Back's 20-40.",
+        "names": [
+            {"name": "Bitcoin (BTC)", "blurb": "Both hold it; quantum isn't the threat; Pompliano expects it to go higher into year-end.", "stance": "OWNS", "conviction": "High", "horizon": "year-end 2026"},
+            {"name": "JPMorgan (JPM)", "blurb": "Banks on crypto rails now have a stake in speeding up the quantum fix.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "hedge-fund-unwind",
+        "tags": ["macro-rates", "finance", "semis"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "AI LOW CALLED WITHIN TWO WEEKS",
+        "title": "A French-German carry unwind is breaking multistrats and dragging the AI winners",
+        "lead": "Visser says the AI sell-off is forced hedge fund deleveraging, not a popping bubble, and he expects the low within two weeks.",
+        "bullets": [
+            "October is a historic negative month for hedge funds, \"much bigger\" than July, because the damage is so broad.",
+            "Trigger: a seven-week blowout in **French vs German** bond spreads (a ~125 bp levered carry trade); the first four days of this week were bigger than the 2011-12 EU crisis week.",
+            "Multistrats (~$100B, levered ~20x, trillions in exposure) lose their diversification once credit, bonds and regions all get hit together.",
+            "**Goldman Sachs**: since 2020 there were 3 days when long-short equity, quant and multistrats each fell over 80 bp, all this year; Thursday was a fourth, above 1% each. Echoes LTCM and the August 2007 quant crash.",
+            "The 20 best stocks of the year, mostly AI names, fell 5-10% in one day and are still up 100%+; the S&P 500 is still up 12% YTD.",
+            "Wednesday night, S&P futures were down ~30 handles for no reason, which reads to him like a fund in trouble; it felt like \"situational awareness day\".",
+            "Catalysts for the low: the remaining hyperscaler earnings (Meta sold off despite nothing bad), the midterms and the quarterly refunding announcement. Pompliano adds that once the midterms pass, \"the clouds will part\".",
+        ],
+        "quote": {"text": "This is not a bubble. AI is not a bubble. It's inevitable. End of story.", "cite": "— Jordi Visser"},
+        "watch": "Visser admits he doesn't know when the unwind officially ends; the two-week low is his call, not a confirmed bottom. A brief SpaceX-driven pop on Wednesday reversed the next day.",
+        "names": [
+            {"name": "Goldman Sachs (GS)", "blurb": "Source of the all-strategy hedge fund drawdown count.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Meta (META)", "blurb": "Hyperscaler earnings showed nothing bad but the stock still sold off.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "SpaceX", "blurb": "Its news was taken as proof compute demand is off the charts; the brief rally faded.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "ai-smarter-than-you",
+        "tags": ["ai-infra", "career", "software"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "POMPLIANO'S NEW PHRASE FOR THE NEXT FEW YEARS",
+        "title": "AI is smarter than you, so the race is how deeply you use it",
+        "lead": "Both argue AI is already past human level, that the winners are the people and companies who adopt it first, and that \"AI is a bubble\" thinking is a generational blind spot.",
+        "bullets": [
+            "Pompliano says he has updated his whole worldview in the last 3-4 months on the premise that AI is now smarter than him; every investor's one big idea used to be \"they're never going to stop printing money\", and this is the 1A.",
+            "**Marc Andreessen** (a16z Frontier podcast), Visser's most trusted voice: ages 15-25 treat a technology as normal, 25-35 use it to make money, over 35 see it as evil. That's why Chamath and the AI bears resist.",
+            "Visser's son turned $700 into $80,000 at age 13 in 2021 and lost it all, which convinced Visser something real was there. Michael Saylor: \"you don't find Bitcoin, Bitcoin finds you.\"",
+            "Pompliano had Grok draw up a 45-day plan to sell a stalled commercial property; it came back with comps and a target list of local land buyers to call, something he says no human seller would think of.",
+            "A prominent New York law school bans laptops and phones in class because it can't police AI; Visser calls this unacceptable and says to embrace Harvey, which speeds up good lawyers.",
+            "His son, now a junior in college, has been building agentic workflows at his internship since July; the firm doesn't want him to go back, and Andreessen says the gap between AI-native companies and incumbents has never been wider.",
+            "The dot-com crash meant a 4-year wait between the bottom and the iPhone; corrections can delay AI but won't stop it. Andreessen Horowitz renamed its crypto funds **Frontier** because crypto and AI have merged.",
+        ],
+        "quote": {"text": "AI is smarter than you, smarter than me, smarter than everybody watching. We have officially reached that point.", "cite": "— Anthony Pompliano"},
+        "watch": "Pompliano runs an AI finance-agent company (Sylvia) and says his public company has more agents than people, so he has a stake in the adoption story; Visser notes he is building his own content business on the same thesis.",
+        "names": [
+            {"name": "Andreessen Horowitz", "blurb": "Renamed crypto funds Frontier; Visser's most trusted source on AI and history.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Harvey", "blurb": "Legal AI; won't replace lawyers but speeds up great ones.", "stance": "POSITIVE VIEW", "conviction": "Low", "horizon": None},
+        ],
+    },
+    {
+        "id": "ai-life-coach",
+        "tags": ["mindset", "dev-workflow"],
+        "color": "green",
+        "badge": "Recommendation",
+        "status": "PERSONAL AND COMPANY WORKFLOWS",
+        "title": "Use AI passively: weekly life-coach check-ins, journals and shared memory",
+        "lead": "The best value comes from passive, recurring AI use that builds up context over time, whether as a weekly coach or as company-wide automation.",
+        "bullets": [
+            "Active use means typing a question; passive use means every meeting is recorded, summarized, emailed and stored as context. Pompliano says passive use is \"where most of the magic is\".",
+            "Visser's routine: pick a fixed weekly time and have **Muse** ask 10 questions about life, workouts, diet and work, then suggest improvements and check whether last week's plan got done.",
+            "Daily gratitude plus \"what I want to remember\" entries, then a 30-day review of themes; Visser has kept a gratitude diary since writing a eulogy for his best friend after 9/11.",
+            "Pompliano's company is moving agents from analytics and engineering into finance and operations; he feeds staff brainstorms back to the AI and asks for more ideas. He also has Grok compile weekly wins from his daily Slack priorities thread.",
+            "Memory tip: have each AI write its new memories to a backup (Google Drive, Notion, Obsidian) daily or weekly, so new tools like Anthropic's Duet, dots or Grok can share it.",
+            "Visser's origin story is compounding: a penny doubled every day becomes $10.7 million, and Moore's law is the same idea; calling AI a bubble \"by definition\" gives up that compounding.",
+            "He links the coaching idea to Emerson, Freud, \"you can't love others until you love yourself\", and treats Munger and Buffett as market psychologists.",
+        ],
+        "quote": {"text": "Take AI and make it a life coach.", "cite": "— Jordi Visser"},
+        "watch": "Pompliano's warning: \"don't fall in love with the AI.\"",
+        "names": None,
+    },
+    {
+        "id": "eli-lilly",
+        "tags": ["biotech", "semis"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "OWNS — BIGGEST LONG",
+        "title": "Eli Lilly over Nvidia: non-cyclical healthcare is the safest AI trade",
+        "lead": "Visser's biggest long is Eli Lilly, which he expects to become the largest US company within 5 years, because healthcare gets the AI upside without the cyclicality of chips.",
+        "bullets": [
+            "Lilly made new all-time highs and the S&P 1500 life sciences/biotech/pharma index hit 52-week highs in a week when everything AI fell.",
+            "Book order: **Eli Lilly** first, then Nvidia, then Marvell (\"basically my AI trade\").",
+            "Healthcare is ~22-23% of consumer spending vs under 3% for energy, the reverse of the 1970s; it is non-cyclical, paid for by government and insurers, and not sensitive to rates.",
+            "Nvidia's multiple is shrinking because the market prices in disruption within 5 years; Nvidia and Micron stay cyclical if GPU over-buying meets a power shortage.",
+            "Lilly has risen 10 years in a row (no big tech name did, most fell in 2022) with a CAGR above 30%, a run he credits to \"Ozempic\" (the GLP-1 class).",
+            "**TuneLab**: Lilly's supercomputer, where 135 companies pool IP data in a \"Manhattan style project\", paid for by its cash cow; he'll cover it in his weekend video.",
+            "Low multiples were the price of safety without growth; if pharma becomes growth stocks, the breakthrough names are mispriced.",
+        ],
+        "quote": {"text": "My biggest long as of right now is Eli Lilly. Then we've got Nvidia. Then we've got Marvell.", "cite": "— Jordi Visser"},
+        "watch": None,
+        "names": [
+            {"name": "Eli Lilly (LLY)", "blurb": "Biggest long; largest US company within 5 years.", "stance": "OWNS", "conviction": "High", "horizon": "5 years"},
+            {"name": "Nvidia (NVDA)", "blurb": "Second-biggest long, but cyclical and its multiple is compressing.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "Marvell (MRVL)", "blurb": "Third-biggest long.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "Micron (MU)", "blurb": "Still a cyclical company, exposed to GPU over-buying.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F510", "tag": "Security", "title": "Retire reused passwords now: agent swarms, not quantum, are today's threat."},
+    {"icon": "\U0001F4C9", "tag": "Markets", "title": "Read the AI drawdown as forced deleveraging and watch hyperscaler earnings, the midterms and the refunding for the low."},
+    {"icon": "\U0001F48A", "tag": "Healthcare", "title": "Balance cyclical chip exposure with non-cyclical healthcare that still gets the AI upside."},
+    {"icon": "\U0001F9E0", "tag": "AI use", "title": "Set up one passive AI routine this week, such as auto meeting notes or a weekly coach check-in."},
+    {"icon": "\U0001F4BE", "tag": "AI use", "title": "Back up your AI memory to Drive, Notion or Obsidian so you can switch tools without starting over."},
+    {"icon": "\U0001F393", "tag": "Careers", "title": "Push kids toward entrepreneurial problem-solving with AI, not credential tracks at incumbents."},
+]
+
+HOT_TAKES = [
+    {"take": "So I find the statement as completely just a joke.", "cite": "— Jordi Visser", "why": "dismissing Chamath's Bitcoin-to-zero quantum call"},
+    {"take": "I think the low for this AI portion will happen with inside the next two weeks.", "cite": "— Jordi Visser", "why": "dated bottom call"},
+    {"take": "It's not a victory lap yet until it's the biggest company in the United States of America, which I will continue to say will happen within 5 years.", "cite": "— Jordi Visser", "why": "Eli Lilly above Nvidia et al"},
+    {"take": "AI is smarter than you, smarter than me, smarter than everybody watching. We have officially reached that point.", "cite": "— Anthony Pompliano", "why": "strong AGI-ish claim"},
+    {"take": "This is what schools are doing to kids. Okay, this is unacceptable.", "cite": "— Jordi Visser", "why": "law school banning laptops/phones"},
+    {"take": "Bitcoin just doesn't care, which I think you believe is like a strong data point that it's going to go higher into the end of the year.", "cite": "— Anthony Pompliano", "why": "year-end BTC direction"},
+]
+
+CLAIMS = [
+    {"who": "Adam Back (cited by Jordi Visser)", "claim": "Quantum computing becomes a real threat to Bitcoin cryptography only in 20 to 40 years.", "metric": "quantum threat timeline", "target": "20-40 years", "by": None, "condition": None, "entity": "Bitcoin (BTC)"},
+    {"who": "Jordi Visser", "claim": "The low for the AI-stock sell-off happens within the next two weeks.", "metric": "AI stocks low", "target": "bottom", "by": "2026-11", "condition": "catalysts: hyperscaler earnings, midterms, quarterly refunding", "entity": None},
+    {"who": "Jordi Visser", "claim": "Eli Lilly becomes the largest company in the United States.", "metric": "US market cap rank", "target": "#1", "by": "2031", "condition": None, "entity": "Eli Lilly (LLY)"},
+    {"who": "Anthony Pompliano", "claim": "Bitcoin goes higher into the end of the year.", "metric": "BTC price", "target": "higher than $80-85K", "by": "2026-12", "condition": None, "entity": "Bitcoin (BTC)"},
+    {"who": "Anthony Pompliano", "claim": "Markets rally into year-end once the midterm elections are over.", "metric": "equities", "target": "rally", "by": "2026-12", "condition": "after the midterms", "entity": None},
+    {"who": "Chamath Palihapitiya (cited by Anthony Pompliano)", "claim": "Bitcoin goes to zero because of quantum computing.", "metric": "BTC price", "target": "zero", "by": None, "condition": None, "entity": "Bitcoin (BTC)"},
+]
+
+RELATIONS = [
+    {"from": "Jordi Visser", "rel": "criticizes", "to": "Chamath Palihapitiya", "note": "Bitcoin-to-zero quantum call"},
+    {"from": "Jordi Visser", "rel": "endorses", "to": "Andreessen Horowitz", "note": "Marc Andreessen is his most trusted voice"},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F415", "title": "Palmer Luckey is working with a biotech firm on genetically modified **\"war hounds\"** for the battlefield, with Anduril-made gear; Pompliano says the venture is valued at ~$1 billion out of the gate.", "tag": "Defense"},
+    {"icon": "\U0001F9EC", "title": "Kevin Weil, OpenAI's former chief product officer, started **Warp Sciences** to work at the intersection of AI, biotech and healthcare.", "tag": "Biotech"},
+    {"icon": "\U0001F43E", "title": "From the end of the a16z podcast: AI will soon translate what pets are saying, which Visser rates the most universally wanted idea.", "tag": "AI"},
+    {"icon": "\U0001F4E1", "title": "Dan Ives' message to AI bears after visiting Korea: **\"Go to Korea\"** and see the demand. Pompliano splits the market into demand-watchers and capex-worriers, such as those alarmed by Meta's spending.", "tag": "AI demand"},
+    {"icon": "\U0001F4F0", "title": "Pompliano subscribes to Chamath's \"Learn With Me\", where a consulting team builds deep slide decks on topics like US energy and healthcare. He also says good content gains value over time, \"just like sports teams\".", "tag": "Media"},
+]
+
+GLOSSARY = [
+    {"term": "Carry trade (France-Germany)", "def": "Levered long position in higher-yielding French bonds against German bonds or swaps, earning the ~125 bp spread for as long as it holds."},
+    {"term": "Multistrat", "def": "A multi-strategy hedge fund running many levered, uncorrelated books; it gets hurt when correlations spike."},
+    {"term": "Quarterly refunding", "def": "The US Treasury's quarterly announcement of how much debt it will issue and at which maturities."},
+    {"term": "Passive AI usage", "def": "AI that runs in the background on recorded context, rather than through typed prompts."},
+    {"term": "TuneLab", "def": "Eli Lilly's AI and supercomputing platform where partner companies pool drug-discovery data."},
+]
