@@ -1,0 +1,183 @@
+META = {
+    "title": "Raoul Pal: Four Frameworks, One Code",
+    "channel": "Raoul Pal The Journey Man",
+    "speakers": "Raoul Pal",
+    "date": "2026-10-25",
+    "video_url": "https://www.youtube.com/watch?v=KLk55NI9DOY",
+    "thread_line": "5 threads · Everything Code debt engine · track record incl. misses · Exponential Age index · economic singularity by 2030 · Universal Code + what to own",
+    "category": "market",
+    "region": "",
+}
+
+SNAPSHOT = [
+    "Solo essay: Raoul Pal stitches 21 years of GMI into **one causal chain** — demographics → debt → liquidity → financial conditions → business cycle → asset prices, with technology the only lever that bends it.",
+    "Debasement runs ~8% a year; GMI's liquidity index has trended just under 6% since 2011. Only **tech and crypto** (Bitcoin, Nasdaq, tech-led S&P) have consistently cleared that hurdle.",
+    "~$350T of global debt at ~5-year average maturity means ~$70T must roll every year — liquidity enables the roll, and US interest payments (>$1T/yr) lead liquidity by ~3 years.",
+    "Exponential Age index (intelligence per dollar) is >40,000x its Jan 2020 level, doubling every 4-5 months — but the energy half (joules per dollar) hasn't fired: US delivered power costs more than in 2020.",
+    "Economic singularity call narrowed from 2030-2032 to **2030 \"spot-on\"**: AI agents and robots as \"synthetic demographics\" push GDP up and debt-to-GDP down mechanically.",
+    "Owns up to misses: 2009 was his worst year (overruled his framework), and the Oct 2024 banana-zone call failed after the US shutdown and Iran war hit liquidity.",
+    "What to own, in three layers: token factories (hyperscalers, AI, agent payments), applications (robotics, biotech, big pharma, probably space), and the crypto layer-one substrate.",
+]
+
+THEMES = [
+    {
+        "id": "everything-code",
+        "tags": ["macro-rates"],
+        "color": "red",
+        "badge": "High conviction",
+        "status": "STRUCTURAL — DEBT CAN ONLY BE REFINANCED, NOT REPAID",
+        "title": "The Everything Code: shrinking workforce, $70T a year to roll, liquidity as the fuel",
+        "lead": "With demographics fading and productivity short, debt is the only growth term left, so liquidity — debasement — drives every asset.",
+        "bullets": [
+            "Magic formula: GDP growth = population growth + productivity growth + debt growth.",
+            "US participation peaked at a little over 67% in early 2000, now ~62%; births lead participation by ~18 years and the US birth rate has more than halved since 1960.",
+            "\"Greatest chart in all of macro\": inverted federal debt tracks participation — under 60% of GDP at the peak, over 120% today.",
+            "US interest bill tops $1T a year, more than double early 2020, and leads liquidity by ~3 years; liquidity leads the ISM by ~6 months.",
+            "~$350T global debt, ~5-year average maturity → ~$70T refinanced yearly; the business cycle is now a debt-refinancing cycle.",
+            "Debasement ~8% a year (GMI liquidity index just under 6% since 2011); wages track GDP, assets track debasement, so the real hurdle is ~8% plus inflation.",
+            "Labor's share of US business output is at a record low, most of the fall after 2000 — he won't pin that on AI.",
+        ],
+        "quote": {"text": "Only two things have outrun the printer with any consistency, technology and crypto.", "cite": "— Raoul Pal"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "track-record",
+        "tags": ["macro-rates", "finance", "crypto"],
+        "color": "amber",
+        "badge": "Track record",
+        "status": "CALLS MEASURED FROM CALL TO BEST POINT",
+        "title": "21 years of GMI calls, hits and misses, all traced back to liquidity and the dollar",
+        "lead": "Every call shown is measured from call to its best point, and he includes the misses to rebut cherry-picking.",
+        "bullets": [
+            "Aug 2007 \"ignore the talk about containment\" → short banks; KBW Bank Index fell **82%**.",
+            "2009 was his worst year: \"I overruled my own framework and went with emotions.\"",
+            "2011 Europe blew up with no contagion because the printer stepped in — first real proof of debasement's power; the euro fell 35% from 148.",
+            "Sept 2011: moved 90% of liquid net worth into dollars, switched GMI billing to dollars, built a house in the Cayman Islands; dollar index rose 54%.",
+            "2015 short oil (WTI −45%) as the dollar exploded on QE removal; March 2020 called $42 → $20 and \"could literally go to zero\" — WTI settled at **−$37.63** on April 20.",
+            "Early 2018 bond-bull call against consensus (yields fail around 3-3.2%); long-dated Treasuries rose 44%.",
+            "Oct 2024 \"next 12 months likely to be wild\" banana-zone call **failed**: shutdown cut US liquidity, the Iran war lifted rates and the dollar, pushing crypto into a mid-cycle bear — he calls it a hiatus.",
+        ],
+        "quote": {"text": "Just because I've been very, very right recently, doesn't mean I can't be spectacularly wrong.", "cite": "— Raoul Pal (April 2020)"},
+        "watch": "Every return is measured to the best point after the call, not to an exit, so the figures are the ceiling of each trade. He runs paid research (GMI, Real Vision), which this track record markets.",
+        "names": None,
+    },
+    {
+        "id": "exponential-age",
+        "tags": ["ai-infra", "crypto", "energy"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "COMPUTE BUILD-OUT INTO 2030 — PAUSES, NO REGIME BREAK",
+        "title": "Exponential Age index at 40,000x since 2020, but energy and productivity haven't fired yet",
+        "lead": "Intelligence per dollar is compounding on a new curve; the energy half and the productivity data are the dominoes still standing.",
+        "bullets": [
+            "Flywheel (David Mattin's framing): energy unlocks compute, compute unlocks intelligence, intelligence discovers new energy.",
+            "Solar on Wright's law: ~20% cost drop per doubling of installed capacity, unbroken for 50 years; a megabyte cost ~$250k in 1975, ~a tenth of a cent by 2023.",
+            "Intelligence per joule climbed 7 orders of magnitude from 1971 and 5 more since 2020 — doubling every 4-5 months vs Moore's 2 years, lately a bit slower.",
+            "Index = intelligence per joule × joules per dollar, now **>40,000x** Jan 2020; the joules-per-dollar half hasn't moved — US delivered power costs more than in 2020.",
+            "AI task horizon (50% success, human-time equivalent): 3 seconds in 2019 → ~17 hours by April 2026, doubling every 3-4 months since 2024.",
+            "Three dominoes: intelligence leads capex ~6 months, capex leads productivity 4-5 years; the last falls when realized 5-year productivity breaks **above 2%**, first time since the early 2000s.",
+            "GMI's \"coal mine\" gauge scores eight warning signs on the build-out: reads in the 80s, none tripped, bottleneck is energy.",
+        ],
+        "quote": {"text": "Exponentials don't feel like growth. They feel like instability.", "cite": "— Raoul Pal"},
+        "watch": "He says GMI has not settled on the final Exponential Age index calculation, and the doubling pace is slower than a year ago.",
+        "names": [
+            {"name": "Bitcoin (BTC)", "blurb": "Nov 2013 call at ~$200 (\"worth zero or a truly outstanding amount\") +456%; Jan 2020 call +720%; priced on Metcalfe's law", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
+            {"name": "Ethereum (ETH)", "blurb": "Jan 2020 call up 3,455% to its best point; crypto priced on adoption", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Sui (SUI)", "blurb": "Jan 2024 call up 555%; blockchains are coordination substrates, not companies", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+        ],
+    },
+    {
+        "id": "economic-singularity",
+        "tags": ["robotics", "macro-rates", "ai-infra"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "TIMING NARROWED TO 2030",
+        "title": "Economic singularity in 2030: synthetic labor grows GDP past the debt",
+        "lead": "AI agents and robots are \"new people\" in economic terms, and when they lift GDP growth around 2030, debt-to-GDP falls mechanically.",
+        "bullets": [
+            "Defined as the point where 250 years of economic models stop working because the economy accelerates past what instruments can measure — not a doom story.",
+            "Trigger: collapse in the marginal cost of intelligence as it moves from carbon to silicon, \"a million times faster\".",
+            "Amazon passed 1M robots in 2025 while human headcount (~1.5M) has been flat since 2021 — \"the largest live experiment\" in intelligence-driven productivity.",
+            "Microsoft, Google, Amazon, Meta, Nvidia: combined net income ~5x since 2019 on ~85% more headcount; Nvidia alone is ~a quarter of the profit on ~2% of the people.",
+            "Productivity up a little over 2% on the year, but total factor productivity hasn't turned and productivity runs ~2 points below inflation; payrolls ~50k a month, unemployment just over 4%.",
+            "AI deflation shows up first as subdued wage growth; $20-a-month design replacing hundreds of dollars registers in GDP as a loss.",
+            "Wages stop being a stable distribution system when labor isn't the bottleneck: \"As intelligence becomes abundant, meaning becomes scarce.\"",
+        ],
+        "quote": {"text": "I used to say 2030 to 2032. I can't see past it. I think 2030 is now spot-on.", "cite": "— Raoul Pal"},
+        "watch": "He flags that weak hiring is partly lower immigration and that the productivity turn is still early in aggregate data; debt-to-GDP doesn't fall until productivity picks up, roughly the next 5 years.",
+        "names": [
+            {"name": "Amazon (AMZN)", "blurb": "1M+ robots, flat human headcount since 2021", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Nvidia (NVDA)", "blurb": "~a quarter of big-five tech profit on ~2% of the headcount", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Microsoft (MSFT), Google (GOOGL), Meta (META)", "blurb": "Net income up ~5x with the group since 2019 on ~85% more staff", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "universal-code-portfolio",
+        "tags": ["crypto", "robotics", "biotech"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "PORTFOLIO FRAMEWORK — THREE LAYERS",
+        "title": "The Universal Code, and why it leaves him owning token factories, robots and layer ones",
+        "lead": "If everything optimizes intelligence per unit of energy, capital flows to whatever converts energy into intelligence most efficiently.",
+        "bullets": [
+            "Thesis \"everything is compute\" — he says it isn't proven; four laws: intelligence efficiency, compression, coherence maximization, memetic selection.",
+            "Market readings: price is compression (GMI financial conditions gauge — short rates + dollar — leads the Nasdaq ~3 months); coherence = liquidity, growth, demographics and policy aligned, why trends persist.",
+            "Memetics: Bitcoin as a nine-page white paper that copied itself into a global monetary network; \"Crustaceanism\" religion emerged overnight on a social network built for AI agents.",
+            "Humanity runs on ~1 terawatt of food energy; the world's AI chips already need >10 GW.",
+            "Layer 1 — token producers (Ribbit Capital's \"token factories\" framing): hyperscalers, AI companies, payments firms building agent payment rails.",
+            "Layer 2 — applications: robotics, biotech, giant pharma, probably space (\"we are debugging biology\"). Layer 3 — crypto layer ones as \"the operating system of the machine economy\".",
+            "June 2022 Exponential Age tech via the Nasdaq call: +151% to its best point.",
+        ],
+        "quote": {"text": "If the robots are coming for our jobs, then we had bloody well better own the robots.", "cite": "— Raoul Pal"},
+        "watch": "He concedes the self-confirming risk: \"I see the universal code everywhere because I built a framework that is very good at seeing the universal code everywhere.\" The close points to his book and Real Vision membership.",
+        "names": [
+            {"name": "Ribbit Capital", "blurb": "Source of the \"token factories\" framing he endorses", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F4C8", "tag": "Macro", "title": "Benchmark every holding against an ~8% debasement hurdle plus inflation, not against zero"},
+    {"icon": "\U0001F4A7", "tag": "Liquidity", "title": "Read today's US interest bill as a ~3-year lead on liquidity, and liquidity as a ~6-month lead on the ISM"},
+    {"icon": "⚡", "tag": "Energy", "title": "Watch delivered power cost — it's the half of the AI intelligence-per-dollar engine that hasn't fired"},
+    {"icon": "\U0001F3ED", "tag": "Productivity", "title": "Treat realized 5-year productivity above 2% as the signal the AI capex cascade has reached the economy"},
+    {"icon": "\U0001F916", "tag": "Portfolio", "title": "Map holdings to three layers: token factories, robotics/biotech/space applications, crypto layer ones"},
+    {"icon": "\U0001F9E0", "tag": "Behavior", "title": "Stick to your framework in drawdowns — his worst year came from overruling it"},
+]
+
+HOT_TAKES = [
+    {"take": "I think 2030 is now spot-on.", "cite": "— Raoul Pal", "why": "dated economic-singularity call, narrowed from 2030-2032"},
+    {"take": "Demographics are dead as a driver, and debt is a band-aid over a bullet wound.", "cite": "— Raoul Pal", "why": "dismissal of conventional growth drivers"},
+    {"take": "AI agents and humanoid robots are not tools in the traditional sense. In purely economic terms, they are new people.", "cite": "— Raoul Pal", "why": "contrarian framing vs AI-kills-demand view"},
+    {"take": "Crypto stops looking like a speculative asset class and starts looking like the operating system of the machine economy.", "cite": "— Raoul Pal", "why": "strong crypto conviction"},
+    {"take": "I think it's a hiatus in a longer bull market.", "cite": "— Raoul Pal", "why": "calls the crypto mid-cycle bear temporary after his own failed call"},
+    {"take": "Asking GDP to measure that is like asking a thermometer to weigh the sun.", "cite": "— Raoul Pal", "why": "says official stats structurally miss AI gains"},
+]
+
+CLAIMS = [
+    {"who": "Raoul Pal", "claim": "The economic singularity, where existing economic models stop working, arrives around 2030.", "metric": "economic singularity", "target": "arrives", "by": "2030", "condition": None, "entity": None},
+    {"who": "Raoul Pal", "claim": "AI and robots drive GDP growth acceleration from around 2030, making US debt-to-GDP fall mechanically.", "metric": "US debt-to-GDP", "target": "falling", "by": "2030", "condition": "if AI and robots accelerate GDP growth", "entity": None},
+    {"who": "Raoul Pal", "claim": "Realized 5-year US productivity growth will break above 2% for the first time since the early 2000s as AI capex feeds through.", "metric": "realized 5-year productivity growth", "target": ">2%", "by": None, "condition": None, "entity": None},
+    {"who": "Raoul Pal", "claim": "The compute build-out runs into 2030 with pauses, rotations and scares but no regime-defining break.", "metric": "compute build-out", "target": "no regime break", "by": "2030", "condition": None, "entity": None},
+    {"who": "Raoul Pal", "claim": "The crypto mid-cycle bear market is a hiatus within a longer bull market.", "metric": "crypto bull market", "target": "resumes", "by": None, "condition": None, "entity": "Bitcoin (BTC)"},
+    {"who": "Raoul Pal", "claim": "Debasement compounds at around 8% a year over time, accelerating as the cycle accelerates.", "metric": "currency debasement", "target": "~8%/yr", "by": None, "condition": None, "entity": None},
+]
+
+RELATIONS = []
+
+OTHER_NEWS = [
+    {"icon": "\U0001F30C", "title": "Cosmic web vs brain: an astrophysicist and a neurosurgeon found a remarkable similarity in 2020; he cites John Wheeler's \"it from bit\" and the holographic principle for \"everything is compute\".", "tag": "Science"},
+    {"icon": "\U0001F4DA", "title": "Sources referenced: David Mattin (flywheel), Ribbit Capital (token factories), John Wheeler; his own GMI archive and book *The Everything Code*.", "tag": "Sources"},
+]
+
+GLOSSARY = [
+    {"term": "Everything Code", "def": "Pal's framework: debt, demographics and liquidity together drive asset prices via debasement."},
+    {"term": "Banana zone", "def": "His name for the phase of the cycle when crypto goes vertical."},
+    {"term": "Exponential Age index", "def": "GMI series of intelligence per joule × joules per dollar = intelligence per dollar."},
+    {"term": "Metcalfe's law", "def": "Network value grows as the square of participants (10 users → 45 links; 1M → ~500B)."},
+    {"term": "Reed's law", "def": "When members can form groups, network value grows as 2^n; he calls AI its first example."},
+    {"term": "Wright's law", "def": "Cost falls by a fixed share with each doubling of cumulative production (~20% for solar)."},
+    {"term": "ISM", "def": "US manufacturing survey used to read the business cycle; liquidity leads it ~6 months."},
+    {"term": "Synthetic demographics", "def": "AI agents and robots counted as new economic participants that offset an aging workforce."},
+]
