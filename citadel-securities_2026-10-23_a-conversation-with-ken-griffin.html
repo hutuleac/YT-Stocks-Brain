@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: A Conversation With Ken Griffin</title>
+<meta name="description" content="Citadel Securities · 5 threads · AI and white-collar work · the GPU overcapacity question · Situational Awareness rescue · midterms and Trump scorecard · grow-your-way-out fiscal plan">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="A Conversation With Ken Griffin">
+<meta property="og:description" content="Citadel Securities · 5 threads · AI and white-collar work · the GPU overcapacity question · Situational Awareness rescue · midterms and Trump scorecard · grow-your-way-out fiscal plan">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>A Conversation With Ken Griffin</h1>
+    <div class="byline">
+      Channel: <b>Citadel Securities</b> &middot; Speaker: <b>Ken Griffin; conference moderator</b> &middot; <b>2026-10-23</b>
+      <div class="stats-line">5 threads · AI and white-collar work · the GPU overcapacity question · Situational Awareness rescue · midterms and Trump scorecard · grow-your-way-out fiscal plan &middot; <a href="https://www.youtube.com/watch?v=wBre0w8lTd8" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Ken Griffin on stage at the annual <b>Citadel Securities</b> conference, two weeks before the midterms, the same week semis logged their longest losing streak since the GFC.</li><li>AI now does in hours what Citadel's PhDs took 4-6 weeks to do; his Friday "depression" has turned into optimism about a <b>golden era for entrepreneurs</b>.</li><li>The AI sell-off is "people doing research": GPUs behave like airline seats — near-zero marginal cost — so if supply outruns demand, pricing goes into free fall, as with 2000-era fiber.</li><li>Calls hedge-fund deleveraging the excuse that "washes your hands of accountability" — it should be answer number 10, not number 1.</li><li>Citadel bought <b>Situational Awareness</b>'s portfolio in under 24 hours; he says that fund got caught in "three mid-size storms", including the Kimi announcement.</li><li>Expects Republicans to lose one or both houses; calls the Iran war's messaging poor, immigration enforcement "disgraceful" and tariffs "a disaster".</li><li>Fiscal fix is growth: productivity tech (AI, fission, fusion, batteries, robotics), education, Simpson-Bowles-style entitlement reform, green cards for top graduates. The bond market is speaking; Washington is "not yet" listening.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="ai-work">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Positive view</span>
+    <span class="theme-status">VIEW SHIFTED — DEPRESSION TO OPTIMISM</span><span class="ttag">ai-infra</span><span class="ttag">career</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">AI fills in moats with bulldozers, but alpha still comes from people</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Griffin says AI is game-changing for white-collar work, painful for incumbents and great for consumers and startups, while Citadel's edge stays human research.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Work that took Citadel's PhDs and masters 4-6 weeks now takes a few hours; the Stanford talk where he said so left him going home depressed one Friday.</li><li><span class="dot" style="background:#3f6b2e;"></span>Three emotions at once: the threat to white-collar jobs, competitive moats "filled in by bulldozers", and a golden era for new business formation.</li><li><span class="dot" style="background:#3f6b2e;"></span>English-to-German translators "probably have already lost" their jobs; the US needs reskilling "in a profound way" — there's talk but no action.</li><li><span class="dot" style="background:#3f6b2e;"></span>Startups hire people with "impaired pedigrees" and give them a new career lane; that's underrated.</li><li><span class="dot" style="background:#3f6b2e;"></span>Research is the core of the business, "almost like journalism"; AI sheds light on bits but the narrative is still assembled by a person.</li><li><span class="dot" style="background:#3f6b2e;"></span>Trading is the most automated, tech-forward part — monetizing research efficiently lets you run bigger positions.</li><li><span class="dot" style="background:#3f6b2e;"></span>Why it nets positive: "you and I would rather live right here in 2026 than in 1926."</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;As a business owner, you're seeing your competitive modes be filled in by bulldozers.&#8221;<cite>— Ken Griffin</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Citadel<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>His firm; core business is fundamental research monetized through trading</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="gpu-overcapacity">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">SEMIS' LONGEST LOSING STREAK SINCE THE GFC</span><span class="ttag">ai-infra</span><span class="ttag">semis</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">The AI trade grows discerning: GPU overcapacity, chip useful life and token bills</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">After two years of "buy them all", investors are asking how long choke-point margins last and whether GPU supply will outrun demand.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Old playbook: buy the hyperscalers, the chip companies, and Korean/Taiwanese/Japanese suppliers "I've never even heard of 5 years ago"; gatekeepers like Microsoft and AWS earn the rents.</li><li><span class="dot" style="background:#93711b;"></span>Supply-constrained DRAM and MLCC margins are extreme; investors now look 2-3 years out to ask how long that lasts.</li><li><span class="dot" style="background:#93711b;"></span>GPUs are like airline seats — very low marginal cost — so overcapacity sends pricing into free fall, as the 2000 fiber build-out did to telecom prices.</li><li><span class="dot" style="background:#93711b;"></span>Useful life is the second worry: 5-6-year-old GPUs earn extraordinary pricing now, which "probably doesn't persist for another 5 or 6 years".</li><li><span class="dot" style="background:#93711b;"></span>Corporate America is learning which work needs top-priced Anthropic/OpenAI models and which runs on open-source at a fraction of the cost — a lot of waste in some areas.</li><li><span class="dot" style="background:#93711b;"></span>Host cites a WSJ report of ~<b>$750B</b> of planned spending in Anthropic's S-1; the open question is whether Anthropic becomes a must-have (e.g. cancer cures in pharma) with pricing power to match.</li><li><span class="dot" style="background:#93711b;"></span>Bubbles: "almost certainly bubbles within this moment"; transformations come wrapped in bubbles (railroads, internet) and the survivors lead for decades — "I just wish I'd kept my Amazon stock".</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I think this market is actually experiencing people doing research.&#8221;<cite>— Ken Griffin</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic<span class="stance" style="background:#93711b;">UNCERTAIN · Low</span></b><span>Pricing power hinges on becoming a must-have; corporate bills under scrutiny</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">UNCERTAIN · Low</span></b><span>Top-priced models companies are rationing against open-source</span></div><div class="namechip"><b>Microsoft (MSFT)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Named as a gatekeeper to foundation models in the old AI trade</span></div><div class="namechip"><b>Amazon (AMZN)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>AWS as gatekeeper; dot-com-era stock he wishes he'd kept</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The host cites Ray Dalio (bubble), Howard Marks ("bubble watch") and the BIS (dot-com echoes) on the other side; Griffin doesn't call the overall market a bubble.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="situational-awareness">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Confirmed event</span>
+    <span class="theme-status">PORTFOLIO BOUGHT IN UNDER 24 HOURS — SUMMER 2026</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">Situational Awareness rescue: three mid-size storms, and why deleveraging is excuse number 10</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Griffin says Citadel bought the AI fund's portfolio on the theory that forced-sale prices snap back once the overhang clears, and "did okay".</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>"Everyone's favorite go-to answer when they're losing money is hedge funds are deleveraging" — he's seen the industry deleverage "to zero at least 10,000 times" in 10 years.</li><li><span class="dot" style="background:#65695f;"></span>Makes it answer 10: first ask what Capital, Fidelity or Wellington figured out that Citadel didn't.</li><li><span class="dot" style="background:#65695f;"></span>Situational Awareness needed to raise cash and protect a large year-to-date gain; it is still up significantly for the year.</li><li><span class="dot" style="background:#65695f;"></span>Three storms: the Kimi announcement, chatter on foundation-model growth rates, and large pension plans reshaping portfolios — plus too much leverage at peak.</li><li><span class="dot" style="background:#65695f;"></span>Fast money front-ran the expected selling, turning "a possibility into a crystallized reality" — a classic finance playbook.</li><li><span class="dot" style="background:#65695f;"></span>Trade done in under 24 hours, risk managed over several days; precedents are Amaranth's energy book (~2006) and Sowood (2007).</li><li><span class="dot" style="background:#65695f;"></span>Would be "a bit surprising" to see another like it soon; Citadel had its own moment in 2008 — had Morgan Stanley not landed its Japanese funding, "I don't think I'd be on stage today."</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#65695f;"><div class="lbl">Pull quote</div>&#8220;The reason that people love that answer is it actually washes your hands of accountability.&#8221;<cite>— Ken Griffin</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Situational Awareness<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>AI-themed fund whose portfolio Citadel bought overnight; up for the year</span></div><div class="namechip"><b>Morgan Stanley (MS)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Its 2008 Japanese funding saved the system Citadel depended on</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Griffin is describing a trade Citadel profited from as a holistic solution for the seller.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="midterms-trump">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">Negative view</span>
+    <span class="theme-status">MIDTERMS IN 2 WEEKS — TRUMP APPROVAL ~33%</span><span class="ttag">policy</span><span class="ttag">geopolitics</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">Griffin's Trump scorecard: Iran messaging, immigration and tariffs hurt; the border is a win</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">He expects Republicans to lose one or both houses and wants Trump to listen rather than double down.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span>Republicans "will almost certainly lose one or both" chambers; the House is in a really tough spot, the Senate will be close.</li><li><span class="dot" style="background:#a23f22;"></span>Backs Republicans but bundled for both parties: supported Rahm Emanuel for Chicago mayor and held an early Obama fundraiser; says a slight majority of Citadel staff are Democrats.</li><li><span class="dot" style="background:#a23f22;"></span>Iran war is very unpopular and badly explained, though a nuclear-free Iran is "of existential importance".</li><li><span class="dot" style="background:#a23f22;"></span>Treatment of illegal immigrants is "disgraceful"; employed long-term residents need a way to stay, even without citizenship.</li><li><span class="dot" style="background:#a23f22;"></span>Tariff battles with Canada and Europe "a disaster" — pro-inflation and supply-chain-severing; most people "don't want to be in factories making Nikes and t-shirts" (a comedian's line, he credits).</li><li><span class="dot" style="background:#a23f22;"></span>Reindustrialize with robotics instead — why he gave <b>$3B</b> to Carnegie Mellon, whose Miami campus he expects to transform the city.</li><li><span class="dot" style="background:#a23f22;"></span>Socialism: France spends <b>60%</b> of GDP on government and its streets are in turmoil; Paris looked like Chicago in '21-'22. Names J.B. Pritzker, citing his failed Fair Tax amendment after rejecting a pensions-for-taxes deal Griffin offered.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;I hate to say it, but I've been right. It's been pro-inflation.&#8221;<cite>— Ken Griffin</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Griffin is a major Republican donor, was Illinois' largest taxpayer (his firm ~2% of state income tax) and has public feuds with Pritzker and New York's mayor.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="grow-out-of-debt">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">High conviction</span>
+    <span class="theme-status">BOND MARKET SPEAKING — WASHINGTON "NOT YET" LISTENING</span><span class="ttag">macro-rates</span><span class="ttag">policy</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Growth is the only way out of $40T of debt — and the bond market is already warning</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Griffin's fiscal plan puts productivity first, then education, entitlement reform and skilled immigration; without it, inflation rises, the dollar weakens and living standards fall.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Pandemic spending as a share of GDP matched what the US spent to win World War II — "the cost of us sitting on our couches".</li><li><span class="dot" style="background:#93711b;"></span>2018 tax cuts were "spot-on"; renewing them a year and change ago lacked fiscal space — Republicans' hands are "dirtier with the tax cuts" than with spending.</li><li><span class="dot" style="background:#93711b;"></span>With <b>$40 trillion</b> of federal debt (he said "deficit"), crowding out is back: high 30-year yields and expensive mortgages.</li><li><span class="dot" style="background:#93711b;"></span>Priority one, "grow the damn economy": data centers in America plus fusion, fission, batteries and robotics; push Europe to grow too — France's working-hour limits while the US funds its defense "doesn't work".</li><li><span class="dot" style="background:#93711b;"></span>Two, fix schools: 53 Illinois schools had not one child at grade level; Eva Moskowitz's Success Academies works.</li><li><span class="dot" style="background:#93711b;"></span>Three, a Simpson-Bowles-style up-down vote on entitlements, including working 1-3 more years before Social Security. Four, give foreign graduates (15-<b>20%</b> of elite schools) a green card with their degree.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;We're going to see higher inflation. We're going to see the dollar weaken, and we're going to see our standard of living fall.&#8221;<cite>— Ken Griffin</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📉</div><div class="tline"><span class="cat">Semis:</span> <span class="txt">Stress-test AI hardware holdings for GPU overcapacity and shorter chip useful lives, not just demand</span></div></div><div class="irow"><div class="ic">🔍</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Rule out what other investors know before blaming a sell-off on hedge-fund deleveraging</span></div></div><div class="irow"><div class="ic">💸</div><div class="tline"><span class="cat">Enterprise AI:</span> <span class="txt">Audit frontier-model spend and move commodity workloads to open-source models</span></div></div><div class="irow"><div class="ic">🗳️</div><div class="tline"><span class="cat">Policy:</span> <span class="txt">Position for a likely split Congress after the Nov 2026 midterms</span></div></div><div class="irow"><div class="ic">🏦</div><div class="tline"><span class="cat">Macro:</span> <span class="txt">Read multi-decade-high long yields as the bond market's fiscal warning — a weaker dollar follows if ignored</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;In the last 10 years, I've seen the entire industry deleverage to zero at least 10,000 times.&#8221; <cite>— Ken Griffin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;GPUs, like airlines, have a very low marginal cost to run.&#8221; <cite>— Ken Griffin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The Republicans, President Trump, they will almost certainly lose one or both houses.&#8221; <cite>— Ken Griffin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The tariff battles with Canada, with Europe, with our allies has just been a disaster.&#8221; <cite>— Ken Griffin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;If you want to look at where socialism leads you to, look at France this last weekend.&#8221; <cite>— Ken Griffin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;If your expertise is in translation from English to German, for example, you probably have already lost your job.&#8221; <cite>— Ken Griffin</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Ken Griffin:</b> Republicans will lose one or both houses of Congress in the midterms. <span class="cmeta">Republican control of House/Senate · lose one or both · 2026-11</span></div><div class="ritem"><b>Ken Griffin:</b> If GPU provisioning exceeds demand, marginal GPU pricing goes into free fall. <span class="cmeta">GPU pricing · free fall</span> <i>if if GPU supply exceeds demand</i></div><div class="ritem"><b>Ken Griffin:</b> Extraordinary pricing on 5-6-year-old GPUs probably doesn't persist for another 5-6 years. <span class="cmeta">pricing on older GPUs · declines · 5-6 years</span></div><div class="ritem"><b>Ken Griffin:</b> Another forced-portfolio event like Situational Awareness's would be surprising in the foreseeable future. <span class="cmeta">repeat forced portfolio sale · unlikely</span> <span class="tag">Situational Awareness</span></div><div class="ritem"><b>Ken Griffin:</b> If Washington ignores the bond market, inflation rises, the dollar weakens and US living standards fall. <span class="cmeta">inflation / US dollar · higher / weaker</span> <i>if if fiscal house isn't put in order</i></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Citadel</b> <span class="rel">acquires</span> <b>Situational Awareness</b> &mdash; bought its portfolio in under 24 hours</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🌎</div><div><div class="title">Citadel's "center of gravity is somewhere over the middle of the Atlantic" between London, Miami and New York; 2,500 New York staff; teams kept in one location because "nothing beats a whiteboard and a good debate". <span class="tag">Workplace</span></div></div></div><div class="irow"><div class="ic">🌴</div><div><div class="title">Miami: pro-business, safe streets, good schools, but housing costs and congested roads; credits the Cuban community for its anti-socialist ethos. Pittsburgh has ~100 robotics companies around CMU. <span class="tag">Cities</span></div></div></div><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: a WSJ report on Anthropic's S-1, Ray Dalio, Howard Marks and the BIS (via the host), and Griffin's own Stanford talk. <span class="tag">Sources</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>MLCC</b> &mdash; Multilayer ceramic capacitor, a supply-constrained AI hardware component Griffin cites for high margins.</div><div><b>Simpson-Bowles</b> &mdash; The 2010 bipartisan deficit commission whose up-down-vote approach he wants revived for entitlements.</div><div><b>Crowding out</b> &mdash; Government borrowing pushing up rates and squeezing private borrowers like homebuyers.</div><div><b>Fair Tax Amendment</b> &mdash; Pritzker's failed Illinois ballot measure for a progressive income tax.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
