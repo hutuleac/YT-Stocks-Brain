@@ -1,0 +1,160 @@
+META = {
+    "title": "This CEO Gives 20-Year-Olds Businesses With $0 Down",
+    "channel": "BRAD LEA TV",
+    "speakers": "Reed Nyfeler (founder, Signal and FilterGO), interviewed by Brad Lea",
+    "date": "2026-10-28",
+    "video_url": "https://www.youtube.com/watch?v=u4DlUKmDbC4",
+    "thread_line": "5 threads · AI as the new tractor · Signal's veteran-owned security franchises · FilterGO unit economics · Next in Leadership placement · work for yourself before you own",
+    "category": "life",
+    "region": "",
+}
+
+SNAPSHOT = [
+    "Reed Nyfeler, 49, founder of security franchisor Signal, pitches zero-down franchises to young people as AI disrupts work the way tractors disrupted farming.",
+    "Signal: 20 years old, 48 states and 9 countries, ~10,000 people; veterans and ex-police buy territories through **sweat equity**, with little to no capital.",
+    "FilterGO, launched ~2 years ago with his 20-year-old son: commercial HVAC filter changes, sold door-to-door in strip malls — his son signed 40 clients in 2 months.",
+    "Unit math he cites: territories at **10 cents a person**, ~$20 profit per install after royalty, a van good for ~200 installs a day (~$1.2M capacity).",
+    "Next in Leadership: a free survey plus a live peer interview graded by AI that places people where their skills pay most.",
+    "Core belief: recreate the Homestead-era land of opportunity — his Swiss great-great-grandfather got free Nebraska land for hard work.",
+    "Mindset lessons: \"multiply a hero, not a zero\"; mentally work for yourself long before you physically do.",
+]
+
+THEMES = [
+    {
+        "id": "ai-tractor",
+        "tags": ["career", "mindset"],
+        "color": "gray",
+        "badge": "Framework",
+        "status": "EVERY ERA HAS ITS DISRUPTION",
+        "title": "AI is the new tractor — and the next generation needs somewhere to go",
+        "lead": "Each technology wave pushed workers into a new role, and Nyfeler thinks AI leaves today's 20-year-olds without a clear next step unless someone offers one.",
+        "bullets": [
+            "Tractors pushed farmers into factories, factory workers into war work, then knowledge work and college in the '60s-'70s; the '80s-'90s internet built Microsoft and Apple.",
+            "People called the internet a fad and predicted the end of paper; neither happened.",
+            "Young workers want **autonomy and schedule flexibility**, may skip the military or police, and won't take security overnights.",
+            "Most franchise owners are in their 50s-60s cashing out 401(k)s; he wants the \"young and hungry\" instead.",
+            "His great-great-grandfather left Switzerland at 18 with $20 for Duncan, Nebraska, got free land under the Homestead offer, and the family farmed it 100 years.",
+            "His father was told not to farm — tractors came and corn prices were too low — went to college and taught industrial arts.",
+            "Leadership won't come from politics or social-media algorithms but from \"authentic\" private leaders — John Deere \"was not made essentially by John Deere.\"",
+        ],
+        "quote": {"text": "The way the world has changed is not because people had money. It's because they had grit, hard work, and effort, and it was directionally targeted.", "cite": "— Reed Nyfeler"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "signal-security",
+        "tags": ["career", "consumer"],
+        "color": "amber",
+        "badge": "Business model",
+        "status": "48 STATES, 9 COUNTRIES, 20 YEARS",
+        "title": "Signal: veterans and ex-police own security territories through sweat equity",
+        "lead": "Signal franchises physical security to people leaving the military and police, using technology to strip out management layers.",
+        "bullets": [
+            "Security is a ~**$500B** global industry that holds up in recessions — \"if we think we're going to die in the next 20 minutes... we're going to go find safety.\"",
+            "Largest competitor Allied Universal has ~900,000 people — per Nyfeler the third-largest US employer behind Amazon and Walmart.",
+            "Positioning: UPS vs USPS — private security fills a gap police can't service.",
+            "Franchisees buy the territory and pay through sweat equity; little to no capital beyond travel to training. Officers have risen to franchise owners.",
+            "Top franchisee does ~$35M a year; top tier runs **over 20% net margins**, starters target at least 10%.",
+            "Bread and butter is recurring apartment-complex work: noise after 10 p.m., car break-ins at 2-3 a.m., closed pools.",
+            "Has been offered hundreds of millions for companies and won't sell — \"I'm here to change the world.\"",
+        ],
+        "quote": None,
+        "watch": "Figures are the founder's own, given while recruiting franchisees; he points to the franchise agreement for the margins.",
+        "names": None,
+    },
+    {
+        "id": "filtergo",
+        "tags": ["career", "consumer"],
+        "color": "amber",
+        "badge": "Business model",
+        "status": "3 STATES, 40-50 FRANCHISES EXPECTED BY AIRING",
+        "title": "FilterGO: Jiffy Lube for commercial air filters, sold door to door",
+        "lead": "A 20-year-old walks a strip mall, photographs an unchanged roof filter, and signs recurring 90-day service on the spot.",
+        "bullets": [
+            "He shortlisted filters 19 years ago alongside security and launched ~2 years ago once the platform existed; his son, then 20, got **40 clients in 2 months**.",
+            "Pitch: free roof photo in the app shows a filter unchanged for 3 years (one ran 9); dirty filters mean higher power bills and lower airflow. Tenants own maintenance like a car lease owns oil changes.",
+            "Territories cost **10 cents per person** — a 50,000-person market is $5,000; Las Vegas (~1.5M) would be ~$150,000 and can be resold.",
+            "~$30 charged per filter, ~$4-5 filter cost, ~$20 made per install after royalty and expenses; service every 90 days per manufacturer guidance.",
+            "One van can do ~200 installs a day, ~$1.2M revenue capacity; ~2,000 serviceable businesses per 50,000 people, ~30,000 in Vegas — a possible $20-30M business.",
+            "Zero down: the pre-wrapped van is leased with GPS recovery, payments withheld from card revenue; credit options for no-credit buyers; a van \"every other week\" for producers.",
+            "Live in 3 states, ~10 more starting; 2,500-4,000 territories nationally, then national restaurant accounts. Commercial over residential: no homeowners to wait on, no mud on carpets.",
+        ],
+        "quote": None,
+        "watch": "Capacity and Vegas revenue are the founder's upside math, not reported results; the episode doubles as a franchise recruiting pitch.",
+        "names": None,
+    },
+    {
+        "id": "next-in-leadership",
+        "tags": ["career"],
+        "color": "gray",
+        "badge": "Recommendation",
+        "status": "FREE PLATFORM",
+        "title": "Next in Leadership: an AI-graded peer interview to place people before they apply",
+        "lead": "Instead of applying to whatever is open to make rent, a free survey and live interview steer people toward where their skills pay most.",
+        "bullets": [
+            "Flow: survey, then a live peer-to-peer video interview; AI grades answers against peers and recommends where in the economy you fit.",
+            "It clips interview highlights to send to employers.",
+            "Problem it targets: people take a job for this month's rent and are unhappy 6-8 weeks later, repeating the cycle.",
+            "Planned cross-sell: **166 services** companies buy from third parties (fire-extinguisher inspection, pest control) — a franchisee who sold filters can sell the next service from the same database.",
+            "His own path: wanted a business at 18, started at 29-30 with a wife and three kids; first job a restaurant host at 14.",
+        ],
+        "quote": None,
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "work-for-yourself",
+        "tags": ["mindset", "career"],
+        "color": "green",
+        "badge": "Principle",
+        "status": "MINDSET · SKILLS · HABITS · OPPORTUNITY",
+        "title": "Mentally work for yourself long before you physically do",
+        "lead": "Both speakers argue the gap isn't money but mindset: act like the owner of every job and the confidence to own one follows.",
+        "bullets": [
+            "At 14, laying concrete block in Omaha at $4.25 minimum wage, his boss raised him to $8.25 because he outworked men earning $10.",
+            "A flight attendant who served beyond her pay \"worked for herself\" — the trait of a future business owner.",
+            "Hardest lesson: others' aspirations aren't his — **align with them, don't dictate**; \"I'm looking for a hero that I can multiply, not a zero.\"",
+            "Directional, not emotional: decide who you'll work hard for over the next 3-5 years.",
+            "Franchisors don't win on new ideas; they execute old ones exceptionally — \"in business for yourself but not by yourself.\"",
+            "Brad Lea's three pillars: mindset, skill set, habits — then an opportunity; most people won't do the simple work, and \"victim mentality\" is a mindset problem.",
+            "Brad's rat-race moment: inventing a blown tire to extend a vacation showed him he had no autonomy.",
+        ],
+        "quote": {"text": "You are only a byproduct of what you produce.", "cite": "— Reed Nyfeler"},
+        "watch": None,
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F9F0", "tag": "Careers", "title": "Treat each job as your own business — the confidence to own one compounds there."},
+    {"icon": "\U0001F9EE", "tag": "Franchising", "title": "Read the franchise agreement before trusting capacity math from a recruiting pitch."},
+    {"icon": "\U0001F50D", "tag": "Business ideas", "title": "Look for boring, recurring, compliance-driven services businesses ignore."},
+    {"icon": "\U0001F91D", "tag": "Leadership", "title": "Align with what people want instead of assigning what you would do."},
+    {"icon": "\U0001F9ED", "tag": "Mindset", "title": "Decide who you'll work hard for over the next 3-5 years before choosing the job."},
+]
+
+HOT_TAKES = [
+    {"take": "I'm going to take equity from you. I'm going to take opportunity from you and I'm going to make just a little bit more uh and just keep you just over broke. Right? That's what a job is.", "cite": "— Reed Nyfeler", "why": "dismissal of employment"},
+    {"take": "I don't think it's going to come from politics. I don't think it's going to come from you know social media algorithms.", "cite": "— Reed Nyfeler", "why": "leadership comes from private leaders"},
+    {"take": "There's never a franchiseor does not do well on new ideas. They take an old idea and execute it exceptionally well.", "cite": "— Reed Nyfeler", "why": "anti-novelty claim"},
+    {"take": "I'm looking for a hero that I can multiply, not a zero.", "cite": "— Reed Nyfeler", "why": "selective leadership stance"},
+    {"take": "It's not easy, but it is simple to become massively successful financially.", "cite": "— Brad Lea", "why": "strong universal claim"},
+]
+
+CLAIMS = [
+    {"who": "Reed Nyfeler", "claim": "FilterGO will have 40-50 franchises by the time the episode airs", "metric": "FilterGO franchises", "target": "40-50", "by": "2026-10", "condition": None, "entity": None},
+    {"who": "Reed Nyfeler", "claim": "FilterGO has room for 2,500-4,000 territories across the US", "metric": "US territories", "target": "2,500-4,000", "by": None, "condition": None, "entity": None},
+    {"who": "Reed Nyfeler", "claim": "Las Vegas could support a $20-30M filter-install business", "metric": "Vegas revenue potential", "target": "$20-30M", "by": None, "condition": None, "entity": None},
+]
+
+RELATIONS = []
+
+OTHER_NEWS = [
+    {"icon": "\U0001F4DA", "title": "No outside sources, shows or publications cited; figures come from the guest's own companies.", "tag": "Sources"},
+]
+
+GLOSSARY = [
+    {"term": "Sweat equity", "def": "Ownership earned through work rather than cash paid up front."},
+    {"term": "Franchisor royalty", "def": "Ongoing fee a franchisee pays the franchisor for brand, systems and coaching."},
+    {"term": "Recurring monthly revenue", "def": "Contracted repeat service income, here from apartment security and 90-day filter changes."},
+]
