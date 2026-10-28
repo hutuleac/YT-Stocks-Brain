@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: Inside Anthropic’s S-1, SpaceX Soars, Why VCs Are Ditching Seed Funds</title>
+<meta name="description" content="This Week in Startups · 6 threads · Anthropic S-1 numbers · the 0.1% adoption gap · Canva/Figma momentum · religion vs business at the labs · compute payback and neoclouds · Bitcoin, SPVs and alicorns">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="Inside Anthropic’s S-1, SpaceX Soars, Why VCs Are Ditching Seed Funds">
+<meta property="og:description" content="This Week in Startups · 6 threads · Anthropic S-1 numbers · the 0.1% adoption gap · Canva/Figma momentum · religion vs business at the labs · compute payback and neoclouds · Bitcoin, SPVs and alicorns">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Inside Anthropic’s S-1, SpaceX Soars, Why VCs Are Ditching Seed Funds</h1>
+    <div class="byline">
+      Channel: <b>This Week in Startups</b> &middot; Speaker: <b>Jason Calacanis and Lon Harris (hosts) with DA Wallach (Time BioVentures), Dave McClure (Practical Venture Capital) and Ben Black (Acadian Ventures / PowerLaw Corp)</b> &middot; <b>2026-10-28</b>
+      <div class="stats-line">6 threads · Anthropic S-1 numbers · the 0.1% adoption gap · Canva/Figma momentum · religion vs business at the labs · compute payback and neoclouds · Bitcoin, SPVs and alicorns &middot; <a href="https://www.youtube.com/watch?v=6m_LBsBSYDM" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Anthropic's public S-1 (NASDAQ: ANT): H1 revenue <b>$16.3B</b>, up 14x; Q2 operating profit $974M; the $80.7B net loss is mostly a $72.4B non-cash mark on convertible notes.</li><li>WSJ: IPO targeted the week of November 16, raising <b>$100B</b>+ at a $1.5-2T valuation. McClure is a buyer at $1.5T, not $2-2.5T; Calacanis calls it the greatest business ever built.</li><li>S-1 says customers spend ~<b>0.1%</b> of opex on AI; 900% net revenue retention. The panel splits on why spend isn't higher: utility, cost, or people ("meat sacks").</li><li>Momentum rules private marks: Canva's secondary price fell ~25-<b>30%</b> when growth slowed from 35% to 20%; Ben Black would put everything in OpenAI and Anthropic.</li><li>DA Wallach: Anthropic's founders are "religious extremists" who may be right; if not, business operators (Microsoft, Google, maybe Oracle) end up the winners.</li><li>SpaceX compute pays back in under 12 months vs 2-3 years for neoclouds; hyperscalers borrow at 6-<b>7%</b> and earn 10-14%, so they are acting rationally.</li><li>Calacanis: Bitcoin "will never break its all-time highs again"; SPVs are hollowing out small funds; AI-native "alicorns" skip funding rounds.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="anthropic-s1">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
+    <span class="theme-status">S-1 FILED · IPO TARGET WEEK OF NOV 16</span><span class="ttag">ai-infra</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Anthropic's S-1: $16.3B half-year revenue, an operating profit, and a $1.5-2T ask</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The filing was framed to calm the profitability debate, and the panel mostly accepts it while arguing over the price.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Public S-1 for a NASDAQ listing as <b>ANT</b>, price range and share count left blank; H1 2026 revenue $16.3B vs ~$1.2B in H1 2025 (14x); Q2 operating profit $974M.</li><li><span class="dot" style="background:#3f6b2e;"></span>Net loss $80.7B, of which $72.4B is a non-cash change in fair value of convertible notes, derivative liabilities and SAFEs, mostly tied to the <b>Amazon and Google</b> note purchase agreements; it is re-measured every period and added back on the cash-flow statement.</li><li><span class="dot" style="background:#3f6b2e;"></span>WSJ: listing targeted the week of November 16, raising <b>$100B</b> or more at ~$1.5-2T.</li><li><span class="dot" style="background:#3f6b2e;"></span>Wallach: the timing was meant to put investors at ease on inference profitability — "sitting on a ton of cash"; still only "fragmentary views of the elephant" from every Gavin Baker interview and All-In episode.</li><li><span class="dot" style="background:#3f6b2e;"></span>tickertrends.com shows ARR flat at <b>$76.8B</b> after steep January-July growth (Harris: ARR here is annualized run rate, not recurring revenue); Replit recently switched its default model to OpenAI.</li><li><span class="dot" style="background:#3f6b2e;"></span>McClure: two to three trillion would have been easy last quarter; his partner's teardown shows at least $5B of new revenue in the quarter; he expects <b>$150-200B</b> run rate next year, not the $200-300B once floated.</li><li><span class="dot" style="background:#3f6b2e;"></span>Black: AI tear-downs of the S-1 appeared within hours; SaaS tools like ARR don't fit a business selling compute across models with falling costs, and "who wins the framing in the next two weeks" decides whether <b>$1.5T</b> holds.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;I think I'm still a believer in Anthropic, probably at one and a half trillion, not at two or two and a half trillion.&#8221;<cite>— Dave McClure</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium · IPO week of Nov 16</span></b><span>S-1 filed; $16.3B H1 revenue, Q2 operating profit; IPO targeted at $1.5-2T</span></div><div class="namechip"><b>Replit<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>switched its default model from Anthropic to OpenAI</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Ben Black's PowerLaw Corp holds OpenAI, a direct competitor; McClure's view leans on his partner's own teardown.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="adoption-gap">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">0.1% OF OPEX · 900% NRR</span><span class="ttag">ai-infra</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Is intelligence the new cigarettes? The 0.1% spend gap</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Customers spend about a tenth of a percent of opex on AI; Anthropic reads that as headroom, while Wallach sees a usefulness question.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Calacanis: formed in 2021, revenue from 2023, now profitable — "the greatest business created by humans"; ~<b>$100B</b> a year would be a quarter of Alphabet's or Apple's ~$400B and a third of Microsoft's ~$350B, from one product sold two ways (subscription and tokens).</li><li><span class="dot" style="background:#93711b;"></span>Wallach: the best stock of the last century was <b>Altria</b>/Philip Morris — huge margins, addictive, no churn, a billion cigarettes a day; AI engineers taking up smoking to signal AI will cure cancer reads to him as "a very toppy signal".</li><li><span class="dot" style="background:#93711b;"></span>S-1: customers spend ~<b>0.1%</b> of opex on AI. Wallach: if cost were the barrier they'd already spend 0.5-1%, which complicates the Jevons-paradox story; he thinks it is mostly utility.</li><li><span class="dot" style="background:#93711b;"></span>McClure: top companies spend ~<b>2%</b> and tens to hundreds of millions on tokens; the question is whether AI just eats the SaaS budget or adds to it.</li><li><span class="dot" style="background:#93711b;"></span>Calacanis: a "meat sack constraint" — Uber burned its token budget in Q1 and put ~30,000 staff on OpenAI; Microsoft's buyout offer to 60,000 (one in four employees) is the roadmap. Andy Berman of RunLayer (This Week in AI): companies haven't wired AI to their data and systems; cyber fears hold them back.</li><li><span class="dot" style="background:#93711b;"></span>Black: <b>900% net revenue retention</b> (same cohort, same three months a year apart); hard part is pricing durability as models age and buyers route to cheaper open models through OpenRouter. Aaron Batalion (ex-CTO LivingSocial): new revenue lines from science breakthroughs aren't measured yet.</li><li><span class="dot" style="background:#93711b;"></span>McClure's analogy: early innings, like teenagers talking about sex — everyone says they're doing it; most still use AI like Google prompts.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;So I think the fundamental question for Anthropic and all the players in this market is basically is intelligence, the new cigarettes, right?&#8221;<cite>— DA Wallach</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Altria (MO)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Wallach's benchmark for the best stock of the past century</span></div><div class="namechip"><b>Uber (UBER)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>burned its Q1 token budget; ~30,000 staff on OpenAI</span></div><div class="namechip"><b>Microsoft (MSFT)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>buyout offered to 60,000 employees, cited as the adoption roadmap</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="consumer-subs">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">OPENAI 50M PAID SUBS</span><span class="ttag">consumer</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Consumer AI subscriptions, Apple's wait, and why Canva lost its momentum</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Distribution owners can wait, while companies that lose momentum get re-marked fast in the secondary market.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>OpenAI reportedly has 50M paid subscribers out of ~900M weekly users (~<b>6%</b>); Microsoft 365 has ~110M subscribers and $10B+ in estimated consumer revenue; Anthropic's count is undisclosed.</li><li><span class="dot" style="background:#93711b;"></span>Subscription run-rate chart: Anthropic ~<b>$65B</b> (if all subscription), OpenAI $50B, Netflix $49B, Salesforce $40B, Adobe $27B (seen as at risk), Spotify strong.</li><li><span class="dot" style="background:#93711b;"></span>Wallach: Apple and Google haven't reached steady state; mobile is theirs to lose, and Apple can wait, preload a good-enough model, or buy one "for <b>$10 billion</b>"; no iPhone successor yet (Sam Altman's device, Meta glasses).</li><li><span class="dot" style="background:#93711b;"></span>Wallach hasn't given any AI access to his email — "that's the test"; he wants AI mostly local, with ~<b>99%</b> of consumer use doable on the iPhone within a few years.</li><li><span class="dot" style="background:#93711b;"></span>McClure: by usage the top consumer AI platforms are OpenAI, Google Gemini, then <b>Canva</b>; Canva's growth slowed from 35% to 20% amid Claude Design fears, and its secondary price fell ~25% (Black) to ~30% (Wallach).</li><li><span class="dot" style="background:#93711b;"></span>Black would put a college fund entirely into OpenAI and Anthropic over Figma or Canva — "perception of loss of momentum is everything"; those two "are not going to change the world anymore".</li><li><span class="dot" style="background:#93711b;"></span>Wallach (a Canva holder) disagrees on Figma: network effects and designers who trained on it for a decade; shorting Anthropic's IPO ("Jim Chanos or whoever") would leave "egg on their face".</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;The minute in this world, perception of loss of momentum is everything.&#8221;<cite>— Ben Black</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>OpenAI<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>~50M paid subscribers; Black would go all in alongside Anthropic</span></div><div class="namechip"><b>Canva<span class="stance" style="background:#3f6b2e;">OWNS · Low</span></b><span>growth 35% to 20%; secondary price down ~25-30%; Wallach holds it</span></div><div class="namechip"><b>Figma (FIG)<span class="stance" style="background:#93711b;">UNCERTAIN · Low</span></b><span>Black avoids; Wallach credits network effects among designers</span></div><div class="namechip"><b>Apple (AAPL)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low · a few years</span></b><span>Wallach: distribution means it can wait, preload or buy</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Wallach discloses he holds Canva; Black's fund holds OpenAI.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="religion-vs-business">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Speculative</span>
+    <span class="theme-status">PANEL SPLIT</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">True believers vs operators: who wins the lab race long-term</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Wallach argues the labs are run by sincere believers who will eventually lose to people who are better at business.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>Wallach: every person has an incentive to offer intelligence cheaper, so being Anthropic means a target on your back; Dario and the co-founders "are not in this for the money" — cynics like Chamath see regulatory capture.</li><li><span class="dot" style="background:#65695f;"></span>Wallach: they are "religious extremists" who may be right; if wrong they get beaten by better operators — Scientology grew for about a decade and couldn't sustain it.</li><li><span class="dot" style="background:#65695f;"></span>Jensen built GPUs 15 years ago without knowing what was coming, and Dario studied physics at Caltech; by contrast Zuckerberg, Nadella and Altman "are not here by accident".</li><li><span class="dot" style="background:#65695f;"></span>McClure: you can believe in a benevolent AI and want money; Dario believes it ("Machines of Loving Grace"), Altman is more of a venture capitalist in Elon's mould.</li><li><span class="dot" style="background:#65695f;"></span>Black: watch actions — Dario publicly scolded Altman over reckless compute deals, then signed the same kind of deals once locking compute proved necessary.</li><li><span class="dot" style="background:#65695f;"></span>Calacanis: a <b>20%</b> less chaotic Altman might have kept Dario and Elon, and there might be no Anthropic.</li><li><span class="dot" style="background:#65695f;"></span>Wallach's endgame: unless this is "software Jesus", it ends as normal business with <b>Microsoft and Google</b> much bigger, maybe Oracle; Larry Ellison's ~$400B capex bet at 80 is "the riskiest hand" in American capitalism, alongside buying media assets with his son.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#65695f;"><div class="lbl">Pull quote</div>&#8220;This will end with normal business. It will probably end with Microsoft and Google being much bigger.&#8221;<cite>— DA Wallach</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Oracle (ORCL)<span class="stance" style="background:#93711b;">UNCERTAIN · Low</span></b><span>~$400B capex called the riskiest hand in American capitalism</span></div><div class="namechip"><b>Alphabet (GOOGL)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low · long term</span></b><span>Wallach expects Google to end up much bigger</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="compute-payback">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">SPACEX PAYBACK &lt; 12 MONTHS</span><span class="ttag">ai-infra</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Compute payback: SpaceX and the hyperscalers are fine, the neoclouds are the risk</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The panel trusts the hyperscalers' math but not leveraged neoclouds whose cost of capital and timing are out of their control.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>McClure: SpaceX Q3 shows compute payback under 12 months, with Elon aiming for six; Chamath's analysis puts other neoclouds at two to three years or worse.</li><li><span class="dot" style="background:#93711b;"></span>McClure: AWS-linked notes subsidized Anthropic's compute, so true compute cost is still unclear; chip depreciation over 4-6 years may not hold for neoclouds.</li><li><span class="dot" style="background:#93711b;"></span>Calacanis: servers live 7-10 years, moving from frontline to inference, storage and background jobs; only the human cost of pulling them limits it.</li><li><span class="dot" style="background:#93711b;"></span>Wallach: hyperscalers borrow at <b>6-7%</b> and earn 10-14%, so it is rational; the lab-cloud-chip loop works as one organism, but the question is whether customers feed it — watch who supplies the revenue, likely via investment banks. Failure mode: a dark-fiber overhang with no buyers.</li><li><span class="dot" style="background:#93711b;"></span>Black's PowerLaw Corp (NASDAQ: PWRL, closed-end fund): top holdings SpaceX, OpenAI and <b>Kalshi</b>; selling down SpaceX bought in early 2025 for about a <b>3x</b>.</li><li><span class="dot" style="background:#93711b;"></span>Black: avoided all neoclouds — cost of capital and build timelines out of their control, plus Jensen's favor; missed CoreWeave; "these guys were all Bitcoin miners two years ago." CoreWeave bonds are under pressure.</li><li><span class="dot" style="background:#93711b;"></span>Calacanis: a loan to a neocloud is still backed by data centers, chips and memory — better collateral than speculative crypto.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;They can get money at 6% or 7%. And if they can earn 10% to 14% returns on it, it's a great financial decision.&#8221;<cite>— DA Wallach</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>SpaceX (SPCX)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>compute payback under 12 months; PowerLaw up ~3x and selling down</span></div><div class="namechip"><b>CoreWeave (CRWV)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium</span></b><span>bonds under pressure; Black avoided neoclouds and missed it</span></div><div class="namechip"><b>PowerLaw Corp (PWRL)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>Black's closed-end fund of late-stage private companies</span></div><div class="namechip"><b>Kalshi<span class="stance" style="background:#3f6b2e;">OWNS · Medium</span></b><span>top-three holding in PowerLaw Corp</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Black's fund is selling SpaceX and holds OpenAI and Kalshi.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="bitcoin-spvs-alicorns">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">Bearish</span>
+    <span class="theme-status">"NEVER BREAK ITS ALL-TIME HIGHS AGAIN"</span><span class="ttag">crypto</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">Bitcoin is dead (again), SPVs crowd out small funds, and alicorns skip rounds</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Calacanis says money is leaving Bitcoin for AI, and the money in venture is moving to SPVs and to founders who barely need capital.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span>Calacanis's monthly "Bitcoin is dead" post (~2M views): ETF outflows continue, a retest of the low is coming, and Bitcoin "will never break its all-time highs again"; three people offered to bet him <b>$1M</b>. He still holds millions in Bitcoin as a long-term holder, plus a ~$750K bet on "Tau".</li><li><span class="dot" style="background:#a23f22;"></span>Wallach: the Ponzi energy is gone, leaving a debasement-trade thesis — has Bitcoin earned a place next to gold? Gold fell over the past six months; rates may stay high and inflation elevated for decades.</li><li><span class="dot" style="background:#a23f22;"></span>Calacanis's real use cases: stablecoins, tokenized real-world assets (Robinhood), and DeFi lending in the long run.</li><li><span class="dot" style="background:#a23f22;"></span>Calacanis: 10-20 VC firms take ~<b>75%</b> of capital; emerging managers struggle (Black runs the Raise Conference) and move to SPVs — "SPVs are killing the VC radio star." SPV fees (2% and 20% carry) are getting commoditized.</li><li><span class="dot" style="background:#a23f22;"></span>Wallach: AI makes building cheap, so the best founders will raise less than ever and small funds writing small checks will win; Lightspeed shows "no interest" in 16-year-old token-maxers, who he calls "a different species".</li><li><span class="dot" style="background:#a23f22;"></span>Calacanis: seed rounds at $5-20M valuations become <b>alicorns</b> that skip Series B on revenue; he pushes some to take $10-20M at $250M-$1B (about 5% dilution) as a rainy-day fund.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;Bitcoin will never break its all-time highs again.&#8221;<cite>— Jason Calacanis</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Bitcoin (BTC)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium</span></b><span>Calacanis: no new all-time highs, but still a long-term holder</span></div><div class="namechip"><b>Gold<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>down over six months; the debasement benchmark</span></div><div class="namechip"><b>Robinhood (HOOD)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>tokenizing real-world assets</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Calacanis says the post is both trolling and belief, and he still holds millions in Bitcoin.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📄</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Net out the <b>$72.4B</b> non-cash mark before judging Anthropic's loss.</span></div></div><div class="irow"><div class="ic">📊</div><div class="tline"><span class="cat">AI adoption:</span> <span class="txt">Track the <b>0.1%</b>-of-opex figure across filings as the real demand signal.</span></div></div><div class="irow"><div class="ic">🔍</div><div class="tline"><span class="cat">AI infra:</span> <span class="txt">Watch the customers funding AI spend, not just the labs reporting it.</span></div></div><div class="irow"><div class="ic">⚠️</div><div class="tline"><span class="cat">Neoclouds:</span> <span class="txt">Compare compute payback periods before lending to or buying a neocloud.</span></div></div><div class="irow"><div class="ic">🚀</div><div class="tline"><span class="cat">Venture:</span> <span class="txt">Back capital-efficient founders who reach revenue before they need a round.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;I think I'm still a believer in Anthropic, probably at one and a half trillion, not at two or two and a half trillion.&#8221; <cite>— Dave McClure</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;So I think this is the greatest business created by humans.&#8221; <cite>— Jason Calacanis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;These are dyed-in-the-wool legitimate religious extremists, and they might be right&#8221; <cite>— DA Wallach</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;They're going to be nice businesses, but they're not going to change the world anymore.&#8221; <cite>— Ben Black</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Bitcoin will never break its all-time highs again.&#8221; <cite>— Jason Calacanis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;these are going to be the greatest fucking entrepreneurs in human history&#8221; <cite>— DA Wallach</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>The Wall Street Journal (cited by Lon Harris):</b> Anthropic goes public the week of November 16, raising $100B or more at a $1.5-2T valuation <span class="cmeta">IPO valuation · $1.5-2T · 2026-11-16</span> <span class="tag">Anthropic</span></div><div class="ritem"><b>Dave McClure:</b> Anthropic reaches a $150-200B run rate next year, short of $300B <span class="cmeta">revenue run rate · $150-200B · 2027</span> <span class="tag">Anthropic</span></div><div class="ritem"><b>Ben Black:</b> How the S-1 gets framed over the next two weeks decides whether $1.5T is the right price <span class="cmeta">IPO valuation framing · $1.5T · 2026-11</span> <span class="tag">Anthropic</span></div><div class="ritem"><b>Dave McClure:</b> Elon aims to cut SpaceX compute payback to six months from under 12 <span class="cmeta">compute payback · 6 months</span> <span class="tag">SpaceX (SPCX)</span></div><div class="ritem"><b>Jason Calacanis:</b> Bitcoin will retest its low and never break its all-time high again <span class="cmeta">BTC all-time high · never exceeded</span> <span class="tag">Bitcoin (BTC)</span></div><div class="ritem"><b>DA Wallach:</b> About 99% of consumer AI use will run on the iPhone within a few years <span class="cmeta">on-device share of consumer AI · 99% · a few years</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Replit</b> <span class="rel">customer of</span> <b>OpenAI</b> &mdash; switched its default model from Anthropic</div><div class="ritem"><b>Amazon (AMZN)</b> <span class="rel">invests in</span> <b>Anthropic</b> &mdash; convertible note purchase agreements</div><div class="ritem"><b>Alphabet (GOOGL)</b> <span class="rel">invests in</span> <b>Anthropic</b> &mdash; convertible note purchase agreements</div><div class="ritem"><b>PowerLaw Corp (PWRL)</b> <span class="rel">owns stake</span> <b>SpaceX (SPCX)</b> &mdash; bought early 2025, ~3x, selling down</div><div class="ritem"><b>PowerLaw Corp (PWRL)</b> <span class="rel">owns stake</span> <b>OpenAI</b> &mdash; top-three holding</div><div class="ritem"><b>PowerLaw Corp (PWRL)</b> <span class="rel">owns stake</span> <b>Kalshi</b> &mdash; top-three holding</div><div class="ritem"><b>Uber (UBER)</b> <span class="rel">customer of</span> <b>OpenAI</b> &mdash; ~30,000 employees put on OpenAI</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📚</div><div><div class="title">Sources cited: The Wall Street Journal (IPO timing), tickertrends.com (ARR chart), Gavin Baker interviews, All-In, This Week in AI (Andy Berman, RunLayer), Chamath's neocloud analysis, Naval and Balaji (Zcash). <span class="tag">Sources</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>S-1</b> &mdash; SEC registration statement a company files before an IPO, with audited financials.</div><div><b>Fair-value convertible notes</b> &mdash; Notes re-measured every period at current value, so a rising valuation books a non-cash loss.</div><div><b>Net revenue retention</b> &mdash; Spend this period from a fixed customer cohort divided by its spend a year earlier.</div><div><b>Annualized run rate</b> &mdash; Latest month or quarter multiplied out to a year; not the same as recurring subscription revenue.</div><div><b>Neocloud</b> &mdash; A GPU cloud provider outside the hyperscalers, often debt-financed (e.g. CoreWeave).</div><div><b>SPV</b> &mdash; Special purpose vehicle pooling investors into a single deal, usually charging fees and carry.</div><div><b>Closed-end fund</b> &mdash; A listed fund with a fixed share count that trades on an exchange, here holding private companies.</div><div><b>Alicorn</b> &mdash; Calacanis's term for a startup that reaches unicorn scale while skipping funding rounds on revenue.</div><div><b>Debasement trade</b> &mdash; Owning scarce assets like gold or Bitcoin as a hedge against currency dilution.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
