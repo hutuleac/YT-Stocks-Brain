@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: Ex-Amazon VP tells us what it’s really like working with Jeff Bezos</title>
+<meta name="description" content="My First Million · 7 threads · Bezos&#x27;s flaws · how he scaled judgment · the sweatshop euphemisms · Prime&#x27;s origin · timing and swing selection · Twitch and sudden wealth · life after the big platform">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="Ex-Amazon VP tells us what it’s really like working with Jeff Bezos">
+<meta property="og:description" content="My First Million · 7 threads · Bezos&#x27;s flaws · how he scaled judgment · the sweatshop euphemisms · Prime&#x27;s origin · timing and swing selection · Twitch and sudden wealth · life after the big platform">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Ex-Amazon VP tells us what it’s really like working with Jeff Bezos</h1>
+    <div class="byline">
+      Channel: <b>My First Million</b> &middot; Speaker: <b>Ethan Evans (former Amazon VP, now executive coach), with hosts Sam Parr and Shaan Puri</b> &middot; <b>2026-10-28</b>
+      <div class="stats-line">7 threads · Bezos's flaws · how he scaled judgment · the sweatshop euphemisms · Prime's origin · timing and swing selection · Twitch and sudden wealth · life after the big platform &middot; <a href="https://www.youtube.com/watch?v=0_hpTKQqKOQ" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Ethan Evans spent ~20 years at Amazon, ran the Appstore, and was Amazon's "adult in the room" at Twitch, where Shaan Puri worked with him.</li><li>Bezos's flaws as he saw them: almost only corrective feedback, cutting public put-downs, and the overconfidence behind the <b>$170M Fire Phone</b> write-off.</li><li>How Bezos scaled judgment: ~10,000 hours of document reviews, trusting anecdotes over data, and the famous <b>question-mark emails</b>.</li><li>Prime began as "Project 100" — a fast-delivery program launched in 100 days to give Wall Street good news, built on years of free-shipping threshold tests.</li><li>Timing matters as much as talent: Bezos's internet window, a week-earlier start that decided two careers, and the pitches he refused (banking, travel).</li><li>Twitch sold for <b>$970M</b>, Amazon stock 5x'd in the earnout, and the vesting cliff drove engineers out; Twitch burned over $1B in five years.</li><li>After Amazon: happiness up from 7-8/10 to "11 out of 12" on about 20 hours a week, at the cost of identity and the Amazon platform.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="bezos-flaws">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Cautionary tale</span>
+    <span class="theme-status">A 360 REVIEW OF BEZOS</span><span class="ttag">mindset</span><span class="ttag">career</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Bezos's weaknesses: all critique, sharp edges, and being right too often</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Bezos was usually right, but he rarely praised, could be cutting, and his track record made him deaf to the Fire Phone warnings.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Feedback was three fixes and "get moving"; after an hour of critique he once walked out, turned back — "Oh, yeah, but good job" — as if ticking off a coach's note.</li><li><span class="dot" style="background:#93711b;"></span>He won the right battles on Kindle and on Prime's two-day-to-one-day shipping, which made challenging him harder.</li><li><span class="dot" style="background:#93711b;"></span>Everyone told him the <b>Fire Phone</b> wasn't good — "like trying to tell a new father that baby is butt ugly"; it cost ~$170M in hardware write-offs alone.</li><li><span class="dot" style="background:#93711b;"></span>Infamous put-down: "Is the A team for this project available, because this is clearly the B team."</li><li><span class="dot" style="background:#93711b;"></span>A customer price-snapping app was framed by media as Amazon spying on small-town stores; Bezos raged "How could we be so stupid?" — mostly at himself.</li><li><span class="dot" style="background:#93711b;"></span>When CFO Tom Szkutak warned about cash, Bezos replied: "How much is that, Tom? I might want to spend it."</li><li><span class="dot" style="background:#93711b;"></span>Evans says Bezos seems to have "changed radically" since leaving Amazon.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;Jeff fell into the flaw of every great man, which I think is having been right a lot.&#8221;<cite>— Ethan Evans</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="scaled-judgment">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Framework</span>
+    <span class="theme-status">QUESTION-MARK EMAILS</span><span class="ttag">career</span><span class="ttag">mindset</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">How Bezos scaled judgment: 10,000 hours of docs, anecdotes over data, and "I got this" lieutenants</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">His instant reads on documents came from pattern recognition built over years, and he scaled his attention with forwarded customer complaints and trusted grinders.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Three to five document reviews a day for years — ~<b>10,000 hours</b> of reading a business for 20 minutes and finding the insight.</li><li><span class="dot" style="background:#3f6b2e;"></span>"Between data and anecdotes, trust the anecdotes": at Amazon scale even a <b>1%</b> failure means a huge number of real customers.</li><li><span class="dot" style="background:#3f6b2e;"></span>Customer emails to Jeff came back forwarded with a single "?" — you had 24 hours to explain; best answer "a one-off," next best "fixed," worst "this will take a while."</li><li><span class="dot" style="background:#3f6b2e;"></span>Worse than "?": "Please tell me we're not doing this" to Evans's Appstore team — then "Just euthanize me."</li><li><span class="dot" style="background:#3f6b2e;"></span>His most rewarded lieutenants weren't the smartest but loyal "I got this" grinders who turn a D into a B; one ended up worth ~<b>$75M</b>.</li><li><span class="dot" style="background:#3f6b2e;"></span>At a Twitch offsite trust exercise, 18 of 20 picked integrity; CEO Emmett Shear picked <b>credibility</b> — when you say "I got this," you have it.</li><li><span class="dot" style="background:#3f6b2e;"></span>Evans would still drop everything if Jeff called with a job; Sam Parr thinks Zuckerberg now "takes the crown."</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="amazon-culture">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Principle</span>
+    <span class="theme-status">10-YEAR VIEW, 24-HOUR CLOCK</span><span class="ttag">career</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Strategically patient, tactically impatient — and the euphemisms for a sweatshop</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Big bets take decades, so every quarter has to squeeze out maximum progress, which Amazon dressed in softer language.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Rockets and Prime (two-day to one-day to same-day) take years, but a five-year project is just <b>20 quarters</b> — none can be wasted.</li><li><span class="dot" style="background:#93711b;"></span>"Work-life harmony," not balance; "we work long, hard and smart — two out of three don't count."</li><li><span class="dot" style="background:#93711b;"></span>"Your career will have seasons" meant: if you want to see your kids, maybe not now — or put them to bed at 6 and work 8 to midnight.</li><li><span class="dot" style="background:#93711b;"></span>"Amazon is a place where high performers go to feel bad about themselves."</li><li><span class="dot" style="background:#93711b;"></span>~300 VPs and only about a dozen SVPs; Evans stack-ranked himself a "middle VP."</li><li><span class="dot" style="background:#93711b;"></span>He told Shaan he was a "round peg in a square hole" — too real for a corporate machine — but credits Shaan's 10-year plans.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;We work long hard and smart. Two out of three don't count.&#8221;<cite>— Jeff Bezos (as recalled by Ethan Evans)</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="prime-origin">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Personal story</span>
+    <span class="theme-status">PROJECT 100</span><span class="ttag">consumer</span><span class="ttag">career</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Prime began as a 100-day project to rescue a bad quarter</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Prime launched as a pure fast-delivery program after years of free-shipping experiments, and Amazon's site was tuned for speed and sales, not looks.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Engineer Charlie Ward claims he put the idea in Amazon's open <b>idea tool</b>; Bezos also claims it. Perks came later.</li><li><span class="dot" style="background:#3f6b2e;"></span>Called <b>Project 100</b> — launch within 100 days — because Bezos saw a quarter short of Wall Street's hopes.</li><li><span class="dot" style="background:#3f6b2e;"></span>"Two-day delivery," not shipping: it started on FedEx, but the wording let Amazon move to the post office and its own trucks.</li><li><span class="dot" style="background:#3f6b2e;"></span>Free-shipping threshold fell from <b>$100 </b>to $75 to $50 to $25 — $25 forced two items, enough profit to cover shipping. Jeff Wilke pushed back that "shipping costs money."</li><li><span class="dot" style="background:#3f6b2e;"></span>Everything is A/B tested in <b>Web Lab</b>; for years the top rule was no added page-load milliseconds — speed equals sales, pretty pixels didn't matter.</li><li><span class="dot" style="background:#3f6b2e;"></span>Low prices made Amazon a winner in the 2007-08 recession; on selling cheap "dumb stuff," Evans casts Bezos as a free-market libertarian: give customers choice, or Walmart will.</li><li><span class="dot" style="background:#3f6b2e;"></span>Bezos quoted Benjamin Graham's voting-vs-weighing machine, put free cash flow over quarterly results, and called one early profitable quarter a mistake because it set a comparison.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="timing-swings">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Counterintuitive take</span>
+    <span class="theme-status">NO CALLED STRIKES</span><span class="ttag">mindset</span><span class="ttag">career</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">Timing beats talent more than we admit — and the pitches Bezos didn't swing at</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Evans thinks Bezos would have been rich anyway but not Bezos without his moment, and the hosts argue opportunity selection matters more than effort.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>Bezos was a D.E. Shaw trader; 10 years older he'd be an entrenched partner, 10 years younger too late — in a parallel life maybe "a hundred million dollars."</li><li><span class="dot" style="background:#65695f;"></span>Naval Ravikant: live so you'd be wealthy in 99 of 100 lives — but not equally wealthy.</li><li><span class="dot" style="background:#65695f;"></span>Evans took the Amazon video team because he started a week before the colleague who'd been promised it; their careers diverged.</li><li><span class="dot" style="background:#65695f;"></span>Bezos is back with <b>Prometheus</b>, building an "artificial general engineer" for the physical world; he likes literal names.</li><li><span class="dot" style="background:#65695f;"></span>Shaan: the impressive part is the years he didn't swing — Buffett's "no called strikes"; the big three were Amazon, Blue Origin and AI.</li><li><span class="dot" style="background:#65695f;"></span>He declined banking (crowded and regulated), mostly passed on healthcare, and turned down travel — Evans helped pitch competing with Expedia and Airbnb.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Prometheus<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Bezos's new company building an 'artificial general engineer' for real-world making</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="twitch-wealth">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Cautionary tale</span>
+    <span class="theme-status">AMAZON STOCK +9,082% IN HIS TENURE</span><span class="ttag">career</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Twitch's vesting cliff, $1B burned, and how wealth disconnects people</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Amazon's stock run made Twitch engineers rich then unretainable, while executives drifted out of touch with ordinary customers.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Twitch sold for <b>$970M</b>; Amazon stock 5x'd during the earnout, so ~$200-250K engineers vested ~$2M a year — and left at the cliff.</li><li><span class="dot" style="background:#93711b;"></span>Twitch burned over <b>$1B</b> in its first five years, submitting "profitable in three years" every year until Andy Jassy lost patience; one leader asked why Amazon couldn't just pay.</li><li><span class="dot" style="background:#93711b;"></span>Amazon stock rose <b>9,082%</b> from Evans's first day to his last (joined 2005, at 35, living paycheck to paycheck); held to today he guesses $40-50M.</li><li><span class="dot" style="background:#93711b;"></span>Selling stock early made every diaper a <b>$1,000 </b>diaper — Guy Kawasaki's $5M Porsche.</li><li><span class="dot" style="background:#93711b;"></span>Out of touch: an exec wanted to prioritize whole-home Sonos automation; Sam compares rich comedians losing their material.</li><li><span class="dot" style="background:#93711b;"></span>Bezos got walled off: a reporter reaching his office led to badge gates, a panic-button guard with a SWAT team on call, and Jassy's restricted elevator; he stopped playing broomball at company picnics.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Amazon (AMZN)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>stock +9,082% over Evans's ~20 years; bought Twitch for $970M</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="after-amazon">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Personal story</span>
+    <span class="theme-status">11 OUT OF 12</span><span class="ttag">career</span><span class="ttag">mindset</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Life after the platform: more happiness, less identity — and getting reps before you leap</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Leaving cost Evans a title and platform but raised his happiness, and he built the exit years earlier by coaching live on Twitch.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Target comp in his last year was <b>$900K</b> (low $1Ms with stock); now ~$700-800K on ~20 hours a week vs 50-60 plus travel.</li><li><span class="dot" style="background:#3f6b2e;"></span>Happiness went from 7-8 out of 10 to "11 out of 12" — he didn't know the scale went that high; the loss is identity and Amazon's door-opening platform.</li><li><span class="dot" style="background:#3f6b2e;"></span>Streamed career coaching on Twitch to 30-40 viewers; worked around the PR-approval rule by getting Emmett Shear's blessing (and emailing Mike Frazzini) to "use our product." HR let it go, guessing he'd leave.</li><li><span class="dot" style="background:#3f6b2e;"></span>Having answered ~<b>10,000</b> questions live, few career questions throw him.</li><li><span class="dot" style="background:#3f6b2e;"></span>Shaan's parallel: early Tony Robbins called radio stations and cured phobias at a mall fountain — promised 7 minutes, took 70.</li><li><span class="dot" style="background:#3f6b2e;"></span>Telling hard truths kindly: see the person as human, not a machine to fix (<i>Leadership and Self-Deception</i>, Arbinger Institute); as a coach, "you're paying me to give you some very difficult news."</li><li><span class="dot" style="background:#3f6b2e;"></span>Next: small-group coaching community; also runs a charity in Poland rehoming people displaced by the war in Ukraine; 10-year vision is more people with money and confidence to do good.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;I didn't know the scale went to 12.&#8221;<cite>— Ethan Evans</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Evans now sells executive coaching, and Sam jokes about "sign up for my coaching program."</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📨</div><div class="tline"><span class="cat">Leadership:</span> <span class="txt">Forward one real customer complaint with a "?" and require an answer in 24 hours.</span></div></div><div class="irow"><div class="ic">🤝</div><div class="tline"><span class="cat">Trust:</span> <span class="txt">Make "I got this" mean done — judge reports on credibility, not just intent.</span></div></div><div class="irow"><div class="ic">⏱</div><div class="tline"><span class="cat">Execution:</span> <span class="txt">Break five-year goals into 20 quarters and protect each one.</span></div></div><div class="irow"><div class="ic">🎯</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Pick opportunities as carefully as effort — and skip the pitches that aren't yours.</span></div></div><div class="irow"><div class="ic">🎤</div><div class="tline"><span class="cat">Transitions:</span> <span class="txt">Use your current job's assets to get public reps before you leave.</span></div></div><div class="irow"><div class="ic">💬</div><div class="tline"><span class="cat">Feedback:</span> <span class="txt">Care about the person first; tone carries a hard truth.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;Amazon is a place where high performers go to feel bad about themselves&#8221; <cite>— Ethan Evans</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Jeff fell into the flaw of every great man, which I think is having been right a lot.&#8221; <cite>— Ethan Evans</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;He seems to have changed radically since he left Amazon.&#8221; <cite>— Ethan Evans</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think Zuck has the takes the crown right now.&#8221; <cite>— Sam Parr</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Sometimes all you need is a B&#8221; <cite>— Ethan Evans</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The great opportunity thing is probably easier to change than how great you are.&#8221; <cite>— Sam Parr</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Ethan Evans:</b> Evans ends the year at about $700-800K from coaching on ~20 hours a week <span class="cmeta">annual income · $700-800K · 2026-12</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Amazon (AMZN)</b> <span class="rel">acquires</span> <b>Twitch</b> &mdash; $970M</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: <i>The Everything Store</i>; <i>Freakonomics</i>; <i>Leadership and Self-Deception</i> (Arbinger Institute); Naval Ravikant; Warren Buffett; Benjamin Graham; Bill Gates ("overestimate one year, underestimate ten"); Guy Kawasaki; Calvin Klein's "no such thing as bad publicity." <span class="tag">Sources</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Question-mark email</b> &mdash; A customer complaint Bezos forwarded with only "?", meaning explain within 24 hours.</div><div><b>Earnout</b> &mdash; Acquisition payments vesting over time, here inflated by Amazon's 5x stock rise.</div><div><b>Vesting cliff</b> &mdash; When large stock grants end and pay drops sharply, prompting departures.</div><div><b>Web Lab</b> &mdash; Amazon's system for running thousands of concurrent A/B tests.</div><div><b>Trust equation</b> &mdash; Exercise splitting trust into intimacy, credibility and integrity.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
