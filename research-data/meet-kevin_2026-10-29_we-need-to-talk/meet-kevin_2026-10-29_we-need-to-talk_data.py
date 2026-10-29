@@ -1,0 +1,182 @@
+META = {
+    "title": "We need to Talk.",
+    "channel": "Meet Kevin",
+    "speakers": "Kevin Paffrath",
+    "date": "2026-10-29",
+    "video_url": "https://www.youtube.com/watch?v=sP9bfi2Tbvg",
+    "thread_line": "5 threads · weak income data, credit-default-swap fear peaking, dovish Fed vs rising breakevens, ServiceNow's margin problem, still bullish into year-end",
+    "category": "market",
+    "region": "",
+}
+
+SNAPSHOT = [
+    "Q3 GDP beat at **3.4%** vs 3.2% expected and the GDP price index came in at 2.3% vs 3.2%, but personal income and spending both missed.",
+    "Kevin's real worry is the **labor market**: worker pricing power keeps weakening even though layoffs are still being absorbed.",
+    "Credit default swaps on Oracle, CoreWeave and Meta have **already peaked** and are falling, while most commentary still talks about them rising.",
+    "A dovish Kevin Warsh cut priced Fed hikes through Sept 2026 from 3.1 to 2.5. Rising 5-year breakevens are the bear case against that.",
+    "ServiceNow fell 24% because subscription costs rose 58% against 20.5% revenue growth, the same margin problem he flagged in July.",
+    "He calls Google's search trouble and ServiceNow's margins isolated problems, not a sign the AI trade is over. He's buying the hardware dip.",
+    "He predicts **all-time highs by Black Friday** and higher highs by year-end, with oil above $110 and no Iran deal as the main risk.",
+]
+
+THEMES = [
+    {
+        "id": "labor-canary",
+        "tags": ["macro-rates"],
+        "color": "amber",
+        "badge": "Watch closely",
+        "status": "Q3 GDP / PCE / PERSONAL INCOME — OCT 29, 2026",
+        "title": "GDP beats, but incomes are falling behind costs",
+        "lead": "The headline data looks fine; the crack is the gap between what workers earn and what things cost.",
+        "bullets": [
+            "Q3 GDP annualized q/q **3.4%** vs 3.2% expected; GDP price index 2.3% vs 3.2% expected.",
+            "Personal spending 0.5% vs 0.6% expected; personal income 0.2% vs 0.3% expected.",
+            "Around 60,000 potential layoffs (framed as buyouts) at **Microsoft** are expected to ripple through the economy over time.",
+            "Unemployment is low and 27-week unemployed levels are stable, so layoffs are still being absorbed. He says a labor-market recession is not close yet.",
+            "He calls the labor market 'the first canary in the coal mine' and the thing he is most worried about.",
+        ],
+        "quote": {"text": "incomes aren't keeping up with inflation and cost. And this is why a lot of people feel frustrated about the economy and eventually that boils over into a labor market recession", "cite": "— Kevin Paffrath"},
+        "watch": None,
+        "names": [
+            {"name": "Microsoft (MSFT)", "blurb": "Around 60,000 potential layoffs/buyouts flagged as a labor-market drag; raising $25B in debt after an earnings beat; CDS stable and about a third of Nvidia's.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+        ],
+    },
+    {
+        "id": "cds-peak",
+        "tags": ["ai-infra", "finance"],
+        "color": "green",
+        "badge": "Contrarian read",
+        "status": "CDS PEAKED OCT 13 — FALLING SINCE",
+        "title": "AI credit fear has already peaked, while commentary still says it's rising",
+        "lead": "Kevin reads falling credit default swaps on the AI-capex names as fear already behind the market.",
+        "bullets": [
+            "**Oracle** CDS peaked on October 13 and has fallen for two weeks; free cash flow is now expected to turn positive sooner than the market thought.",
+            "He called a floor at about $133 for Oracle and admits he was wrong: it went to about $127 before recovering.",
+            "**CoreWeave** CDS fell from about 1,150 to about 989. Still elevated, but past its peak.",
+            "Meta CDS has stabilized after two days of rising; Microsoft's is up since August but nothing unusual, and priced at about a third of Nvidia's.",
+            "The 'great suckening' of bond issuance since June: Meta $96B, Broadcom about $63B, SpaceX $40B plus another $40B, Microsoft $25B.",
+            "QQQ is red but still at 715, well above his 700-707 buy-the-dip zone.",
+        ],
+        "quote": {"text": "they're missing the boat because they've already peaked out and they've already come down. Fear has already once again peaked.", "cite": "— Kevin Paffrath"},
+        "watch": None,
+        "names": [
+            {"name": "Oracle (ORCL)", "blurb": "CDS falling since an Oct 13 peak; balance sheet strengthening, and free cash flow expected to turn positive sooner.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "CoreWeave (CRWV)", "blurb": "CDS off its peak but still elevated.", "stance": "UNCERTAIN", "conviction": "Low", "horizon": None},
+            {"name": "Meta (META)", "blurb": "CDS stabilizing; $96B debt raise.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Broadcom (AVGO)", "blurb": "About $63B debt raise.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "SpaceX", "blurb": "$40B plus another $40B raised.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Nvidia (NVDA)", "blurb": "CDS priced about 3x Microsoft's, which he finds surprising.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "fed-hikes",
+        "tags": ["macro-rates", "geopolitics"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "POST-FOMC — HIKES PRICED 3.1 → 2.5",
+        "title": "A dovish Warsh Fed versus rising inflation expectations",
+        "lead": "After a dovish Fed meeting, markets priced fewer hikes. Kevin thinks this points to one hike and done; breakevens say otherwise.",
+        "bullets": [
+            "Hikes priced through September 15, 2026 fell from **3.1** to 2.5 after the meeting; he had argued 3.1 was far too many.",
+            "A prediction-market contract on 2026 hikes was priced at about 21¢. He says an Iran deal could move it to 50-60%, or even about 80%, and take a hike off the table.",
+            "He thinks Warsh turned dovish because Trump told him an Iran deal was imminent. Either a deal is close or it was pre-election marketing.",
+            "Warsh's labor task force signals he doesn't want a hike to break the labor market or hurt consumption.",
+            "Bear case: the **5-year breakeven** rose on the dovish talk, back to where the Fed last hiked in September.",
+        ],
+        "quote": None,
+        "watch": "Kevin himself frames the 5-year breakeven as the argument that 'any bet you make on just one rate hike is going to fail'.",
+        "names": None,
+    },
+    {
+        "id": "servicenow",
+        "tags": ["software", "ai-infra"],
+        "color": "red",
+        "badge": "Red flag",
+        "status": "NOW −24% ON EARNINGS",
+        "title": "ServiceNow spends 58% more to earn 20% more",
+        "lead": "The 24% drop is a margin problem Kevin flagged in July: ServiceNow can't pass hyperscaler costs on to customers.",
+        "bullets": [
+            "On July 8 he flagged red flags on pricing power: revenue up 22%, subscription cost of goods sold up 46%.",
+            "On July 23, after earnings, he called pricing power yellow-red: margins still worsening while the company waits for hyperscaler costs to fall.",
+            "This quarter revenue rose about **20.5%** while subscription expenses rose 58%.",
+            "A filing line about 'accelerating customer value realization' to justify a higher professional-services gross loss is, in his words, an insane way to say 'we are spending 58% more to make 20% more'.",
+            "He contrasts it with **Salesforce** and Palantir, which he likes, and criticizes CNBC and stock videos that run filings through AI and miss the nuance.",
+        ],
+        "quote": {"text": "Anybody can read you the bull crap. You got to see what the underlying trend is. And that still takes a human to sus out.", "cite": "— Kevin Paffrath"},
+        "watch": None,
+        "names": [
+            {"name": "ServiceNow (NOW)", "blurb": "Down 24%; subscription expenses +58% vs revenue +20.5%; can't pass on hyperscaler costs.", "stance": "NEGATIVE VIEW", "conviction": "High", "horizon": None},
+            {"name": "Salesforce (CRM)", "blurb": "Contrasted as a software name he likes.", "stance": "POSITIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "Palantir (PLTR)", "blurb": "Benchmark ServiceNow hoped to join.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "still-bullish",
+        "tags": ["ai-infra", "semis", "biotech"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "BUYING THE HARDWARE DIP",
+        "title": "Google is isolated; the AI productivity rally is still ahead",
+        "lead": "Kevin treats Google's search trouble and ServiceNow's margins as isolated problems, and is buying cheap hardware and QQQ into year-end.",
+        "bullets": [
+            "**Google**: AI is eroding search, and search plus network ads is about $70B, more than half of revenue. Ads served to agent crawlers work worse.",
+            "He says the productivity gains from AI, not the infrastructure buildout, are only beginning: 'the real euphoric rally is ahead of us'.",
+            "On days dominated by debt issuance, money rotates out of hardware into Apple and healthcare. Before the open he called Apple and Eli Lilly, and both rose.",
+            "He is very bullish on healthcare and hardware, naming SK Hynix, Seagate, Western Digital and Nvidia; Amazon earnings were still due that day.",
+            "Risks: no Iran deal, oil stuck above **$110**, which would weigh on personal income and speed up job worries. Gold is still at $4,000.",
+            "Iran diplomacy: JD Vance sent a letter, with Trump's approval, to Iran's security chief to restart talks; hardliners are meeting Saudi officials around a Mecca summit with Pakistan and Turkey; Russia has offered to mediate.",
+        ],
+        "quote": {"text": "The real euphoric rally is ahead of us, not behind us. The real disruption is ahead of us, not behind us.", "cite": "— Kevin Paffrath"},
+        "watch": "Kevin sells a paid newsletter (the Alpha Report) and course, and cites his own premarket calls as proof while pitching an expiring coupon.",
+        "names": [
+            {"name": "Alphabet (GOOGL)", "blurb": "Search being eroded by AI; 'isolated disaster', 'don't care'.", "stance": "NEGATIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Apple (AAPL)", "blurb": "Premarket call to rise when money rotates out of hardware; it did.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Eli Lilly (LLY)", "blurb": "Healthcare rotation pick; 'very bullish healthcare'.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
+            {"name": "QQQ", "blurb": "Buying QQQ or its components between now and year-end is 'a good idea'.", "stance": "BUYING-ADDING", "conviction": "High", "horizon": "year-end 2026"},
+            {"name": "SK Hynix, Seagate (STX), Western Digital (WDC)", "blurb": "Hardware names he is very bullish on.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
+            {"name": "Amazon (AMZN)", "blurb": "Earnings still due the same day.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Gold", "blurb": "Still at $4,000.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F4C9", "tag": "Macro", "title": "Watch income and spending against inflation, not the unemployment rate, for the first sign of labor stress."},
+    {"icon": "\U0001F4B3", "tag": "Credit", "title": "Track the direction of CDS on Oracle, CoreWeave and Meta, not their level: the turn is the signal."},
+    {"icon": "\U0001F3E6", "tag": "Rates", "title": "Weigh the one-hike-and-done case against the 5-year breakeven before betting on it."},
+    {"icon": "\U0001F9FE", "tag": "Software", "title": "Before owning an AI software name, check subscription cost growth against revenue growth."},
+    {"icon": "\U0001F504", "tag": "Markets", "title": "On days dominated by debt issuance, look at healthcare and Apple as the rotation destination."},
+]
+
+HOT_TAKES = [
+    {"take": "I think we will be at all-time highs by black Friday and we'll be even higher highs by the end of the year maybe that's delusional but it's my take", "cite": "— Kevin Paffrath", "why": "dated market call"},
+    {"take": "Google is an isolated disaster", "cite": "— Kevin Paffrath", "why": "dismisses Google as a market signal"},
+    {"take": "this is an insane way to say we are spending 58% more to make 20% more", "cite": "— Kevin Paffrath", "why": "blunt ServiceNow call"},
+    {"take": "if we get a deal on Iran, this will probably go to like 80%. The the a hike will just be off the table", "cite": "— Kevin Paffrath", "why": "conditional rate call"},
+    {"take": "Kevin Worsh got a phone call from Donald Trump that a deal is imminent", "cite": "— Kevin Paffrath", "why": "speculative motive for a dovish Fed"},
+    {"take": "The real euphoric rally is ahead of us, not behind us.", "cite": "— Kevin Paffrath", "why": "AI bull conviction against bubble talk"},
+]
+
+CLAIMS = [
+    {"who": "Kevin Paffrath", "claim": "Markets reach all-time highs by Black Friday and higher highs by year-end.", "metric": "S&P/QQQ all-time high", "target": "new ATH", "by": "2026-11-27", "condition": None, "entity": "QQQ"},
+    {"who": "Kevin Paffrath", "claim": "The Fed hikes once and is done this cycle.", "metric": "Fed hikes this cycle", "target": "1", "by": None, "condition": None, "entity": None},
+    {"who": "Kevin Paffrath", "claim": "An Iran deal moves the prediction-market 2026-hikes contract to about 80% and takes a hike off the table.", "metric": "2026 Fed hikes contract", "target": "~80%", "by": "2026-12", "condition": "if an Iran deal is reached", "entity": None},
+    {"who": "Kevin Paffrath", "claim": "Buying QQQ or its components between now and year-end works out.", "metric": "QQQ return", "target": "positive", "by": "2026-12-31", "condition": None, "entity": "QQQ"},
+    {"who": "Kevin Paffrath", "claim": "QQQ buy-the-dip zone is 700-707.", "metric": "QQQ price", "target": "700-707", "by": None, "condition": None, "entity": "QQQ"},
+    {"who": "Kevin Paffrath", "claim": "Oracle free cash flow returns to positive sooner than the market expected.", "metric": "free cash flow", "target": "positive", "by": None, "condition": None, "entity": "Oracle (ORCL)"},
+    {"who": "Kevin Paffrath", "claim": "Amazon reports earnings the same day (Oct 29).", "metric": "earnings release", "target": None, "by": "2026-10-29", "condition": None, "entity": "Amazon (AMZN)"},
+]
+
+RELATIONS = []
+
+OTHER_NEWS = [
+    {"icon": "\U0001F916", "title": "Kevin cites a piece in *The Information* about advertisers starting to run ads aimed at AI agents.", "tag": "AI"},
+    {"icon": "\U0001F4FA", "title": "Sources referenced: The Information; a CNBC guest who couldn't explain the ServiceNow drop.", "tag": "Sources"},
+]
+
+GLOSSARY = [
+    {"term": "Credit default swap (CDS)", "def": "Insurance against a company defaulting; a rising price means more fear about its credit."},
+    {"term": "5-year breakeven", "def": "The inflation rate the bond market expects over five years, from the gap between regular and inflation-protected Treasury yields."},
+    {"term": "The great suckening", "def": "Kevin's name for the wave of large AI-capex bond issuance draining liquidity since June."},
+    {"term": "GDP price index", "def": "The inflation measure built into the GDP report."},
+]
