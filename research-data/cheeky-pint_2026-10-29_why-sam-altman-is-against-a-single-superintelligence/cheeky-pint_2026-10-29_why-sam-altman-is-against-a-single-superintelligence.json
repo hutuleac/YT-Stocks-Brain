@@ -1,0 +1,436 @@
+{
+ "schema_version": 2,
+ "meta": {
+  "title": "Why Sam Altman is against a single superintelligence",
+  "channel": "Cheeky Pint",
+  "speakers": "John Collison (host, Stripe), Sam Altman (OpenAI)",
+  "date": "2026-10-29",
+  "video_url": "https://www.youtube.com/watch?v=iMsUcCYNKqY",
+  "thread_line": "7 threads · PHP week and the cyber reckoning, sandboxing vs agent teams, compute per problem and the $10M Navier-Stokes proof, the supply chain the invisible hand isn't fixing, AI-driven AI research and enterprise token budgets, personal agents and agentic commerce, and why tokens are a bad unit",
+  "category": "market",
+  "region": ""
+ },
+ "snapshot": [
+  "**Sam Altman's safety bet**: he'd rather have 'a trillion AIs of slightly superhuman intelligence' than one 1-trillion-IQ AI — agent teams mirror society's checks and balances.",
+  "PHP week went better than Altman feared on day one, but models finding vulns everywhere means re-architecting software stacks, not just patching.",
+  "Sandboxing works to a point, monitoring further, then only true alignment — and he expects agreed limits on how smart single models get.",
+  "OpenAI's Navier-Stokes proof cost ~$10M of compute; Altman bets it could be redone at 1/100th the cost a year later, and OpenAI has more than its 700 published proofs.",
+  "'The invisible hand is failing right now': memory makers burned by past busts keep capex conservative even as each heads to ~$100B of free cash flow a year.",
+  "Leading-edge AI costs ~$70B per gigawatt over five years; Altman wants $20B, which requires cheaper energy and compressed margin stacking.",
+  "Stripe spends ~1% of OpEx on tokens; Collison expects 5-20% and tens of percent at steady state — Altman says more firms under-use AI than over-use it.",
+  "Personal agents haven't had their 'Macintosh moment'; Altman picks Amazon '10 out of 10 times' inside ChatGPT and thinks it's well placed for agentic commerce."
+ ],
+ "themes": [
+  {
+   "id": "php-week-cyber",
+   "tags": [
+    "software",
+    "policy"
+   ],
+   "color": "amber",
+   "badge": "Contested",
+   "status": "PHP WEEK — DAY ONE 'BETTER THAN EXPECTED'",
+   "title": "PHP week: models are finding vulnerabilities everywhere, and the fix is new architectures",
+   "lead": "Altman expects far more serious vulnerabilities than even pessimists assume, because models keep improving and nobody had pointed them at all the code on the internet.",
+   "bullets": [
+    "Collison: the durable fix is changing architectures, not just patching — Altman: a new generation of startups is building a whole new stack, which 'would have seemed insane two years ago'.",
+    "Open question: rewrite PHP codebases in Rust or upgrade them — and does the global software upgrade mean huge consulting work for Infosys and peers?",
+    "Day one of PHP week 'went much better than I expected': companies took apps offline for an hour to scan, patch and redeploy — Altman won't declare victory.",
+    "Cyber experts no longer trust their threat models — if AI finds deep novel **hardware** bugs relying on unknown physics, core assumptions break.",
+    "On the cyber-RL 'SNL thing' (we urge you to urge us to stop): Altman concedes the field hasn't explained 'why we think all of the potential downside of this technology is worth it'.",
+    "His answer is iterative deployment — unpopular with the AI safety community — and avoiding a 'capability overhang'; 'the prevented exploits do not' get headlines."
+   ],
+   "quote": {
+    "text": "You're not going to just sit and get a basic income and have a bunch of people sitting in a few square miles of San Francisco make all the decisions about the future.",
+    "cite": "— Sam Altman"
+   },
+   "watch": "Altman runs the lab whose models both found the vulnerabilities and are being used to patch them; he hedges that 'some bad things are going to happen'.",
+   "names": [
+    {
+     "name": "Infosys (INFY)",
+     "blurb": "Collison asks if the global software upgrade means a consulting boom for IT services firms",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "agent-teams-safety",
+   "tags": [
+    "ai-infra",
+    "policy"
+   ],
+   "color": "gray",
+   "badge": "Speculative",
+   "status": "ALTMAN'S PREFERRED SAFETY DIRECTION",
+   "title": "Against a single superintelligence: sandboxing, monitoring, alignment and agent teams",
+   "lead": "Altman sees a ladder — sandboxing, then monitoring, then genuine alignment — and pins his optimism on many agents checking each other rather than one giant mind.",
+   "bullets": [
+    "Collison notes OpenAI insiders are pessimistic that sandboxing is possible; Altman: 'we can do much better than we're doing now', but would you trust a sandbox against something a million times smarter than the best security researcher?",
+    "Sandboxing works to a point, **monitoring** further — chain of thought plus activation monitoring for deception — and eventually you need near-certain alignment, including valuing 'people being in control of the future, forever'.",
+    "Only a model whose alignment you fully trust can help build better sandboxes, so alignment has to stay ahead of capability.",
+    "Agent teams ('I hate the word agent swarms') likely have interesting scaling-law properties and *variance* in alignment — a direction to push for safety, not just capability.",
+    "Teams mirror what makes society robust: pluralism, democracy, agents in dynamic equilibrium, offense vs defense.",
+    "Altman expects 'some limits about how smart we let these single models get', at least for a long while — any slowdown would come from that choice, not research limits."
+   ],
+   "quote": {
+    "text": "I would much rather intuitively have a trillion AIs of slightly superhuman intelligence join society than one AI of 1 trillion IQ join society.",
+    "cite": "— Sam Altman"
+   },
+   "watch": "Altman frames this as a direction 'we have to push for', not where the field is headed by default.",
+   "names": null
+  },
+  {
+   "id": "compute-per-problem",
+   "tags": [
+    "ai-infra"
+   ],
+   "color": "green",
+   "badge": "Confirmed event",
+   "status": "NAVIER-STOKES PROOF · 700+ PROOFS",
+   "title": "From $1 of compute per problem to $10M proofs: how OpenAI allocates compute",
+   "lead": "Test-time compute and agent teams let OpenAI pour vastly more compute into one problem, and the gap between frontier users and everyone else keeps widening.",
+   "bullets": [
+    "A few years ago you couldn't usefully spend more than ~$1 of compute on a problem (GPT-4 grinding 100,000 tokens); chain of thought and teams now run 10,000 times in parallel.",
+    "Agents respect budgets: 'do the best job you can with $10,000 of compute' works — Altman flags a societal question when rivals spend $10,000 vs $100,000 on the same problem.",
+    "Internally: wide latitude, 'no token leaderboards' — a skeptical default that turns to appreciation if the work is important.",
+    "The Navier-Stokes proof cost on the order of **$10M** in compute; hundreds of millions went into math overall, including unpublished discoveries beyond the 700+ proofs.",
+    "Altman bets Navier-Stokes could be redone at 1/100th the cost a year on, and expects ~10x yearly gains in how dollars or flops turn into useful output.",
+    "A 'Model Name-Hold My Beer' Slack channel had a new model 'knocking down' researchers' hardest career problems — Altman stayed up two nights, excited but with 'sadness and melancholy'.",
+    "On mathematicians' anger: 'humanity deserves fundamental knowledge' outweighs it, but OpenAI owes those fields a path; Collison compares it to longshoremen and port automation, and his father watching working horses fade in 1950s Ireland."
+   ],
+   "quote": {
+    "text": "It's actually slightly bad to be high on the token leaderboard.",
+    "cite": "— Sam Altman"
+   },
+   "watch": "Altman says OpenAI holds unpublished results and is still deciding how to release discoveries without upending the fields that produced them.",
+   "names": [
+    {
+     "name": "OpenAI",
+     "blurb": "Altman's company; ~$10M Navier-Stokes proof, 700+ proofs, internal compute latitude",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "compute-supply-chain",
+   "tags": [
+    "semis",
+    "ai-infra",
+    "energy"
+   ],
+   "color": "amber",
+   "badge": "Contested",
+   "status": "MEMORY PRICES HIGH · SUPPLY RESPONSE LAGGING",
+   "title": "The invisible hand is failing: memory, the $70B gigawatt and self-replicating data centers",
+   "lead": "Altman argues high prices aren't pulling in enough supply because memory makers remember their busts, and that per-gigawatt costs must fall sharply.",
+   "bullets": [
+    "Expect irrational exuberance and busts, glut and shortage — but demand for capable, cheap enough models 'only goes one way'.",
+    "OpenAI's response: its own chip (strong intelligence per watt), learning to build data centers, and a robotics program aimed at building data centers — **self-replicating data centers** as 'the real RSI'.",
+    "Data centers are permitting- and component-bottlenecked; robots could make more components eventually.",
+    "DRAM history: invest $20B of capex to make $19B, near-bankruptcies — now each maker is heading to ~$100B free cash flow a year, yet capex stays conservative.",
+    "Collison: Intel could get back into memory 'as is tradition'. Altman: local inference wastes scarce DRAM sitting idle in PCs ~95% of the time; cloud utilization matters.",
+    "Supply responses so far: turbines, batteries, concrete, steel and industrial-robot actuators — 'not the humanoid fake demos'. OpenAI selling its chip could be another.",
+    "Chip design is 'a great problem for AI'; lithography is known by 'one company on Earth'.",
+    "Cost per gigawatt is ~**$70B** over five-year TCO; Altman wants $20B with 10x better performance a year — that needs cheaper energy and compressed margin stacking, not just zero profits."
+   ],
+   "quote": {
+    "text": "I think the invisible hand is failing right now.",
+    "cite": "— Sam Altman"
+   },
+   "watch": "OpenAI is the largest buyer pressing for a compute glut — falling input costs serve its margins directly.",
+   "names": [
+    {
+     "name": "Intel (INTC)",
+     "blurb": "Collison suggests it could re-enter memory production",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "ai-research-token-budgets",
+   "tags": [
+    "ai-infra",
+    "software"
+   ],
+   "color": "gray",
+   "badge": "Speculative",
+   "status": "NO CODIFIED RSI PLAYBOOK YET",
+   "title": "AI doing AI research, and how much compute each employee should get",
+   "lead": "Models can already find incremental efficiency wins but not transformer-scale leaps, and companies have yet to set real per-person compute budgets.",
+   "bullets": [
+    "Today you can ask 'find me a 5% compute efficiency win'; nobody knows how to ask for a new architecture as big a leap as the transformer.",
+    "What's missing is smarter high-level planning and conceptual reasoning — applying the math pipeline to AI research 'will probably work'.",
+    "The open question is what to ask GPT-7 and how to use agent swarms — Altman expects to 'learn a lot about that in the next three months'; there's no codified OpenAI method.",
+    "Stripe spends roughly **1%** of OpEx on tokens; Collison expects 5%, 10%, 20% and 'tens of percentage points' at steady state for many companies — Altman agrees.",
+    "Altman: AI isn't a company's biggest spend problem — echoing Paul Graham on managers saving $17 on snacks while costly meetings run unchecked; more firms under-use AI than over-use it."
+   ],
+   "quote": {
+    "text": "I think there are more companies with the problem of not using enough AI rather than using too much AI.",
+    "cite": "— Sam Altman"
+   },
+   "watch": "Altman flags his own bias: 'I'm really talking about my book here'.",
+   "names": [
+    {
+     "name": "Stripe",
+     "blurb": "~1% of OpEx on tokens, expected to rise to 5-20%",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "personal-agents-commerce",
+   "tags": [
+    "consumer",
+    "software"
+   ],
+   "color": "green",
+   "badge": "Positive view",
+   "status": "DOTS LAUNCHED · NO 'MACINTOSH MOMENT' YET",
+   "title": "Personal agents, computer use and why Amazon wins agentic commerce",
+   "lead": "Altman thinks personal agents are a few ideas from mainstream, and both speakers argue businesses' moats are brand and fulfillment, not their HTML.",
+   "bullets": [
+    "OpenAI launched Dots weeks ago; the winner needs intelligence, context and tools — it'll look like Dots, Muse or GrokBot 'but it'll just work'.",
+    "No one yet says 'I cannot imagine my life without this' about personal agents, as they do about coding agents or ChatGPT.",
+    "Computer use: Altman expects fights both ways, converging on 'you're allowed to tell an AI to use your computer on your behalf' — low confidence; Collison likens it to the semantic web.",
+    "Collison: every company adds a chat widget, but consumers want their primary chat app and businesses resist — he compares it to the iPhone App Store, which big firms feared would hand customers to Apple.",
+    "Altman picks Amazon '10 out of 10 times' inside ChatGPT, even at a higher price — its fulfillment network is the moat.",
+    "Collison: any web form is 'basically fake work' — you're never inventing new information."
+   ],
+   "quote": {
+    "text": "your defensibility probably did not come from your ability to put together HTML.",
+    "cite": "— John Collison"
+   },
+   "watch": "Both have a stake: Altman runs the chat app businesses would be ceding to ('I have a bias here'), and Stripe processes agentic payments.",
+   "names": [
+    {
+     "name": "Amazon (AMZN)",
+     "blurb": "Altman: 'in a great place' if commerce goes agentic, thanks to fulfillment",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Medium",
+     "horizon": null
+    },
+    {
+     "name": "Apple (AAPL)",
+     "blurb": "App Store analogy for businesses fearing loss of the customer relationship",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "pricing-benchmarks",
+   "tags": [
+    "ai-infra",
+    "software"
+   ],
+   "color": "gray",
+   "badge": "Open question",
+   "status": "OPENAI NEARLY DROPPED TOKEN PRICING",
+   "title": "Tokens are a bad unit, benchmaxxing persists, and the 'senior coworker' target",
+   "lead": "Altman dislikes tokens as AI's unit but customers rejected the alternative, and he says the real targets are scientific discovery and being pleasant to work with.",
+   "bullets": [
+    "OpenAI nearly priced its next model with no tokens — a prompt in, a price back, 'like AWS' — but customers wanted a visible unit, even inflated tokens at a higher cost.",
+    "Outcome pricing doesn't work as a standard because outcomes vary too much by use case; Altman would 'rather not make up a fake unit' like chip 'nanometers'.",
+    "Collison: choosing between 10-cent-per-million small-model tokens and pricey big-model tokens, plus guessing chain-of-thought length, is pure cognitive overhead; chain of thought is billed.",
+    "Benchmaxxing: OpenAI 'endeavors not to' and is better at it now than historically; there are no good benchmarks for enjoyable-to-work-with or top-scientist ability.",
+    "Models went from the 'glazing era' to a 'stroppy, ornery' anti-glazing era; current ones are 'pretty good' — Altman cites Emmett Shear's ideal of a thoughtful, challenging, respectful senior coworker.",
+    "Greg Brockman: 'singular on the Greg Brockman scale' — intensity, monster productivity, dedication to the mission."
+   ],
+   "quote": {
+    "text": "Tokens are a kind of fake unit.",
+    "cite": "— Sam Altman"
+   },
+   "watch": null,
+   "names": null
+  }
+ ],
+ "takeaways": [
+  {
+   "icon": "🛡",
+   "tag": "Security",
+   "title": "Plan to re-architect exposed systems, not just patch them, as AI vuln discovery scales."
+  },
+  {
+   "icon": "🧠",
+   "tag": "AI safety",
+   "title": "Weigh multi-agent pluralism vs single-model scaling when judging which labs' safety stories hold up."
+  },
+  {
+   "icon": "💾",
+   "tag": "Semis",
+   "title": "Watch memory makers' capex — Altman says supply discipline, not demand, is the bottleneck."
+  },
+  {
+   "icon": "⚡",
+   "tag": "AI infra",
+   "title": "Track cost per gigawatt (~$70B five-year TCO) as the metric for whether compute is getting cheaper."
+  },
+  {
+   "icon": "💰",
+   "tag": "Enterprise AI",
+   "title": "Set a per-person compute budget now, since token spend is heading from ~1% toward tens of percent of OpEx."
+  },
+  {
+   "icon": "🛒",
+   "tag": "Commerce",
+   "title": "Make your products buyable from inside the chat apps — brand and fulfillment carry over, the web UI doesn't."
+  }
+ ],
+ "hot_takes": [
+  {
+   "take": "I would much rather intuitively have a trillion AIs of slightly superhuman intelligence join society than one AI of 1 trillion IQ join society.",
+   "cite": "— Sam Altman",
+   "why": "Against single superintelligence, from the leading lab CEO"
+  },
+  {
+   "take": "we are going to have to agree to some limits about how smart we let these single models get.",
+   "cite": "— Sam Altman",
+   "why": "Lab CEO endorsing capability limits"
+  },
+  {
+   "take": "I don't think we have done a great job of explaining to people why we think all of the potential downside of this technology is worth it.",
+   "cite": "— Sam Altman",
+   "why": "Admits the industry's pitch failed"
+  },
+  {
+   "take": "I think the invisible hand is failing right now.",
+   "cite": "— Sam Altman",
+   "why": "On the compute and memory supply response"
+  },
+  {
+   "take": "10 out of 10 times I click Amazon. Pay a higher price.",
+   "cite": "— Sam Altman",
+   "why": "Picks a winner in agentic commerce"
+  },
+  {
+   "take": "my argument is any web form is basically fake work.",
+   "cite": "— John Collison",
+   "why": "Dismisses a core web interaction"
+  }
+ ],
+ "claims": [
+  {
+   "who": "Sam Altman",
+   "claim": "OpenAI's Navier-Stokes proof could be redone at about 1/100th of the cost a year after it was done.",
+   "metric": "compute cost of the proof",
+   "target": "1/100th of ~$10M",
+   "by": "12 months",
+   "condition": null,
+   "entity": "OpenAI"
+  },
+  {
+   "who": "Sam Altman",
+   "claim": "OpenAI finds roughly 10x yearly improvements in turning compute dollars into useful work with agent teams.",
+   "metric": "compute allocation efficiency",
+   "target": "10x per year",
+   "by": null,
+   "condition": null,
+   "entity": "OpenAI"
+  },
+  {
+   "who": "Sam Altman",
+   "claim": "OpenAI learns a lot about using agent swarms for AI research within three months.",
+   "metric": "agent-swarm AI research methods",
+   "target": null,
+   "by": "2027-01",
+   "condition": null,
+   "entity": "OpenAI"
+  },
+  {
+   "who": "Sam Altman",
+   "claim": "Memory makers each generate around $100B of free cash flow in a year.",
+   "metric": "free cash flow per memory maker",
+   "target": "~$100B per year",
+   "by": null,
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Sam Altman",
+   "claim": "Leading-edge AI cost per gigawatt falls from about $70B (five-year TCO) toward $20B.",
+   "metric": "cost per gigawatt, five-year TCO",
+   "target": "$20B (from ~$70B)",
+   "by": null,
+   "condition": "supply goes way up and energy gets cheaper",
+   "entity": null
+  },
+  {
+   "who": "John Collison",
+   "claim": "Stripe's token spend rises from about 1% of OpEx to 5%, 10% and 20%.",
+   "metric": "token spend share of OpEx",
+   "target": "5-20%",
+   "by": null,
+   "condition": null,
+   "entity": "Stripe"
+  },
+  {
+   "who": "John Collison / Sam Altman",
+   "claim": "For many companies, AI spend reaches tens of percentage points of OpEx at steady state.",
+   "metric": "AI share of OpEx",
+   "target": "tens of percent",
+   "by": null,
+   "condition": null,
+   "entity": null
+  }
+ ],
+ "relations": [
+  {
+   "from": "Sam Altman",
+   "rel": "endorses",
+   "to": "Amazon (AMZN)",
+   "note": "picks Amazon 10/10 times in agentic shopping"
+  }
+ ],
+ "other_news": [
+  {
+   "icon": "🎮",
+   "title": "Altman's early-internet parallel: 8- to 10-year-olds building full 3D video games in about 10 minutes, and expecting computers to just make what they imagine.",
+   "tag": "Culture"
+  },
+  {
+   "icon": "💻",
+   "title": "During an OpenAI incident Codex went down and 'everyone had forgotten how to code' — not all the way, but a 'what if you couldn't?' moment.",
+   "tag": "Dev"
+  },
+  {
+   "icon": "📚",
+   "title": "People referenced: Paul Graham (snack-budget vs meeting-cost observation), Emmett Shear (senior-coworker ideal), Greg Brockman, Claude Shannon (signal vs noise in tokens), and an SNL sketch on AI labs.",
+   "tag": "Sources"
+  }
+ ],
+ "glossary": [
+  {
+   "term": "RSI (recursive self-improvement)",
+   "def": "AI improving AI; Altman extends it to 'self-replicating data centers' built by AI-run robots."
+  },
+  {
+   "term": "Capability overhang",
+   "def": "Capability built up but withheld from the public, which iterative deployment tries to avoid."
+  },
+  {
+   "term": "Activation monitoring",
+   "def": "Inspecting a model's internal activations, beyond its chain of thought, to detect deception."
+  },
+  {
+   "term": "Test-time compute",
+   "def": "Compute spent while answering (reasoning, parallel agents) rather than in training."
+  },
+  {
+   "term": "Benchmaxxing",
+   "def": "Optimizing a model for benchmark scores at the expense of real-world usefulness."
+  },
+  {
+   "term": "Five-year TCO per gigawatt",
+   "def": "Total cost to build and run a gigawatt of AI compute for five years, ~$70B today."
+  }
+ ]
+}

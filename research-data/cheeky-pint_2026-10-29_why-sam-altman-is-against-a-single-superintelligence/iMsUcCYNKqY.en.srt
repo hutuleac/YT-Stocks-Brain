@@ -1,0 +1,4891 @@
+1
+00:00:00,200 --> 00:00:02,240
+We're going off script.
+Just having a beer.
+
+2
+00:00:03,169 --> 00:00:06,679
+It's not the first non-Guinness,
+but it is the first IPA.
+
+3
+00:00:07,280 --> 00:00:09,800
+There's a first time for everything.
+Cheers.
+
+4
+00:00:10,009 --> 00:00:10,801
+Cheers.
+
+5
+00:00:12,762 --> 00:00:14,759
+I want to ask about PHP week.
+
+6
+00:00:15,560 --> 00:00:18,916
+Yeah.
+First off, how did it...
+
+7
+00:00:19,000 --> 00:00:22,320
+Why did it take so long
+to find these bugs?
+
+8
+00:00:22,480 --> 00:00:23,320
+Because it sounds like there were—
+
+9
+00:00:23,403 --> 00:00:25,515
+You mean why did it take the 20 years,
+or why did it take the last few months?
+
+10
+00:00:25,600 --> 00:00:27,980
+No, why did it take...
+Exactly, why did it take a year?
+
+11
+00:00:28,236 --> 00:00:30,679
+Maybe start by explaining the bug.
+Or the problem.
+
+12
+00:00:31,657 --> 00:00:35,679
+So the problem is that although we have
+known for a while that these models are
+
+13
+00:00:36,520 --> 00:00:40,316
+getting good at finding
+vulnerabilities in the wild.
+
+14
+00:00:40,399 --> 00:00:44,475
+A) They continue to get
+better fairly rapidly,
+
+15
+00:00:44,560 --> 00:00:48,475
+and B) People just hadn't really used
+them to go look at everything out there.
+
+16
+00:00:48,560 --> 00:00:51,400
+There's a lot of surface area
+and a lot of code on the internet.
+
+17
+00:00:52,240 --> 00:00:57,840
+And, as people have started to do that,
+I think we're going to find that we are in
+
+18
+00:00:59,240 --> 00:01:02,160
+a world of many more serious
+vulnerabilities than we expect.
+
+19
+00:01:02,320 --> 00:01:05,599
+Even though many people who have been
+following this for a while expect a lot.
+
+20
+00:01:05,920 --> 00:01:08,280
+Yeah, I just feel like a lot
+of the discussion ends up being
+
+21
+00:01:08,364 --> 00:01:10,000
+around we need to fix the software.
+
+22
+00:01:10,239 --> 00:01:11,920
+And sure, yeah,
+we should fix the software.
+
+23
+00:01:12,319 --> 00:01:15,559
+But also, we maybe need to change
+the architectures, which is harder,
+
+24
+00:01:16,200 --> 00:01:17,786
+but a much more durable fix.
+
+25
+00:01:18,079 --> 00:01:20,121
+That seems to me what needs to happen.
+Yeah.
+
+26
+00:01:20,359 --> 00:01:23,480
+It would seem really hard, except we
+have this amazing new tool to do it with.
+
+27
+00:01:24,079 --> 00:01:26,039
+So, I kind of think that's
+what's going to happen.
+
+28
+00:01:26,359 --> 00:01:29,560
+And you're already seeing,
+like, a new generation of startups talking
+
+29
+00:01:29,673 --> 00:01:32,796
+about building this
+new kind of internet or new kind
+
+30
+00:01:32,879 --> 00:01:36,599
+of application architecture for this world
+where you assume that the models
+
+31
+00:01:36,719 --> 00:01:37,920
+get smarter and smarter.
+
+32
+00:01:38,140 --> 00:01:40,956
+What do you think the global
+software upgrade looks like?
+
+33
+00:01:41,040 --> 00:01:45,840
+For example, is a PHP codebase just a bad
+idea and you should rewrite a nice,
+
+34
+00:01:45,959 --> 00:01:47,079
+clean version in Rust?
+
+35
+00:01:47,400 --> 00:01:49,160
+Or, do we upgrade PHP?
+
+36
+00:01:49,400 --> 00:01:50,836
+But yeah, as we...
+
+37
+00:01:50,920 --> 00:01:55,519
+Everyone thinks that we need to kind
+of upgrade all hand-spun software.
+
+38
+00:01:56,120 --> 00:01:58,200
+Just what form will that actually take?
+
+39
+00:01:58,480 --> 00:02:01,356
+Is this huge for Infosys
+and all those guys?
+
+40
+00:02:01,439 --> 00:02:03,899
+Because, it's going to be a lot
+more software consulting projects.
+
+41
+00:02:04,040 --> 00:02:06,480
+I mean, people are talking more and more
+about just,
+
+42
+00:02:07,680 --> 00:02:14,475
+"Let's re-architect what it means to be
+a router, or an operating system,
+
+43
+00:02:14,560 --> 00:02:18,280
+or an application." And,
+you know,
+
+44
+00:02:18,919 --> 00:02:21,559
+I've seen some of these new startups
+saying that they're just going
+
+45
+00:02:21,644 --> 00:02:22,840
+to make a whole new stack.
+
+46
+00:02:23,479 --> 00:02:25,739
+And that would have seemed
+insane two years ago.
+
+47
+00:02:26,120 --> 00:02:27,800
+You would have been like, "There's no way.
+There's too much surface.
+
+48
+00:02:27,883 --> 00:02:30,439
+You can't write all that."
+And now maybe soon you can.
+
+49
+00:02:30,901 --> 00:02:35,116
+I would bet that we have a completely new
+sort of model of how we
+
+50
+00:02:35,199 --> 00:02:36,519
+make systems and networks.
+
+51
+00:02:37,324 --> 00:02:39,200
+What else reminds you
+of the early internet days?
+
+52
+00:02:39,408 --> 00:02:42,679
+The thing that most reminded
+me of the early internet was...
+
+53
+00:02:43,599 --> 00:02:48,879
+There is this spirit of just unbelievable,
+creative unleash
+
+54
+00:02:50,280 --> 00:02:52,120
+in people using these tools.
+
+55
+00:02:52,919 --> 00:02:54,280
+You see it in kids particularly.
+Mm-hmm.
+
+56
+00:02:54,364 --> 00:02:58,116
+And again, maybe this is just because I
+remember what it was like when I first got
+
+57
+00:02:58,199 --> 00:03:01,395
+a computer with internet and I could do
+all these things that adults just
+
+58
+00:03:01,479 --> 00:03:02,840
+couldn't even think to ask for.
+
+59
+00:03:03,808 --> 00:03:08,115
+And watching an 8- or 10-year-old
+make a complete video game,
+
+60
+00:03:08,199 --> 00:03:12,159
+with some crazy ideas they have
+that no adult would really have.
+
+61
+00:03:12,280 --> 00:03:12,439
+Yes.
+
+62
+00:03:12,524 --> 00:03:15,075
+And expect that to just be the way
+that technology is going to work
+
+63
+00:03:15,159 --> 00:03:17,656
+for the rest of their lives.
+In fact, getting better and better.
+
+64
+00:03:18,240 --> 00:03:21,516
+And, just this constant "I'm going to make
+useful stuff for me,
+
+65
+00:03:21,599 --> 00:03:22,960
+and show it to my friends."Yes.
+
+66
+00:03:23,439 --> 00:03:25,915
+We had to suffer when I was a kid
+to make a piece of software.
+
+67
+00:03:26,000 --> 00:03:27,199
+Yes.
+That barely did anything.
+
+68
+00:03:27,283 --> 00:03:29,555
+And now you can have
+a full, 3D video game.
+
+69
+00:03:29,639 --> 00:03:31,839
+Unbelievable, anything you
+can think of in 10 minutes.
+
+70
+00:03:31,924 --> 00:03:34,836
+That reminds me of the early internet,
+including the just...
+
+71
+00:03:34,919 --> 00:03:35,965
+These people.
+
+72
+00:03:36,466 --> 00:03:38,676
+They're never going be mind-blown by that,
+because that's always what
+
+73
+00:03:38,759 --> 00:03:40,155
+they expect out of the world.
+
+74
+00:03:40,240 --> 00:03:44,640
+Any
+ideas they can come up with,
+
+75
+00:03:44,759 --> 00:03:47,879
+anything they want to create,
+anything that they think might be useful,
+
+76
+00:03:47,963 --> 00:03:50,556
+anything that they just need
+to make their lives better.
+
+77
+00:03:50,639 --> 00:03:52,319
+The computer's supposed to make it.
+
+78
+00:03:52,816 --> 00:03:56,996
+There was a crazy moment at OpenAI where
+we had a SEV...
+
+79
+00:03:57,080 --> 00:03:58,196
+And Codex went down.
+
+80
+00:03:58,639 --> 00:04:00,159
+And everyone had forgotten how to code.
+
+81
+00:04:00,282 --> 00:04:01,636
+I mean, not all the way.
+
+82
+00:04:01,719 --> 00:04:03,556
+But, it was like a "Whoa,
+what if you couldn't?"
+
+83
+00:04:03,639 --> 00:04:03,799
+Yes.
+
+84
+00:04:04,243 --> 00:04:08,156
+I remember when I was a student,
+and I would meet the really old guys.
+
+85
+00:04:08,240 --> 00:04:10,756
+And they would, once in a while,
+
+86
+00:04:10,840 --> 00:04:15,719
+pull out their gigantic Xerox Alto disk.
+
+87
+00:04:16,519 --> 00:04:18,515
+Or they would pull out their...
+
+88
+00:04:18,600 --> 00:04:20,316
+Line-by-line written assembly.
+
+89
+00:04:20,399 --> 00:04:21,679
+Or they would pull out their punch cards.
+
+90
+00:04:21,764 --> 00:04:23,120
+And I felt...
+
+91
+00:04:24,000 --> 00:04:27,516
+It is incredible to me that you
+all bootstrapped us to this point.
+
+92
+00:04:27,600 --> 00:04:28,480
+Yes.
+Doing it this way.
+
+93
+00:04:28,564 --> 00:04:31,160
+Yes, no, I agree.
+And keeping programs in your head, right?
+
+94
+00:04:31,244 --> 00:04:36,280
+You know, programs running the first time
+after, 100s–1,000s of lines were written.
+
+95
+00:04:37,569 --> 00:04:39,379
+No, there's few lost arts like that.
+
+96
+00:04:40,000 --> 00:04:41,600
+Going back to the cyber side of things.
+
+97
+00:04:41,684 --> 00:04:46,916
+In retrospect, was the cyber RL a mistake?
+
+98
+00:04:47,000 --> 00:04:50,040
+Or, did we just have to go there?
+
+99
+00:04:51,639 --> 00:04:53,395
+It's a little like the SNL thing of...
+
+100
+00:04:53,480 --> 00:04:55,680
+We urge you, to urge us to stop.
+
+101
+00:04:56,920 --> 00:04:59,360
+It's like the models are getting
+very good at cyber capabilities.
+
+102
+00:04:59,444 --> 00:05:03,080
+I mean, they are getting very good,
+but not just totally emergently.
+
+103
+00:05:03,762 --> 00:05:06,980
+Look, the reason that SNL thing was
+so funny is because it was so true.
+
+104
+00:05:07,120 --> 00:05:10,840
+Humor like that doesn't stick
+unless there's an element of...
+
+105
+00:05:11,199 --> 00:05:14,079
+Clearly pointing out a ridiculous
+but true thing about society.
+
+106
+00:05:14,439 --> 00:05:15,956
+Or someone.
+
+107
+00:05:16,040 --> 00:05:21,280
+And the cyber thing,
+there is a point which is like, "Okay.
+
+108
+00:05:22,439 --> 00:05:24,240
+Sure.
+The models are really good at cyber.
+
+109
+00:05:24,324 --> 00:05:25,480
+But, who asked for this?
+
+110
+00:05:26,158 --> 00:05:27,596
+Why are you doing this?"
+
+111
+00:05:27,680 --> 00:05:30,995
+One of my big disappointments,
+criticisms of our field or whatever—and I
+
+112
+00:05:31,079 --> 00:05:33,319
+think maybe the cyber model's
+getting good at cyber.
+
+113
+00:05:33,403 --> 00:05:37,079
+Cyber is an example of this is: I don't
+think we have done a great job
+
+114
+00:05:37,254 --> 00:05:40,676
+of explaining to people
+why we think all of the potential
+
+115
+00:05:40,759 --> 00:05:42,740
+downside of this technology is worth it.
+
+116
+00:05:43,079 --> 00:05:47,195
+The caricature of this is
+people feel like we're like...
+
+117
+00:05:47,279 --> 00:05:48,079
+Fine.
+
+118
+00:05:48,399 --> 00:05:50,239
+You say the model's going
+to cure cancer, someday.
+
+119
+00:05:50,324 --> 00:05:52,436
+Maybe it will.
+And if so, I guess that's good.
+
+120
+00:05:52,519 --> 00:05:54,759
+And you say it's going
+to make stuff cheaper.
+
+121
+00:05:56,120 --> 00:05:59,040
+And okay, maybe I already see that's good
+and I get access to medical
+
+122
+00:05:59,124 --> 00:06:00,460
+advice or legal advice.
+
+123
+00:06:00,560 --> 00:06:03,947
+But, then you paint this picture
+of the future where it's like
+
+124
+00:06:04,447 --> 00:06:06,160
+a new industrial revolution.
+
+125
+00:06:06,600 --> 00:06:09,040
+And maybe the last one wasn't
+that good and this one sounds worse.
+
+126
+00:06:09,124 --> 00:06:14,156
+And I will have no job,
+no ability to have control,
+
+127
+00:06:14,240 --> 00:06:16,720
+or choice, or freedom of my future.
+
+128
+00:06:17,399 --> 00:06:20,479
+And AI is so dangerous that you're going
+to have to have a crazy surveillance
+
+129
+00:06:20,564 --> 00:06:21,860
+state so we don't all die.
+
+130
+00:06:22,480 --> 00:06:23,780
+This is a terrible—I'm with you so far.
+
+131
+00:06:24,319 --> 00:06:25,800
+This is a terrible sales pitch.
+Yeah.
+
+132
+00:06:28,199 --> 00:06:31,920
+One of the things that I am most proud
+of about OpenAI is even when it has been
+
+133
+00:06:32,759 --> 00:06:35,920
+hugely unpopular in the AI safety
+community for us to push for
+
+134
+00:06:36,839 --> 00:06:42,399
+iterative deployment and putting
+these tools in the hands of people,
+
+135
+00:06:43,199 --> 00:06:44,759
+we have really stuck to that principle.
+
+136
+00:06:44,959 --> 00:06:46,715
+And I think this is
+the only kind of good path.
+
+137
+00:06:46,800 --> 00:06:47,439
+I think people...
+
+138
+00:06:47,524 --> 00:06:51,156
+It's not enough to tell people: "You are
+going to get the model to do
+
+139
+00:06:51,240 --> 00:06:52,199
+these great things for you."
+
+140
+00:06:52,283 --> 00:06:55,000
+It's got to be:
+"We are going to enable you to have
+
+141
+00:06:55,519 --> 00:06:58,755
+a better life that you define
+for yourself, to do useful things.
+
+142
+00:06:58,839 --> 00:07:03,995
+You're not going to just sit and
+get a basic income and have a bunch
+
+143
+00:07:04,079 --> 00:07:06,315
+of people sitting in a few square miles
+of San Francisco make all
+
+144
+00:07:06,399 --> 00:07:07,885
+the decisions about the future."
+
+145
+00:07:08,160 --> 00:07:10,640
+Iterative deployment is this idea that you
+just have to get the advances
+
+146
+00:07:10,723 --> 00:07:12,355
+out there and you can't...
+
+147
+00:07:12,439 --> 00:07:14,300
+Stopper them up inside the government—
+
+148
+00:07:14,934 --> 00:07:15,956
+I mean, not all.
+
+149
+00:07:16,040 --> 00:07:18,840
+You still have to make them safe
+before you put them out there.
+
+150
+00:07:18,923 --> 00:07:20,689
+You can't cause havoc in the world.
+
+151
+00:07:20,920 --> 00:07:24,720
+But, building up a capability
+overhang is a thing to fight against.
+
+152
+00:07:25,319 --> 00:07:28,036
+That directionally speaking, yes,
+you want to get this into the world.
+
+153
+00:07:28,120 --> 00:07:29,079
+You want to get this into people's hands.
+
+154
+00:07:29,163 --> 00:07:31,519
+And you want to let people use
+the technology to figure out
+
+155
+00:07:31,603 --> 00:07:32,939
+all these wonderful things.
+
+156
+00:07:33,161 --> 00:07:35,759
+The exploits get a lot of headlines.
+
+157
+00:07:36,319 --> 00:07:38,079
+The prevented exploits do not.
+
+158
+00:07:38,879 --> 00:07:41,600
+How quickly are people making
+progress with cyber blue?
+
+159
+00:07:42,439 --> 00:07:45,079
+I don't want to declare victory at all
+on the PHP thing, because I
+
+160
+00:07:45,163 --> 00:07:46,459
+still don't think we know.
+
+161
+00:07:47,079 --> 00:07:48,939
+And I assume some bad
+things are going to happen.
+
+162
+00:07:49,240 --> 00:07:53,235
+Relative to my worst fears,
+if I can think back 10 days ago,
+
+163
+00:07:53,319 --> 00:07:56,639
+the first day of that went
+much better than I expected.
+
+164
+00:07:59,079 --> 00:08:01,075
+And,
+we heard a bunch of stories from people
+
+165
+00:08:01,160 --> 00:08:05,756
+that were using our models
+to not only build patches and build cyber
+
+166
+00:08:05,839 --> 00:08:08,275
+defense, but individual companies who were
+just: "I need to just do
+
+167
+00:08:08,360 --> 00:08:09,436
+a quick scan and deployment.
+
+168
+00:08:09,519 --> 00:08:11,036
+I'm going to take
+my thing down for an hour.
+
+169
+00:08:11,120 --> 00:08:12,636
+I'm going to use this thing and I want
+to put it back up because
+
+170
+00:08:12,720 --> 00:08:13,956
+my application's offline."
+
+171
+00:08:14,040 --> 00:08:16,756
+Now I feel like I really jinxed it and I
+shouldn't have said that, but the first
+
+172
+00:08:16,839 --> 00:08:18,315
+day did go a lot better than I thought.
+
+173
+00:08:18,399 --> 00:08:20,339
+And I think people have
+been able to use that.
+
+174
+00:08:22,040 --> 00:08:24,680
+The thing that I've heard a lot
+of cyber experts talk about is...
+
+175
+00:08:26,399 --> 00:08:31,435
+They just no longer are confident that we
+have the right assumptions
+
+176
+00:08:31,519 --> 00:08:33,100
+baked into our threat model.
+
+177
+00:08:33,440 --> 00:08:35,400
+And they're like: "Look.
+
+178
+00:08:35,639 --> 00:08:39,035
+If everything is what we think,
+and hardware exploits are as hard as we
+
+179
+00:08:39,120 --> 00:08:41,919
+think they are, then yes,
+we can see how this is going to work."
+
+180
+00:08:42,039 --> 00:08:46,555
+But if AI is going to discover
+really deep novel bugs in hardware
+
+181
+00:08:46,639 --> 00:08:49,639
+that require physics we didn't understand,
+but all of a sudden means
+
+182
+00:08:49,799 --> 00:08:51,155
+some assumption doesn't hold.
+
+183
+00:08:51,240 --> 00:08:53,600
+Then I think, people
+aren't sure what happens.
+
+184
+00:08:54,283 --> 00:09:00,039
+One thing that always strikes me is that,
+when I talk to very knowledgeable people
+
+185
+00:09:01,039 --> 00:09:07,079
+inside OpenAI and similar companies,
+there is a pessimism that sandboxing
+
+186
+00:09:08,000 --> 00:09:09,639
+is possible, basically.
+
+187
+00:09:10,480 --> 00:09:14,399
+And, that would not have been
+my mental model going in.
+
+188
+00:09:14,519 --> 00:09:19,076
+It would've been that,
+yeah, you have to build a really tight
+
+189
+00:09:19,159 --> 00:09:22,795
+sandbox and we haven't hardened them
+historically enough compared
+
+190
+00:09:22,879 --> 00:09:24,196
+to the current capabilities.
+
+191
+00:09:24,279 --> 00:09:28,795
+But ultimately, you can have a maximum
+security prison for the model
+
+192
+00:09:28,879 --> 00:09:30,720
+to work in and keep it inside there.
+
+193
+00:09:31,240 --> 00:09:35,200
+It seems like you guys have a pessimism
+that sandboxing models is possible.
+
+194
+00:09:35,700 --> 00:09:36,640
+My instinct...
+
+195
+00:09:36,724 --> 00:09:39,600
+Well, first of all, I think we can
+do much better than we're doing now.
+
+196
+00:09:39,759 --> 00:09:40,620
+And we should.
+
+197
+00:09:42,240 --> 00:09:45,500
+That is the main thing to focus
+on right now is a better security model.
+
+198
+00:09:46,159 --> 00:09:50,596
+If you imagine a theoretical AI that is
+a million times smarter than the smartest
+
+199
+00:09:50,679 --> 00:09:55,599
+security researcher—would you really
+be willing to trust that sandbox?
+
+200
+00:09:56,639 --> 00:10:00,725
+Especially if the model can discover
+new science that people don't
+
+201
+00:10:01,200 --> 00:10:01,920
+already understand—
+
+202
+00:10:02,004 --> 00:10:04,000
+You can use the models
+to construct the sandboxes.
+
+203
+00:10:04,083 --> 00:10:05,915
+I think you can...
+Well, so this gets...
+
+204
+00:10:06,000 --> 00:10:07,039
+Let me come back to that.
+
+205
+00:10:08,360 --> 00:10:10,019
+I think sandboxing works to a point.
+
+206
+00:10:11,200 --> 00:10:14,396
+Then I think monitoring
+works to a further point.
+
+207
+00:10:14,480 --> 00:10:18,159
+Where we can look at what the models are
+doing, not only in their chain of thought,
+
+208
+00:10:18,279 --> 00:10:20,995
+but we can do activation monitoring
+and try to really understand:
+
+209
+00:10:21,080 --> 00:10:22,020
+are the models...
+
+210
+00:10:22,360 --> 00:10:24,259
+Are we happy that the models
+are not deceiving us?
+
+211
+00:10:24,559 --> 00:10:28,559
+And then, eventually,
+I think you need to believe
+
+212
+00:10:29,399 --> 00:10:32,159
+with huge confidence
+that the models are truly aligned.
+
+213
+00:10:33,000 --> 00:10:38,155
+And are going to value and try
+faithfully to follow their actual...
+
+214
+00:10:38,240 --> 00:10:40,519
+The intent of the people operating them.
+
+215
+00:10:41,159 --> 00:10:45,000
+And that they're going to value people
+being in control of the future, forever.
+
+216
+00:10:45,960 --> 00:10:49,396
+And, if you had
+a model that you could fully trust
+
+217
+00:10:49,480 --> 00:10:52,196
+the alignment—that you were absolutely
+certain of the alignment of.
+
+218
+00:10:52,279 --> 00:10:53,959
+Then yes, I think you can have
+that to help you build
+
+219
+00:10:54,043 --> 00:10:55,419
+better and better sandboxes.
+
+220
+00:10:55,600 --> 00:10:58,396
+But,
+if you really let yourself project forward
+
+221
+00:10:58,480 --> 00:11:02,556
+into the: "What does it mean to have
+something a million times smarter
+
+222
+00:11:02,639 --> 00:11:07,120
+than we are?" I don't know.
+
+223
+00:11:07,279 --> 00:11:08,899
+I think that just gets...
+Strange.
+
+224
+00:11:11,320 --> 00:11:12,720
+Because the alignment becomes hard.
+
+225
+00:11:12,803 --> 00:11:15,559
+Because you need to really,
+really trust the alignment
+
+226
+00:11:16,240 --> 00:11:19,039
+to trust that the sandbox is
+staying ahead of capabilities.
+
+227
+00:11:20,600 --> 00:11:23,240
+Can you not give models competing
+incentives and give them incentives
+
+228
+00:11:23,323 --> 00:11:24,683
+to defect from each other?
+
+229
+00:11:25,320 --> 00:11:26,780
+I think this is a promising direction.
+
+230
+00:11:28,399 --> 00:11:33,279
+I suspect that this idea—I
+hate the word 'agent swarms'.
+
+231
+00:11:33,799 --> 00:11:35,240
+Let's call them 'agent teams'.
+
+232
+00:11:35,778 --> 00:11:37,697
+But it seems to be taking over.
+
+233
+00:11:38,280 --> 00:11:42,875
+I suspect that teams of agents have very
+interesting scaling law properties,
+
+234
+00:11:42,960 --> 00:11:44,900
+but also variance in alignment properties.
+
+235
+00:11:46,960 --> 00:11:50,556
+And, I think that's a direction
+we should push in more.
+
+236
+00:11:50,639 --> 00:11:53,159
+Not just from the capabilities,
+but from a safety perspective too.
+
+237
+00:11:53,296 --> 00:11:56,680
+I note when you talk about
+agent "teams," not "swarms"—
+
+238
+00:11:58,080 --> 00:11:58,800
+Swarm is such a—
+
+239
+00:11:59,320 --> 00:12:00,760
+I know, it's locusts.
+Yeah.
+
+240
+00:12:01,240 --> 00:12:03,000
+Not good.
+Not good branding.
+
+241
+00:12:03,919 --> 00:12:06,475
+In keeping with many historical
+AI industry traditions.
+
+242
+00:12:06,559 --> 00:12:09,439
+We are so good at this.
+We'll get back to branding.
+
+243
+00:12:10,039 --> 00:12:13,639
+But, I note that there seems to be
+
+244
+00:12:14,360 --> 00:12:17,755
+a big gap in what the leading AI users are
+
+245
+00:12:17,840 --> 00:12:22,115
+doing and standard corporate use,
+in the use of swarms,
+
+246
+00:12:22,200 --> 00:12:25,040
+where like all the advanced math—sorry,
+"teams." All the advanced
+
+247
+00:12:25,124 --> 00:12:26,440
+math uses agent teams.
+
+248
+00:12:26,879 --> 00:12:28,919
+All the advanced hacking uses agent teams.
+
+249
+00:12:29,360 --> 00:12:34,320
+And then, common or garden corporate stuff
+is not using big swarms.
+
+250
+00:12:35,240 --> 00:12:39,279
+Why has that not—because we've
+had this for many months?
+
+251
+00:12:39,759 --> 00:12:41,720
+Not to the same degree.
+
+252
+00:12:42,360 --> 00:12:46,840
+The one way to look at this problem
+or this question is: "How much
+
+253
+00:12:47,360 --> 00:12:51,316
+compute can we productively throw
+at a single problem?" And...
+
+254
+00:12:51,399 --> 00:12:54,600
+A few years ago, we forget
+how fast this has all gone.
+
+255
+00:12:55,120 --> 00:12:57,556
+But a few years ago,
+it was impossible to throw more than
+
+256
+00:12:57,639 --> 00:13:00,379
+a dollar of compute at a problem
+and have it help you at all.
+
+257
+00:13:00,559 --> 00:13:00,904
+Why?
+
+258
+00:13:02,559 --> 00:13:06,075
+You could have GPT-4 grind out for you...
+
+259
+00:13:06,159 --> 00:13:08,240
+100,000 tokens or something.
+
+260
+00:13:09,000 --> 00:13:10,460
+And it was going to answer your question.
+
+261
+00:13:10,600 --> 00:13:13,920
+And it certainly was not going to be able
+to go write productively, like,
+
+262
+00:13:14,004 --> 00:13:16,000
+write you a piece of software.
+
+263
+00:13:17,039 --> 00:13:17,439
+We just...
+
+264
+00:13:17,524 --> 00:13:19,916
+We had not figured out how to use a lot
+of test time compute
+
+265
+00:13:20,000 --> 00:13:21,360
+to get you a better result.
+I see.
+
+266
+00:13:21,443 --> 00:13:24,559
+And then, we figured out chain-of-thought
+and the models could think
+
+267
+00:13:24,644 --> 00:13:25,755
+hard about a problem.
+
+268
+00:13:25,840 --> 00:13:27,475
+And now...
+
+269
+00:13:27,559 --> 00:13:30,235
+People really started
+using a lot of compute.
+
+270
+00:13:30,320 --> 00:13:34,236
+And now, you can throw
+a whole team at something.
+
+271
+00:13:34,320 --> 00:13:36,879
+And you can do that
+10,000 times in parallel.
+
+272
+00:13:37,039 --> 00:13:39,795
+You need chain-of-thought and test-time
+compute before you can get to swarms.
+
+273
+00:13:39,879 --> 00:13:42,275
+Because you can't have a useful
+swarm with a bunch of GPT-3s.
+
+274
+00:13:42,360 --> 00:13:42,600
+Yes.
+
+275
+00:13:42,840 --> 00:13:46,200
+But so the effect of this—and I think
+this is not being well followed...
+
+276
+00:13:46,879 --> 00:13:47,879
+Paid attention to in the world.
+
+277
+00:13:47,964 --> 00:13:50,800
+But, the incredible
+
+278
+00:13:51,759 --> 00:13:55,915
+exponential of how much compute you can
+
+279
+00:13:56,000 --> 00:13:58,480
+throw at a single problem and get
+better results is one thing.
+
+280
+00:13:58,960 --> 00:14:03,156
+The delta between what most people are
+using AI for, and what the people who are
+
+281
+00:14:03,240 --> 00:14:06,755
+using AI the most productively for has
+just continued to spread,
+
+282
+00:14:06,840 --> 00:14:08,096
+and spread, and spread.
+
+283
+00:14:08,681 --> 00:14:12,440
+How do you allocate compute budgets now?
+
+284
+00:14:12,759 --> 00:14:16,995
+Because presumably, even though
+researchers are paid a lot,
+
+285
+00:14:17,080 --> 00:14:18,759
+it's eclipsed by compute.
+
+286
+00:14:19,320 --> 00:14:24,836
+And so, capital allocation at OpenAI
+is sort of compute allocation.
+
+287
+00:14:24,919 --> 00:14:28,240
+And it's hard to a priori know
+
+288
+00:14:29,399 --> 00:14:32,035
+how much it will cost to go do something.
+Yeah.
+
+289
+00:14:32,120 --> 00:14:34,875
+It's actually also hard to just
+control the...
+
+290
+00:14:34,960 --> 00:14:38,676
+You can't quite prompt an agent to where
+it's like: "Go do a really good job of
+
+291
+00:14:38,759 --> 00:14:41,596
+this and don't spend more than $10,000."
+You can.
+
+292
+00:14:41,679 --> 00:14:42,799
+Oh, okay.
+Will it do a good job of it?
+
+293
+00:14:42,884 --> 00:14:46,235
+Yeah, if you say do the best job
+you can with $10,000 of compute.
+
+294
+00:14:46,320 --> 00:14:48,805
+Yes, it will understand that.
+Huh.
+
+295
+00:14:48,919 --> 00:14:49,959
+I mean, there's a...
+
+296
+00:14:50,043 --> 00:14:53,196
+There's another kind of hard question
+for society about what does it mean
+
+297
+00:14:53,279 --> 00:14:54,515
+when you have two companies competing.
+
+298
+00:14:54,600 --> 00:14:57,600
+And one says you can spend $10,000 and one
+says you can spend $100,000
+
+299
+00:14:57,683 --> 00:14:58,779
+on the same problem.
+
+300
+00:14:59,240 --> 00:15:00,320
+It's clear what's going to happen there.
+
+301
+00:15:00,403 --> 00:15:04,836
+But there's a question about how society
+thinks about compute allocation,
+
+302
+00:15:04,919 --> 00:15:06,875
+and wealth, and things like that.
+
+303
+00:15:06,960 --> 00:15:09,139
+But we have our own version
+of this inside of OpenAI.
+
+304
+00:15:09,960 --> 00:15:15,235
+We allocate a lot of compute
+to internal productivity.
+
+305
+00:15:15,320 --> 00:15:20,760
+And then people get very wide latitude
+to make their own decisions,
+
+306
+00:15:20,960 --> 00:15:22,680
+unless they're really being abusive.
+
+307
+00:15:23,798 --> 00:15:25,799
+But do you encourage
+people to do useful stuff?
+
+308
+00:15:25,919 --> 00:15:28,915
+And if they spend $10 million in compute,
+it's like: "Oh, interesting."
+
+309
+00:15:29,000 --> 00:15:29,360
+Correct.
+
+310
+00:15:29,443 --> 00:15:31,235
+We try never to reward people
+for using a lot of compute.
+
+311
+00:15:31,320 --> 00:15:32,520
+Sure.
+No token leaderboards.
+
+312
+00:15:32,840 --> 00:15:36,396
+It's actually slightly bad
+to be high on the token leaderboard.
+
+313
+00:15:36,480 --> 00:15:37,940
+Certainly on a promotion.
+
+314
+00:15:39,320 --> 00:15:43,600
+But it's a skeptical default,
+and if you can show that you're doing
+
+315
+00:15:43,720 --> 00:15:46,720
+something important,
+you will have nothing but appreciation.
+
+316
+00:15:47,113 --> 00:15:49,040
+But at a certain point,
+this will need to change.
+
+317
+00:15:49,124 --> 00:15:51,960
+Because you're describing
+the increasing orders of magnitude.
+
+318
+00:15:52,399 --> 00:15:56,435
+And, right now you have a researcher
+who does some very interesting
+
+319
+00:15:56,519 --> 00:15:57,795
+math for $10 million.
+
+320
+00:15:57,879 --> 00:16:02,519
+And you're like: "A little pricey,
+but cool math." And then $100 million.
+
+321
+00:16:02,720 --> 00:16:05,636
+When they're doing the $1 billion math,
+you're like: "Look, I'm really happy
+
+322
+00:16:05,720 --> 00:16:07,076
+that you're making so much math progress.
+
+323
+00:16:07,159 --> 00:16:09,500
+But I really need you to cool
+the jets with the math."
+
+324
+00:16:09,639 --> 00:16:12,155
+Look, we did let it get out
+of control for one week on the math.
+
+325
+00:16:12,240 --> 00:16:14,519
+Intentionally so, because you have to—
+And it worked!
+
+326
+00:16:14,679 --> 00:16:16,235
+Well, you don't know how...
+
+327
+00:16:16,320 --> 00:16:18,756
+You don't know how far it's
+going to go until you try.
+
+328
+00:16:18,840 --> 00:16:20,875
+Yeah.
+And I think it's important to have...
+
+329
+00:16:20,960 --> 00:16:24,076
+When there's a new paradigm,
+I think it's important to let
+
+330
+00:16:24,159 --> 00:16:26,039
+people be fairly unconstrained.
+
+331
+00:16:26,440 --> 00:16:31,156
+So, when we did the Navier-Stokes proof,
+we understood absolutely nothing about
+
+332
+00:16:31,240 --> 00:16:33,039
+the scaling laws of teams of agents.
+
+333
+00:16:33,960 --> 00:16:35,235
+Are you supposed to, like—
+
+334
+00:16:35,320 --> 00:16:37,379
+The very recent Navier-Stokes proof?
+Yes.
+
+335
+00:16:37,519 --> 00:16:39,879
+Are you supposed to give
+them the smartest model?
+
+336
+00:16:40,000 --> 00:16:42,956
+Are you supposed to give them many copies,
+fewer copies, longer rollouts,
+
+337
+00:16:43,039 --> 00:16:45,179
+shorter rollouts?
+We did not understand that at all.
+
+338
+00:16:45,919 --> 00:16:48,759
+And now, we understand it a little bit.
+
+339
+00:16:49,000 --> 00:16:51,080
+I think we can still
+understand it much better.
+
+340
+00:16:51,163 --> 00:16:54,480
+But like has happened in every other new
+paradigm we've discovered,
+
+341
+00:16:55,472 --> 00:16:58,759
+I am confident that we will find our 10x
+
+342
+00:16:59,519 --> 00:17:02,439
+improvements per year at how we allocate
+
+343
+00:17:02,559 --> 00:17:06,319
+dollars or computer flops, whatever you
+want to measure, into useful things.
+
+344
+00:17:06,759 --> 00:17:09,680
+So, I think this is a thing that
+our company is particularly good at,
+
+345
+00:17:10,000 --> 00:17:12,480
+but also fits an important
+property of the field.
+
+346
+00:17:12,599 --> 00:17:17,039
+Which is: let people explore
+at the limit of what is possible.
+
+347
+00:17:17,519 --> 00:17:21,000
+And then trust that the
+incredible optimization pressure
+
+348
+00:17:21,599 --> 00:17:24,099
+will figure out how to do this
+in an efficient way.
+
+349
+00:17:26,480 --> 00:17:32,716
+Directionally speaking, I would rather us
+be more willing to let people use crazy
+
+350
+00:17:32,799 --> 00:17:37,115
+amounts of compute
+and let users have extremely high-end
+
+351
+00:17:37,200 --> 00:17:40,476
+plans to figure out
+the edge of the possible.
+
+352
+00:17:40,559 --> 00:17:43,155
+And then figure out how to make
+that efficient and at mass scale.
+
+353
+00:17:43,240 --> 00:17:45,259
+But when does the optimization
+function come in?
+
+354
+00:17:45,690 --> 00:17:52,559
+Well, I think we're already doing it.
+I bet we could redo Navier-Stokes
+
+355
+00:17:53,480 --> 00:17:56,839
+at 1/100th of the cost
+a year from when it was done.
+
+356
+00:17:57,359 --> 00:17:57,959
+So we did it in—
+
+357
+00:17:58,044 --> 00:18:00,997
+Not just knowing how the proof works,
+but just with better approaches.
+
+358
+00:18:01,400 --> 00:18:03,060
+Yes.
+Smarter models and better approaches.
+
+359
+00:18:03,160 --> 00:18:04,580
+How much shall the math cost?
+
+360
+00:18:04,799 --> 00:18:06,036
+Order $10 million per...
+
+361
+00:18:06,119 --> 00:18:07,439
+For Navier-Stokes, I think.
+
+362
+00:18:08,480 --> 00:18:09,480
+Okay.
+Maybe a little more.
+
+363
+00:18:09,564 --> 00:18:11,316
+$10 million-ish.
+
+364
+00:18:11,400 --> 00:18:13,355
+That order of magnitude.
+Yeah, yeah.
+
+365
+00:18:13,440 --> 00:18:14,556
+But for one proof.
+
+366
+00:18:14,640 --> 00:18:15,920
+And so—Well, no, no.
+
+367
+00:18:16,519 --> 00:18:17,960
+Because then we kept
+getting better so fast.
+
+368
+00:18:18,044 --> 00:18:19,716
+We understood more.
+Got it.
+
+369
+00:18:19,799 --> 00:18:22,395
+We spent way less than
+that on the average one of those.
+
+370
+00:18:22,480 --> 00:18:24,519
+But like 100s of millions
+of dollars of math.
+
+371
+00:18:24,880 --> 00:18:25,236
+Yeah.
+Yeah, yeah.
+
+372
+00:18:25,319 --> 00:18:25,836
+That kind of work.
+
+373
+00:18:25,920 --> 00:18:26,480
+Okay, interesting.
+
+374
+00:18:26,939 --> 00:18:31,956
+But that includes much more other
+discovery than what we have published.
+
+375
+00:18:32,039 --> 00:18:32,119
+Yes.
+
+376
+00:18:32,203 --> 00:18:33,596
+So it was like,
+"Maybe we spent that much—"
+
+377
+00:18:33,680 --> 00:18:35,320
+We have more than the 700 proofs?
+We do.
+
+378
+00:18:35,440 --> 00:18:36,076
+Of course.
+
+379
+00:18:36,160 --> 00:18:36,940
+When did you get those?
+
+380
+00:18:38,701 --> 00:18:40,355
+We are trying to learn how to...
+
+381
+00:18:40,440 --> 00:18:41,759
+This is a real tension.
+
+382
+00:18:43,000 --> 00:18:46,635
+I think on one hand,
+very clearly, and I feel unequivocal
+
+383
+00:18:46,720 --> 00:18:50,196
+on this point:
+Humanity deserves fundamental knowledge.
+
+384
+00:18:50,279 --> 00:18:55,799
+And we should not be sitting on a major
+fundamental science discovery.
+
+385
+00:18:57,960 --> 00:19:01,196
+The world deserves
+that and gets to know it.
+
+386
+00:19:01,279 --> 00:19:05,000
+And I think that outweighs another very
+important equity,
+
+387
+00:19:05,519 --> 00:19:09,639
+which is: If you are a scientist,
+
+388
+00:19:10,599 --> 00:19:12,596
+your career and a significant amount
+
+389
+00:19:12,680 --> 00:19:15,236
+of your enjoyment and fulfillment
+in life comes from discovering science.
+
+390
+00:19:15,319 --> 00:19:15,720
+Yeah.
+
+391
+00:19:15,804 --> 00:19:19,400
+And so if we're going to
+continue to do this for math
+
+392
+00:19:20,000 --> 00:19:25,000
+or begin to do this for other fields,
+then I think we more than owe it to
+
+393
+00:19:25,720 --> 00:19:32,476
+the people that work in those fields
+to figure out what is the solution space
+
+394
+00:19:32,559 --> 00:19:34,440
+where the world gets to benefit
+from the knowledge,
+
+395
+00:19:34,523 --> 00:19:37,679
+and they also get the best version
+of the future that they can have.
+
+396
+00:19:37,920 --> 00:19:39,796
+So we are working through that right now.
+
+397
+00:19:39,880 --> 00:19:40,280
+I did not...
+
+398
+00:19:40,364 --> 00:19:42,420
+I don't know, I think
+you may be too contrite.
+
+399
+00:19:42,559 --> 00:19:46,919
+I did not interpret that moment as
+particularly bad for AI where...
+
+400
+00:19:48,319 --> 00:19:51,279
+I think everyone saw
+the Mathematicians Union up in arms.
+
+401
+00:19:51,799 --> 00:19:55,955
+And I think everyone else said, "Yeah,
+I mean, have you paid attention to 2026?"
+
+402
+00:19:56,039 --> 00:19:57,519
+As I said, I don't
+think it was bad for AI.
+
+403
+00:19:57,604 --> 00:20:02,451
+And I think, on net, the world deserves
+to understand how the universe works.
+
+404
+00:20:03,240 --> 00:20:04,980
+But I do have empathy for the method.
+
+405
+00:20:05,079 --> 00:20:07,119
+I think we need to do this.
+I think we should do this.
+
+406
+00:20:07,203 --> 00:20:10,076
+I think if we can go understand...
+
+407
+00:20:10,160 --> 00:20:15,080
+A theory of all of physics,
+or how to cure a bunch of diseases.
+
+408
+00:20:15,200 --> 00:20:17,460
+Clearly, that is knowledge
+the world should have.
+
+409
+00:20:18,440 --> 00:20:20,875
+But,
+I would like to figure out a way to do
+
+410
+00:20:20,960 --> 00:20:26,436
+this
+that is as sensitive to the communities
+
+411
+00:20:26,519 --> 00:20:29,099
+that have driven these fields
+forward for centuries as we can.
+
+412
+00:20:29,440 --> 00:20:31,272
+And it's just a...
+It's a hard thing.
+
+413
+00:20:31,960 --> 00:20:33,836
+I wasn't that worried about the math.
+I thought it was great.
+
+414
+00:20:33,920 --> 00:20:35,680
+But you agree the mathematicians
+were not that happy?
+
+415
+00:20:35,776 --> 00:20:37,920
+Yeah.
+But, that's fine.
+
+416
+00:20:38,319 --> 00:20:41,995
+Like, the longshoremen union weren't
+happy about the port automation.
+
+417
+00:20:42,079 --> 00:20:43,241
+Remember the guy?
+
+418
+00:20:44,039 --> 00:20:45,559
+No, no, no, no, no.
+I do.
+
+419
+00:20:45,799 --> 00:20:47,235
+Why do I feel differently about this?
+
+420
+00:20:47,319 --> 00:20:49,720
+There was one weekend when
+we got a new model and in...
+
+421
+00:20:50,332 --> 00:20:53,396
+I'm actually probably not supposed to say
+this, but I will since we're drinking—
+
+422
+00:20:53,480 --> 00:20:54,115
+Exactly.
+We're a half pint in.
+
+423
+00:20:54,200 --> 00:20:54,476
+Beers.
+Yeah.
+
+424
+00:20:54,559 --> 00:20:55,200
+Perfect time for—
+
+425
+00:20:55,284 --> 00:21:01,836
+The name of the channel was: "Model
+Name-Hold My Beer." And people were just
+
+426
+00:21:01,920 --> 00:21:05,000
+throwing that at the hardest
+problems they could.
+
+427
+00:21:05,597 --> 00:21:07,960
+And people didn't think the model
+was going to do these things.
+
+428
+00:21:08,044 --> 00:21:11,040
+And we had this collective experience
+of people's hardest research
+
+429
+00:21:11,124 --> 00:21:13,556
+problems from their academic career.
+
+430
+00:21:13,640 --> 00:21:15,596
+The model was just knocking
+down one after the other.
+
+431
+00:21:15,680 --> 00:21:17,980
+Many different fields.
+It was incredible to watch.
+
+432
+00:21:18,279 --> 00:21:21,316
+And two nights in a row,
+I was up most of the night because I
+
+433
+00:21:21,400 --> 00:21:23,115
+was so excited I couldn't go to bed.
+
+434
+00:21:23,200 --> 00:21:24,395
+It was...
+
+435
+00:21:24,480 --> 00:21:28,328
+Many of those problems that we published,
+many other things.
+
+436
+00:21:29,329 --> 00:21:31,439
+And I was tremendously excited and happy.
+
+437
+00:21:32,839 --> 00:21:38,000
+But I also had much more sadness
+and melancholy, and a feeling of
+
+438
+00:21:38,640 --> 00:21:40,840
+something ending than I was expecting.
+
+439
+00:21:41,359 --> 00:21:43,519
+So again, I agree.
+
+440
+00:21:44,640 --> 00:21:47,598
+This is the right thing,
+on behalf of the world.
+
+441
+00:21:47,839 --> 00:21:50,715
+And also, I agree that this is just
+the shape of reality and nothing
+
+442
+00:21:50,799 --> 00:21:52,399
+that anyone can stop, or should stop.
+
+443
+00:21:53,119 --> 00:21:57,000
+But, I do have real—
+
+444
+00:21:57,960 --> 00:22:00,196
+I think it's a wistfulness
+and nostalgia you can feel.
+
+445
+00:22:00,279 --> 00:22:01,319
+It's more than nostalgia.
+
+446
+00:22:01,960 --> 00:22:02,440
+Wistfulness.
+
+447
+00:22:03,113 --> 00:22:03,860
+Yeah.
+
+448
+00:22:04,440 --> 00:22:07,680
+My dad describes how,
+growing up in Ireland in the 1950s,
+
+449
+00:22:08,160 --> 00:22:11,875
+he observed people around him still
+using horses productively, in industry.
+
+450
+00:22:11,960 --> 00:22:12,620
+And—
+
+451
+00:22:13,359 --> 00:22:14,639
+In the '50s?
+Yeah.
+
+452
+00:22:14,960 --> 00:22:18,600
+And I mean, not obviously, there were also
+tractors, but they were being phased out.
+
+453
+00:22:20,200 --> 00:22:21,600
+But it still for sure happened.
+
+454
+00:22:22,240 --> 00:22:27,279
+And, observing that this was a technology
+that humans had
+
+455
+00:22:28,279 --> 00:22:33,000
+been using for thousands of years, and he
+was witnessing the very tail end of it.
+
+456
+00:22:33,400 --> 00:22:37,956
+And yeah, I think there's always
+that feeling of witnessing the closing
+
+457
+00:22:38,039 --> 00:22:41,317
+of a chapter that leads to some
+wistfulness, but it's okay.
+
+458
+00:22:41,599 --> 00:22:44,719
+It's people's lives and it's something
+that has brought them great joy.
+
+459
+00:22:44,804 --> 00:22:47,036
+And maybe most...
+
+460
+00:22:47,119 --> 00:22:51,835
+I mean certainly, most mathematicians
+never solve a Millennium Prize problem.
+
+461
+00:22:51,920 --> 00:22:53,960
+But the idea that you might be able to.
+
+462
+00:22:55,079 --> 00:22:57,919
+And the idea that there is stuff out there
+that we don't understand yet,
+
+463
+00:22:58,003 --> 00:23:01,915
+that through great effort and...
+
+464
+00:23:02,000 --> 00:23:04,640
+Pushing aside other things in your life
+and dedicating yourself to,
+
+465
+00:23:04,723 --> 00:23:09,262
+"You can still solve and understand."
+There's something beautiful about that.
+
+466
+00:23:09,720 --> 00:23:11,740
+What else are you excited about
+from a safety point of view?
+
+467
+00:23:12,119 --> 00:23:13,399
+We talked about this a little bit earlier.
+
+468
+00:23:13,483 --> 00:23:15,519
+But I want to emphasize it again.
+
+469
+00:23:15,680 --> 00:23:19,000
+I'll just call it swarms since
+that seems like the term right now.
+
+470
+00:23:19,640 --> 00:23:23,759
+I do think the properties of swarms
+match a lot of the properties of
+
+471
+00:23:24,319 --> 00:23:26,839
+the resilience of society,
+or the robustness of society.
+
+472
+00:23:30,240 --> 00:23:33,236
+I think we're missing
+from the single-rollout,
+
+473
+00:23:33,319 --> 00:23:35,240
+single-brained version of the world.
+
+474
+00:23:37,079 --> 00:23:41,240
+For all of the deep flaws of society,
+it is unbelievably robust.
+
+475
+00:23:43,119 --> 00:23:47,955
+And this would not happen without a lot
+of people keeping each other
+
+476
+00:23:48,039 --> 00:23:49,619
+in check and collaborating...
+
+477
+00:23:49,720 --> 00:23:51,440
+These values of pluralism and democracy.
+
+478
+00:23:52,000 --> 00:23:57,680
+And I had been sort of sad
+that that was going to trend away in AI.
+
+479
+00:23:57,920 --> 00:24:00,160
+And now I'm excited about
+this as a direction.
+
+480
+00:24:00,605 --> 00:24:03,400
+You're saying basically it shouldn't lead
+in a centralized direction,
+
+481
+00:24:03,483 --> 00:24:06,119
+because you will have many agents.
+
+482
+00:24:06,480 --> 00:24:09,279
+And agents pushing against each
+other in a dynamic equilibrium.
+
+483
+00:24:10,240 --> 00:24:12,559
+Offense-defense is a good example of this.
+
+484
+00:24:13,618 --> 00:24:15,879
+I would much rather intuitively have
+
+485
+00:24:18,519 --> 00:24:21,756
+a trillion AIs of slightly superhuman
+
+486
+00:24:21,839 --> 00:24:27,090
+intelligence join society than one
+AI of 1 trillion IQ join society.
+
+487
+00:24:27,590 --> 00:24:28,239
+Yeah.
+
+488
+00:24:28,324 --> 00:24:31,010
+And you think we're headed
+in that direction of the multiple?
+
+489
+00:24:31,279 --> 00:24:33,399
+All of these things are
+things we have to push for.
+
+490
+00:24:33,483 --> 00:24:36,139
+All of these things are—we have
+this incredible technology.
+
+491
+00:24:37,640 --> 00:24:39,960
+It can be pointed
+and deployed in many ways.
+
+492
+00:24:40,480 --> 00:24:44,996
+I think there are a lot of people who
+may have a different opinion about how it
+
+493
+00:24:45,079 --> 00:24:47,195
+should be used, and what is
+the best version of the world.
+
+494
+00:24:47,279 --> 00:24:49,000
+But, this is the one
+that I think is right.
+
+495
+00:24:49,200 --> 00:24:50,700
+Let's talk about starting a business.
+
+496
+00:24:53,960 --> 00:24:56,360
+Thanks to coding models,
+your weekend side hustle can quickly
+
+497
+00:24:56,443 --> 00:24:57,799
+become a serious undertaking.
+
+498
+00:24:58,160 --> 00:25:01,279
+And we've been busy here at Stripe making
+that process as simple as possible.
+
+499
+00:25:02,000 --> 00:25:05,155
+Stripe Atlas helps you with everything you
+need to start a business,
+
+500
+00:25:05,240 --> 00:25:08,559
+like company formation, tax IDs,
+founder equity, and all the other bits
+
+501
+00:25:08,880 --> 00:25:10,756
+that usually require someone in a suit.
+
+502
+00:25:10,839 --> 00:25:13,235
+So if you've got a company in the making,
+take a look at stripe.
+
+503
+00:25:13,319 --> 00:25:13,980
+com/atlas.
+
+504
+00:25:17,974 --> 00:25:19,619
+How's the compute shortage going?
+
+505
+00:25:22,311 --> 00:25:24,259
+I mean, there are all these ways where...
+
+506
+00:25:25,480 --> 00:25:29,195
+I think things,
+at various times along the curve,
+
+507
+00:25:29,279 --> 00:25:30,720
+are going to get somewhat out of hand.
+Yes.
+
+508
+00:25:30,804 --> 00:25:35,596
+And there will be moments, like with any
+new thing of this importance.
+
+509
+00:25:35,680 --> 00:25:37,836
+There are going to be moments
+of irrational exuberance.
+
+510
+00:25:37,920 --> 00:25:38,960
+There are going to be moments of bust.
+
+511
+00:25:39,044 --> 00:25:42,040
+There are going to be moments of
+constraint, and glut, and up, and down.
+
+512
+00:25:42,583 --> 00:25:46,996
+But I think the trend is toward...
+
+513
+00:25:47,079 --> 00:25:49,279
+We always just want more compute.
+
+514
+00:25:50,440 --> 00:25:55,355
+The demand for sufficiently
+capable models at a sufficiently low
+
+515
+00:25:55,440 --> 00:25:57,960
+price, I think that trend
+only goes one way.
+
+516
+00:26:00,400 --> 00:26:03,300
+And, we're doing a lot of things
+to try to be prepared for this.
+
+517
+00:26:04,640 --> 00:26:09,080
+We made a chip that is an incredible
+performance at units of intelligence,
+
+518
+00:26:09,240 --> 00:26:11,220
+performance of units
+of intelligence per watt.
+
+519
+00:26:11,319 --> 00:26:13,000
+We are learning how to build
+our own data centers.
+
+520
+00:26:13,084 --> 00:26:15,560
+We have a robotics program that we're
+going to point at
+
+521
+00:26:16,359 --> 00:26:17,635
+making lots of data centers.
+
+522
+00:26:17,720 --> 00:26:19,460
+People talk a lot about—The real RSI.
+
+523
+00:26:20,599 --> 00:26:20,759
+Yeah.
+
+524
+00:26:20,844 --> 00:26:25,279
+People talk a lot about RSI as an
+AI that does AI research.
+
+525
+00:26:25,519 --> 00:26:28,759
+There's very little, relatively little
+talk about self-replicating data centers.
+
+526
+00:26:28,878 --> 00:26:33,755
+This idea that you can use AI to
+control robots, and run fabs,
+
+527
+00:26:33,839 --> 00:26:36,635
+and build turbines or solar panels,
+and build data centers.
+
+528
+00:26:36,720 --> 00:26:38,920
+But, I think we are...
+
+529
+00:26:39,160 --> 00:26:40,720
+I think we have that within grasp.
+
+530
+00:26:41,960 --> 00:26:42,200
+But—
+
+531
+00:26:42,284 --> 00:26:44,353
+And so we'll try to make
+a lot of really cheap compute.
+
+532
+00:26:44,936 --> 00:26:47,959
+But aren't data centers
+already not labor-bottlenecked?
+
+533
+00:26:48,359 --> 00:26:52,401
+They're permitting-bottlenecked
+and component-bottlenecked.
+
+534
+00:26:53,200 --> 00:26:54,900
+We could make more components with robots.
+
+535
+00:26:55,279 --> 00:26:56,119
+And—Eventually.
+
+536
+00:26:56,799 --> 00:26:57,720
+Yeah, yeah, yeah.
+
+537
+00:26:57,839 --> 00:27:00,795
+And all of this is how we solve
+this over a long period of time.
+
+538
+00:27:00,880 --> 00:27:04,440
+My observation, the compute stuff is they
+say: "The solution to high prices is
+
+539
+00:27:04,523 --> 00:27:06,479
+high prices." And it's like, okay.
+
+540
+00:27:06,720 --> 00:27:10,839
+Step 1: We have the high prices
+for memory, and GPUs, and everything.
+
+541
+00:27:12,000 --> 00:27:13,720
+The solutions should
+be here any moment now.
+
+542
+00:27:13,960 --> 00:27:15,884
+How are we doing on the solutions front?
+
+543
+00:27:16,160 --> 00:27:18,476
+Bad.
+And I'm not saying this is OpenAI's job.
+
+544
+00:27:18,559 --> 00:27:21,119
+I feel this is the invisible
+hand's job, right?
+
+545
+00:27:21,319 --> 00:27:23,155
+Memory's gotten really expensive.
+
+546
+00:27:23,240 --> 00:27:26,644
+So, new memory makers are going
+to flood the market any moment now.
+
+547
+00:27:27,079 --> 00:27:29,039
+I think the invisible
+hand is failing right now.
+
+548
+00:27:29,124 --> 00:27:30,635
+I mean, the invisible hand...
+
+549
+00:27:30,720 --> 00:27:33,440
+It has a checkered track record at best.
+
+550
+00:27:34,920 --> 00:27:38,039
+But, I think it's not quite working here.
+
+551
+00:27:38,615 --> 00:27:40,741
+Why not?
+Is it just hysteresis, or?
+
+552
+00:27:42,440 --> 00:27:45,076
+I think the specifics
+of each area matter here.
+
+553
+00:27:45,160 --> 00:27:47,660
+But in the...
+Since you started with the memory guys.
+
+554
+00:27:48,960 --> 00:27:52,360
+For a very long time,
+if you were a producer of DRAM,
+
+555
+00:27:53,079 --> 00:27:56,079
+you would invest $20 billion
+of CapEx to make $19 billion.
+
+556
+00:27:57,720 --> 00:27:59,395
+And you would go through
+these booms and busts.
+
+557
+00:27:59,480 --> 00:28:01,476
+Maybe some years you would make $21
+billion, some years you
+
+558
+00:28:01,559 --> 00:28:02,319
+would make $18 billion.
+
+559
+00:28:02,403 --> 00:28:08,076
+But, until right now,
+I don't think making memory has ever been
+
+560
+00:28:08,160 --> 00:28:09,600
+a great business over
+a long period of time.
+
+561
+00:28:09,683 --> 00:28:13,316
+And then all of a sudden,
+these guys are each going to make like
+
+562
+00:28:13,400 --> 00:28:18,080
+$100 billion of free cash flow in a year.
+Unbelievable.
+
+563
+00:28:21,640 --> 00:28:23,196
+But, I think they all
+remember their history.
+
+564
+00:28:23,279 --> 00:28:25,596
+How many times they almost went bankrupt
+by making too many fabs and being
+
+565
+00:28:25,680 --> 00:28:27,080
+promised this time it was different.
+
+566
+00:28:27,372 --> 00:28:29,880
+Which leads them to be
+conservative in their CapEx.
+
+567
+00:28:30,319 --> 00:28:30,750
+Clearly.
+
+568
+00:28:31,335 --> 00:28:37,680
+It feels like what you should expect
+to see is that every part
+
+569
+00:28:38,880 --> 00:28:42,920
+of the supply chain,
+both new startups coming along
+
+570
+00:28:43,519 --> 00:28:45,920
+and maybe more relevantly, people
+
+571
+00:28:46,720 --> 00:28:50,675
+with relevant experience getting into...
+
+572
+00:28:50,759 --> 00:28:54,715
+So, Intel makes chips.
+They can probably make...
+
+573
+00:28:54,799 --> 00:28:57,079
+They can get back into the memory game,
+as is tradition.
+
+574
+00:28:57,653 --> 00:28:58,880
+As is tradition.
+Switch back.
+
+575
+00:29:00,359 --> 00:29:03,039
+Oh, I think there are all of these ways
+where the supply chain—it's
+
+576
+00:29:03,124 --> 00:29:04,600
+just super non-obvious.
+
+577
+00:29:07,000 --> 00:29:10,915
+An example of this is people...
+
+578
+00:29:11,000 --> 00:29:13,839
+A lot of people want local inference.
+
+579
+00:29:14,000 --> 00:29:16,276
+And somehow, they assume
+that the problem is solved now.
+
+580
+00:29:16,359 --> 00:29:17,955
+Because, we are going
+to have open-source models.
+
+581
+00:29:18,039 --> 00:29:19,940
+We're going to be able
+to run them on our computers.
+
+582
+00:29:20,359 --> 00:29:22,359
+And so we're not going to need
+all the stuff in the data center.
+
+583
+00:29:22,443 --> 00:29:27,348
+But from a global allocation perspective,
+actually, it's quite terrible to have
+
+584
+00:29:27,932 --> 00:29:31,516
+everybody have a bunch of the world's
+limited supply of DRAM
+
+585
+00:29:31,599 --> 00:29:33,019
+sitting in their own computer.
+
+586
+00:29:33,480 --> 00:29:36,079
+And, being used—Mm-hmm.
+5% of the time.
+
+587
+00:29:36,599 --> 00:29:39,836
+You want maximum utilization in the cloud
+if you're trying to deal with this
+
+588
+00:29:39,920 --> 00:29:41,436
+very supply constrained environment.
+
+589
+00:29:41,519 --> 00:29:42,599
+And somehow everyone's...
+
+590
+00:29:42,839 --> 00:29:44,991
+Many people's intuition
+is the opposite of that.
+
+591
+00:29:45,599 --> 00:29:48,000
+Where else are we seeing
+the market respond to high prices?
+
+592
+00:29:48,084 --> 00:29:50,680
+Not just in memory,
+but across the supply chain?
+
+593
+00:29:51,640 --> 00:29:52,080
+Turbines.
+
+594
+00:29:53,799 --> 00:29:54,619
+Batteries.
+
+595
+00:29:55,085 --> 00:29:56,756
+Concrete.
+Sorry, the market is—
+
+596
+00:29:56,839 --> 00:29:57,339
+Steel—Responding there in high prices.
+
+597
+00:29:58,880 --> 00:29:59,520
+I'm seeing where...
+
+598
+00:29:59,604 --> 00:30:02,360
+Are you seeing any interesting market
+responses in terms of high
+
+599
+00:30:02,443 --> 00:30:04,260
+prices pulling in innovation?
+
+600
+00:30:04,760 --> 00:30:06,940
+Components for—some components for robots.
+
+601
+00:30:07,519 --> 00:30:10,675
+And not the humanoid fake demos.
+
+602
+00:30:10,759 --> 00:30:13,115
+But the industrial robots
+that can just make stuff faster.
+
+603
+00:30:13,200 --> 00:30:13,279
+I see.
+
+604
+00:30:13,364 --> 00:30:15,920
+There's new actuator makers
+and that kind of stuff.
+
+605
+00:30:16,105 --> 00:30:17,799
+Yeah, honestly...
+
+606
+00:30:18,079 --> 00:30:20,635
+Maybe you could say: "If OpenAI sells our
+chip." Maybe that would be an example.
+
+607
+00:30:20,720 --> 00:30:21,120
+Okay.
+Yeah.
+
+608
+00:30:21,203 --> 00:30:23,639
+I want to get to your chip because
+that was going to be my example.
+
+609
+00:30:23,723 --> 00:30:27,915
+I think the solution to high prices
+and short, limited demand—sorry,
+
+610
+00:30:28,000 --> 00:30:30,839
+limited supply, excuse me,
+is you make your own chip.
+
+611
+00:30:32,319 --> 00:30:34,519
+Presumably, you're using a lot of AI
+to make the chip.
+
+612
+00:30:35,000 --> 00:30:38,319
+I would have thought that's hard because I
+would have thought that chip design
+
+613
+00:30:38,839 --> 00:30:43,359
+is one of those places limited by
+the public tokens you can get.
+
+614
+00:30:43,880 --> 00:30:48,076
+Where there aren't actually that many blog
+posts on the public internet on how
+
+615
+00:30:48,160 --> 00:30:52,517
+to build a leading-edge, 2-nanometer chip.
+Well.
+
+616
+00:30:52,799 --> 00:30:56,675
+In terms of how to do the lithography,
+I think there's one company on Earth
+
+617
+00:30:56,759 --> 00:30:58,259
+that seems to know how to do that.
+
+618
+00:30:58,480 --> 00:31:04,115
+In terms of how to do the chip design,
+to build the file that you eventually
+
+619
+00:31:04,200 --> 00:31:05,956
+send to tape out, that is well understood.
+
+620
+00:31:06,039 --> 00:31:07,319
+That is a great problem for AI.
+
+621
+00:31:08,115 --> 00:31:13,497
+Given that the world is going to be
+limited in its silicon capacity,
+
+622
+00:31:13,880 --> 00:31:15,415
+we all have a shared interest.
+
+623
+00:31:15,915 --> 00:31:20,035
+One of the things that I'm proud of about
+OpenAI, and maybe this sounds obvious.
+
+624
+00:31:20,119 --> 00:31:26,035
+But it was not as obvious at the time,
+is: we have a culture where people...
+
+625
+00:31:26,119 --> 00:31:30,679
+Even if they've done something
+the old-fashioned way for a long time,
+
+626
+00:31:31,599 --> 00:31:35,240
+are super willing to try
+using AI to do it better.
+
+627
+00:31:36,480 --> 00:31:37,980
+What are other examples of that?
+
+628
+00:31:38,319 --> 00:31:41,279
+AI research.
+Software engineering.
+
+629
+00:31:41,960 --> 00:31:44,596
+But also, increasingly, procurement.
+
+630
+00:31:44,680 --> 00:31:47,355
+Or things that people think of very
+outside the realm of what most
+
+631
+00:31:47,440 --> 00:31:48,660
+people are using AI to do.
+
+632
+00:31:49,031 --> 00:31:52,599
+How does AI-driven AI
+research actually work?
+
+633
+00:31:53,577 --> 00:31:57,155
+The math proofs where you say—or find
+the PHP vulnerability where you say:
+
+634
+00:31:57,240 --> 00:31:58,959
+"Please find me some AI advances."So.
+
+635
+00:31:59,542 --> 00:32:02,395
+I think we don't know yet how
+it truly is going to work.
+
+636
+00:32:02,480 --> 00:32:05,759
+We know today how to say,
+"Find me a 5% compute efficiency win."
+
+637
+00:32:06,048 --> 00:32:07,599
+But, it's that high level.
+
+638
+00:32:08,119 --> 00:32:11,053
+I could be an incredibly
+successful AI researcher now.
+
+639
+00:32:11,555 --> 00:32:12,240
+I don't know about incredibly.
+
+640
+00:32:12,324 --> 00:32:14,740
+But yeah, if you were looking
+for a new job, you can come do it.
+
+641
+00:32:15,279 --> 00:32:18,599
+What I don't think anyone knows how to do
+yet, is to say: "Go discover
+
+642
+00:32:19,240 --> 00:32:21,836
+a new architecture that is as big
+of a single leap forward as
+
+643
+00:32:21,920 --> 00:32:24,640
+the transformer was."
+I think that's where things are heading.
+
+644
+00:32:25,861 --> 00:32:26,987
+What's missing there?
+
+645
+00:32:27,279 --> 00:32:28,519
+Smarter models...
+
+646
+00:32:28,759 --> 00:32:30,759
+Smarter models that are
+smarter in this dimension.
+
+647
+00:32:31,359 --> 00:32:33,035
+The high-level planning
+and conceptual reasoning.
+
+648
+00:32:33,119 --> 00:32:36,479
+I think if you apply the same pipeline
+that we applied to get our models to be so
+
+649
+00:32:36,564 --> 00:32:39,583
+good at math to AI research,
+it will probably work.
+
+650
+00:32:40,083 --> 00:32:42,556
+Now, per an earlier part
+of this conversation.
+
+651
+00:32:42,640 --> 00:32:47,436
+I kind of think that,
+at least for a while—maybe for a long
+
+652
+00:32:47,519 --> 00:32:50,155
+while—we are going to have to agree
+to some limits about how smart
+
+653
+00:32:50,240 --> 00:32:51,678
+we let these single models get.
+
+654
+00:32:52,261 --> 00:32:54,995
+But, a lack of progress will
+come from that decision.
+
+655
+00:32:55,079 --> 00:32:57,399
+Not from the AI's inability
+to do good research.
+
+656
+00:32:57,726 --> 00:33:00,240
+Concretely, if I'm using AI
+
+657
+00:33:01,400 --> 00:33:04,916
+to develop improved AI...
+
+658
+00:33:05,000 --> 00:33:07,556
+Because we should expect
+GPT-7 to be really good now.
+
+659
+00:33:07,640 --> 00:33:12,720
+Because you have GPT-6, and whatever
+unreleased version of it, to develop it.
+
+660
+00:33:12,880 --> 00:33:15,535
+So, my expectations are sky high.
+
+661
+00:33:16,160 --> 00:33:18,276
+But, I come into work with my backpack.
+
+662
+00:33:18,359 --> 00:33:21,395
+And I come into the OpenAI office
+in San Francisco.
+
+663
+00:33:21,480 --> 00:33:22,720
+And I sit down at my desk.
+
+664
+00:33:23,359 --> 00:33:29,559
+Am I saying: "Find me more intelligence
+in this model?" Am I
+
+665
+00:33:30,480 --> 00:33:33,039
+giving a real direction of research?
+
+666
+00:33:33,440 --> 00:33:34,720
+How directed does it get?
+
+667
+00:33:34,960 --> 00:33:36,680
+What does the iteration loop look like?
+
+668
+00:33:37,000 --> 00:33:40,559
+Just what does RSI— because
+you have a front row seat to RSI.
+
+669
+00:33:41,359 --> 00:33:42,779
+I'm curious what it looks like.
+
+670
+00:33:43,119 --> 00:33:47,239
+One of the sort of interesting things
+that people talk a lot about
+
+671
+00:33:47,799 --> 00:33:50,395
+at OpenAI, which sounds very obvious.
+
+672
+00:33:50,480 --> 00:33:53,516
+It sounds like you could
+answer: "Well, build me...
+
+673
+00:33:53,599 --> 00:33:57,875
+Build me RSI or whatever," is: "What are
+the questions that you're supposed to ask
+
+674
+00:33:57,960 --> 00:34:01,796
+of GPT-7?" Probably,
+it's not enough to just say: "Make me
+
+675
+00:34:01,880 --> 00:34:07,760
+RSI." Also, it's probably not enough to
+say: "Buy me a 5% compute efficiency win."
+
+676
+00:34:09,119 --> 00:34:12,179
+I think this is one of the most
+interesting debates going on right now.
+
+677
+00:34:12,384 --> 00:34:15,755
+And the answer is not
+just what question to ask it.
+
+678
+00:34:15,840 --> 00:34:17,600
+But it's things like agent swarms.
+
+679
+00:34:17,847 --> 00:34:22,836
+How are we going to use these models
+in a way that actually maximizes
+
+680
+00:34:22,920 --> 00:34:23,800
+what we can get out of them?
+
+681
+00:34:23,884 --> 00:34:26,815
+I think we're going to learn a lot
+about that in the next three months.
+
+682
+00:34:27,280 --> 00:34:27,400
+Okay.
+
+683
+00:34:27,483 --> 00:34:30,920
+But it sounds like
+you guys do not have a codified
+
+684
+00:34:31,639 --> 00:34:36,199
+OpenAI standard way
+of doing an AI-enabled AI development.
+
+685
+00:34:36,360 --> 00:34:37,635
+It's still lots
+of experimentation yourself—
+
+686
+00:34:37,719 --> 00:34:39,219
+It's lots of experimentation.
+Yeah.
+
+687
+00:34:39,440 --> 00:34:41,519
+When we were talking about the
+token budgets,
+
+688
+00:34:42,360 --> 00:34:46,960
+it just strikes me that this is one
+of the big unresolved questions for AI
+
+689
+00:34:47,719 --> 00:34:49,319
+use in enterprises generally is how...
+
+690
+00:34:50,559 --> 00:34:53,715
+We don't have hard budgets
+for individual engineers.
+
+691
+00:34:53,800 --> 00:34:55,400
+You don't get cut off at a certain point.
+
+692
+00:34:55,483 --> 00:35:01,036
+It's like: "Sorry, you've spent all
+your arcade tokens." Maybe we should.
+
+693
+00:35:01,119 --> 00:35:01,719
+But we don't.
+
+694
+00:35:02,199 --> 00:35:06,353
+Again, I think we all believe in
+the scale-up of AI.
+
+695
+00:35:06,855 --> 00:35:10,516
+But if you take that seriously,
+it means the dollars of compute,
+
+696
+00:35:10,599 --> 00:35:12,599
+or AI per person will go up.
+
+697
+00:35:13,000 --> 00:35:18,360
+So I feel like we're pretty soon to now
+actually just running into this question
+
+698
+00:35:18,519 --> 00:35:23,355
+of how you actually decide how much
+spending power to give individual
+
+699
+00:35:23,440 --> 00:35:24,860
+people inside the organization.
+
+700
+00:35:25,414 --> 00:35:29,835
+There was a time when a lot of companies
+had this thing in their Google Calendar,
+
+701
+00:35:29,920 --> 00:35:32,159
+which showed the approximate
+cost of each meeting.
+
+702
+00:35:32,480 --> 00:35:33,139
+Hmm.
+
+703
+00:35:33,679 --> 00:35:35,875
+In terms of everybody's
+comp that had to be there.
+
+704
+00:35:35,960 --> 00:35:38,302
+I think that was always
+still an underestimate of it.
+
+705
+00:35:38,920 --> 00:35:41,115
+There was this observation that...
+
+706
+00:35:41,199 --> 00:35:42,719
+Paul Graham made it at one point.
+
+707
+00:35:42,880 --> 00:35:43,960
+And many other people made it too.
+
+708
+00:35:44,043 --> 00:35:45,155
+There was...
+
+709
+00:35:45,239 --> 00:35:51,435
+There are people at companies that have
+incredible power to save $17 on the snack
+
+710
+00:35:51,519 --> 00:35:53,139
+budget of the office every week.
+
+711
+00:35:53,360 --> 00:35:57,599
+And yeah, you can have these meetings
+for unbelievable amounts of money that are
+
+712
+00:35:59,320 --> 00:36:00,080
+adding no value.
+
+713
+00:36:00,164 --> 00:36:02,952
+And there's no equivalent
+of the ability to stop that.
+
+714
+00:36:04,159 --> 00:36:07,435
+I think that most use...
+
+715
+00:36:07,519 --> 00:36:09,719
+Okay, so I'm really talking about my book
+here and I'm very biased,
+
+716
+00:36:09,804 --> 00:36:11,180
+but I genuinely believe it.
+
+717
+00:36:12,753 --> 00:36:16,880
+That use of AI is
+not a company's biggest spend problem
+
+718
+00:36:17,480 --> 00:36:19,099
+relative to other things that happen.
+
+719
+00:36:19,199 --> 00:36:23,399
+Even if it's somewhat inefficient,
+it is not where I would focus.
+
+720
+00:36:23,764 --> 00:36:26,719
+Well, hang on.
+That's not scaling law-pilled enough.
+
+721
+00:36:27,039 --> 00:36:28,675
+Like, I'm not...
+Okay, two years from now.
+
+722
+00:36:28,760 --> 00:36:31,876
+You want to go spend all Stripe's revenue,
+all Stripe's profit on OpenAI
+
+723
+00:36:31,960 --> 00:36:34,115
+services and then complain about this?
+I'd be delighted to have a conversation.
+
+724
+00:36:34,199 --> 00:36:35,755
+But we're on a path to that.
+Like, you know, we—
+
+725
+00:36:35,840 --> 00:36:36,680
+Great.
+Yeah, yeah.
+
+726
+00:36:36,764 --> 00:36:43,155
+We now spend, you know, 1%-ish order
+of magnitude of Stripe's OpEx is tokens.
+
+727
+00:36:43,239 --> 00:36:44,785
+That is obviously—That feels too low.
+
+728
+00:36:45,159 --> 00:36:46,960
+Yeah.
+So, we're working on fixing it.
+
+729
+00:36:47,159 --> 00:36:53,043
+And it'll get to 5%, and 10%, and 20%.
+Then, you have a real question.
+
+730
+00:36:53,400 --> 00:36:55,380
+Do you have an intuition
+on what the right number is?
+
+731
+00:36:55,960 --> 00:36:57,519
+What it should be today?
+
+732
+00:36:57,639 --> 00:36:59,635
+What it should be today is maybe, tricky.
+
+733
+00:36:59,719 --> 00:37:02,119
+But, steady state...
+
+734
+00:37:03,880 --> 00:37:08,796
+Isn't it going to be,
+depending on the kind of company?
+
+735
+00:37:08,880 --> 00:37:10,880
+Isn't it going to be,
+
+736
+00:37:12,840 --> 00:37:16,160
+10s of percentage points of their OpEx?
+
+737
+00:37:16,920 --> 00:37:19,860
+I think for many companies,
+the answer to that is clearly 'yes.'
+
+738
+00:37:21,559 --> 00:37:25,320
+And I think there will come a time
+
+739
+00:37:26,320 --> 00:37:30,115
+when the right thing to do
+is to really optimize that.
+
+740
+00:37:30,199 --> 00:37:34,501
+Also, another thing I'm proud of about
+OpenAI is—we've tried to really drive
+
+741
+00:37:35,039 --> 00:37:37,719
+the cost per unit of intelligence down,
+and down, and down.
+
+742
+00:37:38,480 --> 00:37:43,440
+I think we've been a good spokesperson,
+and good champion of this.
+
+743
+00:37:44,179 --> 00:37:49,356
+But still, I think the problem,
+even at current costs...
+
+744
+00:37:49,440 --> 00:37:51,996
+I think there are more companies
+with the problem of not using enough
+
+745
+00:37:52,079 --> 00:37:53,440
+AI rather than using too much AI.
+
+746
+00:37:53,938 --> 00:37:56,983
+Do the dollars per gigawatt
+of leading-edge AI go up or down?
+
+747
+00:37:57,920 --> 00:37:58,940
+That should go down.
+
+748
+00:37:59,440 --> 00:38:00,559
+Down?
+That should go down.
+
+749
+00:38:01,039 --> 00:38:01,719
+Why?
+Um.
+
+750
+00:38:01,920 --> 00:38:04,639
+Because it's gone up to this point, right?
+
+751
+00:38:06,000 --> 00:38:10,119
+The reason it could go up is if AI just
+increases in value per
+
+752
+00:38:10,920 --> 00:38:12,559
+what it can do per watt so quickly.
+
+753
+00:38:12,840 --> 00:38:16,140
+And there's such a supply shortage, that
+people are willing to spend much more.
+
+754
+00:38:16,280 --> 00:38:16,400
+Ah.
+
+755
+00:38:16,483 --> 00:38:18,195
+But you would view that as
+compute not keeping up.
+
+756
+00:38:18,280 --> 00:38:19,880
+But I would view that as
+compute not keeping up.
+
+757
+00:38:19,963 --> 00:38:24,639
+And if I look at the fundamental cost
+of turning the sand into intelligence,
+
+758
+00:38:25,440 --> 00:38:27,800
+that should go down.
+The cost of energy should go down.
+
+759
+00:38:28,639 --> 00:38:29,519
+The cost of chips should go down.
+
+760
+00:38:29,603 --> 00:38:31,519
+The rest of the cost of the
+supply chain should go down.
+
+761
+00:38:31,603 --> 00:38:33,460
+If it doesn't go down, I'll be very sad.
+
+762
+00:38:33,599 --> 00:38:36,599
+But for it to go down,
+given how much value there is in this,
+
+763
+00:38:37,239 --> 00:38:38,619
+supply's got to go way up.
+
+764
+00:38:39,025 --> 00:38:44,516
+Okay, so you would like to see a compute
+glut where we start producing a lot more
+
+765
+00:38:44,599 --> 00:38:46,880
+memory, a lot more data centers,
+a lot more of all the inputs.
+
+766
+00:38:46,963 --> 00:38:49,039
+And as a result,
+anyone who wants a computer,
+
+767
+00:38:49,400 --> 00:38:51,119
+for whatever reason, can have one.
+
+768
+00:38:51,538 --> 00:38:56,996
+People give different numbers for the cost
+per gigawatt measured in the five-year
+
+769
+00:38:57,079 --> 00:38:58,559
+total cost of ownership right now.
+
+770
+00:38:58,643 --> 00:39:01,159
+But let's say, let's pick
+$70 billion as a number.
+
+771
+00:39:02,480 --> 00:39:04,076
+I think if that number were—
+That's the cost to install—
+
+772
+00:39:04,159 --> 00:39:04,779
+And run it for five years.
+
+773
+00:39:05,760 --> 00:39:06,840
+Yep.
+Okay.
+
+774
+00:39:07,360 --> 00:39:12,400
+I think if that number were 20
+instead of 70, we should be much happier.
+
+775
+00:39:12,679 --> 00:39:16,639
+And we should still demand to get
+10x better performance out of it
+
+776
+00:39:17,000 --> 00:39:18,436
+with smarter models every year.
+
+777
+00:39:18,519 --> 00:39:20,440
+Presumably you don't think
+two is a good number.
+
+778
+00:39:20,599 --> 00:39:22,315
+Something's gone wrong
+if we're seeing two.
+
+779
+00:39:22,400 --> 00:39:23,840
+Because it'd be surprising if we were—
+
+780
+00:39:23,923 --> 00:39:24,960
+Um...
+
+781
+00:39:25,159 --> 00:39:26,530
+Or, is two better than 20?
+
+782
+00:39:27,760 --> 00:39:28,800
+Why is it not?
+
+783
+00:39:29,000 --> 00:39:30,199
+I don't think that will happen.
+
+784
+00:39:30,284 --> 00:39:33,559
+But, why do we not want that number
+to be as low as possible?
+
+785
+00:39:34,038 --> 00:39:35,000
+I don't know, this is your theory.
+
+786
+00:39:35,083 --> 00:39:37,599
+You have a view that, generally,
+deflationary technology is good.
+
+787
+00:39:37,684 --> 00:39:38,760
+I do believe in that.
+
+788
+00:39:38,844 --> 00:39:40,159
+Yeah, I'm pro-deflation in a sense...
+
+789
+00:39:40,244 --> 00:39:41,516
+Pro-deflationary technology.
+
+790
+00:39:41,599 --> 00:39:42,915
+So how are we going to get there?
+
+791
+00:39:43,000 --> 00:39:44,996
+What's going happen between now—
+Well, $2 a gigawatt.
+
+792
+00:39:45,079 --> 00:39:45,559
+I can't imagine.
+
+793
+00:39:45,643 --> 00:39:47,675
+Okay, what's going to happen
+between now and $20 a gigawatt?
+
+794
+00:39:47,760 --> 00:39:49,716
+$20 billion.
+$20 a gigawatt would be really great.
+
+795
+00:39:49,800 --> 00:39:50,876
+Okay, yeah, yeah.
+$20 billion a gigawatt.
+
+796
+00:39:50,960 --> 00:39:53,195
+Even to get down to 20,
+you're getting into the realm
+
+797
+00:39:53,280 --> 00:39:54,420
+of energy's got to get cheaper.
+
+798
+00:39:55,320 --> 00:39:59,355
+But certainly, all of the gross margin
+stacking that happens between
+
+799
+00:40:00,199 --> 00:40:00,839
+melting sand...
+
+800
+00:40:00,923 --> 00:40:03,115
+Or the equivalent of melting
+sand and getting the token back.
+
+801
+00:40:03,199 --> 00:40:04,919
+A lot of that's got to get compressed.
+
+802
+00:40:05,445 --> 00:40:09,276
+You could just get there
+with eliminating profits?
+
+803
+00:40:09,360 --> 00:40:10,876
+Or do you need to also
+make the energy cheaper?
+
+804
+00:40:10,960 --> 00:40:12,619
+I don't know the math
+off the top of my head.
+
+805
+00:40:12,800 --> 00:40:15,756
+If you assumed all materials were free
+and no one made a profit, maybe you could
+
+806
+00:40:15,840 --> 00:40:17,836
+get there in the current energy envelope.
+But only just.
+
+807
+00:40:17,920 --> 00:40:18,579
+I see.
+
+808
+00:40:18,916 --> 00:40:21,920
+Personal agents are the most exciting
+
+809
+00:40:23,960 --> 00:40:26,679
+thing happening in AI right now.
+
+810
+00:40:26,800 --> 00:40:28,635
+One of them, there's many exciting things
+happening in AI, but one
+
+811
+00:40:28,719 --> 00:40:29,639
+of the most exciting things.
+
+812
+00:40:29,724 --> 00:40:32,640
+You guys launched Dots
+a few weeks back at this stage.
+
+813
+00:40:33,280 --> 00:40:37,640
+And there's a bunch of other
+people also launching in the field.
+
+814
+00:40:38,480 --> 00:40:43,000
+What will be true of the winning
+personal agent?
+
+815
+00:40:43,608 --> 00:40:47,516
+It's like: intelligence, context, tools.
+
+816
+00:40:47,599 --> 00:40:48,880
+It's a limited number of things.
+
+817
+00:40:48,963 --> 00:40:50,159
+Someone is going...
+
+818
+00:40:50,519 --> 00:40:54,000
+I think no one has yet figured
+out the thing that people...
+
+819
+00:40:55,119 --> 00:40:57,079
+People like these,
+but this is not something that people are
+
+820
+00:40:57,164 --> 00:40:59,356
+like,
+"I cannot imagine my life without this
+
+821
+00:40:59,440 --> 00:41:04,436
+thing" in a way when people talk about
+coding agents, or even
+
+822
+00:41:04,519 --> 00:41:05,840
+ChatGPT—they do say.
+Mm-hmm.
+
+823
+00:41:06,797 --> 00:41:07,799
+And someone...
+
+824
+00:41:07,884 --> 00:41:10,740
+I think someone soon is going
+to figure out what that looks like.
+
+825
+00:41:10,840 --> 00:41:13,579
+You talked about one of the reasons
+why this doesn't quite work yet.
+
+826
+00:41:13,920 --> 00:41:18,840
+But I think this is a small number of
+ideas away from a super mainstream thing.
+
+827
+00:41:19,199 --> 00:41:19,639
+Oh, interesting.
+
+828
+00:41:19,724 --> 00:41:22,640
+You think we have not had the Macintosh
+moment for personal agents?
+
+829
+00:41:22,813 --> 00:41:23,899
+I think we have not.
+
+830
+00:41:24,398 --> 00:41:26,775
+Do you have any sense of what
+the shape of it will be?
+
+831
+00:41:27,360 --> 00:41:32,195
+I think it'll look a lot like the current
+Dots, or Muse, or Grokbot, or whatever.
+
+832
+00:41:32,280 --> 00:41:33,160
+But it'll just work.
+
+833
+00:41:34,440 --> 00:41:36,039
+It will just work.
+It will be reliable.
+
+834
+00:41:36,320 --> 00:41:37,320
+You'll never have...
+
+835
+00:41:37,403 --> 00:41:40,719
+You'll just give it more complex tasks,
+and it'll do all of those things.
+
+836
+00:41:41,039 --> 00:41:43,559
+The computer use dynamic
+is very interesting to me.
+
+837
+00:41:44,079 --> 00:41:47,840
+Because, not everyone is embracing
+
+838
+00:41:48,719 --> 00:41:51,359
+the new agentic future with open arms.
+
+839
+00:41:52,360 --> 00:41:54,559
+But it's not totally within their control.
+
+840
+00:41:55,320 --> 00:41:59,600
+Because you can just
+have an agent using a computer.
+
+841
+00:42:00,480 --> 00:42:03,559
+Where do you think that dynamic goes,
+this sort of cat and mouse?
+
+842
+00:42:05,119 --> 00:42:07,875
+Rough instinct is the world will...
+
+843
+00:42:07,960 --> 00:42:11,360
+People are going to fight this in both
+directions but,
+
+844
+00:42:11,960 --> 00:42:15,795
+eventually converge on something like,
+"You're allowed to tell an AI to use your
+
+845
+00:42:15,880 --> 00:42:18,200
+computer on your behalf,
+including software."
+
+846
+00:42:18,869 --> 00:42:22,115
+People always talk about that,
+but isn't it a bit like the semantic web?
+
+847
+00:42:22,199 --> 00:42:24,599
+It's a really nice conceptual idea.
+Yeah, I was going to say.
+
+848
+00:42:24,840 --> 00:42:26,800
+I don't think this is so black and white.
+
+849
+00:42:27,079 --> 00:42:29,635
+I don't think I have a super high degree
+of confidence of how this
+
+850
+00:42:29,719 --> 00:42:30,799
+is going to play out.
+
+851
+00:42:31,007 --> 00:42:35,076
+As a consumer, I feel like
+somewhat annoyed if I can't—
+
+852
+00:42:35,159 --> 00:42:35,659
+Yes.
+
+853
+00:42:35,840 --> 00:42:38,514
+Have an AI automate
+tasks on my own computer.
+
+854
+00:42:38,960 --> 00:42:40,916
+I want it to feel like it's
+my agent doing what I ask.
+
+855
+00:42:41,000 --> 00:42:43,820
+But then it gets like, I don't,
+I don't have to go do something else.
+
+856
+00:42:43,920 --> 00:42:44,360
+Yeah.
+Yeah.
+
+857
+00:42:44,478 --> 00:42:47,039
+I note a very interesting
+
+858
+00:42:47,880 --> 00:42:52,559
+dynamic right now, which is every company
+
+859
+00:42:53,960 --> 00:42:57,480
+is really eager
+to add AI to their products
+
+860
+00:42:58,400 --> 00:43:02,914
+in a very specific way,
+which is there is a tab
+
+861
+00:43:03,960 --> 00:43:08,639
+or popup widget or something
+that gives you a messaging-type UI.
+
+862
+00:43:09,199 --> 00:43:11,519
+And it's often surprisingly capable.
+
+863
+00:43:12,840 --> 00:43:17,916
+And so you can say: "Hey, I actually
+want to return my most recent order."
+
+864
+00:43:18,000 --> 00:43:18,400
+Yeah.
+
+865
+00:43:18,483 --> 00:43:23,956
+And then you're surprisingly impressed
+when it actually is able
+
+866
+00:43:24,039 --> 00:43:25,320
+to find your most recent order.
+
+867
+00:43:25,480 --> 00:43:28,440
+And it's a bit janky,
+and it can do all those things.
+
+868
+00:43:29,039 --> 00:43:33,516
+However, no consumer really wants this UI.
+
+869
+00:43:33,599 --> 00:43:39,759
+Because, consumers have strong—not
+immovable, but strong preferences
+
+870
+00:43:40,199 --> 00:43:42,195
+for their existing primary chat app.
+
+871
+00:43:42,280 --> 00:43:46,236
+The kind of top-of-wallet app that they
+open when they want to go to do something.
+
+872
+00:43:46,320 --> 00:43:49,160
+And what they want is to be able to say:
+"Hey,
+
+873
+00:43:49,639 --> 00:43:54,599
+go find my recent order on this business,
+and refund it." Or something like that.
+
+874
+00:43:55,480 --> 00:44:00,159
+And, I noticed that businesses
+are really reluctant
+
+875
+00:44:00,760 --> 00:44:04,480
+to allow people to use those businesses
+
+876
+00:44:06,360 --> 00:44:08,320
+inside another AI app.
+
+877
+00:44:08,599 --> 00:44:11,596
+Because like, "Oh, we're going to lose
+control and our moat" or whatever.
+
+878
+00:44:11,679 --> 00:44:14,839
+And it just strikes me as fine,
+because your defensibility probably did
+
+879
+00:44:14,923 --> 00:44:17,519
+not come from your ability
+to put together HTML.
+
+880
+00:44:17,920 --> 00:44:21,635
+Your defensibility came from the brand
+loyalty and the product selection.
+
+881
+00:44:21,719 --> 00:44:26,475
+And the new UI
+is that agentic interaction inside
+
+882
+00:44:26,559 --> 00:44:29,000
+ChatGPT, or Gemini, or whatever it is.
+
+883
+00:44:29,599 --> 00:44:31,675
+But, all businesses disagree with me here.
+I—
+
+884
+00:44:31,760 --> 00:44:33,080
+But they're very good at business,
+so maybe, they're right.
+
+885
+00:44:33,295 --> 00:44:35,435
+Yeah, I mean, again, I have a bias here.
+
+886
+00:44:35,519 --> 00:44:37,400
+But I so directionally agree with you.
+
+887
+00:44:37,800 --> 00:44:43,080
+I have such an extreme preference
+to buy something from Amazon
+
+888
+00:44:43,480 --> 00:44:47,036
+versus some random e-commerce vendor
+that I don't know if I can return to.
+
+889
+00:44:47,119 --> 00:44:48,799
+Or I don't know if I can trust them
+to deliver it quickly,
+
+890
+00:44:48,884 --> 00:44:49,996
+or something like that.
+
+891
+00:44:50,079 --> 00:44:54,960
+If I ask ChatGPT to buy me something
+and I can choose Amazon
+
+892
+00:44:55,239 --> 00:44:56,835
+versus some other thing...
+
+893
+00:44:56,920 --> 00:44:58,960
+10 out of 10 times I click Amazon.
+
+894
+00:44:59,880 --> 00:45:01,796
+Pay a higher price.
+I have just like such—
+
+895
+00:45:01,880 --> 00:45:02,119
+Yes.
+
+896
+00:45:02,360 --> 00:45:05,276
+And it's nothing to do with
+my experience of clicking around amazon.
+
+897
+00:45:05,360 --> 00:45:06,200
+com.
+Exactly.
+
+898
+00:45:06,679 --> 00:45:09,755
+And now,
+I think you could say we have not done
+
+899
+00:45:09,840 --> 00:45:13,596
+a good enough job offering partners
+a platform inside of ChatGPT if
+
+900
+00:45:13,679 --> 00:45:14,960
+they don't want this to happen.
+
+901
+00:45:15,043 --> 00:45:17,799
+But...
+And again, maybe I'm really biased here.
+
+902
+00:45:18,880 --> 00:45:20,916
+I think Amazon's in a great...
+
+903
+00:45:21,000 --> 00:45:24,139
+I think they're in a great place if
+commerce moves much more agentic.
+
+904
+00:45:24,280 --> 00:45:27,560
+Amazon in particular has this amazing
+defensibility via the fulfillment network.
+
+905
+00:45:27,643 --> 00:45:30,479
+And so, you can use Amazon
+kind of from anywhere.
+
+906
+00:45:30,599 --> 00:45:32,239
+I super trust that.
+Yeah.
+
+907
+00:45:33,519 --> 00:45:35,916
+I'm just really struck by this dynamic.
+
+908
+00:45:36,000 --> 00:45:38,480
+My new thinking,
+in particular with regards to agentic
+
+909
+00:45:38,563 --> 00:45:44,000
+commerce, but also anything is
+anytime there is a web form field,
+
+910
+00:45:44,360 --> 00:45:46,039
+you as a human are filling out.
+
+911
+00:45:46,440 --> 00:45:48,200
+These days, that is below your pay grade.
+
+912
+00:45:48,284 --> 00:45:52,166
+Because, you are probably not inventing
+that information for the first time.
+
+913
+00:45:52,400 --> 00:45:54,715
+We've all filled out the medical forms
+where it's like—oh,
+
+914
+00:45:54,800 --> 00:45:56,396
+your family history, or whatever.
+Yeah.
+
+915
+00:45:56,480 --> 00:45:57,240
+And that's so frustrating.
+
+916
+00:45:57,324 --> 00:46:01,036
+Because, how many times have you filled
+out your dad's and your mom's medical
+
+917
+00:46:01,119 --> 00:46:02,155
+history, and things like that?
+
+918
+00:46:02,239 --> 00:46:04,755
+It feels so wasteful.
+But there's a million versions of that.
+
+919
+00:46:04,840 --> 00:46:07,120
+You're never inventing new
+information for a web form.
+
+920
+00:46:07,514 --> 00:46:12,018
+I would be so happy to never do
+fake work at a computer again.
+
+921
+00:46:12,519 --> 00:46:13,019
+Yeah.
+
+922
+00:46:13,960 --> 00:46:16,320
+And my argument is any web
+form is basically fake work.
+
+923
+00:46:16,523 --> 00:46:17,023
+I agree.
+
+924
+00:46:17,599 --> 00:46:18,159
+But...
+
+925
+00:46:19,920 --> 00:46:23,599
+I was one of the very earliest adopters
+that I knew of, of those plugins that put
+
+926
+00:46:23,684 --> 00:46:26,200
+in your name and address very clumsily.
+
+927
+00:46:26,480 --> 00:46:27,596
+Because I was just like, "This is...
+
+928
+00:46:27,679 --> 00:46:28,839
+I cannot do this again."
+
+929
+00:46:29,704 --> 00:46:33,207
+But I kind of feel like that using
+most of the web at this point.
+
+930
+00:46:33,440 --> 00:46:36,860
+Yeah, I just find this phenomenon really
+interesting where businesses right now
+
+931
+00:46:37,440 --> 00:46:43,556
+are really attached to their HTML
+and mobile apps as sources
+
+932
+00:46:43,639 --> 00:46:44,719
+of business defensibility.
+
+933
+00:46:45,719 --> 00:46:47,039
+And it just feels very...
+
+934
+00:46:48,760 --> 00:46:51,516
+Either they're wrong and it's
+not a source of defensibility.
+
+935
+00:46:51,599 --> 00:46:54,440
+Or it may be, but it's transitory
+and they just need to get over it.
+
+936
+00:46:55,186 --> 00:46:58,759
+The last example of this that I think
+we really witnessed was the app stores.
+
+937
+00:47:00,239 --> 00:47:01,579
+The iPhone App Store, specifically.
+
+938
+00:47:01,985 --> 00:47:05,279
+I remember every startup was like,
+or many startups...
+
+939
+00:47:06,159 --> 00:47:08,155
+Most of the YC batch was like:
+"I'm gonna build an iPhone app.
+
+940
+00:47:08,239 --> 00:47:09,995
+This is like new distribution.
+This is awesome.
+
+941
+00:47:10,079 --> 00:47:12,155
+I can do a new thing I couldn't do
+before." And many new
+
+942
+00:47:12,239 --> 00:47:13,119
+startups got created.
+
+943
+00:47:13,679 --> 00:47:16,355
+And all the big companies felt like they
+had to make one, but they
+
+944
+00:47:16,440 --> 00:47:17,360
+kind of didn't want to.
+
+945
+00:47:17,480 --> 00:47:19,780
+Because they're like: "Oh,
+I'm going to hand my
+
+946
+00:47:20,239 --> 00:47:23,875
+relationship with my consumer over
+to Apple." And, it was great for mobile.
+
+947
+00:47:23,960 --> 00:47:25,119
+It was just a new UI.
+Yeah.
+
+948
+00:47:25,719 --> 00:47:27,439
+Okay, I'm going to go more rapid fire.
+
+949
+00:47:27,523 --> 00:47:29,219
+People complain about benchmaxxing.
+
+950
+00:47:30,239 --> 00:47:33,319
+Is that a real concern?
+Are OpenAI models benchmaxxed?
+
+951
+00:47:33,719 --> 00:47:36,839
+Are you actually Rick Rubin-ing it, where
+you just feel the vibe of this model is
+
+952
+00:47:36,923 --> 00:47:39,239
+right and you don't care
+what SWE-bench gives it?
+
+953
+00:47:39,920 --> 00:47:42,960
+Maybe there are two things we should
+really care about models being good at.
+
+954
+00:47:43,043 --> 00:47:47,920
+One is, scientific discovery and doing
+things that people cannot do.
+
+955
+00:47:49,000 --> 00:47:50,960
+And the other is being
+enjoyable to work with.
+
+956
+00:47:51,800 --> 00:47:56,556
+And, I don't think we have great
+benchmarks for being
+
+957
+00:47:56,639 --> 00:47:57,559
+enjoyable to work with.
+
+958
+00:47:58,519 --> 00:48:00,800
+I'm actually not sure we have great
+benchmarks for the smartest,
+
+959
+00:48:00,884 --> 00:48:02,356
+scientific scientist either.
+
+960
+00:48:02,440 --> 00:48:06,320
+But, we endeavor not to benchmaxx.
+
+961
+00:48:09,159 --> 00:48:13,973
+I keep thinking that benchmaxxing is over
+as a phenomenon, and people keep doing it.
+
+962
+00:48:14,474 --> 00:48:19,076
+So are you better
+than other labs at not getting sucked
+
+963
+00:48:19,159 --> 00:48:20,875
+in by the siren call of benchmaxxing?
+
+964
+00:48:20,960 --> 00:48:22,500
+I believe we are better at that.
+
+965
+00:48:23,360 --> 00:48:24,151
+It feels like—
+
+966
+00:48:24,280 --> 00:48:25,636
+I don't think we've always been
+better at that in our history.
+
+967
+00:48:25,719 --> 00:48:27,237
+I believe we are better
+than that right now.
+
+968
+00:48:27,639 --> 00:48:30,279
+It feels like the industry is still
+figuring out the "being nice to work
+
+969
+00:48:30,364 --> 00:48:32,159
+with," where there was the glazing era.
+
+970
+00:48:32,244 --> 00:48:36,360
+And more recently, there was the stroppy,
+
+971
+00:48:36,840 --> 00:48:39,236
+ornery era of models that were
+
+972
+00:48:39,320 --> 00:48:41,276
+anti-glazing and as a result,
+tried to disagree with you,
+
+973
+00:48:41,360 --> 00:48:43,076
+and nitpick at you on every minor thing.
+
+974
+00:48:43,159 --> 00:48:44,596
+The current ones are
+pretty good, actually.
+
+975
+00:48:44,679 --> 00:48:45,579
+It's gotten...
+
+976
+00:48:46,239 --> 00:48:49,759
+I think the latest models are
+much better than we've had in a long time.
+
+977
+00:48:49,880 --> 00:48:52,480
+But it also feels like there's
+probably higher peaks to ascend.
+
+978
+00:48:53,556 --> 00:48:58,440
+Emmett Shear said to me years ago
+that what he wanted was a really
+
+979
+00:49:00,039 --> 00:49:03,039
+thoughtful and challenging,
+but still respectful, senior coworker.
+
+980
+00:49:04,079 --> 00:49:06,759
+And I have still not heard a better,
+brief encapsulation than that.
+
+981
+00:49:06,920 --> 00:49:07,193
+Yes.
+
+982
+00:49:07,480 --> 00:49:10,076
+After working with him for many years,
+what's your grand unified
+
+983
+00:49:10,159 --> 00:49:11,315
+theory of Greg Brockman?
+
+984
+00:49:11,400 --> 00:49:13,476
+I think Greg Brockman is one
+of a kind in the best sense.
+
+985
+00:49:13,559 --> 00:49:15,000
+He's singular on the Greg Brockman scale.
+
+986
+00:49:15,083 --> 00:49:17,579
+You just have to be there
+to understand what that is.
+
+987
+00:49:18,079 --> 00:49:24,079
+It's a combination of intensity,
+monster productivity, extreme dedication,
+
+988
+00:49:24,320 --> 00:49:27,213
+and focus on succeeding at the mission.
+It's very cool.
+
+989
+00:49:27,960 --> 00:49:33,760
+You hate tokens as a metric for
+anything really.
+
+990
+00:49:35,159 --> 00:49:36,079
+Pricing, or...
+
+991
+00:49:38,480 --> 00:49:40,039
+It's not the standard unit of AI.
+
+992
+00:49:40,123 --> 00:49:41,719
+And yet, we found ourselves there.
+
+993
+00:49:42,480 --> 00:49:43,516
+You know, we did talk—
+
+994
+00:49:43,599 --> 00:49:45,519
+You might say outcomes,
+but I don't think it can be outcomes.
+
+995
+00:49:45,603 --> 00:49:49,635
+Because outcomes is too
+different across different use cases.
+
+996
+00:49:49,719 --> 00:49:51,199
+What's the right standardized unit?
+
+997
+00:49:51,719 --> 00:49:56,959
+We almost made a very—what would've been
+bad call to say we're not going to price
+
+998
+00:49:57,159 --> 00:49:58,519
+our next model in tokens at all.
+
+999
+00:50:00,199 --> 00:50:02,159
+And you're just going to give it a prompt.
+
+1000
+00:50:02,519 --> 00:50:04,059
+And we're going to give you a price back.
+
+1001
+00:50:04,679 --> 00:50:06,915
+And we're going to do it.
+And it's going to be like AWS to you.
+
+1002
+00:50:07,000 --> 00:50:08,860
+Just do something and we send you a bill.
+
+1003
+00:50:09,320 --> 00:50:13,155
+But the customer response
+on that is so negative.
+
+1004
+00:50:13,239 --> 00:50:15,635
+They're like, "I need to know
+what I'm paying for somehow."
+
+1005
+00:50:15,719 --> 00:50:15,959
+Yes.
+
+1006
+00:50:16,280 --> 00:50:21,356
+And, I asked a few people: "Would you
+rather pay more for the same output,
+
+1007
+00:50:21,440 --> 00:50:23,720
+but have it priced in some
+number of consistent tokens?
+
+1008
+00:50:24,400 --> 00:50:27,235
+Or something?" Even if we inflated
+the tokens and they're like, "Oh,
+
+1009
+00:50:27,320 --> 00:50:29,559
+I'd much rather you inflate
+the tokens and pay more.
+
+1010
+00:50:29,643 --> 00:50:34,359
+Because I know there's a real thing
+there." So I think you are right,
+
+1011
+00:50:34,480 --> 00:50:37,639
+people don't just want us to give them
+a price, because they feel like
+
+1012
+00:50:38,039 --> 00:50:40,476
+over the long term they're
+gonna get screwed somehow.
+
+1013
+00:50:40,559 --> 00:50:45,639
+In the same way that maybe people would
+rather pay for CPU hours rather than just
+
+1014
+00:50:45,840 --> 00:50:48,400
+getting their thing done,
+even if it was less expensive.
+
+1015
+00:50:48,920 --> 00:50:51,480
+You know the way, nanometer...
+The chip gate length?
+
+1016
+00:50:51,599 --> 00:50:52,715
+It's totally fake.
+Yeah.
+
+1017
+00:50:52,800 --> 00:50:55,680
+The nanometer has very little
+relation to reality these days.
+
+1018
+00:50:56,199 --> 00:50:59,319
+Will we get something like that in tokens
+where you guys should start saying,
+
+1019
+00:50:59,403 --> 00:51:02,199
+"Here is an intelligence equivalent
+token," like
+
+1020
+00:51:02,599 --> 00:51:04,435
+I Can't Believe It's Not Butter.
+Of the smallest feature?
+
+1021
+00:51:04,519 --> 00:51:05,219
+Yeah.
+
+1022
+00:51:05,480 --> 00:51:06,059
+I...
+
+1023
+00:51:06,599 --> 00:51:08,239
+That's, like, made up.
+I hope not.
+
+1024
+00:51:10,858 --> 00:51:14,355
+I mean, it offends me that we use
+the word nanometers for something
+
+1025
+00:51:14,440 --> 00:51:16,316
+that has nothing to do with nanometers.
+I know, it's very silly.
+
+1026
+00:51:16,400 --> 00:51:17,160
+Yeah.
+So...
+
+1027
+00:51:17,840 --> 00:51:21,036
+You'd not like that.
+I would rather not make up a fake unit.
+
+1028
+00:51:22,079 --> 00:51:23,315
+Tokens are a kind of fake unit.
+
+1029
+00:51:23,400 --> 00:51:25,836
+I mean, they're real in some sense,
+but they're not a good unit.
+
+1030
+00:51:25,920 --> 00:51:28,059
+They're fake from a business
+value point of view.
+
+1031
+00:51:28,840 --> 00:51:29,920
+But isn't the only...
+Okay.
+
+1032
+00:51:30,003 --> 00:51:33,239
+Isn't the only defense of tokens that if
+you're wasting tokens,
+
+1033
+00:51:34,000 --> 00:51:35,596
+we should fix that pretty soon?
+
+1034
+00:51:35,679 --> 00:51:39,429
+We shouldn't be
+streaming—Claude Shannon would not approve
+
+1035
+00:51:39,639 --> 00:51:42,119
+of us just streaming
+noise rather than signal.
+
+1036
+00:51:42,440 --> 00:51:44,916
+And so, there will be a...
+
+1037
+00:51:45,000 --> 00:51:47,840
+There's a floor of the information
+theoretic most useful
+
+1038
+00:51:48,480 --> 00:51:50,476
+tokens on both sides.
+We'll kind of come back to that.
+
+1039
+00:51:50,559 --> 00:51:50,759
+Yeah.
+
+1040
+00:51:50,880 --> 00:51:53,660
+I mean, right now you have to think about
+whether you should want
+
+1041
+00:51:53,760 --> 00:51:57,880
+the 10-cent-per-million tokens out
+of a small model or $10 per token
+
+1042
+00:51:58,719 --> 00:52:00,919
+tokens out of a big model.
+And then whether...
+
+1043
+00:52:02,199 --> 00:52:04,379
+How long the chain
+of thought is likely to be.
+
+1044
+00:52:04,746 --> 00:52:09,679
+And that's just cognitive overhead that I
+don't think actually adds any value.
+
+1045
+00:52:10,800 --> 00:52:12,340
+Is the chain of thought included?
+
+1046
+00:52:13,039 --> 00:52:14,195
+In the price—In what we charge?
+Most people do.
+
+1047
+00:52:14,280 --> 00:52:14,980
+Okay.
+
+1048
+00:52:15,599 --> 00:52:17,996
+By the way, the Guinness
+was not as bad as I thought.
+
+1049
+00:52:18,079 --> 00:52:20,380
+Definitely not as good as
+an IPA, but not as bad.
+
+1050
+00:52:20,480 --> 00:52:21,519
+It's good.
+Yeah.
+
+1051
+00:52:21,920 --> 00:52:23,920
+I mean, an IPA is great
+but it's pretty good.
+
+1052
+00:52:24,280 --> 00:52:25,800
+We like Guinness.
+Yeah.
+
+1053
+00:52:26,320 --> 00:52:28,280
+At least in this podcast.
+
+1054
+00:52:29,146 --> 00:52:29,560
+Thank you.

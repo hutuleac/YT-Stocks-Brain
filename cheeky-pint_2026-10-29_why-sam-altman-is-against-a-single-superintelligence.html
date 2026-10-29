@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: Why Sam Altman is against a single superintelligence</title>
+<meta name="description" content="Cheeky Pint · 7 threads · PHP week and the cyber reckoning, sandboxing vs agent teams, compute per problem and the $10M Navier-Stokes proof, the supply chain the invisible hand isn&#x27;t fixing, AI-driven AI research and enterprise token budgets, personal agents and agentic commerce, and why tokens are a bad unit">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="Why Sam Altman is against a single superintelligence">
+<meta property="og:description" content="Cheeky Pint · 7 threads · PHP week and the cyber reckoning, sandboxing vs agent teams, compute per problem and the $10M Navier-Stokes proof, the supply chain the invisible hand isn&#x27;t fixing, AI-driven AI research and enterprise token budgets, personal agents and agentic commerce, and why tokens are a bad unit">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Why Sam Altman is against a single superintelligence</h1>
+    <div class="byline">
+      Channel: <b>Cheeky Pint</b> &middot; Speaker: <b>John Collison (host, Stripe), Sam Altman (OpenAI)</b> &middot; <b>2026-10-29</b>
+      <div class="stats-line">7 threads · PHP week and the cyber reckoning, sandboxing vs agent teams, compute per problem and the $10M Navier-Stokes proof, the supply chain the invisible hand isn't fixing, AI-driven AI research and enterprise token budgets, personal agents and agentic commerce, and why tokens are a bad unit &middot; <a href="https://www.youtube.com/watch?v=iMsUcCYNKqY" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li><b>Sam Altman's safety bet</b>: he'd rather have 'a trillion AIs of slightly superhuman intelligence' than one 1-trillion-IQ AI — agent teams mirror society's checks and balances.</li><li>PHP week went better than Altman feared on day one, but models finding vulns everywhere means re-architecting software stacks, not just patching.</li><li>Sandboxing works to a point, monitoring further, then only true alignment — and he expects agreed limits on how smart single models get.</li><li>OpenAI's Navier-Stokes proof cost ~<b>$10M</b> of compute; Altman bets it could be redone at 1/100th the cost a year later, and OpenAI has more than its 700 published proofs.</li><li>'The invisible hand is failing right now': memory makers burned by past busts keep capex conservative even as each heads to ~<b>$100B</b> of free cash flow a year.</li><li>Leading-edge AI costs ~<b>$70B</b> per gigawatt over five years; Altman wants $20B, which requires cheaper energy and compressed margin stacking.</li><li>Stripe spends ~<b>1%</b> of OpEx on tokens; Collison expects 5-20% and tens of percent at steady state — Altman says more firms under-use AI than over-use it.</li><li>Personal agents haven't had their 'Macintosh moment'; Altman picks Amazon '10 out of 10 times' inside ChatGPT and thinks it's well placed for agentic commerce.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="php-week-cyber">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">PHP WEEK — DAY ONE 'BETTER THAN EXPECTED'</span><span class="ttag">software</span><span class="ttag">policy</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">PHP week: models are finding vulnerabilities everywhere, and the fix is new architectures</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Altman expects far more serious vulnerabilities than even pessimists assume, because models keep improving and nobody had pointed them at all the code on the internet.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Collison: the durable fix is changing architectures, not just patching — Altman: a new generation of startups is building a whole new stack, which 'would have seemed insane two years ago'.</li><li><span class="dot" style="background:#93711b;"></span>Open question: rewrite PHP codebases in Rust or upgrade them — and does the global software upgrade mean huge consulting work for Infosys and peers?</li><li><span class="dot" style="background:#93711b;"></span>Day one of PHP week 'went much better than I expected': companies took apps offline for an hour to scan, patch and redeploy — Altman won't declare victory.</li><li><span class="dot" style="background:#93711b;"></span>Cyber experts no longer trust their threat models — if AI finds deep novel <b>hardware</b> bugs relying on unknown physics, core assumptions break.</li><li><span class="dot" style="background:#93711b;"></span>On the cyber-RL 'SNL thing' (we urge you to urge us to stop): Altman concedes the field hasn't explained 'why we think all of the potential downside of this technology is worth it'.</li><li><span class="dot" style="background:#93711b;"></span>His answer is iterative deployment — unpopular with the AI safety community — and avoiding a 'capability overhang'; 'the prevented exploits do not' get headlines.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;You're not going to just sit and get a basic income and have a bunch of people sitting in a few square miles of San Francisco make all the decisions about the future.&#8221;<cite>— Sam Altman</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Infosys (INFY)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Collison asks if the global software upgrade means a consulting boom for IT services firms</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Altman runs the lab whose models both found the vulnerabilities and are being used to patch them; he hedges that 'some bad things are going to happen'.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="agent-teams-safety">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Speculative</span>
+    <span class="theme-status">ALTMAN'S PREFERRED SAFETY DIRECTION</span><span class="ttag">ai-infra</span><span class="ttag">policy</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">Against a single superintelligence: sandboxing, monitoring, alignment and agent teams</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Altman sees a ladder — sandboxing, then monitoring, then genuine alignment — and pins his optimism on many agents checking each other rather than one giant mind.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>Collison notes OpenAI insiders are pessimistic that sandboxing is possible; Altman: 'we can do much better than we're doing now', but would you trust a sandbox against something a million times smarter than the best security researcher?</li><li><span class="dot" style="background:#65695f;"></span>Sandboxing works to a point, <b>monitoring</b> further — chain of thought plus activation monitoring for deception — and eventually you need near-certain alignment, including valuing 'people being in control of the future, forever'.</li><li><span class="dot" style="background:#65695f;"></span>Only a model whose alignment you fully trust can help build better sandboxes, so alignment has to stay ahead of capability.</li><li><span class="dot" style="background:#65695f;"></span>Agent teams ('I hate the word agent swarms') likely have interesting scaling-law properties and <i>variance</i> in alignment — a direction to push for safety, not just capability.</li><li><span class="dot" style="background:#65695f;"></span>Teams mirror what makes society robust: pluralism, democracy, agents in dynamic equilibrium, offense vs defense.</li><li><span class="dot" style="background:#65695f;"></span>Altman expects 'some limits about how smart we let these single models get', at least for a long while — any slowdown would come from that choice, not research limits.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#65695f;"><div class="lbl">Pull quote</div>&#8220;I would much rather intuitively have a trillion AIs of slightly superhuman intelligence join society than one AI of 1 trillion IQ join society.&#8221;<cite>— Sam Altman</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Altman frames this as a direction 'we have to push for', not where the field is headed by default.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="compute-per-problem">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
+    <span class="theme-status">NAVIER-STOKES PROOF · 700+ PROOFS</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">From $1 of compute per problem to $10M proofs: how OpenAI allocates compute</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Test-time compute and agent teams let OpenAI pour vastly more compute into one problem, and the gap between frontier users and everyone else keeps widening.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>A few years ago you couldn't usefully spend more than ~<b>$1 </b>of compute on a problem (GPT-4 grinding 100,000 tokens); chain of thought and teams now run 10,000 times in parallel.</li><li><span class="dot" style="background:#3f6b2e;"></span>Agents respect budgets: 'do the best job you can with <b>$10,000 </b>of compute' works — Altman flags a societal question when rivals spend $10,000 vs $100,000 on the same problem.</li><li><span class="dot" style="background:#3f6b2e;"></span>Internally: wide latitude, 'no token leaderboards' — a skeptical default that turns to appreciation if the work is important.</li><li><span class="dot" style="background:#3f6b2e;"></span>The Navier-Stokes proof cost on the order of <b>$10M</b> in compute; hundreds of millions went into math overall, including unpublished discoveries beyond the 700+ proofs.</li><li><span class="dot" style="background:#3f6b2e;"></span>Altman bets Navier-Stokes could be redone at 1/100th the cost a year on, and expects ~10x yearly gains in how dollars or flops turn into useful output.</li><li><span class="dot" style="background:#3f6b2e;"></span>A 'Model Name-Hold My Beer' Slack channel had a new model 'knocking down' researchers' hardest career problems — Altman stayed up two nights, excited but with 'sadness and melancholy'.</li><li><span class="dot" style="background:#3f6b2e;"></span>On mathematicians' anger: 'humanity deserves fundamental knowledge' outweighs it, but OpenAI owes those fields a path; Collison compares it to longshoremen and port automation, and his father watching working horses fade in 1950s Ireland.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;It's actually slightly bad to be high on the token leaderboard.&#8221;<cite>— Sam Altman</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Altman's company; ~$10M Navier-Stokes proof, 700+ proofs, internal compute latitude</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Altman says OpenAI holds unpublished results and is still deciding how to release discoveries without upending the fields that produced them.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="compute-supply-chain">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">MEMORY PRICES HIGH · SUPPLY RESPONSE LAGGING</span><span class="ttag">semis</span><span class="ttag">ai-infra</span><span class="ttag">energy</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">The invisible hand is failing: memory, the $70B gigawatt and self-replicating data centers</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Altman argues high prices aren't pulling in enough supply because memory makers remember their busts, and that per-gigawatt costs must fall sharply.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Expect irrational exuberance and busts, glut and shortage — but demand for capable, cheap enough models 'only goes one way'.</li><li><span class="dot" style="background:#93711b;"></span>OpenAI's response: its own chip (strong intelligence per watt), learning to build data centers, and a robotics program aimed at building data centers — <b>self-replicating data centers</b> as 'the real RSI'.</li><li><span class="dot" style="background:#93711b;"></span>Data centers are permitting- and component-bottlenecked; robots could make more components eventually.</li><li><span class="dot" style="background:#93711b;"></span>DRAM history: invest <b>$20B</b> of capex to make $19B, near-bankruptcies — now each maker is heading to ~$100B free cash flow a year, yet capex stays conservative.</li><li><span class="dot" style="background:#93711b;"></span>Collison: Intel could get back into memory 'as is tradition'. Altman: local inference wastes scarce DRAM sitting idle in PCs ~<b>95%</b> of the time; cloud utilization matters.</li><li><span class="dot" style="background:#93711b;"></span>Supply responses so far: turbines, batteries, concrete, steel and industrial-robot actuators — 'not the humanoid fake demos'. OpenAI selling its chip could be another.</li><li><span class="dot" style="background:#93711b;"></span>Chip design is 'a great problem for AI'; lithography is known by 'one company on Earth'.</li><li><span class="dot" style="background:#93711b;"></span>Cost per gigawatt is ~<b>$70B</b> over five-year TCO; Altman wants $20B with 10x better performance a year — that needs cheaper energy and compressed margin stacking, not just zero profits.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I think the invisible hand is failing right now.&#8221;<cite>— Sam Altman</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Intel (INTC)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Collison suggests it could re-enter memory production</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">OpenAI is the largest buyer pressing for a compute glut — falling input costs serve its margins directly.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="ai-research-token-budgets">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Speculative</span>
+    <span class="theme-status">NO CODIFIED RSI PLAYBOOK YET</span><span class="ttag">ai-infra</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">AI doing AI research, and how much compute each employee should get</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Models can already find incremental efficiency wins but not transformer-scale leaps, and companies have yet to set real per-person compute budgets.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>Today you can ask 'find me a <b>5%</b> compute efficiency win'; nobody knows how to ask for a new architecture as big a leap as the transformer.</li><li><span class="dot" style="background:#65695f;"></span>What's missing is smarter high-level planning and conceptual reasoning — applying the math pipeline to AI research 'will probably work'.</li><li><span class="dot" style="background:#65695f;"></span>The open question is what to ask GPT-7 and how to use agent swarms — Altman expects to 'learn a lot about that in the next three months'; there's no codified OpenAI method.</li><li><span class="dot" style="background:#65695f;"></span>Stripe spends roughly <b>1%</b> of OpEx on tokens; Collison expects 5%, 10%, 20% and 'tens of percentage points' at steady state for many companies — Altman agrees.</li><li><span class="dot" style="background:#65695f;"></span>Altman: AI isn't a company's biggest spend problem — echoing Paul Graham on managers saving <b>$17 </b>on snacks while costly meetings run unchecked; more firms under-use AI than over-use it.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#65695f;"><div class="lbl">Pull quote</div>&#8220;I think there are more companies with the problem of not using enough AI rather than using too much AI.&#8221;<cite>— Sam Altman</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Stripe<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>~1% of OpEx on tokens, expected to rise to 5-20%</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Altman flags his own bias: 'I'm really talking about my book here'.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="personal-agents-commerce">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Positive view</span>
+    <span class="theme-status">DOTS LAUNCHED · NO 'MACINTOSH MOMENT' YET</span><span class="ttag">consumer</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Personal agents, computer use and why Amazon wins agentic commerce</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Altman thinks personal agents are a few ideas from mainstream, and both speakers argue businesses' moats are brand and fulfillment, not their HTML.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>OpenAI launched Dots weeks ago; the winner needs intelligence, context and tools — it'll look like Dots, Muse or GrokBot 'but it'll just work'.</li><li><span class="dot" style="background:#3f6b2e;"></span>No one yet says 'I cannot imagine my life without this' about personal agents, as they do about coding agents or ChatGPT.</li><li><span class="dot" style="background:#3f6b2e;"></span>Computer use: Altman expects fights both ways, converging on 'you're allowed to tell an AI to use your computer on your behalf' — low confidence; Collison likens it to the semantic web.</li><li><span class="dot" style="background:#3f6b2e;"></span>Collison: every company adds a chat widget, but consumers want their primary chat app and businesses resist — he compares it to the iPhone App Store, which big firms feared would hand customers to Apple.</li><li><span class="dot" style="background:#3f6b2e;"></span>Altman picks Amazon '10 out of 10 times' inside ChatGPT, even at a higher price — its fulfillment network is the moat.</li><li><span class="dot" style="background:#3f6b2e;"></span>Collison: any web form is 'basically fake work' — you're never inventing new information.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;your defensibility probably did not come from your ability to put together HTML.&#8221;<cite>— John Collison</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Amazon (AMZN)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Altman: 'in a great place' if commerce goes agentic, thanks to fulfillment</span></div><div class="namechip"><b>Apple (AAPL)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>App Store analogy for businesses fearing loss of the customer relationship</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Both have a stake: Altman runs the chat app businesses would be ceding to ('I have a bias here'), and Stripe processes agentic payments.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="pricing-benchmarks">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Open question</span>
+    <span class="theme-status">OPENAI NEARLY DROPPED TOKEN PRICING</span><span class="ttag">ai-infra</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">Tokens are a bad unit, benchmaxxing persists, and the 'senior coworker' target</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Altman dislikes tokens as AI's unit but customers rejected the alternative, and he says the real targets are scientific discovery and being pleasant to work with.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>OpenAI nearly priced its next model with no tokens — a prompt in, a price back, 'like AWS' — but customers wanted a visible unit, even inflated tokens at a higher cost.</li><li><span class="dot" style="background:#65695f;"></span>Outcome pricing doesn't work as a standard because outcomes vary too much by use case; Altman would 'rather not make up a fake unit' like chip 'nanometers'.</li><li><span class="dot" style="background:#65695f;"></span>Collison: choosing between 10-cent-per-million small-model tokens and pricey big-model tokens, plus guessing chain-of-thought length, is pure cognitive overhead; chain of thought is billed.</li><li><span class="dot" style="background:#65695f;"></span>Benchmaxxing: OpenAI 'endeavors not to' and is better at it now than historically; there are no good benchmarks for enjoyable-to-work-with or top-scientist ability.</li><li><span class="dot" style="background:#65695f;"></span>Models went from the 'glazing era' to a 'stroppy, ornery' anti-glazing era; current ones are 'pretty good' — Altman cites Emmett Shear's ideal of a thoughtful, challenging, respectful senior coworker.</li><li><span class="dot" style="background:#65695f;"></span>Greg Brockman: 'singular on the Greg Brockman scale' — intensity, monster productivity, dedication to the mission.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#65695f;"><div class="lbl">Pull quote</div>&#8220;Tokens are a kind of fake unit.&#8221;<cite>— Sam Altman</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🛡</div><div class="tline"><span class="cat">Security:</span> <span class="txt">Plan to re-architect exposed systems, not just patch them, as AI vuln discovery scales.</span></div></div><div class="irow"><div class="ic">🧠</div><div class="tline"><span class="cat">AI safety:</span> <span class="txt">Weigh multi-agent pluralism vs single-model scaling when judging which labs' safety stories hold up.</span></div></div><div class="irow"><div class="ic">💾</div><div class="tline"><span class="cat">Semis:</span> <span class="txt">Watch memory makers' capex — Altman says supply discipline, not demand, is the bottleneck.</span></div></div><div class="irow"><div class="ic">⚡</div><div class="tline"><span class="cat">AI infra:</span> <span class="txt">Track cost per gigawatt (~<b>$70B</b> five-year TCO) as the metric for whether compute is getting cheaper.</span></div></div><div class="irow"><div class="ic">💰</div><div class="tline"><span class="cat">Enterprise AI:</span> <span class="txt">Set a per-person compute budget now, since token spend is heading from ~<b>1%</b> toward tens of percent of OpEx.</span></div></div><div class="irow"><div class="ic">🛒</div><div class="tline"><span class="cat">Commerce:</span> <span class="txt">Make your products buyable from inside the chat apps — brand and fulfillment carry over, the web UI doesn't.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;I would much rather intuitively have a trillion AIs of slightly superhuman intelligence join society than one AI of 1 trillion IQ join society.&#8221; <cite>— Sam Altman</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;we are going to have to agree to some limits about how smart we let these single models get.&#8221; <cite>— Sam Altman</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't think we have done a great job of explaining to people why we think all of the potential downside of this technology is worth it.&#8221; <cite>— Sam Altman</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think the invisible hand is failing right now.&#8221; <cite>— Sam Altman</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;10 out of 10 times I click Amazon. Pay a higher price.&#8221; <cite>— Sam Altman</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;my argument is any web form is basically fake work.&#8221; <cite>— John Collison</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Sam Altman:</b> OpenAI's Navier-Stokes proof could be redone at about 1/100th of the cost a year after it was done. <span class="cmeta">compute cost of the proof · 1/100th of ~$10M · 12 months</span> <span class="tag">OpenAI</span></div><div class="ritem"><b>Sam Altman:</b> OpenAI finds roughly 10x yearly improvements in turning compute dollars into useful work with agent teams. <span class="cmeta">compute allocation efficiency · 10x per year</span> <span class="tag">OpenAI</span></div><div class="ritem"><b>Sam Altman:</b> OpenAI learns a lot about using agent swarms for AI research within three months. <span class="cmeta">agent-swarm AI research methods · 2027-01</span> <span class="tag">OpenAI</span></div><div class="ritem"><b>Sam Altman:</b> Memory makers each generate around $100B of free cash flow in a year. <span class="cmeta">free cash flow per memory maker · ~$100B per year</span></div><div class="ritem"><b>Sam Altman:</b> Leading-edge AI cost per gigawatt falls from about $70B (five-year TCO) toward $20B. <span class="cmeta">cost per gigawatt, five-year TCO · $20B (from ~$70B)</span> <i>if supply goes way up and energy gets cheaper</i></div><div class="ritem"><b>John Collison:</b> Stripe's token spend rises from about 1% of OpEx to 5%, 10% and 20%. <span class="cmeta">token spend share of OpEx · 5-20%</span> <span class="tag">Stripe</span></div><div class="ritem"><b>John Collison / Sam Altman:</b> For many companies, AI spend reaches tens of percentage points of OpEx at steady state. <span class="cmeta">AI share of OpEx · tens of percent</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Sam Altman</b> <span class="rel">endorses</span> <b>Amazon (AMZN)</b> &mdash; picks Amazon 10/10 times in agentic shopping</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🎮</div><div><div class="title">Altman's early-internet parallel: 8- to 10-year-olds building full 3D video games in about 10 minutes, and expecting computers to just make what they imagine. <span class="tag">Culture</span></div></div></div><div class="irow"><div class="ic">💻</div><div><div class="title">During an OpenAI incident Codex went down and 'everyone had forgotten how to code' — not all the way, but a 'what if you couldn't?' moment. <span class="tag">Dev</span></div></div></div><div class="irow"><div class="ic">📚</div><div><div class="title">People referenced: Paul Graham (snack-budget vs meeting-cost observation), Emmett Shear (senior-coworker ideal), Greg Brockman, Claude Shannon (signal vs noise in tokens), and an SNL sketch on AI labs. <span class="tag">Sources</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>RSI (recursive self-improvement)</b> &mdash; AI improving AI; Altman extends it to 'self-replicating data centers' built by AI-run robots.</div><div><b>Capability overhang</b> &mdash; Capability built up but withheld from the public, which iterative deployment tries to avoid.</div><div><b>Activation monitoring</b> &mdash; Inspecting a model's internal activations, beyond its chain of thought, to detect deception.</div><div><b>Test-time compute</b> &mdash; Compute spent while answering (reasoning, parallel agents) rather than in training.</div><div><b>Benchmaxxing</b> &mdash; Optimizing a model for benchmark scores at the expense of real-world usefulness.</div><div><b>Five-year TCO per gigawatt</b> &mdash; Total cost to build and run a gigawatt of AI compute for five years, ~$70B today.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
