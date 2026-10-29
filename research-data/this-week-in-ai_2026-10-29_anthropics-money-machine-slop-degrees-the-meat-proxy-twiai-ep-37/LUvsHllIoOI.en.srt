@@ -1,0 +1,4291 @@
+1
+00:00:00,000 --> 00:00:01,020
+All right, everybody, welcome back.
+
+2
+00:00:01,480 --> 00:00:03,000
+This Week in AI, Lon.
+
+3
+00:00:04,060 --> 00:00:04,960
+It dropped.
+
+4
+00:00:05,219 --> 00:00:06,040
+The S1 dropped.
+
+5
+00:00:06,179 --> 00:00:12,519
+And so now we have a lot of data and we understand our industry a bit more.
+
+6
+00:00:13,240 --> 00:00:13,419
+Yeah.
+
+7
+00:00:13,640 --> 00:00:18,980
+And I think what we understand is AI is a money printing machine.
+
+8
+00:00:19,320 --> 00:00:22,260
+And the person with the biggest one is Anthropic.
+
+9
+00:00:22,460 --> 00:00:23,199
+So let's get into it.
+
+10
+00:00:23,199 --> 00:00:27,839
+Thanks to our friends at PayPal, the exclusive sponsor of This Week in AI.
+
+11
+00:00:27,839 --> 00:00:33,600
+Pay zero processing fees on your first $100,000 ineligible PayPal payment volume.
+
+12
+00:00:33,880 --> 00:00:37,019
+Find out more at paypal.launch.co.
+
+13
+00:00:37,179 --> 00:00:40,299
+Got to welcome our guests for this big, exciting roundtable.
+
+14
+00:00:40,399 --> 00:00:43,399
+First up, he's the founder and CEO of Norm AI.
+
+15
+00:00:43,859 --> 00:00:48,920
+They turn laws, regulations, and company policies into AI agents that do compliance and legal
+
+16
+00:00:48,920 --> 00:00:51,600
+work for banks, asset managers, and insurers.
+
+17
+00:00:51,719 --> 00:00:54,740
+Plus, they have an affiliated AI native law firm, Norm Law.
+
+18
+00:00:54,820 --> 00:00:56,060
+Give it up for John Nay.
+
+19
+00:00:56,219 --> 00:00:57,100
+Thanks for being here.
+
+20
+00:00:57,100 --> 00:00:59,420
+And then we have a returning guest.
+
+21
+00:00:59,560 --> 00:01:01,920
+He's the co-founder and CEO of RunLayer.
+
+22
+00:01:02,260 --> 00:01:05,900
+They do enterprise AI control that lets companies roll out AI agents,
+
+23
+00:01:06,040 --> 00:01:09,280
+MCP servers, and AI clients to employees with permissions,
+
+24
+00:01:09,640 --> 00:01:12,099
+runtime security, spend tracking, all that good stuff.
+
+25
+00:01:12,219 --> 00:01:13,379
+Andy Berman is back.
+
+26
+00:01:13,480 --> 00:01:14,299
+Thanks for joining us.
+
+27
+00:01:14,480 --> 00:01:15,200
+Thanks for having me.
+
+28
+00:01:15,400 --> 00:01:15,840
+All right.
+
+29
+00:01:15,980 --> 00:01:16,500
+Welcome back.
+
+30
+00:01:16,579 --> 00:01:17,799
+Yeah, security is a major topic.
+
+31
+00:01:17,900 --> 00:01:23,560
+We're going to get into that as well with the big AI cyber panic of 2026.
+
+32
+00:01:23,560 --> 00:01:29,159
+and it correlates with the aging boom, although maybe not so much overlap yet, thankfully.
+
+33
+00:01:29,820 --> 00:01:31,280
+But, Lon, let's start with Anthropik.
+
+34
+00:01:31,280 --> 00:01:32,480
+Sure, of course.
+
+35
+00:01:32,480 --> 00:01:37,480
+For our strokes, what we've learned, what we've confirmed, and what was unknown.
+
+36
+00:01:37,879 --> 00:01:38,219
+I will.
+
+37
+00:01:38,579 --> 00:01:40,200
+Anthropik filed its S1.
+
+38
+00:01:40,640 --> 00:01:42,820
+It's our first official look at the company's books.
+
+39
+00:01:43,180 --> 00:01:46,439
+Plans to list under NASDAQ, under the ticker ANT, A-N-T.
+
+40
+00:01:46,879 --> 00:01:50,280
+Revenue, $16.3 billion in the first six months of this year.
+
+41
+00:01:50,280 --> 00:01:53,560
+That's up from $1.2 billion in the same period last year.
+
+42
+00:01:53,859 --> 00:01:56,519
+Net revenue retention is around 900%.
+
+43
+00:01:56,519 --> 00:02:00,420
+The headline net loss, $80.7 billion for the first half.
+
+44
+00:02:00,680 --> 00:02:04,200
+That's mostly an accounting charge tied to convertible notes and safes.
+
+45
+00:02:04,480 --> 00:02:09,219
+On an adjusted basis, Anthropic turned an operating profit of $1.6 billion.
+
+46
+00:02:09,659 --> 00:02:13,699
+Wall Street Journal reports it's aiming to go public the week of November 16th,
+
+47
+00:02:13,860 --> 00:02:18,819
+raising as much as $100 billion or more at a $1.5 to $2 trillion valuation,
+
+48
+00:02:18,819 --> 00:02:22,259
+likely topping SpaceX's record IPO from June.
+
+49
+00:02:22,599 --> 00:02:25,340
+94 pages, Jason, of risk factors,
+
+50
+00:02:25,699 --> 00:02:29,239
+including models that could potentially resist shutdown,
+
+51
+00:02:29,759 --> 00:02:33,739
+a catastrophic AI-related incident that's too big to ensure,
+
+52
+00:02:34,199 --> 00:02:35,579
+and being, and I'm quoting,
+
+53
+00:02:36,060 --> 00:02:40,519
+disproportionately or selectively targeted by the government.
+
+54
+00:02:41,099 --> 00:02:43,479
+Disproportionately targeted by the government.
+
+55
+00:02:43,560 --> 00:02:46,079
+I think you have to just start with, gentlemen,
+
+56
+00:02:46,080 --> 00:02:50,780
+and the amount of revenue we're talking about here in such a short period of time.
+
+57
+00:02:50,880 --> 00:02:55,300
+It was $1.2 billion in revenue for the first six months of 25.
+
+58
+00:02:56,080 --> 00:03:00,980
+And that has essentially now grown to $16 billion in top line.
+
+59
+00:03:01,120 --> 00:03:02,160
+$16.3 billion.
+
+60
+00:03:02,760 --> 00:03:03,080
+Yes.
+
+61
+00:03:03,200 --> 00:03:08,100
+So that is well over 10x in top line revenue.
+
+62
+00:03:08,180 --> 00:03:09,980
+But what's very interesting is they're profitable.
+
+63
+00:03:09,980 --> 00:03:14,900
+And their profit is equal to the revenue they had last year.
+
+64
+00:03:14,900 --> 00:03:17,599
+So this is just extraordinary.
+
+65
+00:03:18,500 --> 00:03:20,240
+Explain the accounting charge.
+
+66
+00:03:20,340 --> 00:03:22,840
+I saw that was trending, Lon, if you can.
+
+67
+00:03:23,400 --> 00:03:25,060
+Can you explain the accounting charge?
+
+68
+00:03:25,120 --> 00:03:27,540
+And then we'll just get everybody's first opinions here on it.
+
+69
+00:03:27,560 --> 00:03:31,879
+Because this was, I think, confusing for people.
+
+70
+00:03:32,040 --> 00:03:35,900
+We have convertible notes all the time in technology businesses before the IPO.
+
+71
+00:03:36,120 --> 00:03:40,819
+But now you have convertible notes that have yet to convert, and therefore they're being
+
+72
+00:03:40,819 --> 00:03:44,319
+counted as an expense of some type?
+
+73
+00:03:44,900 --> 00:03:57,620
+Anthropics' $72.4 billion accounting charge is a non-cash paper loss caused by the rising fair value of its convertible notes following a massive surge in the company's private valuation.
+
+74
+00:03:57,620 --> 00:04:15,240
+So Anthropix reporting an $80.7 billion net loss for the first half of 2026, but $72.4 billion of that stems directly from re-measuring convertible notes under ASC 82510, which is the fair value option.
+
+75
+00:04:15,599 --> 00:04:26,340
+So as their valuation soared tied to the expected IPO and investor pricing, the accounting value of their issued convertible and rollover notes, such as those held by Amazon, automatically increased.
+
+76
+00:04:26,339 --> 00:04:29,139
+And theoretically, they haven't converted those yet.
+
+77
+00:04:29,500 --> 00:04:33,019
+And since they haven't converted them, they increased in value.
+
+78
+00:04:33,500 --> 00:04:36,379
+Therefore, I've never even heard of this.
+
+79
+00:04:36,459 --> 00:04:38,979
+I think a lot of people in tech had never heard of this before today.
+
+80
+00:04:39,560 --> 00:04:44,879
+But I guess, Andrew, your thoughts when we look at this beyond, I don't know if the convertible
+
+81
+00:04:44,879 --> 00:04:47,779
+notes is interesting to you, I'm sure, on this week in Venture Capital, we'll have a
+
+82
+00:04:47,779 --> 00:04:48,819
+good discussion about it.
+
+83
+00:04:49,739 --> 00:04:54,539
+But what stands out to you from this S1, if anything?
+
+84
+00:04:54,540 --> 00:05:00,660
+and what's your take on the last business in the world known as Anthropic?
+
+85
+00:05:01,140 --> 00:05:04,980
+I kid, but they joked that they were the last business standing.
+
+86
+00:05:05,120 --> 00:05:06,780
+They were going to absorb all businesses.
+
+87
+00:05:07,040 --> 00:05:09,120
+And it's certainly impressive what they've done.
+
+88
+00:05:09,200 --> 00:05:13,600
+I think off the cuff, I think the convertible node is an accounting charge.
+
+89
+00:05:13,600 --> 00:05:18,080
+You have to get very creative when you're going to do CapEx at this order of magnitude.
+
+90
+00:05:18,879 --> 00:05:21,439
+I think there were some interesting risk factors from what I saw
+
+91
+00:05:21,439 --> 00:05:24,280
+on just the ability for them to secure compute.
+
+92
+00:05:24,279 --> 00:05:29,719
+compute is the number one for somebody who's building models and for at the lab level compute
+
+93
+00:05:29,719 --> 00:05:35,479
+is the number one requirement and i think we've all seen the race between open ai and anthropic
+
+94
+00:05:35,479 --> 00:05:39,879
+to secure this compute and there are just only so many players globally that can actually support
+
+95
+00:05:39,879 --> 00:05:44,679
+these type of demands and i think the third thing that was very interesting and it had been widely
+
+96
+00:05:44,679 --> 00:05:51,799
+rumored is the ebitda profitability and uh the fact that this actually does look that this this
+
+97
+00:05:51,800 --> 00:05:55,220
+This business has characteristics of what people would describe as a good business.
+
+98
+00:05:56,220 --> 00:05:59,139
+And I think there has been a reason they've been racing to go public all year.
+
+99
+00:05:59,300 --> 00:06:01,860
+And I have immense respect for the folks at Anthropic.
+
+100
+00:06:02,040 --> 00:06:04,460
+And I think they just, they run, they built incredible products.
+
+101
+00:06:05,900 --> 00:06:08,439
+And I'm curious to see where they go from here.
+
+102
+00:06:09,340 --> 00:06:12,259
+It's going to be a very interesting time for everyone in venture capital.
+
+103
+00:06:13,019 --> 00:06:17,280
+And everyone in AI, because at one corner of the market, rates are up.
+
+104
+00:06:17,279 --> 00:06:20,379
+and you have the NeoClouds kind of melting down
+
+105
+00:06:20,379 --> 00:06:22,299
+and Elon trying to spook the market.
+
+106
+00:06:22,500 --> 00:06:23,619
+And then the other corner,
+
+107
+00:06:24,039 --> 00:06:26,539
+you have people who are trying to play
+
+108
+00:06:26,539 --> 00:06:27,619
+with their investment grade credit.
+
+109
+00:06:27,959 --> 00:06:32,739
+And I think the next bell over on AI right now
+
+110
+00:06:32,739 --> 00:06:34,799
+is how does this IPO perform and how do they price it?
+
+111
+00:06:34,979 --> 00:06:35,739
+So that's my hot take.
+
+112
+00:06:35,939 --> 00:06:36,939
+I mean, one of the things that's interesting
+
+113
+00:06:36,939 --> 00:06:38,679
+just from like a company building perspective
+
+114
+00:06:38,679 --> 00:06:40,619
+is just how quickly this all happened.
+
+115
+00:06:40,959 --> 00:06:42,500
+So I don't know their exact founding date,
+
+116
+00:06:42,619 --> 00:06:44,959
+but it's probably like five years ago or so.
+
+117
+00:06:45,139 --> 00:06:45,379
+2021.
+
+118
+00:06:45,379 --> 00:06:52,860
+Yeah. So just thinking about in five years going from founding a company to this scale of revenue
+
+119
+00:06:52,860 --> 00:06:59,980
+and impact, to me, that's the most insane thing about this IPO right now. I was just thinking
+
+120
+00:06:59,980 --> 00:07:05,379
+about what that takes to scale an organization, to evolve at that many times that quickly.
+
+121
+00:07:06,139 --> 00:07:09,480
+That's just pretty mind-blowing. It is for sure mind-blowing.
+
+122
+00:07:09,480 --> 00:07:17,580
+They didn't turn on revenue, I think, until 2023 when they had $40 million.
+
+123
+00:07:18,040 --> 00:07:21,740
+Then 2024, $386 million, basically a 10x.
+
+124
+00:07:22,340 --> 00:07:27,680
+24 to 25, $386 million to $4.5 billion, again a 10x.
+
+125
+00:07:28,340 --> 00:07:33,480
+And then here we go, 25 to 25 was 4.5.
+
+126
+00:07:33,480 --> 00:07:38,300
+First half of 26 is 16, so 32, 33.
+
+127
+00:07:38,300 --> 00:07:41,300
+So that will not quite, it'll be an 8x.
+
+128
+00:07:41,300 --> 00:07:43,300
+But here we are, folks.
+
+129
+00:07:43,300 --> 00:07:49,300
+They estimate 16 billion in Q3.
+
+130
+00:07:49,300 --> 00:07:51,300
+So, or is that actually locked in?
+
+131
+00:07:51,300 --> 00:07:57,300
+So in other words, in Q3, they did the first, they did the same amount in Q3 as they did in the first half of the year.
+
+132
+00:07:57,300 --> 00:08:01,300
+So that's pretty extraordinary if you think about it.
+
+133
+00:08:01,300 --> 00:08:08,520
+And this means they are securing compute in order to provide this.
+
+134
+00:08:08,680 --> 00:08:12,900
+And Dario has said many times their compute constraint, not token usage complaint.
+
+135
+00:08:13,000 --> 00:08:20,080
+The question I have, Andrew, for the panel is they lowered token price.
+
+136
+00:08:20,080 --> 00:08:25,280
+And so is this Jevin's paradox realized?
+
+137
+00:08:25,540 --> 00:08:27,300
+They keep lowering the token prices.
+
+138
+00:08:27,879 --> 00:08:29,259
+The models get better.
+
+139
+00:08:29,259 --> 00:08:36,100
+the customers get more value from it and the amount of utilization people have is going up
+
+140
+00:08:36,100 --> 00:08:41,980
+because I still think maybe only 20% of companies, 30% of companies or knowledge workers are really
+
+141
+00:08:41,980 --> 00:08:47,240
+using this in earnest. And I don't know if we have a way to actually know that, but it feels
+
+142
+00:08:47,240 --> 00:08:50,960
+to me in the United States, it's got to be maybe 20% of knowledge workers are using this
+
+143
+00:08:50,960 --> 00:08:56,080
+in a major way. So what are your thoughts on token pricing in this virtuous cycle? Can it continue?
+
+144
+00:08:56,080 --> 00:09:01,759
+The way to view my view since 2023, since working with the labs starting at that point
+
+145
+00:09:01,759 --> 00:09:04,400
+is assume the token prices will always go down.
+
+146
+00:09:04,400 --> 00:09:04,680
+Yeah.
+
+147
+00:09:04,680 --> 00:09:08,180
+Your cost of intelligence is always going to go down over time.
+
+148
+00:09:08,639 --> 00:09:12,820
+Now, where we are with these models, let's call it Fable, let's call it Astra, let's
+
+149
+00:09:12,820 --> 00:09:16,180
+even call it like Opus and Sol 6.1.
+
+150
+00:09:16,300 --> 00:09:21,460
+They are good enough for almost every workflow that the average worker should be using.
+
+151
+00:09:21,460 --> 00:09:26,560
+now where we are outside of, let's call it the Valley and digital natives and AI natives in
+
+152
+00:09:26,560 --> 00:09:31,960
+terms of AI adoption, I'd say we're probably only two to 3% of where you expect us to,
+
+153
+00:09:32,259 --> 00:09:37,480
+where you expect companies to be. And what we see across the board, as you start going to Fortune
+
+154
+00:09:37,480 --> 00:09:44,400
+1000, Fortune 2000, or even Fortune 50, most companies still have yet to connect an LLM to
+
+155
+00:09:44,400 --> 00:09:49,879
+tools and resources that actually allow you to generate the ROI that people expect from
+
+156
+00:09:49,879 --> 00:09:56,259
+what engineers do. And so you're in this messy middle still today coming into 2027.
+
+157
+00:09:56,259 --> 00:10:04,399
+And I think people forget outside of the Bay and outside of tech, the ability to actually call
+
+158
+00:10:04,399 --> 00:10:11,399
+tools and resources and to get work done really only became available at Christmas last year.
+
+159
+00:10:11,740 --> 00:10:17,820
+And so we're in the first year. And so I'd say that 10 to 20, the number you quoted, Jason,
+
+160
+00:10:17,820 --> 00:10:20,800
+is dramatically higher than the average American.
+
+161
+00:10:20,960 --> 00:10:23,480
+I think there's some stat and the average knowledge worker.
+
+162
+00:10:24,000 --> 00:10:26,580
+Most people still use this to proofread their email
+
+163
+00:10:26,580 --> 00:10:28,240
+and clean up Word documents.
+
+164
+00:10:29,340 --> 00:10:31,420
+That's where we are at the state of AI adoption.
+
+165
+00:10:31,700 --> 00:10:33,240
+I got some Gallup numbers from there.
+
+166
+00:10:33,340 --> 00:10:34,700
+These are from earlier this year.
+
+167
+00:10:34,840 --> 00:10:36,320
+So like we've had maybe six months
+
+168
+00:10:36,320 --> 00:10:37,360
+since Gallup did this poll.
+
+169
+00:10:37,500 --> 00:10:41,960
+So it's grown, but they're saying 12% of employed US adults
+
+170
+00:10:41,960 --> 00:10:45,900
+are using AI and nearly every day.
+
+171
+00:10:45,899 --> 00:10:49,039
+So probably not at the level that we're thinking of.
+
+172
+00:10:49,039 --> 00:10:53,399
+They're exactly as Andrew said, they're using it to like help me write this email
+
+173
+00:10:53,399 --> 00:10:56,240
+or help me like read this long essay or something.
+
+174
+00:10:56,240 --> 00:10:58,740
+They're not using it in the way that we're thinking with their,
+
+175
+00:10:58,740 --> 00:11:00,240
+where it's part of every workflow.
+
+176
+00:11:00,240 --> 00:11:01,419
+Yeah, here's the chart.
+
+177
+00:11:01,419 --> 00:11:02,459
+Great job pulling that up.
+
+178
+00:11:02,459 --> 00:11:07,059
+And as you can see, they did update it recently reading this out loud here.
+
+179
+00:11:07,059 --> 00:11:10,960
+Daily AI users, frequent AI users, total AI.
+
+180
+00:11:10,960 --> 00:11:12,960
+So 50% of people have touched it.
+
+181
+00:11:12,960 --> 00:11:13,500
+Right.
+
+182
+00:11:13,500 --> 00:11:20,039
+30% are frequent, 15% are daily AI users.
+
+183
+00:11:20,159 --> 00:11:28,860
+I am perplexed, John, of how anybody could go to work and not be using AI.
+
+184
+00:11:28,899 --> 00:11:32,399
+I'm sorry about white collar work and not be using AI all day long.
+
+185
+00:11:32,700 --> 00:11:35,759
+I mean, yeah, it's perplexing to me.
+
+186
+00:11:36,259 --> 00:11:37,059
+Well, I agree.
+
+187
+00:11:37,059 --> 00:11:40,559
+And I think another interesting stat, I don't know if I get the numbers exact, but
+
+188
+00:11:40,559 --> 00:11:47,139
+from the S1 was around the number of enterprises paying more than 10 million a year to Anthropic.
+
+189
+00:11:47,719 --> 00:11:53,000
+And I think that was pretty small. Like it was like 200, 250 or something like that.
+
+190
+00:11:53,279 --> 00:11:58,819
+So if you think about how many big companies there are in the world, and if only 200 are paying more
+
+191
+00:11:58,819 --> 00:12:05,119
+than 10 million a year to Anthropic, I mean, there's a lot of room to run there of way more
+
+192
+00:12:05,120 --> 00:12:10,340
+than 10 per top companies and then getting way more than 250 companies pay more than
+
+193
+00:12:10,340 --> 00:12:12,240
+10 line a year.
+
+194
+00:12:12,240 --> 00:12:18,019
+And so I think that really shows you that we've barely scratched the surface.
+
+195
+00:12:18,019 --> 00:12:25,100
+And then to your question on Jevin's paradox, I think it's really hard to think about intelligence
+
+196
+00:12:25,100 --> 00:12:29,960
+being sort of bottled up and digital and a thing now.
+
+197
+00:12:29,960 --> 00:12:35,840
+And if it's not a scarce good or not, where we're so used to the way the economy works,
+
+198
+00:12:35,840 --> 00:12:39,160
+it's like there's a fixed supply of something.
+
+199
+00:12:39,160 --> 00:12:40,740
+And then it's just how do you ration that?
+
+200
+00:12:40,740 --> 00:12:46,680
+But if the thing itself that's driving much of the economy is then not fixed, it almost
+
+201
+00:12:46,680 --> 00:12:52,420
+like makes you try to reimagine what that all even looks like.
+
+202
+00:12:52,420 --> 00:12:56,240
+And so then in terms of like, is there unlimited demand for intelligence?
+
+203
+00:12:56,240 --> 00:12:57,740
+I think there might be.
+
+204
+00:12:57,740 --> 00:13:00,980
+But then what does that mean for like, you know, how the economy is even structured?
+
+205
+00:13:00,980 --> 00:13:04,820
+I mean, there is limited on demand for intelligence because there's a limit.
+
+206
+00:13:04,820 --> 00:13:08,960
+Sorry, there is unlimited demand for intelligence because there's always been unlimited demand
+
+207
+00:13:08,960 --> 00:13:10,279
+for human intelligence.
+
+208
+00:13:10,279 --> 00:13:12,980
+And this is a paradox.
+
+209
+00:13:12,980 --> 00:13:19,180
+This is just it's a complete it's a you're going to get to a place where you we have
+
+210
+00:13:19,180 --> 00:13:22,340
+unlimited demand for intelligence in the economy.
+
+211
+00:13:22,340 --> 00:13:23,799
+And that's what we've always had.
+
+212
+00:13:23,799 --> 00:13:25,580
+We've always had jobs that are open.
+
+213
+00:13:25,580 --> 00:13:28,620
+And it's going to be a very interesting next 20 years.
+
+214
+00:13:28,620 --> 00:13:30,740
+And we're in inning one of what is possible.
+
+215
+00:13:30,740 --> 00:13:32,420
+It certainly feels like early innings.
+
+216
+00:13:32,420 --> 00:13:40,440
+And Lon, if we were looking at our own firm and the amount of tokens we're burning, the
+
+217
+00:13:40,440 --> 00:13:45,020
+amount of spend, we went from like watching the spend to being like, does it matter if
+
+218
+00:13:45,020 --> 00:13:51,960
+you have a 20 or $200 a month account or you have two $200 a month accounts or three $200
+
+219
+00:13:51,960 --> 00:13:53,120
+a month account per employee?
+
+220
+00:13:53,120 --> 00:13:54,780
+Who cares?
+
+221
+00:13:54,779 --> 00:13:58,740
+It's just driving such dramatic results.
+
+222
+00:13:58,740 --> 00:14:05,019
+However, one interesting thing came up, and I think, Andrew, you kind of mentioned it.
+
+223
+00:14:05,019 --> 00:14:07,679
+I don't use Fable ever.
+
+224
+00:14:07,679 --> 00:14:11,480
+It tells me I should be on Opus or whatever.
+
+225
+00:14:11,480 --> 00:14:13,559
+And then on Perplexity, it routes me.
+
+226
+00:14:13,559 --> 00:14:15,919
+My GrokBot routes me.
+
+227
+00:14:15,919 --> 00:14:22,259
+So looking at this, there does seem to be in business the case that you don't use.
+
+228
+00:14:22,259 --> 00:14:28,500
+default you don't use the most expensive model anymore no way so you don't need it you don't need
+
+229
+00:14:28,500 --> 00:14:35,460
+it solving math pro you're not doing the navier stokes uh problem or whatever okay so if we're
+
+230
+00:14:35,460 --> 00:14:40,100
+redesigning newsletters and they're designed and looking for hot takes and great stories and doing
+
+231
+00:14:40,100 --> 00:14:46,980
+research on startups and the history of you know various uh sas companies and competitors 5.5 most
+
+232
+00:14:46,980 --> 00:14:50,039
+to the time and it's perfect for what I'm doing.
+
+233
+00:14:50,440 --> 00:14:51,080
+Most of the time.
+
+234
+00:14:51,159 --> 00:14:54,620
+What does that portend to spend then?
+
+235
+00:14:54,620 --> 00:15:00,840
+If we already don't want the latest one and we have people in our organization, John,
+
+236
+00:15:01,080 --> 00:15:07,100
+actively turning off the highest model, like we have our CFO going to different Slack channels
+
+237
+00:15:07,100 --> 00:15:10,879
+and telling, you know, please use this model, please use this model.
+
+238
+00:15:11,100 --> 00:15:14,720
+And like telling people like you're spending too much on tokens on the other model and
+
+239
+00:15:14,720 --> 00:15:16,960
+and telling Claude itself, please stop using Fable.
+
+240
+00:15:17,379 --> 00:15:19,340
+Please use this cheaper model, USANN, et cetera.
+
+241
+00:15:20,120 --> 00:15:24,620
+What does that portend to the future of revenue here?
+
+242
+00:15:24,620 --> 00:15:27,620
+Because it's 2026 and we're already saying,
+
+243
+00:15:27,779 --> 00:15:31,379
+let's use the third best model at a venture capital firm
+
+244
+00:15:31,379 --> 00:15:33,960
+where everybody's token maxing.
+
+245
+00:15:34,160 --> 00:15:35,639
+Everybody's using this all day long.
+
+246
+00:15:36,300 --> 00:15:37,560
+Is that signal?
+
+247
+00:15:37,879 --> 00:15:40,620
+I think it depends on thinking about a copilot
+
+248
+00:15:40,620 --> 00:15:44,560
+versus fundamentally restructuring a workflow
+
+249
+00:15:44,560 --> 00:15:47,120
+to be more agent-centric.
+
+250
+00:15:47,899 --> 00:15:49,860
+So as a co-pilot, totally agree.
+
+251
+00:15:50,419 --> 00:15:52,480
+So if you're using it in the way
+
+252
+00:15:52,480 --> 00:15:54,899
+that we all typically use AI,
+
+253
+00:15:55,899 --> 00:15:59,360
+that we have probably hit a plateau on what we need
+
+254
+00:15:59,360 --> 00:16:02,039
+in terms of additional intelligence capabilities
+
+255
+00:16:02,039 --> 00:16:03,179
+for that use case.
+
+256
+00:16:03,539 --> 00:16:04,440
+But if you're saying,
+
+257
+00:16:04,879 --> 00:16:06,840
+let's reorient an entire workflow
+
+258
+00:16:06,840 --> 00:16:09,940
+and then have it be humans still supervising it,
+
+259
+00:16:09,940 --> 00:16:14,040
+but then just having that kind of flow behind the scenes in parallel,
+
+260
+00:16:14,320 --> 00:16:17,160
+just happening all the time, that's a different thing.
+
+261
+00:16:17,160 --> 00:16:21,300
+And I think that's something that does require increasing levels of intelligence.
+
+262
+00:16:21,500 --> 00:16:25,260
+We're not even quite there yet with the level of intelligence,
+
+263
+00:16:25,400 --> 00:16:30,360
+the models to be able to really be doing things behind the scenes in parallel on their own.
+
+264
+00:16:30,620 --> 00:16:31,560
+I would take the other side of that,
+
+265
+00:16:31,620 --> 00:16:35,620
+that the model is actually completely there from a tool calling perspective and agentic capabilities.
+
+266
+00:16:35,620 --> 00:16:41,100
+I just don't see most people willing to connect the data that they're needed.
+
+267
+00:16:41,539 --> 00:16:44,899
+So very few people will give it access to pertinent data.
+
+268
+00:16:45,460 --> 00:16:47,700
+Very few companies will allow agents in prod.
+
+269
+00:16:48,179 --> 00:16:49,299
+But the models are there.
+
+270
+00:16:49,940 --> 00:16:50,759
+Tool calling is there.
+
+271
+00:16:52,080 --> 00:16:58,200
+The agentic capabilities are there for significantly more workflows than people realize.
+
+272
+00:16:58,399 --> 00:17:03,120
+An LLM without access to the right tools and resources, and specifically the data sources,
+
+273
+00:17:03,120 --> 00:17:07,839
+which most companies will not give access to today, is almost useless.
+
+274
+00:17:08,319 --> 00:17:09,900
+And that's why you see that 10% adoption.
+
+275
+00:17:10,759 --> 00:17:12,299
+People don't realize what is possible.
+
+276
+00:17:12,579 --> 00:17:13,559
+That's the blocker.
+
+277
+00:17:13,680 --> 00:17:19,900
+Until you connect Notion, let's just say you have the standard Notion, Slack, Gmail,
+
+278
+00:17:21,220 --> 00:17:25,079
+that little triumvirate, when you put that on there,
+
+279
+00:17:25,579 --> 00:17:29,559
+my Lord, do you have agents that actually get stuff done?
+
+280
+00:17:29,559 --> 00:17:31,700
+I literally just tried.
+
+281
+00:17:31,700 --> 00:17:38,100
+remember I did this experiment, Lon, I was like, let's do an executive coach in like February when
+
+282
+00:17:38,100 --> 00:17:45,819
+I was using OpenClaw. And I spent weeks trying to get OpenClaw hooked into our Slack, Gmail,
+
+283
+00:17:45,819 --> 00:17:52,100
+and Notion at a sysadmin level. I just said, like, you have access to everything. Every DM,
+
+284
+00:17:52,220 --> 00:17:56,720
+I told everyone in the company, like, please don't like, you know, if you want to make fun of me or
+
+285
+00:17:56,720 --> 00:18:01,080
+something, you hate your boss or you hate your manager, just don't do anything on DM because
+
+286
+00:18:01,079 --> 00:18:02,539
+We're going to have it suck in DMS too.
+
+287
+00:18:02,619 --> 00:18:04,339
+Like we're going to have it suck in private documents.
+
+288
+00:18:04,359 --> 00:18:05,099
+It's going to have everything.
+
+289
+00:18:05,199 --> 00:18:06,179
+We're just going for it.
+
+290
+00:18:06,639 --> 00:18:14,119
+And, um, I just wanted it to tell everybody, Hey, what are the tasks that you're, you were
+
+291
+00:18:14,119 --> 00:18:18,460
+assigned or you were working on that just fell through the cracks or didn't, I just
+
+292
+00:18:18,460 --> 00:18:19,339
+had Grokbot do it.
+
+293
+00:18:19,339 --> 00:18:26,599
+So like it took this weird agent thing on the side, Grokbot to actually fulfill this
+
+294
+00:18:26,599 --> 00:18:33,099
+what eight months later but i came up with a reverse to-do list skill on grokbot which was
+
+295
+00:18:33,099 --> 00:18:39,219
+what did i ask everybody to do did they get it done please check uh i didn't check their emails
+
+296
+00:18:39,219 --> 00:18:43,159
+i have to i still haven't hooked that up to grokbot yet but i said just check their calendars
+
+297
+00:18:43,159 --> 00:18:48,559
+check notion and check my slacks with them and the entire second instance and just tell me if
+
+298
+00:18:48,559 --> 00:18:52,899
+you know what what things were done or not done and it and then dm it to everybody
+
+299
+00:18:52,900 --> 00:18:57,420
+it went in and started dming it to everybody like one person had 14 things and i'm like wow that
+
+300
+00:18:57,420 --> 00:19:03,860
+person really doesn't have a moleskin they don't write down anything and the person was like i'm
+
+301
+00:19:03,860 --> 00:19:09,240
+really sorry like it was like oops i literally did nothing you asked for so then i just was like
+
+302
+00:19:09,240 --> 00:19:13,340
+okay time to go into that person's calendar and i went into their calendar and i just
+
+303
+00:19:13,340 --> 00:19:17,280
+created their name dash tasks as a private room with them and their manager i said hey
+
+304
+00:19:17,280 --> 00:19:21,360
+let's just let's look at your calendar why you're not gonna and i looked and this person is just
+
+305
+00:19:21,359 --> 00:19:27,679
+passively sitting in meetings and podcast reports i said okay for the next month do nothing but the
+
+306
+00:19:27,679 --> 00:19:33,199
+tasks and don't go to any meetings and i just banned them from all meetings ban them from
+
+307
+00:19:33,199 --> 00:19:38,559
+listening to pods and now they're ripping through stuff so i was like wow you're exactly right
+
+308
+00:19:38,559 --> 00:19:42,719
+andrew if you until you connected to these things you have you have no idea what the possibilities
+
+309
+00:19:42,719 --> 00:19:50,159
+are which is a long-winded way john we don't have any insight into what's going to happen with
+
+310
+00:19:50,160 --> 00:19:55,100
+with utilization at OpenAI and Claude with agents
+
+311
+00:19:55,100 --> 00:19:57,560
+because they haven't turned those products on yet.
+
+312
+00:19:57,560 --> 00:20:01,100
+Claude's agentic product, which I just signed up for.
+
+313
+00:20:01,100 --> 00:20:02,880
+It's got a separate app.
+
+314
+00:20:02,880 --> 00:20:03,880
+I forgot the name of it.
+
+315
+00:20:03,880 --> 00:20:06,720
+And then I just upgraded my ChatGP account
+
+316
+00:20:06,720 --> 00:20:10,480
+to $100 to get dots, which I just got last night.
+
+317
+00:20:10,480 --> 00:20:13,040
+But what do we think is gonna happen in token usage
+
+318
+00:20:13,040 --> 00:20:16,440
+when these customer bases get on Claude's?
+
+319
+00:20:16,440 --> 00:20:19,940
+It's Duet. Claude Duet is what you think.
+
+320
+00:20:19,940 --> 00:20:21,440
+That's a terrible name, but okay.
+
+321
+00:20:21,440 --> 00:20:27,140
+So then usage dramatically increases when you start connecting tools and resources.
+
+322
+00:20:27,140 --> 00:20:28,140
+Bottom line.
+
+323
+00:20:28,140 --> 00:20:29,140
+But what about agents?
+
+324
+00:20:29,140 --> 00:20:31,140
+Who are working towards a goal.
+
+325
+00:20:31,140 --> 00:20:34,440
+That's going to be like 100x tokens.
+
+326
+00:20:34,440 --> 00:20:35,640
+Isn't it going to rip tokens?
+
+327
+00:20:35,640 --> 00:20:38,140
+Agents are loop functions that use tools and resources.
+
+328
+00:20:38,140 --> 00:20:39,640
+There are ways to downscope.
+
+329
+00:20:39,640 --> 00:20:41,240
+There are ways to think through sub-agents.
+
+330
+00:20:41,240 --> 00:20:43,140
+There are ways to optimize the processes.
+
+331
+00:20:43,140 --> 00:20:44,440
+You will increase tokens.
+
+332
+00:20:44,440 --> 00:20:46,340
+But that's where you start getting ROI.
+
+333
+00:20:46,440 --> 00:20:54,980
+And we've all seen, we all see these large deployments and large token bills that came out in, let's call it Q2.
+
+334
+00:20:55,500 --> 00:20:57,660
+And companies are wondering why they don't see ROI.
+
+335
+00:20:57,920 --> 00:21:06,740
+And it's if you take, you can give unlimited tokens to everyone and sit there and say, use all this data and you'll have the best crafted memos and the best crafted emails.
+
+336
+00:21:06,740 --> 00:21:13,779
+But at the end of the day, you still haven't connected an LLM to the actual business data to get to a place where you get the outcomes you want.
+
+337
+00:21:13,900 --> 00:21:16,000
+And you're talking about a venture capital firm.
+
+338
+00:21:17,000 --> 00:21:20,079
+And look, venture capital firms are basically small businesses, right?
+
+339
+00:21:20,500 --> 00:21:24,359
+You use some Notion, you use some G Suite, you use basic tooling.
+
+340
+00:21:24,799 --> 00:21:27,680
+Now start thinking about a Fortune 500 where they have a snowflake.
+
+341
+00:21:28,099 --> 00:21:31,859
+They have multiple snowflake data warehouses or Databricks.
+
+342
+00:21:31,859 --> 00:21:38,859
+Getting to the place where you're starting to connect that data warehouse to LLMs and
+
+343
+00:21:38,859 --> 00:21:44,579
+being able to run queries on a buy-user basis with the correct permissions, that's where
+
+344
+00:21:44,579 --> 00:21:51,059
+start to see some dramatic business outcomes. We happen to do some of this at RunLayer and we get
+
+345
+00:21:51,059 --> 00:21:56,579
+to work with amazing companies, but that's what the board is thinking of when they think about
+
+346
+00:21:56,579 --> 00:22:03,460
+AI adoption. And I think there is this phrase that's going around online, self-driving companies,
+
+347
+00:22:03,460 --> 00:22:09,299
+and we're going to get there, but it's going to take between two and 10 years. And that's where
+
+348
+00:22:09,299 --> 00:22:14,899
+you have a fleet of agents and you may have millions of agents running inside your organization
+
+349
+00:22:14,899 --> 00:22:20,259
+and you're going to set a goal jason and venture capital firm will be pretty easy but let's imagine
+
+350
+00:22:20,259 --> 00:22:25,940
+a fortune 100 with 100 000 employees set a goal for the business and watch your fleet of agents
+
+351
+00:22:25,940 --> 00:22:32,899
+and sub agents start processing and actually doing work and that's the roi that and you start
+
+352
+00:22:32,899 --> 00:22:38,740
+thinking through what's going to be what is the world of work going to look like in 2030
+
+353
+00:22:39,299 --> 00:22:45,460
+that's where we're going john you uh work on this stuff with regulated industries i'm guessing
+
+354
+00:22:45,460 --> 00:22:55,059
+finance banks compliance legal um where are they at with connecting sources to andrew's point and
+
+355
+00:22:55,700 --> 00:23:03,299
+how concerned are they do they see this as primarily upside or primarily risk today where
+
+356
+00:23:03,299 --> 00:23:07,539
+Where are they on the fear greed scale when you talk to top companies?
+
+357
+00:23:07,759 --> 00:23:09,759
+Yeah, no, I'll definitely answer that directly.
+
+358
+00:23:09,839 --> 00:23:11,940
+But before that, just one quick thing on the token question.
+
+359
+00:23:11,940 --> 00:23:23,019
+So I think one key question here is do the labs or just whatever you want to call them now, did they evolve something towards more outcome based?
+
+360
+00:23:23,019 --> 00:23:28,759
+Did they do something that's not that base infrastructure layer of token spend?
+
+361
+00:23:29,000 --> 00:23:38,859
+Or did they start to move up the stack and start to earn revenue in a way that isn't tied necessarily completely directly to token spend?
+
+362
+00:23:39,359 --> 00:23:41,180
+And that's an open question.
+
+363
+00:23:41,440 --> 00:23:43,200
+And it's a strategy question for these places.
+
+364
+00:23:43,359 --> 00:23:48,740
+And you could imagine OpenAI going one way, Anthropik going another, and someone else going a different way.
+
+365
+00:23:48,740 --> 00:23:53,700
+How would they charge? If not for tokens, how would you see anthropic charging?
+
+366
+00:23:53,700 --> 00:23:59,380
+Well, I just mean any way other than tokens. So for example, one is they build businesses,
+
+367
+00:23:59,380 --> 00:24:04,420
+they build a biotech business, and then that business earns money in a way that isn't directly
+
+368
+00:24:04,420 --> 00:24:10,019
+related to tokens, or they still sell some sort of infrastructure similar to what they do now
+
+369
+00:24:10,019 --> 00:24:14,900
+through APIs and otherwise, but then they charge differently and they say, okay, this is going to
+
+370
+00:24:14,900 --> 00:24:18,140
+to complete, you know, like a Sierra model where it's like, this is going to complete
+
+371
+00:24:18,140 --> 00:24:21,040
+so many conversations or whatever it's doing.
+
+372
+00:24:21,040 --> 00:24:23,980
+And then they charge as a function of that.
+
+373
+00:24:23,980 --> 00:24:28,540
+So that's, I think a big open, really interesting question about does the business model evolve
+
+374
+00:24:28,540 --> 00:24:30,780
+for the foundation model labs?
+
+375
+00:24:30,780 --> 00:24:34,080
+I think you're, you nailed it.
+
+376
+00:24:34,080 --> 00:24:38,440
+I think everyone's been thinking about that for the last year with these.
+
+377
+00:24:38,440 --> 00:24:43,500
+So when you spend, let's call it 10 million plus, they're the FTE teams at the labs.
+
+378
+00:24:43,500 --> 00:24:47,400
+And right now the FTE teams are really focused on implementation.
+
+379
+00:24:47,400 --> 00:24:51,000
+But it's going to be interesting to see where people move up the stack.
+
+380
+00:24:51,000 --> 00:24:58,619
+Outcome based pricing is still like very early innings, even on the app layer.
+
+381
+00:24:58,619 --> 00:25:04,579
+And I think it's going to be interesting to see where the labs go.
+
+382
+00:25:04,579 --> 00:25:06,619
+At some point you end up competing with every business everywhere.
+
+383
+00:25:06,619 --> 00:25:10,000
+Yeah, to Newton's point on the last business everything.
+
+384
+00:25:10,000 --> 00:25:11,619
+That's where that's headed.
+
+385
+00:25:11,619 --> 00:25:13,119
+Well, it is interesting.
+
+386
+00:25:13,119 --> 00:25:16,639
+I guess they're growing at such a violent pace now that when they come up with a new
+
+387
+00:25:16,639 --> 00:25:18,899
+product, they just bundle it in.
+
+388
+00:25:18,899 --> 00:25:22,779
+They just bundle it in like Microsoft has historically done.
+
+389
+00:25:22,779 --> 00:25:27,939
+I'm trying to remember if there was an instance where Microsoft said, you know, this product
+
+390
+00:25:27,939 --> 00:25:30,000
+is plus 10 bucks a month per person.
+
+391
+00:25:30,000 --> 00:25:35,419
+But I don't think that's been their philosophy generally.
+
+392
+00:25:35,420 --> 00:25:43,420
+So if they said to us, Lon, hey, Claude is now, you know, plus $5 per user per month,
+
+393
+00:25:43,620 --> 00:25:47,140
+I would be like, okay, it's $150 a month for a firm.
+
+394
+00:25:47,180 --> 00:25:49,259
+If they say $10, I'd be like, just give it to everybody.
+
+395
+00:25:49,340 --> 00:25:49,680
+Who cares?
+
+396
+00:25:50,160 --> 00:25:51,580
+It's $2,000 a year.
+
+397
+00:25:52,240 --> 00:25:56,039
+But they could probably extract $50 a month from real designers.
+
+398
+00:25:56,039 --> 00:26:01,240
+So it really does make the mind wonder which model will be better.
+
+399
+00:26:01,240 --> 00:26:08,599
+I guess tokens and charging on a token usage with tiers like they do is the new bundling.
+
+400
+00:26:09,299 --> 00:26:14,160
+So you're bundling every, because they're going to be able to build every possible app, right?
+
+401
+00:26:14,200 --> 00:26:15,319
+They have great developers there.
+
+402
+00:26:15,400 --> 00:26:16,440
+They have the Frontier models.
+
+403
+00:26:16,519 --> 00:26:17,480
+They can build anything.
+
+404
+00:26:17,880 --> 00:26:19,599
+And they just did, didn't they just do a docs?
+
+405
+00:26:19,680 --> 00:26:20,759
+We talked about this last week.
+
+406
+00:26:20,880 --> 00:26:20,980
+Right.
+
+407
+00:26:21,099 --> 00:26:27,160
+Well, yeah, they're trying to make like, you could basically access everything now from just that main clawed bar.
+
+408
+00:26:27,160 --> 00:26:30,940
+So they design and then they added motion onto design.
+
+409
+00:26:30,940 --> 00:26:35,640
+And now they've got this whole like notion replicating suite we were looking at the other day.
+
+410
+00:26:35,720 --> 00:26:45,160
+I mean, I guess the idea is just the more different ways they get you to engage and do more and more and more of your work in club, the more indispensable it becomes.
+
+411
+00:26:45,160 --> 00:26:53,380
+Like you can't imagine leaving club because, well, we've got our whole sub stack design portfolio is in there and it's in all of our email and Slack.
+
+412
+00:26:53,380 --> 00:26:56,740
+And we'd have to rip all that out and replace it with something else.
+
+413
+00:26:56,740 --> 00:27:02,579
+such a bother ai could be like the ultimate export tool it's true it's the counter argument can you
+
+414
+00:27:02,579 --> 00:27:06,900
+imagine like open ai is just like or press one button and we'll suck everything out go ahead
+
+415
+00:27:06,900 --> 00:27:12,019
+andrew and then let's go to the next yeah it becomes the i mean it becomes the g suite we
+
+416
+00:27:12,019 --> 00:27:17,299
+always wanted is really what's going on i mean their vibe their vibe coding the ecosystem at
+
+417
+00:27:17,299 --> 00:27:24,339
+just such a higher speed and it's where google has always struggled from a product standpoint
+
+418
+00:27:24,339 --> 00:27:31,059
+where is google in all of this my lord like shouldn't google be doing this and did they
+
+419
+00:27:31,059 --> 00:27:37,859
+release their own agents or not i i saw that they had something agentic and gemini is such a great
+
+420
+00:27:37,859 --> 00:27:44,099
+product but they should be shoving that down our throats like every day gemini should be you know
+
+421
+00:27:44,740 --> 00:27:53,059
+being pushed towards me in a very aggressive way in my browser in my gmail when i'm on youtube like
+
+422
+00:27:53,059 --> 00:27:56,819
+It seems like it's just like this little tiny afterthought.
+
+423
+00:27:57,019 --> 00:27:58,059
+It's in Google Maps.
+
+424
+00:27:58,139 --> 00:27:58,819
+Did you see that, Lon?
+
+425
+00:27:59,159 --> 00:28:00,859
+They added AI to Google Maps?
+
+426
+00:28:01,179 --> 00:28:01,339
+Right.
+
+427
+00:28:01,460 --> 00:28:04,399
+Well, there was that controversial Google Earth thing
+
+428
+00:28:04,399 --> 00:28:06,599
+where you could add stuff to Google Earth.
+
+429
+00:28:06,679 --> 00:28:07,339
+You remember that?
+
+430
+00:28:07,700 --> 00:28:09,319
+You could pull up Google Earth
+
+431
+00:28:09,319 --> 00:28:10,720
+and then you could tell generative AI,
+
+432
+00:28:11,019 --> 00:28:15,399
+like, put an archway here and add a wall around the city.
+
+433
+00:28:15,639 --> 00:28:17,119
+And then the people were very concerned
+
+434
+00:28:17,119 --> 00:28:19,200
+that it was going to be misinformation.
+
+435
+00:28:19,899 --> 00:28:20,799
+You could make it look like-
+
+436
+00:28:20,799 --> 00:28:22,559
+I literally had a conversation
+
+437
+00:28:22,559 --> 00:28:26,559
+with Google Maps AI, it is extraordinary.
+
+438
+00:28:26,779 --> 00:28:30,019
+I was like, what ramen have I bookmarked in Tokyo?
+
+439
+00:28:30,379 --> 00:28:31,720
+Make me a walking tour.
+
+440
+00:28:31,859 --> 00:28:33,740
+Where should I go in this area?
+
+441
+00:28:34,159 --> 00:28:36,819
+And it was like doing what I was using GrokBot for.
+
+442
+00:28:37,220 --> 00:28:40,039
+So it's a layup for them to do it, but they haven't.
+
+443
+00:28:40,119 --> 00:28:41,000
+It's so weird.
+
+444
+00:28:41,559 --> 00:28:43,379
+Sergey needs to get in there again
+
+445
+00:28:43,379 --> 00:28:45,659
+and just tell everybody AI first, AI first.
+
+446
+00:28:45,980 --> 00:28:46,859
+I wrote about this-
+
+447
+00:28:46,859 --> 00:28:47,819
+Shove this down people's throats.
+
+448
+00:28:48,119 --> 00:28:49,460
+On This Week in AI the other day,
+
+449
+00:28:49,460 --> 00:28:53,600
+there is a Gemini app that you can install on your computer and it does work.
+
+450
+00:28:53,660 --> 00:28:59,620
+It's like, I would say it's like 40% GrokBot-esque where you could tell it to do things and it can,
+
+451
+00:28:59,700 --> 00:29:00,799
+it can take some actions.
+
+452
+00:29:00,900 --> 00:29:01,960
+It's got a lot of connectors.
+
+453
+00:29:01,960 --> 00:29:06,100
+So you could like put YouTube in here, put OpenTable in here.
+
+454
+00:29:06,100 --> 00:29:06,759
+You don't need a connector.
+
+455
+00:29:06,960 --> 00:29:08,539
+You got your Gmail's connected already.
+
+456
+00:29:08,759 --> 00:29:10,480
+It should just, boom.
+
+457
+00:29:10,940 --> 00:29:13,480
+And I guess they, do they have it and they don't want to release it?
+
+458
+00:29:13,860 --> 00:29:17,180
+I don't, I mean, that's what I was going to say is it is, it is clunky.
+
+459
+00:29:17,180 --> 00:29:25,080
+Like I created a presentation in it and then I had to tell it like, don't just post this here, put it in my Google Drive or like go check.
+
+460
+00:29:25,180 --> 00:29:31,720
+You know, like it's not intuitive in the way that I think GrokBot or Claude are at this point.
+
+461
+00:29:31,880 --> 00:29:38,380
+I mean, these agentic platforms are so powerful for normies.
+
+462
+00:29:39,320 --> 00:29:43,380
+And I think that's where we're going to see a complete sea change.
+
+463
+00:29:43,380 --> 00:29:48,660
+I think we're going to see the utilization of these products by non-technical people
+
+464
+00:29:48,660 --> 00:29:50,780
+go like 10x in the next year or so.
+
+465
+00:29:50,980 --> 00:29:54,760
+Because I was, my wife was, we're looking for another home.
+
+466
+00:29:55,340 --> 00:29:59,700
+And I was like, in Austin, it's very weird.
+
+467
+00:29:59,780 --> 00:30:02,800
+You find these like weird situations in research.
+
+468
+00:30:03,060 --> 00:30:05,600
+They don't list homes on the market in Austin.
+
+469
+00:30:05,640 --> 00:30:07,540
+And they don't list the sales price.
+
+470
+00:30:08,140 --> 00:30:10,820
+So like you record the sales price in every other state.
+
+471
+00:30:10,820 --> 00:30:13,180
+In Austin, you don't put it into the MLS.
+
+472
+00:30:13,380 --> 00:30:15,840
+And then the best homes are not put into the MLS.
+
+473
+00:30:15,840 --> 00:30:18,340
+So when you look for something, even like mid-tier,
+
+474
+00:30:18,520 --> 00:30:20,380
+like apartments are not put into it.
+
+475
+00:30:20,460 --> 00:30:22,260
+So they want you to talk to a broker.
+
+476
+00:30:22,640 --> 00:30:23,800
+They don't tell you the price.
+
+477
+00:30:24,320 --> 00:30:25,780
+So I was like, well, how do you get this information?
+
+478
+00:30:25,900 --> 00:30:27,640
+Like, oh, follow your favorite brokers on Instagram.
+
+479
+00:30:28,540 --> 00:30:31,800
+And then I found the homes are on YouTube.
+
+480
+00:30:32,820 --> 00:30:35,340
+And then I found they're on the web.
+
+481
+00:30:36,120 --> 00:30:40,300
+So I was like, I'm like, but don't we have Zillow and Reddit?
+
+482
+00:30:40,400 --> 00:30:41,840
+They're like, yeah, we don't want to put the stuff on there.
+
+483
+00:30:41,900 --> 00:30:42,640
+I'm like, why not?
+
+484
+00:30:42,700 --> 00:30:43,360
+They're like, yeah, I just,
+
+485
+00:30:43,380 --> 00:30:47,120
+doesn't work that way here. You got to talk to a person. And I'm like, okay, I know what this is
+
+486
+00:30:47,120 --> 00:30:51,060
+about. This is like buying a Rolex. You talk to a person, they get to sell it for a higher price.
+
+487
+00:30:51,120 --> 00:30:56,080
+They build a relationship with you. Yada, yada, you get manipulated. I trained the bot in under
+
+488
+00:30:56,080 --> 00:31:01,560
+48 hours. I said, go search for these neighborhoods, search luxury homes, search new home
+
+489
+00:31:01,560 --> 00:31:07,780
+on YouTube, Instagram. Then I said, find me every broker's YouTube, Instagram accounts,
+
+490
+00:31:07,780 --> 00:31:12,780
+then look on their accounts for every builder, architect, interior designer that they shout out
+
+491
+00:31:12,779 --> 00:31:18,700
+on theirs and then make me a database of all of those then i want an html page report every sunday
+
+492
+00:31:18,700 --> 00:31:27,099
+morning with every home that you find that's not on mls but you find it on youtube and i gave it
+
+493
+00:31:27,099 --> 00:31:34,139
+i literally took the search under like you know last 30 days you know whatever neighborhood home
+
+494
+00:31:35,019 --> 00:31:41,259
+whatever and then i started finding them i was like oh my god i i literally built rebuilt a zillow
+
+495
+00:31:41,259 --> 00:31:47,980
+for austin that's better than anything and i did it in maybe 10 instructions or less for the bot my
+
+496
+00:31:47,980 --> 00:31:53,980
+wife's like oh my god how many developers built this i was like zero crockbot will do anything
+
+497
+00:31:53,980 --> 00:32:00,220
+you ask it to do it's it's going to be wild with doordash it still has a little bit of a hard time
+
+498
+00:32:00,220 --> 00:32:05,500
+you gotta the buttons the buttons on doordash computer otherwise that's right it's right there
+
+499
+00:32:05,500 --> 00:32:09,420
+all right let's keep going all right let's go to what i think oh anyway you do you have any thoughts
+
+500
+00:32:09,420 --> 00:32:13,720
+on this, Andrew, with the agentic explosion that's about to happen?
+
+501
+00:32:13,940 --> 00:32:15,880
+Well, I think it more has happened than people even realize.
+
+502
+00:32:16,240 --> 00:32:18,360
+If you go into Codex and you start using Astra,
+
+503
+00:32:18,580 --> 00:32:20,420
+when people don't realize this browser use assault,
+
+504
+00:32:20,820 --> 00:32:22,600
+and you can basically do any task with browser use,
+
+505
+00:32:22,660 --> 00:32:25,080
+so as you're talking about how you're doing this with BrowkBot,
+
+506
+00:32:25,160 --> 00:32:26,360
+I mean, try using Astra.
+
+507
+00:32:27,360 --> 00:32:30,060
+Astra is incredible at browser use to the point where
+
+508
+00:32:30,060 --> 00:32:32,700
+there is basically nothing you can't do on your desktop
+
+509
+00:32:32,700 --> 00:32:34,460
+or in any SaaS application.
+
+510
+00:32:34,820 --> 00:32:36,580
+Most people don't realize this is even possible
+
+511
+00:32:36,579 --> 00:32:39,659
+because these capabilities have only come online in the last three months.
+
+512
+00:32:40,220 --> 00:32:42,259
+And so, like, imagine applying to college.
+
+513
+00:32:42,659 --> 00:32:44,019
+Imagine working at HubSpot.
+
+514
+00:32:44,159 --> 00:32:46,039
+Imagine working on anything that doesn't even have a connector.
+
+515
+00:32:46,539 --> 00:32:48,299
+This is also basically solved.
+
+516
+00:32:48,779 --> 00:32:51,099
+And people just don't realize the capabilities are there.
+
+517
+00:32:51,619 --> 00:32:55,179
+And I think what, Jason, what you're describing is Elon's,
+
+518
+00:32:55,559 --> 00:32:59,519
+Grok has done an incredible job of just pushing out use cases
+
+519
+00:32:59,519 --> 00:33:03,019
+via skills from the internal team onto your X feed.
+
+520
+00:33:03,019 --> 00:33:07,579
+And so people are really starting to be aware of what type of capabilities exist.
+
+521
+00:33:07,700 --> 00:33:10,220
+But this is all available in codex.
+
+522
+00:33:10,319 --> 00:33:12,200
+It's all available in cloud code.
+
+523
+00:33:12,500 --> 00:33:14,099
+It's all available on Muse.
+
+524
+00:33:14,220 --> 00:33:14,799
+It's all available.
+
+525
+00:33:15,379 --> 00:33:19,779
+And certain harnesses and certain clients are actually just better at certain things.
+
+526
+00:33:19,920 --> 00:33:24,900
+And browser use is one of them that has just dramatically have become solved in the last six months.
+
+527
+00:33:25,099 --> 00:33:31,460
+Yeah, the browser use piece changes, I think, everything, except now I'm getting blocked constantly.
+
+528
+00:33:31,460 --> 00:33:36,019
+So I was chatting with Elon the other day and I was, he's like, what's working?
+
+529
+00:33:36,019 --> 00:33:36,360
+What's not?
+
+530
+00:33:36,360 --> 00:33:38,100
+I was like, LinkedIn doesn't work.
+
+531
+00:33:38,460 --> 00:33:42,120
+Like I can search LinkedIn when I'm logged in as a browser.
+
+532
+00:33:42,120 --> 00:33:43,160
+I can't do in-mail.
+
+533
+00:33:43,460 --> 00:33:44,700
+He's like, okay.
+
+534
+00:33:44,700 --> 00:33:47,059
+You know, and like they, they, they're working on it.
+
+535
+00:33:47,059 --> 00:33:51,360
+And so that's what I want is just, I want a desktop browser.
+
+536
+00:33:51,360 --> 00:33:55,120
+And I thought comment from perplexity would be this, but it hasn't really advanced to this.
+
+537
+00:33:55,120 --> 00:34:00,420
+And I guess if you are a legal entity and you break a terms of service or you let people
+
+538
+00:34:00,420 --> 00:34:04,300
+break a terms of service, you maybe carry some liability, you get a legal letter.
+
+539
+00:34:04,800 --> 00:34:07,519
+I just want an open source browser that's unhinged.
+
+540
+00:34:08,260 --> 00:34:09,079
+I want an unhinged.
+
+541
+00:34:09,079 --> 00:34:12,539
+Can somebody make an unhinged browser that will just do what I tell it to do?
+
+542
+00:34:12,619 --> 00:34:14,119
+Does that even exist, John?
+
+543
+00:34:14,420 --> 00:34:15,980
+Like, do people have these?
+
+544
+00:34:16,139 --> 00:34:16,700
+I'm not sure.
+
+545
+00:34:16,980 --> 00:34:18,820
+No, I don't know about that.
+
+546
+00:34:19,039 --> 00:34:20,079
+Andrew, have you heard of this?
+
+547
+00:34:20,099 --> 00:34:24,159
+Like an unhinged open source browser that will just do what it's told to do and just
+
+548
+00:34:24,159 --> 00:34:26,119
+let the terms of service be damned?
+
+549
+00:34:26,119 --> 00:34:30,859
+let me take the responsibility for LinkedIn or Amazon banning my account?
+
+550
+00:34:31,079 --> 00:34:33,139
+Yeah, yes, that's the answer.
+
+551
+00:34:33,319 --> 00:34:34,420
+I mean, you have to run it headless.
+
+552
+00:34:34,579 --> 00:34:36,259
+There are a lot of different tools to run browser automation,
+
+553
+00:34:36,679 --> 00:34:40,059
+and there are a lot of different APIs, but it's very much developer-focused.
+
+554
+00:34:40,199 --> 00:34:41,059
+You can easily build this.
+
+555
+00:34:41,559 --> 00:34:44,359
+And then I think the question is going to be what model you pointed at.
+
+556
+00:34:45,099 --> 00:34:48,059
+You'll probably want to use one of the open source models that have less restrictions.
+
+557
+00:34:48,199 --> 00:34:49,799
+So yes, you can set this up very quickly.
+
+558
+00:34:50,179 --> 00:34:51,659
+That's my dream right now.
+
+559
+00:34:51,659 --> 00:34:52,359
+That's a one-shot.
+
+560
+00:34:52,779 --> 00:34:53,699
+Goal for the week.
+
+561
+00:34:53,699 --> 00:34:57,099
+I mean, I might, I literally, I'm so frustrated.
+
+562
+00:34:57,219 --> 00:35:01,699
+I might just have to make my, my own, uh, unhinged browser, unhinged.
+
+563
+00:35:02,419 --> 00:35:02,859
+Browser.
+
+564
+00:35:03,019 --> 00:35:04,059
+That's what you should call it.
+
+565
+00:35:04,099 --> 00:35:05,239
+The unhinged browser.
+
+566
+00:35:05,419 --> 00:35:06,079
+That's a good name.
+
+567
+00:35:06,179 --> 00:35:06,339
+Yeah.
+
+568
+00:35:06,399 --> 00:35:07,439
+I'm busy this weekend.
+
+569
+00:35:08,439 --> 00:35:10,659
+All I need is one lunatic to make this.
+
+570
+00:35:10,719 --> 00:35:13,500
+And like, literally I'll put a, I'll put a bounty on it.
+
+571
+00:35:13,500 --> 00:35:14,439
+We'll do it on twist.
+
+572
+00:35:14,559 --> 00:35:14,719
+Yeah.
+
+573
+00:35:14,819 --> 00:35:16,539
+Somebody on twist.
+
+574
+00:35:17,019 --> 00:35:18,519
+Uh, where do you guys want to go next?
+
+575
+00:35:18,579 --> 00:35:23,539
+The alpha school story, Jack Dorsey, uh, maybe Washington DC.
+
+576
+00:35:23,699 --> 00:35:30,899
+AI. You have a favorite story here, John? What's the Alpha School situation? I think this is an
+
+577
+00:35:30,899 --> 00:35:34,839
+interesting one. That's where I wanted to go. Tee it up, Lonnie. All right. I will tee this one up
+
+578
+00:35:34,839 --> 00:35:40,480
+for you. So Alpha School promises AI-driven learning. Two to three hours of academics on
+
+579
+00:35:40,480 --> 00:35:45,099
+a computer each morning, twice as much learning in half the time, and then the students get
+
+580
+00:35:45,099 --> 00:35:51,119
+afternoons for life skills. The New York Times reviewed their internal data. About half of the
+
+581
+00:35:51,119 --> 00:35:55,380
+K-8 private school students last year who were doing the Alpha School Protocol.
+
+582
+00:35:55,380 --> 00:36:02,880
+They didn't hit the 2x growth target in math, and only 42% did it in both math and reading.
+
+583
+00:36:03,259 --> 00:36:06,799
+So they didn't quite hit their, we're going to make you twice as productive.
+
+584
+00:36:07,079 --> 00:36:09,380
+But achievement's still very high.
+
+585
+00:36:09,659 --> 00:36:16,880
+The median student doing Alpha School scored in the 87th percentile in math and 89th in reading on the math test.
+
+586
+00:36:16,880 --> 00:36:21,559
+Alpha charges up to 75K a year at about 50 private campuses.
+
+587
+00:36:21,960 --> 00:36:24,099
+They have around 1,500 students so far.
+
+588
+00:36:24,380 --> 00:36:30,920
+The time-backed software is now used by about 2,600 public school students in Texas and South Carolina.
+
+589
+00:36:31,380 --> 00:36:35,760
+Alpha did not respond to questions or interview requests from the Times.
+
+590
+00:36:36,119 --> 00:36:41,660
+So, yeah, it's like a program that promises they're going to make your kids a lot better at sort of math and reading
+
+591
+00:36:41,660 --> 00:36:45,559
+so they can devote more of their day to other kinds of skills.
+
+592
+00:36:45,559 --> 00:36:50,380
+I mean, so John, what do you think of that as like a setup, as like a protocol?
+
+593
+00:36:50,659 --> 00:36:58,219
+Well, I mean, I think in general, like over the – it's so hard to imagine over the next 10 to 20 years what the point of school is and how school changes.
+
+594
+00:36:58,420 --> 00:37:03,119
+You know, it's like – I mean, at a high level – I mean, I have a 2-year-old and a 4-year-old.
+
+595
+00:37:03,119 --> 00:37:15,400
+And at a high level, thinking about what their college experience is, what is even high school, what's middle school for them, it's really hard to reason through that.
+
+596
+00:37:15,559 --> 00:37:18,320
+So I think something has to change dramatically with education.
+
+597
+00:37:18,320 --> 00:37:20,460
+I don't know if this is it.
+
+598
+00:37:20,559 --> 00:37:21,960
+I don't know what exactly it looks like.
+
+599
+00:37:22,199 --> 00:37:30,480
+But if jobs are fundamentally changing and the point of a lot of this is for jobs, then I think we need to change this.
+
+600
+00:37:30,659 --> 00:37:34,000
+And I think a lot of it comes back to sort of philosophy.
+
+601
+00:37:34,299 --> 00:37:41,699
+Like I think that's it's going to be like, well, what can what can we learn that is like more just timeless philosophical reasoning?
+
+602
+00:37:41,880 --> 00:37:45,460
+Because at this point, digital intelligence is almost free.
+
+603
+00:37:45,559 --> 00:37:47,860
+I have a lot of friends who put their kids in this.
+
+604
+00:37:47,860 --> 00:37:54,980
+And if you want to, if you've got a kid who's self-directed and who is addicted to an iPad and to a computer, it's amazing for them.
+
+605
+00:37:54,980 --> 00:38:00,860
+Because if they have executive function enough to work alone, it's kind of gamified.
+
+606
+00:38:01,000 --> 00:38:13,199
+So I think a lot of young boys who are in the video game world who are used to leveling up and, you know, doing quests and, you know, whatever, they do particularly well with this software that they provide.
+
+607
+00:38:13,199 --> 00:38:24,699
+But I am a fan of the Montessori method and teaching people these basics of thinking and the fundamental building blocks of thought.
+
+608
+00:38:24,960 --> 00:38:28,639
+And I think more human is definitely the way to go.
+
+609
+00:38:29,179 --> 00:38:36,139
+What I understand also is Alpha School has an entrepreneurial program where they're helping people build businesses in high school.
+
+610
+00:38:36,239 --> 00:38:41,579
+So a lot of these same kids who are into self-directed, they want to be in the real world and building businesses.
+
+611
+00:38:41,579 --> 00:38:45,739
+And so, John, I'm a little bit ahead of you with I got two 10 year olds and a 16 year old.
+
+612
+00:38:46,000 --> 00:38:55,579
+I'm focused on teaching them how to build businesses and just exposing them to that early because I think there's not going to be jobs available.
+
+613
+00:38:57,199 --> 00:38:58,799
+Here's what I think is happening with jobs.
+
+614
+00:38:58,840 --> 00:39:02,819
+And it relates to this Microsoft buyout story, if you could pull it up, Lon.
+
+615
+00:39:02,880 --> 00:39:05,799
+And if you look at Microsoft, I did a tweet about it the other day.
+
+616
+00:39:05,880 --> 00:39:07,539
+And a lot of people are talking about this.
+
+617
+00:39:07,799 --> 00:39:11,519
+Microsoft just offered 60,000 employees a buyout.
+
+618
+00:39:11,579 --> 00:39:13,980
+I think 10% will take it.
+
+619
+00:39:14,019 --> 00:39:15,099
+Some people think it's going to be five.
+
+620
+00:39:15,179 --> 00:39:16,279
+Some people think it's going to be 20.
+
+621
+00:39:16,440 --> 00:39:19,179
+And then the people who don't take it are going to get laid off anyway.
+
+622
+00:39:19,719 --> 00:39:23,659
+So this is kind of like, you know, take it or you're going to leave it.
+
+623
+00:39:24,000 --> 00:39:26,799
+And this is a better deal than you'll get when we lay you off.
+
+624
+00:39:28,920 --> 00:39:31,819
+This is one in five employees, roughly.
+
+625
+00:39:31,980 --> 00:39:34,759
+They have something like 240,000 employees.
+
+626
+00:39:34,980 --> 00:39:37,659
+More than a quarter of Microsoft's global workforce.
+
+627
+00:39:38,619 --> 00:39:40,099
+Are being offered this.
+
+628
+00:39:40,099 --> 00:39:41,960
+It's a shocking number.
+
+629
+00:39:42,480 --> 00:39:44,259
+It's who knows how many take it.
+
+630
+00:39:45,279 --> 00:39:52,119
+Microsoft had like $900,000 per employee in revenue five years ago, Lon.
+
+631
+00:39:52,500 --> 00:39:55,380
+They now have close to 2 million.
+
+632
+00:39:55,639 --> 00:39:57,940
+In other words, it's more than doubled in five years.
+
+633
+00:39:58,559 --> 00:40:01,980
+And I don't think these are exactly AI layoffs.
+
+634
+00:40:02,559 --> 00:40:08,579
+I think these are super intelligence stasis, super intelligence stasis.
+
+635
+00:40:08,579 --> 00:40:14,380
+all companies are saying the same size people will leave the company you might replace them
+
+636
+00:40:14,380 --> 00:40:20,799
+so it's either going to be trending slightly down slightly up but i think the same number
+
+637
+00:40:20,799 --> 00:40:27,159
+of employees because if these tools and intelligence is getting i don't know what we think
+
+638
+00:40:27,159 --> 00:40:32,139
+open ai and fable and all these things are getting better and the harnesses and the agents i think
+
+639
+00:40:32,139 --> 00:40:35,699
+they're getting two or three times as good each year but even if they just get 50 better every
+
+640
+00:40:35,699 --> 00:40:40,419
+year. It's like getting 50% more employees if they were using these tools. I think all these
+
+641
+00:40:40,419 --> 00:40:45,019
+companies are staying the same size. What does that mean for kids? You better create your own
+
+642
+00:40:45,019 --> 00:40:49,759
+company. You got to create your own company and you're going to have to find a problem set and a
+
+643
+00:40:49,759 --> 00:40:57,739
+customer set that you delight. That's the rubric I'm raising my kids under. There will be no jobs
+
+644
+00:40:57,739 --> 00:41:02,739
+available or a very small number of jobs available and you're going to have to chart your own course
+
+645
+00:41:02,739 --> 00:41:03,619
+and build your own company.
+
+646
+00:41:03,719 --> 00:41:05,779
+And then you'll be unstoppable.
+
+647
+00:41:06,019 --> 00:41:06,679
+Andrew, what do you think?
+
+648
+00:41:06,699 --> 00:41:09,099
+You have kids and what do you think's happening?
+
+649
+00:41:09,099 --> 00:41:10,519
+I have a one and a half year old.
+
+650
+00:41:10,599 --> 00:41:11,579
+I was going to ask the question,
+
+651
+00:41:11,699 --> 00:41:13,639
+are you encouraging your kids to go to college?
+
+652
+00:41:13,819 --> 00:41:16,039
+And that's, or are you taking the goal
+
+653
+00:41:16,039 --> 00:41:17,339
+of the field fellowship?
+
+654
+00:41:17,739 --> 00:41:19,279
+I mean, that's the question I have.
+
+655
+00:41:19,319 --> 00:41:22,299
+And I have, call it 16 and a half years
+
+656
+00:41:22,299 --> 00:41:23,099
+to think about this.
+
+657
+00:41:23,379 --> 00:41:24,699
+You know, listen, they're in a different situation
+
+658
+00:41:24,699 --> 00:41:25,539
+than a normal kid.
+
+659
+00:41:26,459 --> 00:41:28,119
+So if they want to go to college
+
+660
+00:41:28,119 --> 00:41:30,039
+and they want to have that experience,
+
+661
+00:41:30,739 --> 00:41:32,179
+I'm open to it.
+
+662
+00:41:32,179 --> 00:41:37,699
+you know in other words a four-year absurdly expensive vacation that costs 500 a day to just
+
+663
+00:41:37,699 --> 00:41:44,419
+do nothing or whatever the the yearly cost is a lot of stuff in college i i i mean if you look
+
+664
+00:41:44,419 --> 00:41:50,019
+at these current stuff you're proud of though yes nothing yeah i think it's a giant like boondoggle
+
+665
+00:41:50,019 --> 00:41:55,219
+now because of ai because the teachers are phoning it in i think the structure of the classes is
+
+666
+00:41:55,219 --> 00:42:00,659
+phoning it in like they're talking to my nieces and nephews they said some classes they drop in
+
+667
+00:42:00,659 --> 00:42:07,699
+classes because the teachers are playing lectures and they just play the lecture from COVID era and
+
+668
+00:42:07,699 --> 00:42:12,420
+they don't do any work and the materials are all BS and everything's just performative.
+
+669
+00:42:12,920 --> 00:42:21,339
+The teachers are using AI to make the lesson plans. The kids are doing AI to do the work
+
+670
+00:42:21,339 --> 00:42:28,379
+and then everybody is just kind of turning a blind eye to this performative AI slop degree.
+
+671
+00:42:28,380 --> 00:42:33,099
+So I think, Andrew, to your question, I think I would much rather give them a quarter million
+
+672
+00:42:33,099 --> 00:42:39,079
+dollars and say, let's build five businesses, 50K at a time together, and stay at home or
+
+673
+00:42:39,079 --> 00:42:41,980
+get a little apartment, and let's build your business together.
+
+674
+00:42:42,099 --> 00:42:45,280
+Again, they're in a unique situation since their dad's an angel investor.
+
+675
+00:42:45,940 --> 00:42:48,619
+But I do think that's a better option to give them.
+
+676
+00:42:48,840 --> 00:42:55,519
+Put their college in a fund, whatever it is, their Invest America Trump account, 529, and
+
+677
+00:42:55,519 --> 00:42:56,940
+then let them use it to build the business.
+
+678
+00:42:56,940 --> 00:42:58,940
+Starting another incubator in your garage, Jason.
+
+679
+00:43:00,019 --> 00:43:03,440
+I mean, it is definitely the way to go.
+
+680
+00:43:04,119 --> 00:43:08,720
+I think Alpha School, I don't like the idea of kids being on computers this much.
+
+681
+00:43:09,119 --> 00:43:12,340
+I like the idea of them doing the work on paper and pen.
+
+682
+00:43:12,980 --> 00:43:18,019
+I like the idea of learning penmanship, learning how to play chords on a piano or a guitar,
+
+683
+00:43:18,960 --> 00:43:22,380
+learning how to draw, learning how to do art, learning how to sing.
+
+684
+00:43:22,380 --> 00:43:27,220
+I mean, I feel like, is that not like potentially a way forward for like the university?
+
+685
+00:43:27,340 --> 00:43:31,420
+Like colleges and universities obviously were set up to like cater to the kinds of work
+
+686
+00:43:31,420 --> 00:43:32,460
+people do today.
+
+687
+00:43:32,460 --> 00:43:37,000
+You know, we're training people how to like research things or how to like solve business
+
+688
+00:43:37,000 --> 00:43:42,099
+problems that come up at the C-suite or, you know, like couldn't it, I feel like there
+
+689
+00:43:42,099 --> 00:43:45,619
+is a version of it where it becomes about doing things with your hands, building things,
+
+690
+00:43:45,720 --> 00:43:50,660
+making things like we could ship that around to be more like what it makes sense to learn
+
+691
+00:43:50,659 --> 00:43:54,420
+in the AI era rather than abandoning it entirely.
+
+692
+00:43:54,420 --> 00:43:56,359
+The schools are under massive pressure
+
+693
+00:43:56,359 --> 00:44:00,299
+to have that 250K degree result in a job,
+
+694
+00:44:00,299 --> 00:44:01,819
+which means they're gonna just embrace
+
+695
+00:44:01,819 --> 00:44:05,099
+the AI tools even more, I guess.
+
+696
+00:44:05,099 --> 00:44:08,219
+And what I'm saying is make something truly human,
+
+697
+00:44:08,219 --> 00:44:12,500
+hands-on, acoustic, unplugged for 80%,
+
+698
+00:44:12,500 --> 00:44:16,039
+and then do extremely targeted applications
+
+699
+00:44:16,039 --> 00:44:17,259
+for the other 20% of the time
+
+700
+00:44:17,259 --> 00:44:19,059
+where you're just all in on AI.
+
+701
+00:44:19,059 --> 00:44:22,119
+But like, just even looking at penmanship
+
+702
+00:44:22,119 --> 00:44:25,039
+or ability to write a sentence in our own company,
+
+703
+00:44:25,039 --> 00:44:26,099
+I was just appalled.
+
+704
+00:44:26,099 --> 00:44:28,500
+Like some young people coming out of college
+
+705
+00:44:28,500 --> 00:44:31,519
+can't put together three solid sentences.
+
+706
+00:44:31,519 --> 00:44:34,360
+They're smart, they understand the world,
+
+707
+00:44:34,360 --> 00:44:38,000
+but to not be able to write three sentences acoustically
+
+708
+00:44:38,000 --> 00:44:39,019
+with a pen and paper.
+
+709
+00:44:39,019 --> 00:44:40,480
+It's not able to write them
+
+710
+00:44:40,480 --> 00:44:42,400
+and it's not able to tell the difference
+
+711
+00:44:42,400 --> 00:44:45,259
+between like a very clear, well-written sentence
+
+712
+00:44:45,259 --> 00:44:48,759
+and a sentence that's like garbled and not clear.
+
+713
+00:44:48,760 --> 00:44:52,240
+Like it's not even like that kind of reading comprehension
+
+714
+00:44:52,240 --> 00:44:53,160
+I think we're losing.
+
+715
+00:44:53,160 --> 00:44:57,100
+This is, I think John, the interesting part of this is
+
+716
+00:44:57,100 --> 00:45:00,840
+when they did studies, if you are using chat GPT
+
+717
+00:45:00,840 --> 00:45:02,420
+for your and cutting and pasting from it,
+
+718
+00:45:02,420 --> 00:45:05,180
+your brain is not engaged on the CAT scan
+
+719
+00:45:05,180 --> 00:45:06,380
+or whatever the scan is.
+
+720
+00:45:07,680 --> 00:45:11,000
+If you're using Google search and then you're retyping it,
+
+721
+00:45:11,000 --> 00:45:14,200
+your brain is like a magnitude more engaged.
+
+722
+00:45:14,200 --> 00:45:16,340
+I'll call it the Gen X method.
+
+723
+00:45:16,340 --> 00:45:17,560
+You know, you're Googling in one window,
+
+724
+00:45:17,559 --> 00:45:20,559
+you're writing in another and people had complaints about that even.
+
+725
+00:45:20,920 --> 00:45:26,920
+And then if you go to the, you know, fully acoustic method and, uh, you know,
+
+726
+00:45:26,920 --> 00:45:30,219
+you're doing research on one side, printing it out or whatever, and then
+
+727
+00:45:30,219 --> 00:45:35,000
+you're writing it, your brain is just like hyperactive and everything's firing.
+
+728
+00:45:35,019 --> 00:45:41,500
+So what we're having here is, uh, uh, cognitive atrophy is what I'll call it.
+
+729
+00:45:41,739 --> 00:45:41,860
+Yeah.
+
+730
+00:45:41,860 --> 00:45:46,199
+Cognitive atrophy, just like muscle atrophy of people sitting behind desks.
+
+731
+00:45:46,519 --> 00:45:47,239
+I, I agree.
+
+732
+00:45:47,239 --> 00:45:51,859
+And we didn't notice it in our own company, you know, when we, when people just generate
+
+733
+00:45:51,859 --> 00:45:56,399
+a lot of things that is generating things and they're not actually editing them, they're
+
+734
+00:45:56,399 --> 00:45:59,479
+not actually internalizing what it is that they're generating.
+
+735
+00:45:59,799 --> 00:46:05,739
+It's really problematic because then also it's like for the consumer of that, then you
+
+736
+00:46:05,739 --> 00:46:07,219
+have to sort through all that, right?
+
+737
+00:46:07,219 --> 00:46:12,799
+It's like people should spend a lot more time curating and writing and all that because
+
+738
+00:46:12,799 --> 00:46:15,619
+then it's, it's in, it's one to end, right?
+
+739
+00:46:15,619 --> 00:46:17,779
+Like one person writing it goes to in people.
+
+740
+00:46:18,039 --> 00:46:23,460
+And now if in people, if in is 200 people and they all need to spend time thinking through
+
+741
+00:46:23,460 --> 00:46:29,299
+and reading the ad and it's not high quality, that's a terrible problem within the company.
+
+742
+00:46:29,519 --> 00:46:29,739
+Yes.
+
+743
+00:46:29,839 --> 00:46:34,940
+You're now flooding the zone with more slop and you're putting the cognitive burden.
+
+744
+00:46:35,440 --> 00:46:38,980
+You're putting a cognitive burden on the other people in the organization.
+
+745
+00:46:39,159 --> 00:46:39,719
+Yeah, exactly.
+
+746
+00:46:40,099 --> 00:46:40,219
+Yeah.
+
+747
+00:46:40,219 --> 00:46:42,500
+Which is totally unfair and insane.
+
+748
+00:46:42,500 --> 00:46:57,059
+I think Alpha School has some really interesting merits, which is they have curated people who can afford a 50 to 75K a year elementary school education.
+
+749
+00:46:57,239 --> 00:47:01,260
+When you do that, you have the top 10% of students.
+
+750
+00:47:01,380 --> 00:47:07,039
+You get the most engaged parents who have the most tutoring resources, and you get a weird view of the world.
+
+751
+00:47:07,039 --> 00:47:09,179
+We had this with Alpha School.
+
+752
+00:47:09,179 --> 00:47:14,359
+there was another school that was another tech first school that we tried for a semester when
+
+753
+00:47:14,359 --> 00:47:21,539
+we lived in the Bay Area. I think there's fool's gold in these early results often. Yeah. Because
+
+754
+00:47:21,539 --> 00:47:29,279
+of selection bias. Yeah, that's a great point. Yeah. There's a probably a huge difference between
+
+755
+00:47:29,279 --> 00:47:33,859
+what would be applicable to the broader public and this small set of people. Yeah. I want to
+
+756
+00:47:33,859 --> 00:47:38,919
+pull this up that Andrew shared with us, meetproxy.me. This is what we talk about this all
+
+757
+00:47:38,920 --> 00:47:45,820
+the time jason it's about it's about collaborating with the llm and and working what is this meat
+
+758
+00:47:45,820 --> 00:47:51,720
+proxy yeah the the idea is a meat proxy is a human that sits between an llm and other people but
+
+759
+00:47:51,720 --> 00:47:56,980
+doesn't add anything except like latency like i'm typing to claude and then i'm just copying and
+
+760
+00:47:56,980 --> 00:48:03,059
+pasting what claude told me and i'm not adding any value of my own therefore i am a meat proxy i like
+
+761
+00:48:03,059 --> 00:48:08,320
+that i like that formulation but that's i don't know what this website was this was the first
+
+762
+00:48:08,320 --> 00:48:12,340
+thing I found when I Googled it, but a meat proxy is literally what we're describing here. And we
+
+763
+00:48:12,340 --> 00:48:17,200
+see it across every organization. You see it in engineering, you see it in knowledge work, and
+
+764
+00:48:17,200 --> 00:48:21,880
+this is the result of giving people unlimited tokens. Bottom line, you can produce anything.
+
+765
+00:48:22,539 --> 00:48:27,039
+Yeah, scroll down. There's a perfect illustration here where it says the loop adds nothing.
+
+766
+00:48:27,580 --> 00:48:32,960
+A meat proxy copies a question into an AI, copies the answer back, and calls it collaboration.
+
+767
+00:48:32,960 --> 00:48:39,679
+There is no reason for this step to exist. Be more than a meat bridge. I mean, it's so true.
+
+768
+00:48:39,679 --> 00:48:43,039
+Did you know this term before, Andrew, meat proxy?
+
+769
+00:48:43,039 --> 00:48:44,039
+Yeah.
+
+770
+00:48:44,039 --> 00:48:45,380
+I've never heard this term.
+
+771
+00:48:45,380 --> 00:48:46,380
+Yeah, I've never heard this term.
+
+772
+00:48:46,380 --> 00:48:53,119
+We've added, as we onboard people, and we started talking about this three months ago,
+
+773
+00:48:53,119 --> 00:48:57,740
+it is mostly a term that has come through engineering. You will see it in knowledge
+
+774
+00:48:57,739 --> 00:49:03,179
+work, but it's everything you're all describing. And so we have set goals internally for our
+
+775
+00:49:03,179 --> 00:49:09,919
+organization of people not being meat proxies. And if you can't defend or understand what you
+
+776
+00:49:09,919 --> 00:49:16,119
+are trying to articulate, you've added nothing of value. Okay. How do you do it? Get practical
+
+777
+00:49:16,119 --> 00:49:21,619
+for me, Andrew, because I'm taking notes here from my own organization. How do you find a meat
+
+778
+00:49:21,619 --> 00:49:32,099
+proxy how do you remove a meat proxy or retrain a meat proxy to be a curator with taste and a plum
+
+779
+00:49:32,099 --> 00:49:36,259
+it's easier in engineering because what you end up seeing is it's just you vibe code a lot of crap
+
+780
+00:49:36,259 --> 00:49:43,539
+it has new ui it has no ui ux it's very clear it's vibe coded um and so what you've just done
+
+781
+00:49:43,539 --> 00:49:49,779
+is you've become good at articulating a prompt um it's definitely very easy to see when you ask
+
+782
+00:49:49,780 --> 00:49:56,980
+people to create plans now, create a process or a system for a knowledge worker, and it comes back
+
+783
+00:49:56,980 --> 00:50:04,180
+with a great plan, but it makes no logical sense. Or they can't articulate why they did it. I see
+
+784
+00:50:04,180 --> 00:50:10,900
+this a lot. And so we've rolled out guidelines that you have to be able to defend your critical
+
+785
+00:50:10,900 --> 00:50:16,180
+thinking. Bottom line, otherwise you've added no value. Why are you here?
+
+786
+00:50:16,179 --> 00:50:18,259
+Show me the prompt.
+
+787
+00:50:18,259 --> 00:50:19,259
+Yeah.
+
+788
+00:50:19,259 --> 00:50:20,259
+And show me the goal you set.
+
+789
+00:50:20,259 --> 00:50:21,500
+So we started something new, John.
+
+790
+00:50:21,500 --> 00:50:23,739
+We take somebody who is going to write a deal memo.
+
+791
+00:50:23,739 --> 00:50:27,259
+You know, it's like a researcher analyst on the way to becoming an associate at a venture
+
+792
+00:50:27,259 --> 00:50:28,739
+firm.
+
+793
+00:50:28,739 --> 00:50:30,139
+And they get on a Zoom.
+
+794
+00:50:30,139 --> 00:50:34,119
+It's going to be a three-hour Zoom with a proctor, proctor being a senior person at
+
+795
+00:50:34,119 --> 00:50:35,480
+the firm.
+
+796
+00:50:35,480 --> 00:50:37,339
+Then they tell them, here's your data room.
+
+797
+00:50:37,339 --> 00:50:40,179
+The company's name is blank.
+
+798
+00:50:40,179 --> 00:50:42,199
+You have one hour of research.
+
+799
+00:50:42,199 --> 00:50:43,679
+You have two hours to write it.
+
+800
+00:50:43,679 --> 00:50:48,399
+go and you speak out loud what you're doing and we have your entire desktop shared and
+
+801
+00:50:48,399 --> 00:50:50,079
+recorded.
+
+802
+00:50:50,079 --> 00:50:54,879
+And so now we're actually watching their thinking process, watching them write.
+
+803
+00:50:54,879 --> 00:51:02,119
+And people were like, this was equal parts humbling, inspiring, and made me a much better
+
+804
+00:51:02,119 --> 00:51:03,119
+thinker.
+
+805
+00:51:03,119 --> 00:51:06,779
+So now the next phase of this is we're going to have people pair program.
+
+806
+00:51:06,779 --> 00:51:09,519
+Pair programming is when two people would write code together.
+
+807
+00:51:09,519 --> 00:51:15,039
+to have everybody work in pairs where one person is doing the research they're working out loud the
+
+808
+00:51:15,039 --> 00:51:19,840
+other person is writing sentences and you have two screens shared and i don't have the software for
+
+809
+00:51:19,840 --> 00:51:25,759
+this but i want to have two screens shared and an ai so there's you know three people on the call an
+
+810
+00:51:25,759 --> 00:51:32,400
+ai and and two people writing and working together and it's just recorded so you can learn from it
+
+811
+00:51:33,039 --> 00:51:38,880
+and they're checking each other's work i think that accountability andrew solves the meat proxy
+
+812
+00:51:38,880 --> 00:51:43,760
+problem. Well, I think that another way to do it is say you have that hour, you let them build
+
+813
+00:51:43,760 --> 00:51:49,800
+whatever artifact you want in whatever, using whatever intelligence you want, whatever tokens
+
+814
+00:51:49,800 --> 00:51:53,519
+you want, whatever harness or model, you have 30 minutes, go, here's a laptop, you figure it out.
+
+815
+00:51:53,940 --> 00:51:58,559
+Now you have 30 minutes to understand what you just did. And now you have to present it to me
+
+816
+00:51:58,559 --> 00:52:04,019
+and walk me through it, teach it to me. Because I don't really care that you used AI to do the work.
+
+817
+00:52:04,019 --> 00:52:06,900
+I just care that you understand the outputs and you can defend it.
+
+818
+00:52:08,159 --> 00:52:09,099
+It's your thesis.
+
+819
+00:52:09,420 --> 00:52:10,119
+That's what you're doing.
+
+820
+00:52:11,219 --> 00:52:12,139
+What's the difference?
+
+821
+00:52:12,259 --> 00:52:17,179
+I mean, you think about it as in any organization that's kind of command and control and hierarchical,
+
+822
+00:52:17,500 --> 00:52:19,199
+somebody junior was always doing the work.
+
+823
+00:52:19,639 --> 00:52:22,940
+The senior person was accountable for strategy and implementation.
+
+824
+00:52:23,900 --> 00:52:29,480
+And so I just personally believe that everyone has a team of people under them today.
+
+825
+00:52:29,480 --> 00:52:33,380
+And so it's your job as Jason to defend the investment.
+
+826
+00:52:34,019 --> 00:52:39,780
+But the individual is very capable of using as much AI as possible.
+
+827
+00:52:40,380 --> 00:52:46,059
+Now, can they actually understand the topics and defend it?
+
+828
+00:52:46,119 --> 00:52:47,000
+That's a very different question.
+
+829
+00:52:47,099 --> 00:52:51,159
+I think this might go to this other story, open slash open source on Reddit.
+
+830
+00:52:51,400 --> 00:52:51,860
+Oh, sure.
+
+831
+00:52:51,960 --> 00:52:52,800
+Yeah, let's talk about that.
+
+832
+00:52:52,840 --> 00:52:53,300
+That's interesting.
+
+833
+00:52:53,300 --> 00:52:58,960
+So the moderators of Reddit's r slash open source community posted new rules on Saturday.
+
+834
+00:52:58,960 --> 00:53:05,820
+They're banning any project that uses AI, is made by AI, or is intended for AI.
+
+835
+00:53:06,179 --> 00:53:12,059
+From their post, quote, AI, as it exists today, is incongruent to this open source community.
+
+836
+00:53:12,420 --> 00:53:22,639
+They also told non-English speakers they have to find another community because the moderators can't tell AI written posts from AI translated posts.
+
+837
+00:53:22,980 --> 00:53:25,460
+So projects now have to be at least a year old.
+
+838
+00:53:25,720 --> 00:53:27,280
+They have to be actively maintained.
+
+839
+00:53:27,280 --> 00:53:29,100
+They have to have multiple contributors.
+
+840
+00:53:29,100 --> 00:53:33,180
+So there's no more solo developers pushing their own projects.
+
+841
+00:53:33,400 --> 00:53:37,180
+The community is revolting against the moderator's decision.
+
+842
+00:53:37,540 --> 00:53:42,000
+A rival sub, our true open source, has already launched.
+
+843
+00:53:42,340 --> 00:53:42,860
+So, yeah.
+
+844
+00:53:43,040 --> 00:53:49,900
+So I guess, John, your immediate reaction there and like, why do you think this is happening?
+
+845
+00:53:49,980 --> 00:53:53,280
+There's this schism among the open source community on Reddit.
+
+846
+00:53:53,500 --> 00:53:53,740
+Yeah.
+
+847
+00:53:54,160 --> 00:53:56,200
+Well, first of all, that's just super surprising.
+
+848
+00:53:56,199 --> 00:54:06,259
+I mean, I think a lot of it has to do with the open source community wanting to go back
+
+849
+00:54:06,259 --> 00:54:10,219
+to a world that doesn't exist.
+
+850
+00:54:10,219 --> 00:54:17,239
+I think a lot of them, they're from a certain era where they think that software is like
+
+851
+00:54:17,239 --> 00:54:20,239
+an artisanal thing.
+
+852
+00:54:20,239 --> 00:54:22,439
+It's like woodworking or something like that.
+
+853
+00:54:22,440 --> 00:54:27,840
+And a lot of it, it's like when the software engineering jobs are changing, they really
+
+854
+00:54:27,840 --> 00:54:31,440
+so, I mean, they're like, oh, I miss being in the zone.
+
+855
+00:54:31,440 --> 00:54:34,940
+I miss like being in the flow and that part of the work I used to do.
+
+856
+00:54:34,940 --> 00:54:37,440
+We're seeing this happen with mathematics now too, right?
+
+857
+00:54:37,440 --> 00:54:38,440
+Right.
+
+858
+00:54:38,440 --> 00:54:43,059
+Where it's like now, like people miss the fact that they could have been the human solving
+
+859
+00:54:43,059 --> 00:54:45,780
+the mathematical problem and now it's the AI.
+
+860
+00:54:45,780 --> 00:54:50,440
+So I think a lot of it probably kind of stems from that type of angst around that.
+
+861
+00:54:50,440 --> 00:54:51,440
+Andrew, your thoughts?
+
+862
+00:54:51,440 --> 00:54:52,440
+Do you agree?
+
+863
+00:54:52,440 --> 00:54:56,619
+Look, there are different schools of thought
+
+864
+00:54:56,619 --> 00:54:58,019
+for different individuals.
+
+865
+00:54:58,019 --> 00:55:01,019
+There's different levels of adoption of,
+
+866
+00:55:01,019 --> 00:55:04,320
+let's call it AI coding tools at different organizations.
+
+867
+00:55:04,320 --> 00:55:07,639
+I've heard of some that are very early innings
+
+868
+00:55:07,639 --> 00:55:11,320
+and they're still using the outsourced vendors
+
+869
+00:55:11,320 --> 00:55:13,000
+from Wipro and stuff like that.
+
+870
+00:55:13,000 --> 00:55:15,500
+And then there's companies that are all in and token maxing
+
+871
+00:55:15,500 --> 00:55:17,340
+and have seen the ROI.
+
+872
+00:55:18,599 --> 00:55:21,639
+My hot take is there's going to be artisanal people
+
+873
+00:55:21,639 --> 00:55:23,940
+who want to write code by hand,
+
+874
+00:55:23,940 --> 00:55:25,400
+and they're gonna be the rest of us
+
+875
+00:55:25,400 --> 00:55:26,980
+who are sitting there hiring
+
+876
+00:55:26,980 --> 00:55:28,599
+the most stacked engineers possible
+
+877
+00:55:28,599 --> 00:55:30,839
+who can pump out as much as product.
+
+878
+00:55:32,019 --> 00:55:33,980
+And I think Open Source has always had
+
+879
+00:55:33,980 --> 00:55:38,980
+its own unique believers and participants,
+
+880
+00:55:39,159 --> 00:55:40,440
+and we'll see where it goes.
+
+881
+00:55:40,440 --> 00:55:43,079
+I mean, what has Open Source become for the last five years?
+
+882
+00:55:43,079 --> 00:55:46,079
+It's become a way to ship products for AWS.
+
+883
+00:55:46,079 --> 00:55:48,319
+So I don't know where Open Source goes.
+
+884
+00:55:48,319 --> 00:55:50,859
+Is code that sort of thing, Jason?
+
+885
+00:55:50,860 --> 00:56:00,880
+Because, I mean, you know, you could go buy your furniture at Ikea, but if you really care, you could go pay some artist to make you a dining room table or a bookcase.
+
+886
+00:56:00,880 --> 00:56:08,780
+Is that what code will be one day or does code need to be knock it out, make it quick, make it as good as you can right away?
+
+887
+00:56:08,780 --> 00:56:22,060
+Yeah, what we're seeing is, and I think, Jaron, you kind of alluded to this, like people are going to miss acoustic music playing around the campfire, the band, you know, the bass guitar, whatever.
+
+888
+00:56:22,260 --> 00:56:25,980
+And then the DJ comes in and puts their little thumb drive in and goes beep, beep, boop.
+
+889
+00:56:26,060 --> 00:56:27,340
+And now everybody's dancing, right?
+
+890
+00:56:27,480 --> 00:56:27,680
+Right.
+
+891
+00:56:27,760 --> 00:56:33,080
+So like you have 100,000 people at this rave dancing and they don't care that it's not a band.
+
+892
+00:56:33,080 --> 00:56:37,760
+And then you have this band playing to a bar with eight people and they're like, what happened?
+
+893
+00:56:37,840 --> 00:56:38,700
+Where's rock and roll?
+
+894
+00:56:38,780 --> 00:56:43,040
+and it's going to be an adjustment, but the pendulum will swing back. I thought
+
+895
+00:56:43,040 --> 00:56:50,040
+the mathematician crying was the clip of the year. This is my clip of the year.
+
+896
+00:56:50,040 --> 00:56:52,680
+The other day at a town hall meeting, the math department, of course,
+
+897
+00:56:52,680 --> 00:56:58,680
+even Shrogatz, math professor, all the faculty. This is when the student in the back of the room
+
+898
+00:56:58,680 --> 00:57:05,200
+at our town hall says, what's the point? If the AI can do math better than any human being,
+
+899
+00:57:05,199 --> 00:57:09,859
+Sure, I could sit there and learn from it, but I want to discover things too.
+
+900
+00:57:10,139 --> 00:57:11,079
+I want that thrill.
+
+901
+00:57:11,439 --> 00:57:13,119
+I don't want my life to be in vain.
+
+902
+00:57:13,619 --> 00:57:15,199
+Yeah, that's exactly right.
+
+903
+00:57:15,379 --> 00:57:16,899
+I don't want my life to be in vain.
+
+904
+00:57:17,000 --> 00:57:19,759
+So if you take that away from me, what am I doing?
+
+905
+00:57:20,419 --> 00:57:24,019
+I was reminded of this old Bird's song.
+
+906
+00:57:24,199 --> 00:57:25,299
+That's not the Bird's actually.
+
+907
+00:57:25,419 --> 00:57:27,759
+It's a Pete Seeger song, Turn, Turn, Turn.
+
+908
+00:57:28,239 --> 00:57:28,480
+Yep.
+
+909
+00:57:28,739 --> 00:57:30,359
+So that's biblical.
+
+910
+00:57:31,159 --> 00:57:31,839
+Yeah, it comes from the Bible.
+
+911
+00:57:31,839 --> 00:57:34,439
+That's from Ecclesiastes.
+
+912
+00:57:34,440 --> 00:57:36,200
+which I had never read.
+
+913
+00:57:36,599 --> 00:57:39,000
+So I wanted to learn what's Ecclesiastes about
+
+914
+00:57:39,000 --> 00:57:40,940
+because there's a famous passage in there
+
+915
+00:57:40,940 --> 00:57:43,460
+where he says, basically, he's looking around
+
+916
+00:57:43,460 --> 00:57:45,519
+and trying to understand what's the point of it all.
+
+917
+00:57:46,659 --> 00:57:50,220
+And as I understand it, I'm no biblical scholar,
+
+918
+00:57:50,400 --> 00:57:52,440
+but as I understand it, the lesson is,
+
+919
+00:57:53,260 --> 00:57:58,860
+well, that your life is precious because it's short,
+
+920
+00:57:59,559 --> 00:58:02,700
+that you have to make the most of it while you're here.
+
+921
+00:58:02,699 --> 00:58:13,239
+So there's another line in there that says, everything is beautiful in its time.
+
+922
+00:58:14,059 --> 00:58:15,599
+Like, God, I'm sorry, I'm a wreck.
+
+923
+00:58:15,919 --> 00:58:28,480
+But if everything is beautiful in its time, we get to have a turn where we're in love, we're creative, we do what's meaningful, we get to walk our dog, whatever.
+
+924
+00:58:28,699 --> 00:58:29,799
+We do have a time.
+
+925
+00:58:30,159 --> 00:58:32,159
+Otherwise, we're dust, right?
+
+926
+00:58:32,159 --> 00:58:34,219
+We're ashes to ashes, dust to dust.
+
+927
+00:58:34,359 --> 00:58:36,259
+The beautiful part is the in-between.
+
+928
+00:58:36,440 --> 00:58:37,159
+There you have it, guys.
+
+929
+00:58:37,420 --> 00:58:37,960
+It's profound.
+
+930
+00:58:38,159 --> 00:58:46,239
+I mean, he's literally talking about everything that the, you know, the Panikins, the P-Doomers
+
+931
+00:58:46,239 --> 00:58:48,599
+were saying, John, is encapsulated here.
+
+932
+00:58:48,759 --> 00:58:57,759
+Imagine being a mathematician at this point in time, and your entire life's work had its
+
+933
+00:58:57,759 --> 00:59:00,159
+season, and now you've got to go walk your dog.
+
+934
+00:59:00,159 --> 00:59:25,259
+No, it's powerful. And I think this is going to apply increasingly to a lot of areas, a lot of areas that were previously seen as really high end, intellectually elite areas of work, whether that's being an elite programmer, elite mathematician, or many other white collar professions. And I think it's going to be a really wild next decade because of that.
+
+935
+00:59:25,260 --> 00:59:43,200
+Yeah, John, I'm married to a lawyer. My father was a lawyer. My brother-in-law is a lawyer and my mother-in-law is a lawyer. And I just switched law firms. And the law firm I went with, the whole pitch was we can do cap financings. It's a bit one of the larger venture law firms. And we have 20,000 skills that we've built in Claude.
+
+936
+00:59:43,199 --> 00:59:46,439
+and I was like that's what I'm looking to hear
+
+937
+00:59:46,439 --> 00:59:49,179
+and I think it's going to be a very
+
+938
+00:59:49,179 --> 00:59:52,159
+there are people who bring in business and rainmakers
+
+939
+00:59:52,159 --> 00:59:55,119
+and there are people who do work and it's a very interesting dynamic
+
+940
+00:59:55,119 --> 00:59:56,539
+that we're starting to see play out
+
+941
+00:59:56,539 --> 01:00:00,480
+not to pick on you because I think you're actually doing exactly
+
+942
+01:00:00,480 --> 01:00:02,759
+what I just described in a positive way
+
+943
+01:00:02,759 --> 01:00:06,239
+yeah and what we're finding is that
+
+944
+01:00:06,239 --> 01:00:10,099
+people move up the stack of the type of work
+
+945
+01:00:10,099 --> 01:00:12,699
+so even if you're an associate
+
+946
+01:00:12,699 --> 01:00:18,579
+associate, the associate work is getting increasingly automated inside law firms, but then they
+
+947
+01:00:18,579 --> 01:00:23,539
+can start to be more of a strategy consultant, if you will, for their clients.
+
+948
+01:00:23,539 --> 01:00:26,259
+They can talk about, oh, well, here's the deal that we're trying to do.
+
+949
+01:00:26,659 --> 01:00:31,099
+And now I had my agents run a bunch of simulations of the deal, and now let's talk through them.
+
+950
+01:00:31,179 --> 01:00:32,779
+I mean, it's what's everyone I always wanted.
+
+951
+01:00:32,779 --> 01:00:34,339
+Everyone wants strategic advice.
+
+952
+01:00:34,899 --> 01:00:36,460
+Everyone wants to pay less for docs.
+
+953
+01:00:36,460 --> 01:00:49,159
+There was, John, some sort of onboarding of associates, hazing, brutalization of investment bankers at Goldman, you know, be here every weekend.
+
+954
+01:00:49,480 --> 01:00:54,900
+You know, if you're not at work on Saturday, don't show up for work on Sunday kind of situation.
+
+955
+01:00:55,220 --> 01:00:59,179
+Shout out to Jeffrey Katzenberg for that famous memo at Disney when they were on the ropes.
+
+956
+01:01:00,619 --> 01:01:02,480
+What happens to that pipeline?
+
+957
+01:01:02,480 --> 01:01:10,820
+is it now you know the the meat proxy bridge has broken to put these stories together andrew john
+
+958
+01:01:10,820 --> 01:01:16,599
+um the meat proxy seems to like you fill the bridge with meat proxies the whole bridge collapses and
+
+959
+01:01:16,599 --> 01:01:21,840
+now you have on one side you know senior lawyers with 10 years experience you got a bunch of kids
+
+960
+01:01:21,840 --> 01:01:26,079
+on the other side who are like i don't know how to function in this world how do they get to the
+
+961
+01:01:26,079 --> 01:01:33,340
+other side to be that consultant if the senior lawyer can just fire up a thousand associates
+
+962
+01:01:33,340 --> 01:01:40,679
+as agents. Yeah, I think ultimately it just accelerates the growth of people. I think that's
+
+963
+01:01:40,679 --> 01:01:46,179
+the optimistic outcome here, right? Where you still can come, there's still entry-level jobs,
+
+964
+01:01:46,360 --> 01:01:52,000
+but then you just move up faster. And it's like, hopefully you can hang on and move up faster and
+
+965
+01:01:52,000 --> 01:01:55,000
+You can leverage your team of agents to help you move up faster.
+
+966
+01:01:55,119 --> 01:01:57,400
+I think that's the optimistic outcome here.
+
+967
+01:01:57,960 --> 01:02:01,619
+And I mean, we're still hiring very young people as well.
+
+968
+01:02:02,380 --> 01:02:03,000
+Out of school people?
+
+969
+01:02:04,460 --> 01:02:05,840
+Out of law school.
+
+970
+01:02:06,019 --> 01:02:07,800
+Yeah, not out of undergrad.
+
+971
+01:02:08,000 --> 01:02:12,260
+But we're still hiring people that are entry level in many ways.
+
+972
+01:02:12,679 --> 01:02:17,639
+But then they can still help fill the gaps on things and then try to rise up very quickly.
+
+973
+01:02:17,639 --> 01:02:22,500
+So that's what I hope to see play out in a lot of industries as well.
+
+974
+01:02:22,500 --> 01:02:30,619
+My hot take is communication skills, specifically verbal communication skills, become dramatically more important, at least in the very near term.
+
+975
+01:02:31,059 --> 01:02:33,420
+That's a differentiation when intelligence is on tap.
+
+976
+01:02:33,719 --> 01:02:36,739
+Now, this will change, but people still want to speak.
+
+977
+01:02:36,920 --> 01:02:39,239
+People want to speak to people at the end of the day.
+
+978
+01:02:40,000 --> 01:02:44,920
+Now, John's associates are now 10x more intelligent than they ever were before.
+
+979
+01:02:44,920 --> 01:02:53,720
+and my take on most of these high income knowledge work industries is they're just going to be a
+
+980
+01:02:53,720 --> 01:02:58,440
+fourth of the many a fourth of the number of junior people as there were historically
+
+981
+01:02:58,440 --> 01:03:04,240
+you don't need as many but you want them to be stars every one of them and then the bar for that
+
+982
+01:03:04,240 --> 01:03:10,039
+seated john's office or somebody else's office is it used to be top 10 percent now it's going to be
+
+983
+01:03:10,039 --> 01:03:15,199
+top 1% and they're, my guess is you're judging communication skills even more than just
+
+984
+01:03:15,199 --> 01:03:19,239
+intellectual horsepower because you now check the box that they have the intellectual horsepower
+
+985
+01:03:19,239 --> 01:03:24,000
+just to be in the room. And so it just becomes harder and harder. I'm inclined to say, because
+
+986
+01:03:24,000 --> 01:03:29,179
+I've seen this happen with writing in my own, like at first when they were like, you know,
+
+987
+01:03:29,239 --> 01:03:34,279
+ChatGPT could just write your essay for you. I was like, no way. I've been doing this for 30 years.
+
+988
+01:03:34,360 --> 01:03:38,960
+I know the, what, you know, all the vagaries of what needs to go in. And now I've discovered like
+
+989
+01:03:38,960 --> 01:03:44,380
+It maybe can't get 100% of the way, but it could get it could get it could do a pretty good first draft.
+
+990
+01:03:44,380 --> 01:03:53,960
+And my job then becomes the taste factor and the sitting between that output and the finished product and sort of fine tuning and adding the creative things.
+
+991
+01:03:54,000 --> 01:03:56,019
+And I think that basically works across the board.
+
+992
+01:03:56,099 --> 01:04:05,340
+Like what a lot of the mathematicians were saying was, you know, well, it's not it's not elegantly solving the problem through advancing our understanding of high level mathematics.
+
+993
+01:04:05,340 --> 01:04:07,380
+it's just brute forcing it.
+
+994
+01:04:07,460 --> 01:04:08,120
+You know, like we're just,
+
+995
+01:04:08,180 --> 01:04:10,900
+we're throwing every possible answer at it
+
+996
+01:04:10,900 --> 01:04:12,700
+and then figuring out which one works
+
+997
+01:04:12,700 --> 01:04:14,100
+and that's not really doing math.
+
+998
+01:04:14,200 --> 01:04:15,160
+But I think, you know,
+
+999
+01:04:15,280 --> 01:04:17,500
+it's getting to the answer is the important part.
+
+1000
+01:04:17,559 --> 01:04:18,880
+It's getting to the first draft
+
+1001
+01:04:18,880 --> 01:04:20,059
+and writing is the important part.
+
+1002
+01:04:20,100 --> 01:04:22,700
+It's getting to like the theory of law
+
+1003
+01:04:22,700 --> 01:04:24,059
+that we're going to apply.
+
+1004
+01:04:24,539 --> 01:04:26,000
+That's what the AI is doing.
+
+1005
+01:04:26,059 --> 01:04:27,200
+And then the humans come in
+
+1006
+01:04:27,200 --> 01:04:28,880
+to sort of elevate that output
+
+1007
+01:04:28,880 --> 01:04:32,519
+and add our own sensibility and experience
+
+1008
+01:04:32,519 --> 01:04:34,480
+on top of it and taste or whatever.
+
+1009
+01:04:34,480 --> 01:04:39,639
+I really don't feel like that has changed that dramatically as good as the ages are getting.
+
+1010
+01:04:39,940 --> 01:04:41,880
+Yeah, I mean, of course, everything is with a yet.
+
+1011
+01:04:42,300 --> 01:04:45,539
+In 10 years, in 20 years, maybe I will be changing my tune.
+
+1012
+01:04:45,860 --> 01:04:48,059
+Or 10, 20 weeks or months or quarters.
+
+1013
+01:04:48,240 --> 01:04:49,980
+You know, I mean, I keep waiting.
+
+1014
+01:04:50,219 --> 01:04:53,380
+Like, it still can't tell me a good joke.
+
+1015
+01:04:53,639 --> 01:04:56,079
+Like, it's still the Astra.
+
+1016
+01:04:57,099 --> 01:04:59,760
+But it can brainstorm good angles of attack for jokes.
+
+1017
+01:04:59,760 --> 01:05:03,400
+If I'm here to be like, that's funny, that's not funny, that's funny.
+
+1018
+01:05:03,400 --> 01:05:09,579
+like then yeah but like it can't just like write a write a killer comedy set it's still no but if
+
+1019
+01:05:09,579 --> 01:05:16,260
+they say what are the what are the unique observations comedic observations or observations
+
+1020
+01:05:16,260 --> 01:05:21,960
+about you know uh running a ranch that we can start to build jokes off of and all of a sudden
+
+1021
+01:05:21,960 --> 01:05:27,619
+you know that first third of the work is done it's always it's always a collaboration it's exactly
+
+1022
+01:05:27,619 --> 01:05:32,539
+the meat proxy as long as you're not being a meat proxy and you're actively engaging and having a
+
+1023
+01:05:32,539 --> 01:05:38,119
+conversation, you can do incredible things with these tools, but you do need to be an active
+
+1024
+01:05:38,119 --> 01:05:42,800
+participant. You can't just be sitting back and like copying and pasting. I'll leave you with a
+
+1025
+01:05:42,800 --> 01:05:47,619
+little Peter Thiel here from, I think this is 2024. My intuition would be, it's going to be
+
+1026
+01:05:47,619 --> 01:05:53,659
+quite the opposite where it seems much worse for the math people than the word people. And what
+
+1027
+01:05:53,659 --> 01:06:02,019
+people have told me is that they think within three to five years, the AI models will be able
+
+1028
+01:06:02,019 --> 01:06:05,460
+to solve all the US math Olympiad problems.
+
+1029
+01:06:06,139 --> 01:06:09,420
+And that would shift things quite a bit.
+
+1030
+01:06:09,759 --> 01:06:12,900
+Silicon Valley in the early 21st century,
+
+1031
+01:06:13,380 --> 01:06:15,759
+it's way too biased towards the math people.
+
+1032
+01:06:16,079 --> 01:06:17,920
+I don't know if it's a French Revolution thing
+
+1033
+01:06:17,920 --> 01:06:22,800
+or a Russian sort of secret cabal control thing
+
+1034
+01:06:22,800 --> 01:06:25,079
+where you have to prioritize it.
+
+1035
+01:06:25,340 --> 01:06:28,599
+But that's the thing that seems deeply unstable.
+
+1036
+01:06:29,000 --> 01:06:31,619
+And that's what I would bet on getting reversed.
+
+1037
+01:06:31,619 --> 01:06:38,420
+There you go. Your thoughts, John? Peter Hill seems to have nailed it. If that's 24, 25, 26,
+
+1038
+01:06:38,779 --> 01:06:46,559
+here we are. Yeah. No. And so in terms of the primacy of the more critical thinking and the
+
+1039
+01:06:46,559 --> 01:06:51,679
+philosophical thinking, I think that's going to come to the fore. Like I was mentioning earlier,
+
+1040
+01:06:51,759 --> 01:06:57,460
+I think that's where education should shift. And that's something where regardless of how
+
+1041
+01:06:57,460 --> 01:07:04,940
+intelligent AI is, that requires an overlay of values and of things that are not computable.
+
+1042
+01:07:05,420 --> 01:07:07,420
+So I think that's where it lands.
+
+1043
+01:07:07,579 --> 01:07:09,460
+Agency is what I'll leave you with.
+
+1044
+01:07:09,579 --> 01:07:14,659
+I think agency is you have to have executive function and agency and realize this is occurring.
+
+1045
+01:07:14,800 --> 01:07:18,840
+If you're a young person, you're going to need to come into a company.
+
+1046
+01:07:19,079 --> 01:07:22,780
+And if you are able to get a job there, or even if you're outside of trying to get in,
+
+1047
+01:07:22,780 --> 01:07:28,940
+You can just use these tools to start building stuff that when you're in an organization and
+
+1048
+01:07:28,940 --> 01:07:33,780
+show it to management, or you can start using this stuff and be the curator of it, the orchestrator
+
+1049
+01:07:33,780 --> 01:07:41,560
+of it, the maestro, if you will, and move yourself from a meat proxy to a maestro.
+
+1050
+01:07:41,920 --> 01:07:43,500
+These are two very different jobs.
+
+1051
+01:07:43,800 --> 01:07:47,220
+And this relates to what you were saying earlier about like, is there unlimited demand for
+
+1052
+01:07:47,220 --> 01:07:47,740
+intelligence?
+
+1053
+01:07:47,739 --> 01:07:54,159
+The only way to make that actually happen is a huge amount of creativity.
+
+1054
+01:07:56,139 --> 01:08:01,779
+We're going to have to reinvent what it even means to deliver value and what is the value.
+
+1055
+01:08:02,000 --> 01:08:10,019
+Because if there's actually unlimited demand for intelligence, that has to be pointed in myriad directions to be productive.
+
+1056
+01:08:10,019 --> 01:08:10,360
+Right.
+
+1057
+01:08:10,460 --> 01:08:12,380
+So, so that is going to be.
+
+1058
+01:08:12,940 --> 01:08:17,239
+That, that I think is where there's always going to be creativity and human involvement
+
+1059
+01:08:17,239 --> 01:08:19,199
+to even point where, what do we want?
+
+1060
+01:08:19,479 --> 01:08:20,939
+What, where does the demand for?
+
+1061
+01:08:21,100 --> 01:08:21,479
+All right.
+
+1062
+01:08:21,640 --> 01:08:23,260
+Well, I'll set amazing show.
+
+1063
+01:08:23,359 --> 01:08:25,119
+Thanks so much to both of our guests.
+
+1064
+01:08:25,119 --> 01:08:31,840
+Uh, John Ney, he's the founder and CEO of norm AI go to norm.ai to learn more about
+
+1065
+01:08:31,840 --> 01:08:34,479
+how norm embeds law into AI agents.
+
+1066
+01:08:34,479 --> 01:08:38,100
+And then we've also got Andrew Berman co-founder and CEO of run layer.
+
+1067
+01:08:38,100 --> 01:08:39,720
+They are at runlayer.com.
+
+1068
+01:08:39,960 --> 01:08:42,780
+Check it out to go all in on AI.
+
+1069
+01:08:43,160 --> 01:08:44,840
+Thanks to both of you for being here.
+
+1070
+01:08:44,920 --> 01:08:45,780
+Another great show, Jason.
+
+1071
+01:08:46,000 --> 01:08:46,340
+All right.
+
+1072
+01:08:46,440 --> 01:08:47,140
+We'll see you next time.
+
+1073
+01:08:47,200 --> 01:08:47,440
+Bye-bye.

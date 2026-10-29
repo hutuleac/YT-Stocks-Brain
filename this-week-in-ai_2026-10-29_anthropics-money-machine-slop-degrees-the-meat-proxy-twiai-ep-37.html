@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: Anthropic’s Money Machine, “Slop” Degrees &amp; the Meat Proxy | TWiAI Ep 37</title>
+<meta name="description" content="This Week in AI · 8 threads · Anthropic&#x27;s S-1 numbers, the data-access adoption gap, token economics and lab pricing, agents and browser use for normies, Microsoft&#x27;s buyout and the junior pipeline, the meat proxy, Alpha School and the &#x27;slop degree&#x27;, and the craft backlash from r/opensource to math">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="Anthropic’s Money Machine, “Slop” Degrees &amp; the Meat Proxy | TWiAI Ep 37">
+<meta property="og:description" content="This Week in AI · 8 threads · Anthropic&#x27;s S-1 numbers, the data-access adoption gap, token economics and lab pricing, agents and browser use for normies, Microsoft&#x27;s buyout and the junior pipeline, the meat proxy, Alpha School and the &#x27;slop degree&#x27;, and the craft backlash from r/opensource to math">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Anthropic’s Money Machine, “Slop” Degrees &amp; the Meat Proxy | TWiAI Ep 37</h1>
+    <div class="byline">
+      Channel: <b>This Week in AI</b> &middot; Speaker: <b>Jason Calacanis (host), Lon Harris (news), John Nay (Norm AI), Andy Berman (RunLayer)</b> &middot; <b>2026-10-29</b>
+      <div class="stats-line">8 threads · Anthropic's S-1 numbers, the data-access adoption gap, token economics and lab pricing, agents and browser use for normies, Microsoft's buyout and the junior pipeline, the meat proxy, Alpha School and the 'slop degree', and the craft backlash from r/opensource to math &middot; <a href="https://www.youtube.com/watch?v=LUvsHllIoOI" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li><b>Anthropic's S-1</b> shows $16.3B revenue in H1 2026 (vs $1.2B), ~900% net revenue retention and a $1.6B adjusted operating profit; listing on Nasdaq as ANT.</li><li>The <b>$80.7B</b> headline net loss is mostly a $72.4B non-cash charge from re-marking convertible notes as the private valuation soared.</li><li>WSJ: IPO targeted for the week of November 16, raising <b>$100B</b>+ at $1.5-2T — likely topping SpaceX's June record.</li><li>Andy Berman: models and tool calling are already good enough; the <b>real blocker is companies refusing to connect their data</b>. Adoption outside tech is 2-3% of where it should be.</li><li>Jason's own firm is already steering staff off the top model to cheaper ones — the panel asks whether falling token prices and model downshifting cap lab revenue.</li><li>Microsoft offered 60,000 employees a buyout; Jason calls it 'superintelligence stasis' — companies stay the same size while revenue per employee doubles.</li><li>The <b>meat proxy</b> — a human who just copy-pastes between an LLM and colleagues — is the panel's name for the AI-era failure mode; fixes are proctored, recorded, defend-your-work sessions.</li><li>Education and craft: Alpha School's NYT-reviewed data, Jason's 'AI slop degree' attack on college, r/opensource banning AI projects, and a mathematician asking what the point is.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="anthropic-s1">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
+    <span class="theme-status">S-1 FILED · IPO TARGETED WEEK OF NOV 16, 2026</span><span class="ttag">ai-infra</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Anthropic's S-1: $16.3B half-year revenue, profitable on an adjusted basis, IPO at $1.5-2T</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The first official look at Anthropic's books shows roughly 13x year-over-year growth and an adjusted operating profit equal to last year's entire first-half revenue.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Revenue <b>$16.3B</b> in H1 2026, up from $1.2B in H1 2025; net revenue retention around 900%; Nasdaq ticker ANT.</li><li><span class="dot" style="background:#3f6b2e;"></span>Headline net loss $80.7B, of which <b>$72.4B</b> is a non-cash fair-value re-measurement of convertible and rollover notes (ASC 825-10) — e.g. those held by Amazon — that rose with the valuation.</li><li><span class="dot" style="background:#3f6b2e;"></span>Adjusted operating profit <b>$1.6B</b>; Andy Berman flags EBITDA profitability and the compute-supply risk factor as the standouts.</li><li><span class="dot" style="background:#3f6b2e;"></span>Revenue path per Jason: <b>$40M</b> (2023) → $386M (2024) → $4.5B (2025) → $16B in H1 2026, and roughly the same again in Q3 alone; founded 2021.</li><li><span class="dot" style="background:#3f6b2e;"></span>S-1 has 94 pages of risk factors, including models that could resist shutdown, a catastrophic incident 'too big to insure', and being 'disproportionately or selectively targeted by the government'.</li><li><span class="dot" style="background:#3f6b2e;"></span>John Nay recalls only ~200-250 enterprises paying Anthropic &gt;<b>$10M</b> a year — his read: 'we've barely scratched the surface'.</li><li><span class="dot" style="background:#3f6b2e;"></span>Andy's macro frame: rates are up, NeoClouds are 'melting down', Elon is 'trying to spook the market' — how the IPO prices is the next AI bellwether.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;AI is a money printing machine. And the person with the biggest one is Anthropic.&#8221;<cite>— Jason Calacanis</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic (ANT)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium · IPO week of Nov 16, 2026</span></b><span>S-1 filed; $16.3B H1 revenue, $1.6B adjusted operating profit, IPO targeted Nov 16 at $1.5-2T</span></div><div class="namechip"><b>Amazon (AMZN)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Holder of Anthropic convertible notes whose re-marking drove the paper loss</span></div><div class="namechip"><b>SpaceX (SPCX)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>June IPO record that Anthropic's raise would likely top</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>In a compute-securing race with Anthropic</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">John Nay is unsure of the exact &gt;$10M customer count ('200, 250 or something like that'); the Q3 figure is Jason's read of the filing, framed as an estimate.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="data-access-gap">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">PANEL SPLIT — MODELS READY VS MODELS NOT YET THERE</span><span class="ttag">software</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">The adoption gap is data access, not model capability</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Andy Berman argues the models are already capable enough for most work and enterprises are simply not wiring them to their data; John Nay thinks agent-run workflows still need more intelligence.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Gallup (earlier this year): <b>12%</b> of employed US adults use AI nearly daily; updated chart shows 50% have touched it, 30% frequent, 15% daily — Jason had guessed 20-30% of knowledge workers.</li><li><span class="dot" style="background:#93711b;"></span>Andy: outside the Valley, companies are '2-<b>3%</b>' of where they should be; most of the Fortune 1000 hasn't connected an LLM to tools; real tool calling only arrived 'at Christmas last year'.</li><li><span class="dot" style="background:#93711b;"></span>Most people still use AI 'to proofread their email and clean up Word documents'.</li><li><span class="dot" style="background:#93711b;"></span>John: as a copilot we've likely hit a plateau on needed intelligence; restructuring workflows around parallel agents needs more, and 'we're not even quite there yet'.</li><li><span class="dot" style="background:#93711b;"></span>Andy disagrees: tool calling and agentic capability are there — few companies allow agents in prod or give access to data; the Fortune 500 unlock is connecting Snowflake / Databricks warehouses with per-user permissions.</li><li><span class="dot" style="background:#93711b;"></span><b>Self-driving companies</b>: a fleet of possibly millions of agents working toward a goal — Andy puts it 2 to 10 years out.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;An LLM without access to the right tools and resources, and specifically the data sources, which most companies will not give access to today, is almost useless.&#8221;<cite>— Andy Berman</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>RunLayer<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Andy Berman's enterprise AI control layer: permissions, runtime security, spend tracking for agents/MCP</span></div><div class="namechip"><b>Snowflake (SNOW)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Enterprise data warehouse Andy says must be wired to LLMs for real ROI</span></div><div class="namechip"><b>Databricks<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Named alongside Snowflake as the warehouse layer to connect</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Andy runs RunLayer, which sells the enterprise control layer for connecting agents and MCP servers to company data — his 'data is the blocker' thesis is also his product pitch.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="token-economics">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Open question</span>
+    <span class="theme-status">FALLING TOKEN PRICES · BUSINESSES DOWNSHIFTING MODELS</span><span class="ttag">ai-infra</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Cheaper tokens, downshifted models and the search for a post-token business model</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">If even token-maxing firms steer staff to the third-best model, the labs' revenue may have to come from bundling or outcome-based pricing rather than raw token spend.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Andy's rule since 2023: 'assume the token prices will always go down' — Fable, Astra, Opus and Sol 6.1 are 'good enough for almost every workflow'.</li><li><span class="dot" style="background:#93711b;"></span>Jason never uses Fable; '5.5' is perfect most of the time, and his CFO tells staff in Slack to switch to a cheaper model — 'the third best model at a venture capital firm where everybody's token maxing'.</li><li><span class="dot" style="background:#93711b;"></span>Agents will raise token use ('100x tokens?') — Andy: sub-agents and downscoping help; Q2's large token bills came without ROI because the data wasn't connected.</li><li><span class="dot" style="background:#93711b;"></span>John's open question: will labs move to <b>outcome-based pricing</b> (a Sierra-style per-conversation model) or build their own businesses, e.g. a biotech, that don't depend on tokens?</li><li><span class="dot" style="background:#93711b;"></span>Jason: labs bundle like Microsoft — +<b>$5 </b>or +$10/user is a shrug for a small firm, but 'they could probably extract $50 a month from real designers'.</li><li><span class="dot" style="background:#93711b;"></span>Claude now spans design, motion and a Notion-like suite; Lon: the more work lives there, the harder to leave — Andy: 'it becomes the G Suite we always wanted'.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I guess tokens and charging on a token usage with tiers like they do is the new bundling.&#8221;<cite>— Jason Calacanis</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Sierra<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Example of per-outcome (per-conversation) pricing John suggests labs could adopt</span></div><div class="namechip"><b>Microsoft (MSFT)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Historic bundling model Jason compares Anthropic's product strategy to</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Jason's counterpoint to lock-in: 'AI could be the ultimate export tool' — a rival could offer one button to pull everything out.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="agents-browser-use">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Practitioner view</span>
+    <span class="theme-status">BROWSER USE 'SOLVED' IN THE LAST 3-6 MONTHS</span><span class="ttag">software</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Agents for normies: Jason's reverse to-do list, a DIY Zillow for Austin, and the 'unhinged browser'</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Once an agent is hooked into Slack, Gmail and Notion — or can drive a browser — non-technical users can build things that used to take a dev team.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Jason spent weeks in February trying to get OpenClaw into Slack, Gmail and Notion at sysadmin level; GrokBot finally did it with a <b>reverse to-do list</b> skill that DMs everyone their undone tasks — one person had 14, and got banned from meetings for a month.</li><li><span class="dot" style="background:#3f6b2e;"></span>Austin homes often aren't on the MLS and sale prices aren't recorded; Jason trained GrokBot in under 48 hours (~10 instructions) to mine broker YouTube/Instagram and email a Sunday HTML report — 'I literally rebuilt a Zillow for Austin'.</li><li><span class="dot" style="background:#3f6b2e;"></span>Andy: Astra in Codex does browser use so well 'there is basically nothing you can't do on your desktop or in any SaaS application' (e.g. HubSpot) — available in Codex, Claude Code and Muse.</li><li><span class="dot" style="background:#3f6b2e;"></span>Andy credits Grok for pushing skills use cases onto X feeds; new products: Claude Duet (Anthropic's agentic app) and ChatGPT's <b>$100 </b>tier for 'dots'.</li><li><span class="dot" style="background:#3f6b2e;"></span>Jason gets blocked constantly — LinkedIn in-mail fails (he raised it with Elon), and Perplexity's Comet 'hasn't really advanced'; he wants an open-source 'unhinged browser' and floats a TWiST bounty.</li><li><span class="dot" style="background:#3f6b2e;"></span>Andy: it's buildable now — run it headless with an open-source model that has fewer restrictions.</li><li><span class="dot" style="background:#3f6b2e;"></span>Google's agent push lags: Gemini feels 'like this little tiny afterthought'; the desktop app is '<b>40%</b> GrokBot-esque' and clunky, though Google Maps AI built Jason a Tokyo ramen walking tour — 'Sergey needs to get in there again'.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;I think we're going to see the utilization of these products by non-technical people go like 10x in the next year or so.&#8221;<cite>— Jason Calacanis</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Google (GOOGL)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Low</span></b><span>Jason: Gemini is great but under-pushed; agentic desktop app clunky</span></div><div class="namechip"><b>Perplexity<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Comet browser 'hasn't really advanced' to the open agent browser Jason wants</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The 'unhinged browser' explicitly means ignoring sites' terms of service; Jason accepts the account-ban risk, and Andy notes legal entities that enable ToS breaks may carry liability.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="jobs-junior-pipeline">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">MICROSOFT BUYOUT OFFER · FEWER, STRONGER JUNIORS</span><span class="ttag">career</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Microsoft's 60,000-person buyout and the shrinking junior pipeline</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jason reads Microsoft's buyout as 'superintelligence stasis' — flat headcount, soaring output — and the panel debates whether junior roles survive.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Microsoft offered a buyout to 60,000 employees — roughly one in five of ~240,000 (Lon: more than a quarter of its global workforce); Jason expects ~<b>10%</b> to take it, others say 5-20%.</li><li><span class="dot" style="background:#93711b;"></span>Revenue per Microsoft employee went from ~$900,000 five years ago to close to <b>$2M</b>.</li><li><span class="dot" style="background:#93711b;"></span>Jason: tools improve 2-3x a year; 'even if they just get <b>50%</b> better every year' it's like 50% more staff — so companies stay the same size.</li><li><span class="dot" style="background:#93711b;"></span>Jason's new law firm (one of the larger venture firms) pitched '20,000 skills that we've built in Claude' for cap financings.</li><li><span class="dot" style="background:#93711b;"></span>John: associate work is being automated, so associates move up to strategy — running deal simulations with agents; Norm still hires entry-level people out of law school.</li><li><span class="dot" style="background:#93711b;"></span>Andy: high-income knowledge work will hire <b>a fourth</b> of the juniors it used to, with the bar rising from top 10% to top 1% and verbal communication the differentiator.</li><li><span class="dot" style="background:#93711b;"></span>Jason's worry: Goldman-style hazing and the Katzenberg 'come in Saturday' memo built the pipeline — fill that bridge with meat proxies and it collapses.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I don't think these are exactly AI layoffs. I think these are super intelligence stasis&#8221;<cite>— Jason Calacanis</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Microsoft (MSFT)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Buyout offered to 60,000 staff; revenue per employee near $2M</span></div><div class="namechip"><b>Norm AI<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>John Nay's compliance/legal agent company with affiliated AI-native firm Norm Law; still hiring out of law school</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="meat-proxy">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Practice</span>
+    <span class="theme-status">MANAGEMENT PRACTICE · DEFEND YOUR WORK</span><span class="ttag">career</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">The meat proxy: copy-paste between Claude and colleagues adds nothing but latency</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Unlimited tokens let anyone produce anything, so the panel's test shifts to whether a person can explain and defend what they shipped.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>Definition (via meatproxy.me): a human who copies a question into an AI and the answer back and 'calls it collaboration' — 'be more than a meat bridge'.</li><li><span class="dot" style="background:#65695f;"></span>Andy: the term came out of engineering; RunLayer set internal goals against it three months ago — easy to spot as vibe-coded UI, or a plan that 'makes no logical sense' and can't be explained.</li><li><span class="dot" style="background:#65695f;"></span>Jason's fix: a three-hour recorded Zoom with a senior proctor — one hour of research on a data room, two hours writing a deal memo out loud; next step is recorded pair work with two people and an AI.</li><li><span class="dot" style="background:#65695f;"></span>Andy's version: 30 minutes to build any artifact with any model, 30 minutes to understand it, then teach it back — 'I just care that you understand the outputs and you can defend it'.</li><li><span class="dot" style="background:#65695f;"></span>John: unedited AI output is a 1-to-n tax — one person generates, 200 people pay the cognitive cost of reading slop.</li><li><span class="dot" style="background:#65695f;"></span>Lon: AI gets the first draft (or the first third of a comedy set); the human job is taste — though 'it still can't tell me a good joke'.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#65695f;"><div class="lbl">Pull quote</div>&#8220;move yourself from a meat proxy to a maestro. These are two very different jobs.&#8221;<cite>— Andy Berman</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="alpha-school-college">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">Strong opinion</span>
+    <span class="theme-status">NYT REVIEW OF ALPHA SCHOOL DATA</span><span class="ttag">parenting</span><span class="ttag">career</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">Alpha School misses its 2x target, and Jason calls college an 'AI slop degree'</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Alpha School's results are strong but short of its promise and skewed by selection; Jason would rather fund his kids' businesses than college.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span>Alpha School: 2-3 hours of computer-led academics each morning; NYT found about half of K-8 students missed the 2x math-growth target, only <b>42%</b> hit it in both math and reading.</li><li><span class="dot" style="background:#a23f22;"></span>Still high achievement: median student in the 87th percentile in math, 89th in reading; up to <b>$75K</b> a year, ~50 campuses, ~1,500 students; Timeback software used by ~2,600 public students in Texas and South Carolina.</li><li><span class="dot" style="background:#a23f22;"></span>Jason: great for self-directed, gamer kids, but <b>selection bias</b> — top 10% students with engaged, tutor-rich parents — makes early results 'fool's gold'; he prefers Montessori and pen-and-paper.</li><li><span class="dot" style="background:#a23f22;"></span>Jason: college is 'performative' — COVID-era recorded lectures, AI-made lesson plans, AI-done homework; he'd give each kid ~<b>$250K</b> to build five $50K businesses (via a 529 / Invest America Trump account) — Andy raises the Thiel Fellowship route.</li><li><span class="dot" style="background:#a23f22;"></span>Jason's ratio: <b>80%</b> 'acoustic, unplugged', 20% targeted AI; some graduates at his company 'can't put together three solid sentences'.</li><li><span class="dot" style="background:#a23f22;"></span><b>Cognitive atrophy</b>: Jason cites brain-scan studies showing copy-pasting ChatGPT output engages the brain far less than Google-and-retype, which is less than fully manual research.</li><li><span class="dot" style="background:#a23f22;"></span>John (kids aged 2 and 4) expects education to tilt to timeless philosophical reasoning; Lon suggests universities pivot to hands-on making rather than being abandoned.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;everybody is just kind of turning a blind eye to this performative AI slop degree.&#8221;<cite>— Jason Calacanis</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Alpha School<span class="stance" style="background:#93711b;">UNCERTAIN · Low</span></b><span>AI-led private school; NYT data shows strong scores but missed 2x growth target</span></div><div class="namechip"><b>New York Times (NYT)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Reviewed Alpha School's internal data</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Jason concedes his kids are 'in a unique situation since their dad's an angel investor' — the fund-their-businesses alternative isn't general advice. Alpha School did not respond to the Times.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="craft-backlash">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Cultural signal</span>
+    <span class="theme-status">R/OPENSOURCE BANS AI PROJECTS</span><span class="ttag">software</span><span class="ttag">mindset</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">The craft backlash: r/opensource bans AI, and a math student asks what the point is</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">From open-source moderators to mathematicians, people whose identity is the craft are pushing back — the panel reads it as nostalgia the market won't reward.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>r/opensource moderators banned projects that use, are made by, or are for AI; projects must be a year old, actively maintained, with multiple contributors; non-English speakers told to go elsewhere.</li><li><span class="dot" style="background:#65695f;"></span>The community revolted and a rival sub, r/TrueOpenSource, launched.</li><li><span class="dot" style="background:#65695f;"></span>John: it's longing for software as an artisanal craft 'like woodworking' — the same angst now hitting mathematics.</li><li><span class="dot" style="background:#65695f;"></span>Andy: there'll be artisanal hand-coders and everyone else 'token maxing'; some firms are still on outsourced vendors like Wipro. Lon's analogy: Ikea vs a commissioned dining table.</li><li><span class="dot" style="background:#65695f;"></span>Jason's analogy: the DJ with a thumb drive plays to 100,000 at a rave while the band plays to eight in a bar — 'the pendulum will swing back'.</li><li><span class="dot" style="background:#65695f;"></span>Jason's 'clip of the year': at a math-department town hall (with Strogatz), a student asks the point if AI does math better — 'I don't want my life to be in vain'; Jason connects it to Ecclesiastes and Pete Seeger's 'Turn, Turn, Turn'.</li><li><span class="dot" style="background:#65695f;"></span>A 2024 Peter Thiel clip: AI is worse for 'math people' than 'word people', and Silicon Valley's math bias is what he'd bet gets reversed; John: values aren't computable.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#65695f;"><div class="lbl">Pull quote</div>&#8220;what has Open Source become for the last five years? It's become a way to ship products for AWS.&#8221;<cite>— Andy Berman</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Reddit (RDDT)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Host of the r/opensource AI ban and the r/TrueOpenSource split</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📈</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Watch how Anthropic's IPO prices the week of Nov 16 — the panel treats it as the bellwether for AI risk appetite.</span></div></div><div class="irow"><div class="ic">📊</div><div class="tline"><span class="cat">Accounting:</span> <span class="txt">Read the <b>$80.7B</b> loss through the $72.4B note re-mark; judge the business on the $1.6B adjusted operating profit.</span></div></div><div class="irow"><div class="ic">🔌</div><div class="tline"><span class="cat">Enterprise AI:</span> <span class="txt">Connect your agents to real data (warehouses, Slack, Notion, email) before buying more tokens or bigger models.</span></div></div><div class="irow"><div class="ic">💸</div><div class="tline"><span class="cat">Costs:</span> <span class="txt">Default staff to the cheapest model that does the job and reserve frontier models for hard problems.</span></div></div><div class="irow"><div class="ic">🧠</div><div class="tline"><span class="cat">Management:</span> <span class="txt">Make people defend AI-assisted work out loud — recorded, proctored, or teach-it-back — to weed out meat proxies.</span></div></div><div class="irow"><div class="ic">🎓</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Build verbal communication and taste: with a quarter of the junior seats, that's what gets someone hired.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;AI is a money printing machine. And the person with the biggest one is Anthropic.&#8221; <cite>— Jason Calacanis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I would take the other side of that, that the model is actually completely there from a tool calling perspective and agentic capabilities. I just don't see most people willing to connect the data&#8221; <cite>— Andy Berman</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't think these are exactly AI layoffs. I think these are super intelligence stasis&#8221; <cite>— Jason Calacanis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;There will be no jobs available or a very small number of jobs available and you're going to have to chart your own course and build your own company.&#8221; <cite>— Jason Calacanis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;they're just going to be a fourth of the many a fourth of the number of junior people as there were historically&#8221; <cite>— Andy Berman</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think it's a giant like boondoggle now because of AI&#8221; <cite>— Jason Calacanis</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Wall Street Journal (cited by Lon Harris):</b> Anthropic aims to go public the week of November 16, raising $100B or more at a $1.5-2T valuation, likely topping SpaceX's record IPO. <span class="cmeta">IPO raise / valuation · $100B+ at $1.5-2T · 2026-11-16</span> <span class="tag">Anthropic (ANT)</span></div><div class="ritem"><b>Andy Berman:</b> Self-driving companies running fleets of agents toward business goals arrive in two to ten years. <span class="cmeta">self-driving companies · fleets of agents running the business · 2-10 years</span></div><div class="ritem"><b>Jason Calacanis:</b> Use of agentic AI products by non-technical people grows about 10x in the next year. <span class="cmeta">non-technical usage · 10x · 2027-10</span></div><div class="ritem"><b>Jason Calacanis:</b> About 10% of the 60,000 Microsoft employees offered a buyout take it. <span class="cmeta">buyout uptake · ~10% (others say 5-20%)</span> <span class="tag">Microsoft (MSFT)</span></div><div class="ritem"><b>Jason Calacanis:</b> Large companies stay roughly the same headcount as AI tools improve two to three times a year. <span class="cmeta">model/tool improvement · 2-3x per year</span></div><div class="ritem"><b>Andy Berman:</b> High-income knowledge-work industries hire a quarter of the junior people they used to, with the bar moving from top 10% to top 1%. <span class="cmeta">junior hiring · 1/4 of historical; top 1% bar</span></div><div class="ritem"><b>Peter Thiel (clip played by Jason Calacanis):</b> Within three to five years of 2024, AI models can solve all US Math Olympiad problems. <span class="cmeta">US Math Olympiad problems solved · all · 2027-2029</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Amazon (AMZN)</b> <span class="rel">invests in</span> <b>Anthropic (ANT)</b> &mdash; holds convertible/rollover notes re-marked in the S-1</div><div class="ritem"><b>Anthropic (ANT)</b> <span class="rel">competes with</span> <b>OpenAI</b> &mdash; race to secure compute</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced this episode: Anthropic's S-1, the Wall Street Journal (IPO timing), Gallup (AI use polling), the New York Times (Alpha School data), meatproxy.me, Reddit's r/opensource moderator post, and a 2024 Peter Thiel clip. <span class="tag">Sources</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>ASC 825-10 fair value option</b> &mdash; Accounting election that re-measures instruments like convertible notes at fair value each period, so a soaring valuation books a non-cash loss.</div><div><b>Net revenue retention (NRR)</b> &mdash; Revenue this period from last period's customers divided by their prior revenue; ~900% means existing customers spend ~9x more.</div><div><b>Jevons paradox</b> &mdash; Cheaper use of a resource raises total consumption — the panel's lens on falling token prices.</div><div><b>Meat proxy</b> &mdash; A person who relays between an LLM and others without adding judgment, only latency.</div><div><b>Self-driving company</b> &mdash; An organization where fleets of agents and sub-agents pursue goals set by humans.</div><div><b>Outcome-based pricing</b> &mdash; Charging per completed result (e.g. per resolved conversation) rather than per token or seat.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
