@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: They JUST Accidentally Revealed the Truth: The AI Bubble</title>
+<meta name="description" content="Meet Kevin · 4 threads · SK Hynix tries to kill the memory cycle · AI demand read-through · NAND and agents · a 0.3 PEG">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="They JUST Accidentally Revealed the Truth: The AI Bubble">
+<meta property="og:description" content="Meet Kevin · 4 threads · SK Hynix tries to kill the memory cycle · AI demand read-through · NAND and agents · a 0.3 PEG">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>They JUST Accidentally Revealed the Truth: The AI Bubble</h1>
+    <div class="byline">
+      Channel: <b>Meet Kevin</b> &middot; Speaker: <b>Kevin Paffrath</b> &middot; <b>2026-10-31</b>
+      <div class="stats-line">4 threads · SK Hynix tries to kill the memory cycle · AI demand read-through · NAND and agents · a 0.3 PEG &middot; <a href="https://www.youtube.com/watch?v=R6CTLeHIJBY" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Kevin reads SK Hynix's earnings call line by line and calls it one of the most bullish calls he has ever read.</li><li>Over <b>50%</b> of 2027-2028 capacity is locked in long-term agreements with 14 customers, and customers are asking for longer ones.</li><li>DRAM and HBM volume is effectively sold out through 2029; customer demand is more than double what Hynix can supply.</li><li>Hynix's oversupply answer: more fabs doesn't mean more bits, because HBM takes 2-5x the wafers of DRAM.</li><li>Read-through: hyperscaler cloud revenue +30-<b>80%</b>, cloud backlogs up 2-5x, and AI spend now spread across sovereign, on-prem and non-tech buyers.</li><li>Kevin drops Anthropic/OpenAI as his AI-boom canary; the labor market stays as the other one.</li><li>Valuation: about a 6 P/E on the ADR against ~<b>19%</b> average EPS growth, a ~0.3 PEG. Kevin owns no memory stocks but is 'salivating'.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="hynix-kill-cycle">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
+    <span class="theme-status">SK HYNIX EARNINGS CALL</span><span class="ttag">semis</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">SK Hynix is trying to kill memory's boom-bust cycle with longer contracts and custom HBM</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Long-term agreements plus custom chips turn a cyclical commodity into contracted, sticky supply.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>The fear: memory has a classic glut cycle (2014, 2023, the dot-com bust). Shortage, everyone builds, demand slows, prices fall off a cliff.</li><li><span class="dot" style="background:#3f6b2e;"></span>Over 50% of Hynix's 2027-2028 production is under long-term agreements with <b>14 customers</b>, including nearly all major cloud providers, and it is in talks to extend terms.</li><li><span class="dot" style="background:#3f6b2e;"></span>Custom HBM is the lock-in: like the ASICs Marvell and Broadcom build for Anthropic and OpenAI, Hynix will tailor memory per customer as Nvidia and others weigh 'de-speccing' to avoid stranded memory when bandwidth is the bottleneck.</li><li><span class="dot" style="background:#3f6b2e;"></span>Capex rises significantly in 2027 vs 2026, including a ramp of the first fab in Yongin, but free cash flow is still exploding after capex.</li><li><span class="dot" style="background:#3f6b2e;"></span>Shareholder returns: ~45 billion expected to be returned soon and <b>50%</b> of free cash flow going back to shareholders.</li><li><span class="dot" style="background:#3f6b2e;"></span>Oversupply answer: more fabs don't mean more bits, since HBM uses about 2-5x the wafers of DRAM. Hynix also stays on its 6F process rather than risk yield and cost problems at 4F.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;these companies are trying to kill the boom and bust cycle for memory&#8221;<cite>— Kevin Paffrath</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>SK Hynix (000660.KS)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium · through 2029</span></b><span>LTAs on &gt;50% of 2027-28 capacity; sold out through 2029; ~6 P/E.</span></div><div class="namechip"><b>Marvell (MRVL), Broadcom (AVGO)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Custom ASIC makers for Anthropic and OpenAI, the template for custom HBM.</span></div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Spec changes on how much memory to put on chips; GPUs command a premium over ASICs for flexibility.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Kevin flags that an earnings call is a sales pitch for the stock: 'more fabs ≠ more supply' is management's bullish case, and if the AI trade slows it all unwinds, probably into a recession.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="ai-demand-readthrough">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">SOLD OUT THROUGH 2029</span><span class="ttag">ai-infra</span><span class="ttag">macro-rates</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">The memory call says AI demand is broadening, not peaking</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Hynix sees demand at more than double its supply, and spending spread across so many buyers that no single pullback breaks it.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Major hyperscale customers report 30-<b>80%</b> year-on-year cloud revenue growth; other cloud order backlogs grew 2-5x.</li><li><span class="dot" style="background:#3f6b2e;"></span>DRAM and HBM volume effectively sold out through 2029; HBM4 prices expected to rise; customer volume requests are more than double current supply.</li><li><span class="dot" style="background:#3f6b2e;"></span>Broadening: sovereign AI, on-prem and non-tech companies now buy, so one company cutting back no longer swings total demand. More multi-site, mid-size data centers will bring power online faster.</li><li><span class="dot" style="background:#3f6b2e;"></span>Kevin's ADU analogy: Reinvest files six applications hoping to get three. Spread sites the same way so a couple of permit denials don't matter.</li><li><span class="dot" style="background:#3f6b2e;"></span>Kevin changed his second canary: Anthropic and OpenAI matter less with Microsoft, Gemini, Amazon, SpaceX and Grok competing. 'It's not just Oracle, it's everyone.' The labor market stays canary one.</li><li><span class="dot" style="background:#3f6b2e;"></span>Google Workspace upsell as a live check: 'AI expanded access' at <b>$24</b>/month per seat unlocks up to 200 Argon (Gemini 4) responses. Per-seat AI add-ons are where Google prints money.</li><li><span class="dot" style="background:#3f6b2e;"></span>GDP backdrop: Atlanta Fed Q3 real GDP estimate at <b>3.3%</b>, down from as high as 6% earlier in the quarter.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;I almost want to be bearish because of how bullish it is.&#8221;<cite>— Kevin Paffrath</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Alphabet (GOOGL)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Per-seat AI add-ons in Workspace; Kevin says Google 'prints money' this way.</span></div><div class="namechip"><b>Anthropic (ANT), OpenAI<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Dropped as Kevin's AI-boom canary as competition broadens.</span></div><div class="namechip"><b>Oracle (ORCL)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>No longer the single name that moves the AI market.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="nand-agents">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Contested</span>
+    <span class="theme-status">BULLISH NAND · DRAM SUPPLY THESIS INTACT</span><span class="ttag">semis</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Agents are quietly pushing memory onto SSDs, which is the NAND bull case</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Inference is saturating RAM, so cache spills to storage, and Hynix earns 21% of its income from NAND.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Kevin: machines running agents without a good SSD bog down or crash, because agents offload memory to the SSD in the background; his M4 Max handles it, cheap laptops (Apple Neos) won't.</li><li><span class="dot" style="background:#3f6b2e;"></span>Hynix says NAND demand rises as inference grows, since cache gets stored off memory instead of leaving systems memory-locked.</li><li><span class="dot" style="background:#3f6b2e;"></span>Primer: DRAM, DDR5 and HBM are memory; NAND is the storage cell, the SSD is the product, NVMe is the interface.</li><li><span class="dot" style="background:#3f6b2e;"></span>Kevin still holds his thesis that DRAM supply will explode; Hynix counters that bigger HBM stacks absorb DRAM bits.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Kevin's DRAM-supply-glut thesis and Hynix's 'net fewer bits' counter are unresolved.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="hynix-valuation">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Speculative</span>
+    <span class="theme-status">DOES NOT OWN · 'SALIVATING'</span><span class="ttag">semis</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">A 6 P/E and 0.3 PEG: the market is pricing a memory crash that the call says isn't coming</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Analysts bake in a down year in 2029, which Kevin calls 'loony tunes' against a sold-out order book.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>ADR math (10:1 ratio, Kevin says to fact-check him): <b>$162.73 </b>divided by ~27.1 of EPS ≈ a 6 P/E.</li><li><span class="dot" style="background:#93711b;"></span>Consensus EPS growth: +<b>35%</b>, +22%, -18% (2029), +38% (2030), about 19% a year on average; Kevin expects better.</li><li><span class="dot" style="background:#93711b;"></span>6 P/E / 19% growth ≈ a <b>0.3 PEG</b>, 'so discounted for cyclicality it's insane'.</li><li><span class="dot" style="background:#93711b;"></span>Context: Kevin was a memory bear since summer and called the run a meme move (like GameStop at <b>$400</b>), urging trailing stops. He owns no memory or storage stocks.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I want to be clear, I don't own any memory or storage plays, but I have to say your boy is salivating.&#8221;<cite>— Kevin Paffrath</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>SK Hynix (000660.KS)<span class="stance" style="background:#93711b;">WATCHING · Medium · 2027-2030</span></b><span>~0.3 PEG; analysts forecast a negative 2029.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">His ADR conversion is back-of-envelope and he says so; he holds no position.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📜</div><div class="tline"><span class="cat">Semis:</span> <span class="txt">Read memory makers' long-term-agreement coverage, not spot prices, to judge whether the cycle is really broken.</span></div></div><div class="irow"><div class="ic">🧮</div><div class="tline"><span class="cat">Valuation:</span> <span class="txt">Run the PEG on SK Hynix yourself before trusting a 6 P/E, because the ADR ratio trips people up.</span></div></div><div class="irow"><div class="ic">💾</div><div class="tline"><span class="cat">AI infra:</span> <span class="txt">Add NAND/storage to the AI-inference watchlist, not just HBM.</span></div></div><div class="irow"><div class="ic">🐦</div><div class="tline"><span class="cat">Macro:</span> <span class="txt">Track the labor market as the AI-boom canary now that no single lab drives demand.</span></div></div><div class="irow"><div class="ic">💻</div><div class="tline"><span class="cat">Hardware:</span> <span class="txt">Buy a machine with a fast SSD and plenty of memory if you run agents locally.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;This was probably one of the most bullish earnings calls that I've ever read.&#8221; <cite>— Kevin Paffrath</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Dude, this is trading for a point three peg. This has been so discounted for cyclicality. It's insane.&#8221; <cite>— Kevin Paffrath</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;The analyst expectations are just loony tunes right now.&#8221; <cite>— Kevin Paffrath</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I believe there has been a massive inflection in the last 6 months in how good AI is. And I think that's the contrarian piece is that most people don't even notice it yet.&#8221; <cite>— Kevin Paffrath</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>SK Hynix (cited by Kevin Paffrath):</b> DRAM and HBM volume is effectively sold out through 2029. <span class="cmeta">DRAM/HBM volume · sold out · 2029</span> <span class="tag">SK Hynix (000660.KS)</span></div><div class="ritem"><b>SK Hynix (cited by Kevin Paffrath):</b> Over 50% of 2027-2028 capacity is committed under long-term agreements. <span class="cmeta">capacity under LTAs · &gt;50% · 2028</span> <span class="tag">SK Hynix (000660.KS)</span></div><div class="ritem"><b>SK Hynix (cited by Kevin Paffrath):</b> Capex increases significantly in 2027 versus 2026, ramping the first Yongin fab. <span class="cmeta">capex · significant increase · 2027</span> <span class="tag">SK Hynix (000660.KS)</span></div><div class="ritem"><b>SK Hynix (cited by Kevin Paffrath):</b> HBM4 prices are expected to increase. <span class="cmeta">HBM4 price · higher</span> <span class="tag">SK Hynix (000660.KS)</span></div><div class="ritem"><b>Analyst consensus (cited by Kevin Paffrath):</b> SK Hynix EPS grows 35%, 22%, then falls 18% in 2029 before growing 38% in 2030. <span class="cmeta">EPS growth · +35/+22/-18/+38% · 2030</span> <span class="tag">SK Hynix (000660.KS)</span></div><div class="ritem"><b>Kevin Paffrath:</b> SK Hynix will beat the ~19% average EPS growth analysts expect. <span class="cmeta">average EPS growth · &gt;19% · 2030</span> <span class="tag">SK Hynix (000660.KS)</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Marvell (MRVL)</b> <span class="rel">supplies</span> <b>Anthropic (ANT)</b> &mdash; custom ASICs</div><div class="ritem"><b>Broadcom (AVGO)</b> <span class="rel">supplies</span> <b>OpenAI</b> &mdash; custom ASICs</div><div class="ritem"><b>SK Hynix (000660.KS)</b> <span class="rel">supplies</span> <b>Nvidia (NVDA)</b> &mdash; HBM; spec changes on memory per chip</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: the SK Hynix earnings call transcript, a Bloomberg Tech clip, the Atlanta Fed GDP estimate, and Google Admin's Workspace pricing. <span class="tag">Sources</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>LTA</b> &mdash; Long-term agreement: a multi-year supply contract that locks in volume with a customer.</div><div><b>HBM</b> &mdash; High bandwidth memory: stacked DRAM packaged next to AI accelerators, using ~2-5x the wafers of standard DRAM.</div><div><b>ASIC</b> &mdash; Application-specific chip that does one job very well but loses value if needs change.</div><div><b>6F / 4F</b> &mdash; DRAM cell-layout geometries; 4F packs more cells but carries yield and cost risk.</div><div><b>NAND / SSD / NVMe</b> &mdash; Storage cell technology, the finished drive, and the PCIe interface it connects through.</div><div><b>PEG</b> &mdash; P/E divided by expected EPS growth rate; under 1 suggests growth is cheap.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
