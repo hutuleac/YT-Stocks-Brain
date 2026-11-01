@@ -1,0 +1,119 @@
+META = {
+    "title": "You've been WARNED.",
+    "channel": "Meet Kevin",
+    "speakers": "Kevin Paffrath",
+    "date": "2026-11-01",
+    "video_url": "https://www.youtube.com/watch?v=5PPwXRkbNxM",
+    "thread_line": "3 threads · sell-off as a momentum and leverage flush · JPMorgan's earnings and macro case · Iran talks, oil and midterm odds",
+    "category": "market",
+    "region": "",
+}
+
+SNAPSHOT = [
+    "Kevin reads the last two weeks' tech sell-off as a **momentum and leverage flush**, not an economic crack: the momentum basket is down ~30% while the equal-weight S&P (RSP) sits near all-time highs.",
+    "JPMorgan has turned tactically bullish while the fear and greed index shows extreme fear: Q3 GDP 3.4%, earnings forecast +30% EPS on +13% revenue, 8 of 11 sectors up over the month.",
+    "Google and Intel moves are called idiosyncratic: weak search for Google, and expensive memory hurting consumer PC sales for Intel, not an end to the AI boom.",
+    "The swing factor is Iran: Al Jazeera reports the US tone has softened in Doha talks, and JPMorgan says a deal hope means \"straight up\" while strikes send oil higher.",
+    "TS Lombard flags a 1970s-style tail risk of oil above $140 a barrel; Goldman cites Kalshi odds of about 65% for a Democratic sweep of the midterms.",
+    "Kevin has been buying Eli Lilly and Moderna as pharma valuations catch up, and rates his bull-bear scale 9 out of 10.",
+]
+
+THEMES = [
+    {
+        "id": "momentum-flush",
+        "tags": ["finance", "ai-infra"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "MOMENTUM BASKET -30% · RSP NEAR HIGHS",
+        "title": "The tech sell-off is a leveraged-momentum flush, not an economy problem",
+        "lead": "Leveraged AI-trade funds got liquidated while the broad market kept making highs.",
+        "bullets": [
+            "The **momentum basket is down ~30%**, while the S&P 500 equal-weight index (RSP) is next to all-time highs, even through two weeks of tech fear; rumors of liquidations of highly leveraged positions persist.",
+            "Kevin's framing: leveraged funds in the AI trade get liquidated, giving a cheaper entry, while the broad market quietly makes new highs that no earnings headline covers.",
+            "The VIX is at its highest level since the Iranian tensions began, and skew has risen in the sell-off, which Kevin reads as hedges bought in a panic; he says hedge funds were buying roughly five shorts per long, in his own oversimplified read.",
+            "Nasdaq 100 short interest is the highest since 2023, and retail put record money into leveraged ETFs, which is bullish sentiment but a risk if they paper-hand.",
+            "Google is hit by falling search, and Intel by consumer PC sales falling on high memory prices after the AI boom lifted memory costs; Kevin says that is not a sign the AI boom is over.",
+        ],
+        "quote": {"text": "this is not a stock market that's falling apart.", "cite": "— Kevin Paffrath"},
+        "watch": "Kevin says he has been over-exposed to margin in his own career and now carries no debt, so he treats drops as short-term volatility. The hedge-fund short ratio is his rough read, not a cited figure.",
+        "names": [
+            {"name": "RSP", "blurb": "S&P 500 equal-weight ETF sitting near all-time highs during the sell-off.", "stance": "POSITIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "Intel (INTC)", "blurb": "Missed on PC sales as memory prices rose; Kevin calls it unrelated to the AI boom.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Alphabet (GOOGL)", "blurb": "Sell-off blamed on weak search, treated as an idiosyncratic issue.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "SK Hynix", "blurb": "Kevin points anxious holders to its earnings call and an earlier brief.", "stance": "POSITIVE VIEW", "conviction": "Low", "horizon": None},
+        ],
+    },
+    {
+        "id": "jpm-bull-case",
+        "tags": ["finance", "macro-rates", "biotech"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "JPMORGAN TACTICALLY BULLISH · KEVIN 9/10",
+        "title": "JPMorgan turns tactically bullish on growth, earnings and seasonality",
+        "lead": "With fear at extreme levels, JPMorgan says the economy and earnings are holding and this is the best buying window.",
+        "bullets": [
+            "Macro: Q3 GDP at **3.4%** and flash PMIs at 5% real growth for the second straight month; Kevin says this is why he calls the sell-off not an economy thing.",
+            "Earnings forecast: revenue +13%, earnings per share +30%, margins near 15%, framed as trend growth plus rising earnings.",
+            "Breadth: eight of 11 sectors are up over the month, led by energy, staples, utilities, healthcare and financials.",
+            "Positioning: JPMorgan thinks forced sellers have mostly sold and breadth is holding, and calls this the best seasonal window before midterms and the worst month for tech.",
+            "Healthcare is the second-best sector of the year after pharma forward P/E caught up to S&P 500 levels; Kevin has been buying Eli Lilly and Moderna for three or four months and offsets hardware losses with the balance.",
+            "Kevin rates fundamentals 10 out of 10 and his bear-bull scale 9 out of 10, and says AI will cut human pricing power, so studying AI daily is his homework.",
+        ],
+        "quote": None,
+        "watch": "Kevin says he dislikes JPMorgan as a bank but agrees with its call; the forecasts are JPMorgan's, relayed by him.",
+        "names": [
+            {"name": "JPMorgan (JPM)", "blurb": "Source of the tactically bullish call, GDP and earnings forecasts.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Eli Lilly (LLY)", "blurb": "Bought over the past three or four months as pharma re-rates.", "stance": "BUYING-ADDING", "conviction": "Medium", "horizon": "3-4 months so far"},
+            {"name": "Moderna (MRNA)", "blurb": "Bought alongside Lilly; Kevin is a big fan.", "stance": "BUYING-ADDING", "conviction": "Medium", "horizon": "3-4 months so far"},
+        ],
+    },
+    {
+        "id": "iran-oil-midterms",
+        "tags": ["geopolitics", "energy", "policy"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "IRAN TALKS IN DOHA · MIDTERMS",
+        "title": "Iran talks decide the oil path, with midterm odds in the background",
+        "lead": "Hope of a deal sends stocks higher, strikes send oil up, and the political incentive may be pushing a deal.",
+        "bullets": [
+            "Al Jazeera: Iran's foreign minister says Tehran is studying a letter from JD Vance, with talks continuing in Doha through mediators including Qatar; Iranians and mediators say US officials have changed tone from stonewalling and demanding a 50% cut to asking about a deal.",
+            "JPMorgan calls Iran the swing factor: strikes lift oil sharply, while talks that lead anywhere take stocks \"straight up\".",
+            "TS Lombard says a war restart after midterms is mostly priced in, but a 1970s-style tail risk with oil above **$140** a barrel is not.",
+            "Goldman Sachs cites Kalshi odds of about 65% for a Democratic sweep; Kevin reads Senate control at 92% and House at 94% in that market.",
+            "Kevin's speculation: with Republicans facing a rout, the pivot to an Iran deal and credit to JD Vance could be strategic positioning for 2028.",
+        ],
+        "quote": None,
+        "watch": "Kevin says the Al Jazeera report could be fake news or branding; the odds and oil scenarios are third-party figures.",
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F4CA", "tag": "Markets", "title": "Check RSP and the equal-weight index before reading a momentum sell-off as an economic warning."},
+    {"icon": "\U0001F4B8", "tag": "Risk", "title": "Avoid margin and leveraged ETFs into volatility; forced selling is what turns a dip into a loss."},
+    {"icon": "\U0001F6E2️", "tag": "Geopolitics", "title": "Treat the Iran talks as the swing factor for oil and the market, and watch the Doha headlines."},
+    {"icon": "\U0001F9EC", "tag": "Healthcare", "title": "Look at pharma re-rating as a balance to hardware weakness, as Kevin does with Eli Lilly and Moderna."},
+]
+
+HOT_TAKES = [
+    {"take": "this is not an economy thing.", "cite": "— Kevin Paffrath", "why": "Direct dismissal of the recession read of the sell-off."},
+    {"take": "on our bear bull scale, we are nine out of 10.", "cite": "— Kevin Paffrath", "why": "Explicit numeric bullishness."},
+]
+
+CLAIMS = [
+    {"who": "JPMorgan (cited by Kevin Paffrath)", "claim": "S&P earnings per share rise 30% on 13% revenue growth with margins near 15%.", "metric": "S&P 500 EPS growth", "target": "+30% (revenue +13%)", "by": None, "condition": None, "entity": None},
+    {"who": "TS Lombard (cited by Kevin Paffrath)", "claim": "A 1970s-style tail risk pushes oil above $140 a barrel.", "metric": "oil price", "target": "above $140", "by": None, "condition": "war restarts after midterms", "entity": None},
+    {"who": "Goldman Sachs (cited by Kevin Paffrath)", "claim": "Kalshi markets put the chance of a Democratic midterm sweep at about 65%.", "metric": "Democratic sweep odds", "target": "65%", "by": "2026-11-03", "condition": None, "entity": None},
+]
+
+RELATIONS = []
+
+OTHER_NEWS = [
+    {"icon": "\U0001F510", "title": "Security tip: keep the account that approves large wires on a hardware key that is offline when not in use; daily-driver accounts can use synced passkeys.", "tag": "Security"},
+    {"icon": "\U0001F4CC", "title": "Sources referenced: Al Jazeera, JPMorgan, TS Lombard, Goldman Sachs and Kalshi odds.", "tag": "Sources"},
+]
+
+GLOSSARY = [
+    {"term": "Skew", "def": "The extra price of downside protection in options; rising skew in a sell-off means hedges are being bought."},
+    {"term": "Momentum basket", "def": "A group of recent top-performing stocks, which tends to fall hardest when leveraged funds unwind."},
+]
