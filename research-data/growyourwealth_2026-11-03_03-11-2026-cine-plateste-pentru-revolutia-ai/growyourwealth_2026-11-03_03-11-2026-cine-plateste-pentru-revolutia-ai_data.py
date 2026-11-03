@@ -1,0 +1,215 @@
+META = {
+    "title": "03.11.2026 Cine plătește pentru revoluția AI???",
+    "channel": "GrowYourWealth",
+    "speakers": "GrowYourWealth",
+    "date": "2026-11-03",
+    "video_url": "",
+    "thread_line": "6 threads · market rotation, yields, oil and flows · Oracle's $20B raise · SpaceX/Tesla merger talk and ASTS-AT&T · Palantir and AMD earnings · Anthropic IPO pricing · portfolio watchlist",
+    "category": "market",
+    "region": "ro",
+}
+
+SNAPSHOT = [
+    "Source note: built from GrowYourWealth's pasted written daily note (no captions or video link), so figures are as the author states them.",
+    "Stance: not a crash but a **rotation**; the Nasdaq correction gives prices to buy excellent businesses, so buy monthly with fresh cash and don't try to catch the bottom.",
+    "Author bought **100 + 100 ORCL** in two tranches (near $118) after Oracle's ~$20B equity-plus-bond raise sent it down 8.8% in one session, and nibbled NBIS, SPCX and ONDS.",
+    "The market now separates companies that grow revenue from those that can fund growth without borrowing heavily; Oracle, Nebius and Anthropic share the same financing problem.",
+    "Palantir: revenue ~$2.31B (+96%), and US commercial revenue passed US government for the first time, but new US commercial contract growth slowed sharply.",
+    "WSJ: Anthropic faces pressure to price its November IPO at $1.5-1.6T instead of ~$2T, with $895.4B of compute commitments disclosed.",
+    "Flows: US equity funds -$6.7B in the week to Oct 28 while global funds took +$10.2B; money left America, not equities.",
+    "Catalysts this week: US midterms (Nov 3), AMD Q3 after the close, Oracle offerings close Nov 4, NFP on Nov 6.",
+]
+
+THEMES = [
+    {
+        "id": "rotation-not-crash",
+        "tags": ["macro-rates", "finance", "policy"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "NASDAQ -1.07% · DOW +0.41% · MIDTERMS TODAY",
+        "title": "A rotation, not a crash: capital turns selective and funding costs start to matter",
+        "lead": "The author reads the Nasdaq slide as rotation toward defensives and a buying window, while admitting the crash risk he sees over 3-4 years.",
+        "bullets": [
+            "Nov 2 closes: S&P 500 **7,541.40** (-0.51%), Nasdaq Composite 25,164.32 (-1.07%), Dow 51,983.98 (+0.41%), Russell 2000 2,805.88 (-0.21%); the Dow finishing green while the Nasdaq corrects is the rotation signal.",
+            "US 10Y near 4.88% (a two-month low) and Brent near $104 on reported US-Iran talks; yields falling did not rescue Growth, which he reads as falling on financing worries and slowdown fears rather than easing inflation.",
+            "A durable oil détente could ease inflation and rate-hike pressure, but a negotiation headline is not a normalized energy market; he tracks oil daily as a first-line macro indicator.",
+            "Flows: US equity funds -$6.7B in the week to Oct 28 (biggest outflow since mid-September, after +$5.1B and +$13B); global equity funds +$10.2B, a sixth straight inflow week though slower than $25.1B and $19.8B, Asia leading with $9.9B and Europe $4.5B.",
+            "Today's US midterms could shift Congress; a divided Congress may slow fiscal and legislative change, Democratic gains could change expectations on AI regulation, energy, health and spending, and the effect depends on what was already priced in.",
+            "Scenarios: positive (AMD beats, Oracle stabilizes) targets the Nasdaq back above 25,400-25,500; base case is consolidation with brutal dispersion; negative (AMD disappoints) risks losing 25,000.",
+        ],
+        "quote": {"text": "Banii nu au fugit din actiuni. Au fugit din America.", "cite": "— GrowYourWealth"},
+        "watch": "He runs the GYW and GYW500 portfolios and is a buyer on this dip; his own portfolio took broad corrections over the last two to three weeks.",
+        "names": None,
+    },
+    {
+        "id": "oracle-financing",
+        "tags": ["ai-infra", "software", "finance"],
+        "color": "amber",
+        "badge": "High conviction",
+        "status": "ORCL -8.8% · $20B RAISE · OFFERS CLOSE NOV 4",
+        "title": "Oracle's $20B raise: huge AI opportunity, balance-sheet bill due now",
+        "lead": "Oracle must build OCI capacity before revenue arrives, so the market charged for the funding at once; the author bought anyway, in tranches.",
+        "bullets": [
+            "Raise of ~**$20B**: ~$10B equity (86,206,897 shares at $116) and ~$10B bonds, longest maturity 2046 at an 8.65% coupon; net proceeds ~$9.9B and $10B, close expected Nov 4 subject to customary conditions.",
+            "Price: ORCL closed $139.56, then $130.67 on Fri Oct 30, then fell 8.8% on Monday to near $118.",
+            "Management targets (not guarantees): over $225B revenue in fiscal 2030, more than triple today's size; free cash flow positive in H2 FY2028; at least $30B FCF in FY2029.",
+            "Balance sheet: ~$125.3B of borrowings at Aug 31 plus ~$288B of lease commitments, mostly data centers and not yet fully on the balance sheet; he warns the two shouldn't be added mechanically.",
+            "Levels for Nov 3: support $116 (the issue price), then $114-115; resistance $122-126, then $129-131. The offer price is not a guaranteed floor.",
+            "He tracks three indicators only: free cash flow, cost of debt, and OCI revenue realized versus capex.",
+            "He bought for the long horizon and his trust in Larry Ellison's ability to raise capital, and urges staged buying.",
+        ],
+        "quote": {"text": "pretul ofertei nu este un suport garantat", "cite": "— GrowYourWealth"},
+        "watch": "The author holds ORCL (his own buys), and the figures are as he reports them from Monday's filings.",
+        "names": [
+            {"name": "Oracle (ORCL)", "blurb": "~$20B equity-plus-bond raise; bought 100 + 100 shares near $118.", "stance": "BUYING-ADDING", "conviction": "High", "horizon": "multi-year"},
+        ],
+    },
+    {
+        "id": "spcx-tesla-asts",
+        "tags": ["space", "ai-infra", "robotics"],
+        "color": "amber",
+        "badge": "Speculative",
+        "status": "SPCX $134.72 · MERGER TALK · ASTS-AT&T HANDOVER",
+        "title": "SpaceX stabilizes, Tesla merger speculation, and ASTS's first satellite handover",
+        "lead": "SPCX's AI spending makes its financing look more like Oracle's, while ASTS posts a real technical milestone.",
+        "bullets": [
+            "SPCX closed Fri Oct 30 at **$134.72** (-6.37%) and recovered ~3.36% on Monday to about $139.24; the open question is whether current profits can fund new AI projects without excess financing.",
+            "Levels: support $134-136 then $130; resistance $140-142 then $145; above $142 improves the short-term setup, below $134 means selling pressure continues.",
+            "Piper Sandler says a SpaceX-Tesla merger is more likely than not, as both reportedly formed independent special committees; Musk would keep over 70% of the votes in most scenarios.",
+            "ASTS and AT&T reported the first successful handoff of an active cellular connection from a terrestrial network to satellite on an unmodified phone, via AST's BlueBird satellites with Ericsson and Nokia network tech; next step is real-world beta tests before a possible commercial launch.",
+        ],
+        "quote": {"text": "Pana la semnatura insa, ramane o ipoteza, iar eu nu construiesc pozitii pe ipoteze.", "cite": "— GrowYourWealth"},
+        "watch": "He holds SPCX and ASTS (his portfolios); the merger view is Piper Sandler's, which he treats as a hypothesis until signed.",
+        "names": [
+            {"name": "SpaceX (SPCX)", "blurb": "Bought a tranche; AI build-out may start to resemble Oracle's financing mechanics.", "stance": "BUYING-ADDING", "conviction": "Medium", "horizon": None},
+            {"name": "Tesla (TSLA)", "blurb": "Possible SpaceX combination per Piper Sandler.", "stance": "WATCHING", "conviction": "Low", "horizon": None},
+            {"name": "AST SpaceMobile (ASTS)", "blurb": "First terrestrial-to-satellite handover with AT&T on a standard phone.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "AT&T (T)", "blurb": "Partner in the handover test; beta tests next.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Nokia (NOK)", "blurb": "Supplied network technology for the test.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "palantir-amd-earnings",
+        "tags": ["software", "semis", "ai-infra"],
+        "color": "green",
+        "badge": "Confirmed event",
+        "status": "PLTR +96% · AMD REPORTS TONIGHT",
+        "title": "Palantir's beat meets a demanding valuation; AMD reports tonight",
+        "lead": "Palantir's commercial turn is real but priced for perfection, and AMD's Q3 is the next sector test.",
+        "bullets": [
+            "Palantir revenue ~**$2.31B**, +96% year on year versus ~$2.18B expected; US commercial $984M, US government ~$953M.",
+            "Guidance raised: full-year revenue $8.530-8.534B, Q4 $2.649-2.653B.",
+            "First time US commercial revenue exceeded US government, the proof his multi-year thesis wanted; but growth in newly signed US commercial contract value slowed sharply, which the market would not forgive at this valuation.",
+            "After-hours reactions were volatile; he says a $130M beat won't automatically deliver +15% the next day.",
+            "AMD reports Q3 after the close on Nov 3 (call 17:00 ET, 00:00 Romania). Five items: Data Center revenue, gross margin, accelerator orders, delivery capacity, Q4 guidance.",
+            "AMD fell 10.88% on Oct 30 to $504.80; he wouldn't build big positions the evening before earnings and warns against treating a +8% after-hours pop as thesis confirmation.",
+        ],
+        "quote": {"text": "nu as construi pozitii mari cu o seara inainte de earnings", "cite": "— GrowYourWealth"},
+        "watch": "Palantir is a long-held thesis of the author's portfolio; the AMD view is a risk stance, not a position.",
+        "names": [
+            {"name": "Palantir (PLTR)", "blurb": "Revenue +96% to ~$2.31B; commercial passed government in the US.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "AMD", "blurb": "Q3 earnings tonight; fell 10.88% on Oct 30.", "stance": "WATCHING", "conviction": "Low", "horizon": "Q3 print"},
+        ],
+    },
+    {
+        "id": "anthropic-ipo-pricing",
+        "tags": ["ai-infra", "software", "finance"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "WSJ · IPO $1.5-1.6T vs ~$2T HOPED",
+        "title": "Anthropic is pressed to price its IPO lower, with $895B of compute commitments",
+        "lead": "He calls the pattern the same as Oracle's: huge growth paid for with huge commitments.",
+        "bullets": [
+            "Per the Wall Street Journal, institutional investors are pushing for a **$1.5-1.6T** valuation at the November IPO versus earlier expectations near $2T.",
+            "Q3 revenue $17B versus $11.6B in Q2, even after ~$600M of customer discounts.",
+            "Disclosed purchase and lease commitments for AI compute of $895.4B, of which $447.5B expected before 2031 and most of the rest running to 2045.",
+            "Investor meetings could start next week with trading possibly before Thanksgiving; final valuation, size and price are not set.",
+        ],
+        "quote": {"text": "Aceeasi poveste ca la Oracle, doar cu alte nume pe factura.", "cite": "— GrowYourWealth"},
+        "watch": "Figures are WSJ's as relayed by the author.",
+        "names": [
+            {"name": "Anthropic", "blurb": "IPO valuation pressure; $895.4B of compute commitments.", "stance": "WATCHING", "conviction": "Low", "horizon": "November IPO"},
+        ],
+    },
+    {
+        "id": "portfolio-watchlist",
+        "tags": ["finance", "ai-infra", "space"],
+        "color": "gray",
+        "badge": "Watchlist",
+        "status": "GYW HOLDINGS · THE TEST FOR EACH",
+        "title": "Each holding has its own test in a more demanding phase of the cycle",
+        "lead": "The author names the one metric that decides each position now, with funding and execution the common thread.",
+        "bullets": [
+            "Broadcom (AVGO): AI accelerator and networking demand is the catalyst; risk is cloud customers trimming capex. Watch AI order pace, margins, cash conversion.",
+            "Tesla (TSLA): autonomy, robotics and energy are the long-term value; near term auto profitability, competition and cost of capital.",
+            "Meta (META): AI spending against ad performance and cash flow. Nebius (NBIS): the Oracle problem at another scale, with data-center funding, GPU capacity and contract conversion; very sensitive to cost of capital.",
+            "SoFi (SOFI): deposits, credit quality, profitability, member growth. Robinhood (HOOD): trading activity, crypto revenue and product diversification, sensitive to risk appetite.",
+            "Rocket Lab (RKLB): space contracts and the Neutron timeline, execution risk. Ondas (ONDS): high volatility, prudent sizing, autonomous-systems contracts and margins.",
+            "Centrus (LEU): nuclear fuel demand and capacity expansion, contract timing. IREN: AI infrastructure, power costs and Bitcoin; financing and utilization matter more than expansion announcements.",
+            "Sizing and liquidity stay permanent parts of the strategy: liquidity is flexibility and protection against emotional decisions, but it shouldn't be confused with trying to catch the exact bottom.",
+        ],
+        "quote": {"text": "Lichiditatea nu este capital nefolosit.", "cite": "— GrowYourWealth"},
+        "watch": "These are the author's own holdings (GYW portfolios), so the notes are an owner's watch-points, not outside analysis.",
+        "names": [
+            {"name": "Broadcom (AVGO)", "blurb": "AI accelerators and networking; risk of customer capex cuts.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "Meta (META)", "blurb": "AI spend versus ad performance and cash flow.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "Nebius (NBIS)", "blurb": "Same funding problem as Oracle; bought a tranche.", "stance": "BUYING-ADDING", "conviction": "Medium", "horizon": None},
+            {"name": "SoFi (SOFI)", "blurb": "Recent results supported investor interest.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "Robinhood (HOOD)", "blurb": "Trading activity and crypto revenue; risk-appetite sensitive.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "Rocket Lab (RKLB)", "blurb": "Space contracts and Neutron timeline; execution risk.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "Ondas (ONDS)", "blurb": "High volatility, prudent sizing; bought a tranche.", "stance": "BUYING-ADDING", "conviction": "Low", "horizon": None},
+            {"name": "Centrus Energy (LEU)", "blurb": "Nuclear fuel demand and capacity expansion.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "IREN", "blurb": "AI infrastructure, power cost and Bitcoin exposure.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+        ],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F6D2", "tag": "Strategy", "title": "Buy shares monthly with each fresh cash allocation and in tranches; don't try to catch the exact bottom."},
+    {"icon": "\U0001F4B0", "tag": "Funding", "title": "Judge AI names by free cash flow, cost of debt and revenue realized versus capex, not by growth stories alone."},
+    {"icon": "\U0001F4C5", "tag": "Catalysts", "title": "Mark Nov 3 AMD earnings, Nov 4 Oracle offering close and the Nov 6 NFP report before sizing up."},
+    {"icon": "\U0001F6E2", "tag": "Macro", "title": "Track Brent daily; a durable oil détente helps rates, a headline alone doesn't."},
+    {"icon": "\U0001F4C9", "tag": "Risk", "title": "Don't treat Oracle's $116 issue price as a floor, and keep liquidity as protection."},
+    {"icon": "\U0001F9EA", "tag": "Earnings", "title": "Read forward guidance, not the after-hours pop, when AMD reports."},
+]
+
+HOT_TAKES = [
+    {"take": "nu este un crash, ci doar o rotatie de moment catre alte sectoare defensive", "cite": "— GrowYourWealth", "why": "Calls the tech selloff a rotation, while also admitting crash risk in 3-4 years."},
+    {"take": "Banii nu au fugit din actiuni. Au fugit din America.", "cite": "— GrowYourWealth", "why": "Reads the flow data as a geographic shift."},
+    {"take": "pretul ofertei nu este un suport garantat", "cite": "— GrowYourWealth", "why": "Warns against treating Oracle's $116 as a floor."},
+    {"take": "Aceeasi poveste ca la Oracle, doar cu alte nume pe factura.", "cite": "— GrowYourWealth", "why": "Equates Anthropic's commitments with Oracle's."},
+    {"take": "eu nu construiesc pozitii pe ipoteze", "cite": "— GrowYourWealth", "why": "Declines to trade the SpaceX-Tesla merger speculation."},
+]
+
+CLAIMS = [
+    {"who": "GrowYourWealth", "claim": "A crash is possible within the next 3-4 years, since many valuations were stretched by gains without solid fundamentals.", "metric": "equity crash risk", "target": "possible crash", "by": "3-4 years", "condition": "if unsupported rises had continued", "entity": None},
+    {"who": "GrowYourWealth", "claim": "The distinction between revenue growers and self-funding companies decides winners and losers over the next 12 months.", "metric": "self-funding vs borrowing AI companies", "target": "winners/losers", "by": "12 months", "condition": None, "entity": None},
+    {"who": "GrowYourWealth", "claim": "A Nasdaq recovery above 25,400-25,500 is the positive-scenario marker; losing 25,000 would be a technical warning.", "metric": "Nasdaq Composite", "target": "25,400-25,500 up / 25,000 down", "by": "2026-11", "condition": "AMD beats and Oracle stabilizes", "entity": "Nasdaq"},
+    {"who": "Oracle (cited by GrowYourWealth)", "claim": "Oracle targets over $225B of revenue in fiscal 2030.", "metric": "Oracle revenue", "target": ">$225B", "by": "FY2030", "condition": None, "entity": "Oracle (ORCL)"},
+    {"who": "Oracle (cited by GrowYourWealth)", "claim": "Oracle free cash flow turns positive in the second half of fiscal 2028.", "metric": "Oracle free cash flow", "target": "positive", "by": "FY2028 H2", "condition": None, "entity": "Oracle (ORCL)"},
+    {"who": "Oracle (cited by GrowYourWealth)", "claim": "Oracle expects at least $30B of free cash flow in fiscal 2029.", "metric": "Oracle free cash flow", "target": ">=$30B", "by": "FY2029", "condition": None, "entity": "Oracle (ORCL)"},
+    {"who": "Oracle (cited by GrowYourWealth)", "claim": "The ~$20B equity and bond offerings close on Nov 4.", "metric": "Oracle offerings", "target": "~$20B closed", "by": "2026-11-04", "condition": "customary closing conditions", "entity": "Oracle (ORCL)"},
+    {"who": "Palantir (cited by GrowYourWealth)", "claim": "Palantir guides full-year revenue to $8.530-8.534B and Q4 to $2.649-2.653B.", "metric": "Palantir revenue guidance", "target": "FY $8.530-8.534B; Q4 $2.649-2.653B", "by": "2026-Q4", "condition": None, "entity": "Palantir (PLTR)"},
+    {"who": "Piper Sandler (cited by GrowYourWealth)", "claim": "A SpaceX-Tesla merger proposal is more likely than not, with Musk keeping over 70% of votes in most scenarios.", "metric": "SpaceX-Tesla merger", "target": "more likely than not", "by": None, "condition": None, "entity": "SpaceX (SPCX)"},
+    {"who": "Wall Street Journal (cited by GrowYourWealth)", "claim": "Anthropic is pressed to price its IPO at $1.5-1.6T, with trading possible before Thanksgiving.", "metric": "Anthropic IPO valuation", "target": "$1.5-1.6T", "by": "2026-11", "condition": None, "entity": "Anthropic"},
+    {"who": "GrowYourWealth", "claim": "AMD reports Q3 after the close on Nov 3; the call is at 17:00 ET.", "metric": "AMD Q3 earnings", "target": "Data Center revenue, margin, Q4 guide", "by": "2026-11-03", "condition": None, "entity": "AMD"},
+    {"who": "GrowYourWealth", "claim": "October nonfarm payrolls are due Friday, Nov 6.", "metric": "NFP October", "target": "release", "by": "2026-11-06", "condition": None, "entity": None},
+]
+
+RELATIONS = [
+    {"from": "AST SpaceMobile (ASTS)", "rel": "partners_with", "to": "AT&T (T)", "note": "first terrestrial-to-satellite handover of an active call"},
+    {"from": "Nokia (NOK)", "rel": "supplies", "to": "AST SpaceMobile (ASTS)", "note": "network technology for the handover test"},
+    {"from": "SpaceX (SPCX)", "rel": "partners_with", "to": "Tesla (TSLA)", "note": "possible merger per Piper Sandler; special committees reported"},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F4F0", "title": "Sources referenced: Piper Sandler (SpaceX-Tesla merger odds), Wall Street Journal (Anthropic IPO valuation), AT&T (ASTS test and beta plans), plus a stock-history source for SPCX's Monday price. Author flags that bond and oil levels come from Monday trading at different valuation moments and gives no US2Y figure he couldn't confirm.", "tag": "Sources"},
+    {"icon": "\U0001F4C8", "title": "Author's rule: Black Friday and each monthly cash allocation are buying occasions; do not over-analyze headlines driving panic on traditional media.", "tag": "Strategy"},
+]
+
+GLOSSARY = [
+    {"term": "OCI", "def": "Oracle Cloud Infrastructure, the unit Oracle is turning into a major AI infrastructure provider."},
+    {"term": "Special committee", "def": "Independent board members formed to evaluate a possible combination or conflicted deal."},
+    {"term": "NFP", "def": "Nonfarm payrolls, the monthly US jobs report that moves rate expectations."},
+    {"term": "GYW / GYW500", "def": "The author's GrowYourWealth model portfolios."},
+]
