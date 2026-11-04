@@ -1,0 +1,153 @@
+META = {
+    "title": "AI proof businesses worth building in 2027",
+    "channel": "My First Million",
+    "speakers": "Sam Parr, Shaan Puri",
+    "date": "2026-11-04",
+    "video_url": "https://www.youtube.com/watch?v=Sd_Vn1j8qrI",
+    "thread_line": "4 threads · paid peer groups · whale-funded communities · gacha/buyback card apps · Binance hack and DeFi",
+    "category": "market",
+    "region": "",
+}
+
+SNAPSHOT = [
+    "Sam's pitch: you don't need to be an AI person — **communities** are businesses that grow with AI without being AI.",
+    "NADA 20 Groups: dealers pay ~$6-8k a year to sit with ~20 non-competing peers and go line by line through each other's P&L; Sam guesses $13-15M a year in revenue.",
+    "Moda Communities: a Sioux Falls founder runs ~20-25 Facebook groups (watches, cars, gold) with 600,000 members, funded by vetted dealers paying $1-10k a year.",
+    "Shaan's thread: **whales** fund everything — Candy Crush gets all its revenue from 4% of 82M monthly players; Twitch gifted subs worked because whales just needed new ways to spend.",
+    "Card-pack 'ripping' apps add a buyback ($43 back on a $50 pack) and one reportedly did ~$1B in a year; Collector Crypt runs ~$100M a month on-chain.",
+    "Mystery-box packaging lifted a toy maker's revenue 7x versus pick-what-you-want shelves.",
+    "Crypto aside: Binance hacked for $5B, with a ~$2B SAFU fund to cover it; Shaan calls DeFi completely overlooked and due to come back like prediction markets did.",
+]
+
+THEMES = [
+    {
+        "id": "peer-groups",
+        "tags": ["consumer", "career"],
+        "color": "green",
+        "badge": "Business idea",
+        "status": "COPY THE MODEL, ADD ADS",
+        "title": "Boring-profession peer groups are durable cash machines",
+        "lead": "A paid, non-competing peer group for a high-income, unglamorous profession can run for decades, and AI doesn't touch it.",
+        "bullets": [
+            "**NADA 20 Groups** (auto dealers, since roughly the 70s): apply, pay ~$6-8k a year, get placed in a group of ~20 dealers from other regions, meet three times a year, share P&Ls line by line.",
+            "Sam's estimate from published dues: $13-15M a year in revenue; the website and marketing are 'horrible', which is the opening. It later let in HVAC, marina and boat-repair owners.",
+            "His play: copy it a bit better and **run ads**, aimed at dentists, lawyers and other 'millionaire next door' professions rather than crowded e-com (his earlier Club LTV).",
+            "**White Coat Investor**: started as a blog, now media plus Facebook groups where doctors talk about their own money (rental cap rates, not medicine); Shaan sees room for a 2.0 on new media.",
+            "**BNI**: local chapters of non-competing businesses (realtor, garage doors, lawyer) trading leads, often meeting at the YMCA; ~800,000 members paying low thousands a year, recently acquired at a rumored $1B+.",
+            "The design rule: members are either non-competing by trade or matched across geographies.",
+        ],
+        "quote": {"text": "I would either copy this and just do a little bit better and run ads because I don't think these guys are ever going to run ads.", "cite": "— Sam Parr"},
+        "watch": "Sam owns Hampton, a paid founder community, and says he plans to eventually buy other communities, so he is talking up his own category. The $13-15M NADA figure is his guess, and the BNI price is a rumor.",
+        "names": [
+            {"name": "BNI", "blurb": "Lead-sharing local business chapters, ~800k members, reportedly acquired at $1B+", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Hampton", "blurb": "Sam's founder community; long-run plan to roll up other communities", "stance": "OWNS", "conviction": "High", "horizon": "next handful of years"},
+        ],
+    },
+    {
+        "id": "whale-communities",
+        "tags": ["consumer"],
+        "color": "green",
+        "badge": "Business idea",
+        "status": "NETWORKS STILL A MOAT",
+        "title": "Moda Communities: vetted dealers fund 600,000 free members",
+        "lead": "Charge the sellers for trusted access to a pool of super-enthusiast buyers, and let the whales pay for everyone else.",
+        "bullets": [
+            "Started in 2018 when the Sioux Falls founder wanted a better place to buy and sell watches; now 20-25 Facebook groups, 600,000 members, over a dozen full-time staff.",
+            "Groups split by tier: watches under $10k, over $10k, a superfan group above ~$100k, plus collectible cars and gold.",
+            "Dealers pass a vetting interview plus a second member's check, then pay $1-10k a year to post; Sam estimates $5-10M a year in revenue.",
+            "The founder's line to Sam: virtually everything is free and 'the top 1% or even the top 0.001% pay to keep everything running.'",
+            "Sam's moat argument, citing **Pieter Levels**: technology used to be a moat and isn't anymore; communities, networks and marketplaces still are.",
+        ],
+        "quote": None,
+        "watch": "Shaan's caveat: building on Facebook groups is dangerous because the platform keeps changing reach and member-add rules. The revenue range is Sam's estimate.",
+        "names": None,
+    },
+    {
+        "id": "whales-gacha",
+        "tags": ["consumer", "crypto"],
+        "color": "amber",
+        "badge": "Mechanism, ethically mixed",
+        "status": "ADDICTIVE BY DESIGN",
+        "title": "Whales plus gacha: why card-pack 'ripping' apps hit $1B",
+        "lead": "Attach real resale value to a mystery-box mechanic, add an instant buyback, and a tiny slice of heavy spenders drives enormous revenue.",
+        "bullets": [
+            "**Candy Crush**: 82M monthly actives, all revenue from 4% of players; the other 96% are 'the cost of finding those whales.'",
+            "Twitch gifted subs (~$5 each, 200 at once = ~$1,000) was 'like buying a bottle at the club' and lifted revenue per channel.",
+            "Shaan's co-founder was CTO of **AppLovin**, the biggest mobile-game ad network, and saw how games pay to acquire whales who spend across Candy Crush, Block Blast and FarmVille.",
+            "Mobile games set payout rates freely, unlike a regulated slot machine; a lapsed payer (30 days) gets a run of wins, then a frustrating wall built to make them pay again.",
+            "Ripping apps: pay $50 for a digital pack, get offered $43 back instantly; the company keeps $7 and reshuffles the card. One app did ~$1B last year, founded by an ex-Citadel/Bridgewater quant.",
+            "**Collector Crypt** runs ~$100M a month (visible on-chain); Logan Paul launched a rival, 'Rip It'; one of these apps went from ~$50k to $25M a month on the buyback 'vending machine' model.",
+            "Gacha (Japanese mystery capsules) got so popular Japan banned it, per Shaan, then spread to loot boxes in Overwatch and FIFA; real resale value (a top Pikachu card ~$15M) makes it stronger; a toy maker saw **7x** revenue putting the same products in mystery boxes.",
+        ],
+        "quote": {"text": "the genius of the thing was the buyback. The buyback changed everything.", "cite": "— Shaan Puri"},
+        "watch": "Shaan himself calls it 'sad in a way' and likens it to a slot machine with no payout rules. The $1B and $25M-a-month figures came from a dinner conversation; he couldn't say how the revenue is counted (part GMV).",
+        "names": [
+            {"name": "Collector Crypt (CARDS)", "blurb": "On-chain card-pack app doing ~$100M a month", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "AppLovin (APP)", "blurb": "Biggest mobile-game ad network; Shaan's co-founder was its CTO", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Twitch", "blurb": "Gifted subs as a whale-spend feature (Shaan worked there)", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "binance-defi",
+        "tags": ["crypto"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "HACK REPORTED LAST WEEK",
+        "title": "Binance's $5B hack, and why Shaan still thinks DeFi is overlooked",
+        "lead": "The hack shows crypto's real tail risks, yet Shaan calls DeFi the next category to come back the way prediction markets did.",
+        "bullets": [
+            "Shaan: the only crypto-only people left are 'high conviction diehards who deserve to get rich' and people who missed that everyone moved to AI.",
+            "Bitcoin's remaining big risks, in his view: Satoshi's coins moving, or AI/quantum breaking the encryption, either of which would cause 'extreme panic'.",
+            "**Binance** was hacked for $5B last week; its SAFU fund, built from 10% of trading fees since the 2018 hack, holds ~$2B, so it has to cover the gap.",
+            "Last report Shaan read: North Korea did it, via a woman in a romantic relationship with an engineer who got physical access to his laptop; part of the funds got frozen.",
+            "The hacker parked the coins in a DeFi lending protocol, borrowed stablecoins (up to ~50% of collateral) and walked away, so freezing the collateral didn't matter.",
+            "Shaan's analogy: early prediction markets like Augur died, then **Polymarket and Kalshi** broke out ~8 years later doing the same thing; he expects DeFi to follow.",
+        ],
+        "quote": {"text": "DeFi, by the way, is awesome and I think people are completely overlooking this and it's going to come back with the like the vengeance", "cite": "— Shaan Puri"},
+        "watch": "The hack details are Shaan's account of early reporting ('last thing I read'). He is a former crypto investor who now calls himself an AI guy.",
+        "names": [
+            {"name": "Binance", "blurb": "Reported $5B hack; ~$2B SAFU fund to cover it", "stance": "NEGATIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "Polymarket, Kalshi", "blurb": "Prediction markets that broke out years after Augur failed", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F465", "tag": "Business", "title": "Clone a dull, high-income profession's peer group and out-market it with ads"},
+    {"icon": "\U0001F433", "tag": "Pricing", "title": "Charge the sellers or the top 1%, keep the crowd free"},
+    {"icon": "\U0001F6E1", "tag": "Moats", "title": "Build on networks and trust vetting, not on tech AI can copy"},
+    {"icon": "\U0001F3B0", "tag": "Consumer", "title": "Study the buyback mechanic before you build or invest in collectibles apps"},
+    {"icon": "\U0001F510", "tag": "Crypto", "title": "Treat exchange hacks and key-person laptops as live risks, not edge cases"},
+]
+
+HOT_TAKES = [
+    {"take": "I think communities, networks, and marketplaces are still a really good moat.", "cite": "— Sam Parr", "why": "AI-moat claim"},
+    {"take": "my goal is to build a multi-billion dollar company. And I think that we can get there by owning a variety of communities.", "cite": "— Sam Parr", "why": "personal ambition with a number"},
+    {"take": "96% of the players are just kind of the cost of doing business which is the cost of finding those whales.", "cite": "— Shaan Puri", "why": "blunt framing"},
+    {"take": "the only people left that are like true crypto only are the incredibly smart, high conviction dieards who deserve to get rich and the idiots", "cite": "— Shaan Puri", "why": "dismissive"},
+    {"take": "DeFi, by the way, is awesome and I think people are completely overlooking this and it's going to come back with the like the vengeance", "cite": "— Shaan Puri", "why": "contrarian call"},
+]
+
+CLAIMS = [
+    {"who": "Sam Parr", "claim": "Hampton reaches hundreds of millions in annual profit on billions in revenue by owning many communities", "metric": "annual profit", "target": "hundreds of millions", "by": None, "condition": "if it buys other communities", "entity": "Hampton"},
+    {"who": "Shaan Puri", "claim": "DeFi makes a strong comeback, the way prediction markets did after Augur", "metric": "DeFi adoption", "target": "comeback", "by": None, "condition": None, "entity": None},
+]
+
+RELATIONS = [
+    {"from": "Polymarket", "rel": "competes_with", "to": "Kalshi", "note": "both broke out in prediction markets"},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F512", "title": "**Private Photo Vault** (a hidden photo-storage app MFM discussed years ago) has ~1M ratings; the Vegas-raised founder told Sam it's 'a behemoth' (numbers off the record).", "tag": "Apps"},
+    {"icon": "\U0001F4DA", "title": "Sources referenced: Pieter Levels on AI and moats, Ev Williams' rule (find a universal desire, remove friction), a creator who reverse-engineers app algorithms like Tinder's.", "tag": "Sources"},
+    {"icon": "\U0001F4F1", "title": "Scale check: Snapchat does about $4B a year, which is why a $1B app nobody has heard of stood out.", "tag": "Apps"},
+]
+
+GLOSSARY = [
+    {"term": "20 Group", "def": "A peer group of ~20 non-competing business owners who review each other's financials."},
+    {"term": "Whale", "def": "A tiny share of customers who spend far more than everyone else and fund the free users."},
+    {"term": "Gacha", "def": "Japanese mystery-capsule mechanic; the template for loot boxes and blind boxes."},
+    {"term": "Ripping", "def": "Opening card packs, now digital, with an instant buyback offer for unwanted pulls."},
+    {"term": "SAFU fund", "def": "Binance's emergency user-protection fund, fed by 10% of trading fees."},
+    {"term": "DeFi lending", "def": "Permissionless protocols that lend against posted crypto collateral and auto-liquidate if it falls."},
+]
