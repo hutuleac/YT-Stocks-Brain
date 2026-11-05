@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: Big Tech’s $3T AI Bet, Claude Writes 90% of Anthropic’s Code, AIs Editing AI Brains | EP #308</title>
+<meta name="description" content="Peter H. Diamandis · 7 threads · $3T capex and financing strain · Apple vs data-center RAM · GDPX and LifeEval benchmarks · RSI via Anthropic&#x27;s S-1 · models editing weights · freezer hack · Artemis and antimatter">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="Big Tech’s $3T AI Bet, Claude Writes 90% of Anthropic’s Code, AIs Editing AI Brains | EP #308">
+<meta property="og:description" content="Peter H. Diamandis · 7 threads · $3T capex and financing strain · Apple vs data-center RAM · GDPX and LifeEval benchmarks · RSI via Anthropic&#x27;s S-1 · models editing weights · freezer hack · Artemis and antimatter">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Big Tech’s $3T AI Bet, Claude Writes 90% of Anthropic’s Code, AIs Editing AI Brains | EP #308</h1>
+    <div class="byline">
+      Channel: <b>Peter H. Diamandis</b> &middot; Speaker: <b>Peter Diamandis, Alex Wissner-Gross, Dave Blundin, Salim Ismail</b> &middot; <b>2026-11-04</b>
+      <div class="stats-line">7 threads · $3T capex and financing strain · Apple vs data-center RAM · GDPX and LifeEval benchmarks · RSI via Anthropic's S-1 · models editing weights · freezer hack · Artemis and antimatter &middot; <a href="https://www.youtube.com/watch?v=x09f_BuJsoY" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Alphabet, Meta, Microsoft, Amazon and Oracle have disclosed <b>$3T+</b> in AI buildout commitments — ~$1T added in 3 months, "10 Apollo programs".</li><li>Cracks in financing: lenders demand tougher terms, OpenAI's round cut to ~$20B at <b>$1.25T</b>, CoreWeave put options at a record; panel says capex only doubles down.</li><li>Alex's money-flow call: the next capital pool is <b>insurance</b> (~$6T life, ~$3T P&amp;C in the US).</li><li>Anthropic's S-1: internal Claude usage exceeds payroll, grew 250x Jan-Sep, and Claude wrote <b>90%</b> of September's code.</li><li>New SemiAnalysis benchmark GDPX: best model (Opus 5.5) scores just <b>12%</b> on 8-hour expert work; OpenAI's own LifeEval jumped from 49% to 81% in 9 months.</li><li>MIT CSAIL: a frontier model edited <b>0.016%</b> of a small model's weights and lifted its math score from 7.9% to 48.1% with no retraining.</li><li>Apple posted a beat in John Ternus's first quarter as CEO but fell ~<b>3%</b>; panel calls memory-price pain self-inflicted.</li><li>Also: hackers defrosted supermarket freezers in 8 European countries; Artemis 3 set for summer 2027; positron held for a month.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="three-trillion-capex">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">$3T+ COMMITTED · LENDERS TIGHTENING</span><span class="ttag">ai-infra</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Big Tech's $3T AI buildout meets nervous lenders</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The panel says the spend keeps doubling down because the prize is permanent business domination — the open question is how much money exists in the world.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Five giants: <b>$3T+</b> in leases, buildings, power and equipment; Google alone over $1T (~8x last year), Meta over $800B, some leases 30 years; Apollo cost ~$280B in today's dollars.</li><li><span class="dot" style="background:#93711b;"></span>Wall Street Journal: lenders now demand tougher terms; Financial Times: OpenAI cut its new round to ~<b>$20B</b> (from $30B) at a $1.25T valuation (from $1.4T).</li><li><span class="dot" style="background:#93711b;"></span>Hedging everywhere: HSBC is talking to insurers about offloading data-center loan risk; CoreWeave put options hit a record in October; ex-tech employees hedge their stock.</li><li><span class="dot" style="background:#93711b;"></span>Dave: Elon is "torpedoing" rivals' financing — lend to him at ~<b>8%</b> rather than to AI-only firms at ~15%.</li><li><span class="dot" style="background:#93711b;"></span>Compute is scarce: H100 prices are <i>rising</i> on 3-year-old chips; Dave could only get an NVL72 via a <b>$15M three-year lease</b>, online in February.</li><li><span class="dot" style="background:#93711b;"></span>Salim: biggest infrastructure buildout in history, likely with a bubble — direction right, timing hard; radically new compute is at least 3-5 years out.</li><li><span class="dot" style="background:#93711b;"></span>Alex: next capital pool is insurance (~<b>$6T</b> life, ~$3T P&amp;C); Dave says EverQuote's earnings call now centers on insurers swapping investment for compute capacity; a Berkshire-style "margin of safety" has no data-center equivalent yet (maybe Crusoe).</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;it is the singularity swallowing the economy&#8221;<cite>— Alex Wissner-Gross</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Alphabet (GOOGL)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Over $1T of the $3T, ~8x last year</span></div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Over $800B committed</span></div><div class="namechip"><b>Microsoft (MSFT), Amazon (AMZN), Oracle (ORCL)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Rest of the five-company $3T commitment set</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Round cut to ~$20B at $1.25T (FT)</span></div><div class="namechip"><b>CoreWeave (CRWV)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Put options at record high in October</span></div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>H100 prices rising; NVL72 only via long lease</span></div><div class="namechip"><b>EverQuote (EVER)<span class="stance" style="background:#3f6b2e;">OWNS · High</span></b><span>Dave's company; pitching insurers on AI capital flows</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Alex, Dave and Peter hold a financial interest in a GPU-futures firm the panel cites on chip lifespans; Dave speaks for EverQuote (its earnings call), whose insurance pitch he describes.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="apple-vs-ram">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">Negative view</span>
+    <span class="theme-status">TERNUS'S FIRST EARNINGS · STOCK ~-3%</span><span class="ttag">consumer</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">Apple's memory squeeze and the thin-client threat</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Apple beat but blamed memory prices — the panel says the RAM belongs in data centers and Starlink could turn phones into thin clients.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span>John Ternus's first report as CEO: revenue beat estimates around <b>$114.5B</b>, stock fell ~3%, closing at <b>$4.94T</b> — just above Nvidia.</li><li><span class="dot" style="background:#a23f22;"></span>Ternus flagged unprecedented memory pricing eating margins; Alex: "Apple has only itself to blame" for not leaning into superintelligence, while Sam Altman argues idle consumer RAM should move to data centers.</li><li><span class="dot" style="background:#a23f22;"></span>Siri "still sucks"; a reported home device and tabletop robot look 5-10 years behind next to Optimus.</li><li><span class="dot" style="background:#a23f22;"></span>Sam's dream per Dave: take the front-end interface away and push Apple back a layer — "and it's gone".</li><li><span class="dot" style="background:#a23f22;"></span>Thin clients failed before (Sun, Chromebook) on bandwidth; Alex says the market isn't pricing Starlink as a <b>substitute good for consumer RAM</b> — a phone as screen, battery and antenna.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;Follow the money and follow the RAM.&#8221;<cite>— Alex Wissner-Gross</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Apple (AAPL)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium</span></b><span>Beat but fell; seen as behind on superintelligence</span></div><div class="namechip"><b>SpaceX (SPCX)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>Starlink direct-to-cell as thin-client pipe</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="gdpx-lifeeval">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
+    <span class="theme-status">GDPX LAUNCHED · LIFEEVAL LAUNCHED</span><span class="ttag">software</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Expert work scores 12%, everyday errands 81%</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">GDPX shows frontier models barely start on real expert jobs, while OpenAI's own LifeEval says they already handle most errands.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>GDPX (SemiAnalysis, Dylan Patel): agent left alone up to 8 hours on 206 tasks in 11 fields, e.g. a PE deal in a 2,000-file data room; built with 14 specialist partners.</li><li><span class="dot" style="background:#3f6b2e;"></span>Scores: <b>Opus 5.5 12%</b>, Gemini 4 Carbon 10.9%, GPT6 Astra 9.6%; almost every model scored zero on finance and legal.</li><li><span class="dot" style="background:#3f6b2e;"></span>Gemini 4 Carbon fills a gap on the cost/performance Pareto frontier — unreleased, so Google may be subsidizing tokens; results are spiky even within STEM.</li><li><span class="dot" style="background:#3f6b2e;"></span>OpenAI LifeEval (its own benchmark on its own models): 3,995 Americans surveyed, 169 tasks via browser; <b>GPT 5.2 49.3% (Dec 2025) → GPT6 Astra 80.6% (Sep 2026)</b>.</li><li><span class="dot" style="background:#3f6b2e;"></span>Alex reads the tight GPT 5.4-to-Astra cluster as OpenAI de-prioritizing consumer tasks after its pivot to enterprise.</li><li><span class="dot" style="background:#3f6b2e;"></span>Bottleneck is connection, not capability: an EverQuote analyst lost 4 hours moving insurance by phone; Meta's Muse is "imminent" but Facebook's paid-click model has no clean AI equivalent yet.</li><li><span class="dot" style="background:#3f6b2e;"></span>Build your own benchmark for what you care about (Jonathan Hendler's MediationBench); Salim tracks economic value per unit of human involvement; Peter readies an Abundance/Singularity index.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>SemiAnalysis<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Built GDPX; Dave a self-described Dylan Patel fan</span></div><div class="namechip"><b>Anthropic (ANT)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Opus 5.5 leads GDPX at 12%</span></div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#93711b;">UNCERTAIN · Low</span></b><span>Muse agent imminent; ad model in flux</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">LifeEval is OpenAI grading its own models; GDPX is independent.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="anthropic-rsi">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">ANTHROPIC AMENDED S-1</span><span class="ttag">ai-infra</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Anthropic's S-1 makes recursive self-improvement a line item</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Claude's internal usage now costs more than Anthropic's payroll and writes 90% of its code — the panel's financial proof that RSI has arrived.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Since April, internal Claude usage at consumer prices exceeds monthly cash payroll; usage grew <b>250x</b> January-September.</li><li><span class="dot" style="background:#3f6b2e;"></span>Claude authored over <b>90%</b> of September 2026 code contributions; daily code contributions per engineer are 45x two years ago.</li><li><span class="dot" style="background:#3f6b2e;"></span>Alex: by capital/opex, "we've arrived" — but real RSI is physical recursion (nanobots building copies); Salim notes Claude's share of its own next version went from ~<b>10%</b> to 40% and 60%.</li><li><span class="dot" style="background:#3f6b2e;"></span>Dave's math: top models cost ~<b>$1</b>/day per human-equivalent; a Lightwave engineer burned half a billion tokens (~$5,000) in a day ≈ 5,000 people; costs fall ~10x a year.</li><li><span class="dot" style="background:#3f6b2e;"></span>Salim's playbook: under 50 people, brute-force the shift; over 50, build a side stack and move workflows over one by one — one firm cut 22 steps to four.</li><li><span class="dot" style="background:#3f6b2e;"></span>Use cases: a Cisco junior employee reportedly asked to rewrite the whole codebase with AI; Kevin Weil's new fully automated biotech research company raised big.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic (ANT)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>S-1: AI spend &gt; payroll, 90% of code by Claude</span></div><div class="namechip"><b>Cisco (CSCO)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Reported full-codebase AI rewrite</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Peter and Dave are investors in Kevin Weil's new biotech company.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="weight-space-programming">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Speculative</span>
+    <span class="theme-status">MIT CSAIL PAPER · EARLY, SMALL-SCALE</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">Models editing other models' weights directly</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">MIT's "Sparks of Weight Space Programming" shows a frontier model surgically fixing a small model with no retraining — a possible shortcut to RSI.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>Astra diagnosed why Qwen 3.5 got stuck in thinking loops, edited <b>0.016%</b> of its weights and lifted its math score from 7.9% to 48.1% — no backprop.</li><li><span class="dot" style="background:#65695f;"></span>Alex: future of mechanistic interpretability and of "abliteration" (stripping open models' guardrails); what OpenAI's shut-down superalignment effort meant to do.</li><li><span class="dot" style="background:#65695f;"></span>Dave: a path to a Hugging Face for finished neural modules — bolt a biotech or Swahili module onto a ~40B base instead of a <b>$100M</b>+ retrain (e.g. a Moderna team).</li><li><span class="dot" style="background:#65695f;"></span>Panel is "90 plus%" confident frontier labs already run self-editing models; risk side is de-guardrailing open-source Chinese models.</li><li><span class="dot" style="background:#65695f;"></span>Likened to the first integrated transistor — profound, but only ~<b>0.01%</b> of a model so far.</li><li><span class="dot" style="background:#65695f;"></span>Persistent rumor: Ilya Sutskever's SSI has been doing prop/quant trading; Alex calls that a likely "fail for civilization".</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#65695f;"><div class="lbl">Pull quote</div>&#8220;The machines will understand the machines.&#8221;<cite>— Alex Wissner-Gross</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>SSI<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Low</span></b><span>Rumored prop trading; still in stealth</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The paper drew backlash that it's less transformative than it looks; the SSI trading story is rumor.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="freezer-hack">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">Confirmed event</span>
+    <span class="theme-status">SECOND WAVE · 8 COUNTRIES</span><span class="ttag">geopolitics</span><span class="ttag">policy</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">Hackers defrosted Europe's supermarket freezers</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Internet-connected fridge controllers let attackers crank stores to 55°C — proof that legacy industrial systems are the soft target.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span>Attackers switched on defrost mode remotely, up to <b>55°C</b>, in 8 countries incl. Belgium, Sweden, Ireland, Netherlands, Luxembourg, Estonia; ~€100,000 of spoiled food in Belgium.</li><li><span class="dot" style="background:#a23f22;"></span>Second wave: 3 weeks earlier the same attack hit 500+ stores in France; no one claimed it, fingers point at Russia.</li><li><span class="dot" style="background:#a23f22;"></span>Week before: one Binance engineer's laptop cost <b>$6B</b> in stolen tokens.</li><li><span class="dot" style="background:#a23f22;"></span>Offense is now humans-out-of-the-loop agent swarms while defense stays human-in-the-loop; Peter expects banks, power and the grid next over a tough 1-8 year transition.</li><li><span class="dot" style="background:#a23f22;"></span>Alex: AI is patching the Linux kernel at record scale but not legacy SCADA — "many billions of dollars of opportunity".</li><li><span class="dot" style="background:#a23f22;"></span>Too small to wake politicians — the warning hack Eric Schmidt has been looking for.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;we bolted 1990s security onto 2026 connectivity&#8221;<cite>— Peter Diamandis</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Binance<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>$6B stolen via one engineer's laptop</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Attribution is unconfirmed; nobody has claimed responsibility.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="artemis-antimatter">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Confirmed event</span>
+    <span class="theme-status">ARTEMIS 3 SUMMER 2027 · ARTEMIS 4 2028</span><span class="ttag">space</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">NASA back at Apollo speed, and a positron held for a month</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Isaacman's plan puts humans on the Moon in 2028 against China; Northwestern's antimatter trap is a first step toward antimatter propulsion.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Artemis 3 (summer 2027): four astronauts practice Orion docking with <b>both</b> Blue Origin's lander and SpaceX's Starship in Earth orbit; three launches in quick sequence.</li><li><span class="dot" style="background:#3f6b2e;"></span>Artemis 4 (2028): first humans on the Moon since 1972; NASA picks the landing provider as late as possible; south-pole Moon base, first launch by year-end.</li><li><span class="dot" style="background:#3f6b2e;"></span>Isaacman calls it a race against China "much closer than it ever needed to be"; US imagery via Maxar shows an advanced Chinese space plane.</li><li><span class="dot" style="background:#3f6b2e;"></span>History: Apollo 7 to Apollo 11 took 9 months; an early-1970s report projected a 100-person Moon base by 1986; the panel blames cold-war budget diversion for the 50-year gap.</li><li><span class="dot" style="background:#3f6b2e;"></span>Northwestern (Gabrielse group): a positron held a month at 0.3 K in a "container without walls"; matters for CPT symmetry and Isaacman's interest in antimatter propulsion.</li><li><span class="dot" style="background:#3f6b2e;"></span>Efficiency of rest mass: antimatter ~<b>100%</b>, fusion ~1-4%, fission ~0.1-0.3%.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>SpaceX (SPCX)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium · 2027-2028</span></b><span>Starship lander in the Artemis 3 docking test</span></div><div class="namechip"><b>Blue Origin<span class="stance" style="background:#93711b;">WATCHING · Low · 2027-2028</span></b><span>Competing lander; must make up lost time</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Timeline depends on federal budget; Peter keynotes with Isaacman this week.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">💰</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Watch insurance capital as the next funder of AI infrastructure</span></div></div><div class="irow"><div class="ic">📉</div><div class="tline"><span class="cat">Credit:</span> <span class="txt">Track lender terms, round sizes and put demand for the first real capex strain</span></div></div><div class="irow"><div class="ic">📏</div><div class="tline"><span class="cat">Benchmarks:</span> <span class="txt">Use GDPX, not lab-run evals, to gauge when expert work gets automated</span></div></div><div class="irow"><div class="ic">🏗</div><div class="tline"><span class="cat">AI ops:</span> <span class="txt">Move workflows one by one onto an AI side stack if your company has 50+ people</span></div></div><div class="irow"><div class="ic">🛡</div><div class="tline"><span class="cat">Cyber:</span> <span class="txt">Take connected devices and legacy controllers off the open internet</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;I think Apple has only itself to blame.&#8221; <cite>— Alex Wissner-Gross</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I would never lend money to somebody who only makes money by serving AI from a data center.&#8221; <cite>— Elon Musk (quoted by Dave Blundin)</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;this is about to get solved like probably next year max, maybe two&#8221; <cite>— Alex Wissner-Gross</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think everything crumbles really quickly, like within two years, everything pretty much saturates&#8221; <cite>— Dave Blundin</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I don't see any future in which governments are not being run by sovereign AI systems.&#8221; <cite>— Peter Diamandis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think that's probably a fail for civilization&#8221; <cite>— Alex Wissner-Gross</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Alex Wissner-Gross:</b> GDPX will be saturated within a year, two at most. <span class="cmeta">GDPX top score · saturated · 2027-2028</span></div><div class="ritem"><b>Dave Blundin:</b> Top models reach ~50% on GDPX in about a year and nearly every benchmark saturates within two. <span class="cmeta">GDPX top score · 50% · 2027-11</span></div><div class="ritem"><b>Dave Blundin:</b> In the 2028 election the vast majority of voters will ask an AI agent what to do. <span class="cmeta">voters consulting AI agents · vast majority · 2028</span></div><div class="ritem"><b>Dave Blundin:</b> Cost of AI labor keeps falling about 10x a year, so a day's half-billion tokens buys ~50,000 people-equivalents next year. <span class="cmeta">AI cost per human-equivalent · -10x per year · 2027-11</span></div><div class="ritem"><b>Salim Ismail:</b> Radically new compute paradigms are at least 3-5 years from coming online. <span class="cmeta">new compute paradigm · online · 3-5 years</span></div><div class="ritem"><b>Peter Diamandis:</b> eBay auction volume skyrockets as agents photograph, price and list household items. <span class="cmeta">eBay auctions · skyrocket · 6 months</span> <span class="tag">eBay (EBAY)</span></div><div class="ritem"><b>Peter Diamandis:</b> Cyber attacks spread to banks, power and the grid over a tough transition. <span class="cmeta">transition period · 1-8 years</span></div><div class="ritem"><b>Jared Isaacman (cited by Peter Diamandis):</b> Artemis 3 launches next summer to test docking with both lunar landers. <span class="cmeta">Artemis 3 launch · launch · 2027</span> <span class="tag">NASA</span></div><div class="ritem"><b>Jared Isaacman (cited by Peter Diamandis):</b> Artemis 4 lands the first humans on the Moon since 1972. <span class="cmeta">crewed lunar landing · landing · 2028</span> <span class="tag">NASA</span></div><div class="ritem"><b>Alex Wissner-Gross:</b> Many Starships could fly empty if new use cases like orbital data centers don't absorb the upmass. <span class="cmeta">Starship utilization · empty flights</span> <i>if if no new use cases emerge</i> <span class="tag">SpaceX (SPCX)</span></div><div class="ritem"><b>David Sinclair (cited by Peter Diamandis):</b> AI-discovered three-molecule therapy SL100 will cost about $200 a month. <span class="cmeta">SL100 price · $200/month</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>SpaceX (SPCX)</b> <span class="rel">competes with</span> <b>Blue Origin</b> &mdash; for the Artemis crew lander</div><div class="ritem"><b>OpenAI</b> <span class="rel">competes with</span> <b>Apple (AAPL)</b> &mdash; Altman aims to take the front-end interface</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🗳</div><div><div class="title">Election day: panel argues AIs "already have the vote" through what voters ask them; OpenAI and Anthropic run election war rooms; a panelist cites a 2015 Yale study that US legislation doesn't follow public will; push for local control and more special economic zones (Diamond Age). <span class="tag">Politics</span></div></div></div><div class="irow"><div class="ic">🏆</div><div><div class="title">XPRIZE (CEO Anousheh Ansari) weighs city-level micro-bounties; Dave's Forge v2 aims to show CEOs what 50,000 people's worth of AI could do; SemiAnalysis' Catrini reportedly cracked scorpion antivenom. <span class="tag">Innovation</span></div></div></div><div class="irow"><div class="ic">🧬</div><div><div class="title">Longevity: sleep, diet, exercise, mindset first; David Sinclair's partial epigenetic reprogramming uses 3 Yamanaka factors via AAV at <b>$0.5-2M</b> per treatment; the $101M Healthspan XPRIZE targets 20 years of reversal and must be affordable. <span class="tag">Health</span></div></div></div><div class="irow"><div class="ic">🧭</div><div><div class="title">AMA: Salim says <b>79%</b> of corporate workers feel no connection to their work — purpose ≠ employment; Dave: AI will unlock human self-improvement via daily planning; Alex: a second renaissance rediscovering the post-WWII era after Tyler Cowen's great stagnation. <span class="tag">Society</span></div></div></div><div class="irow"><div class="ic">🤖</div><div><div class="title">Robots: Alex expects humanoid supply to overwhelm demand until new uses (robots building data centers) clear it, like Starship upmass needing orbital data centers; Peter: go to trade school — the singularity needs electricians and plumbers. <span class="tag">Robotics</span></div></div></div><div class="irow"><div class="ic">📢</div><div><div class="title">Dave on Elon's "contaminated by empathy": US decisions skew to media outliers (a Learjet crash) while China lets statisticians decide — why it has abundant energy and Europe doesn't. <span class="tag">Culture</span></div></div></div><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: Wall Street Journal, Financial Times, SemiAnalysis/Dylan Patel, Anthropic's S-1, MIT CSAIL, Kevin Kelly, Neal Stephenson's Diamond Age. <span class="tag">Sources</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>RSI</b> &mdash; Recursive self-improvement: AI building better AI.</div><div><b>GDPX</b> &mdash; SemiAnalysis benchmark dropping agents into realistic 8-hour expert work across 11 frontier fields.</div><div><b>LifeEval</b> &mdash; OpenAI benchmark of 169 everyday tasks done via browser.</div><div><b>Pareto frontier</b> &mdash; Set of models where no other is both cheaper and better.</div><div><b>Abliteration</b> &mdash; Removing an open model's safety behavior by editing a few weights.</div><div><b>SCADA</b> &mdash; Supervisory control and data acquisition — industrial control systems like the hacked fridge controllers.</div><div><b>CPT symmetry</b> &mdash; Charge-parity-time symmetry; antimatter measurements test it.</div><div><b>MTP</b> &mdash; Massive transformative purpose — a cause to point intelligence at.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>

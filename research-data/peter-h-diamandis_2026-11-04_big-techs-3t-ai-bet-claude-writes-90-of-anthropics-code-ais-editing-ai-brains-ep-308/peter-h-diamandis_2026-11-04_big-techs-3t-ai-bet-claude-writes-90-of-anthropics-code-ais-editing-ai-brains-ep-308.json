@@ -1,0 +1,575 @@
+{
+ "schema_version": 2,
+ "meta": {
+  "title": "Big Tech’s $3T AI Bet, Claude Writes 90% of Anthropic’s Code, AIs Editing AI Brains | EP #308",
+  "channel": "Peter H. Diamandis",
+  "speakers": "Peter Diamandis, Alex Wissner-Gross, Dave Blundin, Salim Ismail",
+  "date": "2026-11-04",
+  "video_url": "https://www.youtube.com/watch?v=x09f_BuJsoY",
+  "thread_line": "7 threads · $3T capex and financing strain · Apple vs data-center RAM · GDPX and LifeEval benchmarks · RSI via Anthropic's S-1 · models editing weights · freezer hack · Artemis and antimatter",
+  "category": "market",
+  "region": ""
+ },
+ "snapshot": [
+  "Alphabet, Meta, Microsoft, Amazon and Oracle have disclosed **$3T+** in AI buildout commitments — ~$1T added in 3 months, \"10 Apollo programs\".",
+  "Cracks in financing: lenders demand tougher terms, OpenAI's round cut to ~$20B at **$1.25T**, CoreWeave put options at a record; panel says capex only doubles down.",
+  "Alex's money-flow call: the next capital pool is **insurance** (~$6T life, ~$3T P&C in the US).",
+  "Anthropic's S-1: internal Claude usage exceeds payroll, grew 250x Jan-Sep, and Claude wrote **90%** of September's code.",
+  "New SemiAnalysis benchmark GDPX: best model (Opus 5.5) scores just **12%** on 8-hour expert work; OpenAI's own LifeEval jumped from 49% to 81% in 9 months.",
+  "MIT CSAIL: a frontier model edited 0.016% of a small model's weights and lifted its math score from 7.9% to 48.1% with no retraining.",
+  "Apple posted a beat in John Ternus's first quarter as CEO but fell ~3%; panel calls memory-price pain self-inflicted.",
+  "Also: hackers defrosted supermarket freezers in 8 European countries; Artemis 3 set for summer 2027; positron held for a month."
+ ],
+ "themes": [
+  {
+   "id": "three-trillion-capex",
+   "tags": [
+    "ai-infra",
+    "finance"
+   ],
+   "color": "amber",
+   "badge": "Contested",
+   "status": "$3T+ COMMITTED · LENDERS TIGHTENING",
+   "title": "Big Tech's $3T AI buildout meets nervous lenders",
+   "lead": "The panel says the spend keeps doubling down because the prize is permanent business domination — the open question is how much money exists in the world.",
+   "bullets": [
+    "Five giants: **$3T+** in leases, buildings, power and equipment; Google alone over $1T (~8x last year), Meta over $800B, some leases 30 years; Apollo cost ~$280B in today's dollars.",
+    "Wall Street Journal: lenders now demand tougher terms; Financial Times: OpenAI cut its new round to ~$20B (from $30B) at a $1.25T valuation (from $1.4T).",
+    "Hedging everywhere: HSBC is talking to insurers about offloading data-center loan risk; CoreWeave put options hit a record in October; ex-tech employees hedge their stock.",
+    "Dave: Elon is \"torpedoing\" rivals' financing — lend to him at ~8% rather than to AI-only firms at ~15%.",
+    "Compute is scarce: H100 prices are *rising* on 3-year-old chips; Dave could only get an NVL72 via a **$15M three-year lease**, online in February.",
+    "Salim: biggest infrastructure buildout in history, likely with a bubble — direction right, timing hard; radically new compute is at least 3-5 years out.",
+    "Alex: next capital pool is insurance (~$6T life, ~$3T P&C); Dave says EverQuote's earnings call now centers on insurers swapping investment for compute capacity; a Berkshire-style \"margin of safety\" has no data-center equivalent yet (maybe Crusoe)."
+   ],
+   "quote": {
+    "text": "it is the singularity swallowing the economy",
+    "cite": "— Alex Wissner-Gross"
+   },
+   "watch": "Alex, Dave and Peter hold a financial interest in a GPU-futures firm the panel cites on chip lifespans; Dave speaks for EverQuote (its earnings call), whose insurance pitch he describes.",
+   "names": [
+    {
+     "name": "Alphabet (GOOGL)",
+     "blurb": "Over $1T of the $3T, ~8x last year",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Meta (META)",
+     "blurb": "Over $800B committed",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Microsoft (MSFT), Amazon (AMZN), Oracle (ORCL)",
+     "blurb": "Rest of the five-company $3T commitment set",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "OpenAI",
+     "blurb": "Round cut to ~$20B at $1.25T (FT)",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "CoreWeave (CRWV)",
+     "blurb": "Put options at record high in October",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Nvidia (NVDA)",
+     "blurb": "H100 prices rising; NVL72 only via long lease",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Medium",
+     "horizon": null
+    },
+    {
+     "name": "EverQuote (EVER)",
+     "blurb": "Dave's company; pitching insurers on AI capital flows",
+     "stance": "OWNS",
+     "conviction": "High",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "apple-vs-ram",
+   "tags": [
+    "consumer",
+    "ai-infra"
+   ],
+   "color": "red",
+   "badge": "Negative view",
+   "status": "TERNUS'S FIRST EARNINGS · STOCK ~-3%",
+   "title": "Apple's memory squeeze and the thin-client threat",
+   "lead": "Apple beat but blamed memory prices — the panel says the RAM belongs in data centers and Starlink could turn phones into thin clients.",
+   "bullets": [
+    "John Ternus's first report as CEO: revenue beat estimates around **$114.5B**, stock fell ~3%, closing at **$4.94T** — just above Nvidia.",
+    "Ternus flagged unprecedented memory pricing eating margins; Alex: \"Apple has only itself to blame\" for not leaning into superintelligence, while Sam Altman argues idle consumer RAM should move to data centers.",
+    "Siri \"still sucks\"; a reported home device and tabletop robot look 5-10 years behind next to Optimus.",
+    "Sam's dream per Dave: take the front-end interface away and push Apple back a layer — \"and it's gone\".",
+    "Thin clients failed before (Sun, Chromebook) on bandwidth; Alex says the market isn't pricing Starlink as a **substitute good for consumer RAM** — a phone as screen, battery and antenna."
+   ],
+   "quote": {
+    "text": "Follow the money and follow the RAM.",
+    "cite": "— Alex Wissner-Gross"
+   },
+   "watch": null,
+   "names": [
+    {
+     "name": "Apple (AAPL)",
+     "blurb": "Beat but fell; seen as behind on superintelligence",
+     "stance": "NEGATIVE VIEW",
+     "conviction": "Medium",
+     "horizon": null
+    },
+    {
+     "name": "SpaceX (SPCX)",
+     "blurb": "Starlink direct-to-cell as thin-client pipe",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Low",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "gdpx-lifeeval",
+   "tags": [
+    "software",
+    "ai-infra"
+   ],
+   "color": "green",
+   "badge": "Confirmed event",
+   "status": "GDPX LAUNCHED · LIFEEVAL LAUNCHED",
+   "title": "Expert work scores 12%, everyday errands 81%",
+   "lead": "GDPX shows frontier models barely start on real expert jobs, while OpenAI's own LifeEval says they already handle most errands.",
+   "bullets": [
+    "GDPX (SemiAnalysis, Dylan Patel): agent left alone up to 8 hours on 206 tasks in 11 fields, e.g. a PE deal in a 2,000-file data room; built with 14 specialist partners.",
+    "Scores: **Opus 5.5 12%**, Gemini 4 Carbon 10.9%, GPT6 Astra 9.6%; almost every model scored zero on finance and legal.",
+    "Gemini 4 Carbon fills a gap on the cost/performance Pareto frontier — unreleased, so Google may be subsidizing tokens; results are spiky even within STEM.",
+    "OpenAI LifeEval (its own benchmark on its own models): 3,995 Americans surveyed, 169 tasks via browser; **GPT 5.2 49.3% (Dec 2025) → GPT6 Astra 80.6% (Sep 2026)**.",
+    "Alex reads the tight GPT 5.4-to-Astra cluster as OpenAI de-prioritizing consumer tasks after its pivot to enterprise.",
+    "Bottleneck is connection, not capability: an EverQuote analyst lost 4 hours moving insurance by phone; Meta's Muse is \"imminent\" but Facebook's paid-click model has no clean AI equivalent yet.",
+    "Build your own benchmark for what you care about (Jonathan Hendler's MediationBench); Salim tracks economic value per unit of human involvement; Peter readies an Abundance/Singularity index."
+   ],
+   "quote": null,
+   "watch": "LifeEval is OpenAI grading its own models; GDPX is independent.",
+   "names": [
+    {
+     "name": "SemiAnalysis",
+     "blurb": "Built GDPX; Dave a self-described Dylan Patel fan",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Medium",
+     "horizon": null
+    },
+    {
+     "name": "Anthropic (ANT)",
+     "blurb": "Opus 5.5 leads GDPX at 12%",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Medium",
+     "horizon": null
+    },
+    {
+     "name": "Meta (META)",
+     "blurb": "Muse agent imminent; ad model in flux",
+     "stance": "UNCERTAIN",
+     "conviction": "Low",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "anthropic-rsi",
+   "tags": [
+    "ai-infra",
+    "software"
+   ],
+   "color": "green",
+   "badge": "High conviction",
+   "status": "ANTHROPIC AMENDED S-1",
+   "title": "Anthropic's S-1 makes recursive self-improvement a line item",
+   "lead": "Claude's internal usage now costs more than Anthropic's payroll and writes 90% of its code — the panel's financial proof that RSI has arrived.",
+   "bullets": [
+    "Since April, internal Claude usage at consumer prices exceeds monthly cash payroll; usage grew **250x** January-September.",
+    "Claude authored over **90%** of September 2026 code contributions; daily code contributions per engineer are 45x two years ago.",
+    "Alex: by capital/opex, \"we've arrived\" — but real RSI is physical recursion (nanobots building copies); Salim notes Claude's share of its own next version went from ~10% to 40% and 60%.",
+    "Dave's math: top models cost ~$1/day per human-equivalent; a Lightwave engineer burned half a billion tokens (~$5,000) in a day ≈ 5,000 people; costs fall ~10x a year.",
+    "Salim's playbook: under 50 people, brute-force the shift; over 50, build a side stack and move workflows over one by one — one firm cut 22 steps to four.",
+    "Use cases: a Cisco junior employee reportedly asked to rewrite the whole codebase with AI; Kevin Weil's new fully automated biotech research company raised big."
+   ],
+   "quote": null,
+   "watch": "Peter and Dave are investors in Kevin Weil's new biotech company.",
+   "names": [
+    {
+     "name": "Anthropic (ANT)",
+     "blurb": "S-1: AI spend > payroll, 90% of code by Claude",
+     "stance": "POSITIVE VIEW",
+     "conviction": "High",
+     "horizon": null
+    },
+    {
+     "name": "Cisco (CSCO)",
+     "blurb": "Reported full-codebase AI rewrite",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "weight-space-programming",
+   "tags": [
+    "ai-infra"
+   ],
+   "color": "gray",
+   "badge": "Speculative",
+   "status": "MIT CSAIL PAPER · EARLY, SMALL-SCALE",
+   "title": "Models editing other models' weights directly",
+   "lead": "MIT's \"Sparks of Weight Space Programming\" shows a frontier model surgically fixing a small model with no retraining — a possible shortcut to RSI.",
+   "bullets": [
+    "Astra diagnosed why Qwen 3.5 got stuck in thinking loops, edited **0.016%** of its weights and lifted its math score from 7.9% to 48.1% — no backprop.",
+    "Alex: future of mechanistic interpretability and of \"abliteration\" (stripping open models' guardrails); what OpenAI's shut-down superalignment effort meant to do.",
+    "Dave: a path to a Hugging Face for finished neural modules — bolt a biotech or Swahili module onto a ~40B base instead of a $100M+ retrain (e.g. a Moderna team).",
+    "Panel is \"90 plus%\" confident frontier labs already run self-editing models; risk side is de-guardrailing open-source Chinese models.",
+    "Likened to the first integrated transistor — profound, but only ~0.01% of a model so far.",
+    "Persistent rumor: Ilya Sutskever's SSI has been doing prop/quant trading; Alex calls that a likely \"fail for civilization\"."
+   ],
+   "quote": {
+    "text": "The machines will understand the machines.",
+    "cite": "— Alex Wissner-Gross"
+   },
+   "watch": "The paper drew backlash that it's less transformative than it looks; the SSI trading story is rumor.",
+   "names": [
+    {
+     "name": "SSI",
+     "blurb": "Rumored prop trading; still in stealth",
+     "stance": "NEGATIVE VIEW",
+     "conviction": "Low",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "freezer-hack",
+   "tags": [
+    "geopolitics",
+    "policy"
+   ],
+   "color": "red",
+   "badge": "Confirmed event",
+   "status": "SECOND WAVE · 8 COUNTRIES",
+   "title": "Hackers defrosted Europe's supermarket freezers",
+   "lead": "Internet-connected fridge controllers let attackers crank stores to 55°C — proof that legacy industrial systems are the soft target.",
+   "bullets": [
+    "Attackers switched on defrost mode remotely, up to **55°C**, in 8 countries incl. Belgium, Sweden, Ireland, Netherlands, Luxembourg, Estonia; ~€100,000 of spoiled food in Belgium.",
+    "Second wave: 3 weeks earlier the same attack hit 500+ stores in France; no one claimed it, fingers point at Russia.",
+    "Week before: one Binance engineer's laptop cost **$6B** in stolen tokens.",
+    "Offense is now humans-out-of-the-loop agent swarms while defense stays human-in-the-loop; Peter expects banks, power and the grid next over a tough 1-8 year transition.",
+    "Alex: AI is patching the Linux kernel at record scale but not legacy SCADA — \"many billions of dollars of opportunity\".",
+    "Too small to wake politicians — the warning hack Eric Schmidt has been looking for."
+   ],
+   "quote": {
+    "text": "we bolted 1990s security onto 2026 connectivity",
+    "cite": "— Peter Diamandis"
+   },
+   "watch": "Attribution is unconfirmed; nobody has claimed responsibility.",
+   "names": [
+    {
+     "name": "Binance",
+     "blurb": "$6B stolen via one engineer's laptop",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "artemis-antimatter",
+   "tags": [
+    "space"
+   ],
+   "color": "green",
+   "badge": "Confirmed event",
+   "status": "ARTEMIS 3 SUMMER 2027 · ARTEMIS 4 2028",
+   "title": "NASA back at Apollo speed, and a positron held for a month",
+   "lead": "Isaacman's plan puts humans on the Moon in 2028 against China; Northwestern's antimatter trap is a first step toward antimatter propulsion.",
+   "bullets": [
+    "Artemis 3 (summer 2027): four astronauts practice Orion docking with **both** Blue Origin's lander and SpaceX's Starship in Earth orbit; three launches in quick sequence.",
+    "Artemis 4 (2028): first humans on the Moon since 1972; NASA picks the landing provider as late as possible; south-pole Moon base, first launch by year-end.",
+    "Isaacman calls it a race against China \"much closer than it ever needed to be\"; US imagery via Maxar shows an advanced Chinese space plane.",
+    "History: Apollo 7 to Apollo 11 took 9 months; an early-1970s report projected a 100-person Moon base by 1986; the panel blames cold-war budget diversion for the 50-year gap.",
+    "Northwestern (Gabrielse group): a positron held a month at 0.3 K in a \"container without walls\"; matters for CPT symmetry and Isaacman's interest in antimatter propulsion.",
+    "Efficiency of rest mass: antimatter ~100%, fusion ~1-4%, fission ~0.1-0.3%."
+   ],
+   "quote": null,
+   "watch": "Timeline depends on federal budget; Peter keynotes with Isaacman this week.",
+   "names": [
+    {
+     "name": "SpaceX (SPCX)",
+     "blurb": "Starship lander in the Artemis 3 docking test",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Medium",
+     "horizon": "2027-2028"
+    },
+    {
+     "name": "Blue Origin",
+     "blurb": "Competing lander; must make up lost time",
+     "stance": "WATCHING",
+     "conviction": "Low",
+     "horizon": "2027-2028"
+    }
+   ]
+  }
+ ],
+ "takeaways": [
+  {
+   "icon": "💰",
+   "tag": "Markets",
+   "title": "Watch insurance capital as the next funder of AI infrastructure"
+  },
+  {
+   "icon": "📉",
+   "tag": "Credit",
+   "title": "Track lender terms, round sizes and put demand for the first real capex strain"
+  },
+  {
+   "icon": "📏",
+   "tag": "Benchmarks",
+   "title": "Use GDPX, not lab-run evals, to gauge when expert work gets automated"
+  },
+  {
+   "icon": "🏗",
+   "tag": "AI ops",
+   "title": "Move workflows one by one onto an AI side stack if your company has 50+ people"
+  },
+  {
+   "icon": "🛡",
+   "tag": "Cyber",
+   "title": "Take connected devices and legacy controllers off the open internet"
+  }
+ ],
+ "hot_takes": [
+  {
+   "take": "I think Apple has only itself to blame.",
+   "cite": "— Alex Wissner-Gross",
+   "why": "on memory prices"
+  },
+  {
+   "take": "I would never lend money to somebody who only makes money by serving AI from a data center.",
+   "cite": "— Elon Musk (quoted by Dave Blundin)",
+   "why": "jab at AI-only borrowers"
+  },
+  {
+   "take": "this is about to get solved like probably next year max, maybe two",
+   "cite": "— Alex Wissner-Gross",
+   "why": "GDPX saturation"
+  },
+  {
+   "take": "I think everything crumbles really quickly, like within two years, everything pretty much saturates",
+   "cite": "— Dave Blundin",
+   "why": "benchmarks"
+  },
+  {
+   "take": "I don't see any future in which governments are not being run by sovereign AI systems.",
+   "cite": "— Peter Diamandis",
+   "why": "governance"
+  },
+  {
+   "take": "I think that's probably a fail for civilization",
+   "cite": "— Alex Wissner-Gross",
+   "why": "if SSI is a quant-trading shop"
+  }
+ ],
+ "claims": [
+  {
+   "who": "Alex Wissner-Gross",
+   "claim": "GDPX will be saturated within a year, two at most.",
+   "metric": "GDPX top score",
+   "target": "saturated",
+   "by": "2027-2028",
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Dave Blundin",
+   "claim": "Top models reach ~50% on GDPX in about a year and nearly every benchmark saturates within two.",
+   "metric": "GDPX top score",
+   "target": "50%",
+   "by": "2027-11",
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Dave Blundin",
+   "claim": "In the 2028 election the vast majority of voters will ask an AI agent what to do.",
+   "metric": "voters consulting AI agents",
+   "target": "vast majority",
+   "by": "2028",
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Dave Blundin",
+   "claim": "Cost of AI labor keeps falling about 10x a year, so a day's half-billion tokens buys ~50,000 people-equivalents next year.",
+   "metric": "AI cost per human-equivalent",
+   "target": "-10x per year",
+   "by": "2027-11",
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Salim Ismail",
+   "claim": "Radically new compute paradigms are at least 3-5 years from coming online.",
+   "metric": "new compute paradigm",
+   "target": "online",
+   "by": "3-5 years",
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Peter Diamandis",
+   "claim": "eBay auction volume skyrockets as agents photograph, price and list household items.",
+   "metric": "eBay auctions",
+   "target": "skyrocket",
+   "by": "6 months",
+   "condition": null,
+   "entity": "eBay (EBAY)"
+  },
+  {
+   "who": "Peter Diamandis",
+   "claim": "Cyber attacks spread to banks, power and the grid over a tough transition.",
+   "metric": "transition period",
+   "target": "1-8 years",
+   "by": null,
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Jared Isaacman (cited by Peter Diamandis)",
+   "claim": "Artemis 3 launches next summer to test docking with both lunar landers.",
+   "metric": "Artemis 3 launch",
+   "target": "launch",
+   "by": "2027",
+   "condition": null,
+   "entity": "NASA"
+  },
+  {
+   "who": "Jared Isaacman (cited by Peter Diamandis)",
+   "claim": "Artemis 4 lands the first humans on the Moon since 1972.",
+   "metric": "crewed lunar landing",
+   "target": "landing",
+   "by": "2028",
+   "condition": null,
+   "entity": "NASA"
+  },
+  {
+   "who": "Alex Wissner-Gross",
+   "claim": "Many Starships could fly empty if new use cases like orbital data centers don't absorb the upmass.",
+   "metric": "Starship utilization",
+   "target": "empty flights",
+   "by": null,
+   "condition": "if no new use cases emerge",
+   "entity": "SpaceX (SPCX)"
+  },
+  {
+   "who": "David Sinclair (cited by Peter Diamandis)",
+   "claim": "AI-discovered three-molecule therapy SL100 will cost about $200 a month.",
+   "metric": "SL100 price",
+   "target": "$200/month",
+   "by": null,
+   "condition": null,
+   "entity": null
+  }
+ ],
+ "relations": [
+  {
+   "from": "SpaceX (SPCX)",
+   "rel": "competes_with",
+   "to": "Blue Origin",
+   "note": "for the Artemis crew lander"
+  },
+  {
+   "from": "OpenAI",
+   "rel": "competes_with",
+   "to": "Apple (AAPL)",
+   "note": "Altman aims to take the front-end interface"
+  }
+ ],
+ "other_news": [
+  {
+   "icon": "🗳",
+   "title": "Election day: panel argues AIs \"already have the vote\" through what voters ask them; OpenAI and Anthropic run election war rooms; a panelist cites a 2015 Yale study that US legislation doesn't follow public will; push for local control and more special economic zones (Diamond Age).",
+   "tag": "Politics"
+  },
+  {
+   "icon": "🏆",
+   "title": "XPRIZE (CEO Anousheh Ansari) weighs city-level micro-bounties; Dave's Forge v2 aims to show CEOs what 50,000 people's worth of AI could do; SemiAnalysis' Catrini reportedly cracked scorpion antivenom.",
+   "tag": "Innovation"
+  },
+  {
+   "icon": "🧬",
+   "title": "Longevity: sleep, diet, exercise, mindset first; David Sinclair's partial epigenetic reprogramming uses 3 Yamanaka factors via AAV at **$0.5-2M** per treatment; the $101M Healthspan XPRIZE targets 20 years of reversal and must be affordable.",
+   "tag": "Health"
+  },
+  {
+   "icon": "🧭",
+   "title": "AMA: Salim says 79% of corporate workers feel no connection to their work — purpose ≠ employment; Dave: AI will unlock human self-improvement via daily planning; Alex: a second renaissance rediscovering the post-WWII era after Tyler Cowen's great stagnation.",
+   "tag": "Society"
+  },
+  {
+   "icon": "🤖",
+   "title": "Robots: Alex expects humanoid supply to overwhelm demand until new uses (robots building data centers) clear it, like Starship upmass needing orbital data centers; Peter: go to trade school — the singularity needs electricians and plumbers.",
+   "tag": "Robotics"
+  },
+  {
+   "icon": "📢",
+   "title": "Dave on Elon's \"contaminated by empathy\": US decisions skew to media outliers (a Learjet crash) while China lets statisticians decide — why it has abundant energy and Europe doesn't.",
+   "tag": "Culture"
+  },
+  {
+   "icon": "📚",
+   "title": "Sources referenced: Wall Street Journal, Financial Times, SemiAnalysis/Dylan Patel, Anthropic's S-1, MIT CSAIL, Kevin Kelly, Neal Stephenson's Diamond Age.",
+   "tag": "Sources"
+  }
+ ],
+ "glossary": [
+  {
+   "term": "RSI",
+   "def": "Recursive self-improvement: AI building better AI."
+  },
+  {
+   "term": "GDPX",
+   "def": "SemiAnalysis benchmark dropping agents into realistic 8-hour expert work across 11 frontier fields."
+  },
+  {
+   "term": "LifeEval",
+   "def": "OpenAI benchmark of 169 everyday tasks done via browser."
+  },
+  {
+   "term": "Pareto frontier",
+   "def": "Set of models where no other is both cheaper and better."
+  },
+  {
+   "term": "Abliteration",
+   "def": "Removing an open model's safety behavior by editing a few weights."
+  },
+  {
+   "term": "SCADA",
+   "def": "Supervisory control and data acquisition — industrial control systems like the hacked fridge controllers."
+  },
+  {
+   "term": "CPT symmetry",
+   "def": "Charge-parity-time symmetry; antimatter measurements test it."
+  },
+  {
+   "term": "MTP",
+   "def": "Massive transformative purpose — a cause to point intelligence at."
+  }
+ ]
+}
