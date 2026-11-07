@@ -1,0 +1,129 @@
+META = {
+    "title": "Building AI for the $650B Home Services Market",
+    "channel": "YC Root Access",
+    "speakers": "Broccoli co-founders (Arjun, AJ) with a YC host",
+    "date": "2026-10-29",
+    "video_url": "https://www.youtube.com/watch?v=5NRNqjlmnKQ",
+    "thread_line": "4 threads · two failed ideas to a pivot, talking to 140 contractors, the first customer, AI and the technician's job",
+    "category": "life",
+    "region": "",
+}
+
+SNAPSHOT = [
+    "Broccoli automates the front office (calls, prospects, scheduling by voice, text and SMS) for HVAC, plumbing and electrical companies: **500+ clients**, ARR expected above $60M by end of year from $0 two years ago.",
+    "The founders came to it after two dead ideas: a campus delivery app era, an EdTech product that could not scale, then EV APIs (Telematica) that sold into a market too small and too indifferent.",
+    "The pivot rule: pick a market that is large from day one, and solve the customer's single biggest problem, not their third or fourth.",
+    "Selling failed; learning worked. Pitching AI to contractors got doors slammed, asking to learn about their family business got 8 conversations a day and 140 interviews in two months.",
+    "The biggest pain was after-hours calls going to $5,000-$10,000 a month answering services; the first customer was won by demoing an AI voice, not by selling a solution.",
+    "Founders expect AI to shrink the time to expert technician from 10-15 years to about two, by handling the lookup-and-documentation part of diagnosis.",
+]
+
+THEMES = [
+    {
+        "id": "dead-ideas",
+        "tags": ["career", "mindset"],
+        "color": "amber",
+        "badge": "Cautionary tale",
+        "status": "THREE YC APPLICATIONS, THEN THE TELEMATICA PIVOT",
+        "title": "Two and a half years on EV APIs taught them to test whether the problem is the customer's problem",
+        "lead": "A good idea for the founders can be a fifth-priority problem for the customer, and that is a signal to move on.",
+        "bullets": [
+            "Friends from adjacent dorms at BITS Pilani, building ideas since 2017; the EdTech idea ran about three years and could not expand.",
+            "Their framework afterward: pick an idea, work on it for three months, and if it does not work, move on, even if that takes ten years.",
+            "Telematica (APIs for electric vehicles) went from idea to YC application in **25 days**; they moved from India to London four months after acceptance because the Indian EV market was too small.",
+            "Consumer demand-response never worked: remote charging control saves about **$50 a year**, which is not worth risking a car that is uncharged on a work morning; energy companies never found a business use case for the API.",
+            "During the pivot an early angel investor suggested returning the money and getting a proper job; they concluded the problem might be the market, not themselves.",
+        ],
+        "quote": {"text": "If it is the fifth priority, it probably isn't a problem we need to solve.", "cite": "— Broccoli co-founder"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "pivot-method",
+        "tags": ["career", "mindset"],
+        "color": "green",
+        "badge": "Framework",
+        "status": "MAY 2024, BAY AREA CONTRACTORS",
+        "title": "Learning beat selling: 140 contractor conversations with no product and no pitch",
+        "lead": "Founders who walked in as AI salespeople got thrown out; the same founders who asked to learn about the family business got welcomed.",
+        "bullets": [
+            "Selection criteria for the next idea: a large market from the start (not one with potential for growth), and the customer's number-one pain.",
+            "Of the three Telematica customer types (energy, electrical construction, vehicle maintenance) they chose construction/contractors, partly on personal preference for selling to owners over being a product manager at a 5,000-person utility.",
+            "Two weeks of LinkedIn-style outreach to contractors in the Bay Area produced **zero conversations**; a plumber shouted at them to get out and someone slammed the door.",
+            "Even two years earlier the word 'AI' was unmentionable in the service industry, in what are often family-run businesses.",
+            "Switching to 'we are students, we would like to learn your family's plumbing business' gave 8 conversations a day, 140 contractors in about two months, and ride-alongs in technicians' trucks.",
+        ],
+        "quote": {"text": "I think I probably underestimated the contractors.", "cite": "— Broccoli co-founder"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "first-customer",
+        "tags": ["career", "software"],
+        "color": "green",
+        "badge": "Personal story",
+        "status": "SACRAMENTO, THEN PRODUCT-MARKET FIT",
+        "title": "After-hours calls were the pain, and the first customer arrived without a pitch",
+        "lead": "The problem was a missed call at 5 p.m., and the demo was the sale.",
+        "bullets": [
+            "After-hours emergencies hit offices with nobody in them; callers who reach voicemail find another plumber on Google or Yelp. About **80%** of customers who had an answering service were paying **$5,000-$10,000 a month** for it.",
+            "No solution was proposed in interviews; contractors had none in mind. After hearing 60 daily-life stories, about 60% pointed to phone response.",
+            "They played contractors a recording of an AI voice; the owner's first use case was calling customers to confirm appointments, the lowest-risk option.",
+            "First client was a Sacramento plumbing company; the owner, Marcella Flowers, later joined Broccoli. The founder commuted daily from San Francisco and wrote his first code at her workshop, connected to her CRM ServiceTitan.",
+            "Version one went live in two weeks, covering 5-7 p.m. calls: **3 appointments in two hours** versus a prior overnight maximum of about two. The owner wanted to cancel the answering service the next day; a full weekend then produced **19 bookings** versus a previous maximum near 5.",
+            "That client's word of mouth brought up to 20 customers without door-to-door sales.",
+        ],
+        "quote": {"text": "I no longer needed to do direct door-to-door sales.", "cite": "— Broccoli co-founder"},
+        "watch": "The founders are YC alumni speaking on a YC channel about their own company; all revenue and client figures are company-stated.",
+        "names": None,
+    },
+    {
+        "id": "scale-and-technicians",
+        "tags": ["software", "career", "robotics"],
+        "color": "green",
+        "badge": "Principle",
+        "status": "75 PEOPLE, $60M ARR TARGET",
+        "title": "From voice assistant to front office, and AI that compresses the technician learning curve",
+        "lead": "A voice product that answers calls expanded into the whole front office and now targets the knowledge work behind a repair.",
+        "bullets": [
+            "Scale: 500+ clients (large operators, not single stores), about **75 employees**, from roughly 15 people at $2M revenue. The company says that AI-driven bookings for clients passed $1 billion in annual revenue last week.",
+            "Customers spend about 2% of revenue on software such as ServiceTitan or QuickBooks and about 15% on office labor, of which roughly 2% is front-office automation today.",
+            "Becoming an expert technician takes 10-15 years plus certification; the founder expects AI to cut that to about **two years**, with AI already helping with at least 20% of problems.",
+            "Most diagnosis is operational: serial number, finding the right document, knowing where to look. Today a technician without a connection must phone headquarters; with a smartphone and AI the lookup happens on site.",
+            "Culture at scale: new engineers (including from India) spend time in San Francisco with customers at the plumbing store, since working beside the customer is the easiest way to teach customer thinking.",
+        ],
+        "quote": {"text": "I really can't do anything other than this job.", "cite": "— Broccoli co-founder"},
+        "watch": "The market figure in the title ($650B) is not cleanly spoken in the captions, so no market-size claim is recorded here.",
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F3AF", "tag": "Startups", "title": "Ask the customer for their top three problems and drop any idea that is not in the top one."},
+    {"icon": "\U0001F91D", "tag": "Sales", "title": "Walk in to learn, not to pitch; a request for advice opens doors that a product pitch closes."},
+    {"icon": "\U0001F4DE", "tag": "Product", "title": "Pick the lowest-risk first use case (appointment confirmations) and let a demo do the selling."},
+    {"icon": "\U0001F4CF", "tag": "Markets", "title": "Choose a market that is large on day one, not one that might grow."},
+    {"icon": "\U0001F6E0", "tag": "Careers", "title": "Keep technician knowledge in hand on site: documents and serial lookups are where AI helps first."},
+]
+
+HOT_TAKES = [
+    {"take": "I think AI will narrow that gap to about two years.", "cite": "— Broccoli co-founder", "why": "Expert technician time from 10-15 years to 2"},
+    {"take": "AI is already helping with at least 20% of problems.", "cite": "— Broccoli co-founder", "why": "numeric claim on diagnosis"},
+]
+
+CLAIMS = [
+    {"who": "Broccoli co-founder", "claim": "Broccoli ARR is expected to exceed $60 million by end of year.", "metric": "ARR", "target": "$60M+", "by": "2026-12", "condition": None, "entity": None},
+    {"who": "Broccoli co-founder", "claim": "AI will narrow the time to become an expert technician from 10-15 years to about two years.", "metric": "years to expert technician", "target": "about 2 years", "by": None, "condition": None, "entity": None},
+]
+
+RELATIONS = []
+
+OTHER_NEWS = [
+    {"icon": "\U0001F4DA", "title": "Sources referenced this episode: ServiceTitan (industry CRM, public, over $1B revenue), Amazon's 14 principles (culture reference). No other outside sources named.", "tag": "Sources"},
+]
+
+GLOSSARY = [
+    {"term": "BPO", "def": "Business process outsourcing: third-party answering services that took after-hours calls for contractors."},
+    {"term": "PMF", "def": "Product-market fit; the founders say it must be found again at every stage of the business."},
+    {"term": "Telematica", "def": "The founders' earlier YC company building APIs for electric vehicles."},
+]

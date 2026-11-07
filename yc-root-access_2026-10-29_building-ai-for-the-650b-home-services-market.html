@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: Building AI for the $650B Home Services Market</title>
+<meta name="description" content="YC Root Access · 4 threads · two failed ideas to a pivot, talking to 140 contractors, the first customer, AI and the technician&#x27;s job">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="Building AI for the $650B Home Services Market">
+<meta property="og:description" content="YC Root Access · 4 threads · two failed ideas to a pivot, talking to 140 contractors, the first customer, AI and the technician&#x27;s job">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Building AI for the $650B Home Services Market</h1>
+    <div class="byline">
+      Channel: <b>YC Root Access</b> &middot; Speaker: <b>Broccoli co-founders (Arjun, AJ) with a YC host</b> &middot; <b>2026-10-29</b>
+      <div class="stats-line">4 threads · two failed ideas to a pivot, talking to 140 contractors, the first customer, AI and the technician's job &middot; <a href="https://www.youtube.com/watch?v=5NRNqjlmnKQ" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Broccoli automates the front office (calls, prospects, scheduling by voice, text and SMS) for HVAC, plumbing and electrical companies: <b>500+ clients</b>, ARR expected above $60M by end of year from $0 two years ago.</li><li>The founders came to it after two dead ideas: a campus delivery app era, an EdTech product that could not scale, then EV APIs (Telematica) that sold into a market too small and too indifferent.</li><li>The pivot rule: pick a market that is large from day one, and solve the customer's single biggest problem, not their third or fourth.</li><li>Selling failed; learning worked. Pitching AI to contractors got doors slammed, asking to learn about their family business got 8 conversations a day and 140 interviews in two months.</li><li>The biggest pain was after-hours calls going to <b>$5,000</b>-$10,000 a month answering services; the first customer was won by demoing an AI voice, not by selling a solution.</li><li>Founders expect AI to shrink the time to expert technician from 10-15 years to about two, by handling the lookup-and-documentation part of diagnosis.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="dead-ideas">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Cautionary tale</span>
+    <span class="theme-status">THREE YC APPLICATIONS, THEN THE TELEMATICA PIVOT</span><span class="ttag">career</span><span class="ttag">mindset</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Two and a half years on EV APIs taught them to test whether the problem is the customer's problem</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">A good idea for the founders can be a fifth-priority problem for the customer, and that is a signal to move on.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Friends from adjacent dorms at BITS Pilani, building ideas since 2017; the EdTech idea ran about three years and could not expand.</li><li><span class="dot" style="background:#93711b;"></span>Their framework afterward: pick an idea, work on it for three months, and if it does not work, move on, even if that takes ten years.</li><li><span class="dot" style="background:#93711b;"></span>Telematica (APIs for electric vehicles) went from idea to YC application in <b>25 days</b>; they moved from India to London four months after acceptance because the Indian EV market was too small.</li><li><span class="dot" style="background:#93711b;"></span>Consumer demand-response never worked: remote charging control saves about <b>$50 a year</b>, which is not worth risking a car that is uncharged on a work morning; energy companies never found a business use case for the API.</li><li><span class="dot" style="background:#93711b;"></span>During the pivot an early angel investor suggested returning the money and getting a proper job; they concluded the problem might be the market, not themselves.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;If it is the fifth priority, it probably isn't a problem we need to solve.&#8221;<cite>— Broccoli co-founder</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="pivot-method">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Framework</span>
+    <span class="theme-status">MAY 2024, BAY AREA CONTRACTORS</span><span class="ttag">career</span><span class="ttag">mindset</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Learning beat selling: 140 contractor conversations with no product and no pitch</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Founders who walked in as AI salespeople got thrown out; the same founders who asked to learn about the family business got welcomed.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Selection criteria for the next idea: a large market from the start (not one with potential for growth), and the customer's number-one pain.</li><li><span class="dot" style="background:#3f6b2e;"></span>Of the three Telematica customer types (energy, electrical construction, vehicle maintenance) they chose construction/contractors, partly on personal preference for selling to owners over being a product manager at a 5,000-person utility.</li><li><span class="dot" style="background:#3f6b2e;"></span>Two weeks of LinkedIn-style outreach to contractors in the Bay Area produced <b>zero conversations</b>; a plumber shouted at them to get out and someone slammed the door.</li><li><span class="dot" style="background:#3f6b2e;"></span>Even two years earlier the word 'AI' was unmentionable in the service industry, in what are often family-run businesses.</li><li><span class="dot" style="background:#3f6b2e;"></span>Switching to 'we are students, we would like to learn your family's plumbing business' gave 8 conversations a day, 140 contractors in about two months, and ride-alongs in technicians' trucks.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;I think I probably underestimated the contractors.&#8221;<cite>— Broccoli co-founder</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="first-customer">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Personal story</span>
+    <span class="theme-status">SACRAMENTO, THEN PRODUCT-MARKET FIT</span><span class="ttag">career</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">After-hours calls were the pain, and the first customer arrived without a pitch</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The problem was a missed call at 5 p.m., and the demo was the sale.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>After-hours emergencies hit offices with nobody in them; callers who reach voicemail find another plumber on Google or Yelp. About <b>80%</b> of customers who had an answering service were paying <b>$5,000-$10,000 a month</b> for it.</li><li><span class="dot" style="background:#3f6b2e;"></span>No solution was proposed in interviews; contractors had none in mind. After hearing 60 daily-life stories, about <b>60%</b> pointed to phone response.</li><li><span class="dot" style="background:#3f6b2e;"></span>They played contractors a recording of an AI voice; the owner's first use case was calling customers to confirm appointments, the lowest-risk option.</li><li><span class="dot" style="background:#3f6b2e;"></span>First client was a Sacramento plumbing company; the owner, Marcella Flowers, later joined Broccoli. The founder commuted daily from San Francisco and wrote his first code at her workshop, connected to her CRM ServiceTitan.</li><li><span class="dot" style="background:#3f6b2e;"></span>Version one went live in two weeks, covering 5-7 p.m. calls: <b>3 appointments in two hours</b> versus a prior overnight maximum of about two. The owner wanted to cancel the answering service the next day; a full weekend then produced <b>19 bookings</b> versus a previous maximum near 5.</li><li><span class="dot" style="background:#3f6b2e;"></span>That client's word of mouth brought up to 20 customers without door-to-door sales.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;I no longer needed to do direct door-to-door sales.&#8221;<cite>— Broccoli co-founder</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The founders are YC alumni speaking on a YC channel about their own company; all revenue and client figures are company-stated.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="scale-and-technicians">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Principle</span>
+    <span class="theme-status">75 PEOPLE, $60M ARR TARGET</span><span class="ttag">software</span><span class="ttag">career</span><span class="ttag">robotics</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">From voice assistant to front office, and AI that compresses the technician learning curve</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">A voice product that answers calls expanded into the whole front office and now targets the knowledge work behind a repair.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Scale: 500+ clients (large operators, not single stores), about <b>75 employees</b>, from roughly 15 people at $2M revenue. The company says that AI-driven bookings for clients passed $1 billion in annual revenue last week.</li><li><span class="dot" style="background:#3f6b2e;"></span>Customers spend about <b>2%</b> of revenue on software such as ServiceTitan or QuickBooks and about 15% on office labor, of which roughly 2% is front-office automation today.</li><li><span class="dot" style="background:#3f6b2e;"></span>Becoming an expert technician takes 10-15 years plus certification; the founder expects AI to cut that to about <b>two years</b>, with AI already helping with at least 20% of problems.</li><li><span class="dot" style="background:#3f6b2e;"></span>Most diagnosis is operational: serial number, finding the right document, knowing where to look. Today a technician without a connection must phone headquarters; with a smartphone and AI the lookup happens on site.</li><li><span class="dot" style="background:#3f6b2e;"></span>Culture at scale: new engineers (including from India) spend time in San Francisco with customers at the plumbing store, since working beside the customer is the easiest way to teach customer thinking.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;I really can't do anything other than this job.&#8221;<cite>— Broccoli co-founder</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The market figure in the title ($650B) is not cleanly spoken in the captions, so no market-size claim is recorded here.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🎯</div><div class="tline"><span class="cat">Startups:</span> <span class="txt">Ask the customer for their top three problems and drop any idea that is not in the top one.</span></div></div><div class="irow"><div class="ic">🤝</div><div class="tline"><span class="cat">Sales:</span> <span class="txt">Walk in to learn, not to pitch; a request for advice opens doors that a product pitch closes.</span></div></div><div class="irow"><div class="ic">📞</div><div class="tline"><span class="cat">Product:</span> <span class="txt">Pick the lowest-risk first use case (appointment confirmations) and let a demo do the selling.</span></div></div><div class="irow"><div class="ic">📏</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Choose a market that is large on day one, not one that might grow.</span></div></div><div class="irow"><div class="ic">🛠</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Keep technician knowledge in hand on site: documents and serial lookups are where AI helps first.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;I think AI will narrow that gap to about two years.&#8221; <cite>— Broccoli co-founder</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;AI is already helping with at least 20% of problems.&#8221; <cite>— Broccoli co-founder</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Broccoli co-founder:</b> Broccoli ARR is expected to exceed $60 million by end of year. <span class="cmeta">ARR · $60M+ · 2026-12</span></div><div class="ritem"><b>Broccoli co-founder:</b> AI will narrow the time to become an expert technician from 10-15 years to about two years. <span class="cmeta">years to expert technician · about 2 years</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><p class="empty">No company-to-company relationships stated in this video.</p></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced this episode: ServiceTitan (industry CRM, public, over <b>$1B</b> revenue), Amazon's 14 principles (culture reference). No other outside sources named. <span class="tag">Sources</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>BPO</b> &mdash; Business process outsourcing: third-party answering services that took after-hours calls for contractors.</div><div><b>PMF</b> &mdash; Product-market fit; the founders say it must be found again at every stage of the business.</div><div><b>Telematica</b> &mdash; The founders' earlier YC company building APIs for electric vehicles.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
