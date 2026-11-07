@@ -1,0 +1,181 @@
+"""Raoul Pal Friday drinks AMA livestream, recorded 2023-11-17 (Grand Cayman). Caption ends mid-sentence in a closing disclaimer; no content lost."""
+META = {
+    "title": "🔴 Drinks with Raoul Pal: Ask Me Anything",
+    "channel": "Raoul Pal The Journey Man",
+    "speakers": "Raoul Pal",
+    "date": "2023-11-17",
+    "video_url": "https://www.youtube.com/watch?v=WvRua0iPwiQ",
+    "thread_line": "5 threads · macro spring into the banana zone · inflation falls, the ISM turns · buy, hold, add until 2030 · Solana, Coinbase, Tesla and MicroStrategy calls · gold, energy and the UK investor problem",
+    "category": "market",
+}
+
+SNAPSHOT = [
+    "A November 2023 Friday drinks AMA from Grand Cayman; Raoul Pal answers Real Vision members' questions over a Gramona cava.",
+    "His frame: 2022 priced the recession; 2023 is macro and crypto spring, moving into a year-end **banana zone**, then summer in 2024 and a 'batshit crazy' 2025.",
+    "Year to date by his count: Nasdaq almost +50%, exponential-age tech basket +63%, Bitcoin +119%, Ethereum +63%, Solana **+500%**.",
+    "Inflation is mean-reverting: back to 2% or lower, likely negative including core in this cycle; zero chance of a December Fed hike.",
+    "He hasn't sold a single crypto holding since buying aggressively in **April 2020** and plans to run most of it to 2030.",
+    "Calls: Coinbase over Tesla for two months, Solana over Ethereum for six; MicroStrategy likely trades at a discount once a spot Bitcoin ETF exists.",
+    "Corrections in an election year: maybe two of about 10%, at most 15%; buy them.",
+]
+
+THEMES = [
+    {
+        "id": "cycle",
+        "tags": ["macro-rates", "crypto"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "LATE MACRO SPRING · NOV 2023",
+        "title": "Macro spring into the banana zone, then summer in 2024 and a wild 2025",
+        "lead": "Pal says macro and crypto run on the same liquidity cycle, which since 2008 lines up election years with Bitcoin halvings.",
+        "bullets": [
+            "2022 was the bear market: growth tech down about 70%, crypto 70-80%, Nasdaq priced an ISM of **38** that only reached 46.",
+            "He bought Ethereum first in June 2022, then crypto and tech in Oct-Dec 2022, and has added since.",
+            "Late spring brings the **banana zone**: a fast year-end rally that underweight institutions chase.",
+            "Macro summer (2024) = falling rates and inflation, rising unemployment, growth turning up from the floor; same timing as the election year and halving.",
+            "2025 is usually the exponential year before winter, when rates rise and markets pull back.",
+            "Election-year corrections: maybe two of about 10%, max **15%**.",
+            "He credits his 'everything code' thesis, first written in Global Macro Investor, for being 'spookily right' so far.",
+        ],
+        "quote": {"text": "macro spring and crypto spring are the same thing because macro is crypto", "cite": "— Raoul Pal"},
+        "watch": "He frames this probabilistically, 'no guarantees'; he founded and promotes Real Vision, which sells the research he cites.",
+        "names": None,
+    },
+    {
+        "id": "inflation-liquidity",
+        "tags": ["macro-rates"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "FORWARD INDICATORS TURNING",
+        "title": "Inflation falls through 2024, the ISM turns, and liquidity rises",
+        "lead": "Invest 6-18 months ahead: the recession is priced, and forward indicators point to growth picking up.",
+        "bullets": [
+            "Recession this quarter and next is likely but irrelevant unless you trade the Russell 2000, oil or copper.",
+            "Inflation goes to **2% or lower**, likely negative, core too; he thinks the Fed wants lower rates to refinance debt.",
+            "Rates come significantly lower (1-2%); zero is unknown and doesn't matter.",
+            "ISM new orders minus inventories says the ISM is above **50** within three to four months; no double dip, which he says has never happened since 1990 except 2001.",
+            "Fed net liquidity is up **10%** this year; GMI liquidity year on year is positive; China is looking to stimulate, so 2024 is 'the year of stimulus'.",
+            "Debasement marks assets up rather than buying them (as in Argentina, Venezuela, Iran, Turkey): when 20 billionaires show up, every house gaps higher.",
+            "Lagging assets: NFTs bottomed about **15 months** after the Ethereum economy; Rolex and Patek Philippe prices still fall, with recovery in 2024-25.",
+        ],
+        "quote": {"text": "don't invest in today it's the biggest mistake everybody makes in markets", "cite": "— Raoul Pal"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "buy-hold",
+        "tags": ["crypto", "mindset"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "HOLDING — NOTHING SOLD SINCE APRIL 2020",
+        "title": "Buy, hold, add into dips, and run it to 2030",
+        "lead": "His own Bitcoin history taught him that selling early cost far more than any drawdown.",
+        "bullets": [
+            "Bought Bitcoin in 2013 at **$200** as a 10-year bet; valued it at $1 million, discounted 90% to $100,000.",
+            "It rose 5x, fell 85%, ran 10x into 2017; he sold at $2,000-2,500 and watched it reach $20,000.",
+            "Re-entered April 2020 near $6,500 and bought up to about $12,000; holding the original stake would have made 5x more, adding within 30% of lows 25x more.",
+            "Plan: take a little off the table, run most of it until **2030**; no stablecoins, full crypto exposure.",
+            "Rules: buy and hold, no leverage, cold storage (exchange, then Ledger), no FOMO; he still holds a small Solana bag bought at $189.",
+            "He avoids staking yield: native staking tokens are like emerging-market local bonds, the yield gets paid while the currency can go to zero, as with Luna.",
+            "Crypto is the best-performing asset three years of every four; Druckenmiller, Paul Tudor Jones, Soros, Louis Bacon and Steve Cohen trade it, he says.",
+        ],
+        "quote": {"text": "since I started buying aggressively in April 2020 I've not sold a single thing", "cite": "— Raoul Pal"},
+        "watch": "He is an investor in smaller tokens and venture deals, so 'everything looks amazing' comes with exposure.",
+        "names": [
+            {"name": "Bitcoin (BTC)", "blurb": "Held since April 2020; run to 2030.", "stance": "OWNS", "conviction": "High", "horizon": "to 2030"},
+            {"name": "Ethereum (ETH)", "blurb": "Core bet with Solana; ETF could end its lag.", "stance": "OWNS", "conviction": "High", "horizon": "to 2030"},
+        ],
+    },
+    {
+        "id": "picks",
+        "tags": ["crypto", "finance"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "AMA CALLS",
+        "title": "Solana over Ethereum, Coinbase over Tesla, and avoid MicroStrategy",
+        "lead": "Asked to choose, he favors the higher-beta asset in each pair.",
+        "bullets": [
+            "Six months: **Solana** over Ethereum; the Solana trade since his GMI note two months ago 'shocked me'; liquidity pushes Solana up more than Bitcoin.",
+            "Two months: **Coinbase**, though very bullish Tesla; Coinbase probably makes a new all-time high by 2025 and goes up more than Tesla.",
+            "Tesla is held back by high rates hitting car buyers and explodes when rates fall; he calls it the most important company in the world, with **$29 billion** of cash.",
+            "**MicroStrategy** likely trades at a discount to its Bitcoin, as GBTC did, once a spot ETF tracks Bitcoin one for one; steer clear.",
+            "Smaller bags (XRP, Doge, Avalanche, Matic) are leftover shrapnel; Chainlink and The Graph 'look great', but alt season is only starting.",
+            "To a viewer chasing Avalanche: that is FOMO; ask if Ethereum rises over two years.",
+        ],
+        "quote": {"text": "I think coinbase probably goes up more and they're both really high quality companies", "cite": "— Raoul Pal"},
+        "watch": None,
+        "names": [
+            {"name": "Solana (SOL)", "blurb": "Six-month pick; up 500% this year.", "stance": "OWNS", "conviction": "High", "horizon": "6 months"},
+            {"name": "Coinbase (COIN)", "blurb": "Two-month pick; likely new high by 2025.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": "2 months"},
+            {"name": "Tesla (TSLA)", "blurb": "Most important company in the world; rate-sensitive.", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
+            {"name": "MicroStrategy (MSTR)", "blurb": "Likely discount to its Bitcoin once an ETF exists.", "stance": "NEGATIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Chainlink (LINK)", "blurb": "Looks great; not his area.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Avalanche (AVAX)", "blurb": "Small leftover holding; buying it now is FOMO.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "other-assets",
+        "tags": ["energy", "macro-rates"],
+        "color": "amber",
+        "badge": "Mixed",
+        "status": "SIDE BETS",
+        "title": "Gold, energy, uranium and the UK investor problem",
+        "lead": "Outside crypto and tech he likes gold and uranium, but expects everything to underperform tech, and tech to underperform crypto.",
+        "bullets": [
+            "**Gold** should break $2,000; without tech and crypto he'd call it one of the best 12-month risk-reward bets.",
+            "Energy stocks rise in macro summer but underperform tech over 20-30 years.",
+            "Uranium and copper share the cheap-energy thesis; he worries the Sprott-driven retail crowd 'gets rinsed'.",
+            "Carbon allowances lag the ISM; his trade has done nothing and should work once ISM is back above 50.",
+            "UK and European markets have gone nowhere for 20 years, so UK investors take currency risk in US tech; the dollar is in a secular bear market; Europeans 'just buy LVMH'.",
+        ],
+        "quote": None,
+        "watch": None,
+        "names": [
+            {"name": "Gold", "blurb": "Should break $2,000.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": "12 months"},
+            {"name": "LVMH", "blurb": "The one European winner, he jokes.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F4C8", "tag": "Macro", "title": "Position 6-18 months ahead using forward liquidity and ISM new orders, not today's data"},
+    {"icon": "\U0001F48E", "tag": "Crypto", "title": "Buy corrections of 10-15% in election years rather than trading around them"},
+    {"icon": "\U0001F510", "tag": "Risk", "title": "Hold in cold storage without leverage; skip staking yield that adds counterparty risk"},
+    {"icon": "\U0001F3E6", "tag": "Markets", "title": "Prefer a spot Bitcoin ETF over MicroStrategy for pure exposure"},
+]
+
+CLAIMS = [
+    {"who": "Raoul Pal", "claim": "Inflation falls to 2% or lower and likely goes negative, including core, this cycle.", "metric": "US inflation", "target": "<=2%, likely negative", "by": "2024", "condition": None, "entity": None},
+    {"who": "Raoul Pal", "claim": "The ISM goes above 50 within three to four months.", "metric": "ISM manufacturing", "target": ">50", "by": "2024-03", "condition": None, "entity": None},
+    {"who": "Raoul Pal", "claim": "Zero chance the Fed raises rates in December.", "metric": "Fed December decision", "target": "no hike", "by": "2023-12", "condition": None, "entity": None},
+    {"who": "Raoul Pal", "claim": "Election-year corrections are at most about 15%.", "metric": "max correction", "target": "15%", "by": "2024", "condition": None, "entity": None},
+    {"who": "Raoul Pal", "claim": "Coinbase most likely hits a new all-time high by 2025.", "metric": "COIN price", "target": "new all-time high", "by": "2025", "condition": None, "entity": "Coinbase (COIN)"},
+    {"who": "Raoul Pal", "claim": "Gold breaks $2,000.", "metric": "gold price", "target": ">$2,000", "by": "12 months", "condition": None, "entity": "Gold"},
+    {"who": "Raoul Pal", "claim": "MicroStrategy will trade at a discount to its Bitcoin holdings and underperform once a spot ETF exists.", "metric": "MSTR vs BTC holdings", "target": "discount", "by": None, "condition": "once a spot Bitcoin ETF launches", "entity": "MicroStrategy (MSTR)"},
+    {"who": "Raoul Pal", "claim": "2024 is a strong year and 2025 even better before the cycle turns.", "metric": "crypto and tech returns", "target": "banner years", "by": "2025", "condition": None, "entity": None},
+]
+
+RELATIONS = [
+    {"from": "Solana (SOL)", "rel": "competes_with", "to": "Ethereum (ETH)", "note": "rotation from Ethereum into Solana"},
+]
+
+HOT_TAKES = [
+    {"take": "I think it actually goes negative in this cycle and I think core inflation will go negative this cycle too", "cite": "— Raoul Pal", "why": "contrarian inflation call"},
+    {"take": "I honestly think this is the most important company in the world by a long way", "cite": "— Raoul Pal", "why": "Tesla"},
+    {"take": "are you choosing to be poor because that's what you do when you say you don't want crypto", "cite": "— Raoul Pal", "why": "provocative"},
+    {"take": "Julian Brigton was wrong again on NASDAQ um will he be again at the beginning of next year yes of course he's a boomer", "cite": "— Raoul Pal", "why": "jab at his colleague"},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F916", "tag": "AI", "title": "Reacting live to reports Sam Altman was out as OpenAI CEO: maybe OpenAI built internal AGI and he didn't tell the board; 'a hell of a story brewing'."},
+    {"icon": "\U0001F377", "tag": "Lifestyle", "title": "Recommendations: Gramona Imperial cava, home-roasted pumpkin seeds with black salt, a gin martini over vodka, Estrella from Barcelona in a small cold caña, 1996 Dom Perignon, the band Jungle ('Heavy, California'); Cayman builders Phoenix Construction and Edgewater Development."},
+    {"icon": "\U0001F4DA", "tag": "Sources", "title": "Sources referenced: Stan Druckenmiller (invest on forward information), Jordi Visser's end-of-business-cycle thesis, his own Global Macro Investor (19-year track record) and Real Vision Pro Macro, an upcoming exponential-age list portfolio built with Julian Bittel."},
+]
+
+GLOSSARY = [
+    {"term": "Banana zone", "def": "Pal's name for the fast, late-cycle rally phase in crypto and tech."},
+    {"term": "ISM", "def": "US manufacturing survey; above 50 means expansion."},
+    {"term": "Fed net liquidity", "def": "Fed balance sheet minus the Treasury account and reverse repo; a proxy for liquidity."},
+    {"term": "GBTC discount", "def": "Grayscale Bitcoin Trust traded below its Bitcoin value before converting to an ETF."},
+    {"term": "Everything code", "def": "Pal's thesis that debt refinancing and liquidity cycles drive all assets."},
+]
