@@ -266,10 +266,10 @@ def render(data, memos=()):
                    + (f' · {len(rest_m)} earlier</summary><div class="all">'
                       + " ".join(f'<a href="{esc(h)}">{esc(l)}</a>' for l, h in rest_m) + "</div>"
                       if rest_m else "</summary>") + "</details>")
-    out.append(f'<p class="sig-intro">Ideas your sources are converging on, from market briefs only. A narrative is a group '
-               f'of companies and assets that keep getting named together; open one to read the information behind it. '
+    out.append(f'<details class="sig-how"><summary>Ideas your sources are converging on, from market briefs only.</summary>'
+               f'<p class="sig-intro">A narrative is a group of companies and assets that keep getting named together; open one to read the information behind it. '
                f'Growth compares the latest {w["recent_briefs"]} briefs ({esc(w["recent_from"])} to {esc(w["latest"])}) '
-               f'with the {w["prior_briefs"]} before them. It shows attention and lean, not price action.</p>')
+               f'with the {w["prior_briefs"]} before them. It shows attention and lean, not price action.</p></details>')
     hubs = data.get("hubs", [])
     if hubs:
         out.append(f'<p class="sig-note" data-search="{esc(" ".join(f"{n} {t or ''}" for n, t in hubs).lower())}">'

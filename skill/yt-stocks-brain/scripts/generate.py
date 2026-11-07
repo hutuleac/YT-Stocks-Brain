@@ -344,7 +344,16 @@ ul.mentions .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-r
 .m-stance{display:block;font-size:12px;color:var(--brand);font-style:italic;margin-top:2px;}
 .m-blurb{font-size:13.3px;color:#3a3d35;line-height:1.5;margin-top:4px;}
 .noresults{color:var(--muted);font-style:italic;padding:20px 0;display:none;}
-.noresults .jump{font:inherit;font-style:normal;font-weight:600;color:var(--brand);background:none;border:0;padding:0 0 0 6px;cursor:pointer;text-decoration:underline;text-underline-offset:3px;}
+#tkcard{display:flex;align-items:center;flex-wrap:wrap;gap:6px 10px;padding:10px 14px;margin:0 0 16px;border:1px solid var(--line);border-radius:10px;}
+#tkcard .cnt{color:var(--muted);font-size:13px;}
+#tkcard .jump{margin-left:auto;padding:0;}
+.sig-how{margin:4px 0 18px;max-width:760px;}
+.sig-how summary{cursor:pointer;font-size:14px;color:var(--ink);}
+.sig-how .sig-intro{margin:8px 0 0;}
+td.idx-title{width:34%;}
+td.idx-channel{max-width:210px;overflow:hidden;text-overflow:ellipsis;}
+td.idx-thread span{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.noresults .jump,#tkcard .jump{font:inherit;font-style:normal;font-weight:600;color:var(--brand);background:none;border:0;padding:0 0 0 6px;cursor:pointer;text-decoration:underline;text-underline-offset:3px;}
 .hits{display:flex;flex-direction:column;}
 .hitrow{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);}
 .hitrow:last-child{border-bottom:none;}
@@ -854,6 +863,10 @@ def _content_hits(d):
     return hits
 
 
+# Same channel published under two names; merged for the index only (brief slugs stay as they are).
+CHANNEL_ALIASES = {"GrowYourWealth": "Grow your WEALTH - Valentin Dragu si Alex Marian"}
+
+
 def _load_brief(json_path):
     try:
         d = json.load(open(json_path, encoding="utf-8"))
@@ -886,7 +899,7 @@ def _load_brief(json_path):
     return {
         "html": html_name,
         "title": m.get("title", base),
-        "channel": m.get("channel", ""),
+        "channel": CHANNEL_ALIASES.get(m.get("channel", ""), m.get("channel", "")),
         "date": date,
         "speakers": speakers,
         "thread_line": thread_line,
@@ -923,9 +936,9 @@ def _render_chrono_view(briefs):
     rows = "".join(
         f'<tr class="row" data-search="{_search_blob(b["title"], b["channel"], b["speakers"], b["thread_line"], " ".join(b["tags"]), _entity_words(b))}">'
         f'<td class="idx-date">{esc(b["date"])}</td>'
-        f'<td class="idx-channel">{esc(b["channel"])}</td>'
+        f'<td class="idx-channel" title="{esc(b["channel"])}">{esc(b["channel"])}</td>'
         f'<td class="idx-title"><a href="{esc(b["html"])}">{esc(b["title"])}</a></td>'
-        f'<td class="idx-thread">{esc(b["thread_line"])}</td></tr>'
+        f'<td class="idx-thread"><span title="{esc(b["thread_line"])}">{esc(b["thread_line"])}</span></td></tr>'
         for b in briefs
     ) or '<tr><td colspan="4" class="empty">No briefs found yet.</td></tr>'
     return f"""<table class="idx">
@@ -1146,9 +1159,19 @@ INDEX_JS = """
     var av = activeView(), msg = document.querySelector('#view-' + av + ' .noresults');
     if (msg && toks.length && !counts[av]){
       var best = Object.keys(counts).sort(function(a, z){ return counts[z] - counts[a]; })[0];
-      msg.innerHTML = counts[best] ? 'No matches in this tab. <button class="jump" data-v="' + best + '">'
-        + counts[best] + ' in ' + LABELS[best] + ' \\u2192</button>' : 'No matches in any tab.';
+      var said = '\\u201c' + q.value.trim().replace(/[&<>"]/g, function(c){ return '&#' + c.charCodeAt(0) + ';'; }) + '\\u201d';
+      msg.innerHTML = counts[best] ? 'No matches for ' + said + ' in this tab. <button class="jump" data-v="' + best + '">'
+        + counts[best] + ' in ' + LABELS[best] + ' \\u2192</button>'
+        : 'No matches for ' + said + ' in any tab. <button class="jump clearq">Clear search</button>';
     }
+    // exact ticker or company name: point at its Companies row from any other tab
+    var card = document.getElementById('tkcard'), qv = norm(q.value), ent = null;
+    if (qv && av !== 'entity') document.querySelectorAll('#view-entity details[data-key]').forEach(function(d){
+      var t = d.querySelector('.tkr'), b = d.querySelector('summary b');
+      if (!ent && ((t && norm(t.textContent) === qv) || norm(b.textContent) === qv)) ent = d;
+    });
+    card.hidden = !ent;
+    if (ent) card.innerHTML = ent.querySelector('summary').innerHTML + '<button class="jump" data-v="entity">Open in Companies \\u2192</button>';
     document.getElementById('qstatus').textContent = toks.length ? counts[av] + ' matches in ' + LABELS[av] : '';
     var url = location.pathname + (q.value.trim() ? '?q=' + encodeURIComponent(q.value.trim()) : '') + '#' + activeView();
     history.replaceState(null, '', url);
@@ -1174,7 +1197,8 @@ INDEX_JS = """
   var LABELS = {chrono: 'All Briefs'};
   tabs.forEach(function(t){ LABELS[t.dataset.view] = LABELS[t.dataset.view] || t.firstChild.textContent; });
   document.addEventListener('click', function(e){
-    if (e.target.classList.contains('jump')){ select(e.target.dataset.v); apply(); }
+    if (e.target.classList.contains('clearq')){ q.value = ''; apply(); q.focus(); }
+    else if (e.target.classList.contains('jump')){ select(e.target.dataset.v); apply(); }
   });
 
   // Column sort: click a header to sort by it, click again to flip; ties fall back to newest first.
@@ -1286,6 +1310,7 @@ def build_index():
       <button class="tab" role="tab" data-view="ro">Romania</button>
     </div>
     </div>
+    <div id="tkcard" hidden></div>
     <div id="view-chrono" class="view active">{_render_chrono_view(briefs)}</div>
     <div id="view-channel" class="view">{_render_channel_view(briefs)}</div>
     <div id="view-signals" class="view">{signals.render(signals.compute(KB_PATH), memos)}</div>
