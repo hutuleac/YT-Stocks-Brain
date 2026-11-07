@@ -258,7 +258,7 @@ def render(data, memos=()):
 
     out = []
     if memos:
-        out.append('<div class="sig-memos"><span>Weekly memos</span>'
+        out.append('<div class="sig-memos"><span>Memos</span>'
                    + " ".join(f'<a href="{esc(h)}">{esc(l)}</a>' for l, h in memos) + "</div>")
     out.append(f'<p class="sig-intro">Ideas your sources are converging on, from market briefs only. A narrative is a group '
                f'of companies and assets that keep getting named together; open one to read the information behind it. '

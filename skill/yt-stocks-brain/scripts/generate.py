@@ -1191,8 +1191,8 @@ def build_index():
     briefs.sort(key=lambda b: _date_sort_key(b["date"]))
     reg = _canonicalize_entities(briefs)
     kb_warnings = build_kb(briefs, reg)
-    memos = [(f'{m["week"]} · {m.get("title") or "memo"}', p[:-5] + ".html")
-             for m, p in ((json.load(open(p, encoding="utf-8")), p) for p in memo.memo_paths())
+    memos = [(f'{m.get("week") or m["month"]} · {m.get("title") or "memo"}', p[:-5] + ".html")
+             for m, p in ((json.load(open(p, encoding="utf-8")), p) for p in memo.month_paths() + memo.memo_paths())
              if os.path.exists(p[:-5] + ".html")]
 
     channels = sorted(set(b["channel"] for b in briefs))
@@ -1270,6 +1270,8 @@ def build_index():
         print(f"warning: {w}")
     if memo.is_due():
         print(f"memo due: weekly memo for {memo.week_key()} — see SKILL.md 'Weekly memo'")
+    if memo.month_due():
+        print(f"memo due: monthly memo for {memo.month_due()} — see ref/weekly-memo.md 'Monthly memo'")
     if reg.save():
         print(f"Updated {reg.path} (new entities/aliases — commit it with the brief)")
 

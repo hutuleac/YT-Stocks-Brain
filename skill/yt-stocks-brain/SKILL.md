@@ -294,5 +294,5 @@ only if the user must act on it. A duplicate (`EXISTS:` or a re-upload of an exi
 one sentence naming the existing brief.
 
 ## Weekly memo
-When `generate.py` prints `memo due:`, write it after the brief is committed: `ref/weekly-memo.md`.
+When `generate.py` prints `memo due:` (weekly or monthly), write it after the brief is committed: `ref/weekly-memo.md`.
 `generate.py` itself is never edited per video; the page design lives in its HTML/CSS comment block.

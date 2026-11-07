@@ -106,10 +106,16 @@ Key things baked into the current skill that aren't obvious from a first read:
     (`TICKER_KINDS` in `generate.py`); people, countries, products stay findable via All Briefs
     search. `unknown` stays visible on purpose so new auto-registered tickers don't vanish.
   - **Weekly memo** (`scripts/memo.py`, `memos/<ISO-week>.{json,html}`, linked from Signals):
-    `generate.py` prints `memo due:` once a week; the workflow is in SKILL.md "Weekly memo".
+    `generate.py` prints `memo due:` once a week; the workflow is in `ref/weekly-memo.md`. Each
+    memo records the `briefs` it covered (new = not listed by any earlier memo; W40-W45 backfilled
+    from git), watch items carry `entities` for a computed follow-up next week, and narrative
+    `label`s carry forward to matching clusters so names stay stable.
+  - **Monthly memo** (`memo.py month`, `memos/<YYYY-MM>.{json,html}`): due once last month has
+    weekly memos; computed month diff + trajectory across the weekly snapshots, written title +
+    summary only.
 
 ## Backlog (agreed, not built — Oct 2026)
-- **Scheduled memo:** the memo currently piggybacks on brief runs. If briefs pause for a week,
+- **Scheduled memo:** the weekly/monthly memo currently piggybacks on brief runs. If briefs pause for a week,
   a weekly cloud routine (reindex, then memo, then push) would keep it on time; needs repo push
   access, so ask first.
 - **Claim outcomes:** `kb/claim_outcomes.json` exists but stays empty by design (direction over
