@@ -161,7 +161,7 @@ body{margin:0;background:var(--bg);color:var(--ink);
 .backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
   border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
 .backlink a:hover{color:var(--brand);border-color:var(--brand);}
-.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+.hero h1{text-wrap:balance;font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
   letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
 .byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
 .byline b{color:var(--ink);font-weight:600;}
@@ -351,6 +351,8 @@ ul.mentions .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-r
 .sig-how summary{cursor:pointer;font-size:14px;color:var(--ink);}
 .sig-how .sig-intro{margin:8px 0 0;}
 td.idx-title{width:34%;}
+table.idx.capped tbody tr:nth-child(n+51){display:none;}
+.showall{display:block;margin:18px auto 8px;font:inherit;font-size:14px;font-weight:600;color:var(--brand);background:none;border:1px solid var(--line);border-radius:20px;padding:9px 18px;cursor:pointer;}
 td.idx-channel{max-width:210px;overflow:hidden;text-overflow:ellipsis;}
 td.idx-thread span{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
 .noresults .jump,#tkcard .jump{font:inherit;font-style:normal;font-weight:600;color:var(--brand);background:none;border:0;padding:0 0 0 6px;cursor:pointer;text-decoration:underline;text-underline-offset:3px;}
@@ -374,6 +376,7 @@ html.dark mark{background:#5c4422;}
 @media (max-width:640px){
   #q{font-size:16px;}
   .tabs,.subtabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-right:calc(-1*clamp(18px,4vw,56px));padding-right:clamp(18px,4vw,56px);}
+  .tabs,.subtabs{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 32px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 32px),transparent);}
   .tabs::-webkit-scrollbar,.subtabs::-webkit-scrollbar{display:none;}
   .tabs{gap:6px;}
   .tabs .tab{flex:1 0 auto;padding:10px 9px;font-size:13px;white-space:nowrap;}
@@ -387,7 +390,7 @@ html.dark mark{background:#5c4422;}
   table.idx tr{display:block;padding:12px 0;border-bottom:1px solid var(--line);}
   table.idx td{display:inline;padding:0;border:none;white-space:normal;}
   table.idx .idx-date{margin-right:10px;}
-  table.idx .idx-title{display:block;margin:4px 0 2px;font-size:15.5px;line-height:1.45;}
+  table.idx .idx-title{display:block;width:auto;margin:4px 0 2px;font-size:15.5px;line-height:1.45;}
   table.idx .idx-thread{display:block;}
   table.idx tr:hover td{background:none;}
 }
@@ -1052,6 +1055,7 @@ INDEX_JS = """
     return blob.indexOf(' ' + t) !== -1 ||
       (t.length > 3 && t.charAt(t.length - 1) === 's' && blob.indexOf(' ' + t.slice(0, -1) + ' ') !== -1);
   }
+  var CAP = 50;
   function hasAll(blob, toks){ for (var i = 0; i < toks.length; i++) if (!has(blob, toks[i])) return false; return true; }
   var data = null;
   function unesc(s){ return s.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&'); }
@@ -1172,6 +1176,29 @@ INDEX_JS = """
     });
     card.hidden = !ent;
     if (ent) card.innerHTML = ent.querySelector('summary').innerHTML + '<button class="jump" data-v="entity">Open in Companies \\u2192</button>';
+    // brief tables: during a search, titles naming the query (or the matched company) come first, then newest;
+    // with no search, show the newest CAP rows behind a "Show all" button (every row stays in the HTML)
+    var terms = qv ? [qv].concat(ent ? [norm(ent.querySelector('summary b').textContent)] : []) : [];
+    document.querySelectorAll('table.idx').forEach(function(t){
+      var body = t.tBodies[0], rows = Array.prototype.slice.call(body.rows);
+      if (terms.length || t.dataset.ranked){
+        var top = function(r){ var x = norm(r.cells[2].textContent); return terms.some(function(w){ return x.indexOf(w) >= 0; }) ? 0 : 1; };
+        rows.sort(function(a, z){ return (top(a) - top(z)) || z.cells[0].textContent.localeCompare(a.cells[0].textContent); })
+          .forEach(function(r){ body.appendChild(r); });
+        t.querySelectorAll('th').forEach(function(th){ th.removeAttribute('aria-sort'); });
+        t.dataset.ranked = terms.length ? '1' : '';
+      }
+      if (rows.length <= CAP) return;
+      var b = t.nextElementSibling;
+      if (!b || !b.classList.contains('showall')){
+        b = document.createElement('button'); b.className = 'showall'; b.textContent = 'Show all ' + rows.length + ' briefs';
+        b.addEventListener('click', function(){ t.dataset.all = '1'; apply(); });
+        t.after(b);
+      }
+      var capped = !toks.length && !t.dataset.all;
+      t.classList.toggle('capped', capped);
+      b.hidden = !capped;
+    });
     document.getElementById('qstatus').textContent = toks.length ? counts[av] + ' matches in ' + LABELS[av] : '';
     var url = location.pathname + (q.value.trim() ? '?q=' + encodeURIComponent(q.value.trim()) : '') + '#' + activeView();
     history.replaceState(null, '', url);
@@ -1224,8 +1251,9 @@ INDEX_JS = """
 
   var initial = new URLSearchParams(location.search).get('q');
   if (location.hash) select(location.hash.slice(1));
+  select(activeView());  // sets aria-selected on first load too
   if (initial){ q.value = initial; }
-  if (initial || location.hash) apply();
+  apply();
 })();
 """
 
