@@ -341,6 +341,7 @@ ul.mentions .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-r
 .m-stance{display:block;font-size:12px;color:var(--brand);font-style:italic;margin-top:2px;}
 .m-blurb{font-size:13.3px;color:#3a3d35;line-height:1.5;margin-top:4px;}
 .noresults{color:var(--muted);font-style:italic;padding:20px 0;display:none;}
+.noresults .jump{font:inherit;font-style:normal;font-weight:600;color:var(--brand);background:none;border:0;padding:0 0 0 6px;cursor:pointer;text-decoration:underline;text-underline-offset:3px;}
 .hits{display:flex;flex-direction:column;}
 .hitrow{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);}
 .hitrow:last-child{border-bottom:none;}
@@ -936,7 +937,8 @@ def _render_channel_view(briefs):
     out = []
     for channel, items in groups:
         items = sorted(items, key=lambda b: _date_sort_key(b["date"]))
-        search = _search_blob(channel, " ".join(b["title"] for b in items))
+        search = _search_blob(channel, *(p for b in items for p in (
+            b["title"], b["speakers"], b["thread_line"], " ".join(b["tags"]), _entity_words(b))))
         rows = "".join(
             f'<li><span class="idx-date">{esc(b["date"])}</span> '
             f'<a href="{esc(b["html"])}">{esc(b["title"])}</a> '
@@ -1099,7 +1101,7 @@ INDEX_JS = """
       if (el.tagName === 'DETAILS') el.open = hit && toks.length > 0 && n <= 5;
     });
     var empty = view.querySelector('.noresults');
-    if (!empty){ empty = document.createElement('p'); empty.className = 'noresults'; empty.textContent = 'No matches in this tab.'; view.appendChild(empty); }
+    if (!empty){ empty = document.createElement('p'); empty.className = 'noresults'; empty.textContent = 'No matches in this tab.'; view.prepend(empty); }
     empty.style.display = toks.length && !n ? 'block' : 'none';
     return n;
   }
@@ -1114,7 +1116,7 @@ INDEX_JS = """
 
   function activeView(){ return document.querySelector('.tab[data-view].active').dataset.view; }
   function apply(){
-    var toks = norm(q.value) ? norm(q.value).split(' ') : [];
+    var toks = norm(q.value) ? norm(q.value).split(' ') : [], counts = {};
     tabs.forEach(function(tab){
       var v = tab.dataset.view, n;
       if (v === 'content'){
@@ -1126,7 +1128,15 @@ INDEX_JS = """
       }
       setCount(tab, toks.length ? n : null);
       if (v === 'chrono') setCount(ptab, toks.length ? n : null);
+      counts[v] = n;
     });
+    // empty tab: point at the tab holding the most matches instead of a dead end
+    var av = activeView(), msg = document.querySelector('#view-' + av + ' .noresults');
+    if (msg && toks.length && !counts[av]){
+      var best = Object.keys(counts).sort(function(a, z){ return counts[z] - counts[a]; })[0];
+      msg.innerHTML = counts[best] ? 'No matches in this tab. <button class="jump" data-v="' + best + '">'
+        + counts[best] + ' in ' + LABELS[best] + ' \\u2192</button>' : 'No matches in any tab.';
+    }
     var url = location.pathname + (q.value.trim() ? '?q=' + encodeURIComponent(q.value.trim()) : '') + '#' + activeView();
     history.replaceState(null, '', url);
   }
@@ -1146,6 +1156,11 @@ INDEX_JS = """
     tab.addEventListener('click', function(){ select(tab.dataset.view); apply(); });
   });
   ptab.addEventListener('click', function(){ select('chrono'); apply(); });
+  var LABELS = {chrono: 'All Briefs'};
+  tabs.forEach(function(t){ LABELS[t.dataset.view] = LABELS[t.dataset.view] || t.firstChild.textContent; });
+  document.addEventListener('click', function(e){
+    if (e.target.classList.contains('jump')){ select(e.target.dataset.v); apply(); }
+  });
 
   // Column sort: click a header to sort by it, click again to flip; ties fall back to newest first.
   document.querySelectorAll('table.idx').forEach(function(table){
