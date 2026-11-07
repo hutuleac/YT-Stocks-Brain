@@ -263,9 +263,11 @@ html.dark .namechip .stance{color:#fff;}
 """
 
 INDEX_CSS = CSS + """
-.sig-memos{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;margin:0 0 14px;font-size:13.5px;}
-.sig-memos span{font-weight:600;color:var(--brand);}
-.sig-intro{font-size:14px;color:var(--muted);line-height:1.55;margin:4px 0 18px;max-width:760px;}
+.sig-memos{margin:0 0 14px;font-size:13.5px;}
+.sig-memos summary{cursor:pointer;color:var(--muted);}
+.sig-memos summary span{font-weight:600;color:var(--brand);margin-right:8px;}
+.sig-memos a{color:var(--brand);text-underline-offset:3px;}
+.sig-memos .all{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:8px;}.sig-intro{font-size:14px;color:var(--muted);line-height:1.55;margin:4px 0 18px;max-width:760px;}
 .sig-h{font-family:var(--serif);font-size:clamp(18px,1.4vw,22px);margin:28px 0 2px;}
 .sig-note{font-size:13px;color:var(--muted);font-style:italic;margin:0 0 12px;}
 .sig-fwd{margin-top:10px;padding:10px 12px;border-radius:8px;background:var(--line);font-size:13.3px;line-height:1.5;}
@@ -281,6 +283,7 @@ INDEX_CSS = CSS + """
 .sig-more[open]>summary h3::after{content:" \\25BE";}
 .idx-stats{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:6px;}
 .idx-stats span{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);}
+@media (max-width:640px){.idx-stats{display:none;}.hero h1{margin-bottom:10px;padding-right:48px;}}
 .controls{position:sticky;top:0;z-index:5;background:var(--card);margin:0 calc(-1*clamp(18px,4vw,56px)) 22px;
   padding:12px clamp(18px,4vw,56px);border-bottom:1px solid var(--line);}
 .searchwrap{margin:0 0 12px;}
@@ -1218,9 +1221,8 @@ def build_index():
 <div class="page">
   <header class="hero">
     <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
-    <div class="kicker">All Research Briefs</div>
     <h1>YouTube Research Brief Index</h1>
-    <div class="byline">{len(briefs)} brief{'s' if len(briefs) != 1 else ''} &middot; {len(channels)} channel{'s' if len(channels) != 1 else ''} &middot; {len(tickers)} ticker{'s' if len(tickers) != 1 else ''} tracked &middot; {hit_count} quotes/takes/notes indexed
+    <div class="byline">{len(briefs)} brief{'s' if len(briefs) != 1 else ''} &middot; {len(channels)} channel{'s' if len(channels) != 1 else ''} &middot; {len(tickers)} ticker{'s' if len(tickers) != 1 else ''} tracked &middot; {hit_count:,} quotes/takes/notes indexed
       <div class="idx-stats"><span>One search covers everything: tickers, companies, people, quotes and takes. The number on each tab shows where the matches are.</span></div>
     </div>
   </header>

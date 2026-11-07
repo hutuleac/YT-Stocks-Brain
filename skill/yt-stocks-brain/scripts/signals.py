@@ -258,8 +258,12 @@ def render(data, memos=()):
 
     out = []
     if memos:
-        out.append('<div class="sig-memos"><span>Memos</span>'
-                   + " ".join(f'<a href="{esc(h)}">{esc(l)}</a>' for l, h in memos) + "</div>")
+        (l0, h0), rest_m = memos[0], memos[1:]
+        latest = f'<span>Memos</span><a href="{esc(h0)}">{esc(l0)}</a>'
+        out.append(f'<details class="sig-memos"><summary>{latest}'
+                   + (f' · {len(rest_m)} earlier</summary><div class="all">'
+                      + " ".join(f'<a href="{esc(h)}">{esc(l)}</a>' for l, h in rest_m) + "</div>"
+                      if rest_m else "</summary>") + "</details>")
     out.append(f'<p class="sig-intro">Ideas your sources are converging on, from market briefs only. A narrative is a group '
                f'of companies and assets that keep getting named together; open one to read the information behind it. '
                f'Growth compares the latest {w["recent_briefs"]} briefs ({esc(w["recent_from"])} to {esc(w["latest"])}) '
