@@ -153,7 +153,7 @@ def compute(db_path):
         tags = [t for k in g for m in by_ent[k] if m["bid"] in hits for t in ttags[(m["bid"], m["tid"])]]
         rows, fwd = evidence(g, hits)
         sr, sp = stances(g, hits)
-        n = {"members": g, "names": [name[k] for k in g], "tag": max(sorted(set(tags)), key=tags.count, default=None),
+        n = {"members": g, "names": [name[k] for k in g], "tickers": [ticker[k] for k in g if ticker[k]], "tag": max(sorted(set(tags)), key=tags.count, default=None),
              "briefs_all": len(hits), "briefs": n_r, "prior": n_p,
              "recent_pct": round(100 * n_r / max(tot["r"], 1)), "prior_pct": round(100 * n_p / max(tot["p"], 1)),
              "lift": round(_lift(n_r, tot["r"], n_p, tot["p"]), 2), "sent_recent": sr, "sent_prior": sp,
@@ -174,7 +174,9 @@ def compute(db_path):
     rs = sorted(recent, key=pos.get)
     out = {"window": {"latest": info[order[-1]]["date"], "recent_from": info[rs[0]]["date"],
                       "recent_briefs": tot["r"], "prior_briefs": tot["p"]},
-           "narratives": narr, "new_names": new[:15]}
+           "narratives": narr, "new_names": new[:15],
+           "hubs": [(name[k], ticker[k]) for k in sorted(eb, key=lambda k: -len(eb[k]))
+                    if len(eb[k]) > HUB_SHARE * len(order)]}
     db.close()
     return out
 
@@ -228,7 +230,7 @@ def narrative_row(n):
     sent = sent_label(n["sent_recent"])
     if n["sent_recent"] is not None and n["sent_prior"] is not None and abs(n["sent_recent"] - n["sent_prior"]) >= 0.4:
         sent += f' {_arrow(n["sent_recent"] - n["sent_prior"])} was {sent_label(n["sent_prior"])}'
-    return (f'<details class="grp" data-search="{esc(" ".join(n["names"]).lower())}">'
+    return (f'<details class="grp" data-search="{esc(" ".join(n["names"] + n.get("tickers", [])).lower())}">'
             f'<summary><b>{" · ".join(esc(x) for x in n["names"][:3])}</b>'
             f'<span class="cnt">{move} {n["recent_pct"]}% of recent briefs (was {n["prior_pct"]}%) · '
             f'{n["briefs_all"]} briefs · {sent}' + (f' · {esc(n["tag"])}' if n["tag"] else "") + '</span></summary>'
@@ -237,7 +239,7 @@ def narrative_row(n):
 
 
 def name_row(i):
-    tkr = f'<span class="tkr">{esc(i["ticker"])}</span>' if i["ticker"] else '<span class="tkr none">&mdash;</span>'
+    tkr = f'<span class="tkr">{esc(i["ticker"])}</span>' if i["ticker"] else ''
     return (f'<details class="grp" data-search="{esc((i["name"] + " " + (i["ticker"] or "")).lower())}">'
             f'<summary>{tkr}<b>{esc(i["name"])}</b><span class="cnt">first seen {esc(i["first_seen"])} · '
             f'{i["briefs"]} briefs · {sent_label(i["sent"])}</span></summary>'
@@ -268,6 +270,11 @@ def render(data, memos=()):
                f'of companies and assets that keep getting named together; open one to read the information behind it. '
                f'Growth compares the latest {w["recent_briefs"]} briefs ({esc(w["recent_from"])} to {esc(w["latest"])}) '
                f'with the {w["prior_briefs"]} before them. It shows attention and lean, not price action.</p>')
+    hubs = data.get("hubs", [])
+    if hubs:
+        out.append(f'<p class="sig-note" data-search="{esc(" ".join(f"{n} {t or ''}" for n, t in hubs).lower())}">'
+                   f'Named in most briefs, so not clustered: {esc(", ".join(n for n, _ in hubs))}. '
+                   'Find their briefs under Briefs or Companies.</p>')
     out.append(section("Emerging narratives", f"Taking a growing share of recent briefs, not yet mainstream "
                        f"(under {MAINSTREAM_PCT}% of them).", "".join(narrative_row(n) for n in emerging)))
     out.append(section("New names", f"First named in the latest {w['recent_briefs']} briefs and already in two or more. "

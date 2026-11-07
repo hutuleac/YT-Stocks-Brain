@@ -289,7 +289,10 @@ INDEX_CSS = CSS + """
 .searchwrap{margin:0 0 12px;}
 #q{width:100%;box-sizing:border-box;padding:12px 16px;border:1px solid var(--line);border-radius:10px;
   background:#fffefb;font-size:15px;font-family:inherit;color:var(--ink);}
-#q:focus{outline:2px solid var(--brand);outline-offset:-1px;}
+#q:focus-visible,.tab:focus-visible{outline:2px solid var(--brand);outline-offset:2px;}
+#q::placeholder{color:var(--muted);}
+[hidden]{display:none!important;}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
 .tabs{display:flex;flex-wrap:wrap;gap:8px;}
 .tab{font-family:inherit;font-size:13.5px;font-weight:600;padding:9px 16px;border-radius:20px;
   border:1px solid var(--line);background:#fbf7ef;color:var(--muted);cursor:pointer;}
@@ -361,8 +364,13 @@ mark{background:#f3dcb0;color:inherit;border-radius:2px;padding:0 1px;}
 html.dark mark{background:#5c4422;}
 @media (max-width:640px){
   #q{font-size:16px;}
-  .tabs .tab{flex:1 1 auto;padding:11px 10px;}
-  .subtabs .tab{padding:7px 11px;}
+  .tabs,.subtabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-right:calc(-1*clamp(18px,4vw,56px));padding-right:clamp(18px,4vw,56px);}
+  .tabs::-webkit-scrollbar,.subtabs::-webkit-scrollbar{display:none;}
+  .tabs{gap:6px;}
+  .tabs .tab{flex:1 0 auto;padding:10px 9px;font-size:13px;white-space:nowrap;}
+  .tabs .tcount{margin-left:4px;padding:1px 5px;}
+  .subtabs .tab{flex:0 0 auto;padding:7px 11px;white-space:nowrap;}
+  .wide{display:none;}
   .grp summary{flex-wrap:wrap;}
   .grp summary .cnt{white-space:normal;}
   table.idx,table.idx tbody{display:block;}
@@ -1141,6 +1149,7 @@ INDEX_JS = """
       msg.innerHTML = counts[best] ? 'No matches in this tab. <button class="jump" data-v="' + best + '">'
         + counts[best] + ' in ' + LABELS[best] + ' \\u2192</button>' : 'No matches in any tab.';
     }
+    document.getElementById('qstatus').textContent = toks.length ? counts[av] + ' matches in ' + LABELS[av] : '';
     var url = location.pathname + (q.value.trim() ? '?q=' + encodeURIComponent(q.value.trim()) : '') + '#' + activeView();
     history.replaceState(null, '', url);
   }
@@ -1155,6 +1164,8 @@ INDEX_JS = """
     var inBriefs = tab.parentElement === sub;
     ptab.classList.toggle('active', inBriefs);
     sub.hidden = !inBriefs;
+    document.querySelectorAll('.controls .tab').forEach(function(t){ t.setAttribute('aria-selected', t.classList.contains('active')); });
+    tab.scrollIntoView({block: 'nearest', inline: 'nearest'});
   }
   tabs.forEach(function(tab){
     tab.addEventListener('click', function(){ select(tab.dataset.view); apply(); });
@@ -1259,19 +1270,20 @@ def build_index():
   </header>
   <div class="inner">
     <div class="controls">
-    <div class="searchwrap"><input id="q" type="search" placeholder="Search tickers, companies, people, quotes..." autocomplete="off"></div>
-    <div class="tabs">
-      <button class="tab ptab active" id="tab-briefs">Briefs</button>
-      <button class="tab" data-view="signals">Signals</button>
-      <button class="tab" data-view="entity">Companies</button>
-      <button class="tab" data-view="content">Quotes &amp; Takes</button>
+    <div class="searchwrap"><input id="q" type="search" placeholder="Search tickers, companies, people, quotes..." aria-label="Search briefs, tickers, people and quotes" autocomplete="off"></div>
+    <p id="qstatus" class="sr-only" aria-live="polite"></p>
+    <div class="tabs" role="tablist" aria-label="Views">
+      <button class="tab ptab active" id="tab-briefs" role="tab">Briefs</button>
+      <button class="tab" role="tab" data-view="signals">Signals</button>
+      <button class="tab" role="tab" data-view="entity">Companies</button>
+      <button class="tab" role="tab" data-view="content">Quotes<span class="wide"> &amp; Takes</span></button>
     </div>
-    <div class="subtabs">
-      <button class="tab active" data-view="chrono">All</button>
-      <button class="tab" data-view="channel">By channel</button>
-      <button class="tab" data-view="dev">Dev &amp; Workflows</button>
-      <button class="tab" data-view="life">Life</button>
-      <button class="tab" data-view="ro">Romania</button>
+    <div class="subtabs" role="tablist" aria-label="Brief filters">
+      <button class="tab active" role="tab" data-view="chrono">All</button>
+      <button class="tab" role="tab" data-view="channel">By channel</button>
+      <button class="tab" role="tab" data-view="dev">Dev &amp; Workflows</button>
+      <button class="tab" role="tab" data-view="life">Life</button>
+      <button class="tab" role="tab" data-view="ro">Romania</button>
     </div>
     </div>
     <div id="view-chrono" class="view active">{_render_chrono_view(briefs)}</div>
