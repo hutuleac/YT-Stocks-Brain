@@ -279,8 +279,8 @@ INDEX_CSS = CSS + """
 .sig-more{margin-top:8px;}
 .sig-more>summary{cursor:pointer;list-style:none;}
 .sig-more>summary::-webkit-details-marker{display:none;}
-.sig-more>summary h3::after{content:" \\25B8";color:var(--brand);font-size:14px;}
-.sig-more[open]>summary h3::after{content:" \\25BE";}
+.sig-more>summary h2::after{content:" \\25B8";color:var(--brand);font-size:14px;}
+.sig-more[open]>summary h2::after{content:" \\25BE";}
 .idx-stats{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:6px;}
 .idx-stats span{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);}
 @media (max-width:640px){.idx-stats{display:none;}.hero h1{margin-bottom:10px;padding-right:48px;}}
@@ -304,7 +304,7 @@ table.idx{width:100%;border-collapse:collapse;}
 table.idx th{text-align:left;font-family:var(--serif);font-style:italic;font-weight:600;
   color:var(--brand);font-size:13px;padding:8px 14px 8px 0;border-bottom:2px solid var(--brand);}
 table.idx th button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;}
-table.idx th button::after{content:"↕";margin-left:5px;font-style:normal;opacity:.3;}
+table.idx th button::after{content:"↕";margin-left:5px;font-style:normal;opacity:.55;}
 table.idx th button:hover::after{opacity:.7;}
 table.idx th[aria-sort=ascending] button::after{content:"↑";opacity:1;}
 table.idx th[aria-sort=descending] button::after{content:"↓";opacity:1;}
@@ -940,7 +940,7 @@ def _render_channel_view(briefs):
         search = _search_blob(channel, *(p for b in items for p in (
             b["title"], b["speakers"], b["thread_line"], " ".join(b["tags"]), _entity_words(b))))
         rows = "".join(
-            f'<li><span class="idx-date">{esc(b["date"])}</span> '
+            f'<li data-row="{_search_blob(channel, b["title"], b["speakers"], b["thread_line"], " ".join(b["tags"]), _entity_words(b))}"><span class="idx-date">{esc(b["date"])}</span> '
             f'<a href="{esc(b["html"])}">{esc(b["title"])}</a> '
             f'<span class="idx-thread">{esc(b["thread_line"])}</span></li>'
             for b in items
@@ -1098,6 +1098,10 @@ INDEX_JS = """
       var hit = !toks.length || (primary ? isPrimary(el) : hasAll(el.dataset.search, toks));
       el.hidden = !hit;
       if (hit) n++;
+      var rows = el.querySelectorAll('[data-row]'), shown = 0;
+      rows.forEach(function(li){ li.hidden = hit && toks.length > 0 && !hasAll(li.dataset.row, toks); if (!li.hidden) shown++; });
+      var cnt = rows.length && el.querySelector('.cnt');
+      if (cnt){ cnt.dataset.all = cnt.dataset.all || cnt.textContent; cnt.textContent = shown < rows.length ? shown + ' of ' + cnt.dataset.all : cnt.dataset.all; }
       if (el.tagName === 'DETAILS') el.open = hit && toks.length > 0 && n <= 5;
     });
     var empty = view.querySelector('.noresults');

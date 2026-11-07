@@ -253,7 +253,7 @@ def render(data, memos=()):
     rest = [n for n in data["narratives"] if not n["emerging"]]
 
     def section(title, note, body):
-        return (f'<h3 class="sig-h">{title}</h3><p class="sig-note">{note}</p>'
+        return (f'<h2 class="sig-h">{title}</h2><p class="sig-note">{note}</p>'
                 + (body or '<p class="empty">Nothing crosses the bar right now.</p>'))
 
     out = []
@@ -273,7 +273,7 @@ def render(data, memos=()):
     out.append(section("New names", f"First named in the latest {w['recent_briefs']} briefs and already in two or more. "
                        "Too new to cluster with anything yet.", "".join(name_row(i) for i in data["new_names"])))
     if rest:
-        out.append(f'<details class="sig-more"><summary><h3 class="sig-h">Established narratives ({len(rest)})</h3></summary>'
+        out.append(f'<details class="sig-more"><summary><h2 class="sig-h">Established narratives ({len(rest)})</h2></summary>'
                    f'<p class="sig-note">Steady, fading or already mainstream. Sorted by how many briefs back them.</p>'
                    + "".join(narrative_row(n) for n in rest) + "</details>")
     return "".join(out)
