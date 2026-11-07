@@ -1061,12 +1061,15 @@ INDEX_JS = """
   function unesc(s){ return s.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&'); }
   function blob(){ return ' ' + norm(unesc([].join.call(arguments, ' '))) + ' '; }
   function getData(){
-    if (data) return data;
-    data = JSON.parse(document.getElementById('hitdata').textContent || '{"b":[],"x":[]}');
-    data.b.forEach(function(b){ b[5] = blob(b[2], b[1], b[4]); });
-    data.x.forEach(function(h){ h[5] = blob(h[2], h[3], h[4]); });
-    return data;
+    return data || {b: [], x: []};
   }
+  // ~5 MB quote index lives in its own file so it never blocks first paint; searches re-run once it lands
+  fetch('search-hits.json').then(function(r){ return r.json(); }).then(function(d){
+    d.b.forEach(function(b){ b[5] = blob(b[2], b[1], b[4]); });
+    d.x.forEach(function(h){ h[5] = blob(h[2], h[3], h[4]); });
+    data = d;
+    if (norm(q.value)) apply();
+  }).catch(function(){});
   function reEsc(s){ return s.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&'); }
   function highlight(html, toks){
     if (!toks.length) return html;
@@ -1349,12 +1352,13 @@ def build_index():
     <div id="view-ro" class="view">{_render_chrono_view(ro_briefs)}</div>
   </div>
 </div>
-<script id="hitdata" type="application/json">{_content_hits_payload(briefs)}</script>
 <script>{INDEX_JS}</script>
 </body>
 </html>"""
     with open("index.html", "w", encoding="utf-8") as f:
         f.write(html)
+    with open("search-hits.json", "w", encoding="utf-8") as f:
+        f.write(_content_hits_payload(briefs))
 
     manifest = {
         "generated_from": "youtube-research-brief generate.py --reindex",

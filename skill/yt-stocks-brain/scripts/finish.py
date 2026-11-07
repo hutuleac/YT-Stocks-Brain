@@ -142,7 +142,7 @@ def main():
 
     msg = f"Add brief: {meta['channel']} — {meta['title']} ({meta['date']})"
     body = "\n".join(f"- {t['title']}" for t in brief.get("themes", []) if t.get("title"))
-    paths = [p for p in ("index.html", "library.json", "kb", "research-data", "memos") if os.path.exists(p)]
+    paths = [p for p in ("index.html", "search-hits.json", "library.json", "kb", "research-data", "memos") if os.path.exists(p)]
     sh(["git", "add", "-A", "--", *paths, *glob.glob(slug + ".html")])
     c = sh(["git", "commit", "-q", *(["--amend"] if a.amend else []), "-m", msg, *(["-m", body] if body else [])])
     if c.returncode:
