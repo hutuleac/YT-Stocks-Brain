@@ -1,0 +1,232 @@
+META = {
+    "title": "Why a Do-Nothing Congress could be great for markets | E2359",
+    "channel": "This Week in Startups",
+    "speakers": "Jason Calacanis (host), D.A. Wallach, Ilona Gold, Tomasz Tunguz",
+    "date": "2026-11-05",
+    "video_url": "https://www.youtube.com/watch?v=UjSfp3lmj9c",
+    "thread_line": "7 threads · divided government and the data-center backlash · agents/robots as the counter-narrative · GPU scarcity · AI margins · Sequoia reorg · allicorns · private-market access and perps",
+    "category": "market",
+    "region": "",
+}
+
+SNAPSHOT = [
+    "Democrats won the House and Senate; markets rose instead of the 2-4% correction the host expected. Wallach's read: gridlock means *nothing crazy* (no new war, no tariff chaos).",
+    "Data centers are now a **political liability**: an NBC exit poll found 56% of voters called AI and data centers a crucial or major factor. Panel thinks only visible consumer wins (agents, robots, AVs) can turn it around.",
+    "Tunguz expects AI to be **rationed in 2027**: Blackwell-class GPU hours roughly $5 to $13 in six months, ~81 GW of supply, ~60% going to training.",
+    "AI labs sit at ~81-82% gross margins (Anthropic S-1) vs ~71% for public software; the counter-argument is a **41-day** model lead versus a 17-year drug patent.",
+    "Sequoia is closing London, sunsetting Arc and the Scout program, merging early and growth, and raising $10B; Wallach says it should let winners go public instead.",
+    "'Allicorns' (profitable AI-native startups that skip rounds) squeeze venture entry prices, while secondaries and uncapped SAFEs fill the gap.",
+    "Panel wants retail access to private growth earlier (looser accredited-investor rules, earlier IPOs); Tunguz sees on-chain perps and tokenization possibly superseding the whole debate.",
+]
+
+THEMES = [
+    {
+        "id": "divided-government",
+        "tags": ["policy", "ai-infra", "finance"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "ELECTION NIGHT, NOV 3-4 2026",
+        "title": "A divided Congress: data-center backlash vs. fewer shocks and a closing M&A window",
+        "lead": "Gridlock lowers policy uncertainty, but the election turned data centers into a political target and may shorten the window for big tech deals.",
+        "bullets": [
+            "Host: Democrats took the House and Senate; Texas swung blue; markets rallied 2-4% instead of correcting on hopes the war and oil chaos fade.",
+            "Wallach: long-term rates have moved on **uncertainty and fiscal unsustainability**, not AI borrowing crowding out; split government means no new war or tariff chaos.",
+            "An NBC exit poll found **56%** of voters called AI and data centers a crucial or major factor; Democrats spent more than **$100 million** on ads tying Republicans to Big Tech and data centers.",
+            "Gold: data-center siting becomes a state issue, but **power is still short** (she cites Elon Musk saying the US runs out of power in 2026), which favors nuclear and lower-power chip startups.",
+            "Tunguz: HSR/FTC reviews run about 18 months, so big deals need to close **before June or July 2027**; a Marvell acquisition's long pole is Chinese, not US, approval; EU posture on M&A is unchanged.",
+            "Wallach frames the deeper driver as an intergenerational split: the Social Security Trust Fund is insolvent in **2032**, equity owners benefit from Uber, Tesla, SpaceX and data centers, and young workers do not.",
+        ],
+        "quote": {"text": "divided government, even if it means sclerosis, even if it means that nothing gets done in DC, what it does mean is that nothing crazy's likely to happen", "cite": "— D.A. Wallach"},
+        "watch": "Host Jason Calacanis is a Polymarket partner and holds a significant Uber stake, which colors his election and autonomy commentary.",
+        "names": [
+            {"name": "Marvell (MRVL)", "blurb": "Acquirer in a large pending deal whose approval bottleneck Tunguz says is China.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "consumer-ai-narrative",
+        "tags": ["consumer", "robotics", "policy"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "THE COUNTER-NARRATIVE",
+        "title": "Agents, robots and self-driving cars are the only way to win back public opinion",
+        "lead": "The panel's answer to the backlash is visible everyday wins: personal agents, delivery robots and autonomous cars, plus a positive story nobody is telling yet.",
+        "bullets": [
+            "Calacanis: Meta runs a free **generation tool belt** program training plumbers and electricians, and pushes data-center landing pages touting tax revenue and jobs.",
+            "His own stack costs **$40,000** (Claude, Cursor, Lovable, ElevenLabs and others) for what he values at **$2 million**: a syndicate platform that would have taken 4-5 people two years took three months with no developers.",
+            "He expects everyday users to turn once agents cancel duplicate Netflix subscriptions, catch missed plumbing quotes or run an Etsy/eBay store; Zipline drone delivery and a robotic trash-bin attachment are his other examples.",
+            "Calacanis sees a **non-zero chance of an anti-self-driving wave**; Gold argues AVs open jobs to people who cannot afford cars and that one Waymo mistake becomes the headline.",
+            "Tunguz: insurers, not regulators, may force the shift to self-driving, and car insurance could end up like title insurance (claims under 2%).",
+            "A panelist asks whether the US is a **net exporter or importer of tokens**, like oil, citing Muse at 10 million first-quarter downloads and 2.5 million daily actives.",
+        ],
+        "quote": {"text": "I think being anti-AI will become increasingly uh a losing position as consumers get huge value from it", "cite": "— D.A. Wallach"},
+        "watch": "Calacanis is an investor in Zipline and a long-time Uber holder, and the $2 million value figure is his own estimate.",
+        "names": [
+            {"name": "Waymo", "blurb": "Panel uses it as the safety and consumer-value case for AVs; Calacanis says his syndicate could not get an allocation.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Zipline", "blurb": "Drone delivery company Calacanis says he is an investor in.", "stance": "OWNS", "conviction": "Medium", "horizon": None},
+            {"name": "Meta (META)", "blurb": "Zuckerberg's tool belt training program and data-center PR cited as the one attempt to reverse the narrative.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Uber (UBER)", "blurb": "Calacanis says he holds a significant portion of his original investment and bought $1M of Uber and Tesla on the market drop.", "stance": "OWNS", "conviction": "High", "horizon": None},
+            {"name": "Tesla (TSLA)", "blurb": "Panel members praise FSD; Calacanis says he bought $1M of Uber and Tesla near the bottom.", "stance": "BUYING-ADDING", "conviction": "Medium", "horizon": None},
+        ],
+    },
+    {
+        "id": "ai-rationing",
+        "tags": ["ai-infra", "semis", "software"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "2027 SUPPLY CRUNCH VIEW",
+        "title": "Tunguz: compute gets rationed in 2027, which revives the app layer and local inference",
+        "lead": "Cheap all-you-can-eat AI is a temporary state; GPU prices are rising and supply is finite, so users will buy AI by capacity and speed.",
+        "bullets": [
+            "Blackwell-class GPU hourly cost rose about **120%**, from roughly $5 to $13, in six months, per Tunguz.",
+            "Next year about **81 GW** of supply, roughly **60%** of it for model training; he cites Google's data-center head on intelligence per watt doubling yearly and a 400x cost reduction, yet demand grows faster than 200% a year.",
+            "He expects AI to be bought like bandwidth (volume and speed) and a resurgence of the **app layer**, since bespoke vibe-coded apps become too expensive.",
+            "Calacanis counters that Canva cut **22%** of its staff to AI and that software will become free; he ordered a **$12,000 Mac Studio** for local models and would spend $20k per employee.",
+            "Tunguz backs local inference: Theory invests in Ollama (about **10 million** users) and a Stanford study says **90%** of non-coder AI work can run on a local model.",
+            "Gold: companies now ask what AI costs to deploy at scale; Calacanis says he is still hiring 10-14 roles, because automation does not remove hands-on work.",
+        ],
+        "quote": {"text": "we will start to buy AI the way that we buy internet", "cite": "— Tomasz Tunguz"},
+        "watch": "Tunguz's firm Theory Ventures invests in Ollama, which benefits from the local-inference thesis he argues.",
+        "names": [
+            {"name": "Ollama", "blurb": "Local-inference company with about 10 million users; Tunguz says his firm is an investor.", "stance": "OWNS", "conviction": "Medium", "horizon": "2027"},
+            {"name": "Nvidia (NVDA)", "blurb": "Tunguz: bookings plateau because GPUs sit idle without electricity; Vera Rubin chips are twice as productive.", "stance": "NEGATIVE VIEW", "conviction": "Medium", "horizon": None},
+        ],
+    },
+    {
+        "id": "ai-margins",
+        "tags": ["ai-infra", "semis", "software"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "WHO KEEPS THE PROFIT",
+        "title": "Are 80% gross margins across the AI stack sustainable?",
+        "lead": "Wallach questions monopoly-style margins at every layer; Tunguz argues they are healthy and temporary pressure is already visible.",
+        "bullets": [
+            "Wallach asks whether the **everyone wins thesis** (memory makers, Nvidia, neoclouds, frontier labs) can hold when firms earn around **80%** gross margin and capitalism should compete them down.",
+            "Tunguz: the Anthropic S-1 shows about **81-82%** gross margin vs about 71% for public software, while a price war (OpenAI cut prices 50%, then 80%) and open models 80-85% cheaper push the other way.",
+            "Labs have **41 days** before a rival releases a new model, versus a 17-year drug patent, so they need fat margins to fund the next one.",
+            "Wallach: Micron trades at about 4.5x forward earnings and Hynix about 2.8x, so why not put retirement funds in Micron; Tunguz still passes on hardware stocks because idle GPUs cap Nvidia bookings.",
+            "AWS, largely commodity compute, runs a **35-36%** operating margin, and he argues competition does not zero out margins (Coke vs. Pepsi).",
+            "Wallach: someone must assemble ASML machines, which makes hardware the most durable business; Calacanis says SpaceX's Colossus 2 is four times Colossus 1 and key talent is shifting to 'Elon web services'.",
+        ],
+        "quote": {"text": "If I'm a state-of-the-art AI lab, I have 41 days", "cite": "— Tomasz Tunguz"},
+        "watch": "Wallach and Calacanis frame Micron as cheap but state no position; Tunguz's reasons to avoid hardware stocks are his own thesis, not a dated call.",
+        "names": [
+            {"name": "Micron (MU)", "blurb": "Cited at about 4.5x forward PE as the cheap leg of the AI memory trade.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "SK Hynix", "blurb": "Cited at about 2.8x forward PE.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Anthropic", "blurb": "S-1 gross margin of 81-82% is the panel's reference point for lab economics.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "SpaceX", "blurb": "Colossus 2 data center, four times the size of Colossus 1, per Calacanis.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "sequoia-reorg",
+        "tags": ["finance"],
+        "color": "gray",
+        "badge": "Confirmed event",
+        "status": "SEQUOIA POST, NOV 4 2026",
+        "title": "Sequoia collapses into one fund and retires Arc and Scouts",
+        "lead": "A year after its leadership change, Sequoia is simplifying to one firm, one team and a $10 billion raise.",
+        "bullets": [
+            "Per the firm's post: London office closing, the **Arc** batch accelerator sunset, the **Scout program** shut down and the Sequoia Capital Fund (post-IPO share holding) simplified.",
+            "Early and growth stages merge into one group, Doug Leone is back investing, the **$10 billion** raise stands, and the 40-year Monday partner meeting ends in favor of 24/7.",
+            "Tunguz: a seed round can now be $5M, $50M or $500M, so separate early and growth funds no longer fit; AI labs need $300-500 million to prove an idea.",
+            "Calacanis, Sequoia's first scout, says scouts let Sequoia avoid the signaling damage of skipping a follow-on and that everyone copied the program; he says a16z's speedrun puts in **$500k at $5M** plus an option for $500k at **$20M**.",
+            "Gold would have kept Arc going; Calacanis says programs have to cut off, or an accelerator ends up with thousands of small stakes expecting board-level help.",
+        ],
+        "quote": None,
+        "watch": "Calacanis was Sequoia's first scout and says he has feelings about the shutdown.",
+        "names": [
+            {"name": "Sequoia Capital", "blurb": "Unifying early and growth under Doug Leone; Tunguz calls the move smart.", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Andreessen Horowitz", "blurb": "Its speedrun accelerator is described as aggressive, with 10-12% ownership via super pro rata.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "allicorns-secondaries",
+        "tags": ["finance", "software"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "VENTURE STRUCTURE",
+        "title": "Allicorns skip rounds while secondaries and uncapped SAFEs fill the middle",
+        "lead": "Two-to-three-person AI-native companies reach profitability without venture money, forcing funds to enter very early, very late or as small agile networks.",
+        "bullets": [
+            "Calacanis defines an **allicorn**: a company that reaches $10-100k monthly revenue with two or three people and flies over funding rounds; at about **$500k** revenue he calls it venture ready.",
+            "He argues founders may self-fund and keep a rainy-day reserve to be the acquirer in a pullback, which pushes VCs to enter early or late like a crossover hedge fund.",
+            "Wallach: the best AI-native companies will be capital efficient and fund themselves through social networks, and a $10 billion fund cannot deliver outlier returns; he thinks small, networked funds win the allicorn class.",
+            "Tunguz says Theory is about 3 years old, has raised just under **$800 million**, backs about 10 companies per fund and uses forward-deployed go-to-market staff.",
+            "Gold sees founders offering **uncapped SAFEs at 10-15% discounts** days after a round closes; Tunguz refuses deals without pro rata and information rights.",
+            "Calacanis added late-stage allocations (Zipline, Vast, Atoms) for his syndicate, wanting **$250k to $2 million** checks; Waymo was too oversubscribed.",
+            "Wallach calls secondary-market SPV brokers **freelance investment banking** that earns fees and leaves public investors the drags.",
+        ],
+        "quote": {"text": "Many of the companies I'm seeing right now don't want to raise money", "cite": "— Jason Calacanis"},
+        "watch": "Calacanis runs a syndicate, an accelerator and a podcast business, and previously said the next unicorns are allicorns.",
+        "names": [
+            {"name": "Vast", "blurb": "Space-station company in the host's late-stage syndicate allocations.", "stance": "OWNS", "conviction": "Low", "horizon": None},
+        ],
+    },
+    {
+        "id": "private-access",
+        "tags": ["finance", "crypto", "policy"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "MARKET STRUCTURE DEBATE",
+        "title": "Open private markets to savers, or let perps and tokenized assets route around them",
+        "lead": "The panel agrees retail should reach growth earlier, but splits between going public earlier, loosening accredited-investor rules, or on-chain derivatives that may supersede both.",
+        "bullets": [
+            "Wallach wants companies public earlier; he blames dual share classes and cheap founder-friendly private capital, and calls private-equity-in-401(k) pushes a fee grab after ETFs commoditized active management.",
+            "Calacanis wants to **scrap the accredited-investor rule**, raised it with the head of the SEC, and has considered launching an offshore fund; Gold notes a qualified-purchaser bar for public raises.",
+            "Tunguz: a 10-year-old IPO cost **$25 million** on $100 million revenue vs $500-600k for a private deal; the Jobs Act raised shareholder limits, and global private credit is about **$4 trillion**.",
+            "He says tokenized assets are the fastest-growing technology market and **Hyperliquid** offers perps on private-company valuations; Anthropic shows price discovery weeks before an IPO.",
+            "Derivatives usually trade 5-10x the underlying volume, so he thinks perps could improve private price discovery; a Kalshi/Hyperliquid screen shows nearly **7x** leverage, while a Korean index product offers **11.8x**.",
+            "Wallach cites Charlie Munger (the world runs on envy) to explain retail appetite for 3x levered ETFs on Hynix.",
+        ],
+        "quote": {"text": "Sequoia doesn't need a $10 billion fund. Let your great winners go public", "cite": "— D.A. Wallach"},
+        "watch": "Calacanis mentions Zipline, Vast and Atoms as syndicate deals; the host's Polymarket partnership and the guests' own funds are context for their market-structure views.",
+        "names": [
+            {"name": "Hyperliquid", "blurb": "On-chain perps platform presented as a way to bet on private-company valuations.", "stance": "POSITIVE VIEW", "conviction": "Low", "horizon": None},
+            {"name": "Kalshi", "blurb": "Perpetuals and prediction-market screen shown on air, with leverage sliders.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Polymarket", "blurb": "Host's partner; the prediction markets were right on the election.", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F3DB", "tag": "Policy", "title": "Treat data-center sites as state-level risk; track permitting and power-guarantee rules rather than federal action."},
+    {"icon": "\U000023F3", "tag": "M&A", "title": "Date big tech deals against mid-2027: after that, review windows run past the next election cycle."},
+    {"icon": "\U0001F5A5", "tag": "AI infra", "title": "Model compute costs as rising, not falling, for 2027 budgets, and price a local-inference fallback."},
+    {"icon": "\U0001F4C8", "tag": "Markets", "title": "Test any 80%-margin AI thesis against the 41-day model-lead clock and the 35-36% AWS reference."},
+    {"icon": "\U0001F4B8", "tag": "Venture", "title": "Expect uncapped SAFEs, allicorn rounds and secondaries; insist on pro rata and information rights."},
+    {"icon": "\U0001F4F1", "tag": "Crypto", "title": "Follow perps and tokenized-asset volume as a competitor to private-market access."},
+]
+
+HOT_TAKES = [
+    {"take": "Sequoia doesn't need a $10 billion fund. Let your great winners go public", "cite": "— D.A. Wallach", "why": "Direct criticism of the raise."},
+    {"take": "I think we're going to get to a place where we won't have enough AI in 27.", "cite": "— Tomasz Tunguz", "why": "Dated scarcity call."},
+    {"take": "I think a lot of this software is going to become free", "cite": "— Jason Calacanis", "why": "Opposes Tunguz's rationing view."},
+    {"take": "non-zero chance that we're going to see a wave of anti-self-driving go across the country", "cite": "— Jason Calacanis", "why": "Political risk call for AVs."},
+    {"take": "I think you're going to see Andreesen try to go public", "cite": "— D.A. Wallach", "why": "Prediction about a named firm."},
+    {"take": "I think there's a good chance that this just eats a lot of the capital market if it were left to its own devices.", "cite": "— Tomasz Tunguz", "why": "Perps and tokenization could supersede regulated markets."},
+]
+
+CLAIMS = [
+    {"who": "Tomasz Tunguz", "claim": "There will not be enough AI compute in 2027, so AI gets rationed and bought by capacity and speed.", "metric": "AI compute supply", "target": "shortage", "by": "2027", "condition": None, "entity": None},
+    {"who": "Tomasz Tunguz", "claim": "Large tech acquisitions must close before mid-2027 or face roughly an 18-month approval window.", "metric": "M&A approval window", "target": "close before June or July", "by": "2027-07", "condition": None, "entity": None},
+    {"who": "Jason Calacanis", "claim": "2027 is the last year to get a big tech deal done before a possible five years without M&A.", "metric": "big tech M&A", "target": "last window", "by": "2027", "condition": "If Democrats win in 2028", "entity": None},
+    {"who": "Tomasz Tunguz", "claim": "Nvidia bookings plateau because GPUs cannot be powered up in the US.", "metric": "Nvidia bookings", "target": "plateau", "by": None, "condition": "GPUs sit idle without electricity", "entity": "Nvidia (NVDA)"},
+    {"who": "D.A. Wallach", "claim": "Andreessen Horowitz tries to go public.", "metric": "a16z listing", "target": "IPO attempt", "by": None, "condition": None, "entity": "Andreessen Horowitz"},
+    {"who": "D.A. Wallach", "claim": "The Social Security Trust Fund becomes insolvent.", "metric": "Social Security Trust Fund", "target": "insolvent", "by": "2032", "condition": None, "entity": "United States"},
+    {"who": "Elon Musk (cited by Ilona Gold)", "claim": "The US runs out of power.", "metric": "US power supply", "target": "shortfall", "by": "2026", "condition": None, "entity": "United States"},
+]
+
+RELATIONS = [
+    {"from": "Theory Ventures", "rel": "invests_in", "to": "Ollama", "note": "Tunguz says his firm backs the local-inference company"},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F4DA", "title": "Sources cited this episode: an NBC exit poll, the Anthropic S-1, a Stanford study on local models, Google's data-center head on intelligence per watt, and Charlie Munger on envy.", "tag": "Sources"},
+]
+
+GLOSSARY = [
+    {"term": "Allicorn", "def": "Calacanis's term for a startup that reaches meaningful revenue with a tiny team and 'flies over' venture rounds."},
+    {"term": "Uncapped SAFE", "def": "A convertible note with no valuation cap, here offered with a 10-15% discount to get into a company's next round."},
+    {"term": "Super pro rata", "def": "A right to invest beyond one's ownership share in later rounds; a16z's speedrun uses it to reach 10-12%."},
+    {"term": "Perpetual (perp)", "def": "A leveraged derivative with no expiry that simplifies option-like bets, here on private-company valuations."},
+    {"term": "Tokenization", "def": "Moving existing equities and debt onto a blockchain so they trade 24 hours a day and outside the US."},
+]
