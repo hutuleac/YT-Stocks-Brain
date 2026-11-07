@@ -1,0 +1,158 @@
+META = {
+    "title": "How To Build The Future: Paul Graham & Amjad Masad",
+    "channel": "Y Combinator",
+    "speakers": "Paul Graham, Amjad Masad",
+    "date": "2026-11-07",
+    "video_url": "https://www.youtube.com/watch?v=Q78dJ0vkWe8",
+    "thread_line": "5 threads · how Replit got to vibe coding first · the infrastructure iceberg · enterprise and the self-driving company · grieving the craft · living on the exponential",
+    "category": "dev",
+    "region": "",
+}
+
+SNAPSHOT = [
+    "Replit was already generating **50-60%** of code via autocomplete before it went to full agent coding.",
+    "Watching non-coders paste code and errors between ChatGPT and Replit showed the loop to automate: run the model **to completion**, ending when the program works.",
+    "Agent launched September 2024; Andrej Karpathy called it a \"feel the AGI\" moment; Paul Graham says Amjad seemed \"like a Bond villain\".",
+    "The 2024 harness was **10x** more complex than today's — better models make agent engineering easier, and easier to copy.",
+    "Enterprise: a project scoped at **$10M** got done for $250,000 on Replit; outsourcing is being displaced.",
+    "Replit now calls itself the platform for the **self-driving company**, not a vibe-coding tool.",
+    "Amjad's edge: actively predicting, revising, and assuming exponential change (Kurzweil's compute line).",
+]
+
+THEMES = [
+    {
+        "id": "vibe-coding-origin",
+        "tags": ["dev-workflow", "software"],
+        "color": "green",
+        "badge": "Personal story",
+        "status": "LAUNCHED SEPT 2024",
+        "title": "How Replit invented agent coding by watching users",
+        "lead": "For Replit the jump to agents was incremental — users were already doing it by hand, and the job was to automate the loop.",
+        "bullets": [
+            "Before agents, autocomplete already wrote **50-60%** of code on Replit.",
+            "Amjad invited users to the office: non-coders copied code from ChatGPT into Replit, pasted errors back, copied fixes — a manual loop.",
+            "The hard part: models made only a couple of tool calls; Replit had to loop until the program works, not one chat turn — model companies \"were so surprised\" it worked.",
+            "Second proof: AI can **provision infrastructure** — a tool call spins up a database or Redis.",
+            "Paul saw the demo July 2024; launch was September 2024; Andrej Karpathy called it an AGI moment.",
+            "Beta failed ~30% of the time, but users tolerated it because it was magical; early payers were people who'd otherwise pay ~$100,000 for outsourced apps vs ~$1,000 on Replit.",
+            "Replit Bounties (teens using early AI as outsourcers) grew fast but was shut down — agents would take the whole job.",
+        ],
+        "quote": {"text": "the harness circuit 24 is 10 times more complex than the harness today", "cite": "— Amjad Masad"},
+        "watch": "Amjad concedes agent engineering keeps getting commoditized — competitors catch up as models improve.",
+        "names": [
+            {"name": "Replit", "blurb": "Agent launched Sept 2024; now pitching self-driving companies", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
+        ],
+    },
+    {
+        "id": "infrastructure-iceberg",
+        "tags": ["dev-workflow", "software"],
+        "color": "green",
+        "badge": "Structural edge",
+        "status": "SYSTEMS PROGRAMMING DNA",
+        "title": "The iceberg: infrastructure under the English prompt",
+        "lead": "Years of systems work — sandboxing, a transactional file system, collaboration primitives — made Replit agent-ready before agents existed.",
+        "bullets": [
+            "Below the waterline: kernel and OS engineers and a homegrown file system that is **transactional and fully reversible**.",
+            "Multiplayer coding meant the first agent was \"just another user\" on the same project.",
+            "Org chart fit: a new agent team sat between infrastructure, deployment, glue and IDE teams; the IDE team now builds edit tools for agents.",
+            "In 2024 models hallucinated line numbers and lazily left \"finish it later\" stubs (both OpenAI and Anthropic, likely a chat artifact); now models ship native edit tools and just need a shell.",
+            "Guardrails make Replit slower and pricier, which enterprises like; Amjad says some competitors build insecure apps.",
+        ],
+        "quote": None,
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "self-driving-company",
+        "tags": ["software", "career"],
+        "color": "amber",
+        "badge": "Strategy shift",
+        "status": "ENTERPRISE · CUSTOMER ZERO",
+        "title": "From vibe coding to the self-driving company",
+        "lead": "Ambitious insiders at banks and manufacturers are replacing SaaS with Replit apps — Replit wants to be how AI flows into companies.",
+        "bullets": [
+            "A project scoped at **$10M** was built for $250,000; internal tools replace $10M SaaS — \"the outsourcing industry is sort of that\".",
+            "Biggest impact is non-tech firms; adopters are scrappy insiders (a sales lead building a sales tool) who often get promoted.",
+            "Amjad opposes token rationing ($100 a month each); companies should track ROI — one person can drive **100x** another.",
+            "Paul: tools that show which work is valuable fix the core problem of big companies.",
+            "Replit is customer zero for the self-driving company; copycats copy \"this frame from like 6 months ago\".",
+            "Telecom hackathon: after one hour on Replit, AI anxiety flipped from ~80% worried to ~80% optimistic.",
+            "Most banks run something like 2023 ChatGPT, barely connected; COBOL is finally being rewritten.",
+        ],
+        "quote": {"text": "Replet is the platform for the transformation for self-driving companies", "cite": "— Amjad Masad"},
+        "watch": "Amjad admits enterprise schlep (admin controls, budgets) sometimes makes the product worse for users.",
+        "names": None,
+    },
+    {
+        "id": "grieving-the-craft",
+        "tags": ["career", "mindset"],
+        "color": "gray",
+        "badge": "Counterintuitive take",
+        "status": "DENIAL → ACCEPTANCE",
+        "title": "Grieving the craft and killing sacred cows",
+        "lead": "Every engineer goes through denial, depression and acceptance — the code is now object code.",
+        "bullets": [
+            "Amjad told Paul at the demo: \"Don't look at the code\" — it's object code; Paul felt decades of craft reduced.",
+            "Amjad grieved around 2020; everyone else was convinced at end of 2025, triggered more by **OpenClaw** (texting, running to completion) than Claude Code.",
+            "Lesson: form factor matters for everyday people — vision isn't enough, you have to tinker with the experience.",
+            "Ya pushed Amjad to watch users despite the pain; she also drove Replit's distinctive graphic design.",
+            "Paul's original thesis: make programming 10% easier and you get twice as many programmers — \"I didn't mean make it this easy\".",
+            "Parenting: teach flexibility, adaptability and lifelong learning; Paul — surf the tidal wave, don't hug a palm tree.",
+        ],
+        "quote": {"text": "the safest place to be is surfing on it", "cite": "— Paul Graham"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "living-in-the-future",
+        "tags": ["mindset", "career"],
+        "color": "gray",
+        "badge": "Framework",
+        "status": "PREDICT · REVISE · ASSUME EXPONENTIAL",
+        "title": "How to live in the future",
+        "lead": "Prediction is a trainable skill: make calls, revise them, and assume exponential change as the default.",
+        "bullets": [
+            "Amjad's 2015-16 pitch deck predicted training a model on millions of coders — before the Transformers paper.",
+            "He wanted to code on his Symbian phone in 2008; Replit was the first programming platform with a mobile app.",
+            "Ray Kurzweil's log-linear chart of global compute is a straight line AI didn't bend — \"the compute brought on AI\".",
+            "From GPT-2 in 2019 he imagined chats, agents and personal assistants.",
+            "Paul: insiders see continuous steps where outsiders see step functions — like Steve Jobs' 1980s tablet before the iPhone.",
+            "Replit predicts users go from 1 agent to 10,000 agents, which can't run on a MacBook — so work moves to the cloud.",
+        ],
+        "quote": {"text": "people implicitly treat things as static.", "cite": "— Paul Graham"},
+        "watch": None,
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F3AF", "tag": "Product", "title": "Watch users in person — the manual workaround is the product to build."},
+    {"icon": "\U0001F3AF", "tag": "AI strategy", "title": "Measure AI spend by ROI per person, not flat token budgets."},
+    {"icon": "\U0001F3AF", "tag": "Careers", "title": "Grieve the craft early; keep your identity small and move up a layer."},
+    {"icon": "\U0001F3AF", "tag": "Foresight", "title": "Write down predictions, revise them, and assume exponential change."},
+    {"icon": "\U0001F3AF", "tag": "Moats", "title": "Build depth below the waterline — harness tricks get commoditized."},
+]
+
+CLAIMS = [
+    {"who": "Amjad Masad", "claim": "Users go from one agent to 10,000 agents, pushing work off local machines to the cloud.", "metric": "agents per user", "target": "10,000", "by": None, "condition": None, "entity": "Replit"},
+]
+
+RELATIONS = []
+
+HOT_TAKES = [
+    {"take": "I think with AI everyone will have to go through this period of you know denial and then and then sort of uh later on you know depression and then you know eventually acceptance", "cite": "— Amjad Masad", "why": "engineer grief"},
+    {"take": "I disagree with like rationing tokens.", "cite": "— Amjad Masad", "why": "enterprise AI budgets"},
+    {"take": "I think really the outsourcing industry is sort of that at this point.", "cite": "— Amjad Masad", "why": "outsourcing dead"},
+    {"take": "most banks are using like chat GPT like 2023 basically", "cite": "— Amjad Masad", "why": "enterprise lag"},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F4DA", "title": "Sources referenced: Andrej Karpathy, Ray Kurzweil, Paul Graham's essay *Keep Your Identity Small*, Steve Jobs/Apple history.", "tag": "Sources"},
+]
+
+GLOSSARY = [
+    {"term": "Vibe coding", "def": "Describing software in English and letting an agent write and run the code."},
+    {"term": "Harness", "def": "The scaffolding of tools and loops that turns a model into an agent."},
+    {"term": "Self-driving company", "def": "Replit's term for firms whose work is increasingly run by AI agents."},
+    {"term": "Schlep", "def": "Tedious but necessary work, like enterprise admin controls."},
+]
