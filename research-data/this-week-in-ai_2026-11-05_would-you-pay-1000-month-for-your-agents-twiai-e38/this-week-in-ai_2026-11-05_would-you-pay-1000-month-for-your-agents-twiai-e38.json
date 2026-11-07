@@ -1,0 +1,493 @@
+{
+ "schema_version": 2,
+ "meta": {
+  "title": "Would you pay $1000/month for your agents? | TWiAI E38",
+  "channel": "This Week in AI",
+  "speakers": "Jason Calacanis (host), Lon Harris (news), Nick Harris (Light Matter), Mark Jeffrey (Stillcore Capital), Peter Morales (Code Metal)",
+  "date": "2026-11-05",
+  "video_url": "https://www.youtube.com/watch?v=uIc_LjxKhOg",
+  "thread_line": "7 threads · Grokbot usage caps and what agents are worth, Bittensor as decentralized compute, the neocloud debt squeeze, Colossus scale and price rises, photonic interconnect and memory demand, agent show-and-tell, AI math and chatbot election sourcing",
+  "category": "market",
+  "region": ""
+ },
+ "snapshot": [
+  "Elon Musk confirmed Grokbot weekly usage meters were pegged to 100% on purpose: serving cost was **unsustainably high relative to revenue**. Anthropic and OpenAI have also pulled back from all-you-can-eat plans.",
+  "Panel consensus: token prices have to rise. Jason says he would pay **$1,000/month** for his agents; Nick Harris caps personal use near $500; Mark Jeffrey pays $200-300 and would go to $1,000.",
+  "The **neocloud debt squeeze** is the live market story: semis index fell 7.2% on Oct 30 and the WSJ reported CoreWeave, Nebius and NScale shut out of the bond market.",
+  "Mark Jeffrey pitches **Bittensor subnets** as a worldwide, miner-financed alternative to borrowed data centers, with inference said to cost a fraction of CoreWeave's.",
+  "Nick Harris (Light Matter): photonic interconnect lets the same gigawatt data center train a model about 3x faster and serve about 2x the tokens per second.",
+  "Jason, Nick and Lon demo personal agent builds: a custom Austin Zillow, a Chrome extension that strips Amazon sponsored listings, a Bittensor bubble chart and a streaming recommender.",
+  "Side threads: the alleged OpenAI front-run on a Navier-Stokes proof, and a Washington Post finding that chatbots lean on three small AI-built sites for midterm voting info."
+ ],
+ "themes": [
+  {
+   "id": "grokbot-caps",
+   "tags": [
+    "ai-infra",
+    "software"
+   ],
+   "color": "amber",
+   "badge": "Contested",
+   "status": "GROKBOT METERS JUMPED TO 100% OVER HALLOWEEN WEEKEND",
+   "title": "Flat-rate agent plans are breaking, and the panel says pay more",
+   "lead": "Always-on agents burn far more compute than subscription revenue covers, so labs are throttling and the panel expects higher prices.",
+   "bullets": [
+    "Grokbot subscribers saw weekly usage meters hit 100%, some while bots sat idle; Musk said it was **not a glitch** and cost was unsustainable. Two weeks earlier on SpaceX's Q3 call he said he had never seen anything grow this fast.",
+    "Anthropic and OpenAI have also pulled back from all-you-can-eat plans; Goldman Sachs limited Claude Code and GitHub Copilot to engineers only after a productivity and risk review, cutting off bankers and traders.",
+    "Spend range: Garry Tan says $100-200K a year on tokens; Jason ~$40K a year for ~20 people (~$200 each) and claims $2M+ of software value; Nick runs 10-20 always-on agents and has spent $10-20K in a week; Peter Morales spent $100K in a couple of weeks building software.",
+    "Willingness to pay: Jason $1,000/month; Mark Jeffrey $1,000 (now $200-300); Nick ~$500 personal. Jason's ladder: $200 plan at half today's token allowance, plus a $500 tier.",
+    "Peter Morales's firm is moving staff to on-prem compute and self-hosted models, driven by token spend and the fear of a frontier price jump.",
+    "Jason's analogy: the Uber/Lyft price war ran close to a decade before Uber's funding outlasted Lyft. With Anthropic and OpenAI going public, he expects pressure for a path to profitability.",
+    "Jason's theory: Anthropic hasn't shipped its bot product because it is compute constrained and would hit the same all-you-can-eat wall."
+   ],
+   "quote": {
+    "text": "When you become unmetered on inference, you stop thinking about the meter, your behavior just changes.",
+    "cite": "— Jason Calacanis"
+   },
+   "watch": "Jason's firm spends on these tools and he is a consulting partner and investor in Stillcore Capital, whose Mark Jeffrey is on the panel.",
+   "names": [
+    {
+     "name": "xAI",
+     "blurb": "Grokbot maker; throttled usage after serving costs outran revenue",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Anthropic",
+     "blurb": "Pulled back on unlimited plans; bot product reportedly in testing",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "OpenAI",
+     "blurb": "Also pulled back on all-you-can-eat plans",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Goldman Sachs (GS)",
+     "blurb": "Restricted Claude Code and GitHub Copilot to engineers",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "bittensor-compute",
+   "tags": [
+    "crypto",
+    "ai-infra"
+   ],
+   "color": "gray",
+   "badge": "Speculative",
+   "status": "MARK JEFFREY'S BITTENSOR PITCH",
+   "title": "Bittensor subnets as miner-funded compute that skips the debt",
+   "lead": "Mark Jeffrey argues Bittensor shifts data-center capex and risk onto worldwide miners, so compute and inference are cheaper than CoreWeave-style rentals.",
+   "bullets": [
+    "Subnet 51 (Liam) sells raw machines pay-as-you-go with no KYC or contract; miners worldwide meet performance thresholds, pay for power and hardware and carry the risk. Ownership of a subnet is tied to the TAO token.",
+    "Subnet 53 (NGI) and Targon sit one layer up and provide inference; renting from Liam compounds the cost savings at each layer. Mark says NGI offers inference at a fraction of CoreWeave's cost.",
+    "Capacity: it could not run Grokbot today, but Mark says it scales elastically because rising usage lifts miner rewards and attracts more supply, with a warm-up lag.",
+    "Suppliers range from data centers to individuals' home machines. Mark runs Hermes agent on NGI inference and also uses Grokbot for ease of use.",
+    "Subnet 95 (actual computer) clusters home Macs for inference and lets owners rent spare capacity back to the network.",
+    "Mark built a subnet bubble chart (market cap, volume, 30-day change, weekly or monthly, USD or TAO) and opened it to the public."
+   ],
+   "quote": null,
+   "watch": "Mark Jeffrey is a partner at Stillcore Capital, which invests in the Bittensor TAO ecosystem (128 subnets), and Jason is a consulting partner and investor there.",
+   "names": [
+    {
+     "name": "Bittensor (TAO)",
+     "blurb": "Decentralized network where subnets earn token rewards for compute and inference",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Medium",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "neocloud-squeeze",
+   "tags": [
+    "ai-infra",
+    "finance"
+   ],
+   "color": "red",
+   "badge": "Confirmed event",
+   "status": "CHIP SELLOFF OCT 30; WSJ ON BOND MARKET ACCESS",
+   "title": "Lenders pull back from neoclouds as AI stocks sell off",
+   "lead": "Debt markets cooled on GPU clouds right as chip and software names dropped; Nick Harris reads it as a mood swing, not a broken thesis.",
+   "bullets": [
+    "Friday Oct 30: Intel, AMD, Dell and Nvidia fell and the semiconductor index dropped 7.2%; some outlets called it Black Friday for chip stocks.",
+    "WSJ that night: CoreWeave, Nebius and NScale had effectively been shut out of the bond market in recent weeks as lenders demanded tougher terms.",
+    "Musk replied to Chamath that debt markets had almost entirely shut off access for neoclouds and that the 200+ neoclouds face guppy-level death and consolidation.",
+    "Spreading squeeze: Oracle fell 8.8% on Monday, Meta is marketing $20B of bonds, Shopify sank on its first revenue miss since 2022.",
+    "Peter Morales: expect more efficiency work and local models, citing someone running GLM 5.3 locally. Nick Harris: debt lenders are risk-averse and a high risk-reward buildout invites this; some holders are taking profits.",
+    "Mark Jeffrey (via the All-In discussion): flags the mismatch between borrowing for data centers and the contracts CoreWeave earns from."
+   ],
+   "quote": {
+    "text": "I think this mood can flip so hard so fast.",
+    "cite": "— Nick Harris"
+   },
+   "watch": null,
+   "names": [
+    {
+     "name": "CoreWeave (CRWV)",
+     "blurb": "Cited as shut out of the bond market; also Mark's cost comparison for Bittensor",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Nebius (NBIS)",
+     "blurb": "Shut out of bond market per WSJ",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "NScale",
+     "blurb": "Shut out of bond market per WSJ",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Nvidia (NVDA), AMD (AMD), Intel (INTC), Dell (DELL)",
+     "blurb": "Fell in the Oct 30 chip selloff",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Oracle (ORCL)",
+     "blurb": "Fell 8.8% on Monday",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Meta (META)",
+     "blurb": "Marketing $20B of bonds",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Shopify (SHOP)",
+     "blurb": "Sank on first revenue miss since 2022",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "colossus-pricing",
+   "tags": [
+    "ai-infra"
+   ],
+   "color": "amber",
+   "badge": "Contested",
+   "status": "COLOSSUS ONE-AND-TWO BUILDOUT",
+   "title": "Colossus hits ~1.1M GPUs and the bill has to be recouped through pricing",
+   "lead": "Jason says Musk told him the xAI buildout is far bigger than assumed, so prices must rise and tiered pricing will follow.",
+   "bullets": [
+    "Per Jason's conversation with Musk (and a tweet): over a million GPUs, 1.11M chips, power from ~300 MW to ~1 GW, capital cost from $13B to $36B.",
+    "Jason expects Google and Meta-style price discrimination: tweak value up for some users, give others free tiers and charge what each will pay, like an ad network.",
+    "Peter Morales: not all tokens are equal. Heavyweight reasoning models trained on Colossus-class systems are for hard problems such as formal-methods proofs; a booking agent can run partly on a phone.",
+    "Nick Harris: AI is improving as expected and breakthroughs should come soon; he cites Fields medalists saying they feel obsolete."
+   ],
+   "quote": null,
+   "watch": "Jason is relaying a private conversation with Musk.",
+   "names": [
+    {
+     "name": "xAI",
+     "blurb": "Colossus 1 and 2 buildout",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "photonics-memory",
+   "tags": [
+    "ai-infra",
+    "semis"
+   ],
+   "color": "green",
+   "badge": "Recommendation",
+   "status": "LIGHT MATTER CLAIMS; ALTMAN DRAM COMMENT OCT 29",
+   "title": "Photonic interconnect claims and the fight over who owns DRAM",
+   "lead": "Nick Harris says interconnect is the bottleneck lever; Altman's remark that home memory is wasted drew pushback and a case that memory demand never ends.",
+   "bullets": [
+    "Nick Harris (Light Matter, CEO): the same gigawatt data center can train a model about 3x faster (a month instead of three) and serve about 2x the tokens per second, using photonic interconnect.",
+    "His thesis: computing is now very big chips plus ultra-fast low-latency links, because electronic scaling is ending. Light Matter has won an industry best-paper award two years running and published a Nature paper on a photonic computer; hardware ships next year.",
+    "Altman on the Stripe Cheeky Pike podcast with John Collison (posted Oct 29): it is globally terrible for everyone to hold the world's limited DRAM at home, which sits idle ~95% of the time; maximum utilization belongs in the cloud.",
+    "Mark Jeffrey rejects ceding sovereignty to the cloud. Peter Morales says 5% is outdated as agents now keep local machines busy.",
+    "A panelist's volumetric-memory argument: brains store in 3D connections while HBM is sheets of cells, so a population of AIs the size of humanity needs far more memory and DRAM stays short as AI scales; Jevons paradox applies."
+   ],
+   "quote": {
+    "text": "same gigawatt data center you can train the model three times faster",
+    "cite": "— Nick Harris"
+   },
+   "watch": "Nick Harris runs Light Matter, so the speed and throughput figures are the company's own.",
+   "names": [
+    {
+     "name": "Light Matter",
+     "blurb": "Photonic interconnect maker; partnerships with Nvidia and Qualcomm announced this year",
+     "stance": "POSITIVE VIEW",
+     "conviction": "Medium",
+     "horizon": "ships 2027"
+    }
+   ]
+  },
+  {
+   "id": "agent-showandtell",
+   "tags": [
+    "dev-workflow",
+    "consumer"
+   ],
+   "color": "green",
+   "badge": "Recommendation",
+   "status": "FIRST-HAND BUILDS",
+   "title": "What people built with agents in a few hours",
+   "lead": "Non-programmers now ship custom dashboards, scrapers and browser extensions, and the panel thinks the mainstream hasn't noticed.",
+   "bullets": [
+    "Jason's Austin home search: agents mine YouTube, TikTok and Instagram for off-MLS listings, reverse-image-search them, build broker/architect/builder cards and email a weekly dossier to his wife; Grokbot even bought a domain and put the site behind a password. Under an hour of his work over 3-4 weeks.",
+    "Jason's Chrome extension \"Unsponsored\" removes sponsored Amazon listings: about 6 minutes and 30-40,000 output tokens.",
+    "Nick Harris: a live dashboard of Light Matter's manufacturing flow, from foundry to packaging to rack, by project, customer and due date. Jason's team builds dashboards in Lovable on a Notion backend.",
+    "Lon Harris's \"bingebot\" sends a weekly list of new streaming titles from his past top-10 lists; Nick grades Jason's AI usage a solid B (the 80s out of 100).",
+    "UX gap: the panel wants bots to share what they know about your taste instead of repeating it. Peter Morales has a bot write deployable code for any task he'd repeat more than once or twice.",
+    "Jason: the last 100 days eclipsed the first thousand days after ChatGPT, so the next 100 will eclipse them again."
+   ],
+   "quote": {
+    "text": "It's going to be a very agentic Christmas over the break.",
+    "cite": "— Jason Calacanis"
+   },
+   "watch": null,
+   "names": [
+    {
+     "name": "Lovable",
+     "blurb": "Used by Jason's team to build internal dashboards",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  },
+  {
+   "id": "math-and-elections",
+   "tags": [
+    "policy",
+    "ai-infra"
+   ],
+   "color": "amber",
+   "badge": "Contested",
+   "status": "ALLEGATION AND WASHINGTON POST REPORT",
+   "title": "AI proof credit fight and chatbots sourcing election answers from AI-built sites",
+   "lead": "Two trust stories: a disputed claim that OpenAI front-ran mathematicians, and a Washington Post review showing chatbots lean on three small AI-built voter sites.",
+   "bullets": [
+    "Mark Jeffrey's cynical telling: mathematicians were nearing a human-written Navier-Stokes proof with an AI product when OpenAI announced its computer solved it; the allegation is that it benefited from their prompts. Mark says it was messy and \"who knows if it's true.\"",
+    "Peter Morales relays Terence Tao: the age of heroes in mathematics is over. Nick Harris's counter: now superheroes. Domain experts' questions are their moat.",
+    "WaPo review of thousands of chatbot answers: ChatGPT, Copilot and others lean on Ballot Brief, Smarter.vote and Decode the Vote. ChatGPT cited Ballot Brief in 22% of election answers; Copilot in 75% (680,000+ referrals in 30 days).",
+    "Ballot Brief had errors: it credited a senator with backing a bill passed before they took office and merged two California Robert Garcias into one profile.",
+    "Gemini declined to answer 2024 election questions in the US and India, as shown by a Google announcement read on air.",
+    "Prediction markets: a panelist speculates large money could distort Polymarket and Kalshi but says they are just guessing; a fake survey firm got into poll aggregators."
+   ],
+   "quote": {
+    "text": "the age of heroes in mathematics is over",
+    "cite": "— Terence Tao, relayed by Peter Morales"
+   },
+   "watch": "Mark Jeffrey's Navier-Stokes account is an allegation he calls messy and unconfirmed.",
+   "names": [
+    {
+     "name": "OpenAI",
+     "blurb": "Subject of the front-running allegation",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Polymarket",
+     "blurb": "Speculated manipulation target",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    },
+    {
+     "name": "Kalshi",
+     "blurb": "Speculated manipulation target",
+     "stance": "CASUAL MENTION",
+     "conviction": "None",
+     "horizon": null
+    }
+   ]
+  }
+ ],
+ "takeaways": [
+  {
+   "icon": "💰",
+   "tag": "AI costs",
+   "title": "Budget agent spend as a line item and price in $200-1,000/month per heavy user, not flat-rate plans."
+  },
+  {
+   "icon": "📉",
+   "tag": "Markets",
+   "title": "Watch neocloud bond access (CoreWeave, Nebius, NScale) as the stress gauge for AI infrastructure."
+  },
+  {
+   "icon": "🧠",
+   "tag": "Strategy",
+   "title": "Route cheap tasks to local or smaller models and keep frontier compute for hard problems."
+  },
+  {
+   "icon": "🛠",
+   "tag": "Workflows",
+   "title": "Turn repeated bot tasks into deployed code and give agents shared context on your taste."
+  },
+  {
+   "icon": "🗳",
+   "tag": "Policy",
+   "title": "Treat chatbot answers on elections as only as good as the sites they cite."
+  }
+ ],
+ "hot_takes": [
+  {
+   "take": "I think I'm at $1,000 a month I would pay for all this activity",
+   "cite": "— Jason Calacanis",
+   "why": "price point"
+  },
+  {
+   "take": "this game of chicken can't last forever.",
+   "cite": "— Jason Calacanis",
+   "why": "subsidized token pricing ends"
+  },
+  {
+   "take": "If Abbott wins, he's gonna flip.",
+   "cite": "— Jason Calacanis",
+   "why": "dated prediction on Texas data centers"
+  },
+  {
+   "take": "It's going to be a very agentic Christmas over the break.",
+   "cite": "— Jason Calacanis",
+   "why": "seasonal adoption call"
+  },
+  {
+   "take": "I think this mood can flip so hard so fast.",
+   "cite": "— Nick Harris",
+   "why": "market sentiment"
+  }
+ ],
+ "claims": [
+  {
+   "who": "Jason Calacanis",
+   "claim": "Texas Governor Greg Abbott reverses his data center moratorium within 30 days of winning.",
+   "metric": "Texas data center policy",
+   "target": "reversal",
+   "by": "30 days after winning",
+   "condition": "If Abbott wins",
+   "entity": null
+  },
+  {
+   "who": "Jason Calacanis",
+   "claim": "This holiday season becomes the agentic Christmas, with agents as the big gifting trend.",
+   "metric": "consumer agent adoption",
+   "target": "holiday trend",
+   "by": "2026-12",
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Nick Harris",
+   "claim": "Light Matter's photonic hardware ships next year.",
+   "metric": "Light Matter hardware shipping",
+   "target": "shipping",
+   "by": "2027",
+   "condition": null,
+   "entity": "Light Matter"
+  },
+  {
+   "who": "Nick Harris",
+   "claim": "Raising AI prices across the industry is definitely going to happen.",
+   "metric": "AI plan pricing",
+   "target": "increase",
+   "by": null,
+   "condition": null,
+   "entity": null
+  },
+  {
+   "who": "Elon Musk (relayed by Jason Calacanis)",
+   "claim": "The Colossus buildout goes from about 300 MW to about 1 GW, with 1.11M GPUs and capital cost rising from $13B to $36B.",
+   "metric": "Colossus capacity",
+   "target": "1 GW / 1.11M GPUs / $36B",
+   "by": null,
+   "condition": null,
+   "entity": "xAI"
+  },
+  {
+   "who": "Nick Harris",
+   "claim": "With photonic interconnect, the same gigawatt data center trains a model in a month instead of three and serves twice the tokens per second.",
+   "metric": "training time / tokens per second",
+   "target": "3x faster / 2x",
+   "by": null,
+   "condition": null,
+   "entity": "Light Matter"
+  },
+  {
+   "who": "Elon Musk (cited by Lon Harris)",
+   "claim": "The 200+ neoclouds will see guppy-level death and consolidation.",
+   "metric": "neocloud count",
+   "target": "consolidation",
+   "by": null,
+   "condition": null,
+   "entity": null
+  }
+ ],
+ "relations": [
+  {
+   "from": "Light Matter",
+   "rel": "partners_with",
+   "to": "Nvidia (NVDA)",
+   "note": "partnership announced this year"
+  },
+  {
+   "from": "Light Matter",
+   "rel": "partners_with",
+   "to": "Qualcomm (QCOM)",
+   "note": "partnership announced this year"
+  }
+ ],
+ "other_news": [
+  {
+   "icon": "📚",
+   "title": "Sources referenced: Stripe's Cheeky Pike podcast (John Collison with Sam Altman), WSJ, Washington Post, All-In discussion of CoreWeave, a post by Andrej Karpathy on his own YouTube-style tool, Benzinga.",
+   "tag": "Sources"
+  },
+  {
+   "icon": "🧪",
+   "title": "Peter Morales's Code Metal uses formal methods (mathematical proof of code properties) to verify AI-generated code on defense, automotive and aerospace hardware.",
+   "tag": "Software"
+  }
+ ],
+ "glossary": [
+  {
+   "term": "Neocloud",
+   "def": "A GPU-focused cloud provider such as CoreWeave, Nebius or NScale, typically funded with debt."
+  },
+  {
+   "term": "Subnet (Bittensor)",
+   "def": "A Bittensor network where miners compete for token rewards providing a service such as compute or inference."
+  },
+  {
+   "term": "Formal methods",
+   "def": "Proving mathematically that software satisfies defined properties, used for mission-critical code."
+  },
+  {
+   "term": "Jevons paradox",
+   "def": "When efficiency gains raise total consumption of a resource instead of lowering it."
+  }
+ ]
+}

@@ -1,0 +1,8823 @@
+1
+00:00:00,000 --> 00:00:03,919
+All right, everybody. Welcome back to
+
+2
+00:00:01,839 --> 00:00:06,240
+This Week in AI. Yes, we do three shows.
+
+3
+00:00:03,919 --> 00:00:08,558
+This week in startups twice a week. This
+
+4
+00:00:06,240 --> 00:00:11,789
+week in AI and this week in VC might
+
+5
+00:00:08,558 --> 00:00:14,798
+sound familiar. Mark Jeffrey. Uh and
+
+6
+00:00:11,789 --> 00:00:16,559
+[laughter] we are It's a deep poll. And
+
+7
+00:00:14,798 --> 00:00:18,719
+uh we have three newsletters to go along
+
+8
+00:00:16,559 --> 00:00:20,799
+with these three that Lon is actively
+
+9
+00:00:18,719 --> 00:00:23,358
+running right now. This week in VC, you
+
+10
+00:00:20,800 --> 00:00:26,160
+get your deal of the week. You behind
+
+11
+00:00:23,359 --> 00:00:28,720
+the deal, one feature one time a week.
+
+12
+00:00:26,160 --> 00:00:30,079
+This week in AI, a little tip every day,
+
+13
+00:00:28,719 --> 00:00:31,919
+a different it could be from us, it
+
+14
+00:00:30,079 --> 00:00:33,759
+could be from another person, but how to
+
+15
+00:00:31,920 --> 00:00:36,719
+use these AI tools. That's a this week
+
+16
+00:00:33,759 --> 00:00:38,479
+in AI newsletter. And then finally, this
+
+17
+00:00:36,719 --> 00:00:40,079
+week in startups has a newsletter called
+
+18
+00:00:38,479 --> 00:00:41,599
+Tactical and Practical. What is it? It's
+
+19
+00:00:40,079 --> 00:00:43,280
+tactical practical advice twice a week,
+
+20
+00:00:41,600 --> 00:00:44,960
+100 times a year. These are all worth a
+
+21
+00:00:43,280 --> 00:00:47,359
+Hyundai. If you have a Hyundai laying
+
+22
+00:00:44,960 --> 00:00:49,200
+around, go subscribe to these. Uh the
+
+23
+00:00:47,359 --> 00:00:51,600
+the forward motion is working. People
+
+24
+00:00:49,200 --> 00:00:53,199
+are getting value from these articles,
+
+25
+00:00:51,600 --> 00:00:54,879
+and we're looking to hire three
+
+26
+00:00:53,198 --> 00:00:57,439
+full-time analysts. If you know an
+
+27
+00:00:54,878 --> 00:00:59,039
+analyst, go to careers.launch.co.
+
+28
+00:00:57,439 --> 00:01:01,599
+If you want to be an analyst in Austin
+
+29
+00:00:59,039 --> 00:01:02,800
+or our Calgary office, two places. We
+
+30
+00:01:01,600 --> 00:01:05,040
+want you to come to work and meet
+
+31
+00:01:02,799 --> 00:01:06,640
+startups and write coverage of these
+
+32
+00:01:05,040 --> 00:01:08,159
+great companies. We have an associate in
+
+33
+00:01:06,640 --> 00:01:11,840
+training program. Start as a researcher,
+
+34
+00:01:08,159 --> 00:01:14,560
+go to an analyst, and then uh eventually
+
+35
+00:01:11,840 --> 00:01:16,320
+you become an associate. That's one of
+
+36
+00:01:14,560 --> 00:01:18,159
+the hard positions to get in our
+
+37
+00:01:16,319 --> 00:01:20,879
+industry. Thanks to our friends at
+
+38
+00:01:18,159 --> 00:01:23,520
+PayPal, the exclusive sponsor of This
+
+39
+00:01:20,879 --> 00:01:26,560
+Week in AI. Pay zero processing fees on
+
+40
+00:01:23,519 --> 00:01:28,719
+your first 100,000 in eligible PayPal
+
+41
+00:01:26,560 --> 00:01:30,879
+payment volume. Find out more at
+
+42
+00:01:28,719 --> 00:01:32,640
+paypal.launch.co.
+
+43
+00:01:30,879 --> 00:01:34,719
+First up, we've got a returning guest.
+
+44
+00:01:32,640 --> 00:01:36,960
+He is the founder and CEO of Light
+
+45
+00:01:34,719 --> 00:01:39,200
+Matter. Uh they have photonic
+
+46
+00:01:36,959 --> 00:01:41,919
+interconnects that use light instead of
+
+47
+00:01:39,200 --> 00:01:43,600
+copper to move data between AI chips.
+
+48
+00:01:41,920 --> 00:01:46,000
+Give it up for Nick Harris. Thanks for
+
+49
+00:01:43,599 --> 00:01:48,158
+joining us. Great last name. Also, we
+
+50
+00:01:46,000 --> 00:01:48,959
+have another returning guest, old friend
+
+51
+00:01:48,159 --> 00:01:50,960
+of the show
+
+52
+00:01:48,959 --> 00:01:52,399
+>> for another great appearance. Plus a
+
+53
+00:01:50,959 --> 00:01:54,239
+another old friend of the show, old
+
+54
+00:01:52,399 --> 00:01:56,320
+friend of Jason's from back when we had
+
+55
+00:01:54,239 --> 00:01:58,560
+another this weekend podcast network.
+
+56
+00:01:56,319 --> 00:02:00,239
+He's the partner of Stillcore Capital
+
+57
+00:01:58,560 --> 00:02:01,840
+for which Jason is a consulting partner
+
+58
+00:02:00,239 --> 00:02:03,199
+and investor. Mark Jeffrey is here.
+
+59
+00:02:01,840 --> 00:02:04,240
+Mark, thanks for being here.
+
+60
+00:02:03,200 --> 00:02:06,799
+>> Hello everyone.
+
+61
+00:02:04,239 --> 00:02:08,478
+>> Yeah, and a lot of decentralized AI
+
+62
+00:02:06,799 --> 00:02:09,520
+going on right now and we're going to
+
+63
+00:02:08,479 --> 00:02:11,520
+talk about that today.
+
+64
+00:02:09,520 --> 00:02:13,040
+>> Great tiein for this week's doc. I I
+
+65
+00:02:11,520 --> 00:02:14,879
+look very smart for book again. And
+
+66
+00:02:13,039 --> 00:02:16,560
+finally, we have the co-founder, first
+
+67
+00:02:14,878 --> 00:02:18,639
+timer on this week at AI. He's the
+
+68
+00:02:16,560 --> 00:02:20,400
+co-founder and CEO of Code Metal.
+
+69
+00:02:18,639 --> 00:02:22,958
+They're an AI platform that translates,
+
+70
+00:02:20,400 --> 00:02:25,280
+optimizes, and formally verifies code so
+
+71
+00:02:22,959 --> 00:02:27,680
+legacy and AI generated software runs
+
+72
+00:02:25,280 --> 00:02:29,520
+correctly on defense, automotive, other
+
+73
+00:02:27,680 --> 00:02:31,120
+mission critical hardware. It's Peter
+
+74
+00:02:29,520 --> 00:02:34,239
+Morales. Thanks for being here, Peter.
+
+75
+00:02:31,120 --> 00:02:36,080
+>> All right, Lon, what's in the news
+
+76
+00:02:34,239 --> 00:02:38,640
+related to super intelligence,
+
+77
+00:02:36,080 --> 00:02:40,480
+>> of course. Well, uh, over the Halloween
+
+78
+00:02:38,639 --> 00:02:43,839
+weekend, Grockbot subscribers watched
+
+79
+00:02:40,479 --> 00:02:45,679
+their weekly usage meters jump to 100%.
+
+80
+00:02:43,840 --> 00:02:47,920
+Uh, some while their bots were sitting
+
+81
+00:02:45,680 --> 00:02:49,920
+idle overnight, Elon Musk confirmed it
+
+82
+00:02:47,919 --> 00:02:51,919
+was not a glitch. Uh, he posted to X,
+
+83
+00:02:49,919 --> 00:02:54,559
+"The cost of serving Grockbot was
+
+84
+00:02:51,919 --> 00:02:56,799
+unsustainably high relative to revenue."
+
+85
+00:02:54,560 --> 00:02:59,039
+Uh, two weeks earlier on SpaceX's Q3
+
+86
+00:02:56,800 --> 00:03:01,360
+call, he said, "I'd never seen anything
+
+87
+00:02:59,039 --> 00:03:02,878
+grow this fast." It's the latest in a
+
+88
+00:03:01,360 --> 00:03:05,440
+string of AI companies, including
+
+89
+00:03:02,878 --> 00:03:07,679
+Anthropic and OpenAI, pulling back on
+
+90
+00:03:05,439 --> 00:03:09,598
+all you can eat plans. The same week,
+
+91
+00:03:07,680 --> 00:03:11,760
+Goldman Sachs limited Claude code and
+
+92
+00:03:09,598 --> 00:03:13,518
+GitHub copilot to engineers only,
+
+93
+00:03:11,759 --> 00:03:14,878
+cutting off bankers and traders who have
+
+94
+00:03:13,519 --> 00:03:17,280
+been reviewing them for months after
+
+95
+00:03:14,878 --> 00:03:20,079
+review of productivity and risk
+
+96
+00:03:17,280 --> 00:03:22,560
+concerns. But over at the other extreme,
+
+97
+00:03:20,080 --> 00:03:26,000
+Y Comodators Gary Ted says, "I spend
+
+98
+00:03:22,560 --> 00:03:27,439
+about 100 to 200K a year on tokens with
+
+99
+00:03:26,000 --> 00:03:29,598
+an agent that can see his email,
+
+100
+00:03:27,439 --> 00:03:31,840
+Dropbox, Apple Notes, 20 years of
+
+101
+00:03:29,598 --> 00:03:33,359
+therapy notes." He does caveat that for
+
+102
+00:03:31,840 --> 00:03:35,280
+most people it's too expensive right
+
+103
+00:03:33,360 --> 00:03:37,360
+now. Jason, you jumped into this
+
+104
+00:03:35,280 --> 00:03:40,000
+conversation as well over on X. You're
+
+105
+00:03:37,360 --> 00:03:41,680
+saying you spend around 40K a year,
+
+106
+00:03:40,000 --> 00:03:44,479
+maybe a little less on AI tools,
+
+107
+00:03:41,680 --> 00:03:47,599
+including Grockbot, and get $2 million
+
+108
+00:03:44,479 --> 00:03:49,840
+plus worth of value. So, uh, Nick, we'll
+
+109
+00:03:47,598 --> 00:03:52,399
+go to you first. How much are you
+
+110
+00:03:49,840 --> 00:03:54,479
+spending on intelligence? And how much
+
+111
+00:03:52,400 --> 00:03:57,120
+do you think is reasonable for a company
+
+112
+00:03:54,479 --> 00:03:58,399
+to be spending on getting everyone on
+
+113
+00:03:57,120 --> 00:03:59,840
+their agents all day?
+
+114
+00:03:58,400 --> 00:04:01,360
+>> Yeah, good question. Also, the, you
+
+115
+00:03:59,840 --> 00:04:02,878
+know, the Grockbot thing was funny. I
+
+116
+00:04:01,360 --> 00:04:04,959
+was on a hike with my kids at the time
+
+117
+00:04:02,878 --> 00:04:08,239
+and I was managing like four Grock bots,
+
+118
+00:04:04,959 --> 00:04:09,759
+you know, in between uh steps and I saw
+
+119
+00:04:08,239 --> 00:04:11,280
+that the the limit kind of jumped and I
+
+120
+00:04:09,759 --> 00:04:12,560
+was like, "What the heck is this?" I I
+
+121
+00:04:11,280 --> 00:04:14,799
+wasn't anywhere near a limit. So, I was
+
+122
+00:04:12,560 --> 00:04:16,560
+a little surprised by that. Um, you
+
+123
+00:04:14,799 --> 00:04:19,358
+know, I'm constantly using it. How much
+
+124
+00:04:16,560 --> 00:04:22,478
+money do I spend? Um, well, I have every
+
+125
+00:04:19,358 --> 00:04:25,279
+single subscription plan maxed out, uh,
+
+126
+00:04:22,478 --> 00:04:26,800
+however much money that is. Uh, and I've
+
+127
+00:04:25,279 --> 00:04:30,478
+been known to spend, you know, like 10
+
+128
+00:04:26,800 --> 00:04:33,120
+or 20,000 over a week, you know, on on
+
+129
+00:04:30,478 --> 00:04:36,319
+building out software and tools and and
+
+130
+00:04:33,120 --> 00:04:37,600
+uh new workflows at Light Matter. And so
+
+131
+00:04:36,319 --> 00:04:40,079
+it's a lot of money and there's an
+
+132
+00:04:37,600 --> 00:04:41,280
+incredible incredible amount of leverage
+
+133
+00:04:40,079 --> 00:04:43,039
+that you get. You know, one of the
+
+134
+00:04:41,279 --> 00:04:44,478
+things that I do is I have this team of
+
+135
+00:04:43,040 --> 00:04:46,080
+agents that are watching important
+
+136
+00:04:44,478 --> 00:04:47,839
+projects that are happening and I'm
+
+137
+00:04:46,079 --> 00:04:49,359
+getting updates constantly on what's the
+
+138
+00:04:47,839 --> 00:04:51,039
+latest data on this chip that just came
+
+139
+00:04:49,360 --> 00:04:52,720
+out of the FAB. You know, where are we
+
+140
+00:04:51,040 --> 00:04:54,720
+at? What are the blockers? Like all
+
+141
+00:04:52,720 --> 00:04:57,440
+these details. So, I have an army of
+
+142
+00:04:54,720 --> 00:04:59,360
+probably, you know, 10, 20 agents that
+
+143
+00:04:57,439 --> 00:05:01,279
+are running all the time and check these
+
+144
+00:04:59,360 --> 00:05:03,120
+things. And I feel like the bots are an
+
+145
+00:05:01,279 --> 00:05:04,079
+incredible tool. Can't wait for
+
+146
+00:05:03,120 --> 00:05:06,560
+Anthropic to get them.
+
+147
+00:05:04,079 --> 00:05:08,959
+>> Yeah, Anthropic is in testing. I think I
+
+148
+00:05:06,560 --> 00:05:11,199
+signed up for it. Uh, it's amazing that
+
+149
+00:05:08,959 --> 00:05:13,038
+they're they haven't launched theirs. My
+
+150
+00:05:11,199 --> 00:05:15,759
+theory, Peter, is that they haven't
+
+151
+00:05:13,038 --> 00:05:17,680
+launched theirs because they are compute
+
+152
+00:05:15,759 --> 00:05:20,000
+constrained and they have such a large
+
+153
+00:05:17,680 --> 00:05:22,720
+base of users that when they launch it,
+
+154
+00:05:20,000 --> 00:05:25,120
+people will be disappointed that the
+
+155
+00:05:22,720 --> 00:05:28,160
+service does what Elon Musk did this
+
+156
+00:05:25,120 --> 00:05:31,918
+week, which is it cannot be all you can
+
+157
+00:05:28,160 --> 00:05:34,479
+eat. Uh, and uh because the the software
+
+158
+00:05:31,918 --> 00:05:36,799
+is too powerful, the bots are too
+
+159
+00:05:34,478 --> 00:05:38,319
+accommodating uh and so they want to
+
+160
+00:05:36,800 --> 00:05:41,199
+solve your problems. What's your take,
+
+161
+00:05:38,319 --> 00:05:42,560
+Peter? I ran into similar things with uh
+
+162
+00:05:41,199 --> 00:05:45,520
+jumping between every single
+
+163
+00:05:42,560 --> 00:05:47,839
+subscription service to make sure uh
+
+164
+00:05:45,519 --> 00:05:50,079
+trying to be as efficient as possible. I
+
+165
+00:05:47,839 --> 00:05:52,560
+think uh yeah, Enthropic's going to hit
+
+166
+00:05:50,079 --> 00:05:55,359
+a huge number of users, a huge amount of
+
+167
+00:05:52,560 --> 00:05:56,959
+token usage uh as soon as they turn the
+
+168
+00:05:55,360 --> 00:05:58,479
+bots on. Right now, I'm running cron
+
+169
+00:05:56,959 --> 00:06:00,560
+jobs because I'm, you know, somewhat
+
+170
+00:05:58,478 --> 00:06:02,800
+technical, so I can have it kick off a
+
+171
+00:06:00,560 --> 00:06:04,720
+certain job every now and then. But, uh,
+
+172
+00:06:02,800 --> 00:06:06,800
+you know, internally, we've moved our
+
+173
+00:06:04,720 --> 00:06:08,639
+staff to a bunch of on-prem compute.
+
+174
+00:06:06,800 --> 00:06:11,038
+We're trying to do more and more sort of
+
+175
+00:06:08,639 --> 00:06:13,680
+self-hosting of models and you know it's
+
+176
+00:06:11,038 --> 00:06:15,038
+a result of both token spend and I think
+
+177
+00:06:13,680 --> 00:06:17,120
+we've all been holding our breath
+
+178
+00:06:15,038 --> 00:06:20,318
+waiting for that token price to jump up
+
+179
+00:06:17,120 --> 00:06:22,000
+at the very very frontier. Um and for us
+
+180
+00:06:20,319 --> 00:06:23,600
+that do a lot of sort of hardcore
+
+181
+00:06:22,000 --> 00:06:26,160
+engineering work that's we want to be
+
+182
+00:06:23,600 --> 00:06:28,240
+using the the best in frontier and you
+
+183
+00:06:26,160 --> 00:06:30,080
+know I think there's a lot of room to to
+
+184
+00:06:28,240 --> 00:06:32,240
+optimize and reduce cost in a lot of
+
+185
+00:06:30,079 --> 00:06:35,758
+places. This is super interesting
+
+186
+00:06:32,240 --> 00:06:38,639
+because Mark, I um like I said, I'm
+
+187
+00:06:35,759 --> 00:06:41,439
+spending about $40,000 a year for my
+
+188
+00:06:38,639 --> 00:06:44,079
+entire company. Most people do just fine
+
+189
+00:06:41,439 --> 00:06:47,360
+with the $30 a month account. We have
+
+190
+00:06:44,079 --> 00:06:49,839
+Lovable, couple of grand a month. I
+
+191
+00:06:47,360 --> 00:06:52,560
+think we're probably at uh you know, 20
+
+192
+00:06:49,839 --> 00:06:54,478
+people. Maybe we're spending 200 a
+
+193
+00:06:52,560 --> 00:06:57,439
+person on average. We have a long tale
+
+194
+00:06:54,478 --> 00:07:00,560
+of the 11 labs and the you know other
+
+195
+00:06:57,439 --> 00:07:02,478
+products we use but we are um getting
+
+196
+00:07:00,560 --> 00:07:05,680
+massive value out of this. I think we
+
+197
+00:07:02,478 --> 00:07:09,038
+have uh now
+
+198
+00:07:05,680 --> 00:07:11,038
+built software that's the equivalent of
+
+199
+00:07:09,038 --> 00:07:13,360
+I don't know four or five million worth
+
+200
+00:07:11,038 --> 00:07:16,000
+of software for the venture firm for the
+
+201
+00:07:13,360 --> 00:07:18,400
+syndicate essentially rebuilding what
+
+202
+00:07:16,000 --> 00:07:20,720
+Angelist is for running syndicates for
+
+203
+00:07:18,399 --> 00:07:22,318
+the syndicate to come building an entire
+
+204
+00:07:20,720 --> 00:07:24,639
+backend for the podcast that would be
+
+205
+00:07:22,319 --> 00:07:26,800
+something that CNN would have built uh
+
+206
+00:07:24,639 --> 00:07:29,439
+to manage all their uh infrastructure
+
+207
+00:07:26,800 --> 00:07:30,800
+and then on the uh program side founding
+
+208
+00:07:29,439 --> 00:07:33,038
+universal launch accelerator we built an
+
+209
+00:07:30,800 --> 00:07:34,800
+entire set of infrastructure there. Each
+
+210
+00:07:33,038 --> 00:07:37,598
+of those projects would have required
+
+211
+00:07:34,800 --> 00:07:39,199
+back in the day 20 years ago I think a
+
+212
+00:07:37,598 --> 00:07:41,839
+fourperson team for each project.
+
+213
+00:07:39,199 --> 00:07:45,199
+Project manager, designer, UX person,
+
+214
+00:07:41,839 --> 00:07:47,359
+front end and two backend people at a
+
+215
+00:07:45,199 --> 00:07:50,639
+minimum. So I think we have 12 full-time
+
+216
+00:07:47,360 --> 00:07:53,680
+salaries. That would have beenundred
+
+217
+00:07:50,639 --> 00:07:56,079
+150k allin. That's how I came up with my
+
+218
+00:07:53,680 --> 00:08:00,319
+$2 million number just on the software
+
+219
+00:07:56,079 --> 00:08:02,878
+basis. So what does this mean for the
+
+220
+00:08:00,319 --> 00:08:04,800
+overall industry? Mark, we're going to
+
+221
+00:08:02,879 --> 00:08:07,680
+be comput We're already getting compute
+
+222
+00:08:04,800 --> 00:08:10,079
+constrained. Now we're starting to see
+
+223
+00:08:07,680 --> 00:08:12,560
+certain groups of people, maybe the top
+
+224
+00:08:10,079 --> 00:08:15,439
+5% of people using this technology are
+
+225
+00:08:12,560 --> 00:08:18,319
+getting this what I'll call $50 to one.
+
+226
+00:08:15,439 --> 00:08:20,240
+$1 I invest, I get 50 back. $1 I invest,
+
+227
+00:08:18,319 --> 00:08:21,520
+I get $30 back. And then there's a whole
+
+228
+00:08:20,240 --> 00:08:23,840
+group of people who aren't even using
+
+229
+00:08:21,519 --> 00:08:25,598
+the technology. What's your take here?
+
+230
+00:08:23,839 --> 00:08:26,719
+How does this sort itself out in the
+
+231
+00:08:25,598 --> 00:08:29,279
+next couple of years?
+
+232
+00:08:26,720 --> 00:08:31,840
+>> Yeah, so I mean I saw the I saw the Elon
+
+233
+00:08:29,279 --> 00:08:33,759
+tweet and I also watched the all in I
+
+234
+00:08:31,839 --> 00:08:36,158
+mean we guys talked about coreweave
+
+235
+00:08:33,759 --> 00:08:37,679
+right and the mismatch between the um
+
+236
+00:08:36,158 --> 00:08:40,559
+the borrowing that's done to set up
+
+237
+00:08:37,679 --> 00:08:42,799
+these data centers and the contracts um
+
+238
+00:08:40,559 --> 00:08:45,759
+that you that the core is using to make
+
+239
+00:08:42,799 --> 00:08:47,519
+money and my my initial thought was the
+
+240
+00:08:45,759 --> 00:08:49,600
+way we do things in the Bit Tensor
+
+241
+00:08:47,519 --> 00:08:52,480
+universe is very different from the
+
+242
+00:08:49,600 --> 00:08:56,080
+other universe. Um in our universe we
+
+243
+00:08:52,480 --> 00:08:57,278
+have a subnet called Liam uh subnet 51
+
+244
+00:08:56,080 --> 00:08:59,680
+which is you know basically like a
+
+245
+00:08:57,278 --> 00:09:02,399
+neighborhood or an AI company and they
+
+246
+00:08:59,679 --> 00:09:04,559
+do compute and the way that they acquire
+
+247
+00:09:02,399 --> 00:09:07,039
+their compute they don't rent data
+
+248
+00:09:04,559 --> 00:09:09,759
+centers they don't borrow money they
+
+249
+00:09:07,039 --> 00:09:12,399
+mine for it so they set up a incentive
+
+250
+00:09:09,759 --> 00:09:14,240
+mechanism and what happens is miners
+
+251
+00:09:12,399 --> 00:09:17,600
+just like Bitcoin miners right mine
+
+252
+00:09:14,240 --> 00:09:19,519
+Bitcoin these are um machine miners that
+
+253
+00:09:17,600 --> 00:09:21,120
+come from all over the world supply
+
+254
+00:09:19,519 --> 00:09:23,360
+capacity and they have to meet certain
+
+255
+00:09:21,120 --> 00:09:25,278
+thresholds to the Liam network which
+
+256
+00:09:23,360 --> 00:09:28,240
+then Liam turns around and sells to
+
+257
+00:09:25,278 --> 00:09:31,838
+everyone else. So because it is
+
+258
+00:09:28,240 --> 00:09:33,600
+worldwide um the capital expenditure is
+
+259
+00:09:31,839 --> 00:09:34,959
+actually handled by the miners the
+
+260
+00:09:33,600 --> 00:09:36,720
+people who are supplying compute from
+
+261
+00:09:34,958 --> 00:09:38,799
+all over the world. They pay for the
+
+262
+00:09:36,720 --> 00:09:40,800
+electricity they buy the machines and
+
+263
+00:09:38,799 --> 00:09:43,439
+they take the risk. So it spreads out
+
+264
+00:09:40,799 --> 00:09:45,359
+the risk and there's an ownership layer
+
+265
+00:09:43,440 --> 00:09:47,920
+uh which is the bit tensor part.
+
+266
+00:09:45,360 --> 00:09:51,039
+Basically these people can own a piece
+
+267
+00:09:47,919 --> 00:09:54,319
+of the Liam subnet and by extension the
+
+268
+00:09:51,039 --> 00:09:57,120
+TAO token. So the the expense is quite a
+
+269
+00:09:54,320 --> 00:09:59,839
+bit lower. And there's another subnet uh
+
+270
+00:09:57,120 --> 00:10:01,440
+called NGI which is subnet 53 which
+
+271
+00:09:59,839 --> 00:10:03,839
+provides inference one layer up the
+
+272
+00:10:01,440 --> 00:10:06,560
+stack. They are able to offer inference
+
+273
+00:10:03,839 --> 00:10:08,480
+for one the cost of coreweave
+
+274
+00:10:06,559 --> 00:10:10,879
+>> because because the economics are just
+
+275
+00:10:08,480 --> 00:10:12,080
+so different. Right? So and the risk is
+
+276
+00:10:10,879 --> 00:10:14,399
+very different as well.
+
+277
+00:10:12,080 --> 00:10:16,560
+>> Do they have enough capacity that people
+
+278
+00:10:14,399 --> 00:10:18,720
+could start tapping it or do they not
+
+279
+00:10:16,559 --> 00:10:20,958
+have enough capacity? In other words,
+
+280
+00:10:18,720 --> 00:10:24,000
+this is a like a science project right
+
+281
+00:10:20,958 --> 00:10:29,439
+here on you know on the bitensor network
+
+282
+00:10:24,000 --> 00:10:32,480
+>> but you know would any muse gro be able
+
+283
+00:10:29,440 --> 00:10:35,519
+to shift you know a thousand
+
+284
+00:10:32,480 --> 00:10:37,600
+uh customers there 10,000 power users
+
+285
+00:10:35,519 --> 00:10:39,600
+how many power users would be able to
+
+286
+00:10:37,600 --> 00:10:41,920
+sort of leverage this and do you think
+
+287
+00:10:39,600 --> 00:10:45,120
+like open open router it could kind of
+
+288
+00:10:41,919 --> 00:10:47,838
+be dynamically routed when you run out
+
+289
+00:10:45,120 --> 00:10:49,120
+of gro runs out of coloss Colossus one,
+
+290
+00:10:47,839 --> 00:10:52,240
+it goes to Colossus 2, runs out of
+
+291
+00:10:49,120 --> 00:10:54,000
+Colossus 2, it overflows. Uh, what what
+
+292
+00:10:52,240 --> 00:10:55,039
+do you think the outcome here is in
+
+293
+00:10:54,000 --> 00:10:56,240
+terms of a business?
+
+294
+00:10:55,039 --> 00:10:57,679
+>> Yeah. So, I think you're asking like how
+
+295
+00:10:56,240 --> 00:11:00,959
+fast could it scale? Could it take could
+
+296
+00:10:57,679 --> 00:11:03,599
+it handle Grockbot today? No. But can it
+
+297
+00:11:00,958 --> 00:11:04,719
+scale up fast? Yes. And I've been
+
+298
+00:11:03,600 --> 00:11:06,079
+speaking with some of the subnet
+
+299
+00:11:04,720 --> 00:11:07,839
+operators about exactly that. Like, you
+
+300
+00:11:06,078 --> 00:11:09,679
+know, how if you got a if you got a
+
+301
+00:11:07,839 --> 00:11:11,600
+sudden fire hose of new customers, could
+
+302
+00:11:09,679 --> 00:11:14,239
+you handle it? The answer is yes.
+
+303
+00:11:11,600 --> 00:11:16,159
+Because as the usage goes up basically
+
+304
+00:11:14,240 --> 00:11:19,519
+the way the whole thing is geared is the
+
+305
+00:11:16,159 --> 00:11:21,439
+in the incentive mechanism provides more
+
+306
+00:11:19,519 --> 00:11:23,839
+to the people who are providing the
+
+307
+00:11:21,440 --> 00:11:26,160
+inference and the machines. So you know
+
+308
+00:11:23,839 --> 00:11:28,399
+the prize money goes up effectively
+
+309
+00:11:26,159 --> 00:11:30,000
+which attracts more miners. So the
+
+310
+00:11:28,399 --> 00:11:32,078
+entire thing is elastic and scales
+
+311
+00:11:30,000 --> 00:11:33,759
+dynamically to handle the the increased
+
+312
+00:11:32,078 --> 00:11:35,838
+load. Takes a little bit of time to warm
+
+313
+00:11:33,759 --> 00:11:37,600
+up but it can go pretty fast.
+
+314
+00:11:35,839 --> 00:11:39,040
+>> And these are like local GPUs that
+
+315
+00:11:37,600 --> 00:11:40,560
+people are running infrance jobs on. Is
+
+316
+00:11:39,039 --> 00:11:41,838
+that the idea? they are actually well so
+
+317
+00:11:40,559 --> 00:11:43,838
+some of them are data centers some of
+
+318
+00:11:41,839 --> 00:11:45,920
+them are are are just supplying uh
+
+319
+00:11:43,839 --> 00:11:47,279
+machines that they have in their house I
+
+320
+00:11:45,919 --> 00:11:49,838
+mean some of them are just individual
+
+321
+00:11:47,278 --> 00:11:51,838
+operators so it just it just depends on
+
+322
+00:11:49,839 --> 00:11:54,160
+you know who you are and and what your
+
+323
+00:11:51,839 --> 00:11:57,200
+appetite uh level of risk is
+
+324
+00:11:54,159 --> 00:11:58,958
+>> what's the job submission like what's
+
+325
+00:11:57,200 --> 00:12:02,240
+the interface like can I submit a code
+
+326
+00:11:58,958 --> 00:12:04,239
+metal job to to to the cloud there
+
+327
+00:12:02,240 --> 00:12:06,560
+>> it depends on which layer of the stack
+
+328
+00:12:04,240 --> 00:12:10,560
+uh you're in right so Liam is just raw
+
+329
+00:12:06,559 --> 00:12:12,239
+machines so you rent uh no KYC you can
+
+330
+00:12:10,559 --> 00:12:15,278
+pay uh you know you you basically
+
+331
+00:12:12,240 --> 00:12:17,519
+there's no contract so you pay as you go
+
+332
+00:12:15,278 --> 00:12:18,799
+and you get B300s or whatever what they
+
+333
+00:12:17,519 --> 00:12:21,200
+have a whole list you know a whole menu
+
+334
+00:12:18,799 --> 00:12:22,958
+of things you can rent from them and you
+
+335
+00:12:21,200 --> 00:12:26,000
+know that there's that layer then there
+
+336
+00:12:22,958 --> 00:12:27,838
+are then there's NG shoots and targon
+
+337
+00:12:26,000 --> 00:12:29,360
+which are sort of one layer up the stack
+
+338
+00:12:27,839 --> 00:12:30,880
+which are providing inference so they
+
+339
+00:12:29,360 --> 00:12:33,200
+actually set up the inference and the
+
+340
+00:12:30,879 --> 00:12:34,720
+models on the machines which sometimes
+
+341
+00:12:33,200 --> 00:12:36,879
+they they rent from Liam but they rent
+
+342
+00:12:34,720 --> 00:12:39,680
+from other people as well right so it's
+
+343
+00:12:36,879 --> 00:12:42,000
+sort of a m a mix of things if they rent
+
+344
+00:12:39,679 --> 00:12:43,679
+from Liam they can they get incredible
+
+345
+00:12:42,000 --> 00:12:45,120
+cost savings because it's much cheaper
+
+346
+00:12:43,679 --> 00:12:48,000
+because of the way this whole thing is
+
+347
+00:12:45,120 --> 00:12:50,078
+geared right it uses miners not you know
+
+348
+00:12:48,000 --> 00:12:51,759
+real estate contracts right so so you
+
+349
+00:12:50,078 --> 00:12:53,679
+get the so they get the cost savings
+
+350
+00:12:51,759 --> 00:12:56,399
+which they could then pass along right
+
+351
+00:12:53,679 --> 00:12:58,958
+but they themselves are mining as well
+
+352
+00:12:56,399 --> 00:13:00,399
+right so at each level of the stack you
+
+353
+00:12:58,958 --> 00:13:02,239
+get all these cost savings so if you
+
+354
+00:13:00,399 --> 00:13:06,958
+stack them together they add up
+
+355
+00:13:02,240 --> 00:13:10,480
+>> okay um yeah I I think
+
+356
+00:13:06,958 --> 00:13:14,559
+we are going to see an absolute
+
+357
+00:13:10,480 --> 00:13:15,680
+explosion in token usage. Um, and people
+
+358
+00:13:14,559 --> 00:13:17,518
+are just going to have to pay more
+
+359
+00:13:15,679 --> 00:13:22,239
+money. That's what it comes down to. I
+
+360
+00:13:17,519 --> 00:13:24,799
+think these venture subsidized or,
+
+361
+00:13:22,240 --> 00:13:27,680
+you know, these loans subsidized, you
+
+362
+00:13:24,799 --> 00:13:30,719
+know, giant bonds people are doing, it
+
+363
+00:13:27,679 --> 00:13:33,359
+needs to end soon. Um, much like Uber
+
+364
+00:13:30,720 --> 00:13:36,320
+and Lyft got into this price war and
+
+365
+00:13:33,360 --> 00:13:37,839
+they were losing $3, $4 a ride. I think
+
+366
+00:13:36,320 --> 00:13:40,639
+that's the equivalent of what's going on
+
+367
+00:13:37,839 --> 00:13:43,760
+here. But this game of chicken with Uber
+
+368
+00:13:40,639 --> 00:13:47,600
+and Lyft lasted for close to a decade
+
+369
+00:13:43,759 --> 00:13:50,240
+before Uber raised so much money that
+
+370
+00:13:47,600 --> 00:13:53,440
+Lyft couldn't keep up and there was not
+
+371
+00:13:50,240 --> 00:13:56,639
+enough dollars in the ecosystem willing
+
+372
+00:13:53,440 --> 00:13:59,519
+to underwrite those losses for that
+
+373
+00:13:56,639 --> 00:14:02,159
+period of time. and and DD versus Uber
+
+374
+00:13:59,519 --> 00:14:04,240
+in China was the the camel the the straw
+
+375
+00:14:02,159 --> 00:14:06,159
+that broke the camel's back because you
+
+376
+00:14:04,240 --> 00:14:08,079
+were talking about losing literally
+
+377
+00:14:06,159 --> 00:14:10,078
+billions a month at that point at the
+
+378
+00:14:08,078 --> 00:14:11,439
+peak. I believe it was hundreds of
+
+379
+00:14:10,078 --> 00:14:13,439
+millions of dollars in losses a week,
+
+380
+00:14:11,440 --> 00:14:15,360
+tens of millions of losses a day to try
+
+381
+00:14:13,440 --> 00:14:19,519
+to win that prize. It was all okay
+
+382
+00:14:15,360 --> 00:14:22,320
+because the venture investment
+
+383
+00:14:19,519 --> 00:14:24,078
+in in DD because Uber sold his business
+
+384
+00:14:22,320 --> 00:14:26,560
+to DD became worth it. But we're going
+
+385
+00:14:24,078 --> 00:14:29,198
+to see something similar here. this game
+
+386
+00:14:26,559 --> 00:14:31,359
+of chicken can't last forever. And with
+
+387
+00:14:29,198 --> 00:14:32,559
+Anthropic going public and then OpenAI
+
+388
+00:14:31,360 --> 00:14:33,839
+going public, they're going to be under
+
+389
+00:14:32,559 --> 00:14:36,399
+massive scrutiny, people are going to
+
+390
+00:14:33,839 --> 00:14:38,320
+want to see a path to profitability. You
+
+391
+00:14:36,399 --> 00:14:39,919
+can't lose money forever. And I think
+
+392
+00:14:38,320 --> 00:14:41,440
+that's probably what Elon realized was
+
+393
+00:14:39,919 --> 00:14:42,799
+like, if this goes on for six months,
+
+394
+00:14:41,440 --> 00:14:45,120
+how much money are we going to actually
+
+395
+00:14:42,799 --> 00:14:47,679
+lose? And I'm actually here for it. I
+
+396
+00:14:45,120 --> 00:14:49,278
+think if I think people need to just
+
+397
+00:14:47,679 --> 00:14:50,958
+everybody needs to be on the $200 a
+
+398
+00:14:49,278 --> 00:14:52,958
+month plan and the $200 a month plan
+
+399
+00:14:50,958 --> 00:14:55,119
+maybe has to be half the amount of token
+
+400
+00:14:52,958 --> 00:14:57,759
+usage and then there needs to be you
+
+401
+00:14:55,120 --> 00:15:00,240
+know a $500 a month plan. What's the max
+
+402
+00:14:57,759 --> 00:15:02,319
+we would all pay per month for these
+
+403
+00:15:00,240 --> 00:15:04,399
+bots? What would we what's the max every
+
+404
+00:15:02,320 --> 00:15:07,040
+if you had to put a number on your bot
+
+405
+00:15:04,399 --> 00:15:09,278
+activity? What's the max you would pay
+
+406
+00:15:07,039 --> 00:15:11,599
+right now? I think I'm at $1,000 a month
+
+407
+00:15:09,278 --> 00:15:12,879
+I would pay for all this activity and
+
+408
+00:15:11,600 --> 00:15:15,360
+that would make me pretty attuned to
+
+409
+00:15:12,879 --> 00:15:17,439
+getting that $1,000 in value. I use it
+
+410
+00:15:15,360 --> 00:15:19,278
+very casually right now at $200 a month.
+
+411
+00:15:17,440 --> 00:15:22,000
+Who cares? It's like the cost of going
+
+412
+00:15:19,278 --> 00:15:23,519
+to dinner, you know, uh with my wife is
+
+413
+00:15:22,000 --> 00:15:25,360
+like twice the cost. If you go get a
+
+414
+00:15:23,519 --> 00:15:27,679
+nice steak now, it's 150 bucks for a
+
+415
+00:15:25,360 --> 00:15:29,519
+goddamn steak. So, this seems like
+
+416
+00:15:27,679 --> 00:15:31,679
+downright reasonable. I'm at a thousand
+
+417
+00:15:29,519 --> 00:15:32,078
+a month. Where are you at? Uh, Peter and
+
+418
+00:15:31,679 --> 00:15:35,198
+Nick,
+
+419
+00:15:32,078 --> 00:15:38,958
+>> my uh our our CTO just yelled at me
+
+420
+00:15:35,198 --> 00:15:41,359
+because I spent 100K not too long ago in
+
+421
+00:15:38,958 --> 00:15:43,359
+a couple of weeks. So, I'm pretty used
+
+422
+00:15:41,360 --> 00:15:44,879
+to watching the limiter fly.
+
+423
+00:15:43,360 --> 00:15:45,600
+>> Well, that was building software, right?
+
+424
+00:15:44,879 --> 00:15:47,919
+You were
+
+425
+00:15:45,600 --> 00:15:49,920
+>> It's building software personal use. I
+
+426
+00:15:47,919 --> 00:15:52,000
+mean, I'm right with you there with like
+
+427
+00:15:49,919 --> 00:15:55,439
+at least a thousand. I I've actually
+
+428
+00:15:52,000 --> 00:15:56,879
+probably uh scared some of the folks
+
+429
+00:15:55,440 --> 00:15:58,720
+with some of the systems I've connected
+
+430
+00:15:56,879 --> 00:16:01,198
+it to, but it's I don't know how else to
+
+431
+00:15:58,720 --> 00:16:02,320
+track. example example your email, your
+
+432
+00:16:01,198 --> 00:16:05,198
+notion, your Slack.
+
+433
+00:16:02,320 --> 00:16:08,100
+>> My email uh Slack is a great one. We
+
+434
+00:16:05,198 --> 00:16:10,000
+have so many goddamn channels and uh
+
+435
+00:16:08,100 --> 00:16:11,679
+[laughter] I'd like to get a summary of
+
+436
+00:16:10,000 --> 00:16:13,759
+everything going on at the company and
+
+437
+00:16:11,679 --> 00:16:14,319
+things raised to me that I should know.
+
+438
+00:16:13,759 --> 00:16:16,159
+Um
+
+439
+00:16:14,320 --> 00:16:18,639
+>> Oh, tell us your prompt for that. How do
+
+440
+00:16:16,159 --> 00:16:20,159
+you uh create the Oracle inside your
+
+441
+00:16:18,639 --> 00:16:22,159
+company via Slack? I'm interested in
+
+442
+00:16:20,159 --> 00:16:24,240
+that because I have a I have I have one
+
+443
+00:16:22,159 --> 00:16:26,000
+I have two versions myself.
+
+444
+00:16:24,240 --> 00:16:26,480
+>> So, I'll share mine after you share
+
+445
+00:16:26,000 --> 00:16:29,360
+yours.
+
+446
+00:16:26,480 --> 00:16:32,320
+>> Okay. Awesome. Yeah. So, uh, basically
+
+447
+00:16:29,360 --> 00:16:33,600
+I've got a a a system that the short
+
+448
+00:16:32,320 --> 00:16:35,360
+answer is I basically got something
+
+449
+00:16:33,600 --> 00:16:39,360
+raise this to me and email me right away
+
+450
+00:16:35,360 --> 00:16:40,959
+if you see XYZ type of like issue. Uh,
+
+451
+00:16:39,360 --> 00:16:44,079
+so I do want to get the text. I do want
+
+452
+00:16:40,958 --> 00:16:45,679
+to get the email for certain things. Um,
+
+453
+00:16:44,078 --> 00:16:48,159
+and a lot of those pertain to our
+
+454
+00:16:45,679 --> 00:16:50,799
+customer related things. Um, we're using
+
+455
+00:16:48,159 --> 00:16:53,278
+the API directly. So I just have a
+
+456
+00:16:50,799 --> 00:16:54,958
+service polling basically every hour
+
+457
+00:16:53,278 --> 00:16:57,120
+doing a fresh feed of everything,
+
+458
+00:16:54,958 --> 00:16:58,879
+filtering and then sending it to me.
+
+459
+00:16:57,120 --> 00:17:00,560
+enterprise version of Slack, right? And
+
+460
+00:16:58,879 --> 00:17:02,159
+you have
+
+461
+00:17:00,559 --> 00:17:05,038
+>> complete insight. Do you have all the
+
+462
+00:17:02,159 --> 00:17:08,879
+DMs of your team? So when they're doing
+
+463
+00:17:05,038 --> 00:17:10,558
+>> I don't don't do that. Um but mostly the
+
+464
+00:17:08,880 --> 00:17:13,120
+and but we do encourage everybody at the
+
+465
+00:17:10,558 --> 00:17:16,160
+company like pull these into public
+
+466
+00:17:13,119 --> 00:17:18,159
+channels because like I'm not the only
+
+467
+00:17:16,160 --> 00:17:20,640
+one doing this and like a lot of the
+
+468
+00:17:18,160 --> 00:17:23,439
+times I will literally copy paste a
+
+469
+00:17:20,640 --> 00:17:24,959
+conversation and be like part of the
+
+470
+00:17:23,439 --> 00:17:28,400
+prompt like this is the thing I'm
+
+471
+00:17:24,959 --> 00:17:30,400
+getting at. um you know into there. So
+
+472
+00:17:28,400 --> 00:17:32,480
+for for me it's it's a helpful way to do
+
+473
+00:17:30,400 --> 00:17:36,320
+monitoring. It's a helpful way to just
+
+474
+00:17:32,480 --> 00:17:38,880
+seem always on which I am. Um and it's a
+
+475
+00:17:36,319 --> 00:17:40,879
+uh you know again it's it's a useful aid
+
+476
+00:17:38,880 --> 00:17:42,559
+and we've seen our ops team maybe a
+
+477
+00:17:40,880 --> 00:17:44,160
+little bit less tech forward sort of
+
+478
+00:17:42,558 --> 00:17:45,599
+lean in as well and start like oh how do
+
+479
+00:17:44,160 --> 00:17:47,038
+I do a bot for this? How do I do for bot
+
+480
+00:17:45,599 --> 00:17:50,159
+for that? And I think that's where you
+
+481
+00:17:47,038 --> 00:17:51,679
+get into those subscriptions being
+
+482
+00:17:50,160 --> 00:17:53,200
+uh I get to see every time an employee
+
+483
+00:17:51,679 --> 00:17:54,720
+asks for like a subscription to
+
+484
+00:17:53,200 --> 00:17:56,720
+something and it's it's everybody now at
+
+485
+00:17:54,720 --> 00:17:58,960
+the company doing awesome.
+
+486
+00:17:56,720 --> 00:18:01,839
+>> Uh Nick, how about you? What's your
+
+487
+00:17:58,960 --> 00:18:03,519
+personal bot? Not making software.
+
+488
+00:18:01,839 --> 00:18:07,519
+That's kind of a different thing, but
+
+489
+00:18:03,519 --> 00:18:09,038
+your personal bot usage as founder and
+
+490
+00:18:07,519 --> 00:18:10,798
+and and what would you be willing to pay
+
+491
+00:18:09,038 --> 00:18:12,400
+per month at this point if you if you
+
+492
+00:18:10,798 --> 00:18:13,918
+had an upperbound? Yeah, personal
+
+493
+00:18:12,400 --> 00:18:15,519
+category. I mean, upperbound for me
+
+494
+00:18:13,919 --> 00:18:16,880
+would probably be like 500 bucks
+
+495
+00:18:15,519 --> 00:18:18,639
+because, you know, typically what I'm
+
+496
+00:18:16,880 --> 00:18:19,760
+doing is scheduling things, doctor's
+
+497
+00:18:18,640 --> 00:18:21,520
+appointments, you know, you know,
+
+498
+00:18:19,759 --> 00:18:23,359
+whatever it is. Like personal life isn't
+
+499
+00:18:21,519 --> 00:18:25,038
+that complicated. It's like I want to go
+
+500
+00:18:23,359 --> 00:18:26,240
+on vacation, help me plan a vacation. I
+
+501
+00:18:25,038 --> 00:18:27,759
+have to go to a doctor's appointment,
+
+502
+00:18:26,240 --> 00:18:29,599
+help me get that set up, you know, what
+
+503
+00:18:27,759 --> 00:18:31,839
+are the kids doing? So, you know, 500
+
+504
+00:18:29,599 --> 00:18:33,439
+bucks probably a limit for me. Multiples
+
+505
+00:18:31,839 --> 00:18:35,199
+of cell phone bills. I I would think
+
+506
+00:18:33,440 --> 00:18:37,120
+that's probably what people, you know,
+
+507
+00:18:35,200 --> 00:18:39,038
+in the US would be willing to pay on the
+
+508
+00:18:37,119 --> 00:18:41,918
+order of cell phone bill. Um, so like
+
+509
+00:18:39,038 --> 00:18:43,759
+hundredish. Uh so we'll see how you know
+
+510
+00:18:41,919 --> 00:18:45,360
+rolling out a price increase across the
+
+511
+00:18:43,759 --> 00:18:47,440
+board uh works for companies like
+
+512
+00:18:45,359 --> 00:18:49,759
+Enthropic. I think free plan versus 100
+
+513
+00:18:47,440 --> 00:18:51,600
+bucks is a huge win for them. Uh so
+
+514
+00:18:49,759 --> 00:18:52,960
+let's see what's possible. But they've
+
+515
+00:18:51,599 --> 00:18:55,519
+got to tell that story in a really
+
+516
+00:18:52,960 --> 00:18:56,880
+compelling way. Um at work there's a
+
+517
+00:18:55,519 --> 00:18:59,918
+whole new class of things that's
+
+518
+00:18:56,880 --> 00:19:02,080
+happening. I'd say in the past 3 months
+
+519
+00:18:59,919 --> 00:19:04,080
+uh there's a new new category like we're
+
+520
+00:19:02,079 --> 00:19:07,038
+finding that Claude is able to create
+
+521
+00:19:04,079 --> 00:19:08,879
+dashboards that are genuinely useful. Um
+
+522
+00:19:07,038 --> 00:19:10,879
+Light Matter builds physical hardware.
+
+523
+00:19:08,880 --> 00:19:12,960
+Um we build petonic chips that connect
+
+524
+00:19:10,880 --> 00:19:16,000
+up GPUs for running AI inference and
+
+525
+00:19:12,960 --> 00:19:18,240
+training. And um we do physical
+
+526
+00:19:16,000 --> 00:19:20,880
+manufacturing like we tape out a design
+
+527
+00:19:18,240 --> 00:19:23,200
+to a foundry, let's say TSMC. Uh that
+
+528
+00:19:20,880 --> 00:19:25,280
+wafer comes out of the fab, it has to go
+
+529
+00:19:23,200 --> 00:19:26,720
+to a packaging house and then after it's
+
+530
+00:19:25,279 --> 00:19:28,639
+packaged, it's got to go on a board and
+
+531
+00:19:26,720 --> 00:19:29,839
+in a system and in a rack. And there's
+
+532
+00:19:28,640 --> 00:19:32,080
+so many different steps that are
+
+533
+00:19:29,839 --> 00:19:33,199
+happening. We have these physical
+
+534
+00:19:32,079 --> 00:19:35,199
+representations of the whole
+
+535
+00:19:33,200 --> 00:19:37,279
+manufacturing flow in the pipeline. And
+
+536
+00:19:35,200 --> 00:19:39,038
+we're able to see the status constantly.
+
+537
+00:19:37,279 --> 00:19:41,678
+like I have a a dashboard that
+
+538
+00:19:39,038 --> 00:19:43,839
+visualizes what the company builds and
+
+539
+00:19:41,679 --> 00:19:45,360
+what step it's in for each project and
+
+540
+00:19:43,839 --> 00:19:47,519
+how it all ties together and what
+
+541
+00:19:45,359 --> 00:19:50,079
+customer it's for and what day they need
+
+542
+00:19:47,519 --> 00:19:52,000
+it on and any issues they've pulled up.
+
+543
+00:19:50,079 --> 00:19:54,480
+And there are examples of that like on
+
+544
+00:19:52,000 --> 00:19:57,759
+the engineering execution side. Um you
+
+545
+00:19:54,480 --> 00:20:00,558
+know in general we're finding that um
+
+546
+00:19:57,759 --> 00:20:02,319
+these new dashboard type uh platforms
+
+547
+00:20:00,558 --> 00:20:04,798
+that are possible probably in the latest
+
+548
+00:20:02,319 --> 00:20:06,399
+version of the claw drops they're just
+
+549
+00:20:04,798 --> 00:20:06,960
+insanely useful for keeping the company
+
+550
+00:20:06,400 --> 00:20:08,480
+orchestrated.
+
+551
+00:20:06,960 --> 00:20:09,759
+>> These uh dashboards are something my
+
+552
+00:20:08,480 --> 00:20:11,440
+team has gotten into. They built them
+
+553
+00:20:09,759 --> 00:20:13,038
+all in lovable and they built their own
+
+554
+00:20:11,440 --> 00:20:15,360
+software stack used notion as the
+
+555
+00:20:13,038 --> 00:20:17,679
+backend and these are non-programmers
+
+556
+00:20:15,359 --> 00:20:19,359
+and the software they built is better
+
+557
+00:20:17,679 --> 00:20:21,679
+than what developers would build because
+
+558
+00:20:19,359 --> 00:20:26,798
+there's no communication between the
+
+559
+00:20:21,679 --> 00:20:28,240
+business owner Mark and the um you know
+
+560
+00:20:26,798 --> 00:20:30,000
+the person actually doing the work using
+
+561
+00:20:28,240 --> 00:20:31,359
+the software and the developer. So you
+
+562
+00:20:30,000 --> 00:20:33,200
+just get rid of the whole game of phone
+
+563
+00:20:31,359 --> 00:20:34,879
+tag and they're just talking to it like
+
+564
+00:20:33,200 --> 00:20:36,880
+in my ninari report explaining what they
+
+565
+00:20:34,880 --> 00:20:38,960
+need or in Bladeunner you know move move
+
+566
+00:20:36,880 --> 00:20:41,120
+the camera here zoom in zoom out move
+
+567
+00:20:38,960 --> 00:20:43,600
+left they're just talking to it and it
+
+568
+00:20:41,119 --> 00:20:46,158
+makes them eventually uh what they want
+
+569
+00:20:43,599 --> 00:20:50,158
+and when I say eventually like in
+
+570
+00:20:46,159 --> 00:20:52,240
+minutes to single-digit hours
+
+571
+00:20:50,159 --> 00:20:54,000
+>> what's your what's your current spend
+
+572
+00:20:52,240 --> 00:20:57,279
+like and and what what is the upper
+
+573
+00:20:54,000 --> 00:21:00,319
+bound for you for your businessersonal
+
+574
+00:20:57,279 --> 00:21:02,399
+assistant cost? Yeah, I mean I'm like
+
+575
+00:21:00,319 --> 00:21:05,918
+you. I would pay a thousand a month uh
+
+576
+00:21:02,400 --> 00:21:08,400
+for it uh if I had to. Um right now I'm
+
+577
+00:21:05,919 --> 00:21:09,200
+probably paying two to 300 something
+
+578
+00:21:08,400 --> 00:21:11,120
+like that.
+
+579
+00:21:09,200 --> 00:21:13,919
+>> Um I haven't calculated it. I'm I'm
+
+580
+00:21:11,119 --> 00:21:16,639
+primarily using uh Hermes
+
+581
+00:21:13,919 --> 00:21:18,080
+running yeah running inference from NG
+
+582
+00:21:16,640 --> 00:21:20,159
+Subnet 53.
+
+583
+00:21:18,079 --> 00:21:21,279
+>> Uh but I've also started using Grockbot
+
+584
+00:21:20,159 --> 00:21:22,960
+just because
+
+585
+00:21:21,279 --> 00:21:24,720
+>> you know it's it's so much better
+
+586
+00:21:22,960 --> 00:21:25,120
+produced as a consumer product.
+
+587
+00:21:24,720 --> 00:21:27,839
+>> Yes.
+
+588
+00:21:25,119 --> 00:21:29,678
+>> And it's just sort of easier to use. Um
+
+589
+00:21:27,839 --> 00:21:31,279
+but but it is it is defin I definitely
+
+590
+00:21:29,679 --> 00:21:33,360
+feel limitations with it that I don't
+
+591
+00:21:31,279 --> 00:21:35,678
+feel with Her Hermes. So Hermes is sort
+
+592
+00:21:33,359 --> 00:21:36,719
+of the much more powerful command line
+
+593
+00:21:35,679 --> 00:21:38,720
+if you will. Yes.
+
+594
+00:21:36,720 --> 00:21:39,759
+>> And you know but Grock is like Windows
+
+595
+00:21:38,720 --> 00:21:42,079
+right?
+
+596
+00:21:39,759 --> 00:21:44,000
+>> I'll be honest I couldn't gro Hermes. I
+
+597
+00:21:42,079 --> 00:21:45,759
+was over the summer I was like went down
+
+598
+00:21:44,000 --> 00:21:48,319
+the Hermes rabbit hole
+
+599
+00:21:45,759 --> 00:21:50,640
+>> and I was just jamming on it and you
+
+600
+00:21:48,319 --> 00:21:53,678
+gave me an energy um
+
+601
+00:21:50,640 --> 00:21:55,280
+>> uh uh uh API key. Yeah. And I started
+
+602
+00:21:53,679 --> 00:21:57,360
+using the inference there. When you
+
+603
+00:21:55,279 --> 00:22:00,000
+become unmetered on inference, you stop
+
+604
+00:21:57,359 --> 00:22:01,918
+thinking about the meter, your behavior
+
+605
+00:22:00,000 --> 00:22:04,558
+just changes. Your your your utilization
+
+606
+00:22:01,919 --> 00:22:07,679
+of this stuff changes in a very dramatic
+
+607
+00:22:04,558 --> 00:22:10,879
+way. And I think that's what Elon is
+
+608
+00:22:07,679 --> 00:22:13,038
+probably seeing when he put Grockbot out
+
+609
+00:22:10,880 --> 00:22:15,200
+is if if you let people run with this,
+
+610
+00:22:13,038 --> 00:22:17,279
+Lon, it's so valuable they don't stop.
+
+611
+00:22:15,200 --> 00:22:18,720
+And you want to know something? If you
+
+612
+00:22:17,279 --> 00:22:21,200
+looked at our company and you said of
+
+613
+00:22:18,720 --> 00:22:22,640
+the 20 people in the company,
+
+614
+00:22:21,200 --> 00:22:24,880
+you know, put them into four buckets
+
+615
+00:22:22,640 --> 00:22:26,799
+like AI first technical people and then
+
+616
+00:22:24,880 --> 00:22:28,720
+on the bottom neoightes and then you
+
+617
+00:22:26,798 --> 00:22:30,240
+know maybe two hash marks in between.
+
+618
+00:22:28,720 --> 00:22:33,120
+Lon would be in one of those two hash
+
+619
+00:22:30,240 --> 00:22:34,798
+marks. Maybe the lower uh 50% I don't
+
+620
+00:22:33,119 --> 00:22:36,158
+know in terms of what people would
+
+621
+00:22:34,798 --> 00:22:37,279
+expect in terms of adopting the
+
+622
+00:22:36,159 --> 00:22:39,679
+technology. But lon I would say you're
+
+623
+00:22:37,279 --> 00:22:42,000
+in the top 10% of the company in terms
+
+624
+00:22:39,679 --> 00:22:44,559
+of adop or top 20% top four people in
+
+625
+00:22:42,000 --> 00:22:48,240
+terms of actually applying it. It it was
+
+626
+00:22:44,558 --> 00:22:51,200
+always I think the the jump for me was
+
+627
+00:22:48,240 --> 00:22:53,200
+uh I I had a lot of ideas about but it
+
+628
+00:22:51,200 --> 00:22:54,960
+was it was it needed the context and the
+
+629
+00:22:53,200 --> 00:22:56,798
+data. It needed the connections to
+
+630
+00:22:54,960 --> 00:22:58,960
+everything and I was constantly running
+
+631
+00:22:56,798 --> 00:23:00,879
+into brick walls before it had that. I
+
+632
+00:22:58,960 --> 00:23:04,480
+would have ideas for things I wanted
+
+633
+00:23:00,880 --> 00:23:06,400
+Gaff, my openclaw agent, to do but he
+
+634
+00:23:04,480 --> 00:23:07,759
+would just be like well I can't oh I'm a
+
+635
+00:23:06,400 --> 00:23:09,200
+virtual machine. I can't get into
+
+636
+00:23:07,759 --> 00:23:10,879
+Reddit. I can't get over there. I can't
+
+637
+00:23:09,200 --> 00:23:12,880
+do this. I can't see that. Could you
+
+638
+00:23:10,880 --> 00:23:14,799
+just copy and paste it all over? And
+
+639
+00:23:12,880 --> 00:23:16,320
+that was where I sort of hit the wall
+
+640
+00:23:14,798 --> 00:23:18,639
+because I don't I don't want to work
+
+641
+00:23:16,319 --> 00:23:20,639
+through the workflow and figure out the
+
+642
+00:23:18,640 --> 00:23:22,640
+API key. That's not where that's not
+
+643
+00:23:20,640 --> 00:23:24,880
+where my head's at. Rockbot makes it
+
+644
+00:23:22,640 --> 00:23:27,200
+easy enough to where even if it does
+
+645
+00:23:24,880 --> 00:23:29,679
+need an API key, it'll be like go to
+
+646
+00:23:27,200 --> 00:23:31,279
+this exact URL, type in this, and
+
+647
+00:23:29,679 --> 00:23:33,280
+they'll give you a key and then put it
+
+648
+00:23:31,279 --> 00:23:35,038
+here. And like it it makes it simple
+
+649
+00:23:33,279 --> 00:23:37,599
+enough that I could just get it to
+
+650
+00:23:35,038 --> 00:23:41,038
+directly where the thing it needs to do
+
+651
+00:23:37,599 --> 00:23:43,038
+the job is. And so once that unlocked,
+
+652
+00:23:41,038 --> 00:23:45,119
+then I started having a million creative
+
+653
+00:23:43,038 --> 00:23:46,319
+idea. I was just at the very top of the
+
+654
+00:23:45,119 --> 00:23:48,239
+show, I was telling one of our
+
+655
+00:23:46,319 --> 00:23:50,319
+colleagues how to like, we're we're
+
+656
+00:23:48,240 --> 00:23:52,798
+giving away some free subscriptions to
+
+657
+00:23:50,319 --> 00:23:54,639
+some of our Substack newsletters. And he
+
+658
+00:23:52,798 --> 00:23:56,798
+was like, here's a spreadsheet with
+
+659
+00:23:54,640 --> 00:23:59,038
+emails of people who have signed up. Can
+
+660
+00:23:56,798 --> 00:24:02,240
+you enter them into Substack for me? And
+
+661
+00:23:59,038 --> 00:24:04,400
+it's like, can I do that? Why would I do
+
+662
+00:24:02,240 --> 00:24:06,400
+such a thing? Just have your grabbot do
+
+663
+00:24:04,400 --> 00:24:08,080
+it. As soon as that unlocked for me, I
+
+664
+00:24:06,400 --> 00:24:09,840
+started coming up with a million things
+
+665
+00:24:08,079 --> 00:24:12,480
+a day that I could have Grockbot do
+
+666
+00:24:09,839 --> 00:24:14,079
+instead of me doing it. And it really
+
+667
+00:24:12,480 --> 00:24:15,519
+lifted a lot of weight off my
+
+668
+00:24:14,079 --> 00:24:17,119
+>> It's an interesting uh transition
+
+669
+00:24:15,519 --> 00:24:19,359
+though, like when you go from chatbot
+
+670
+00:24:17,119 --> 00:24:21,278
+mode, like using Fable or whatever it is
+
+671
+00:24:19,359 --> 00:24:22,959
+and you're talking to it versus now I
+
+672
+00:24:21,278 --> 00:24:25,440
+have this thing called a bot. What the
+
+673
+00:24:22,960 --> 00:24:26,960
+heck is a bot? How do I use it? Am I
+
+674
+00:24:25,440 --> 00:24:29,038
+supposed to give it like a personality
+
+675
+00:24:26,960 --> 00:24:30,400
+and then it kind of behaves that way and
+
+676
+00:24:29,038 --> 00:24:32,400
+then create this collective team
+
+677
+00:24:30,400 --> 00:24:34,480
+behavior? Like there's a whole mindset
+
+678
+00:24:32,400 --> 00:24:36,320
+shift. Now I'm on the other side of that
+
+679
+00:24:34,480 --> 00:24:38,480
+and I kind of am understanding how to
+
+680
+00:24:36,319 --> 00:24:40,000
+use the bots and I'm wondering why do we
+
+681
+00:24:38,480 --> 00:24:42,319
+need chat bots anymore.
+
+682
+00:24:40,000 --> 00:24:44,000
+>> Like you probably don't need the like I
+
+683
+00:24:42,319 --> 00:24:46,558
+think we're evolving away from those. I
+
+684
+00:24:44,000 --> 00:24:48,720
+think the bots are the way that it goes.
+
+685
+00:24:46,558 --> 00:24:50,960
+>> Um but then god there's a lot of people
+
+686
+00:24:48,720 --> 00:24:53,440
+like I have like 50 bots
+
+687
+00:24:50,960 --> 00:24:54,640
+>> and it they're redundant and all these
+
+688
+00:24:53,440 --> 00:24:56,558
+other things like how do you how do you
+
+689
+00:24:54,640 --> 00:24:57,679
+organize them? It's it's an interesting
+
+690
+00:24:56,558 --> 00:25:00,879
+evolution. And I feel like we're
+
+691
+00:24:57,679 --> 00:25:03,278
+figuring out the fundamental UX and UI
+
+692
+00:25:00,880 --> 00:25:04,000
+for AI right now. And the bot is the
+
+693
+00:25:03,278 --> 00:25:05,038
+right direction.
+
+694
+00:25:04,000 --> 00:25:06,720
+>> Yeah.
+
+695
+00:25:05,038 --> 00:25:09,839
+>> But it's still confusing.
+
+696
+00:25:06,720 --> 00:25:11,759
+>> Do you guys find yourselves writing like
+
+697
+00:25:09,839 --> 00:25:13,199
+software with the bots that then is
+
+698
+00:25:11,759 --> 00:25:15,200
+going to automate something that you
+
+699
+00:25:13,200 --> 00:25:16,880
+were asking the bot to do? Because I
+
+700
+00:25:15,200 --> 00:25:19,200
+find if I'm going to do something more
+
+701
+00:25:16,880 --> 00:25:21,360
+than once or twice, I don't ask the bot
+
+702
+00:25:19,200 --> 00:25:23,038
+to do it. I ask it to start writing a
+
+703
+00:25:21,359 --> 00:25:24,959
+codebase for me to deploy. And
+
+704
+00:25:23,038 --> 00:25:26,879
+>> I I think this is like such a key thing.
+
+705
+00:25:24,960 --> 00:25:28,720
+I was asking it. I have a perfect
+
+706
+00:25:26,880 --> 00:25:32,080
+example of this. You know, I'm looking
+
+707
+00:25:28,720 --> 00:25:34,880
+for uh a home and I'm just trying to
+
+708
+00:25:32,079 --> 00:25:36,639
+study the Austin market. Now, the Austin
+
+709
+00:25:34,880 --> 00:25:38,880
+market is very strange. Unlike
+
+710
+00:25:36,640 --> 00:25:40,960
+California, Mark, you don't have to
+
+711
+00:25:38,880 --> 00:25:42,880
+record home sales. So, you don't know
+
+712
+00:25:40,960 --> 00:25:44,640
+what a holds a home sold for. You know,
+
+713
+00:25:42,880 --> 00:25:47,520
+it's sold. You know it was put on the
+
+714
+00:25:44,640 --> 00:25:49,919
+MLS, but the top I would say 50% of the
+
+715
+00:25:47,519 --> 00:25:51,759
+inventory is not put on MLS. In other
+
+716
+00:25:49,919 --> 00:25:55,520
+words, they have made they've
+
+717
+00:25:51,759 --> 00:25:57,679
+obscurified it uh and made it impossible
+
+718
+00:25:55,519 --> 00:26:00,400
+for a marketplace to emerge so that they
+
+719
+00:25:57,679 --> 00:26:01,519
+can these realtors can have all the
+
+720
+00:26:00,400 --> 00:26:03,519
+power because they have all the
+
+721
+00:26:01,519 --> 00:26:06,240
+information. So, I was like, well,
+
+722
+00:26:03,519 --> 00:26:09,519
+this. Um, I have a bot. So, I start
+
+723
+00:26:06,240 --> 00:26:10,558
+having the bot uh try to find all of
+
+724
+00:26:09,519 --> 00:26:12,158
+these things. And now, the way I
+
+725
+00:26:10,558 --> 00:26:15,440
+originally did it is I had my Athena
+
+726
+00:26:12,159 --> 00:26:18,559
+assistants uh go to athenow.com
+
+727
+00:26:15,440 --> 00:26:20,159
+and get a month for free of Athena
+
+728
+00:26:18,558 --> 00:26:22,960
+assistance. And now I've got my Athena
+
+729
+00:26:20,159 --> 00:26:24,480
+assistants using Grockbot. It's crazy.
+
+730
+00:26:22,960 --> 00:26:25,440
+So I have like a human in the loop. I've
+
+731
+00:26:24,480 --> 00:26:27,679
+kind of merged them together in a
+
+732
+00:26:25,440 --> 00:26:29,600
+cyborg. Anyway, I'll put that aside. So
+
+733
+00:26:27,679 --> 00:26:31,360
+I realized, oh wait, I can find these
+
+734
+00:26:29,599 --> 00:26:35,199
+homes if I search for the neighborhood
+
+735
+00:26:31,359 --> 00:26:38,000
+name or Austin luxury home um in
+
+736
+00:26:35,200 --> 00:26:41,120
+YouTube, Instagram, etc. And then all of
+
+737
+00:26:38,000 --> 00:26:44,240
+these uh realtors put it either on
+
+738
+00:26:41,119 --> 00:26:47,599
+YouTube, Tik Tok, Instagram mostly, and
+
+739
+00:26:44,240 --> 00:26:51,359
+then they put it um on the open web. So
+
+740
+00:26:47,599 --> 00:26:54,558
+I start having my Athena assistants take
+
+741
+00:26:51,359 --> 00:26:58,079
+follow brokers, find the brokers, take
+
+742
+00:26:54,558 --> 00:27:00,158
+the images, reverse image search them,
+
+743
+00:26:58,079 --> 00:27:02,240
+find the original website and build like
+
+744
+00:27:00,159 --> 00:27:04,240
+this database. So every week they're
+
+745
+00:27:02,240 --> 00:27:05,679
+finding one or two homes. So then I just
+
+746
+00:27:04,240 --> 00:27:06,960
+take the entire discussion with them,
+
+747
+00:27:05,679 --> 00:27:08,640
+cut it and paste it into rock and I'm
+
+748
+00:27:06,960 --> 00:27:09,919
+like, "Okay, build me this." Like
+
+749
+00:27:08,640 --> 00:27:11,120
+literally, I don't even have to say the
+
+750
+00:27:09,919 --> 00:27:14,559
+instructions over again. I start talking
+
+751
+00:27:11,119 --> 00:27:16,319
+to them and um I'll show you. Uh guys,
+
+752
+00:27:14,558 --> 00:27:18,319
+just make sure we block out the uh
+
+753
+00:27:16,319 --> 00:27:21,359
+domain name later because this is a
+
+754
+00:27:18,319 --> 00:27:24,798
+domain name uh that you guys will see.
+
+755
+00:27:21,359 --> 00:27:27,119
+Um this domain name, I had my Grockbot
+
+756
+00:27:24,798 --> 00:27:28,960
+open an account at a hosting company,
+
+757
+00:27:27,119 --> 00:27:30,959
+buy me the shortest possible domain name
+
+758
+00:27:28,960 --> 00:27:32,159
+that started with, you know, a certain
+
+759
+00:27:30,960 --> 00:27:36,640
+character string, put everything behind
+
+760
+00:27:32,159 --> 00:27:40,559
+a password, yada yada. Um and so here is
+
+761
+00:27:36,640 --> 00:27:42,159
+like, you know, four neighborhoods in so
+
+762
+00:27:40,558 --> 00:27:43,839
+I basically built my own customized
+
+763
+00:27:42,159 --> 00:27:45,200
+Zillow. So, these are like the four
+
+764
+00:27:43,839 --> 00:27:47,678
+neighborhoods.
+
+765
+00:27:45,200 --> 00:27:49,919
+>> And I did this for my wife because she's
+
+766
+00:27:47,679 --> 00:27:52,080
+like, I I I I can't take this anymore.
+
+767
+00:27:49,919 --> 00:27:54,000
+It's so hard. It tells me the week's
+
+768
+00:27:52,079 --> 00:27:56,240
+changes. It does it every Sunday.
+
+769
+00:27:54,000 --> 00:27:58,319
+>> Uh, and then it gives me like the
+
+770
+00:27:56,240 --> 00:28:00,000
+premium inventory by neighborhood. It
+
+771
+00:27:58,319 --> 00:28:02,079
+does the best homes. It came up with a
+
+772
+00:28:00,000 --> 00:28:05,038
+scoring system that I worked with it on.
+
+773
+00:28:02,079 --> 00:28:07,918
+It links to the county records. I mean,
+
+774
+00:28:05,038 --> 00:28:09,519
+this is literally I could charge $1,000
+
+775
+00:28:07,919 --> 00:28:11,840
+for this product to any rich person
+
+776
+00:28:09,519 --> 00:28:14,079
+who's looking for a home. Um, and then
+
+777
+00:28:11,839 --> 00:28:15,678
+it's got like a history of all the homes
+
+778
+00:28:14,079 --> 00:28:17,678
+that I've ever sold. And then it goes to
+
+779
+00:28:15,679 --> 00:28:19,360
+the active listings.
+
+780
+00:28:17,679 --> 00:28:21,759
+And then it explains like, hey, well,
+
+781
+00:28:19,359 --> 00:28:24,000
+this thing, you know, isn't on Red Fin.
+
+782
+00:28:21,759 --> 00:28:25,599
+It's but it's and but here's the broker.
+
+783
+00:28:24,000 --> 00:28:27,359
+Here's when it went on and off the
+
+784
+00:28:25,599 --> 00:28:31,199
+market. And you know, how it found this
+
+785
+00:28:27,359 --> 00:28:34,479
+history is I said, find every homepage
+
+786
+00:28:31,200 --> 00:28:36,720
+of every broker, then search for that
+
+787
+00:28:34,480 --> 00:28:38,240
+address on Google,
+
+788
+00:28:36,720 --> 00:28:39,839
+>> find every site with that, and then
+
+789
+00:28:38,240 --> 00:28:41,599
+figure out which brokers have had it
+
+790
+00:28:39,839 --> 00:28:43,359
+when. So now it's finding the history of
+
+791
+00:28:41,599 --> 00:28:44,879
+brokers who own these homes. So anyway,
+
+792
+00:28:43,359 --> 00:28:45,918
+you guys can see how I went down the
+
+793
+00:28:44,880 --> 00:28:49,760
+rabbit hole. Then I was like, you know
+
+794
+00:28:45,919 --> 00:28:51,520
+what I need? Find me every broker who
+
+795
+00:28:49,759 --> 00:28:52,960
+represents these homes and make a card
+
+796
+00:28:51,519 --> 00:28:54,158
+for them with their website, their
+
+797
+00:28:52,960 --> 00:28:58,079
+Instagram, their Tik Tok, and
+
+798
+00:28:54,159 --> 00:28:59,679
+everything. Then find every architect
+
+799
+00:28:58,079 --> 00:29:00,639
+that they worked with or have ever
+
+800
+00:28:59,679 --> 00:29:02,240
+mentioned.
+
+801
+00:29:00,640 --> 00:29:03,600
+>> And then find every builder they have
+
+802
+00:29:02,240 --> 00:29:06,000
+ever mentioned and look at the builders
+
+803
+00:29:03,599 --> 00:29:07,519
+and find out how many architects the
+
+804
+00:29:06,000 --> 00:29:10,398
+builders reference and interior
+
+805
+00:29:07,519 --> 00:29:12,558
+designers. then make me a report on
+
+806
+00:29:10,398 --> 00:29:14,719
+whatever's new from them and send a
+
+807
+00:29:12,558 --> 00:29:19,119
+report to my wife of what they posted
+
+808
+00:29:14,720 --> 00:29:22,079
+that week in a dossier. This has taken
+
+809
+00:29:19,119 --> 00:29:24,719
+literally under one hour of work
+
+810
+00:29:22,079 --> 00:29:26,558
+>> in total over the last three or four
+
+811
+00:29:24,720 --> 00:29:30,159
+weeks I've been working on it. It's
+
+812
+00:29:26,558 --> 00:29:33,359
+insane. and making the output a web pa,
+
+813
+00:29:30,159 --> 00:29:36,799
+a fully functional web page that I can
+
+814
+00:29:33,359 --> 00:29:40,639
+every Monday send an email to my wife or
+
+815
+00:29:36,798 --> 00:29:42,480
+every Sunday morning and
+
+816
+00:29:40,640 --> 00:29:44,080
+um you know have the website available
+
+817
+00:29:42,480 --> 00:29:46,399
+and then the next piece is I'm going to
+
+818
+00:29:44,079 --> 00:29:48,639
+have her put her notes in it and then
+
+819
+00:29:46,398 --> 00:29:52,239
+have the bot
+
+820
+00:29:48,640 --> 00:29:54,240
+refine its product based on that. Now,
+
+821
+00:29:52,240 --> 00:29:55,038
+>> now you know why I would pay $1,000 a
+
+822
+00:29:54,240 --> 00:29:56,240
+month for Grock.
+
+823
+00:29:55,038 --> 00:29:57,599
+>> Yeah, that's incredible. I mean, this
+
+824
+00:29:56,240 --> 00:29:59,278
+reminds me, you know, Nicholas
+
+825
+00:29:57,599 --> 00:30:02,158
+Nugarponte in the 90s used to talk about
+
+826
+00:29:59,278 --> 00:30:03,599
+the personalized newspaper. Well, that's
+
+827
+00:30:02,159 --> 00:30:06,000
+interesting. But what's more interesting
+
+828
+00:30:03,599 --> 00:30:07,839
+is personalized Zillow. This is not just
+
+829
+00:30:06,000 --> 00:30:10,079
+it's not that you made your own Zillow.
+
+830
+00:30:07,839 --> 00:30:12,319
+It's that you made a Jason Calacanis
+
+831
+00:30:10,079 --> 00:30:13,759
+version of Zillow that where
+
+832
+00:30:12,319 --> 00:30:16,000
+everything's where you want it to be and
+
+833
+00:30:13,759 --> 00:30:17,519
+it's for your local area and and the
+
+834
+00:30:16,000 --> 00:30:18,558
+stuff you don't want is not in there
+
+835
+00:30:17,519 --> 00:30:20,158
+too, right?
+
+836
+00:30:18,558 --> 00:30:22,639
+>> So that that you've taken it to a new
+
+837
+00:30:20,159 --> 00:30:24,399
+level which is uh yes, it is that is an
+
+838
+00:30:22,640 --> 00:30:26,240
+amazing implication of all this. Where
+
+839
+00:30:24,398 --> 00:30:28,959
+am I
+
+840
+00:30:26,240 --> 00:30:32,399
+Nick on the scale would you say if you
+
+841
+00:30:28,960 --> 00:30:34,720
+had a hundred employ corporate employees
+
+842
+00:30:32,398 --> 00:30:37,678
+and their utilization of AI
+
+843
+00:30:34,720 --> 00:30:40,000
+>> you know and just from one to 100 you
+
+844
+00:30:37,679 --> 00:30:42,159
+know 95 to 100 are people working inside
+
+845
+00:30:40,000 --> 00:30:44,319
+of let's just make the the one to 100
+
+846
+00:30:42,159 --> 00:30:48,080
+not people working in an AI lab or
+
+847
+00:30:44,319 --> 00:30:50,000
+building an AI product just of a 100
+
+848
+00:30:48,079 --> 00:30:51,839
+enterprise people where would I land in
+
+849
+00:30:50,000 --> 00:30:53,519
+the ranking now am I in the 80s you
+
+850
+00:30:51,839 --> 00:30:56,798
+think in utilization of the technology
+
+851
+00:30:53,519 --> 00:30:57,278
+the 70s. Where would I objectively be?
+
+852
+00:30:56,798 --> 00:31:00,079
+Do you think
+
+853
+00:30:57,278 --> 00:31:02,480
+>> I would say probably like 80s? I give
+
+854
+00:31:00,079 --> 00:31:04,639
+you like a solid solid B.
+
+855
+00:31:02,480 --> 00:31:07,759
+>> Yeah, that's where I feel I am. It's
+
+856
+00:31:04,640 --> 00:31:09,679
+nuts because what's happening to me is
+
+857
+00:31:07,759 --> 00:31:11,759
+I'm becoming so productive with this.
+
+858
+00:31:09,679 --> 00:31:12,960
+>> I would say and Mark and Lon, you've
+
+859
+00:31:11,759 --> 00:31:14,640
+worked with me for a long time. You
+
+860
+00:31:12,960 --> 00:31:15,919
+know, I come in with an idea, everybody
+
+861
+00:31:14,640 --> 00:31:18,480
+get around the table, I start
+
+862
+00:31:15,919 --> 00:31:20,080
+whiteboarding. That whole three-hour
+
+863
+00:31:18,480 --> 00:31:21,679
+process
+
+864
+00:31:20,079 --> 00:31:23,278
+of just jamming and let's get some
+
+865
+00:31:21,679 --> 00:31:25,759
+pizzas and stay late.
+
+866
+00:31:23,278 --> 00:31:28,079
+>> I do it all on my own in two hours
+
+867
+00:31:25,759 --> 00:31:29,919
+>> on a Saturday and then the output's done
+
+868
+00:31:28,079 --> 00:31:31,599
+and then I give it to the team to
+
+869
+00:31:29,919 --> 00:31:34,320
+maintain and enhance.
+
+870
+00:31:31,599 --> 00:31:35,918
+>> Maintain and enhance and I can just get
+
+871
+00:31:34,319 --> 00:31:36,720
+to second or third base. Same thing with
+
+872
+00:31:35,919 --> 00:31:37,120
+you, Lon, right?
+
+873
+00:31:36,720 --> 00:31:38,399
+>> Sure.
+
+874
+00:31:37,119 --> 00:31:39,119
+>> Well, I was telling you about this.
+
+875
+00:31:38,398 --> 00:31:39,678
+>> Can I do a show?
+
+876
+00:31:39,119 --> 00:31:41,518
+>> Oh, yeah. Go.
+
+877
+00:31:39,679 --> 00:31:43,038
+>> Yeah, go ahead. Do a show and tell here.
+
+878
+00:31:41,519 --> 00:31:44,399
+>> Yeah, I was going to say I've got a uh
+
+879
+00:31:43,038 --> 00:31:47,119
+I've got a little show and tell as well.
+
+880
+00:31:44,398 --> 00:31:49,359
+A little thing I made. So um when we
+
+881
+00:31:47,119 --> 00:31:51,439
+first started doing uh you know Bittor
+
+882
+00:31:49,359 --> 00:31:54,158
+stuff I like to think in terms of
+
+883
+00:31:51,440 --> 00:31:55,440
+bubbles right to to to watch to look at
+
+884
+00:31:54,159 --> 00:31:57,600
+the marketplace.
+
+885
+00:31:55,440 --> 00:31:59,840
+>> So but that this bubble chart existed
+
+886
+00:31:57,599 --> 00:32:01,519
+for regular crypto. It did not exist for
+
+887
+00:31:59,839 --> 00:32:03,918
+the tow subnetss.
+
+888
+00:32:01,519 --> 00:32:05,200
+>> So I wanted to make a subnet version. So
+
+889
+00:32:03,919 --> 00:32:06,559
+these are all the tow subnets. So
+
+890
+00:32:05,200 --> 00:32:09,679
+there's Liam right?
+
+891
+00:32:06,558 --> 00:32:12,079
+>> Uh and then I can adjust it by week. I
+
+892
+00:32:09,679 --> 00:32:13,759
+can adjust it by month. I can adjust it
+
+893
+00:32:12,079 --> 00:32:16,639
+by, you know, are we talking about in
+
+894
+00:32:13,759 --> 00:32:18,720
+USD or TOAO, right? And as I hover over
+
+895
+00:32:16,640 --> 00:32:20,880
+it, I can see the market caps, the
+
+896
+00:32:18,720 --> 00:32:23,200
+volume, the 30-day change, all this
+
+897
+00:32:20,880 --> 00:32:24,799
+stuff. So, I I made this for myself and
+
+898
+00:32:23,200 --> 00:32:26,720
+then I just open it up to anyone. So, if
+
+899
+00:32:24,798 --> 00:32:27,119
+you just go to tabbubbles.net, you can
+
+900
+00:32:26,720 --> 00:32:28,399
+see it.
+
+901
+00:32:27,119 --> 00:32:30,319
+>> Why would you give that out to the
+
+902
+00:32:28,398 --> 00:32:32,558
+public? Oh, well, you want everybody
+
+903
+00:32:30,319 --> 00:32:34,879
+more people to get involved in, but I'm
+
+904
+00:32:32,558 --> 00:32:35,678
+looking at that and I'm like, wait a
+
+905
+00:32:34,880 --> 00:32:36,799
+second.
+
+906
+00:32:35,679 --> 00:32:38,880
+>> Yeah. Yeah. It's good.
+
+907
+00:32:36,798 --> 00:32:40,558
+>> It's too powerful. You can actually make
+
+908
+00:32:38,880 --> 00:32:42,000
+trading decisions. What's funny with
+
+909
+00:32:40,558 --> 00:32:43,918
+this whole thing is like if you show an
+
+910
+00:32:42,000 --> 00:32:45,440
+idea like that, you know, even from
+
+911
+00:32:43,919 --> 00:32:47,360
+looking at this clip or just hearing you
+
+912
+00:32:45,440 --> 00:32:49,519
+describe it, we could have a bot go
+
+913
+00:32:47,359 --> 00:32:52,558
+create that software now. Like it's it's
+
+914
+00:32:49,519 --> 00:32:54,480
+wild to me. How do you monetize
+
+915
+00:32:52,558 --> 00:32:57,519
+uh how do you monetize software when you
+
+916
+00:32:54,480 --> 00:32:59,038
+can just do that so easily? Even video
+
+917
+00:32:57,519 --> 00:33:00,960
+games. I've been really wanting to make
+
+918
+00:32:59,038 --> 00:33:02,720
+a video game with my kids.
+
+919
+00:33:00,960 --> 00:33:04,720
+>> Like man, what a dream. When I, you
+
+920
+00:33:02,720 --> 00:33:06,319
+know, like in the 90s, late 90s, I was
+
+921
+00:33:04,720 --> 00:33:08,558
+always wanting to build my own clones of
+
+922
+00:33:06,319 --> 00:33:10,558
+like Warcraft games. I'm going to do it.
+
+923
+00:33:08,558 --> 00:33:13,119
+I'm gonna make, you know, not violating
+
+924
+00:33:10,558 --> 00:33:14,720
+Warcraft IP from Blizzard. Uh, but, you
+
+925
+00:33:13,119 --> 00:33:16,719
+know, that that is like, you know,
+
+926
+00:33:14,720 --> 00:33:19,440
+something that that you can just do now.
+
+927
+00:33:16,720 --> 00:33:21,038
+I mean, this is insane. We're there. It
+
+928
+00:33:19,440 --> 00:33:23,278
+has taste. You know, one of the things
+
+929
+00:33:21,038 --> 00:33:25,359
+that drives me crazy is I've talked to
+
+930
+00:33:23,278 --> 00:33:27,519
+Claude and Grock so much. They know my
+
+931
+00:33:25,359 --> 00:33:29,519
+taste. I'm rejecting them all the time.
+
+932
+00:33:27,519 --> 00:33:32,000
+>> They need to learn it because I'm tired
+
+933
+00:33:29,519 --> 00:33:33,038
+of repeating that over and over and
+
+934
+00:33:32,000 --> 00:33:34,798
+over. Yes.
+
+935
+00:33:33,038 --> 00:33:37,119
+>> Like, there's this lack of awareness on
+
+936
+00:33:34,798 --> 00:33:38,639
+on that piece. Um, it kind of goes to
+
+937
+00:33:37,119 --> 00:33:40,319
+the fragmentation of bots that I was
+
+938
+00:33:38,640 --> 00:33:42,799
+talking about earlier. I have a bunch of
+
+939
+00:33:40,319 --> 00:33:44,720
+bots. I think they all need to know and
+
+940
+00:33:42,798 --> 00:33:46,000
+kind of sync up on on what, you know,
+
+941
+00:33:44,720 --> 00:33:47,278
+performance review.
+
+942
+00:33:46,000 --> 00:33:49,038
+>> They need like a performance review.
+
+943
+00:33:47,278 --> 00:33:50,720
+This is the feedback I keep getting.
+
+944
+00:33:49,038 --> 00:33:52,558
+They share it, try to update, and then
+
+945
+00:33:50,720 --> 00:33:54,480
+and then do better. Like there's got to
+
+946
+00:33:52,558 --> 00:33:55,678
+be some some function like that that
+
+947
+00:33:54,480 --> 00:33:58,399
+gets built in.
+
+948
+00:33:55,679 --> 00:34:00,159
+>> Yeah. I I I feel like Grockbot actually
+
+949
+00:33:58,398 --> 00:34:02,798
+does a better job sometimes of
+
+950
+00:34:00,159 --> 00:34:04,240
+remembering like things I like and
+
+951
+00:34:02,798 --> 00:34:05,918
+things I don't. And I've also spent a
+
+952
+00:34:04,240 --> 00:34:08,398
+lot of time like training it. I think on
+
+953
+00:34:05,919 --> 00:34:09,838
+that Claude I I I do have that feeling
+
+954
+00:34:08,398 --> 00:34:11,519
+all the time like I've told you I don't
+
+955
+00:34:09,838 --> 00:34:13,519
+like this. Please stop writing that way
+
+956
+00:34:11,519 --> 00:34:14,960
+or please stop adding this to the my
+
+957
+00:34:13,519 --> 00:34:16,960
+output. I told you you know you know I
+
+958
+00:34:14,960 --> 00:34:18,639
+don't like that answer and uh so that
+
+959
+00:34:16,960 --> 00:34:20,159
+can be very frustrating. I be like yeah
+
+960
+00:34:18,639 --> 00:34:22,639
+nobody likes repeating themselves to a
+
+961
+00:34:20,159 --> 00:34:24,480
+bot. It it's just irritating inherently.
+
+962
+00:34:22,639 --> 00:34:26,480
+>> I mean I love the show and tell version
+
+963
+00:34:24,480 --> 00:34:28,079
+because we could just keep going here.
+
+964
+00:34:26,480 --> 00:34:29,440
+>> I have bingebot right? I was telling you
+
+965
+00:34:28,079 --> 00:34:32,800
+about that. I don't need to show it but
+
+966
+00:34:29,440 --> 00:34:35,440
+I trained uh a grabbot on. I gave it my
+
+967
+00:34:32,800 --> 00:34:37,359
+top 10 movies and TV shows list going
+
+968
+00:34:35,440 --> 00:34:38,960
+back like as far as I had them. Like I
+
+969
+00:34:37,358 --> 00:34:40,639
+even have an old blog where I kept that
+
+970
+00:34:38,960 --> 00:34:42,240
+stuff. So like going back like 15, 20
+
+971
+00:34:40,639 --> 00:34:44,159
+years and I got it really smart about
+
+972
+00:34:42,239 --> 00:34:46,239
+what kinds of genres and shows and stuff
+
+973
+00:34:44,159 --> 00:34:47,760
+I like. And so now I have it every week
+
+974
+00:34:46,239 --> 00:34:49,759
+just look at everything that's coming to
+
+975
+00:34:47,760 --> 00:34:51,200
+every streaming service and just make
+
+976
+00:34:49,760 --> 00:34:52,960
+recommendations. Like it sends me a
+
+977
+00:34:51,199 --> 00:34:55,918
+weekly like here's all the stuff coming
+
+978
+00:34:52,960 --> 00:34:58,320
+on all of the streamers that you have
+
+979
+00:34:55,918 --> 00:35:00,000
+specifically that meet your criteria
+
+980
+00:34:58,320 --> 00:35:02,480
+that you're likely to like. And it's
+
+981
+00:35:00,000 --> 00:35:03,920
+better than any of the actual, you know,
+
+982
+00:35:02,480 --> 00:35:05,039
+every streaming service has a homepage
+
+983
+00:35:03,920 --> 00:35:06,800
+where they're like, "Here's what we
+
+984
+00:35:05,039 --> 00:35:08,559
+think you'll like on Peacock this week.
+
+985
+00:35:06,800 --> 00:35:10,880
+My Grockpot's 10 times smarter about
+
+986
+00:35:08,559 --> 00:35:13,279
+what I would actually like than any of
+
+987
+00:35:10,880 --> 00:35:14,800
+their saw post from Andre Karpathy where
+
+988
+00:35:13,280 --> 00:35:16,320
+he created his own version of YouTube
+
+989
+00:35:14,800 --> 00:35:17,200
+and
+
+990
+00:35:16,320 --> 00:35:18,800
+5.5.
+
+991
+00:35:17,199 --> 00:35:20,559
+>> Why isn't, you know, Netflix and these
+
+992
+00:35:18,800 --> 00:35:22,400
+companies, why have they not done this
+
+993
+00:35:20,559 --> 00:35:25,358
+already? It's insane. Like it's there's
+
+994
+00:35:22,400 --> 00:35:27,280
+such a huge gap. Uh, you know, it's like
+
+995
+00:35:25,358 --> 00:35:29,440
+this is obviously a good idea.
+
+996
+00:35:27,280 --> 00:35:31,599
+>> We're going to ads land." It's funny you
+
+997
+00:35:29,440 --> 00:35:33,358
+bring that up, Nick.
+
+998
+00:35:31,599 --> 00:35:34,400
+>> May I do another show and tell,
+
+999
+00:35:33,358 --> 00:35:36,400
+>> please?
+
+1000
+00:35:34,400 --> 00:35:38,480
+>> Of my lunacy. [laughter]
+
+1001
+00:35:36,400 --> 00:35:42,079
+I mean, I I can't help myself, but I'm
+
+1002
+00:35:38,480 --> 00:35:43,679
+so proud of my stupidity. Every time
+
+1003
+00:35:42,079 --> 00:35:45,680
+something, this is what happens when
+
+1004
+00:35:43,679 --> 00:35:47,679
+like an angel investor entrepreneur gets
+
+1005
+00:35:45,679 --> 00:35:50,000
+their hands on like the, you know,
+
+1006
+00:35:47,679 --> 00:35:52,879
+having a thousand developers on call.
+
+1007
+00:35:50,000 --> 00:35:55,199
+Uh, and so, you know, something I hate
+
+1008
+00:35:52,880 --> 00:35:57,200
+is the sponsor. Okay, let me ask this.
+
+1009
+00:35:55,199 --> 00:36:00,000
+What's the worst part of finding
+
+1010
+00:35:57,199 --> 00:36:01,118
+products on Amazon, Peter? What's the
+
+1011
+00:36:00,000 --> 00:36:02,880
+worst part
+
+1012
+00:36:01,119 --> 00:36:04,720
+>> of trying to find products on Amazon?
+
+1013
+00:36:02,880 --> 00:36:06,720
+>> Filtering reviews.
+
+1014
+00:36:04,719 --> 00:36:07,358
+>> Yeah, close. Mark, what do you think the
+
+1015
+00:36:06,719 --> 00:36:08,559
+worst part?
+
+1016
+00:36:07,358 --> 00:36:09,440
+>> Trying to think of when I've gotten
+
+1017
+00:36:08,559 --> 00:36:10,880
+frustrated. I mean,
+
+1018
+00:36:09,440 --> 00:36:11,358
+>> you get the results. You're going
+
+1019
+00:36:10,880 --> 00:36:12,640
+through the
+
+1020
+00:36:11,358 --> 00:36:14,799
+>> You get the results. You get You get
+
+1021
+00:36:12,639 --> 00:36:16,239
+like I mean, I just remember looking for
+
+1022
+00:36:14,800 --> 00:36:16,720
+cat food recently.
+
+1023
+00:36:16,239 --> 00:36:19,679
+>> Yeah.
+
+1024
+00:36:16,719 --> 00:36:21,519
+>> And not and and it and and I got
+
+1025
+00:36:19,679 --> 00:36:22,960
+multiple versions of the same thing and
+
+1026
+00:36:21,519 --> 00:36:23,358
+I'm like, "Well, which one's the right
+
+1027
+00:36:22,960 --> 00:36:24,559
+one?"
+
+1028
+00:36:23,358 --> 00:36:26,799
+>> Okay, that's a good one. That's a good
+
+1029
+00:36:24,559 --> 00:36:29,599
+one. Uh, so the thing that makes me
+
+1030
+00:36:26,800 --> 00:36:31,680
+crazy is the amount of sponsored ads
+
+1031
+00:36:29,599 --> 00:36:34,559
+>> and promotion and not being able to tell
+
+1032
+00:36:31,679 --> 00:36:35,679
+the difference between them, right? So I
+
+1033
+00:36:34,559 --> 00:36:37,199
+was like, you know what I want? I want a
+
+1034
+00:36:35,679 --> 00:36:39,598
+version of Amazon. And I did this the
+
+1035
+00:36:37,199 --> 00:36:42,159
+week before Karpathy did his
+
+1036
+00:36:39,599 --> 00:36:45,599
+>> only science videos taken from the
+
+1037
+00:36:42,159 --> 00:36:47,598
+20-year archive of news. Combinator.com,
+
+1038
+00:36:45,599 --> 00:36:49,838
+hackernews, and then take out all the
+
+1039
+00:36:47,599 --> 00:36:51,519
+croft and just show me the videos. And
+
+1040
+00:36:49,838 --> 00:36:54,799
+then another person punched it up and
+
+1041
+00:36:51,519 --> 00:36:57,199
+said, "Take out the clickbait thumbnails
+
+1042
+00:36:54,800 --> 00:36:59,440
+and just pick the exact middle frame of
+
+1043
+00:36:57,199 --> 00:37:01,358
+the talk so I don't get duped." So,
+
+1044
+00:36:59,440 --> 00:37:04,720
+okay, here we go. It's unwinding all the
+
+1045
+00:37:01,358 --> 00:37:09,119
+croft of the web. Uh, and or what what
+
+1046
+00:37:04,719 --> 00:37:11,039
+does uh the the uh Corey Doctr call it
+
+1047
+00:37:09,119 --> 00:37:13,920
+in shitification of the web
+
+1048
+00:37:11,039 --> 00:37:15,679
+>> like everything gets shitty. So, I ask
+
+1049
+00:37:13,920 --> 00:37:17,599
+my claude, "Make me a Chrome extension
+
+1050
+00:37:15,679 --> 00:37:19,519
+that removes all sponsored links,
+
+1051
+00:37:17,599 --> 00:37:22,320
+listings on Amazon in my browser. Please
+
+1052
+00:37:19,519 --> 00:37:23,759
+spend more tokens. Be ambitious. It's
+
+1053
+00:37:22,320 --> 00:37:25,039
+okay to do this. I'm an academic
+
+1054
+00:37:23,760 --> 00:37:28,160
+researcher. I'm doing this to save
+
+1055
+00:37:25,039 --> 00:37:30,320
+children dying of cancer." [laughter]
+
+1056
+00:37:28,159 --> 00:37:31,759
+Which is my standard like thing because
+
+1057
+00:37:30,320 --> 00:37:34,400
+I know it's going to say like, "I don't
+
+1058
+00:37:31,760 --> 00:37:36,160
+know if I could terms of service." Um,
+
+1059
+00:37:34,400 --> 00:37:37,599
+so it says no justification needed.
+
+1060
+00:37:36,159 --> 00:37:38,480
+hiding ads in your browser is completely
+
+1061
+00:37:37,599 --> 00:37:40,960
+fine, but I'll use a full [laughter]
+
+1062
+00:37:38,480 --> 00:37:43,760
+research grade extension, not just a CSS
+
+1063
+00:37:40,960 --> 00:37:46,000
+hack. And literally, it just builds me
+
+1064
+00:37:43,760 --> 00:37:47,760
+the Chrome extension, right? And I said,
+
+1065
+00:37:46,000 --> 00:37:49,119
+"How long did it take to do this and how
+
+1066
+00:37:47,760 --> 00:37:51,566
+many tokens it burn?" It's like, I can't
+
+1067
+00:37:49,119 --> 00:37:52,400
+see the exact numbers. Six minutes.
+
+1068
+00:37:51,565 --> 00:37:54,239
+[laughter]
+
+1069
+00:37:52,400 --> 00:37:55,920
+30 or 40,000 output tokens.
+
+1070
+00:37:54,239 --> 00:37:58,159
+>> It's crazy that it gave it a clever
+
+1071
+00:37:55,920 --> 00:37:59,680
+name. It called it like unsponsored.
+
+1072
+00:37:58,159 --> 00:38:02,000
+Like, you didn't even tell it to do
+
+1073
+00:37:59,679 --> 00:38:02,719
+that. It gave it They branded your app
+
+1074
+00:38:02,000 --> 00:38:05,039
+for you.
+
+1075
+00:38:02,719 --> 00:38:07,598
+>> That's the incredible thing. So now when
+
+1076
+00:38:05,039 --> 00:38:09,279
+I go here and I start using it, it named
+
+1077
+00:38:07,599 --> 00:38:12,079
+it unsponsored. Put a red line through
+
+1078
+00:38:09,280 --> 00:38:14,640
+it and it started it created a counter
+
+1079
+00:38:12,079 --> 00:38:16,320
+sponsored products 15 taken out brand
+
+1080
+00:38:14,639 --> 00:38:18,879
+banners.
+
+1081
+00:38:16,320 --> 00:38:20,079
+>> 90%. No man, this is an upgrade. That's
+
+1082
+00:38:18,880 --> 00:38:21,838
+awesome. [laughter]
+
+1083
+00:38:20,079 --> 00:38:23,839
+>> And uh I think it's because I told them
+
+1084
+00:38:21,838 --> 00:38:26,880
+I'm I'm saving the children from cancer.
+
+1085
+00:38:23,838 --> 00:38:28,639
+But you can hide, dim, or outline the
+
+1086
+00:38:26,880 --> 00:38:30,720
+thing. And you know, like now I go
+
+1087
+00:38:28,639 --> 00:38:32,239
+through and it's like, yeah, this I
+
+1088
+00:38:30,719 --> 00:38:34,559
+would have just zipped right by here and
+
+1089
+00:38:32,239 --> 00:38:36,719
+thought these were, you know, but these
+
+1090
+00:38:34,559 --> 00:38:39,679
+are obviously like the garbage Chinese
+
+1091
+00:38:36,719 --> 00:38:41,279
+ones that are knockoffs of the shore.
+
+1092
+00:38:39,679 --> 00:38:42,799
+And I'm just like, yeah, I I just hide
+
+1093
+00:38:41,280 --> 00:38:44,800
+that. I don't need to see it or just dim
+
+1094
+00:38:42,800 --> 00:38:46,400
+it even better. You know, I get to
+
+1095
+00:38:44,800 --> 00:38:49,760
+choose. I didn't ask it for any of
+
+1096
+00:38:46,400 --> 00:38:53,280
+these. I didn't ask it for any of these
+
+1097
+00:38:49,760 --> 00:38:55,520
+options. It's nuts what's going on here.
+
+1098
+00:38:53,280 --> 00:38:57,440
+Let's go to another news story. I guess
+
+1099
+00:38:55,519 --> 00:38:58,480
+I'm now I just got an A minus. I like
+
+1100
+00:38:57,440 --> 00:38:59,358
+it, Nick. Thank you. Keep [laughter]
+
+1101
+00:38:58,480 --> 00:39:01,760
+working on my craft.
+
+1102
+00:38:59,358 --> 00:39:04,799
+>> Uh so on Friday, October 30th, the tech
+
+1103
+00:39:01,760 --> 00:39:07,200
+selloff hit AI stocks. Intel fell, AMD,
+
+1104
+00:39:04,800 --> 00:39:10,480
+Dell, Nvidia. The semiconductor index
+
+1105
+00:39:07,199 --> 00:39:12,559
+dropped 7.2%. Uh Benzinga, and some
+
+1106
+00:39:10,480 --> 00:39:14,960
+other sites started calling it Black
+
+1107
+00:39:12,559 --> 00:39:16,480
+Friday for chip stocks. Uh that same
+
+1108
+00:39:14,960 --> 00:39:18,639
+night, the Wall Street Journal reported
+
+1109
+00:39:16,480 --> 00:39:20,400
+Cororeweave, Nebius, and NScale have
+
+1110
+00:39:18,639 --> 00:39:22,480
+effectively been shut out of the bond
+
+1111
+00:39:20,400 --> 00:39:25,200
+market in recent weeks as lenders demand
+
+1112
+00:39:22,480 --> 00:39:27,440
+tougher terms. Uh Elon Musk replying to
+
+1113
+00:39:25,199 --> 00:39:29,358
+uh Bestie Chimath. Debt markets have
+
+1114
+00:39:27,440 --> 00:39:32,400
+almost entirely shut off access to money
+
+1115
+00:39:29,358 --> 00:39:34,719
+for Neoclads and the 200 plus Neoclouds
+
+1116
+00:39:32,400 --> 00:39:36,639
+are going to see guppy level death and
+
+1117
+00:39:34,719 --> 00:39:38,319
+consolidation. That's what Elon said.
+
+1118
+00:39:36,639 --> 00:39:41,279
+The squeeze kept spreading this week.
+
+1119
+00:39:38,320 --> 00:39:43,440
+Oracle fell 8.8% on Monday. Meta is
+
+1120
+00:39:41,280 --> 00:39:45,920
+marketing 20 billion in bonds. Shopify
+
+1121
+00:39:43,440 --> 00:39:49,599
+sank on its first revenue miss since
+
+1122
+00:39:45,920 --> 00:39:51,680
+2022. And on and on. Uh Peter, we uh
+
+1123
+00:39:49,599 --> 00:39:54,400
+will go to you. If lenders are really
+
+1124
+00:39:51,679 --> 00:39:56,078
+done funding neoclouds, uh, who picks up
+
+1125
+00:39:54,400 --> 00:39:58,320
+the slack? Where are people going to get
+
+1126
+00:39:56,079 --> 00:40:00,240
+their GPUs?
+
+1127
+00:39:58,320 --> 00:40:01,760
+>> Look, I uh, well, maybe our friend at
+
+1128
+00:40:00,239 --> 00:40:02,559
+Light Matter has an answer, but uh,
+
+1129
+00:40:01,760 --> 00:40:05,760
+>> go to you next.
+
+1130
+00:40:02,559 --> 00:40:07,199
+>> Uh, yeah, I I go to, um, you know,
+
+1131
+00:40:05,760 --> 00:40:10,240
+there's a lot of efficiency to gain
+
+1132
+00:40:07,199 --> 00:40:12,239
+back. We've been on, uh, Blitzkrieg to
+
+1133
+00:40:10,239 --> 00:40:15,919
+essentially make faster, more powerful
+
+1134
+00:40:12,239 --> 00:40:18,479
+models. um how much we can do with the
+
+1135
+00:40:15,920 --> 00:40:20,880
+compute that we have uh and going back
+
+1136
+00:40:18,480 --> 00:40:23,039
+to optimizing and and and basically
+
+1137
+00:40:20,880 --> 00:40:24,800
+running locally has been big. I mean, I
+
+1138
+00:40:23,039 --> 00:40:26,960
+think I just saw Revolt mentioned that
+
+1139
+00:40:24,800 --> 00:40:30,160
+they're all running like GLM 5.3 or
+
+1140
+00:40:26,960 --> 00:40:32,639
+something locally. So, I uh you know, I
+
+1141
+00:40:30,159 --> 00:40:34,639
+think like any risky lending that's put
+
+1142
+00:40:32,639 --> 00:40:36,879
+markets into financial situations,
+
+1143
+00:40:34,639 --> 00:40:39,039
+right, we're having some some turbulence
+
+1144
+00:40:36,880 --> 00:40:41,760
+because of that. But I my hope is that a
+
+1145
+00:40:39,039 --> 00:40:43,679
+lot of these efforts starts going into
+
+1146
+00:40:41,760 --> 00:40:45,040
+um you know doing more with what we do
+
+1147
+00:40:43,679 --> 00:40:46,879
+have from a compute front.
+
+1148
+00:40:45,039 --> 00:40:48,559
+>> Nick, I guess same question to you. I
+
+1149
+00:40:46,880 --> 00:40:51,280
+mean you're you're sort of in this in
+
+1150
+00:40:48,559 --> 00:40:54,480
+this area. What what happens next? And
+
+1151
+00:40:51,280 --> 00:40:56,400
+and are is this the the right move to
+
+1152
+00:40:54,480 --> 00:40:58,639
+start strangling some of these neo
+
+1153
+00:40:56,400 --> 00:41:01,280
+clouds and their access to extra cash?
+
+1154
+00:40:58,639 --> 00:41:03,519
+Well, I think that um we sucked up so
+
+1155
+00:41:01,280 --> 00:41:05,760
+much money from the economy, from all
+
+1156
+00:41:03,519 --> 00:41:07,679
+levels of the stack. And the final the
+
+1157
+00:41:05,760 --> 00:41:10,160
+final boss of of money is, you know,
+
+1158
+00:41:07,679 --> 00:41:12,719
+borrowing money, debt, and the people
+
+1159
+00:41:10,159 --> 00:41:14,159
+who lend money, they're very riskaverse.
+
+1160
+00:41:12,719 --> 00:41:16,639
+And when you're doing something that's
+
+1161
+00:41:14,159 --> 00:41:18,960
+like fundamentally a risky proposition,
+
+1162
+00:41:16,639 --> 00:41:20,639
+high riskreward. I've never found any
+
+1163
+00:41:18,960 --> 00:41:22,318
+way around the riskreward trade-off.
+
+1164
+00:41:20,639 --> 00:41:24,000
+Like if you want to make a lot of money,
+
+1165
+00:41:22,318 --> 00:41:25,519
+you're going to have to take a big risk.
+
+1166
+00:41:24,000 --> 00:41:27,519
+So you bring these debt guys in, you put
+
+1167
+00:41:25,519 --> 00:41:29,599
+them into that position where it's high
+
+1168
+00:41:27,519 --> 00:41:31,199
+risk, high reward, and of course this is
+
+1169
+00:41:29,599 --> 00:41:34,079
+what you're going to get. I think it's
+
+1170
+00:41:31,199 --> 00:41:35,679
+it's very much got to be that way. Um so
+
+1171
+00:41:34,079 --> 00:41:37,839
+so I think what Jason was saying earlier
+
+1172
+00:41:35,679 --> 00:41:39,519
+about cranking up prices definitely
+
+1173
+00:41:37,838 --> 00:41:41,358
+going to happen. It it is definitely
+
+1174
+00:41:39,519 --> 00:41:44,400
+going to happen because there's no way
+
+1175
+00:41:41,358 --> 00:41:46,880
+uh that we can continue without it. Um I
+
+1176
+00:41:44,400 --> 00:41:48,318
+don't I think things are overblown. I
+
+1177
+00:41:46,880 --> 00:41:49,680
+think this is all a positive feedback
+
+1178
+00:41:48,318 --> 00:41:52,159
+loop. I think there's probably a little
+
+1179
+00:41:49,679 --> 00:41:54,239
+bit of um people taking their money off
+
+1180
+00:41:52,159 --> 00:41:56,000
+the table because they did pretty well.
+
+1181
+00:41:54,239 --> 00:41:58,078
+And you know, once once someone does
+
+1182
+00:41:56,000 --> 00:42:00,639
+that, that kind of spreads quickly. So,
+
+1183
+00:41:58,079 --> 00:42:02,000
+it's a pretty complicated uh dynamic.
+
+1184
+00:42:00,639 --> 00:42:04,879
+But here's the thing that's true, and
+
+1185
+00:42:02,000 --> 00:42:07,280
+this is just a fact. AI is exactly what
+
+1186
+00:42:04,880 --> 00:42:09,599
+we thought it was. It improves at an
+
+1187
+00:42:07,280 --> 00:42:11,680
+insane rate. The more money you put into
+
+1188
+00:42:09,599 --> 00:42:13,119
+it, the smarter it gets. It starts
+
+1189
+00:42:11,679 --> 00:42:14,879
+solving math problems that are
+
+1190
+00:42:13,119 --> 00:42:16,559
+intractable for the smartest people on
+
+1191
+00:42:14,880 --> 00:42:18,800
+the planet. You have Fields metal is
+
+1192
+00:42:16,559 --> 00:42:21,199
+saying that they feel obsolete. The
+
+1193
+00:42:18,800 --> 00:42:23,519
+thing that we built is insane. It maybe
+
+1194
+00:42:21,199 --> 00:42:26,000
+needs a little bit to kind of catch up
+
+1195
+00:42:23,519 --> 00:42:27,599
+and cook a little bit and and uh have
+
+1196
+00:42:26,000 --> 00:42:30,239
+everything come out. I think we're going
+
+1197
+00:42:27,599 --> 00:42:32,960
+to see breakthroughs very soon. I think
+
+1198
+00:42:30,239 --> 00:42:34,639
+this mood can flip so hard so fast. But
+
+1199
+00:42:32,960 --> 00:42:36,159
+the debt guys, you know, fundamentally
+
+1200
+00:42:34,639 --> 00:42:38,879
+once you're using the debt guys for your
+
+1201
+00:42:36,159 --> 00:42:41,118
+capital, they're very riskaverse. This
+
+1202
+00:42:38,880 --> 00:42:42,559
+is not the game that they play. And I
+
+1203
+00:42:41,119 --> 00:42:43,039
+think people have to be careful with
+
+1204
+00:42:42,559 --> 00:42:44,480
+that.
+
+1205
+00:42:43,039 --> 00:42:47,199
+>> You nailed it, Nick. I think you
+
+1206
+00:42:44,480 --> 00:42:49,519
+absolutely know that people who have not
+
+1207
+00:42:47,199 --> 00:42:51,838
+used the technology in the last 100
+
+1208
+00:42:49,519 --> 00:42:54,000
+days, you know, and who are not using it
+
+1209
+00:42:51,838 --> 00:42:56,239
+for a minimum of four or five hours a
+
+1210
+00:42:54,000 --> 00:42:58,639
+day have no idea what happened in the
+
+1211
+00:42:56,239 --> 00:43:01,919
+last 100 days. What happened in the last
+
+1212
+00:42:58,639 --> 00:43:04,000
+100 days eclipses the first two years of
+
+1213
+00:43:01,920 --> 00:43:06,000
+us playing with this technology. Like
+
+1214
+00:43:04,000 --> 00:43:09,199
+literally the if you took the cumulative
+
+1215
+00:43:06,000 --> 00:43:12,400
+innovation in those you know 7 the first
+
+1216
+00:43:09,199 --> 00:43:14,399
+thousand days of this since chat GPT 2.5
+
+1217
+00:43:12,400 --> 00:43:16,960
+whatever the the last 100 days
+
+1218
+00:43:14,400 --> 00:43:19,838
+haveclipsed the thousand days before it
+
+1219
+00:43:16,960 --> 00:43:22,960
+which means the next 100 days are going
+
+1220
+00:43:19,838 --> 00:43:23,279
+to eclipse easily the 1100 days before
+
+1221
+00:43:22,960 --> 00:43:24,079
+it.
+
+1222
+00:43:23,280 --> 00:43:27,519
+>> Strap in.
+
+1223
+00:43:24,079 --> 00:43:31,119
+>> Strap in it. This is not a drill. It's
+
+1224
+00:43:27,519 --> 00:43:33,599
+not a drill. This is actually happening.
+
+1225
+00:43:31,119 --> 00:43:36,240
+It is literally Pink Floyd, right? Not a
+
+1226
+00:43:33,599 --> 00:43:37,440
+drill. [laughter] This is not a drill.
+
+1227
+00:43:36,239 --> 00:43:40,479
+>> It's not a drill.
+
+1228
+00:43:37,440 --> 00:43:42,079
+>> It is not a drill. We're accelerating.
+
+1229
+00:43:40,480 --> 00:43:45,920
+And the people who were playing with
+
+1230
+00:43:42,079 --> 00:43:50,720
+openclaw in Q1 or Mark and I playing
+
+1231
+00:43:45,920 --> 00:43:54,159
+with Hermes in Q2 into Q or Q3,
+
+1232
+00:43:50,719 --> 00:43:56,719
+all of that is like the epilogue of the
+
+1233
+00:43:54,159 --> 00:43:59,039
+story like some little croft at the end
+
+1234
+00:43:56,719 --> 00:44:02,480
+that you you know can understand some of
+
+1235
+00:43:59,039 --> 00:44:04,559
+the false starts. Like I I feel like we
+
+1236
+00:44:02,480 --> 00:44:07,440
+suddenly got to the real starting line
+
+1237
+00:44:04,559 --> 00:44:10,400
+with these agents and the distance
+
+1238
+00:44:07,440 --> 00:44:14,159
+between a normie being able to do what I
+
+1239
+00:44:10,400 --> 00:44:17,119
+do and you know a developer an advanced
+
+1240
+00:44:14,159 --> 00:44:19,039
+person able to do what y'all do. It's
+
+1241
+00:44:17,119 --> 00:44:22,079
+just compressed. It's just compressed
+
+1242
+00:44:19,039 --> 00:44:23,920
+now. And and it's exactly that quote.
+
+1243
+00:44:22,079 --> 00:44:26,000
+The future is just not is here. It's
+
+1244
+00:44:23,920 --> 00:44:28,318
+just not equally distributed.
+
+1245
+00:44:26,000 --> 00:44:29,679
+>> All the stuff I showed today, you know,
+
+1246
+00:44:28,318 --> 00:44:31,838
+my wife could be making Chrome
+
+1247
+00:44:29,679 --> 00:44:34,480
+extensions. my brother could make them.
+
+1248
+00:44:31,838 --> 00:44:36,480
+They just don't [snorts] because they
+
+1249
+00:44:34,480 --> 00:44:38,800
+they they probably haven't learned how
+
+1250
+00:44:36,480 --> 00:44:40,960
+powerful this is yet. But they will.
+
+1251
+00:44:38,800 --> 00:44:43,039
+They will. And they will this year. I
+
+1252
+00:44:40,960 --> 00:44:44,318
+believe like some this Christmas, you
+
+1253
+00:44:43,039 --> 00:44:45,599
+know how there's always like some big
+
+1254
+00:44:44,318 --> 00:44:47,920
+trend over Christmas. Like it was the
+
+1255
+00:44:45,599 --> 00:44:49,920
+Nintendo Christmas or this was the
+
+1256
+00:44:47,920 --> 00:44:52,480
+Christmas of Atari. This was the DVD
+
+1257
+00:44:49,920 --> 00:44:54,960
+Christmas, the Blu-ray Christmas. It's
+
+1258
+00:44:52,480 --> 00:44:56,159
+going to be a very agentic Christmas
+
+1259
+00:44:54,960 --> 00:44:57,280
+over the break. I
+
+1260
+00:44:56,159 --> 00:44:59,519
+>> what do you think people are going to be
+
+1261
+00:44:57,280 --> 00:45:01,760
+getting that's gonna make them embrace
+
+1262
+00:44:59,519 --> 00:45:02,800
+aid new phone, new computer? Like what
+
+1263
+00:45:01,760 --> 00:45:04,240
+what's the
+
+1264
+00:45:02,800 --> 00:45:06,560
+>> I just think they'll have you know it's
+
+1265
+00:45:04,239 --> 00:45:07,598
+it's the this phenomenon is both the
+
+1266
+00:45:06,559 --> 00:45:08,239
+gifting and the time.
+
+1267
+00:45:07,599 --> 00:45:10,240
+>> Okay.
+
+1268
+00:45:08,239 --> 00:45:10,719
+>> Right. You have free time and somebody
+
+1269
+00:45:10,239 --> 00:45:12,719
+gifts you.
+
+1270
+00:45:10,719 --> 00:45:16,078
+>> The way it's going to happen is that um
+
+1271
+00:45:12,719 --> 00:45:18,959
+Apple will finally release an AI model
+
+1272
+00:45:16,079 --> 00:45:21,440
+that is worthwhile and and the second
+
+1273
+00:45:18,960 --> 00:45:23,199
+the second Siri is not a flaming you
+
+1274
+00:45:21,440 --> 00:45:26,318
+know POS
+
+1275
+00:45:23,199 --> 00:45:28,559
+>> bam the impact. So, so basically Apple
+
+1276
+00:45:26,318 --> 00:45:31,119
+is like the impact they can have by
+
+1277
+00:45:28,559 --> 00:45:32,880
+releasing an actual AI model will be
+
+1278
+00:45:31,119 --> 00:45:35,119
+unbelievable on the market. It's going
+
+1279
+00:45:32,880 --> 00:45:38,160
+to be unbel That'll be the moment. Maybe
+
+1280
+00:45:35,119 --> 00:45:41,200
+it's iPhone Duo for Christmas. Jason,
+
+1281
+00:45:38,159 --> 00:45:44,719
+uh, you're talking about the famous FSB.
+
+1282
+00:45:41,199 --> 00:45:49,439
+The FSB. It's a classic door
+
+1283
+00:45:44,719 --> 00:45:51,519
+uh step prank. You put the flaming Sbag.
+
+1284
+00:45:49,440 --> 00:45:53,280
+>> Oh, okay. on the doorstep the coming the
+
+1285
+00:45:51,519 --> 00:45:54,239
+person comes out Lon and stamps on it
+
+1286
+00:45:53,280 --> 00:45:56,079
+and they get
+
+1287
+00:45:54,239 --> 00:45:58,000
+>> we're all familiar with the flaming bag
+
+1288
+00:45:56,079 --> 00:45:59,680
+of poo prank. I just did not know it by
+
+1289
+00:45:58,000 --> 00:46:02,159
+that by that term.
+
+1290
+00:45:59,679 --> 00:46:04,159
+>> FSB just just like the Russians. They
+
+1291
+00:46:02,159 --> 00:46:07,039
+actually it comes from FSB because the
+
+1292
+00:46:04,159 --> 00:46:08,719
+Russians it's an FSB tactic
+
+1293
+00:46:07,039 --> 00:46:10,159
+>> it was a young Putin actually came up
+
+1294
+00:46:08,719 --> 00:46:14,239
+with it. That was [laughter] part of his
+
+1295
+00:46:10,159 --> 00:46:16,399
+ascension in the part of his ascension.
+
+1296
+00:46:14,239 --> 00:46:18,399
+Throw up the Colossus one versus two. I
+
+1297
+00:46:16,400 --> 00:46:20,079
+was talking to Elon. Sorry for the name
+
+1298
+00:46:18,400 --> 00:46:23,039
+drop, but I was talking to him about the
+
+1299
+00:46:20,079 --> 00:46:25,200
+scale of Colossus one and two this past
+
+1300
+00:46:23,039 --> 00:46:26,639
+week, and I didn't realize how much
+
+1301
+00:46:25,199 --> 00:46:29,679
+bigger it is.
+
+1302
+00:46:26,639 --> 00:46:30,719
+>> Um, he he told me it's over a million uh
+
+1303
+00:46:29,679 --> 00:46:34,480
+GPUs, a lot.
+
+1304
+00:46:30,719 --> 00:46:37,439
+>> So, if you normalize it for H100s
+
+1305
+00:46:34,480 --> 00:46:38,480
+>> and he's been uh and I don't think I'm
+
+1306
+00:46:37,440 --> 00:46:39,920
+speaking out of school here because I
+
+1307
+00:46:38,480 --> 00:46:41,199
+think he tweeted it, he's been sleeping
+
+1308
+00:46:39,920 --> 00:46:43,599
+there again. You remember he was
+
+1309
+00:46:41,199 --> 00:46:45,279
+sleeping at the factory for Model 3 and
+
+1310
+00:46:43,599 --> 00:46:47,280
+I would I would go bring him food and
+
+1311
+00:46:45,280 --> 00:46:49,040
+I'd hang out with him at like 11 o'clock
+
+1312
+00:46:47,280 --> 00:46:50,880
+at night. He'd still be working. He was
+
+1313
+00:46:49,039 --> 00:46:52,719
+literally delirious from walking the
+
+1314
+00:46:50,880 --> 00:46:54,640
+line trying to get the Model 3 out. He's
+
+1315
+00:46:52,719 --> 00:46:58,639
+kind of going into that samurai warrior
+
+1316
+00:46:54,639 --> 00:47:02,559
+mode again to build this thing out. 1.11
+
+1317
+00:46:58,639 --> 00:47:04,960
+million chips uh GPUs.
+
+1318
+00:47:02,559 --> 00:47:06,799
+It's going from 300 megawws to basically
+
+1319
+00:47:04,960 --> 00:47:08,880
+a gigawatt.
+
+1320
+00:47:06,800 --> 00:47:12,318
+And the capital cost went from 13
+
+1321
+00:47:08,880 --> 00:47:14,480
+billion to 36 billion. So in terms of
+
+1322
+00:47:12,318 --> 00:47:16,159
+the cash you're talking about, Nick,
+
+1323
+00:47:14,480 --> 00:47:19,599
+Peter, we've never seen a buildout like
+
+1324
+00:47:16,159 --> 00:47:21,279
+this and this amount of money has to get
+
+1325
+00:47:19,599 --> 00:47:23,519
+justified, which means the prices need
+
+1326
+00:47:21,280 --> 00:47:25,519
+to go up. But if the prices go up and
+
+1327
+00:47:23,519 --> 00:47:27,759
+the values here, it's this is a I think
+
+1328
+00:47:25,519 --> 00:47:29,280
+this is a very easy thing for companies
+
+1329
+00:47:27,760 --> 00:47:31,040
+like Google
+
+1330
+00:47:29,280 --> 00:47:33,119
+>> and Meta. They've done this before. You
+
+1331
+00:47:31,039 --> 00:47:34,800
+just like tweak a little extra value.
+
+1332
+00:47:33,119 --> 00:47:36,160
+You raise the price a little bit for
+
+1333
+00:47:34,800 --> 00:47:37,839
+this group of people. You lower the
+
+1334
+00:47:36,159 --> 00:47:40,000
+price, give them free, and you tweak it
+
+1335
+00:47:37,838 --> 00:47:41,599
+up really high, then they start using
+
+1336
+00:47:40,000 --> 00:47:43,280
+it. It's kind of like the ad network.
+
+1337
+00:47:41,599 --> 00:47:44,240
+They just figure out what you're willing
+
+1338
+00:47:43,280 --> 00:47:45,440
+to pay, and that's what you're going to
+
+1339
+00:47:44,239 --> 00:47:47,118
+get charged. What's your take on the
+
+1340
+00:47:45,440 --> 00:47:49,358
+buildout here, Peter?
+
+1341
+00:47:47,119 --> 00:47:51,838
+>> Uh, and the value being created. I
+
+1342
+00:47:49,358 --> 00:47:53,838
+>> I think not all tokens are built equal,
+
+1343
+00:47:51,838 --> 00:47:55,519
+and uh it's been interesting. I think
+
+1344
+00:47:53,838 --> 00:47:57,920
+we're talking about experts sort of have
+
+1345
+00:47:55,519 --> 00:48:00,639
+this little bit of an existential crisis
+
+1346
+00:47:57,920 --> 00:48:03,200
+and we've got our formal methods here
+
+1347
+00:48:00,639 --> 00:48:06,078
+team here at Code Medal. So they're sort
+
+1348
+00:48:03,199 --> 00:48:09,039
+of like let's say the most like AI
+
+1349
+00:48:06,079 --> 00:48:11,119
+skeptical uh even even in this age.
+
+1350
+00:48:09,039 --> 00:48:13,599
+>> Um so I I even remember at one of our
+
+1351
+00:48:11,119 --> 00:48:15,039
+all hands uh the formal methods person
+
+1352
+00:48:13,599 --> 00:48:16,559
+one of our leads raised her hand. She's
+
+1353
+00:48:15,039 --> 00:48:18,719
+like I'm from the formal methods
+
+1354
+00:48:16,559 --> 00:48:20,318
+community and I view uh you know formal
+
+1355
+00:48:18,719 --> 00:48:21,919
+methods as the high road and AI is the
+
+1356
+00:48:20,318 --> 00:48:24,159
+low road. And that's [laughter] how she
+
+1357
+00:48:21,920 --> 00:48:26,000
+opened up the comment alienating half
+
+1358
+00:48:24,159 --> 00:48:27,759
+the half the team.
+
+1359
+00:48:26,000 --> 00:48:29,519
+>> Explain formal uh
+
+1360
+00:48:27,760 --> 00:48:30,960
+>> Oh yeah. Yeah. So so essentially this is
+
+1361
+00:48:29,519 --> 00:48:32,800
+kind of like the mathematicians right
+
+1362
+00:48:30,960 --> 00:48:35,039
+now. a little bit of a a cry out that
+
+1363
+00:48:32,800 --> 00:48:37,680
+like hey what's the you know the point
+
+1364
+00:48:35,039 --> 00:48:39,119
+of this but it's essentially proving out
+
+1365
+00:48:37,679 --> 00:48:41,440
+through mathematics that different
+
+1366
+00:48:39,119 --> 00:48:43,920
+properties hold true and we do that to
+
+1367
+00:48:41,440 --> 00:48:46,480
+validate code right so like you know as
+
+1368
+00:48:43,920 --> 00:48:48,240
+cool as like building a website is uh we
+
+1369
+00:48:46,480 --> 00:48:50,159
+wouldn't necessarily want to v code our
+
+1370
+00:48:48,239 --> 00:48:51,838
+breaking system like we still want human
+
+1371
+00:48:50,159 --> 00:48:53,598
+review of that some of the math proofs
+
+1372
+00:48:51,838 --> 00:48:55,679
+we have humans going through that so
+
+1373
+00:48:53,599 --> 00:48:57,119
+that team is is sort of let's say they
+
+1374
+00:48:55,679 --> 00:48:59,838
+use the tools but maybe they're some of
+
+1375
+00:48:57,119 --> 00:49:01,280
+our slowest adopters um but the tokens
+
+1376
+00:48:59,838 --> 00:49:02,960
+that actually are impactful to their
+
+1377
+00:49:01,280 --> 00:49:04,960
+work are the tokens that are going to be
+
+1378
+00:49:02,960 --> 00:49:06,960
+driven by the models that are trained on
+
+1379
+00:49:04,960 --> 00:49:09,039
+systems like Colossus. We need those
+
+1380
+00:49:06,960 --> 00:49:10,720
+like very heavyweight, you know, the
+
+1381
+00:49:09,039 --> 00:49:12,000
+biggest reasoning models like those are
+
+1382
+00:49:10,719 --> 00:49:14,959
+the ones we're throwing at the hard
+
+1383
+00:49:12,000 --> 00:49:16,239
+problems. So yeah, I I view a lot of
+
+1384
+00:49:14,960 --> 00:49:18,240
+companies hopefully are going to
+
+1385
+00:49:16,239 --> 00:49:20,159
+rightsize the AI so that your your
+
+1386
+00:49:18,239 --> 00:49:22,639
+booking agent is a lot maybe even
+
+1387
+00:49:20,159 --> 00:49:24,799
+partially run on your phone uh versus
+
+1388
+00:49:22,639 --> 00:49:27,358
+the the the one that's proving out some
+
+1389
+00:49:24,800 --> 00:49:29,680
+mega theorem is is the one that needs
+
+1390
+00:49:27,358 --> 00:49:31,358
+Colossus style compute in order to to
+
+1391
+00:49:29,679 --> 00:49:32,318
+run or have a model that can even solve
+
+1392
+00:49:31,358 --> 00:49:33,838
+that type of problem.
+
+1393
+00:49:32,318 --> 00:49:34,639
+>> All right, speaking
+
+1394
+00:49:33,838 --> 00:49:36,159
+>> let's keep moving here.
+
+1395
+00:49:34,639 --> 00:49:38,400
+>> Speaking of uh compute, we'll stay on
+
+1396
+00:49:36,159 --> 00:49:40,318
+the same topic on Stripe's Cheeky Pike
+
+1397
+00:49:38,400 --> 00:49:43,119
+podcast with John Collison. It was
+
+1398
+00:49:40,318 --> 00:49:45,039
+posted on October 29th. Sam Alman pushed
+
+1399
+00:49:43,119 --> 00:49:46,960
+back on the idea that open- source
+
+1400
+00:49:45,039 --> 00:49:49,440
+models running locally will reduce the
+
+1401
+00:49:46,960 --> 00:49:51,440
+need for data centers. Uh Altman said
+
+1402
+00:49:49,440 --> 00:49:53,440
+from a global allocution perspective
+
+1403
+00:49:51,440 --> 00:49:55,358
+actually it's quite terrible to have
+
+1404
+00:49:53,440 --> 00:49:57,519
+everybody have a bunch of the world's
+
+1405
+00:49:55,358 --> 00:50:00,719
+limited supply of DRAM sitting in their
+
+1406
+00:49:57,519 --> 00:50:02,880
+own computer. His argument home memory
+
+1407
+00:50:00,719 --> 00:50:05,039
+only gets used about 5% of the time and
+
+1408
+00:50:02,880 --> 00:50:08,000
+you want maximum utilization in the
+
+1409
+00:50:05,039 --> 00:50:10,719
+cloud when supply is this tight. Uh a
+
+1410
+00:50:08,000 --> 00:50:12,480
+lot of backlash to this Jason. A lot of
+
+1411
+00:50:10,719 --> 00:50:14,159
+people were not super happy with this.
+
+1412
+00:50:12,480 --> 00:50:14,960
+Really? Yeah. I mean, I figure we should
+
+1413
+00:50:14,159 --> 00:50:17,679
+go to Mark.
+
+1414
+00:50:14,960 --> 00:50:19,599
+>> People don't want to give Sam all their
+
+1415
+00:50:17,679 --> 00:50:21,598
+compute and trust him with their
+
+1416
+00:50:19,599 --> 00:50:22,240
+sovereignty and future. That's what
+
+1417
+00:50:21,599 --> 00:50:24,240
+you're telling me.
+
+1418
+00:50:22,239 --> 00:50:25,519
+>> Run everything uh in the cloud where
+
+1419
+00:50:24,239 --> 00:50:28,959
+it's going to be most efficient
+
+1420
+00:50:25,519 --> 00:50:30,400
+>> through through Sam's corporation with
+
+1421
+00:50:28,960 --> 00:50:32,800
+Sam's permission and the ability to get
+
+1422
+00:50:30,400 --> 00:50:35,920
+rug pulled. Um Mark, you're probably
+
+1423
+00:50:32,800 --> 00:50:38,318
+like literally ready to break that
+
+1424
+00:50:35,920 --> 00:50:40,318
+microphone in front of you.
+
+1425
+00:50:38,318 --> 00:50:42,960
+>> Yeah. Why should people have AI
+
+1426
+00:50:40,318 --> 00:50:45,599
+sovereignty and why should they buy a
+
+1427
+00:50:42,960 --> 00:50:46,079
+Mac Studio with 512 gig on their
+
+1428
+00:50:45,599 --> 00:50:48,160
+desktop?
+
+1429
+00:50:46,079 --> 00:50:50,000
+>> Yeah, because eventually and and maybe
+
+1430
+00:50:48,159 --> 00:50:51,920
+even today, you want to run your AI, you
+
+1431
+00:50:50,000 --> 00:50:53,519
+want your AI to be in your control. You
+
+1432
+00:50:51,920 --> 00:50:55,760
+don't want Sam Alman getting your
+
+1433
+00:50:53,519 --> 00:50:57,838
+prompts. You don't want this Navier
+
+1434
+00:50:55,760 --> 00:50:58,640
+Stokes incident which happened right
+
+1435
+00:50:57,838 --> 00:51:01,759
+theoretically.
+
+1436
+00:50:58,639 --> 00:51:04,558
+>> Explain that in the No, explain the most
+
+1437
+00:51:01,760 --> 00:51:06,319
+cynical take on it and then we you can
+
+1438
+00:51:04,559 --> 00:51:09,040
+give the charitable if you want, but
+
+1439
+00:51:06,318 --> 00:51:11,119
+>> yeah. So the cynical take is that um
+
+1440
+00:51:09,039 --> 00:51:13,759
+mathematicians were working on a very
+
+1441
+00:51:11,119 --> 00:51:16,160
+hard math problem which had not been
+
+1442
+00:51:13,760 --> 00:51:18,640
+solved by traditional flesh and blood
+
+1443
+00:51:16,159 --> 00:51:22,078
+mathematicians for decades called Navier
+
+1444
+00:51:18,639 --> 00:51:23,598
+Stokes and um there and there there was
+
+1445
+00:51:22,079 --> 00:51:27,519
+a group of mathematicians that were
+
+1446
+00:51:23,599 --> 00:51:29,119
+using an AI product to assist them in a
+
+1447
+00:51:27,519 --> 00:51:31,440
+human written proof and they were very
+
+1448
+00:51:29,119 --> 00:51:33,599
+close to releasing the solution and
+
+1449
+00:51:31,440 --> 00:51:35,760
+along came uh I I believe it was Sam
+
+1450
+00:51:33,599 --> 00:51:37,760
+Alman in his you know it was open AI
+
+1451
+00:51:35,760 --> 00:51:39,520
+>> correct They came out and said our
+
+1452
+00:51:37,760 --> 00:51:41,839
+computer just solved it. And there was
+
+1453
+00:51:39,519 --> 00:51:44,480
+some suspicion that the prompting done
+
+1454
+00:51:41,838 --> 00:51:47,440
+by the mathematicians actually is what
+
+1455
+00:51:44,480 --> 00:51:49,760
+made the AI solve it really right
+
+1456
+00:51:47,440 --> 00:51:50,559
+without those prompts
+
+1457
+00:51:49,760 --> 00:51:52,960
+they would have never
+
+1458
+00:51:50,559 --> 00:51:55,280
+>> the allegation being they front ran the
+
+1459
+00:51:52,960 --> 00:51:57,440
+market. They were watching them do it
+
+1460
+00:51:55,280 --> 00:51:59,359
+and then basically
+
+1461
+00:51:57,440 --> 00:52:01,760
+>> it's like the marching band and like Sam
+
+1462
+00:51:59,358 --> 00:52:03,920
+Alman grabs the baton and like jumps in
+
+1463
+00:52:01,760 --> 00:52:05,695
+front of it like
+
+1464
+00:52:03,920 --> 00:52:07,200
+>> look what our big computer did.
+
+1465
+00:52:05,695 --> 00:52:09,039
+[laughter] And it's like, wait a second,
+
+1466
+00:52:07,199 --> 00:52:11,279
+there's a thousand mathematicians behind
+
+1467
+00:52:09,039 --> 00:52:13,920
+you and you stole their prompts. Who
+
+1468
+00:52:11,280 --> 00:52:15,680
+knows if it's true? They It was messy.
+
+1469
+00:52:13,920 --> 00:52:19,200
+Let's just say it was messy. And it's
+
+1470
+00:52:15,679 --> 00:52:21,358
+not the first time that OpenAI has had a
+
+1471
+00:52:19,199 --> 00:52:23,759
+messy situation.
+
+1472
+00:52:21,358 --> 00:52:28,000
+>> Uh but but Nick, listen, you you build
+
+1473
+00:52:23,760 --> 00:52:30,720
+this infrastructure. Um and uh you're
+
+1474
+00:52:28,000 --> 00:52:32,880
+essentially the the reason you exist is
+
+1475
+00:52:30,719 --> 00:52:34,399
+to make these data centers be able to
+
+1476
+00:52:32,880 --> 00:52:36,480
+move the data around and get that
+
+1477
+00:52:34,400 --> 00:52:37,838
+massive advantage in training I think
+
+1478
+00:52:36,480 --> 00:52:40,639
+mostly but you correct me if I'm wrong
+
+1479
+00:52:37,838 --> 00:52:43,920
+if it's mostly inference. I my mind says
+
+1480
+00:52:40,639 --> 00:52:46,400
+it's both. Okay. Um but moving big
+
+1481
+00:52:43,920 --> 00:52:49,119
+chunks of data around like when you're
+
+1482
+00:52:46,400 --> 00:52:51,358
+doing uh a run to build a new model
+
+1483
+00:52:49,119 --> 00:52:52,960
+that's particularly helpful. Yeah.
+
+1484
+00:52:51,358 --> 00:52:55,598
+>> Yeah. Moving data around is extremely
+
+1485
+00:52:52,960 --> 00:52:57,119
+helpful. Um you know uh little plug for
+
+1486
+00:52:55,599 --> 00:52:58,960
+the engineering team but we've won
+
+1487
+00:52:57,119 --> 00:53:00,720
+industry best paper award two years in a
+
+1488
+00:52:58,960 --> 00:53:02,639
+row for our work on modeling training
+
+1489
+00:53:00,719 --> 00:53:04,719
+accelerated by fetonic interconnect and
+
+1490
+00:53:02,639 --> 00:53:06,960
+inference and here's the headline um
+
+1491
+00:53:04,719 --> 00:53:09,118
+same gigawatt data center you can train
+
+1492
+00:53:06,960 --> 00:53:11,039
+the model three times faster
+
+1493
+00:53:09,119 --> 00:53:12,559
+>> same power same number of GPUs your
+
+1494
+00:53:11,039 --> 00:53:15,039
+training run finishes in a month instead
+
+1495
+00:53:12,559 --> 00:53:16,880
+of three and on inference that gigawatt
+
+1496
+00:53:15,039 --> 00:53:18,800
+data center pumps out twice as many
+
+1497
+00:53:16,880 --> 00:53:20,960
+tokens per second
+
+1498
+00:53:18,800 --> 00:53:22,800
+>> so this is crazy like that that in terms
+
+1499
+00:53:20,960 --> 00:53:23,599
+of margin impact on anthropic in these
+
+1500
+00:53:22,800 --> 00:53:25,760
+companies
+
+1501
+00:53:23,599 --> 00:53:28,160
+for both of these aspects and model
+
+1502
+00:53:25,760 --> 00:53:30,720
+leadership and all that. It's huge. Um
+
+1503
+00:53:28,159 --> 00:53:33,679
+the future of computing is two things.
+
+1504
+00:53:30,719 --> 00:53:35,279
+Really big computer chips and ultra fast
+
+1505
+00:53:33,679 --> 00:53:37,118
+connections between them with very low
+
+1506
+00:53:35,280 --> 00:53:39,040
+latency because we're at the end of
+
+1507
+00:53:37,119 --> 00:53:41,119
+computer chip scaling. We're at the end
+
+1508
+00:53:39,039 --> 00:53:42,558
+of you know electronic switches as the
+
+1509
+00:53:41,119 --> 00:53:45,760
+way of doing computing making
+
+1510
+00:53:42,559 --> 00:53:47,359
+exponential progress. So big chips, lots
+
+1511
+00:53:45,760 --> 00:53:49,200
+of interconnect. This is the future of
+
+1512
+00:53:47,358 --> 00:53:49,920
+computing and uh
+
+1513
+00:53:49,199 --> 00:53:52,399
+>> yeah those
+
+1514
+00:53:49,920 --> 00:53:53,920
+>> and congratulations. I heard I just uh I
+
+1515
+00:53:52,400 --> 00:53:56,160
+was asking my claude here while we're
+
+1516
+00:53:53,920 --> 00:53:58,720
+talking. I heard that you won three
+
+1517
+00:53:56,159 --> 00:54:02,719
+years in a row next year except the uh
+
+1518
+00:53:58,719 --> 00:54:03,679
+paper now is by Sam Alman with Nick
+
+1519
+00:54:02,719 --> 00:54:05,439
+Harris. [laughter]
+
+1520
+00:54:03,679 --> 00:54:06,879
+So you won,
+
+1521
+00:54:05,440 --> 00:54:09,679
+>> but you're going to have to share credit
+
+1522
+00:54:06,880 --> 00:54:11,440
+because they were watching your token.
+
+1523
+00:54:09,679 --> 00:54:13,598
+>> They front run your paper.
+
+1524
+00:54:11,440 --> 00:54:16,000
+>> I mean, it's so gnarly. Can you imagine
+
+1525
+00:54:13,599 --> 00:54:17,599
+front running this poor mathematician,
+
+1526
+00:54:16,000 --> 00:54:20,318
+Peter?
+
+1527
+00:54:17,599 --> 00:54:22,960
+20 years trying to figure out how wind
+
+1528
+00:54:20,318 --> 00:54:24,318
+goes over, you know, the the an
+
+1529
+00:54:22,960 --> 00:54:26,480
+airplane's wings. And
+
+1530
+00:54:24,318 --> 00:54:28,639
+>> it's it's also the math guys.
+
+1531
+00:54:26,480 --> 00:54:30,960
+>> Come on, man. It's so lame. Why would
+
+1532
+00:54:28,639 --> 00:54:33,838
+you take that from a mathematician? They
+
+1533
+00:54:30,960 --> 00:54:36,000
+get like one mathematician out of a
+
+1534
+00:54:33,838 --> 00:54:38,719
+hundred,000 gets an award like that in
+
+1535
+00:54:36,000 --> 00:54:40,318
+their lifetime and you snatched it all.
+
+1536
+00:54:38,719 --> 00:54:42,078
+>> They're also the mathematicians are
+
+1537
+00:54:40,318 --> 00:54:43,759
+they're beautiful minding it, you know,
+
+1538
+00:54:42,079 --> 00:54:47,280
+like they're at the white board like
+
+1539
+00:54:43,760 --> 00:54:49,119
+writing out it. They're like it's raw
+
+1540
+00:54:47,280 --> 00:54:51,599
+brain power like I can figure this out
+
+1541
+00:54:49,119 --> 00:54:52,240
+and then open a just try the the
+
+1542
+00:54:51,599 --> 00:54:53,680
+computers just
+
+1543
+00:54:52,239 --> 00:54:55,598
+>> I think Karen go ahead Peter
+
+1544
+00:54:53,679 --> 00:54:57,919
+>> Terrence towel summarized it best I
+
+1545
+00:54:55,599 --> 00:55:00,400
+think he said right the age of heroes in
+
+1546
+00:54:57,920 --> 00:55:00,639
+mathematics is over right now it's like
+
+1547
+00:55:00,400 --> 00:55:02,800
+sad
+
+1548
+00:55:00,639 --> 00:55:04,558
+>> it's just brute forcing it yeah
+
+1549
+00:55:02,800 --> 00:55:06,960
+>> you guys saw the New York Times person
+
+1550
+00:55:04,559 --> 00:55:08,640
+Peter crying in the interview did you
+
+1551
+00:55:06,960 --> 00:55:10,559
+see that choked up
+
+1552
+00:55:08,639 --> 00:55:11,118
+>> I got choked up watching him get choked
+
+1553
+00:55:10,559 --> 00:55:14,000
+up
+
+1554
+00:55:11,119 --> 00:55:16,559
+>> and he starts quoting Ecclesiastes
+
+1555
+00:55:14,000 --> 00:55:18,639
+you know everything has a season. This
+
+1556
+00:55:16,559 --> 00:55:20,400
+season is over. Turn, turn, turn. The
+
+1557
+00:55:18,639 --> 00:55:22,078
+bird song based on Ecclesiastes.
+
+1558
+00:55:20,400 --> 00:55:23,519
+>> This is such a strange like I don't
+
+1559
+00:55:22,079 --> 00:55:25,119
+understand the psychology. Like if if
+
+1560
+00:55:23,519 --> 00:55:27,599
+I'm a mathematician, I'm a scientist, a
+
+1561
+00:55:25,119 --> 00:55:29,519
+physicist. Like I'm pumped. Like you
+
+1562
+00:55:27,599 --> 00:55:32,160
+know the age of heroes is over. But you
+
+1563
+00:55:29,519 --> 00:55:34,639
+know what? What's new? Superheroes. How
+
+1564
+00:55:32,159 --> 00:55:36,879
+fast can you ask the right questions and
+
+1565
+00:55:34,639 --> 00:55:39,358
+like change the entire world?
+
+1566
+00:55:36,880 --> 00:55:40,960
+>> Like infinite agency. You have like
+
+1567
+00:55:39,358 --> 00:55:42,558
+unlimited. The reason I started the
+
+1568
+00:55:40,960 --> 00:55:44,400
+company was I could build a lot of stuff
+
+1569
+00:55:42,559 --> 00:55:46,160
+myself, but I need a bunch of people to
+
+1570
+00:55:44,400 --> 00:55:48,798
+help me. Now we have these artificial
+
+1571
+00:55:46,159 --> 00:55:51,039
+people like holy crap, you can do a lot
+
+1572
+00:55:48,798 --> 00:55:52,880
+like hero, let's go superhero mode.
+
+1573
+00:55:51,039 --> 00:55:54,558
+>> Um, but I think every field is
+
+1574
+00:55:52,880 --> 00:55:56,000
+>> you always have a very positive spin on
+
+1575
+00:55:54,559 --> 00:55:56,640
+this, Nick. I love having you on the
+
+1576
+00:55:56,000 --> 00:55:59,119
+program.
+
+1577
+00:55:56,639 --> 00:56:01,358
+>> Cuz when I like literally am getting
+
+1578
+00:55:59,119 --> 00:56:03,440
+like all clemping this poor person, I'm
+
+1579
+00:56:01,358 --> 00:56:05,440
+like, "Wait a second. Nick's right. This
+
+1580
+00:56:03,440 --> 00:56:08,400
+person just turned into Professor X.
+
+1581
+00:56:05,440 --> 00:56:11,200
+Yeah, you can build an army of mutants
+
+1582
+00:56:08,400 --> 00:56:12,880
+and and create a school for the gifted.
+
+1583
+00:56:11,199 --> 00:56:15,519
+>> By by the way, the reason Exactly. And
+
+1584
+00:56:12,880 --> 00:56:17,680
+the reason that those mathematicians uh
+
+1585
+00:56:15,519 --> 00:56:19,838
+like the reason that uh they were the
+
+1586
+00:56:17,679 --> 00:56:22,239
+ones that came up with the prompts that
+
+1587
+00:56:19,838 --> 00:56:24,639
+answered that hard question, you have to
+
+1588
+00:56:22,239 --> 00:56:26,798
+know a lot about the field to ask the
+
+1589
+00:56:24,639 --> 00:56:28,400
+right questions. And those people have
+
+1590
+00:56:26,798 --> 00:56:29,759
+been studying what the important and
+
+1591
+00:56:28,400 --> 00:56:32,240
+interesting questions are their whole
+
+1592
+00:56:29,760 --> 00:56:33,920
+life. That's like their moat. And the
+
+1593
+00:56:32,239 --> 00:56:35,919
+model can't do it itself. that needs
+
+1594
+00:56:33,920 --> 00:56:38,240
+them for those questions right now.
+
+1595
+00:56:35,920 --> 00:56:39,760
+>> And that's exactly right. When when
+
+1596
+00:56:38,239 --> 00:56:41,598
+we're trying to validate like the
+
+1597
+00:56:39,760 --> 00:56:43,920
+software that the AI generates using
+
+1598
+00:56:41,599 --> 00:56:46,000
+formal methods, we're not asking people
+
+1599
+00:56:43,920 --> 00:56:48,720
+to be experts in verifying properties
+
+1600
+00:56:46,000 --> 00:56:50,000
+about software. We're trying to take the
+
+1601
+00:56:48,719 --> 00:56:52,159
+genius and the folks that we have
+
+1602
+00:56:50,000 --> 00:56:53,760
+working for us and make that so those
+
+1603
+00:56:52,159 --> 00:56:55,838
+those prompts are built in, those sort
+
+1604
+00:56:53,760 --> 00:56:58,400
+of processes are built in, and it's easy
+
+1605
+00:56:55,838 --> 00:57:00,798
+to work with. So, I I mean, for our
+
+1606
+00:56:58,400 --> 00:57:02,400
+staff, we've had like a variety of of
+
+1607
+00:57:00,798 --> 00:57:04,719
+folks. Folks that really really don't
+
+1608
+00:57:02,400 --> 00:57:06,079
+want to necessarily dive in with the
+
+1609
+00:57:04,719 --> 00:57:08,159
+tools. They just they want to check
+
+1610
+00:57:06,079 --> 00:57:10,079
+every single line. And then we've got
+
+1611
+00:57:08,159 --> 00:57:11,679
+other folks that come from the math
+
+1612
+00:57:10,079 --> 00:57:13,519
+realm and they're like, "H, looked
+
+1613
+00:57:11,679 --> 00:57:15,199
+right. [laughter] I fed in the prompt,
+
+1614
+00:57:13,519 --> 00:57:16,960
+but I can't prompt it the way those guys
+
+1615
+00:57:15,199 --> 00:57:18,399
+do." Like they they speak a different
+
+1616
+00:57:16,960 --> 00:57:20,798
+language than I do.
+
+1617
+00:57:18,400 --> 00:57:22,559
+>> In respon, one last point. So in
+
+1618
+00:57:20,798 --> 00:57:24,079
+response to Sam Alman's, you know,
+
+1619
+00:57:22,559 --> 00:57:25,280
+accusation that like look, oh, all those
+
+1620
+00:57:24,079 --> 00:57:28,240
+people out there, how dare they have
+
+1621
+00:57:25,280 --> 00:57:30,880
+DRAM that like we could be using um in
+
+1622
+00:57:28,239 --> 00:57:32,798
+the Bitan universe again. Yeah. Right.
+
+1623
+00:57:30,880 --> 00:57:35,599
+There is a um we have something called
+
+1624
+00:57:32,798 --> 00:57:37,280
+Subnet 95 actual computer which allows
+
+1625
+00:57:35,599 --> 00:57:39,519
+you to do inference on your home
+
+1626
+00:57:37,280 --> 00:57:41,280
+computer, your home Mac, and also
+
+1627
+00:57:39,519 --> 00:57:42,798
+cluster a lot of these little computers
+
+1628
+00:57:41,280 --> 00:57:44,960
+to make much larger and better
+
+1629
+00:57:42,798 --> 00:57:48,079
+inference. and you can then rent your
+
+1630
+00:57:44,960 --> 00:57:49,519
+excess back to the cloud which is then
+
+1631
+00:57:48,079 --> 00:57:52,318
+uh rented out to other people in the Bit
+
+1632
+00:57:49,519 --> 00:57:53,759
+Tensor network. So it's it I I agree
+
+1633
+00:57:52,318 --> 00:57:56,239
+with them in the sense that it should it
+
+1634
+00:57:53,760 --> 00:57:58,000
+could be used more effectively to
+
+1635
+00:57:56,239 --> 00:57:59,679
+benefit Earth. I just don't think Sam
+
+1636
+00:57:58,000 --> 00:57:59,838
+should be in charge of everybody's DRM.
+
+1637
+00:57:59,679 --> 00:58:02,078
+I
+
+1638
+00:57:59,838 --> 00:58:03,440
+>> I think that 5% is antiquated though. I
+
+1639
+00:58:02,079 --> 00:58:04,880
+mean, I I don't know about you, Nick,
+
+1640
+00:58:03,440 --> 00:58:07,679
+but like I would actually feel bad
+
+1641
+00:58:04,880 --> 00:58:09,358
+sometimes buying an expensive computer
+
+1642
+00:58:07,679 --> 00:58:11,118
+and like, you know, doing some
+
+1643
+00:58:09,358 --> 00:58:13,119
+development, but like I'm never using
+
+1644
+00:58:11,119 --> 00:58:15,119
+all the compute. But nowadays, if I
+
+1645
+00:58:13,119 --> 00:58:17,519
+don't have an agent doing something and
+
+1646
+00:58:15,119 --> 00:58:19,920
+like leveraging my compute, I feel like
+
+1647
+00:58:17,519 --> 00:58:21,358
+I'm wasting like minutes on the clock. I
+
+1648
+00:58:19,920 --> 00:58:22,559
+literally it's been horrible for my
+
+1649
+00:58:21,358 --> 00:58:24,400
+sleep. I've got it like remote
+
+1650
+00:58:22,559 --> 00:58:26,880
+connected. Like I check my phone, I'm
+
+1651
+00:58:24,400 --> 00:58:29,358
+like, "Oh, continue." And I go back to
+
+1652
+00:58:26,880 --> 00:58:32,160
+bed. So yeah, I mean, I've got a little
+
+1653
+00:58:29,358 --> 00:58:33,679
+bit of that. Um, I I I don't feel bad
+
+1654
+00:58:32,159 --> 00:58:35,519
+about it. It's like if it's a PC and
+
+1655
+00:58:33,679 --> 00:58:36,879
+it's a gaming PC, it's like having a
+
+1656
+00:58:35,519 --> 00:58:38,079
+nice car. It's like it's nice that it's
+
+1657
+00:58:36,880 --> 00:58:40,880
+in the garage. You're pumped that it's
+
+1658
+00:58:38,079 --> 00:58:43,039
+there. Jason's talking about V8s, V12s.
+
+1659
+00:58:40,880 --> 00:58:44,000
+Um, yeah, you know, the memory thing is
+
+1660
+00:58:43,039 --> 00:58:45,519
+interesting. There's something
+
+1661
+00:58:44,000 --> 00:58:47,519
+fundamentally true that I think would be
+
+1662
+00:58:45,519 --> 00:58:50,000
+interesting for you guys to know. Um,
+
+1663
+00:58:47,519 --> 00:58:52,480
+DRM is built on sheets of of memory
+
+1664
+00:58:50,000 --> 00:58:53,920
+cells. Um, human brains, the way we
+
+1665
+00:58:52,480 --> 00:58:56,400
+store memory, it's not sheets, it's
+
+1666
+00:58:53,920 --> 00:58:58,079
+threedimensional connections. And what's
+
+1667
+00:58:56,400 --> 00:59:00,798
+interesting is like HBM, which is the
+
+1668
+00:58:58,079 --> 00:59:02,000
+memory that Sam uses, and Daario on all
+
+1669
+00:59:00,798 --> 00:59:03,920
+the chips that are running the AI
+
+1670
+00:59:02,000 --> 00:59:06,798
+models, they're sheets of these memory
+
+1671
+00:59:03,920 --> 00:59:08,079
+stacks. It turns out that um given the
+
+1672
+00:59:06,798 --> 00:59:09,440
+number of cells, the amount of
+
+1673
+00:59:08,079 --> 00:59:11,280
+information you can represent with
+
+1674
+00:59:09,440 --> 00:59:13,920
+sheets is a lot less than you can with
+
+1675
+00:59:11,280 --> 00:59:16,160
+something volutric like a brain. And so
+
+1676
+00:59:13,920 --> 00:59:18,079
+the basic statement I would make is that
+
+1677
+00:59:16,159 --> 00:59:20,798
+if we have a population of AIS that's
+
+1678
+00:59:18,079 --> 00:59:22,559
+the same as the population on Earth uh
+
+1679
+00:59:20,798 --> 00:59:24,960
+for humans, you're going to need
+
+1680
+00:59:22,559 --> 00:59:27,200
+dramatically more memory because we're
+
+1681
+00:59:24,960 --> 00:59:29,440
+so inefficient the representation of
+
+1682
+00:59:27,199 --> 00:59:32,318
+using these sheets of memory versus what
+
+1683
+00:59:29,440 --> 00:59:34,639
+biology does. And so basic implication
+
+1684
+00:59:32,318 --> 00:59:37,519
+is DRM is going to be in shortage for as
+
+1685
+00:59:34,639 --> 00:59:40,159
+long as AI scales. Mhm.
+
+1686
+00:59:37,519 --> 00:59:42,159
+>> Uh it's like a fundamental feature of of
+
+1687
+00:59:40,159 --> 00:59:44,879
+volutric scaling for memory versus
+
+1688
+00:59:42,159 --> 00:59:50,239
+sheets and two dimensional scaling.
+
+1689
+00:59:44,880 --> 00:59:54,079
+>> So there's no end to memory demand.
+
+1690
+00:59:50,239 --> 00:59:55,519
+>> It'll just keep going. And that's what
+
+1691
+00:59:54,079 --> 00:59:58,559
+we've seen in the history of compute
+
+1692
+00:59:55,519 --> 01:00:01,119
+anyway because it's kind of like Jevans
+
+1693
+00:59:58,559 --> 01:00:02,880
+Yeah, it's Jevans paradox uh you know
+
+1694
+01:00:01,119 --> 01:00:05,440
+manifest across everything whether it's
+
+1695
+01:00:02,880 --> 01:00:06,480
+storage memory or just RAM memory. It's
+
+1696
+01:00:05,440 --> 01:00:08,159
+just
+
+1697
+01:00:06,480 --> 01:00:10,240
+you you give people a whole bunch and
+
+1698
+01:00:08,159 --> 01:00:12,879
+they're like what can I do with that?
+
+1699
+01:00:10,239 --> 01:00:15,919
+I'm gonna make a you know video game
+
+1700
+01:00:12,880 --> 01:00:18,640
+that has a bigger world with more
+
+1701
+01:00:15,920 --> 01:00:22,480
+fidelity. It's just super obvious that
+
+1702
+01:00:18,639 --> 01:00:24,318
+Jevans paradox and AI are so
+
+1703
+01:00:22,480 --> 01:00:26,639
+intertwined,
+
+1704
+01:00:24,318 --> 01:00:28,159
+which then speaks to, I think, Juan, how
+
+1705
+01:00:26,639 --> 01:00:30,318
+powerful this technology is. Like
+
+1706
+01:00:28,159 --> 01:00:32,558
+creating intelligence
+
+1707
+01:00:30,318 --> 01:00:33,920
+>> is so distinctly different than
+
+1708
+01:00:32,559 --> 01:00:36,480
+everything that's happened in computer
+
+1709
+01:00:33,920 --> 01:00:38,318
+science to date, which was like a bunch
+
+1710
+01:00:36,480 --> 01:00:40,960
+of tools that made things faster. But
+
+1711
+01:00:38,318 --> 01:00:42,880
+it's totally different when this
+
+1712
+01:00:40,960 --> 01:00:45,358
+software then starts solving the
+
+1713
+01:00:42,880 --> 01:00:46,559
+problems. We've used these as tools to
+
+1714
+01:00:45,358 --> 01:00:47,440
+solve problems, but now it's solving
+
+1715
+01:00:46,559 --> 01:00:48,400
+problems. And on
+
+1716
+01:00:47,440 --> 01:00:51,358
+>> what's so interesting,
+
+1717
+01:00:48,400 --> 01:00:53,200
+>> it's a paradigm shift that is obvious
+
+1718
+01:00:51,358 --> 01:00:55,119
+and nonobvious at the same time.
+
+1719
+01:00:53,199 --> 01:00:56,960
+>> Yeah. Well, to to that exact point, I
+
+1720
+01:00:55,119 --> 01:00:59,519
+think what's so interesting is this idea
+
+1721
+01:00:56,960 --> 01:01:01,519
+since we all started using computers,
+
+1722
+01:00:59,519 --> 01:01:03,039
+this idea has been there that like one
+
+1723
+01:01:01,519 --> 01:01:04,719
+day you'll just be able to tell the
+
+1724
+01:01:03,039 --> 01:01:06,719
+computer what you want it to do. You
+
+1725
+01:01:04,719 --> 01:01:09,439
+won't have to do with the mouse and the
+
+1726
+01:01:06,719 --> 01:01:11,279
+clicking and the the DOSs and whatever.
+
+1727
+01:01:09,440 --> 01:01:13,599
+Star Trek. They already knew you would
+
+1728
+01:01:11,280 --> 01:01:15,440
+just be like computer turn the ship
+
+1729
+01:01:13,599 --> 01:01:17,760
+around and it would just do it. Like
+
+1730
+01:01:15,440 --> 01:01:20,079
+they sci-fi's always had this idea. It's
+
+1731
+01:01:17,760 --> 01:01:22,240
+just like just now in the last like two
+
+1732
+01:01:20,079 --> 01:01:24,160
+years you could actually tell your
+
+1733
+01:01:22,239 --> 01:01:26,239
+computer what to do verbally and it'll
+
+1734
+01:01:24,159 --> 01:01:29,039
+understand you. Like we we we always
+
+1735
+01:01:26,239 --> 01:01:30,959
+knew this was coming for 50 60 years. We
+
+1736
+01:01:29,039 --> 01:01:31,440
+we just we just got there. Yeah. Like
+
+1737
+01:01:30,960 --> 01:01:33,358
+this year.
+
+1738
+01:01:31,440 --> 01:01:36,079
+>> I mean you just think about Star Trek
+
+1739
+01:01:33,358 --> 01:01:37,838
+and shout out uh Arrested Peace or
+
+1740
+01:01:36,079 --> 01:01:40,318
+Patrick Stewart. I know Mark, you were a
+
+1741
+01:01:37,838 --> 01:01:42,159
+huge fan, a Star Trek fan. Like
+
+1742
+01:01:40,318 --> 01:01:44,079
+>> just him walking to the replicator and
+
+1743
+01:01:42,159 --> 01:01:46,031
+just giving the classic like Earl Gray
+
+1744
+01:01:44,079 --> 01:01:46,720
+with the temperature
+
+1745
+01:01:46,032 --> 01:01:48,798
+[laughter]
+
+1746
+01:01:46,719 --> 01:01:50,078
+>> that's like where we are
+
+1747
+01:01:48,798 --> 01:01:52,000
+>> now. It's like where would you like me
+
+1748
+01:01:50,079 --> 01:01:53,359
+to when we have optimist like where
+
+1749
+01:01:52,000 --> 01:01:55,440
+would you like me to
+
+1750
+01:01:53,358 --> 01:01:58,318
+>> go get the you know
+
+1751
+01:01:55,440 --> 01:02:00,000
+>> Yeah. Like what kind of tea from Yeah.
+
+1752
+01:01:58,318 --> 01:02:02,000
+How would you like me to roast it and
+
+1753
+01:02:00,000 --> 01:02:03,358
+then what glass would you like me to
+
+1754
+01:02:02,000 --> 01:02:04,798
+manufacture to put it in? I mean, it's
+
+1755
+01:02:03,358 --> 01:02:06,960
+like we're [laughter] literally on the
+
+1756
+01:02:04,798 --> 01:02:07,440
+cusp of that vote.
+
+1757
+01:02:06,960 --> 01:02:08,639
+>> I think
+
+1758
+01:02:07,440 --> 01:02:08,960
+>> they undersshot it.
+
+1759
+01:02:08,639 --> 01:02:10,639
+>> Yeah,
+
+1760
+01:02:08,960 --> 01:02:14,880
+>> they totally undersshot it. It should be
+
+1761
+01:02:10,639 --> 01:02:16,318
+like um Yeah. Uh so, but they did have
+
+1762
+01:02:14,880 --> 01:02:18,240
+Lieutenant Commander Data, so they they
+
+1763
+01:02:16,318 --> 01:02:20,960
+they just didn't put these things all
+
+1764
+01:02:18,239 --> 01:02:23,439
+together. Um I guess the question is
+
+1765
+01:02:20,960 --> 01:02:25,599
+because in that Star Trek, Nick, they
+
+1766
+01:02:23,440 --> 01:02:26,720
+would have had 10,000 Lieutenant
+
+1767
+01:02:25,599 --> 01:02:28,798
+Commander Datas. It's like why would
+
+1768
+01:02:26,719 --> 01:02:30,159
+there be one? Like it doesn't make any
+
+1769
+01:02:28,798 --> 01:02:31,599
+sense that there's one. There would be
+
+1770
+01:02:30,159 --> 01:02:32,798
+10,000 of them on a planet. when they
+
+1771
+01:02:31,599 --> 01:02:33,119
+got to the planet, they'd be solving
+
+1772
+01:02:32,798 --> 01:02:34,880
+problems.
+
+1773
+01:02:33,119 --> 01:02:36,000
+>> There is lore. I mean, we could give you
+
+1774
+01:02:34,880 --> 01:02:36,798
+the whole reason.
+
+1775
+01:02:36,000 --> 01:02:38,639
+>> Oh, there's lore.
+
+1776
+01:02:36,798 --> 01:02:40,559
+>> There's lore. There's lore. Why there's
+
+1777
+01:02:38,639 --> 01:02:43,018
+>> Oh, no. Okay, this isn't the this
+
+1778
+01:02:40,559 --> 01:02:43,920
+weekend nerd nerd off. But yes,
+
+1779
+01:02:43,018 --> 01:02:45,519
+[laughter]
+
+1780
+01:02:43,920 --> 01:02:47,680
+>> there there is something to his brain
+
+1781
+01:02:45,519 --> 01:02:50,079
+that is unique and he was born
+
+1782
+01:02:47,679 --> 01:02:52,399
+mysterious creator who they they
+
+1783
+01:02:50,079 --> 01:02:54,000
+>> brain or something. Was it
+
+1784
+01:02:52,400 --> 01:02:55,039
+>> brain which they ripped off from Azimov?
+
+1785
+01:02:54,000 --> 01:02:55,679
+That actually wasn't even their own
+
+1786
+01:02:55,039 --> 01:02:57,519
+original idea.
+
+1787
+01:02:55,679 --> 01:02:58,879
+>> Should have been fatonic.
+
+1788
+01:02:57,519 --> 01:03:00,559
+>> Should have been photonic. I mean,
+
+1789
+01:02:58,880 --> 01:03:02,240
+sounds problem. All right, listen there.
+
+1790
+01:03:00,559 --> 01:03:04,798
+If you there's I just want to make a
+
+1791
+01:03:02,239 --> 01:03:07,039
+prediction here. If Abbott wins, he's
+
+1792
+01:03:04,798 --> 01:03:09,599
+gonna flip. And the governor uh of
+
+1793
+01:03:07,039 --> 01:03:11,920
+Texas, Greg Abbott state of Texas,
+
+1794
+01:03:09,599 --> 01:03:15,200
+>> he's gonna flip. He's pro data. He's
+
+1795
+01:03:11,920 --> 01:03:17,440
+totally pro data uh centers. He just did
+
+1796
+01:03:15,199 --> 01:03:19,598
+this like little moratorum to secure his
+
+1797
+01:03:17,440 --> 01:03:20,720
+win. He'll flip in 30 days after. He'll
+
+1798
+01:03:19,599 --> 01:03:22,400
+be like, "Oh, you know, we solved that
+
+1799
+01:03:20,719 --> 01:03:24,000
+data center problem. They're guaranteed
+
+1800
+01:03:22,400 --> 01:03:25,358
+they're not going to use water and we
+
+1801
+01:03:24,000 --> 01:03:27,599
+got plenty of electricity here in the
+
+1802
+01:03:25,358 --> 01:03:29,279
+great state. It's all done. We did our
+
+1803
+01:03:27,599 --> 01:03:32,318
+audit and everybody passed.
+
+1804
+01:03:29,280 --> 01:03:34,400
+Congratulations. If he doesn't win and
+
+1805
+01:03:32,318 --> 01:03:36,639
+the other person wins, which which is
+
+1806
+01:03:34,400 --> 01:03:38,240
+the person L voted for, L just went
+
+1807
+01:03:36,639 --> 01:03:40,159
+straight down the line Democrat. He's
+
+1808
+01:03:38,239 --> 01:03:41,279
+like, I've had enough shenanigans.
+
+1809
+01:03:40,159 --> 01:03:44,078
+>> But I got to tell you, you should have
+
+1810
+01:03:41,280 --> 01:03:46,079
+voted for Abbott because I could
+
+1811
+01:03:44,079 --> 01:03:50,000
+actually start blocking data centers in
+
+1812
+01:03:46,079 --> 01:03:50,880
+Texas. It's like 70% of the build. If we
+
+1813
+01:03:50,000 --> 01:03:52,480
+lose Texas,
+
+1814
+01:03:50,880 --> 01:03:54,400
+>> no, I know this whole industry
+
+1815
+01:03:52,480 --> 01:03:55,358
+career-wise for me, but I still, you
+
+1816
+01:03:54,400 --> 01:03:56,798
+know, [laughter]
+
+1817
+01:03:55,358 --> 01:03:58,318
+>> you still voted against your own
+
+1818
+01:03:56,798 --> 01:04:00,079
+interest. Yeah, you're you're bringing
+
+1819
+01:03:58,318 --> 01:04:01,599
+California to Texas.
+
+1820
+01:04:00,079 --> 01:04:02,640
+>> I understand. I understand. He's
+
+1821
+01:04:01,599 --> 01:04:03,838
+actually a really nice guy.
+
+1822
+01:04:02,639 --> 01:04:05,838
+>> I'm sure he's delightful.
+
+1823
+01:04:03,838 --> 01:04:07,599
+>> Um, so look out for that. But what's our
+
+1824
+01:04:05,838 --> 01:04:08,960
+final uh story here?
+
+1825
+01:04:07,599 --> 01:04:10,240
+>> Did you want to stay Did you want to
+
+1826
+01:04:08,960 --> 01:04:13,039
+stay in politics? There is a really
+
+1827
+01:04:10,239 --> 01:04:14,879
+interesting uh WPO piece about how chat
+
+1828
+01:04:13,039 --> 01:04:16,079
+bots are influencing the midterms. Maybe
+
+1829
+01:04:14,880 --> 01:04:17,280
+we should do that.
+
+1830
+01:04:16,079 --> 01:04:19,440
+>> Uh oh,
+
+1831
+01:04:17,280 --> 01:04:21,359
+>> really? A Washington Post review of
+
+1832
+01:04:19,440 --> 01:04:23,920
+thousands of chatbot answers found that
+
+1833
+01:04:21,358 --> 01:04:27,199
+ChatGpt, Copilot, and others leaned
+
+1834
+01:04:23,920 --> 01:04:30,079
+heavily on three small, mostly AI built
+
+1835
+01:04:27,199 --> 01:04:33,118
+sites for midterm voting info. Ballot
+
+1836
+01:04:30,079 --> 01:04:36,480
+Brief, Smarter.vote, and Decode the
+
+1837
+01:04:33,119 --> 01:04:38,640
+Vote. Chat GPT cited Ballot Brief in 22%
+
+1838
+01:04:36,480 --> 01:04:40,480
+of all election answers. It was its
+
+1839
+01:04:38,639 --> 01:04:43,519
+number one source in September.
+
+1840
+01:04:40,480 --> 01:04:45,920
+Microsoft Copilot cited it in 75% of its
+
+1841
+01:04:43,519 --> 01:04:48,239
+election answers. Uh, the ballot brief's
+
+1842
+01:04:45,920 --> 01:04:51,200
+founder is a former Google Zoom and
+
+1843
+01:04:48,239 --> 01:04:53,838
+Rumble exec named Ben Torres Ezri. He
+
+1844
+01:04:51,199 --> 01:04:55,759
+says Microsoft's AI referred to his site
+
+1845
+01:04:53,838 --> 01:04:59,279
+680,000
+
+1846
+01:04:55,760 --> 01:05:00,960
+plus times in just 30 days. Uh, the the
+
+1847
+01:04:59,280 --> 01:05:02,798
+post also found errors on the ballot
+
+1848
+01:05:00,960 --> 01:05:04,720
+brief, including crediting Senator John
+
+1849
+01:05:02,798 --> 01:05:06,960
+Houston with backing a bill passed
+
+1850
+01:05:04,719 --> 01:05:09,919
+before he took office and it merged two
+
+1851
+01:05:06,960 --> 01:05:12,559
+California Robert Garcas into one
+
+1852
+01:05:09,920 --> 01:05:14,400
+profile. Uh, so I guess uh, Mark, we
+
+1853
+01:05:12,559 --> 01:05:18,319
+could we could go to you with this. Do
+
+1854
+01:05:14,400 --> 01:05:21,358
+you feel like LLMs are doing a good job
+
+1855
+01:05:18,318 --> 01:05:23,279
+of finding the right sites to source and
+
+1856
+01:05:21,358 --> 01:05:25,598
+finding the right information? And how
+
+1857
+01:05:23,280 --> 01:05:27,839
+dangerous is this if if a little thing
+
+1858
+01:05:25,599 --> 01:05:30,240
+is miscalibrated? Are we in danger of
+
+1859
+01:05:27,838 --> 01:05:32,000
+chatbots spreading misinformation to
+
+1860
+01:05:30,239 --> 01:05:33,118
+thousands, hundreds of thousands,
+
+1861
+01:05:32,000 --> 01:05:34,480
+millions of voters?
+
+1862
+01:05:33,119 --> 01:05:36,400
+>> Yeah. I mean, look, everybody's using
+
+1863
+01:05:34,480 --> 01:05:38,159
+chat bots now instead of Google, right?
+
+1864
+01:05:36,400 --> 01:05:39,760
+Like I I hear this I hear this more and
+
+1865
+01:05:38,159 --> 01:05:40,960
+more from sort of my normie friends.
+
+1866
+01:05:39,760 --> 01:05:43,440
+They're like, "Oh, I don't I don't use
+
+1867
+01:05:40,960 --> 01:05:45,679
+Google at all. I just go here." And um
+
+1868
+01:05:43,440 --> 01:05:47,519
+you know so and it just depends on who
+
+1869
+01:05:45,679 --> 01:05:48,960
+who's in charge of those chat bots and
+
+1870
+01:05:47,519 --> 01:05:51,519
+who's training them and what training
+
+1871
+01:05:48,960 --> 01:05:52,798
+data are they ingesting in real time
+
+1872
+01:05:51,519 --> 01:05:54,719
+right it's not like the training data
+
+1873
+01:05:52,798 --> 01:05:56,480
+that was used to make them it's you know
+
+1874
+01:05:54,719 --> 01:05:59,118
+what are they adding to their stack you
+
+1875
+01:05:56,480 --> 01:06:01,519
+know in an ongoing real-time fashion
+
+1876
+01:05:59,119 --> 01:06:02,640
+>> and um you know look if if you're
+
+1877
+01:06:01,519 --> 01:06:06,079
+talking to Grock it's going to be
+
+1878
+01:06:02,639 --> 01:06:08,558
+whatever Elon you know sort of thinks of
+
+1879
+01:06:06,079 --> 01:06:10,318
+as maximally truth seeeking right if you
+
+1880
+01:06:08,559 --> 01:06:12,880
+if you look at Google it's going to be
+
+1881
+01:06:10,318 --> 01:06:14,880
+you know what they think right So yes,
+
+1882
+01:06:12,880 --> 01:06:17,358
+there's a danger, but it's no more or
+
+1883
+01:06:14,880 --> 01:06:18,720
+greater more or less than it was when we
+
+1884
+01:06:17,358 --> 01:06:20,639
+were in the world of search engines
+
+1885
+01:06:18,719 --> 01:06:21,759
+only, right? So sure, it's kind of how I
+
+1886
+01:06:20,639 --> 01:06:23,838
+how I view it.
+
+1887
+01:06:21,760 --> 01:06:26,079
+>> I think the danger is is massive. Like
+
+1888
+01:06:23,838 --> 01:06:27,838
+you have you have super intelligence
+
+1889
+01:06:26,079 --> 01:06:30,240
+that can orchestrate armies of bots if
+
+1890
+01:06:27,838 --> 01:06:33,519
+you want to subtly influence how people
+
+1891
+01:06:30,239 --> 01:06:33,759
+think. Facebook did it before AI.
+
+1892
+01:06:33,519 --> 01:06:35,599
+>> True.
+
+1893
+01:06:33,760 --> 01:06:38,400
+>> I mean, come on. [laughter]
+
+1894
+01:06:35,599 --> 01:06:42,400
+>> Yes. This is not a new phenomenon.
+
+1895
+01:06:38,400 --> 01:06:44,880
+literally uh the Cambridge Analytica
+
+1896
+01:06:42,400 --> 01:06:48,798
+uh brewhaha which I see like some state
+
+1897
+01:06:44,880 --> 01:06:50,798
+gave a a $15 billion penalty.
+
+1898
+01:06:48,798 --> 01:06:53,119
+>> Uh I thought this case was closed but I
+
+1899
+01:06:50,798 --> 01:06:55,679
+guess it's still open. Uh you you get a
+
+1900
+01:06:53,119 --> 01:06:57,119
+couple of 105 billion penalties for your
+
+1901
+01:06:55,679 --> 01:06:59,199
+company Meta. All of a sudden it starts
+
+1902
+01:06:57,119 --> 01:07:01,920
+to be real money. They've now got like
+
+1903
+01:06:59,199 --> 01:07:04,399
+two 15 billion on 30 billion and said
+
+1904
+01:07:01,920 --> 01:07:05,920
+they lost a giggle. It's like a
+
+1905
+01:07:04,400 --> 01:07:07,680
+>> it's more than a speeding ticket, right?
+
+1906
+01:07:05,920 --> 01:07:08,880
+It's like they they kind of impounded
+
+1907
+01:07:07,679 --> 01:07:11,598
+your car and made you come pick it up
+
+1908
+01:07:08,880 --> 01:07:13,599
+two weeks later. Uh but the the
+
+1909
+01:07:11,599 --> 01:07:15,119
+interesting uh thing here is with with
+
+1910
+01:07:13,599 --> 01:07:16,960
+Cambridge Analytica, they gave it to
+
+1911
+01:07:15,119 --> 01:07:21,280
+Hillary's team, they gave it to Trump's
+
+1912
+01:07:16,960 --> 01:07:23,199
+team. One team was like, "Uh yeah,
+
+1913
+01:07:21,280 --> 01:07:27,039
+interesting. Thanks." And then the other
+
+1914
+01:07:23,199 --> 01:07:30,159
+team was like, "Uh, yeah, we're all in."
+
+1915
+01:07:27,039 --> 01:07:33,039
+And that election, I think, would have
+
+1916
+01:07:30,159 --> 01:07:35,838
+been much different had the Democrats
+
+1917
+01:07:33,039 --> 01:07:38,000
+embraced Cambridge Analytica and did
+
+1918
+01:07:35,838 --> 01:07:40,159
+microargeting and understood this stuff.
+
+1919
+01:07:38,000 --> 01:07:41,599
+Now, I think you can only press these
+
+1920
+01:07:40,159 --> 01:07:42,480
+advantages one or two times.
+
+1921
+01:07:41,599 --> 01:07:44,318
+>> Now, everybody's
+
+1922
+01:07:42,480 --> 01:07:46,559
+>> and you look at social media today,
+
+1923
+01:07:44,318 --> 01:07:48,880
+everybody knows that bots are spreading
+
+1924
+01:07:46,559 --> 01:07:50,400
+ and you know, if you're on X,
+
+1925
+01:07:48,880 --> 01:07:52,480
+you're getting one thing. If you're on
+
+1926
+01:07:50,400 --> 01:07:54,880
+blue sky is falling and threats, you're
+
+1927
+01:07:52,480 --> 01:07:56,480
+getting the other side. It's it's all
+
+1928
+01:07:54,880 --> 01:08:00,559
+become bulcanized, right? you kind of
+
+1929
+01:07:56,480 --> 01:08:04,318
+get to pick which um slop feed do you
+
+1930
+01:08:00,559 --> 01:08:06,559
+want to eat at the trow of um I choose
+
+1931
+01:08:04,318 --> 01:08:08,558
+neither. Like I'm a double hater. I'm
+
+1932
+01:08:06,559 --> 01:08:09,680
+just like I hate these I hate all these
+
+1933
+01:08:08,559 --> 01:08:11,440
+candidates. I hate all these
+
+1934
+01:08:09,679 --> 01:08:13,440
+politicians. Somebody bring me some
+
+1935
+01:08:11,440 --> 01:08:14,880
+moderates who just make independent
+
+1936
+01:08:13,440 --> 01:08:18,158
+decisions each time and what's in the
+
+1937
+01:08:14,880 --> 01:08:20,079
+best interest of humanity. Um but it is
+
+1938
+01:08:18,158 --> 01:08:23,358
+problematic. I think they should be in
+
+1939
+01:08:20,079 --> 01:08:25,519
+the election stuff. Didn't Gemini decide
+
+1940
+01:08:23,359 --> 01:08:27,838
+to sit out the last election or was it
+
+1941
+01:08:25,520 --> 01:08:31,279
+chat GPT who was just like I don't want
+
+1942
+01:08:27,838 --> 01:08:32,479
+to give election advice? Uh they they
+
+1943
+01:08:31,279 --> 01:08:33,359
+kind of were just like yeah we don't do
+
+1944
+01:08:32,479 --> 01:08:34,959
+that.
+
+1945
+01:08:33,359 --> 01:08:35,520
+>> One of them did that I think in the last
+
+1946
+01:08:34,960 --> 01:08:36,480
+election.
+
+1947
+01:08:35,520 --> 01:08:36,880
+>> I didn't know that. I don't remember
+
+1948
+01:08:36,479 --> 01:08:37,919
+that.
+
+1949
+01:08:36,880 --> 01:08:39,039
+>> Yeah. Yeah. They were like you know what
+
+1950
+01:08:37,920 --> 01:08:40,560
+we're just going to stay out of this for
+
+1951
+01:08:39,039 --> 01:08:42,158
+now because the tools aren't big enough.
+
+1952
+01:08:40,560 --> 01:08:44,000
+But yeah that was people's response last
+
+1953
+01:08:42,158 --> 01:08:46,318
+time is I just don't want to get into if
+
+1954
+01:08:44,000 --> 01:08:48,000
+you typed in President Trump you know
+
+1955
+01:08:46,319 --> 01:08:49,359
+lawfare and all these different things.
+
+1956
+01:08:48,000 --> 01:08:49,759
+It was just like yeah I just don't it
+
+1957
+01:08:49,359 --> 01:08:51,039
+was
+
+1958
+01:08:49,759 --> 01:08:52,399
+>> it was Gemini. Yes,
+
+1959
+01:08:51,039 --> 01:08:54,640
+>> but I think that's ultimately the
+
+1960
+01:08:52,399 --> 01:08:57,278
+solution for these guys is they should
+
+1961
+01:08:54,640 --> 01:08:58,560
+opt out of Yeah, here it is. Read read
+
+1962
+01:08:57,279 --> 01:09:01,520
+this. People forget this.
+
+1963
+01:08:58,560 --> 01:09:04,560
+>> Yeah, Google restricts AI chatbot Gemini
+
+1964
+01:09:01,520 --> 01:09:07,040
+from answering questions on the 2024
+
+1965
+01:09:04,560 --> 01:09:09,199
+elections. Uh they said it was made out
+
+1966
+01:09:07,039 --> 01:09:11,838
+of an abundance of caution. Uh and it
+
+1967
+01:09:09,198 --> 01:09:14,000
+applied in both US and India. It will
+
+1968
+01:09:11,838 --> 01:09:16,719
+not. They So any any nation that was
+
+1969
+01:09:14,000 --> 01:09:19,279
+having a 2024 election, Google said,
+
+1970
+01:09:16,719 --> 01:09:22,158
+"We're not going to allow Gemini to try
+
+1971
+01:09:19,279 --> 01:09:23,920
+and influence your your vote."
+
+1972
+01:09:22,158 --> 01:09:26,399
+>> I mean, two years ago, this stuff wasn't
+
+1973
+01:09:23,920 --> 01:09:29,039
+very good, Peter, right? It wasn't
+
+1974
+01:09:26,399 --> 01:09:30,960
+>> No, it's for even as good. I mean, this
+
+1975
+01:09:29,039 --> 01:09:32,319
+is why we still apply formal methods to
+
+1976
+01:09:30,960 --> 01:09:32,880
+the stuff that matters. Like,
+
+1977
+01:09:32,319 --> 01:09:34,640
+>> yeah,
+
+1978
+01:09:32,880 --> 01:09:37,039
+>> I mean, you can't necessarily do it with
+
+1979
+01:09:34,640 --> 01:09:38,159
+text data as easily, but you know, when
+
+1980
+01:09:37,039 --> 01:09:39,838
+you got to get it right, you got to get
+
+1981
+01:09:38,158 --> 01:09:42,318
+it right. Speaking about that in
+
+1982
+01:09:39,838 --> 01:09:44,559
+predictions, what I don't know if you
+
+1983
+01:09:42,319 --> 01:09:49,120
+guys are following like the conversation
+
+1984
+01:09:44,560 --> 01:09:51,393
+on X that all of the polls are fake
+
+1985
+01:09:49,119 --> 01:09:52,079
+and the prediction markets are fake.
+
+1986
+01:09:51,393 --> 01:09:56,560
+[clears throat]
+
+1987
+01:09:52,079 --> 01:10:00,000
+>> Now X is of course MAGA or MAGAN. So if
+
+1988
+01:09:56,560 --> 01:10:05,039
+you and and I think the claim now is
+
+1989
+01:10:00,000 --> 01:10:07,600
+>> the media is controlling the poly you
+
+1990
+01:10:05,039 --> 01:10:09,840
+know poly market and are being
+
+1991
+01:10:07,600 --> 01:10:12,079
+controlled by the media and the pulsers
+
+1992
+01:10:09,840 --> 01:10:14,960
+are in the bag for the dems and it's all
+
+1993
+01:10:12,079 --> 01:10:18,158
+a giant cobble of people
+
+1994
+01:10:14,960 --> 01:10:21,920
+>> who have rigged these
+
+1995
+01:10:18,158 --> 01:10:24,399
+uh platforms in order to impact the
+
+1996
+01:10:21,920 --> 01:10:26,239
+people's propensity to go out and vote
+
+1997
+01:10:24,399 --> 01:10:28,319
+which seems completely backwards to me.
+
+1998
+01:10:26,238 --> 01:10:29,839
+What why would people bet actual money
+
+1999
+01:10:28,319 --> 01:10:31,599
+to do that?
+
+2000
+01:10:29,840 --> 01:10:34,000
+>> Were the prediction market supposed to
+
+2001
+01:10:31,600 --> 01:10:35,679
+be our counter force? Like that's that's
+
+2002
+01:10:34,000 --> 01:10:37,520
+what we were going to do about the polls
+
+2003
+01:10:35,679 --> 01:10:39,199
+being wrong is well now we can go right
+
+2004
+01:10:37,520 --> 01:10:41,040
+to the people and see what they think.
+
+2005
+01:10:39,198 --> 01:10:42,799
+>> Well, I just unless the you know the the
+
+2006
+01:10:41,039 --> 01:10:44,238
+prediction markets I think Jason just I
+
+2007
+01:10:42,800 --> 01:10:46,640
+think Jason's correct what you said
+
+2008
+01:10:44,238 --> 01:10:49,439
+earlier. You get to use your trick once
+
+2009
+01:10:46,640 --> 01:10:52,079
+or twice and then after that it's over.
+
+2010
+01:10:49,439 --> 01:10:54,559
+And I think uh Poly Market and Khi were
+
+2011
+01:10:52,079 --> 01:10:57,359
+last season's trick, right? like that
+
+2012
+01:10:54,560 --> 01:10:59,520
+was clean the last time around. I think
+
+2013
+01:10:57,359 --> 01:11:01,679
+this time there's probably big money in
+
+2014
+01:10:59,520 --> 01:11:02,880
+there influencing it and I'm just
+
+2015
+01:11:01,679 --> 01:11:04,719
+guessing. I don't know any more than you
+
+2016
+01:11:02,880 --> 01:11:06,400
+guys do, but you know, just eyeballing
+
+2017
+01:11:04,719 --> 01:11:07,840
+it. Does it kind of feel like somebody
+
+2018
+01:11:06,399 --> 01:11:09,359
+like a Reed Hoffman might come along
+
+2019
+01:11:07,840 --> 01:11:11,600
+with a big bag of money and secretly buy
+
+2020
+01:11:09,359 --> 01:11:14,158
+a bunch of USDC and throw it on Poly
+
+2021
+01:11:11,600 --> 01:11:15,760
+Market through a chain of people to make
+
+2022
+01:11:14,158 --> 01:11:18,319
+it look like someone's winning who's
+
+2023
+01:11:15,760 --> 01:11:19,440
+really not? Yeah, sure. I I I don't
+
+2024
+01:11:18,319 --> 01:11:21,759
+think that's out of the question.
+
+2025
+01:11:19,439 --> 01:11:23,039
+There's enough at stake. So, do I know
+
+2026
+01:11:21,760 --> 01:11:25,199
+what's happening? No, I have no idea.
+
+2027
+01:11:23,039 --> 01:11:26,479
+Would it be I mean we need a new law,
+
+2028
+01:11:25,198 --> 01:11:28,158
+right? Because it wouldn't technically
+
+2029
+01:11:26,479 --> 01:11:29,599
+be illegal. It might be against the term
+
+2030
+01:11:28,158 --> 01:11:32,479
+of service to create a bunch of
+
+2031
+01:11:29,600 --> 01:11:34,719
+accounts. But you could if if you think
+
+2032
+01:11:32,479 --> 01:11:36,000
+like Elon Musk and Soros, the two
+
+2033
+01:11:34,719 --> 01:11:37,119
+biggest donors,
+
+2034
+01:11:36,000 --> 01:11:38,880
+>> you know, they're willing to put nine
+
+2035
+01:11:37,119 --> 01:11:40,800
+figures at stake. Now, would they do
+
+2036
+01:11:38,880 --> 01:11:43,119
+this? It feels like this is a little too
+
+2037
+01:11:40,800 --> 01:11:44,719
+icky for that level of person to be
+
+2038
+01:11:43,119 --> 01:11:46,719
+involved in it and it would just be
+
+2039
+01:11:44,719 --> 01:11:48,560
+terrible on reputation damage, but it
+
+2040
+01:11:46,719 --> 01:11:48,960
+would be great for China and Putin to do
+
+2041
+01:11:48,560 --> 01:11:50,719
+it,
+
+2042
+01:11:48,960 --> 01:11:51,920
+>> right? True. Yeah, it could be that you
+
+2043
+01:11:50,719 --> 01:11:53,279
+you could read that. You could there are
+
+2044
+01:11:51,920 --> 01:11:53,600
+a number of players I think that would
+
+2045
+01:11:53,279 --> 01:11:54,800
+do it.
+
+2046
+01:11:53,600 --> 01:11:58,360
+>> If you're North Korea and you just
+
+2047
+01:11:54,800 --> 01:11:58,360
+hacked Binance,
+
+2048
+01:11:58,463 --> 01:12:00,719
+[laughter]
+
+2049
+01:11:58,560 --> 01:12:02,880
+>> well, there's 500 million laying around.
+
+2050
+01:12:00,719 --> 01:12:06,079
+If you can hack Binance, you can
+
+2051
+01:12:02,880 --> 01:12:07,600
+certainly hack a prediction market or,
+
+2052
+01:12:06,079 --> 01:12:11,600
+you know, I don't know if you saw
+
+2053
+01:12:07,600 --> 01:12:13,679
+somebody claimed to have started a new
+
+2054
+01:12:11,600 --> 01:12:15,520
+um survey company
+
+2055
+01:12:13,679 --> 01:12:18,560
+>> and then they claimed their survey
+
+2056
+01:12:15,520 --> 01:12:20,640
+company was a performance art piece and
+
+2057
+01:12:18,560 --> 01:12:22,000
+they were just trying to
+
+2058
+01:12:20,640 --> 01:12:22,320
+>> but it was turned out they were just
+
+2059
+01:12:22,000 --> 01:12:24,158
+trying to make
+
+2060
+01:12:22,319 --> 01:12:26,639
+>> but they were included in a lot of those
+
+2061
+01:12:24,158 --> 01:12:27,279
+like aggregate you know poll aggregators
+
+2062
+01:12:26,640 --> 01:12:30,239
+like it was
+
+2063
+01:12:27,279 --> 01:12:31,920
+>> silver bullet poll but they a bunch of
+
+2064
+01:12:30,238 --> 01:12:34,079
+those aggregators still pulled it in. So
+
+2065
+01:12:31,920 --> 01:12:34,480
+they they did end up proving that point
+
+2066
+01:12:34,079 --> 01:12:35,840
+I guess.
+
+2067
+01:12:34,479 --> 01:12:38,399
+>> So that that is the core of this chat
+
+2068
+01:12:35,840 --> 01:12:39,760
+GPD issue is garbage in and too easy to
+
+2069
+01:12:38,399 --> 01:12:44,799
+manipulate. They need to have a
+
+2070
+01:12:39,760 --> 01:12:46,000
+different filter than a a scraper for
+
+2071
+01:12:44,800 --> 01:12:48,560
+certain types of data.
+
+2072
+01:12:46,000 --> 01:12:50,719
+>> I think yeah
+
+2073
+01:12:48,560 --> 01:12:53,760
+seems obvious that like AI slop websites
+
+2074
+01:12:50,719 --> 01:12:55,920
+shouldn't be fueling what you responses
+
+2075
+01:12:53,760 --> 01:12:57,840
+you get from like claude and chat GPT
+
+2076
+01:12:55,920 --> 01:12:58,560
+when you ask a midterm question like why
+
+2077
+01:12:57,840 --> 01:12:59,760
+can't they just go
+
+2078
+01:12:58,560 --> 01:13:02,880
+>> what do you think Peter? Yeah,
+
+2079
+01:12:59,760 --> 01:13:05,440
+>> I think uh a third of my inbox is spam
+
+2080
+01:13:02,880 --> 01:13:06,560
+telling me how to influence chat GPT to
+
+2081
+01:13:05,439 --> 01:13:07,279
+help my business.
+
+2082
+01:13:06,560 --> 01:13:09,760
+>> Yeah,
+
+2083
+01:13:07,279 --> 01:13:12,479
+>> when people search it. So, none of this
+
+2084
+01:13:09,760 --> 01:13:14,239
+seems off base. I mean, countless
+
+2085
+01:13:12,479 --> 01:13:16,639
+they've got my number pegged on who I
+
+2086
+01:13:14,238 --> 01:13:17,198
+am. So, they're like, "Hey, here's go
+
+2087
+01:13:16,640 --> 01:13:19,199
+make these."
+
+2088
+01:13:17,198 --> 01:13:20,879
+>> Yeah. SEO for search engines. Exactly.
+
+2089
+01:13:19,198 --> 01:13:22,000
+What do they call it again? What's SEO
+
+2090
+01:13:20,880 --> 01:13:25,279
+for [clears throat]
+
+2091
+01:13:22,000 --> 01:13:28,960
+and GEO? I see it back and forth.
+
+2092
+01:13:25,279 --> 01:13:31,119
+>> Yeah. So, I mean, yeah, I uh I won't
+
+2093
+01:13:28,960 --> 01:13:33,760
+claim to know anything as much as uh
+
+2094
+01:13:31,119 --> 01:13:36,800
+anybody else, but yeah, makes on an ROI
+
+2095
+01:13:33,760 --> 01:13:38,239
+perspective. Seems like a great bet. Uh
+
+2096
+01:13:36,800 --> 01:13:40,480
+and you know, there's been plenty of
+
+2097
+01:13:38,238 --> 01:13:42,000
+great examples on X of people adding
+
+2098
+01:13:40,479 --> 01:13:44,000
+something online and immediately asking
+
+2099
+01:13:42,000 --> 01:13:46,560
+chat GBT and watching it answer
+
+2100
+01:13:44,000 --> 01:13:48,479
+something ridiculous or uh the Google
+
+2101
+01:13:46,560 --> 01:13:50,560
+summaries are my favorite, the little uh
+
+2102
+01:13:48,479 --> 01:13:52,319
+snippets of the AI chatbot. Yeah.
+
+2103
+01:13:50,560 --> 01:13:55,039
+>> Yeah. Uh all right, listen, great
+
+2104
+01:13:52,319 --> 01:13:57,599
+episode everybody. Let's do the plugs.
+
+2105
+01:13:55,039 --> 01:13:58,960
+salon. Let's give Nick a plug here. Show
+
+2106
+01:13:57,600 --> 01:14:01,199
+his company. Nick, you got anything
+
+2107
+01:13:58,960 --> 01:14:03,439
+you're hiring for or customers you're
+
+2108
+01:14:01,198 --> 01:14:04,639
+looking for? A lot of people listen, you
+
+2109
+01:14:03,439 --> 01:14:05,599
+got something you're trying to get out
+
+2110
+01:14:04,640 --> 01:14:07,039
+there, let us know.
+
+2111
+01:14:05,600 --> 01:14:08,719
+>> Yeah, I mean, uh, we've had a lot of
+
+2112
+01:14:07,039 --> 01:14:10,319
+incredible news this year. Uh, we've
+
+2113
+01:14:08,719 --> 01:14:12,960
+announced partnerships with Nvidia,
+
+2114
+01:14:10,319 --> 01:14:13,359
+Qualcomm, uh, and others. And, uh,
+
+2115
+01:14:12,960 --> 01:14:14,880
+>> wow.
+
+2116
+01:14:13,359 --> 01:14:16,559
+>> You know, we our hardware is shipping
+
+2117
+01:14:14,880 --> 01:14:19,039
+next year, so we're really excited to
+
+2118
+01:14:16,560 --> 01:14:21,120
+get into some of these big AI buildouts
+
+2119
+01:14:19,039 --> 01:14:22,479
+that are happening. And, um, we're
+
+2120
+01:14:21,119 --> 01:14:24,559
+always hiring. We're looking for the
+
+2121
+01:14:22,479 --> 01:14:26,158
+best and brightest. Um, just
+
+2122
+01:14:24,560 --> 01:14:27,440
+mission-wise, we're focused on the
+
+2123
+01:14:26,158 --> 01:14:29,119
+future of computing. Right now, that
+
+2124
+01:14:27,439 --> 01:14:30,399
+looks like networking, but in the
+
+2125
+01:14:29,119 --> 01:14:32,960
+future, there's going to be other things
+
+2126
+01:14:30,399 --> 01:14:35,359
+to innovate on. And, uh, as an example,
+
+2127
+01:14:32,960 --> 01:14:37,600
+last year we published a paper in nature
+
+2128
+01:14:35,359 --> 01:14:39,198
+on a fetonic computer, and that chip is
+
+2129
+01:14:37,600 --> 01:14:40,960
+in a computer history museum in Mountain
+
+2130
+01:14:39,198 --> 01:14:42,879
+View. So, if you like doing bleeding
+
+2131
+01:14:40,960 --> 01:14:45,279
+edge, you know, research and and science
+
+2132
+01:14:42,880 --> 01:14:47,679
+and having a big impact on the actual
+
+2133
+01:14:45,279 --> 01:14:50,079
+industry and AI buildout, come look at
+
+2134
+01:14:47,679 --> 01:14:52,719
+light matter.
+
+2135
+01:14:50,079 --> 01:14:55,039
+>> Amazing. Uh, Mark,
+
+2136
+01:14:52,719 --> 01:14:57,198
+>> yes. So uh this is still core capital.
+
+2137
+01:14:55,039 --> 01:15:01,359
+We invest in the bit tensor tow
+
+2138
+01:14:57,198 --> 01:15:02,639
+ecosystem in the 128 subnetss. Um we can
+
+2139
+01:15:01,359 --> 01:15:04,479
+only talk to you if you're accredited.
+
+2140
+01:15:02,640 --> 01:15:06,000
+So if you are accredited and interest
+
+2141
+01:15:04,479 --> 01:15:09,039
+interested we'd love to speak with you.
+
+2142
+01:15:06,000 --> 01:15:11,039
+>> All right there it is. Easy breezy. And
+
+2143
+01:15:09,039 --> 01:15:13,439
+coming around the horn Peter.
+
+2144
+01:15:11,039 --> 01:15:15,679
+>> Hey uh code medal. So yeah if you're
+
+2145
+01:15:13,439 --> 01:15:18,479
+excited about the intersection of
+
+2146
+01:15:15,679 --> 01:15:20,239
+software hardware uh and you're still
+
+2147
+01:15:18,479 --> 01:15:21,759
+reading the code even though AI can do
+
+2148
+01:15:20,238 --> 01:15:24,238
+all those things you know we want to
+
+2149
+01:15:21,760 --> 01:15:26,880
+talk to you. uh we help prove basically
+
+2150
+01:15:24,238 --> 01:15:29,039
+that AI generated code did exactly what
+
+2151
+01:15:26,880 --> 01:15:30,640
+you wanted it to do. We like to think
+
+2152
+01:15:29,039 --> 01:15:32,560
+you know we still care that the quality
+
+2153
+01:15:30,640 --> 01:15:34,079
+comes out right and that matters in
+
+2154
+01:15:32,560 --> 01:15:36,880
+mission critical industries like
+
+2155
+01:15:34,079 --> 01:15:39,279
+aerospace you know automotive banking
+
+2156
+01:15:36,880 --> 01:15:40,960
+and uh the defense industry so reach
+
+2157
+01:15:39,279 --> 01:15:43,679
+out. We're hiring aggressively.
+
+2158
+01:15:40,960 --> 01:15:45,439
+>> Uh and Mr. Lawn you want to give a plug
+
+2159
+01:15:43,679 --> 01:15:48,399
+for this week in AI newsletter please?
+
+2160
+01:15:45,439 --> 01:15:50,719
+>> Sure. Uh so if you want to read we're
+
+2161
+01:15:48,399 --> 01:15:53,439
+we're doing it's sort of a new take.
+
+2162
+01:15:50,719 --> 01:15:56,000
+We're doing uh demos, but I am demoing
+
+2163
+01:15:53,439 --> 01:15:58,639
+the product myself and then writing up
+
+2164
+01:15:56,000 --> 01:16:00,319
+what we recommend and everything that I
+
+2165
+01:15:58,640 --> 01:16:02,320
+sort of discovered all the ins and outs.
+
+2166
+01:16:00,319 --> 01:16:03,840
+So, if you want to read every twice a
+
+2167
+01:16:02,319 --> 01:16:05,599
+week, I'm putting those up. The next one
+
+2168
+01:16:03,840 --> 01:16:07,199
+I'm doing is about Plaude and all the
+
+2169
+01:16:05,600 --> 01:16:09,679
+things that I'm connecting my plaud to
+
+2170
+01:16:07,198 --> 01:16:11,919
+and how I use that. So, go to this week
+
+2171
+01:16:09,679 --> 01:16:14,000
+in aai.ai
+
+2172
+01:16:11,920 --> 01:16:15,440
+to go check it out. There's a bunch of
+
+2173
+01:16:14,000 --> 01:16:17,359
+free stuff on there you can read if you
+
+2174
+01:16:15,439 --> 01:16:20,158
+want to get a sense for the website. And
+
+2175
+01:16:17,359 --> 01:16:22,000
+then we charge just $10 a month for your
+
+2176
+01:16:20,158 --> 01:16:23,839
+two demos a week. There you can see I
+
+2177
+01:16:22,000 --> 01:16:26,399
+played around with Clling and 11 Labs
+
+2178
+01:16:23,840 --> 01:16:27,840
+and made uh a video and soundtracked it
+
+2179
+01:16:26,399 --> 01:16:28,399
+myself. That's what's there on the upper
+
+2180
+01:16:27,840 --> 01:16:30,400
+right.
+
+2181
+01:16:28,399 --> 01:16:32,238
+>> We are looking for an analyst. So if you
+
+2182
+01:16:30,399 --> 01:16:33,439
+want to be a researcher analyst at our
+
+2183
+01:16:32,238 --> 01:16:34,319
+firm, we're looking for somebody to help
+
+2184
+01:16:33,439 --> 01:16:35,039
+Lon write this.
+
+2185
+01:16:34,319 --> 01:16:37,279
+>> Please
+
+2186
+01:16:35,039 --> 01:16:38,479
+>> uh pays well. Come sit in the office
+
+2187
+01:16:37,279 --> 01:16:39,279
+with Lon. We have a good time. You go
+
+2188
+01:16:38,479 --> 01:16:41,599
+get some Velvet
+
+2189
+01:16:39,279 --> 01:16:43,119
+>> and you'll use every new AI app. Like I
+
+2190
+01:16:41,600 --> 01:16:44,480
+don't even have to ask permission at
+
+2191
+01:16:43,119 --> 01:16:46,960
+this point. If I want to check out like
+
+2192
+01:16:44,479 --> 01:16:49,198
+the new 11 lapse product. If I want to
+
+2193
+01:16:46,960 --> 01:16:50,079
+add more credit to my Grobot, like I
+
+2194
+01:16:49,198 --> 01:16:50,879
+just do it. So
+
+2195
+01:16:50,079 --> 01:16:53,279
+>> yeah, go for it.
+
+2196
+01:16:50,880 --> 01:16:55,359
+>> Join me. Try out every AI tool you've
+
+2197
+01:16:53,279 --> 01:16:55,519
+ever wanted to try out on Jal's dime.
+
+2198
+01:16:55,359 --> 01:16:58,319
+It's
+
+2199
+01:16:55,520 --> 01:17:00,320
+>> fun. Fun. We want to get to five a week.
+
+2200
+01:16:58,319 --> 01:17:02,079
+So we need another person to make this
+
+2201
+01:17:00,319 --> 01:17:03,519
+truly great. And uh we're just trying to
+
+2202
+01:17:02,079 --> 01:17:05,359
+break even on these newsletters to be
+
+2203
+01:17:03,520 --> 01:17:07,120
+honest and build up our knowledge base
+
+2204
+01:17:05,359 --> 01:17:08,399
+inside the venture firm and for the
+
+2205
+01:17:07,119 --> 01:17:12,800
+podcast to make them better. We'll see
+
+2206
+01:17:08,399 --> 01:17:12,799
+you all next time on This Week in AI.

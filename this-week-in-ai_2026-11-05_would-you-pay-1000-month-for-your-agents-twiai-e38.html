@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: Would you pay $1000/month for your agents? | TWiAI E38</title>
+<meta name="description" content="This Week in AI · 7 threads · Grokbot usage caps and what agents are worth, Bittensor as decentralized compute, the neocloud debt squeeze, Colossus scale and price rises, photonic interconnect and memory demand, agent show-and-tell, AI math and chatbot election sourcing">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="Would you pay $1000/month for your agents? | TWiAI E38">
+<meta property="og:description" content="This Week in AI · 7 threads · Grokbot usage caps and what agents are worth, Bittensor as decentralized compute, the neocloud debt squeeze, Colossus scale and price rises, photonic interconnect and memory demand, agent show-and-tell, AI math and chatbot election sourcing">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Would you pay $1000/month for your agents? | TWiAI E38</h1>
+    <div class="byline">
+      Channel: <b>This Week in AI</b> &middot; Speaker: <b>Jason Calacanis (host), Lon Harris (news), Nick Harris (Light Matter), Mark Jeffrey (Stillcore Capital), Peter Morales (Code Metal)</b> &middot; <b>2026-11-05</b>
+      <div class="stats-line">7 threads · Grokbot usage caps and what agents are worth, Bittensor as decentralized compute, the neocloud debt squeeze, Colossus scale and price rises, photonic interconnect and memory demand, agent show-and-tell, AI math and chatbot election sourcing &middot; <a href="https://www.youtube.com/watch?v=uIc_LjxKhOg" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Elon Musk confirmed Grokbot weekly usage meters were pegged to 100% on purpose: serving cost was <b>unsustainably high relative to revenue</b>. Anthropic and OpenAI have also pulled back from all-you-can-eat plans.</li><li>Panel consensus: token prices have to rise. Jason says he would pay <b>$1,000/month</b> for his agents; Nick Harris caps personal use near $500; Mark Jeffrey pays $200-300 and would go to $1,000.</li><li>The <b>neocloud debt squeeze</b> is the live market story: semis index fell 7.2% on Oct 30 and the WSJ reported CoreWeave, Nebius and NScale shut out of the bond market.</li><li>Mark Jeffrey pitches <b>Bittensor subnets</b> as a worldwide, miner-financed alternative to borrowed data centers, with inference said to cost a fraction of CoreWeave's.</li><li>Nick Harris (Light Matter): photonic interconnect lets the same gigawatt data center train a model about 3x faster and serve about 2x the tokens per second.</li><li>Jason, Nick and Lon demo personal agent builds: a custom Austin Zillow, a Chrome extension that strips Amazon sponsored listings, a Bittensor bubble chart and a streaming recommender.</li><li>Side threads: the alleged OpenAI front-run on a Navier-Stokes proof, and a Washington Post finding that chatbots lean on three small AI-built sites for midterm voting info.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="grokbot-caps">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">GROKBOT METERS JUMPED TO 100% OVER HALLOWEEN WEEKEND</span><span class="ttag">ai-infra</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Flat-rate agent plans are breaking, and the panel says pay more</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Always-on agents burn far more compute than subscription revenue covers, so labs are throttling and the panel expects higher prices.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Grokbot subscribers saw weekly usage meters hit 100%, some while bots sat idle; Musk said it was <b>not a glitch</b> and cost was unsustainable. Two weeks earlier on SpaceX's Q3 call he said he had never seen anything grow this fast.</li><li><span class="dot" style="background:#93711b;"></span>Anthropic and OpenAI have also pulled back from all-you-can-eat plans; Goldman Sachs limited Claude Code and GitHub Copilot to engineers only after a productivity and risk review, cutting off bankers and traders.</li><li><span class="dot" style="background:#93711b;"></span>Spend range: Garry Tan says <b>$100</b>-200K a year on tokens; Jason ~$40K a year for ~20 people (~$200 each) and claims $2M+ of software value; Nick runs 10-20 always-on agents and has spent $10-20K in a week; Peter Morales spent $100K in a couple of weeks building software.</li><li><span class="dot" style="background:#93711b;"></span>Willingness to pay: Jason <b>$1,000</b>/month; Mark Jeffrey $1,000 (now $200-300); Nick ~$500 personal. Jason's ladder: $200 plan at half today's token allowance, plus a $500 tier.</li><li><span class="dot" style="background:#93711b;"></span>Peter Morales's firm is moving staff to on-prem compute and self-hosted models, driven by token spend and the fear of a frontier price jump.</li><li><span class="dot" style="background:#93711b;"></span>Jason's analogy: the Uber/Lyft price war ran close to a decade before Uber's funding outlasted Lyft. With Anthropic and OpenAI going public, he expects pressure for a path to profitability.</li><li><span class="dot" style="background:#93711b;"></span>Jason's theory: Anthropic hasn't shipped its bot product because it is compute constrained and would hit the same all-you-can-eat wall.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;When you become unmetered on inference, you stop thinking about the meter, your behavior just changes.&#8221;<cite>— Jason Calacanis</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>xAI<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Grokbot maker; throttled usage after serving costs outran revenue</span></div><div class="namechip"><b>Anthropic<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Pulled back on unlimited plans; bot product reportedly in testing</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Also pulled back on all-you-can-eat plans</span></div><div class="namechip"><b>Goldman Sachs (GS)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Restricted Claude Code and GitHub Copilot to engineers</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Jason's firm spends on these tools and he is a consulting partner and investor in Stillcore Capital, whose Mark Jeffrey is on the panel.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="bittensor-compute">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Speculative</span>
+    <span class="theme-status">MARK JEFFREY'S BITTENSOR PITCH</span><span class="ttag">crypto</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">Bittensor subnets as miner-funded compute that skips the debt</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Mark Jeffrey argues Bittensor shifts data-center capex and risk onto worldwide miners, so compute and inference are cheaper than CoreWeave-style rentals.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>Subnet 51 (Liam) sells raw machines pay-as-you-go with no KYC or contract; miners worldwide meet performance thresholds, pay for power and hardware and carry the risk. Ownership of a subnet is tied to the TAO token.</li><li><span class="dot" style="background:#65695f;"></span>Subnet 53 <b>(NGI)</b> and Targon sit one layer up and provide inference; renting from Liam compounds the cost savings at each layer. Mark says NGI offers inference at a fraction of CoreWeave's cost.</li><li><span class="dot" style="background:#65695f;"></span>Capacity: it could not run Grokbot today, but Mark says it scales elastically because rising usage lifts miner rewards and attracts more supply, with a warm-up lag.</li><li><span class="dot" style="background:#65695f;"></span>Suppliers range from data centers to individuals' home machines. Mark runs Hermes agent on NGI inference and also uses Grokbot for ease of use.</li><li><span class="dot" style="background:#65695f;"></span>Subnet 95 (actual computer) clusters home Macs for inference and lets owners rent spare capacity back to the network.</li><li><span class="dot" style="background:#65695f;"></span>Mark built a subnet bubble chart (market cap, volume, 30-day change, weekly or monthly, USD or TAO) and opened it to the public.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Bittensor (TAO)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Decentralized network where subnets earn token rewards for compute and inference</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Mark Jeffrey is a partner at Stillcore Capital, which invests in the Bittensor TAO ecosystem (128 subnets), and Jason is a consulting partner and investor there.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="neocloud-squeeze">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">Confirmed event</span>
+    <span class="theme-status">CHIP SELLOFF OCT 30; WSJ ON BOND MARKET ACCESS</span><span class="ttag">ai-infra</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">Lenders pull back from neoclouds as AI stocks sell off</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Debt markets cooled on GPU clouds right as chip and software names dropped; Nick Harris reads it as a mood swing, not a broken thesis.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span>Friday Oct 30: Intel, AMD, Dell and Nvidia fell and the semiconductor index dropped <b>7.2%</b>; some outlets called it Black Friday for chip stocks.</li><li><span class="dot" style="background:#a23f22;"></span>WSJ that night: CoreWeave, Nebius and NScale had effectively been shut out of the bond market in recent weeks as lenders demanded tougher terms.</li><li><span class="dot" style="background:#a23f22;"></span>Musk replied to Chamath that debt markets had almost entirely shut off access for neoclouds and that the 200+ neoclouds face guppy-level death and consolidation.</li><li><span class="dot" style="background:#a23f22;"></span>Spreading squeeze: Oracle fell <b>8.8%</b> on Monday, Meta is marketing $20B of bonds, Shopify sank on its first revenue miss since 2022.</li><li><span class="dot" style="background:#a23f22;"></span>Peter Morales: expect more efficiency work and local models, citing someone running GLM 5.3 locally. Nick Harris: debt lenders are risk-averse and a high risk-reward buildout invites this; some holders are taking profits.</li><li><span class="dot" style="background:#a23f22;"></span>Mark Jeffrey (via the All-In discussion): flags the mismatch between borrowing for data centers and the contracts CoreWeave earns from.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;I think this mood can flip so hard so fast.&#8221;<cite>— Nick Harris</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>CoreWeave (CRWV)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Cited as shut out of the bond market; also Mark's cost comparison for Bittensor</span></div><div class="namechip"><b>Nebius (NBIS)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Shut out of bond market per WSJ</span></div><div class="namechip"><b>NScale<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Shut out of bond market per WSJ</span></div><div class="namechip"><b>Nvidia (NVDA), AMD (AMD), Intel (INTC), Dell (DELL)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Fell in the Oct 30 chip selloff</span></div><div class="namechip"><b>Oracle (ORCL)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Fell 8.8% on Monday</span></div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Marketing $20B of bonds</span></div><div class="namechip"><b>Shopify (SHOP)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Sank on first revenue miss since 2022</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="colossus-pricing">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">COLOSSUS ONE-AND-TWO BUILDOUT</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Colossus hits ~1.1M GPUs and the bill has to be recouped through pricing</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Jason says Musk told him the xAI buildout is far bigger than assumed, so prices must rise and tiered pricing will follow.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Per Jason's conversation with Musk (and a tweet): over a million GPUs, 1.11M chips, power from ~300 MW to ~1 GW, capital cost from <b>$13B</b> to $36B.</li><li><span class="dot" style="background:#93711b;"></span>Jason expects Google and Meta-style price discrimination: tweak value up for some users, give others free tiers and charge what each will pay, like an ad network.</li><li><span class="dot" style="background:#93711b;"></span>Peter Morales: not all tokens are equal. Heavyweight reasoning models trained on Colossus-class systems are for hard problems such as formal-methods proofs; a booking agent can run partly on a phone.</li><li><span class="dot" style="background:#93711b;"></span>Nick Harris: AI is improving as expected and breakthroughs should come soon; he cites Fields medalists saying they feel obsolete.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>xAI<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Colossus 1 and 2 buildout</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Jason is relaying a private conversation with Musk.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="photonics-memory">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">LIGHT MATTER CLAIMS; ALTMAN DRAM COMMENT OCT 29</span><span class="ttag">ai-infra</span><span class="ttag">semis</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Photonic interconnect claims and the fight over who owns DRAM</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Nick Harris says interconnect is the bottleneck lever; Altman's remark that home memory is wasted drew pushback and a case that memory demand never ends.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Nick Harris (Light Matter, CEO): the same gigawatt data center can train a model about 3x faster (a month instead of three) and serve about 2x the tokens per second, using photonic interconnect.</li><li><span class="dot" style="background:#3f6b2e;"></span>His thesis: computing is now very big chips plus ultra-fast low-latency links, because electronic scaling is ending. Light Matter has won an industry best-paper award two years running and published a Nature paper on a photonic computer; hardware ships next year.</li><li><span class="dot" style="background:#3f6b2e;"></span>Altman on the Stripe Cheeky Pike podcast with John Collison (posted Oct 29): it is globally terrible for everyone to hold the world's limited DRAM at home, which sits idle ~<b>95%</b> of the time; maximum utilization belongs in the cloud.</li><li><span class="dot" style="background:#3f6b2e;"></span>Mark Jeffrey rejects ceding sovereignty to the cloud. Peter Morales says <b>5%</b> is outdated as agents now keep local machines busy.</li><li><span class="dot" style="background:#3f6b2e;"></span>A panelist's volumetric-memory argument: brains store in 3D connections while HBM is sheets of cells, so a population of AIs the size of humanity needs far more memory and DRAM stays short as AI scales; Jevons paradox applies.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;same gigawatt data center you can train the model three times faster&#8221;<cite>— Nick Harris</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Light Matter<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium · ships 2027</span></b><span>Photonic interconnect maker; partnerships with Nvidia and Qualcomm announced this year</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Nick Harris runs Light Matter, so the speed and throughput figures are the company's own.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="agent-showandtell">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">FIRST-HAND BUILDS</span><span class="ttag">dev-workflow</span><span class="ttag">consumer</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">What people built with agents in a few hours</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Non-programmers now ship custom dashboards, scrapers and browser extensions, and the panel thinks the mainstream hasn't noticed.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Jason's Austin home search: agents mine YouTube, TikTok and Instagram for off-MLS listings, reverse-image-search them, build broker/architect/builder cards and email a weekly dossier to his wife; Grokbot even bought a domain and put the site behind a password. Under an hour of his work over 3-4 weeks.</li><li><span class="dot" style="background:#3f6b2e;"></span>Jason's Chrome extension "Unsponsored" removes sponsored Amazon listings: about 6 minutes and 30-40,000 output tokens.</li><li><span class="dot" style="background:#3f6b2e;"></span>Nick Harris: a live dashboard of Light Matter's manufacturing flow, from foundry to packaging to rack, by project, customer and due date. Jason's team builds dashboards in Lovable on a Notion backend.</li><li><span class="dot" style="background:#3f6b2e;"></span>Lon Harris's "bingebot" sends a weekly list of new streaming titles from his past top-10 lists; Nick grades Jason's AI usage a solid B (the 80s out of 100).</li><li><span class="dot" style="background:#3f6b2e;"></span>UX gap: the panel wants bots to share what they know about your taste instead of repeating it. Peter Morales has a bot write deployable code for any task he'd repeat more than once or twice.</li><li><span class="dot" style="background:#3f6b2e;"></span>Jason: the last 100 days eclipsed the first thousand days after ChatGPT, so the next 100 will eclipse them again.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;It's going to be a very agentic Christmas over the break.&#8221;<cite>— Jason Calacanis</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Lovable<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Used by Jason's team to build internal dashboards</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="math-and-elections">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">ALLEGATION AND WASHINGTON POST REPORT</span><span class="ttag">policy</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">AI proof credit fight and chatbots sourcing election answers from AI-built sites</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Two trust stories: a disputed claim that OpenAI front-ran mathematicians, and a Washington Post review showing chatbots lean on three small AI-built voter sites.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Mark Jeffrey's cynical telling: mathematicians were nearing a human-written Navier-Stokes proof with an AI product when OpenAI announced its computer solved it; the allegation is that it benefited from their prompts. Mark says it was messy and "who knows if it's true."</li><li><span class="dot" style="background:#93711b;"></span>Peter Morales relays Terence Tao: the age of heroes in mathematics is over. Nick Harris's counter: now superheroes. Domain experts' questions are their moat.</li><li><span class="dot" style="background:#93711b;"></span>WaPo review of thousands of chatbot answers: ChatGPT, Copilot and others lean on Ballot Brief, Smarter.vote and Decode the Vote. ChatGPT cited Ballot Brief in <b>22%</b> of election answers; Copilot in 75% (680,000+ referrals in 30 days).</li><li><span class="dot" style="background:#93711b;"></span>Ballot Brief had errors: it credited a senator with backing a bill passed before they took office and merged two California Robert Garcias into one profile.</li><li><span class="dot" style="background:#93711b;"></span>Gemini declined to answer 2024 election questions in the US and India, as shown by a Google announcement read on air.</li><li><span class="dot" style="background:#93711b;"></span>Prediction markets: a panelist speculates large money could distort Polymarket and Kalshi but says they are just guessing; a fake survey firm got into poll aggregators.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;the age of heroes in mathematics is over&#8221;<cite>— Terence Tao, relayed by Peter Morales</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Subject of the front-running allegation</span></div><div class="namechip"><b>Polymarket<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Speculated manipulation target</span></div><div class="namechip"><b>Kalshi<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Speculated manipulation target</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Mark Jeffrey's Navier-Stokes account is an allegation he calls messy and unconfirmed.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">💰</div><div class="tline"><span class="cat">AI costs:</span> <span class="txt">Budget agent spend as a line item and price in <b>$200</b>-1,000/month per heavy user, not flat-rate plans.</span></div></div><div class="irow"><div class="ic">📉</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Watch neocloud bond access (CoreWeave, Nebius, NScale) as the stress gauge for AI infrastructure.</span></div></div><div class="irow"><div class="ic">🧠</div><div class="tline"><span class="cat">Strategy:</span> <span class="txt">Route cheap tasks to local or smaller models and keep frontier compute for hard problems.</span></div></div><div class="irow"><div class="ic">🛠</div><div class="tline"><span class="cat">Workflows:</span> <span class="txt">Turn repeated bot tasks into deployed code and give agents shared context on your taste.</span></div></div><div class="irow"><div class="ic">🗳</div><div class="tline"><span class="cat">Policy:</span> <span class="txt">Treat chatbot answers on elections as only as good as the sites they cite.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;I think I'm at $1,000 a month I would pay for all this activity&#8221; <cite>— Jason Calacanis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;this game of chicken can't last forever.&#8221; <cite>— Jason Calacanis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;If Abbott wins, he's gonna flip.&#8221; <cite>— Jason Calacanis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;It's going to be a very agentic Christmas over the break.&#8221; <cite>— Jason Calacanis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think this mood can flip so hard so fast.&#8221; <cite>— Nick Harris</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Jason Calacanis:</b> Texas Governor Greg Abbott reverses his data center moratorium within 30 days of winning. <span class="cmeta">Texas data center policy · reversal · 30 days after winning</span> <i>if If Abbott wins</i></div><div class="ritem"><b>Jason Calacanis:</b> This holiday season becomes the agentic Christmas, with agents as the big gifting trend. <span class="cmeta">consumer agent adoption · holiday trend · 2026-12</span></div><div class="ritem"><b>Nick Harris:</b> Light Matter's photonic hardware ships next year. <span class="cmeta">Light Matter hardware shipping · shipping · 2027</span> <span class="tag">Light Matter</span></div><div class="ritem"><b>Nick Harris:</b> Raising AI prices across the industry is definitely going to happen. <span class="cmeta">AI plan pricing · increase</span></div><div class="ritem"><b>Elon Musk (relayed by Jason Calacanis):</b> The Colossus buildout goes from about 300 MW to about 1 GW, with 1.11M GPUs and capital cost rising from $13B to $36B. <span class="cmeta">Colossus capacity · 1 GW / 1.11M GPUs / $36B</span> <span class="tag">xAI</span></div><div class="ritem"><b>Nick Harris:</b> With photonic interconnect, the same gigawatt data center trains a model in a month instead of three and serves twice the tokens per second. <span class="cmeta">training time / tokens per second · 3x faster / 2x</span> <span class="tag">Light Matter</span></div><div class="ritem"><b>Elon Musk (cited by Lon Harris):</b> The 200+ neoclouds will see guppy-level death and consolidation. <span class="cmeta">neocloud count · consolidation</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Light Matter</b> <span class="rel">partners with</span> <b>Nvidia (NVDA)</b> &mdash; partnership announced this year</div><div class="ritem"><b>Light Matter</b> <span class="rel">partners with</span> <b>Qualcomm (QCOM)</b> &mdash; partnership announced this year</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: Stripe's Cheeky Pike podcast (John Collison with Sam Altman), WSJ, Washington Post, All-In discussion of CoreWeave, a post by Andrej Karpathy on his own YouTube-style tool, Benzinga. <span class="tag">Sources</span></div></div></div><div class="irow"><div class="ic">🧪</div><div><div class="title">Peter Morales's Code Metal uses formal methods (mathematical proof of code properties) to verify AI-generated code on defense, automotive and aerospace hardware. <span class="tag">Software</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Neocloud</b> &mdash; A GPU-focused cloud provider such as CoreWeave, Nebius or NScale, typically funded with debt.</div><div><b>Subnet (Bittensor)</b> &mdash; A Bittensor network where miners compete for token rewards providing a service such as compute or inference.</div><div><b>Formal methods</b> &mdash; Proving mathematically that software satisfies defined properties, used for mission-critical code.</div><div><b>Jevons paradox</b> &mdash; When efficiency gains raise total consumption of a resource instead of lowering it.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
