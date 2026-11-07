@@ -8,7 +8,7 @@ graph/brain over stocks, investing, and industry trends. Static HTML, no build s
 - **Remote:** https://github.com/hutuleac/YT-Stocks-Brain.git (`main` branch, no other branches used)
 - **Live site:** https://hutuleac.github.io/YT-Stocks-Brain/ — GitHub Pages serving `main` branch root
 - Working directory root should only ever gain the finished `.html` brief + the refreshed
-  `index.html`/`library.json`. Everything else (transcripts, JSON, archived data files) lives in
+  `index.html`/`search-hits.json`/`library.json`. Everything else (transcripts, JSON, archived data files) lives in
   `research-data/<slug>/`.
 - **Future knowledge-graph build:** use `library.json` + per-brief `.json` as the source (already
   structured: themes, entities/tickers, quotes). Don't parse HTML (pure presentation, redundant
@@ -47,9 +47,18 @@ Key things baked into the current skill that aren't obvious from a first read:
   is sponsored by" read ever goes into a brief — not as a theme, OTHER_NEWS item, CLAIMS row, or
   glossary term. This was an explicit standing instruction, not a default of the skill template.
 - `META["category"]` also accepts `"life"` (life/family/mindset/business perspectives, no primary
-  investing angle). `index.html` has tabs: All Briefs, By Channel, By Company/Ticker, Quotes & Takes,
-  Dev & Workflows (`"dev"`), Life & Perspectives (`"life"`) and Romania (`region: "ro"`). Rebuilt automatically on every
-  `generate.py` run, or standalone via `python3 <skill-folder>/generate.py --reindex`.
+  investing angle). `index.html` has 4 primary tabs (Briefs, Signals, Companies, Quotes & Takes) plus a
+  Briefs filter row (All, By channel, Dev & Workflows `"dev"`, Life `"life"`, Romania `region: "ro"`).
+  Rebuilt automatically on every `generate.py` run, or standalone via `python3 <skill-folder>/generate.py --reindex`.
+- **Index behaviour (Nov 2026 critique rounds):** brief tables show the newest 50 + "Show all" (all rows
+  stay in the HTML for SEO); search ranks titles naming the query/matched company first; an exact
+  ticker/company query shows a card linking to Companies. The ~5 MB Quotes & Takes data is written to
+  `search-hits.json` and fetched after first paint — commit it with `index.html` (`finish.py` does).
+  Design changes go in `generate.py`/`signals.py`, never in the generated HTML. Critique snapshots:
+  `.impeccable/critique/`.
+- **Channel names feed brief slugs.** Never rename `channel` in a data file to merge channels — it
+  creates duplicate briefs. Merge display names via `CHANNEL_ALIASES` in `generate.py` and add the
+  speaker string as an alias in `kb/entities.json`.
 - **Romanian videos (since Oct 2026):** brief written in English so it joins search, Signals and
   the graph; quotes and hot takes stay verbatim Romanian (no diacritics), published title unchanged.
   `META["region"] = "ro"` puts it on the **Romania** tab; the `romania` tag goes only on themes about
