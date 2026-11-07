@@ -71,7 +71,7 @@ THEMES = [
             "Three GYW priorities: protect capital through position sizing, keep checking fundamentals, and hold enough liquidity never to be forced to sell at a bad moment.",
         ],
         "quote": {"text": "Noi nu suntem aici pentru 3 zile. Suntem aici pentru 10 ani", "cite": "— GrowYourWealth"},
-        "watch": "His own buys (VRT, ONDS) frame the rebound as vindication; he says himself a one-day technical rebound does not end the correction.",
+        "watch": "His own buys (VRT, ONDS) frame the rebound as vindication; he says himself a one-day technical rebound does not end the correction. His Nov 6 note says the VRT purchase was made on margin.",
         "names": [
             {"name": "Vertiv (VRT)", "blurb": "Bought 200 shares Thursday; now in daily GYW monitoring as AI power-and-cooling infrastructure.", "stance": "BUYING-ADDING", "conviction": "High", "horizon": "long term"},
             {"name": "Ondas (ONDS)", "blurb": "Bought at Friday's open; +18% with possible short covering ahead.", "stance": "BUYING-ADDING", "conviction": "Medium", "horizon": None},
