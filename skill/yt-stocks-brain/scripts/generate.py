@@ -992,15 +992,14 @@ def _render_entity_view(briefs):
 
 def _content_hits_payload(briefs):
     """Compact JSON payload for the Quotes & Takes view. Brief fields are stored once in "b"
-    ([date, channel, title, html, search blob]) and each of the ~8000 hits in "x" points at
-    its brief by index: [brief_idx, theme anchor or "", type, text, cite, search blob]."""
+    ([date, channel, title, html, speakers]) and each of the ~25k hits in "x" points at its brief
+    by index: [brief_idx, theme anchor or "", type, text, cite]. The search blobs are built in the
+    browser on first search (getData in INDEX_JS), not shipped: that halves the payload."""
     out_b, out_x = [], []
     for i, b in enumerate(briefs):
-        out_b.append([b["date"], esc(b["channel"]), esc(b["title"]), esc(b["html"]),
-                      _search_blob(b["title"], b["channel"], b["speakers"])])
+        out_b.append([b["date"], esc(b["channel"]), esc(b["title"]), esc(b["html"]), esc(b["speakers"])])
         for h in b["hits"]:
-            out_x.append([i, h["theme_id"] or "", esc(h["type"]), esc(h["text"]), esc(h["cite"]),
-                          _search_blob(h["type"], h["text"], h["cite"])])
+            out_x.append([i, h["theme_id"] or "", esc(h["type"]), esc(h["text"]), esc(h["cite"])])
     return json.dumps({"b": out_b, "x": out_x}, separators=(",", ":"), ensure_ascii=False).replace("</", "<\\/")
 
 
@@ -1011,7 +1010,7 @@ INDEX_JS = """
   var LIMIT = 300;
   // must stay in sync with _search_blob() in generate.py
   function norm(s){
-    return (s || '').toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g, '')
+    return (s || '').toLowerCase().normalize('NFKD').replace(/[\\u0300-\\u036f]/g, '')
       .replace(/['\\u2019]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
   }
   // word-prefix match; "metas"/"meta's"/"bitcoins" also match the bare word
@@ -1021,8 +1020,13 @@ INDEX_JS = """
   }
   function hasAll(blob, toks){ for (var i = 0; i < toks.length; i++) if (!has(blob, toks[i])) return false; return true; }
   var data = null;
+  function unesc(s){ return s.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&'); }
+  function blob(){ return ' ' + norm(unesc([].join.call(arguments, ' '))) + ' '; }
   function getData(){
-    if (!data) data = JSON.parse(document.getElementById('hitdata').textContent || '{"b":[],"x":[]}');
+    if (data) return data;
+    data = JSON.parse(document.getElementById('hitdata').textContent || '{"b":[],"x":[]}');
+    data.b.forEach(function(b){ b[5] = blob(b[2], b[1], b[4]); });
+    data.x.forEach(function(h){ h[5] = blob(h[2], h[3], h[4]); });
     return data;
   }
   function reEsc(s){ return s.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&'); }
@@ -1042,7 +1046,7 @@ INDEX_JS = """
       var b = d.b[h[0]], inText = 0;
       for (var k = 0; k < toks.length; k++){
         if (has(h[5], toks[k])) inText++;
-        else if (!has(b[4], toks[k])) return;
+        else if (!has(b[5], toks[k])) return;
       }
       out.push({h: h, b: b, score: inText, i: i});
     });
