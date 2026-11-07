@@ -294,6 +294,10 @@ INDEX_CSS = CSS + """
 .tab{font-family:inherit;font-size:13.5px;font-weight:600;padding:9px 16px;border-radius:20px;
   border:1px solid var(--line);background:#fbf7ef;color:var(--muted);cursor:pointer;}
 .tab.active{background:var(--brand);border-color:var(--brand);color:#fffdf8;}
+.subtabs{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.subtabs[hidden]{display:none;}
+.subtabs .tab{font-size:12.5px;padding:5px 12px;background:none;}
+.subtabs .tab.active{background:none;color:var(--brand);border-color:var(--brand);}
 .view{display:none;}
 .view.active{display:block;}
 table.idx{width:100%;border-collapse:collapse;}
@@ -356,9 +360,10 @@ mark{background:#f3dcb0;color:inherit;border-radius:2px;padding:0 1px;}
 html.dark mark{background:#5c4422;}
 @media (max-width:640px){
   #q{font-size:16px;}
-  .tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-right:calc(-1*clamp(18px,4vw,56px));padding-right:18px;}
-  .tabs::-webkit-scrollbar{display:none;}
-  .tab{flex:none;padding:11px 16px;}
+  .tabs .tab{flex:1 1 auto;padding:11px 10px;}
+  .subtabs .tab{padding:7px 11px;}
+  .grp summary{flex-wrap:wrap;}
+  .grp summary .cnt{white-space:normal;}
   table.idx,table.idx tbody{display:block;}
   table.idx thead{display:none;}
   table.idx tr{display:block;padding:12px 0;border-bottom:1px solid var(--line);}
@@ -371,6 +376,8 @@ html.dark mark{background:#5c4422;}
 html.dark #q{background:#23211d;}
 html.dark .tab,html.dark .grp{background:#211f1b;}
 html.dark .tab.active{background:var(--brand);color:#121210;}
+html.dark .subtabs .tab{background:none;}
+html.dark .subtabs .tab.active{color:var(--brand);}
 html.dark table.idx tr:hover td{background:#211f1b;}
 html.dark .grp summary b{color:#f2eee3;}
 html.dark .tkr,html.dark .htype{background:#e6e2d6;color:#121210;}
@@ -1009,7 +1016,8 @@ def _content_hits_payload(briefs):
 INDEX_JS = """
 (function(){
   var q = document.getElementById('q');
-  var tabs = document.querySelectorAll('.tab');
+  var tabs = document.querySelectorAll('.tab[data-view]');
+  var ptab = document.getElementById('tab-briefs'), sub = document.querySelector('.subtabs');
   var LIMIT = 300;
   // must stay in sync with _search_blob() in generate.py
   function norm(s){
@@ -1104,7 +1112,7 @@ INDEX_JS = """
     tab.classList.toggle('zero', n === 0);
   }
 
-  function activeView(){ return document.querySelector('.tab.active').dataset.view; }
+  function activeView(){ return document.querySelector('.tab[data-view].active').dataset.view; }
   function apply(){
     var toks = norm(q.value) ? norm(q.value).split(' ') : [];
     tabs.forEach(function(tab){
@@ -1117,6 +1125,7 @@ INDEX_JS = """
         n = filterView(document.getElementById('view-' + v), toks);
       }
       setCount(tab, toks.length ? n : null);
+      if (v === 'chrono') setCount(ptab, toks.length ? n : null);
     });
     var url = location.pathname + (q.value.trim() ? '?q=' + encodeURIComponent(q.value.trim()) : '') + '#' + activeView();
     history.replaceState(null, '', url);
@@ -1129,11 +1138,14 @@ INDEX_JS = """
     if (!tab) return;
     tabs.forEach(function(t){ t.classList.toggle('active', t === tab); });
     document.querySelectorAll('.view').forEach(function(el){ el.classList.toggle('active', el.id === 'view-' + v); });
-    var row = tab.parentElement; row.scrollLeft = tab.offsetLeft - row.offsetLeft - 18;
+    var inBriefs = tab.parentElement === sub;
+    ptab.classList.toggle('active', inBriefs);
+    sub.hidden = !inBriefs;
   }
   tabs.forEach(function(tab){
     tab.addEventListener('click', function(){ select(tab.dataset.view); apply(); });
   });
+  ptab.addEventListener('click', function(){ select('chrono'); apply(); });
 
   // Column sort: click a header to sort by it, click again to flip; ties fall back to newest first.
   document.querySelectorAll('table.idx').forEach(function(table){
@@ -1230,13 +1242,16 @@ def build_index():
     <div class="controls">
     <div class="searchwrap"><input id="q" type="search" placeholder="Search tickers, companies, people, quotes..." autocomplete="off"></div>
     <div class="tabs">
-      <button class="tab active" data-view="chrono">All Briefs</button>
-      <button class="tab" data-view="channel">By Channel</button>
+      <button class="tab ptab active" id="tab-briefs">Briefs</button>
       <button class="tab" data-view="signals">Signals</button>
-      <button class="tab" data-view="entity">By Company / Ticker</button>
+      <button class="tab" data-view="entity">Companies</button>
       <button class="tab" data-view="content">Quotes &amp; Takes</button>
+    </div>
+    <div class="subtabs">
+      <button class="tab active" data-view="chrono">All</button>
+      <button class="tab" data-view="channel">By channel</button>
       <button class="tab" data-view="dev">Dev &amp; Workflows</button>
-      <button class="tab" data-view="life">Life &amp; Perspectives</button>
+      <button class="tab" data-view="life">Life</button>
       <button class="tab" data-view="ro">Romania</button>
     </div>
     </div>
