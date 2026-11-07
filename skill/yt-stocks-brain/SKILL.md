@@ -32,7 +32,9 @@ Exits `EXISTS: <folder>` if the video is already in `research-data/` (stop, tell
 it prints metadata, fetches captions with yt-dlp (falling back to `youtube-transcript-api` on 429
 or failure), cleans to `<id>.en.txt` (timestamps stripped, rolling duplicates collapsed) and
 prints `flag:` lines for possible sponsor paragraphs and a cut-off ending. Read the full `.txt`,
-never the raw `.srt`. If there are no usable captions, use the **local-whisper** skill
+never the raw `.srt` — with the Read tool in `offset`/`limit` chunks (~60 lines, every chunk to
+the end), never `cat` or a sandbox tool: those summarize large output, and a brief drafted from a
+summary drops facts and paraphrases quotes. If there are no usable captions, use the **local-whisper** skill
 (`~/.claude/skills/local-whisper/SKILL.md`); it writes the same `VID.<lang>.srt`. If captions truly
 fail, state the limitation at the top of the brief. **Romanian video:** read `ref/romanian.md`.
 
@@ -240,10 +242,14 @@ python3 <skill-folder>/scripts/finish.py <slug-substring> --src <scratchpad-dir>
 ```
 `generate.py` writes the `.html`, `research-data/<slug>/` json plus archived data file, and rebuilds
 `index.html`, `library.json` and the KB. A new entity prints `warning: new entity '<key>' ... set its
-kind`. `finish.py` copies the transcripts into the slug folder, sets kinds from `--kind key=kind`
-(company / fund / crypto / commodity / person / country / government / org / product / group /
-other), regenerates, prints the entity list, refuses to commit while a new entity is still
-`unknown`, then commits and pushes with no Co-Authored-By trailer. Add `--no-push` to hold.
+kind`. `finish.py` runs the selftests, copies the transcripts into the slug folder, sets kinds from
+`--kind key=kind` (company / fund / crypto / commodity / person / country / government / org /
+product / group / other), regenerates, prints the entity list, runs `check_quotes.py` and (when
+`<scratchpad>/inventory.md` exists) `check_coverage.py`, then commits (body = theme titles) and
+pushes with no Co-Authored-By trailer. **It refuses to commit** while a new entity is `unknown` or
+any check is flagged: fix the brief; for a name flagged only because the caption spells it
+differently ("cues" for QQQ, "SKHEX" for SK Hynix) pass `--heard key=variant` once and it never
+flags again; `--accept-flags` only after reading every remaining flag. Add `--no-push` to hold.
 Output layout, index tabs and correction passes: `ref/outputs.md`.
 
 ### 7. Quality check before finishing
@@ -254,6 +260,8 @@ Output layout, index tabs and correction passes: `ref/outputs.md`.
   represented) gets added, not dropped for length.
   For long videos, run the checker in `ref/long-video.md`.
 - Quotes and names (`finish.py` runs `check_quotes.py`): a flagged quote or hot take is not in the transcript;
+  a flagged `inline:` span is text in quotation marks inside a bullet/lead/watch/snapshot that isn't
+  the speaker's words (often a translation) — use their words or drop the quotation marks;
   a flagged name is not spoken as written (caption spelling like "City" for Citi is fine; an inferred or guessed company is not);
   fix it to the speaker's words or cut it. Censored words trip it legitimately.
 - Entities (printed by `finish.py`): every row is a company, fund, organization or investable

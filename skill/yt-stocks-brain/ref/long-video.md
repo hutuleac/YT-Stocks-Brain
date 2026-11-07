@@ -8,8 +8,9 @@ against the drafted `bullets`/`quote`/`watch`/`names` once themes are written �
 these holds: the cleaned `.txt` exceeds ~50k characters (`wc -c` it after Section 2); the video is a
 multi-hour or multi-speaker panel; it covers many distinct stories; or the user asked for
 exhaustive/"deep" coverage. Don't agonize over the call — a 59-minute single-guest interview at 63k
-chars still surfaced facts that a read-and-place pass had dropped. Put the inventory in the
-scratchpad directory, not the project.
+chars still surfaced facts that a read-and-place pass had dropped (over half the library's
+transcripts pass 50k, so this is the normal path). Write it to `<scratchpad>/inventory.md`, not
+the project: `finish.py` runs the checker on it automatically and won't commit while it flags.
 
 ## Coverage check (after generating)
 **Do this against the inventory file itself, line by line — not against your memory of the
