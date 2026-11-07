@@ -100,8 +100,8 @@ Key things baked into the current skill that aren't obvious from a first read:
     (>=1.25x) and under 30% of recent briefs; the rest sit collapsed under Established. **New
     names** = entities first seen in the recent window, in >=2 briefs, not yet in any narrative.
     Week-to-week narrative identity = >=50% member overlap (memo diff: new / faded / share moves /
-    now emerging). Upgrade path if labels need to stick: a committed `kb/narratives.json` name
-    registry (not built). Don't turn this into prediction scoring.
+    now emerging). Labels stick by carrying forward through the memo snapshots (memo.py
+    `carry_labels`), so no separate narrative registry. Don't turn this into prediction scoring.
   - **By Company / Ticker** shows registry kinds company/fund/crypto/commodity/unknown only
     (`TICKER_KINDS` in `generate.py`); people, countries, products stay findable via All Briefs
     search. `unknown` stays visible on purpose so new auto-registered tickers don't vanish.
