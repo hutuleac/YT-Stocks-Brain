@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: Alex Finn: Anthropic has the best model, Grok has the best harness | TWiAI 39</title>
+<meta name="description" content="This Week in AI · 6 threads · Fable 5.2 vs GPT-6 Cyber · model vs harness lock-in · Anthropic IPO terms · Nvidia spy story and export controls · anti-data-center politics · Fireworks AI breach">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="Alex Finn: Anthropic has the best model, Grok has the best harness | TWiAI 39">
+<meta property="og:description" content="This Week in AI · 6 threads · Fable 5.2 vs GPT-6 Cyber · model vs harness lock-in · Anthropic IPO terms · Nvidia spy story and export controls · anti-data-center politics · Fireworks AI breach">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{text-wrap:balance;font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Alex Finn: Anthropic has the best model, Grok has the best harness | TWiAI 39</h1>
+    <div class="byline">
+      Channel: <b>This Week in AI</b> &middot; Speaker: <b>Jason Calacanis (host), Lon Harris (co-host), Alex Finn, Sarah Hooker, Manu Sharma</b> &middot; <b>2026-11-12</b>
+      <div class="stats-line">6 threads · Fable 5.2 vs GPT-6 Cyber · model vs harness lock-in · Anthropic IPO terms · Nvidia spy story and export controls · anti-data-center politics · Fireworks AI breach &middot; <a href="https://www.youtube.com/watch?v=7nXXuEzmM_I" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Anthropic shipped Fable 5.2 (public) and Mythos 5.2 (vetted cyber/life-science orgs only); OpenAI shipped GPT-6 Cyber, rated <b>critical</b> on its own cyber risk tier.</li><li>Alex Finn calls Fable 5.2 the best model ever; Sarah Hooker reads the release as a cost story under pressure from open weights ("<b>70%</b> of all traffic").</li><li>Calacanis says his team gets more from Grokbot than from Claude and he is weighing dropping Claude; Finn: Claude is the model, Grokbot the best harness.</li><li>Anthropic IPO: <b>$70-78</b> a share, up to ~$1.405T fully diluted, pricing Nov 18, trading Nov 19 on Nasdaq; ~20% of shares to retail.</li><li>Panel split on Jensen Huang after the spy story: Finn and Calacanis say firing him would be a disaster; Manu Sharma questions the timing of the leak.</li><li>Hooker and Finn: chip export controls have not worked; Chinese labs rent compute in Southeast Asia. Calacanis expects the Chip Security Act (GPU location tracking) to pass.</li><li>Calacanis predicts the anti-data-center movement will be traced to foreign money; Hooker and Finn frame it as public anxiety about AI.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="fable-vs-gpt6-cyber">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Contested</span>
+    <span class="theme-status">FRONTIER RELEASES — TWO LABS, CYBER LOCKED TO VETTED USERS</span><span class="ttag">ai-infra</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Fable 5.2 and GPT-6 Cyber: breakthrough or cost cut?</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Finn sees a real Anthropic breakthrough; Hooker sees a lab cutting cost to justify its premium against open weights.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Fable 5.2 and Mythos 5.2 are the same model per Anthropic, two months after 5.1; Mythos goes only to vetted cyber and life-science orgs.</li><li><span class="dot" style="background:#3f6b2e;"></span>Fable 5.2 pricing: <b>$8</b> per million input tokens, $40 per million output.</li><li><span class="dot" style="background:#3f6b2e;"></span>GPT-6 Cyber stays in scope <b>99.93%</b> of the time vs 94.49% for the prior model, per OpenAI.</li><li><span class="dot" style="background:#3f6b2e;"></span>Finn: every Anthropic release since Opus 5.5 got smarter, faster and cheaper at once; Fable built a "AAA level" game over two weeks with no input from him.</li><li><span class="dot" style="background:#3f6b2e;"></span>Hooker: "you don't create a new technique in a month"; enterprises will not move to 5.2 unless it pays off on API bills.</li><li><span class="dot" style="background:#3f6b2e;"></span>Manu Sharma: no single trick, but RL scaled across many axes; Fable 5.2 steps up in multimodal, science and robot-arm tasks.</li><li><span class="dot" style="background:#3f6b2e;"></span>Sharma's own company pushes recurring tasks to Sonnet/Haiku-class models and saves the frontier models for long-horizon science and engineering work.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Anthropic clearly has had a breakthrough over the last month.&#8221;<cite>— Alex Finn</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Fable 5.2 / Mythos 5.2 release.</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>GPT-6 Cyber, security-tuned.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Finn had early access to Fable 5.2 and is building his own agent startup on top of these models.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="harness-lock-in">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">MODEL VS HARNESS — WHO OWNS THE WORKFLOW</span><span class="ttag">software</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Claude is the model, Grokbot the harness, and Anthropic wants both</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The panel agrees the harness matters as much as the model; it splits on whether Anthropic's lock-in strategy is a strength.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Calacanis: Grokbot costs <b>$40</b> a month per seat (~$10k a year for his team) vs ~$20k a year on Claude with overages; he is considering kicking Claude out.</li><li><span class="dot" style="background:#93711b;"></span>Finn: "Grokbot is by far the best harness on planet Earth" for knowledge work.</li><li><span class="dot" style="background:#93711b;"></span>Hooker: Anthropic chose to own model and harness and not co-optimize with third-party harnesses like Hermes; switching is meant to feel a bit painful.</li><li><span class="dot" style="background:#93711b;"></span>Hooker: the shift to open weights and automated self-improvement makes API lock-in less sticky; that plays out over the next year.</li><li><span class="dot" style="background:#93711b;"></span>Sharma: enterprise lock-in is strong once IT provisions Claude Cowork with integrations; buyers pick an application (Codex, Grokbot, Claude), not a model.</li><li><span class="dot" style="background:#93711b;"></span>Calacanis's counter: let each department try two or three tools with a forward-deployed engineer; his team uses Lovable, Claude Code, Grok and Perplexity Computer.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;They believe that they should own both the harness and the model and it should feel sticky if you try and switch it&#8221;<cite>— Sarah Hooker</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>xAI<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Grokbot, Finn's pick for best harness.</span></div><div class="namechip"><b>Anthropic<span class="stance" style="background:#93711b;">UNCERTAIN · Medium · next year</span></b><span>Owns model and harness; lock-in strategy.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="anthropic-ipo">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Watching</span>
+    <span class="theme-status">IPO — PRICING NOV 18, TRADING NOV 19</span><span class="ttag">ai-infra</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Anthropic's IPO: priced to $1.4T, but where is the 10x?</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The panel expects a strong debut; the open question is how a model lab defends its moat after it.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Range <b>$70-78</b> a share, 825M shares, up to $64.35B raised; up from a $965B valuation in May (CNBC, per Lon Harris).</li><li><span class="dot" style="background:#93711b;"></span>AMD, Broadcom, Google, Micron, Microsoft, Nvidia and TSMC agreed to buy <b>$26B</b> in a private placement at the IPO price.</li><li><span class="dot" style="background:#93711b;"></span>Calacanis: ~<b>$80B</b> annualized run rate; Anthropic is commoditizing SaaS with Claude Code, design, dashboards, and new whiteboards, sheets and data products.</li><li><span class="dot" style="background:#93711b;"></span>Finn wants to invest but cannot see a path from <b>$1T</b> to $10T; models can be overtaken overnight, unlike SpaceX's moats.</li><li><span class="dot" style="background:#93711b;"></span>Hooker: the IPO goes very well; the hard year is after, when Anthropic must move up into legal, tax, healthcare and finance verticals.</li><li><span class="dot" style="background:#93711b;"></span>Sharma: over <b>80%</b> gross margins, no capex (it buys compute), higher compute multiplier; a 2x price cut would lift usage 2-3x.</li><li><span class="dot" style="background:#93711b;"></span>Harris: Anthropic says <b>90%</b> of the code for Claude is written by Claude.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I just can't envision how does this go from one trillion to 10 trillion.&#8221;<cite>— Alex Finn</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic<span class="stance" style="background:#93711b;">WATCHING · Medium · year after IPO</span></b><span>IPO, ticker ENT per CNBC.</span></div><div class="namechip"><b>SpaceX<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Finn's example of real moats.</span></div><div class="namechip"><b>Microsoft (MSFT)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Placement buyer; Claude Sheets aims at Excel.</span></div><div class="namechip"><b>Databricks<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Possible target of Claude Data.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Finn: frontier labs may only 10x by chasing grand-slam breakthroughs (cancer, disease) because open source eats the consumer side.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="nvidia-spy-export-controls">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">Contested</span>
+    <span class="theme-status">NVIDIA SPY STORY — INDEPENDENT INVESTIGATION UNDERWAY</span><span class="ttag">semis</span><span class="ttag">geopolitics</span><span class="ttag">policy</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">The Nvidia spy story and why export controls already failed</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The panel backs Jensen staying, and says chip controls were leaking long before the spy angle.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span>The Information: the woman at the centre allegedly helped route at least <b>$7.5B</b> in Nvidia chips (~240,000) to two Chinese companies; Reuters could not verify the numbers.</li><li><span class="dot" style="background:#a23f22;"></span>Nvidia's board says it has no reason to believe security or company secrets were compromised; outside-counsel investigation underway.</li><li><span class="dot" style="background:#a23f22;"></span>Finn: firing Jensen would be "one of the stupidest things"; founder-CEOs like Jensen and Elon are the company, a hired Google CEO is not.</li><li><span class="dot" style="background:#a23f22;"></span>Sharma doubts the story's timing around the midterms and says intelligence agencies reportedly knew for over a year.</li><li><span class="dot" style="background:#a23f22;"></span>Hooker: export controls were weak regardless; Malaysia, Vietnam and other neighbours host data centers serving Chinese labs, and China is pushing its own chips.</li><li><span class="dot" style="background:#a23f22;"></span>Sharma: Chinese labs do not need chips on the mainland, they can call APIs abroad; he leans toward letting the market decide.</li><li><span class="dot" style="background:#a23f22;"></span>Calacanis: the Chip Security Act (HR 3447) gives Commerce 180 days to require location verification on exported chips; he expects it to pass after this story.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;I think these chip export controls are much like the drug on war, uh, the war on drugs. It's just not going to work.&#8221;<cite>— Alex Finn</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>CEO spy story; panel wants Jensen to stay.</span></div><div class="namechip"><b>Megaspeed<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Singapore Nvidia customer at the centre of the story.</span></div><div class="namechip"><b>DeepSeek<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Hooker's marker of Chinese efficiency.</span></div><div class="namechip"><b>Alibaba (BABA)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Named among strong Chinese labs.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">All allegations about the woman involved are unresolved; Calacanis repeats a disclaimer on air.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="anti-data-center">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">DATA CENTER BACKLASH — PROJECTS PAUSED</span><span class="ttag">ai-infra</span><span class="ttag">policy</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Anti-data-center politics: foreign money or real AI anxiety?</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Calacanis sees covert funding; Hooker and Finn see a public that fears AI and uses data centers as the symbol.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>A <b>$5B</b> data center on the old Landover Mall site in Prince George's County, Maryland is on hold after a 25,000-signature petition and local moratoriums.</li><li><span class="dot" style="background:#93711b;"></span>Sam Lyman of the Bitcoin Policy Institute links the fight to the Party for Socialism and Liberation; the NPR story does not mention it.</li><li><span class="dot" style="background:#93711b;"></span>Calacanis predicts much of the movement will be traced to covert foreign money sent through LLCs to "useful idiots".</li><li><span class="dot" style="background:#93711b;"></span>Hooker: data centers are boring utilities, water use is no worse than a golf course; the real risk is how easily a few citizens can block US infrastructure.</li><li><span class="dot" style="background:#93711b;"></span>Finn: midterm candidates won on stopping data centers; the fix is education, e.g. free Grok or ChatGPT accounts, not handouts.</li><li><span class="dot" style="background:#93711b;"></span>Finn's parents went pro-data-center after ChatGPT fixed a broken door they had been quoted <b>$1,000</b> for.</li><li><span class="dot" style="background:#93711b;"></span>Sharma: hyperscalers and local governments must communicate real local benefits with metrics; Harris wants specifics, not Meta's generic El Paso ads.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I am going to guarantee and predict right now we're going to do a lot of investigations and find out the anti-data center movement is backed by useful idiots&#8221;<cite>— Jason Calacanis</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Generic El Paso data-center ads.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The foreign-funding link is Calacanis's and Lyman's claim; the panel offers no evidence beyond it.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="fireworks-breach">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">Risk</span>
+    <span class="theme-status">CYBER — ATTACKERS AHEAD FOR NOW</span><span class="ttag">software</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">Fireworks AI breach opens a rough six months for cyber</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Hooker expects attackers to hold the edge for about six months, pushing companies to keep AI in-house.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span>Fireworks AI (hosts and fine-tunes open models for Uber, Shopify, DoorDash) says hackers accessed customer datasets and models over the past month.</li><li><span class="dot" style="background:#a23f22;"></span>Started with misused internal credentials in early October, then a separate attack on <b>October 24</b> on R&amp;D machines (Forbes).</li><li><span class="dot" style="background:#a23f22;"></span>Exposed: billing and account info, payment history, parts of unfinished customer models; Fireworks blames LLM-jacking and its CEO says AI agents seemed involved.</li><li><span class="dot" style="background:#a23f22;"></span>Hooker: compute aggregators are more exposed; companies will want fine-tuning on their own premises.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;It is going to be rough for the next six months until cyber is an adversarial game.&#8221;<cite>— Sarah Hooker</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Fireworks AI<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Low</span></b><span>Breached model host.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Hooker runs Adaption Labs, which sells self-owned, self-improving fine-tuned models.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🧮</div><div class="tline"><span class="cat">AI tools:</span> <span class="txt">Route recurring work to cheaper models and keep frontier models for long-horizon jobs.</span></div></div><div class="irow"><div class="ic">🔗</div><div class="tline"><span class="cat">Strategy:</span> <span class="txt">Price the harness, not just the model, before you standardize a team on one vendor.</span></div></div><div class="irow"><div class="ic">📈</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Watch Anthropic's first year as a public company for vertical moves into legal, tax and finance.</span></div></div><div class="irow"><div class="ic">🌏</div><div class="tline"><span class="cat">Policy:</span> <span class="txt">Track HR 3447: GPU location tracking would change how chips are exported and resold.</span></div></div><div class="irow"><div class="ic">🛡</div><div class="tline"><span class="cat">Cyber:</span> <span class="txt">Audit credentials on any third-party model host holding your data.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;Grockbot is by far the best harness on planet Earth for just getting pure knowledge work done. Nothing comes close to Grockbot.&#8221; <cite>— Alex Finn</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I'm gonna kick Claude out.&#8221; <cite>— Jason Calacanis</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;you don't create a new technique in a month. This is almost entirely a story about cost.&#8221; <cite>— Sarah Hooker</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I think that if Enthropic were to reduce its prices by 2x um the usage would go more than two to 3x um easily.&#8221; <cite>— Manu Sharma</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;Elon with all his companies, I think without Elon, any of his companies immediately go to zero.&#8221; <cite>— Alex Finn</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I'm not buying this story, by the way.&#8221; <cite>— Manu Sharma</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Lon Harris (citing CNBC):</b> Anthropic prices its IPO Nov 18 and starts trading on Nasdaq Nov 19 <span class="cmeta">IPO date · $70-78 per share · 2026-11-19</span> <span class="tag">Anthropic</span></div><div class="ritem"><b>Sarah Hooker:</b> Anthropic's IPO is very successful <span class="cmeta">IPO outcome · successful · 2026-11</span> <span class="tag">Anthropic</span></div><div class="ritem"><b>Manu Sharma:</b> A 2x Anthropic price cut lifts usage 2-3x or more <span class="cmeta">usage · 2-3x</span> <i>if if prices fall 2x</i> <span class="tag">Anthropic</span></div><div class="ritem"><b>Sarah Hooker:</b> Cyber attackers keep the advantage for about six months <span class="cmeta">attacker advantage · 6 months · 2027-05</span></div><div class="ritem"><b>Jason Calacanis:</b> The Chip Security Act (HR 3447) passes after the Nvidia spy story <span class="cmeta">HR 3447 · passes</span> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>Jason Calacanis:</b> Much of the anti-data-center movement is traced to covert foreign money <span class="cmeta">foreign funding found · traced · 2027</span></div><div class="ritem"><b>Sarah Hooker:</b> Jensen Huang survives the spy story as Nvidia CEO <span class="cmeta">Jensen remains CEO · survives</span> <span class="tag">Nvidia (NVDA)</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Microsoft (MSFT)</b> <span class="rel">invests in</span> <b>Anthropic</b> &mdash; IPO private placement</div><div class="ritem"><b>Nvidia (NVDA)</b> <span class="rel">invests in</span> <b>Anthropic</b> &mdash; IPO private placement</div><div class="ritem"><b>AMD (AMD)</b> <span class="rel">invests in</span> <b>Anthropic</b> &mdash; IPO private placement</div><div class="ritem"><b>Broadcom (AVGO)</b> <span class="rel">invests in</span> <b>Anthropic</b> &mdash; IPO private placement</div><div class="ritem"><b>Google (GOOGL)</b> <span class="rel">invests in</span> <b>Anthropic</b> &mdash; IPO private placement</div><div class="ritem"><b>Micron (MU)</b> <span class="rel">invests in</span> <b>Anthropic</b> &mdash; IPO private placement</div><div class="ritem"><b>TSMC (TSM)</b> <span class="rel">invests in</span> <b>Anthropic</b> &mdash; IPO private placement</div><div class="ritem"><b>Megaspeed</b> <span class="rel">customer of</span> <b>Nvidia (NVDA)</b></div><div class="ritem"><b>Anthropic</b> <span class="rel">competes with</span> <b>Microsoft (MSFT)</b> &mdash; Claude Sheets vs Excel</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🚗</div><div><div class="title">Calacanis shows a chart: a Geely compact EV priced around <b>$9,000</b> outsold the Tesla Model Y in China; Sharma notes the Model Y still leads Jan-Oct. <span class="tag">EVs</span></div></div></div><div class="irow"><div class="ic">📰</div><div><div class="title">Sources referenced: CNBC, The Information, Reuters, NPR, Forbes, the Bitcoin Policy Institute, Bobby Mars on X (a second blocked data center in western New York). <span class="tag">Sources</span></div></div></div><div class="irow"><div class="ic">💤</div><div><div class="title">Finn says his Grokbot manages his sleep schedule alongside his Whoop. <span class="tag">Workflow</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Harness</b> &mdash; The agent app wrapped around a model (tools, integrations, memory), e.g. Grokbot or Claude Code.</div><div><b>LLM-jacking</b> &mdash; Stealing access to a hosted AI model and reselling it, leaving the owner with the bill.</div><div><b>Annualized run rate</b> &mdash; Last month x12 or last quarter x4, not contracted recurring revenue.</div><div><b>Useful idiots</b> &mdash; People unknowingly advancing a foreign adversary's agenda.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
