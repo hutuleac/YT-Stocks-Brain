@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: Dan Ives on Jensen Huang, Nvidia, SpaceX, Tesla, and Blue Wave</title>
+<meta name="description" content="Anthony Pompliano · 6 threads · Jensen key-man risk · blue-wave capex peak · Anthropic IPO · frontier vendors vs partners · leverage and neoclouds · SpaceX, Tesla, Meta">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="Dan Ives on Jensen Huang, Nvidia, SpaceX, Tesla, and Blue Wave">
+<meta property="og:description" content="Anthony Pompliano · 6 threads · Jensen key-man risk · blue-wave capex peak · Anthropic IPO · frontier vendors vs partners · leverage and neoclouds · SpaceX, Tesla, Meta">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{text-wrap:balance;font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Dan Ives on Jensen Huang, Nvidia, SpaceX, Tesla, and Blue Wave</h1>
+    <div class="byline">
+      Channel: <b>Anthony Pompliano</b> &middot; Speaker: <b>Dan Ives (guest), Anthony Pompliano (host)</b> &middot; <b>2026-11-10</b>
+      <div class="stats-line">6 threads · Jensen key-man risk · blue-wave capex peak · Anthropic IPO · frontier vendors vs partners · leverage and neoclouds · SpaceX, Tesla, Meta &middot; <a href="https://www.youtube.com/watch?v=PWMNwdI360M" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Dan Ives puts <b>15%</b> odds on Jensen Huang no longer being Nvidia CEO in 12 months; an exit would hit the stock <b>25-30%</b> on day one.</li><li>Core worry is key-man risk: no succession plan, ~60 direct reports, and the AI financing web (neoclouds, Anthropic, OpenAI) runs through Jensen.</li><li>Ives says US chips to China are "done" after the spy story landed a week after the midterm "blue wave".</li><li>The blue wave pulls the capex peak into 2027 (from 2028-29): leverage worries, a better free-cash-flow rebound, more separation of winners and losers.</li><li>Anthropic's IPO valuation talk fell from ~<b>$2T</b> to ~$1T; Ives calls the reset healthy and expects OpenAI to list by spring 2027.</li><li>Still bullish: SpaceX (expects it to acquire Tesla), Palantir, Meta, hyperscalers; cautious on Oracle and CoreWeave.</li><li>Calls for tech stocks up <b>20-25%</b> next year despite a Nasdaq correction of more than 10%.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="jensen-key-man">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">Contested</span>
+    <span class="theme-status">NVIDIA CEO RISK — SPY PROBE, BOARD INVESTIGATION PENDING</span><span class="ttag">semis</span><span class="ttag">ai-infra</span><span class="ttag">geopolitics</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">Jensen Huang is Nvidia's single point of failure</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Ives prices a 15% chance Jensen is gone within a year, and says the whole US tech ecosystem leans on him.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span>Ives: a Jensen exit would send Nvidia down <b>25-30%</b> on the first trade; the market is pricing in that he stays.</li><li><span class="dot" style="background:#a23f22;"></span>The pivotal question for Ives: did Jensen lie to the board when asked about this six months ago; if so, he is out.</li><li><span class="dot" style="background:#a23f22;"></span>A prediction market cited by Pompliano: <b>39%</b> he is out by 1 Jan 2028, 48% by end-2028, almost 60% by 1 Jan 2031.</li><li><span class="dot" style="background:#a23f22;"></span>No succession plan: about 60 direct reports; Ives names the CFO and a few internal names as interim options, and Tim Cook only as a spitball.</li><li><span class="dot" style="background:#a23f22;"></span>He built the circular-financing web (neoclouds, Anthropic, OpenAI) "single-handedly"; ripple risk to Oracle, neoclouds and Anthropic.</li><li><span class="dot" style="background:#a23f22;"></span>Pompliano relays the counter-story: the woman at the centre may be a businesswoman using relationships; Ives notes her employer was already on the US government's suspicion list. Neither claims to know the truth.</li><li><span class="dot" style="background:#a23f22;"></span>Ives wants real congressional and board investigations; a quick board clearing would read as a check-the-box exercise.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;Jensen is so hands on 3:00 a.m. like he'll be like emailing someone in marketing about some slide.&#8221;<cite>— Dan Ives</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#93711b;">UNCERTAIN · Medium · 12 months</span></b><span>Key-man risk around Jensen; ~$4.5T market cap.</span></div><div class="namechip"><b>AMD (AMD)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Market read: a damaged Jensen is bullish for AMD.</span></div><div class="namechip"><b>Broadcom (AVGO)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Named among semis that rallied on the story.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The spy narrative is unresolved; both speakers say the full story may never be known.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="china-chips">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Hot take</span>
+    <span class="theme-status">US-CHINA CHIP POLICY</span><span class="ttag">geopolitics</span><span class="ttag">policy</span><span class="ttag">semis</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Chips to China are 'done', and the US lead is at risk from only two things</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Ives says the spy story plus the blue wave unites both parties against selling chips to China.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Ives: US chip sales to China are over; the story landed a week after the blue wave, which already rallied both parties around an anti-China mode.</li><li><span class="dot" style="background:#93711b;"></span>Counter-risk he names: not selling chips can make China more powerful, and he calls it a complicated spider web.</li><li><span class="dot" style="background:#93711b;"></span>First time in 30 years the US is ahead of China in tech; Ives sees two ways that reverses: politicians go anti-data-center/anti-AI, or a China leap built on Nvidia/Jensen information.</li><li><span class="dot" style="background:#93711b;"></span>A frontier model or chip breakthrough in China in 6-12 months could look like it came from the leak, and nobody would know.</li><li><span class="dot" style="background:#93711b;"></span>Pompliano relays Trump's unconfirmed remark about an AI-company leader told to stop or face jail; he treats the media narrative as unreliable.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="blue-wave-capex">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">NASDAQ CORRECTION — POST-MIDTERM</span><span class="ttag">ai-infra</span><span class="ttag">macro-rates</span><span class="ttag">policy</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">The blue wave moves the capex peak earlier, not away</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Ives thinks last week's selloff over-read the midterms: data centers are largely permitted and demand outruns supply 4:1.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>About <b>75%</b> of roughly 800 to 1,000 planned data centers are effectively permitted; Ives sets 10% as not happening, 20% worst case.</li><li><span class="dot" style="background:#93711b;"></span>Demand to supply for compute still <b>four to one</b>; spending runs $3-4 trillion.</li><li><span class="dot" style="background:#93711b;"></span>Capex now peaks in <b>2027</b> instead of 2028-29, which he reads as less overbuild worry and a faster free-cash-flow rebound.</li><li><span class="dot" style="background:#93711b;"></span>Nasdaq is down more than <b>10%</b>; Ives compares last week's panic (Nasdaq down 5%) to 2008, March 2020 and April 2025's Liberation Day.</li><li><span class="dot" style="background:#93711b;"></span>Hyperscalers with existing capacity (Microsoft, Amazon) should be worth more post-midterms; Meta is in a great position (3.6B users, works with communities on data centers) that he says is not in the stock.</li><li><span class="dot" style="background:#93711b;"></span>Pompliano's macro list: hotter inflation, 10-year near <b>5%</b>, oil volatility, a Middle East war; stocks rallying through all of it would be the most resilient bull market ever.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Microsoft (MSFT)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Existing capacity makes hyperscalers more valuable.</span></div><div class="namechip"><b>Amazon (AMZN)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Existing capacity makes hyperscalers more valuable.</span></div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Great spot, 3.6B users, not reflected in the stock.</span></div><div class="namechip"><b>Apple (AAPL)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Low</span></b><span>In a better position as spending elongates.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="anthropic-ipo">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">ROADSHOW LAUNCHED — TRADING EXPECTED NEXT WEEK</span><span class="ttag">ai-infra</span><span class="ttag">software</span><span class="ttag">finance</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Anthropic's valuation reset is healthy; OpenAI follows</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Ives welcomes a roughly 50% fall in Anthropic's reported IPO valuation as the market setting a digestible price.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Pompliano: reported IPO talk went from about <b>$2T</b> three weeks ago, to $1.5T a week ago, to about $1T now (soft numbers).</li><li><span class="dot" style="background:#93711b;"></span>Ives: justifying $1.5T would take <b>$600-800B</b> of yearly revenue in six to seven years; some hubris came off, which is healthy for tech.</li><li><span class="dot" style="background:#93711b;"></span>He expects OpenAI to go public by <b>spring 2027</b> (maybe late winter), having learned from Anthropic's pricing and with a stronger enterprise business than it gets credit for.</li><li><span class="dot" style="background:#93711b;"></span>Pompliano says Anthropic's new personal-finance tool shows frontier labs can compete with their own customers.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Anthropic<span class="stance" style="background:#93711b;">UNCERTAIN · Medium</span></b><span>IPO valuation reset; Ives expects continued growth.</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">UNCERTAIN · Low · by spring 2027</span></b><span>Expected to IPO by spring 2027.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Ives and Pompliano both hold views on frontier-lab competition; Pompliano is building a sovereign-AI business that benefits from the vendor-risk argument.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="vendor-risk-sovereign">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">FRONTIER LABS VS CUSTOMERS</span><span class="ttag">software</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Your AI vendor can become your competitor, so sovereign AI wins</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Ives describes three phases: get in the game, wall off your data, then run on your own.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Pompliano's tweet on Anthropic's finance tool drew almost <b>2 million</b> impressions; CEOs of large partners quietly engaged, so private fear differs from public partnership talk.</li><li><span class="dot" style="background:#3f6b2e;"></span>Ives: phase one partners (boards need an AI strategy), phase two CIOs digest and put up data walls, phase three companies go on their own; this is why frontier labs push hard into enterprise.</li><li><span class="dot" style="background:#3f6b2e;"></span>Spend caps on coding tools are another phase-two pressure.</li><li><span class="dot" style="background:#3f6b2e;"></span>Palantir is looking better and better: sovereign AI, a use-case strategy, and a founder who has never deviated from the vision.</li><li><span class="dot" style="background:#3f6b2e;"></span>Ives groups Palantir, Snowflake, MongoDB, Salesforce and ServiceNow as the 'rubber meets the road' use-case layer.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Palantir (PLTR)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Applied-AI use cases and sovereign AI.</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Pompliano says his own bet is sovereign AI, the thesis he is arguing.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="spacex-tesla-leverage">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">SPACEX DOWN 13-14% IN A MONTH</span><span class="ttag">space</span><span class="ttag">robotics</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">SpaceX needs Texas, Tesla pivots to robotics, and Oracle is the leverage poster child</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Ives still expects SpaceX to acquire Tesla and sees a 20-25% political discount that clears if Musk makes peace with Texas.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Ives: the midterms hurt SpaceX because its data-center build-out is in Texas; Musk will have to offer an olive branch.</li><li><span class="dot" style="background:#3f6b2e;"></span>He calls the 20-<b>25%</b> political discount on SpaceX the opportunity if the Texas relationship is resolved.</li><li><span class="dot" style="background:#3f6b2e;"></span>Orbital data centers: Ives agrees longer term, but the near-term job is Texas.</li><li><span class="dot" style="background:#3f6b2e;"></span>Tesla ends Cybertruck production to focus on Cybercab; Ives calls it a good idea because the future is physical AI.</li><li><span class="dot" style="background:#3f6b2e;"></span>Humanoids: Ives says China is clearly ahead of the US outside Tesla; US humanoids need about two years to go from prototype to functional.</li><li><span class="dot" style="background:#3f6b2e;"></span>Oracle is the leverage poster child (<b>cautious</b> per Ives); CoreWeave is not in a good spot because of its debt but should survive; Nebius is better positioned; Marvell's $100B+ stock deal drew a hostile reaction.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>SpaceX<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Still bullish; Texas dependence; expects SpaceX to acquire Tesla.</span></div><div class="namechip"><b>Tesla (TSLA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Robotics and autonomy are the future; Cybertruck ending.</span></div><div class="namechip"><b>Oracle (ORCL)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium</span></b><span>Poster child for leverage; Ives more cautious.</span></div><div class="namechip"><b>CoreWeave (CRWV)<span class="stance" style="background:#93711b;">UNCERTAIN · Medium</span></b><span>Heavy debt, but a likely survivor; capital structure must change.</span></div><div class="namechip"><b>Nebius (NBIS)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>Better placed than CoreWeave on debt.</span></div><div class="namechip"><b>Marvell (MRVL)<span class="stance" style="background:#93711b;">UNCERTAIN · Low</span></b><span>Over $100B stock-for-stock deal sold off hard.</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🎯</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Treat Nvidia as a key-man position: watch the board investigation and congressional hearings for the <b>15%</b> to move.</span></div></div><div class="irow"><div class="ic">🌏</div><div class="tline"><span class="cat">Geopolitics:</span> <span class="txt">Assume no US chip sales to China when modelling Nvidia revenue.</span></div></div><div class="irow"><div class="ic">📉</div><div class="tline"><span class="cat">Macro:</span> <span class="txt">Re-date the capex peak to 2027 and test which names depend on 2028-29 spend.</span></div></div><div class="irow"><div class="ic">🧪</div><div class="tline"><span class="cat">AI:</span> <span class="txt">Check your AI vendor's competing products before building on top of its models.</span></div></div><div class="irow"><div class="ic">🚀</div><div class="tline"><span class="cat">Space:</span> <span class="txt">Follow SpaceX-Texas talks as the trigger for the claimed 20-<b>25%</b> discount to close.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;He's actually irreplaceable. Now some be like, no one's irreplaceable. No, actually in this situation, he is.&#8221; <cite>— Dan Ives</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;That's over. Like the point is like chips going to China that's no like that's done in my view.&#8221; <cite>— Dan Ives</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I still believe SpaceX acquires Tesla&#8221; <cite>— Dan Ives</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;probably like by spring 27 you maybe late winter OpenAI goes public&#8221; <cite>— Dan Ives</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;China when it comes to robotics is clearly ahead of the US. I don't think there's a debate there.&#8221; <cite>— Dan Ives</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I still believe like we head toward like you know tech stocks that are up 20-25% next year.&#8221; <cite>— Dan Ives</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Dan Ives:</b> Jensen Huang is no longer Nvidia CEO within 12 months <span class="cmeta">Jensen exit probability · 15% · 2027-11</span> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>Dan Ives:</b> Nvidia falls 25-30% on the first trade if Jensen leaves <span class="cmeta">Nvidia share price · -25% to -30%</span> <i>if if Jensen is no longer CEO</i> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>A prediction market (cited by Anthony Pompliano):</b> Jensen Huang is out by 1 January 2028 <span class="cmeta">market-implied odds · 39% · 2028-01-01</span> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>A prediction market (cited by Anthony Pompliano):</b> Jensen Huang is out by 1 January 2031 <span class="cmeta">market-implied odds · almost 60% · 2031-01-01</span> <span class="tag">Nvidia (NVDA)</span></div><div class="ritem"><b>Dan Ives:</b> About 10% of 800-1,000 data centers do not happen, worst case 20% <span class="cmeta">data centers cancelled · 10-20%</span></div><div class="ritem"><b>Dan Ives:</b> Hyperscaler capex peaks in 2027 instead of 2028-29 <span class="cmeta">capex peak year · 2027 · 2027</span> <i>if given the blue wave</i></div><div class="ritem"><b>Dan Ives:</b> Anthropic needs $600-800 billion of yearly revenue in six to seven years to justify $1.5T <span class="cmeta">Anthropic annual revenue · $600-800B · 6-7 years</span> <i>if to justify a $1.5T valuation</i> <span class="tag">Anthropic</span></div><div class="ritem"><b>Dan Ives:</b> OpenAI goes public <span class="cmeta">OpenAI IPO · IPO · 2027-03</span> <span class="tag">OpenAI</span></div><div class="ritem"><b>Dan Ives:</b> SpaceX acquires Tesla <span class="cmeta">SpaceX-Tesla merger · acquisition</span> <span class="tag">SpaceX</span></div><div class="ritem"><b>Dan Ives:</b> Resolving the Texas relationship closes a 20-25% political discount in SpaceX <span class="cmeta">SpaceX discount · 20-25%</span> <i>if if Musk and Texas resolve it</i> <span class="tag">SpaceX</span></div><div class="ritem"><b>Dan Ives:</b> US humanoid robots move from prototype to functional reality <span class="cmeta">US humanoid readiness · functional · 2 years</span></div><div class="ritem"><b>Dan Ives:</b> Tech stocks rise 20-25% next year <span class="cmeta">tech stock returns · +20-25% · 2027-12</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>SpaceX</b> <span class="rel">acquires</span> <b>Tesla (TSLA)</b> &mdash; Ives's expectation, not announced</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📰</div><div><div class="title">Sources referenced: a prediction market for the Jensen-out odds; Trump's interview remark about an AI-company leader; Ives cites Karp, the CrowdStrike founder and Zuckerberg as founders who stuck to their vision. <span class="tag">Sources</span></div></div></div><div class="irow"><div class="ic">💰</div><div><div class="title">Pompliano cites the internet 'affair rally': Amazon and Microsoft each rallied over <b>$2T</b> after their founders' scandals; he says Nvidia would be up about 50% if the pattern held. <span class="tag">Markets</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Key-man risk</b> &mdash; The danger that a company's value depends on one person.</div><div><b>Blue wave</b> &mdash; The Democratic midterm sweep, read by Ives as an anti-AI, anti-data-center political shift.</div><div><b>Sovereign AI</b> &mdash; AI run on a customer's own data and infrastructure rather than a frontier lab's.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
