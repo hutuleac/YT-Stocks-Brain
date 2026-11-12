@@ -1,0 +1,203 @@
+META = {
+    "title": "You’re probably sleepwalking through life (here's how to wake up) - Robert Greene",
+    "channel": "My First Million",
+    "speakers": "Robert Greene, Sam Parr, Shaan Puri",
+    "date": "2026-11-11",
+    "video_url": "https://www.youtube.com/watch?v=GJUZUnJmW6c",
+    "thread_line": "7 threads · The Sublime and awe · limits and purpose · power and withdrawal · AI fears · near-death experience · charisma · character and creative courage",
+    "category": "life",
+    "region": "",
+}
+
+SNAPSHOT = [
+    "Robert Greene's new book *The Sublime* is the opposite of his power books: it is about awe, connection and being small, born from a near-death experience **8 years ago**.",
+    "His diagnosis: phones and algorithms program your experience; the fix is leaving the phone behind and getting outside.",
+    "Purpose carries people through the impossible: the 1972 Andes crash survivors, Victor Frankl, and his own stroke recovery writing the book by hand over seven years.",
+    "Power tactic for the social media age: say less than necessary and disappear for a week; Josh Kushner is his case study.",
+    "On AI he is a self-described pessimist: public backlash, scams, weakened young minds, and a decimated legal profession.",
+    "Charisma is confidence, and many charismatic people come from troubled childhoods; being great does not make someone nice.",
+    "Near-death research: roughly **85%** of experiences are positive; his own softened his fear of death.",
+]
+
+THEMES = [
+    {
+        "id": "sublime-awe",
+        "tags": ["mindset", "health"],
+        "color": "green",
+        "badge": "Principle",
+        "status": "THE SUBLIME · PHONE-FREE AWE",
+        "title": "The Sublime: reclaiming awe from the phone",
+        "lead": "Greene says people suffer from the narrowness of their experience, and awe comes only from your own senses, not from programmed feeds.",
+        "bullets": [
+            "The book came from nearly dying 8 years ago; he wants readers to get that aliveness without nearly dying, via practical exercises at the end of each chapter.",
+            "Phones and algorithms program what you see and feel; the one genuinely new crisis he sees is a sense of powerlessness, sharpened by AI.",
+            "Hosts: **90%+** of Americans have a smartphone and most are addicted, around seven hours a day.",
+            "On his recumbent bike in the LA hills he sees walkers staring at Instagram; that disconnect from surroundings he calls mental illness.",
+            "Fix: go outside, leave the phone locked in a drawer, climb a mountain, slow time down, be with pets and loved ones.",
+            "External stimulation leaves you empty and wanting more, even travel (bring your problems to Bali); inner experience is your own.",
+            "Anecdote: one of the oldest tablets complains about the young generation, so every era thinks it is the worst; he can't quantify whether now is different.",
+        ],
+        "quote": {"text": "There's no there's no experience that could be programmed on your stupid phone that can ever give you that kind of sensation.", "cite": "— Robert Greene"},
+        "watch": None,
+        "names": [],
+    },
+    {
+        "id": "limits-purpose",
+        "tags": ["mindset", "career"],
+        "color": "green",
+        "badge": "Personal story",
+        "status": "ANDES 1972 · STROKE · 7 YEARS",
+        "title": "Limits, purpose and writing a book by hand",
+        "lead": "Facing the impossible with a purpose unlocks powers people don't know they have, and Greene's own recovery is the example.",
+        "bullets": [
+            "Andes crash (1971-72): a Uruguayan rugby team on a plane to Chile; Nando Parrado, who lost his mother and sister, climbed a 14,000-foot peak with improvised gear to save his father the grief, and about **18** survived.",
+            "Victor Frankl: survivors of Auschwitz were those with something to live for, a book to write or a family member to save.",
+            "Greene held **60** jobs in the 80s and 90s, depressed in his mid-30s; a book packager in Italy then paid him to write The 48 Laws of Power.",
+            "A 911 call by his girlfriend, now wife, saved him from death or severe brain damage; he believes he survived to write one more large book.",
+            "He wrote The Sublime by hand with one hand: a notebook draft, a second notebook rewrite, four or five rounds, dictation, a printed hand edit, then one-handed computer edits; about **120** notebooks over seven years.",
+            "Reading tip from the hosts: master one cornerstone text by rereading rather than ten books on a topic.",
+        ],
+        "quote": {"text": "We put limits on what we think we can do. But there are actually no limits.", "cite": "— Robert Greene"},
+        "watch": None,
+        "names": [],
+    },
+    {
+        "id": "power-withdrawal",
+        "tags": ["career", "relationships"],
+        "color": "amber",
+        "badge": "Framework",
+        "status": "LESS THAN NECESSARY · MYSTERY",
+        "title": "Power, absence and mystery in the attention economy",
+        "lead": "If a power course had two lessons, they would be saying less than necessary and managing other people's egos.",
+        "bullets": [
+            "Lesson one: say less, withdraw, and alternate absence and presence so people talk about you when you vanish for a week.",
+            "Lesson two: egos; never outshine the master and know who you're dealing with.",
+            "He posts only practical podcast clips, never breakfast or travel photos, so his private life stays a mystery.",
+            "Case study per the hosts: Josh Kushner, an early Instagram investor, now owns the Lakers at 41, with no social media and an air of mystique.",
+            "Greene tells celebrities to disappear; he cites Beyonce going quiet for a year and a half, as people get tired of constant exposure and a fresher face arrives.",
+            "A college course on power would belong in business school, since college teaches things you will never use.",
+        ],
+        "quote": {"text": "Power is about absence and presence.", "cite": "— Robert Greene"},
+        "watch": None,
+        "names": [],
+    },
+    {
+        "id": "ai-fears",
+        "tags": ["policy", "career", "mindset"],
+        "color": "red",
+        "badge": "Cautionary tale",
+        "status": "SELF-DESCRIBED PESSIMIST",
+        "title": "Greene on AI: backlash, scams and weaker minds",
+        "lead": "He sees public resentment turning into regulation and human dark sides turning AI into a weapon, with young brains the quiet casualty.",
+        "bullets": [
+            "Public resentment and fear of AI is deep, and could become laws capping data centers.",
+            "From his Laws of Human Nature (18 laws, he names four missing): irrationality, grandiosity, envy and shortsightedness will drive misuse; scams and phishing mount daily.",
+            "Fear that dirty-bomb or bioweapon knowledge ends up in a crazy person's hands, though AI could also cure cancer.",
+            "Young people skip writing essays and reading 400-page books and never build discipline, so they will never think on their own.",
+            "Lawyers will be decimated, and he sees one upside: anyone can get legal answers without one.",
+            "He never used AI for The Sublime research beyond tiny facts; he closes his eyes and scrolls past the Google AI box.",
+        ],
+        "quote": {"text": "Being able to write an essay and read a 400page book is absolutely an essential skill in the 21st century, right?", "cite": "— Robert Greene"},
+        "watch": "Greene says he has a negative bias to his brain and is quick to doubt hype.",
+        "names": [],
+    },
+    {
+        "id": "near-death",
+        "tags": ["health", "mindset"],
+        "color": "gray",
+        "badge": "Personal story",
+        "status": "~85% POSITIVE · ~15% HELLISH",
+        "title": "What near-death experiences reveal",
+        "lead": "Greene reads the near-death literature as the brain's constructed reality breaking down, and says his own experience softened his fear of death.",
+        "bullets": [
+            "Roughly **85%** of reports are positive and about 15% hellish (he says don't quote him); even hardcore atheists have come back believing in God.",
+            "Susan Blackmore's Dying to Live is the skeptical counterpart, explaining tunnels and light as a scrambled dying brain.",
+            "His takeaway: the brain constructs reality, and as it dies you glimpse things as they are.",
+            "After his coma the sky looked incandescent blue; sensations of bones dissolving and strange light return in waves.",
+            "Psychedelics feel similar because they remove the brain's familiar filter, though he thinks LSD makes you see things that aren't there.",
+            "He is no longer very afraid of death and sometimes yearns for the peace; he begs the hosts not to wish for a stroke.",
+        ],
+        "quote": {"text": "your brain constructs the world that you see.", "cite": "— Robert Greene"},
+        "watch": "Greene says the percentages are approximate; the last chapter of The Sublime covers four near-death cases.",
+        "names": [],
+    },
+    {
+        "id": "charisma",
+        "tags": ["career", "relationships"],
+        "color": "amber",
+        "badge": "Framework",
+        "status": "CONFIDENCE · TROUBLED ORIGINS",
+        "title": "Charisma, myth and leadership",
+        "lead": "Charisma is inner confidence and intensity, often forged in hardship, and leaders need a mythic story, not a policy list.",
+        "bullets": [
+            "Confidence is the most charismatic quality, and you can't fake it; bravado reads as empty.",
+            "Many charismatic people had troubled childhoods and seek love from the public; Marilyn Monroe, orphaned, is his example, while Churchill and Malcolm X channelled suffering into a cause.",
+            "50 Cent: Greene spent 6-7 months writing The 50th Law with him; surviving nine shots left him fearless.",
+            "Democrats' flaw is a laundry list of policies; they need something mythic, as with Reagan or JFK, who mastered television (the Nixon debate).",
+            "His American myth: builders and practical pioneers, now lost to ease and impatience.",
+            "He talked with Tim Ryan after Ryan lost the Ohio Senate race to JD Vance; it was a conversation, not a campaign job, and he says it had no effect.",
+            "Hosts: aura is non-verbal charisma; examples are Conor McGregor's self-belief and Jaylen Brown's energy is about to shift tweet before Boston's title run.",
+            "Sam's coach scored him very high on narcissism; Greene says great people needn't be nice, citing Steve Jobs and Kobe Bryant.",
+        ],
+        "quote": {"text": "confidence is by far the most charismatic quality that you could have.", "cite": "— Robert Greene"},
+        "watch": "Greene says Ryan's effort crossed party lines and amounted to nothing; he gives no data for the charisma claims.",
+        "names": [],
+    },
+    {
+        "id": "character-courage",
+        "tags": ["career", "mindset"],
+        "color": "green",
+        "badge": "Recommendation",
+        "status": "MASTERY + SOCIAL SKILLS",
+        "title": "Admired people and the courage to write what you must",
+        "lead": "The people Greene admires pair analytic skill with social skill and character, and he writes for himself first.",
+        "bullets": [
+            "Ryan Holiday, his former researcher, is successful, decent and a great father; he hired him for character.",
+            "Mark Daigneault, Oklahoma City Thunder coach and Greene's friend, won a title after years at the bottom, mixing strategy, empathy and an offensive-rebounding system.",
+            "Mastery includes social skills; brilliant people who are bad with people neutralize themselves.",
+            "Sam admires the artistic courage to write a book with no guaranteed payoff.",
+            "Greene: write a good book, try something new and the audience will come; if not, screw them.",
+            "He tells Mike Posner's story: after hits then a shelved deal, Posner makes what is cool to him.",
+            "Create from purpose rather than the market and the excitement carries to readers; you may reach platinum rather than triple platinum.",
+        ],
+        "quote": {"text": "I just make what's cool to me and sometimes the whole world agrees.", "cite": "— Mike Posner, as told by Sam Parr"},
+        "watch": None,
+        "names": [],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F3AF", "tag": "Attention", "title": "Lock the phone away for a walk outside and notice what's around you."},
+    {"icon": "\U0001F3AF", "tag": "Power", "title": "Say less than necessary and step back from posting for a week."},
+    {"icon": "\U0001F3AF", "tag": "Learning", "title": "Reread one cornerstone book instead of skimming ten on the topic."},
+    {"icon": "\U0001F3AF", "tag": "AI", "title": "Keep writing and reading long-form yourself so the skill doesn't atrophy."},
+    {"icon": "\U0001F3AF", "tag": "Purpose", "title": "Find the cause you can embody before chasing charisma."},
+]
+
+CLAIMS = [
+    {"who": "Robert Greene", "claim": "Roughly 85% of near-death experiences are positive and about 15% are hellish.", "metric": "share of positive near-death experiences", "target": "~85%", "by": None, "condition": None, "entity": None},
+    {"who": "Robert Greene", "claim": "The legal profession will be decimated by AI.", "metric": "legal profession", "target": "decimated", "by": None, "condition": None, "entity": None},
+]
+
+RELATIONS = []
+
+HOT_TAKES = [
+    {"take": "That to me is like mental illness to me", "cite": "— Robert Greene", "why": "walkers on phones in nature"},
+    {"take": "The profession of lawyers is going to be decimated by AI.", "cite": "— Robert Greene", "why": "AI job loss"},
+    {"take": "It's supposed to be teaching you about things that are useless that you're never going to do in your life.", "cite": "— Robert Greene", "why": "what college teaches"},
+    {"take": "we have to get over this notion that being great and powerful also makes you a wonderful, loving, kind person", "cite": "— Robert Greene", "why": "Jobs, Kobe"},
+    {"take": "You can't fake confidence.", "cite": "— Robert Greene", "why": "charisma"},
+    {"take": "you can disappear for a week. It's not going to kill you.", "cite": "— Robert Greene", "why": "celebrity advice"},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F4D6", "title": "Hosts' reading: The Escape Artist, a story of surviving Auschwitz, as a way to feel you can handle a hard conversation.", "tag": "Books"},
+    {"icon": "\U0001F4DA", "title": "Sources referenced: Louis CK, Victor Frankl's Man's Search for Meaning, Susan Blackmore, Mark Daigneault, Ryan Holiday, Mike Posner, Tim Ryan, Phil Jackson, Conor McGregor, Jaylen Brown.", "tag": "Sources"},
+]
+
+GLOSSARY = [
+    {"term": "The Sublime", "def": "Greene's book on awe, connection and the strangeness of being alive."},
+    {"term": "Aura", "def": "Non-verbal charisma: presence that needs no words."},
+    {"term": "Presence and absence", "def": "Greene's dialectic: be seen, then vanish so people want you back."},
+    {"term": "Situational awareness", "def": "A military term for staying observant of your surroundings."},
+]
