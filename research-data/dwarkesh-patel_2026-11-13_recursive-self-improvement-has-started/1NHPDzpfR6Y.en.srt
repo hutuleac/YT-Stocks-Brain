@@ -1,0 +1,5007 @@
+1
+00:00:00,320 --> 00:00:03,439
+If you had asked me earlier this year
+
+2
+00:00:02,080 --> 00:00:05,120
+how far away we are from super
+
+3
+00:00:03,439 --> 00:00:06,798
+intelligence, I'd probably have said at
+
+4
+00:00:05,120 --> 00:00:08,720
+least the better part of a decade. But
+
+5
+00:00:06,799 --> 00:00:10,960
+over the last 3 months, I've updated my
+
+6
+00:00:08,720 --> 00:00:13,120
+views a ton. I've been debating people
+
+7
+00:00:10,960 --> 00:00:14,559
+both on and off the podcast about this
+
+8
+00:00:13,119 --> 00:00:16,559
+question. And of course, I've been
+
+9
+00:00:14,558 --> 00:00:18,399
+watching the progress of AI on
+
+10
+00:00:16,559 --> 00:00:20,320
+verifiable domains and thinking about
+
+11
+00:00:18,399 --> 00:00:22,559
+what that implies for AI research
+
+12
+00:00:20,320 --> 00:00:24,399
+itself. And I've come to the view that
+
+13
+00:00:22,559 --> 00:00:26,719
+we're only a couple years away and
+
+14
+00:00:24,399 --> 00:00:29,439
+possibly only a couple months away from
+
+15
+00:00:26,719 --> 00:00:31,759
+AIs that are as good as the best humans
+
+16
+00:00:29,439 --> 00:00:34,000
+at AI research. And I've also come to
+
+17
+00:00:31,760 --> 00:00:36,079
+believe that automating AI research will
+
+18
+00:00:34,000 --> 00:00:39,679
+compress so much progress into a single
+
+19
+00:00:36,079 --> 00:00:42,160
+year that soon thereafter, so by 2030
+
+20
+00:00:39,679 --> 00:00:44,558
+and plausibly as early as next year,
+
+21
+00:00:42,159 --> 00:00:46,640
+we'll have AIs that are at least as good
+
+22
+00:00:44,558 --> 00:00:48,878
+as the best human experts in every
+
+23
+00:00:46,640 --> 00:00:50,719
+field. I know this is a wild claim and
+
+24
+00:00:48,878 --> 00:00:52,718
+it's one that I myself didn't believe
+
+25
+00:00:50,719 --> 00:00:57,399
+even a couple months ago. Let me walk
+
+26
+00:00:52,719 --> 00:00:57,399
+you through how my thinking has changed.
+
+27
+00:00:58,479 --> 00:01:01,358
+Before we get into the more speculative
+
+28
+00:01:00,000 --> 00:01:04,079
+arguments about what will happen in the
+
+29
+00:01:01,359 --> 00:01:05,920
+future, I want to point out that AI is
+
+30
+00:01:04,079 --> 00:01:07,840
+already dramatically speeding up further
+
+31
+00:01:05,920 --> 00:01:10,000
+AI progress at the frontier. For
+
+32
+00:01:07,840 --> 00:01:12,320
+example, Meter, which is an independent
+
+33
+00:01:10,000 --> 00:01:14,560
+evaluation organization, spent three
+
+34
+00:01:12,319 --> 00:01:16,719
+months embedded inside of Enthropic and
+
+35
+00:01:14,560 --> 00:01:19,759
+afterwards concluded that Enthropic's
+
+36
+00:01:16,719 --> 00:01:23,519
+rate of AI progress on well scoped tasks
+
+37
+00:01:19,759 --> 00:01:25,438
+is 2x what it was a year ago and that a
+
+38
+00:01:23,519 --> 00:01:27,840
+quote majority of this acceleration
+
+39
+00:01:25,438 --> 00:01:30,399
+today is likely attributable to
+
+40
+00:01:27,840 --> 00:01:32,799
+Enthropic's extensive use of AI to do
+
+41
+00:01:30,400 --> 00:01:34,640
+R&D end quote. OpenAI published a blog
+
+42
+00:01:32,799 --> 00:01:38,000
+post about this in September where they
+
+43
+00:01:34,640 --> 00:01:40,319
+showed that the heaviest 10% of AI users
+
+44
+00:01:38,000 --> 00:01:42,719
+amongst OpenAI's researchers went from
+
+45
+00:01:40,319 --> 00:01:44,239
+using about $1,000 a day of internal
+
+46
+00:01:42,719 --> 00:01:47,359
+coding agents at the beginning of the
+
+47
+00:01:44,239 --> 00:01:49,438
+summer to over $7,000 a day by the end
+
+48
+00:01:47,359 --> 00:01:51,920
+of August. And also in September,
+
+49
+00:01:49,438 --> 00:01:54,639
+Enthropic put out a similar post on its
+
+50
+00:01:51,920 --> 00:01:58,399
+own AI uplift. They reported that Claude
+
+51
+00:01:54,640 --> 00:02:01,759
+now leads 26% of Anthropic's AI R&D
+
+52
+00:01:58,399 --> 00:02:04,759
+work, up from under 1% as recently as
+
+53
+00:02:01,759 --> 00:02:04,759
+February.
+
+54
+00:02:05,680 --> 00:02:09,439
+In thinking about how big a deal it
+
+55
+00:02:07,280 --> 00:02:11,280
+would be for AIS to automate AI research
+
+56
+00:02:09,439 --> 00:02:13,359
+and how much that would speed up AI
+
+57
+00:02:11,280 --> 00:02:15,598
+progress, a really important update for
+
+58
+00:02:13,360 --> 00:02:18,080
+me has just been seeing how fast the
+
+59
+00:02:15,598 --> 00:02:20,799
+capabilities of AI models in mathematics
+
+60
+00:02:18,080 --> 00:02:22,640
+have exploded. Current AIS are slicing
+
+61
+00:02:20,800 --> 00:02:24,879
+through well scopeed problems in maths
+
+62
+00:02:22,639 --> 00:02:27,359
+like a hot knife through butter. It was
+
+63
+00:02:24,878 --> 00:02:29,759
+only two years ago that I asked Daario
+
+64
+00:02:27,360 --> 00:02:31,760
+why LLMs aren't able to use their vast
+
+65
+00:02:29,759 --> 00:02:33,518
+knowledge across so many different
+
+66
+00:02:31,759 --> 00:02:35,439
+fields in order to connect together
+
+67
+00:02:33,519 --> 00:02:38,159
+different ideas and make new
+
+68
+00:02:35,439 --> 00:02:40,400
+discoveries. And lo and behold, here we
+
+69
+00:02:38,159 --> 00:02:42,639
+are in a wholly verifiable domain like
+
+70
+00:02:40,400 --> 00:02:44,879
+mathematics. AIS are doing the search
+
+71
+00:02:42,639 --> 00:02:46,878
+and match discovery to such a great
+
+72
+00:02:44,878 --> 00:02:49,280
+extent that hundreds of important
+
+73
+00:02:46,878 --> 00:02:50,959
+results which the top mathematicians and
+
+74
+00:02:49,280 --> 00:02:53,598
+computer scientists in the world had
+
+75
+00:02:50,959 --> 00:02:56,239
+spent decades trying to resolve are
+
+76
+00:02:53,598 --> 00:02:58,479
+being turned out as side quests to hype
+
+77
+00:02:56,239 --> 00:03:00,239
+up future model releases. It's crazy how
+
+78
+00:02:58,479 --> 00:03:02,639
+fast this progress has happened. As
+
+79
+00:03:00,239 --> 00:03:04,640
+recently as 2023, these models couldn't
+
+80
+00:03:02,639 --> 00:03:07,039
+reliably add four-digit numbers. In
+
+81
+00:03:04,639 --> 00:03:08,399
+2024, they could barely solve any
+
+82
+00:03:07,039 --> 00:03:11,199
+problems in a high school math
+
+83
+00:03:08,400 --> 00:03:12,640
+competition. in 2025 they could win a
+
+84
+00:03:11,199 --> 00:03:14,878
+gold medal in the international math
+
+85
+00:03:12,639 --> 00:03:16,878
+Olympiad to earlier this year where they
+
+86
+00:03:14,878 --> 00:03:19,919
+finally started to solve some niche open
+
+87
+00:03:16,878 --> 00:03:22,878
+problems to a month ago where open AAI
+
+88
+00:03:19,919 --> 00:03:25,280
+solved a millennium price problem in 88
+
+89
+00:03:22,878 --> 00:03:28,239
+hours I'm reminded of a line from the
+
+90
+00:03:25,280 --> 00:03:30,959
+novel east of Eden quote and there is
+
+91
+00:03:28,239 --> 00:03:33,439
+one sure thing about the fall of gods
+
+92
+00:03:30,959 --> 00:03:36,319
+they do not fall a little they crash and
+
+93
+00:03:33,439 --> 00:03:38,560
+shatter end quote now it's true that
+
+94
+00:03:36,318 --> 00:03:40,479
+progress has screwed disproportionately
+
+95
+00:03:38,560 --> 00:03:42,239
+towards the verification laden parts of
+
+96
+00:03:40,479 --> 00:03:44,560
+mathematics like finding counter
+
+97
+00:03:42,239 --> 00:03:46,480
+examples rather than say coming up with
+
+98
+00:03:44,560 --> 00:03:48,799
+new theory. Toby or recently wrote a
+
+99
+00:03:46,479 --> 00:03:50,878
+great essay about this. He writes quote
+
+100
+00:03:48,799 --> 00:03:53,200
+while current AI systems are starting to
+
+101
+00:03:50,878 --> 00:03:55,199
+automate mathematical proof there is
+
+102
+00:03:53,199 --> 00:03:57,359
+currently very little evidence that they
+
+103
+00:03:55,199 --> 00:03:59,280
+can ask powerful questions or find
+
+104
+00:03:57,360 --> 00:04:01,760
+profound new fields of mathematical
+
+105
+00:03:59,280 --> 00:04:03,438
+inquiry. End quote. But another way to
+
+106
+00:04:01,759 --> 00:04:06,318
+say that same exact sentence would be
+
+107
+00:04:03,438 --> 00:04:08,959
+this. Current AI systems have solved a
+
+108
+00:04:06,318 --> 00:04:11,199
+millennium prize problem all without the
+
+109
+00:04:08,959 --> 00:04:13,199
+ability to ask powerful questions or
+
+110
+00:04:11,199 --> 00:04:15,679
+find profound new fields of mathematical
+
+111
+00:04:13,199 --> 00:04:17,519
+inquiry. And this ability to solve well
+
+112
+00:04:15,680 --> 00:04:18,959
+scoped problems is going to be an even
+
+113
+00:04:17,519 --> 00:04:20,478
+bigger deal for machine learning
+
+114
+00:04:18,959 --> 00:04:22,879
+research than it has been for
+
+115
+00:04:20,478 --> 00:04:24,800
+mathematics broadly construed. That's
+
+116
+00:04:22,879 --> 00:04:27,360
+because the goal of mathematics research
+
+117
+00:04:24,800 --> 00:04:29,759
+is not just to prove or disprove long
+
+118
+00:04:27,360 --> 00:04:31,759
+lists of conjectures, but rather to
+
+119
+00:04:29,759 --> 00:04:34,240
+extend the human understanding of
+
+120
+00:04:31,759 --> 00:04:37,840
+mathematical concepts. Coming up with
+
+121
+00:04:34,240 --> 00:04:39,600
+the idea of topology or group theory or
+
+122
+00:04:37,839 --> 00:04:43,039
+going back even further the cartisian
+
+123
+00:04:39,600 --> 00:04:45,360
+grid matters far more than knowing
+
+124
+00:04:43,040 --> 00:04:48,400
+exactly how many one unit apart pairs
+
+125
+00:04:45,360 --> 00:04:51,360
+you can make from n dots. We mainly care
+
+126
+00:04:48,399 --> 00:04:53,439
+about such abstrus questions in so far
+
+127
+00:04:51,360 --> 00:04:55,600
+as they might elicit new mathematical
+
+128
+00:04:53,439 --> 00:04:59,040
+theory. But in AI research the
+
+129
+00:04:55,600 --> 00:05:00,800
+priorities are exactly reversed. AI labs
+
+130
+00:04:59,040 --> 00:05:03,600
+mainly care about how any new
+
+131
+00:05:00,800 --> 00:05:05,759
+algorithmic recipe empirically makes
+
+132
+00:05:03,600 --> 00:05:07,840
+training more efficient or elicits
+
+133
+00:05:05,759 --> 00:05:09,759
+smarter models. They don't care about
+
+134
+00:05:07,839 --> 00:05:11,038
+theory for its own sake. And all the
+
+135
+00:05:09,759 --> 00:05:13,120
+progress that we've made in deep
+
+136
+00:05:11,038 --> 00:05:14,959
+learning over the last decade and a half
+
+137
+00:05:13,120 --> 00:05:17,680
+has not required much new theory
+
+138
+00:05:14,959 --> 00:05:19,758
+anyways. The equivalent of just grinding
+
+139
+00:05:17,680 --> 00:05:21,918
+through random conjectures would be
+
+140
+00:05:19,759 --> 00:05:23,439
+enormously valuable in machine learning
+
+141
+00:05:21,918 --> 00:05:25,519
+in a way that it just isn't for
+
+142
+00:05:23,439 --> 00:05:27,759
+mathematics. AI research is actually
+
+143
+00:05:25,519 --> 00:05:29,918
+surprisingly similar to the kind of
+
+144
+00:05:27,759 --> 00:05:32,240
+mathematical progress which current AIs
+
+145
+00:05:29,918 --> 00:05:34,799
+are disproportionately good at, which is
+
+146
+00:05:32,240 --> 00:05:36,639
+unlocking a ton of lowhanging fruit by
+
+147
+00:05:34,800 --> 00:05:39,360
+applying a combination of incredible
+
+148
+00:05:36,639 --> 00:05:41,439
+persistence and a superhuman capacity to
+
+149
+00:05:39,360 --> 00:05:43,120
+connect ideas from lots of adjacent
+
+150
+00:05:41,439 --> 00:05:44,879
+domains. For example, let's talk about
+
+151
+00:05:43,120 --> 00:05:47,038
+the transformer architecture. This is
+
+152
+00:05:44,879 --> 00:05:49,519
+the big breakthrough that enabled modern
+
+153
+00:05:47,038 --> 00:05:51,759
+LLMs. My friend Scholto Douglas, who is
+
+154
+00:05:49,519 --> 00:05:54,000
+an AI researcher himself, has this
+
+155
+00:05:51,759 --> 00:05:56,000
+perennially halffinish blog post where
+
+156
+00:05:54,000 --> 00:05:58,639
+he explains how you could have invented
+
+157
+00:05:56,000 --> 00:06:00,478
+the transformer 2 years earlier than
+
+158
+00:05:58,639 --> 00:06:01,840
+people actually did. And maybe this
+
+159
+00:06:00,478 --> 00:06:04,240
+video will finally get him to quit
+
+160
+00:06:01,839 --> 00:06:06,000
+stalling and complete his essay. But in
+
+161
+00:06:04,240 --> 00:06:07,680
+the meantime, I'll summarize a bit of
+
+162
+00:06:06,000 --> 00:06:09,680
+the discussion I had with him about the
+
+163
+00:06:07,680 --> 00:06:12,160
+contents of his essay. Before the
+
+164
+00:06:09,680 --> 00:06:14,240
+transformer paper was published in 2017,
+
+165
+00:06:12,160 --> 00:06:16,400
+many researchers had already identified
+
+166
+00:06:14,240 --> 00:06:18,160
+attention as a way to better parallelize
+
+167
+00:06:16,399 --> 00:06:20,959
+training and communicate information
+
+168
+00:06:18,160 --> 00:06:22,960
+across longer sequences. Chris Ola, who
+
+169
+00:06:20,959 --> 00:06:26,079
+was an active researcher at the time,
+
+170
+00:06:22,959 --> 00:06:28,079
+has said, quote, "At that time, my sense
+
+171
+00:06:26,079 --> 00:06:30,560
+is that the transformer architecture was
+
+172
+00:06:28,079 --> 00:06:32,719
+a natural combination of many ideas like
+
+173
+00:06:30,560 --> 00:06:35,199
+attention and residual networks, which
+
+174
+00:06:32,720 --> 00:06:37,360
+had independently been effective, taken
+
+175
+00:06:35,199 --> 00:06:38,960
+to quite aggressive lengths." End quote.
+
+176
+00:06:37,360 --> 00:06:41,120
+In other words, none of the core pieces
+
+177
+00:06:38,959 --> 00:06:42,318
+were a surprise to researchers active in
+
+178
+00:06:41,120 --> 00:06:44,478
+the field. So then why didn't people
+
+179
+00:06:42,319 --> 00:06:46,319
+invent the transformer sooner? One
+
+180
+00:06:44,478 --> 00:06:48,399
+reason was that this new architecture
+
+181
+00:06:46,319 --> 00:06:50,319
+was only obviously better than the
+
+182
+00:06:48,399 --> 00:06:51,839
+state-of-the-art at the time once you
+
+183
+00:06:50,319 --> 00:06:53,600
+connected together half a dozen
+
+184
+00:06:51,839 --> 00:06:55,119
+additional tweaks and innovations. And
+
+185
+00:06:53,600 --> 00:06:57,680
+though almost all of them had been known
+
+186
+00:06:55,120 --> 00:06:59,199
+in the literature for years, no one knew
+
+187
+00:06:57,680 --> 00:07:01,598
+how to combine these puzzle pieces
+
+188
+00:06:59,199 --> 00:07:03,759
+together in just the right way. Doing so
+
+189
+00:07:01,598 --> 00:07:06,159
+required great research taste of course,
+
+190
+00:07:03,759 --> 00:07:08,319
+but it also required tons and tons of
+
+191
+00:07:06,160 --> 00:07:10,400
+small experiments. But what I've just
+
+192
+00:07:08,319 --> 00:07:12,560
+described above, which is persistently
+
+193
+00:07:10,399 --> 00:07:14,638
+and intelligently matching dozens of
+
+194
+00:07:12,560 --> 00:07:17,199
+different combinations of ideas, is
+
+195
+00:07:14,639 --> 00:07:18,879
+exactly the kind of capability that AIs
+
+196
+00:07:17,199 --> 00:07:20,800
+have shown themselves disproportionately
+
+197
+00:07:18,879 --> 00:07:23,199
+skilled at in their contributions in
+
+198
+00:07:20,800 --> 00:07:25,120
+mathematics. This is all to say that
+
+199
+00:07:23,199 --> 00:07:26,960
+even the transformer, which is arguably
+
+200
+00:07:25,120 --> 00:07:28,478
+the biggest breakthrough in ML since
+
+201
+00:07:26,959 --> 00:07:30,959
+Alexet kicked off the deep learning
+
+202
+00:07:28,478 --> 00:07:32,800
+revolution in 2012, is the kind of thing
+
+203
+00:07:30,959 --> 00:07:35,198
+that Claude 7 could have invented if
+
+204
+00:07:32,800 --> 00:07:37,280
+Chris Ola asked it to try really hard to
+
+205
+00:07:35,199 --> 00:07:39,120
+get this attention thing to work better.
+
+206
+00:07:37,279 --> 00:07:41,198
+Now, I want to clarify that some parts
+
+207
+00:07:39,120 --> 00:07:44,000
+of AI research are in fact less
+
+208
+00:07:41,199 --> 00:07:45,919
+verifiable than math. That's why OpenAI
+
+209
+00:07:44,000 --> 00:07:47,360
+hasn't fired all of its researchers
+
+210
+00:07:45,918 --> 00:07:49,359
+despite having a model that can
+
+211
+00:07:47,360 --> 00:07:51,759
+apparently autonomously solve Millennium
+
+212
+00:07:49,360 --> 00:07:54,080
+Prize problems. But I think that AI
+
+213
+00:07:51,759 --> 00:07:56,319
+research is verifiable enough that AIs
+
+214
+00:07:54,079 --> 00:07:59,359
+will soon be as good at it as the best
+
+215
+00:07:56,319 --> 00:08:01,520
+humans. Now, explaining why requires
+
+216
+00:07:59,360 --> 00:08:03,759
+getting into the nitty-gritty of how AI
+
+217
+00:08:01,519 --> 00:08:05,839
+research actually works. And because
+
+218
+00:08:03,759 --> 00:08:08,080
+those details are interesting but
+
+219
+00:08:05,839 --> 00:08:09,598
+technical, I've saved them for after the
+
+220
+00:08:08,079 --> 00:08:11,038
+conclusion. So, if you're curious and
+
+221
+00:08:09,598 --> 00:08:12,878
+you want to hear them, you should just
+
+222
+00:08:11,038 --> 00:08:14,959
+keep watching until the end of the
+
+223
+00:08:12,879 --> 00:08:16,720
+video. But in the meantime, I'm going to
+
+224
+00:08:14,959 --> 00:08:19,198
+give you my estimate of when we're going
+
+225
+00:08:16,720 --> 00:08:21,120
+to have such AIS. If I had to pick my
+
+226
+00:08:19,199 --> 00:08:23,280
+median year for when automated
+
+227
+00:08:21,120 --> 00:08:26,478
+researchers will be as good as the very
+
+228
+00:08:23,279 --> 00:08:29,119
+best human AI researchers at doing AI
+
+229
+00:08:26,478 --> 00:08:31,439
+research, I'd guess 2028. And that's
+
+230
+00:08:29,120 --> 00:08:33,759
+assuming that the AI labs go full steam
+
+231
+00:08:31,439 --> 00:08:35,918
+ahead and don't slow themselves down
+
+232
+00:08:33,759 --> 00:08:38,000
+intentionally or aren't slowed down by a
+
+233
+00:08:35,918 --> 00:08:40,718
+government. Why do I think that AI could
+
+234
+00:08:38,000 --> 00:08:42,639
+get this good within 2 years? Well, in
+
+235
+00:08:40,719 --> 00:08:44,640
+every domain where we can check answers
+
+236
+00:08:42,639 --> 00:08:46,399
+and give AI thousands of rounds of
+
+237
+00:08:44,639 --> 00:08:48,799
+practice, for example, competitive
+
+238
+00:08:46,399 --> 00:08:51,600
+programming contests or well scoped open
+
+239
+00:08:48,799 --> 00:08:53,838
+math problems, they've gone from worse
+
+240
+00:08:51,600 --> 00:08:56,800
+than most humans to better than the best
+
+241
+00:08:53,839 --> 00:08:59,279
+humans within just a few years. And as
+
+242
+00:08:56,799 --> 00:09:02,000
+I'll argue after the conclusion, AI
+
+243
+00:08:59,278 --> 00:09:03,919
+research has exactly the same verifiable
+
+244
+00:09:02,000 --> 00:09:05,839
+properties. Of course, a big part of
+
+245
+00:09:03,919 --> 00:09:07,759
+what makes the top human AI researchers
+
+246
+00:09:05,839 --> 00:09:09,519
+really good at their job can't be
+
+247
+00:09:07,759 --> 00:09:12,080
+directly verified. for example, their
+
+248
+00:09:09,519 --> 00:09:14,240
+ability to bet years in advance on the
+
+249
+00:09:12,080 --> 00:09:16,320
+right research direction. But as we've
+
+250
+00:09:14,240 --> 00:09:18,320
+already seen in mathematics, models
+
+251
+00:09:16,320 --> 00:09:21,200
+generalize far beyond what they were
+
+252
+00:09:18,320 --> 00:09:23,278
+directly trained on. OpenAI's model was
+
+253
+00:09:21,200 --> 00:09:25,040
+obviously not trained by solving other
+
+254
+00:09:23,278 --> 00:09:27,519
+Millennium Prize problems. It was
+
+255
+00:09:25,039 --> 00:09:30,240
+trained on lots of less ambitious, more
+
+256
+00:09:27,519 --> 00:09:32,320
+tractable math problems. And from those,
+
+257
+00:09:30,240 --> 00:09:34,560
+it generalized all the way to solving a
+
+258
+00:09:32,320 --> 00:09:36,640
+problem which no human had ever cracked
+
+259
+00:09:34,559 --> 00:09:38,079
+before. I'd expect the same in AI
+
+260
+00:09:36,639 --> 00:09:39,759
+research where the combination of
+
+261
+00:09:38,080 --> 00:09:42,240
+thousands of rounds of practice on
+
+262
+00:09:39,759 --> 00:09:44,480
+verifiable research tasks plus the fact
+
+263
+00:09:42,240 --> 00:09:46,879
+that each new generation of models is
+
+264
+00:09:44,480 --> 00:09:48,959
+broadly smarter than the last will make
+
+265
+00:09:46,879 --> 00:09:51,360
+models excellent even at the parts of AI
+
+266
+00:09:48,958 --> 00:09:53,278
+research that we can't directly check.
+
+267
+00:09:51,360 --> 00:09:54,959
+Now I want to be clear that there is a
+
+268
+00:09:53,278 --> 00:09:57,519
+pretty decent chance that hitting this
+
+269
+00:09:54,958 --> 00:09:59,599
+milestone takes longer because some
+
+270
+00:09:57,519 --> 00:10:02,080
+important parts of AI research remain
+
+271
+00:09:59,600 --> 00:10:04,000
+hard to automate. This is just a very
+
+272
+00:10:02,080 --> 00:10:05,278
+hard thing to try to predict in advance.
+
+273
+00:10:04,000 --> 00:10:08,240
+And I'd guess that there's at least a
+
+274
+00:10:05,278 --> 00:10:11,360
+25% chance that it doesn't happen until
+
+275
+00:10:08,240 --> 00:10:13,278
+after 2032. But conversely, I also think
+
+276
+00:10:11,360 --> 00:10:15,839
+that things could happen much faster and
+
+277
+00:10:13,278 --> 00:10:17,600
+we hit this milestone in 2027. Some of
+
+278
+00:10:15,839 --> 00:10:19,519
+the most well-informed researchers I
+
+279
+00:10:17,600 --> 00:10:21,200
+know, people who have a very good track
+
+280
+00:10:19,519 --> 00:10:23,839
+record of making predictions over the
+
+281
+00:10:21,200 --> 00:10:26,800
+last few years, expect AI to beat the
+
+282
+00:10:23,839 --> 00:10:29,519
+best humans at AI research as early as
+
+283
+00:10:26,799 --> 00:10:31,439
+next year. And 2027 is also the
+
+284
+00:10:29,519 --> 00:10:33,759
+straightforward implication of putting
+
+285
+00:10:31,440 --> 00:10:35,360
+the new report for meter that says that
+
+286
+00:10:33,759 --> 00:10:38,159
+anthropic's rate of AI progress has
+
+287
+00:10:35,360 --> 00:10:40,480
+doubled from a year ago into a takeoffs
+
+288
+00:10:38,159 --> 00:10:42,799
+model. As former guest AJ Coocher put it
+
+289
+00:10:40,480 --> 00:10:45,519
+in a blog post about this report, quote,
+
+290
+00:10:42,799 --> 00:10:47,278
+"If we take at face value that AI is now
+
+291
+00:10:45,519 --> 00:10:49,200
+nearly doubling the rate of AI
+
+292
+00:10:47,278 --> 00:10:51,600
+capabilities progress and assume that
+
+293
+00:10:49,200 --> 00:10:53,360
+acceleration from AI is smooth, this
+
+294
+00:10:51,600 --> 00:10:55,519
+naively implies that we would reach
+
+295
+00:10:53,360 --> 00:10:57,839
+extreme super intelligence within a
+
+296
+00:10:55,519 --> 00:11:00,639
+year." End quote. So, the reason my
+
+297
+00:10:57,839 --> 00:11:02,160
+median year is not 2027 is just that I'm
+
+298
+00:11:00,639 --> 00:11:03,919
+uncertain about how accurate this kind
+
+299
+00:11:02,159 --> 00:11:05,679
+of straightforward modeling is. But we
+
+300
+00:11:03,919 --> 00:11:07,759
+should not be surprised and we should be
+
+301
+00:11:05,679 --> 00:11:12,199
+ready for a world in which we get to
+
+302
+00:11:07,759 --> 00:11:12,200
+this milestone next year.
+
+303
+00:11:14,078 --> 00:11:19,679
+Once AI is as good as the best humans at
+
+304
+00:11:17,120 --> 00:11:22,000
+AI research, algorithmic progress will
+
+305
+00:11:19,679 --> 00:11:24,078
+get a lot faster for three important
+
+306
+00:11:22,000 --> 00:11:26,240
+reasons. One, the AIS will be much
+
+307
+00:11:24,078 --> 00:11:28,159
+faster. two, each of them will be very
+
+308
+00:11:26,240 --> 00:11:29,759
+smart. And three, there will be a lot
+
+309
+00:11:28,159 --> 00:11:32,399
+more of them. Let's start with faster
+
+310
+00:11:29,759 --> 00:11:34,480
+first. Today's AIS already do work at
+
+311
+00:11:32,399 --> 00:11:36,000
+about 10 times human speed. And
+
+312
+00:11:34,480 --> 00:11:37,680
+automated researchers would also be
+
+313
+00:11:36,000 --> 00:11:40,159
+working around the clock, nights and
+
+314
+00:11:37,679 --> 00:11:41,919
+weekends included. As a result, each
+
+315
+00:11:40,159 --> 00:11:44,159
+individual automated researcher will be
+
+316
+00:11:41,919 --> 00:11:46,078
+cramming roughly 50 times more work
+
+317
+00:11:44,159 --> 00:11:48,078
+every calendar week than a human
+
+318
+00:11:46,078 --> 00:11:50,078
+researcher can do. Of course, that
+
+319
+00:11:48,078 --> 00:11:52,639
+doesn't mean that AI progress will
+
+320
+00:11:50,078 --> 00:11:54,399
+immediately accelerate 50x. those
+
+321
+00:11:52,639 --> 00:11:56,480
+automated researchers would still be
+
+322
+00:11:54,399 --> 00:11:58,320
+bottlenecked by compute for experiments
+
+323
+00:11:56,480 --> 00:12:00,320
+which aren't running any faster. So
+
+324
+00:11:58,320 --> 00:12:02,079
+there would be diminishing returns. But
+
+325
+00:12:00,320 --> 00:12:04,000
+even with extremely steep diminishing
+
+326
+00:12:02,078 --> 00:12:06,399
+returns, this alone would make
+
+327
+00:12:04,000 --> 00:12:08,559
+algorithmic progress proceed many times
+
+328
+00:12:06,399 --> 00:12:10,078
+faster than it currently does. And this
+
+329
+00:12:08,559 --> 00:12:12,479
+is before we account for the fact that
+
+330
+00:12:10,078 --> 00:12:14,799
+in the scenario I'm talking about, every
+
+331
+00:12:12,480 --> 00:12:17,200
+automated researcher will be at least as
+
+332
+00:12:14,799 --> 00:12:19,759
+good at AI research and engineering as
+
+333
+00:12:17,200 --> 00:12:21,440
+the very best humans today. My sense is
+
+334
+00:12:19,759 --> 00:12:23,278
+that around 80% of the algorithmic
+
+335
+00:12:21,440 --> 00:12:25,760
+progress at a given frontier lab is
+
+336
+00:12:23,278 --> 00:12:27,600
+driven by its 50 top researchers. It's
+
+337
+00:12:25,759 --> 00:12:29,120
+not for nothing that Zuckerberg was
+
+338
+00:12:27,600 --> 00:12:30,959
+willing to pay hundreds of millions of
+
+339
+00:12:29,120 --> 00:12:32,959
+dollars to acquire the best talent in
+
+340
+00:12:30,958 --> 00:12:34,958
+the industry. And so you get another big
+
+341
+00:12:32,958 --> 00:12:36,958
+speed up in algorithmic progress from
+
+342
+00:12:34,958 --> 00:12:39,119
+the fact that every single engineer and
+
+343
+00:12:36,958 --> 00:12:41,199
+researcher in this automated company
+
+344
+00:12:39,120 --> 00:12:44,240
+will be at the level of the very best
+
+345
+00:12:41,200 --> 00:12:46,000
+humans in today's frontier AI labs. And
+
+346
+00:12:44,240 --> 00:12:47,919
+finally, there will be a lot more
+
+347
+00:12:46,000 --> 00:12:50,000
+automated researchers. Now, throwing
+
+348
+00:12:47,919 --> 00:12:52,479
+more workers at a problem isn't always
+
+349
+00:12:50,000 --> 00:12:53,759
+helpful. For example, a swarm of agents
+
+350
+00:12:52,480 --> 00:12:56,240
+probably isn't going to be able to write
+
+351
+00:12:53,759 --> 00:12:58,159
+a great novel much faster than a single
+
+352
+00:12:56,240 --> 00:13:00,399
+agent could. But other tasks lend
+
+353
+00:12:58,159 --> 00:13:01,759
+themselves much more to parallelization.
+
+354
+00:13:00,399 --> 00:13:03,839
+For example, look at this animation that
+
+355
+00:13:01,759 --> 00:13:05,838
+I'm overlaying, which shows a bunch of
+
+356
+00:13:03,839 --> 00:13:09,279
+different clouds working together to
+
+357
+00:13:05,839 --> 00:13:11,600
+formalize form theorem. This feat had
+
+358
+00:13:09,278 --> 00:13:13,200
+thousands of modular subtasks, each of
+
+359
+00:13:11,600 --> 00:13:15,680
+which could be completed independently
+
+360
+00:13:13,200 --> 00:13:17,759
+and where each agent could locally check
+
+361
+00:13:15,679 --> 00:13:19,838
+whether their work had succeeded. AI
+
+362
+00:13:17,759 --> 00:13:21,679
+research is closer to formalizing a
+
+363
+00:13:19,839 --> 00:13:23,519
+theorem than it is to writing a novel
+
+364
+00:13:21,679 --> 00:13:25,199
+because there's a lot of independent
+
+365
+00:13:23,519 --> 00:13:27,440
+modular work to do and there are
+
+366
+00:13:25,200 --> 00:13:29,759
+verifiable proxies for progress. That
+
+367
+00:13:27,440 --> 00:13:31,440
+means a swarm of agents can try out a
+
+368
+00:13:29,759 --> 00:13:33,278
+thousand different approaches and see
+
+369
+00:13:31,440 --> 00:13:35,040
+which one performs best. And they can do
+
+370
+00:13:33,278 --> 00:13:37,200
+this independently for each different
+
+371
+00:13:35,039 --> 00:13:39,278
+part of the pipeline. AI companies are
+
+372
+00:13:37,200 --> 00:13:41,839
+already made up of dozens of different
+
+373
+00:13:39,278 --> 00:13:44,159
+teams working independently on different
+
+374
+00:13:41,839 --> 00:13:45,279
+parts of model development. One team,
+
+375
+00:13:44,159 --> 00:13:46,879
+for example, improves how the
+
+376
+00:13:45,278 --> 00:13:48,399
+pre-training data is filtered. Another
+
+377
+00:13:46,879 --> 00:13:50,559
+designs a particular kind of synthetic
+
+378
+00:13:48,399 --> 00:13:52,879
+RL environment. Another writes a better
+
+379
+00:13:50,559 --> 00:13:54,638
+attention kernel and so on. In domains
+
+380
+00:13:52,879 --> 00:13:56,159
+like this where different streams of
+
+381
+00:13:54,639 --> 00:13:58,720
+work can be done and checked
+
+382
+00:13:56,159 --> 00:14:00,719
+independently, dumping in lots of
+
+383
+00:13:58,720 --> 00:14:02,720
+persistent hill climbing agents tends to
+
+384
+00:14:00,720 --> 00:14:04,480
+speed up progress a lot. Again, there
+
+385
+00:14:02,720 --> 00:14:06,639
+will be steeply diminishing returns just
+
+386
+00:14:04,480 --> 00:14:07,839
+from adding more parallel researchers.
+
+387
+00:14:06,639 --> 00:14:09,680
+Anybody who's ever worked in the team
+
+388
+00:14:07,839 --> 00:14:11,519
+before knows that having a 100,000
+
+389
+00:14:09,679 --> 00:14:13,519
+collaborators doesn't mean that you'll
+
+390
+00:14:11,519 --> 00:14:15,839
+go a 100 thousand times faster, probably
+
+391
+00:14:13,519 --> 00:14:18,078
+not even 100 times faster. But given the
+
+392
+00:14:15,839 --> 00:14:19,519
+nature of AI research, it's implausible
+
+393
+00:14:18,078 --> 00:14:21,599
+that you wouldn't be going at least a
+
+394
+00:14:19,519 --> 00:14:25,959
+couple times faster from having orders
+
+395
+00:14:21,600 --> 00:14:25,959
+of magnitude more automated labor.
+
+396
+00:14:27,360 --> 00:14:32,320
+So the combination of faster, smarter,
+
+397
+00:14:30,240 --> 00:14:34,959
+and more automated researchers will
+
+398
+00:14:32,320 --> 00:14:36,959
+speed up AI progress a lot. But will
+
+399
+00:14:34,958 --> 00:14:39,518
+this pace continue? Will it get even
+
+400
+00:14:36,958 --> 00:14:41,359
+faster or will it slow down? That
+
+401
+00:14:39,519 --> 00:14:43,600
+question is even more important than
+
+402
+00:14:41,360 --> 00:14:45,199
+what the initial pace actually is. Two
+
+403
+00:14:43,600 --> 00:14:47,440
+competing trends are relevant here and
+
+404
+00:14:45,198 --> 00:14:49,120
+the subsequent rate of progress will
+
+405
+00:14:47,440 --> 00:14:51,519
+come down to which one ends up being
+
+406
+00:14:49,120 --> 00:14:54,320
+more powerful. On the one hand, because
+
+407
+00:14:51,519 --> 00:14:56,480
+of RSI, automated researchers will
+
+408
+00:14:54,320 --> 00:14:59,199
+continue getting faster, smarter, and
+
+409
+00:14:56,480 --> 00:15:00,639
+more plentiful. On the other hand, AI
+
+410
+00:14:59,198 --> 00:15:03,039
+research will be getting harder and
+
+411
+00:15:00,639 --> 00:15:05,120
+harder as all the easy ideas get eaten
+
+412
+00:15:03,039 --> 00:15:06,719
+away by the swarm. By the way, ideas
+
+413
+00:15:05,120 --> 00:15:08,560
+getting harder to find is a thing that
+
+414
+00:15:06,720 --> 00:15:10,480
+already happens. AI companies have to
+
+415
+00:15:08,559 --> 00:15:12,719
+quadruple their R&D compute and double
+
+416
+00:15:10,480 --> 00:15:14,800
+their workforce every single year just
+
+417
+00:15:12,720 --> 00:15:16,959
+to maintain the same rate of progress.
+
+418
+00:15:14,799 --> 00:15:18,879
+So if the rate at which AI gets smarter
+
+419
+00:15:16,958 --> 00:15:20,958
+is faster than the rate at which ideas
+
+420
+00:15:18,879 --> 00:15:22,480
+get harder to find, then we'd get
+
+421
+00:15:20,958 --> 00:15:25,039
+something called the software only
+
+422
+00:15:22,480 --> 00:15:27,519
+singularity. In this scenario, even
+
+423
+00:15:25,039 --> 00:15:29,120
+without increasing compute, the AI swarm
+
+424
+00:15:27,519 --> 00:15:31,360
+rapidly makes smarter and smarter
+
+425
+00:15:29,120 --> 00:15:33,120
+versions of itself until within a matter
+
+426
+00:15:31,360 --> 00:15:35,120
+of months, we end up with a super
+
+427
+00:15:33,120 --> 00:15:37,039
+intelligence that scrapes against the
+
+428
+00:15:35,120 --> 00:15:38,879
+physical limits of our current ships.
+
+429
+00:15:37,039 --> 00:15:41,439
+But if ideas get harder to find faster
+
+430
+00:15:38,879 --> 00:15:43,120
+than RSI makes AI better at research,
+
+431
+00:15:41,440 --> 00:15:45,440
+we'd end up with something which I'd
+
+432
+00:15:43,120 --> 00:15:47,360
+call a spark. We'd get something like 3
+
+433
+00:15:45,440 --> 00:15:50,000
+to six years of AI progress at the
+
+434
+00:15:47,360 --> 00:15:51,519
+current rate in a single calendar year.
+
+435
+00:15:50,000 --> 00:15:53,679
+And then things would simmer down until
+
+436
+00:15:51,519 --> 00:15:55,600
+we build more compute as even these
+
+437
+00:15:53,679 --> 00:15:57,359
+super genius automated researchers need
+
+438
+00:15:55,600 --> 00:15:59,278
+to run bigger experiments before they
+
+439
+00:15:57,360 --> 00:16:01,440
+can make further breakthroughs. As to
+
+440
+00:15:59,278 --> 00:16:04,078
+which one will actually happen, I think
+
+441
+00:16:01,440 --> 00:16:06,800
+it's basically a coin toss. If rest, I'd
+
+442
+00:16:04,078 --> 00:16:09,198
+give a 50% chance to the spark scenario
+
+443
+00:16:06,799 --> 00:16:11,278
+and a 50% chance to the software only
+
+444
+00:16:09,198 --> 00:16:12,879
+singularity. But to be clear, even in
+
+445
+00:16:11,278 --> 00:16:14,799
+this spark scenario where we make
+
+446
+00:16:12,879 --> 00:16:16,320
+something like 4 years of progress in
+
+447
+00:16:14,799 --> 00:16:19,039
+the first calendar year after we
+
+448
+00:16:16,320 --> 00:16:22,639
+automate AI research, things would feel
+
+449
+00:16:19,039 --> 00:16:26,559
+insane. That's a jump as big as GPT 3.5
+
+450
+00:16:22,639 --> 00:16:28,320
+to GPT6 Astra in just 12 months. To
+
+451
+00:16:26,559 --> 00:16:31,119
+remind you of the scale of progress that
+
+452
+00:16:28,320 --> 00:16:33,360
+this leap would compress, GBT3.5 was
+
+453
+00:16:31,120 --> 00:16:35,278
+able to write a passable limmerick and
+
+454
+00:16:33,360 --> 00:16:37,120
+autocomplete a trivial Python function,
+
+455
+00:16:35,278 --> 00:16:39,679
+but otherwise it was mostly a useless
+
+456
+00:16:37,120 --> 00:16:42,000
+toy. Whereas Astra can build whole video
+
+457
+00:16:39,679 --> 00:16:43,599
+games from scratch and turns out so many
+
+458
+00:16:42,000 --> 00:16:45,519
+fields medal worthy mathematical
+
+459
+00:16:43,600 --> 00:16:47,839
+contributions that we become totally
+
+460
+00:16:45,519 --> 00:16:50,240
+desensitized. In the last four years,
+
+461
+00:16:47,839 --> 00:16:52,639
+we've gone from a preschooler to a
+
+462
+00:16:50,240 --> 00:16:56,799
+savant intern. If you made another jump
+
+463
+00:16:52,639 --> 00:16:58,639
+that big, but starting in 2027 or 2028,
+
+464
+00:16:56,799 --> 00:17:01,278
+you'd probably get a mine which would be
+
+465
+00:16:58,639 --> 00:17:03,440
+vastly superhuman in domains that are
+
+466
+00:17:01,278 --> 00:17:05,279
+even slightly verifiable. For example,
+
+467
+00:17:03,440 --> 00:17:06,880
+it'd be better than Nvidia at coming up
+
+468
+00:17:05,279 --> 00:17:09,038
+with the next generation of AI
+
+469
+00:17:06,880 --> 00:17:10,559
+accelerators. It would make more money
+
+470
+00:17:09,038 --> 00:17:12,318
+than the current human versions of
+
+471
+00:17:10,558 --> 00:17:14,160
+Citadel and Jane Street if it was given
+
+472
+00:17:12,318 --> 00:17:16,000
+equal access to the market. If you give
+
+473
+00:17:14,160 --> 00:17:17,839
+it remote access to a material science
+
+474
+00:17:16,000 --> 00:17:19,439
+experiment lab, you'd be better than the
+
+475
+00:17:17,838 --> 00:17:22,639
+rest of humanity at finding a room
+
+476
+00:17:19,439 --> 00:17:22,640
+temperature superconductor.
+
+477
+00:17:24,160 --> 00:17:28,319
+Now at this point you might say how will
+
+478
+00:17:26,480 --> 00:17:30,880
+even super intelligence which is trained
+
+479
+00:17:28,318 --> 00:17:33,119
+in a data center beat human experts in
+
+480
+00:17:30,880 --> 00:17:35,440
+domains where the basis of that human
+
+481
+00:17:33,119 --> 00:17:37,599
+expertise is years and years of
+
+482
+00:17:35,440 --> 00:17:39,440
+realworld experience. The way we're
+
+483
+00:17:37,599 --> 00:17:41,599
+currently making AI smarter is by
+
+484
+00:17:39,440 --> 00:17:43,759
+rlinging them on tasks that are easy to
+
+485
+00:17:41,599 --> 00:17:45,678
+automatically grade from within a data
+
+486
+00:17:43,759 --> 00:17:47,440
+center. For example, do the million new
+
+487
+00:17:45,679 --> 00:17:49,440
+lines of code that the AI wrote pass all
+
+488
+00:17:47,440 --> 00:17:51,919
+the unit tests? Did the AI solve more
+
+489
+00:17:49,440 --> 00:17:53,679
+open math problems? But of course, most
+
+490
+00:17:51,919 --> 00:17:55,600
+of the world is not like this. I made
+
+491
+00:17:53,679 --> 00:17:57,440
+this point in a recent essay. How would
+
+492
+00:17:55,599 --> 00:17:59,199
+we train an AI to get really good at
+
+493
+00:17:57,440 --> 00:18:01,200
+building a business from scratch? How
+
+494
+00:17:59,200 --> 00:18:02,960
+about winning court cases or having a
+
+495
+00:18:01,200 --> 00:18:05,120
+profitable day of trading in the markets
+
+496
+00:18:02,960 --> 00:18:06,960
+or helping a candidate win an election?
+
+497
+00:18:05,119 --> 00:18:08,959
+The roll out here requires interacting
+
+498
+00:18:06,960 --> 00:18:10,880
+with the real world, and you can't
+
+499
+00:18:08,960 --> 00:18:13,038
+recreate it from just within a data
+
+500
+00:18:10,880 --> 00:18:14,799
+center. So, how will super intelligence
+
+501
+00:18:13,038 --> 00:18:16,558
+get good at this kind of stuff? Well,
+
+502
+00:18:14,798 --> 00:18:19,038
+let me be clear. I don't think we can
+
+503
+00:18:16,558 --> 00:18:21,759
+just bake the answer to every real world
+
+504
+00:18:19,038 --> 00:18:23,919
+problem into the weights. Rather, my
+
+505
+00:18:21,759 --> 00:18:26,960
+claim is that scaling up RL training
+
+506
+00:18:23,919 --> 00:18:29,679
+will give AIS the abilities necessary to
+
+507
+00:18:26,960 --> 00:18:31,519
+ramp up quickly in new contexts, even in
+
+508
+00:18:29,679 --> 00:18:33,519
+hard to verify domains like the ones
+
+509
+00:18:31,519 --> 00:18:36,160
+mentioned above. Getting really good at
+
+510
+00:18:33,519 --> 00:18:38,480
+any complex task requires two things.
+
+511
+00:18:36,160 --> 00:18:41,038
+One is domain specific knowledge and the
+
+512
+00:18:38,480 --> 00:18:43,519
+other is a more general set of skills.
+
+513
+00:18:41,038 --> 00:18:45,759
+the kind of capabilities that capable
+
+514
+00:18:43,519 --> 00:18:48,319
+humans have, like being able to seek out
+
+515
+00:18:45,759 --> 00:18:50,000
+relevant information, make a plan, push
+
+516
+00:18:48,319 --> 00:18:52,000
+forward on that plan through mistakes
+
+517
+00:18:50,000 --> 00:18:53,599
+and obstacles, keep track of what you've
+
+518
+00:18:52,000 --> 00:18:56,640
+learned, and collaborate with other
+
+519
+00:18:53,599 --> 00:18:58,798
+people. During RSI, automated engineers
+
+520
+00:18:56,640 --> 00:19:00,799
+will build tens of thousands of times
+
+521
+00:18:58,798 --> 00:19:02,960
+more RL environments than we have
+
+522
+00:19:00,798 --> 00:19:05,519
+currently. And these will be far larger
+
+523
+00:19:02,960 --> 00:19:07,840
+and longer running and higher quality
+
+524
+00:19:05,519 --> 00:19:10,400
+and more open-ended and covering a much
+
+525
+00:19:07,839 --> 00:19:12,319
+wider range than today's environments.
+
+526
+00:19:10,400 --> 00:19:15,120
+The AIS will learn to make their way
+
+527
+00:19:12,319 --> 00:19:17,519
+through unfathomable amounts of virtual
+
+528
+00:19:15,119 --> 00:19:19,759
+worlds that are each to today's video
+
+529
+00:19:17,519 --> 00:19:21,679
+games what a Bugatti is to a horse and
+
+530
+00:19:19,759 --> 00:19:24,160
+buggy. These games will be far more
+
+531
+00:19:21,679 --> 00:19:25,919
+difficult and messy and sprawling and
+
+532
+00:19:24,160 --> 00:19:27,840
+realistic than anything that has ever
+
+533
+00:19:25,919 --> 00:19:30,720
+been made for human entertainment. They
+
+534
+00:19:27,839 --> 00:19:32,720
+will require AIS to cooperate or compete
+
+535
+00:19:30,720 --> 00:19:34,880
+with teams of other AIs over long
+
+536
+00:19:32,720 --> 00:19:36,079
+periods of time. For example, an AI
+
+537
+00:19:34,880 --> 00:19:38,720
+might be dropped into a simulated
+
+538
+00:19:36,079 --> 00:19:40,558
+economy of millions of other AIs and
+
+539
+00:19:38,720 --> 00:19:41,919
+told to co-found a successful company.
+
+540
+00:19:40,558 --> 00:19:43,359
+And it's not like the AI will be stuck
+
+541
+00:19:41,919 --> 00:19:44,960
+just thinking about the ideal corporate
+
+542
+00:19:43,359 --> 00:19:46,639
+structure. It'll go through an
+
+543
+00:19:44,960 --> 00:19:48,720
+evolutionary process that involves
+
+544
+00:19:46,640 --> 00:19:50,480
+centuries of corporate competition to
+
+545
+00:19:48,720 --> 00:19:52,558
+figure out the optimal organizational
+
+546
+00:19:50,480 --> 00:19:54,960
+techniques. The AI will also train
+
+547
+00:19:52,558 --> 00:19:57,038
+themselves on endless back tests of
+
+548
+00:19:54,960 --> 00:19:59,759
+everything in the history of science and
+
+549
+00:19:57,038 --> 00:20:03,359
+tech and politics and culture. every
+
+550
+00:19:59,759 --> 00:20:04,960
+discovery, invention, war, election, and
+
+551
+00:20:03,359 --> 00:20:06,558
+quarterly earning that has ever
+
+552
+00:20:04,960 --> 00:20:08,480
+happened. For example, here's one
+
+553
+00:20:06,558 --> 00:20:10,319
+prediction training task. Can the AI
+
+554
+00:20:08,480 --> 00:20:12,240
+figure out general relativity given a
+
+555
+00:20:10,319 --> 00:20:14,720
+training corpus that includes no
+
+556
+00:20:12,240 --> 00:20:16,880
+information beyond 1700, which is far
+
+557
+00:20:14,720 --> 00:20:19,519
+earlier than any human was on track to
+
+558
+00:20:16,880 --> 00:20:21,200
+discover GR? Another task might be,
+
+559
+00:20:19,519 --> 00:20:24,160
+given every single newspaper article
+
+560
+00:20:21,200 --> 00:20:25,919
+until 1962, can AI predict how the Cuban
+
+561
+00:20:24,160 --> 00:20:27,360
+missile crisis is going to unfold? And
+
+562
+00:20:25,919 --> 00:20:28,799
+it's not just the training data that
+
+563
+00:20:27,359 --> 00:20:30,558
+these automated researchers will be
+
+564
+00:20:28,798 --> 00:20:32,319
+improving. They will also radically
+
+565
+00:20:30,558 --> 00:20:34,558
+improve the basic learning algorithms
+
+566
+00:20:32,319 --> 00:20:36,720
+themselves through breakthroughs in
+
+567
+00:20:34,558 --> 00:20:38,639
+online learning and sample efficiency,
+
+568
+00:20:36,720 --> 00:20:40,558
+both of which have verifiable proxies,
+
+569
+00:20:38,640 --> 00:20:43,440
+as I'll discuss later. In the same way
+
+570
+00:20:40,558 --> 00:20:45,599
+that humans are much more efficient and
+
+571
+00:20:43,440 --> 00:20:48,720
+effective at learning from data than
+
+572
+00:20:45,599 --> 00:20:51,199
+current LLMs are, future AIs could be
+
+573
+00:20:48,720 --> 00:20:53,120
+far beyond humans at their learning
+
+574
+00:20:51,200 --> 00:20:55,279
+efficiency. Now, why do I think we'll
+
+575
+00:20:53,119 --> 00:20:57,439
+see lots of transfer from verifiable
+
+576
+00:20:55,279 --> 00:20:59,839
+tasks to these more general skills?
+
+577
+00:20:57,440 --> 00:21:02,720
+Well, one reason is that even at 1
+
+578
+00:20:59,839 --> 00:21:04,480
+10,000th or a millionth of the scale of
+
+579
+00:21:02,720 --> 00:21:06,400
+RL trading that will be happening during
+
+580
+00:21:04,480 --> 00:21:08,480
+the intelligence explosion, we're
+
+581
+00:21:06,400 --> 00:21:10,720
+already seeing lots of generalization.
+
+582
+00:21:08,480 --> 00:21:12,480
+If you point clot code or codeex at a
+
+583
+00:21:10,720 --> 00:21:14,079
+project that it's never seen before, it
+
+584
+00:21:12,480 --> 00:21:15,679
+knows how to orient itself and figure
+
+585
+00:21:14,079 --> 00:21:17,759
+out how everything fits together and
+
+586
+00:21:15,679 --> 00:21:19,120
+then tackle an ambitious assignment. Of
+
+587
+00:21:17,759 --> 00:21:20,558
+course, it's hard to measure how much
+
+588
+00:21:19,119 --> 00:21:22,558
+models have improved at tasks that are
+
+589
+00:21:20,558 --> 00:21:25,119
+not easily verifiable because if we
+
+590
+00:21:22,558 --> 00:21:26,798
+could, those tasks would be verifiable.
+
+591
+00:21:25,119 --> 00:21:28,639
+But you can just go talk to a new model
+
+592
+00:21:26,798 --> 00:21:30,558
+and compare it to an old one. In my
+
+593
+00:21:28,640 --> 00:21:32,320
+experience, AIS have gotten much better
+
+594
+00:21:30,558 --> 00:21:34,879
+at things that have very little to do
+
+595
+00:21:32,319 --> 00:21:36,798
+with code or math. For example, helping
+
+596
+00:21:34,880 --> 00:21:38,559
+me research the abstract questions I
+
+597
+00:21:36,798 --> 00:21:40,158
+needed to answer while writing this
+
+598
+00:21:38,558 --> 00:21:42,720
+essay. The other big piece of evidence
+
+599
+00:21:40,159 --> 00:21:44,480
+for transfer is human evolution. Our
+
+600
+00:21:42,720 --> 00:21:46,880
+general purpose mental architecture was
+
+601
+00:21:44,480 --> 00:21:48,720
+developed by evolution. And evolution is
+
+602
+00:21:46,880 --> 00:21:51,520
+an optimization process with a really
+
+603
+00:21:48,720 --> 00:21:53,839
+crude verifier. Did your genes pass on
+
+604
+00:21:51,519 --> 00:21:55,839
+or not? In the ancestral environment,
+
+605
+00:21:53,839 --> 00:21:58,158
+the tasks which influence that outcome
+
+606
+00:21:55,839 --> 00:22:00,000
+were things like hunting and fending off
+
+607
+00:21:58,159 --> 00:22:02,799
+predators and keeping your standing in
+
+608
+00:22:00,000 --> 00:22:04,880
+your tribe. These are a tiny subset of
+
+609
+00:22:02,798 --> 00:22:06,960
+the kinds of tasks that humans are able
+
+610
+00:22:04,880 --> 00:22:08,720
+to tackle today. Evolution did not
+
+611
+00:22:06,960 --> 00:22:10,880
+specifically optimize us to be able to
+
+612
+00:22:08,720 --> 00:22:13,440
+write a Pulitzer Prizewinning biography
+
+613
+00:22:10,880 --> 00:22:15,440
+or make advanced semiconductors or lead
+
+614
+00:22:13,440 --> 00:22:17,759
+nations of millions of people or come up
+
+615
+00:22:15,440 --> 00:22:19,440
+with a new branch of mathematics. But in
+
+616
+00:22:17,759 --> 00:22:22,240
+optimizing us for survival on the
+
+617
+00:22:19,440 --> 00:22:24,400
+savannah evolution built a general
+
+618
+00:22:22,240 --> 00:22:26,400
+purpose learner. And in training these
+
+619
+00:22:24,400 --> 00:22:28,880
+AIs, we're running a similar process
+
+620
+00:22:26,400 --> 00:22:31,120
+except we're doing so deliberately with
+
+621
+00:22:28,880 --> 00:22:33,039
+tasks that are much more closely related
+
+622
+00:22:31,119 --> 00:22:36,000
+to the ones that are needed for success
+
+623
+00:22:33,038 --> 00:22:38,798
+in today's world. And unlike evolution,
+
+624
+00:22:36,000 --> 00:22:40,640
+AI companies are trying to improve
+
+625
+00:22:38,798 --> 00:22:42,400
+transfer during training. For example,
+
+626
+00:22:40,640 --> 00:22:44,400
+by making sure that performance improves
+
+627
+00:22:42,400 --> 00:22:47,120
+on difficult tasks that were held out of
+
+628
+00:22:44,400 --> 00:22:49,200
+training. If even dumb blind evolution
+
+629
+00:22:47,119 --> 00:22:51,199
+can get this much transfer out of
+
+630
+00:22:49,200 --> 00:22:53,200
+building a mind that is effective at
+
+631
+00:22:51,200 --> 00:22:55,038
+propagating itself in the savannah, then
+
+632
+00:22:53,200 --> 00:22:57,279
+the deliberate effort that AI companies
+
+633
+00:22:55,038 --> 00:22:59,359
+are putting into building a flexible and
+
+634
+00:22:57,279 --> 00:23:01,918
+general intelligence that can rapidly
+
+635
+00:22:59,359 --> 00:23:03,918
+ramp up in new contexts should advance
+
+636
+00:23:01,919 --> 00:23:05,600
+much further. Now, even a super
+
+637
+00:23:03,919 --> 00:23:07,360
+intelligent learner can't figure out
+
+638
+00:23:05,599 --> 00:23:09,678
+everything from inside a data center.
+
+639
+00:23:07,359 --> 00:23:11,599
+So, even these AIs would need some real
+
+640
+00:23:09,679 --> 00:23:13,120
+world experience before they can beat
+
+641
+00:23:11,599 --> 00:23:14,959
+the best humans. But I think they'll be
+
+642
+00:23:13,119 --> 00:23:16,558
+able to get that experience much faster
+
+643
+00:23:14,960 --> 00:23:18,640
+than people expect. And that they'll be
+
+644
+00:23:16,558 --> 00:23:20,399
+able to beat top human experts within
+
+645
+00:23:18,640 --> 00:23:21,440
+months of being deployed. And honestly,
+
+646
+00:23:20,400 --> 00:23:23,200
+one of the things that's guiding my
+
+647
+00:23:21,440 --> 00:23:24,798
+intuition here is that I have a lot of
+
+648
+00:23:23,200 --> 00:23:27,440
+20something year old friends who I've
+
+649
+00:23:24,798 --> 00:23:29,119
+watched accomplish incredible things and
+
+650
+00:23:27,440 --> 00:23:30,880
+build worldleading companies and
+
+651
+00:23:29,119 --> 00:23:33,038
+ventures in domains that they entered
+
+652
+00:23:30,880 --> 00:23:35,280
+into with basically zero years of
+
+653
+00:23:33,038 --> 00:23:37,119
+experience. History is full of super
+
+654
+00:23:35,279 --> 00:23:38,240
+competent young people who ran circles
+
+655
+00:23:37,119 --> 00:23:40,239
+around the world that they found
+
+656
+00:23:38,240 --> 00:23:42,079
+themselves in. By the age of 27,
+
+657
+00:23:40,240 --> 00:23:44,558
+Napoleon had stacked victory after
+
+658
+00:23:42,079 --> 00:23:47,199
+victory against far larger armies from
+
+659
+00:23:44,558 --> 00:23:49,119
+the other great powers of Europe. By 25,
+
+660
+00:23:47,200 --> 00:23:51,200
+just two years after he got into the oil
+
+661
+00:23:49,119 --> 00:23:53,359
+business, Rockefeller was running one of
+
+662
+00:23:51,200 --> 00:23:55,200
+the world's largest refineries.
+
+663
+00:23:53,359 --> 00:23:57,839
+Rockefeller and Napoleon needed
+
+664
+00:23:55,200 --> 00:24:00,080
+experience, yes, but only a couple years
+
+665
+00:23:57,839 --> 00:24:02,158
+worth, not decades. And whatever was
+
+666
+00:24:00,079 --> 00:24:04,399
+going on inside these guys' brains, an
+
+667
+00:24:02,159 --> 00:24:06,559
+AI should be able to replicate or even
+
+668
+00:24:04,400 --> 00:24:08,400
+exceed. There's no reason to think that
+
+669
+00:24:06,558 --> 00:24:10,558
+humans are at the ceiling of learning
+
+670
+00:24:08,400 --> 00:24:12,960
+quickly from experience. Furthermore,
+
+671
+00:24:10,558 --> 00:24:15,200
+unlike Napoleon or Rockefeller, AI can
+
+672
+00:24:12,960 --> 00:24:17,200
+accumulate years of deployed context in
+
+673
+00:24:15,200 --> 00:24:18,880
+just a few days of calendar time. For
+
+674
+00:24:17,200 --> 00:24:21,519
+example, imagine that you wanted these
+
+675
+00:24:18,880 --> 00:24:23,520
+future AIs to run a Fortune 500 company
+
+676
+00:24:21,519 --> 00:24:25,599
+better than its current CEO. How quickly
+
+677
+00:24:23,519 --> 00:24:27,599
+could the AI ramp up at the job? Well,
+
+678
+00:24:25,599 --> 00:24:29,519
+if you let it shadow that CEO on its
+
+679
+00:24:27,599 --> 00:24:31,839
+first morning, it could read every email
+
+680
+00:24:29,519 --> 00:24:33,599
+and Slack message and document that the
+
+681
+00:24:31,839 --> 00:24:35,519
+company has ever produced. By the end of
+
+682
+00:24:33,599 --> 00:24:37,519
+its first day, copies of it have
+
+683
+00:24:35,519 --> 00:24:39,200
+interviewed every employee and major
+
+684
+00:24:37,519 --> 00:24:40,400
+client in parallel. Obviously, they
+
+685
+00:24:39,200 --> 00:24:41,919
+wouldn't have access to feedback that
+
+686
+00:24:40,400 --> 00:24:44,480
+arrives after many months of serial
+
+687
+00:24:41,919 --> 00:24:46,720
+time. For example, how well they did on
+
+688
+00:24:44,480 --> 00:24:48,720
+the next quarterly earnings. But even
+
+689
+00:24:46,720 --> 00:24:51,519
+given these kinds of bottlenecks, we
+
+690
+00:24:48,720 --> 00:24:53,360
+should expect these future postspark AIs
+
+691
+00:24:51,519 --> 00:24:55,759
+to be able to get to top human
+
+692
+00:24:53,359 --> 00:24:58,319
+performance in all domains within months
+
+693
+00:24:55,759 --> 00:25:01,200
+of being developed. There's still 2028
+
+694
+00:24:58,319 --> 00:25:03,519
+or 2029 in this median scenario. And
+
+695
+00:25:01,200 --> 00:25:05,600
+remember, even in this spark scenario,
+
+696
+00:25:03,519 --> 00:25:07,679
+all of this happens in just the first
+
+697
+00:25:05,599 --> 00:25:10,000
+year or two after AI research is fully
+
+698
+00:25:07,679 --> 00:25:11,759
+automated. Things don't just stop there
+
+699
+00:25:10,000 --> 00:25:14,319
+because even if the software progress
+
+700
+00:25:11,759 --> 00:25:16,480
+peters out, AIS will continue stoking
+
+701
+00:25:14,319 --> 00:25:19,038
+the fire by adding more and more
+
+702
+00:25:16,480 --> 00:25:20,558
+compute. Even without help from AIS,
+
+703
+00:25:19,038 --> 00:25:22,798
+global AI compute has been growing
+
+704
+00:25:20,558 --> 00:25:24,960
+roughly 3x a year for the last half
+
+705
+00:25:22,798 --> 00:25:27,519
+decade. And the AIs that come out of the
+
+706
+00:25:24,960 --> 00:25:29,519
+spark will be jaggedly superhuman at
+
+707
+00:25:27,519 --> 00:25:31,200
+helping us continue scaling up this
+
+708
+00:25:29,519 --> 00:25:33,519
+compute. They'll be extremely good at
+
+709
+00:25:31,200 --> 00:25:35,519
+designing new AI chips and laying out
+
+710
+00:25:33,519 --> 00:25:37,599
+the designs of new fabs, even
+
+711
+00:25:35,519 --> 00:25:39,759
+teleoperating robots to help build parts
+
+712
+00:25:37,599 --> 00:25:42,158
+of fabs and data centers. So in the
+
+713
+00:25:39,759 --> 00:25:44,158
+Spark scenario, AI capabilities continue
+
+714
+00:25:42,159 --> 00:25:46,159
+to improve. But because their progress
+
+715
+00:25:44,159 --> 00:25:48,880
+is driven by building more chips and
+
+716
+00:25:46,159 --> 00:25:51,120
+data centers and robots, it takes years
+
+717
+00:25:48,880 --> 00:25:52,960
+to get to the same end point that the
+
+718
+00:25:51,119 --> 00:25:55,519
+software only singularity would have
+
+719
+00:25:52,960 --> 00:25:58,319
+achieved in months, which is a super
+
+720
+00:25:55,519 --> 00:26:02,158
+intelligence that is to us what we are
+
+721
+00:25:58,319 --> 00:26:04,158
+to chimps. appendix.
+
+722
+00:26:02,159 --> 00:26:06,480
+So earlier I promised to explain why I
+
+723
+00:26:04,159 --> 00:26:08,320
+think AI research is largely verifiable.
+
+724
+00:26:06,480 --> 00:26:09,759
+So that's where I'll start. After that
+
+725
+00:26:08,319 --> 00:26:11,599
+I'll go through what I think are the
+
+726
+00:26:09,759 --> 00:26:13,519
+strongest objections to my arguments
+
+727
+00:26:11,599 --> 00:26:15,918
+about RSI. Now one thing I want to call
+
+728
+00:26:13,519 --> 00:26:17,359
+out at the very top is that because both
+
+729
+00:26:15,919 --> 00:26:18,880
+pre-training and post- training are
+
+730
+00:26:17,359 --> 00:26:21,439
+verifiable and I'll make my argument for
+
+731
+00:26:18,880 --> 00:26:23,440
+why later. So is progress on what is the
+
+732
+00:26:21,440 --> 00:26:25,919
+most gling and important efficiency that
+
+733
+00:26:23,440 --> 00:26:28,000
+AIs have against humans. Namely their
+
+734
+00:26:25,919 --> 00:26:30,000
+lack of sample efficiency. If you want a
+
+735
+00:26:28,000 --> 00:26:32,640
+neural network to gain some capability,
+
+736
+00:26:30,000 --> 00:26:34,640
+you have to feed it far more data than
+
+737
+00:26:32,640 --> 00:26:37,038
+it would take a human to learn the exact
+
+738
+00:26:34,640 --> 00:26:39,200
+same thing. But every kind of sample
+
+739
+00:26:37,038 --> 00:26:40,798
+efficiency is measurable. For example,
+
+740
+00:26:39,200 --> 00:26:42,798
+you can measure how much data it takes
+
+741
+00:26:40,798 --> 00:26:44,798
+to reach a given pre-training loss or
+
+742
+00:26:42,798 --> 00:26:47,278
+how many tasks it takes to reach a given
+
+743
+00:26:44,798 --> 00:26:49,679
+score in an RL environment or even how
+
+744
+00:26:47,278 --> 00:26:52,000
+much feedback and time within a single
+
+745
+00:26:49,679 --> 00:26:54,240
+session it takes to reach a desired
+
+746
+00:26:52,000 --> 00:26:56,400
+level of performance just from incontext
+
+747
+00:26:54,240 --> 00:26:58,159
+learning. Sample efficiency and online
+
+748
+00:26:56,400 --> 00:27:00,400
+learning are really two sides of the
+
+749
+00:26:58,159 --> 00:27:03,120
+same problem, which is how to learn from
+
+750
+00:27:00,400 --> 00:27:05,519
+real world data quickly and efficiently.
+
+751
+00:27:03,119 --> 00:27:07,678
+For decades, people have recognized this
+
+752
+00:27:05,519 --> 00:27:09,839
+as the deepest open problem in machine
+
+753
+00:27:07,679 --> 00:27:11,679
+learning. AI is equivalent of a
+
+754
+00:27:09,839 --> 00:27:14,079
+millennium prize problem. And
+
+755
+00:27:11,679 --> 00:27:16,400
+mathematics has already shown us what
+
+756
+00:27:14,079 --> 00:27:18,480
+happens to such problems, even when they
+
+757
+00:27:16,400 --> 00:27:21,038
+are very difficult, as long as they are
+
+758
+00:27:18,480 --> 00:27:22,558
+verifiable. Okay, now let's get to why I
+
+759
+00:27:21,038 --> 00:27:25,038
+think that AI progress is largely
+
+760
+00:27:22,558 --> 00:27:27,278
+verifiable. Why progress on sample
+
+761
+00:27:25,038 --> 00:27:29,839
+efficiency or online learning or the
+
+762
+00:27:27,278 --> 00:27:32,000
+other problems in ML is captured by
+
+763
+00:27:29,839 --> 00:27:35,119
+verifiable proxies. There are roughly
+
+764
+00:27:32,000 --> 00:27:37,200
+three broad buckets of AI R&D.
+
+765
+00:27:35,119 --> 00:27:39,278
+Pre-training, post-training, and
+
+766
+00:27:37,200 --> 00:27:41,759
+inference efficiency. And as I'll
+
+767
+00:27:39,278 --> 00:27:44,240
+explain, each has strong verifiable
+
+768
+00:27:41,759 --> 00:27:47,119
+proxies that are easy to train against.
+
+769
+00:27:44,240 --> 00:27:49,359
+And since together these comprise all of
+
+770
+00:27:47,119 --> 00:27:51,119
+algorithmic progress, that means that AI
+
+771
+00:27:49,359 --> 00:27:52,879
+progress in general is easy to train
+
+772
+00:27:51,119 --> 00:27:55,439
+against, which in some sense shouldn't
+
+773
+00:27:52,880 --> 00:27:56,640
+be that surprising because we can make
+
+774
+00:27:55,440 --> 00:27:58,558
+models better at things that can be
+
+775
+00:27:56,640 --> 00:28:00,640
+tested inside a data center. And AI
+
+776
+00:27:58,558 --> 00:28:02,480
+training is literally happening inside a
+
+777
+00:28:00,640 --> 00:28:04,640
+data center. As we talk about these
+
+778
+00:28:02,480 --> 00:28:06,880
+proxies, you should keep in mind that
+
+779
+00:28:04,640 --> 00:28:09,278
+verifiability is valuable for two
+
+780
+00:28:06,880 --> 00:28:12,320
+reasons. So first, it allows AI
+
+781
+00:28:09,278 --> 00:28:14,159
+companies to directly RL a model to get
+
+782
+00:28:12,319 --> 00:28:16,639
+better at the specific parts of AI
+
+783
+00:28:14,159 --> 00:28:18,320
+research through thousands of rounds of
+
+784
+00:28:16,640 --> 00:28:20,080
+practice. But the second reason
+
+785
+00:28:18,319 --> 00:28:23,678
+verifiability is important is that these
+
+786
+00:28:20,079 --> 00:28:26,798
+proxies allow each agent to empirically
+
+787
+00:28:23,679 --> 00:28:28,960
+check whether they've beaten some score
+
+788
+00:28:26,798 --> 00:28:31,200
+on a leaderboard before they merge their
+
+789
+00:28:28,960 --> 00:28:33,600
+contributions. And so they can work much
+
+790
+00:28:31,200 --> 00:28:35,200
+more effectively in parallel. Okay, so
+
+791
+00:28:33,599 --> 00:28:37,759
+with that in mind, let's start by
+
+792
+00:28:35,200 --> 00:28:40,798
+talking about pre-training. So as you're
+
+793
+00:28:37,759 --> 00:28:42,640
+building GPT7, you can RL that model to
+
+794
+00:28:40,798 --> 00:28:45,038
+get better at finding pre-training
+
+795
+00:28:42,640 --> 00:28:47,520
+compute multipliers. For example, you
+
+796
+00:28:45,038 --> 00:28:50,158
+can make an RL objective that GPD7 has
+
+797
+00:28:47,519 --> 00:28:52,960
+to minimize how much compute it uses to
+
+798
+00:28:50,159 --> 00:28:55,360
+train a GPT2 size model to a fixed free
+
+799
+00:28:52,960 --> 00:28:57,840
+training class. And once GPD7 is built,
+
+800
+00:28:55,359 --> 00:29:00,079
+you can now deploy this model or a swarm
+
+801
+00:28:57,839 --> 00:29:03,599
+of these models to figure out how to
+
+802
+00:29:00,079 --> 00:29:06,079
+train a GPT3 size model to the lowest
+
+803
+00:29:03,599 --> 00:29:08,319
+possible perplexity. And this is because
+
+804
+00:29:06,079 --> 00:29:10,558
+loss on a heldout test set which is the
+
+805
+00:29:08,319 --> 00:29:13,119
+basis of free training research is
+
+806
+00:29:10,558 --> 00:29:14,558
+extremely easy to verify. Of course,
+
+807
+00:29:13,119 --> 00:29:16,239
+what works at small scale doesn't
+
+808
+00:29:14,558 --> 00:29:18,879
+necessarily work at large scale and
+
+809
+00:29:16,240 --> 00:29:21,200
+requires taste to anticipate exactly
+
+810
+00:29:18,880 --> 00:29:22,559
+which smallcale improvements will
+
+811
+00:29:21,200 --> 00:29:25,278
+actually bear fruit when they're
+
+812
+00:29:22,558 --> 00:29:26,960
+composed together in a bigger model. But
+
+813
+00:29:25,278 --> 00:29:28,798
+this kind of intuition is also
+
+814
+00:29:26,960 --> 00:29:31,759
+trainable. For example, you can make an
+
+815
+00:29:28,798 --> 00:29:33,440
+RL environment where GPD7 has to predict
+
+816
+00:29:31,759 --> 00:29:35,519
+whether an algorithmic improvement that
+
+817
+00:29:33,440 --> 00:29:37,679
+it made at the 100 million parameter
+
+818
+00:29:35,519 --> 00:29:40,240
+scale will also hold at the 10 billion
+
+819
+00:29:37,679 --> 00:29:41,840
+parameter scale. And while this taste
+
+820
+00:29:40,240 --> 00:29:44,640
+bench environment is more expensive to
+
+821
+00:29:41,839 --> 00:29:46,720
+RI on than the nano GPT speedrun, it's
+
+822
+00:29:44,640 --> 00:29:49,360
+still not that difficult to train on if
+
+823
+00:29:46,720 --> 00:29:51,360
+you have frontier lab scale compute. So
+
+824
+00:29:49,359 --> 00:29:52,959
+even important parts of research tastes
+
+825
+00:29:51,359 --> 00:29:54,959
+are verifiable. And if you just
+
+826
+00:29:52,960 --> 00:29:57,120
+automated pre-training, you'd already
+
+827
+00:29:54,960 --> 00:29:59,519
+radically speed up AI progress. And
+
+828
+00:29:57,119 --> 00:30:01,759
+there's a couple of reasons why. First
+
+829
+00:29:59,519 --> 00:30:03,679
+is that pre-training leads to very
+
+830
+00:30:01,759 --> 00:30:05,599
+general improvements in the model's
+
+831
+00:30:03,679 --> 00:30:07,440
+intelligence and capabilities. And
+
+832
+00:30:05,599 --> 00:30:09,599
+there's a deep explanation for why this
+
+833
+00:30:07,440 --> 00:30:11,360
+is true, which has to do with the link
+
+834
+00:30:09,599 --> 00:30:12,398
+between compression and intelligence.
+
+835
+00:30:11,359 --> 00:30:13,759
+And if you want to learn more about
+
+836
+00:30:12,398 --> 00:30:15,519
+this, by the way, I highly recommend
+
+837
+00:30:13,759 --> 00:30:17,359
+this excellent video by three blue one
+
+838
+00:30:15,519 --> 00:30:19,440
+brown on the topic that I'll link to
+
+839
+00:30:17,359 --> 00:30:21,038
+below. And the second reason is that as
+
+840
+00:30:19,440 --> 00:30:23,038
+you make pre-training improvements, you
+
+841
+00:30:21,038 --> 00:30:24,960
+can now train a smaller and smaller
+
+842
+00:30:23,038 --> 00:30:26,720
+model that is just as good as a
+
+843
+00:30:24,960 --> 00:30:29,120
+previously larger model, but which
+
+844
+00:30:26,720 --> 00:30:31,200
+trains faster and more cheaply. And this
+
+845
+00:30:29,119 --> 00:30:33,599
+not only speeds up pre-training, but it
+
+846
+00:30:31,200 --> 00:30:36,319
+also means that your experiments and RL
+
+847
+00:30:33,599 --> 00:30:38,558
+rollouts at top this base model are now
+
+848
+00:30:36,319 --> 00:30:40,639
+more efficient. And since your automated
+
+849
+00:30:38,558 --> 00:30:42,639
+researchers are just instantiations of
+
+850
+00:30:40,640 --> 00:30:44,399
+this now smaller model, you can now
+
+851
+00:30:42,640 --> 00:30:46,640
+support larger researcher populations,
+
+852
+00:30:44,398 --> 00:30:48,639
+too. The third reason is that because
+
+853
+00:30:46,640 --> 00:30:50,720
+smaller models train faster, this
+
+854
+00:30:48,640 --> 00:30:53,038
+actually tightens the RSI loop itself.
+
+855
+00:30:50,720 --> 00:30:54,640
+During RSI, labs probably won't be doing
+
+856
+00:30:53,038 --> 00:30:56,079
+three monthlong pre-training runs that
+
+857
+00:30:54,640 --> 00:30:59,038
+are spread out across multiple data
+
+858
+00:30:56,079 --> 00:31:01,119
+center campuses. Instead, the army of
+
+859
+00:30:59,038 --> 00:31:03,440
+automated researchers will be finding
+
+860
+00:31:01,119 --> 00:31:05,678
+algorithmic innovations so quickly that
+
+861
+00:31:03,440 --> 00:31:07,759
+by the time that a giant run finished,
+
+862
+00:31:05,679 --> 00:31:09,840
+it would already have been made obsolete
+
+863
+00:31:07,759 --> 00:31:12,158
+by a much smaller model that first began
+
+864
+00:31:09,839 --> 00:31:14,000
+training only a week ago. It's similar
+
+865
+00:31:12,159 --> 00:31:16,320
+to how if you launch a spaceship to
+
+866
+00:31:14,000 --> 00:31:18,000
+Alpha Centator with today's technology,
+
+867
+00:31:16,319 --> 00:31:19,759
+it would probably be overtaken in
+
+868
+00:31:18,000 --> 00:31:21,679
+transit by one that was launched a
+
+869
+00:31:19,759 --> 00:31:23,440
+century from now. Furthermore, since
+
+870
+00:31:21,679 --> 00:31:25,120
+you're training smaller models faster
+
+871
+00:31:23,440 --> 00:31:27,278
+and on a scale where you can run
+
+872
+00:31:25,119 --> 00:31:29,278
+thousands of experiments daily, you
+
+873
+00:31:27,278 --> 00:31:31,200
+won't have to bet that small scale
+
+874
+00:31:29,278 --> 00:31:33,278
+results will hold up in bigger models,
+
+875
+00:31:31,200 --> 00:31:34,880
+you've already tested at the scale which
+
+876
+00:31:33,278 --> 00:31:36,798
+you'll be training at. Now, how much
+
+877
+00:31:34,880 --> 00:31:39,039
+better could base models get even at
+
+878
+00:31:36,798 --> 00:31:41,278
+today's parameter sizes? I think there's
+
+879
+00:31:39,038 --> 00:31:42,960
+probably a ton more potential. We are
+
+880
+00:31:41,278 --> 00:31:44,960
+far from the limits of pre-training. For
+
+881
+00:31:42,960 --> 00:31:46,798
+example, the AI lab magic recently
+
+882
+00:31:44,960 --> 00:31:48,159
+announced that they pre-trained a model
+
+883
+00:31:46,798 --> 00:31:50,398
+that matches the leading open
+
+884
+00:31:48,159 --> 00:31:52,480
+sourcebased models today like DeepSc V4
+
+885
+00:31:50,398 --> 00:31:55,119
+Pro for just half of the compute that
+
+886
+00:31:52,480 --> 00:31:57,679
+was used to train the original GBT3,
+
+887
+00:31:55,119 --> 00:31:59,518
+which would roughly cost $500,000 today.
+
+888
+00:31:57,679 --> 00:32:01,919
+Orders of magnitude further improvements
+
+889
+00:31:59,519 --> 00:32:03,519
+seem totally plausible. Now, let's talk
+
+890
+00:32:01,919 --> 00:32:05,200
+about post- training. There are three
+
+891
+00:32:03,519 --> 00:32:07,599
+different kinds of verifiable proxies
+
+892
+00:32:05,200 --> 00:32:09,440
+for post training. First, your automated
+
+893
+00:32:07,599 --> 00:32:11,439
+researchers can try to improve your
+
+894
+00:32:09,440 --> 00:32:12,960
+post- training algorithms such that if
+
+895
+00:32:11,440 --> 00:32:15,200
+you want to RL on a new set of
+
+896
+00:32:12,960 --> 00:32:17,600
+environments, it takes less compute or
+
+897
+00:32:15,200 --> 00:32:19,840
+data or time. All three of which are
+
+898
+00:32:17,599 --> 00:32:21,678
+easily measurable. Second, your
+
+899
+00:32:19,839 --> 00:32:23,678
+automated researchers can work on making
+
+900
+00:32:21,679 --> 00:32:25,278
+models better at learning on the fly.
+
+901
+00:32:23,679 --> 00:32:26,960
+And you can easily measure progress on
+
+902
+00:32:25,278 --> 00:32:28,720
+this. For example, you can measure if
+
+903
+00:32:26,960 --> 00:32:30,960
+you drop your model into an environment
+
+904
+00:32:28,720 --> 00:32:32,880
+that was never trained on, how quickly
+
+905
+00:32:30,960 --> 00:32:35,038
+does it learn what's going on and figure
+
+906
+00:32:32,880 --> 00:32:36,399
+out how to get a good score and how fast
+
+907
+00:32:35,038 --> 00:32:37,759
+does it get better at a video game that
+
+908
+00:32:36,398 --> 00:32:39,359
+it's never played before. And you can
+
+909
+00:32:37,759 --> 00:32:41,119
+have more real world examples of this
+
+910
+00:32:39,359 --> 00:32:42,398
+too. If you want to see what these could
+
+911
+00:32:41,119 --> 00:32:43,759
+look like, check out this great
+
+912
+00:32:42,398 --> 00:32:45,518
+benchmark that Bite Dance released
+
+913
+00:32:43,759 --> 00:32:48,480
+called Edgebench for these kinds of
+
+914
+00:32:45,519 --> 00:32:51,440
+tasks. And third, you can just measure
+
+915
+00:32:48,480 --> 00:32:53,038
+AI R&D capability directly. Enthropic,
+
+916
+00:32:51,440 --> 00:32:55,519
+for example, has this internal benchmark
+
+917
+00:32:53,038 --> 00:32:57,278
+called Coobch, which contains around 500
+
+918
+00:32:55,519 --> 00:32:59,278
+real problems that their researchers and
+
+919
+00:32:57,278 --> 00:33:01,038
+engineers have solved this year. And
+
+920
+00:32:59,278 --> 00:33:03,278
+every benchmark is also an RL
+
+921
+00:33:01,038 --> 00:33:05,359
+environment. And an RL environment like
+
+922
+00:33:03,278 --> 00:33:07,919
+this would allow Anthropic to have their
+
+923
+00:33:05,359 --> 00:33:09,439
+models practice redoing the last 3 to 6
+
+924
+00:33:07,919 --> 00:33:11,679
+months of human progress at the
+
+925
+00:33:09,440 --> 00:33:13,759
+frontier. The third big area of AI
+
+926
+00:33:11,679 --> 00:33:15,600
+research is inference efficiency. What
+
+927
+00:33:13,759 --> 00:33:17,759
+this involves is designing your model
+
+928
+00:33:15,599 --> 00:33:19,839
+and the surrounding software to get more
+
+929
+00:33:17,759 --> 00:33:21,759
+juice out of your compute. And this is
+
+930
+00:33:19,839 --> 00:33:24,720
+especially verifiable. For example, you
+
+931
+00:33:21,759 --> 00:33:27,200
+can easily measure GPU utilization or KB
+
+932
+00:33:24,720 --> 00:33:32,399
+cache size per token or total flops in a
+
+933
+00:33:27,200 --> 00:33:34,240
+forward pass or latency and so on.
+
+934
+00:33:32,398 --> 00:33:36,639
+Now, I want to deal with the strongest
+
+935
+00:33:34,240 --> 00:33:38,159
+objections to my arguments about RSI. I
+
+936
+00:33:36,640 --> 00:33:40,399
+want to be clear that these bottlenecks
+
+937
+00:33:38,159 --> 00:33:42,080
+are serious and they do tamp down the
+
+938
+00:33:40,398 --> 00:33:44,239
+probability of the most aggressive
+
+939
+00:33:42,079 --> 00:33:46,398
+possible takeoff. This is why I think
+
+940
+00:33:44,240 --> 00:33:50,079
+we'll probably make something like a GPD
+
+941
+00:33:46,398 --> 00:33:52,079
+3.5 to GPD6 size jump in 2028 rather
+
+942
+00:33:50,079 --> 00:33:54,079
+than some crazy overnight singularity
+
+943
+00:33:52,079 --> 00:33:55,519
+that starts tomorrow. But I think these
+
+944
+00:33:54,079 --> 00:33:56,960
+bottlenecks won't be especially
+
+945
+00:33:55,519 --> 00:33:58,960
+crippling and that the neck of the
+
+946
+00:33:56,960 --> 00:34:00,720
+bottle is actually pretty wide. Let me
+
+947
+00:33:58,960 --> 00:34:02,159
+explain why. Okay, so the first
+
+948
+00:34:00,720 --> 00:34:04,480
+objection and this is an objection that
+
+949
+00:34:02,159 --> 00:34:06,399
+I had until recently is that we'll be
+
+950
+00:34:04,480 --> 00:34:08,240
+bottlenecked by continual learning or
+
+951
+00:34:06,398 --> 00:34:09,759
+the lack thereof. I've spent the past
+
+952
+00:34:08,239 --> 00:34:12,239
+year and a half arguing that the main
+
+953
+00:34:09,760 --> 00:34:14,159
+thing missing from today's AIS is this
+
+954
+00:34:12,239 --> 00:34:16,559
+ability to learn from on the job
+
+955
+00:34:14,159 --> 00:34:18,320
+experience. Every new session is their
+
+956
+00:34:16,559 --> 00:34:20,559
+first day on the job. And in each
+
+957
+00:34:18,320 --> 00:34:22,480
+session, they can only retain a couple
+
+958
+00:34:20,559 --> 00:34:24,000
+hours worth of information so they don't
+
+959
+00:34:22,480 --> 00:34:26,000
+accumulate the kind of feedback and
+
+960
+00:34:24,000 --> 00:34:28,719
+knowhow that arrives over the course of
+
+961
+00:34:26,000 --> 00:34:30,639
+weeks or months. Last December, this was
+
+962
+00:34:28,719 --> 00:34:33,279
+my main reason for doubting that we'd
+
+963
+00:34:30,639 --> 00:34:35,280
+automate AI research anytime soon. as I
+
+964
+00:34:33,280 --> 00:34:36,720
+wrote then somehow this automated
+
+965
+00:34:35,280 --> 00:34:39,440
+researcher is going to figure out the
+
+966
+00:34:36,719 --> 00:34:40,638
+algorithm for hi which is a problem that
+
+967
+00:34:39,440 --> 00:34:42,720
+humans have been banging their head
+
+968
+00:34:40,639 --> 00:34:44,878
+against for the better half of a century
+
+969
+00:34:42,719 --> 00:34:46,878
+while not having the basic learning
+
+970
+00:34:44,878 --> 00:34:48,878
+capabilities that children have. I find
+
+971
+00:34:46,878 --> 00:34:50,719
+this super implausible but I've somewhat
+
+972
+00:34:48,878 --> 00:34:52,319
+changed my mind on this. Here's why I
+
+973
+00:34:50,719 --> 00:34:54,319
+don't think that the current lack of
+
+974
+00:34:52,320 --> 00:34:56,559
+continual learning in these models will
+
+975
+00:34:54,320 --> 00:34:59,599
+stop full automation of the best AI
+
+976
+00:34:56,559 --> 00:35:00,960
+researchers by 2028. First, AI companies
+
+977
+00:34:59,599 --> 00:35:02,480
+might just solve continual learning by
+
+978
+00:35:00,960 --> 00:35:04,320
+then with architectures that are much
+
+979
+00:35:02,480 --> 00:35:05,920
+like the ones they already have.
+
+980
+00:35:04,320 --> 00:35:08,160
+Previously, I thought that we were
+
+981
+00:35:05,920 --> 00:35:10,240
+bottlenecked by some crazy breakthroughs
+
+982
+00:35:08,159 --> 00:35:12,480
+that would allow models to update their
+
+983
+00:35:10,239 --> 00:35:14,078
+own weights at the end of every session.
+
+984
+00:35:12,480 --> 00:35:15,599
+But now, I think that scaling up in
+
+985
+00:35:14,079 --> 00:35:16,560
+context learning is enough. And so,
+
+986
+00:35:15,599 --> 00:35:18,880
+you'll have sessions that are
+
+987
+00:35:16,559 --> 00:35:21,279
+effectively many months long. And this
+
+988
+00:35:18,880 --> 00:35:23,440
+will allow a single instance to learn
+
+989
+00:35:21,280 --> 00:35:25,359
+effectively on the job. And people have
+
+990
+00:35:23,440 --> 00:35:27,280
+published many many promising ideas that
+
+991
+00:35:25,358 --> 00:35:29,119
+would let the labs achieve dramatically
+
+992
+00:35:27,280 --> 00:35:30,960
+longer effective context windows. And
+
+993
+00:35:29,119 --> 00:35:32,960
+the second reason is that you might not
+
+994
+00:35:30,960 --> 00:35:34,720
+need a continual learner to solve
+
+995
+00:35:32,960 --> 00:35:36,960
+continual learning. As I explained
+
+996
+00:35:34,719 --> 00:35:39,118
+earlier, online learning is an ML
+
+997
+00:35:36,960 --> 00:35:41,199
+research problem with clean verifiable
+
+998
+00:35:39,119 --> 00:35:43,119
+proxies. If you'd asked me 2 years ago
+
+999
+00:35:41,199 --> 00:35:44,799
+which would be harder to solve, Navier
+
+1000
+00:35:43,119 --> 00:35:46,160
+Stokes or continual learning, it
+
+1001
+00:35:44,800 --> 00:35:48,160
+wouldn't have been obvious to me that
+
+1002
+00:35:46,159 --> 00:35:49,440
+the answer was Na'vi Stokes. Now, of
+
+1003
+00:35:48,159 --> 00:35:51,279
+course, it turns out that continual
+
+1004
+00:35:49,440 --> 00:35:52,480
+learning did turn out to be harder given
+
+1005
+00:35:51,280 --> 00:35:55,040
+the fact that the labs haven't cracked
+
+1006
+00:35:52,480 --> 00:35:57,679
+it yet. But are we so confident that
+
+1007
+00:35:55,039 --> 00:35:59,679
+it's that much harder that the nonline
+
+1008
+00:35:57,679 --> 00:36:01,358
+learning models a year or two smarter
+
+1009
+00:35:59,679 --> 00:36:03,279
+than the ones that are currently solving
+
+1010
+00:36:01,358 --> 00:36:05,358
+millennium prize problems won't be able
+
+1011
+00:36:03,280 --> 00:36:06,720
+to crack it? Even if they're amnesiacs
+
+1012
+00:36:05,358 --> 00:36:07,920
+like the current models are, these
+
+1013
+00:36:06,719 --> 00:36:09,759
+models are out here are solving
+
+1014
+00:36:07,920 --> 00:36:11,760
+millennium prize problems while still
+
+1015
+00:36:09,760 --> 00:36:13,680
+being these derpy savant interns that
+
+1016
+00:36:11,760 --> 00:36:15,599
+have no long-term memory. It's like
+
+1017
+00:36:13,679 --> 00:36:17,679
+watching somebody do cartwheels down the
+
+1018
+00:36:15,599 --> 00:36:19,440
+track and still keep pace with Usain
+
+1019
+00:36:17,679 --> 00:36:21,598
+Bolt. If they were actually allowed to
+
+1020
+00:36:19,440 --> 00:36:23,039
+run, I'm sure they could go even faster.
+
+1021
+00:36:21,599 --> 00:36:25,359
+But who's to say that they can't win
+
+1022
+00:36:23,039 --> 00:36:27,039
+this race while still cartwheeling? Now,
+
+1023
+00:36:25,358 --> 00:36:28,480
+all this being said, I think there is a
+
+1024
+00:36:27,039 --> 00:36:30,079
+serious chance that we don't solve
+
+1025
+00:36:28,480 --> 00:36:32,320
+continual learning within the next few
+
+1026
+00:36:30,079 --> 00:36:34,560
+years and that models are not able to
+
+1027
+00:36:32,320 --> 00:36:36,400
+compensate for this missing capability
+
+1028
+00:36:34,559 --> 00:36:39,119
+through their other advantages. That's
+
+1029
+00:36:36,400 --> 00:36:41,280
+why I put a 25% probability that we
+
+1030
+00:36:39,119 --> 00:36:44,559
+won't automate Ilia level top human
+
+1031
+00:36:41,280 --> 00:36:46,320
+researchers until after 2032.
+
+1032
+00:36:44,559 --> 00:36:47,838
+One important objection people have is
+
+1033
+00:36:46,320 --> 00:36:49,920
+that we'll be bottlenecked by finding
+
+1034
+00:36:47,838 --> 00:36:51,279
+the right verifiable proxies. All the
+
+1035
+00:36:49,920 --> 00:36:53,519
+verifiable proxies that I've listed
+
+1036
+00:36:51,280 --> 00:36:55,359
+above assume the current paradigm, they
+
+1037
+00:36:53,519 --> 00:36:57,519
+would argue. But figuring out what
+
+1038
+00:36:55,358 --> 00:37:00,559
+objective to verify in the first place,
+
+1039
+00:36:57,519 --> 00:37:02,559
+choosing which hill to have GPT7 climb
+
+1040
+00:37:00,559 --> 00:37:04,400
+is itself an important part of AI
+
+1041
+00:37:02,559 --> 00:37:06,078
+research. This is what one might call
+
+1042
+00:37:04,400 --> 00:37:08,480
+research taste. And how are you going to
+
+1043
+00:37:06,079 --> 00:37:10,240
+train for that? Before 2018, almost
+
+1044
+00:37:08,480 --> 00:37:12,000
+nobody was saying that minimizing loss
+
+1045
+00:37:10,239 --> 00:37:14,159
+on next token prediction is going to be
+
+1046
+00:37:12,000 --> 00:37:15,440
+the most tractable path to AI progress.
+
+1047
+00:37:14,159 --> 00:37:17,598
+So nobody would have bothered to build
+
+1048
+00:37:15,440 --> 00:37:19,679
+nano GPT style speedrun environments
+
+1049
+00:37:17,599 --> 00:37:21,280
+where the agent swarm has to minimize
+
+1050
+00:37:19,679 --> 00:37:23,039
+how much time it takes to get to a
+
+1051
+00:37:21,280 --> 00:37:24,560
+certain pre-training loss. Won't there
+
+1052
+00:37:23,039 --> 00:37:26,079
+be multiple new paradigms that we have
+
+1053
+00:37:24,559 --> 00:37:27,920
+to cross to get from here to super
+
+1054
+00:37:26,079 --> 00:37:30,480
+intelligence? And won't each new
+
+1055
+00:37:27,920 --> 00:37:32,960
+paradigm require some associated proxy
+
+1056
+00:37:30,480 --> 00:37:35,039
+that we don't know X anti? How will the
+
+1057
+00:37:32,960 --> 00:37:37,358
+automated researchers find these during
+
+1058
+00:37:35,039 --> 00:37:40,159
+RSI? I have two responses to this
+
+1059
+00:37:37,358 --> 00:37:42,960
+objection. First, the transformer was
+
+1060
+00:37:40,159 --> 00:37:45,118
+visible on in fact invented to beat the
+
+1061
+00:37:42,960 --> 00:37:46,639
+existing translation benchmarks. A
+
+1062
+00:37:45,119 --> 00:37:48,640
+similar story is true for reasoning
+
+1063
+00:37:46,639 --> 00:37:51,679
+models and the pre-existing coding and
+
+1064
+00:37:48,639 --> 00:37:54,159
+math benchmarks. Proxies made before a
+
+1065
+00:37:51,679 --> 00:37:55,919
+paradigm leap seem perfectly capable of
+
+1066
+00:37:54,159 --> 00:37:57,920
+capturing large step changes in
+
+1067
+00:37:55,920 --> 00:38:00,000
+performance. This is because AI learning
+
+1068
+00:37:57,920 --> 00:38:02,000
+algorithms are quite general. And
+
+1069
+00:38:00,000 --> 00:38:03,838
+second, it's not that difficult to come
+
+1070
+00:38:02,000 --> 00:38:05,760
+up with paradigm agnostic outer loop
+
+1071
+00:38:03,838 --> 00:38:07,358
+proxies. For example, how many
+
+1072
+00:38:05,760 --> 00:38:09,040
+millennium prize problems does your new
+
+1073
+00:38:07,358 --> 00:38:11,519
+model solve? And if you train your model
+
+1074
+00:38:09,039 --> 00:38:12,800
+on data before 1905, how long does it
+
+1075
+00:38:11,519 --> 00:38:14,960
+take before it discovers general
+
+1076
+00:38:12,800 --> 00:38:17,519
+relativity? How fast does it master
+
+1077
+00:38:14,960 --> 00:38:19,039
+totally unseen video games? And so on.
+
+1078
+00:38:17,519 --> 00:38:20,960
+All in all, I think the other objections
+
+1079
+00:38:19,039 --> 00:38:22,880
+to the impact of RSI are much stronger,
+
+1080
+00:38:20,960 --> 00:38:25,358
+and I'd be very surprised if this ended
+
+1081
+00:38:22,880 --> 00:38:27,200
+up being the reason that RSI was not a
+
+1082
+00:38:25,358 --> 00:38:29,358
+big deal. The other big bottleneck that
+
+1083
+00:38:27,199 --> 00:38:31,519
+people point out is data. Isn't data one
+
+1084
+00:38:29,358 --> 00:38:34,078
+of the main inputs into AI progress? How
+
+1085
+00:38:31,519 --> 00:38:36,320
+will RSI happen without that scaling up
+
+1086
+00:38:34,079 --> 00:38:38,480
+at the same rate? My answer is that data
+
+1087
+00:38:36,320 --> 00:38:40,720
+will continue growing during RSI, but
+
+1088
+00:38:38,480 --> 00:38:42,320
+the AIs will be the ones compiling it.
+
+1089
+00:38:40,719 --> 00:38:44,559
+Producing better training data for both
+
+1090
+00:38:42,320 --> 00:38:46,800
+pre-training and post-training is itself
+
+1091
+00:38:44,559 --> 00:38:48,480
+an ML research problem and AIs are
+
+1092
+00:38:46,800 --> 00:38:50,400
+getting increasingly better at doing it
+
+1093
+00:38:48,480 --> 00:38:52,079
+themselves. Now, it is true that data is
+
+1094
+00:38:50,400 --> 00:38:54,079
+an extremely important input into AI
+
+1095
+00:38:52,079 --> 00:38:55,760
+progress. Together with Jerry Han, who's
+
+1096
+00:38:54,079 --> 00:38:57,599
+a student at Princeton, I actually did
+
+1097
+00:38:55,760 --> 00:39:00,000
+some research into this. We found that
+
+1098
+00:38:57,599 --> 00:39:01,599
+for pre-training over the last 6 years
+
+1099
+00:39:00,000 --> 00:39:03,199
+more than three times the algorithmic
+
+1100
+00:39:01,599 --> 00:39:05,519
+progress has come from data improvements
+
+1101
+00:39:03,199 --> 00:39:06,799
+than model improvements. However, I
+
+1102
+00:39:05,519 --> 00:39:08,800
+don't think that people realize that
+
+1103
+00:39:06,800 --> 00:39:10,720
+these data improvements in pre-training
+
+1104
+00:39:08,800 --> 00:39:12,240
+are very much in line with normal AI
+
+1105
+00:39:10,719 --> 00:39:13,759
+research work. It's basically figuring
+
+1106
+00:39:12,239 --> 00:39:15,679
+out which techniques were filtering
+
+1107
+00:39:13,760 --> 00:39:18,560
+existing data or generating new
+
+1108
+00:39:15,679 --> 00:39:20,799
+synthetic data empirically lead to lower
+
+1109
+00:39:18,559 --> 00:39:22,559
+loss on a held out corpus. A similar
+
+1110
+00:39:20,800 --> 00:39:24,480
+thing seems to be increasingly true for
+
+1111
+00:39:22,559 --> 00:39:26,000
+RL. Deep Seek just published a paper
+
+1112
+00:39:24,480 --> 00:39:27,679
+where they talk about how they postrain
+
+1113
+00:39:26,000 --> 00:39:29,760
+their new model. They see that changes
+
+1114
+00:39:27,679 --> 00:39:32,559
+to the basic RL algorithm have not
+
+1115
+00:39:29,760 --> 00:39:34,480
+mattered nearly as much and that quote
+
+1116
+00:39:32,559 --> 00:39:36,400
+systematic improvements in the scale,
+
+1117
+00:39:34,480 --> 00:39:38,240
+diversity and verifiability of
+
+1118
+00:39:36,400 --> 00:39:40,160
+synthesized data and environments
+
+1119
+00:39:38,239 --> 00:39:42,239
+account for essentially all of the
+
+1120
+00:39:40,159 --> 00:39:43,920
+observed gains. End quote. And the way
+
+1121
+00:39:42,239 --> 00:39:45,598
+in which these environments are made is
+
+1122
+00:39:43,920 --> 00:39:47,838
+itself getting more and more automated.
+
+1123
+00:39:45,599 --> 00:39:50,240
+They write quote we invest in
+
+1124
+00:39:47,838 --> 00:39:52,480
+large-scale automated pipelines for data
+
+1125
+00:39:50,239 --> 00:39:54,078
+synthesis and environment construction
+
+1126
+00:39:52,480 --> 00:39:56,159
+using difficulty and correctness as
+
+1127
+00:39:54,079 --> 00:39:58,160
+reward signals. We iteratively train the
+
+1128
+00:39:56,159 --> 00:40:00,879
+model to construct better tasks. End
+
+1129
+00:39:58,159 --> 00:40:02,719
+quote. Now I want to talk about the idea
+
+1130
+00:40:00,880 --> 00:40:04,480
+that AI progress will be bottlenecked by
+
+1131
+00:40:02,719 --> 00:40:06,559
+experiments. So earlier I made this
+
+1132
+00:40:04,480 --> 00:40:08,559
+extended analogy between the current
+
+1133
+00:40:06,559 --> 00:40:10,559
+acceleration in mathematics and what we
+
+1134
+00:40:08,559 --> 00:40:12,159
+should expect to happen in AI research.
+
+1135
+00:40:10,559 --> 00:40:14,480
+But there is one big difference between
+
+1136
+00:40:12,159 --> 00:40:16,319
+AI research and mathematics. In math,
+
+1137
+00:40:14,480 --> 00:40:18,480
+you can simply reason your way with pen
+
+1138
+00:40:16,320 --> 00:40:20,400
+and paper to new discoveries. Whereas in
+
+1139
+00:40:18,480 --> 00:40:22,719
+AI research, you need to run actual
+
+1140
+00:40:20,400 --> 00:40:25,119
+experiments to validate your ideas. And
+
+1141
+00:40:22,719 --> 00:40:27,118
+these take compute and time. And as the
+
+1142
+00:40:25,119 --> 00:40:29,200
+number of automated researchers grows,
+
+1143
+00:40:27,119 --> 00:40:31,440
+each gets access to a smaller and
+
+1144
+00:40:29,199 --> 00:40:33,759
+smaller slice of the total experiment
+
+1145
+00:40:31,440 --> 00:40:35,519
+compute pie. My answer to this is that
+
+1146
+00:40:33,760 --> 00:40:37,760
+each agent will still get access to a
+
+1147
+00:40:35,519 --> 00:40:39,440
+ton of compute. Basically, Frontier Labs
+
+1148
+00:40:37,760 --> 00:40:41,440
+have been more than quadrupling their
+
+1149
+00:40:39,440 --> 00:40:43,440
+compute every single year. And if this
+
+1150
+00:40:41,440 --> 00:40:46,639
+trend continues, then by the end of
+
+1151
+00:40:43,440 --> 00:40:48,400
+2027, OpenAI could almost give 10,000
+
+1152
+00:40:46,639 --> 00:40:50,559
+agents, so the amount that were involved
+
+1153
+00:40:48,400 --> 00:40:53,440
+in solving the Millennium Prize problem,
+
+1154
+00:40:50,559 --> 00:40:56,318
+each enough compute to run a GPT3 size
+
+1155
+00:40:53,440 --> 00:40:58,880
+training run every single day. Keep in
+
+1156
+00:40:56,318 --> 00:41:02,000
+mind that the final model trained in the
+
+1157
+00:40:58,880 --> 00:41:05,358
+original transformer paper in 2017 took
+
+1158
+00:41:02,000 --> 00:41:07,599
+3 days on 8 P100s which would cost about
+
+1159
+00:41:05,358 --> 00:41:10,000
+50 bucks if he went to rent it today or
+
+1160
+00:41:07,599 --> 00:41:13,359
+about 110,000th of the training compute
+
+1161
+00:41:10,000 --> 00:41:16,239
+of GPT3. If the top human AI researchers
+
+1162
+00:41:13,358 --> 00:41:18,799
+like Nor Shazir and Iaskar had enough
+
+1163
+00:41:16,239 --> 00:41:20,879
+experiment compute to train a GPT3 size
+
+1164
+00:41:18,800 --> 00:41:22,640
+model every single day, they might make
+
+1165
+00:41:20,880 --> 00:41:24,318
+slower progress than they currently do.
+
+1166
+00:41:22,639 --> 00:41:26,239
+But it would be extremely surprising to
+
+1167
+00:41:24,318 --> 00:41:28,239
+me if they failed to make meaningful
+
+1168
+00:41:26,239 --> 00:41:29,838
+progress altogether and just sat down
+
+1169
+00:41:28,239 --> 00:41:32,078
+and started complaining about how small
+
+1170
+00:41:29,838 --> 00:41:33,920
+their cluster was. Now, how productive
+
+1171
+00:41:32,079 --> 00:41:36,560
+do you think an AI lab would be if it
+
+1172
+00:41:33,920 --> 00:41:38,639
+had 10,000 great researchers, each with
+
+1173
+00:41:36,559 --> 00:41:40,239
+this much compute and each thinking 10
+
+1174
+00:41:38,639 --> 00:41:42,719
+times as fast? You wouldn't want to
+
+1175
+00:41:40,239 --> 00:41:44,879
+write a check to this Neolab. The nature
+
+1176
+00:41:42,719 --> 00:41:47,199
+of research and experimentation at the
+
+1177
+00:41:44,880 --> 00:41:50,160
+labs today reflects that researcher time
+
+1178
+00:41:47,199 --> 00:41:52,480
+is extremely scarce relative to compute.
+
+1179
+00:41:50,159 --> 00:41:54,480
+top AI researchers individually get paid
+
+1180
+00:41:52,480 --> 00:41:56,639
+hundreds of millions of dollars a year.
+
+1181
+00:41:54,480 --> 00:41:58,159
+So the way labs use compute today tells
+
+1182
+00:41:56,639 --> 00:42:00,879
+us very little about how efficiently
+
+1183
+00:41:58,159 --> 00:42:03,358
+they could use it if compute rather than
+
+1184
+00:42:00,880 --> 00:42:05,119
+researcher time was the key bottleneck.
+
+1185
+00:42:03,358 --> 00:42:07,279
+There are two main ways in which the RSI
+
+1186
+00:42:05,119 --> 00:42:09,280
+agents worm will use experiment compute
+
+1187
+00:42:07,280 --> 00:42:11,760
+much more efficiently than researchers
+
+1188
+00:42:09,280 --> 00:42:13,839
+today use it. First, immediately they
+
+1189
+00:42:11,760 --> 00:42:15,839
+can trade labor for compute to save
+
+1190
+00:42:13,838 --> 00:42:18,559
+valuable researcher time. Experiments
+
+1191
+00:42:15,838 --> 00:42:20,239
+today are and should be very wasteful
+
+1192
+00:42:18,559 --> 00:42:22,159
+with compute. So instead of
+
+1193
+00:42:20,239 --> 00:42:24,239
+painstakingly setting up and carefully
+
+1194
+00:42:22,159 --> 00:42:26,159
+monitoring tons of smallcale
+
+1195
+00:42:24,239 --> 00:42:28,159
+pre-training experiments, a human
+
+1196
+00:42:26,159 --> 00:42:30,639
+researcher today might instead kick off
+
+1197
+00:42:28,159 --> 00:42:32,559
+a couple of huge multi-agent RL runs in
+
+1198
+00:42:30,639 --> 00:42:34,318
+parallel. But if you're bottlenecked by
+
+1199
+00:42:32,559 --> 00:42:36,159
+experiment compute, you can just do more
+
+1200
+00:42:34,318 --> 00:42:38,400
+of the former. And when those automated
+
+1201
+00:42:36,159 --> 00:42:39,838
+researchers are doing an RL run, they
+
+1202
+00:42:38,400 --> 00:42:41,760
+could read every single rollout
+
+1203
+00:42:39,838 --> 00:42:43,920
+transcript and immediately pause and
+
+1204
+00:42:41,760 --> 00:42:45,760
+rebuild a whole environment if some task
+
+1205
+00:42:43,920 --> 00:42:47,280
+is broken. They could be doing crazy
+
+1206
+00:42:45,760 --> 00:42:49,440
+amounts of small scale ablations of
+
+1207
+00:42:47,280 --> 00:42:51,280
+their models to make them oh so slightly
+
+1208
+00:42:49,440 --> 00:42:52,720
+better. And when a team of agents
+
+1209
+00:42:51,280 --> 00:42:54,640
+decides to combine their compute
+
+1210
+00:42:52,719 --> 00:42:57,279
+together in order to do a much bigger
+
+1211
+00:42:54,639 --> 00:42:59,679
+run, they could spend many subjective
+
+1212
+00:42:57,280 --> 00:43:01,760
+decades designing the most informative
+
+1213
+00:42:59,679 --> 00:43:03,358
+poolled experiment. And once it's done
+
+1214
+00:43:01,760 --> 00:43:05,359
+running, they could spend further
+
+1215
+00:43:03,358 --> 00:43:07,199
+subjective decades comprehensively
+
+1216
+00:43:05,358 --> 00:43:10,239
+analyzing it before designing a new
+
+1217
+00:43:07,199 --> 00:43:12,399
+experiment. The other big way that this
+
+1218
+00:43:10,239 --> 00:43:13,838
+huge agent swarm could remain productive
+
+1219
+00:43:12,400 --> 00:43:16,079
+despite the fact that each individual
+
+1220
+00:43:13,838 --> 00:43:18,239
+copy will have access to less compute is
+
+1221
+00:43:16,079 --> 00:43:19,839
+that these automated researchers could
+
+1222
+00:43:18,239 --> 00:43:21,759
+come up with a better science for
+
+1223
+00:43:19,838 --> 00:43:23,279
+learning from small scale experiments.
+
+1224
+00:43:21,760 --> 00:43:25,359
+Scaling laws themselves are a good
+
+1225
+00:43:23,280 --> 00:43:26,880
+example of this. The GBD4 paper says
+
+1226
+00:43:25,358 --> 00:43:29,519
+that they were able to predict the
+
+1227
+00:43:26,880 --> 00:43:32,160
+model's final loss using models trained
+
+1228
+00:43:29,519 --> 00:43:33,759
+with 10,000x less compute. One of the
+
+1229
+00:43:32,159 --> 00:43:35,440
+things that the smarter and faster
+
+1230
+00:43:33,760 --> 00:43:36,880
+automated company could be doing is
+
+1231
+00:43:35,440 --> 00:43:39,200
+trying to discover more scaling
+
+1232
+00:43:36,880 --> 00:43:41,119
+phenomenon like MUP which lets
+
+1233
+00:43:39,199 --> 00:43:43,838
+researchers anticipate the optimal
+
+1234
+00:43:41,119 --> 00:43:45,920
+hyperparameters for a larger run from a
+
+1235
+00:43:43,838 --> 00:43:47,679
+100x smaller model. How many more
+
+1236
+00:43:45,920 --> 00:43:49,920
+similar discoveries like this are there?
+
+1237
+00:43:47,679 --> 00:43:51,759
+I remember chatting to an AI researcher
+
+1238
+00:43:49,920 --> 00:43:53,039
+who thought that learning from extremely
+
+1239
+00:43:51,760 --> 00:43:54,880
+small neural networks could be
+
+1240
+00:43:53,039 --> 00:43:57,440
+incredibly informative. He put it this
+
+1241
+00:43:54,880 --> 00:44:01,200
+way. The gods above must work from the
+
+1242
+00:43:57,440 --> 00:44:03,200
+same principles as the ants below.
+
+1243
+00:44:01,199 --> 00:44:04,799
+I want to thank my friends who paired
+
+1244
+00:44:03,199 --> 00:44:07,598
+with me through significant parts of
+
+1245
+00:44:04,800 --> 00:44:10,160
+writing this essay. Max Farens, Gabe
+
+1246
+00:44:07,599 --> 00:44:11,359
+Frerieded, and Thomas Larson. I'll see
+
+1247
+00:44:10,159 --> 00:44:13,279
+you on the next essay about super
+
+1248
+00:44:11,358 --> 00:44:15,519
+intelligence. But in the meantime, if
+
+1249
+00:44:13,280 --> 00:44:17,359
+you want to get notified when that video
+
+1250
+00:44:15,519 --> 00:44:19,039
+essay drops, please subscribe on
+
+1251
+00:44:17,358 --> 00:44:22,039
+YouTube. All right, I'll see you next
+
+1252
+00:44:19,039 --> 00:44:22,039
+time.
