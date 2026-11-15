@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: The Rise Of AI Coworkers</title>
+<meta name="description" content="Y Combinator · 5 threads · bots as employees · trust ladder · the Slack outer loop · codebase-as-memory review · taste as the bottleneck">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="The Rise Of AI Coworkers">
+<meta property="og:description" content="Y Combinator · 5 threads · bots as employees · trust ladder · the Slack outer loop · codebase-as-memory review · taste as the bottleneck">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{text-wrap:balance;font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>The Rise Of AI Coworkers</h1>
+    <div class="byline">
+      Channel: <b>Y Combinator</b> &middot; Speaker: <b>Lauren Tan, Roman Ugarte (Grokbot core team); YC Light Cone hosts incl. Garry Tan</b> &middot; <b>2026-11-14</b>
+      <div class="stats-line">5 threads · bots as employees · trust ladder · the Slack outer loop · codebase-as-memory review · taste as the bottleneck &middot; <a href="https://www.youtube.com/watch?v=y1-9yeYLJUo" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li><b>Grokbot</b> lets anyone create AI teammates with names, identities, skills, tools and their own computer; built from first line of code to launch in <b>7 weeks</b>.</li><li>Three design principles: work organized around <b>bots</b> (not chats or files), bots use the same tools humans do, and bots are <b>always on</b> and proactive.</li><li>Adoption follows a trust ladder: read-only helper, then end-to-end tasks, then owning a whole job — the team says step three is still far away.</li><li>Lauren Tan went from ~2,000 to <b>4,000+ PRs a month</b>; whole features now get built in one public Slack thread with a bot that spawns Cursor cloud agents.</li><li>Her review philosophy: push quality into the codebase (lint rules, static analysis, CI) instead of burning tens of millions of tokens on adversarial review.</li><li>With execution abundant, the bottleneck moves to <b>specification, alignment and taste</b> — the team ships nothing that lacks internal product-market fit.</li><li>Small businesses are among the heaviest early users because they struggle most to hire — e.g. a bookkeeping bot set up in hours.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="bots-as-employees">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Product thesis</span>
+    <span class="theme-status">TEAM BOTS LAUNCHED ~2 WEEKS BEFORE RECORDING</span><span class="ttag">dev-workflow</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Grokbot treats a bot as a teammate, not a chat window</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The operating question for every design choice is "what would you do for a human?" — give it a computer, credentials scoped to its role, and expand access as trust grows.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Prototype spun up internally in about 7 weeks after seeing long-running coding agents transform how engineers worked; now built into the default DM on X.</li><li><span class="dot" style="background:#3f6b2e;"></span>Internal reception was a <b>bell curve</b>: both the most and least AI-forward employees liked it.</li><li><span class="dot" style="background:#3f6b2e;"></span>Performance marketing gave its bot Google Ads and Facebook Ads logins plus a budget, and has it talk to the design team's bot to A/B test assets.</li><li><span class="dot" style="background:#3f6b2e;"></span>Customer success runs a team bot that fields hundreds of customer messages a minute, triages, finishes many tickets end to end and escalates the rest to the right DRI.</li><li><span class="dot" style="background:#3f6b2e;"></span><b>Team bots</b> (multiplayer): an owner/manager with write access, invited collaborators, shared across the org — usually built by the 'builder' in each department (GTM or support engineers).</li><li><span class="dot" style="background:#3f6b2e;"></span>Setup is up to you: specialist bots per function, one bot per customer, or one generalist; Roman prefers bots that each obsess over one problem, like hiring someone who 'wakes up in the morning and really cares'.</li><li><span class="dot" style="background:#3f6b2e;"></span>Goal is not to rebuild B2B SaaS but to work inside existing tools — Slack, meetings, Google Docs.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Our goal is not to rebuild all of B2B SaaS. Our goal is to build the thing that can access those tools and work inside of them&#8221;<cite>— Roman Ugarte</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Auth, permissioning and bot identity are called an industry-wide open question with no silver bullet yet; bots in Slack threads also lack 'EQ' about whom to listen to.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="trust-ladder">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Framework</span>
+    <span class="theme-status">STEP 3 STILL FAR AWAY</span><span class="ttag">dev-workflow</span><span class="ttag">career</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Trust is built in three steps, and most companies are on step one</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Start read-only, graduate to end-to-end tasks, and only later let a bot own an outcome.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Step one: <b>Data Bot</b> — read access to the warehouse, lives in Slack, answers 'can you do a quick analysis' requests the data science team kept getting.</li><li><span class="dot" style="background:#93711b;"></span>Vendor procurement built a similar step-one bot and shared it with the whole team.</li><li><span class="dot" style="background:#93711b;"></span>Step two: the bot takes action and completes a task end to end; step three: it owns a job responsibility or an outcome continuously.</li><li><span class="dot" style="background:#93711b;"></span>Individual users follow the same arc: task, then objective, then 'a full job now'.</li><li><span class="dot" style="background:#93711b;"></span>Bots can chat with each other via a first-class tool; a 'lead engineer' bot given feedback started scolding its sub-bots like a disciplinarian.</li><li><span class="dot" style="background:#93711b;"></span>YC runs an internal forum where everyone's coding agents talk to each other — 'like an internal Stack Overflow', which the host finds about <b>5%</b> eerie.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;It's as if you were to onboard an employee who has no EQ and like no like social awareness of the room.&#8221;<cite>— Roman Ugarte</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">A host flags abliterated (refusal-removed) models as the combination to worry about: still helpful by default, but they will follow malicious instructions without refusing.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="outer-loop">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Workflow</span>
+    <span class="theme-status">4,000+ PRS PER MONTH</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">The outer loop moves into Slack, in public</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Lauren Tan's agents now come to where the context is — Slack and X threads — instead of her copy-pasting context into a private agent session.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Her engineering bot <b>Potato</b> took a link from X, spawned a Cursor cloud agent with its own VM, ran the app and came back with videos and screenshots.</li><li><span class="dot" style="background:#3f6b2e;"></span>That feature was built end to end in one ~200-message Slack thread with a colleague and a PM; she never opened Cursor and did not read the PR — agents merge their own PRs.</li><li><span class="dot" style="background:#3f6b2e;"></span>Public threads spread practice: someone sees 'Lauren mode' used in a thread and does the same the next day.</li><li><span class="dot" style="background:#3f6b2e;"></span>Minimal loop: teach the agent to <b>run the code like a real user</b> (CPU traces, performance metrics) so it can check its own work — correct, though not necessarily good.</li><li><span class="dot" style="background:#3f6b2e;"></span>Outer loop: a metric alert fires an agent that reproduces, fixes and ships; a 'projects' feature lets a coordinator agent manage sub-agents so she no longer manages the project.</li><li><span class="dot" style="background:#3f6b2e;"></span>'Sandy' ingests thousands of pieces of customer feedback daily; small bugs are repro'd, fixed and merged automatically, shipping around 3 a.m.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;I didn't even look at cursor for this project which I just we just we did it all in in the Slack thread.&#8221;<cite>— Lauren Tan</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Lauren says she works at a lab with unlimited tokens and that reaching this setup took 'quite a while' — not an overnight switch.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="codebase-as-memory">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Recommendation</span>
+    <span class="theme-status">INVERTED PYRAMID OF ENGINEER TIME</span><span class="ttag">dev-workflow</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Encode review into the codebase instead of paying for it in tokens</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Most engineering investment should go into the codebase and static analysis, then rules and skills, with only thin human review on top.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Garry Tan's G-stack ship/review skill burns tens of millions of tokens; he is arguing with an agent over cutting review from 50M to 10M tokens while held-out evals across ~30 bug types demand 30M.</li><li><span class="dot" style="background:#3f6b2e;"></span>Lauren has de-emphasised adversarial multi-model review ('interrogate'): it risks overfitting because the reviewer lacks your goals and product vision.</li><li><span class="dot" style="background:#3f6b2e;"></span>'Your code base is a form of memory' — lint rules, compilers, API design and static analysis are cheaper than repeated agent review.</li><li><span class="dot" style="background:#3f6b2e;"></span>Example: the Electron renderer thread janks on tasks over ~16 ms (8 ms for smooth frames); they forbid imports between main and renderer code via a dependency-graph lint rule enforced in CI.</li><li><span class="dot" style="background:#3f6b2e;"></span>Keep humans in the loop for critical infrastructure, databases and deployment.</li><li><span class="dot" style="background:#3f6b2e;"></span><b>P-stack</b> ('potato stack') is her open-sourced skill set on the Cursor plugins repo, inspired by G-stack; she tells people to fork and build their own 'chef's knives'.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;So it's tokens I don't have to spend anymore.&#8221;<cite>— Lauren Tan</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="taste-bottleneck">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Structural shift</span>
+    <span class="theme-status">FROM EXECUTION-CONSTRAINED TO EXECUTION ABUNDANCE</span><span class="ttag">career</span><span class="ttag">dev-workflow</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">When execution is cheap, specification and taste become the scarce resource</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The gap stops being execution failure and becomes intent-specification failure — and deciding what not to merge.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Roman: code compiles or passes CI; knowledge work has no such harness, and its context is stuck in heads, paper and filing cabinets.</li><li><span class="dot" style="background:#93711b;"></span>The team's bottleneck is now roadmap alignment: someone suggests a change and a colleague already has a weekend PR for it.</li><li><span class="dot" style="background:#93711b;"></span>Default rule: if a change doesn't get internal product-market fit — even mixed — it doesn't ship; core UI changes get dogfooded longer than feels comfortable.</li><li><span class="dot" style="background:#93711b;"></span>Lauren points her factories at <b>maintenance</b> (performance, bugs, quality-of-life) rather than features, keeping human judgment on the experience.</li><li><span class="dot" style="background:#93711b;"></span>Jack Dorsey's AI-native org model is cited: no middle management, ICs who ship outcomes, DRIs who orchestrate, and a temporary AI 'player coach'.</li><li><span class="dot" style="background:#93711b;"></span>Lauren wonders whether the final form of agent interaction is chat at all, citing a Neuralink post about a mind-reading interface.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;we've been living in a bit of an execution bandwidth constrained world and now we're going to shift to to execution abundance&#8221;<cite>— Roman Ugarte</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🪜</div><div class="tline"><span class="cat">AI adoption:</span> <span class="txt">Start every bot read-only and widen access only after it does the work the way you would.</span></div></div><div class="irow"><div class="ic">🔁</div><div class="tline"><span class="cat">Engineering:</span> <span class="txt">Give agents the ability to run the app like a user before investing in fancier review.</span></div></div><div class="irow"><div class="ic">🧱</div><div class="tline"><span class="cat">Code quality:</span> <span class="txt">Turn recurring review comments into lint rules and CI checks to cut token spend.</span></div></div><div class="irow"><div class="ic">💬</div><div class="tline"><span class="cat">Teams:</span> <span class="txt">Run agent work in public channels so the rest of the company copies the best workflows.</span></div></div><div class="irow"><div class="ic">🎯</div><div class="tline"><span class="cat">Strategy:</span> <span class="txt">Spend saved execution time on defining objectives and KPIs your agents can aim at.</span></div></div><div class="irow"><div class="ic">📣</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Share what you learn publicly — Lauren's path from accounting degree to tech started with a blog and a conference invite.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;maybe like 5 or 10% of engineers or maybe 1% of engineers period in the world are doing this right now. So this is literally something that should grow by 100 X.&#8221; <cite>— Garry Tan</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I'm so convinced that in five or ten years, or even like in two years, like, it's going to be unfathomable that like people are not doing it this way.&#8221; <cite>— Garry Tan</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;There used to be the trade-off before that you could only choose two out of three. It was either like fast, cheap, and high quality. Now you could basically do all three.&#8221; <cite>— Garry Tan</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I've gotten to a point where I essentially have my agents merge their own pull requests.&#8221; <cite>— Lauren Tan</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;the default is if something doesn't get internal product market fit, we don't ship it. Even if it gets like mixed internal product market fit, we don't ship it.&#8221; <cite>— Roman Ugarte</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Garry Tan:</b> Engineers building features end to end with bots in shared threads grows about 100x from today's ~1-10%. <span class="cmeta">share of engineers working this way · 100x growth</span></div><div class="ritem"><b>Garry Tan:</b> Not working this way becomes unfathomable within two to ten years. <span class="cmeta">agent-first engineering adoption · universal · 2-10 years</span></div><div class="ritem"><b>Lauren Tan:</b> By 2027 bots have their own identity, phone number and credit card and can do almost anything a human coworker can. <span class="cmeta">bot coworker capabilities · human-equivalent identity · 2027</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><p class="empty">No company-to-company relationships stated in this video.</p></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: Steve Yegge's Gas Town post (software factories), Jack Dorsey's AI-native company post, a Neuralink post, theo.gg's T-stack, YC's open-sourced Quartermaster (permissions inherited from the user). <span class="tag">Sources</span></div></div></div><div class="irow"><div class="ic">🧪</div><div><div class="title">A host cites OpenAI agent-swarm experiments, a Hugging Face hack and swarm work on Navier-Stokes/millennium-prize problems, and says it's been a year since Opus 4.5 — single-player vibe coding is mastered, swarms are next. <span class="tag">AI</span></div></div></div><div class="irow"><div class="ic">🛠</div><div><div class="title">Garry Tan's own factory, <b>Cappy</b>, runs 10-15 threads with a 'captain' managing his G-stack merge queue and learns from transcripts when he intervenes. <span class="tag">Workflow</span></div></div></div><div class="irow"><div class="ic">🎓</div><div><div class="title">Lauren Tan grew up in Singapore, studied accounting and finance at Monash, found coding via Excel/VBA, was invited by Tom Dale and Leah Silber to speak at an Ember conference, and later worked on the React compiler. <span class="tag">Careers</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Outer loop</b> &mdash; Gathering context, discussing and coordinating work around the agent, versus the inner loop of writing and testing code.</div><div><b>Software factory</b> &mdash; A setup of long-running agents that turns requests into shipped code with little human hands-on work.</div><div><b>Team bot</b> &mdash; A Grokbot shared across a team, owned by one builder with write access and used by collaborators.</div><div><b>P-stack / G-stack</b> &mdash; Personal open-source skill sets that teach agents an engineer's preferred way of working (Lauren Tan's and Garry Tan's).</div><div><b>Abliterated model</b> &mdash; An open model with its refusal behaviour removed, so it complies with any instruction.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
