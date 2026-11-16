@@ -1,0 +1,218 @@
+META = {
+    "title": "Robotic Deep-Dive: Beating China, the Race Against Tesla, & New Robotics Timeline With Brett Adcock",
+    "channel": "Peter H. Diamandis",
+    "speakers": "Brett Adcock (Figure AI, Hark); hosts Peter Diamandis and Dave Blundin",
+    "date": "2026-11-16",
+    "video_url": "https://www.youtube.com/watch?v=E864U582FVY",
+    "thread_line": "6 threads · home-robot timeline · Helix and scaling laws · compute and memory crunch · Figure 4 and vertical integration · China as the rival · Hark and the post-iPhone device",
+    "category": "market",
+    "region": "",
+}
+
+SNAPSHOT = [
+    "Figure now has **more robots than humans** on campus — well over 1,000 robots against roughly 700-800 staff.",
+    "Brett Adcock hopes within **sub six months** to drop a robot into any home and run hours-long tasks end to end; full home picture by end of 2027.",
+    "Helix 2.5 showed zero-shot work in 30 unseen rented homes and the first humanoid data scaling laws; unreleased Helix 3 is his 'baby AGI moment'.",
+    "Compute is the bottleneck: Figure spends low nine figures a year, has a ~$3B, 100,000-GPU Nscale deal for H2 2027, and says the world ran out of compute in **September 2026**.",
+    "Figure 4 is pitched as the 'iPhone one moment' — new hands make a gloved robot hand 'almost indistinguishable' from a human's, and it is designed for lights-out self-manufacture.",
+    "China is the closest competitor (~150 humanoid firms, 'all crap right now' but improving fast); Adcock hasn't seen much from Tesla in two or three years.",
+    "His AI company **Hark** has 1.2M signups a month after launching Pro; he bets it passes Figure in size within months and that the iPhone goes away within 10 years.",
+]
+
+THEMES = [
+    {
+        "id": "home-timeline",
+        "tags": ["robotics", "consumer"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "HOME LAUNCH ONLY AT APPLE-LEVEL QUALITY",
+        "title": "The home robot: zero-shot work in sub six months, sale when it's magical",
+        "lead": "Figure won't ship to homes until the robot works unteleoperated, safely, a dozen-plus hours a day — the gating constraint is intelligence, not hardware.",
+        "bullets": [
+            "At any time Figure is testing in 20 to 100 new California homes it has never seen, mostly for model evals.",
+            "Figure 3 can already fold laundry, do dishes, unload groceries and open ovens; the gap is doing it end to end for years.",
+            "Adcock warns rivals who launch early will fail like **Humane and Rabbit** did in AI devices.",
+            "Target pricing: a $300-$500 a month lease (Diamandis: about 10 bucks a day); lease lets owners upgrade every few years.",
+            "Figure will do maintenance in-house at first; financing demand is strong, starting with commercial contracts, via banks and funds.",
+            "Persistent memory and personality will port across devices; owners will be able to dress robots and change voices.",
+            "Safety spans actuator faults (40+ actuators), 'semantic' safety like not knocking over candles, rules in nonvolatile memory and a large cybersecurity team.",
+        ],
+        "quote": {"text": "We're like in the flip phone era for humanoids.", "cite": "— Brett Adcock"},
+        "watch": "Adcock repeatedly says he 'can't promise' the timeline. Peter Diamandis discloses he is an early investor in Figure.",
+        "names": [
+            {"name": "Figure AI", "blurb": "Home and commercial humanoids; private", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": "home tasks sub 6 months; full by 2027"},
+        ],
+    },
+    {
+        "id": "helix-scaling",
+        "tags": ["robotics", "ai-infra"],
+        "color": "green",
+        "badge": "Confirmed progress",
+        "status": "HELIX 3 SHOWN PRIVATELY",
+        "title": "From a K-cup demo to humanoid scaling laws",
+        "lead": "Adcock's four chapters: functional hardware, a working AI recipe, then scaling intelligence and scaling robots — Figure says it is now in chapter three.",
+        "bullets": [
+            "The Figure 1 K-cup coffee demo, with the upper body run by one neural net, was the turning point; a $500 million post-it note became a raise of a little under $700 million.",
+            "Helix 1 was upper-body neural nets, Helix 2 full body — a year of work that taught them the whole body exists to place hands and head.",
+            "Helix 2.5 did zero-shot work (make the bed, tidy the living room) in 30 rented homes and showed a **log-linear** data scaling law.",
+            "A robot taken to a new client warehouse three weeks ago zero-shot the whole job, which he expected would take five years.",
+            "Helix 3, shown in the 'Blackbox' lab, is like 'a 2-year-old in an adult body' from an undertrained first checkpoint; servers hold about 15x more data than it saw.",
+            "Data diversity helps: footage of washing a dog or painting a house improved laundry folding; the 'Index' effort collects force and hand data the internet lacks.",
+            "All Helix inference runs on board; cloud handles speech and fleet orchestration, since 5G alone costs ~50 ms round trip.",
+            "General LLM-driven robot demos are 'not real models for robotics' — slow, fixed-camera tabletop work sped up 5-20x.",
+        ],
+        "quote": {"text": "it feels for me like a really like a baby agi moment.", "cite": "— Brett Adcock"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "compute-crunch",
+        "tags": ["ai-infra", "semis"],
+        "color": "amber",
+        "badge": "Supply warning",
+        "status": "NSCALE CLUSTER ONLINE H2 2027",
+        "title": "The world ran out of compute — and memory makers aren't forecasting robots",
+        "lead": "Figure got zero bids when it tried to double capacity months after a cheap Blackwell deal; Adcock says compute and memory are now the hard constraint.",
+        "bullets": [
+            "Figure pays low nine figures a year for compute, 50-70% on pre-training, and is doubling internal compute next week.",
+            "The Nscale deal: 100,000 Vera Rubin GPUs, ~$3 billion+, second half of 2027 — 'well over 100x' current compute; he expects **billion-dollar training runs** on Helix next summer.",
+            "Seven months ago four vendors bid; three to four months ago none did, then one bid back at a steep price; even old H100s trade above par.",
+            "A top memory OEM's C-suite said it has no capacity for Figure and no humanoids in its projections; Figure has struck memory partnerships for the next few years.",
+            "Custom chips are a 2-3 year bet on an architecture that keeps changing; Dave Blundin points to Positron, Etched and Groq on 6 nm as a stopgap.",
+            "Diamandis cites $9 trillion of new liquidity from Anthropic's IPO and Nvidia's run-up as making SF the financial capital too.",
+        ],
+        "quote": {"text": "September 2026, the world ran out of comput. You just can't get it.", "cite": "— Brett Adcock"},
+        "watch": None,
+        "names": [
+            {"name": "Nscale", "blurb": "~$3B, 100k Vera Rubin GPU deal with Figure for H2 2027", "stance": "CASUAL MENTION", "conviction": "None", "horizon": "H2 2027"},
+            {"name": "Nvidia (NVDA)", "blurb": "'you can't train on anything else'; everything at capacity", "stance": "POSITIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Positron", "blurb": "Blundin: 6 nm inference chips as a stopgap", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Etched", "blurb": "Blundin: 6 nm inference chips as a stopgap", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Groq", "blurb": "Blundin: 6 nm inference chips as a stopgap", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "figure4-manufacturing",
+        "tags": ["robotics"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "FIGURE 4 — LARGEST GENERATIONAL STEP",
+        "title": "Figure 4, vertical integration and lights-out manufacturing",
+        "lead": "Figure 4 is built to be cheaper, more capable and able to help build itself, with hands Adcock says will make Figure 3 'look like a caveman'.",
+        "bullets": [
+            "Seven hand iterations over ~two years, both tendon-driven and non-tendon-driven; next-gen programs take about a year each.",
+            "Figure 1's off-the-shelf elbow actuator was three times too big and heavy and cost hundreds of dollars when it needs to be tens — so everything is built in-house.",
+            "Tariffs hit 270% one week last year; Figure has since rotated parts out of China.",
+            "BotQ next door can make **40,000+ units a year** across four lines; he sees a path to a million a year if chapter-three problems are cracked.",
+            "Full lights-out manufacturing 'for sure within five years', timing foggy between 6 months and 3 years.",
+            "Market sizing: 3.2 billion workers growing to 5-10 billion plus one robot per person ≈ 20 billion humanoids; he agrees with Elon Musk's robots-outnumber-humans view.",
+            "Space interests Figure (a human costs low tens of millions of dollars per hour in space) but 'we are not ready'; no defense work.",
+        ],
+        "quote": {"text": "Figure 3 is probably the best humanoid on the market by far, but it'll make Figure 3 look like a caveman.", "cite": "— Brett Adcock"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "china-race",
+        "tags": ["robotics", "geopolitics"],
+        "color": "amber",
+        "badge": "Contested",
+        "status": "FCC BAN ON CHINESE HUMANOIDS",
+        "title": "China is the rival, Tesla is quiet, and dancing is the wrong race",
+        "lead": "Adcock calls collective China the closest competitor but says its showcase robots run open-loop motion-capture routines that are '180 degrees' from general robotics.",
+        "bullets": [
+            "Chinese demos use deep mimic: mocap-suited humans, RL controllers replayed open loop, lidar to avoid collisions in parades.",
+            "About 150 Chinese humanoid companies; hardware and models 'all crap right now', but year-over-year progress is great.",
+            "**Unitree** robots are tiny, lack hands and have compute 'the size of a USB stick'; researchers bolt on compute backpacks.",
+            "Diamandis relays MIT CSAIL's Danielle Rus saying lobby Chinese robots there transmit video and audio back to China.",
+            "The FCC ban on Chinese robots was 'a shock'; Adcock would like a level playing field and says he doesn't lobby in DC.",
+            "Bay Area is the best place to build robotics (12 disciplines, everyone relocates), with Shenzhen second.",
+        ],
+        "quote": {"text": "I personally haven't seen it much out of Tesla in two or three years.", "cite": "— Brett Adcock"},
+        "watch": "Adcock is a direct competitor to the companies he critiques.",
+        "names": [
+            {"name": "Unitree", "blurb": "Adcock: poor hardware, no hands, tiny compute", "stance": "NEGATIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Tesla (TSLA)", "blurb": "Optimus: not much seen in 2-3 years beyond teleoperation", "stance": "NEGATIVE VIEW", "conviction": "Low", "horizon": None},
+        ],
+    },
+    {
+        "id": "hark-devices",
+        "tags": ["software", "consumer"],
+        "color": "gray",
+        "badge": "Speculative",
+        "status": "HARK PRO ONE MONTH IN",
+        "title": "Hark, the OpenAI split and the end of the iPhone",
+        "lead": "Adcock's personal-AI company Hark powers Figure's speech and, he bets, will soon be bigger than Figure — with its own device to replace the phone.",
+        "bullets": [
+            "Hark Pro: over 1.2 million signups and about five million browser sessions in a month; some countries curbed for capacity.",
+            "Hark's in-house real-time speech-to-speech runs on every Figure robot; Figure was Hark's first beta user five months ago.",
+            "Already bigger than Figure by revenue, he says; could pass it in size 'sub 90 days'.",
+            "OpenAI co-led Figure's Series B with Microsoft and joined the board, but never came to the office; Figure was making '10 to one, 100 to one' progress and fired them about two years ago.",
+            "Device thesis: AI devices will replace the billion-unit phone/computer centerpiece; Meta's glasses are 'maybe one of the worst products I've ever tried'.",
+            "He expected Apple to announce a $100 billion GPU and pre-training push and says it is now probably too late to turn around.",
+        ],
+        "quote": {"text": "the iPhone's going to go away", "cite": "— Brett Adcock"},
+        "watch": "Adcock owns both Hark and Figure and is promoting an unreleased Hark device.",
+        "names": [
+            {"name": "Hark", "blurb": "Adcock's personal-AI company; voice for Figure robots", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": "sub 90 days to pass Figure"},
+            {"name": "OpenAI", "blurb": "Former Figure Series B lead and board member, dropped", "stance": "NEGATIVE VIEW", "conviction": "Medium", "horizon": None},
+            {"name": "Apple (AAPL)", "blurb": "Missed the AI pivot; iPhone challenged", "stance": "NEGATIVE VIEW", "conviction": "High", "horizon": "10 years"},
+            {"name": "Meta (META)", "blurb": "Glasses called horrible", "stance": "NEGATIVE VIEW", "conviction": "Medium", "horizon": None},
+        ],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F916", "tag": "Robotics", "title": "Judge humanoid demos by autonomy, speed and closed-loop control, not choreography."},
+    {"icon": "\U0001F4BE", "tag": "AI infra", "title": "Treat memory and GPU supply as the binding constraint on robotics and AI scaling into 2027."},
+    {"icon": "\U0001F4C5", "tag": "Markets", "title": "Watch for Figure 4's reveal and a zero-shot home demo as the next milestones."},
+    {"icon": "\U0001F4F1", "tag": "Consumer tech", "title": "Track whether AI-native devices start eating phone time before betting on the iPhone franchise."},
+    {"icon": "\U0001F3ED", "tag": "Manufacturing", "title": "Expect humanoid supply chains to go vertical and leave China as tariffs and bans bite."},
+]
+
+HOT_TAKES = [
+    {"take": "I'd be very shocked if we exit 2027. We haven't seen this this whole picture.", "cite": "— Brett Adcock", "why": "dated home-robot call"},
+    {"take": "September 2026, the world ran out of comput. You just can't get it.", "cite": "— Brett Adcock", "why": "compute scarcity"},
+    {"take": "There's like 150 humanoid robot companies. Yeah. just it's kind of all crap right now", "cite": "— Brett Adcock", "why": "dismissal of China field"},
+    {"take": "I bet Hark is bigger than Figure in sub in sub six months. Maybe sub 90 days.", "cite": "— Brett Adcock", "why": "dated bet"},
+    {"take": "if you take the extreme case in 10 years we're not using a traditional phone.", "cite": "— Brett Adcock", "why": "iPhone obsolescence"},
+    {"take": "it's going to be 100 times bigger than the internet.", "cite": "— Brett Adcock", "why": "scale claim"},
+]
+
+CLAIMS = [
+    {"who": "Brett Adcock", "claim": "Figure robots do long-horizon tasks end to end in any home.", "metric": "zero-shot long-horizon home work", "target": "any home, hours of tasks", "by": "sub 6 months", "condition": None, "entity": "Figure AI"},
+    {"who": "Brett Adcock", "claim": "The full home-robot picture is demonstrated before the end of 2027.", "metric": "general home robot", "target": "demonstrated", "by": "2027-12", "condition": None, "entity": "Figure AI"},
+    {"who": "Brett Adcock", "claim": "Figure runs billion-dollar Helix training runs next summer.", "metric": "training run size", "target": "$1B", "by": "2027-08", "condition": "if all goes well", "entity": "Figure AI"},
+    {"who": "Brett Adcock", "claim": "Nscale's 100,000 Vera Rubin GPUs come online for Figure.", "metric": "GPUs online", "target": "100,000", "by": "2027 H2", "condition": None, "entity": "Nscale"},
+    {"who": "Brett Adcock", "claim": "Full lights-out humanoid manufacturing arrives.", "metric": "lights-out manufacturing", "target": "achieved", "by": "within 5 years", "condition": None, "entity": "Figure AI"},
+    {"who": "Brett Adcock", "claim": "Hark becomes bigger than Figure.", "metric": "company size", "target": "Hark > Figure", "by": "sub 90 days to 6 months", "condition": None, "entity": "Hark"},
+    {"who": "Brett Adcock", "claim": "People stop using traditional phones.", "metric": "phone usage", "target": "replaced by AI devices", "by": "10 years", "condition": "extreme case", "entity": "Apple (AAPL)"},
+    {"who": "Brett Adcock", "claim": "The world could hold about 20 billion humanoids.", "metric": "humanoid installed base", "target": "~20 billion", "by": None, "condition": None, "entity": None},
+    {"who": "Brett Adcock", "claim": "Figure could scale to a million units a year from one facility.", "metric": "annual production", "target": "1,000,000", "by": None, "condition": "if chapter-three problems are cracked", "entity": "Figure AI"},
+]
+
+RELATIONS = [
+    {"from": "Figure AI", "rel": "customer_of", "to": "Nscale", "note": "100k Vera Rubin GPUs, ~$3B+"},
+    {"from": "Figure AI", "rel": "partners_with", "to": "Hark", "note": "Hark speech-to-speech on every robot"},
+    {"from": "OpenAI", "rel": "invests_in", "to": "Figure AI", "note": "co-led Series B with Microsoft; relationship ended"},
+    {"from": "Microsoft (MSFT)", "rel": "invests_in", "to": "Figure AI", "note": "co-led Series B"},
+    {"from": "Figure AI", "rel": "competes_with", "to": "Unitree", "note": None},
+    {"from": "Figure AI", "rel": "competes_with", "to": "Tesla (TSLA)", "note": None},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F9ED", "title": "Adcock warns of a dystopia where digital ASI pays humans to do physical work (Task Rabbit-style agent marketplaces are already traction-gaining); humanoids, not humans, should take those orders.", "tag": "AI ethics"},
+    {"icon": "\U0001F4BC", "title": "Adcock sold Vettery in 2017 for a little over $100 million and took Archer Aviation public raising under $1 billion — 'because we needed the money'; he'd rather hit general robotics privately before a Figure IPO. Peggy Johnson took Agility public.", "tag": "Capital"},
+    {"icon": "\U0001F6E1", "title": "No robot insurance industry has appeared yet; Figure won't train robots to defend themselves from vandals (Diamandis recalls Waymos burning in LA).", "tag": "Policy"},
+    {"icon": "\U0001F9E0", "title": "Diamandis says he is invested in four BCI companies and sees a mouse then human connectome coming; Adcock sees BCI as the long-term AI interface.", "tag": "BCI"},
+    {"icon": "\U0001F4DA", "title": "Sources referenced: Elon Musk's 2040 robots prediction and Gigafactory visit, Mike Rowe and Joe Polish, Danielle Rus at MIT CSAIL, Bernie Sanders on slowing AI, and an AI-diagnostician claim from Diamandis.", "tag": "Sources"},
+]
+
+GLOSSARY = [
+    {"term": "Zero shot", "def": "Doing a task in an environment or with objects never seen in training."},
+    {"term": "Loco-manipulation", "def": "Walking the body and using the hands together as one learned behaviour."},
+    {"term": "Deep mimic", "def": "Training an RL controller to replay human motion-capture moves, usually open loop."},
+    {"term": "Lights-out manufacturing", "def": "A factory running fully automated with no humans on site."},
+    {"term": "HMI", "def": "Human-machine interaction: face, voice, gestures and memory that make robots natural to deal with."},
+    {"term": "BotQ", "def": "Figure's robot manufacturing facility, ~40,000 units a year across four lines."},
+]

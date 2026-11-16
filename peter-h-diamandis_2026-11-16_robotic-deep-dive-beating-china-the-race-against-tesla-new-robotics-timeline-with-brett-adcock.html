@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: Robotic Deep-Dive: Beating China, the Race Against Tesla, &amp; New Robotics Timeline With Brett Adcock</title>
+<meta name="description" content="Peter H. Diamandis · 6 threads · home-robot timeline · Helix and scaling laws · compute and memory crunch · Figure 4 and vertical integration · China as the rival · Hark and the post-iPhone device">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="Robotic Deep-Dive: Beating China, the Race Against Tesla, &amp; New Robotics Timeline With Brett Adcock">
+<meta property="og:description" content="Peter H. Diamandis · 6 threads · home-robot timeline · Helix and scaling laws · compute and memory crunch · Figure 4 and vertical integration · China as the rival · Hark and the post-iPhone device">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{text-wrap:balance;font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Robotic Deep-Dive: Beating China, the Race Against Tesla, &amp; New Robotics Timeline With Brett Adcock</h1>
+    <div class="byline">
+      Channel: <b>Peter H. Diamandis</b> &middot; Speaker: <b>Brett Adcock (Figure AI, Hark); hosts Peter Diamandis and Dave Blundin</b> &middot; <b>2026-11-16</b>
+      <div class="stats-line">6 threads · home-robot timeline · Helix and scaling laws · compute and memory crunch · Figure 4 and vertical integration · China as the rival · Hark and the post-iPhone device &middot; <a href="https://www.youtube.com/watch?v=E864U582FVY" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Figure now has <b>more robots than humans</b> on campus — well over 1,000 robots against roughly 700-800 staff.</li><li>Brett Adcock hopes within <b>sub six months</b> to drop a robot into any home and run hours-long tasks end to end; full home picture by end of 2027.</li><li>Helix 2.5 showed zero-shot work in 30 unseen rented homes and the first humanoid data scaling laws; unreleased Helix 3 is his 'baby AGI moment'.</li><li>Compute is the bottleneck: Figure spends low nine figures a year, has a ~$3B, 100,000-GPU Nscale deal for H2 2027, and says the world ran out of compute in <b>September 2026</b>.</li><li>Figure 4 is pitched as the 'iPhone one moment' — new hands make a gloved robot hand 'almost indistinguishable' from a human's, and it is designed for lights-out self-manufacture.</li><li>China is the closest competitor (~150 humanoid firms, 'all crap right now' but improving fast); Adcock hasn't seen much from Tesla in two or three years.</li><li>His AI company <b>Hark</b> has 1.2M signups a month after launching Pro; he bets it passes Figure in size within months and that the iPhone goes away within 10 years.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="home-timeline">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">HOME LAUNCH ONLY AT APPLE-LEVEL QUALITY</span><span class="ttag">robotics</span><span class="ttag">consumer</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">The home robot: zero-shot work in sub six months, sale when it's magical</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Figure won't ship to homes until the robot works unteleoperated, safely, a dozen-plus hours a day — the gating constraint is intelligence, not hardware.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>At any time Figure is testing in 20 to 100 new California homes it has never seen, mostly for model evals.</li><li><span class="dot" style="background:#3f6b2e;"></span>Figure 3 can already fold laundry, do dishes, unload groceries and open ovens; the gap is doing it end to end for years.</li><li><span class="dot" style="background:#3f6b2e;"></span>Adcock warns rivals who launch early will fail like <b>Humane and Rabbit</b> did in AI devices.</li><li><span class="dot" style="background:#3f6b2e;"></span>Target pricing: a <b>$300</b>-$500 a month lease (Diamandis: about 10 bucks a day); lease lets owners upgrade every few years.</li><li><span class="dot" style="background:#3f6b2e;"></span>Figure will do maintenance in-house at first; financing demand is strong, starting with commercial contracts, via banks and funds.</li><li><span class="dot" style="background:#3f6b2e;"></span>Persistent memory and personality will port across devices; owners will be able to dress robots and change voices.</li><li><span class="dot" style="background:#3f6b2e;"></span>Safety spans actuator faults (40+ actuators), 'semantic' safety like not knocking over candles, rules in nonvolatile memory and a large cybersecurity team.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;We're like in the flip phone era for humanoids.&#8221;<cite>— Brett Adcock</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Figure AI<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High · home tasks sub 6 months; full by 2027</span></b><span>Home and commercial humanoids; private</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Adcock repeatedly says he 'can't promise' the timeline. Peter Diamandis discloses he is an early investor in Figure.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="helix-scaling">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Confirmed progress</span>
+    <span class="theme-status">HELIX 3 SHOWN PRIVATELY</span><span class="ttag">robotics</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">From a K-cup demo to humanoid scaling laws</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Adcock's four chapters: functional hardware, a working AI recipe, then scaling intelligence and scaling robots — Figure says it is now in chapter three.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>The Figure 1 K-cup coffee demo, with the upper body run by one neural net, was the turning point; a <b>$500 million</b> post-it note became a raise of a little under $700 million.</li><li><span class="dot" style="background:#3f6b2e;"></span>Helix 1 was upper-body neural nets, Helix 2 full body — a year of work that taught them the whole body exists to place hands and head.</li><li><span class="dot" style="background:#3f6b2e;"></span>Helix 2.5 did zero-shot work (make the bed, tidy the living room) in 30 rented homes and showed a <b>log-linear</b> data scaling law.</li><li><span class="dot" style="background:#3f6b2e;"></span>A robot taken to a new client warehouse three weeks ago zero-shot the whole job, which he expected would take five years.</li><li><span class="dot" style="background:#3f6b2e;"></span>Helix 3, shown in the 'Blackbox' lab, is like 'a 2-year-old in an adult body' from an undertrained first checkpoint; servers hold about 15x more data than it saw.</li><li><span class="dot" style="background:#3f6b2e;"></span>Data diversity helps: footage of washing a dog or painting a house improved laundry folding; the 'Index' effort collects force and hand data the internet lacks.</li><li><span class="dot" style="background:#3f6b2e;"></span>All Helix inference runs on board; cloud handles speech and fleet orchestration, since 5G alone costs ~50 ms round trip.</li><li><span class="dot" style="background:#3f6b2e;"></span>General LLM-driven robot demos are 'not real models for robotics' — slow, fixed-camera tabletop work sped up 5-20x.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;it feels for me like a really like a baby agi moment.&#8221;<cite>— Brett Adcock</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="compute-crunch">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Supply warning</span>
+    <span class="theme-status">NSCALE CLUSTER ONLINE H2 2027</span><span class="ttag">ai-infra</span><span class="ttag">semis</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">The world ran out of compute — and memory makers aren't forecasting robots</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Figure got zero bids when it tried to double capacity months after a cheap Blackwell deal; Adcock says compute and memory are now the hard constraint.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Figure pays low nine figures a year for compute, 50-<b>70%</b> on pre-training, and is doubling internal compute next week.</li><li><span class="dot" style="background:#93711b;"></span>The Nscale deal: 100,000 Vera Rubin GPUs, ~$3 billion+, second half of 2027 — 'well over 100x' current compute; he expects <b>billion-dollar training runs</b> on Helix next summer.</li><li><span class="dot" style="background:#93711b;"></span>Seven months ago four vendors bid; three to four months ago none did, then one bid back at a steep price; even old H100s trade above par.</li><li><span class="dot" style="background:#93711b;"></span>A top memory OEM's C-suite said it has no capacity for Figure and no humanoids in its projections; Figure has struck memory partnerships for the next few years.</li><li><span class="dot" style="background:#93711b;"></span>Custom chips are a 2-3 year bet on an architecture that keeps changing; Dave Blundin points to Positron, Etched and Groq on 6 nm as a stopgap.</li><li><span class="dot" style="background:#93711b;"></span>Diamandis cites <b>$9 trillion</b> of new liquidity from Anthropic's IPO and Nvidia's run-up as making SF the financial capital too.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;September 2026, the world ran out of comput. You just can't get it.&#8221;<cite>— Brett Adcock</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Nscale<span class="stance" style="background:#93711b;">CASUAL MENTION · H2 2027</span></b><span>~$3B, 100k Vera Rubin GPU deal with Figure for H2 2027</span></div><div class="namechip"><b>Nvidia (NVDA)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · Medium</span></b><span>'you can't train on anything else'; everything at capacity</span></div><div class="namechip"><b>Positron<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Blundin: 6 nm inference chips as a stopgap</span></div><div class="namechip"><b>Etched<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Blundin: 6 nm inference chips as a stopgap</span></div><div class="namechip"><b>Groq<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Blundin: 6 nm inference chips as a stopgap</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="figure4-manufacturing">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">FIGURE 4 — LARGEST GENERATIONAL STEP</span><span class="ttag">robotics</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Figure 4, vertical integration and lights-out manufacturing</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Figure 4 is built to be cheaper, more capable and able to help build itself, with hands Adcock says will make Figure 3 'look like a caveman'.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Seven hand iterations over ~two years, both tendon-driven and non-tendon-driven; next-gen programs take about a year each.</li><li><span class="dot" style="background:#3f6b2e;"></span>Figure 1's off-the-shelf elbow actuator was three times too big and heavy and cost hundreds of dollars when it needs to be tens — so everything is built in-house.</li><li><span class="dot" style="background:#3f6b2e;"></span>Tariffs hit <b>270%</b> one week last year; Figure has since rotated parts out of China.</li><li><span class="dot" style="background:#3f6b2e;"></span>BotQ next door can make <b>40,000+ units a year</b> across four lines; he sees a path to a million a year if chapter-three problems are cracked.</li><li><span class="dot" style="background:#3f6b2e;"></span>Full lights-out manufacturing 'for sure within five years', timing foggy between 6 months and 3 years.</li><li><span class="dot" style="background:#3f6b2e;"></span>Market sizing: 3.2 billion workers growing to 5-10 billion plus one robot per person ≈ 20 billion humanoids; he agrees with Elon Musk's robots-outnumber-humans view.</li><li><span class="dot" style="background:#3f6b2e;"></span>Space interests Figure (a human costs low tens of millions of dollars per hour in space) but 'we are not ready'; no defense work.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;Figure 3 is probably the best humanoid on the market by far, but it'll make Figure 3 look like a caveman.&#8221;<cite>— Brett Adcock</cite></div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="china-race">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Contested</span>
+    <span class="theme-status">FCC BAN ON CHINESE HUMANOIDS</span><span class="ttag">robotics</span><span class="ttag">geopolitics</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">China is the rival, Tesla is quiet, and dancing is the wrong race</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Adcock calls collective China the closest competitor but says its showcase robots run open-loop motion-capture routines that are '180 degrees' from general robotics.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Chinese demos use deep mimic: mocap-suited humans, RL controllers replayed open loop, lidar to avoid collisions in parades.</li><li><span class="dot" style="background:#93711b;"></span>About 150 Chinese humanoid companies; hardware and models 'all crap right now', but year-over-year progress is great.</li><li><span class="dot" style="background:#93711b;"></span><b>Unitree</b> robots are tiny, lack hands and have compute 'the size of a USB stick'; researchers bolt on compute backpacks.</li><li><span class="dot" style="background:#93711b;"></span>Diamandis relays MIT CSAIL's Danielle Rus saying lobby Chinese robots there transmit video and audio back to China.</li><li><span class="dot" style="background:#93711b;"></span>The FCC ban on Chinese robots was 'a shock'; Adcock would like a level playing field and says he doesn't lobby in DC.</li><li><span class="dot" style="background:#93711b;"></span>Bay Area is the best place to build robotics (12 disciplines, everyone relocates), with Shenzhen second.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I personally haven't seen it much out of Tesla in two or three years.&#8221;<cite>— Brett Adcock</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Unitree<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium</span></b><span>Adcock: poor hardware, no hands, tiny compute</span></div><div class="namechip"><b>Tesla (TSLA)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Low</span></b><span>Optimus: not much seen in 2-3 years beyond teleoperation</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Adcock is a direct competitor to the companies he critiques.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="hark-devices">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#65695f;">Speculative</span>
+    <span class="theme-status">HARK PRO ONE MONTH IN</span><span class="ttag">software</span><span class="ttag">consumer</span>
+  </div>
+  <h2 style="border-left:4px solid #65695f;">Hark, the OpenAI split and the end of the iPhone</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Adcock's personal-AI company Hark powers Figure's speech and, he bets, will soon be bigger than Figure — with its own device to replace the phone.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#65695f;"></span>Hark Pro: over 1.2 million signups and about five million browser sessions in a month; some countries curbed for capacity.</li><li><span class="dot" style="background:#65695f;"></span>Hark's in-house real-time speech-to-speech runs on every Figure robot; Figure was Hark's first beta user five months ago.</li><li><span class="dot" style="background:#65695f;"></span>Already bigger than Figure by revenue, he says; could pass it in size 'sub 90 days'.</li><li><span class="dot" style="background:#65695f;"></span>OpenAI co-led Figure's Series B with Microsoft and joined the board, but never came to the office; Figure was making '10 to one, 100 to one' progress and fired them about two years ago.</li><li><span class="dot" style="background:#65695f;"></span>Device thesis: AI devices will replace the billion-unit phone/computer centerpiece; Meta's glasses are 'maybe one of the worst products I've ever tried'.</li><li><span class="dot" style="background:#65695f;"></span>He expected Apple to announce a <b>$100 billion</b> GPU and pre-training push and says it is now probably too late to turn around.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#65695f;"><div class="lbl">Pull quote</div>&#8220;the iPhone's going to go away&#8221;<cite>— Brett Adcock</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Hark<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High · sub 90 days to pass Figure</span></b><span>Adcock's personal-AI company; voice for Figure robots</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium</span></b><span>Former Figure Series B lead and board member, dropped</span></div><div class="namechip"><b>Apple (AAPL)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · High · 10 years</span></b><span>Missed the AI pivot; iPhone challenged</span></div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · Medium</span></b><span>Glasses called horrible</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Adcock owns both Hark and Figure and is promoting an unreleased Hark device.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🤖</div><div class="tline"><span class="cat">Robotics:</span> <span class="txt">Judge humanoid demos by autonomy, speed and closed-loop control, not choreography.</span></div></div><div class="irow"><div class="ic">💾</div><div class="tline"><span class="cat">AI infra:</span> <span class="txt">Treat memory and GPU supply as the binding constraint on robotics and AI scaling into 2027.</span></div></div><div class="irow"><div class="ic">📅</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Watch for Figure 4's reveal and a zero-shot home demo as the next milestones.</span></div></div><div class="irow"><div class="ic">📱</div><div class="tline"><span class="cat">Consumer tech:</span> <span class="txt">Track whether AI-native devices start eating phone time before betting on the iPhone franchise.</span></div></div><div class="irow"><div class="ic">🏭</div><div class="tline"><span class="cat">Manufacturing:</span> <span class="txt">Expect humanoid supply chains to go vertical and leave China as tariffs and bans bite.</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;I'd be very shocked if we exit 2027. We haven't seen this this whole picture.&#8221; <cite>— Brett Adcock</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;September 2026, the world ran out of comput. You just can't get it.&#8221; <cite>— Brett Adcock</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;There's like 150 humanoid robot companies. Yeah. just it's kind of all crap right now&#8221; <cite>— Brett Adcock</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;I bet Hark is bigger than Figure in sub in sub six months. Maybe sub 90 days.&#8221; <cite>— Brett Adcock</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;if you take the extreme case in 10 years we're not using a traditional phone.&#8221; <cite>— Brett Adcock</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;it's going to be 100 times bigger than the internet.&#8221; <cite>— Brett Adcock</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Brett Adcock:</b> Figure robots do long-horizon tasks end to end in any home. <span class="cmeta">zero-shot long-horizon home work · any home, hours of tasks · sub 6 months</span> <span class="tag">Figure AI</span></div><div class="ritem"><b>Brett Adcock:</b> The full home-robot picture is demonstrated before the end of 2027. <span class="cmeta">general home robot · demonstrated · 2027-12</span> <span class="tag">Figure AI</span></div><div class="ritem"><b>Brett Adcock:</b> Figure runs billion-dollar Helix training runs next summer. <span class="cmeta">training run size · $1B · 2027-08</span> <i>if if all goes well</i> <span class="tag">Figure AI</span></div><div class="ritem"><b>Brett Adcock:</b> Nscale's 100,000 Vera Rubin GPUs come online for Figure. <span class="cmeta">GPUs online · 100,000 · 2027 H2</span> <span class="tag">Nscale</span></div><div class="ritem"><b>Brett Adcock:</b> Full lights-out humanoid manufacturing arrives. <span class="cmeta">lights-out manufacturing · achieved · within 5 years</span> <span class="tag">Figure AI</span></div><div class="ritem"><b>Brett Adcock:</b> Hark becomes bigger than Figure. <span class="cmeta">company size · Hark &gt; Figure · sub 90 days to 6 months</span> <span class="tag">Hark</span></div><div class="ritem"><b>Brett Adcock:</b> People stop using traditional phones. <span class="cmeta">phone usage · replaced by AI devices · 10 years</span> <i>if extreme case</i> <span class="tag">Apple (AAPL)</span></div><div class="ritem"><b>Brett Adcock:</b> The world could hold about 20 billion humanoids. <span class="cmeta">humanoid installed base · ~20 billion</span></div><div class="ritem"><b>Brett Adcock:</b> Figure could scale to a million units a year from one facility. <span class="cmeta">annual production · 1,000,000</span> <i>if if chapter-three problems are cracked</i> <span class="tag">Figure AI</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Figure AI</b> <span class="rel">customer of</span> <b>Nscale</b> &mdash; 100k Vera Rubin GPUs, ~$3B+</div><div class="ritem"><b>Figure AI</b> <span class="rel">partners with</span> <b>Hark</b> &mdash; Hark speech-to-speech on every robot</div><div class="ritem"><b>OpenAI</b> <span class="rel">invests in</span> <b>Figure AI</b> &mdash; co-led Series B with Microsoft; relationship ended</div><div class="ritem"><b>Microsoft (MSFT)</b> <span class="rel">invests in</span> <b>Figure AI</b> &mdash; co-led Series B</div><div class="ritem"><b>Figure AI</b> <span class="rel">competes with</span> <b>Unitree</b></div><div class="ritem"><b>Figure AI</b> <span class="rel">competes with</span> <b>Tesla (TSLA)</b></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🧭</div><div><div class="title">Adcock warns of a dystopia where digital ASI pays humans to do physical work (Task Rabbit-style agent marketplaces are already traction-gaining); humanoids, not humans, should take those orders. <span class="tag">AI ethics</span></div></div></div><div class="irow"><div class="ic">💼</div><div><div class="title">Adcock sold Vettery in 2017 for a little over <b>$100 million</b> and took Archer Aviation public raising under $1 billion — 'because we needed the money'; he'd rather hit general robotics privately before a Figure IPO. Peggy Johnson took Agility public. <span class="tag">Capital</span></div></div></div><div class="irow"><div class="ic">🛡</div><div><div class="title">No robot insurance industry has appeared yet; Figure won't train robots to defend themselves from vandals (Diamandis recalls Waymos burning in LA). <span class="tag">Policy</span></div></div></div><div class="irow"><div class="ic">🧠</div><div><div class="title">Diamandis says he is invested in four BCI companies and sees a mouse then human connectome coming; Adcock sees BCI as the long-term AI interface. <span class="tag">BCI</span></div></div></div><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: Elon Musk's 2040 robots prediction and Gigafactory visit, Mike Rowe and Joe Polish, Danielle Rus at MIT CSAIL, Bernie Sanders on slowing AI, and an AI-diagnostician claim from Diamandis. <span class="tag">Sources</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Zero shot</b> &mdash; Doing a task in an environment or with objects never seen in training.</div><div><b>Loco-manipulation</b> &mdash; Walking the body and using the hands together as one learned behaviour.</div><div><b>Deep mimic</b> &mdash; Training an RL controller to replay human motion-capture moves, usually open loop.</div><div><b>Lights-out manufacturing</b> &mdash; A factory running fully automated with no humans on site.</div><div><b>HMI</b> &mdash; Human-machine interaction: face, voice, gestures and memory that make robots natural to deal with.</div><div><b>BotQ</b> &mdash; Figure's robot manufacturing facility, ~40,000 units a year across four lines.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
