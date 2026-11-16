@@ -1,0 +1,172 @@
+META = {
+    "title": "Russian Honeypot: I Was Trained To Control A Man's Mind With Sex! | John Kiriakou & Aliia Roza",
+    "channel": "The Diary Of A CEO",
+    "speakers": "John Kiriakou (former CIA officer), Aliia Roza (former Russian undercover agent); host Steven Bartlett",
+    "date": "2026-11-16",
+    "video_url": "https://www.youtube.com/watch?v=1mDHHi398ig",
+    "thread_line": "5 threads · the alleged Jensen Huang honeypot · Nvidia fallout and a buy-the-dip call · how a honey trap is trained · the five-step manipulation playbook · life inside and after deep cover",
+    "category": "market",
+    "region": "",
+}
+
+SNAPSHOT = [
+    "Former CIA officer John Kiriakou walks through press reports that Nvidia CEO Jensen Huang had an affair with Alice Wong, alleged by the guests to be a Chinese intelligence asset.",
+    "The alleged payoff: a $5 billion Nvidia chip order from **Megaspeed**, a 'Singapore' firm the New York Times found had two non-engineer staff and an empty Malaysian office.",
+    "Kiriakou says a CIA memo reached the president in early April 2026, yet Jensen still flew to China on Air Force One.",
+    "Both guests say Nvidia survives; Aliia Roza says she would buy the stock 'as much as I could' after a ~20% drop.",
+    "Roza, trained from 18 in a secret Russian program, lays out the honey-trap playbook: research, love bombing, information control, emotional dependency, isolation, gaslighting.",
+    "Her story: an 8-month undercover relationship with a crime boss, betrayal by a corrupt commander, a near-execution and the boss's later killing.",
+    "Kiriakou: about 90% of recruited assets do it for money; the FBI estimates 10,000-15,000 foreign intelligence officers in Washington.",
+]
+
+THEMES = [
+    {
+        "id": "jensen-honeypot",
+        "tags": ["geopolitics", "semis"],
+        "color": "red",
+        "badge": "Alleged operation",
+        "status": "AS REPORTED BY NYT AND CNN, PER THE GUESTS",
+        "title": "The alleged honeypot that moved $5 billion of Nvidia chips to China",
+        "lead": "Kiriakou calls it a classic, low-sophistication operation: an attractive operative, a front company and a CEO who waved the order through.",
+        "bullets": [
+            "Alice Wong claimed anchor jobs at Hunan TV and CCTV; Hunan TV says it never heard of her and no CCTV footage exists.",
+            "In 2023 she became managing director at **Megaspeed**, which bought $5 billion of chips with US approval and sent them to China; reports say chips sat unopened in Singapore.",
+            "Timeline cited: photographed together June 2024, in Taiwan May 2025, investigated October 2025; Jensen has been married 41 years.",
+            "Kiriakou: no due diligence because the orders came from the CEO — 'If Jensen Wong says go ahead and do this' — and 'bad tradecraft', since a real cover company is backstopped with an office, website and board.",
+            "Her husband Kangwi, a Chinese fund executive who founded Hexi Investment Management and faced Chinese stock-manipulation sanctions, has reportedly known Jensen since 2010 and introduced them; she joined his firm around 2015.",
+            "A CIA memo written March 2026 reached the president early April 2026; Marco Rubio blocked Jensen from the China trip, but Trump had him fly to Anchorage and sit beside Xi.",
+            "Bigger risk than chips, Kiriakou says: pillow talk about the president, DARPA and NSA — 'so far nobody's really talking about that.'",
+        ],
+        "quote": {"text": "You're thinking with the wrong head is what it comes down to.", "cite": "— John Kiriakou"},
+        "watch": "These are allegations relayed from press reports; Jensen Huang says he had no idea. Kiriakou is a vocal critic of the CIA and was imprisoned after leaving it; Roza suggests the whole affair may be someone's setup.",
+        "names": [
+            {"name": "Megaspeed", "blurb": "Alleged front company that bought $5B of Nvidia chips", "stance": "NEGATIVE VIEW", "conviction": "High", "horizon": None},
+        ],
+    },
+    {
+        "id": "nvidia-fallout",
+        "tags": ["semis", "ai-infra"],
+        "color": "green",
+        "badge": "Buy-the-dip call",
+        "status": "NVIDIA EARNINGS NOVEMBER 17",
+        "title": "Nvidia's fallout: board probe, FBI and a divorce bill — but the guests would buy",
+        "lead": "Both guests say Nvidia outlasts the scandal because it is the one company with these GPUs.",
+        "bullets": [
+            "Kiriakou lists three problems for Jensen: an outside board investigation, an FBI probe tied to CIA/NSA/Pentagon, and no prenup.",
+            "Steven Bartlett cites reports the divorce could cost about $100 billion, with Jensen owning roughly 3% of Nvidia.",
+            "Shares fell **about 20%** after the affair went public three weeks earlier; Nvidia reports results on November 17.",
+            "Governance gap: 60 direct reports, a flat structure and no named successor; no one is calling for his resignation.",
+            "Roza: Nvidia spends about $10 million a year on Jensen's security, yet no background check flagged the relationship.",
+            "Roza floats that Kangwi could be the one buying shares cheaply now.",
+        ],
+        "quote": {"text": "with Jensen or without Jensen the Nvidia will become even more powerful and stronger and profitable.", "cite": "— Aliia Roza"},
+        "watch": "Neither guest discloses a position; the buy call is a casual on-air view, not research.",
+        "names": [
+            {"name": "Nvidia (NVDA)", "blurb": "Roza would buy after the ~20% drop; Kiriakou: it survives this", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
+        ],
+    },
+    {
+        "id": "honeytrap-training",
+        "tags": ["geopolitics", "mindset"],
+        "color": "gray",
+        "badge": "Personal story",
+        "status": "RUSSIA, FROM AGE 18",
+        "title": "How Russia trained a honey trap — and paid $100 a month",
+        "lead": "Roza was handpicked at 18 into a secret KGB-derived program where 70-80% of the training was male psychology.",
+        "bullets": [
+            "Her father, a high-ranking officer, steered her from design school into a criminal-investigation unit fighting human and drug trafficking.",
+            "Of about 350 first-year students, five girls were picked: set height, under 26, deliberately different looks (her nickname was 'exotic').",
+            "Salary was about $100 a month for six-day weeks; Kiriakou recalls Time magazine putting Russian diplomats at $100 a month — one's wife taught ice skating to feed them.",
+            "Arousal 'anchoring': train the brain to like the target via the target's photo, a perfume and a keyword, then reuse the anchor before meeting.",
+            "Social engineering on a crime boss called Vladimir: hired actor couples staged his lost love story over two months, then eight months as his girlfriend, bugging his house and passing notes via dead drops.",
+            "A corrupt commander outed her to install his own protégé; she was beaten, taken to a forest to be killed, talked her way out with Vladimir, and he was killed two months later.",
+            "She says two teammates died and that she opened doors for 'cleaning' teams; she carries guilt and attempted suicide.",
+        ],
+        "quote": {"text": "If I would compare my life to James Bond movie, I would be the one who would seduce James Bond", "cite": "— Aliia Roza"},
+        "watch": "Personal account, not independently detailed on air; she declined to say whether she met Vladimir Putin, citing family still in Russia and people watching her.",
+        "names": None,
+    },
+    {
+        "id": "manipulation-playbook",
+        "tags": ["relationships", "mindset"],
+        "color": "amber",
+        "badge": "Framework",
+        "status": "NOW TAUGHT DEFENSIVELY",
+        "title": "The five-brick manipulation playbook, and the red flags to spot it",
+        "lead": "Research, love bombing, information control, emotional dependency, isolation and gaslighting — the same steps Roza now teaches women to recognise.",
+        "bullets": [
+            "Love bombing targets achievements, not looks; she greeted Kiriakou in Greek after learning his background, then asked a small favor so he would invest in her.",
+            "Information control maps the inner circle; isolation plants subtle doubts about whoever has an opinion on the relationship, so cutting them off feels like his idea.",
+            "Gaslighting makes the target doubt himself; she demonstrated it live on Kiriakou over a past interview quote.",
+            "Red flags: instant **mirroring** (test it by changing gesture), endless 'me too' similarities, and early 'we're soulmates' talk.",
+            "Body language: open posture, no bag on the lap, the eye-contact 'triangle', showing wrist and neck.",
+            "The 'milk technique': free association reveals whether to play the mother or the lover archetype.",
+            "Kiriakou: CIA trainers taught body language; old officers' war stories became a class he later mined by classified email.",
+        ],
+        "quote": {"text": "seduction, the art of seduction, it's not about loving someone. It's about what do we experience?", "cite": "— Aliia Roza"},
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "spy-craft-world",
+        "tags": ["geopolitics", "policy"],
+        "color": "gray",
+        "badge": "Insider view",
+        "status": "KIRIAKOU OUT OF THE CIA SINCE 2004",
+        "title": "Why people spy, how deep cover works, and what it does to you",
+        "lead": "Kiriakou says money drives about 90% of recruits, then ideology, excitement, revenge or legacy.",
+        "bullets": [
+            "The FBI estimates 10,000-15,000 foreign intelligence officers in Washington; Russia, France, Israel and China still run honey traps, the CIA largely stopped after the 1970s.",
+            "Best sources are overlooked insiders, like the White House valet; a DIA colleague built a career on a San Francisco cab driver.",
+            "NOC (non-official cover) officers live a cover job for 20-30 years; US companies routinely agree to host them.",
+            "Sleeper agents: an Arlington elementary teacher arrested; Jack Barsky walked into the FBI rather than answer his activation.",
+            "China once had poor English and was not a big threat; it has grown far more sophisticated over 20-30 years and can afford to try many operatives at once.",
+            "The CIA rarely runs decade-long operations 'because you can't get promoted that way'.",
+            "Both guests relate to sociopathic traits; Roza says she has never been in love and keeps scanning rooms, as Kiriakou still checks his mirrors.",
+        ],
+        "quote": {"text": "I've said many, many times the CIA actively seeks to hire people with sociopathic tendencies.", "cite": "— John Kiriakou"},
+        "watch": None,
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F4C9", "tag": "Markets", "title": "Separate CEO scandal from franchise value — check whether the moat depends on the person."},
+    {"icon": "\U0001F3E2", "tag": "Governance", "title": "Watch key-person risk: 60 direct reports and no successor is a board problem, scandal or not."},
+    {"icon": "\U0001F50E", "tag": "Due diligence", "title": "Verify counterparties are backstopped — office, staff, website, board — before big orders."},
+    {"icon": "\U0001F6A9", "tag": "Relationships", "title": "Test fast rapport: change a gesture and see if it's copied, and be wary of instant 'soulmate' talk."},
+    {"icon": "\U0001F9E0", "tag": "Mindset", "title": "Use anchoring for good — a word, scent or breath routine to steady nerves before a talk."},
+]
+
+HOT_TAKES = [
+    {"take": "You're thinking with the wrong head is what it comes down to.", "cite": "— John Kiriakou", "why": "blunt verdict on Jensen"},
+    {"take": "if I would have extra cash I would go and buy this stock right now as much as I could.", "cite": "— Aliia Roza", "why": "buy call mid-scandal"},
+    {"take": "The Chinese had to have been laughing at us during this this dinner.", "cite": "— John Kiriakou", "why": "criticism of the president"},
+    {"take": "I've said many, many times the CIA actively seeks to hire people with sociopathic tendencies.", "cite": "— John Kiriakou", "why": "claim about the CIA"},
+    {"take": "About 90% of the time in my experience it was money.", "cite": "— John Kiriakou", "why": "numeric claim on motive"},
+]
+
+CLAIMS = [
+    {"who": "Aliia Roza / John Kiriakou", "claim": "Nvidia survives the scandal and becomes even more powerful and profitable.", "metric": "Nvidia business strength", "target": "stronger", "by": None, "condition": "with or without Jensen", "entity": "Nvidia (NVDA)"},
+    {"who": "Aliia Roza", "claim": "Nvidia reports results on November 17.", "metric": "earnings report", "target": "disclosure", "by": "2026-11-17", "condition": None, "entity": "Nvidia (NVDA)"},
+]
+
+RELATIONS = [
+    {"from": "Megaspeed", "rel": "customer_of", "to": "Nvidia (NVDA)", "note": "$5B chip order allegedly diverted to China"},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F4DA", "title": "Sources referenced: New York Times and CNN reporting, Time magazine, Kiriakou's own podcast, Neil Strauss's podcast To Die For, Jack Barsky's book, The Sopranos and LA Confidential as analogies, and Roza's book *Honey Trap: How Never Be Trapped Again*.", "tag": "Sources"},
+    {"icon": "\U0001F3AF", "title": "Kiriakou recalls Colin Powell asking who would run a plot to kill George H.W. Bush; 47 cruise missiles hit Iraqi intelligence HQ at night and killed a janitor — 'Powell killed the janitor,' his boss said.", "tag": "History"},
+    {"icon": "\U0001F355", "title": "After prison, Kiriakou says the FBI tailed him routinely; he once bought the surveillance team pizza, and Aldrich Ames and Robert Hanssen were caught through Western penetrations of the KGB.", "tag": "Espionage"},
+    {"icon": "\U0001F3DD", "title": "Roza's stated goal: buy an island and build an internet-free orphanage for thousands of children.", "tag": "Life"},
+]
+
+GLOSSARY = [
+    {"term": "Honeypot / honey trap", "def": "An operation using a seductive operative to gain access, information or favors from a well-connected target."},
+    {"term": "Backstopping", "def": "Making a cover identity checkable: real office, phone, website, records."},
+    {"term": "NOC", "def": "Non-official cover: an intelligence officer posing in a private job rather than at an embassy."},
+    {"term": "Sleeper agent", "def": "An operative placed to live a normal life until activated."},
+    {"term": "Dead drop", "def": "A hidden spot for passing notes or material without meeting."},
+    {"term": "Warm turnover", "def": "Handing an asset to a successor case officer in person."},
+]
