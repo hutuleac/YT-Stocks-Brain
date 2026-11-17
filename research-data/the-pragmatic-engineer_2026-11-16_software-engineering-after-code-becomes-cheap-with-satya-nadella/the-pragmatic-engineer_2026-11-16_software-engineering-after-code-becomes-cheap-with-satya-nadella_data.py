@@ -1,0 +1,175 @@
+META = {
+    "title": "Software engineering after code becomes cheap with Satya Nadella",
+    "channel": "The Pragmatic Engineer",
+    "speakers": "Satya Nadella (Microsoft CEO), Gergely Orosz (host)",
+    "date": "2026-11-16",
+    "video_url": "https://www.youtube.com/watch?v=0NE89Nzfk20",
+    "thread_line": "5 threads · verification over generation · software factories in brownfield · Microsoft's workforce reshape · own your model system · local models and unmetered intelligence",
+    "category": "market",
+    "region": "",
+}
+
+SNAPSHOT = [
+    "Nadella's core line: once **code generation is cheap, verification is the hard part**. Specs, tests, critique and production traces now carry the engineering.",
+    "He admits Microsoft was slow to react. Cursor won on agent mode, and Claude Code in 2025 made the CLI the form factor, so IDEs faded in about 6 months.",
+    "**Decision engines** are the new primitive he's most excited about, \"the stored procedure of the intelligence era.\"",
+    "The voluntary exit offers are about giving people agency during a reorg into smaller, factory-style teams. The junior-hiring slowdown may be temporary.",
+    "Strategic thesis: every firm should own its harness, context, memory and evals, and be able to swap any model. If you can't, you're not a sovereign firm.",
+    "Treat agents as **insider risk**: keep authority separate from intelligence, and make chain of thought auditable.",
+    "Local models on PCs (Surface Ultra, Copilot Fusion routing) open a \"hybrid intelligence era\" of unmetered intelligence.",
+]
+
+THEMES = [
+    {
+        "id": "verification",
+        "tags": ["dev-workflow", "software"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "CODE MOVED FROM INPUT TO OUTPUT",
+        "title": "Cheap code, hard verification: Microsoft missed the CLI shift, then rebuilt around specs and tests",
+        "lead": "Nadella frames the new job as specification in and verified output out, and admits the form-factor shift caught Microsoft flat-footed.",
+        "bullets": [
+            "Copilot shipped before GPT-4, and code completions reaffirmed his belief in scaling laws. **Cursor** forked VS Code in 2023 and won on agent mode, and Microsoft caught up.",
+            "Anthropic's model work made the CLI the form factor (Claude Code, 2025). Nadella says IDEs faded in roughly 6 months, and the \"new IDE\" is about inputting specs and markdown.",
+            "Lesson: \"when model jumps happen nonlinearly, the form factor has to change\"; AI-first product building is \"unforgiving\". Don't be in love with what you built.",
+            "**Decision engines** are a new primitive, like Excel macros for code. Token-efficient and not regenerated each time; an Xbox community-feedback system is the example. He backs Diego's aim to make them \"as boring as databases\". He also sees a possible IDE rebirth around embedded intelligence.",
+            "Verification craft: turn every failure into a test case, and use a **separate model family** as the critic so one family's alignment issues don't become yours.",
+            "His \"RSI\": production traces feed back to verify a fix end to end. A Rust migration on one of these teams still had to revert.",
+            "Onboarding gets easier because a software factory documents everything. The codebase becomes a patient mentor.",
+        ],
+        "quote": {"text": "in a world where code generation has become cheap what has become hard is verification", "cite": "— Satya Nadella"},
+        "watch": None,
+        "names": [
+            {"name": "Cursor", "blurb": "Forked VS Code and won early on agent mode", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "Anthropic", "blurb": "Its model made the CLI form factor work", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "factories",
+        "tags": ["dev-workflow", "software"],
+        "color": "green",
+        "badge": "In production",
+        "status": "BROWNFIELD, NOT GREENFIELD",
+        "title": "Software factories inside Microsoft: tiny teams, agentic ops, and a git rebuild for agent load",
+        "lead": "The factory model is already running on Microsoft's own products, and the hard part is brownfield builds and CI/CD, not new demos.",
+        "bullets": [
+            "On GitHub, a single developer maintains an entire Copilot runtime, ported to Rust. The Cowork team is only 9 or 12 engineers. Both have published blogs on how they work.",
+            "Azure networking manages ~500 fiber operators worldwide. It replaced email-and-ad-hoc DevOps with an agentic ops system wired into its repos.",
+            "Windows is building a CVE pipeline from crash traces to fixes, because AI models now find vulnerabilities faster. It's brownfield: the build system is still the Windows build system.",
+            "Coding agents pushed GitHub load to \"superhuman\" levels, so Microsoft is changing the **git protocol** and storage system.",
+            "Difference from past shifts: Nadella went VAX/VMS → Sun workstation → Microsoft, and the IDE stayed stable for his whole career. This time runtime, framework, IDE and stack all change, and a new model can reset everything again.",
+            "No separate \"shiny object\" team: every product (Windows, SQL Server, cloud services) gets the new toolchain. And \"we don't get permission to do things that are not adding value to customers.\"",
+        ],
+        "quote": None,
+        "watch": None,
+        "names": [
+            {"name": "Microsoft (MSFT)", "blurb": "Rebuilding Windows, GitHub and Azure ops as software factories", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
+        ],
+    },
+    {
+        "id": "workforce",
+        "tags": ["career"],
+        "color": "amber",
+        "badge": "Reorg underway",
+        "status": "200,000 PEOPLE, RECONFIGURED",
+        "title": "Voluntary exits, FDE growth and a junior-hiring pause Nadella calls too early to read",
+        "lead": "Nadella says the voluntary exit offers are about agency during a reconfiguration, not a prelude to cuts, and that expertise still matters with new leverage.",
+        "bullets": [
+            "The 200,000 people at Microsoft \"will have to be configured in different ways\": new team sizes and workflows.",
+            "Systems/infrastructure engineers and training researchers earn wages \"through the roof\". He wants people slotted where their long-term economic opportunity is.",
+            "**Forward deployed engineer (FDE)** is one of the fastest-growing jobs. Account reps, customer success, support and FDEs should all go through the same preceptorship. LinkedIn merged roles into \"full stack builders\".",
+            "Mark Russinovich and Scott Hanselman run a preceptorship program, reportedly with a Carnegie Mellon tie, for early-career engineers. Nadella calls joining such a team his \"dream next job\".",
+            "The junior-hiring slowdown may only last while new factories get built. An AI-native company \"start[s] with a token budget and a human\".",
+            "He says the AI narrative (singularity, one company, no jobs) created \"enormous anxiety\". Microsoft is a 51-year-old incumbent doing the hard structural work.",
+        ],
+        "quote": {"text": "I wish I could just sit here and say it'll all be the same. I cannot", "cite": "— Satya Nadella"},
+        "watch": "Nadella is explaining his own company's exit program. The host reads it more bluntly, as an offer to leave before an intensive period of reorgs and smaller teams.",
+        "names": None,
+    },
+    {
+        "id": "sovereign-firm",
+        "tags": ["ai-infra", "software"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "AZURE FOUNDRY · IQ LAYER",
+        "title": "Own your model system: harness, context and evals separate from any one model",
+        "lead": "Nadella argues every firm needs its own token capital, and a firm that can't swap models while improving on its private eval has lost control.",
+        "bullets": [
+            "Hayek's distributed knowledge argument means there should be \"as many frontier models as firms\". Every firm holds human capital and **token capital**.",
+            "The host notes firms such as Revolut buying B200s to run open models themselves. Nadella says open weights are \"one strategy that I think has legs\", alongside context layers and traces from closed models.",
+            "Microsoft's **IQ layer** offers the Copilot harness as a managed service in Foundry. You can also bring PI or another open-source harness, with memory, context and the plugin/skill action space kept separate from any model.",
+            "Customer pattern: start on a frontier model, collect traces, then fine-tune a cheap MAI Flash model for a deterministic workflow.",
+            "\"Reverse information paradox\": don't leak your value. His test: replace any model and still hill-climb on your private eval. Private evals matter more than public benchmarks.",
+            "Database analogy: you can migrate data out of a relational database, but not memory baked into a vendor model's embeddings.",
+            "Trust architecture: models get more capable but not more aligned. Separate **authority from intelligence**, treat agents as insider risk, and log chain of thought in human language so it can't be tampered with.",
+        ],
+        "quote": {"text": "you should be able to replace any model and still hill climb on an eval that's your private eval", "cite": "— Satya Nadella"},
+        "watch": "Microsoft sells the managed harness, Foundry models and MAI models that this architecture runs on, and it still uses OpenAI models through their partnership.",
+        "names": [
+            {"name": "Revolut", "blurb": "Cited by the host as buying B200s for its own inference", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+            {"name": "OpenAI", "blurb": "Partner models Microsoft keeps using alongside MAI", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "local-models",
+        "tags": ["ai-infra", "semis"],
+        "color": "green",
+        "badge": "Positive view",
+        "status": "HYBRID INTELLIGENCE ERA",
+        "title": "Local models and Copilot Fusion turn PCs into token factories",
+        "lead": "Nadella sees cloud demand staying unlimited while the edge becomes a second token factory, with routers picking models per task.",
+        "bullets": [
+            "\"Last year's frontier can run on your laptop and last quarter's\" on your desktop. Silicon work at Nvidia, AMD, Qualcomm and Intel is driving it.",
+            "Surface Ultra runs a local coding model. In agent swarms some sub-agents run locally while others call the cloud, which Nadella calls \"unmetered intelligence\".",
+            "**Copilot Fusion** routes each task to a model. Nadella hasn't picked a model manually in Copilot in a while.",
+            "MAI Code is a closed model you can still download and run on Windows. The host found the MAI Flash 1.1 model unimpressive.",
+            "MAI2 base: Microsoft disclosed a clean-room pre-training recipe, which Nadella calls one of the most detailed in public. The goal is new points on the frontier curve that save both FLOPs and tokens, and more choice than one model family.",
+        ],
+        "quote": {"text": "distributed computing will always remain distributed", "cite": "— Satya Nadella"},
+        "watch": "Microsoft makes Surface and Windows, so it benefits directly if local models move work onto PCs.",
+        "names": None,
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F9EA", "tag": "Engineering", "title": "Shift effort to specs, test-from-failure loops and a cross-family critic model"},
+    {"icon": "\U0001F510", "tag": "AI strategy", "title": "Keep harness, context and evals vendor-neutral, and prove you can swap models on a private eval"},
+    {"icon": "\U0001F6E1️", "tag": "Security", "title": "Give agents insider-risk controls: no authority without oversight, logged chain of thought"},
+    {"icon": "\U0001F4BB", "tag": "Markets", "title": "Watch MSFT's Foundry, MAI models and Copilot Fusion as the play on firms owning their model stack"},
+    {"icon": "\U0001F393", "tag": "Careers", "title": "Change your talk-to-do ratio: join a team building with agents and get back to school mode"},
+]
+
+HOT_TAKES = [
+    {"take": "In 6 months or so, ide kind of faded away.", "cite": "— Gergely Orosz / Satya Nadella", "why": "Microsoft CEO conceding its core dev tool lost the moment"},
+    {"take": "It's like it's a like this is the stored procedure of the intelligence era.", "cite": "— Satya Nadella", "why": "names decision engines the next database-level primitive"},
+    {"take": "If you can't do that, then you have to ask yourself how are you a sovereign firm", "cite": "— Satya Nadella", "why": "most firms locked into one lab fail this test"},
+    {"take": "right now we're getting more and more capable and less and less reliable like which is the most dangerous place to be in", "cite": "— Satya Nadella", "why": "frontier-lab partner calling current scaling the dangerous zone"},
+    {"take": "last year's frontier can run on your laptop and last quarters uh Frontier can run on your desktop", "cite": "— Satya Nadella", "why": "concrete lag claim for local models"},
+]
+
+CLAIMS = [
+    {"who": "Satya Nadella", "claim": "Soon everyone will run a multi-model system instead of debating open versus closed models", "metric": "multi-model systems as default", "target": "everyone", "by": "by the next conversation", "condition": None, "entity": None},
+    {"who": "Satya Nadella", "claim": "Last year's frontier models run on a laptop and last quarter's on a desktop", "metric": "local model lag vs frontier", "target": "~1 year laptop / ~1 quarter desktop", "by": None, "condition": None, "entity": None},
+    {"who": "Satya Nadella", "claim": "Ignite will show blueprints for owning the enterprise AI stack", "metric": "Ignite conference", "target": None, "by": "2026-11", "condition": None, "entity": "Microsoft (MSFT)"},
+    {"who": "Gergely Orosz", "claim": "Blueprints and certifications for agentic software systems will arrive", "metric": "blueprints/certifications", "target": None, "by": "5-10 years", "condition": None, "entity": None},
+]
+
+RELATIONS = [
+    {"from": "Microsoft (MSFT)", "rel": "partners_with", "to": "OpenAI", "note": "keeps using OpenAI models alongside its own MAI family"},
+    {"from": "Cursor", "rel": "competes_with", "to": "Microsoft (MSFT)", "note": "forked VS Code, beat Copilot to agent mode"},
+]
+
+OTHER_NEWS = [
+    {"icon": "\U0001F4BB", "title": "Open-source turn after 2014: VS Code, the GitHub acquisition, TypeScript and SQL Server on Linux. Nadella says that by true accounting Microsoft would rank at or near the top of open-source contributors, while some big beneficiaries \"have hardly contributed\".", "tag": "Open source"},
+    {"icon": "\U0001F465", "title": "VS Code taught \"building in the open\": Erich Gamma and Amanda Silver's team took daily direction from community feedback instead of from a vice president.", "tag": "Product"},
+    {"icon": "\U0001F4DA", "title": "Sources referenced: Diego's decision-engine work, the GitHub Copilot and Cowork team blogs, and Hayek on pricing and distributed knowledge. GitHub Universe: Nadella met the first graduating class that never used an IDE before Copilot.", "tag": "Sources"},
+]
+
+GLOSSARY = [
+    {"term": "Software factory", "def": "A team setup where agents generate code from specs and humans own intent, verification and the build/ops pipeline."},
+    {"term": "Decision engine", "def": "An embedded, token-efficient intelligence primitive that makes a call without regenerating code each time."},
+    {"term": "Forward deployed engineer (FDE)", "def": "An engineer embedded with customers to build their deployments."},
+    {"term": "Reverse information paradox", "def": "Nadella's term for a firm leaking its proprietary value into a vendor's model through usage."},
+    {"term": "Unmetered intelligence", "def": "Local inference on your own hardware, used without per-token billing."},
+    {"term": "Brownfield", "def": "Existing systems with legacy builds and CI/CD, as opposed to new greenfield projects."},
+]

@@ -1,0 +1,7163 @@
+1
+00:00:00,080 --> 00:00:04,160
+In a world where code generation has
+
+2
+00:00:01,839 --> 00:00:06,160
+become cheap, what has become hard is
+
+3
+00:00:04,160 --> 00:00:07,759
+verification. In fact, I kind of feel
+
+4
+00:00:06,160 --> 00:00:10,719
+like I got to learn because I've not
+
+5
+00:00:07,759 --> 00:00:13,199
+worked in a team that is mostly now code
+
+6
+00:00:10,718 --> 00:00:15,279
+as output. But the code as output has a
+
+7
+00:00:13,199 --> 00:00:16,960
+particular order of operations. It's not
+
+8
+00:00:15,279 --> 00:00:18,480
+like code as output means everybody's
+
+9
+00:00:16,960 --> 00:00:18,800
+just generating all sorts of random
+
+10
+00:00:18,480 --> 00:00:21,359
+code.
+
+11
+00:00:18,800 --> 00:00:22,880
+>> Out of nowhere 2025 clock code. For the
+
+12
+00:00:21,359 --> 00:00:24,160
+first time, I felt that you didn't have
+
+13
+00:00:22,879 --> 00:00:26,879
+an immediate response.
+
+14
+00:00:24,160 --> 00:00:29,439
+>> When model jumps happen nonlinearly, the
+
+15
+00:00:26,879 --> 00:00:30,879
+form factor has to change. AI first
+
+16
+00:00:29,439 --> 00:00:34,079
+product building in that sense is
+
+17
+00:00:30,879 --> 00:00:35,119
+unforgiving. In 6 months or so, ide kind
+
+18
+00:00:34,079 --> 00:00:36,960
+of faded away.
+
+19
+00:00:35,119 --> 00:00:39,439
+>> I'm asking myself, are there parallels
+
+20
+00:00:36,960 --> 00:00:40,079
+to the open source movement and now the
+
+21
+00:00:39,439 --> 00:00:41,759
+open model?
+
+22
+00:00:40,079 --> 00:00:44,079
+>> If you just get past this thing called
+
+23
+00:00:41,759 --> 00:00:46,238
+there's going to be one frontier model
+
+24
+00:00:44,079 --> 00:00:48,239
+to have all of the world's knowledge,
+
+25
+00:00:46,238 --> 00:00:50,238
+right? If you don't buy that, then you
+
+26
+00:00:48,238 --> 00:00:53,038
+have to assume that there should be in
+
+27
+00:00:50,238 --> 00:00:54,718
+some sense as many frontier models as
+
+28
+00:00:53,039 --> 00:00:57,719
+firms in the world, right? Because after
+
+29
+00:00:54,719 --> 00:00:57,719
+all,
+
+30
+00:00:59,119 --> 00:01:02,159
+What does software engineering mean
+
+31
+00:01:00,558 --> 00:01:04,478
+after code generation becomes very
+
+32
+00:01:02,159 --> 00:01:06,640
+cheap? Today's guest is Sacha Nadella,
+
+33
+00:01:04,478 --> 00:01:08,159
+Microsoft CEO, one of the few big tech
+
+34
+00:01:06,640 --> 00:01:10,478
+CEOs [music] who started his career as a
+
+35
+00:01:08,159 --> 00:01:11,920
+software engineer. Today we cover what
+
+36
+00:01:10,478 --> 00:01:13,599
+the term software factory means for
+
+37
+00:01:11,920 --> 00:01:15,980
+Satcha and how it looks like today
+
+38
+00:01:13,599 --> 00:01:17,280
+inside of Microsoft. Open models,
+
+39
+00:01:15,980 --> 00:01:19,759
+[music] local models, and the idea of
+
+40
+00:01:17,280 --> 00:01:22,239
+unmetered intelligence. the very real
+
+41
+00:01:19,759 --> 00:01:24,319
+anxiety for us devs around AI, Microsoft
+
+42
+00:01:22,239 --> 00:01:26,798
+voluntary exit offers and why the junior
+
+43
+00:01:24,319 --> 00:01:28,719
+hiring slowdown might only be temporary
+
+44
+00:01:26,799 --> 00:01:30,400
+and many more. If you want to understand
+
+45
+00:01:28,719 --> 00:01:32,798
+what Satcha thinks will take to become a
+
+46
+00:01:30,400 --> 00:01:34,400
+standout software dev in this age of AI
+
+47
+00:01:32,799 --> 00:01:35,920
+and want to understand his thoughtful
+
+48
+00:01:34,400 --> 00:01:37,680
+mental models on how to make sense of
+
+49
+00:01:35,920 --> 00:01:39,759
+all this change, this episode is for
+
+50
+00:01:37,680 --> 00:01:41,840
+you. This episode is presented by
+
+51
+00:01:39,759 --> 00:01:43,599
+Turbopuffer, a ridiculously scalable,
+
+52
+00:01:41,840 --> 00:01:45,439
+fast, and cheap hybrid search engine
+
+53
+00:01:43,599 --> 00:01:47,039
+built on top of object storage used by
+
+54
+00:01:45,438 --> 00:01:48,959
+cuttingedge companies like Entropic,
+
+55
+00:01:47,040 --> 00:01:50,560
+Linear Ramp, and many others. Many
+
+56
+00:01:48,959 --> 00:01:52,478
+companies who switch to Turbopuffer are
+
+57
+00:01:50,560 --> 00:01:54,719
+cutting their search bills by 50% or
+
+58
+00:01:52,478 --> 00:01:55,200
+more and getting much faster results.
+
+59
+00:01:54,719 --> 00:01:58,078
+Check it out at
+
+60
+00:01:55,200 --> 00:01:59,759
+turbopuffer.com/pragmatic.
+
+61
+00:01:58,078 --> 00:02:01,679
+Satcha, welcome to the podcast.
+
+62
+00:01:59,759 --> 00:02:03,200
+>> Thank you so much for having me, G.
+
+63
+00:02:01,680 --> 00:02:04,479
+>> Well, it's great to be here because I'm
+
+64
+00:02:03,200 --> 00:02:05,200
+not sure if you know, but I was a
+
+65
+00:02:04,478 --> 00:02:06,959
+Microsofty.
+
+66
+00:02:05,200 --> 00:02:08,878
+>> Were you here or where were you? I I was
+
+67
+00:02:06,959 --> 00:02:11,519
+in London and this is the first time I'm
+
+68
+00:02:08,878 --> 00:02:14,719
+here in headquarters. So, you know, like
+
+69
+00:02:11,520 --> 00:02:16,480
+>> welcome 12 years back. But I want to
+
+70
+00:02:14,719 --> 00:02:18,959
+rewind back there. I was actually at
+
+71
+00:02:16,479 --> 00:02:20,959
+Microsoft when you became CEO in 2014.
+
+72
+00:02:18,959 --> 00:02:22,959
+And I remember distinctly remember how
+
+73
+00:02:20,959 --> 00:02:24,959
+Microsoft was still very much embracing
+
+74
+00:02:22,959 --> 00:02:27,120
+closed source. And when you came on, you
+
+75
+00:02:24,959 --> 00:02:29,120
+started to embrace open source. There
+
+76
+00:02:27,120 --> 00:02:31,360
+was Visual Studio Code that was
+
+77
+00:02:29,120 --> 00:02:33,599
+released. Microsoft acquired GitHub and
+
+78
+00:02:31,360 --> 00:02:36,160
+went all on Git before we used TFS.
+
+79
+00:02:33,598 --> 00:02:39,919
+Typescript was released as open source.
+
+80
+00:02:36,159 --> 00:02:42,400
+And I just wanted to rewind back. Why
+
+81
+00:02:39,919 --> 00:02:43,598
+did you people were surprised my my
+
+82
+00:02:42,400 --> 00:02:45,120
+friends outside of Microsoft were
+
+83
+00:02:43,598 --> 00:02:47,679
+surprised even I was surprised. Why did
+
+84
+00:02:45,120 --> 00:02:49,039
+Microsoft go all in on open source?
+
+85
+00:02:47,680 --> 00:02:51,519
+>> Yeah. Yeah, I mean at some level
+
+86
+00:02:49,039 --> 00:02:53,679
+sometimes these narratives and
+
+87
+00:02:51,519 --> 00:02:55,759
+perceptions get shaped and it takes a
+
+88
+00:02:53,680 --> 00:02:58,640
+lot to change and what have you because
+
+89
+00:02:55,759 --> 00:03:01,840
+if you look at even I would say commits
+
+90
+00:02:58,639 --> 00:03:04,399
+even into Linux even preme becoming CEO
+
+91
+00:03:01,840 --> 00:03:07,039
+I think Microsoft had significant uh
+
+92
+00:03:04,400 --> 00:03:09,760
+contributions and were committed to it.
+
+93
+00:03:07,039 --> 00:03:12,239
+But the thing that I think we really
+
+94
+00:03:09,759 --> 00:03:14,399
+made sure the we understood internally
+
+95
+00:03:12,239 --> 00:03:16,959
+and the world understood is Microsoft is
+
+96
+00:03:14,400 --> 00:03:19,519
+committed to open source, right? Whether
+
+97
+00:03:16,959 --> 00:03:22,319
+it is uh bringing some of our workloads
+
+98
+00:03:19,519 --> 00:03:24,959
+to Linux like SQL Server uh or
+
+99
+00:03:22,318 --> 00:03:26,878
+contributing to Linux or or open
+
+100
+00:03:24,959 --> 00:03:29,598
+sourcing projects like Typescript and
+
+101
+00:03:26,878 --> 00:03:32,000
+others. I think we're all part and you
+
+102
+00:03:29,598 --> 00:03:34,719
+know obviously our you know us as
+
+103
+00:03:32,000 --> 00:03:36,719
+stewards of GitHub uh put us at the
+
+104
+00:03:34,719 --> 00:03:39,519
+center of it and we just wanted to make
+
+105
+00:03:36,719 --> 00:03:42,080
+sure that we were able to earn the trust
+
+106
+00:03:39,519 --> 00:03:43,680
+uh of the open source community by doing
+
+107
+00:03:42,080 --> 00:03:45,120
+right by the community. In fact, it's
+
+108
+00:03:43,680 --> 00:03:48,159
+fascinating. I've always thought about
+
+109
+00:03:45,120 --> 00:03:50,879
+this which is when you look at companies
+
+110
+00:03:48,158 --> 00:03:52,798
+that have used open-source and people
+
+111
+00:03:50,878 --> 00:03:54,878
+who have contributed to open source if
+
+112
+00:03:52,799 --> 00:03:56,959
+there was a true accounting of it at
+
+113
+00:03:54,878 --> 00:03:59,679
+some point I think Microsoft would be at
+
+114
+00:03:56,959 --> 00:04:01,438
+the top or if not amongst the top right
+
+115
+00:03:59,680 --> 00:04:02,959
+in fact if you look at some quote
+
+116
+00:04:01,438 --> 00:04:05,199
+unquote a lot of these other companies
+
+117
+00:04:02,959 --> 00:04:07,438
+that have benefited the most from open
+
+118
+00:04:05,199 --> 00:04:09,679
+source have hardly contributed it's
+
+119
+00:04:07,438 --> 00:04:11,359
+never and that is I think how you know
+
+120
+00:04:09,680 --> 00:04:13,360
+and like hey you can't complain but
+
+121
+00:04:11,360 --> 00:04:15,360
+that's how the world rolls which is it's
+
+122
+00:04:13,360 --> 00:04:15,760
+on nar narratives versus facts all the
+
+123
+00:04:15,360 --> 00:04:17,680
+time.
+
+124
+00:04:15,759 --> 00:04:19,439
+>> Well, it's it's narratives versus facts.
+
+125
+00:04:17,680 --> 00:04:21,680
+That's true. And and again, I think
+
+126
+00:04:19,439 --> 00:04:24,240
+there's that Windows legacy from the
+
+127
+00:04:21,680 --> 00:04:26,240
+'90s that shifts people's uh you know,
+
+128
+00:04:24,240 --> 00:04:27,918
+like how they think about it. But what I
+
+129
+00:04:26,240 --> 00:04:29,519
+remember made the biggest impact across
+
+130
+00:04:27,918 --> 00:04:31,599
+the developer community was not really
+
+131
+00:04:29,519 --> 00:04:33,839
+open source. It was Visual Studio Code.
+
+132
+00:04:31,600 --> 00:04:36,160
+Yeah, it was open source, sure, but it
+
+133
+00:04:33,839 --> 00:04:38,239
+was also free. And I was a developer
+
+134
+00:04:36,160 --> 00:04:41,600
+before I used Visual Studio and it was
+
+135
+00:04:38,240 --> 00:04:44,478
+so good. Visual Studio 2003 is still
+
+136
+00:04:41,600 --> 00:04:46,160
+amazing piece of software. and somehow
+
+137
+00:04:44,478 --> 00:04:48,240
+you decided Microsoft to bring Visual
+
+138
+00:04:46,160 --> 00:04:50,080
+Studio for free in an open source
+
+139
+00:04:48,240 --> 00:04:52,879
+version to the broader dev community and
+
+140
+00:04:50,079 --> 00:04:55,120
+boom 10 or 5 years later it's everywhere
+
+141
+00:04:52,879 --> 00:04:58,240
+everyone was using it was that
+
+142
+00:04:55,120 --> 00:05:00,319
+intentional yeah in fact u you know that
+
+143
+00:04:58,240 --> 00:05:02,560
+you know Eric GMA and others who were at
+
+144
+00:05:00,319 --> 00:05:04,079
+that time in that place really was
+
+145
+00:05:02,560 --> 00:05:05,680
+absolutely it was intentional even
+
+146
+00:05:04,079 --> 00:05:08,319
+building with community in fact uh you
+
+147
+00:05:05,680 --> 00:05:10,000
+know when I look at even product making
+
+148
+00:05:08,319 --> 00:05:12,079
+uh it was the first time I also got
+
+149
+00:05:10,000 --> 00:05:13,680
+exposed to what I think now people talk
+
+150
+00:05:12,079 --> 00:05:16,478
+about you know building in the open.
+
+151
+00:05:13,680 --> 00:05:18,560
+That was really the first time we all
+
+152
+00:05:16,478 --> 00:05:20,639
+learned what building in the open means,
+
+153
+00:05:18,560 --> 00:05:22,560
+having the community around it and just
+
+154
+00:05:20,639 --> 00:05:24,478
+that feedback cycle. I remember even
+
+155
+00:05:22,560 --> 00:05:27,280
+spending time at that time with Amanda
+
+156
+00:05:24,478 --> 00:05:28,639
+Silver and others learning how that team
+
+157
+00:05:27,279 --> 00:05:31,599
+even the product manager what does it
+
+158
+00:05:28,639 --> 00:05:33,600
+mean to be a PM uh on that team how they
+
+159
+00:05:31,600 --> 00:05:35,759
+every day looked at the community
+
+160
+00:05:33,600 --> 00:05:37,439
+feedback as a way to build versus you
+
+161
+00:05:35,759 --> 00:05:39,600
+know top you know like it's not like a
+
+162
+00:05:37,439 --> 00:05:41,279
+you know I listen to my vice president I
+
+163
+00:05:39,600 --> 00:05:44,000
+listen to my community. So there were
+
+164
+00:05:41,279 --> 00:05:46,879
+many many cultural aspects of building
+
+165
+00:05:44,000 --> 00:05:48,639
+in the open uh beyond open source that I
+
+166
+00:05:46,879 --> 00:05:50,399
+think were fundamentally transformative.
+
+167
+00:05:48,639 --> 00:05:52,079
+In fact, I would say sometimes I sort of
+
+168
+00:05:50,399 --> 00:05:53,519
+feel like we learned a lot of great
+
+169
+00:05:52,079 --> 00:05:55,279
+lessons there. We should have learned it
+
+170
+00:05:53,519 --> 00:05:57,120
+even more deeply and more broadly.
+
+171
+00:05:55,279 --> 00:05:59,359
+Speaking of of learning more more deeply
+
+172
+00:05:57,120 --> 00:06:00,959
+or more broadly,
+
+173
+00:05:59,360 --> 00:06:02,879
+Visual Studio Code was everywhere.
+
+174
+00:06:00,959 --> 00:06:05,519
+GitHub was doing great. And then with
+
+175
+00:06:02,879 --> 00:06:07,519
+Copilot, I mean I was so surprised. I've
+
+176
+00:06:05,519 --> 00:06:10,719
+been looking back how Microsoft was so
+
+177
+00:06:07,519 --> 00:06:13,439
+early to realizing that AI before chat
+
+178
+00:06:10,720 --> 00:06:16,240
+GPC 3.5 this was I think the 3.0 Over
+
+179
+00:06:13,439 --> 00:06:18,240
+version or or so Copilot was working
+
+180
+00:06:16,240 --> 00:06:20,240
+like magic and there was no real
+
+181
+00:06:18,240 --> 00:06:22,639
+competition for at least a year until
+
+182
+00:06:20,240 --> 00:06:24,478
+2023 when cursor came out and then
+
+183
+00:06:22,639 --> 00:06:26,160
+cursor came out and I still felt that
+
+184
+00:06:24,478 --> 00:06:27,918
+you guys were super smart about VS code
+
+185
+00:06:26,160 --> 00:06:29,439
+because cursor was based on VS code
+
+186
+00:06:27,918 --> 00:06:31,918
+familiar interface and you know GitHub
+
+187
+00:06:29,439 --> 00:06:33,600
+copilot and cursor were going has side
+
+188
+00:06:31,918 --> 00:06:35,599
+by side competing with one another
+
+189
+00:06:33,600 --> 00:06:39,360
+keeping up with one another and then out
+
+190
+00:06:35,600 --> 00:06:41,360
+of nowhere 2025 clock code and for
+
+191
+00:06:39,360 --> 00:06:42,800
+myself for people working at startups uh
+
+192
+00:06:41,360 --> 00:06:44,720
+even big tech companies
+
+193
+00:06:42,800 --> 00:06:48,160
+in 6 months everyone just forgot about
+
+194
+00:06:44,720 --> 00:06:50,800
+the ID and I am still so so surprised
+
+195
+00:06:48,160 --> 00:06:53,680
+that Microsoft you guys live and breathe
+
+196
+00:06:50,800 --> 00:06:56,240
+developer DNA is in your your your DNA
+
+197
+00:06:53,680 --> 00:06:58,959
+and it's always been how do you think
+
+198
+00:06:56,240 --> 00:07:00,639
+you miss that this sudden shift would
+
+199
+00:06:58,959 --> 00:07:02,318
+would come and it for the first time I
+
+200
+00:07:00,639 --> 00:07:02,960
+felt that you didn't have an immediate
+
+201
+00:07:02,319 --> 00:07:05,360
+response
+
+202
+00:07:02,959 --> 00:07:07,439
+>> yeah no it's a it's a great uh thing to
+
+203
+00:07:05,360 --> 00:07:10,560
+unpack right I think you to your point
+
+204
+00:07:07,439 --> 00:07:14,160
+being early to it uh when we you know
+
+205
+00:07:10,560 --> 00:07:15,839
+this is preGP PT4 right so when we even
+
+206
+00:07:14,160 --> 00:07:18,240
+started there
+
+207
+00:07:15,839 --> 00:07:20,239
+>> um and even just the code completions
+
+208
+00:07:18,240 --> 00:07:22,800
+were magical that was sort of really
+
+209
+00:07:20,240 --> 00:07:25,199
+what copilot uh you know if you remember
+
+210
+00:07:22,800 --> 00:07:27,280
+we worked on IntelliSense forever and we
+
+211
+00:07:25,199 --> 00:07:28,960
+made good progress and then we said wow
+
+212
+00:07:27,279 --> 00:07:30,478
+this thing is working and quite frankly
+
+213
+00:07:28,959 --> 00:07:32,239
+there was a lot of skepticism that it
+
+214
+00:07:30,478 --> 00:07:35,038
+would ever work but it started and that
+
+215
+00:07:32,240 --> 00:07:38,240
+was my even my own belief in scaling
+
+216
+00:07:35,038 --> 00:07:40,639
+laws quite frankly was uh fundamentally
+
+217
+00:07:38,240 --> 00:07:42,400
+uh reaffirmed let's say when I started
+
+218
+00:07:40,639 --> 00:07:44,400
+seeing that and I thought we did a good
+
+219
+00:07:42,399 --> 00:07:47,359
+job of trying to build that product. One
+
+220
+00:07:44,399 --> 00:07:50,719
+of the keys of building with uh models
+
+221
+00:07:47,360 --> 00:07:53,598
+is when model jumps happen nonlinearly,
+
+222
+00:07:50,720 --> 00:07:55,599
+the form factor has to change quickly,
+
+223
+00:07:53,598 --> 00:07:57,439
+right? That's the you know what is AI
+
+224
+00:07:55,598 --> 00:08:00,000
+first product building in that sense is
+
+225
+00:07:57,439 --> 00:08:01,918
+unforgiving because when you you have to
+
+226
+00:08:00,000 --> 00:08:03,839
+be basically build everything around a
+
+227
+00:08:01,918 --> 00:08:05,439
+given model and then be ready for the
+
+228
+00:08:03,839 --> 00:08:07,839
+next model to have some emergent
+
+229
+00:08:05,439 --> 00:08:09,279
+capabilities and rewire yourself for
+
+230
+00:08:07,839 --> 00:08:11,598
+that, right? Don't be in love with what
+
+231
+00:08:09,279 --> 00:08:14,239
+you built. So that's why even when
+
+232
+00:08:11,598 --> 00:08:15,839
+agentic coding or task handling started
+
+233
+00:08:14,240 --> 00:08:17,598
+becoming something that one could do
+
+234
+00:08:15,839 --> 00:08:20,399
+right it's not just code completions but
+
+235
+00:08:17,598 --> 00:08:22,240
+you could assign uh small tasks that's
+
+236
+00:08:20,399 --> 00:08:24,719
+where cursor really you know they took
+
+237
+00:08:22,240 --> 00:08:28,240
+the IDE they forked but they did a good
+
+238
+00:08:24,720 --> 00:08:30,400
+job on really uh the agent mode and so
+
+239
+00:08:28,240 --> 00:08:31,759
+we then caught up on the agent mode uh
+
+240
+00:08:30,399 --> 00:08:33,918
+because that was sort of something that
+
+241
+00:08:31,759 --> 00:08:36,158
+we could do on top of even the open AAI
+
+242
+00:08:33,918 --> 00:08:38,079
+models but then the thing that hit us
+
+243
+00:08:36,158 --> 00:08:40,639
+was obviously a great work that
+
+244
+00:08:38,080 --> 00:08:43,839
+Ananthropic did uh with their model uh
+
+245
+00:08:40,639 --> 00:08:46,080
+which then truly made the CLI as a form
+
+246
+00:08:43,839 --> 00:08:49,600
+factor uh and then you could even just
+
+247
+00:08:46,080 --> 00:08:52,160
+say just complete full uh handling of
+
+248
+00:08:49,600 --> 00:08:54,560
+you know code be went from input to
+
+249
+00:08:52,159 --> 00:08:56,240
+output effectively right I mean that I
+
+250
+00:08:54,559 --> 00:08:59,039
+think was the transformation in 6 months
+
+251
+00:08:56,240 --> 00:09:02,560
+or so uh we went primarily that to your
+
+252
+00:08:59,039 --> 00:09:05,278
+point about uh uh ideides kind of faded
+
+253
+00:09:02,559 --> 00:09:07,599
+away and then you really had this new
+
+254
+00:09:05,278 --> 00:09:10,080
+way of thinking about code as input and
+
+255
+00:09:07,600 --> 00:09:12,080
+that's why if I look at uh the new IDE
+
+256
+00:09:10,080 --> 00:09:14,639
+it's more about how do I really input
+
+257
+00:09:12,080 --> 00:09:16,879
+the specs and the markdowns and
+
+258
+00:09:14,639 --> 00:09:19,360
+everything else around the software
+
+259
+00:09:16,879 --> 00:09:21,600
+factory and so that transformation
+
+260
+00:09:19,360 --> 00:09:22,800
+changes interesting enough it's funny
+
+261
+00:09:21,600 --> 00:09:24,320
+that we're talking about it like one of
+
+262
+00:09:22,799 --> 00:09:26,319
+the things thoughts I have is with these
+
+263
+00:09:24,320 --> 00:09:28,240
+decision engine models finally I'm back
+
+264
+00:09:26,320 --> 00:09:30,000
+again to IDE because you know an
+
+265
+00:09:28,240 --> 00:09:31,759
+interesting way it's kind of like
+
+266
+00:09:30,000 --> 00:09:33,519
+functions right it's intelligent
+
+267
+00:09:31,759 --> 00:09:35,919
+functions that are embedded inside
+
+268
+00:09:33,519 --> 00:09:39,600
+software so I think that there could be
+
+269
+00:09:35,919 --> 00:09:41,439
+a rebirth even of an IDE um as we think
+
+270
+00:09:39,600 --> 00:09:43,920
+about even embedding intelligence in a
+
+271
+00:09:41,440 --> 00:09:45,839
+more token efficient way. So I don't say
+
+272
+00:09:43,919 --> 00:09:47,838
+uh it's a permanent shift over in one
+
+273
+00:09:45,839 --> 00:09:50,880
+way. It's about having multiple form
+
+274
+00:09:47,839 --> 00:09:52,240
+factors now that actually help you with
+
+275
+00:09:50,879 --> 00:09:54,879
+model capability.
+
+276
+00:09:52,240 --> 00:09:56,799
+>> I do want to ask you here you mentioned
+
+277
+00:09:54,879 --> 00:09:58,720
+decision models and how you're excited
+
+278
+00:09:56,799 --> 00:10:00,559
+about them. Both of us recently talked
+
+279
+00:09:58,720 --> 00:10:02,480
+with the yogo and in in different
+
+280
+00:10:00,559 --> 00:10:04,799
+different forums. How has your thinking
+
+281
+00:10:02,480 --> 00:10:07,278
+changed on both decision models but also
+
+282
+00:10:04,799 --> 00:10:09,599
+on the limits of LLM specifically for
+
+283
+00:10:07,278 --> 00:10:11,200
+for programmatic tasks for for coding
+
+284
+00:10:09,600 --> 00:10:12,879
+for for building software in a reliable
+
+285
+00:10:11,200 --> 00:10:14,800
+way? Yeah, I think that that's kind of
+
+286
+00:10:12,879 --> 00:10:17,600
+it, right? Which is look, I think the
+
+287
+00:10:14,799 --> 00:10:19,838
+LLMs are fantastic and we can talk about
+
+288
+00:10:17,600 --> 00:10:21,200
+like even how you know
+
+289
+00:10:19,839 --> 00:10:22,560
+>> we're engineers. Let's cut to the point
+
+290
+00:10:21,200 --> 00:10:24,720
+where they're not fantastic, right?
+
+291
+00:10:22,559 --> 00:10:26,958
+>> Right. uh in the sense of how do you
+
+292
+00:10:24,720 --> 00:10:28,879
+even think about uh the software factory
+
+293
+00:10:26,958 --> 00:10:31,199
+and there's an entire thing that we can
+
+294
+00:10:28,879 --> 00:10:34,559
+go into but the a what I love about
+
+295
+00:10:31,200 --> 00:10:36,640
+decision engines is it's kind of a new
+
+296
+00:10:34,559 --> 00:10:39,679
+primitive right and how Diego talks
+
+297
+00:10:36,639 --> 00:10:41,360
+about it and how our own decision engine
+
+298
+00:10:39,679 --> 00:10:42,799
+and others are talking about it and I
+
+299
+00:10:41,360 --> 00:10:45,278
+like that because you know it's kind of
+
+300
+00:10:42,799 --> 00:10:47,199
+like you know Excel macros right you
+
+301
+00:10:45,278 --> 00:10:50,078
+know what happened to spreadsheets with
+
+302
+00:10:47,200 --> 00:10:52,000
+macros can happen with code with
+
+303
+00:10:50,078 --> 00:10:55,199
+intelligence embedded as a primitive
+
+304
+00:10:52,000 --> 00:10:56,958
+right And so I don't know you build any
+
+305
+00:10:55,200 --> 00:10:59,120
+system like I think I was looking at an
+
+306
+00:10:56,958 --> 00:11:01,919
+Xbox system that they had built for
+
+307
+00:10:59,120 --> 00:11:04,399
+managing all of the community feedback
+
+308
+00:11:01,919 --> 00:11:06,639
+right it's a classic community feedback
+
+309
+00:11:04,399 --> 00:11:08,958
+comes I make a set of decisions based on
+
+310
+00:11:06,639 --> 00:11:10,639
+it I don't want to really generate LLM
+
+311
+00:11:08,958 --> 00:11:13,119
+code on it I just want to be able to
+
+312
+00:11:10,639 --> 00:11:14,639
+make decisions so it's better to embed
+
+313
+00:11:13,120 --> 00:11:16,639
+this primitive right it has a
+
+314
+00:11:14,639 --> 00:11:18,240
+distribution you can make a call it's
+
+315
+00:11:16,639 --> 00:11:20,399
+sort of a uh it doesn't need to be
+
+316
+00:11:18,240 --> 00:11:23,200
+generated again and again it's token
+
+317
+00:11:20,399 --> 00:11:24,639
+efficient uh and So I think that this is
+
+318
+00:11:23,200 --> 00:11:27,440
+one of those places where software
+
+319
+00:11:24,639 --> 00:11:29,360
+engineering remains very much alive.
+
+320
+00:11:27,440 --> 00:11:31,120
+It's changing. One of the things I like
+
+321
+00:11:29,360 --> 00:11:33,200
+about Diego's thing is he wants to make
+
+322
+00:11:31,120 --> 00:11:35,278
+it as boring as databases. In fact, to
+
+323
+00:11:33,200 --> 00:11:38,240
+me, a relational database. I grew up
+
+324
+00:11:35,278 --> 00:11:40,399
+with my my my like the most favorite
+
+325
+00:11:38,240 --> 00:11:42,879
+product uh in the developer chain other
+
+326
+00:11:40,399 --> 00:11:45,039
+than the compilers and the lex and yak
+
+327
+00:11:42,879 --> 00:11:46,879
+and what have you was the database
+
+328
+00:11:45,039 --> 00:11:51,039
+because the relational database is a
+
+329
+00:11:46,879 --> 00:11:53,838
+reliable way to be able to store query
+
+330
+00:11:51,039 --> 00:11:55,679
+uh your information just made all kinds
+
+331
+00:11:53,839 --> 00:11:57,440
+of applications possible and I think
+
+332
+00:11:55,679 --> 00:11:59,039
+decision engines in the era of
+
+333
+00:11:57,440 --> 00:12:01,200
+intelligence will also do the same.
+
+334
+00:11:59,039 --> 00:12:03,199
+Well, in fact, the databases are the
+
+335
+00:12:01,200 --> 00:12:04,879
+hard and so we talk about what is the
+
+336
+00:12:03,200 --> 00:12:06,240
+essence of a software company. It's the
+
+337
+00:12:04,879 --> 00:12:08,159
+business logic, right? But when you go
+
+338
+00:12:06,240 --> 00:12:09,919
+deeper, it's often in the database. In
+
+339
+00:12:08,159 --> 00:12:13,439
+fact, so much of the business logic used
+
+340
+00:12:09,919 --> 00:12:16,078
+to be coded in store transactions, some
+
+341
+00:12:13,440 --> 00:12:16,399
+of these things. So, I wonder if it's a
+
+342
+00:12:16,078 --> 00:12:18,159
+good one.
+
+343
+00:12:16,399 --> 00:12:20,159
+>> It's like it's a like this is the stored
+
+344
+00:12:18,159 --> 00:12:21,759
+procedure of the intelligence era.
+
+345
+00:12:20,159 --> 00:12:24,000
+>> Yeah. So, so I wonder if there's an
+
+346
+00:12:21,759 --> 00:12:25,360
+analogy or a hope because I do see that
+
+347
+00:12:24,000 --> 00:12:27,278
+we haven't found the right primitive
+
+348
+00:12:25,360 --> 00:12:30,000
+like we know that LMS can generate code.
+
+349
+00:12:27,278 --> 00:12:31,600
+we can use LMS to do unreliable stuff
+
+350
+00:12:30,000 --> 00:12:32,480
+but we still we're missing these kind of
+
+351
+00:12:31,600 --> 00:12:34,240
+primitives right
+
+352
+00:12:32,480 --> 00:12:36,320
+>> yeah yeah so I'm very excited about it
+
+353
+00:12:34,240 --> 00:12:37,360
+and this is I think the beginning of how
+
+354
+00:12:36,320 --> 00:12:39,040
+you know because one of the other
+
+355
+00:12:37,360 --> 00:12:40,639
+challenges you know so let's go to the
+
+356
+00:12:39,039 --> 00:12:42,559
+software factory for a second right if
+
+357
+00:12:40,639 --> 00:12:44,480
+you look at even how co-work is built or
+
+358
+00:12:42,559 --> 00:12:45,838
+even the GitHub copilot runtime is built
+
+359
+00:12:44,480 --> 00:12:48,480
+today and you know I think people have
+
+360
+00:12:45,839 --> 00:12:50,320
+blogged about it and it's fascinating
+
+361
+00:12:48,480 --> 00:12:52,399
+right you know in a world where code
+
+362
+00:12:50,320 --> 00:12:55,519
+generation has become cheap what has
+
+363
+00:12:52,399 --> 00:12:57,120
+become hard is verification right in
+
+364
+00:12:55,519 --> 00:12:58,799
+fact one of the things that I feel like
+
+365
+00:12:57,120 --> 00:13:00,480
+oh my god I wish you know I want to join
+
+366
+00:12:58,799 --> 00:13:02,799
+one of these Mark Renovich Scott
+
+367
+00:13:00,480 --> 00:13:04,480
+Henselman you know perceptor ships or
+
+368
+00:13:02,799 --> 00:13:06,078
+whatever they call because I kind of
+
+369
+00:13:04,480 --> 00:13:09,039
+feel like I got to learn because I've
+
+370
+00:13:06,078 --> 00:13:11,120
+not worked in a team that is mostly now
+
+371
+00:13:09,039 --> 00:13:13,599
+code as output right but the code is
+
+372
+00:13:11,120 --> 00:13:15,519
+output has a particular order of
+
+373
+00:13:13,600 --> 00:13:17,200
+operations it's not like code is output
+
+374
+00:13:15,519 --> 00:13:19,200
+means everybody's just generating all
+
+375
+00:13:17,200 --> 00:13:22,240
+sorts of random code like the way you
+
+376
+00:13:19,200 --> 00:13:24,560
+got to build the verification stuff how
+
+377
+00:13:22,240 --> 00:13:27,200
+do you take every failure and then build
+
+378
+00:13:24,559 --> 00:13:29,278
+back the test case and make sure you
+
+379
+00:13:27,200 --> 00:13:31,278
+truly verify the test right I mean
+
+380
+00:13:29,278 --> 00:13:33,439
+there's just so much I would say new
+
+381
+00:13:31,278 --> 00:13:35,838
+type of tribal knowledge people are
+
+382
+00:13:33,440 --> 00:13:37,279
+building up in managing complex software
+
+383
+00:13:35,839 --> 00:13:39,279
+projects in fact it was a nightmare I
+
+384
+00:13:37,278 --> 00:13:42,320
+think even in that rust migration they
+
+385
+00:13:39,278 --> 00:13:45,838
+were having they had to revert back um
+
+386
+00:13:42,320 --> 00:13:48,000
+and so that is sort of all the quote the
+
+387
+00:13:45,839 --> 00:13:49,920
+great advantages and some massive
+
+388
+00:13:48,000 --> 00:13:52,720
+disadvantages so that's why to your
+
+389
+00:13:49,919 --> 00:13:55,199
+point having additional primitives like
+
+390
+00:13:52,720 --> 00:13:57,360
+this uh decision engine I think are good
+
+391
+00:13:55,200 --> 00:13:59,759
+>> and you mentioned that as a as a CEO of
+
+392
+00:13:57,360 --> 00:14:01,039
+of like this amazing company, you see
+
+393
+00:13:59,759 --> 00:14:02,958
+all of the things happening, right? You
+
+394
+00:14:01,039 --> 00:14:05,278
+oversee, you get information, you would
+
+395
+00:14:02,958 --> 00:14:06,078
+want to go and work on a team if you
+
+396
+00:14:05,278 --> 00:14:09,198
+could.
+
+397
+00:14:06,078 --> 00:14:12,638
+>> Oh, absolutely. In fact, you know, my
+
+398
+00:14:09,198 --> 00:14:15,759
+dream next job would be that, right? if
+
+399
+00:14:12,639 --> 00:14:16,879
+I could go back and just be part in fact
+
+400
+00:14:15,759 --> 00:14:18,240
+in fact one of the things that's
+
+401
+00:14:16,879 --> 00:14:20,559
+interesting you know I was going to send
+
+402
+00:14:18,240 --> 00:14:22,159
+mail to Scott and Mark and say hey
+
+403
+00:14:20,559 --> 00:14:23,838
+they're doing an unbelievable job of
+
+404
+00:14:22,159 --> 00:14:25,919
+creating this new program inside of
+
+405
+00:14:23,839 --> 00:14:27,440
+Microsoft uh called perceptorship I
+
+406
+00:14:25,919 --> 00:14:29,838
+think they even have a relationship with
+
+407
+00:14:27,440 --> 00:14:32,480
+Carnegie Melon or something and that
+
+408
+00:14:29,839 --> 00:14:34,000
+idea that you can have people who can
+
+409
+00:14:32,480 --> 00:14:35,759
+come in even early in career because I
+
+410
+00:14:34,000 --> 00:14:38,559
+care a lot about hey can you have an
+
+411
+00:14:35,759 --> 00:14:40,159
+early in career person come in join one
+
+412
+00:14:38,559 --> 00:14:41,759
+of these teams go up the learning curve
+
+413
+00:14:40,159 --> 00:14:42,958
+because I think the learning curve I
+
+414
+00:14:41,759 --> 00:14:45,120
+Remember people used to come to
+
+415
+00:14:42,958 --> 00:14:48,559
+Microsoft for an internship. they would
+
+416
+00:14:45,120 --> 00:14:50,320
+go see hey how is you know Cutler's code
+
+417
+00:14:48,559 --> 00:14:53,278
+how do I go look at the Malo
+
+418
+00:14:50,320 --> 00:14:55,360
+implementation so what's the new form of
+
+419
+00:14:53,278 --> 00:14:57,360
+that is what I think we have to really
+
+420
+00:14:55,360 --> 00:14:59,278
+discover and so yes if we you know my
+
+421
+00:14:57,360 --> 00:14:59,600
+hope would be one day I get to do that
+
+422
+00:14:59,278 --> 00:15:03,759
+again
+
+423
+00:14:59,600 --> 00:15:06,720
+>> I'm now understanding why so many CTO's
+
+424
+00:15:03,759 --> 00:15:08,639
+uh VP of engineering SVPs do take step
+
+425
+00:15:06,720 --> 00:15:10,560
+downs to work on small teams to learn
+
+426
+00:15:08,639 --> 00:15:12,240
+how to build with with these new tools
+
+427
+00:15:10,559 --> 00:15:13,759
+right now seems all is changing
+
+428
+00:15:12,240 --> 00:15:16,240
+>> I absolutely I think yeah the
+
+429
+00:15:13,759 --> 00:15:18,639
+organization ational sort of context of
+
+430
+00:15:16,240 --> 00:15:20,959
+it all uh is changing that I think yeah
+
+431
+00:15:18,639 --> 00:15:22,959
+if I um if I think about it I think it's
+
+432
+00:15:20,958 --> 00:15:24,879
+very important in fact you know being a
+
+433
+00:15:22,958 --> 00:15:26,559
+lot more hands-on at a time of great
+
+434
+00:15:24,879 --> 00:15:28,720
+change on many fronts right by the way
+
+435
+00:15:26,559 --> 00:15:31,359
+being close to customers building in the
+
+436
+00:15:28,720 --> 00:15:34,240
+open there's so much to learn on all
+
+437
+00:15:31,360 --> 00:15:37,039
+aspects of what makes successful
+
+438
+00:15:34,240 --> 00:15:38,320
+products or successful technology uh
+
+439
+00:15:37,039 --> 00:15:39,120
+that yeah there's a plenty of
+
+440
+00:15:38,320 --> 00:15:40,959
+opportunity
+
+441
+00:15:39,120 --> 00:15:42,399
+>> we've now been throwing around the the
+
+442
+00:15:40,958 --> 00:15:44,319
+term software factory for a little bit
+
+443
+00:15:42,399 --> 00:15:46,799
+so so let's let's actually talk about
+
+444
+00:15:44,320 --> 00:15:48,320
+it. I feel this term is a bit vague but
+
+445
+00:15:46,799 --> 00:15:48,719
+it's coming around. What does it mean
+
+446
+00:15:48,320 --> 00:15:50,639
+for you?
+
+447
+00:15:48,720 --> 00:15:52,720
+>> Yeah. So I'm also still kind of coming
+
+448
+00:15:50,639 --> 00:15:57,440
+to grips with it. So I'm pattern
+
+449
+00:15:52,720 --> 00:16:00,639
+matching um in what is teams of people
+
+450
+00:15:57,440 --> 00:16:02,720
+in a software team today do right. So
+
+451
+00:16:00,639 --> 00:16:05,440
+you know I think I'd point your viewers
+
+452
+00:16:02,720 --> 00:16:06,959
+to uh the the blog that Bass wrote. I
+
+453
+00:16:05,440 --> 00:16:08,560
+mean in fact there are two nice blogs
+
+454
+00:16:06,958 --> 00:16:11,198
+right the co-work team and the GitHub
+
+455
+00:16:08,559 --> 00:16:13,439
+copilot uh team. Both of them have these
+
+456
+00:16:11,198 --> 00:16:15,278
+blogs out. one is what one what and one
+
+457
+00:16:13,440 --> 00:16:16,880
+individual developer
+
+458
+00:16:15,278 --> 00:16:20,000
+>> was able to do that was on the GitHub
+
+459
+00:16:16,879 --> 00:16:22,320
+side which is maintain an entire runtime
+
+460
+00:16:20,000 --> 00:16:23,839
+um and re you know I think they also
+
+461
+00:16:22,320 --> 00:16:26,000
+migrated I forget whether it's from
+
+462
+00:16:23,839 --> 00:16:27,199
+Python I guess to rust um
+
+463
+00:16:26,000 --> 00:16:29,278
+>> it's always to rust [laughter]
+
+464
+00:16:27,198 --> 00:16:31,439
+>> to rust uh but nevertheless they kind of
+
+465
+00:16:29,278 --> 00:16:33,439
+that's a beautiful case study of what
+
+466
+00:16:31,440 --> 00:16:34,880
+the productivity of a single developer
+
+467
+00:16:33,440 --> 00:16:37,120
+and what does it mean to do that
+
+468
+00:16:34,879 --> 00:16:39,198
+maintenance and so on then there is the
+
+469
+00:16:37,120 --> 00:16:40,639
+team I think it's nine or 12 or whatever
+
+470
+00:16:39,198 --> 00:16:43,039
+number of engineers it's kind of crazy
+
+471
+00:16:40,639 --> 00:16:44,879
+that that's the total size of that team
+
+472
+00:16:43,039 --> 00:16:46,559
+um and the software factory and they've
+
+473
+00:16:44,879 --> 00:16:48,480
+also done a nice blog but there's so
+
+474
+00:16:46,559 --> 00:16:50,958
+many things there I love I mean this is
+
+475
+00:16:48,480 --> 00:16:52,800
+where you know uh if if I could just go
+
+476
+00:16:50,958 --> 00:16:55,278
+join that team and really learn it
+
+477
+00:16:52,799 --> 00:16:58,559
+firsthand versus just reading blogs or
+
+478
+00:16:55,278 --> 00:17:00,958
+talking to bass and team but for example
+
+479
+00:16:58,559 --> 00:17:03,278
+the fundamental transformation as I
+
+480
+00:17:00,958 --> 00:17:06,078
+understand it is right one is code has
+
+481
+00:17:03,278 --> 00:17:08,880
+gone from being input to output great
+
+482
+00:17:06,078 --> 00:17:11,438
+then you kind of have to say okay that
+
+483
+00:17:08,880 --> 00:17:12,946
+means specification and intent right
+
+484
+00:17:11,439 --> 00:17:14,079
+which was always important
+
+485
+00:17:12,945 --> 00:17:15,438
+[clears throat] design docs were
+
+486
+00:17:14,078 --> 00:17:16,159
+important and so
+
+487
+00:17:15,439 --> 00:17:18,640
+>> alignment
+
+488
+00:17:16,160 --> 00:17:20,480
+>> align and so that that's kind of yeah
+
+489
+00:17:18,640 --> 00:17:22,480
+very important now
+
+490
+00:17:20,480 --> 00:17:25,038
+>> the other fascinating thing I'm also
+
+491
+00:17:22,480 --> 00:17:27,679
+finding is and I talked to one uh sort
+
+492
+00:17:25,038 --> 00:17:29,839
+of early in career uh person who went in
+
+493
+00:17:27,679 --> 00:17:32,480
+getting into a code base now is actually
+
+494
+00:17:29,839 --> 00:17:34,558
+much easier because the reason when
+
+495
+00:17:32,480 --> 00:17:37,839
+you're managing a software factory
+
+496
+00:17:34,558 --> 00:17:40,240
+everything is documented
+
+497
+00:17:37,839 --> 00:17:42,240
+>> um and so and then you can you can ask
+
+498
+00:17:40,240 --> 00:17:42,640
+it questions patient mentor onboarding
+
+499
+00:17:42,240 --> 00:17:45,200
+buddy.
+
+500
+00:17:42,640 --> 00:17:47,440
+>> Exactly. And so you can have you your
+
+501
+00:17:45,200 --> 00:17:50,080
+onboarding onto a codebase is so much
+
+502
+00:17:47,440 --> 00:17:51,600
+more easier than you scrging around for
+
+503
+00:17:50,079 --> 00:17:53,678
+tribal knowledge that's in people's
+
+504
+00:17:51,599 --> 00:17:55,199
+heads if you will. Right. So the other
+
+505
+00:17:53,679 --> 00:17:57,280
+thing is I'm learning a lot about this
+
+506
+00:17:55,200 --> 00:17:59,840
+verification stuff right which is the
+
+507
+00:17:57,279 --> 00:18:02,639
+way you want to do agentic coding is
+
+508
+00:17:59,839 --> 00:18:05,199
+like these little tasks that you give it
+
+509
+00:18:02,640 --> 00:18:07,360
+make sure that it's truly done. How do
+
+510
+00:18:05,200 --> 00:18:09,840
+you have the critique? Right? There's so
+
+511
+00:18:07,359 --> 00:18:11,918
+much to be said about having a separate
+
+512
+00:18:09,839 --> 00:18:13,439
+model family. In fact, that's the other
+
+513
+00:18:11,919 --> 00:18:14,640
+thing that I I I've always worried
+
+514
+00:18:13,440 --> 00:18:16,320
+about. It's like, hey, if there's one
+
+515
+00:18:14,640 --> 00:18:17,919
+model family and these model families
+
+516
+00:18:16,319 --> 00:18:20,000
+are going to have all these alignment
+
+517
+00:18:17,919 --> 00:18:22,720
+issues, how do you use a critique to
+
+518
+00:18:20,000 --> 00:18:25,279
+ensure that one model family's challenge
+
+519
+00:18:22,720 --> 00:18:27,600
+doesn't become your challenge? And so
+
+520
+00:18:25,279 --> 00:18:31,200
+anyway, I I kind of look at say there's
+
+521
+00:18:27,599 --> 00:18:32,798
+an entire new way to build uh that is
+
+522
+00:18:31,200 --> 00:18:34,480
+emerging and it's new software
+
+523
+00:18:32,798 --> 00:18:35,839
+engineering and it requires software
+
+524
+00:18:34,480 --> 00:18:37,599
+engineers. It's just a level of
+
+525
+00:18:35,839 --> 00:18:39,439
+interaction maybe that's why I like the
+
+526
+00:18:37,599 --> 00:18:41,839
+even the analogy of you know when you
+
+527
+00:18:39,440 --> 00:18:43,759
+know uh you went from writing your own
+
+528
+00:18:41,839 --> 00:18:46,639
+assembly to saying oh wow I have a
+
+529
+00:18:43,759 --> 00:18:49,440
+compiler um and suddenly you felt like
+
+530
+00:18:46,640 --> 00:18:51,520
+oh wow I can now go from intent to code
+
+531
+00:18:49,440 --> 00:18:52,880
+and I don't need to know assembly
+
+532
+00:18:51,519 --> 00:18:55,679
+there's a little bit of that it's a
+
+533
+00:18:52,880 --> 00:18:58,000
+level of abstraction but even how you
+
+534
+00:18:55,679 --> 00:18:59,600
+work in a team has changed and how you
+
+535
+00:18:58,000 --> 00:19:01,200
+construct a product has changed the
+
+536
+00:18:59,599 --> 00:19:05,038
+other one that I'm really excited about
+
+537
+00:19:01,200 --> 00:19:07,279
+is um the the traces from production
+
+538
+00:19:05,038 --> 00:19:08,000
+coming back. I love that too, right?
+
+539
+00:19:07,279 --> 00:19:10,240
+Which is, you know,
+
+540
+00:19:08,000 --> 00:19:11,679
+>> we're talking observability, but you
+
+541
+00:19:10,240 --> 00:19:13,120
+have more more opportunities.
+
+542
+00:19:11,679 --> 00:19:15,440
+>> Yeah. I mean, when people say like, you
+
+543
+00:19:13,119 --> 00:19:17,119
+know, RSI, that's kind of my RSI, right?
+
+544
+00:19:15,440 --> 00:19:19,679
+Which is it's sort of the ability to
+
+545
+00:19:17,119 --> 00:19:22,159
+take my production logs and then to be
+
+546
+00:19:19,679 --> 00:19:25,759
+able to verify the fix. In fact, that
+
+547
+00:19:22,160 --> 00:19:28,960
+verifiability loop is great that you can
+
+548
+00:19:25,759 --> 00:19:31,119
+then deploy the fix and deploy it all
+
+549
+00:19:28,960 --> 00:19:33,600
+the way through that it actually passed
+
+550
+00:19:31,119 --> 00:19:35,439
+all the tests. Uh, that actually is very
+
+551
+00:19:33,599 --> 00:19:38,079
+helpful. And so I think there's a lot of
+
+552
+00:19:35,440 --> 00:19:40,080
+learning uh that these teams are having
+
+553
+00:19:38,079 --> 00:19:42,879
+and it's spreading across Microsoft. I
+
+554
+00:19:40,079 --> 00:19:44,720
+mean uh it's just good to see how this
+
+555
+00:19:42,880 --> 00:19:46,799
+is now becoming the way teams are
+
+556
+00:19:44,720 --> 00:19:49,120
+structuring. The other one that I love
+
+557
+00:19:46,798 --> 00:19:52,000
+um is our networking Azure networking
+
+558
+00:19:49,119 --> 00:19:54,479
+team, right? In fact, my that used to be
+
+559
+00:19:52,000 --> 00:19:57,440
+my favorite story where this team said,
+
+560
+00:19:54,480 --> 00:20:00,319
+"Hey, we you know Microsoft manages
+
+561
+00:19:57,440 --> 00:20:02,320
+something like 500 fiber operators all
+
+562
+00:20:00,319 --> 00:20:03,918
+over the world for our global network."
+
+563
+00:20:02,319 --> 00:20:06,240
+And you know, always it's a physical
+
+564
+00:20:03,919 --> 00:20:07,919
+asset something or the other goes wrong.
+
+565
+00:20:06,240 --> 00:20:10,880
+You know, the fancy word for managing
+
+566
+00:20:07,919 --> 00:20:13,280
+all that is DevOps, but the reality is
+
+567
+00:20:10,880 --> 00:20:15,200
+it's emails and you know, all sorts of
+
+568
+00:20:13,279 --> 00:20:18,079
+ad hoc processes. And so they went and
+
+569
+00:20:15,200 --> 00:20:20,880
+built this entire Egyptic system that
+
+570
+00:20:18,079 --> 00:20:23,119
+actually does the ops and that ops is
+
+571
+00:20:20,880 --> 00:20:26,320
+connected even uh to their repos. And so
+
+572
+00:20:23,119 --> 00:20:27,839
+now it's not just the repo on its own or
+
+573
+00:20:26,319 --> 00:20:29,678
+the codebase but it's even the
+
+574
+00:20:27,839 --> 00:20:32,798
+operations that are around it. And so
+
+575
+00:20:29,679 --> 00:20:36,080
+you can start seeing how the nature of
+
+576
+00:20:32,798 --> 00:20:39,839
+what technical teams do is build these
+
+577
+00:20:36,079 --> 00:20:42,558
+factories of ops plus uh software that
+
+578
+00:20:39,839 --> 00:20:44,319
+do the job versus doing the job. But
+
+579
+00:20:42,558 --> 00:20:45,200
+still they're doing a job which is
+
+580
+00:20:44,319 --> 00:20:48,558
+slightly different.
+
+581
+00:20:45,200 --> 00:20:50,159
+>> I I do wonder because an AI labs uh it's
+
+582
+00:20:48,558 --> 00:20:52,000
+it's pretty common and and they're very
+
+583
+00:20:50,159 --> 00:20:54,400
+open about sharing how software
+
+584
+00:20:52,000 --> 00:20:57,038
+engineers there their job is becoming to
+
+585
+00:20:54,400 --> 00:20:58,880
+allow the agent and the loop to do a
+
+586
+00:20:57,038 --> 00:21:01,200
+better job. So, so what you just said,
+
+587
+00:20:58,880 --> 00:21:02,880
+but just sticking to practical level
+
+588
+00:21:01,200 --> 00:21:04,960
+like at a place like Microsoft, you're
+
+589
+00:21:02,880 --> 00:21:06,720
+you will have teams that can experiment
+
+590
+00:21:04,960 --> 00:21:08,720
+and they're building new factories or or
+
+591
+00:21:06,720 --> 00:21:10,240
+their platform teams and maybe they have
+
+592
+00:21:08,720 --> 00:21:11,759
+extra cycles and they're doing all these
+
+593
+00:21:10,240 --> 00:21:13,120
+things, but you also have product teams
+
+594
+00:21:11,759 --> 00:21:15,038
+who actually have a product. you have
+
+595
+00:21:13,119 --> 00:21:16,719
+real customers and this is where I see a
+
+596
+00:21:15,038 --> 00:21:18,079
+lot of companies struggle with who do
+
+597
+00:21:16,720 --> 00:21:20,240
+have a real business and they're seeing
+
+598
+00:21:18,079 --> 00:21:21,678
+these aspirational things from AI labs
+
+599
+00:21:20,240 --> 00:21:23,519
+or maybe even they're listening to you
+
+600
+00:21:21,679 --> 00:21:25,280
+right now and they're thinking hang on
+
+601
+00:21:23,519 --> 00:21:26,639
+like I can't just drop everything and
+
+602
+00:21:25,279 --> 00:21:28,879
+build a factory because what am I going
+
+603
+00:21:26,640 --> 00:21:30,799
+to do with with the thing how how are
+
+604
+00:21:28,880 --> 00:21:32,400
+you thinking about both this balance and
+
+605
+00:21:30,798 --> 00:21:34,400
+especially inside of Microsoft what what
+
+606
+00:21:32,400 --> 00:21:35,600
+do you tell engineers like how is your
+
+607
+00:21:34,400 --> 00:21:36,880
+job changing especially when you're
+
+608
+00:21:35,599 --> 00:21:38,399
+working on a product that is a good
+
+609
+00:21:36,880 --> 00:21:39,600
+product it's a profitable product
+
+610
+00:21:38,400 --> 00:21:41,120
+customers depend on it
+
+611
+00:21:39,599 --> 00:21:43,199
+>> yeah it's a great point I mean like
+
+612
+00:21:41,119 --> 00:21:45,759
+first of all you know We don't get
+
+613
+00:21:43,200 --> 00:21:47,840
+permission to do things that are not
+
+614
+00:21:45,759 --> 00:21:49,839
+adding value to customers. Like let's
+
+615
+00:21:47,839 --> 00:21:52,240
+start there to your point about a little
+
+616
+00:21:49,839 --> 00:21:54,079
+bit of and we made our share of mistakes
+
+617
+00:21:52,240 --> 00:21:56,240
+of you know going and doing random AI
+
+618
+00:21:54,079 --> 00:21:58,079
+things just because they were you know
+
+619
+00:21:56,240 --> 00:21:58,880
+you know cool to do. You kind of
+
+620
+00:21:58,079 --> 00:22:00,000
+ultimately are going to
+
+621
+00:21:58,880 --> 00:22:01,679
+>> I think everyone's done that.
+
+622
+00:22:00,000 --> 00:22:03,440
+>> Everyone's done that and I've done my
+
+623
+00:22:01,679 --> 00:22:05,600
+fair share of it and learned from it
+
+624
+00:22:03,440 --> 00:22:07,919
+hopefully and we'll get better. But that
+
+625
+00:22:05,599 --> 00:22:10,480
+said, if you sort of say, well, let's
+
+626
+00:22:07,919 --> 00:22:13,120
+take even let's face it, right, which is
+
+627
+00:22:10,480 --> 00:22:15,360
+today when I look at the CVE in Windows,
+
+628
+00:22:13,119 --> 00:22:17,279
+right? Um because you now have AI models
+
+629
+00:22:15,359 --> 00:22:19,038
+that are finding vulnerabilities. Yep.
+
+630
+00:22:17,279 --> 00:22:20,240
+And so we now need to go fix them all.
+
+631
+00:22:19,038 --> 00:22:22,960
+And so therefore, there's a new
+
+632
+00:22:20,240 --> 00:22:26,480
+pipeline. So in fact, if I look at even
+
+633
+00:22:22,960 --> 00:22:29,919
+the windows from crash traces all the
+
+634
+00:22:26,480 --> 00:22:31,440
+way to fixes, they're building out
+
+635
+00:22:29,919 --> 00:22:33,840
+essentially a new type of software
+
+636
+00:22:31,440 --> 00:22:35,600
+factory except this is a brown field,
+
+637
+00:22:33,839 --> 00:22:37,199
+right? which is the build system of
+
+638
+00:22:35,599 --> 00:22:39,038
+Windows still is still the build system
+
+639
+00:22:37,200 --> 00:22:41,200
+of Windows. In fact, if you think about
+
+640
+00:22:39,038 --> 00:22:44,960
+in all these brownfield projects, the
+
+641
+00:22:41,200 --> 00:22:47,038
+most difficult part is builds and CI/CD.
+
+642
+00:22:44,960 --> 00:22:48,400
+>> Um and then of course you got to really
+
+643
+00:22:47,038 --> 00:22:50,240
+you know even you know if I look at the
+
+644
+00:22:48,400 --> 00:22:52,000
+amount of change that underneath even
+
+645
+00:22:50,240 --> 00:22:53,759
+GitHub right which is if you think about
+
+646
+00:22:52,000 --> 00:22:55,519
+it right you know we've had I mean
+
+647
+00:22:53,759 --> 00:22:57,919
+suddenly all these coding agents showed
+
+648
+00:22:55,519 --> 00:22:58,879
+up to work at GitHub and the scale has
+
+649
+00:22:57,919 --> 00:22:59,679
+gone through the roof
+
+650
+00:22:58,880 --> 00:23:01,039
+>> superhuman level.
+
+651
+00:22:59,679 --> 00:23:03,120
+>> Yeah. And so therefore we have to
+
+652
+00:23:01,038 --> 00:23:05,279
+fundamentally change the entire the git
+
+653
+00:23:03,119 --> 00:23:08,158
+protocol the storage system. We are
+
+654
+00:23:05,279 --> 00:23:11,119
+working on every part of this to make
+
+655
+00:23:08,159 --> 00:23:12,720
+sure that we are living in the brown
+
+656
+00:23:11,119 --> 00:23:15,918
+field as opposed to I mean the green
+
+657
+00:23:12,720 --> 00:23:17,679
+field stuff we'll always do but the real
+
+658
+00:23:15,919 --> 00:23:20,320
+world is all about brownfield and the
+
+659
+00:23:17,679 --> 00:23:22,880
+brownfield requires stepwise you know
+
+660
+00:23:20,319 --> 00:23:25,279
+hardening of systems rethinking of the
+
+661
+00:23:22,880 --> 00:23:27,120
+the core primitives right all the way
+
+662
+00:23:25,279 --> 00:23:30,000
+from source code control to build to
+
+663
+00:23:27,119 --> 00:23:31,279
+CI/CD that works in a brownfield project
+
+664
+00:23:30,000 --> 00:23:33,679
+and that takes time that takes
+
+665
+00:23:31,279 --> 00:23:35,279
+investment that takes uh thought and the
+
+666
+00:23:33,679 --> 00:23:37,360
+sequence of oper operations or the order
+
+667
+00:23:35,279 --> 00:23:39,119
+of operations is very very critical. So
+
+668
+00:23:37,359 --> 00:23:40,959
+one of the things that I want our teams
+
+669
+00:23:39,119 --> 00:23:43,359
+is is not about well one nice thing I
+
+670
+00:23:40,960 --> 00:23:45,440
+like about the transformation is this is
+
+671
+00:23:43,359 --> 00:23:47,359
+not about oh here is some new shiny
+
+672
+00:23:45,440 --> 00:23:49,679
+object and here is the team that's doing
+
+673
+00:23:47,359 --> 00:23:52,000
+that and everybody else lives in the uh
+
+674
+00:23:49,679 --> 00:23:54,798
+old world like everybody across the
+
+675
+00:23:52,000 --> 00:23:57,919
+company gets to use the new tool chain
+
+676
+00:23:54,798 --> 00:24:00,079
+and the new ways of working and tackle
+
+677
+00:23:57,919 --> 00:24:02,000
+the challenge in front of them on any
+
+678
+00:24:00,079 --> 00:24:04,798
+product whether it's Windows or SQL
+
+679
+00:24:02,000 --> 00:24:06,558
+server or a cloudnative service what
+
+680
+00:24:04,798 --> 00:24:07,918
+have you and that I think is what we're
+
+681
+00:24:06,558 --> 00:24:09,599
+seeing To be fair, like this doesn't
+
+682
+00:24:07,919 --> 00:24:11,038
+sound all that different to what we did
+
+683
+00:24:09,599 --> 00:24:12,959
+in the past because when there was a new
+
+684
+00:24:11,038 --> 00:24:15,119
+technology, let's say React, which was a
+
+685
+00:24:12,960 --> 00:24:17,278
+new front-end technology, everyone
+
+686
+00:24:15,119 --> 00:24:19,359
+wanted to use it. And what we did is no
+
+687
+00:24:17,278 --> 00:24:21,119
+one got permission to just stop and
+
+688
+00:24:19,359 --> 00:24:22,558
+migrate to React. But when you built a
+
+689
+00:24:21,119 --> 00:24:24,399
+new product or you added a new feature,
+
+690
+00:24:22,558 --> 00:24:26,319
+you start to add it in, you start to mix
+
+691
+00:24:24,400 --> 00:24:28,480
+it. So maybe it's not all that different
+
+692
+00:24:26,319 --> 00:24:29,519
+to how we're adopting AI. But but what
+
+693
+00:24:28,480 --> 00:24:30,480
+is different about this? Is it?
+
+694
+00:24:29,519 --> 00:24:32,000
+>> It's a good one. Like, you know,
+
+695
+00:24:30,480 --> 00:24:34,079
+sometimes I I you know, I kind of say,
+
+696
+00:24:32,000 --> 00:24:35,759
+"Yeah, I've seen this before and what
+
+697
+00:24:34,079 --> 00:24:38,798
+have you." But I think the one thing
+
+698
+00:24:35,759 --> 00:24:43,599
+that I do feel that's different this
+
+699
+00:24:38,798 --> 00:24:46,879
+time around is that the the physics of
+
+700
+00:24:43,599 --> 00:24:49,199
+how we do things right that order of
+
+701
+00:24:46,880 --> 00:24:50,799
+operations the level of abstraction
+
+702
+00:24:49,200 --> 00:24:53,840
+maybe in fact one of the fascinating
+
+703
+00:24:50,798 --> 00:24:56,000
+things I think about is it is like when
+
+704
+00:24:53,839 --> 00:24:58,798
+people moved right I I I joined the
+
+705
+00:24:56,000 --> 00:25:01,278
+workforce at the cusp of when we went
+
+706
+00:24:58,798 --> 00:25:03,359
+from you know in in fact in college I
+
+707
+00:25:01,278 --> 00:25:04,640
+was mostly working on a vax right you
+
+708
+00:25:03,359 --> 00:25:06,479
+know with a VT
+
+709
+00:25:04,640 --> 00:25:07,520
+you know terminal uh
+
+710
+00:25:06,480 --> 00:25:10,480
+>> this is a mainframe
+
+711
+00:25:07,519 --> 00:25:12,879
+>> yeah or a mini uh mini right VMS systems
+
+712
+00:25:10,480 --> 00:25:14,480
+right so and then and then I joined
+
+713
+00:25:12,880 --> 00:25:15,840
+actually for a couple of years at sun on
+
+714
+00:25:14,480 --> 00:25:18,000
+a workstation and then I came to
+
+715
+00:25:15,839 --> 00:25:19,759
+Microsoft and so and then you know the
+
+716
+00:25:18,000 --> 00:25:22,400
+world kind of was stable right you
+
+717
+00:25:19,759 --> 00:25:24,400
+mostly wrote code in an IDE throughout
+
+718
+00:25:22,400 --> 00:25:25,919
+my professional career it sort of didn't
+
+719
+00:25:24,400 --> 00:25:27,600
+really change I mean new technologies
+
+720
+00:25:25,919 --> 00:25:30,320
+came but all those new technologies were
+
+721
+00:25:27,599 --> 00:25:33,278
+new frameworks and new runtimes it was
+
+722
+00:25:30,319 --> 00:25:35,278
+not like con the concept count radically
+
+723
+00:25:33,278 --> 00:25:38,798
+changed Even the mobile thing was sort
+
+724
+00:25:35,278 --> 00:25:40,720
+of a miniaturized PC with new sort of uh
+
+725
+00:25:38,798 --> 00:25:43,119
+user you know user interface right and
+
+726
+00:25:40,720 --> 00:25:45,278
+new frameworks this is a place where
+
+727
+00:25:43,119 --> 00:25:48,239
+everything what is the runtime what is
+
+728
+00:25:45,278 --> 00:25:48,798
+the framework what is the IDE what's the
+
+729
+00:25:48,240 --> 00:25:49,919
+stack
+
+730
+00:25:48,798 --> 00:25:53,679
+>> you're right all every single
+
+731
+00:25:49,919 --> 00:25:55,679
+>> par it's a little more of a change in
+
+732
+00:25:53,679 --> 00:25:58,640
+how you think about I think then let's
+
+733
+00:25:55,679 --> 00:26:01,440
+not forget a new model could drop right
+
+734
+00:25:58,640 --> 00:26:03,278
+whether it is a new uh frontier model or
+
+735
+00:26:01,440 --> 00:26:04,720
+a new thing like decision engine and it
+
+736
+00:26:03,278 --> 00:26:07,919
+could change again, right? This is where
+
+737
+00:26:04,720 --> 00:26:11,038
+I think we also have to be ready for the
+
+738
+00:26:07,919 --> 00:26:13,278
+regime to completely be transformed uh
+
+739
+00:26:11,038 --> 00:26:14,640
+at any moment if you will. And so
+
+740
+00:26:13,278 --> 00:26:17,038
+therefore, I think these are two things
+
+741
+00:26:14,640 --> 00:26:19,600
+at least I think about that thinking of
+
+742
+00:26:17,038 --> 00:26:22,000
+it learning from the past when we were
+
+743
+00:26:19,599 --> 00:26:24,639
+at our best individually or as companies
+
+744
+00:26:22,000 --> 00:26:26,558
+or as teams in managing change I think
+
+745
+00:26:24,640 --> 00:26:28,720
+is always important but also being
+
+746
+00:26:26,558 --> 00:26:29,918
+open-minded that this time is different
+
+747
+00:26:28,720 --> 00:26:31,839
+is also good.
+
+748
+00:26:29,919 --> 00:26:33,120
+>> Yeah. And and also specifically for for
+
+749
+00:26:31,839 --> 00:26:34,959
+the biggest change for us software
+
+750
+00:26:33,119 --> 00:26:36,479
+engineers and you know Microsoft has
+
+751
+00:26:34,960 --> 00:26:38,640
+probably majority of the workforce is
+
+752
+00:26:36,480 --> 00:26:40,880
+software engineers or people close to
+
+753
+00:26:38,640 --> 00:26:43,520
+the code is we used to spend most of our
+
+754
+00:26:40,880 --> 00:26:46,320
+time writing code and most of our effort
+
+755
+00:26:43,519 --> 00:26:48,480
+was learning at college at previous jobs
+
+756
+00:26:46,319 --> 00:26:51,119
+to be good at this and this part
+
+757
+00:26:48,480 --> 00:26:53,360
+suddenly disappeared which I know for a
+
+758
+00:26:51,119 --> 00:26:56,479
+lot of people including me for for
+
+759
+00:26:53,359 --> 00:26:58,240
+earlier it it was hard to reconcile cuz
+
+760
+00:26:56,480 --> 00:27:00,640
+we've never seen it with any technology
+
+761
+00:26:58,240 --> 00:27:02,880
+change it always added a new a new tool
+
+762
+00:27:00,640 --> 00:27:04,640
+How do you see people inside of
+
+763
+00:27:02,880 --> 00:27:06,799
+Microsoft or or outside who you talk
+
+764
+00:27:04,640 --> 00:27:08,159
+with reconcile this who who are are
+
+765
+00:27:06,798 --> 00:27:09,679
+really good engineers and they've spent
+
+766
+00:27:08,159 --> 00:27:11,440
+decades getting very good at coding
+
+767
+00:27:09,679 --> 00:27:13,038
+which is hard to do right yeah no I
+
+768
+00:27:11,440 --> 00:27:17,200
+think that that's right I think so this
+
+769
+00:27:13,038 --> 00:27:21,359
+is where what at least I am observing
+
+770
+00:27:17,200 --> 00:27:23,278
+and as I talk to even people uh who are
+
+771
+00:27:21,359 --> 00:27:26,319
+you know both been great software
+
+772
+00:27:23,278 --> 00:27:28,480
+engineers uh previously and now are
+
+773
+00:27:26,319 --> 00:27:29,678
+prolific even in the new mode of
+
+774
+00:27:28,480 --> 00:27:32,079
+production
+
+775
+00:27:29,679 --> 00:27:35,278
+is the same skills are still required.
+
+776
+00:27:32,079 --> 00:27:38,000
+It's just again that the what you think
+
+777
+00:27:35,278 --> 00:27:42,079
+about the order of operations, the tool
+
+778
+00:27:38,000 --> 00:27:44,079
+chain um has changed. And so that's one
+
+779
+00:27:42,079 --> 00:27:46,798
+of the other reasons where I don't think
+
+780
+00:27:44,079 --> 00:27:49,759
+it's about devaluing the expertise. It's
+
+781
+00:27:46,798 --> 00:27:52,000
+about really taking the expertise and
+
+782
+00:27:49,759 --> 00:27:54,240
+making sure that you can exercise that
+
+783
+00:27:52,000 --> 00:27:58,640
+with new leverage. Right? That is where
+
+784
+00:27:54,240 --> 00:28:00,399
+the nature of how you work has to change
+
+785
+00:27:58,640 --> 00:28:03,120
+as opposed to thinking that this is
+
+786
+00:28:00,398 --> 00:28:05,359
+about uh software engineering no longer
+
+787
+00:28:03,119 --> 00:28:08,079
+being important and I think that we're
+
+788
+00:28:05,359 --> 00:28:10,240
+in that phase right uh where we are
+
+789
+00:28:08,079 --> 00:28:13,759
+trying to figure out how to value the
+
+790
+00:28:10,240 --> 00:28:15,679
+new thing and in valuing the new thing
+
+791
+00:28:13,759 --> 00:28:17,519
+you are suddenly going to even start
+
+792
+00:28:15,679 --> 00:28:19,200
+valuing the old thing if it makes sense
+
+793
+00:28:17,519 --> 00:28:20,798
+right which is when I look at the people
+
+794
+00:28:19,200 --> 00:28:22,480
+there's obviously somebody who is AI
+
+795
+00:28:20,798 --> 00:28:25,679
+native who comes out of like in fact it
+
+796
+00:28:22,480 --> 00:28:27,440
+is funny last last GitHub universe uh I
+
+797
+00:28:25,679 --> 00:28:30,000
+went down and I met a bunch of uh
+
+798
+00:28:27,440 --> 00:28:33,519
+college kids and this that was the first
+
+799
+00:28:30,000 --> 00:28:36,000
+batch of college graduates who grew up
+
+800
+00:28:33,519 --> 00:28:37,200
+in the AI era right because they went to
+
+801
+00:28:36,000 --> 00:28:39,679
+college
+
+802
+00:28:37,200 --> 00:28:42,159
+>> when GitHub copilot co-pilot
+
+803
+00:28:39,679 --> 00:28:44,240
+>> right they so they didn't know an IDE
+
+804
+00:28:42,159 --> 00:28:46,880
+world pre GitHub copilot it was like
+
+805
+00:28:44,240 --> 00:28:48,240
+stunning to me that that was sort of
+
+806
+00:28:46,880 --> 00:28:50,000
+what's happening so there's going to be
+
+807
+00:28:48,240 --> 00:28:51,839
+people who are going to come at this who
+
+808
+00:28:50,000 --> 00:28:54,319
+are quot going to be native to this tool
+
+809
+00:28:51,839 --> 00:28:57,199
+chain but I also think that people when
+
+810
+00:28:54,319 --> 00:28:59,839
+I see at Microsoft anyone who has great
+
+811
+00:28:57,200 --> 00:29:02,480
+depth and expertise in any part has
+
+812
+00:28:59,839 --> 00:29:04,798
+curiosity and is sort of learning the
+
+813
+00:29:02,480 --> 00:29:06,558
+new ways to work are absolutely
+
+814
+00:29:04,798 --> 00:29:09,599
+flourishing in it. And so one of the
+
+815
+00:29:06,558 --> 00:29:11,678
+things I I'm hoping to ensure is we
+
+816
+00:29:09,599 --> 00:29:13,599
+create that opportunity for folks
+
+817
+00:29:11,679 --> 00:29:15,440
+because at the end of the day, right,
+
+818
+00:29:13,599 --> 00:29:17,278
+you know, it's about economic return on
+
+819
+00:29:15,440 --> 00:29:18,640
+your professional careers that matters.
+
+820
+00:29:17,278 --> 00:29:20,798
+And so therefore, we want to make sure
+
+821
+00:29:18,640 --> 00:29:23,120
+at Microsoft you can both value the
+
+822
+00:29:20,798 --> 00:29:24,639
+skill set you have and build the new
+
+823
+00:29:23,119 --> 00:29:25,119
+skill set that the marketplace will
+
+824
+00:29:24,640 --> 00:29:26,480
+value.
+
+825
+00:29:25,119 --> 00:29:29,199
+>> I'm really liking how you're looking at
+
+826
+00:29:26,480 --> 00:29:31,839
+this and also how you talked about how
+
+827
+00:29:29,200 --> 00:29:34,240
+junior new new grads, early career
+
+828
+00:29:31,839 --> 00:29:36,319
+people are contributing. they can get up
+
+829
+00:29:34,240 --> 00:29:38,399
+up to speed. But one thing that's been
+
+830
+00:29:36,319 --> 00:29:39,839
+going around in dev circles, and I I'll
+
+831
+00:29:38,398 --> 00:29:42,158
+just lay it out for you, is people are
+
+832
+00:29:39,839 --> 00:29:44,079
+speculating, why is it that that
+
+833
+00:29:42,159 --> 00:29:46,720
+Microsoft is making the voluntary
+
+834
+00:29:44,079 --> 00:29:48,960
+retirement offers? Like, what does this
+
+835
+00:29:46,720 --> 00:29:52,159
+mean? There's this fear that could this
+
+836
+00:29:48,960 --> 00:29:54,960
+be a prelude to potentially a layoff
+
+837
+00:29:52,159 --> 00:29:56,880
+because of AI making teams more
+
+838
+00:29:54,960 --> 00:29:58,720
+efficient? And I just wanted to ask you
+
+839
+00:29:56,880 --> 00:30:00,240
+dead on the head, there's never been
+
+840
+00:29:58,720 --> 00:30:01,839
+anything like this at Microsoft, which
+
+841
+00:30:00,240 --> 00:30:03,599
+is what I actually paid most attention
+
+842
+00:30:01,839 --> 00:30:05,519
+to. and also the fact that it is
+
+843
+00:30:03,599 --> 00:30:06,798
+voluntary. How did your your thinking
+
+844
+00:30:05,519 --> 00:30:08,639
+and the company's thinking come together
+
+845
+00:30:06,798 --> 00:30:10,240
+on this one? It's a it's a very
+
+846
+00:30:08,640 --> 00:30:12,559
+important question and you know one of
+
+847
+00:30:10,240 --> 00:30:15,278
+the things that we discussed a lot and
+
+848
+00:30:12,558 --> 00:30:18,158
+we felt was let's acknowledge two things
+
+849
+00:30:15,278 --> 00:30:20,558
+right one is that or maybe three things
+
+850
+00:30:18,159 --> 00:30:22,640
+one is that let's acknowledge that there
+
+851
+00:30:20,558 --> 00:30:25,119
+is going to be plenty of opportunity
+
+852
+00:30:22,640 --> 00:30:27,278
+going forward the shape of that
+
+853
+00:30:25,119 --> 00:30:28,959
+opportunity may be different than what
+
+854
+00:30:27,278 --> 00:30:30,640
+is the opportunity right if you let's
+
+855
+00:30:28,960 --> 00:30:32,640
+even narrowly think about just software
+
+856
+00:30:30,640 --> 00:30:34,399
+engineering as we were discussing
+
+857
+00:30:32,640 --> 00:30:36,399
+>> so let's start there
+
+858
+00:30:34,398 --> 00:30:39,199
+>> then the next thing we should say is
+
+859
+00:30:36,398 --> 00:30:42,479
+okay Great. Let's create more of that
+
+860
+00:30:39,200 --> 00:30:44,080
+new opportunity inside uh the company,
+
+861
+00:30:42,480 --> 00:30:45,200
+right? That's where everything that
+
+862
+00:30:44,079 --> 00:30:46,720
+we're talking about, whether you're
+
+863
+00:30:45,200 --> 00:30:49,440
+working on Windows or whether you're
+
+864
+00:30:46,720 --> 00:30:51,919
+working on AI training, quite frankly,
+
+865
+00:30:49,440 --> 00:30:53,840
+you get to really equip yourself with
+
+866
+00:30:51,919 --> 00:30:55,440
+new skills that are going to be valuable
+
+867
+00:30:53,839 --> 00:30:56,240
+inside of Microsoft and in the
+
+868
+00:30:55,440 --> 00:30:56,880
+marketplace, right?
+
+869
+00:30:56,240 --> 00:30:59,038
+>> Yes.
+
+870
+00:30:56,880 --> 00:31:01,520
+>> But the shape of what this new thing
+
+871
+00:30:59,038 --> 00:31:03,679
+looks like is going to be different than
+
+872
+00:31:01,519 --> 00:31:07,759
+what the shape of what it was before,
+
+873
+00:31:03,679 --> 00:31:09,759
+right? team team sizes team workflows.
+
+874
+00:31:07,759 --> 00:31:11,919
+So we need to take it's not that we
+
+875
+00:31:09,759 --> 00:31:13,919
+don't want the 200,000 people at
+
+876
+00:31:11,919 --> 00:31:16,880
+Microsoft flourishing all of them and
+
+877
+00:31:13,919 --> 00:31:19,200
+growing even but the the 200,000 people
+
+878
+00:31:16,880 --> 00:31:20,720
+at Microsoft and growing will have to be
+
+879
+00:31:19,200 --> 00:31:22,880
+configured in different ways right when
+
+880
+00:31:20,720 --> 00:31:24,720
+I look at even at inside of Microsoft
+
+881
+00:31:22,880 --> 00:31:26,880
+some of even let's say even the economic
+
+882
+00:31:24,720 --> 00:31:29,440
+return right if you look at the wages
+
+883
+00:31:26,880 --> 00:31:31,600
+for a systems engineer right or an
+
+884
+00:31:29,440 --> 00:31:34,640
+infrastructure person is through the
+
+885
+00:31:31,599 --> 00:31:37,519
+roof same thing if you are a researcher
+
+886
+00:31:34,640 --> 00:31:40,559
+in training right so some of the expert
+
+887
+00:31:37,519 --> 00:31:43,679
+ertise is highly competitive, highly
+
+888
+00:31:40,558 --> 00:31:46,240
+valued, right? And so we want to give
+
+889
+00:31:43,679 --> 00:31:48,480
+more agency. Quite frankly, in fact,
+
+890
+00:31:46,240 --> 00:31:52,079
+this voluntary thing was mostly about
+
+891
+00:31:48,480 --> 00:31:55,200
+let's give everybody more agency to get
+
+892
+00:31:52,079 --> 00:31:57,599
+themselves slaughtered into places uh
+
+893
+00:31:55,200 --> 00:32:00,080
+that make sense for their economic
+
+894
+00:31:57,599 --> 00:32:01,599
+opportunity long term. That's I think
+
+895
+00:32:00,079 --> 00:32:03,759
+the key thing. You know, I've been CEO
+
+896
+00:32:01,599 --> 00:32:05,439
+for a long time. I was a senior exec
+
+897
+00:32:03,759 --> 00:32:07,440
+before that and what have you. But at
+
+898
+00:32:05,440 --> 00:32:10,399
+the end of the day though I did grow up
+
+899
+00:32:07,440 --> 00:32:13,840
+as from an IC to this right. So I think
+
+900
+00:32:10,398 --> 00:32:17,359
+about lot of the times when I was an IC
+
+901
+00:32:13,839 --> 00:32:20,480
+or a lead right and maybe uh a manager
+
+902
+00:32:17,359 --> 00:32:22,479
+of uh leads that's sort of the lens
+
+903
+00:32:20,480 --> 00:32:24,480
+through which I think about how should
+
+904
+00:32:22,480 --> 00:32:26,480
+we create opportunity inside the
+
+905
+00:32:24,480 --> 00:32:28,480
+company. I don't want to be stuck in a
+
+906
+00:32:26,480 --> 00:32:30,240
+team that's not transforming even inside
+
+907
+00:32:28,480 --> 00:32:32,240
+of Microsoft. Let's face it, right? It's
+
+908
+00:32:30,240 --> 00:32:35,359
+not like I can sit here and say every
+
+909
+00:32:32,240 --> 00:32:37,200
+part of Microsoft is sort of really got
+
+910
+00:32:35,359 --> 00:32:39,038
+the memo and they're all transforming at
+
+911
+00:32:37,200 --> 00:32:41,600
+the eap I want to give them you know if
+
+912
+00:32:39,038 --> 00:32:44,720
+you if you're in a team where you feel
+
+913
+00:32:41,599 --> 00:32:46,879
+stuck professionally uh you can vote
+
+914
+00:32:44,720 --> 00:32:48,558
+with your feet I don't want you to
+
+915
+00:32:46,880 --> 00:32:50,640
+because quite frankly there are many
+
+916
+00:32:48,558 --> 00:32:52,558
+places you can go inside of Microsoft
+
+917
+00:32:50,640 --> 00:32:55,120
+itself. So that is another opportunity
+
+918
+00:32:52,558 --> 00:32:57,278
+we want to create. So in that context,
+
+919
+00:32:55,119 --> 00:33:00,239
+we are trying to give more agency to
+
+920
+00:32:57,278 --> 00:33:02,480
+people. Uh realizing that this is a time
+
+921
+00:33:00,240 --> 00:33:04,960
+of tumult, right? I I wish I could just
+
+922
+00:33:02,480 --> 00:33:07,278
+sit here and say it'll all be the same.
+
+923
+00:33:04,960 --> 00:33:08,720
+I cannot, right? And you know, and and
+
+924
+00:33:07,278 --> 00:33:11,119
+you know, this is one of those places
+
+925
+00:33:08,720 --> 00:33:12,960
+where I I want to be as transparent
+
+926
+00:33:11,119 --> 00:33:15,439
+about the change. I want to make sure we
+
+927
+00:33:12,960 --> 00:33:17,919
+do I I do the hard work of creating all
+
+928
+00:33:15,440 --> 00:33:20,080
+the opportunity at the company and then
+
+929
+00:33:17,919 --> 00:33:22,000
+make sure that our workforce is able to
+
+930
+00:33:20,079 --> 00:33:23,199
+really make their professional growth
+
+931
+00:33:22,000 --> 00:33:25,519
+come true here.
+
+932
+00:33:23,200 --> 00:33:27,679
+>> I mean I think you're saying this very
+
+933
+00:33:25,519 --> 00:33:29,278
+nicely and thoughtfully but how I would
+
+934
+00:33:27,679 --> 00:33:30,720
+translate it is you know the world has
+
+935
+00:33:29,278 --> 00:33:32,319
+changed big time and we saw for example
+
+936
+00:33:30,720 --> 00:33:34,159
+with clot code has been such a fast
+
+937
+00:33:32,319 --> 00:33:36,720
+change and the teams who fall asleep at
+
+938
+00:33:34,159 --> 00:33:39,519
+the wheel if you will we you cannot
+
+939
+00:33:36,720 --> 00:33:41,679
+afford it. Uh so you need to either go
+
+940
+00:33:39,519 --> 00:33:43,440
+with this realize that the the world has
+
+941
+00:33:41,679 --> 00:33:45,038
+changed my work as a software engineer
+
+942
+00:33:43,440 --> 00:33:47,038
+will change my tools will change and
+
+943
+00:33:45,038 --> 00:33:48,480
+either I'm on board with this I figure
+
+944
+00:33:47,038 --> 00:33:50,480
+out how to be enthusiastic about this
+
+945
+00:33:48,480 --> 00:33:51,919
+and see all the opportunities all the
+
+946
+00:33:50,480 --> 00:33:54,558
+engineering challenges with building the
+
+947
+00:33:51,919 --> 00:33:57,038
+factories with the new workflows or I
+
+948
+00:33:54,558 --> 00:33:58,398
+decide well I'm not going to do that and
+
+949
+00:33:57,038 --> 00:34:00,000
+most places you're kind of stuck but
+
+950
+00:33:58,398 --> 00:34:02,239
+you're actually giving an option for
+
+951
+00:34:00,000 --> 00:34:04,079
+people to decide if you would like to
+
+952
+00:34:02,240 --> 00:34:05,440
+check out from there you can right now
+
+953
+00:34:04,079 --> 00:34:07,759
+and there's no hard feelings
+
+954
+00:34:05,440 --> 00:34:09,838
+>> I think so and I also feel Like look I
+
+955
+00:34:07,759 --> 00:34:11,599
+think let's sort of if you come down to
+
+956
+00:34:09,838 --> 00:34:14,000
+it and I care a lot about this right
+
+957
+00:34:11,599 --> 00:34:18,000
+which is we have created
+
+958
+00:34:14,000 --> 00:34:20,639
+enormous anxiety enormous anxiety in
+
+959
+00:34:18,000 --> 00:34:23,119
+people sort of feeling that they don't
+
+960
+00:34:20,639 --> 00:34:24,720
+have control of their own destiny
+
+961
+00:34:23,119 --> 00:34:27,838
+>> because the way we have talked about
+
+962
+00:34:24,719 --> 00:34:29,838
+this AI revolution is yeah you know been
+
+963
+00:34:27,838 --> 00:34:32,398
+people say hey this maybe you know the
+
+964
+00:34:29,838 --> 00:34:33,918
+singularity is here and therefore maybe
+
+965
+00:34:32,398 --> 00:34:38,000
+we are building there will be one
+
+966
+00:34:33,918 --> 00:34:41,838
+company or you know there'll be no jobs.
+
+967
+00:34:38,000 --> 00:34:45,918
+All that sort of leads to anyone who
+
+968
+00:34:41,838 --> 00:34:46,960
+even wants to change be sort of anxious.
+
+969
+00:34:45,918 --> 00:34:50,078
+>> Yes. Stress.
+
+970
+00:34:46,960 --> 00:34:52,800
+>> And so I kind of feel that this is where
+
+971
+00:34:50,079 --> 00:34:54,639
+look, we're a company of 200,000 people.
+
+972
+00:34:52,800 --> 00:34:56,960
+You know, I know that there's going to
+
+973
+00:34:54,639 --> 00:34:58,400
+be a lot of change in what each of us
+
+974
+00:34:56,960 --> 00:35:00,960
+do. Like think about it, right? One of
+
+975
+00:34:58,400 --> 00:35:01,760
+the fastest growing jobs at Microsoft is
+
+976
+00:35:00,960 --> 00:35:02,639
+FDE.
+
+977
+00:35:01,760 --> 00:35:04,000
+>> Microsoft as well.
+
+978
+00:35:02,639 --> 00:35:05,358
+>> Yeah. Across the industry right now.
+
+979
+00:35:04,000 --> 00:35:06,639
+>> Across the industry. Because in some
+
+980
+00:35:05,358 --> 00:35:10,400
+sense if you think about it right you
+
+981
+00:35:06,639 --> 00:35:12,480
+have an account rep very important
+
+982
+00:35:10,400 --> 00:35:15,920
+>> then right next to the account rep is
+
+983
+00:35:12,480 --> 00:35:17,920
+sort of our uh customer uh you know the
+
+984
+00:35:15,920 --> 00:35:20,960
+technical support folks right and the
+
+985
+00:35:17,920 --> 00:35:22,639
+customer um it's I think CSU is what we
+
+986
+00:35:20,960 --> 00:35:25,039
+call a customer success
+
+987
+00:35:22,639 --> 00:35:27,199
+>> uh and then we have even the technical
+
+988
+00:35:25,039 --> 00:35:27,920
+support people and then you have uh the
+
+989
+00:35:27,199 --> 00:35:28,719
+FD team
+
+990
+00:35:27,920 --> 00:35:31,599
+>> forward the engineers
+
+991
+00:35:28,719 --> 00:35:33,598
+>> all of these things require a complete
+
+992
+00:35:31,599 --> 00:35:35,760
+like they all should be going to the
+
+993
+00:35:33,599 --> 00:35:37,599
+same preceptor ship that any software
+
+994
+00:35:35,760 --> 00:35:39,520
+engineer is going if you will right
+
+995
+00:35:37,599 --> 00:35:41,119
+because you can all like I know even
+
+996
+00:35:39,519 --> 00:35:43,039
+LinkedIn I think they made this change
+
+997
+00:35:41,119 --> 00:35:44,880
+inside where they call them full stack
+
+998
+00:35:43,039 --> 00:35:48,239
+builders right which they they combine
+
+999
+00:35:44,880 --> 00:35:51,280
+roles so all that change I think there's
+
+1000
+00:35:48,239 --> 00:35:54,959
+opportunity but you have to sort of walk
+
+1001
+00:35:51,280 --> 00:35:57,040
+the hard walk of really making the
+
+1002
+00:35:54,960 --> 00:35:59,199
+structural changes getting people
+
+1003
+00:35:57,039 --> 00:36:01,920
+slaughtered giving them opportunity
+
+1004
+00:35:59,199 --> 00:36:04,559
+giving them uh the wage support knowing
+
+1005
+00:36:01,920 --> 00:36:06,960
+knowing how to evaluate people with
+
+1006
+00:36:04,559 --> 00:36:09,440
+their productivity and their excellence
+
+1007
+00:36:06,960 --> 00:36:11,679
+in their new jobs in their new slots.
+
+1008
+00:36:09,440 --> 00:36:13,119
+This is the hard work any incumbent you
+
+1009
+00:36:11,679 --> 00:36:15,279
+know so that's why you know the
+
+1010
+00:36:13,119 --> 00:36:16,720
+celebration of the new which always
+
+1011
+00:36:15,280 --> 00:36:19,680
+should be there right that's how
+
+1012
+00:36:16,719 --> 00:36:21,838
+competitive marketplaces work uh look
+
+1013
+00:36:19,679 --> 00:36:24,000
+you know we are a 51-year-old company
+
+1014
+00:36:21,838 --> 00:36:26,239
+we're going to sort of be comfortable in
+
+1015
+00:36:24,000 --> 00:36:28,320
+our skin we want to serve our customers
+
+1016
+00:36:26,239 --> 00:36:30,239
+well we want to create fantastic
+
+1017
+00:36:28,320 --> 00:36:32,640
+economic opportunity for the employees
+
+1018
+00:36:30,239 --> 00:36:34,559
+at this company doing great work given
+
+1019
+00:36:32,639 --> 00:36:35,519
+our mission to empower people and
+
+1020
+00:36:34,559 --> 00:36:37,039
+organizations
+
+1021
+00:36:35,519 --> 00:36:38,320
+>> on the other side of this but I I just
+
+1022
+00:36:37,039 --> 00:36:41,199
+want to get this on the record so when
+
+1023
+00:36:38,320 --> 00:36:43,680
+we talked out hiring new grads. So you
+
+1024
+00:36:41,199 --> 00:36:45,519
+you are still hiring new grads, junior
+
+1025
+00:36:43,679 --> 00:36:46,719
+people. You're investing in them. You're
+
+1026
+00:36:45,519 --> 00:36:48,320
+seeing that because one of the worries
+
+1027
+00:36:46,719 --> 00:36:50,319
+in a lot of other companies and startups
+
+1028
+00:36:48,320 --> 00:36:51,920
+is and they've slowed down or even
+
+1029
+00:36:50,320 --> 00:36:54,400
+stopped hiring because they're thinking
+
+1030
+00:36:51,920 --> 00:36:55,920
+well with AI the most the people who can
+
+1031
+00:36:54,400 --> 00:36:57,039
+use it the most efficiently as as we
+
+1032
+00:36:55,920 --> 00:36:58,720
+previously mentioned the ones who have
+
+1033
+00:36:57,039 --> 00:37:01,199
+expertise and they can leverage that and
+
+1034
+00:36:58,719 --> 00:37:01,838
+they're very hesitant to hire any new
+
+1035
+00:37:01,199 --> 00:37:03,358
+career people.
+
+1036
+00:37:01,838 --> 00:37:06,078
+>> That's a great point. So, so one of the
+
+1037
+00:37:03,358 --> 00:37:08,078
+things that we're trying to do is in
+
+1038
+00:37:06,079 --> 00:37:09,440
+this change, this is where I think a
+
+1039
+00:37:08,079 --> 00:37:11,519
+little bit of the trends have to be
+
+1040
+00:37:09,440 --> 00:37:13,599
+watched carefully over sort of slightly
+
+1041
+00:37:11,519 --> 00:37:14,719
+longitudinally versus just you know one
+
+1042
+00:37:13,599 --> 00:37:16,960
+year because
+
+1043
+00:37:14,719 --> 00:37:18,879
+>> um we're in the process of a lot of
+
+1044
+00:37:16,960 --> 00:37:20,960
+change right so first job is to make
+
+1045
+00:37:18,880 --> 00:37:24,640
+sure internally all of the folks are
+
+1046
+00:37:20,960 --> 00:37:27,838
+getting reorged to places that make
+
+1047
+00:37:24,639 --> 00:37:30,159
+sense right step one I mean like even
+
+1048
+00:37:27,838 --> 00:37:33,599
+inside of a team right you just want to
+
+1049
+00:37:30,159 --> 00:37:35,358
+get the configuration Right? Then it
+
+1050
+00:37:33,599 --> 00:37:37,599
+makes sense to oh what is the industry
+
+1051
+00:37:35,358 --> 00:37:39,519
+higher or a new college h higher you add
+
+1052
+00:37:37,599 --> 00:37:42,880
+to this right and so a little bit of
+
+1053
+00:37:39,519 --> 00:37:45,759
+what's happening I think is the slowdown
+
+1054
+00:37:42,880 --> 00:37:47,599
+may be a slowdown to get those quote
+
+1055
+00:37:45,760 --> 00:37:51,760
+unquote new factories of software
+
+1056
+00:37:47,599 --> 00:37:55,039
+engineering built such that new inputs
+
+1057
+00:37:51,760 --> 00:37:57,440
+not just tokens humans can come in and
+
+1058
+00:37:55,039 --> 00:37:59,519
+then in this new configuration give you
+
+1059
+00:37:57,440 --> 00:38:01,200
+high leverage right I mean let's face it
+
+1060
+00:37:59,519 --> 00:38:03,599
+when what is an AI native company they
+
+1061
+00:38:01,199 --> 00:38:06,480
+start with a token budget and a human,
+
+1062
+00:38:03,599 --> 00:38:08,400
+right? Then they add that person maxes
+
+1063
+00:38:06,480 --> 00:38:10,400
+their token budget and and then says
+
+1064
+00:38:08,400 --> 00:38:12,320
+let's add the next human and then that
+
+1065
+00:38:10,400 --> 00:38:14,559
+human gets a token budget and then their
+
+1066
+00:38:12,320 --> 00:38:17,359
+factory gets the budget. Yes,
+
+1067
+00:38:14,559 --> 00:38:19,279
+>> that is the constructionist way and it's
+
+1068
+00:38:17,358 --> 00:38:21,440
+not like okay those companies if they
+
+1069
+00:38:19,280 --> 00:38:24,079
+succeed they will also be big one day
+
+1070
+00:38:21,440 --> 00:38:26,400
+and they will and some already are are
+
+1071
+00:38:24,079 --> 00:38:28,480
+and you every company is going to start
+
+1072
+00:38:26,400 --> 00:38:30,079
+looking like that and every project team
+
+1073
+00:38:28,480 --> 00:38:33,599
+or product team will look like that and
+
+1074
+00:38:30,079 --> 00:38:35,119
+so that process of reconfiguring new
+
+1075
+00:38:33,599 --> 00:38:37,920
+discovery
+
+1076
+00:38:35,119 --> 00:38:40,079
+uh and configuration it'll take time and
+
+1077
+00:38:37,920 --> 00:38:43,760
+that's where I think you know trying to
+
+1078
+00:38:40,079 --> 00:38:46,079
+draw too many lines as long-term trends
+
+1079
+00:38:43,760 --> 00:38:47,599
+I think it's too early. Before we get
+
+1080
+00:38:46,079 --> 00:38:49,839
+back to the conversation, I'd like to
+
+1081
+00:38:47,599 --> 00:38:51,599
+talk about Linear, our season sponsor.
+
+1082
+00:38:49,838 --> 00:38:53,440
+Until recently, I was thinking of Linear
+
+1083
+00:38:51,599 --> 00:38:55,599
+as a tool that helps plan and organize
+
+1084
+00:38:53,440 --> 00:38:57,119
+the work, but it's much more than that.
+
+1085
+00:38:55,599 --> 00:38:59,200
+A lot of teams use Linear to ship
+
+1086
+00:38:57,119 --> 00:39:01,039
+changes from idea to merge in GitHub,
+
+1087
+00:38:59,199 --> 00:39:02,559
+all without leaving the tool. I sat down
+
+1088
+00:39:01,039 --> 00:39:04,639
+with Dimma, an engineer on the linear
+
+1089
+00:39:02,559 --> 00:39:07,039
+team, to see how devs inside of Linear
+
+1090
+00:39:04,639 --> 00:39:08,719
+use linear to build all of Linear. So,
+
+1091
+00:39:07,039 --> 00:39:10,800
+here's a real issue. When you submit a
+
+1092
+00:39:08,719 --> 00:39:13,199
+review with unsend comments, Linear
+
+1093
+00:39:10,800 --> 00:39:14,640
+warns you about these comments. but it
+
+1094
+00:39:13,199 --> 00:39:16,799
+didn't tell you where those comments
+
+1095
+00:39:14,639 --> 00:39:18,480
+were. A customer complained and Dimma
+
+1096
+00:39:16,800 --> 00:39:20,800
+decided to fix it. But for the fix,
+
+1097
+00:39:18,480 --> 00:39:22,800
+Dimma did not open his ID. Instead, he
+
+1098
+00:39:20,800 --> 00:39:24,880
+opened up Linear and described the issue
+
+1099
+00:39:22,800 --> 00:39:26,960
+to the agent. The agent built a fix,
+
+1100
+00:39:24,880 --> 00:39:28,880
+created a PR, and attached storybook
+
+1101
+00:39:26,960 --> 00:39:30,480
+screenshots for easy verification. You
+
+1102
+00:39:28,880 --> 00:39:32,480
+can see the fix with the draft comments
+
+1103
+00:39:30,480 --> 00:39:34,240
+linked on this screenshot. In the PR,
+
+1104
+00:39:32,480 --> 00:39:35,838
+you can then open the preview with one
+
+1105
+00:39:34,239 --> 00:39:38,000
+click from linear to play around with
+
+1106
+00:39:35,838 --> 00:39:40,159
+the change and see that it worked. And
+
+1107
+00:39:38,000 --> 00:39:42,239
+here's my favorite part, guided reviews,
+
+1108
+00:39:40,159 --> 00:39:44,000
+which is work in progress. Guided
+
+1109
+00:39:42,239 --> 00:39:46,479
+reviews is a new code review experience
+
+1110
+00:39:44,000 --> 00:39:48,239
+where the important stuff just pops out.
+
+1111
+00:39:46,480 --> 00:39:50,320
+The top of the review has a summary and
+
+1112
+00:39:48,239 --> 00:39:52,399
+a diagram of the change and the poll
+
+1113
+00:39:50,320 --> 00:39:54,800
+request is divided into chapters that
+
+1114
+00:39:52,400 --> 00:39:56,400
+walk you through what has changed. These
+
+1115
+00:39:54,800 --> 00:39:58,320
+blocks highlight the important changes
+
+1116
+00:39:56,400 --> 00:40:00,320
+in a way that's easier to understand and
+
+1117
+00:39:58,320 --> 00:40:01,920
+review. Oh, and when Dimma is finished
+
+1118
+00:40:00,320 --> 00:40:03,760
+with all of this, he just self- approves
+
+1119
+00:40:01,920 --> 00:40:05,680
+the code and it's merged into GitHub.
+
+1120
+00:40:03,760 --> 00:40:07,839
+All without leaving linear. If you take
+
+1121
+00:40:05,679 --> 00:40:09,358
+away one thing from this, Linear is no
+
+1122
+00:40:07,838 --> 00:40:11,679
+longer just a place for planning tickets
+
+1123
+00:40:09,358 --> 00:40:13,679
+and organizing the work. It's where all
+
+1124
+00:40:11,679 --> 00:40:15,279
+the work happens. Creating the issue,
+
+1125
+00:40:13,679 --> 00:40:17,199
+kicking off the agent, checking out the
+
+1126
+00:40:15,280 --> 00:40:19,519
+preview, and doing the review and
+
+1127
+00:40:17,199 --> 00:40:20,960
+merging to production. Linear is the
+
+1128
+00:40:19,519 --> 00:40:22,400
+product development system for teams and
+
+1129
+00:40:20,960 --> 00:40:24,079
+AI agents. And I'm loving this
+
+1130
+00:40:22,400 --> 00:40:26,400
+evolution. Linear is the product
+
+1131
+00:40:24,079 --> 00:40:28,560
+development system for teams and for AI
+
+1132
+00:40:26,400 --> 00:40:30,160
+agents, and I'm loving this evolution.
+
+1133
+00:40:28,559 --> 00:40:32,719
+Check it out and get a six-month trial
+
+1134
+00:40:30,159 --> 00:40:34,480
+at linear.app/pramatic.
+
+1135
+00:40:32,719 --> 00:40:36,639
+If you've ever worked on B2B software,
+
+1136
+00:40:34,480 --> 00:40:38,559
+you know how this goes. A customer likes
+
+1137
+00:40:36,639 --> 00:40:41,118
+a product, then their security team
+
+1138
+00:40:38,559 --> 00:40:43,440
+sends a list. SSO, skin provisioning,
+
+1139
+00:40:41,119 --> 00:40:45,519
+rolebased access. None of it is what you
+
+1140
+00:40:43,440 --> 00:40:48,079
+set out to build, but the deal waits on
+
+1141
+00:40:45,519 --> 00:40:50,159
+it. Work OS is the infrastructure that
+
+1142
+00:40:48,079 --> 00:40:52,000
+covers all of that. So nobody on your
+
+1143
+00:40:50,159 --> 00:40:53,679
+team has to debug a customer's sample
+
+1144
+00:40:52,000 --> 00:40:56,318
+setup. The newer version of the problem
+
+1145
+00:40:53,679 --> 00:40:58,239
+is agents. Once an agent is acting
+
+1146
+00:40:56,318 --> 00:40:59,759
+inside of a customer systems, the
+
+1147
+00:40:58,239 --> 00:41:02,399
+enterprise wants to know what it's
+
+1148
+00:40:59,760 --> 00:41:05,359
+allowed to do. That's what works airlock
+
+1149
+00:41:02,400 --> 00:41:07,680
+is for. It's intentbased access control.
+
+1150
+00:41:05,358 --> 00:41:10,239
+Most access control only asks who you
+
+1151
+00:41:07,679 --> 00:41:12,078
+are. Airlock also asks what the agent is
+
+1152
+00:41:10,239 --> 00:41:14,559
+trying to do at the moment it tries to
+
+1153
+00:41:12,079 --> 00:41:16,720
+do it. Clear-cut rules like no agent
+
+1154
+00:41:14,559 --> 00:41:18,960
+deletes cloud resources run as plain
+
+1155
+00:41:16,719 --> 00:41:21,358
+code. For the fuzzier air calls, an AI
+
+1156
+00:41:18,960 --> 00:41:22,720
+judge evaluates a policy at runtime. You
+
+1157
+00:41:21,358 --> 00:41:24,400
+write these policies in plain English
+
+1158
+00:41:22,719 --> 00:41:26,399
+and Claude can pull the ones you already
+
+1159
+00:41:24,400 --> 00:41:28,559
+had out of notion or JR and import them
+
+1160
+00:41:26,400 --> 00:41:30,160
+for you. Your agents, whether that's
+
+1161
+00:41:28,559 --> 00:41:32,480
+Claude or Devon, connect through a
+
+1162
+00:41:30,159 --> 00:41:35,519
+single access point and your MTP servers
+
+1163
+00:41:32,480 --> 00:41:37,199
+sit behind it. Airlock is a new layer on
+
+1164
+00:41:35,519 --> 00:41:38,960
+top of your existing permissions. So an
+
+1165
+00:41:37,199 --> 00:41:41,118
+agent can never get more access than the
+
+1166
+00:41:38,960 --> 00:41:42,880
+person who invoked it has. When
+
+1167
+00:41:41,119 --> 00:41:44,800
+something risky comes up, airlock can
+
+1168
+00:41:42,880 --> 00:41:47,119
+escalate to human for approval, say over
+
+1169
+00:41:44,800 --> 00:41:49,039
+Slack. The idea is to write the rules
+
+1170
+00:41:47,119 --> 00:41:50,960
+once and spend human attention only on
+
+1171
+00:41:49,039 --> 00:41:52,960
+the calls that need it. And every
+
+1172
+00:41:50,960 --> 00:41:54,559
+request and decision is logged. Visit
+
+1173
+00:41:52,960 --> 00:41:57,280
+workwise.com/airlock
+
+1174
+00:41:54,559 --> 00:41:58,960
+to learn more. Now we know when everyone
+
+1175
+00:41:57,280 --> 00:42:01,200
+is building their their software factors
+
+1176
+00:41:58,960 --> 00:42:02,559
+or changing how they work. A big trend
+
+1177
+00:42:01,199 --> 00:42:04,559
+now that we go down to a little bit of
+
+1178
+00:42:02,559 --> 00:42:06,239
+the how this is done. big trend across
+
+1179
+00:42:04,559 --> 00:42:08,000
+the industry that I'm seeing and I'm
+
+1180
+00:42:06,239 --> 00:42:09,838
+sure you're seeing as well. A lot of
+
+1181
+00:42:08,000 --> 00:42:12,480
+tech companies are moving to open models
+
+1182
+00:42:09,838 --> 00:42:14,000
+as well. The a lot of them are are
+
+1183
+00:42:12,480 --> 00:42:15,280
+spinning up their inference or companies
+
+1184
+00:42:14,000 --> 00:42:17,039
+like Revolute are buying their
+
+1185
+00:42:15,280 --> 00:42:19,040
+inference. They're buying their B200s
+
+1186
+00:42:17,039 --> 00:42:20,318
+and just launching the models on it.
+
+1187
+00:42:19,039 --> 00:42:21,679
+They all have their own reasons. But
+
+1188
+00:42:20,318 --> 00:42:23,279
+from your vantage point, you know,
+
+1189
+00:42:21,679 --> 00:42:24,879
+Microsoft is also in the open model
+
+1190
+00:42:23,280 --> 00:42:29,519
+serving business with with Foundry, for
+
+1191
+00:42:24,880 --> 00:42:31,760
+example. How big is this trend and is
+
+1192
+00:42:29,519 --> 00:42:33,920
+this in inevitable? I'm asking myself
+
+1193
+00:42:31,760 --> 00:42:35,599
+are there parallels to the open source
+
+1194
+00:42:33,920 --> 00:42:35,920
+movement and now the open model
+
+1195
+00:42:35,599 --> 00:42:37,440
+movement?
+
+1196
+00:42:35,920 --> 00:42:39,200
+>> Yeah, I think that there are for sure
+
+1197
+00:42:37,440 --> 00:42:40,960
+the parallel which is you know you know
+
+1198
+00:42:39,199 --> 00:42:42,480
+there's sort of going to be closed
+
+1199
+00:42:40,960 --> 00:42:44,318
+models and there'll be competition
+
+1200
+00:42:42,480 --> 00:42:46,800
+amongst them and there will be sort of
+
+1201
+00:42:44,318 --> 00:42:50,318
+an alternative to obviously closed would
+
+1202
+00:42:46,800 --> 00:42:52,240
+be open. uh open gives you flexibility.
+
+1203
+00:42:50,318 --> 00:42:54,960
+In fact, I think you know, one of the
+
+1204
+00:42:52,239 --> 00:42:56,879
+ways I come at it is with just this what
+
+1205
+00:42:54,960 --> 00:42:59,039
+is a frontier ecosystem look like,
+
+1206
+00:42:56,880 --> 00:43:01,280
+right? It's can't be if you just get
+
+1207
+00:42:59,039 --> 00:43:04,719
+past this thing called uh there's going
+
+1208
+00:43:01,280 --> 00:43:06,319
+to be one frontier uh model to sort of
+
+1209
+00:43:04,719 --> 00:43:08,639
+have all of the world's knowledge,
+
+1210
+00:43:06,318 --> 00:43:10,960
+right? If you don't buy that, right, uh
+
+1211
+00:43:08,639 --> 00:43:13,679
+then you have to assume that there
+
+1212
+00:43:10,960 --> 00:43:15,519
+should be in some sense as many frontier
+
+1213
+00:43:13,679 --> 00:43:17,279
+models as firms in the world, right?
+
+1214
+00:43:15,519 --> 00:43:21,358
+Because after all if you go back to
+
+1215
+00:43:17,280 --> 00:43:23,760
+actually Hayek uh the his description of
+
+1216
+00:43:21,358 --> 00:43:26,000
+what an economy is it's all about
+
+1217
+00:43:23,760 --> 00:43:28,560
+knowledge being distributed right in
+
+1218
+00:43:26,000 --> 00:43:30,800
+fact his you know his entire thing about
+
+1219
+00:43:28,559 --> 00:43:34,078
+pricing uh is a beautiful sort of
+
+1220
+00:43:30,800 --> 00:43:36,318
+explanation of hey it happens because of
+
+1221
+00:43:34,079 --> 00:43:38,560
+knowledge being tacit and distributed
+
+1222
+00:43:36,318 --> 00:43:41,039
+throughout the economy and every firm
+
+1223
+00:43:38,559 --> 00:43:43,599
+needs to be in control of it and if so
+
+1224
+00:43:41,039 --> 00:43:45,679
+then I would even say every firm is
+
+1225
+00:43:43,599 --> 00:43:48,480
+essentially got both human capital and
+
+1226
+00:43:45,679 --> 00:43:50,159
+token capital. So if every firm is going
+
+1227
+00:43:48,480 --> 00:43:51,838
+to have both token capital and human
+
+1228
+00:43:50,159 --> 00:43:54,078
+capital, the token capital can be an
+
+1229
+00:43:51,838 --> 00:43:56,318
+openw weight model into which you know
+
+1230
+00:43:54,079 --> 00:43:58,318
+you've embedded your knowledge. That's
+
+1231
+00:43:56,318 --> 00:44:00,000
+one. It could also be in the context
+
+1232
+00:43:58,318 --> 00:44:02,480
+layer. You could even be using multiple
+
+1233
+00:44:00,000 --> 00:44:06,400
+closed models. in fact collecting even
+
+1234
+00:44:02,480 --> 00:44:08,880
+the traces uh of your usage of those
+
+1235
+00:44:06,400 --> 00:44:11,599
+closed models and then using those
+
+1236
+00:44:08,880 --> 00:44:13,358
+traces to maybe train an a small model
+
+1237
+00:44:11,599 --> 00:44:15,200
+and an open weight model for yourself
+
+1238
+00:44:13,358 --> 00:44:16,960
+and keeping you know combination when I
+
+1239
+00:44:15,199 --> 00:44:19,199
+look at even copilot in fact whether
+
+1240
+00:44:16,960 --> 00:44:21,920
+it's github copilot or co-pilot they're
+
+1241
+00:44:19,199 --> 00:44:24,639
+all designed as these multimodel system
+
+1242
+00:44:21,920 --> 00:44:26,400
+right in fact I would say maybe even by
+
+1243
+00:44:24,639 --> 00:44:28,639
+the next time you and I talk everybody
+
+1244
+00:44:26,400 --> 00:44:30,720
+would say it's not about even open or
+
+1245
+00:44:28,639 --> 00:44:32,799
+closed everyone has a model system in
+
+1246
+00:44:30,719 --> 00:44:35,838
+Fact, it starts with even a decision
+
+1247
+00:44:32,800 --> 00:44:39,119
+engine which says which model to use for
+
+1248
+00:44:35,838 --> 00:44:41,519
+what task and then I have my context and
+
+1249
+00:44:39,119 --> 00:44:43,680
+memory and my action space separate from
+
+1250
+00:44:41,519 --> 00:44:45,519
+any one model because otherwise you have
+
+1251
+00:44:43,679 --> 00:44:47,838
+a complete lock in. In fact, one of the
+
+1252
+00:44:45,519 --> 00:44:49,838
+things I I I think about it's like, wow,
+
+1253
+00:44:47,838 --> 00:44:52,799
+if you really got your harness, your
+
+1254
+00:44:49,838 --> 00:44:54,400
+model, your memory and all coupled, how
+
+1255
+00:44:52,800 --> 00:44:56,400
+would you ever get out, right? In fact,
+
+1256
+00:44:54,400 --> 00:44:59,599
+what are you doing and what what do you
+
+1257
+00:44:56,400 --> 00:45:01,599
+own versus what is owned by the model?
+
+1258
+00:44:59,599 --> 00:45:04,318
+Uh because no, the model will basically
+
+1259
+00:45:01,599 --> 00:45:06,720
+collapse into it everything it sees. Um
+
+1260
+00:45:04,318 --> 00:45:08,400
+and so I think that this dynamic is
+
+1261
+00:45:06,719 --> 00:45:10,159
+getting well better understood. It's you
+
+1262
+00:45:08,400 --> 00:45:12,318
+know most people again think oh this is
+
+1263
+00:45:10,159 --> 00:45:14,960
+just some competition amongst tech
+
+1264
+00:45:12,318 --> 00:45:17,440
+people. Remember there's no limit to
+
+1265
+00:45:14,960 --> 00:45:19,358
+intelligence. Every bank, every
+
+1266
+00:45:17,440 --> 00:45:22,159
+healthcare company, every insurance
+
+1267
+00:45:19,358 --> 00:45:24,960
+company, every analyst out, everybody
+
+1268
+00:45:22,159 --> 00:45:28,399
+needs to sort of have a real thing
+
+1269
+00:45:24,960 --> 00:45:30,880
+architectural approach to figuring out
+
+1270
+00:45:28,400 --> 00:45:34,079
+how do they manage to control their own
+
+1271
+00:45:30,880 --> 00:45:36,400
+learning and knowledge and have firm
+
+1272
+00:45:34,079 --> 00:45:38,880
+differentiation. And in that context,
+
+1273
+00:45:36,400 --> 00:45:40,639
+open rate models is one strategy that I
+
+1274
+00:45:38,880 --> 00:45:42,720
+think has legs. You know, this is very
+
+1275
+00:45:40,639 --> 00:45:45,279
+interesting because I I talk with a lot
+
+1276
+00:45:42,719 --> 00:45:47,279
+of midsize tech companies, startups, and
+
+1277
+00:45:45,280 --> 00:45:48,880
+almost all of them are building the
+
+1278
+00:45:47,280 --> 00:45:50,800
+things that you just dropped, their own
+
+1279
+00:45:48,880 --> 00:45:52,880
+harness, their own context layer, their
+
+1280
+00:45:50,800 --> 00:45:55,440
+own own context graph, their own
+
+1281
+00:45:52,880 --> 00:45:56,559
+inference. And I thought initially I'm
+
+1282
+00:45:55,440 --> 00:45:58,559
+like, well, this kind of makes sense
+
+1283
+00:45:56,559 --> 00:45:59,759
+because engineers love to build and if
+
+1284
+00:45:58,559 --> 00:46:01,279
+you want to get AI engineering
+
+1285
+00:45:59,760 --> 00:46:03,440
+experience, the the least risky thing is
+
+1286
+00:46:01,280 --> 00:46:05,200
+to build something internal. However, I
+
+1287
+00:46:03,440 --> 00:46:07,519
+never thought of of this part where it's
+
+1288
+00:46:05,199 --> 00:46:08,879
+actually these engineers building for
+
+1289
+00:46:07,519 --> 00:46:10,159
+the right reasons, which is the
+
+1290
+00:46:08,880 --> 00:46:11,838
+strategic reason or not. They're
+
+1291
+00:46:10,159 --> 00:46:13,519
+probably doing their company a service.
+
+1292
+00:46:11,838 --> 00:46:16,000
+And you're saying that most companies
+
+1293
+00:46:13,519 --> 00:46:17,599
+should probably consider owning this
+
+1294
+00:46:16,000 --> 00:46:18,400
+system, having replaceable parts,
+
+1295
+00:46:17,599 --> 00:46:19,760
+primitives because
+
+1296
+00:46:18,400 --> 00:46:21,440
+>> that's correct. So, in fact, what you're
+
+1297
+00:46:19,760 --> 00:46:23,280
+observing is correct, which is it's
+
+1298
+00:46:21,440 --> 00:46:25,599
+fascinating, right? In fact, I would say
+
+1299
+00:46:23,280 --> 00:46:27,839
+if you're a bank, you should check how
+
+1300
+00:46:25,599 --> 00:46:30,079
+software companies that are trying to
+
+1301
+00:46:27,838 --> 00:46:33,679
+manage in this ecosystem to become
+
+1302
+00:46:30,079 --> 00:46:37,519
+frontier uh are doing it. they're not
+
+1303
+00:46:33,679 --> 00:46:39,199
+seeding control. So in some sense that's
+
+1304
+00:46:37,519 --> 00:46:40,800
+what the bank should be doing. So what
+
+1305
+00:46:39,199 --> 00:46:42,318
+does the bank in there they will have
+
+1306
+00:46:40,800 --> 00:46:44,079
+leverage. So for example what we have
+
+1307
+00:46:42,318 --> 00:46:46,639
+done you know what we describe as this
+
+1308
+00:46:44,079 --> 00:46:48,400
+IQ layer is we have taken for example
+
+1309
+00:46:46,639 --> 00:46:51,039
+the harness that we have underneath
+
+1310
+00:46:48,400 --> 00:46:53,280
+copilot and github c-ilot made it a
+
+1311
+00:46:51,039 --> 00:46:55,279
+firstass thing that you can now go to
+
+1312
+00:46:53,280 --> 00:46:57,040
+foundry as a managed service and you
+
+1313
+00:46:55,280 --> 00:46:58,880
+have the harness. So in there, let's say
+
+1314
+00:46:57,039 --> 00:47:01,358
+you're building a supply chain system,
+
+1315
+00:46:58,880 --> 00:47:03,119
+you can start with our harness just as
+
+1316
+00:47:01,358 --> 00:47:04,799
+essentially an open or you can bring PI
+
+1317
+00:47:03,119 --> 00:47:05,200
+or any other open- source harness as
+
+1318
+00:47:04,800 --> 00:47:06,000
+well in there.
+
+1319
+00:47:05,199 --> 00:47:08,318
+>> Oh, we love PI.
+
+1320
+00:47:06,000 --> 00:47:11,519
+>> Uh but you can just have it like as a
+
+1321
+00:47:08,318 --> 00:47:13,039
+managed service, right? So battle tested
+
+1322
+00:47:11,519 --> 00:47:14,960
+uh harness from Microsoft which we
+
+1323
+00:47:13,039 --> 00:47:16,480
+ourselves are using is just available
+
+1324
+00:47:14,960 --> 00:47:18,079
+there and then you can have all the
+
+1325
+00:47:16,480 --> 00:47:19,920
+foundry models, right? So you have a
+
+1326
+00:47:18,079 --> 00:47:21,920
+harness, you can use multiple models as
+
+1327
+00:47:19,920 --> 00:47:23,440
+endpoints, you can have your context
+
+1328
+00:47:21,920 --> 00:47:25,920
+layer that is completely separate,
+
+1329
+00:47:23,440 --> 00:47:28,800
+right? your memory and context uh is
+
+1330
+00:47:25,920 --> 00:47:31,680
+yours then so I think now we have a
+
+1331
+00:47:28,800 --> 00:47:33,680
+model system uh oh by the way the action
+
+1332
+00:47:31,679 --> 00:47:36,159
+space so with all the plugins and skills
+
+1333
+00:47:33,679 --> 00:47:38,078
+and connectors right all separate from
+
+1334
+00:47:36,159 --> 00:47:40,960
+any given model being only having the
+
+1335
+00:47:38,079 --> 00:47:44,160
+visibility to it so I think a good sort
+
+1336
+00:47:40,960 --> 00:47:46,480
+of classic middle tier platform is
+
+1337
+00:47:44,159 --> 00:47:48,399
+emerging even for model first
+
+1338
+00:47:46,480 --> 00:47:50,240
+development where you're not just
+
+1339
+00:47:48,400 --> 00:47:51,680
+captured and then you can eval
+
+1340
+00:47:50,239 --> 00:47:54,318
+everything right you can say hey I have
+
+1341
+00:47:51,679 --> 00:47:55,759
+an eval and my private RIV evals will
+
+1342
+00:47:54,318 --> 00:47:57,599
+matter more, right? All these public
+
+1343
+00:47:55,760 --> 00:47:59,680
+benchmarks, which by the way is great,
+
+1344
+00:47:57,599 --> 00:48:02,160
+but you need to have your own private
+
+1345
+00:47:59,679 --> 00:48:05,118
+eval for what is the outcome that
+
+1346
+00:48:02,159 --> 00:48:08,480
+matters to you and then look at in your
+
+1347
+00:48:05,119 --> 00:48:10,480
+RLE the real performance for across all
+
+1348
+00:48:08,480 --> 00:48:12,480
+these models and continuously optimize.
+
+1349
+00:48:10,480 --> 00:48:14,159
+In fact, when I look at even, you know,
+
+1350
+00:48:12,480 --> 00:48:16,480
+even with our customers, they start with
+
+1351
+00:48:14,159 --> 00:48:18,799
+a frontier model, then they say, well,
+
+1352
+00:48:16,480 --> 00:48:20,719
+great. I've got all those traces. Now,
+
+1353
+00:48:18,800 --> 00:48:22,559
+I'm going to flip to, hey, this is a
+
+1354
+00:48:20,719 --> 00:48:24,318
+deterministic workflow. I mean, it's not
+
+1355
+00:48:22,559 --> 00:48:26,319
+like I don't need the next big model
+
+1356
+00:48:24,318 --> 00:48:28,719
+drop. I want to now cost optimize. I'll
+
+1357
+00:48:26,318 --> 00:48:31,279
+drop, you know, an MAI flash model, drop
+
+1358
+00:48:28,719 --> 00:48:33,358
+it in there, use the traces to fine-tune
+
+1359
+00:48:31,280 --> 00:48:35,280
+it, and there you have it. So therefore,
+
+1360
+00:48:33,358 --> 00:48:37,519
+that's all stuff you can do in Foundry.
+
+1361
+00:48:35,280 --> 00:48:39,119
+So that type of work, I think, is what's
+
+1362
+00:48:37,519 --> 00:48:40,559
+going to increasingly be true. We're
+
+1363
+00:48:39,119 --> 00:48:42,079
+we're saying that's you're you're
+
+1364
+00:48:40,559 --> 00:48:43,599
+already seeing that a lot of companies
+
+1365
+00:48:42,079 --> 00:48:45,760
+have their reinforcement learning
+
+1366
+00:48:43,599 --> 00:48:47,440
+environment as well on top of the evals
+
+1367
+00:48:45,760 --> 00:48:50,880
+so that they can they can stay in
+
+1368
+00:48:47,440 --> 00:48:54,079
+control control pricing and also I guess
+
+1369
+00:48:50,880 --> 00:48:55,760
+not leak their business data to some of
+
+1370
+00:48:54,079 --> 00:48:56,960
+the AI companies that might want to
+
+1371
+00:48:55,760 --> 00:48:58,319
+train their models on it.
+
+1372
+00:48:56,960 --> 00:49:00,400
+>> That's right. So if you think about it
+
+1373
+00:48:58,318 --> 00:49:02,159
+right so the way it's a simple analogy I
+
+1374
+00:49:00,400 --> 00:49:05,039
+have at least in my head is you know
+
+1375
+00:49:02,159 --> 00:49:06,960
+people you know in the past whether you
+
+1376
+00:49:05,039 --> 00:49:08,719
+know in an insurance company in a bank
+
+1377
+00:49:06,960 --> 00:49:10,800
+in a healthcare company said hey I'm
+
+1378
+00:49:08,719 --> 00:49:11,919
+going to get a relational database great
+
+1379
+00:49:10,800 --> 00:49:14,960
+I'm going to deploy a relational
+
+1380
+00:49:11,920 --> 00:49:16,639
+database on top of it I may even buy
+
+1381
+00:49:14,960 --> 00:49:18,400
+some software that runs on that
+
+1382
+00:49:16,639 --> 00:49:20,480
+relational database that is sort of
+
+1383
+00:49:18,400 --> 00:49:22,318
+comes with its own business logic but
+
+1384
+00:49:20,480 --> 00:49:24,559
+then I'm going to extend it with my own
+
+1385
+00:49:22,318 --> 00:49:27,519
+business logic that I write right and
+
+1386
+00:49:24,559 --> 00:49:30,319
+then I control it and never at any point
+
+1387
+00:49:27,519 --> 00:49:31,759
+is my data in the database going to
+
+1388
+00:49:30,318 --> 00:49:33,358
+somebody else. It's not like when the
+
+1389
+00:49:31,760 --> 00:49:35,359
+database vendor says, "Hey, I'm no
+
+1390
+00:49:33,358 --> 00:49:38,719
+longer going to give you a database
+
+1391
+00:49:35,358 --> 00:49:40,239
+update." You still can migrate out.
+
+1392
+00:49:38,719 --> 00:49:44,239
+>> That's the question you have to how are
+
+1393
+00:49:40,239 --> 00:49:46,399
+you going to migrate your memory out if
+
+1394
+00:49:44,239 --> 00:49:48,239
+your memory is in the embeddings of a
+
+1395
+00:49:46,400 --> 00:49:50,240
+given model when that model company
+
+1396
+00:49:48,239 --> 00:49:52,719
+says, "You know what? Tough luck. I
+
+1397
+00:49:50,239 --> 00:49:54,399
+can't do a next update to you." Plus, I
+
+1398
+00:49:52,719 --> 00:49:55,838
+guess what we talked about when we have
+
+1399
+00:49:54,400 --> 00:49:57,760
+new primitives come, how are you going
+
+1400
+00:49:55,838 --> 00:49:59,759
+to integrate them? Great point because
+
+1401
+00:49:57,760 --> 00:50:01,520
+because if you're too reliant on on a
+
+1402
+00:49:59,760 --> 00:50:03,760
+vendor or a series of vendors, you'll
+
+1403
+00:50:01,519 --> 00:50:06,000
+have to wait for them to maybe do it.
+
+1404
+00:50:03,760 --> 00:50:07,040
+>> And I guess it's also easier to build
+
+1405
+00:50:06,000 --> 00:50:09,119
+right now like right if you have
+
+1406
+00:50:07,039 --> 00:50:10,800
+competent engineers, we're good at this.
+
+1407
+00:50:09,119 --> 00:50:13,838
+>> Yeah. So, I think that there are two
+
+1408
+00:50:10,800 --> 00:50:16,880
+enterprise architectural decisions that
+
+1409
+00:50:13,838 --> 00:50:18,639
+I think interestingly enough are I'm
+
+1410
+00:50:16,880 --> 00:50:20,400
+hoping that people are going to start
+
+1411
+00:50:18,639 --> 00:50:21,920
+talking, right? because and in fact to
+
+1412
+00:50:20,400 --> 00:50:24,318
+your point all you have to do is look at
+
+1413
+00:50:21,920 --> 00:50:26,880
+a software team today in a software in
+
+1414
+00:50:24,318 --> 00:50:28,318
+industry they're all figuring this out
+
+1415
+00:50:26,880 --> 00:50:30,160
+to stay independent
+
+1416
+00:50:28,318 --> 00:50:32,639
+>> I think this has to become more of the
+
+1417
+00:50:30,159 --> 00:50:34,558
+reality in the commercial space uh and
+
+1418
+00:50:32,639 --> 00:50:36,400
+there are two are how do you avoid this
+
+1419
+00:50:34,559 --> 00:50:38,720
+reverse information paradox which is
+
+1420
+00:50:36,400 --> 00:50:41,119
+don't leak your value you as a firm need
+
+1421
+00:50:38,719 --> 00:50:42,959
+to be in charge and control of your own
+
+1422
+00:50:41,119 --> 00:50:45,200
+learning loop what's the architectural
+
+1423
+00:50:42,960 --> 00:50:47,199
+approach how are you making sure your
+
+1424
+00:50:45,199 --> 00:50:49,358
+context is separate from the models and
+
+1425
+00:50:47,199 --> 00:50:51,519
+you're using multiple models mod uh
+
+1426
+00:50:49,358 --> 00:50:53,358
+that's and your harness is separate from
+
+1427
+00:50:51,519 --> 00:50:55,119
+the context and the models because that
+
+1428
+00:50:53,358 --> 00:50:57,679
+I think is the only way you can assure
+
+1429
+00:50:55,119 --> 00:51:00,318
+yourself that you can replace any model.
+
+1430
+00:50:57,679 --> 00:51:02,879
+In fact, my asset test for that is you
+
+1431
+00:51:00,318 --> 00:51:05,358
+should be able to replace any model and
+
+1432
+00:51:02,880 --> 00:51:06,240
+still hill climb on an eval that's your
+
+1433
+00:51:05,358 --> 00:51:06,639
+private eval.
+
+1434
+00:51:06,239 --> 00:51:09,279
+>> Yeah.
+
+1435
+00:51:06,639 --> 00:51:11,039
+>> If you can't do that, then you have to
+
+1436
+00:51:09,280 --> 00:51:13,760
+ask yourself
+
+1437
+00:51:11,039 --> 00:51:16,318
+how are you a sovereign firm,
+
+1438
+00:51:13,760 --> 00:51:18,240
+>> right? Like that means you do not have
+
+1439
+00:51:16,318 --> 00:51:19,679
+control of your own output. Yeah.
+
+1440
+00:51:18,239 --> 00:51:21,358
+>> Uh so that's kind of the
+
+1441
+00:51:19,679 --> 00:51:22,879
+>> just sitting on taking time bomb.
+
+1442
+00:51:21,358 --> 00:51:25,119
+>> Yeah. I mean you're done. I mean like is
+
+1443
+00:51:22,880 --> 00:51:27,599
+my my my point. And so the then the next
+
+1444
+00:51:25,119 --> 00:51:29,680
+thing is you now need a trust
+
+1445
+00:51:27,599 --> 00:51:31,680
+architecture right which is you kind of
+
+1446
+00:51:29,679 --> 00:51:35,039
+have to like in a world where you now
+
+1447
+00:51:31,679 --> 00:51:37,279
+know scaling laws work except with
+
+1448
+00:51:35,039 --> 00:51:39,440
+scaling comes new capability but not
+
+1449
+00:51:37,280 --> 00:51:41,200
+alignment. In fact, no mechanistic
+
+1450
+00:51:39,440 --> 00:51:42,639
+understanding that hopefully someday
+
+1451
+00:51:41,199 --> 00:51:44,318
+there's a science breakthrough, but
+
+1452
+00:51:42,639 --> 00:51:46,719
+right now we're getting more and more
+
+1453
+00:51:44,318 --> 00:51:48,800
+capable and less and less reliable like
+
+1454
+00:51:46,719 --> 00:51:50,639
+which is the most dangerous place to be
+
+1455
+00:51:48,800 --> 00:51:53,280
+in. And so that means you have to
+
+1456
+00:51:50,639 --> 00:51:55,279
+separate out architecturally authority
+
+1457
+00:51:53,280 --> 00:51:57,839
+from intelligence. If your intelligence
+
+1458
+00:51:55,280 --> 00:51:59,440
+has authority and it's unreliable,
+
+1459
+00:51:57,838 --> 00:52:01,519
+again, you're taken, right? You have a
+
+1460
+00:51:59,440 --> 00:52:03,679
+massive insider risk problem. And so
+
+1461
+00:52:01,519 --> 00:52:05,679
+you've got to treat these agents as
+
+1462
+00:52:03,679 --> 00:52:08,000
+insider risk. That means you got to have
+
+1463
+00:52:05,679 --> 00:52:09,919
+a trust system. And there are a lot of
+
+1464
+00:52:08,000 --> 00:52:12,400
+things right even this chain of thought
+
+1465
+00:52:09,920 --> 00:52:14,480
+man like this the amount of like this
+
+1466
+00:52:12,400 --> 00:52:16,880
+chain of thought has to be not in new
+
+1467
+00:52:14,480 --> 00:52:19,280
+release it has to be in in in human
+
+1468
+00:52:16,880 --> 00:52:21,200
+language it needs to be auditable it
+
+1469
+00:52:19,280 --> 00:52:23,519
+needs to be logged such that it's not
+
+1470
+00:52:21,199 --> 00:52:27,118
+tampered it's not just in you know
+
+1471
+00:52:23,519 --> 00:52:28,960
+pre-training or in uh you know RL that
+
+1472
+00:52:27,119 --> 00:52:30,880
+things happen right which is in test
+
+1473
+00:52:28,960 --> 00:52:33,280
+time compute things could happen because
+
+1474
+00:52:30,880 --> 00:52:35,920
+they could reward hack and so we have
+
+1475
+00:52:33,280 --> 00:52:39,519
+some serious amount of safeguards you
+
+1476
+00:52:35,920 --> 00:52:41,119
+have to build um at at runtime as I
+
+1477
+00:52:39,519 --> 00:52:44,000
+describe it which is the trust
+
+1478
+00:52:41,119 --> 00:52:46,559
+architecture that ensures that you can
+
+1479
+00:52:44,000 --> 00:52:48,559
+treat models and and agents as inside a
+
+1480
+00:52:46,559 --> 00:52:51,040
+risk and monitor them and have
+
+1481
+00:52:48,559 --> 00:52:52,720
+observability and what have you and then
+
+1482
+00:52:51,039 --> 00:52:53,519
+ensure that you have control over your
+
+1483
+00:52:52,719 --> 00:52:55,358
+learning loop
+
+1484
+00:52:53,519 --> 00:52:57,039
+>> as as an engineer all all I'm hearing
+
+1485
+00:52:55,358 --> 00:52:58,799
+and all I'm seeing is there's so much
+
+1486
+00:52:57,039 --> 00:53:01,119
+new type of work that needs to be done
+
+1487
+00:52:58,800 --> 00:53:02,800
+so many novel systems need to be built
+
+1488
+00:53:01,119 --> 00:53:04,559
+which we don't have a blueprint for I
+
+1489
+00:53:02,800 --> 00:53:06,880
+mean and probably the best way to do is
+
+1490
+00:53:04,559 --> 00:53:08,319
+well build it also talk with peers who
+
+1491
+00:53:06,880 --> 00:53:10,000
+are building it at the same time and I'm
+
+1492
+00:53:08,318 --> 00:53:11,838
+sure we'll have blueprints and
+
+1493
+00:53:10,000 --> 00:53:13,760
+certifications in I don't know 5 to 10
+
+1494
+00:53:11,838 --> 00:53:15,838
+years or something but right now this is
+
+1495
+00:53:13,760 --> 00:53:17,440
+a job it's correct and in fact in fact
+
+1496
+00:53:15,838 --> 00:53:18,960
+one of the things we have our conference
+
+1497
+00:53:17,440 --> 00:53:20,240
+Ignite coming up next week and I'm
+
+1498
+00:53:18,960 --> 00:53:21,920
+excited about it because that's kind of
+
+1499
+00:53:20,239 --> 00:53:23,838
+what I want to make sure we do a good
+
+1500
+00:53:21,920 --> 00:53:26,318
+job is communicating that hey this is
+
+1501
+00:53:23,838 --> 00:53:28,799
+all doable like there are blueprints
+
+1502
+00:53:26,318 --> 00:53:30,800
+there is a lot of innovation happening
+
+1503
+00:53:28,800 --> 00:53:33,119
+in how companies and so I think that
+
+1504
+00:53:30,800 --> 00:53:34,800
+we're reaching that stage where it's not
+
+1505
+00:53:33,119 --> 00:53:36,720
+just about the shiny object and the
+
+1506
+00:53:34,800 --> 00:53:38,960
+novelty effect and I think people have
+
+1507
+00:53:36,719 --> 00:53:41,519
+to sit back and say hey how am I
+
+1508
+00:53:38,960 --> 00:53:43,679
+creating enterprise value in my firm and
+
+1509
+00:53:41,519 --> 00:53:45,838
+once people sit and talk about that in a
+
+1510
+00:53:43,679 --> 00:53:48,399
+little more depth then I think these
+
+1511
+00:53:45,838 --> 00:53:50,480
+patterns of success become much clearer
+
+1512
+00:53:48,400 --> 00:53:52,559
+>> now as as an engineer one things that I
+
+1513
+00:53:50,480 --> 00:53:54,240
+I feel very lacking is all of these AI
+
+1514
+00:53:52,559 --> 00:53:56,640
+models they run in the cloud on someone
+
+1515
+00:53:54,239 --> 00:53:59,199
+else's server or a super expensive B200
+
+1516
+00:53:56,639 --> 00:54:01,519
+that I cannot afford or my company will
+
+1517
+00:53:59,199 --> 00:54:03,358
+not buy it for me or if if if you are I
+
+1518
+00:54:01,519 --> 00:54:05,119
+mean you're lucky but would it not be
+
+1519
+00:54:03,358 --> 00:54:05,679
+nice if it just ran on my laptop That's
+
+1520
+00:54:05,119 --> 00:54:07,760
+a great
+
+1521
+00:54:05,679 --> 00:54:10,879
+>> and local AI until now it's been
+
+1522
+00:54:07,760 --> 00:54:12,240
+difficult very hacky actually funny
+
+1523
+00:54:10,880 --> 00:54:14,400
+Microsoft is is the one that's
+
+1524
+00:54:12,239 --> 00:54:16,399
+innovating there's a new Surface Ultra
+
+1525
+00:54:14,400 --> 00:54:17,920
+laptop that Scott Hanselman gave me a
+
+1526
+00:54:16,400 --> 00:54:19,838
+demo I now want to get my hands on
+
+1527
+00:54:17,920 --> 00:54:21,920
+because it it has a chip it has a local
+
+1528
+00:54:19,838 --> 00:54:26,400
+coding model running on it where do you
+
+1529
+00:54:21,920 --> 00:54:28,480
+think local models fit into the the AI
+
+1530
+00:54:26,400 --> 00:54:30,160
+loop and as a developer I feel is
+
+1531
+00:54:28,480 --> 00:54:32,079
+desperately missing but am I kind of
+
+1532
+00:54:30,159 --> 00:54:34,639
+alone you talk with way more people
+
+1533
+00:54:32,079 --> 00:54:37,119
+>> it's it's a great point right so one of
+
+1534
+00:54:34,639 --> 00:54:40,558
+the things is we're very excited about
+
+1535
+00:54:37,119 --> 00:54:44,240
+making sure that the the PC as the form
+
+1536
+00:54:40,559 --> 00:54:46,720
+factor um you know we innovate in uh in
+
+1537
+00:54:44,239 --> 00:54:48,239
+the age of AI and so to me the way I've
+
+1538
+00:54:46,719 --> 00:54:51,759
+been thinking about it and how we've
+
+1539
+00:54:48,239 --> 00:54:53,199
+been executing on it is I've always felt
+
+1540
+00:54:51,760 --> 00:54:55,839
+like distributed computing will always
+
+1541
+00:54:53,199 --> 00:54:58,719
+remain distributed so why not use all
+
+1542
+00:54:55,838 --> 00:55:01,519
+the power and all the tokens that are
+
+1543
+00:54:58,719 --> 00:55:03,598
+out there versus just the stuff in the
+
+1544
+00:55:01,519 --> 00:55:05,838
+cloud so that's sort of the inspiration
+
+1545
+00:55:03,599 --> 00:55:07,599
+even for ultra but but there is lots of
+
+1546
+00:55:05,838 --> 00:55:10,159
+innovation in fact from you know whether
+
+1547
+00:55:07,599 --> 00:55:12,160
+it's Nvidia or AMD or Qualcomm so it's
+
+1548
+00:55:10,159 --> 00:55:14,078
+fantastic Intel there's good silicon
+
+1549
+00:55:12,159 --> 00:55:16,318
+work happening and systems work and this
+
+1550
+00:55:14,079 --> 00:55:19,200
+is in fact it's already true what is it
+
+1551
+00:55:16,318 --> 00:55:22,079
+like last year's frontier can run on
+
+1552
+00:55:19,199 --> 00:55:24,399
+your laptop and last quarters uh
+
+1553
+00:55:22,079 --> 00:55:26,160
+Frontier can run on your desktop I mean
+
+1554
+00:55:24,400 --> 00:55:26,559
+like that's kind of like the capability
+
+1555
+00:55:26,159 --> 00:55:27,920
+so
+
+1556
+00:55:26,559 --> 00:55:28,240
+>> it's like how pieces used to evolve
+
+1557
+00:55:27,920 --> 00:55:29,920
+right
+
+1558
+00:55:28,239 --> 00:55:32,000
+>> exactly so it's great so now that you
+
+1559
+00:55:29,920 --> 00:55:33,440
+have that then one of the things that I
+
+1560
+00:55:32,000 --> 00:55:35,440
+think about again goes back to my
+
+1561
+00:55:33,440 --> 00:55:37,838
+decision engine and routers right so
+
+1562
+00:55:35,440 --> 00:55:39,358
+when I think about hydra fusion um I
+
+1563
+00:55:37,838 --> 00:55:41,599
+think that's the term we use I forget
+
+1564
+00:55:39,358 --> 00:55:44,639
+now which in github we have a you know a
+
+1565
+00:55:41,599 --> 00:55:46,880
+way to route right I love the github uh
+
+1566
+00:55:44,639 --> 00:55:48,239
+because all nowadays in fact in copilot
+
+1567
+00:55:46,880 --> 00:55:49,039
+the last time I chose a model
+
+1568
+00:55:48,239 --> 00:55:52,558
+>> copilot fusion
+
+1569
+00:55:49,039 --> 00:55:54,719
+>> yeah copilot fusion so basically we want
+
+1570
+00:55:52,559 --> 00:55:57,119
+to be able to have this router pick the
+
+1571
+00:55:54,719 --> 00:55:59,118
+models right for the task and so that
+
+1572
+00:55:57,119 --> 00:56:01,280
+means in fact I see it in ultra sometime
+
+1573
+00:55:59,119 --> 00:56:03,680
+I mean it you know my suddenly I see the
+
+1574
+00:56:01,280 --> 00:56:05,119
+fan go right because my local model is
+
+1575
+00:56:03,679 --> 00:56:07,679
+being used because especially in an
+
+1576
+00:56:05,119 --> 00:56:10,160
+agent swarm uh where you have multiple
+
+1577
+00:56:07,679 --> 00:56:12,399
+sub aents then you can invoke for some
+
+1578
+00:56:10,159 --> 00:56:14,078
+sub aents a bunch of local models while
+
+1579
+00:56:12,400 --> 00:56:16,960
+you're using even the cloud models
+
+1580
+00:56:14,079 --> 00:56:18,559
+together u and so yeah this makes sense
+
+1581
+00:56:16,960 --> 00:56:21,039
+architecturally it makes sense
+
+1582
+00:56:18,559 --> 00:56:22,798
+economically it makes sense and so we're
+
+1583
+00:56:21,039 --> 00:56:25,519
+in the beginning of what I'll call this
+
+1584
+00:56:22,798 --> 00:56:27,199
+hybrid intelligence era cloud will
+
+1585
+00:56:25,519 --> 00:56:29,119
+continue to grow there's going to be
+
+1586
+00:56:27,199 --> 00:56:31,759
+infinite amount of sort of demand for
+
+1587
+00:56:29,119 --> 00:56:33,440
+these tokens but that means you can also
+
+1588
+00:56:31,760 --> 00:56:36,160
+start thinking about the, you know, the
+
+1589
+00:56:33,440 --> 00:56:37,599
+form factors at the edge as also token
+
+1590
+00:56:36,159 --> 00:56:39,679
+factories. In fact, I kind of think of
+
+1591
+00:56:37,599 --> 00:56:41,039
+it as the unmetered intelligence.
+
+1592
+00:56:39,679 --> 00:56:42,318
+>> Yeah. Because you you don't need to
+
+1593
+00:56:41,039 --> 00:56:42,798
+worry about how much you're using it.
+
+1594
+00:56:42,318 --> 00:56:44,079
+>> That's right.
+
+1595
+00:56:42,798 --> 00:56:45,679
+>> I guess this is where it's now starting
+
+1596
+00:56:44,079 --> 00:56:48,720
+to come together for me because the uh
+
+1597
+00:56:45,679 --> 00:56:50,318
+MAI code uh what the the Flash 1.1
+
+1598
+00:56:48,719 --> 00:56:52,000
+model, I'll be honest, I wasn't too
+
+1599
+00:56:50,318 --> 00:56:54,079
+impressed. I don't think anyone was too
+
+1600
+00:56:52,000 --> 00:56:56,000
+impressed. But the one detail I was
+
+1601
+00:56:54,079 --> 00:56:58,160
+impressed with when it comes to local
+
+1602
+00:56:56,000 --> 00:57:00,798
+models running on any laptop, I always
+
+1603
+00:56:58,159 --> 00:57:03,920
+assumed it must be open models. However,
+
+1604
+00:57:00,798 --> 00:57:04,960
+the MAI code can be downloaded on a
+
+1605
+00:57:03,920 --> 00:57:06,960
+Windows machine even though it's a
+
+1606
+00:57:04,960 --> 00:57:08,318
+closed model and it can be run there.
+
+1607
+00:57:06,960 --> 00:57:09,760
+There's the infrastructure there. And
+
+1608
+00:57:08,318 --> 00:57:11,920
+I'm like, huh, could there be a future
+
+1609
+00:57:09,760 --> 00:57:13,520
+where like other closed models? So I I
+
+1610
+00:57:11,920 --> 00:57:15,358
+could choose on my laptop like pick and
+
+1611
+00:57:13,519 --> 00:57:17,599
+choose like either I download them and
+
+1612
+00:57:15,358 --> 00:57:19,119
+maybe it's free or I pay very little.
+
+1613
+00:57:17,599 --> 00:57:21,359
+you know to your point about the the
+
+1614
+00:57:19,119 --> 00:57:25,119
+code flash models getting them even all
+
+1615
+00:57:21,358 --> 00:57:26,639
+the way uh to a laptop is core priority
+
+1616
+00:57:25,119 --> 00:57:28,480
+for us and we are excited and that's
+
+1617
+00:57:26,639 --> 00:57:31,039
+kind when I look at the code tab inside
+
+1618
+00:57:28,480 --> 00:57:33,679
+of copilot right which is uh even you
+
+1619
+00:57:31,039 --> 00:57:36,000
+know independent of github copilot now
+
+1620
+00:57:33,679 --> 00:57:37,919
+code writing a document or writing an
+
+1621
+00:57:36,000 --> 00:57:40,559
+application you can easily use these
+
+1622
+00:57:37,920 --> 00:57:42,400
+models on your PC and that's exciting
+
+1623
+00:57:40,559 --> 00:57:44,160
+but just to kind of step back and say
+
+1624
+00:57:42,400 --> 00:57:45,200
+what are we doing with even MAI models
+
+1625
+00:57:44,159 --> 00:57:46,879
+right first of all through the
+
+1626
+00:57:45,199 --> 00:57:48,798
+partnership with open AI we have the
+
+1627
+00:57:46,880 --> 00:57:50,480
+Open AAAI models and and we're going to
+
+1628
+00:57:48,798 --> 00:57:52,798
+continue to use those OpenAI models,
+
+1629
+00:57:50,480 --> 00:57:55,280
+right? Uh on on top of that, what we are
+
+1630
+00:57:52,798 --> 00:57:58,960
+saying is okay, let's sort of innovate
+
+1631
+00:57:55,280 --> 00:58:00,160
+in a new model family ground up that
+
+1632
+00:57:58,960 --> 00:58:01,199
+>> ground up meaning you build.
+
+1633
+00:58:00,159 --> 00:58:03,519
+>> Yeah, first of all, we have a you know,
+
+1634
+00:58:01,199 --> 00:58:05,838
+I think we disclosed even the new MI2
+
+1635
+00:58:03,519 --> 00:58:07,599
+base which is the pre-training and in
+
+1636
+00:58:05,838 --> 00:58:10,480
+fact it's one of the best disclosures of
+
+1637
+00:58:07,599 --> 00:58:12,318
+a pre-training recipe and regime. Uh so
+
+1638
+00:58:10,480 --> 00:58:13,519
+for those who are uh you know your
+
+1639
+00:58:12,318 --> 00:58:14,960
+listeners should go look at it, right?
+
+1640
+00:58:13,519 --> 00:58:18,000
+It's probably and people tell me from
+
+1641
+00:58:14,960 --> 00:58:20,400
+the outside that it's the most detailed
+
+1642
+00:58:18,000 --> 00:58:22,000
+descriptions of pre-training, right?
+
+1643
+00:58:20,400 --> 00:58:23,680
+Because there are very few places where
+
+1644
+00:58:22,000 --> 00:58:25,920
+you can go to and get it and it's
+
+1645
+00:58:23,679 --> 00:58:28,159
+completely, you know, clean room so to
+
+1646
+00:58:25,920 --> 00:58:30,000
+speak, uh, implementation of a a
+
+1647
+00:58:28,159 --> 00:58:31,920
+pre-training run. So therefore, we're
+
+1648
+00:58:30,000 --> 00:58:33,679
+continuing to do that. But then the
+
+1649
+00:58:31,920 --> 00:58:36,880
+place where we are able to sort of
+
+1650
+00:58:33,679 --> 00:58:40,639
+innovate is put I'll call it new points
+
+1651
+00:58:36,880 --> 00:58:42,960
+on the frontier curve where using our
+
+1652
+00:58:40,639 --> 00:58:44,558
+products, right? Whether it's cyber,
+
+1653
+00:58:42,960 --> 00:58:47,280
+whether it is knowledge work, whether
+
+1654
+00:58:44,559 --> 00:58:50,798
+it's coding, how do you put new points
+
+1655
+00:58:47,280 --> 00:58:53,599
+on the frontier where you're both flops
+
+1656
+00:58:50,798 --> 00:58:56,559
+efficient on training and you are
+
+1657
+00:58:53,599 --> 00:58:58,798
+efficient on tokens in deployment and
+
+1658
+00:58:56,559 --> 00:59:01,440
+once you are in a world where you're
+
+1659
+00:58:58,798 --> 00:59:04,480
+handing high level intents to many sub
+
+1660
+00:59:01,440 --> 00:59:06,400
+agents, the sub aents can be using
+
+1661
+00:59:04,480 --> 00:59:08,400
+multiple model families, right? That's I
+
+1662
+00:59:06,400 --> 00:59:11,200
+think the way like this idea that oh I'm
+
+1663
+00:59:08,400 --> 00:59:13,920
+like wedded to one model family may not
+
+1664
+00:59:11,199 --> 00:59:17,358
+be true if there are choices agents will
+
+1665
+00:59:13,920 --> 00:59:19,519
+be smart in picking all of the models
+
+1666
+00:59:17,358 --> 00:59:21,598
+that allow them to get the task done in
+
+1667
+00:59:19,519 --> 00:59:23,519
+the most efficient way and that I think
+
+1668
+00:59:21,599 --> 00:59:26,400
+is our goal. Our goal is to give more
+
+1669
+00:59:23,519 --> 00:59:26,960
+choice as opposed to just one model
+
+1670
+00:59:26,400 --> 00:59:29,358
+family.
+
+1671
+00:59:26,960 --> 00:59:30,880
+>> I I really like how like you're you're
+
+1672
+00:59:29,358 --> 00:59:32,639
+setting out choice because as a
+
+1673
+00:59:30,880 --> 00:59:34,960
+developer I love choice. It also helps
+
+1674
+00:59:32,639 --> 00:59:38,078
+least to competition, better prices and
+
+1675
+00:59:34,960 --> 00:59:39,358
+so on. And as closing, this changes very
+
+1676
+00:59:38,079 --> 00:59:41,119
+fast. Everyone I talked to who've been
+
+1677
+00:59:39,358 --> 00:59:43,519
+in the industry, they said they've seen,
+
+1678
+00:59:41,119 --> 00:59:45,119
+you know, like change maybe similar to
+
+1679
+00:59:43,519 --> 00:59:47,119
+this, maybe not as big, but not not as
+
+1680
+00:59:45,119 --> 00:59:48,720
+quickly. You've been through multiple
+
+1681
+00:59:47,119 --> 00:59:50,400
+change cycles. When you started, it was
+
+1682
+00:59:48,719 --> 00:59:51,679
+a very different time. How would you
+
+1683
+00:59:50,400 --> 00:59:53,920
+approach this change as a software
+
+1684
+00:59:51,679 --> 00:59:56,078
+professional when your goal is I would
+
+1685
+00:59:53,920 --> 00:59:58,798
+like to be a amazing software engineer
+
+1686
+00:59:56,079 --> 01:00:00,318
+in this new age of AI in a year or two?
+
+1687
+00:59:58,798 --> 01:00:01,920
+you know, it's sort of the stuff we
+
+1688
+01:00:00,318 --> 01:00:07,358
+talked about. Quite frankly, even for
+
+1689
+01:00:01,920 --> 01:00:09,760
+me, I think just making sure that one
+
+1690
+01:00:07,358 --> 01:00:11,838
+gets grounded in what is this change
+
+1691
+01:00:09,760 --> 01:00:14,160
+about, right? Uh it's not just about the
+
+1692
+01:00:11,838 --> 01:00:16,400
+headlines and it's not just about the
+
+1693
+01:00:14,159 --> 01:00:18,399
+headlines, you know, I love X and you
+
+1694
+01:00:16,400 --> 01:00:21,519
+know, it's great, but it's just not
+
+1695
+01:00:18,400 --> 01:00:27,119
+about uh the hype cycle. Yeah.
+
+1696
+01:00:21,519 --> 01:00:29,199
+>> And that constant need um uh to talk.
+
+1697
+01:00:27,119 --> 01:00:34,798
+But it's ironic in a podcast to say
+
+1698
+01:00:29,199 --> 01:00:37,358
+that. But it's do do more uh learn more
+
+1699
+01:00:34,798 --> 01:00:38,798
+and and hands-on experience
+
+1700
+01:00:37,358 --> 01:00:40,239
+>> experience it firsthand. That's you know
+
+1701
+01:00:38,798 --> 01:00:43,199
+quite frankly that's kind of what I
+
+1702
+01:00:40,239 --> 01:00:47,199
+would even say for me if I could change
+
+1703
+01:00:43,199 --> 01:00:48,960
+the ratio of my you know talk to do I
+
+1704
+01:00:47,199 --> 01:00:50,000
+would do it. This is the time. If one
+
+1705
+01:00:48,960 --> 01:00:53,760
+piece of advice, whether you're
+
+1706
+01:00:50,000 --> 01:00:57,199
+mid-career or even a CEO like me or or a
+
+1707
+01:00:53,760 --> 01:01:02,160
+fresh uh college grad, the more you can
+
+1708
+01:00:57,199 --> 01:01:05,519
+take the time to sort of learn to do be
+
+1709
+01:01:02,159 --> 01:01:08,719
+in teams that are doing uh the better it
+
+1710
+01:01:05,519 --> 01:01:10,880
+is versus um I think anything else
+
+1711
+01:01:08,719 --> 01:01:12,239
+because at times like sometime at some
+
+1712
+01:01:10,880 --> 01:01:14,318
+level I sometimes think about it and
+
+1713
+01:01:12,239 --> 01:01:17,118
+when am I at my best? It's when I'm in
+
+1714
+01:01:14,318 --> 01:01:18,000
+the school mode. Uh so let's get back to
+
+1715
+01:01:17,119 --> 01:01:19,519
+school.
+
+1716
+01:01:18,000 --> 01:01:21,119
+>> Satia, thank you so much.
+
+1717
+01:01:19,519 --> 01:01:22,880
+>> Thank you so much. It's such a pleasure.
+
+1718
+01:01:21,119 --> 01:01:23,920
+Well, this was an awesome experience and
+
+1719
+01:01:22,880 --> 01:01:26,160
+we really [music] covered a ton of
+
+1720
+01:01:23,920 --> 01:01:28,159
+ground with Satia. A recurring theme
+
+1721
+01:01:26,159 --> 01:01:29,838
+that kept coming back. What kind of
+
+1722
+01:01:28,159 --> 01:01:31,759
+software engineering work becomes more
+
+1723
+01:01:29,838 --> 01:01:34,639
+important when coding becomes cheap with
+
+1724
+01:01:31,760 --> 01:01:37,440
+AI? We talked about how the things both
+
+1725
+01:01:34,639 --> 01:01:39,440
+before and after coding that is planning
+
+1726
+01:01:37,440 --> 01:01:41,599
+and validation both become more
+
+1727
+01:01:39,440 --> 01:01:44,318
+important and this will be activities as
+
+1728
+01:01:41,599 --> 01:01:45,920
+us engineers will spend more time on. I
+
+1729
+01:01:44,318 --> 01:01:47,440
+also observed a lot of tech companies
+
+1730
+01:01:45,920 --> 01:01:49,200
+building their own coding harness,
+
+1731
+01:01:47,440 --> 01:01:51,200
+context layer, and AI infra. [music]
+
+1732
+01:01:49,199 --> 01:01:52,558
+And I assume that it's because engineers
+
+1733
+01:01:51,199 --> 01:01:54,879
+just like to build with novel
+
+1734
+01:01:52,559 --> 01:01:57,040
+technology. But Sachio pointed out that
+
+1735
+01:01:54,880 --> 01:01:59,680
+it's actually suicidal strategy for a
+
+1736
+01:01:57,039 --> 01:02:01,838
+company to not own their AI infra and
+
+1737
+01:01:59,679 --> 01:02:03,440
+their [music] AI intellectual property.
+
+1738
+01:02:01,838 --> 01:02:05,119
+In fact, he thinks that every successful
+
+1739
+01:02:03,440 --> 01:02:07,358
+company will build out this own [music]
+
+1740
+01:02:05,119 --> 01:02:09,280
+AI infrastructure. And those relying on
+
+1741
+01:02:07,358 --> 01:02:11,358
+a single vendor or AI lab are making a
+
+1742
+01:02:09,280 --> 01:02:13,359
+massive strategic mistake. Talk about us
+
+1743
+01:02:11,358 --> 01:02:15,598
+devs enjoying building new stuff and
+
+1744
+01:02:13,358 --> 01:02:17,119
+it's paying off. I can see us having a
+
+1745
+01:02:15,599 --> 01:02:19,519
+lot of opportunities to build this new
+
+1746
+01:02:17,119 --> 01:02:20,880
+type of AI infra and these internal
+
+1747
+01:02:19,519 --> 01:02:22,318
+software factories. [music]
+
+1748
+01:02:20,880 --> 01:02:24,880
+Finally, software engineering roles and
+
+1749
+01:02:22,318 --> 01:02:26,400
+expectations are also changing. Sasha
+
+1750
+01:02:24,880 --> 01:02:28,240
+has shared that the one of the fastest
+
+1751
+01:02:26,400 --> 01:02:30,160
+growing jobs inside of Microsoft is
+
+1752
+01:02:28,239 --> 01:02:31,679
+forward deployed engineer. This is a
+
+1753
+01:02:30,159 --> 01:02:34,318
+position that has not existed a few
+
+1754
+01:02:31,679 --> 01:02:35,838
+years ago. Sachi expects to see a lot of
+
+1755
+01:02:34,318 --> 01:02:38,318
+reorg inside of Microsoft where [music]
+
+1756
+01:02:35,838 --> 01:02:40,159
+teams become smaller and roles change
+
+1757
+01:02:38,318 --> 01:02:41,838
+and the voluntary exit program is an
+
+1758
+01:02:40,159 --> 01:02:43,279
+opportunity for people who leave who
+
+1759
+01:02:41,838 --> 01:02:45,279
+don't want to go through what will
+
+1760
+01:02:43,280 --> 01:02:47,680
+probably be a really intensive period of
+
+1761
+01:02:45,280 --> 01:02:49,040
+change much more than before. I would
+
+1762
+01:02:47,679 --> 01:02:51,039
+assume that this kind of change with
+
+1763
+01:02:49,039 --> 01:02:52,558
+reorgs and role changes all of these
+
+1764
+01:02:51,039 --> 01:02:54,639
+being more intense than before [music]
+
+1765
+01:02:52,559 --> 01:02:56,160
+is probably not just true for Microsoft
+
+1766
+01:02:54,639 --> 01:02:57,598
+but it will be true for a lot of other
+
+1767
+01:02:56,159 --> 01:02:59,199
+tech companies. In the end [music] I
+
+1768
+01:02:57,599 --> 01:03:01,359
+walked away being more energized from
+
+1769
+01:02:59,199 --> 01:03:03,358
+this conversation. Yes, the industry is
+
+1770
+01:03:01,358 --> 01:03:05,279
+changing. But what I understood is how
+
+1771
+01:03:03,358 --> 01:03:07,358
+Satia sees that a lot of software
+
+1772
+01:03:05,280 --> 01:03:09,359
+engineer work is waiting to happen with
+
+1773
+01:03:07,358 --> 01:03:11,039
+these new AI related primitives like
+
+1774
+01:03:09,358 --> 01:03:12,400
+decision models and some of the
+
+1775
+01:03:11,039 --> 01:03:14,400
+primitives that have been not been
+
+1776
+01:03:12,400 --> 01:03:15,680
+invented and users will need to build
+
+1777
+01:03:14,400 --> 01:03:18,079
+these new systems with these new
+
+1778
+01:03:15,679 --> 01:03:20,318
+primitives deciding what goes where, how
+
+1779
+01:03:18,079 --> 01:03:21,920
+to change it, what makes sense, how to
+
+1780
+01:03:20,318 --> 01:03:23,599
+deploy it and just keep learning from
+
+1781
+01:03:21,920 --> 01:03:25,358
+it. Do check out the show notes below
+
+1782
+01:03:23,599 --> 01:03:26,798
+for related deep dives on AI engineering
+
+1783
+01:03:25,358 --> 01:03:28,639
+concept like evals, inference
+
+1784
+01:03:26,798 --> 01:03:30,159
+engineering, loop engineering and more.
+
+1785
+01:03:28,639 --> 01:03:31,598
+If you've enjoyed this podcast, please
+
+1786
+01:03:30,159 --> 01:03:33,279
+do subscribe on our favorite podcast
+
+1787
+01:03:31,599 --> 01:03:34,559
+platform and [music] on YouTube. A
+
+1788
+01:03:33,280 --> 01:03:36,000
+special thank you if you also leave a
+
+1789
+01:03:34,559 --> 01:03:38,160
+rating on the show or share with
+
+1790
+01:03:36,000 --> 01:03:40,719
+colleagues or friends. Thanks and see
+
+1791
+01:03:38,159 --> 01:03:40,719
+you in the next

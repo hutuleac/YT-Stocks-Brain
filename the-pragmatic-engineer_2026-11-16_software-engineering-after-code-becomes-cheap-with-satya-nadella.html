@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: Software engineering after code becomes cheap with Satya Nadella</title>
+<meta name="description" content="The Pragmatic Engineer · 5 threads · verification over generation · software factories in brownfield · Microsoft&#x27;s workforce reshape · own your model system · local models and unmetered intelligence">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="Software engineering after code becomes cheap with Satya Nadella">
+<meta property="og:description" content="The Pragmatic Engineer · 5 threads · verification over generation · software factories in brownfield · Microsoft&#x27;s workforce reshape · own your model system · local models and unmetered intelligence">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{text-wrap:balance;font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Software engineering after code becomes cheap with Satya Nadella</h1>
+    <div class="byline">
+      Channel: <b>The Pragmatic Engineer</b> &middot; Speaker: <b>Satya Nadella (Microsoft CEO), Gergely Orosz (host)</b> &middot; <b>2026-11-16</b>
+      <div class="stats-line">5 threads · verification over generation · software factories in brownfield · Microsoft's workforce reshape · own your model system · local models and unmetered intelligence &middot; <a href="https://www.youtube.com/watch?v=0NE89Nzfk20" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Nadella's core line: once <b>code generation is cheap, verification is the hard part</b>. Specs, tests, critique and production traces now carry the engineering.</li><li>He admits Microsoft was slow to react. Cursor won on agent mode, and Claude Code in 2025 made the CLI the form factor, so IDEs faded in about 6 months.</li><li><b>Decision engines</b> are the new primitive he's most excited about, "the stored procedure of the intelligence era."</li><li>The voluntary exit offers are about giving people agency during a reorg into smaller, factory-style teams. The junior-hiring slowdown may be temporary.</li><li>Strategic thesis: every firm should own its harness, context, memory and evals, and be able to swap any model. If you can't, you're not a sovereign firm.</li><li>Treat agents as <b>insider risk</b>: keep authority separate from intelligence, and make chain of thought auditable.</li><li>Local models on PCs (Surface Ultra, Copilot Fusion routing) open a "hybrid intelligence era" of unmetered intelligence.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="verification">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">CODE MOVED FROM INPUT TO OUTPUT</span><span class="ttag">dev-workflow</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Cheap code, hard verification: Microsoft missed the CLI shift, then rebuilt around specs and tests</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Nadella frames the new job as specification in and verified output out, and admits the form-factor shift caught Microsoft flat-footed.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Copilot shipped before GPT-4, and code completions reaffirmed his belief in scaling laws. <b>Cursor</b> forked VS Code in 2023 and won on agent mode, and Microsoft caught up.</li><li><span class="dot" style="background:#3f6b2e;"></span>Anthropic's model work made the CLI the form factor (Claude Code, 2025). Nadella says IDEs faded in roughly 6 months, and the "new IDE" is about inputting specs and markdown.</li><li><span class="dot" style="background:#3f6b2e;"></span>Lesson: "when model jumps happen nonlinearly, the form factor has to change"; AI-first product building is "unforgiving". Don't be in love with what you built.</li><li><span class="dot" style="background:#3f6b2e;"></span><b>Decision engines</b> are a new primitive, like Excel macros for code. Token-efficient and not regenerated each time; an Xbox community-feedback system is the example. He backs Diego's aim to make them "as boring as databases". He also sees a possible IDE rebirth around embedded intelligence.</li><li><span class="dot" style="background:#3f6b2e;"></span>Verification craft: turn every failure into a test case, and use a <b>separate model family</b> as the critic so one family's alignment issues don't become yours.</li><li><span class="dot" style="background:#3f6b2e;"></span>His "RSI": production traces feed back to verify a fix end to end. A Rust migration on one of these teams still had to revert.</li><li><span class="dot" style="background:#3f6b2e;"></span>Onboarding gets easier because a software factory documents everything. The codebase becomes a patient mentor.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;in a world where code generation has become cheap what has become hard is verification&#8221;<cite>— Satya Nadella</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Cursor<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Forked VS Code and won early on agent mode</span></div><div class="namechip"><b>Anthropic<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Its model made the CLI form factor work</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="factories">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">In production</span>
+    <span class="theme-status">BROWNFIELD, NOT GREENFIELD</span><span class="ttag">dev-workflow</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Software factories inside Microsoft: tiny teams, agentic ops, and a git rebuild for agent load</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">The factory model is already running on Microsoft's own products, and the hard part is brownfield builds and CI/CD, not new demos.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>On GitHub, a single developer maintains an entire Copilot runtime, ported to Rust. The Cowork team is only 9 or 12 engineers. Both have published blogs on how they work.</li><li><span class="dot" style="background:#3f6b2e;"></span>Azure networking manages ~500 fiber operators worldwide. It replaced email-and-ad-hoc DevOps with an agentic ops system wired into its repos.</li><li><span class="dot" style="background:#3f6b2e;"></span>Windows is building a CVE pipeline from crash traces to fixes, because AI models now find vulnerabilities faster. It's brownfield: the build system is still the Windows build system.</li><li><span class="dot" style="background:#3f6b2e;"></span>Coding agents pushed GitHub load to "superhuman" levels, so Microsoft is changing the <b>git protocol</b> and storage system.</li><li><span class="dot" style="background:#3f6b2e;"></span>Difference from past shifts: Nadella went VAX/VMS → Sun workstation → Microsoft, and the IDE stayed stable for his whole career. This time runtime, framework, IDE and stack all change, and a new model can reset everything again.</li><li><span class="dot" style="background:#3f6b2e;"></span>No separate "shiny object" team: every product (Windows, SQL Server, cloud services) gets the new toolchain. And "we don't get permission to do things that are not adding value to customers."</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Microsoft (MSFT)<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High</span></b><span>Rebuilding Windows, GitHub and Azure ops as software factories</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="workforce">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Reorg underway</span>
+    <span class="theme-status">200,000 PEOPLE, RECONFIGURED</span><span class="ttag">career</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Voluntary exits, FDE growth and a junior-hiring pause Nadella calls too early to read</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Nadella says the voluntary exit offers are about agency during a reconfiguration, not a prelude to cuts, and that expertise still matters with new leverage.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>The 200,000 people at Microsoft "will have to be configured in different ways": new team sizes and workflows.</li><li><span class="dot" style="background:#93711b;"></span>Systems/infrastructure engineers and training researchers earn wages "through the roof". He wants people slotted where their long-term economic opportunity is.</li><li><span class="dot" style="background:#93711b;"></span><b>Forward deployed engineer (FDE)</b> is one of the fastest-growing jobs. Account reps, customer success, support and FDEs should all go through the same preceptorship. LinkedIn merged roles into "full stack builders".</li><li><span class="dot" style="background:#93711b;"></span>Mark Russinovich and Scott Hanselman run a preceptorship program, reportedly with a Carnegie Mellon tie, for early-career engineers. Nadella calls joining such a team his "dream next job".</li><li><span class="dot" style="background:#93711b;"></span>The junior-hiring slowdown may only last while new factories get built. An AI-native company "start[s] with a token budget and a human".</li><li><span class="dot" style="background:#93711b;"></span>He says the AI narrative (singularity, one company, no jobs) created "enormous anxiety". Microsoft is a 51-year-old incumbent doing the hard structural work.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#93711b;"><div class="lbl">Pull quote</div>&#8220;I wish I could just sit here and say it'll all be the same. I cannot&#8221;<cite>— Satya Nadella</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Nadella is explaining his own company's exit program. The host reads it more bluntly, as an offer to leave before an intensive period of reorgs and smaller teams.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="sovereign-firm">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">High conviction</span>
+    <span class="theme-status">AZURE FOUNDRY · IQ LAYER</span><span class="ttag">ai-infra</span><span class="ttag">software</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Own your model system: harness, context and evals separate from any one model</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Nadella argues every firm needs its own token capital, and a firm that can't swap models while improving on its private eval has lost control.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Hayek's distributed knowledge argument means there should be "as many frontier models as firms". Every firm holds human capital and <b>token capital</b>.</li><li><span class="dot" style="background:#3f6b2e;"></span>The host notes firms such as Revolut buying B200s to run open models themselves. Nadella says open weights are "one strategy that I think has legs", alongside context layers and traces from closed models.</li><li><span class="dot" style="background:#3f6b2e;"></span>Microsoft's <b>IQ layer</b> offers the Copilot harness as a managed service in Foundry. You can also bring PI or another open-source harness, with memory, context and the plugin/skill action space kept separate from any model.</li><li><span class="dot" style="background:#3f6b2e;"></span>Customer pattern: start on a frontier model, collect traces, then fine-tune a cheap MAI Flash model for a deterministic workflow.</li><li><span class="dot" style="background:#3f6b2e;"></span>"Reverse information paradox": don't leak your value. His test: replace any model and still hill-climb on your private eval. Private evals matter more than public benchmarks.</li><li><span class="dot" style="background:#3f6b2e;"></span>Database analogy: you can migrate data out of a relational database, but not memory baked into a vendor model's embeddings.</li><li><span class="dot" style="background:#3f6b2e;"></span>Trust architecture: models get more capable but not more aligned. Separate <b>authority from intelligence</b>, treat agents as insider risk, and log chain of thought in human language so it can't be tampered with.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;you should be able to replace any model and still hill climb on an eval that's your private eval&#8221;<cite>— Satya Nadella</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Revolut<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Cited by the host as buying B200s for its own inference</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Partner models Microsoft keeps using alongside MAI</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Microsoft sells the managed harness, Foundry models and MAI models that this architecture runs on, and it still uses OpenAI models through their partnership.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="local-models">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Positive view</span>
+    <span class="theme-status">HYBRID INTELLIGENCE ERA</span><span class="ttag">ai-infra</span><span class="ttag">semis</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Local models and Copilot Fusion turn PCs into token factories</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">Nadella sees cloud demand staying unlimited while the edge becomes a second token factory, with routers picking models per task.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>"Last year's frontier can run on your laptop and last quarter's" on your desktop. Silicon work at Nvidia, AMD, Qualcomm and Intel is driving it.</li><li><span class="dot" style="background:#3f6b2e;"></span>Surface Ultra runs a local coding model. In agent swarms some sub-agents run locally while others call the cloud, which Nadella calls "unmetered intelligence".</li><li><span class="dot" style="background:#3f6b2e;"></span><b>Copilot Fusion</b> routes each task to a model. Nadella hasn't picked a model manually in Copilot in a while.</li><li><span class="dot" style="background:#3f6b2e;"></span>MAI Code is a closed model you can still download and run on Windows. The host found the MAI Flash 1.1 model unimpressive.</li><li><span class="dot" style="background:#3f6b2e;"></span>MAI2 base: Microsoft disclosed a clean-room pre-training recipe, which Nadella calls one of the most detailed in public. The goal is new points on the frontier curve that save both FLOPs and tokens, and more choice than one model family.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;distributed computing will always remain distributed&#8221;<cite>— Satya Nadella</cite></div>
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Microsoft makes Surface and Windows, so it benefits directly if local models move work onto PCs.</div></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">🧪</div><div class="tline"><span class="cat">Engineering:</span> <span class="txt">Shift effort to specs, test-from-failure loops and a cross-family critic model</span></div></div><div class="irow"><div class="ic">🔐</div><div class="tline"><span class="cat">AI strategy:</span> <span class="txt">Keep harness, context and evals vendor-neutral, and prove you can swap models on a private eval</span></div></div><div class="irow"><div class="ic">🛡️</div><div class="tline"><span class="cat">Security:</span> <span class="txt">Give agents insider-risk controls: no authority without oversight, logged chain of thought</span></div></div><div class="irow"><div class="ic">💻</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Watch MSFT's Foundry, MAI models and Copilot Fusion as the play on firms owning their model stack</span></div></div><div class="irow"><div class="ic">🎓</div><div class="tline"><span class="cat">Careers:</span> <span class="txt">Change your talk-to-do ratio: join a team building with agents and get back to school mode</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;In 6 months or so, ide kind of faded away.&#8221; <cite>— Gergely Orosz / Satya Nadella</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;It's like it's a like this is the stored procedure of the intelligence era.&#8221; <cite>— Satya Nadella</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;If you can't do that, then you have to ask yourself how are you a sovereign firm&#8221; <cite>— Satya Nadella</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;right now we're getting more and more capable and less and less reliable like which is the most dangerous place to be in&#8221; <cite>— Satya Nadella</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;last year's frontier can run on your laptop and last quarters uh Frontier can run on your desktop&#8221; <cite>— Satya Nadella</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Satya Nadella:</b> Soon everyone will run a multi-model system instead of debating open versus closed models <span class="cmeta">multi-model systems as default · everyone · by the next conversation</span></div><div class="ritem"><b>Satya Nadella:</b> Last year's frontier models run on a laptop and last quarter's on a desktop <span class="cmeta">local model lag vs frontier · ~1 year laptop / ~1 quarter desktop</span></div><div class="ritem"><b>Satya Nadella:</b> Ignite will show blueprints for owning the enterprise AI stack <span class="cmeta">Ignite conference · 2026-11</span> <span class="tag">Microsoft (MSFT)</span></div><div class="ritem"><b>Gergely Orosz:</b> Blueprints and certifications for agentic software systems will arrive <span class="cmeta">blueprints/certifications · 5-10 years</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>Microsoft (MSFT)</b> <span class="rel">partners with</span> <b>OpenAI</b> &mdash; keeps using OpenAI models alongside its own MAI family</div><div class="ritem"><b>Cursor</b> <span class="rel">competes with</span> <b>Microsoft (MSFT)</b> &mdash; forked VS Code, beat Copilot to agent mode</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">💻</div><div><div class="title">Open-source turn after 2014: VS Code, the GitHub acquisition, TypeScript and SQL Server on Linux. Nadella says that by true accounting Microsoft would rank at or near the top of open-source contributors, while some big beneficiaries "have hardly contributed". <span class="tag">Open source</span></div></div></div><div class="irow"><div class="ic">👥</div><div><div class="title">VS Code taught "building in the open": Erich Gamma and Amanda Silver's team took daily direction from community feedback instead of from a vice president. <span class="tag">Product</span></div></div></div><div class="irow"><div class="ic">📚</div><div><div class="title">Sources referenced: Diego's decision-engine work, the GitHub Copilot and Cowork team blogs, and Hayek on pricing and distributed knowledge. GitHub Universe: Nadella met the first graduating class that never used an IDE before Copilot. <span class="tag">Sources</span></div></div></div></div></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>Software factory</b> &mdash; A team setup where agents generate code from specs and humans own intent, verification and the build/ops pipeline.</div><div><b>Decision engine</b> &mdash; An embedded, token-efficient intelligence primitive that makes a call without regenerating code each time.</div><div><b>Forward deployed engineer (FDE)</b> &mdash; An engineer embedded with customers to build their deployments.</div><div><b>Reverse information paradox</b> &mdash; Nadella's term for a firm leaking its proprietary value into a vendor's model through usage.</div><div><b>Unmetered intelligence</b> &mdash; Local inference on your own hardware, used without per-token billing.</div><div><b>Brownfield</b> &mdash; Existing systems with legacy builds and CI/CD, as opposed to new greenfield projects.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
