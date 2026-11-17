@@ -1,0 +1,119 @@
+META = {
+    "title": "Yann LeCun's $1B Bet Against LLMs [Part 1]",
+    "channel": "Welch Labs",
+    "speakers": "Yann LeCun (AMI Labs), Welch Labs narrator",
+    "date": "2026-05-02",
+    "video_url": "https://www.youtube.com/watch?v=kYkIdXwW2AE",
+    "thread_line": "4 threads · why pixel prediction blurs · joint embeddings and collapse · Barlow Twins to DINOv3 · JEPA as a world model",
+    "category": "market",
+    "region": "",
+}
+
+SNAPSHOT = [
+    "Yann LeCun has raised **$1 billion** for JEPA, a non-generative AI framework that predicts embeddings instead of text, pixels or tokens.",
+    "LeCun's 2015 \"cake slide\": self-supervised learning is the cake, supervised the icing, RL the cherry. GPT-1 → ChatGPT later followed that exact recipe.",
+    "Generative video prediction fails because a model forced to output one frame averages the possible futures into blur.",
+    "Joint embedding sidesteps blur but risks **representation collapse**. Barlow Twins (2021) fixed collapse by pushing the cross-correlation matrix toward identity.",
+    "DINOv3 (Aug 2025) reached 88.4% on ImageNet without labels, the first time self-supervised matched supervised.",
+    "JEPA = encoders + a predictor of the next state's embedding, optionally conditioned on actions. That makes it a learned world model for planning.",
+    "LeCun: LLMs will be replaced \"eventually\", because agents must predict the consequences of their actions.",
+]
+
+THEMES = [
+    {
+        "id": "blur-problem",
+        "tags": ["ai-infra"],
+        "color": "gray",
+        "badge": "Background",
+        "status": "GPT-1 TO CHATGPT",
+        "title": "Self-supervised learning won in language, but next-frame video prediction collapses into blur",
+        "lead": "Next-token prediction freed AI from labeled data, but the same generative trick fails on video because the space of possible frames is intractable.",
+        "bullets": [
+            "LeCun pioneered convolutional nets in the 1980s. AlexNet (2012) looked uncannily like them and was trained on ~1M labeled ImageNet examples.",
+            "Mid-2010s RL renaissance: Google DeepMind on Atari and Go. OpenAI (founded 2015) began with Gym and Universe before Alec Radford and Ilya Sutskever pivoted to Transformers.",
+            "**GPT-1** pre-trained on 7,000 books and set new state-of-the-art results on nine benchmarks. GPT-3 (2020) trained on hundreds of billions of examples.",
+            "GPT-2 has 50,257 output tokens. A full-HD frame has ~10^15 million possible values, so a video model must output pixel intensities directly.",
+            "Ball-bounce example: an LLM keeps separate probabilities per outcome, but a video model predicts their *average*, which compounds into blur when autoregressive.",
+            "Key reframing: what matters from pre-training is the internal representation, not the generation.",
+        ],
+        "quote": {"text": "the icing on the cake is supervised learning, and the cherry on the cake is reinforcement learning", "cite": "— Yann LeCun"},
+        "watch": None,
+        "names": [
+            {"name": "OpenAI", "blurb": "Scaled GPT-1 through ChatGPT on self-supervised pre-training", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+    {
+        "id": "joint-embedding",
+        "tags": ["ai-infra"],
+        "color": "green",
+        "badge": "Breakthrough",
+        "status": "BARLOW TWINS · 2021",
+        "title": "Joint embeddings fixed blur, then Barlow Twins fixed representation collapse",
+        "lead": "Mapping two views of the same thing to similar embeddings learns without generating, as long as the network can't cheat by outputting a constant.",
+        "bullets": [
+            "Siamese nets: LeCun's Bell Labs team in the early 1990s detected fraudulent signatures by comparing embedding vectors.",
+            "**Representation collapse**: the trivial solution outputs the same vector (e.g. all ones) for every input. Contrastive negatives avoid it, but cost may grow exponentially with dimension.",
+            "Stéphane Deny applied Horace Barlow's 1961 redundancy-reduction hypothesis: correlated corresponding neurons, decorrelated everything else. The cross-correlation matrix is pushed toward identity.",
+            "Barlow Twins linear probe: 73.2% ImageNet vs AlexNet's 59.3%. Google's 2020 vision transformer reached 88.6% fully supervised.",
+            "Follow-ups: VICReg (simplified Barlow Twins) and FAIR Paris's DINO v1–v3.",
+            "DINOv3 (Aug 2025) hit 88.4% ImageNet. Its patch embeddings segment a hand, ball, cat or book with no labels.",
+        ],
+        "quote": None,
+        "watch": None,
+        "names": None,
+    },
+    {
+        "id": "jepa",
+        "tags": ["ai-infra", "robotics"],
+        "color": "green",
+        "badge": "High conviction",
+        "status": "$1B RAISED · 2022 POSITION PAPER",
+        "title": "JEPA: predict the next state's embedding, condition on actions, and you have a world model",
+        "lead": "LeCun's billion-dollar bet is that world models built on joint embeddings are the missing piece of AI, and that they should plan rather than generate.",
+        "bullets": [
+            "2022 60-page paper \"A path towards autonomous machine intelligence\": a teenager learns to drive in ~20 hours, while Tesla's millions of hours yield only Level 2.",
+            "JEPA predicts embedding(t+1) from embedding(t). The encoder drops unpredictable detail, like leaves moving beside a road in dashcam video.",
+            "V-JEPA 2 conditions on robot-arm control signals. Planning searches over actions until the predicted state matches a goal embedding (moving a cup off a platform).",
+            "LeCun: this is classical optimal control from the late '50s (USSR) / early '60s (West). What's new is learning the model *and* the abstract state.",
+            "Inference becomes a **search**, not autoregressive prediction, which also enables safety guardrails.",
+        ],
+        "quote": {"text": "Initially, they'll solve different problems. Eventually, they'll replace.", "cite": "— Yann LeCun"},
+        "watch": "LeCun is raising $1B on this thesis. Part 2 shows JEPA's demonstrated robotics capability still well behind VLA models.",
+        "names": [
+            {"name": "AMI Labs", "blurb": "LeCun's $1B venture built on JEPA world models", "stance": "POSITIVE VIEW", "conviction": "High", "horizon": None},
+            {"name": "Tesla (TSLA)", "blurb": "LeCun: millions of hours of data yet only Level 2 driving", "stance": "CASUAL MENTION", "conviction": "None", "horizon": None},
+        ],
+    },
+]
+
+TAKEAWAYS = [
+    {"icon": "\U0001F9E0", "tag": "AI research", "title": "Judge a model by its learned representations, not by what it generates"},
+    {"icon": "\U0001F916", "tag": "Robotics", "title": "Track JEPA world models as the planning-first alternative to end-to-end robot policies"},
+    {"icon": "\U0001F4C8", "tag": "Markets", "title": "Treat AMI Labs' $1B as a bet against the LLM-only consensus, and watch for industrial demos"},
+    {"icon": "\U0001F4DA", "tag": "Learning", "title": "Read DINOv3 and Barlow Twins to see self-supervised vision catch up with supervised"},
+]
+
+HOT_TAKES = [
+    {"take": "LLMs are really good at manipulating language, but basically nothing else.", "cite": "— Yann LeCun", "why": "dismissal of the dominant paradigm"},
+    {"take": "Initially, they'll solve different problems. Eventually, they'll replace.", "cite": "— Yann LeCun", "why": "JEPA replacing LLMs"},
+    {"take": "I do not understand how you can even think of building an agentic system without a agentic system having the ability of predicting the consequences of its actions.", "cite": "— Yann LeCun", "why": "rejects LLM/VLA agents"},
+    {"take": "LLMs do not have world models.", "cite": "— Yann LeCun", "why": "contested claim"},
+]
+
+CLAIMS = [
+    {"who": "Yann LeCun", "claim": "JEPA world-model approaches will eventually replace LLMs", "metric": "JEPA replaces LLMs", "target": "replace", "by": None, "condition": None, "entity": "AMI Labs"},
+]
+
+RELATIONS = []
+
+OTHER_NEWS = [
+    {"icon": "\U0001F4DA", "title": "Sources referenced: LeCun's 2022 position paper, the Barlow Twins and DINOv3 papers, Horace Barlow (1961), and Geoffrey Hinton's related information-content ideas.", "tag": "Sources"},
+]
+
+GLOSSARY = [
+    {"term": "JEPA", "def": "Joint Embedding Predictive Architecture: encoders embed input and target, and a predictor predicts the target's embedding."},
+    {"term": "Representation collapse", "def": "A joint-embedding network outputting the same vector for every input, trivially maximizing similarity."},
+    {"term": "Contrastive learning", "def": "Training with positive and negative pairs so different inputs get dissimilar embeddings."},
+    {"term": "Linear probe", "def": "A single trainable layer on a frozen encoder, used to measure representation quality."},
+    {"term": "World model", "def": "A model predicting the next state of the world given the current state and an action."},
+]
