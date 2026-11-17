@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>(function(){var d=document.documentElement,t,m=matchMedia('(prefers-color-scheme: dark)');try{t=localStorage.getItem('theme')}catch(e){}function a(){d.classList.toggle('dark',t?t==='dark':m.matches)}a();m.addEventListener('change',function(){if(!t)a()});window.toggleTheme=function(){t=d.classList.contains('dark')?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}a()}})();</script>
+<title>Research: Yann LeCun's $1B Bet Against LLMs [Part 2]</title>
+<meta name="description" content="Welch Labs · 4 threads · V-JEPA 2 vs CLIP · VL-JEPA efficiency · LeCun vs VLA robots · AMI Labs roadmap">
+<meta property="og:site_name" content="YouTube Research Briefs">
+<meta property="og:title" content="Yann LeCun&#x27;s $1B Bet Against LLMs [Part 2]">
+<meta property="og:description" content="Welch Labs · 4 threads · V-JEPA 2 vs CLIP · VL-JEPA efficiency · LeCun vs VLA robots · AMI Labs roadmap">
+<meta property="og:image" content="https://hutuleac.github.io/YT-Stocks-Brain/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --ink:#20231f; --muted:#6b6f66; --line:#e4e2d8; --card:#fffdf8; --bg:#efece2;
+  --brand:#8a5a2e; --serif:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:clamp(15px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased;}
+.page{max-width:1600px;width:100%;margin:0 auto;background:var(--card);box-shadow:0 0 0 1px var(--line);}
+.hero{padding:clamp(18px,2.4vw,34px) clamp(18px,4vw,56px) clamp(14px,1.8vw,22px);border-bottom:1px solid var(--line);}
+.kicker{font-family:var(--serif);font-style:italic;font-size:clamp(13px,1vw,16px);color:var(--brand);margin-bottom:10px;}
+.backlink{margin-bottom:12px;}
+.backlink a{font-size:clamp(12.5px,.95vw,14px);color:var(--muted);text-decoration:none;border:1px solid var(--line);
+  border-radius:20px;padding:5px 14px;transition:color .15s,border-color .15s;}
+.backlink a:hover{color:var(--brand);border-color:var(--brand);}
+.hero h1{text-wrap:balance;font-family:var(--serif);margin:0 0 14px;font-size:clamp(24px,3.4vw,42px);line-height:1.15;
+  letter-spacing:-.01em;font-weight:600;color:#171916;max-width:42ch;}
+.byline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:clamp(13px,1vw,15px);line-height:1.6;}
+.byline b{color:var(--ink);font-weight:600;}
+.stats-line{font-family:var(--serif);font-style:italic;color:var(--brand);font-size:clamp(12.5px,.95vw,14.5px);margin-top:4px;}
+.stats-line a{color:var(--brand);}
+.inner{padding:10px clamp(18px,4vw,56px) 48px;}
+section.sec{padding:34px 0;border-bottom:1px solid var(--line);}
+.sec-eye{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--brand);margin-bottom:4px;}
+.sec h2{font-family:var(--serif);margin:0;font-size:clamp(20px,2vw,26px);font-weight:600;color:#171916;
+  border-bottom:2px solid var(--brand);display:inline-block;padding-bottom:5px;}
+.card{background:#fbf7ef;border:1px solid var(--line);border-radius:14px;padding:clamp(18px,3vw,28px);}
+.snap{list-style:none;margin:0;padding:0;}
+.snap li{padding:12px 0;border-bottom:1px solid var(--line);line-height:1.6;font-size:clamp(14.5px,.95vw,16.5px);}
+.snap li:last-child{border-bottom:none}
+.theme{padding:36px 0;border-bottom:1px solid var(--line);}
+.theme-badgerow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:10px;}
+.badge{display:inline-block;padding:5px 13px;border-radius:3px;font-size:12px;font-weight:700;
+  white-space:nowrap;letter-spacing:.03em;text-transform:uppercase;color:#fffdf8;}
+.theme-status{font-family:var(--serif);font-style:italic;font-size:13.5px;color:var(--muted);}
+.theme h2{font-family:var(--serif);margin:0 0 20px;font-size:clamp(20px,2.2vw,28px);font-weight:600;
+  color:#171916;line-height:1.25;max-width:32ch;padding-left:16px;}
+.theme-body{display:flex;flex-wrap:wrap;gap:28px;}
+.theme-main{flex:3 1 400px;min-width:0;}
+.theme-side{flex:2 1 260px;min-width:0;}
+.lead{margin:0 0 18px;font-size:clamp(16px,1.15vw,19px);line-height:1.6;color:#171916;font-weight:600;max-width:70ch;}
+.bullets{list-style:none;margin:0 0 22px;padding:0;max-width:76ch;}
+.bullets li{position:relative;padding:9px 0 9px 20px;border-bottom:1px solid var(--line);
+  font-size:clamp(14px,.95vw,15.5px);line-height:1.65;color:#2c2f28;}
+.bullets li .dot{position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;}
+.sidecard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 26px;max-width:76ch;margin:0 0 18px;}
+.sidecard:last-child{margin-bottom:0;}
+.sidecard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;
+  background:var(--sc-accent);}
+.sidecard .lbl{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:8px;}
+.sidecard.quote{font-family:var(--serif);font-style:italic;font-size:clamp(15px,1.1vw,18px);
+  line-height:1.5;color:#2c2f28;}
+.sidecard.quote .lbl{font-family:-apple-system,sans-serif;font-style:normal;}
+.sidecard.quote cite{display:block;font-family:-apple-system,sans-serif;font-style:normal;font-size:13px;
+  color:var(--muted);margin-top:9px;}
+.sidecard .txt{font-size:14.5px;line-height:1.55;color:#3a3d35;}
+.namechip{padding:0 0 10px;margin:0 0 10px;border-bottom:1px solid var(--line);}
+.namechip:last-child{padding-bottom:0;margin-bottom:0;border-bottom:none;}
+.namechip b{display:block;font-weight:600;font-size:14.5px;color:#171916;}
+.namechip span{font-size:13px;color:#4a4d44;line-height:1.5;}
+.icardbox{background:#fffefb;border:1px solid var(--line);border-radius:12px;padding:2px 18px;}
+.irow{display:flex;gap:14px;align-items:flex-start;padding:13px 0;}
+.irow+.irow{border-top:1px solid var(--line);}
+.irow .ic{flex:none;width:30px;height:30px;border-radius:6px;display:grid;place-items:center;
+  font-size:14px;background:#f4e9db;line-height:1;}
+.irow .title{font-weight:600;font-size:clamp(14px,.95vw,15.5px);color:#171916;line-height:1.42;}
+.irow .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:12.5px;font-weight:600;color:var(--brand);margin-left:6px;}
+.irow .detail{font-size:13.5px;color:#4a4d44;line-height:1.55;margin-top:4px;}
+.irow .tline{font-size:clamp(14px,.95vw,15.5px);line-height:1.48;}
+.irow .tline .cat{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--brand);margin-right:6px;}
+.irow .tline .txt{font-weight:600;color:#171916;}
+b{font-weight:700;}
+i{font-style:italic;}
+.riskcard{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px 14px 28px;margin:11px 0;}
+.riskcard::before{content:"";position:absolute;left:11px;top:12px;bottom:12px;width:7px;border-radius:5px;background:#a23f22;}
+.riskbox{position:relative;background:#fffefb;border:1px solid var(--line);border-radius:12px;
+  padding:2px 18px 2px 28px;}
+.riskbox::before{content:"";position:absolute;left:11px;top:14px;bottom:14px;width:7px;border-radius:5px;background:var(--box-accent,#a23f22);}
+.riskbox .cmeta{font-weight:600;color:#2d6a4f;white-space:nowrap;}
+.riskbox .rel{font-family:var(--serif);font-style:italic;color:#3b5b8c;}
+.riskbox .tag{font-size:11px;color:#8a8d81;margin-left:6px;}
+.namechip .stance{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:999px;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:middle;}
+.theme-badgerow .ttag{font-size:11px;color:#8a8d81;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:6px;}
+.riskbox .ritem{font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;padding:13px 0;}
+.riskbox .ritem+.ritem{border-top:1px solid var(--line);}
+.riskcard.takecard::before{background:#6d4b9c;}
+.riskcard.takecard .txt{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.3vw,19px);line-height:1.5;}
+.riskcard cite{display:inline;margin-left:6px;font-size:11px;color:#8a8d81;font-style:normal;white-space:nowrap;}
+.riskcard .txt{font-weight:500;font-size:clamp(13.5px,.9vw,15px);color:#171916;line-height:1.55;}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 30px;}
+.gloss div{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.8px;line-height:1.55;}
+.gloss b{font-family:var(--serif);color:#171916;}
+.empty{color:var(--muted);font-style:italic;font-size:14.5px;}
+html{-webkit-text-size-adjust:100%;}
+@media (max-width:640px){.riskbox .cmeta,.badge{white-space:normal;}.theme h2{padding-left:0;}}
+html.dark{color-scheme:dark;}
+.hero{position:relative;}
+.theme-toggle{position:absolute;top:clamp(14px,2vw,26px);right:clamp(14px,3vw,40px);width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0;}
+.theme-toggle:hover{color:var(--brand);border-color:var(--brand);}
+.theme-toggle .sun,html.dark .theme-toggle .moon{display:none;}
+html.dark .theme-toggle .sun{display:block;}
+html.dark{--ink:#e6e2d6;--muted:#9c978a;--line:#34322b;--card:#1b1a17;--bg:#121210;--brand:#d39c63;}
+html.dark .hero h1,html.dark .sec h2,html.dark .theme h2,html.dark .lead,html.dark .namechip b,html.dark .irow .title,html.dark .irow .tline .txt,html.dark .riskbox .ritem,html.dark .riskcard .txt,html.dark .gloss b{color:#f2eee3;}
+html.dark .bullets li,html.dark .sidecard.quote{color:#d4cfc2;}
+html.dark .sidecard .txt,html.dark .namechip span,html.dark .irow .detail{color:#b3ae9f;}
+html.dark .card{background:#211f1b;}
+html.dark .sidecard,html.dark .icardbox,html.dark .riskcard,html.dark .riskbox{background:#23211d;}
+html.dark .irow .ic{background:#342c22;}
+html.dark .riskbox .cmeta{color:#74c79b;}
+html.dark .riskbox .rel{color:#93b4e6;}
+html.dark .namechip .stance{color:#fff;}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode"><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <div class="backlink"><a href="index.html">&#8592; All Research Briefs</a></div>
+    <div class="kicker">A YouTube Research Brief</div>
+    <h1>Yann LeCun's $1B Bet Against LLMs [Part 2]</h1>
+    <div class="byline">
+      Channel: <b>Welch Labs</b> &middot; Speaker: <b>Yann LeCun (AMI Labs), Welch Labs narrator</b> &middot; <b>2026-05-30</b>
+      <div class="stats-line">4 threads · V-JEPA 2 vs CLIP · VL-JEPA efficiency · LeCun vs VLA robots · AMI Labs roadmap &middot; <a href="https://www.youtube.com/watch?v=v_jDvpEGTIg" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+    </div>
+  </header>
+  <div class="inner">
+    <section class="sec">
+      <div class="sec-eye">The one-paragraph takeaway</div>
+      <h2>Video Snapshot</h2>
+      <div class="card" style="margin-top:16px;"><ol class="snap"><li>Part 2 climbs the stack (vision encoder → VLM → VLA) and puts a JEPA alternative at each level.</li><li><b>V-JEPA 2</b> (Meta, 2025, 1M hours of video, up to 1B parameters) is trained with no language yet beats CLIP-style encoders on video understanding.</li><li><b>VL-JEPA</b> reached 35% vs 20% accuracy after 5M examples and beat 7B models on GQA with just 1.6B parameters.</li><li>LeCun: "VLAs are doomed": behavioral cloning doesn't scale and there's no explicit planning.</li><li>Reality check: JEPA takes 60 seconds to move a cup, and Le World Model plans only ~5 steps ahead on Push-T (15 with two hierarchy levels).</li><li>AMI Labs plan: industrial pilots within 1-2 years, then become "the main supplier of intelligent systems" in 3-5 years.</li></ol></div>
+    </section>
+
+    
+<section class="theme" id="vjepa-vlm">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Strong evidence</span>
+    <span class="theme-status">META · V-JEPA 2 / VL-JEPA</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">Language-free vision and embedding-space targets beat their generative counterparts</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">JEPA already competes in the vision half of VLMs and learns faster when the whole VLM predicts embeddings instead of text.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>OpenAI's 2021 CLIP matches image-caption pairs and underpins most multimodal LLM vision encoders. Natively it handles images only.</li><li><span class="dot" style="background:#3f6b2e;"></span><b>V-JEPA 2</b> learns by predicting embeddings of masked video patches. Swapped into a VLM, it set state-of-the-art video-understanding results "contrary to conventional wisdom".</li><li><span class="dot" style="background:#3f6b2e;"></span>TempCompass reversed-pineapple test: ChatGPT 5.5 fails forwards and backwards in Welch Labs' testing, and only some Claude and Gemini versions get it right.</li><li><span class="dot" style="background:#3f6b2e;"></span>AMI Labs' landing page: "Real intelligence does not start in language. It starts in the world."</li><li><span class="dot" style="background:#3f6b2e;"></span>Mushroom example: a generative VLM is penalized for a correct paraphrase. <b>VL-JEPA</b> maps both phrasings to nearby embeddings.</li><li><span class="dot" style="background:#3f6b2e;"></span>VL-JEPA (Meta, late 2025): <b>35%</b> vs 20% video classification after 5M examples, and on GQA it beats 7B models with 1.6B parameters.</li><li><span class="dot" style="background:#3f6b2e;"></span>Being non-generative, it answers by nearest embedding among candidate answers, or through a trained text decoder.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Meta (META)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>Trained V-JEPA 2 and VL-JEPA</span></div><div class="namechip"><b>OpenAI<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>CLIP, the language-supervised encoder JEPA competes with</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">Still hybrid: V-JEPA 2 alignment uses a standard next-token LLM on the language side.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="vla-doomed">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#a23f22;">Contested</span>
+    <span class="theme-status">PHYSICAL INTELLIGENCE PI0.7 VS JEPA</span><span class="ttag">robotics</span><span class="ttag">ai-infra</span>
+  </div>
+  <h2 style="border-left:4px solid #a23f22;">LeCun says VLAs are doomed, while VLAs keep generalizing in demos</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">LeCun's critique is that VLAs rely on behavioral cloning and don't plan explicitly. The narrator shows VLAs are far ahead in real capability today.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#a23f22;"></span>Physical Intelligence's PI0.7 VLA peels zucchini, folds pinwheels, takes out trash, and shuffles a key between grippers to open a lock.</li><li><span class="dot" style="background:#a23f22;"></span>VLAs = VLM + action expert, trained end-to-end on human demonstrations captured with teleoperation controllers.</li><li><span class="dot" style="background:#a23f22;"></span>LeCun: collecting demonstrations for every variation is "only practical for a very small number of applications". Faced with new situations, VLAs are brittle.</li><li><span class="dot" style="background:#a23f22;"></span>Counter-evidence: Google's RT-2 (2023) moved a Coke can to a picture of Taylor Swift with no such demo. PI robots handle unseen microwave, paper-towel and air-fryer tasks.</li><li><span class="dot" style="background:#a23f22;"></span>Second critique: no visibility into planning. The VLA is a black box from camera + text to joint positions.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#a23f22;"><div class="lbl">Pull quote</div>&#8220;VLAs are doomed. I mean, they they basically don't work really well.&#8221;<cite>— Yann LeCun</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>Physical Intelligence<span class="stance" style="background:#a23f22;">NEGATIVE VIEW · High</span></b><span>Builds the PI VLA robot models LeCun calls doomed</span></div><div class="namechip"><b>Google (GOOGL)<span class="stance" style="background:#93711b;">CASUAL MENTION</span></b><span>RT-2 was the 2023 VLA generalization breakthrough</span></div></div>
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">LeCun's company competes with the VLA approach he dismisses. The video's own comparison shows JEPA robotics far behind for now.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="le-world-model">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#93711b;">Early</span>
+    <span class="theme-status">PUSH-T · 5 → 15 STEP HORIZON</span><span class="ttag">robotics</span>
+  </div>
+  <h2 style="border-left:4px solid #93711b;">Le World Model plans in embedding space, but only a few steps ahead</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">A JEPA world model trained from pixels and actions learns Push-T physics well enough to plan, though horizon limits keep it to simple tasks.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#93711b;"></span>Learns from human Push-T trajectories but predicts <i>outcomes</i>, not human actions. A decoder shows a "learned video game" matching reality over 18 steps, with some drift.</li><li><span class="dot" style="background:#93711b;"></span>Planning uses the <b>cross-entropy method</b>: 500 random trajectories rolled out 5 actions per batch and scored by Euclidean distance to the goal embedding. A top-30 elite set resamples until it converges.</li><li><span class="dot" style="background:#93711b;"></span>Reliable only ~5 prediction loops ahead. Two-level hierarchical world models extend that to 15.</li><li><span class="dot" style="background:#93711b;"></span>LeCun's hierarchy analogy: NYU office to Paris means airport → taxi → stand up. "Your cat can do hierarchical planning" without language.</li><li><span class="dot" style="background:#93711b;"></span>Hope: the hierarchy emerges from training like CNN features, but it needs semi-expert trajectories, not random actions.</li></ul>
+    </div>
+    <div class="theme-side">
+      
+      
+      <div class="sidecard" style="--sc-accent:#93711b;"><div class="lbl">Worth noting</div><div class="txt">The narrator compares it to LeCun's 30-year-old handwritten-digit nets: limited then, scaled later. Whether JEPA follows is open.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="theme" id="ami-roadmap">
+  <div class="theme-badgerow">
+    <span class="badge" style="background:#3f6b2e;">Speculative</span>
+    <span class="theme-status">1-2 YEARS INDUSTRIAL · 3-5 YEARS SCALE</span><span class="ttag">ai-infra</span><span class="ttag">energy</span><span class="ttag">biotech</span>
+  </div>
+  <h2 style="border-left:4px solid #3f6b2e;">AMI Labs targets complex systems you can't write equations for</h2>
+  <div class="theme-body">
+    <div class="theme-main">
+      <p class="lead">LeCun plans first to apply JEPA planning to industrial control problems, not consumer robots, aiming to gain experience rather than revenue.</p>
+      <ul class="bullets"><li><span class="dot" style="background:#3f6b2e;"></span>Targets: jet engines, whole airplanes, chemical plants, power plants, and diabetes patients' blood-sugar control.</li><li><span class="dot" style="background:#3f6b2e;"></span>Also: steering stem cells into insulin-producing pancreas cells, and designing materials, catalysts and batteries.</li><li><span class="dot" style="background:#3f6b2e;"></span>Excluded: robot arms, humanoids or NASA moon rockets, where dynamical equations can be written down.</li></ul>
+    </div>
+    <div class="theme-side">
+      <div class="sidecard quote" style="--sc-accent:#3f6b2e;"><div class="lbl">Pull quote</div>&#8220;the hope is that, you know, we might become the main supplier of intelligence systems, whatever the application is&#8221;<cite>— Yann LeCun</cite></div>
+      <div class="sidecard" style="--sc-accent:#65695f;"><div class="lbl">Names in play</div><div class="namechip"><b>AMI Labs<span class="stance" style="background:#3f6b2e;">POSITIVE VIEW · High · 3-5 years</span></b><span>Industrial pilots in 1-2 years, broad supplier ambition in 3-5</span></div></div>
+      
+    </div>
+  </div>
+</section>
+
+
+    <section class="sec">
+      <div class="sec-eye">What to do with this</div>
+      <h2>Best Actionable Takeaways</h2>
+      <div style="margin-top:16px;"><div class="icardbox"><div class="irow"><div class="ic">👁️</div><div class="tline"><span class="cat">AI research:</span> <span class="txt">Test language-free video encoders like V-JEPA 2 where temporal understanding matters</span></div></div><div class="irow"><div class="ic">🤖</div><div class="tline"><span class="cat">Robotics:</span> <span class="txt">Weigh VLA generalization demos against LeCun's brittleness critique before betting on either camp</span></div></div><div class="irow"><div class="ic">🏭</div><div class="tline"><span class="cat">Markets:</span> <span class="txt">Watch AMI Labs' first industrial pilots in 1-2 years as the real JEPA proof point</span></div></div><div class="irow"><div class="ic">🧭</div><div class="tline"><span class="cat">Agents:</span> <span class="txt">Prefer agents that can predict consequences and plan explicitly when safety matters</span></div></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Where they stuck their neck out</div>
+      <h2>Hot Takes &amp; Personal Convictions</h2>
+      <div style="margin-top:16px;"><div class="riskcard takecard"><div class="txt">&#8220;VLAs are doomed. I mean, they they basically don't work really well.&#8221; <cite>— Yann LeCun</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;your cat can do hierarchical planning. So, you know, they don't have language&#8221; <cite>— Yann LeCun</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;within a year or two uh we'll we'll try to apply the the whole JEPPA world model planning, etc., to a number of uh industrial applications&#8221; <cite>— Yann LeCun</cite></div></div><div class="riskcard takecard"><div class="txt">&#8220;we might become the main supplier of intelligence systems, whatever the application is&#8221; <cite>— Yann LeCun</cite></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Numbers and dates someone can be held to</div>
+      <h2>Predictions &amp; Dated Calls</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#2d6a4f;"><div class="ritem"><b>Yann LeCun:</b> JEPA-based approaches will overtake VLA approaches in robotics <span class="cmeta">JEPA overtakes VLA · overtake</span> <span class="tag">Physical Intelligence</span></div><div class="ritem"><b>Yann LeCun:</b> AMI Labs applies JEPA world-model planning to industrial applications <span class="cmeta">industrial pilots · several · 1-2 years</span> <span class="tag">AMI Labs</span></div><div class="ritem"><b>Yann LeCun:</b> AMI Labs becomes the main supplier of intelligent systems <span class="cmeta">market position · main supplier · 3-5 years</span> <span class="tag">AMI Labs</span></div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Who is tied to whom</div>
+      <h2>Relationships</h2>
+      <div style="margin-top:16px;"><div class="riskbox" style="--box-accent:#3b5b8c;"><div class="ritem"><b>AMI Labs</b> <span class="rel">competes with</span> <b>Physical Intelligence</b> &mdash; JEPA world models vs VLA robot brains</div><div class="ritem"><b>AMI Labs</b> <span class="rel">criticizes</span> <b>Physical Intelligence</b> &mdash; LeCun calls VLAs doomed</div></div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-eye">Beyond the main threads</div>
+      <h2>Other Notable News</h2>
+      <div style="margin-top:16px;"><p class="empty">Nothing notable found in this category for this video.</p></div>
+    </section>
+
+    <section class="sec" style="border-bottom:none;">
+      <div class="sec-eye">Names and terms at a glance</div>
+      <h2>Glossary &amp; Entities</h2>
+      <div style="margin-top:16px;"><div class="gloss"><div><b>CLIP</b> &mdash; OpenAI's 2021 contrastive image-caption encoder used as the vision front-end of many VLMs.</div><div><b>VLM / VLA</b> &mdash; Vision-language model / vision-language-action model, the latter outputting robot controls.</div><div><b>Behavioral cloning</b> &mdash; Training a policy to imitate human demonstration actions.</div><div><b>Cross-entropy method (CEM)</b> &mdash; Sample trajectories, keep an elite set, refit and resample until the plan converges.</div><div><b>Hierarchical world model</b> &mdash; Stacked predictors: detailed short-term at the bottom, abstract long-term subgoals above.</div></div></div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
